@@ -840,7 +840,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8295-1" />
 		<set name="item_skill" val="3859-2;3552-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="157" />
@@ -850,12 +856,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14527" type="Weapon" name="Icarus Dual Daggers - Confusion">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -878,7 +878,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3858-3;3552-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="332" />
 			<set order="0x08" stat="mAtk" val="169" />
@@ -888,12 +894,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14528" type="Weapon" name="Dynasty Dual Daggers - Great Gale {PvP}">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -918,7 +918,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3859-2;3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="157" />
@@ -928,12 +934,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14529" type="Weapon" name="Icarus Dual Daggers - Confusion {PvP}">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -958,7 +958,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3858-3;3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="332" />
 			<set order="0x08" stat="mAtk" val="169" />
@@ -968,12 +974,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14530" type="EtcItem" name="Maxwell House Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
@@ -1362,7 +1362,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="157" />
@@ -1372,12 +1378,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14559" type="EtcItem" name="PC cafe points">
 		<set name="icon" val="icon.etc_pccafe_point_i00" />

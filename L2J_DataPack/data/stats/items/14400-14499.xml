@@ -2005,7 +2005,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3651-1;3652-1;3552-3" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="332" />
 			<set order="0x08" stat="mAtk" val="169" />
@@ -2015,12 +2021,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14462" type="Weapon" name="Vesper Dual Sword {PvP}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -2528,7 +2528,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="360" />
 			<set order="0x08" stat="mAtk" val="181" />
@@ -2538,12 +2544,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="14478" type="Weapon" name="Vesper Cutter {PvP} - Haste">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />

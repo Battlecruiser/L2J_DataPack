@@ -815,7 +815,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8298-1" />
 		<set name="item_skill" val="3859-2;3552-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="360" />
 			<set order="0x08" stat="mAtk" val="181" />
@@ -825,12 +831,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16149" type="Weapon" name="Vesper Dual Daggers - Gale {PvP}">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -855,7 +855,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3651-1;3652-1;3859-2" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="360" />
 			<set order="0x08" stat="mAtk" val="181" />
@@ -865,12 +871,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16150" type="Weapon" name="Vesper Dual Sword - Destruction">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -953,7 +953,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8298-1" />
 		<set name="item_skill" val="3552-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;84};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="84" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="415" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -963,12 +969,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16153" type="Weapon" name="Skull Edge Dual Daggers {PvP}">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -993,7 +993,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;84};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="84" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="415" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1003,12 +1009,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16154" type="Weapon" name="Periel Dual Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -1091,7 +1091,13 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8298-1" />
 		<set name="item_skill" val="3552-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="437" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -1101,12 +1107,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16157" type="Weapon" name="Mamba Edge Dual Daggers {PvP}">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -1131,7 +1131,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3651-1;3652-1" />
-		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="437" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -1141,12 +1147,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player class_id_restriction="93, 101, 108" />
-				<player subclass="false" />
-			</and>
-		</cond>
 	</item>
 	<item id="16158" type="Weapon" name="Eternal Core Dual Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
