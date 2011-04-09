@@ -148,7 +148,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
-		<!-- TODO: Npc Id: 32529 needs to be in range 300 to be used. -->
+		<cond msgId="113">
+			<player npcIdRadius="32529,300" />
+		</cond>
 	</skill>
 	<skill id="2616" levels="1" name="Bond Sealant">
 		<set name="target" val="TARGET_NONE" />
