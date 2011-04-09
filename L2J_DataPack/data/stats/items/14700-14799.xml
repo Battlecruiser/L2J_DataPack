@@ -1272,7 +1272,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_requiredlevel;81};{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
