@@ -19,14 +19,15 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5103" levels="1" name="Production - Clan / Transfer">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="hitTime" val="1000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
 		<!-- Not Used Anymore -->
@@ -83,14 +84,16 @@
 		</for>
 	</skill>
 	<skill id="5109" levels="1" name="Production - Clan Gate">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="hitTime" val="1000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5110" levels="1" name="Cannon Fodder">
 		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 4 Flash Gunpowder. -->
@@ -267,11 +270,11 @@
 		</for>
 	</skill>
 	<skill id="5121" levels="1" name="Production - Corpse Revival">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_SELF" /> <!-- Needs to be checked -->
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5122" levels="1" name="Sailren Use Might">
 		<!-- CT2.5 retail confirmed -->
@@ -1160,36 +1163,43 @@
 		</for>
 	</skill>
 	<skill id="5183" levels="1" name="Production: Dimensional Stun">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="flyRadius" val="300" />
+		<set name="flyType" val="THROW_UP" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="StunSelf" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="ThrowUp" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5184" levels="1" name="Production: Valakas Dragon Breath">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
+		<set name="coolTime" val="2000" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="1200" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5185" levels="1" name="Production: Magic-type Guard">
-		<!-- Needs more work -->
-		<!-- Only pre-implementation -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="6000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="54" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5186" levels="2" name="Pet Haste">
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
