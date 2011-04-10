@@ -447,11 +447,11 @@ while :
      echo "There we go, it may take some time..."
 	 echo "Installing Gameserver Updates"
      for file in $(ls ../sql/server/updates/*.sql);do
-        $MYG < $file 
+        $MYG < $file >> gserror.log
 	 done
 	 echo "Installing Loginserver Updates"
 	 for file in $(ls ../sql/login/updates/*.sql);do
-		$MYL < $file
+		$MYL < $file >> lserror.log
 	 done
      break
    elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
