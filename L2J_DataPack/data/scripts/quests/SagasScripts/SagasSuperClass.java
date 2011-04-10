@@ -50,11 +50,11 @@ public class SagasSuperClass extends QuestJython
 	public String[] Text = {};
 	L2FastMap<L2Npc, Integer> _SpawnList = new L2FastMap<L2Npc, Integer>();
 	
-	int[] QuestClass[] = {{0x7f},{0x80,0x81},{0x82},{0x05},{0x14},{0x15},{0x02},{0x03},{0x2e},{0x30},{0x33},{0x34},{0x08},{0x17},{0x24},{0x09},{0x18},{0x25},{0x10},{0x11},{0x1e},{0x0c},{0x1b},{0x28},{0x0e},{0x1c},{0x29},{0x0d},{0x06},{0x22},{0x21},{0x2b},{0x37},{0x39}};
+	int[] QuestClass[] = { { 0x7f }, { 0x80, 0x81 }, { 0x82 }, { 0x05 }, { 0x14 }, { 0x15 }, { 0x02 }, { 0x03 }, { 0x2e }, { 0x30 }, { 0x33 }, { 0x34 }, { 0x08 }, { 0x17 }, { 0x24 }, { 0x09 }, { 0x18 }, { 0x25 }, { 0x10 }, { 0x11 }, { 0x1e }, { 0x0c }, { 0x1b }, { 0x28 }, { 0x0e }, { 0x1c }, { 0x29 }, { 0x0d }, { 0x06 }, { 0x22 }, { 0x21 }, { 0x2b }, { 0x37 }, { 0x39 } };
 	
 	public SagasSuperClass(int id, String name, String descr)
 	{
-		super(id,name,descr);
+		super(id, name, descr);
 		qnu = id;
 	}
 	
@@ -70,11 +70,12 @@ public class SagasSuperClass extends QuestJython
 		for (int mobid : Mob)
 			addKillId(mobid);
 		questItemIds = Items.clone();
-		questItemIds[0] = 0; questItemIds[2] = 0; //remove Ice Crystal and Divine Stone of Wisdom
+		questItemIds[0] = 0;
+		questItemIds[2] = 0; //remove Ice Crystal and Divine Stone of Wisdom
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 			addKillId(Archon_Minion);
-		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
-		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
+		int[] Archon_Hellisha_Norm = { 18212, 18214, 18215, 18216, 18218 };
+		for (int i = 0; i < Archon_Hellisha_Norm.length; i++)
 			addKillId(Archon_Hellisha_Norm[i]);
 		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
 			addKillId(Guardian_Angel);
@@ -82,8 +83,8 @@ public class SagasSuperClass extends QuestJython
 	
 	public void Cast(L2Npc npc, L2Character target, int skillId, int level)
 	{
-		target.broadcastPacket(new MagicSkillUse(target,target,skillId,level,6000,1));
-		target.broadcastPacket(new MagicSkillUse(npc,npc,skillId,level,6000,1));
+		target.broadcastPacket(new MagicSkillUse(target, target, skillId, level, 6000, 1));
+		target.broadcastPacket(new MagicSkillUse(npc, npc, skillId, level, 6000, 1));
 	}
 	
 	public void AutoChat(L2Npc npc, String text)
@@ -96,14 +97,14 @@ public class SagasSuperClass extends QuestJython
 		_SpawnList.put(mob, st.getPlayer().getObjectId());
 	}
 	
-	public L2Npc FindSpawn (L2PcInstance player,L2Npc npc)
+	public L2Npc FindSpawn(L2PcInstance player, L2Npc npc)
 	{
 		if (_SpawnList.containsKey(npc) && _SpawnList.get(npc) == player.getObjectId())
 			return npc;
 		return null;
 	}
 	
-	public void DeleteSpawn(QuestState st,L2Npc npc)
+	public void DeleteSpawn(QuestState st, L2Npc npc)
 	{
 		if (_SpawnList.containsKey(npc))
 		{
@@ -131,20 +132,20 @@ public class SagasSuperClass extends QuestJython
 		{
 			if (st2.getQuestItemsCount(Items[3]) >= 700)
 			{
-				st2.takeItems(Items[3],20);
+				st2.takeItems(Items[3], 20);
 				int xx = st2.getPlayer().getX();
 				int yy = st2.getPlayer().getY();
 				int zz = st2.getPlayer().getZ();
-				L2Npc Archon = st2.addSpawn(Mob[1],xx,yy,zz);
-				AddSpawn(st2,Archon);
-				st2.set("spawned","1");
-				st2.startQuestTimer("Archon Hellisha has despawned",600000,Archon);
-				AutoChat(Archon,Text[13].replace("PLAYERNAME",st2.getPlayer().getName()));
-				((L2Attackable) Archon).addDamageHate(st2.getPlayer(),0,99999);
-				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,st2.getPlayer(),null);
+				L2Npc Archon = st2.addSpawn(Mob[1], xx, yy, zz);
+				AddSpawn(st2, Archon);
+				st2.set("spawned", "1");
+				st2.startQuestTimer("Archon Hellisha has despawned", 600000, Archon);
+				AutoChat(Archon, Text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
+				((L2Attackable) Archon).addDamageHate(st2.getPlayer(), 0, 99999);
+				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
 			}
 			else
-				st2.giveItems(Items[3],1);
+				st2.giveItems(Items[3], 1);
 		}
 	}
 	
@@ -160,7 +161,7 @@ public class SagasSuperClass extends QuestJython
 			}
 			else
 			{
-				for (int q=0 ; q<2;q++)
+				for (int q = 0; q < 2; q++)
 				{
 					if (player.getClassId().getId() == QuestClass[1][q])
 						return st;
@@ -192,20 +193,20 @@ public class SagasSuperClass extends QuestJython
 	}
 	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		String htmltext = "";
 		if (st != null)
 		{
-			if (event.equalsIgnoreCase("0-011.htm")||event.equalsIgnoreCase("0-012.htm")||event.equalsIgnoreCase("0-013.htm")||event.equalsIgnoreCase("0-014.htm")||event.equalsIgnoreCase("0-015.htm"))
+			if (event.equalsIgnoreCase("0-011.htm") || event.equalsIgnoreCase("0-012.htm") || event.equalsIgnoreCase("0-013.htm") || event.equalsIgnoreCase("0-014.htm") || event.equalsIgnoreCase("0-015.htm"))
 				htmltext = event;
 			else if (event.equalsIgnoreCase("accept"))
 			{
-				st.set("cond","1");
+				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				st.giveItems(Items[10],1);
+				st.giveItems(Items[10], 1);
 				htmltext = "0-03.htm";
 			}
 			else if (event.equalsIgnoreCase("0-1"))
@@ -224,19 +225,19 @@ public class SagasSuperClass extends QuestJython
 				if (player.getLevel() >= 76)
 				{
 					st.exitQuest(false);
-					st.set("cond","0");
+					st.set("cond", "0");
 					htmltext = "0-07.htm";
-					st.takeItems(Items[10],-1);
-					st.addExpAndSp(2586527,0);
-					st.giveItems(57,5000000);
-					st.giveItems(6622,1);
+					st.takeItems(Items[10], -1);
+					st.addExpAndSp(2586527, 0);
+					st.giveItems(57, 5000000);
+					st.giveItems(6622, 1);
 					int Class = getClassId(player);
 					int prevClass = getPrevClass(player);
 					player.setClassId(Class);
 					if (!player.isSubClassActive() && player.getBaseClass() == prevClass)
 						player.setBaseClass(Class);
 					player.broadcastUserInfo();
-					Cast(npc,player,4339,1);
+					Cast(npc, player, 4339, 1);
 					
 					Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
 					if (q != null)
@@ -244,36 +245,36 @@ public class SagasSuperClass extends QuestJython
 				}
 				else
 				{
-					st.takeItems(Items[10],-1);
+					st.takeItems(Items[10], -1);
 					st.playSound("ItemSound.quest_middle");
-					st.set("cond","20");
+					st.set("cond", "20");
 					htmltext = "0-08.htm";
 				}
 			}
 			else if (event.equalsIgnoreCase("1-3"))
 			{
-				st.set("cond","3");
+				st.set("cond", "3");
 				htmltext = "1-05.htm";
 			}
 			else if (event.equalsIgnoreCase("1-4"))
 			{
-				st.set("cond","4");
-				st.takeItems(Items[0],1);
+				st.set("cond", "4");
+				st.takeItems(Items[0], 1);
 				if (Items[11] != 0)
-					st.takeItems(Items[11],1);
-				st.giveItems(Items[1],1);
+					st.takeItems(Items[11], 1);
+				st.giveItems(Items[1], 1);
 				htmltext = "1-06.htm";
 			}
 			else if (event.equalsIgnoreCase("2-1"))
 			{
-				st.set("cond","2");
+				st.set("cond", "2");
 				htmltext = "2-05.htm";
 			}
 			else if (event.equalsIgnoreCase("2-2"))
 			{
-				st.set("cond","5");
-				st.takeItems(Items[1],1);
-				st.giveItems(Items[4],1);
+				st.set("cond", "5");
+				st.takeItems(Items[1], 1);
+				st.giveItems(Items[4], 1);
 				htmltext = "2-06.htm";
 			}
 			else if (event.equalsIgnoreCase("3-5"))
@@ -282,19 +283,19 @@ public class SagasSuperClass extends QuestJython
 			}
 			else if (event.equalsIgnoreCase("3-6"))
 			{
-				st.set("cond","11");
+				st.set("cond", "11");
 				htmltext = "3-02.htm";
 			}
 			else if (event.equalsIgnoreCase("3-7"))
 			{
-				st.set("cond","12");
+				st.set("cond", "12");
 				htmltext = "3-03.htm";
 			}
 			else if (event.equalsIgnoreCase("3-8"))
 			{
-				st.set("cond","13");
-				st.takeItems(Items[2],1);
-				st.giveItems(Items[7],1);
+				st.set("cond", "13");
+				st.takeItems(Items[2], 1);
+				st.giveItems(Items[7], 1);
 				htmltext = "3-08.htm";
 			}
 			else if (event.equalsIgnoreCase("4-1"))
@@ -303,35 +304,35 @@ public class SagasSuperClass extends QuestJython
 			}
 			else if (event.equalsIgnoreCase("4-2"))
 			{
-				st.giveItems(Items[9],1);
-				st.set("cond","18");
+				st.giveItems(Items[9], 1);
+				st.set("cond", "18");
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "4-011.htm";
 			}
 			else if (event.equalsIgnoreCase("4-3"))
 			{
-				st.giveItems(Items[9],1);
-				st.set("cond","18");
-				AutoChat(npc,Text[13].replace("PLAYERNAME",player.getName()));
-				st.set("Quest0","0");
-				cancelQuestTimer("Mob_2 has despawned",npc,player);
+				st.giveItems(Items[9], 1);
+				st.set("cond", "18");
+				AutoChat(npc, Text[13].replace("PLAYERNAME", player.getName()));
+				st.set("Quest0", "0");
+				cancelQuestTimer("Mob_2 has despawned", npc, player);
 				st.playSound("ItemSound.quest_middle");
 				DeleteSpawn(st, npc);
 				return null;
 			}
 			else if (event.equalsIgnoreCase("5-1"))
 			{
-				st.set("cond","6");
-				st.takeItems(Items[4],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "6");
+				st.takeItems(Items[4], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "5-02.htm";
 			}
 			else if (event.equalsIgnoreCase("6-1"))
 			{
-				st.set("cond","8");
-				st.takeItems(Items[5],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "8");
+				st.takeItems(Items[5], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "6-03.htm";
 			}
@@ -341,11 +342,11 @@ public class SagasSuperClass extends QuestJython
 					htmltext = "7-03.htm";
 				else if (st.getInt("spawned") == 0)
 				{
-					L2Npc Mob_1 = st.addSpawn(Mob[0],X[0],Y[0],Z[0]);
-					st.set("spawned","1");
-					st.startQuestTimer("Mob_1 Timer 1",500,Mob_1);
-					st.startQuestTimer("Mob_1 has despawned",300000,Mob_1);
-					AddSpawn(st,Mob_1);
+					L2Npc Mob_1 = st.addSpawn(Mob[0], X[0], Y[0], Z[0]);
+					st.set("spawned", "1");
+					st.startQuestTimer("Mob_1 Timer 1", 500, Mob_1);
+					st.startQuestTimer("Mob_1 has despawned", 300000, Mob_1);
+					AddSpawn(st, Mob_1);
 					htmltext = "7-02.htm";
 				}
 				else
@@ -353,25 +354,25 @@ public class SagasSuperClass extends QuestJython
 			}
 			else if (event.equalsIgnoreCase("7-2"))
 			{
-				st.set("cond","10");
-				st.takeItems(Items[6],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "10");
+				st.takeItems(Items[6], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "7-06.htm";
 			}
 			else if (event.equalsIgnoreCase("8-1"))
 			{
-				st.set("cond","14");
-				st.takeItems(Items[7],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "14");
+				st.takeItems(Items[7], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "8-02.htm";
 			}
 			else if (event.equalsIgnoreCase("9-1"))
 			{
-				st.set("cond","17");
-				st.takeItems(Items[8],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "17");
+				st.takeItems(Items[8], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "9-03.htm";
 			}
@@ -379,116 +380,116 @@ public class SagasSuperClass extends QuestJython
 			{
 				if (st.getInt("Quest0") == 0)
 				{
-					L2Npc Mob_3 = st.addSpawn(Mob[2],X[1],Y[1],Z[1]);
-					L2Npc Mob_2 = st.addSpawn(NPC[4],X[2],Y[2],Z[2]);
-					AddSpawn(st,Mob_3);
-					AddSpawn(st,Mob_2);
-					st.set("Mob_2",String.valueOf(Mob_2.getObjectId()));
-					st.set("Quest0","1");
-					st.set("Quest1","45");
-					st.startRepeatingQuestTimer("Mob_3 Timer 1",500,Mob_3);
-					st.startQuestTimer("Mob_3 has despawned",59000,Mob_3);
-					st.startQuestTimer("Mob_2 Timer 1",500,Mob_2);
-					st.startQuestTimer("Mob_2 has despawned",60000,Mob_2);
+					L2Npc Mob_3 = st.addSpawn(Mob[2], X[1], Y[1], Z[1]);
+					L2Npc Mob_2 = st.addSpawn(NPC[4], X[2], Y[2], Z[2]);
+					AddSpawn(st, Mob_3);
+					AddSpawn(st, Mob_2);
+					st.set("Mob_2", String.valueOf(Mob_2.getObjectId()));
+					st.set("Quest0", "1");
+					st.set("Quest1", "45");
+					st.startRepeatingQuestTimer("Mob_3 Timer 1", 500, Mob_3);
+					st.startQuestTimer("Mob_3 has despawned", 59000, Mob_3);
+					st.startQuestTimer("Mob_2 Timer 1", 500, Mob_2);
+					st.startQuestTimer("Mob_2 has despawned", 60000, Mob_2);
 					htmltext = "10-02.htm";
 				}
-				else if( st.getInt("Quest1") == 45)
+				else if (st.getInt("Quest1") == 45)
 					htmltext = "10-03.htm";
 				else
 					htmltext = "10-04.htm";
 			}
 			else if (event.equalsIgnoreCase("10-2"))
 			{
-				st.set("cond","19");
-				st.takeItems(Items[9],1);
-				Cast(npc,player,4546,1);
+				st.set("cond", "19");
+				st.takeItems(Items[9], 1);
+				Cast(npc, player, 4546, 1);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "10-06.htm";
 			}
 			else if (event.equalsIgnoreCase("11-9"))
 			{
-				st.set("cond","15");
+				st.set("cond", "15");
 				htmltext = "11-03.htm";
 			}
 			else if (event.equalsIgnoreCase("Mob_1 Timer 1"))
 			{
-				AutoChat(npc,Text[0].replace("PLAYERNAME",player.getName()));
+				AutoChat(npc, Text[0].replace("PLAYERNAME", player.getName()));
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_1 has despawned"))
 			{
-				AutoChat(npc,Text[1].replace("PLAYERNAME",player.getName()));
-				st.set("spawned","0");
-				DeleteSpawn(st,npc);
+				AutoChat(npc, Text[1].replace("PLAYERNAME", player.getName()));
+				st.set("spawned", "0");
+				DeleteSpawn(st, npc);
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Archon Hellisha has despawned"))
 			{
-				AutoChat(npc,Text[6].replace("PLAYERNAME",player.getName()));
-				st.set("spawned","0");
-				DeleteSpawn(st,npc);
+				AutoChat(npc, Text[6].replace("PLAYERNAME", player.getName()));
+				st.set("spawned", "0");
+				DeleteSpawn(st, npc);
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_3 Timer 1"))
 			{
-				L2Npc Mob_2 = FindSpawn(player,(L2Npc) L2World.getInstance().findObject(st.getInt("Mob_2")));
+				L2Npc Mob_2 = FindSpawn(player, (L2Npc) L2World.getInstance().findObject(st.getInt("Mob_2")));
 				if (npc.getKnownList().knowsObject(Mob_2))
 				{
-					((L2Attackable) npc).addDamageHate(Mob_2,0,99999);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,Mob_2,null);
-					Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,npc,null);
-					AutoChat(npc,Text[14].replace("PLAYERNAME",player.getName()));
-					cancelQuestTimer("Mob_3 Timer 1",npc,player);
+					((L2Attackable) npc).addDamageHate(Mob_2, 0, 99999);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, Mob_2, null);
+					Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
+					AutoChat(npc, Text[14].replace("PLAYERNAME", player.getName()));
+					cancelQuestTimer("Mob_3 Timer 1", npc, player);
 				}
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_3 has despawned"))
 			{
-				AutoChat(npc,Text[15].replace("PLAYERNAME",player.getName()));
-				st.set("Quest0","2");
-				DeleteSpawn(st,npc);
+				AutoChat(npc, Text[15].replace("PLAYERNAME", player.getName()));
+				st.set("Quest0", "2");
+				DeleteSpawn(st, npc);
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_2 Timer 1"))
 			{
-				AutoChat(npc,Text[7].replace("PLAYERNAME",player.getName()));
-				st.startQuestTimer("Mob_2 Timer 2",1500,npc);
+				AutoChat(npc, Text[7].replace("PLAYERNAME", player.getName()));
+				st.startQuestTimer("Mob_2 Timer 2", 1500, npc);
 				if (st.getInt("Quest1") == 45)
-					st.set("Quest1","0");
+					st.set("Quest1", "0");
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_2 Timer 2"))
 			{
-				AutoChat(npc,Text[8].replace("PLAYERNAME",player.getName()));
-				st.startQuestTimer("Mob_2 Timer 3",10000,npc);
+				AutoChat(npc, Text[8].replace("PLAYERNAME", player.getName()));
+				st.startQuestTimer("Mob_2 Timer 3", 10000, npc);
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_2 Timer 3"))
 			{
 				if (st.getInt("Quest0") == 0)
 				{
-					st.startQuestTimer("Mob_2 Timer 3",13000,npc);
+					st.startQuestTimer("Mob_2 Timer 3", 13000, npc);
 					if (st.getRandom(2) == 0)
-						AutoChat(npc,Text[9].replace("PLAYERNAME",player.getName()));
+						AutoChat(npc, Text[9].replace("PLAYERNAME", player.getName()));
 					else
-						AutoChat(npc,Text[10].replace("PLAYERNAME",player.getName()));
+						AutoChat(npc, Text[10].replace("PLAYERNAME", player.getName()));
 				}
 				return null;
 			}
 			else if (event.equalsIgnoreCase("Mob_2 has despawned"))
 			{
-				st.set("Quest1",String.valueOf(st.getInt("Quest1")+1));
+				st.set("Quest1", String.valueOf(st.getInt("Quest1") + 1));
 				if (st.getInt("Quest0") == 1 || st.getInt("Quest0") == 2 || st.getInt("Quest1") > 3)
 				{
-					st.set("Quest0","0");
+					st.set("Quest0", "0");
 					if (st.getInt("Quest0") == 1)
-						AutoChat(npc,Text[11].replace("PLAYERNAME",player.getName()));
+						AutoChat(npc, Text[11].replace("PLAYERNAME", player.getName()));
 					else
-						AutoChat(npc,Text[12].replace("PLAYERNAME",player.getName()));
-					DeleteSpawn(st,npc);
+						AutoChat(npc, Text[12].replace("PLAYERNAME", player.getName()));
+					DeleteSpawn(st, npc);
 				}
 				else
-					st.startQuestTimer("Mob_2 has despawned",1000,npc);
+					st.startQuestTimer("Mob_2 has despawned", 1000, npc);
 				return null;
 			}
 		}
@@ -498,7 +499,7 @@ public class SagasSuperClass extends QuestJython
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc,L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
@@ -531,7 +532,7 @@ public class SagasSuperClass extends QuestJython
 				}
 				else if (cond == 3)
 				{
-					if (npcId == NPC[1] && st.getQuestItemsCount(Items[0])!= 0)
+					if (npcId == NPC[1] && st.getQuestItemsCount(Items[0]) != 0)
 					{
 						htmltext = "1-02.htm";
 						if (Items[11] == 0 || st.getQuestItemsCount(Items[11]) != 0)
@@ -648,17 +649,17 @@ public class SagasSuperClass extends QuestJython
 							if (getClassId(player) < 131 || getClassId(player) > 135) //in Kamael quests, npc wants to chat for a bit before changing class
 							{
 								st.exitQuest(false);
-								st.set("cond","0");
-								st.addExpAndSp(2299404,0);
-								st.giveItems(57,5000000);
-								st.giveItems(6622,1);
+								st.set("cond", "0");
+								st.addExpAndSp(2299404, 0);
+								st.giveItems(57, 5000000);
+								st.giveItems(6622, 1);
 								int Class = getClassId(player);
 								int prevClass = getPrevClass(player);
 								player.setClassId(Class);
 								if (!player.isSubClassActive() && player.getBaseClass() == prevClass)
 									player.setBaseClass(Class);
 								player.broadcastUserInfo();
-								Cast(npc,player,4339,1);
+								Cast(npc, player, 4339, 1);
 								
 								Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
 								if (q != null)
@@ -675,7 +676,7 @@ public class SagasSuperClass extends QuestJython
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc,L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(qn);
@@ -735,42 +736,43 @@ public class SagasSuperClass extends QuestJython
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc,L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
 		QuestState st2 = findRightState(npc);
-		if (st2 == null) return super.onAttack(npc, player, damage, isPet);
+		if (st2 == null)
+			return super.onAttack(npc, player, damage, isPet);
 		int cond = st2.getInt("cond");
 		QuestState st = player.getQuestState(qn);
 		int npcId = npc.getNpcId();
 		if (npcId == Mob[2] && st == st2 && cond == 17)
 		{
-			st.set("Quest0",String.valueOf(st.getInt("Quest0")+1));
+			st.set("Quest0", String.valueOf(st.getInt("Quest0") + 1));
 			if (st.getInt("Quest0") == 1)
-				AutoChat(npc,Text[16].replace("PLAYERNAME",player.getName()));
+				AutoChat(npc, Text[16].replace("PLAYERNAME", player.getName()));
 			if (st.getInt("Quest0") > 15)
 			{
-				st.set("Quest0","1");
-				AutoChat(npc,Text[17].replace("PLAYERNAME",player.getName()));
-				cancelQuestTimer("Mob_3 has despawned",npc,st2.getPlayer());
-				st.set("Tab","1");
-				DeleteSpawn(st,npc);
+				st.set("Quest0", "1");
+				AutoChat(npc, Text[17].replace("PLAYERNAME", player.getName()));
+				cancelQuestTimer("Mob_3 has despawned", npc, st2.getPlayer());
+				st.set("Tab", "1");
+				DeleteSpawn(st, npc);
 			}
 		}
 		else if (npcId == Mob[1] && cond == 15)
 		{
 			if (st != st2 || (st == st2 && player.isInParty()))
 			{
-				AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
-				cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
-				st2.set("spawned","0");
-				DeleteSpawn(st2,npc);
+				AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+				cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+				st2.set("spawned", "0");
+				DeleteSpawn(st2, npc);
 			}
 		}
 		return super.onAttack(npc, player, damage, isPet);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc,L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (_SpawnList.containsKey(npc) && _SpawnList.get(npc) != player.getObjectId())
 		{
@@ -784,11 +786,12 @@ public class SagasSuperClass extends QuestJython
 					if (obj == quest_player || obj == npc)
 					{
 						QuestState st2 = findRightState(npc);
-						if (st2 == null) return null;
-						AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
-						cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
-						st2.set("spawned","0");
-						DeleteSpawn(st2,npc);
+						if (st2 == null)
+							return null;
+						AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+						cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+						st2.set("spawned", "0");
+						DeleteSpawn(st2, npc);
 					}
 				}
 			}
@@ -797,7 +800,7 @@ public class SagasSuperClass extends QuestJython
 	}
 	
 	@Override
-	public String onKill(L2Npc npc,L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
 		QuestState st = player.getQuestState(qn);
@@ -837,8 +840,8 @@ public class SagasSuperClass extends QuestJython
 			}
 		}
 		
-		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
-		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
+		int[] Archon_Hellisha_Norm = { 18212, 18214, 18215, 18216, 18218 };
+		for (int i = 0; i < Archon_Hellisha_Norm.length; i++)
 		{
 			if (npcId == Archon_Hellisha_Norm[i])
 			{
@@ -848,10 +851,10 @@ public class SagasSuperClass extends QuestJython
 					if (st1.getInt("cond") == 15)
 					{
 						//This is just a guess....not really sure what it actually says, if anything
-						AutoChat(npc,Text[4].replace("PLAYERNAME",st1.getPlayer().getName()));
-						st1.giveItems(Items[8],1);
-						st1.takeItems(Items[3],-1);
-						st1.set("cond","16");
+						AutoChat(npc, Text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
+						st1.giveItems(Items[8], 1);
+						st1.takeItems(Items[3], -1);
+						st1.set("cond", "16");
 						st1.playSound("ItemSound.quest_middle");
 					}
 					
@@ -870,12 +873,12 @@ public class SagasSuperClass extends QuestJython
 					if (st1.getInt("cond") == 6)
 					{
 						if (st1.getInt("kills") < 9)
-							st1.set("kills",String.valueOf(st1.getInt("kills")+1));
+							st1.set("kills", String.valueOf(st1.getInt("kills") + 1));
 						else
 						{
 							st1.playSound("ItemSound.quest_middle");
-							st1.giveItems(Items[5],1);
-							st1.set("cond","7");
+							st1.giveItems(Items[5], 1);
+							st1.set("cond", "7");
 						}
 					}
 					
@@ -886,7 +889,8 @@ public class SagasSuperClass extends QuestJython
 		if (st != null && npcId != Mob[2])
 		{
 			QuestState st2 = findRightState(npc);
-			if (st2 == null) return super.onKill(npc, player, isPet);
+			if (st2 == null)
+				return super.onKill(npc, player, isPet);
 			int cond = st.getInt("cond");
 			if (npcId == Mob[0] && cond == 8)
 			{
@@ -894,15 +898,15 @@ public class SagasSuperClass extends QuestJython
 				{
 					if (st == st2)
 					{
-						AutoChat(npc,Text[12].replace("PLAYERNAME",player.getName()));
-						st.giveItems(Items[6],1);
-						st.set("cond","9");
+						AutoChat(npc, Text[12].replace("PLAYERNAME", player.getName()));
+						st.giveItems(Items[6], 1);
+						st.set("cond", "9");
 						st.playSound("ItemSound.quest_middle");
 					}
 				}
-				cancelQuestTimer("Mob_1 has despawned",npc,st2.getPlayer());
-				st2.set("spawned","0");
-				DeleteSpawn(st2,npc);
+				cancelQuestTimer("Mob_1 has despawned", npc, st2.getPlayer());
+				st2.set("spawned", "0");
+				DeleteSpawn(st2, npc);
 			}
 			else if (npcId == Mob[1] && cond == 15)
 			{
@@ -910,18 +914,18 @@ public class SagasSuperClass extends QuestJython
 				{
 					if (st == st2)
 					{
-						AutoChat(npc,Text[4].replace("PLAYERNAME",player.getName()));
-						st.giveItems(Items[8],1);
-						st.takeItems(Items[3],-1);
-						st.set("cond","16");
+						AutoChat(npc, Text[4].replace("PLAYERNAME", player.getName()));
+						st.giveItems(Items[8], 1);
+						st.takeItems(Items[3], -1);
+						st.set("cond", "16");
 						st.playSound("ItemSound.quest_middle");
 					}
 					else
-						AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
+						AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
 				}
-				cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
-				st2.set("spawned","0");
-				DeleteSpawn(st2,npc);
+				cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+				st2.set("spawned", "0");
+				DeleteSpawn(st2, npc);
 			}
 		}
 		else
@@ -929,21 +933,21 @@ public class SagasSuperClass extends QuestJython
 			if (npcId == Mob[0])
 			{
 				st = findRightState(npc);
-				if (st!= null)
+				if (st != null)
 				{
-					cancelQuestTimer("Mob_1 has despawned",npc,st.getPlayer());
-					st.set("spawned","0");
-					DeleteSpawn(st,npc);
+					cancelQuestTimer("Mob_1 has despawned", npc, st.getPlayer());
+					st.set("spawned", "0");
+					DeleteSpawn(st, npc);
 				}
 			}
 			else if (npcId == Mob[1])
 			{
 				st = findRightState(npc);
-				if (st!=null)
+				if (st != null)
 				{
-					cancelQuestTimer("Archon Hellisha has despawned",npc,st.getPlayer());
-					st.set("spawned","0");
-					DeleteSpawn(st,npc);
+					cancelQuestTimer("Archon Hellisha has despawned", npc, st.getPlayer());
+					st.set("spawned", "0");
+					DeleteSpawn(st, npc);
 				}
 			}
 		}
@@ -958,7 +962,7 @@ public class SagasSuperClass extends QuestJython
 			return super.unload();
 		
 		// unload all subclasses
-		for (int index=0;index<_scripts.size();index++)
+		for (int index = 0; index < _scripts.size(); index++)
 		{
 			if (_scripts.get(index) == null)
 				continue;
@@ -973,7 +977,7 @@ public class SagasSuperClass extends QuestJython
 	public static void main(String[] args)
 	{
 		// initialize superclass
-		new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
+		new SagasSuperClass(-1, "SagasSuperClass", "Saga's SuperClass");
 		
 		// initialize subclasses
 		_scripts.add(new SagaOfEvasSaint());
