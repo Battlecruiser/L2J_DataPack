@@ -191,7 +191,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="159" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -438,7 +440,9 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="221" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -780,7 +784,9 @@
 		<set name="change_weaponId" val="11929" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="210" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1062,7 +1068,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="176" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1142,7 +1150,9 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="245" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1196,7 +1206,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="270" />
 			<set order="0x08" stat="mAtk" val="107" />
@@ -1224,7 +1236,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="193" />
 			<set order="0x08" stat="mAtk" val="107" />
@@ -1501,7 +1515,9 @@
 		<set name="change_weaponId" val="11954" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="231" />
 			<set order="0x08" stat="mAtk" val="107" />
@@ -1579,7 +1595,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="210" />
 			<set order="0x08" stat="mAtk" val="114" />
@@ -1654,7 +1672,9 @@
 		<set name="change_weaponId" val="11968" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="114" />
@@ -1832,7 +1852,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="294" />
 			<set order="0x08" stat="mAtk" val="114" />
@@ -2040,7 +2062,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -2092,7 +2116,9 @@
 		<set name="change_weaponId" val="11984" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -2221,7 +2247,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -2349,7 +2377,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2459,7 +2489,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2514,7 +2546,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
 			<set order="0x08" stat="mAtk" val="132" />

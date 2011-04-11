@@ -1165,7 +1165,9 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="10" />
 			<add order="0x10" stat="accCombat" val="-1.5" />
@@ -1186,7 +1188,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="8" />
 			<add order="0x10" stat="accCombat" val="2" />
@@ -1207,7 +1211,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="10" />
 			<add order="0x10" stat="accCombat" val="-1.5" />
