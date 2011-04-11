@@ -7,12 +7,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;3;4}};{ec_category;{@weapon_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="46, 113, 55, 117, 57, 118" />
-				<!-- destroyer, titan , bounty hunter, fortune seeker, warsmith, maestro -->
+				<player class_id_restriction="46, 113, 55, 117, 57, 118" /> <!-- Weapon Master -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -23,12 +22,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2}};{ec_category;{@dagger_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="8, 93, 23, 101, 36, 108" />
-				<!-- treasure hunter, adventurer, plainswalker, windrider, abysswalker, ghosthunter -->
+				<player class_id_restriction="8, 93, 23, 101, 36, 108" /> <!-- Dagger Master -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -39,12 +37,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2}};{ec_category;{@bow_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="9, 92, 24, 102, 37, 109" />
-				<!-- hawkeye, sagittarius, silverranger, moonlight sentinel, phantom ranger, ghost sentinel -->
+				<player class_id_restriction="9, 92, 24, 102, 37, 109" /> <!-- Bow Master -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -55,12 +52,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2}};{ec_category;{@wizard_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="12, 94, 13, 95, 27, 103, 40, 110" />
-				<!-- sorceror, archmage, necromancer, soultaker, spellsinger, mystic muse, spellhowler, stormscreamer -->
+				<player class_id_restriction="12, 94, 13, 95, 27, 103, 40, 110" /> <!-- Wizard -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -71,12 +67,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2}};{ec_category;{@summon_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="14, 96, 28, 104, 41, 111" />
-				<!-- warlock, arcana lord, elemental summoner, elemental master, phantom summoner, spectral master -->
+				<player class_id_restriction="14, 96, 28, 104, 41, 111" /> <!-- Summoner -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -87,12 +82,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2}};{ec_category;{@heal_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="16, 97, 30, 105, 43, 112" />
-				<!-- bishop, cardinal, elven elder, eva saint, shillien elder, shillien saint -->
+				<player class_id_restriction="16, 97, 30, 105, 43, 112" /> <!-- Healer -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -103,12 +97,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3}};{ec_category;{@buff_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="17, 98, 51, 115, 52, 116" />
-				<!-- prophet, hierophant, overlord, dominator, warcryer, doomcryer -->
+				<player class_id_restriction="17, 98, 51, 115, 52, 116" /> <!-- Enchanter -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -119,12 +112,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{5}};{ec_category;{@weapon_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="127, 131, 128, 132, 129, 133" />
-				<!-- berserker M, doombringer M, soulbreaker M, soulhound M, soulbreaker F, soulhound F -->
+				<player class_id_restriction="127, 131, 128, 132, 129, 133" /> <!-- Kamael Weapon Master -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -135,12 +127,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{5}};{ec_category;{@bow_master2_3}};{ec_subjob;0};{ec_requiredlevel;40}}" />
 		<cond msgId="1518">
 			<and>
-				<player class_id_restriction="130, 134" />
-				<!-- arbalester F, trickster F -->
+				<player class_id_restriction="130, 134" /> <!-- Kamael Bow Master -->
 				<player subclass="false" />
+				<player level="40" />
 			</and>
 		</cond>
 	</item>
@@ -162,7 +153,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{0}}}" />
 		<cond msgId="1518">
 			<player race="Human" />
 		</cond>
@@ -174,7 +164,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{1}}}" />
 		<cond msgId="1518">
 			<player race="Elf" />
 		</cond>
@@ -186,7 +175,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{2}}}" />
 		<cond msgId="1518">
 			<player race="DarkElf" />
 		</cond>
@@ -198,7 +186,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{3}}}" />
 		<cond msgId="1518">
 			<player race="Orc" />
 		</cond>
@@ -210,7 +197,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{4}}}" />
 		<cond msgId="1518">
 			<player race="Dwarf" />
 		</cond>
@@ -222,7 +208,6 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
 		<cond msgId="1518">
 			<player race="Kamael" />
 		</cond>

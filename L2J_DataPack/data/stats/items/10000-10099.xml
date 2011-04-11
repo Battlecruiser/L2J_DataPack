@@ -59,7 +59,9 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="46" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -119,7 +121,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="90" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="46" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -149,7 +153,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="90" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="55" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -180,7 +186,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="90" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="64" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -211,7 +219,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="120" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="126" />
 			<set order="0x08" stat="mAtk" val="76" />
@@ -241,7 +251,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="120" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="151" />
 			<set order="0x08" stat="mAtk" val="76" />
@@ -272,7 +284,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="120" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="176" />
 			<set order="0x08" stat="mAtk" val="76" />
