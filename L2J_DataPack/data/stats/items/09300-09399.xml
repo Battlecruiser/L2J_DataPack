@@ -87,10 +87,10 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
+		<set name="reduced_soulshot" val="37,5" />
 		<cond msgId="1518">
 			<player race="Kamael" />
 		</cond>
-		<set name="reduced_soulshot" val="37,5" />
 		<for>
 			<set order="0x08" stat="pAtk" val="198" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -529,10 +529,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
+		<set name="reduced_soulshot" val="19,1" />
 		<cond msgId="1518">
 			<player race="Kamael" />
 		</cond>
-		<set name="reduced_soulshot" val="19,1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="221" />
 			<set order="0x08" stat="mAtk" val="91" />

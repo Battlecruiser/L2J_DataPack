@@ -1139,10 +1139,10 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3868-1" />
+		<set name="reduced_soulshot" val="19,1" />
 		<cond msgId="1518">
 			<player race="Kamael" />
 		</cond>
-		<set name="reduced_soulshot" val="19,1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="221" />
 			<set order="0x08" stat="mAtk" val="91" />
