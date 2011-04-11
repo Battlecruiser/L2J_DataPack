@@ -377,13 +377,14 @@ public class Antharas extends L2AttackableAIScript
 	private class AntharasSpawn implements Runnable
 	{
 		private int _taskId = 0;
-		private Collection<L2Character> _players = _Zone.getCharactersInside().values();
+		private final Collection<L2Character> _players = _Zone.getCharactersInside().values();
 		
-		AntharasSpawn(int taskId)
+		public AntharasSpawn(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		@Override
 		public void run()
 		{
 			int npcId;
@@ -533,6 +534,7 @@ public class Antharas extends L2AttackableAIScript
 		{
 		}
 		
+		@Override
 		public void run()
 		{
 			L2NpcTemplate template1;
@@ -614,13 +616,14 @@ public class Antharas extends L2AttackableAIScript
 	// Do self destruction.
 	private class SelfDestructionOfBomber implements Runnable
 	{
-		private L2Npc _bomber;
+		private final L2Npc _bomber;
 		
 		public SelfDestructionOfBomber(L2Npc bomber)
 		{
 			_bomber = bomber;
 		}
 		
+		@Override
 		public void run()
 		{
 			L2Skill skill = null;
@@ -640,8 +643,11 @@ public class Antharas extends L2AttackableAIScript
 			}
 			
 			_bomber.doCast(skill);
-			_selfDestructionTask.cancel(false);
-			_selfDestructionTask = null;
+			if (_selfDestructionTask != null)
+			{
+				_selfDestructionTask.cancel(false);
+				_selfDestructionTask = null;
+			}
 		}
 	}
 	
@@ -673,6 +679,7 @@ public class Antharas extends L2AttackableAIScript
 	// At end of activity time.
 	private class CheckActivity implements Runnable
 	{
+		@Override
 		public void run()
 		{
 			Long temp = (System.currentTimeMillis() - _LastAction);
@@ -752,13 +759,14 @@ public class Antharas extends L2AttackableAIScript
 	// Do spawn teleport cube.
 	private class CubeSpawn implements Runnable
 	{
-		private int _type;
+		private final int _type;
 		
-		CubeSpawn(int type)
+		public CubeSpawn(int type)
 		{
 			_type = type;
 		}
 		
+		@Override
 		public void run()
 		{
 			if (_type == 0)
@@ -774,13 +782,14 @@ public class Antharas extends L2AttackableAIScript
 	// UnLock Antharas.
 	private static class UnlockAntharas implements Runnable
 	{
-		private int _bossId;
+		private final int _bossId;
 		
 		public UnlockAntharas(int bossId)
 		{
 			_bossId = bossId;
 		}
 		
+		@Override
 		public void run()
 		{
 			GrandBossManager.getInstance().setBossStatus(_bossId,DORMANT);
@@ -793,13 +802,14 @@ public class Antharas extends L2AttackableAIScript
 	// Action is enabled the boss.
 	private class SetMobilised implements Runnable
 	{
-		private L2GrandBossInstance _boss;
+		private final L2GrandBossInstance _boss;
 		
 		public SetMobilised(L2GrandBossInstance boss)
 		{
 			_boss = boss;
 		}
 		
+		@Override
 		public void run()
 		{
 			_boss.setIsImmobilized(false);
@@ -816,8 +826,8 @@ public class Antharas extends L2AttackableAIScript
 	// Move at random on after Antharas appears.
 	private static class MoveAtRandom implements Runnable
 	{
-		private L2Npc _npc;
-		private L2CharPosition _pos;
+		private final L2Npc _npc;
+		private final L2CharPosition _pos;
 		
 		public MoveAtRandom(L2Npc npc, L2CharPosition pos)
 		{
@@ -825,6 +835,7 @@ public class Antharas extends L2AttackableAIScript
 			_pos = pos;
 		}
 		
+		@Override
 		public void run()
 		{
 			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, _pos);
