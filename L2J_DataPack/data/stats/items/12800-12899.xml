@@ -1117,7 +1117,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3360-1;3868-4;3552-3;3360-1;3655-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1152,7 +1154,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3868-4;3655-1;3552-1;3050-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1186,7 +1190,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3868-4;3655-1;3552-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1315,7 +1321,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3050-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1348,7 +1356,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3068-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1381,7 +1391,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3013-5" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1801,7 +1813,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3834-1;3650-1;3552-1;3068-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1835,7 +1849,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3834-1;3650-1;3552-1;3013-5" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1870,7 +1886,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="oncrit_skill" val="3061-3" />
 		<set name="item_skill" val="3834-1;3650-1;3552-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -2231,7 +2249,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3564-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2264,7 +2284,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3013-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2297,7 +2319,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3566-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
 			<set order="0x08" stat="mAtk" val="132" />

@@ -244,7 +244,9 @@
 		<set name="item_skill" val="3010-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="176" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -277,7 +279,9 @@
 		<set name="oncrit_skill" val="3022-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="210" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -311,7 +315,9 @@
 		<set name="item_skill" val="3360-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="245" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -726,7 +732,9 @@
 		<set name="item_skill" val="3068-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -759,7 +767,9 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -793,7 +803,9 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />

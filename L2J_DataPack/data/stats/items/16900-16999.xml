@@ -1422,7 +1422,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3050-2" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1452,7 +1454,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3013-1" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="210" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1482,7 +1486,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3010-4" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="169" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -1511,7 +1517,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="100" />
 			<set order="0x08" stat="mAtk" val="54" />
@@ -1542,7 +1550,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3068-3" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1573,7 +1583,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3036-6" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="176" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1604,7 +1616,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3036-4" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="141" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -1634,7 +1648,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="83" />
 			<set order="0x08" stat="mAtk" val="54" />
@@ -1665,7 +1681,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3050-2" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -1696,7 +1714,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3360-1" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="245" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -1727,7 +1747,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3360-1" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="198" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -1757,7 +1779,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="117" />
 			<set order="0x08" stat="mAtk" val="54" />

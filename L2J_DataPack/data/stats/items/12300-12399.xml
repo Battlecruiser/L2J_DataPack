@@ -1147,7 +1147,9 @@
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -1267,7 +1269,9 @@
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="159" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -1346,7 +1350,9 @@
 		<set name="price" val="6680500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="221" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -1443,7 +1449,9 @@
 		<set name="price" val="10091400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="210" />
 			<set order="0x08" stat="mAtk" val="99" />

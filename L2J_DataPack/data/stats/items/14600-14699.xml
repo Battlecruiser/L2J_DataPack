@@ -31,7 +31,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 		</for>
@@ -630,7 +629,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="46" />
 			<set order="0x08" stat="mAtk" val="38" />
@@ -657,7 +658,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="56" />
 			<set order="0x08" stat="mAtk" val="38" />
@@ -683,7 +686,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" />
 		<set name="time" val="180" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="65" />
 			<set order="0x08" stat="mAtk" val="38" />

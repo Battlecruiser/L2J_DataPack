@@ -210,7 +210,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3833-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -243,7 +245,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3833-1;3564-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -276,7 +280,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3833-1;3013-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -309,7 +315,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3833-1;3566-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="255" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -462,7 +470,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3872-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -495,7 +505,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3872-1;3552-1;3360-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -529,7 +541,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3872-1;3567-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -564,7 +578,9 @@
 		<set name="oncrit_chance" val="16" />
 		<set name="oncrit_skill" val="3574-1" />
 		<set name="item_skill" val="3872-1;3552-1" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="356" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -1347,7 +1363,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3846-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1379,7 +1397,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3846-2;3566-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1411,7 +1431,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3846-2;3013-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1443,7 +1465,9 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-1;3498-1;3846-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="361" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1625,7 +1649,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3831-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1658,7 +1684,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3831-2;3566-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1691,7 +1719,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3831-2;3013-3" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1724,7 +1754,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3552-1;3498-1;3831-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="302" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -2734,7 +2766,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3869-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -2767,7 +2801,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3552-1;3360-1;3869-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -2801,7 +2837,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3869-2;3573-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -2834,7 +2872,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3869-2;3567-2" />
-		<set name="equip_condition" val="{{ec_race;{5}}}" />
+		<cond msgId="1518">
+			<player race="Kamael" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="401" />
 			<set order="0x08" stat="mAtk" val="151" />
