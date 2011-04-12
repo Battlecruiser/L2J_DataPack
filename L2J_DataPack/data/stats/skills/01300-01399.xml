@@ -3,7 +3,7 @@
 	<skill id="1300" levels="3" name="Servitor Cure">
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> poison,3;bleeding,3 poison,7;bleeding,7 posion,9;bleeding,9 </table>
 		<table name="#aggro"> 379 457 566 </table>
 		<table name="#magicLvl"> 40 48 60 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -16,8 +16,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="negateStats" val="POISON BLEED" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="magicLvl" val="#magicLvl" />
 	</skill>
@@ -33,7 +32,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="negateStats" val="ROOT PARALYZE DEBUFF" />
+		<set name="negateAbnormals" val="root_physically,1;root_magically,1;paralyze,1;attack_time_up,3;speed_down,3" />
 		<set name="aggroPoints" val="582" />
 	</skill>
 	<skill id="1303" levels="2" name="Wild Magic" enchantGroup1="1" enchantGroup2="1">
@@ -1115,29 +1114,29 @@
 		<set name="mpInitialConsume" val="25" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="77" />
-		<set name="power" val="40" />
+		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="WARRIOR_BANE" />
+		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="1345" levels="1" name="Mass Mage Bane">
 		<set name="mpInitialConsume" val="27" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="78" />
-		<set name="power" val="40" />
+		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MAGE_BANE" />
+		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="1346" levels="1" name="Warrior Servitor" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
@@ -1332,31 +1331,31 @@
 		<set name="mpInitialConsume" val="20" />
 		<set name="mpConsume" val="50" />
 		<set name="magicLvl" val="76" />
-		<set name="power" val="80" />
+		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="WARRIOR_BANE" />
+		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="1351" levels="1" name="Mage Bane">
 		<set name="mpInitialConsume" val="20" />
 		<set name="mpConsume" val="50" />
 		<set name="magicLvl" val="77" />
-		<set name="power" val="80" />
+		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MAGE_BANE" />
+		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="1352" levels="1" name="Elemental Protection" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 1280 1360 1440 1520 1600 1680 1760 1840 1920 2000 2080 2160 2240 2320 2400 </table>

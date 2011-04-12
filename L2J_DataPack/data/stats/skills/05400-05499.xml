@@ -649,10 +649,11 @@
 		<set name="magicLvl" val="90" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="negateStats" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="maxNegated" val="20" />
+		<set name="power" val="100" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="CANCEL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="speed_down" effectPower="80" effectType="DEBUFF">
@@ -830,7 +831,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<!-- set name="negateAbnormals" val="invincibility,9" / TODO: Require Support -->
+		<set name="negateAbnormals" val="invincibility,9" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />

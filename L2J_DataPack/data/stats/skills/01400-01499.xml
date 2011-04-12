@@ -111,12 +111,10 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="power" val="#ench34Power" />
-		<enchant3 name="negateStats" val="POISON" />
-		<enchant3 name="negateLvl" val="9" />
+		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="power" val="#ench34Power" />
-		<enchant4 name="negateStats" val="BLEED" />
-		<enchant4 name="negateLvl" val="9" />
+		<enchant4 name="negateAbnormals" val="bleed,9" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>

@@ -1226,8 +1226,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BLEED" />
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="bleed,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1243,8 +1242,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="ROOT" /> <!-- Should be Physical Root only -->
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="root_physically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1260,8 +1258,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="ROOT" /> <!-- Should be Magical Root only -->
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="root_magically,9" /> <!-- Should be Magical Root only -->
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1277,8 +1274,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="ROOT" /> <!-- Should be Physical & Magical Root -->
-		<set name="negateLvl" val="3" />
+		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1294,8 +1290,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="MUTE" /> <!-- Should be Physical mute only -->
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="silence_physical,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1311,8 +1306,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="MUTE" /> <!-- Should be Magical mute only -->
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="silence,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
@@ -1328,8 +1322,7 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="MUTE" /> <!-- Should be Physical & Magical mute -->
-		<set name="negateLvl" val="9" />
+		<set name="negateAbnormals" val="silence_all,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />

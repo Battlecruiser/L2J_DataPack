@@ -579,7 +579,7 @@
 		<table name="#mpInitialConsume"> 4 7 11 </table>
 		<table name="#mpConsume"> 16 28 44 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> poison,3 poison,7 poison,9 </table>
 		<table name="#aggro"> 204 379 566 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -588,8 +588,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="POISON" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
@@ -842,7 +841,7 @@
 	<skill id="34" levels="3" name="Bandage">
 		<table name="#mpConsume"> 19 41 55 </table>
 		<table name="#magicLvl"> 20 46 62 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
 		<table name="#aggro"> 204 438 582 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -850,8 +849,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BLEED" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 	</skill>
@@ -971,7 +969,7 @@
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
 		<table name="#magicLvl"> 40 49 62 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
 		<table name="#aggro"> 379 467 582 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -980,8 +978,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BLEED" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
@@ -1226,11 +1223,9 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="negateStats" val="POISON" />
-		<enchant3 name="negateLvl" val="9" />
+		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="negateStats" val="BLEED" />
-		<enchant4 name="negateLvl" val="9" />
+		<enchant4 name="negateAbnormals" val="bleed,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
@@ -1253,7 +1248,7 @@
 		<table name="#mpInitialConsume"> 5 9 11 </table>
 		<table name="#mpConsume"> 17 33 44 </table>
 		<table name="#magicLvl"> 24 46 62 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
 		<table name="#aggro"> 235 438 582 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1262,8 +1257,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BLEED" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
@@ -1348,12 +1342,10 @@
 		<enchant2 name="hpConsume" val="#ench2HpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="hpConsume" val="#ench34HpConsume" />
-		<enchant3 name="negateStats" val="POISON" />
-		<enchant3 name="negateLvl" val="9" />
+		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="hpConsume" val="#ench34HpConsume" />
-		<enchant4 name="negateStats" val="BLEED" />
-		<enchant4 name="negateLvl" val="9" />
+		<enchant4 name="negateAbnormals" val="bleed,9" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>

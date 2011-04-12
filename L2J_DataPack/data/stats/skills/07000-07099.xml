@@ -8,9 +8,10 @@
 	<skill id="7001" levels="1" name="Dispel Buff">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BUFF" />
+		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="maxNegated" val="20" />
+		<set name="power" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -18,8 +19,7 @@
 	<skill id="7002" levels="1" name="Dispel Debuff">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="DEBUFF" />
+		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -39,7 +39,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="PARALYZE" />
+		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="true" />

@@ -361,7 +361,7 @@
 	<skill id="1012" levels="3" name="Cure Poison">
 		<table name="#mpInitialConsume"> 2 6 11 </table>
 		<table name="#mpConsume"> 8 24 44 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> poison,3 poison,7 poison,9 </table>
 		<table name="#aggro"> 121 331 566 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -369,8 +369,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="POISON" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
@@ -448,7 +447,7 @@
 	<skill id="1018" levels="3" name="Purify">
 		<table name="#mpInitialConsume"> 8 10 11 </table>
 		<table name="#mpConsume"> 31 38 44 </table>
-		<table name="#negateLvl"> 3 7 9 </table>
+		<table name="#negateAbnormals"> poison,3;bleeding,3;paralyze,1 poison,7;bleeding,7;paralyze,1;turn_stone,1 poison,9;bleeding,9;paralyze,1;turn_stone,1 </table>
 		<table name="#aggro"> 418 495 566 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -460,8 +459,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="negateStats" val="POISON BLEED PARALYZE" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="aggroPoints" val="#aggro" />
 	</skill>
 	<skill id="1020" levels="27" name="Vitalize" enchantGroup1="2" enchantGroup2="2">
@@ -471,7 +469,7 @@
 		<table name="#mpInitialConsume"> 18 18 19 20 20 20 21 22 22 23 23 24 24 24 24 25 25 26 26 27 27 27 28 28 28 29 29 </table>
 		<table name="#mpConsume"> 69 71 73 77 77 79 83 85 87 89 91 93 94 94 96 98 99 101 103 105 106 108 109 111 112 113 115 </table>
 		<table name="#power"> 440 454 467 494 508 521 548 562 575 588 602 615 627 640 653 665 677 689 700 711 722 733 743 753 763 772 780 </table>
-		<table name="#negateLvl"> 3 3 3 3 3 7 7 7 7 7 7 7 7 7 7 7 7 7 9 9 9 9 9 9 9 9 9 </table>
+		<table name="#negateAbnormals"> poison,3;bleeding,3 poison,3;bleeding,3 poison,3;bleeding,3 poison,3;bleeding,3 poison,3;bleeding,3 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,7;bleeding,7 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 poison,9;bleeding,9 </table>
 		<table name="#ench1power"> 785 789 794 798 803 807 812 816 821 825 829 834 838 843 847 852 856 861 865 870 874 879 883 887 892 896 901 905 910 914 </table>
 		<table name="#aggro"> 528 544 561 593 609 626 658 674 690 706 722 737 753 768 783 798 812 826 840 854 867 879 892 904 915 926 936 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -485,8 +483,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="negateStats" val="POISON BLEED" />
-		<set name="negateLvl" val="#negateLvl" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1power" />
