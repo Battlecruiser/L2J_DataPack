@@ -1580,7 +1580,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="NEGATE" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="negateStats" val="ROOT" />
+		<set name="negateAbnormals" val="root_physically,3" />
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
 		<set name="target" val="TARGET_SELF" />
@@ -1754,10 +1754,11 @@
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">
 		<table name="#mpConsume"> 33 37 </table>
+		<table name="#negateAbnormals"> root_physically,3;root_magically,3 speed_down,3;root_physically,3;root_magically,3 </table>
 		<table name="#numCharges"> 2 3 </table> <!-- 2 3 Charges are consumed -->
 		<set name="hitTime" val="3000" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="negateStats" val="ROOT" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="numCharges" val="#numCharges" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="4000" />

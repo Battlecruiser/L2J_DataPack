@@ -744,7 +744,7 @@
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="600" />
-		<set name="negateStats" val="SLEEP" />
+		<set name="negateAbnormals" val="sleep,1" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
