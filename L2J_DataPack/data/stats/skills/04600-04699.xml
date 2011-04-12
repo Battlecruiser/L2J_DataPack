@@ -414,7 +414,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="negateStats" val="SLEEP" />
+		<set name="negateAbnormals" val="sleep,1" />
 		<set name="aggroPoints" val="100" />
 	</skill>
 	<skill id="4620" levels="12" name="Paralysis">
@@ -1054,7 +1054,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="mpConsume" val="42" />
 		<set name="mpInitialConsume" val="11" />
-		<set name="negateStats" val="ROOT" />
+		<set name="negateAbnormals" val="root_magically,1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="NEGATE" />
@@ -1064,11 +1064,12 @@
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mpConsume"> 23 42 66 </table>
 		<table name="#mpInitialConsume"> 6 11 17 </table>
+		<table name="#negateAbnormals"> speed_down,1 speed_down,2 speed_down,3 </table>
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="negateStats" val="DEBUFF" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="NEGATE" />
@@ -1079,7 +1080,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="mpConsume" val="42" />
 		<set name="mpInitialConsume" val="11" />
-		<set name="negateStats" val="MUTE" />
+		<set name="negateAbnormals" val="silence,1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="NEGATE" />

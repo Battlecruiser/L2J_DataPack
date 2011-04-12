@@ -36,12 +36,12 @@
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="ignoreResists" val="true" /> <!-- TEMP FIX -->
-		<set name="skillType" val="CANCEL_STATS" />
+		<set name="ignoreResists" val="true" />
+		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="negateStats" val="DEBUFF" />
+		<set name="negateAbnormals" val="attack_time_up;hit_down;pa_down" />
 		<set name="aggroPoints" val="#aggroPoints" />
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
@@ -99,14 +99,14 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="CANCEL_STATS" />
+		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
-		<set name="ignoreResists" val="true" /> <!-- TEMP FIX -->
+		<set name="ignoreResists" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
-		<set name="negateStats" val="SLEEP ROOT STUN PARALYZE MUTE" />
+		<set name="negateAbnormals" val="sleep;root_magically;stun;paralyze;silence" />
 		<set name="aggroPoints" val="#aggroPoints" />
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">

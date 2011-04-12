@@ -33,7 +33,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	 * Third Class Transfer Quest - Duelist: The quest asks for "Top-grade Meat" which can now be acquired directly through NPC Tunatun, instead of through an additional quest from NPC Tunatun.
 	 */
 	private final int TUNATUN = 31537;
-	private static int TOPQUALITYMEAT = 7546;
+	private final int TOPQUALITYMEAT = 7546;
 	
 	public SagaOfTheDuelist()
 	{

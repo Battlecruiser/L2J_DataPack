@@ -610,9 +610,9 @@
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->
 		<set name="target" val="TARGET_SELF" />
+		<set name="maxNegated" val="20" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="ROOT PARALYZE DEBUFF POISON BLEED" />
+		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="power" val="100" />
 		<set name="hitTime" val="2000" />
 		<set name="staticHitTime" val="true" />

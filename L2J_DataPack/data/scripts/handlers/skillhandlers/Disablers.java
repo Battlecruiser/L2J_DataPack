@@ -138,7 +138,7 @@ public class Disablers implements ISkillHandler
 			if (!(obj instanceof L2Character))
 				continue;
 			L2Character target = (L2Character) obj;
-			if (target.isDead() || (target.isInvul() && !target.isParalyzed())) // bypass if target is null, dead or invul (excluding invul from Petrification)
+			if (target.isDead() || ((target.isInvul() && type != L2SkillType.NEGATE) && !target.isParalyzed())) // bypass if target is null, dead or invul (excluding invul from Petrification)
 				continue;
 			
 			shld = Formulas.calcShldUse(activeChar, target, skill);
@@ -516,10 +516,21 @@ public class Disablers implements ISkillHandler
 								target.stopSkillEffects(skill.getNegateId()[i]);
 						}
 					}
-					
-					
-					// all others negate type skills
-					else
+					else if (skill.getNegateAbnormals() != null)
+					{
+						for (L2Effect effect : target.getAllEffects())
+						{
+							if (effect == null)
+								continue;
+							
+							for (String negateAbnormalType : skill.getNegateAbnormals().keySet())
+							{
+								if (negateAbnormalType.equalsIgnoreCase(effect.getAbnormalType()) && skill.getNegateAbnormals().get(negateAbnormalType) >= effect.getAbnormalLvl())
+									effect.exit();
+							}
+						}
+					}
+					else // all others negate type skills
 					{
 						int removedBuffs = (skill.getMaxNegatedEffects() > 0) ? 0 : -2;
 						
