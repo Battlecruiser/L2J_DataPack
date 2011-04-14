@@ -50,8 +50,11 @@
 		<node X="12945" Y="184009" />
 	</zone>
 
+	<!-- Town Zones needs correct ID (from MerchantPriceConfig) to determine tax ! -->
+	<!-- DO NOT REMOVE IDs -->
+
 	<!-- Town Zones -->
-	<zone name="Giran Castle Town" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3300">
+	<zone name="Giran Castle Town" id="11020" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3300">
 		<stat name="townId" val="9" />
 		<stat name="taxById" val="3" />
 		<node X="77170" Y="147420" />
@@ -123,7 +126,7 @@
 		<spawn X="79832" Y="154009" Z="-3500" isChaotic="true" />
 		<spawn X="75501" Y="147178" Z="-3530" isChaotic="true" />
 	</zone>
-	<zone name="Dark Elven Village" type="TownZone" shape="NPoly" minZ="-4700" maxZ="-3600">
+	<zone name="Dark Elven Village" id="11021" type="TownZone" shape="NPoly" minZ="-4700" maxZ="-3600">
 		<stat name="townId" val="1" />
 		<stat name="taxById" val="4" />
 		<node X="15704" Y="15397" />
@@ -172,7 +175,7 @@
 		<spawn X="-13632" Y="21872" Z="-3620" isChaotic="true" />
 		<spawn X="-11984" Y="21232" Z="-3600" isChaotic="true" />
 	</zone>
-	<zone name="Talking Island" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3700">
+	<zone name="Talking Island" id="11022" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3700">
 		<stat name="townId" val="2" />
 		<stat name="taxById" val="1" />
 		<node X="-83739" Y="245733" />
@@ -252,7 +255,7 @@
 		<spawn X="-83328" Y="238304" Z="-3700" isChaotic="true" />
 		<spawn X="-91296" Y="236272" Z="-3690" isChaotic="true" />
 	</zone>
-	<zone name="Elven Village" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-2750">
+	<zone name="Elven Village" id="11023" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-2750">
 		<stat name="townId" val="3" />
 		<stat name="taxById" val="4" />
 		<node X="45364" Y="46535" />
@@ -333,7 +336,7 @@
 		<spawn X="51232" Y="59216" Z="-3320" isChaotic="true" />
 		<spawn X="49808" Y="56240" Z="-3430" isChaotic="true" />
 	</zone>
-	<zone name="Orc Village" type="TownZone" shape="NPoly" minZ="-400" maxZ="-200">
+	<zone name="Orc Village" id="11024" type="TownZone" shape="NPoly" minZ="-400" maxZ="-200">
 		<stat name="townId" val="4" />
 		<stat name="taxById" val="9" />
 		<node X="-45528" Y="-110079" />
@@ -405,7 +408,7 @@
 		<spawn X="-39136" Y="-112688" Z="-1844" isChaotic="true" />
 		<spawn X="-37888" Y="-112608" Z="-1772" isChaotic="true" />
 	</zone>
-	<zone name="Gludin Village" type="TownZone" shape="NPoly" minZ="-3300" maxZ="-3000">
+	<zone name="Gludin Village" id="11025" type="TownZone" shape="NPoly" minZ="-3300" maxZ="-3000">
 		<stat name="townId" val="5" />
 		<stat name="taxById" val="1" />
 		<node X="-84867" Y="149371" />
@@ -462,7 +465,7 @@
 		<spawn X="-75440" Y="162672" Z="-3350" isChaotic="true" />
 		<spawn X="-81760" Y="161248" Z="-3200" isChaotic="true" />
 	</zone>
-	<zone name="Dwarven Village" type="TownZone" shape="NPoly" minZ="-1600" maxZ="-800">
+	<zone name="Dwarven Village" id="11026" type="TownZone" shape="NPoly" minZ="-1600" maxZ="-800">
 		<stat name="townId" val="6" />
 		<stat name="taxById" val="9" />
 		<node X="115499" Y="-176771" />
@@ -523,7 +526,7 @@
 		<spawn X="119264" Y="-188736" Z="-3203" isChaotic="true" />
 		<spawn X="118656" Y="-187760" Z="-2828" isChaotic="true" />
 	</zone>
-	<zone name="Gludio Castle Town" type="TownZone" shape="NPoly" minZ="-3200" maxZ="-2900">
+	<zone name="Gludio Castle Town" id="11027" type="TownZone" shape="NPoly" minZ="-3200" maxZ="-2900">
 		<stat name="townId" val="7" />
 		<stat name="taxById" val="1" />
 		<node X="-14960" Y="121148" />
@@ -581,7 +584,7 @@
 		<spawn X="-20176" Y="124512" Z="-3350" isChaotic="true" />
 		<spawn X="-19040" Y="121632" Z="-3200" isChaotic="true" />
 	</zone>
-	<zone name="Dion Castle Town" type="TownZone" shape="NPoly" minZ="-3250" maxZ="-2600">
+	<zone name="Dion Castle Town" id="11028" type="TownZone" shape="NPoly" minZ="-3250" maxZ="-2600">
 		<stat name="townId" val="8" />
 		<stat name="taxById" val="2" />
 		<node X="15264" Y="141764" />
@@ -640,7 +643,7 @@
 		<spawn X="18054" Y="170263" Z="-3400" isChaotic="true" />
 		<spawn X="17931" Y="170381" Z="-3400" isChaotic="true" />
 	</zone>
-	<zone name="Town of Oren" type="TownZone" shape="NPoly" minZ="-2250" maxZ="-1400">
+	<zone name="Town of Oren" id="11029" type="TownZone" shape="NPoly" minZ="-2250" maxZ="-1400">
 		<stat name="townId" val="10" />
 		<stat name="taxById" val="4" />
 		<node X="84014" Y="52245" />
@@ -707,7 +710,7 @@
 		<spawn X="70139" Y="55885" Z="-3550" isChaotic="true" />
 		<spawn X="80236" Y="45675" Z="-3150" isChaotic="true" />
 	</zone>
-	<zone name="Hunter Village" type="TownZone" shape="NPoly" minZ="-2800" maxZ="-1500">
+	<zone name="Hunter Village" id="11030" type="TownZone" shape="NPoly" minZ="-2800" maxZ="-1500">
 		<stat name="townId" val="11" />
 		<stat name="taxById" val="5" />
 		<node X="115318" Y="74260" />
@@ -752,7 +755,7 @@
 		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
 		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
 	</zone>
-	<zone name="Town of Aden" type="TownZone" shape="NPoly" minZ="-2700" maxZ="-1900">
+	<zone name="Town of Aden" id="11031" type="TownZone" shape="NPoly" minZ="-2700" maxZ="-1900">
 		<stat name="townId" val="12" />
 		<stat name="taxById" val="5" />
 		<node X="143209" Y="25727" />
@@ -810,7 +813,7 @@
 		<spawn X="137708" Y="15640" Z="-3800" isChaotic="true" />
 		<spawn X="136629" Y="28127" Z="-3258" isChaotic="true" />
 	</zone>
-	<zone name="Town of Goddard" type="TownZone" shape="NPoly" minZ="-3550" maxZ="-2600">
+	<zone name="Town of Goddard" id="11032" type="TownZone" shape="NPoly" minZ="-3550" maxZ="-2600">
 		<stat name="townId" val="13" />
 		<stat name="taxById" val="7" />
 		<node X="144345" Y="-53353" />
@@ -882,7 +885,7 @@
 		<spawn X="149680" Y="-59600" Z="-3440" isChaotic="true" />
 		<spawn X="149360" Y="-60576" Z="-3520" isChaotic="true" />
 	</zone>
-	<zone name="Rune Castle Town" type="TownZone" shape="Cuboid" minZ="-1200" maxZ="3000">
+	<zone name="Rune Castle Town" id="11033" type="TownZone" shape="Cuboid" minZ="-1200" maxZ="3000">
 		<stat name="townId" val="14" />
 		<stat name="taxById" val="8" />
 		<node X="47150" Y="-44815" />
@@ -916,7 +919,7 @@
 		<spawn X="42496" Y="-58192" Z="-3264" isChaotic="true" />
 		<spawn X="40784" Y="-59888" Z="-2600" isChaotic="true" />
 	</zone>
-	<zone name="Heine" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3400">
+	<zone name="Heine" id="11034" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3400">
 		<stat name="townId" val="15" />
 		<stat name="taxById" val="6" />
 		<node X="111391" Y="216329" />
@@ -998,7 +1001,7 @@
 		<spawn X="100784" Y="218272" Z="-3420" isChaotic="true" />
 		<spawn X="100928" Y="218560" Z="-3420" isChaotic="true" />
 	</zone>
-	<zone name="Town of Schuttgart" type="TownZone" shape="NPoly" minZ="-2350" maxZ="-1200">
+	<zone name="Town of Schuttgart" id="11035" type="TownZone" shape="NPoly" minZ="-2350" maxZ="-1200">
 		<stat name="townId" val="17" />
 		<stat name="taxById" val="9" />
 		<node X="91098" Y="-144458" />
@@ -1056,7 +1059,7 @@
 		<spawn X="42496" Y="-58192" Z="-3264" isChaotic="true" />
 		<spawn X="40784" Y="-59888" Z="-2600" isChaotic="true" />
 	</zone>
-	<zone name="Floran Village" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-3400">
+	<zone name="Floran Village" id="11036" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-3400">
 		<stat name="townId" val="16" />
 		<stat name="taxById" val="2" />
 		<node X="16529" Y="170516" />
@@ -1104,7 +1107,7 @@
 		<spawn X="18054" Y="170263" Z="-3451" isChaotic="true" />
 		<spawn X="17931" Y="170381" Z="-3451" isChaotic="true" />
 	</zone>
-	<zone name="Kamael Village" type="TownZone" shape="NPoly" minZ="250" maxZ="2250">
+	<zone name="Kamael Village" id="11038" type="TownZone" shape="NPoly" minZ="250" maxZ="2250">
 		<stat name="townId" val="20" />
 		<stat name="taxById" val="5" />
 		<node X="-121743" Y="44424" />
@@ -1148,7 +1151,7 @@
 		<spawn X="-115997" Y="41736" Z="1241" />
 		<spawn X="-121425" Y="59778" Z="-2264" isChaotic="true" /> <!-- Guess -->
 	</zone>
-	<zone name="Fantasy Isle" type="TownZone" shape="Cuboid" minZ="-4324" maxZ="3097">
+	<zone name="Fantasy Isle" id="11039" type="TownZone" shape="Cuboid" minZ="-4324" maxZ="3097">
 		<stat name="townId" val="22" />
 		<stat name="taxById" val="14" />
 		<node X="-88871" Y="-77664" />
@@ -1157,7 +1160,7 @@
 		<spawn X="-59078" Y="-56898" Z="-2032" />
 		<spawn X="-60009" Y="-56328" Z="-2032" />
 	</zone>
-	<zone name="Keucereus" type="TownZone" shape="Cuboid" minZ="1080" maxZ="3210">
+	<zone name="Keucereus" id="11040" type="TownZone" shape="Cuboid" minZ="1080" maxZ="3210">
 		<stat name="townId" val="33" />
 		<node X="-187342" Y="238059" />
 		<node X="-181849" Y="247548" />
@@ -1183,7 +1186,7 @@
 	</zone>
 
 	<!-- (vertices, min Z & Max Z are estimated) -->
-	<zone name="Primeval Isle (Town Zone)" type="TownZone" shape="Cuboid" minZ="-4300" maxZ="2700">
+	<zone name="Primeval Isle (Town Zone)" id="40001" type="TownZone" shape="Cuboid" minZ="-4300" maxZ="2700">
 		<stat name="townId" val="19" />
 		<node X="0" Y="-32768" />
 		<node X="32678" Y="0" />
