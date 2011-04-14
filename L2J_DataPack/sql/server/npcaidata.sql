@@ -5879,8 +5879,8 @@ INSERT INTO `npcaidata` VALUES
 (29017,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'orfen_clan',2700,NULL,NULL,NULL,'fighter'),
 (29018,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'orfen_clan',2900,NULL,NULL,NULL,'balanced'),
 (29019,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'balanced'),
-(29020,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,300,'archangel',NULL,'balanced'),
-(29021,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'archangel_clan',300,300,'baium',NULL,'balanced'),
+(29020,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'balanced'),
+(29021,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'archangel_clan',300,NULL,NULL,NULL,'balanced'),
 (29022,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'balanced'),
 (29023,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'fighter'),
 (29024,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'fighter'),
@@ -10112,3 +10112,11 @@ INSERT INTO `npcaidata` VALUES
 (36598,15,NULL,0,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'balanced'),
 (36599,15,NULL,0,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',300,NULL,NULL,NULL,'balanced');
 
+-- Enemy Clans (TEMP FIX until AI is done).
+-- Enchanted Valley
+UPDATE `npcaidata` SET enemyRange=300, enemyClan='all_elemental2_clan' WHERE clan='all_elemental_clan';
+UPDATE `npcaidata` SET enemyRange=300, enemyClan='all_elemental_clan' WHERE clan='all_elemental2_clan';
+-- Baium & Archangels
+UPDATE `npcaidata` SET clan='baium' WHERE npc_id=29020;
+UPDATE `npcaidata` SET enemyRange=300, enemyClan='archangel_clan' WHERE clan='baium_clan';
+UPDATE `npcaidata` SET enemyRange=300, enemyClan='baium_clan' WHERE clan='archangel_clan';
