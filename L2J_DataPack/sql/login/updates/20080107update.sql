@@ -1,0 +1,1 @@
+ALTER TABLE `characters` DROP `acc`, DROP `crit`, DROP `evasion`, DROP `mAtk`, DROP `mDef`, DROP `mSpd`, DROP `pAtk`, DROP `pDef`, DROP `pSpd`, DROP `runSpd`, DROP `walkSpd`, DROP `str`, DROP `con`, DROP `dex`, DROP `_int`, DROP `men`, DROP `wit`, DROP `movement_multiplier`, DROP `attack_speed_multiplier`, DROP `colRad`, DROP `colHeight`, DROP `maxload`;

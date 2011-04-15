@@ -1,0 +1,1 @@
+ALTER TABLE `custom_npc` ADD `enchant` INT NOT NULL default 0 after `armor`;

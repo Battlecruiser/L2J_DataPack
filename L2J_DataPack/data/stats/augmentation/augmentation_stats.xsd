@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="stat" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="table" minOccurs="2" maxOccurs="2">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:token">
+											<xs:attribute name="name" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="#combinedValues" />
+														<xs:enumeration value="#soloValues" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="accCombat" />
+									<xs:enumeration value="mAtk" />
+									<xs:enumeration value="maxCp" />
+									<xs:enumeration value="maxHp" />
+									<xs:enumeration value="maxMp" />
+									<xs:enumeration value="mDef" />
+									<xs:enumeration value="pAtk" />
+									<xs:enumeration value="pDef" />
+									<xs:enumeration value="rCrit" />
+									<xs:enumeration value="regCp" />
+									<xs:enumeration value="regHp" />
+									<xs:enumeration value="regMp" />
+									<xs:enumeration value="rEvas" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

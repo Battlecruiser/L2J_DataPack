@@ -1,0 +1,1 @@
+ALTER TABLE `castle` MODIFY `treasury` BIGINT NOT NULL default 0;

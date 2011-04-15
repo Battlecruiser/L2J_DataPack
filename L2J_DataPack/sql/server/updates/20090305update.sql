@@ -1,0 +1,1 @@
+ALTER TABLE `grandboss_list` DROP PRIMARY KEY, ADD PRIMARY KEY (`player_id`,`zone`);

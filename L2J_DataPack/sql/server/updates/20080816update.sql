@@ -1,0 +1,1 @@
+ALTER TABLE `character_skills_save` ADD `systime` BIGINT UNSIGNED NOT NULL AFTER `reuse_delay`;

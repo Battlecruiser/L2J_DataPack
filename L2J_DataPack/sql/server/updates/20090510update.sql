@@ -1,0 +1,1 @@
+ALTER TABLE `characters` add `bookmarkslot` int(5) NOT NULL DEFAULT '0' after `death_penalty_level`;

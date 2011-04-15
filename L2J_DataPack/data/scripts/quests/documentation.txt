@@ -1,0 +1,322 @@
+Quest scripts define the complete or near-complete flow of events that take place from the 
+start to the end of a quest.  This includes, but is not limitted to, starting and accepting 
+the quest, following complex dialogs, attacking or killing mobs, finding quest items, spawning
+quest mobs, completing a quest, and getting rewards.
+
+In order for quest scripts to function properly, at least 3 classes must be imported from Java:
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+
+In addition, the jython library "sys" is generally imported for convinience.  More classes can
+be imported as needed, in order to access other components of the core and enhance the abilities
+of the script.
+
+Jython quest scripts essentially inherit from the Java class com.l2jserver.gameserver.model.quest.Quest
+Developers who are comfortable with Java may read the source code for this class, as provided by the
+l2jserver project (www.l2jserver.com) for full details and available functions.  Alternatively, one
+may read forward in this documentation.
+
+
+AVAILABLE TRIGGER FUNCTIONS:
+There exist a set of functions that are predefined for quests and are triggered from various actions.
+These functions, their triggers, and the parameters passed into the script are defined below:
+
+1) onAdvEvent(self, event, npc, player)
+	This function is called whenever a player clicks on a link in a quest dialog and whenever 
+		a timer fires.  Also, should other functions (see below - onTalk, onKill, etc) are not 
+		implemented, this function will be called in their place.   
+	The	parameter "npc" contains a reference to the instance of NPC associated with this event.  
+		This may be the NPC registered in a timer, or the NPC with whom a player is speaking, etc.
+		This parameter may be NULL in certain circumstances.
+	The parameter "player" contains a reference to the player participating in this function.  It
+		may be the player speaking to the NPC, or the player who caused a timer to start (and owns 
+		that timer).
+		This parameter may be NULL in certain circumstances.
+	The parameter "event" contains a string identifier for the event.  Generally, this string
+		is passed directly via the link.  For example:
+		<a action="bypass -h Quest 626_ADarkTwilight 31517-1.htm">hello</a>
+		The above link sets the event variable to "31517-1.htm" for the quest 626_ADarkTwilight
+		In the case of timers, this will be the name of the timer.  This parameter serves as a 
+		sort of identifier.
+	The parameter "self" is a reference to the quest itself.  You may use self.XXXX where XXXX is
+		any function defined in the parent class of your quest.
+2) onEvent(self, event, st)
+	This function is called in place of onAdvEvent if the former is not implemented.  If a script
+		contains BOTH onAdvEvent AND onEvent, then onEvent will never be called unless the script's
+		onAdvEvent explicitely calls onEvent within.  
+	The	parameter "st" contains a reference to the QuestState of the player who used the link or 
+		started the timer.
+	The parameters "event" and "self" are same as in onAdvEvent.
+3) onAttack(self, npc, player, damage, isPet, skill)
+	This function is called whenever a player attacks an NPC that is registered for the quest
+	The parameter "npc" contains a reference to the exact instance of the NPC that got attacked
+	The parameter "player" contains a reference to the exact instance of the player who attacked.
+	The parameter "damage" is a number, representing the total damage that this attack has inflicted to the NPC.
+	The parameter "isPet" is a boolean.  When false it denotes that the attacker was indeed the player.  
+		If true it specifies that the damage was actually dealt by the player's pet.
+	The parameter "skill" is a skill that player used to attack NPC.
+	The parameter "self" works the same as in onEvent.
+4) onAttack(self, npc, player, damage, isPet)
+	This function is called in place of onAttack(with skill) if the former is not implemented.  If a script
+		contains BOTH onAttacks, then this one (without skill) will never be called unless the script's
+		onAttack(with skill) explicitely calls onAttack(without skill) within.
+4) onKill(self, npc, player, isPet)
+	This function is called whenever a player kills an NPC that is registered for the quest
+	All parameters are the same as in onAttack, lacking the damage parameter, of course.
+5) onSkillSee(self, npc, caster, skill, targets, isPet)
+	This function is called whenever a player casts a skill near a registered NPC (1000 distance)
+	The "npc" and "isPet" parameters are same as with onAttack.
+	the "caster" parameter references the actual instance of the player who cast the spell.
+	The "skill" parameter is a referece to the actual skill that was used (from which info about the id and level
+		of the skill can be obtained).
+	The "targets" parameter is an array of all objects (can be any type of object, including mobs and players) that
+		are affected by the skill.
+	NOTE: if a skill does damage, BOTH onSkillSee AND onAttack will be triggered for the damaged NPC!  However, 
+		only onSkillSee will be triggered if the skill does no damage, or if it damages an NPC who has no onAttack
+		registration while near another NPC who has an onSkillSee registration.
+6) onTalk(self,npc, player)
+	This function is called whenever a player clicks to the "Quest" link of an NPC that is registered 
+	for the quest.
+	All parameters are the same as in onAttack
+7) onFirstTalk(self,npc, player)
+	This function is called whenever a player talks to an NPC that is registered for the quest.  That is, 
+	it is triggered from the very first click on the NPC, not via another dialog.
+	NOTE 1: Each NPC can be registered to at most one quest for triggering this function.  In other words, 
+		the same one NPC cannot respond to an "onFirstTalk" request from two different quests.
+		Attempting to register an NPC in two different quests for this function will result in one of the
+		two registration being ignored.
+	NOTE 2: Since a Quest link isn't clicked in order to reach this, a quest state can be invalid within this
+		function.  The coder of the script may need to create a new quest state (if necessary), by using:
+		st = self.newQuestState(player)	
+	NOTE 3: the returned value of onFirstTalk replaces the default html that would have otherwise been loaded 
+		from a subfolder of .../gameserver/data/html/...
+		If you wish to show the default html, within onFirstTalk do npc.showChatWindow(player) and then return ""
+	All parameters are the same as in onAttack.
+8) onDeath (self, npc, character, st) 
+	This function is called whenever an exact INSTANCE of a character who was previously registered for this 
+	event dies.  The registration for onDeath events is NOT done via the quest itself, but it is instead handled
+	by the QuestState of a particular player.
+	The parameter "npc" contains a reference to the exact instance of the NPC that KILLED the character.
+	The parameter "character" contains a reference to the exact instance of the character that got killed.
+	The parameter "st" contains a reference to the QuestState of whomever was interested (waiting) for this kill
+	The parameter "self" works the same as in onEvent.
+9) onSpawn (self, npc)
+	Currently the only function that has no reference to a player.  It is triggered whenever an NPC spawns or
+	respawns and passes a reference to the newly (re)spawned NPC.  It is useful for initializations, starting
+	quest timers, displaying chat (NpcSay), and more.
+	The parameter "npc" contains a reference to the exact instance of the NPC who just (re)spawned.
+10) onFactionCall(self, npc, caller, attacker, isPet)
+	Triggered when an npc is called by another npc in the same faction.
+	The parameter "npc" contains a reference to the exact instance of the NPC who is being asked for help
+	The parameter "caller" contains a reference to the exact instance of the NPC who is asking for help
+	The parameter "attacker" contains a reference to the exact instance of the player who attacked the caller
+	The "isPet" parameters works same as with onAttack.
+11) onAggroRangeEnter(self, npc, player, isPet)
+	This is currently here only as a place-holder.  This function is NOT yet called from any part of the code.
+	The idea is it will be called whenever a player or pet come near an aggro mob (enter its aggro range).
+	The parameters "npc", "player", and "isPet" work similar to onAttack.
+	
+12) REGISTRATION FUNCTIONS:
+	The functions described below have a single purpose: To register an NPC for event triggers.  Simply put,
+	an NPC must be registered in a quest for a particular event in order for the NPC to respond to the occurence
+	of thatevent.  
+	Registration Functions are NOT called automatically.  Instead, they should be added at the bottom of your 
+	quest script.
+	Descriptions of all registration functions follow:
+	a) addStartNpc(npcId)
+		Registers an NPC for onTalk events.  These NPCs are considered start NPCs.  Therefore, the player
+		does NOT need to have started the quest in order to access the onTalk section of the quest.
+		Instead, when a player talks to NPCs registered by addStartNpc, then the players automatically get
+		a CREATED state for this quest.
+		The parameter "npcId" contains the id of the template for this NPC.
+	b) addTalkId(npcId)
+		Registers an NPC for onTalk events.  These NPCs are not considered start NPCs (unless they are also
+		registered with addStartNpc).  NPCs registered using addTalkId will only respond to the player's
+		click of a "Quest" link if and only if the player has alredy started the quest.
+		The parameter "npcId" contains the id of the template for this NPC.
+	c) addAttackId(npcId)
+		Registers an NPC for onAttack events.  The players do NOT need to be registered for the quest in order
+		to trigger a response to an attack against this NPC.  
+		The parameter "npcId" contains the id of the template for this NPC.
+	d) addKillId(npcId)
+		Registers an NPC for onKill events.  The players do NOT need to be registered for the quest in order
+		to trigger a response to this NPC getting killed.
+		The parameter "npcId" contains the id of the template for this NPC.
+	e) addFirstTalkId(npc)
+		Registers an NPC for onFirstTalk events.  
+	f) addSpawnId(npc)
+		Registers an NPC for onSpawn events.  
+	g) addSkillSeeId(npc)
+		Registers an NPC for onSkillSee events.  
+	f) addFactionCallId(npc)
+		Registers an NPC for onFactionCall events.  
+	h) addAggroRangeEnterId(npc)
+		Registers an NPC for onAggroRangeEnter events (remember, those events aren't yet supported and will not be 
+		triggered by core yet).		
+		
+13) OVERRIDABLE QUEST FUNCTIONS:
+	There exist a few functions which are automatically called by the core (and optionally manually called within
+	your script) which meant to be overriden by your quest script for special needs.   
+	a) saveGlobalData()
+		Optional function.  If a quest (or ai) needs to keep track of variables that are persistant beyond a reboot
+		but are not tied to any particular character (for example, count how many players have finished a quest in 
+		order to do some special action when the count reaches 1000), then you can override this function and add
+		code for saving your special variabls.  This function will automatically be called when the server is shutting
+		down as well as when you attempt to reload the quest using GM commands.  The actual functions used to save
+		those variables are described in section 11, below.  
+	b) init_LoadGlobalData()
+		Optional function.  If a quest has saved global data, you will also need to implement a way to load the data
+		back.  Here, you can define everything from which variables to look for and load to the structure in which
+		you wish to store the data (for example, you may want to format things as an array, or a dictionary, or some 
+		other structure).  The actual functions used to load those variables are described in section 11, below.  
+
+14) OTHER QUEST FUNCTIONS:
+	In addition to the trigger functions (which are called automatically by the core when certain actions take place)
+	there also exist a variety of functions that belong to the Quest class and can be accessed within each script.
+	To call those functions one needs to prefix the call with "self." and provide the appropriate parameters.  For
+	example, if the Quest class had a function named "foo" and it expected an integer parameter, you could call this
+	function from anywhere within the "class Quest" segment of your script, using the code
+	self.foo(5)
+
+	The full listing of available functions can be seen in the class com.l2jserver.gameserver.model.quest.Quest, which 
+	is located at com/l2jsever/gameserver/model/quest/Quest.java from the l2jserver project.  However, a few of the
+	more common functions are summarized here:
+	a) startQuestTimer(name, time, npc, player, repeating)
+		Starts a timer.  The timer will call onAdvEvent(name, npc, player) each time that it fires.
+		The parameter name is a string which serves as the name of the timer (or "event").
+			time refers to the number of milliseconds that the timer will wait before it fires.
+		npc is the actual instance of an NPC or Mob assosiated with the timer.  If this timer is not tied to 
+			any particular instance, you should pass None as the parameter.
+		player is the actual instance of a player assosiated with the timer.  If this timer is not tied to 
+			any particular instance, you should pass None as the parameter.
+		repeating is a boolean (True or False) variable.  If this is False, the timer will only fire once.  If 
+			this is True, the timer will keep firing at equal periods (equal to the "time" parameter) for ever, 
+			unless you explicitely cancel the timer, reboot the server, or reload the quest (assuming that your
+			script doesn't automatically start the timer again when it loads).
+	b) getQuestTimer(name, npc, player)
+		Allows you to grab an instance of the timer.  This is primarily used behind the scenes (from core) and
+		you would rarely really need it, but I am describing as it is somewhat important in understanding timers.
+		The parameter name refers to the name with which a timer was added.  It is the first and most important
+			key in identifying the timer.  Two timers with different name are always considered unrelated to each
+			other.  If the name is the same, the timers are further identified by the npc and player associated.
+		npc is the second key for identifying timers.  A null (None) npc acts as a wildcard!  That is, if you call 
+			this function with a null npc parameter, it will consider as matches any timers with the correct 
+			name and player, regardless of which NPC was used.  On the other hand, if you use a non-null npc, this
+			function will consider as matches any timers with the same name, npc, and player as well as timers
+			with the same name and player but null NPC.
+		player is the last key for identifying timers.  A null (None) player acts as a wildcard!  That is, if you call 
+			this function with a null player parameter, it will consider as matches any timers with the correct 
+			name and npc, regardless of which player was used.  On the other hand, if you use a non-null player, this
+			function will consider as matches any timers with the same name, npc, and player as well as timers
+			with the same name and npc but null player.   
+		Naturally, if both player and npc are null, matches are identified based solely on the name.
+	c) cancelQuestTimer(name, npc, player)
+		Cancels a timer.  See getQuestTimer for details on how this call will match and discover which timer to 
+		cancel.  If multiple timers match the parameters, only the first timer that the code discovers will be cancelled.
+	d) saveGlobalQuestVar(var, value)
+		This permanently (until explicit deletion) saves a variable that is global for this quest.  Here, global 
+		refers to the fact that it is not tied to any particular player!  It does not mean global for all quest. 
+		var is a string denoting the variable name.
+		value is a string denoting the value of the variable "var".
+		For storing complex structures, your script must provide code which properly breaks down the data into 
+		var/value pairs and saves it in a way that can be read back.
+	e) loadGlobalQuestVar(var)
+		This loads a permanently saved variable that is global for all players within this quest.  It then 
+		returns the result as a string.  It returns an empty string if the specified variable does not exist 
+		for this quest.
+		var is the name of the variable you wish to load
+	f) deleteGlobalQuestVar(var)
+		Deletes a global quest variable for this quest (same definition of "global" as in #d).
+		var is the name of the variable you wish to delete
+	g) deleteAllGlobalQuestVars()
+		Deletes ALL global quest variables for this quest (same definition of "global" as in #d).
+	h) getRandomPartyMember(player)
+		Returns a random player who is in the same party as the referenced parameter.  If the referenced
+		parameter is a player who is not in a party, it returns the player reference itself automatically.
+		If the reference is null, it returns null.
+		player is a reference to a player instance.
+	i) getRandomPartyMember(player, var, value)
+		Similar to #h but only returns a result among those players who have the specified var and value pair 
+		among their QuestState variables (see QuestState description below).  If no party member matches these 
+		conditions, a null (None) is returned.
+		The reference player may also be among the possible results if it also matches the conditions.
+		Similarly to #h, if the reference player is not in a party, then only the var/value pairs are checked.
+		In that case, if the player matches the conditions, the same player is returned, else null is returned. 
+		player: The reference player whose party will be checked
+		var: The variable name necessary for a match.  If this is null (None), then a completely random
+			party member is returned regardless of the value (same as in #h).
+		value: the required value of the "var" before a party member is considered for the random poll.  
+		Example usage:
+		self.getRandomPartyMemberState(player, "cond","5")
+		This will return a random party member among those members who have cond=5.
+	j) getRandomPartyMemberState(player, state)
+		Similar to #h but only returns a result among those players whose QuestState has a state matching the 
+		passed "state" variable (see QuestState description below).  If no party member matches the state 
+		condition a null (None) is returned.
+		If the reference player is not in a party, either the reference is return if it matches the state 
+		condition, or a null (None) is returned if the reference player doesn't match the state condition.   
+		For example, 
+		self.getRandomPartyMemberState(player, State.COMPLETED)
+		will return a random party member among those members who have completed the quest.
+
+Quest:
+After writing your script, in order to initialize your quest and register it with the game server, near the 
+bottom of your script, you must use:
+	QUEST       = Quest(id,"12345_QuestName","Description")
+For example:
+	QUEST       = Quest(626,"626_ADarkTwilight","A Dark Twilight")
+It is often useful to define the quest name in a variable at the top of the script (typically called "qn").  
+In that case, you may register your quest using:
+	QUEST       = Quest(626,qn,"A Dark Twilight")
+In addition, you can register quest items with this quest.  All registered items will be DELETED from the
+player's inventory, as soon as the quest is aborted or completed.  Many quests reward items that are not
+meant to be deleted upon quest completion, even if the items appear in the quest inventory (example: star of destiny).
+Such items should NOT be registered as questItems.  To register items with a quest, you need to modify the __init__ 
+function of the quest.  For a simple quest with no registrations, the __init__ function will look something like :
+ def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+For a quest with registered items, this should be:
+ def __init__(self,id,name,descr): 
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [1234,5678] 
+In this example, the items with id 1234 and 5678 are registered.
+
+QuestState:
+A QuestState is not part of the quest definition itself, but it contains the information that tracks the 
+progress of a particular player for this quest.  Given a player instance, the quest-state of that player for 
+this quest can be found using:
+	st = player.getQuestState("12345_questname")
+If the player does NOT have a quest-state for this quest (i.e. the player is not currently doing this quest), then
+st will be null.
+In addition, the queststate of a random party member who has a particular variable and value stored for this quest,
+can be discovered using:
+	partyMember = self.getRandomPartyMember(player,"variable","value")
+	st = partyMember.getQuestState("12345_questname")
+Similarly, the queststate of a random party member who has reached a particular STATE for this quest,
+can be discovered using:
+	partyMember = self.getRandomPartyMemberState(player,STATE)
+	st = partyMember.getQuestState("12345_questname")
+For example, instead of "variable" and "value" in the first sample, one may use "cond" and "1".  Instead of STATE in 
+the second sample, one may use State.STARTED
+While a QuestState can be discovered from a player, it can also access the player instance back when needed, using
+	st.getPlayer()
+All other public methods of implementation of QuestState are accessible from jython.  Similarly, objects
+reachable from st can be further used in order to reach deeper.  For example, one may do something like:
+	st.getPlayer().getClan().getLeader().getPlayerInstance().getPet()
+	(this example may not be fully accurate or may get deprecated in the future...it is only meant as a 
+	little demonstation of how one may reach deeper into a chain of objects that are accessible.  In this
+	case, from the QuestState, we get the player whose QuestState this is, then get that player's clan,
+	the clan's leader, the leader's actual player instance, and from there, we find the leader's summonned pet!)
+	
+State:
+States are used to track segments of the quest for players.  States are not a property of any particular quest and 
+States Types cannot be added or removed dynamically.  They are a mere enumeration used universally by all quests.  
+Each QuestState carries a State value which can be compared to the available (global) state types in order to check
+the progress that the given character has with regards to the given QuestState (see QuestState info above).
+The available state types are:
+CREATED
+STARTED
+COMPLETED
+For example, given an instance of a QuestState (st) for a given player doing some quest, one can check if the
+player has completed the quest by doing the comparison:
+st.getState() == State.COMPLETED

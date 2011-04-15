@@ -1,0 +1,1 @@
+ALTER TABLE `character_reco_bonus` CHANGE `task_end` `time_left` decimal(20,0) unsigned NOT NULL DEFAULT '0';

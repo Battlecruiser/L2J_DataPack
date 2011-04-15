@@ -1,0 +1,1 @@
+ALTER TABLE `custom_npc` MODIFY `drop_herbs` enum('true','false') DEFAULT 'false' NOT NULL;

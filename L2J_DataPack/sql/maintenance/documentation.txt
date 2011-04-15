@@ -1,0 +1,23 @@
+There are SQL sequences that should not neccessarily be performed every time you
+update your database structure. Rather, these queries should be executed once or
+from time to time. Essentially, an .sql file should appear under 'maintenance'
+instead of the old 'updates' folder provided that:
+
+- Its execution isn't mandatory to keep L2J setups working past any core revision
+number. (e.g. orphans cleanup)
+
+- Its execution were time consuming and could slowdown regular database update tasks.
+(e.g. complex sub/queries, joins)
+
+- Its execution could allow administrators to perform optimization, maintenance, 
+repair or recovery tasks whenever they needed to.
+
+Any SQL maintenance should be named like that:
+
+YYYYMMDDmaintenance(_s).sql
+
+See the updates directory documentation for further details of the naming convention.
+
+Additionally, it would be desirable that any maintenance script could hold internal
+documentation describing their specific purpose, execution scenario and any other
+information that could be of interest for the administrator.
