@@ -111,7 +111,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	{
 		QuestState st = player.getQuestState(qn);
 		
-		if (st.getInt("cond") == 1)
+		if (st != null && st.getInt("cond") == 1)
 		{
 			st.takeItems(PoorNecklace, 1);
 			st.giveItems(ValorNecklace, 1);
