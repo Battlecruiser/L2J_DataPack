@@ -218,6 +218,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25610,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25611,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25612,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
+(29040,1,189400,-105702,-782,0,604800,604800,0,218741,1865), -- Wings of Flame Ixion (84)
 -- (29054,1,11882,-49216,-3008,0,43200,129600,0,1352750,1494), -- Benom (75) (spawn 1hr before siege in rune start)
 -- (29056,1,102800,-126000,-2500,0,43200,129600,0,1450978,9999), -- Ice Fairy Sirra (60) (Spawn by Quest)
 -- (29060,1,106000,-128000,-3000,0,43200,129600,0,1566263,9999), -- Captain Of The Ice Queen's Royal Guard (59) (Spawn by Quest)
