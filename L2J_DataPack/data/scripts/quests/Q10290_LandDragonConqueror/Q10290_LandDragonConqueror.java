@@ -111,7 +111,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	{
 		QuestState st = player.getQuestState(qn);
 		
-		if (st.getInt("cond") == 1)
+		if (st != null && st.getInt("cond") == 1)
 		{
 			st.takeItems(ShabbyNecklace, 1);
 			st.giveItems(MiracleNecklace, 1);

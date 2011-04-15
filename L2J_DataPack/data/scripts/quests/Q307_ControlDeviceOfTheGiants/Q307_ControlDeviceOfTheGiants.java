@@ -199,7 +199,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		
-		if (st.getInt("spawned") == 1)
+		if (st != null && st.getInt("spawned") == 1)
 		{
 			st.playSound("ItemSound.quest_middle");
 			st.unset("spawned");
