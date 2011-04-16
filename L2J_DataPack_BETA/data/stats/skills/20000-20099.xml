@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
+	<skill id="20000" levels="1" name="Block Checker Search">
+		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
+		<!-- Slams down on the treasure chest with a hammer to open it. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="20002" levels="1" name="Dragon Blow">
+		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="20003" levels="1" name="Dragon Slash">
+		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="20004" levels="1" name="Dragon Dash">
+		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="20005" levels="1" name="Dragon Aura">
+		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
 	<skill id="20006" levels="1" name="Soul Roar">
 		<!-- H5 Skill -->
 		<set name="aggroPoints" val="635" /> <!-- Guess -->
