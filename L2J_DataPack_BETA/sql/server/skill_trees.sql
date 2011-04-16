@@ -233,7 +233,7 @@ INSERT INTO `skill_trees` VALUES
 (2,87,1,'Detect Animal Weakness',33000,40,'true','false','false','false'),
 (2,212,3,'Fast HP Recovery',33000,40,'true','false','false','false'),
 (2,312,6,'Vicious Stance',33000,40,'true','false','false','false'),
-(2,484,1,'Rush',33000,40,'true','false','false','false'),
+(2,994,1,'Rush',33000,40,'true','false','false','false'),
 (2,312,7,'Vicious Stance',35000,43,'true','false','false','false'),
 (2,78,2,'War Cry',35000,43,'true','false','false','false'),
 (2,8,2,'Sonic Focus',35000,43,'true','false','false','false'),
@@ -702,7 +702,7 @@ INSERT INTO `skill_trees` VALUES
 (3,212,3,'Fast HP Recovery',39000,40,'true','false','false','false'),
 (3,312,6,'Vicious Stance',39000,40,'true','false','false','false'),
 (3,317,1,'Focus Attack',39000,40,'true','false','false','false'),
-(3,484,1,'Rush',33000,40,'true','false','false','false'),
+(3,994,1,'Rush',33000,40,'true','false','false','false'),
 (3,920,4,'Power Crush',14000,43,'true','false','false','false'),
 (3,920,5,'Power Crush',14000,43,'true','false','false','false'),
 (3,920,6,'Power Crush',14000,43,'true','false','false','false'),
@@ -11201,7 +11201,7 @@ INSERT INTO `skill_trees` VALUES
 (46,212,3,'Fast HP Recovery',33000,40,'true','false','false','false'),
 (46,293,6,'Two-handed Weapon Mastery',33000,40,'true','false','false','false'),
 (46,312,6,'Vicious Stance',33000,40,'true','false','false','false'),
-(46,484,1,'Rush',33000,40,'true','false','false','false'),
+(46,994,1,'Rush',33000,40,'true','false','false','false'),
 (46,312,7,'Vicious Stance',38000,43,'true','false','false','false'),
 (46,293,7,'Two-handed Weapon Mastery',38000,43,'true','false','false','false'),
 (46,212,4,'Fast HP Recovery',38000,43,'true','false','false','false'),
@@ -11638,7 +11638,7 @@ INSERT INTO `skill_trees` VALUES
 (48,284,5,'Hurricane Assault',13000,40,'true','false','false','false'),
 (48,284,6,'Hurricane Assault',13000,40,'true','false','false','false'),
 (48,319,2,'Agile Movement',39000,40,'true','false','false','false'),
-(48,484,1,'Rush',33000,40,'true','false','false','false'),
+(48,994,1,'Rush',33000,40,'true','false','false','false'),
 (48,222,1,'Fist Fury',51000,43,'true','false','false','false'),
 (48,284,7,'Hurricane Assault',17000,43,'true','false','false','false'),
 (48,284,8,'Hurricane Assault',17000,43,'true','false','false','false'),
@@ -13604,7 +13604,7 @@ INSERT INTO `skill_trees` VALUES
 (57,148,3,'Vital Force',33000,40,'true','false','false','false'),
 (57,212,3,'Fast HP Recovery',33000,40,'true','false','false','false'),
 (57,248,2,'Crystallize',33000,40,'true','false','false','false'),
-(57,484,1,'Rush',28000,40,'true','false','false','false'),
+(57,994,1,'Rush',28000,40,'true','false','false','false'),
 (57,823,1,'Strengthen Golem',38000,43,'true','false','false','false'),
 (57,190,4,'Fatal Strike',13000,43,'true','false','false','false'),
 (57,190,5,'Fatal Strike',13000,43,'true','false','false','false'),
@@ -13935,7 +13935,7 @@ INSERT INTO `skill_trees` VALUES
 (88,756,1,'Protection of Elemental',0,82,'false','true','false','false'),
 (88,757,1,'Protection of Alignment',0,82,'false','true','false','false'),
 (88,919,1,'Maximum Sonic Focus',0,83,'false','true','false','false'),
-(88,793,1,'Rush Impact',100000000,83,'true','false','false','false');
+(88,995,1,'Rush Impact',100000000,83,'true','false','false','false');
 
 -- Dreadnought
 INSERT INTO `skill_trees` VALUES
@@ -13959,7 +13959,7 @@ INSERT INTO `skill_trees` VALUES
 (89,755,1,'Protection of Rune',0,82,'false','true','false','false'),
 (89,756,1,'Protection of Elemental',0,82,'false','true','false','false'),
 (89,757,1,'Protection of Alignment',0,82,'false','true','false','false'),
-(89,793,1,'Rush Impact',100000000,83,'true','false','false','false');
+(89,995,1,'Rush Impact',100000000,83,'true','false','false','false');
 
 -- Phoenix Knight
 INSERT INTO `skill_trees` VALUES
@@ -14510,7 +14510,7 @@ INSERT INTO `skill_trees` VALUES
 (113,755,1,'Protection of Rune',0,82,'false','true','false','false'),
 (113,756,1,'Protection of Elemental',0,82,'false','true','false','false'),
 (113,757,1,'Protection of Alignment',0,82,'false','true','false','false'),
-(113,793,1,'Rush Impact',150000000,85,'true','false','false','false');
+(113,995,1,'Rush Impact',150000000,85,'true','false','false','false');
 
 -- Grand Khavatari
 INSERT INTO `skill_trees` VALUES
@@ -14534,7 +14534,7 @@ INSERT INTO `skill_trees` VALUES
 (114,756,1,'Protection of Elemental',0,82,'false','true','false','false'),
 (114,757,1,'Protection of Alignment',0,82,'false','true','false','false'),
 (114,918,1,'Maximum Force Focus',0,83,'false','true','false','false'),
-(114,793,1,'Rush Impact',100000000,83,'true','false','false','false');
+(114,995,1,'Rush Impact',100000000,83,'true','false','false','false');
 
 -- Dominator
 INSERT INTO `skill_trees` VALUES
@@ -14627,7 +14627,7 @@ INSERT INTO `skill_trees` VALUES
 (118,755,1,'Protection of Rune',0,82,'false','true','false','false'),
 (118,756,1,'Protection of Elemental',0,82,'false','true','false','false'),
 (118,757,1,'Protection of Alignment',0,82,'false','true','false','false'),
-(118,793,1,'Rush Impact',100000000,83,'true','false','false','false');
+(118,995,1,'Rush Impact',100000000,83,'true','false','false','false');
 
 -- Male Soldier
 INSERT INTO `skill_trees` VALUES
