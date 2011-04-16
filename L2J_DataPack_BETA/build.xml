@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<project name="L2J_DataPack" default="dist" basedir=".">
+<project name="L2J_DataPack_BETA" default="dist" basedir=".">
 	<description>
 		This script will build the L2J DataPack.
 
@@ -79,11 +79,11 @@
 	</target>
 
 	<target name="dist" depends="distclean" description="Creates a ZIP file. Suitable for distribution but building takes longer. See dist-deflate for faster builds.">
-		<zip destfile="${build}/L2J_DataPack.zip" basedir="${build.dist}" update="true" />
+		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" update="true" />
 	</target>
 
 	<target name="dist-deflate" depends="distclean" description="Creates a datapack ZIP file with NO compression (bigger ZIP file but faster than regular dist target)">
-		<zip destfile="${build}/L2J_DataPack-nocompress.zip" basedir="${build.dist}" update="true" compress="false" />
+		<zip destfile="${build}/L2J_DataPack_BETA-nocompress.zip" basedir="${build.dist}" update="true" compress="false" />
 	</target>
 
 	<target name="version" depends="init" description="Create l2jdp-version.properties file">
@@ -115,7 +115,7 @@
 	</target>
 
 	<target name="distclean" depends="export" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
-		<delete file="${build}/L2J_DataPack.zip" />
-		<delete file="${build}/L2J_DataPack-nocompress.zip" />
+		<delete file="${build}/L2J_DataPack_BETA.zip" />
+		<delete file="${build}/L2J_DataPack_BETA-nocompress.zip" />
 	</target>
 </project>
