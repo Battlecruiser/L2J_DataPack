@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="6913" levels="1" name="Challenge of Faith">
+		<!-- H5 Skill -->
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" AbnormalTime="15" val="0">
+				<add order="0x40" stat="pDef" val="360" />
+				<add order="0x40" stat="mDef" val="270" />
+			</effect>
+		</for>
+	</skill>
+</list>

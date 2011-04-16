@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="6706" levels="1" name="Piercing Attack">
+		<!-- H5 Skill -->
+		<set name="castRange" val="100" />
+		<set name="effectRange" val="500" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate --> <!-- Guess -->
+		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- FIXME: Time value is guess -->
+			<effect name="Debuff" AbnormalTime="10" val="0" AbnormalLvl="3" abnormalType="pd_down">
+				<mul order="0x30" stat="pDef" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+</list>

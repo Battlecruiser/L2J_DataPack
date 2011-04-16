@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="20006" levels="1" name="Soul Roar">
+		<!-- H5 Skill -->
+		<set name="aggroPoints" val="635" /> <!-- Guess -->
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="62" />
+		<set name="mpConsume" val="58" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="15" />
+		<set name="reuseDelay" val="240000" />
+		<set name="skillType" val="HPCPHEAL_PERCENT" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" AbnormalTime="600" val="0" AbnormalLvl="2" abnormalType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.15" />
+				<mul order="0x30" stat="maxCp" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+</list>
