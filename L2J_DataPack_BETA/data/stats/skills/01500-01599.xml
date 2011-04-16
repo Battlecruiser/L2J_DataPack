@@ -1150,8 +1150,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
-		<set name="negateLvl" val="9" />
-		<set name="negateStats" val="POISON" />
+		<set name="negateAbnormals" val="poison,9" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="1000" />
@@ -1166,8 +1165,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
-		<set name="negateLvl" val="9" />
-		<set name="negateStats" val="POISON BLEED PARALYZE" />
+		<set name="negateAbnormals" val="poison,9;bleeding,9;paralyze,1;turn_stone,1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
@@ -1182,8 +1180,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="155" />
 		<set name="mpInitialConsume" val="38" />
-		<set name="negateLvl" val="9" />
-		<set name="negateStats" val="POISON BLEED" />
+		<set name="negateAbnormals" val="poison,9;bleeding,9" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="796" />
 		<set name="reuseDelay" val="9000" />
