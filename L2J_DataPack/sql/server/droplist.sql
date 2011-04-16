@@ -37628,6 +37628,41 @@ INSERT INTO `droplist` VALUES
 (25666,6579,1,1,1,3314); -- Arcana Mace
 
 INSERT INTO `droplist` VALUES
+-- Queen Shyeed
+(25671,9524,1,1,0,4066), -- [sealed_dynasty_tunic]
+(25671,9525,1,1,0,6506), -- [sealed_dynasty_hose]
+(25671,9540,2,4,0,332765), -- [sealed_dynasty_tunic_piece]
+(25671,9541,4,12,0,183429), -- [sealed_dynasty_hose_piece]
+(25671,9514,1,1,0,4574), -- [sealed_dynasty_blast_plate]
+(25671,9515,1,1,0,7319), -- [sealed_dynasty_gaiter]
+(25671,9530,2,6,0,304761), -- [sealed_dynasty_blast_plate_piece]
+(25671,9531,15,45,0,120194), -- [sealed_dynasty_gaiter_piece]
+(25671,959,1,1,2,28933), -- [scrl_of_ench_wp_s]
+(25671,960,1,1,2,289340), -- [scrl_of_ench_am_s]
+(25671,6577,1,1,2,4822), -- [blessed_scrl_of_ench_wp_s]
+-- Gwindorr
+(25674,10223,1,1,1,1417), -- [icarus_accipiter]
+(25674,10405,1,1,1,469885), -- [icarus_accipiter_piece]
+(25674,9514,1,1,0,4506), -- [sealed_dynasty_blast_plate]
+(25674,9515,1,1,0,7210), -- [sealed_dynasty_gaiter]
+(25674,9530,2,6,0,300237), -- [sealed_dynasty_blast_plate_piece]
+(25674,9531,15,45,0,118410), -- [sealed_dynasty_gaiter_piece]
+(25674,6578,1,1,2,47507), -- [blessed_scrl_of_ench_am_s]
+(25674,3936,1,1,2,534457), -- [blessed_scroll_of_resurrection]
+-- Water Spirit Lian
+(25677,10220,1,1,1,719), -- [icarus_chopper]
+(25677,10222,1,1,1,719), -- [icarus_wand]
+(25677,10402,1,1,1,238403), -- [icarus_chopper_piece]
+(25677,10404,1,1,1,238403), -- [icarus_wand_piece]
+(25677,9516,1,1,0,8132), -- [sealed_dynasty_helmet]
+(25677,9529,1,1,0,11617), -- [sealed_dynasty_shield]
+(25677,13885,1,1,0,22175), -- [sealed_arcana_sigil]
+(25677,9532,9,27,0,111466), -- [sealed_dynasty_helmet_piece]
+(25677,9545,5,15,0,239157), -- [sealed_dynasty_shield_piece]
+(25677,10114,2,6,0,345871), -- [sealed_dynasty_sigil_piece]
+(25677,959,1,1,2,28933), -- [scrl_of_ench_wp_s]
+(25677,960,1,1,2,289340), -- [scrl_of_ench_am_s]
+(25677,6577,1,1,2,4822), -- [blessed_scrl_of_ench_wp_s]
 -- Giant Marpanak
 (25680,14851,1,1,2,1000000), -- [q_book_of_cave_explr1]
 (25680,9448,1,1,1,904), -- [dynasty_hammer]
@@ -37681,6 +37716,22 @@ INSERT INTO `droplist` VALUES
 (25687,10403,1,3,1,653144), -- [icarus_knuckle_piece]
 (25687,6578,1,1,2,88048), -- [blessed_scrl_of_ench_am_s]
 (25687,3936,1,3,2,495271), -- [blessed_scroll_of_resurrection]
+-- Anays
+(25701,14109,1,1,0,8472), -- [sealed_vesper_gauntlet]
+(25701,14113,1,1,0,8472), -- [sealed_vesper_leather_gloves]
+(25701,14116,1,1,0,8472), -- [sealed_vesper_gloves]
+(25701,14110,1,1,0,8472), -- [sealed_vesper_boots]
+(25701,14114,1,1,0,8472), -- [sealed_vesper_leather_boots]
+(25701,14117,1,1,0,8472), -- [sealed_vesper_shoes]
+(25701,15484,1,1,0,197697), -- [highangel_circlet]
+(25701,13143,1,1,0,11861), -- [sealed_vesper_helmet]
+(25701,13144,1,1,0,11861), -- [sealed_vesper_leather_helmet]
+(25701,13145,1,1,0,11861), -- [sealed_vesper_circlet]
+(25701,14111,1,1,0,16945), -- [sealed_vesper_verteidiger]
+(25701,13887,1,1,0,16945), -- [sealed_vesper_sigil]
+(25701,959,1,1,2,44847), -- [scrl_of_ench_wp_s]
+(25701,960,1,1,2,448478), -- [scrl_of_ench_am_s]
+(25701,6577,1,1,2,7474), -- [blessed_scrl_of_ench_wp_s]
 (18342,57,7,13,0,1000000); -- Adena
 
 INSERT INTO `droplist` VALUES
