@@ -186,6 +186,7 @@ import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
 import handlers.skillhandlers.Cancel;
+import handlers.skillhandlers.ChainHeal;
 import handlers.skillhandlers.Charge;
 import handlers.skillhandlers.CombatPointHeal;
 import handlers.skillhandlers.Continuous;
@@ -491,6 +492,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new SummonFriend());
 		SkillHandler.getInstance().registerSkillHandler(new Disablers());
 		SkillHandler.getInstance().registerSkillHandler(new Cancel());
+		SkillHandler.getInstance().registerSkillHandler(new ChainHeal());
 		SkillHandler.getInstance().registerSkillHandler(new StealBuffs());
 		SkillHandler.getInstance().registerSkillHandler(new BallistaBomb());
 		SkillHandler.getInstance().registerSkillHandler(new TakeCastle());
