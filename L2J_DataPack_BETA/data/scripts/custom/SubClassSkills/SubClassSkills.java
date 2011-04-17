@@ -154,7 +154,7 @@ public class SubClassSkills extends Quest
 	@Override
 	public String onAcquireSkillInfo(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		AcquireSkillInfo asi = new AcquireSkillInfo(skill.getId(), skill.getLevel(), 0, 4);
+		AcquireSkillInfo asi = new AcquireSkillInfo(skill.getId(), skill.getLevel(), 0, 5);
 		for (int i : SKILLITEMS)
 		{
 			if (Util.contains(SUBSKILLS.get(i), skill.getId()))
