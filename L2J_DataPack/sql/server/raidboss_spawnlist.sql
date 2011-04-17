@@ -1,12 +1,13 @@
-CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
-  `boss_id` INT NOT NULL default 0,
-  `amount` INT NOT NULL default 0,
-  `loc_x` INT NOT NULL default 0,
-  `loc_y` INT NOT NULL default 0,
-  `loc_z` INT NOT NULL default 0,
-  `heading` INT NOT NULL default 0,
-  `respawn_min_delay` INT(11) NOT NULL default '43200',
-  `respawn_max_delay` INT(11) NOT NULL default '129600',
+DROP TABLE IF EXISTS `raidboss_spawnlist`;
+CREATE TABLE `raidboss_spawnlist` (
+  `boss_id` int NOT NULL default '0',
+  `amount` int NOT NULL default '0',
+  `loc_x` int NOT NULL default '0',
+  `loc_y` int NOT NULL default '0',
+  `loc_z` int NOT NULL default '0',
+  `heading` int NOT NULL default '0',
+  `respawn_min_delay` int(11) NOT NULL default '43200',
+  `respawn_max_delay` int(11) NOT NULL default '129600',
   `respawn_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
@@ -130,12 +131,12 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25296,1,158352,-121088,-2240,0,43200,129600,0,935092,3718), -- Icicle Emperor Bumbalump (74) -- (Spawn by Quest 625_TheFinestIngredientsPart2)
 (25299,1,148160,-73808,-4919,0,43200,129600,0,714778,3718), -- Ketra's Hero Hekaton (80)
 (25302,1,145504,-81664,-6016,0,43200,129600,0,743801,3718), -- Ketra's Commander Tayr (84)
-(25305,1,145008,-84992,-6240,0,43200,129600,0,1532678,3718), -- Ketra's Chief Brakki (87)
--- (25306,1,142368,-82512,-6487,0,43200,129600,0,534922,3718), -- Soul Of Fire Nastron (87) -- (Spawn by Quest 616_MagicalPowerOfFirePart2)
+(25305,1,145008,-84992,-6240,0,43200,129600,0,1532678,3718), -- Ketra's Chief Brakki (80)
+-- (25306,1,142368,-82512,-6487,0,43200,129600,0,534922,3718), -- Soul Of Fire Nastron (80) -- (Spawn by Quest 616_MagicalPowerOfFirePart2)
 (25309,1,115552,-39200,-2480,0,43200,129600,0,714778,3718), -- Varka's Hero Shadith (80)
 (25312,1,109216,-36160,-938,0,43200,129600,0,743801,3718), -- Varka's Commander Mos (84)
-(25315,1,105584,-43024,-1728,0,43200,129600,0,1532678,3718), -- Varka's Chief Horus (87)
--- (25316,1,105452,-36775,-1050,0,43200,129600,0,534922,3718), -- Soul Of Water Ashutar (87) -- (Spawn by Quest 610_MagicalPowerOfWaterPart2)
+(25315,1,105584,-43024,-1728,0,43200,129600,0,1532678,3718), -- Varka's Chief Horus (80)
+-- (25316,1,105452,-36775,-1050,0,43200,129600,0,534922,3718), -- Soul Of Water Ashutar (80) -- (Spawn by Quest 610_MagicalPowerOfWaterPart2)
 (25319,1,184542,-106330,-6304,0,43200,129600,0,1048567,3718), -- Ember (85)
 (25322,1,93296,-75104,-1824,0,43200,129600,0,834231,3718), -- Demon's Agent Falston (66)
 (25325,1,91008,-85904,-2736,0,43200,129600,0,888658,3718), -- Flame Of Splendor Barakiel (70)
@@ -196,10 +197,10 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25493,1,83174,254428,-10873,0,43200,129600,0,451391,3718), -- Eva's Spirit Niniel (55)
 (25496,1,88300,258000,-10200,0,43200,129600,0,402319,3718), -- Fafurion's Envoy Pingolpin (52)
 (25498,1,126624,174448,-3056,0,43200,129600,0,288415,3718), -- Fafurion's Henchman Istary (45)
--- (25501,1,48575,-106191,-1568,0,43200,129600,0,127782,9999), -- Boss Akata (30) -- stats to be done
--- (25504,1,123000,-141000,-1100,0,43200,129600,0,206753,9999), -- Nellis' Vengeful Spirit (39) -- stats to be done
--- (25506,1,127900,-160600,-1100,0,43200,129600,0,184670,9999), -- Rayito The Looter (37) -- stats to be done
--- (25523,1,170000,-60000,-3500,0,43200,129600,0,1848045,9999), -- Plague Golem (73) -- stats to be done
+(25501,1,48575,-106191,-1568,0,43200,129600,0,127782,731), -- Boss Akata (30)
+(25504,1,123000,-141000,-1100,0,43200,129600,0,206753,1028), -- Nellis' Vengeful Spirit (39)
+(25506,1,127900,-160600,-1100,0,43200,129600,0,184670,960), -- Rayito The Looter (37)
+(25523,1,170000,-60000,-3500,0,43200,129600,0,1848045,3202), -- Plague Golem (73)
 (25524,1,144600,-5500,-4100,0,43200,129600,0,956490,3247), -- Flamestone Giant (76)
 (25527,1,3776,-6768,-3276,0,43200,129600,0,1608553,3718), -- Uruka (80)
 -- (25528,1,0,0,0,0,43200,129600,0,49148,9999), -- Tiberias (22) -- handled by instance script
@@ -239,11 +240,11 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25665,1,0,0,0,0,43200,129600,0,9999,9999), -- Yehan Klodekus (?) -- stats to be done
 -- (25666,1,0,0,0,0,43200,129600,0,9999,9999), -- Yehan Klanikus (?) -- stats to be done
 -- (25667,1,0,0,0,0,43200,129600,0,9999,9999), -- Cannibalistic Stakato Chief (?) -- stats to be done
-(25671,1,79634,-55428,-6104,0,43200,86400,0,312521,1812), -- Queen Shyeed (84)
-(25674,1,86534,216888,-3176,0,86400,129600,0,309427,1777), -- Gwindorr (83)
-(25677,1,83056,183232,-3616,0,43200,129600,0,312521,1812), -- Water Spirit Lian (84)
-(25680,1,193902,54135,-4184,0,21600,21600,0,855234,1743), -- Giant Marpanak (82)
-(25681,1,186210,61479,-4000,0,21600,21600,0,306363,1743), -- Gorgolos (82)
-(25684,1,186919,56297,-4480,0,21600,21600,0,309427,1777), -- Last Titan Utenus (83)
-(25687,1,191777,56197,-7624,0,3600,3600,0,431893,1777), -- Hekaton Prime (83)
-(25701,1,112798,-76800,-10,-15544,86400,129600,0,937564,21812); -- Anais (87)
+(25671,1,79634,-55428,-6104,0,43200,86400,0,743801,4022), -- Queen Shyeed (84)
+(25674,1,86534,216888,-3176,0,86400,129600,0,736436,3945), -- Gwindorr (83)
+(25677,1,83056,183232,-3616,0,43200,129600,0,743801,4022), -- Water Spirit Lian (84)
+(25680,1,193902,54135,-4184,0,21600,21600,0,2035459,3869), -- Giant Marpanak (82)
+(25681,1,186210,61479,-4000,0,21600,21600,0,729145,3869), -- Gorgolos (82)
+(25684,1,186919,56297,-4480,0,21600,21600,0,736436,3945), -- Last Titan Utenus (83)
+(25687,1,191777,56197,-7624,0,3600,3600,0,1027906,3945), -- Hekaton Prime (83)
+(25701,1,112798,-76800,-10,-15544,86400,129600,0,2231403,48422); -- Anays (84)
