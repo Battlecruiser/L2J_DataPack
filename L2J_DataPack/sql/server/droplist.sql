@@ -37166,52 +37166,54 @@ INSERT INTO `droplist` VALUES
 (25498,4603,2,6,2,146027),-- Greater Dye of Constitution <Con+3 Str-3>
 (25499,1342,20,60,2,559200),-- Fine Steel Arrow
 (25500,1539,1,1,2,124267),-- Greater Healing Potion 
-(25501,2038,4,12,1,339851),-- Maingauche Edge
-(25501,4553,1,3,3,333565),-- Greater Dye of STR <Str+1 Con-1>
-(25501,1943,24,72,2,283869),-- Manticore Skin Gaiters Pattern
-(25501,4554,2,4,3,222377),-- Greater Dye of STR <Str+1 Dex-1>
-(25501,395,1,1,2,199474),-- Manticore Skin Shirt
-(25501,2044,8,22,1,181254),-- Cursed Maingauche Edge
-(25501,4555,2,6,3,166783),-- Greater Dye of CON <Con+1 Str-1>
-(25501,1942,53,157,2,83336),-- Manticore Skin Shirt Texture
-(25501,224,1,1,1,47918),-- Maingauche
-(25501,1660,1,1,1,47918),-- Cursed Maingauche
-(25501,417,4,12,2,39821),-- Manticore Skin Gaiters
-(25501,6575,1,1,4,37063),-- Blessed Scroll: Enchant Weapon (D)
-(25504,951,1,1,3,531163),-- Scroll: Enchant Weapon (C)
-(25504,2076,2,6,1,441895),-- Body Slasher Blade
-(25504,2062,5,15,1,176758),-- Scythe Edge
-(25504,952,12,36,3,162300),-- Scroll: Enchant Armor (C)
-(25504,2433,1,1,2,103153),-- Boots of Seal
-(25504,2452,1,1,2,103153),-- Reinforced Mithril Gloves
-(25504,2453,1,1,2,103153),-- Chain Gloves
-(25504,2454,1,1,2,103153),-- Karmian Gloves
-(25504,2075,9,27,1,98199),-- Orcish Glaive Blade
-(25504,2938,26,78,2,86570),-- Karmian Boots Fabric
-(25504,2939,35,105,2,64309),-- Plate Leather Boot Lining
-(25504,2940,45,135,2,50019),-- Dwarven Chain Boots Part
-(25504,2941,56,168,2,40193),-- Boots of Seal Pattern
-(25504,2942,68,204,2,33100),-- Reinforced Mithril Gloves Design
-(25504,2943,81,243,2,27788),-- Chain Gloves Design
-(25504,96,1,1,1,25568),-- Scythe
-(25504,298,1,1,1,25568),-- Orcish Glaive
-(25504,302,1,1,1,25568),-- Body Slasher
-(25504,2944,95,285,2,23694),-- Karmian Gloves Fabric
-(25504,6573,1,1,3,19476),-- Blessed Scroll: Enchant Weapon (C)
-(25504,1958,220,660,2,10231),-- Mithril Boots Design
-(25504,2937,378,1134,2,5955),-- Chain Boots Part
-(25504,62,11,33,2,4689),-- Mithril Boots
-(25504,2429,12,34,2,4485),-- Chain Boots
-(25504,2430,12,36,2,4298),-- Karmian Boots
-(25504,2431,13,37,2,4126),-- Plated Leather Boots
-(25504,2432,13,39,2,3967),-- Dwarven Chain Boots
-(25506,6574,1,1,3,460338),-- Blessed Scroll: Enchant Armor (C)
-(25506,2935,24,72,2,229435),-- Tempered Mithril Gaiters Fragment
-(25506,2387,1,1,2,227514),-- Tempered Mithril Gaiters
-(25506,2074,12,36,2,183398),-- Crystallized Ice Bow Shaft
-(25506,397,1,1,2,142372),-- Mithril Shirt
-(25506,281,1,1,1,70504),-- Crystallized Ice Bow
-(25506,1961,53,157,2,63132),-- Mithril Shirt Fabric
+-- Boss Akata
+(25501,395,1,1,0,199474),-- [manticor_skin_shirt]
+(25501,417,4,12,0,39820),-- [manticor_skin_gaiters]
+(25501,1942,53,157,0,83335),-- [manticor_skin_shirt_texture]
+(25501,1943,24,72,0,283869),-- [manticor_skin_gaiters_pattern]
+(25501,224,1,1,1,47918),-- [maingauche]
+(25501,1660,1,1,1,47918),-- [cursed_maingauche]
+(25501,2038,4,12,1,339850),-- [maingauche_edge]
+(25501,2044,8,22,1,181253),-- [cursed_maingauche_edge]
+(25501,4553,1,3,2,333565),-- [dye_s1c1_c]
+(25501,4554,2,4,2,222377),-- [dye_s1d1_c]
+(25501,4555,2,6,2,166782),-- [dye_c1s1_c]
+(25501,6575,1,1,2,37063),-- [blessed_scrl_of_ench_wp_d]
+-- Nellis' Vengeful Spirit
+(25504,62,11,33,0,4688),-- [mithril_boots]
+(25504,2429,12,34,0,4484),-- [chain_boots]
+(25504,2430,12,36,0,4297),-- [karmian_boots]
+(25504,2431,13,37,0,4126),-- [plate_leather_boots]
+(25504,2432,13,39,0,3967),-- [dwarven_chain_boots]
+(25504,2433,1,1,0,103152),-- [boots_of_seal]
+(25504,2452,1,1,0,103152),-- [reinforce_mithril_gloves]
+(25504,2453,1,1,0,103152),-- [chain_gloves]
+(25504,2454,1,1,0,103152),-- [karmian_gloves]
+(25504,1958,220,660,0,10231),-- [mithril_boots_design]
+(25504,2937,378,1134,0,5954),-- [chain_boots_part]
+(25504,2938,26,78,0,86569),-- [karmian_boots_fabric]
+(25504,2939,35,105,0,64309),-- [plate_leather_boots_lining]
+(25504,2940,45,135,0,50018),-- [dwarven_chain_boots_part]
+(25504,2941,56,168,0,40193),-- [boots_of_seal_pattern]
+(25504,2942,68,204,0,33100),-- [reinforce_mithril_gloves_design]
+(25504,2943,81,243,0,27788),-- [chain_gloves_design]
+(25504,2944,95,285,0,23693),-- [karmian_gloves_fabric]
+(25504,96,1,1,1,25567),-- [scythe]
+(25504,298,1,1,1,25567),-- [orcish_glaive]
+(25504,302,1,1,1,25567),-- [body_slasher]
+(25504,2062,5,15,1,176758),-- [scythe_edge]
+(25504,2075,9,27,1,98199),-- [orcish_glaive_blade]
+(25504,2076,2,6,1,441895),-- [body_slasher_blade]
+(25504,951,1,1,2,531163),-- [scrl_of_ench_wp_c]
+(25504,952,12,36,2,162299),-- [scrl_of_ench_am_c]
+(25504,6573,1,1,2,19476),-- [blessed_scrl_of_ench_wp_c]
+-- Rayito The Looter
+(25506,2387,1,1,0,227514),-- [tempered_mithril_gaiters]
+(25506,1961,53,157,0,63131),-- [tempered_mithril_shirt_fabric]
+(25506,2935,24,72,0,229434),-- [tempered_mithril_gaiters_fragment]
+(25506,281,1,1,1,70503),-- [crystallized_ice_bow]
+(25506,2074,12,36,1,183398),-- [crystallized_ice_bow_shaft]
+(25506,6574,1,1,2,460338),-- [blessed_scrl_of_ench_am_c]
 (25509,4615,1,1,4,424821),-- Greater Dye of CON <Con+4 Str-4>
 (25509,4106,2,6,1,334340),-- Sprite\'s Staff Head
 (25509,4069,9,27,2,276625),-- Tunic of Zubei Fabric
@@ -37266,21 +37268,21 @@ INSERT INTO `droplist` VALUES
 (25514,6367,1,1,1,7348),-- Angel Slayer
 (25515,1344,20,60,2,403000),-- Mithril Arrow 
 (25516,1344,20,60,2,403000),-- Mithril Arrow
-(25523,6710,11,31,2,288537),-- Sealed Draconic Leather Helmet Pattern
-(25523,6691,12,36,1,201838),-- Angel Slayer Blade
-(25523,6714,16,48,2,189352),-- Sealed Major Arcana Circlet Pattern
-(25523,6570,1,1,3,161398),-- Blessed Scroll: Enchant Armor (A)
-(25523,6705,23,67,2,115759),-- Sealed Imperial Crusader Shield Part
-(25523,6578,1,1,3,64559),-- Blessed Scroll: Enchant Armor (S)
-(25523,6706,60,180,2,50494),-- Sealed Imperial Crusader Helmet Pattern
-(25523,6678,1,1,2,22267),-- Sealed Imperial Crusader Shield
-(25523,6679,1,1,2,15586),-- Sealed Imperial Crusader Helmet
-(25523,6683,1,1,2,15586),-- Sealed Draconic Leather Helmet
-(25523,6687,1,1,2,15586),-- Sealed Major Arcana Circlet
-(25523,6367,1,1,1,10483),-- Angel Slayer
--- (25523,9817,3,7,101,8300),-- Nonliving Nucleus
--- (25523,8176,1,4,100,8300),-- Destruction Tombstone
--- (25523,8619,1,1,102,5600),-- Ancient Book - Divine Inspiration (Original Language Version)
+-- Plague Golem
+(25523,6678,1,1,0,22266),-- [sealed_imperial_crusader_shield]
+(25523,6679,1,1,0,15586),-- [sealed_imperial_crusader_helmet]
+(25523,6683,1,1,0,15586),-- [sealed_draconic_leather_helmet]
+(25523,6687,1,1,0,15586),-- [sealed_major_arcana_hood]
+(25523,6705,23,67,0,115759),-- [sealed_imperial_crusader_shield_part]
+(25523,6706,60,180,0,50493),-- [sealed_imperial_crusader_helmet_pattern]
+(25523,6710,11,31,0,288536),-- [sealed_draconic_leather_helmet_pattern]
+(25523,6714,16,48,0,189352),-- [sealed_major_arcana_hood_pattern]
+(25523,6367,1,1,1,10482),-- [angel_slayer]
+(25523,6691,12,36,1,201838),-- [angel_slayer_blade]
+(25523,6578,1,1,2,64559),-- [blessed_scrl_of_ench_am_s]
+(25523,9817,3,7,100,830000),-- [core_of_false_life]
+(25523,8176,1,4,101,830000),-- [tombstone_of_destruction]
+(25523,8619,1,1,102,560000),-- [sb_increase_of_divinity_a]
 (25524,960,1,1,3,524479),-- Scroll: Enchant Armor (S)
 (25524,5522,4,12,2,430587),-- Sealed Armor of Nightmare Pattern
 (25524,5546,5,15,1,304812),-- Sword of Miracles Edge
@@ -38810,7 +38812,6 @@ INSERT INTO `droplist` VALUES
 (25296,9817,3,7,100,830000),-- Icicle Emperor Bumbalump (74)
 (25467,9817,1,5,100,740000),-- Gorgolos (64)
 (25470,9817,1,5,100,770000),-- Last Titan Utenus (66)
-(25523,9817,3,7,100,830000),-- Plague Golem (73)
 (25259,9817,2,6,100,800000),-- Zaken's Butcher Krantz (55)
 (25029,9817,2,6,100,790000),-- Atraiban (53)
 (25273,9817,2,5,100,770000),-- Carnamakos (50)
@@ -38917,7 +38918,6 @@ INSERT INTO `droplist` VALUES
 (25490,8176,1,1,101,650000),-- Gwindorr (40)
 (25493,8176,1,2,101,630000),-- Eva's Spirit Niniel (55)
 (25498,8176,1,1,101,750000),-- Fafurion's Henchman Istary (45)
-(25523,8176,1,4,101,830000),-- Plague Golem (73)
 (25395,8176,1,1,101,750000),-- Archon Suscepter (45)
 (25029,8176,1,3,101,790000),-- Atraiban (53)
 (25137,8176,1,4,101,750000),-- Beleth's Seer Sephia (55)
