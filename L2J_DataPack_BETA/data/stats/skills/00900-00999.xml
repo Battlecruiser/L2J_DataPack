@@ -1637,6 +1637,70 @@
 			<effect name="ChanceSkillTrigger" AbnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
+	<skill id="994" levels="1" name="Rush">
+		<!-- H5 Skill -->
+		<set name="castRange" val="400" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="900" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="800" />
+		<set name="magicLvl" val="40" />
+		<set name="mpConsume" val="38" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<and>
+				<target mindistance="200" />
+				<not>
+					<using kind="Bow,Crossbow" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="EnemyCharge" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="995" levels="1" name="Rush Impact">
+		<!-- H5 Skill -->
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="800" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="82" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4224" />
+		<set name="reuseDelay" val="20000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<cond msgId="113" addName="1">
+			<and>
+				<target mindistance="200" />
+				<not>
+					<using kind="Bow,Crossbow" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+		</for>
+	</skill>
+	<skill id="996" levels="1" name="Disarm">
+		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 seconds -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
 	<skill id="997" levels="25" name="Crushing Strike">
 		<!-- H5 Skill -->
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>

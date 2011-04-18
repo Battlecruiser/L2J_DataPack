@@ -2206,17 +2206,16 @@
 	</skill>
 	<skill id="484" levels="1" name="Rush">
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="200" />
 		<set name="effectRange" val="900" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="32" />
 		<set name="mpInitialConsume" val="6" />
 		<set name="mpConsume" val="14" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="skillType" val="DEBUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Rapier, Ancient" /> <!-- Ancient/Rapier -->
 		<cond msgId="113" addName="1">
