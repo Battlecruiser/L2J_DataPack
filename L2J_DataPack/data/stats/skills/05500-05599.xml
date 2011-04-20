@@ -616,7 +616,7 @@
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="expose_weak_point">
 				<mul order="0x30" stat="pDef" val="0.8" />
-				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<mul order="0x30" stat="critDamEvas" val="0.7" />
 			</effect>
 		</for>
 	</skill>
