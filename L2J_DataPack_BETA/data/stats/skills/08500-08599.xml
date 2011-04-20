@@ -170,9 +170,12 @@
 	</skill>
 	<skill id="8521" levels="1" name="Release Seal on Agathion - Antharas">
 		<!-- Removes the seal of Agathion. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" /> 
+		<set name="skillType" val="AGATHION" /> 
+		<set name="hitTime" val="3000" /> 
+		<set name="staticHitTime" val="true" /> 
+		<set name="operateType" val="OP_ACTIVE" /> 
+		<set name="npcId" val="16077" /> 
 	</skill>
 	<skill id="8522" levels="1" name="Release Seal on Agathion - Nevit's Messenger Kanna">
 		<!-- Removes the seal of Agathion. -->

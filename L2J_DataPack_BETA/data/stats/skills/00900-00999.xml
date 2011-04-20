@@ -1538,7 +1538,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" AbnormalTime="120" val="0" AbnormalLvl="1" abnormalType="battle_whisper">
+			<effect name="Buff" abnormalTime="120" val="0" AbnormalLvl="1" abnormalType="battle_whisper">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="cAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
@@ -1558,7 +1558,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" AbnormalTime="120" val="0" AbnormalLvl="1" abnormalType="defense_motion">
+			<effect name="Buff" abnormalTime="120" val="0" AbnormalLvl="1" abnormalType="defense_motion">
 				<mul order="0x30" stat="pDef" val="1.25" />
 				<add order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="mDef" val="1.1" />
@@ -1598,7 +1598,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Dagger" />
 		<for>
-			<effect name="Debuff" AbnormalTime="10" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
 		</for>
@@ -1617,7 +1617,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="weaponsAllowed" val="Sword, Big Sword, Blunt, Big Blunt, Dual Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt/Dual Sword -->
 		<for>
-			<effect name="ChanceSkillTrigger" AbnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="993" levels="8" name="Force Mastery">
@@ -1634,7 +1634,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="ChanceSkillTrigger" AbnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="994" levels="1" name="Rush">
@@ -1720,7 +1720,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Sword, Blunt, Big Blunt, Big Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<for>
-			<effect name="Debuff" AbnormalTime="3" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="defense_down">
+			<effect name="Debuff" abnormalTime="3" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="defense_down">
 				<mul order="0x30" stat="pDef" val="0.9" />
 				<mul order="0x30" stat="mDef" val="0.9" />
 			</effect>
