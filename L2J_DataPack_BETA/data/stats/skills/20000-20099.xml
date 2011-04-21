@@ -48,7 +48,7 @@
 		<set name="skillType" val="HPCPHEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" AbnormalLvl="2" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="2" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.15" />
 				<mul order="0x30" stat="maxCp" val="1.15" />
 			</effect>

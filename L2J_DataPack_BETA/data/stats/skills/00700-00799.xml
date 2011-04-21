@@ -791,7 +791,6 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpInitialConsume"> 13 14 14 </table>
 		<table name="#mpConsume"> 52 54 56 </table>
-		<set name="effectAbnormalLvl" val="8" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1018,16 +1017,13 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#power"> 1193 1303 1412 </table>
 		<table name="#mpConsume"> 71 74 77 </table>
-		<set name="effectAbnormalLvl" val="3" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="abnormalLvl" val="3" />
 		<set name="hitTime" val="1080" />
 		<set name="saveVs" val="CON" />
 		<set name="nextActionAttack" val="true" />
@@ -1971,7 +1967,6 @@
 		<set name="skillScope" val="square;250;60" />
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
-		<set name="effectAbnormalLvl" val="3" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
@@ -1983,7 +1978,6 @@
 		<set name="power" val="1689" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="effectType" val="POISON" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />

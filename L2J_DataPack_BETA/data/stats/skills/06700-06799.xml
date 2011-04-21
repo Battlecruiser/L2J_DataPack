@@ -50,7 +50,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- FIXME: Time value is guess -->
-			<effect name="Debuff" AbnormalTime="10" val="0" AbnormalLvl="3" abnormalType="pd_down">
+			<effect name="Debuff" AbnormalTime="10" val="0" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>

@@ -355,7 +355,6 @@
 		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
-		<set name="effectAbnormalLvl" val="1" />
 		<set name="lvlDepend" val="1" />
 		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<set name="itemConsumeId" val="10113" />
@@ -372,7 +371,6 @@
 		<set name="coolTime" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="BLEED" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
@@ -1580,7 +1578,6 @@
 		<table name="#power"> 900 1013 1129 1248 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1598,7 +1595,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="2" name="DamOverTime" abnormalTime="5" val="615" effectPower="50" effectType="BLEED" abnormal="bleed" />
+			<effect count="2" name="DamOverTime" abnormalTime="5" abnormalLvl="#abnormalLvl" val="615" effectPower="50" effectType="BLEED" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -1805,7 +1802,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1931,7 +1927,6 @@
 		<table name="#power"> 625 703 784 867 </table>
 		<table name="#dot"> 81 81 93 93 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="PDAM" />
@@ -1943,13 +1938,12 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="effectType" val="POISON" />
 		<set name="skillRadius" val="150" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="overHit" val="true" />
 		<for>
-			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormal="poison" effectPower="60" />
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormal="poison" effectPower="60" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2022,7 +2016,6 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 875 984 1098 1213 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2033,7 +2026,6 @@
 		<set name="hitTime" val="1080" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="BLEED" />
 		<set name="coolTime" val="720" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />

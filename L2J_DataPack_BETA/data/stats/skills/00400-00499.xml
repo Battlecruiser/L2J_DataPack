@@ -2481,7 +2481,7 @@
 	<skill id="495" levels="10" name="Blade Rush" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 135 135 136 136 137 137 138 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 </table>
-		<table name="#enchant1effectAbnormalLvl"> 8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 </table>
+		<table name="#enchant1AbnormalLvl"> 8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 </table>
 		<table name="#ench2Chance"> 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 </table>
 		<table name="#ench3Cost"> 85 84 83 82 81 80 79 78 78 77 76 75 74 73 72 71 71 70 69 68 67 66 65 64 64 63 62 61 60 59 </table>
 		<table name="#ench4Duel"> 16 22 29 35 41 48 54 60 67 73 79 86 92 98 105 111 117 124 130 136 143 149 155 162 168 174 181 187 193 200 </table>
@@ -2491,7 +2491,6 @@
 		<table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
 		<table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
-		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="flyType" val="CHARGE" />
@@ -2509,13 +2508,11 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="#castRange" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="BLEED" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="weaponsAllowed" val="Ancient" /> <!-- Ancient -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="effectAbnormalLvl" val="#enchant1effectAbnormalLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="mpConsume" val="#ench3Cost" />
@@ -2530,7 +2527,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1effectAbnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
+			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant1for>

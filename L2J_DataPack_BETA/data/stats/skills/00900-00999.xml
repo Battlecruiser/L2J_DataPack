@@ -75,7 +75,6 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#power"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
-		<set name="effectAbnormalLvl" val="8" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="83" />
@@ -86,13 +85,12 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
-		<set name="effectType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -163,7 +161,6 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#power"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
-		<set name="effectAbnormalLvl" val="8" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -176,12 +173,11 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
-		<set name="effectType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison">
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON">
 				<mul order="0x30" stat="runSpd" val="0.30" />
 				<mul order="0x30" stat="pAtkSpd" val="0.80" />
 				<mul order="0x30" stat="mAtkSpd" val="0.80" />
@@ -885,14 +881,12 @@
 	</skill>
 	<skill id="954" levels="1" name="Strider Bite">
 		<!-- Confirmed CT2.5 -->
-		<set name="effectAbnormalLvl" val="6" />
 		<set name="magicLvl" val="56" />
 		<set name="mpConsume" val="68" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="power" val="1649" />
 		<set name="overHit" val="true" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="BLEED" />
 		<set name="lvlDepend" val="2" />
 		<set name="hitTime" val="10800" />
 		<set name="reuseDelay" val="3000" />
@@ -1461,7 +1455,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<for>
-			<effect name="TargetMe" abnormalAbnormalTime="3" val="0" AbnormalLvl="1" AbnormalType="target_lock" />
+			<effect name="TargetMe" abnormalAbnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
 		</for>
 	</skill>
 	<skill id="985" levels="1" name="Challenge for Fate">
@@ -1538,7 +1532,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" AbnormalLvl="1" abnormalType="battle_whisper">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="battle_whisper">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="cAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
@@ -1558,7 +1552,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" AbnormalLvl="1" abnormalType="defense_motion">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="defense_motion">
 				<mul order="0x30" stat="pDef" val="1.25" />
 				<add order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="mDef" val="1.1" />
@@ -1598,7 +1592,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Dagger" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
 		</for>
@@ -1720,7 +1714,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Sword, Blunt, Big Blunt, Big Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<for>
-			<effect name="Debuff" abnormalTime="3" val="0" effectPower="80" effectType="DEBUFF" AbnormalLvl="4" abnormalType="defense_down">
+			<effect name="Debuff" abnormalTime="3" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="4" abnormalType="defense_down">
 				<mul order="0x30" stat="pDef" val="0.9" />
 				<mul order="0x30" stat="mDef" val="0.9" />
 			</effect>
