@@ -37,7 +37,6 @@
 	<skill id="6402" levels="5" name="Torumba Poison Strike">
 		<table name="#dot"> 500 1100 2200 4400 8000 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
@@ -67,7 +66,6 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="abnormalLvl" val="3" />
 		<set name="skillRadius" val="300" />
 		<set name="isDebuff" val="true" />
 		<for>
@@ -149,14 +147,13 @@
 	</skill>
 	<skill id="6408" levels="1" name="Soul Weakness">
 		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" /> <!-- Need Core Support for prevent player from begin transformed -->
+		<set name="skillType" val="NOTDONE" /> <!-- TODO: Need Core Support for prevent player from begin transformed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="60" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="600" />
-		<set name="abnormalLvl" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="6409" levels="1" name="Reptilikon Earthquake">
@@ -276,7 +273,6 @@
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
-		<set name="abnormalLvl" val="8" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormal="poison" />
@@ -298,7 +294,6 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="abnormalLvl" val="8" />
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
@@ -321,7 +316,6 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="abnormalLvl" val="8" />
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
@@ -604,7 +598,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
-		<set name="abnormalLvl" val="10" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
