@@ -89,7 +89,6 @@
 		<table name="#damage"> 57 84 114 147 180 207 235 235 234 234 237 237 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
@@ -694,7 +693,6 @@
 	</skill>
 	<skill id="4243" levels="1" name="Venomous Poison">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="9" />
 		<set name="magicLvl" val="70" />
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
@@ -972,7 +970,6 @@
 		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="35" /> <!-- Base Land Rate -->
