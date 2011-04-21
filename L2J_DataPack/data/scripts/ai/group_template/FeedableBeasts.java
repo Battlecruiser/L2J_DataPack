@@ -525,7 +525,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		}
 		
 		// display the social action of the beast eating the food.
-		npc.broadcastPacket(new SocialAction(objectId,2));
+		npc.broadcastPacket(new SocialAction(npc,2));
 		
 		// if this pet can't grow, it's all done.
 		if (_GrowthCapableMobs.containsKey(npcId))

@@ -753,7 +753,7 @@ public class AdminEffects implements IAdminCommandHandler
 					return false;
 				}
 				L2Character character = (L2Character) target;
-				character.broadcastPacket(new SocialAction(target.getObjectId(), action));
+				character.broadcastPacket(new SocialAction(character, action));
 			}
 			else
 				return false;

@@ -155,7 +155,7 @@ public class Q401_PathToWarrior extends Quest
 			{
 				st.set("cond", "0");
 				st.exitQuest(false);
-				player.sendPacket(new SocialAction(player.getObjectId(), 3));
+				player.sendPacket(new SocialAction(player, 3));
 				st.takeItems(RustedBronzeSword3, 1);
 				st.giveAdena(163800, false);
 				st.takeItems(PoisonSpiderLeg, 20);
