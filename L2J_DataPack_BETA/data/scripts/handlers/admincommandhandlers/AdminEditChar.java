@@ -353,7 +353,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(15);
+				String val = command.substring(15).trim();
 				int classidval = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
@@ -382,6 +382,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			catch (StringIndexOutOfBoundsException e)
 			{
 				AdminHelpPage.showHelpPage(activeChar, "charclasses.htm");
+			}
+			catch (NumberFormatException e)
+			{
+				activeChar.sendMessage("Usage: //setclass <valid_new_classid>");
 			}
 		}
 		else if (command.startsWith("admin_settitle"))
