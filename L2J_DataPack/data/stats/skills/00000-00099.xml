@@ -1615,7 +1615,6 @@
 		<table name="#mpConsume"> 38 42 50 </table>
 		<table name="#dot"> 114 132 144 </table>
 		<table name="#abnormalLvl"> 6 7 8 </table>
-		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1629,7 +1628,6 @@
 		<set name="coolTime" val="167" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="effectType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1899,7 +1897,6 @@
 		<table name="#magicLvl"> 24 32 49 58 66 70 </table>
 		<table name="#mpConsume"> 28 37 60 73 83 89 </table>
 		<table name="#dot"> 75 102 132 156 186 201 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />

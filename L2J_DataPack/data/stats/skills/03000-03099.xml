@@ -21,7 +21,6 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3005" levels="1" name="Bleed">
-		<set name="abnormalLvl" val="5" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="40" />
@@ -200,7 +199,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -219,7 +217,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="5" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -273,7 +270,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="12000" />
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -498,7 +494,6 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -518,7 +513,6 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -679,7 +673,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="7" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -697,7 +690,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="7" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -715,7 +707,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="7" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -733,7 +724,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="abnormalLvl" val="7" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
@@ -833,7 +823,6 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="abnormalLvl" val="7" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -851,7 +840,6 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="abnormalLvl" val="7" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="672" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
 		</for>

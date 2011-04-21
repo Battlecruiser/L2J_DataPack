@@ -769,7 +769,6 @@
 		<table name="#dot"> 180 273 393 531 675 810 915 915 1002 1002 1080 1080 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -787,7 +786,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dot" abnormal="poison" />
 			<effect name="ChanceSkillTrigger" abnormalTime="30" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -854,7 +853,6 @@
 		<table name="#dot"> 96 141 189 246 300 345 378 378 396 396 405 405 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -899,7 +897,6 @@
 		<table name="#dot"> 95 150 204 261 321 369 402 402 417 417 426 426 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -926,7 +923,6 @@
 		<table name="#dot"> 12 18 24 33 42 51 60 63 66 69 69 69 </table>
 		<table name="#abnormalLvl"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1207,7 +1203,6 @@
 		<!-- CT2.5 retail confirmed -->
 		<table name="#dmg"> 54 66 78 78 78 84 165 165 165 165 171 171 171 171 171 171 171 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 79 80 81 82 83 84 85 86 </table>
-		<set name="effectAbnormalLvl" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_AURA" />
