@@ -114,14 +114,14 @@ public class Unlock implements ISkillHandler
 					chest.setInteracted();
 					if (chestUnlock(skill, chest))
 					{
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+						activeChar.broadcastPacket(new SocialAction(activeChar, 3));
 						chest.setSpecialDrop();
 						chest.setMustRewardExpSp(false);
 						chest.reduceCurrentHp(99999999, activeChar, skill);
 					}
 					else
 					{
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
+						activeChar.broadcastPacket(new SocialAction(activeChar, 13));
 						chest.addDamageHate(activeChar, 0, 1);
 						chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
 						if (chestTrap(chest))
