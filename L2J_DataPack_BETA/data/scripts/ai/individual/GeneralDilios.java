@@ -94,7 +94,7 @@ public class GeneralDilios extends L2AttackableAIScript
 			int value = Integer.parseInt(event.substring(16));
 			for (L2Npc guard : _guards)
 			{
-				guard.broadcastPacket(new SocialAction(guard.getObjectId(), 4));
+				guard.broadcastPacket(new SocialAction(guard, 4));
 			}
 			if (value < 2)
 				startQuestTimer("guard_animation_"+(value+1), 1500, null, null);

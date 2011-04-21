@@ -162,7 +162,7 @@ public class Baium extends L2AttackableAIScript
 						_baium.setIsInvul(true);
 						_baium.setIsImmobilized(true);
 						_baium.setRunning();
-						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(),2));
+						_baium.broadcastPacket(new SocialAction(_baium,2));
 						startQuestTimer("baium_wakeup",15000, _baium, null);
 					}
 					catch (Exception e)
@@ -196,7 +196,7 @@ public class Baium extends L2AttackableAIScript
 		{
 			if (npc.getNpcId() == LIVE_BAIUM)
 			{
-				npc.broadcastPacket(new SocialAction(npc.getObjectId(),1));
+				npc.broadcastPacket(new SocialAction(npc,1));
 				npc.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5));
 				// start monitoring baium's inactivity
 				_LastAttackVsBaiumTime = System.currentTimeMillis();
@@ -294,7 +294,7 @@ public class Baium extends L2AttackableAIScript
 						{
 							_baium.setIsInvul(true);
 							_baium.setRunning();
-							_baium.broadcastPacket(new SocialAction(_baium.getObjectId(),2));
+							_baium.broadcastPacket(new SocialAction(_baium,2));
 							startQuestTimer("baium_wakeup",15000, _baium, null);
 							_baium.setShowSummonAnimation(false);
 						}

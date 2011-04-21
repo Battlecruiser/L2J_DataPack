@@ -183,11 +183,11 @@ public class QueenAnt extends L2AttackableAIScript
 			{
 				if (Rnd.get(2) == 0)
 				{
-					npc.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
+					npc.broadcastPacket(new SocialAction(npc, 3));
 				}
 				else
 				{
-					npc.broadcastPacket(new SocialAction(npc.getObjectId(), 4));
+					npc.broadcastPacket(new SocialAction(npc, 4));
 				}
 			}
 		}

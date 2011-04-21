@@ -385,7 +385,7 @@ public class BeastFarm extends L2AttackableAIScript
 		}
 		
 		// display the social action of the beast eating the food.
-		npc.broadcastPacket(new SocialAction(objectId,2));
+		npc.broadcastPacket(new SocialAction(npc,2));
 		
 		int food = 0;
 		if (skillId == SKILL_GOLDEN_SPICE || skillId == SKILL_BLESSED_GOLDEN_SPICE)
