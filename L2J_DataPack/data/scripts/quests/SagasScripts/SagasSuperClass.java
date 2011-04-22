@@ -14,6 +14,7 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -815,7 +816,7 @@ public class SagasSuperClass extends QuestJython
 					for (L2PcInstance player1 : party.getPartyMembers())
 					{
 						QuestState st1 = findQuest(player1);
-						if (st1 != null)
+						if (st1 != null && player1.isInsideRadius(player, Config.ALT_PARTY_RANGE2, false, false))
 						{
 							if (st1.getInt("cond") == 15)
 								PartyQuestMembers.add(st1);
