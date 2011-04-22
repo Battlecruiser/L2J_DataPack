@@ -484,9 +484,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
-		<cond msgId="1508">
-			<player olympiad="false" />
+		<cond msgId="1518">
+			<player isHero="true" />
 		</cond>
 	</item>
 	<item id="6843" type="Armor" name="Cat Ear">

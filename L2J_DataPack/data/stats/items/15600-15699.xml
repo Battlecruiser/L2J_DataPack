@@ -1012,7 +1012,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="396" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1039,7 +1041,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="346" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1067,7 +1071,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="396" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1095,7 +1101,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="482" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1123,7 +1131,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="482" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1150,7 +1160,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="482" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1179,7 +1191,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="3599-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="396" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1207,7 +1221,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="317" />
 			<set order="0x08" stat="mAtk" val="244" />
@@ -1235,7 +1251,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="386" />
 			<set order="0x08" stat="mAtk" val="268" />
@@ -1262,7 +1280,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="317" />
 			<set order="0x08" stat="mAtk" val="244" />
@@ -1292,7 +1312,9 @@
 		<set name="mp_consume" val="12" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="724" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1325,7 +1347,12 @@
 		<set name="oncrit_chance" val="4" />
 		<set name="oncrit_skill" val="3579-1" />
 		<set name="item_skill" val="3427-1" />
-		<set name="equip_condition" val="{{ec_race;{5}};{ec_hero;1}}" />
+		<cond msgId="1518">
+			<and>
+				<player race="Kamael" />
+				<player isHero="true" />
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="344" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1354,7 +1381,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_race;{5}};{ec_hero;1}}" />
+		<cond msgId="1518">
+			<and>
+				<player race="Kamael" />
+				<player isHero="true" />
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
 			<set order="0x08" stat="mAtk" val="183" />
@@ -1384,7 +1416,12 @@
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_race;{5}};{ec_hero;1}}" />
+		<cond msgId="1518">
+			<and>
+				<player race="Kamael" />
+				<player isHero="true" />
+			</and>
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
 			<set order="0x08" stat="mAtk" val="183" />
