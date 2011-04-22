@@ -32,6 +32,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_endolympiad',1,'true'),
 ('admin_setconfig',1,'false'),
 ('admin_config_server',1,'false'),
+('admin_gmon',1,'false'),
 
 -- ADMIN ANNOUNCEMENTS
 ('admin_list_announcements',1,'false'),

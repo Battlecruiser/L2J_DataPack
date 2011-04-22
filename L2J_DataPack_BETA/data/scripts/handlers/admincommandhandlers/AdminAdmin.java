@@ -82,7 +82,8 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_sethero",
 		"admin_endolympiad",
 		"admin_setconfig",
-		"admin_config_server"
+		"admin_config_server",
+		"admin_gmon"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -350,6 +351,10 @@ public class AdminAdmin implements IAdminCommandHandler
 						AdminHelpPage.showHelpPage(activeChar, "mods_menu.htm");
 				}
 			}
+		}
+		else if (command.startsWith("admin_gmon"))
+		{
+			// nothing
 		}
 		return true;
 	}
