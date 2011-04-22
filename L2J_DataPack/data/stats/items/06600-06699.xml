@@ -354,7 +354,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3579-1" />
 		<set name="item_skill" val="3578-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="437" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -385,7 +387,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="3582-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="532" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -418,7 +422,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3581-1" />
 		<set name="item_skill" val="3580-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="437" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -453,7 +459,9 @@
 		<set name="oncast_chance" val="3" />
 		<set name="oncast_skill" val="3598-1" />
 		<set name="item_skill" val="3597-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="350" />
 			<set order="0x08" stat="mAtk" val="256" />
@@ -487,7 +495,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3584-1" />
 		<set name="item_skill" val="3583-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="532" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -522,7 +532,9 @@
 		<set name="oncast_chance" val="3" />
 		<set name="oncast_skill" val="3596-1" />
 		<set name="item_skill" val="3595-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="426" />
 			<set order="0x08" stat="mAtk" val="281" />
@@ -556,7 +568,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3590-1" />
 		<set name="item_skill" val="3589-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="382" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -590,7 +604,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3588-1" />
 		<set name="item_skill" val="3587-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="532" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -626,7 +642,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3594-1" />
 		<set name="item_skill" val="3593-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="794" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -664,7 +682,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3586-1" />
 		<set name="item_skill" val="3585-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="532" />
 			<set order="0x08" stat="mAtk" val="192" />
@@ -697,7 +717,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3592-1" />
 		<set name="item_skill" val="3591-1" />
-		<set name="equip_condition" val="{{ec_hero;1}}" />
+		<cond msgId="1518">
+			<player isHero="true" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="437" />
 			<set order="0x08" stat="mAtk" val="192" />
