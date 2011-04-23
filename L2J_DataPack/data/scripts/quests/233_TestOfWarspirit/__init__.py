@@ -132,7 +132,7 @@ class Quest (JQuest) :
       st.giveItems(57,80903)
       st.takeItems(TONARS_REMAINS2,-1)
       st.giveItems(MARK_OF_WARSPIRIT,1)
-      st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
+      st.getPlayer().sendPacket(SocialAction(st.getPlayer(),3))
       st.giveItems(7562,92)
       htmltext = "30649-03.htm"
       for var in STATS:

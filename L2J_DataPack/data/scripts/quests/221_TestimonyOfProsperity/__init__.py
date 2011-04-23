@@ -228,7 +228,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
-          player.sendPacket(SocialAction(player.getObjectId(),3))
+          player.sendPacket(SocialAction(player,3))
    elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) == 0 and st.getQuestItemsCount(COLLECTION_LICENSE_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         htmltext = "30531-01.htm"
    elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :

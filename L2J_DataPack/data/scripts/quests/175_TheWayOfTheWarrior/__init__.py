@@ -59,8 +59,8 @@ class Quest (JQuest) :
          st.playTutorialVoice("tutorial_voice_026")
        st.giveItems(WARRIORS_SWORD,1)
        st.addExpAndSp(20739,1777)
-       player.sendPacket(SocialAction(player.getObjectId(),3))
-       player.sendPacket(SocialAction(player.getObjectId(),15))
+       player.sendPacket(SocialAction(player,3))
+       player.sendPacket(SocialAction(player,15))
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
      return htmltext
