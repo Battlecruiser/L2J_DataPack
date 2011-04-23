@@ -126,7 +126,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_finish")
          st.takeItems(ALANKELLS_RECOMMEND,1)
          st.giveItems(MARK_OF_SEARCHER,1)
-         st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
+         st.getPlayer().sendPacket(SocialAction(st.getPlayer(),3))
      elif npcId == NPC[0] :
       if cond==1 :
         htmltext = "30291-01.htm"
