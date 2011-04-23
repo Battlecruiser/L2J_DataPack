@@ -142,7 +142,7 @@ class Quest (JQuest) :
             for item in range(4412,4417) : 
                 st.rewardItems(item,10)   # Echo crystals 
             st.addExpAndSp(41478,3555)
-            player.sendPacket(SocialAction(player.getObjectId(),3))
+            player.sendPacket(SocialAction(player,3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
             st.unset("cond") 
