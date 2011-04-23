@@ -90,7 +90,7 @@ class Quest (JQuest) :
         if isFinished == "" : 
           st.giveItems(57,81900)
           st.addExpAndSp(295862,19344)
-        player.sendPacket(SocialAction(player.getObjectId(),3))
+        player.sendPacket(SocialAction(player,3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
@@ -177,7 +177,7 @@ class Quest (JQuest) :
         st.giveItems(KHAVATARI_TOTEM,1)
         st.giveItems(57,81900)
         st.addExpAndSp(295862,19344)
-        player.sendPacket(SocialAction(player.getObjectId(),3))
+        player.sendPacket(SocialAction(player,3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
