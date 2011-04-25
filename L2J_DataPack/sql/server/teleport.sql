@@ -734,7 +734,7 @@ INSERT INTO `teleport` VALUES
 ('Gludio Castle -> Ruins of Despair',13005,-19120,136816,-3762,500,0,57),
 ('Gludio Castle -> The Ant Nest',13006,-9959,176184,-4160,500,0,57),
 ('Gludio Castle -> Windawood Manor',13007,-28327,155125,-3496,500,0,57),
-('Dion Castle -> Front of Dion Castle',13008,19888,19888,-3144,0,0,57),
+('Dion Castle -> Front of Dion Castle',13008,19888,153395,-3144,0,0,57),
 ('Dion Castle -> Dion Town Square',13009,19025,145245,-3107,0,0,57),
 ('Dion Castle -> Front of the Hive Fortress',13010,20126,188254,-3392,0,0,57),
 ('Dion Castle -> Entrance to Floran Village',13011,17430,170103,-3506,0,0,57),
