@@ -408,7 +408,7 @@ done
 # MOD: Wedding.
 	echo -ne "Install "Wedding Mod" tables? (y/N): "
 	read modprompt
-	if [ "$modprompt" == "y" -o "$LSB" == "y" ]; then
+	if [ "$modprompt" == "y" -o "$modprompt" == "Y" ]; then
 		for mod in $(ls ../sql/server/mods/*.sql);do
 			echo "Installing custom mod table : $mod"
 			$MYG < $mod
