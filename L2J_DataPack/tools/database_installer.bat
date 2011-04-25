@@ -37,7 +37,7 @@ set cmode=c
 set fresh_setup=0
 
 :loadconfig
-title L2JDP installer - Reading configuration from file...
+title L2JDP Installer - Reading Configuration from File...
 cls
 if not exist %config_file% goto configure
 ren %config_file% vars.bat
@@ -84,7 +84,7 @@ goto :eof
 
 :configure
 call :colors 17
-title L2JDP installer - Setup
+title L2JDP Installer - Setup
 cls
 set config_version=2
 if NOT %upgrade_mode% == 2 (
@@ -240,7 +240,7 @@ cls
 call :colors 17
 set cmdline=
 set stage=1
-title L2JDP installer - Login Server database setup
+title L2JDP Installer - Login Server DataBase Setup
 echo.
 echo Trying to make a backup of your loginserver database.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> "%backup%\loginserver_backup.sql" 2^> NUL
@@ -249,7 +249,7 @@ if %ERRORLEVEL% == 0 goto lsdbok
 REM if %safe_mode% == 1 goto omfg
 :ls_err1
 call :colors 47
-title L2JDP installer - Login Server database setup ERROR!!!
+title L2JDP Installer - Login Server DataBase Setup ERROR!!!
 cls
 echo.
 echo Backup attempt failed! A possible reason for this to 
@@ -279,7 +279,7 @@ goto ls_ask1
 :omfg
 cls
 call :colors 57
-title L2JDP installer - potential PICNIC detected at stage %stage%
+title L2JDP Installer - Potential PICNIC detected at stage %stage%
 echo.
 echo There was some problem while executing:
 echo.
@@ -316,7 +316,7 @@ goto omfgask1
 call :colors 17
 set cmdline=
 set stage=2
-title L2JDP installer - Login Server database setup - DB Creation
+title L2JDP Installer - Login Server DataBase Setup - DB Creation
 echo.
 echo Trying to create a Login Server database...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
@@ -325,7 +325,7 @@ if %ERRORLEVEL% == 0 goto logininstall
 if %safe_mode% == 1 goto omfg
 :ls_err2
 call :colors 47
-title L2JDP installer - Login Server database setup - DB Creation error
+title L2JDP Installer - Login Server DataBase Setup - DB Creation ERROR!
 cls
 echo An error occured while trying to create a database for 
 echo your login server.
@@ -356,7 +356,7 @@ goto ls_ask2
 
 :lsdbok
 call :colors 17
-title L2JDP installer - Login Server database setup - WARNING!!!
+title L2JDP Installer - Login Server DataBase Setup - WARNING!
 echo.
 :asklogin
 if %fresh_setup%==0 (
@@ -380,7 +380,7 @@ echo     those fresh values.
 echo.
 echo (q) Quit
 echo.
-set /p loginprompt= Choose (%msg%) : 
+set /p loginprompt= Choose (%msg%):
 if /i %loginprompt%==f goto logininstall
 if /i %loginprompt%==s goto cb_backup
 if /i %loginprompt%==r goto configure
@@ -391,7 +391,7 @@ goto asklogin
 set stage=3
 call :colors 17
 set cmdline=
-title L2JDP installer - Login Server database setup - Full install
+title L2JDP Installer - Login Server DataBase Setup - Full Install
 echo Deleting loginserver tables for new content.
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< login_install.sql 2^> NUL
 %cmdline%
@@ -405,7 +405,7 @@ call :colors 17
 set cmdline=
 rem if %full% == 1 goto communityinstall
 set stage=4
-title L2JDP installer - Community Board Server database setup
+title L2JDP Installer - Community Board Server DataBase Setup
 echo.
 echo Trying to make a backup of your cbserver database.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %cbhost% -u %cbuser% --password=%cbpass% %cbdb% ^> "%backup%\cbserver_backup.sql" 2^> NUL
@@ -414,7 +414,7 @@ if %ERRORLEVEL% == 0 goto cbdbok
 REM if %safe_mode% == 1 goto omfg
 :cb_err1
 call :colors 47
-title L2JDP installer - Community Board Server database setup ERROR!!!
+title L2JDP Installer - Community Board Server DataBase Setup ERROR!
 cls
 echo.
 echo Backup attempt failed! A possible reason for this to 
@@ -445,7 +445,7 @@ goto cb_ask1
 call :colors 17
 set cmdline=
 set stage=5
-title L2JDP installer - Communty Board Server database setup - DB Creation
+title L2JDP Installer - Communty Board Server DataBase Setup - DB Creation
 echo.
 echo Trying to create a Community Board Server database...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
@@ -454,7 +454,7 @@ if %ERRORLEVEL% == 0 goto communityinstall
 if %safe_mode% == 1 goto omfg
 :cb_err2
 call :colors 47
-title L2JDP installer - Community Board Server database setup - DB Creation error
+title L2JDP Installer - Community Board Server DataBase Setup - DB Creation ERROR!
 cls
 echo An error occured while trying to create a database for 
 echo your Community Board server.
@@ -485,7 +485,7 @@ goto cb_ask2
 
 :cbdbok
 call :colors 17
-title L2JDP installer - Community Board Server database setup - WARNING!!!
+title L2JDP Installer - Community Board Server DataBase Setup - WARNING!
 echo.
 :askcommunity
 if %fresh_setup%==0 (
@@ -512,7 +512,7 @@ echo     those fresh values.
 echo.
 echo (q) Quit
 echo.
-set /p communityprompt= Choose (%msg%) : 
+set /p communityprompt= Choose (%msg%):
 if /i %communityprompt%==f goto communityinstall
 if /i %communityprompt%==u goto upgradecbinstall
 if /i %communityprompt%==s goto gs_backup
@@ -524,7 +524,7 @@ goto askcommunity
 set stage=6
 call :colors 17
 set cmdline=
-title L2JDP installer - Community Board Server database setup - Full install
+title L2JDP Installer - Community Board Server DataBase Setup - Full Install
 echo Deleting communityserver tables for new content.
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< community_install.sql 2^> NUL
 %cmdline%
@@ -536,10 +536,10 @@ goto upgradecbinstall
 set stage=6
 set cmdline=
 if %full% == 1 (
-title L2JDP installer - Community Board Server database setup - Installing...
+title L2JDP Installer - Community Board Server DataBase Setup - Installing...
 echo Installing new communityserver content.
 ) else (
-title L2JDP installer - Community Board Server database setup - Upgrading...
+title L2JDP Installer - Community Board Server DataBase Setup - Upgrading...
 echo Upgrading communityserver content.
 )
 if %logging% == 0 set output=NUL
@@ -556,7 +556,7 @@ call :colors 17
 set cmdline=
 if %full% == 1 goto fullinstall
 set stage=7
-title L2JDP installer - Game server database setup
+title L2JDP Installer - Game Server DataBase Setup
 cls
 echo.
 echo Making a backup of the original gameserver database.
@@ -566,7 +566,7 @@ if %ERRORLEVEL% == 0 goto gsdbok
 rem if %safe_mode% == 1 goto omfg
 :gs_err1
 call :colors 47
-title L2JDP installer - Game Server database setup - Backup failed!
+title L2JDP Installer - Game Server DataBase Setup - Backup ERROR!
 cls
 echo.
 echo Backup attempt failed! A possible reason for this to happen,
@@ -597,7 +597,7 @@ goto askgsdb
 call :colors 17
 set stage=8
 set cmdline=
-title L2JDP installer - Game Server database setup - DB Creation
+title L2JDP Installer - Game Server DataBase Setup - DB Creation
 cls
 echo Trying to create Game Server database...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
@@ -606,7 +606,7 @@ if %ERRORLEVEL% == 0 goto fullinstall
 if %safe_mode% == 1 goto omfg
 :gs_err2
 call :colors 47
-title L2JDP installer - Game Server database setup - DB Creation failed!
+title L2JDP Installer - Game Server DataBase Setup - DB Creation ERROR!
 cls
 echo.
 echo An error occured while trying to create a database for 
@@ -634,7 +634,7 @@ goto askgsdbcreate
 
 :gsdbok
 call :colors 17
-title L2JDP installer - Game Server database setup - WARNING!!!
+title L2JDP Installer - Game Server DataBase Setup - WARNING!
 cls
 echo.
 :asktype
@@ -663,7 +663,7 @@ goto asktype
 call :colors 17
 set stage=9
 set cmdline=
-title L2JDP installer - Game Server database setup - Full install
+title L2JDP Installer - Game Server DataBase Setup - Full Install
 echo Deleting all gameserver tables for new content...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< full_install.sql 2^> NUL
 %cmdline%
@@ -677,10 +677,10 @@ goto upgradeinstall
 set stage=9
 set cmdline=
 if %full% == 1 (
-title L2JDP installer - Game Server database setup - Installing...
+title L2JDP Installer - Game Server DataBase Setup - Installing...
 echo Installing new gameserver content.
 ) else (
-title L2JDP installer - Game Server database setup - Upgrading...
+title L2JDP Installer - Game Server DataBase Setup - Upgrading...
 echo Upgrading gameserver content.
 )
 if %logging% == 0 set output=NUL
@@ -708,7 +708,7 @@ goto :eof
 :omfg2
 cls
 call :colors 47
-title L2JDP installer - potential database issue at stage %stage%
+title L2JDP Installer - Potential DataBase Issue at stage %stage%
 echo.
 echo Something caused an error while executing instruction :
 echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb%
@@ -741,7 +741,7 @@ goto askomfg2
 :logginon
 cls
 call :colors 17
-title L2JDP installer - Game Server database setup - Logging options turned on
+title L2JDP Installer - Game Server DataBase Setup - Logging Options turned on
 set logging=1
 if %full% == 1 (
   set output=%logdir%\install-%~nx1.log
@@ -770,52 +770,58 @@ set output=NUL
 goto :eof
 
 :custom
-echo.
+title L2JDP Installer - Custom Server Tables
+cls
 set cstprompt=n
-set /p cstprompt=Install custom gameserver DB tables: (y) yes or (N) no or (q) quit? 
+echo.
+set /p cstprompt=Install Custom Server Tables: (y) yes or (n) no 
 if /i %cstprompt%==y goto cstinstall
-if /i %cstprompt%==n goto newbie_helper
-if /i %cstprompt%==q goto end
+if /i %cstprompt%==n goto mod
 goto newbie_helper
 :cstinstall
+cls
+echo.
 echo Installing custom content.
 cd ..\sql\server\custom\
 echo @echo off> temp.bat
-if exist errors.txt del errors.txt
+if exist custom_errors.txt del custom_errors.txt
 for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move custom_errors.txt %workdir%
-title L2JDP installer - Game Server database setup - custom tables processing complete
+title L2JDP Installer - Custom Server Tables Process Complete
 cls
-echo Database structure for custom additions finished, i'm leaving a
-echo 'custom_errors.txt' file for your consideration.
+echo Database structure for L2J Custom finished.
 echo.
 echo Remember that in order to get these additions actually working 
 echo you need to edit your configuration files. 
 echo.
 pause
 cd %workdir%
-title L2JDP installer - Game Server database setup - L2J Mods
-cls
-echo L2J provides a basic infraestructure for some non-retail features
-echo (aka L2J mods) to get enabled with a minimum of changes.
-echo.
-echo Some of these mods would require extra tables in order to work
-echo and those tables could be created now if you wanted to.
-echo.
-cd ..\sql\server\mods\
-REM L2J mods that needed extra tables to work properly, should be 
-REM listed here. To do so copy & paste the following 4 lines and
-REM change them properly:
-REM MOD: Wedding.
-set modprompt=n
-set /p modprompt=Install "Wedding Mod" tables: (y) yes or (N) no? 
-if /i %modprompt%==y "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% < mods_wedding.sql 2>>NUL
 
-title L2JDP installer - Game Server database setup - L2J Mods setup complete
+:mod
+title L2JDP Installer - Mod Server Tables
 cls
-echo Database structure for L2J mods finished.
+set cstprompt=n
+echo.
+set /p cstprompt=Install Mod Server Tables: (y) yes or (n) no 
+if /i %cstprompt%==y goto modinstall
+if /i %cstprompt%==n goto newbie_helper
+goto newbie_helper
+:modinstall
+cls
+echo.
+echo Installing mods content.
+cd ..\sql\server\mods\
+echo @echo off> temp.bat
+if exist mods_errors.txt del mods_errors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move mods_errors.txt %workdir%
+title L2JDP Installer - Mod Server Tables Process Complete
+cls
+echo Database structure for L2J Mods finished.
 echo.
 echo Remember that in order to get these additions actually working 
 echo you need to edit your configuration files. 
@@ -824,22 +830,23 @@ pause
 cd %workdir%
 goto newbie_helper
 
-
 :newbie_helper
 call :colors 17
 set stage=10
-title L2JDP installer - Game/CB Server database setup - update SQL files
+title L2JDP Installer - Update SQL Tables
 cls
 if %full% == 1 goto end
 echo.
-echo In the sql/server/updates and cb_sql/updates folders,
+echo Inside...
+echo sql/login/updates
+echo sql/server/updates
+echo cb_sql/updates folders
 echo we use to store cummulative changes needed by
 echo the database structures.
 echo.
 echo Usually these SQL files are created whenever some new
 echo feature implementation requires it.
 echo.
-echo If you're too lame to know what these changes are about,
 echo I can try to apply these patches for you.
 :asknb
 set nbprompt=a
@@ -899,7 +906,7 @@ del temp.bat
 move gserrors.txt %workdir%
 cd %workdir%
 :nbfinished
-title L2JDP installer - Game Server database setup - updates processing complete
+title L2JDP Installer - Update SQL Tables Process Complete
 cls
 echo Automagic processing finished, i'm leaving an 'errors.txt'
 echo file for your consideration.
@@ -926,7 +933,7 @@ goto :eof
 
 :horrible_end
 call :colors 47
-title L2JDP installer - Oops!
+title L2JDP Installer - Oops!
 cls
 echo This wasn't a clean run, but don't worry.
 echo You can get help and support:
@@ -975,10 +982,10 @@ goto end
 
 :end
 call :colors 17
-title L2JDP installer - Script execution finished
+title L2JDP Installer - Script Execution Finished
 cls
 echo.
-echo L2JDP database_installer version 0.2.3
+echo L2JDP database_installer version 0.2.4
 echo (C) 2007-2011 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
