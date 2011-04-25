@@ -1,5 +1,6 @@
 # Made by Kilkenny
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -66,13 +67,17 @@ class Quest (JQuest) :
    if st :
      if st.getState() == State.STARTED :
        count = st.getQuestItemsCount(THIEF_GUILD_MARK)
-       if st.getInt("cond") == 1 and count < 200 and st.getRandom(100)<DROP_CHANCE :  
-          st.giveItems(THIEF_GUILD_MARK,1)  
-          if count == 199 :  
-            st.playSound("ItemSound.quest_middle")  
-            st.set("cond","2")  
-          else:  
-            st.playSound("ItemSound.quest_itemget") 
+       numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
+       if st.getInt("cond") == 1 and count < 200 :
+         if st.getRandom(100) < chance :
+           numItems += 1
+         if numItems :
+           st.giveItems(THIEF_GUILD_MARK,int(numItems))
+         if count == 199 :  
+           st.playSound("ItemSound.quest_middle")  
+           st.set("cond","2")  
+         else:  
+           st.playSound("ItemSound.quest_itemget") 
    return
 
 QUEST       = Quest(649,qn,"A Looter and a Railroad Man")
