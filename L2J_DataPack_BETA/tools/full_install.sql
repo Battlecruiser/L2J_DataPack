@@ -103,6 +103,7 @@ DROP TABLE IF EXISTS olympiad_data;
 DROP TABLE IF EXISTS olympiad_fights;
 DROP TABLE IF EXISTS olympiad_nobles;
 DROP TABLE IF EXISTS olympiad_nobles_eom;
+DROP TABLE IF EXISTS petition_feedback;
 DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS pets_skills;
 DROP TABLE IF EXISTS pledge_skill_trees;
