@@ -93,7 +93,7 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 				case State.STARTED :
 					if (st.getInt("cond") < 4)
 					{
-						htmltext = "elite-04.htm";
+						htmltext = "exalted-04.htm";
 					}
 					else if (st.getInt("cond") == 4)
 					{

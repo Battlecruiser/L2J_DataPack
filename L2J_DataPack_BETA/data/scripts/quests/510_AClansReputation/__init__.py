@@ -14,7 +14,7 @@ Valdis = 31331
 Claw = 8767
 
 # Reward
-CLAN_POINTS_REWARD = 50 # Rep Points Per Tyrannosaurus Item - need to be confirmed
+CLAN_POINTS_REWARD = 100 # Rep Points Per Tyrannosaurus Item - need to be confirmed
 
 class Quest (JQuest) :
 
