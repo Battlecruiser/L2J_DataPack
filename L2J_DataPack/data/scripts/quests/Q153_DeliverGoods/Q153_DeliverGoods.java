@@ -38,6 +38,7 @@ public class Q153_DeliverGoods extends Quest
 	{
 		super(questId, name, descr);
 		
+		questItemIds = new int[] { DeliveryListId, HeavyWoodBoxId, ClothBundleId, ClayPotId, JacksonsReceipt, SilviasReceipt, RantsReceipt };
 		addStartNpc(ArnoldId);
 		addTalkId(JacksonId);
 		addTalkId(SilviaId);
@@ -96,10 +97,10 @@ public class Q153_DeliverGoods extends Quest
 						else if (st.getInt("cond") == 2)
 						{
 							htmltext = "30041-04.html";
-							st.takeItems(DeliveryListId, 1);
-							st.takeItems(JacksonsReceipt, 1);
-							st.takeItems(SilviasReceipt, 1);
-							st.takeItems(RantsReceipt, 1);
+							st.takeItems(DeliveryListId, -1);
+							st.takeItems(JacksonsReceipt, -1);
+							st.takeItems(SilviasReceipt, -1);
+							st.takeItems(RantsReceipt, -1);
 							//On retail it gives 2 rings but one at the time.
 							st.giveItems(RingofKnowledgeId, 1);
 							st.giveItems(RingofKnowledgeId, 1);
@@ -116,10 +117,10 @@ public class Q153_DeliverGoods extends Quest
 			{
 				if (npc.getNpcId() == JacksonId)
 				{
-					if (st.getQuestItemsCount(HeavyWoodBoxId) == 1)
+					if (st.getQuestItemsCount(HeavyWoodBoxId) > 0)
 					{
 						htmltext = "30002-01.html";
-						st.takeItems(HeavyWoodBoxId, 1);
+						st.takeItems(HeavyWoodBoxId, -1);
 						st.giveItems(JacksonsReceipt, 1);
 					}
 					else
@@ -129,10 +130,10 @@ public class Q153_DeliverGoods extends Quest
 				}
 				else if (npc.getNpcId() == SilviaId)
 				{
-					if (st.getQuestItemsCount(ClothBundleId) == 1)
+					if (st.getQuestItemsCount(ClothBundleId) > 0)
 					{
 						htmltext = "30003-01.html";
-						st.takeItems(ClothBundleId, 1);
+						st.takeItems(ClothBundleId, -1);
 						st.giveItems(SilviasReceipt, 1);
 						st.giveItems(SoulshotNoGradeId, 3);
 					}
@@ -143,10 +144,10 @@ public class Q153_DeliverGoods extends Quest
 				}
 				else if (npc.getNpcId() == RantId)
 				{
-					if (st.getQuestItemsCount(ClayPotId) == 1)
+					if (st.getQuestItemsCount(ClayPotId) > 0)
 					{
 						htmltext = "30054-01.html";
-						st.takeItems(ClayPotId, 1);
+						st.takeItems(ClayPotId, -1);
 						st.giveItems(RantsReceipt, 1);
 					}
 					else
@@ -155,7 +156,7 @@ public class Q153_DeliverGoods extends Quest
 					}
 				}
 				
-				if ((st.getInt("cond") == 1) && (st.getQuestItemsCount(JacksonsReceipt) == 1) && (st.getQuestItemsCount(SilviasReceipt) == 1) && (st.getQuestItemsCount(RantsReceipt) == 1))
+				if ((st.getInt("cond") == 1) && (st.getQuestItemsCount(JacksonsReceipt) > 0) && (st.getQuestItemsCount(SilviasReceipt) > 0) && (st.getQuestItemsCount(RantsReceipt) > 0))
 				{
 					st.set("cond", "2");
 					st.playSound("ItemSound.quest_middle");
