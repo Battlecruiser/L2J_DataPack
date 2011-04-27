@@ -1131,7 +1131,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="holy_attack">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="md_up_attr">
 				<add order="0x40" stat="firePower" val="20" />
 				<add order="0x40" stat="waterPower" val="20" />
 				<add order="0x40" stat="windPower" val="20" />
