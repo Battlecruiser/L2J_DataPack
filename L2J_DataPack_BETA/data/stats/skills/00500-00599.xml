@@ -866,21 +866,21 @@
 		<set name="target" val="TARGET_PARTY" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
 		<for>
-			<effect name="TransferDamage" time="15" val="0" stackOrder="1" stackType="transfer_damage">
+			<effect name="TransferDamage" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="transfer_damage">
 				<add order="0x40" stat="transDamToPlayer" val="90" />
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="TransferDamage" time="15" val="0" stackOrder="1" stackType="transfer_damage">
+			<effect name="TransferDamage" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="transfer_damage">
 				<add order="0x40" stat="transDamToPlayer" val="90" />
 				<add order="0x40" stat="pDef" val="#ench1pDef" />
 				<add order="0x40" stat="mDef" val="#ench1mDef" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="TransferDamage" time="#ench2Time" val="0" stackOrder="1" stackType="transfer_damage">
+			<effect name="TransferDamage" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="transfer_damage">
 				<add order="0x40" stat="transDamToPlayer" val="90" />
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
