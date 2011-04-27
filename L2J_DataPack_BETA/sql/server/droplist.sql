@@ -33523,184 +33523,208 @@ INSERT INTO `droplist` VALUES
 (18810,15668,1,1,-1,6000),-- Sealed Vesper Boots Piece
 (18810,15672,1,1,-1,6000),-- Sealed Vesper Leather Boots Piece
 (18810,15675,1,1,-1,6000),-- Sealed Vesper Shoes Piece
--- Divinity Judge
-(22794,57,5731,11245,0,700000),-- Adena
-(22794,15639,1,1,1,6000),-- Vesper Stormer Piece
-(22794,13462,1,1,1,12),-- Vesper Stormer
-(22794,1895,1,1,2,321200),-- Metallic Fiber
-(22794,4040,1,1,2,20200),-- Mold Lubricant
-(22794,9628,1,1,2,12400),-- Leonard
-(22794,9630,1,1,2,6000),-- Orichalcum
-(22794,960,1,1,2,500),-- Scroll: Enchant Armor (S)
-(22794,9573,1,1,200,18000),-- Life Stone: level 80
-(22794,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
-(22794,9575,1,1,200,440),-- High-Grade Life Stone: level 80
-(22794,15820,1,1,-1,800),-- Recipe - Vesper Stormer (60%)
-(22794,15639,1,1,-1,8000),-- Vesper Stormer Piece
-(22794,959,1,1,-1,400),-- Scroll: Enchant Weapon (S)
--- Divinity Manager
-(22795,57,9560,11749,0,700000),-- Adena
-(22795,15663,1,1,1,4000),-- Sealed Vesper Cuirass Piece
-(22795,15666,1,1,1,5500),-- Sealed Vesper Gaiter Piece
-(22795,14105,1,1,1,7),-- Sealed Vesper Cuirass
-(22795,14108,1,1,1,10),-- Sealed Vesper Gaiter
-(22795,1879,1,1,2,230200),-- Cokes
-(22795,1885,1,1,2,100200),-- High Grade Suede
-(22795,9628,1,1,2,12200),-- Leonard
-(22795,9629,1,1,2,6000),-- Adamantine
-(22795,9630,1,1,2,7000),-- Orichalcum
-(22795,15795,1,1,2,60),-- Recipe - Sealed Vesper Cuirass (60%)
-(22795,15798,1,1,2,70),-- Recipe - Sealed Vesper Gaiter (60%)
-(22795,9573,1,1,200,18000),-- Life Stone: level 80
-(22795,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
-(22795,9575,1,1,200,440),-- High-Grade Life Stone: level 80
-(22795,15795,1,1,-1,1600),-- Recipe - Sealed Vesper Cuirass (60%)
-(22795,15798,1,1,-1,2000),-- Recipe - Sealed Vesper Gaiter (60%)
-(22795,15663,1,1,-1,16000),-- Sealed Vesper Cuirass Piece
-(22795,15666,1,1,-1,22000),-- Sealed Vesper Gaiter Piece
-(22795,9628,1,1,-1,250000),-- Leonard
--- Divinity Supervisor
-(22796,57,8405,12071,0,700000),-- Adena
-(22796,15664,1,1,1,4000),-- Sealed Vesper Houberk Piece
-(22796,15670,1,1,1,5500),-- Sealed Vesper Leather Leggins Piece
-(22796,14106,1,1,1,7),-- Sealed Vesper Houberk
-(22796,14112,1,1,1,10),-- Sealed Vesper Leather Leggins
-(22796,1879,1,1,2,230200),-- Cokes
-(22796,1885,1,1,2,100200),-- High Grade Suede
-(22796,9628,1,1,2,12200),-- Leonard
-(22796,9629,1,1,2,6000),-- Adamantine
-(22796,9630,1,1,2,7000),-- Orichalcum
-(22796,15796,1,1,2,60),-- Recipe - Sealed Vesper Houberk (60%)
-(22796,15799,1,1,2,70),-- Recipe - Sealed Vesper Leather Leggins (60%)
-(22796,9573,1,1,200,18000),-- Life Stone: level 80
-(22796,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
-(22796,9575,1,1,200,440),-- High-Grade Life Stone: level 80
-(22796,15796,1,1,-1,1600),-- Recipe - Sealed Vesper Houberk (60%)
-(22796,15799,1,1,-1,2000),-- Recipe - Sealed Vesper Leather Leggins (60%)
-(22796,15664,1,1,-1,16000),-- Sealed Vesper Houberk Piece
-(22796,15670,1,1,-1,22000),-- Sealed Vesper Leather Leggins Piece
-(22796,9630,1,1,-1,200000),-- Orichalcum
--- Divinity Worshipper
-(22797,57,6727,12273,0,700000),-- Adena
-(22797,15665,1,1,1,4000),-- Sealed Vesper Tunic Piece
-(22797,15673,1,1,1,5500),-- Sealed Vesper Hose Piece
-(22797,14107,1,1,1,7),-- Sealed Vesper Tunic
-(22797,14115,1,1,1,10),-- Sealed Vesper Hose 
-(22797,1895,1,1,2,321200),-- Metallic Fiber
-(22797,4040,1,1,2,20200),-- Mold Lubricant
-(22797,9628,1,1,2,12400),-- Leonard
-(22797,9630,1,1,2,6000),-- Orichalcum
-(22797,15797,1,1,2,60),-- Recipe - Sealed Vesper Tunic (60%)
-(22797,15800,1,1,2,70),-- Recipe - Sealed Vesper Hose (60%)
-(22797,9573,1,1,200,18000),-- Life Stone: level 80
-(22797,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
-(22797,9575,1,1,200,440),-- High-Grade Life Stone: level 80
-(22797,15797,1,1,-1,1600),-- Recipe - Sealed Vesper Tunic (60%)
-(22797,15800,1,1,-1,2000),-- Recipe - Sealed Vesper Hose (60%)
-(22797,15665,1,1,-1,16000),-- Sealed Vesper Tunic Piece
-(22797,15673,1,1,-1,22000),-- Sealed Vesper Hose Piece
-(22797,9628,1,1,-1,250000),-- Leonard
--- Divinity Protector
-(22798,57,19734,21529,0,700000),-- Adena
-(22798,15769,1,1,1,15000),-- Sealed Vesper Ring Gem
-(22798,15770,1,1,1,12000),-- Sealed Vesper Earring Gem
-(22798,15771,1,1,1,10000),-- Sealed Vesper Necklace Gem
-(22798,14162,1,1,1,30),-- Sealed Vesper Ring
-(22798,14160,1,1,1,24),-- Sealed Vesper Earring
-(22798,14161,1,1,1,18),-- Sealed Vesper Necklace
-(22798,1879,1,3,2,230200),-- Cokes
-(22798,1885,1,1,2,200200),-- High Grade Suede
-(22798,9628,1,1,2,24200),-- Leonard
-(22798,9629,1,1,2,12000),-- Adamantine
-(22798,9630,1,1,2,14000),-- Orichalcum
-(22798,15809,1,1,2,300),-- Recipe - Sealed Vesper Ring (70%)
-(22798,15810,1,1,2,240),-- Recipe - Sealed Vesper Earring (70%)
-(22798,15811,1,1,2,180),-- Recipe - Sealed Vesper Necklace (70%)
-(22798,9573,1,1,200,36000),-- Life Stone: level 80
-(22798,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
-(22798,9575,1,1,200,880),-- High-Grade Life Stone: level 80
-(22798,15809,1,1,-1,5000),-- Recipe - Sealed Vesper Ring (70%)
-(22798,15810,1,1,-1,4000),-- Recipe - Sealed Vesper Earring (70%)
-(22798,15811,1,1,-1,3000),-- Recipe - Sealed Vesper Necklace (70%)
-(22798,15769,1,1,-1,60000),-- Sealed Vesper Ring Gem
-(22798,15770,1,1,-1,48000),-- Sealed Vesper Earring Gem
-(22798,15771,1,1,-1,36000),-- Sealed Vesper Necklace Gem
--- Divinity Fighter
-(22799,57,12253,22034,0,700000),-- Adena
-(22799,15667,1,1,1,10000),-- Sealed Vesper Gauntlet Piece
-(22799,15671,1,1,1,10000),-- Sealed Vesper Leather Gloves Piece
-(22799,15674,1,1,1,10000),-- Sealed Vesper Gloves Piece
-(22799,15668,1,1,1,10000),-- Sealed Vesper Boots Piece
-(22799,15672,1,1,1,10000),-- Sealed Vesper Leather Boots Piece
-(22799,15675,1,1,1,10000),-- Sealed Vesper Shoes Piece
-(22799,14109,1,1,1,90),-- Sealed Vesper Gauntlet
-(22799,14113,1,1,1,90),-- Sealed Vesper Leather Gloves
-(22799,14116,1,1,1,90),-- Sealed Vesper Gloves
-(22799,14110,1,1,1,90),-- Sealed Vesper Boots
-(22799,14114,1,1,1,90),-- Sealed Vesper Leather Boots
-(22799,14117,1,1,1,90),-- Sealed Vesper Shoes
-(22799,1879,1,3,2,230200),-- Cokes
-(22799,1885,1,1,2,200200),-- High Grade Suede
-(22799,9628,1,1,2,24200),-- Leonard
-(22799,9629,1,1,2,12000),-- Adamantine
-(22799,9630,1,1,2,14000),-- Orichalcum
-(22799,15801,1,1,2,200),-- Recipe - Sealed Vesper Gauntlet (60%)
-(22799,15802,1,1,2,200),-- Recipe - Sealed Vesper Leather Gloves (60%)
-(22799,15803,1,1,2,200),-- Recipe - Sealed Vesper Gloves (60%)
-(22799,15804,1,1,2,200),-- Recipe - Sealed Vesper Boots (60%)
-(22799,15805,1,1,2,200),-- Recipe - Sealed Vesper Leather Boots (60%)
-(22799,15806,1,1,2,200),-- Recipe - Sealed Vesper Shoes (60%)
-(22799,9573,1,1,200,36000),-- Life Stone: level 80
-(22799,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
-(22799,9575,1,1,200,880),-- High-Grade Life Stone: level 80
-(22799,15801,1,1,-1,3500),-- Recipe - Sealed Vesper Gauntlet (60%)
-(22799,15802,1,1,-1,3500),-- Recipe - Sealed Vesper Leather Gloves (60%)
-(22799,15803,1,1,-1,3500),-- Recipe - Sealed Vesper Gloves (60%)
-(22799,15804,1,1,-1,3500),-- Recipe - Sealed Vesper Boots (60%)
-(22799,15805,1,1,-1,3500),-- Recipe - Sealed Vesper Leather Boots (60%)
-(22799,15806,1,1,-1,3500),-- Recipe - Sealed Vesper Shoes (60%)
-(22799,15667,1,1,-1,40000),-- Sealed Vesper Gauntlet Piece
-(22799,15671,1,1,-1,40000),-- Sealed Vesper Leather Gloves Piece
-(22799,15674,1,1,-1,40000),-- Sealed Vesper Gloves Piece
-(22799,15668,1,1,-1,40000),-- Sealed Vesper Boots Piece
-(22799,15672,1,1,-1,40000),-- Sealed Vesper Leather Boots Piece
-(22799,15675,1,1,-1,40000),-- Sealed Vesper Shoes Piece
-(22799,9630,1,1,-1,400000),-- Orichalcum
--- Divinity Magus
-(22800,57,14473,20877,0,700000),-- Adena
-(22800,15660,1,1,1,8000),-- Sealed Vesper Helmet Piece
-(22800,15661,1,1,1,8000),-- Sealed Vesper Leather Helmet Piece
-(22800,15662,1,1,1,8000),-- Sealed Vesper Circlet Piece
-(22800,15669,1,1,1,10000),-- Sealed Vesper Verteidiger Piece
-(22800,15691,1,1,1,10000),-- Sealed Vesper Sigil Piece
-(22800,13143,1,1,1,70),-- Sealed Vesper Helmet
-(22800,13144,1,1,1,70),-- Sealed Vesper Leather Helmet
-(22800,13145,1,1,1,70),-- Sealed Vesper Circlet
-(22800,13887,1,1,1,90),-- Sealed Vesper Sigil
-(22800,14111,1,1,1,90),-- Sealed Vesper Shield
-(22800,1879,1,3,2,230200),-- Cokes
-(22800,1885,1,1,2,200200),-- High Grade Suede
-(22800,9628,1,1,2,24200),-- Leonard
-(22800,9629,1,1,2,12000),-- Adamantine
-(22800,9630,1,1,2,14000),-- Orichalcum
-(22800,15792,1,1,2,160),-- Recipe - Sealed Vesper Helmet (60%)
-(22800,15793,1,1,2,160),-- Recipe - Sealed Vesper Leather Helmet (60%)
-(22800,15794,1,1,2,160),-- Recipe - Sealed Vesper Circlet (60%)
-(22800,15807,1,1,2,200),-- Recipe - Sealed Vesper Sigil (60%)
-(22800,15808,1,1,2,200),-- Recipe - Sealed Vesper Shield (60%)
-(22800,9573,1,1,200,36000),-- Life Stone: level 80
-(22800,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
-(22800,9575,1,1,200,880),-- High-Grade Life Stone: level 80
-(22800,15792,1,1,-1,3000),-- Recipe - Sealed Vesper Helmet (60%)
-(22800,15793,1,1,-1,3000),-- Recipe - Sealed Vesper Leather Helmet (60%)
-(22800,15794,1,1,-1,3000),-- Recipe - Sealed Vesper Circlet (60%)
-(22800,15807,1,1,-1,3500),-- Recipe - Sealed Vesper Sigil (60%)
-(22800,15808,1,1,-1,3500),-- Recipe - Sealed Vesper Shield (60%)
-(22800,15660,1,1,-1,36000),-- Sealed Vesper Helmet Piece
-(22800,15661,1,1,-1,36000),-- Sealed Vesper Leather Helmet Piece
-(22800,15662,1,1,-1,36000),-- Sealed Vesper Circlet Piece
-(22800,15669,1,1,-1,40000),-- Sealed Vesper Verteidiger Piece
-(22800,15691,1,1,-1,40000),-- Sealed Vesper Sigil Piece
+-- Divinity Judge (84)
+(22794,15639,1,1,-1,13732), -- [vesper_stormer_piece]
+(22794,959,1,1,-1,922), -- [scrl_of_ench_wp_s]
+(22794,15820,1,1,-1,1608), -- [rp_vesper_stormer_i]
+(22794,57,5594,11432,0,700000), -- [adena]
+(22794,13462,1,1,1,7), -- [vesper_stormer]
+(22794,15639,1,1,1,3382), -- [vesper_stormer_piece]
+(22794,1895,1,1,2,405501), -- [metallic_fiber]
+(22794,4040,1,1,2,28385), -- [mold_lubricant]
+(22794,9628,1,1,2,11131), -- [renad]
+(22794,9630,1,1,2,7469), -- [oricalcum]
+(22794,14166,1,1,2,6856), -- [general_84_s]
+(22794,14167,1,1,2,1711), -- [special_84_s]
+(22794,14168,1,1,2,171), -- [rare_84_s]
+(22794,960,1,1,2,567), -- [scrl_of_ench_am_s]
+(22794,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22794,15540,1,1,3,10500), -- [unlit_torchlight]
+(22794,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Manager (84)
+(22795,15663,1,1,-1,26096), -- [sealed_vesper_cuirass_piece]
+(22795,15666,1,1,-1,42035), -- [sealed_vesper_gaiter_piece]
+(22795,9628,1,1,-1,113082), -- [renad]
+(22795,15795,1,1,-1,3089), -- [rp_sealed_vesper_cuirass_i]
+(22795,15798,1,1,-1,4943), -- [rp_sealed_vesper_gaiter_i]
+(22795,57,5832,11919,0,700000), -- [adena]
+(22795,14105,1,1,1,12), -- [sealed_vesper_cuirass]
+(22795,15663,1,1,1,5355), -- [sealed_vesper_cuirass_piece]
+(22795,14108,1,1,1,20, -- [sealed_vesper_gaiter]
+(22795,15666,1,1,1,8625), -- [sealed_vesper_gaiter_piece]
+(22795,1879,1,1,2,179354), -- [cokes]
+(22795,1885,1,1,2,89677), -- [high_grade_suede]
+(22795,9628,1,1,2,8440), -- [renad]
+(22795,9630,1,1,2,5663), -- [oricalcum]
+(22795,9629,1,1,2,4678), -- [adamantium]
+(22795,14166,1,1,2,5198), -- [general_84_s]
+(22795,14167,1,1,2,1298), -- [special_84_s]
+(22795,14168,1,1,2,129), -- [rare_84_s]
+(22795,15795,1,1,2,230), -- [rp_sealed_vesper_cuirass_i]
+(22795,15798,1,1,2,369), -- [rp_sealed_vesper_gaiter_i]
+(22795,9557,1,1,2,214), -- [high_ore_of_holy]
+(22795,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22795,15540,1,1,3,10500), -- [unlit_torchlight]
+(22795,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Supervisor (84)
+(22796,15664,1,1,-1,37946), -- [sealed_vesper_houberk_piece]
+(22796,15670,1,1,-1,58481), -- [sealed_vesper_leather_legging_piece]
+(22796,9630,1,1,-1,84181), -- [oricalcum]
+(22796,15796,1,1,-1,4570), -- [rp_sealed_vesper_houberk_i]
+(22796,15799,1,1,-1,7311), -- [rp_sealed_vesper_leather_legging_i]
+(22796,57,6469,13222,0,700000), -- [adena]
+(22796,14106,1,1,1,18), -- [sealed_vesper_houberk]
+(22796,14112,1,1,1,30), -- [sealed_vesper_leather_legging]
+(22796,15664,1,1,1,7784), -- [sealed_vesper_houberk_piece]
+(22796,15670,1,1,1,11996), -- [sealed_vesper_leather_legging_piece]
+(22796,1879,1,1,2,198965), -- [cokes]
+(22796,1885,1,1,2,99482), -- [high_grade_suede]
+(22796,9628,1,1,2,9363), -- [renad]
+(22796,9630,1,1,2,6283), -- [oricalcum]
+(22796,9629,1,1,2,5190), -- [adamantium]
+(22796,14166,1,1,2,5766), -- [general_84_s]
+(22796,14167,1,1,2,1440), -- [special_84_s]
+(22796,14168,1,1,2,143), -- [rare_84_s]
+(22796,15796,1,1,2,341), -- [rp_sealed_vesper_houberk_i]
+(22796,15799,1,1,2,545), -- [rp_sealed_vesper_leather_legging_i]
+(22796,9557,1,1,2,238), -- [high_ore_of_holy]
+(22796,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22796,15540,1,1,3,10500), -- [unlit_torchlight]
+(22796,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Worshipper (84)
+(22797,15665,1,1,-1,35390), -- [sealed_vesper_jaket_piece]
+(22797,15673,1,1,-1,54541), -- [sealed_vesper_hose_piece]
+(22797,9628,1,1,-1,116995), -- [renad]
+(22797,15797,1,1,-1,4262), -- [rp_sealed_vesper_jaket_i]
+(22797,15800,1,1,-1,6819), -- [rp_sealed_vesper_hose_i]
+(22797,57,6033,12331,0,700000), -- [adena]
+(22797,14107,1,1,1,17), -- [sealed_vesper_jaket]
+(22797,14115,1,1,1,27), -- [sealed_vesper_hose]
+(22797,15665,1,1,1,7259), -- [sealed_vesper_jaket_piece]
+(22797,15673,1,1,1,11188), -- [sealed_vesper_hose_piece]
+(22797,1895,1,1,2,388793), -- [metallic_fiber]
+(22797,4040,1,1,2,27215), -- [mold_lubricant]
+(22797,9628,1,1,2,10672), -- [renad]
+(22797,9630,1,1,2,7161), -- [oricalcum]
+(22797,14166,1,1,2,6573), -- [general_84_s]
+(22797,14167,1,1,2,1641), -- [special_84_s]
+(22797,14168,1,1,2,163), -- [rare_84_s]
+(22797,15797,1,1,2,388), -- [rp_sealed_vesper_jaket_i]
+(22797,15800,1,1,2,623), -- [rp_sealed_vesper_hose_i]
+(22797,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22797,15540,1,1,3,10500), -- [unlit_torchlight]
+(22797,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Protector (84)
+(22798,15770,1,1,-1,142869), -- [sealed_vesper_earring_gem]
+(22798,15771,1,1,-1,102788), -- [sealed_vesper_necklace_gem]
+(22798,15769,1,1,-1,237865), -- [sealed_vesper_ring_gem]
+(22798,15810,1,1,-1,19937), -- [rp_sealed_vesper_earring_i]
+(22798,15811,1,1,-1,14953), -- [rp_sealed_vesper_necklace_i]
+(22798,15809,1,1,-1,29905), -- [rp_sealed_vesper_ring_i]
+(22798,57,11026,22534,0,700000), -- [adena]
+(22798,14160,1,1,1,65), -- [sealed_vesper_earring]
+(22798,14161,1,1,1,49), -- [sealed_vesper_necklace]
+(22798,14162,1,1,1,98), -- [sealed_vesper_ring]
+(22798,15770,1,1,1,23472), -- [sealed_vesper_earring_gem]
+(22798,15771,1,1,1,16887), -- [sealed_vesper_necklace_gem]
+(22798,15769,1,1,1,39079), -- [sealed_vesper_ring_gem]
+(22798,1879,1,3,2,155419), -- [cokes]
+(22798,1885,1,1,2,155419), -- [high_grade_suede]
+(22798,9628,1,1,2,14627), -- [renad]
+(22798,9630,1,1,2,9816), -- [oricalcum]
+(22798,9629,1,1,2,8108), -- [adamantium]
+(22798,14166,1,1,2,9009), -- [general_84_s]
+(22798,14167,1,1,2,2249), -- [special_84_s]
+(22798,14168,1,1,2,224), -- [rare_84_s]
+(22798,15809,1,1,2,2455), -- [rp_sealed_vesper_ring_i]
+(22798,15810,1,1,2,1636), -- [rp_sealed_vesper_earring_i]
+(22798,15811,1,1,2,1227), -- [rp_sealed_vesper_necklace_i]
+(22798,9557,1,1,2,372), -- [high_ore_of_holy]
+(22798,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22798,15540,1,1,3,10500), -- [unlit_torchlight]
+(22798,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Fighter (84)
+(22799,15667,1,1,-1,81546), -- [sealed_vesper_gauntlet_piece]
+(22799,15671,1,1,-1,81546), -- [sealed_vesper_leather_gloves_piece]
+(22799,15674,1,1,-1,81546), -- [sealed_vesper_gloves_piece]
+(22799,15668,1,1,-1,81546), -- [sealed_vesper_boots_piece]
+(22799,15672,1,1,-1,81546), -- [sealed_vesper_leather_boots_piece]
+(22799,15675,1,1,-1,81546), -- [sealed_vesper_shoes_piece]
+(22799,9630,1,1,-1,56009), -- [oricalcum]
+(22799,15801,1,1,-1,9121), -- [rp_sealed_vesper_gauntlet_i]
+(22799,15802,1,1,-1,9121), -- [rp_sealed_vesper_leather_gloves_i]
+(22799,15803,1,1,-1,9121), -- [rp_sealed_vesper_gloves_i]
+(22799,15804,1,1,-1,9121), -- [rp_sealed_vesper_boots_i]
+(22799,15805,1,1,-1,9121), -- [rp_sealed_vesper_leather_boots_i]
+(22799,15806,1,1,-1,9121), -- [rp_sealed_vesper_shoes_i]
+(22799,57,11191,22872,0,700000), -- [adena]
+(22799,14109,1,1,1,32), -- [sealed_vesper_gauntlet]
+(22799,14113,1,1,1,32), -- [sealed_vesper_leather_gloves]
+(22799,14116,1,1,1,32), -- [sealed_vesper_gloves]
+(22799,14110,1,1,1,32), -- [sealed_vesper_boots]
+(22799,14114,1,1,1,32), -- [sealed_vesper_leather_boots]
+(22799,14117,1,1,1,32), -- [sealed_vesper_shoes]
+(22799,15667,1,1,1,14506), -- [sealed_vesper_gauntlet_piece]
+(22799,15671,1,1,1,14506), -- [sealed_vesper_leather_gloves_piece]
+(22799,15674,1,1,1,14506), -- [sealed_vesper_gloves_piece]
+(22799,15668,1,1,1,14506), -- [sealed_vesper_boots_piece]
+(22799,15672,1,1,1,14506), -- [sealed_vesper_leather_boots_piece]
+(22799,15675,1,1,1,14506), -- [sealed_vesper_shoes_piece]
+(22799,1879,1,1,2,270432), -- [cokes]
+(22799,1885,1,1,2,135216), -- [high_grade_suede]
+(22799,9628,1,1,2,12726), -- [renad]
+(22799,9630,1,1,2,8539), -- [oricalcum]
+(22799,9629,1,1,2,7054), -- [adamantium]
+(22799,14166,1,1,2,7838), -- [general_84_s]
+(22799,14167,1,1,2,1957), -- [special_84_s]
+(22799,14168,1,1,2,195), -- [rare_84_s]
+(22799,15801,1,1,2,1390), -- [rp_sealed_vesper_gauntlet_i]
+(22799,15802,1,1,2,1390), -- [rp_sealed_vesper_leather_gloves_i]
+(22799,15803,1,1,2,1390), -- [rp_sealed_vesper_gloves_i]
+(22799,15804,1,1,2,1390), -- [rp_sealed_vesper_boots_i]
+(22799,15805,1,1,2,1390), -- [rp_sealed_vesper_leather_boots_i]
+(22799,15806,1,1,2,1390), -- [rp_sealed_vesper_shoes_i]
+(22799,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22799,15540,1,1,3,10500), -- [unlit_torchlight]
+(22799,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+-- Divinity Magus (84)
+(22800,15660,1,1,-1,67556), -- [sealed_vesper_helmet_piece]
+(22800,15661,1,1,-1,67556), -- [sealed_vesper_leather_helmet_piece]
+(22800,15662,1,1,-1,67556), -- [sealed_vesper_circlet_piece]
+(22800,15669,1,1,-1,99846), -- [sealed_vesper_verteidiger_piece]
+(22800,15691,1,1,-1,99846), -- [sealed_vesper_sigil_piece]
+(22800,15792,1,1,-1,8416), -- [rp_sealed_vesper_helmet_i]
+(22800,15793,1,1,-1,8416), -- [rp_sealed_vesper_leather_helmet_i]
+(22800,15794,1,1,-1,8416), -- [rp_sealed_vesper_circlet_i]
+(22800,15808,1,1,-1,12022), -- [rp_sealed_vesper_verteidiger_i]
+(22800,15807,1,1,-1,12022), -- [rp_sealed_vesper_sigil_i]
+(22800,57,11913,24348,0,700000), -- [adena]
+(22800,13143,1,1,1,27), -- [sealed_vesper_helmet]
+(22800,13144,1,1,1,27), -- [sealed_vesper_leather_helmet]
+(22800,13145,1,1,1,27), -- [sealed_vesper_circlet]
+(22800,14111,1,1,1,39), -- [sealed_vesper_verteidiger]
+(22800,13887,1,1,1,39), -- [sealed_vesper_sigil]
+(22800,15660,1,1,1,11100), -- [sealed_vesper_helmet_piece]
+(22800,15661,1,1,1,11100), -- [sealed_vesper_leather_helmet_piece]
+(22800,15662,1,1,1,11100), -- [sealed_vesper_circlet_piece]
+(22800,15669,1,1,1,16406), -- [sealed_vesper_verteidiger_piece]
+(22800,15691,1,1,1,16406), -- [sealed_vesper_sigil_piece]
+(22800,1879,1,3,2,155017), -- [cokes]
+(22800,1885,1,1,2,155017), -- [high_grade_suede]
+(22800,9628,1,1,2,14589), -- [renad]
+(22800,9630,1,1,2,9790), -- [oricalcum]
+(22800,9629,1,1,2,8087), -- [adamantium]
+(22800,14166,1,1,2,8986), -- [general_84_s]
+(22800,14167,1,1,2,2243), -- [special_84_s]
+(22800,14168,1,1,2,224), -- [rare_84_s]
+(22800,15792,1,1,2,1062), -- [rp_sealed_vesper_helmet_i]
+(22800,15793,1,1,2,1062), -- [rp_sealed_vesper_leather_helmet_i]
+(22800,15794,1,1,2,1062), -- [rp_sealed_vesper_circlet_i]
+(22800,15808,1,1,2,1518), -- [rp_sealed_vesper_verteidiger_i]
+(22800,15807,1,1,2,1518), -- [rp_sealed_vesper_sigil_i]
+(22800,15690,1,1,3,10500), -- [silent_monastery_secret_key]
+(22800,15540,1,1,3,10500), -- [unlit_torchlight]
+(22800,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
 -- Freya Pavel Ruins + Archaic Laboratory
 -- Cruel Pincer Golem
 (22801,57,1500,3000,0,700000),-- Adena
