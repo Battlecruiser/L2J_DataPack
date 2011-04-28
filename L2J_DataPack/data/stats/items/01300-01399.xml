@@ -8,7 +8,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;41;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="80" />
@@ -23,8 +22,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1301" type="Weapon" name="Big Hammer">
@@ -35,7 +32,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="300" />
@@ -50,8 +46,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1302" type="Weapon" name="Bec de Corbin">
@@ -62,7 +56,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;150" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="750" />
@@ -78,8 +71,6 @@
 			<set order="0x08" stat="rCrit" val="8" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1303" type="Weapon" name="Lance">
@@ -90,7 +81,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;150" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="750" />
@@ -106,8 +96,6 @@
 			<set order="0x08" stat="rCrit" val="8" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1304" type="Weapon" name="Conjuror's Staff">
@@ -118,7 +106,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="oriharukon" />
 		<set name="weight" val="150" />
@@ -133,8 +120,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1305" type="Weapon" name="Knife">
@@ -145,7 +130,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;26;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="120" />
@@ -160,8 +144,6 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1306" type="Weapon" name="Crafted Dagger">
@@ -172,7 +154,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;26;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="chrysolite" />
 		<set name="weight" val="100" />
@@ -187,8 +168,6 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1307" type="Weapon" name="Bow">
@@ -199,7 +178,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="5000" />
 		<set name="damage_range" val="0;0;5000;0" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="150" />
@@ -216,8 +194,6 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1308" type="Armor" name="Compound Scale Mail">
@@ -658,8 +634,6 @@
 			<set order="0x08" stat="mAtk" val="12" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="1334" type="EtcItem" name="Predator's Fang">
@@ -1119,7 +1093,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
