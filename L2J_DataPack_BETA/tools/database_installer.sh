@@ -199,7 +199,7 @@ echo "communityserver DB installation/upgrade."
 echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
 read LOGINPROMPT
 case "$LOGINPROMPT" in
-	"f"|"F") logininstall; loginupgrade; gsbackup; asktype;;
+	"f"|"F") logininstall; loginupgrade; cbbackup; askcbtype;;
 	"s"|"S") cbbackup; askcbtype;;
 	"q"|"Q") finish;;
 	*) asklogin;;
