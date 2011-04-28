@@ -199,7 +199,7 @@ echo "communityserver DB installation/upgrade."
 echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
 read LOGINPROMPT
 case "$LOGINPROMPT" in
-	"f"|"F") logininstall; loginupgrade; gsbackup; asktype;;
+	"f"|"F") logininstall; loginupgrade; cbbackup; askcbtype;;
 	"s"|"S") cbbackup; askcbtype;;
 	"q"|"Q") finish;;
 	*) asklogin;;
@@ -408,7 +408,7 @@ done
 # MOD: Wedding.
 	echo -ne "Install "Wedding Mod" tables? (y/N): "
 	read modprompt
-	if [ "$modprompt" == "y" -o "$LSB" == "y" ]; then
+	if [ "$modprompt" == "y" -o "$modprompt" == "Y" ]; then
 		for mod in $(ls ../sql/server/mods/*.sql);do
 			echo "Installing custom mod table : $mod"
 			$MYG < $mod
