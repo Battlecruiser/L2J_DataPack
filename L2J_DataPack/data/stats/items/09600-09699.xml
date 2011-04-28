@@ -465,7 +465,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -492,7 +491,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -519,7 +517,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -546,7 +543,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -573,7 +569,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -600,7 +595,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;300;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="743" />
 		<set name="crystal_type" val="d" />
@@ -637,8 +631,6 @@
 			<set order="0x08" stat="mAtk" val="21" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9645" type="Weapon" name="npc Only (Sword)">
@@ -659,8 +651,6 @@
 			<set order="0x08" stat="mAtk" val="21" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9646" type="Weapon" name="npc Only (Rapier)">
@@ -681,8 +671,6 @@
 			<set order="0x08" stat="mAtk" val="21" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9647" type="EtcItem" name="Scroll of Escape: Kamael Village">
@@ -779,8 +767,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9657" type="Weapon" name="Enchanted Coyote Fang">
@@ -801,8 +787,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9658" type="Weapon" name="Enchanted Saltydog Fang">
@@ -823,8 +807,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9659" type="Weapon" name="Enchanted Cerberus Fang">
@@ -845,8 +827,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9660" type="Weapon" name="Orichalcum Fang">
@@ -867,8 +847,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9661" type="Weapon" name="Enchanted Fenrir Fang">
@@ -889,8 +867,6 @@
 			<add order="0x10" stat="mAtk" val="5" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="277" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9662" type="Armor" name="Great Wolf Scale Armor">
@@ -906,8 +882,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="112" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9663" type="Armor" name="Great Wolf Bronze Armor">
@@ -923,8 +897,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="124" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9664" type="Armor" name="Great Wolf Plate Armor">
@@ -940,8 +912,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="136" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9665" type="Armor" name="Great Wolf Mithril Armor">
@@ -957,8 +927,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="148" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9666" type="Armor" name="Great Wolf Oriharukon Armor">
@@ -974,8 +942,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="160" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9667" type="Armor" name="Great Wolf Orichalcum Armor">
@@ -991,8 +957,6 @@
 		<for>
 			<add order="0x10" stat="mDef" val="14" />
 			<add order="0x10" stat="pDef" val="171" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9668" type="EtcItem" name="Great Wolf Food">

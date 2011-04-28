@@ -313,7 +313,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="c" />
 		<set name="material" val="fine_steel" />
@@ -396,8 +395,6 @@
 			<set order="0x08" stat="mAtk" val="21" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="10129" type="EtcItem" name="Scroll of Escape: Fortress">
@@ -909,8 +906,6 @@
 			<set order="0x08" stat="mAtk" val="1" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="10168" type="Armor" name="Dynasty Leather Armor - Enchanter">

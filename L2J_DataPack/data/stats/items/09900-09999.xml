@@ -33,8 +33,6 @@
 			<set order="0x08" stat="mAtk" val="21" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9902" type="Weapon" name="Improved Great Spear">
@@ -45,7 +43,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
 		<set name="damage_range" val="0;0;66;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="2120" />
@@ -58,8 +55,6 @@
 			<set order="0x08" stat="rCrit" val="8" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9903" type="Weapon" name="Improved Iron Hammer">
@@ -70,7 +65,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1850" />
@@ -82,8 +76,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9904" type="Weapon" name="Improved Sword Breaker">
@@ -94,7 +86,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1110" />
@@ -106,8 +97,6 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="433" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9905" type="Weapon" name="Improved Viper Fang">
@@ -118,7 +107,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;32;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1560" />
@@ -130,8 +118,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9906" type="Weapon" name="Improved Composite Bow">
@@ -142,7 +128,6 @@
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1880" />
@@ -156,8 +141,6 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="293" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9907" type="Weapon" name="Improved Flanged Mace">
@@ -168,7 +151,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1800" />
@@ -180,8 +162,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9908" type="Weapon" name="Improved Mage Staff">
@@ -192,7 +172,6 @@
 		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;46;120" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1050" />
@@ -205,8 +184,6 @@
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9909" type="Armor" name="Agathion Seal Bracelet">
@@ -1301,7 +1278,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="-1.5" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="915" />
 		<set name="crystal_type" val="d" />
@@ -1322,8 +1298,6 @@
 			<set order="0x08" stat="rCrit" val="10" />
 			<add order="0x10" stat="accCombat" val="-1.5" />
 			<set order="0x08" stat="pAtkSpd" val="303" />
-			<enchant val="0" order="0x0C" stat="pAtk" />
-			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
 	<item id="9996" type="Weapon" name="Hand Crossbow">
@@ -1334,7 +1308,6 @@
 		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="hit_modify" val="-1.5" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="915" />
 		<set name="crystal_type" val="d" />
