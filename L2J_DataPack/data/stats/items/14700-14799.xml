@@ -942,7 +942,6 @@
 		<set name="weapon_type" val="dagger" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="1" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1130" />
@@ -976,7 +975,6 @@
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="3" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1640" />
@@ -995,7 +993,6 @@
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="4" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="2080" />
@@ -1014,7 +1011,6 @@
 		<set name="weapon_type" val="pole" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="5" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="2120" />
@@ -1032,7 +1028,6 @@
 		<set name="weapon_type" val="bow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="6" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
 		<set name="weight" val="1790" />
@@ -1052,7 +1047,6 @@
 		<set name="weapon_type" val="dualfist" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="7" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1520" />
@@ -1089,7 +1083,6 @@
 		<set name="weapon_type" val="blunt" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="9" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="990" />
@@ -1109,7 +1102,6 @@
 		<set name="weapon_type" val="bigblunt" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="10" />
-		<set name="hit_modify" val="4.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="340" />
@@ -1156,7 +1148,6 @@
 		<set name="weapon_type" val="rapier" />
 		<set name="bodypart" val="rhand" />
 		<set name="attack_range" val="12" />
-		<set name="hit_modify" val="-1.5" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
@@ -1200,7 +1191,6 @@
 		<set name="weapon_type" val="crossbow" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="14" />
-		<set name="hit_modify" val="-1.5" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1580" />
@@ -1254,11 +1244,6 @@
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="14797" type="Weapon" name="Baguette's Two-handed Dagger">
 		<set name="icon" val="icon.dual_dagger_i00" />
@@ -1266,7 +1251,6 @@
 		<set name="weapon_type" val="dualdagger" />
 		<set name="bodypart" val="lrhand" />
 		<set name="attack_range" val="17" />
-		<set name="hit_modify" val="-3.75" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="2150" />
