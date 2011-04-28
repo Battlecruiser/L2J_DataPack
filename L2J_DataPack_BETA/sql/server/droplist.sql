@@ -33550,7 +33550,7 @@ INSERT INTO `droplist` VALUES
 (22795,57,5832,11919,0,700000), -- [adena]
 (22795,14105,1,1,1,12), -- [sealed_vesper_cuirass]
 (22795,15663,1,1,1,5355), -- [sealed_vesper_cuirass_piece]
-(22795,14108,1,1,1,20, -- [sealed_vesper_gaiter]
+(22795,14108,1,1,1,20), -- [sealed_vesper_gaiter]
 (22795,15666,1,1,1,8625), -- [sealed_vesper_gaiter_piece]
 (22795,1879,1,1,2,179354), -- [cokes]
 (22795,1885,1,1,2,89677), -- [high_grade_suede]
@@ -33725,6 +33725,7 @@ INSERT INTO `droplist` VALUES
 (22800,15690,1,1,3,10500), -- [silent_monastery_secret_key]
 (22800,15540,1,1,3,10500), -- [unlit_torchlight]
 (22800,8056,1,1,3,49000), -- [q_key_of_brilliant_room]
+
 -- Freya Pavel Ruins + Archaic Laboratory
 -- Cruel Pincer Golem
 (22801,57,1500,3000,0,700000),-- Adena
