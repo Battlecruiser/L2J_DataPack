@@ -774,7 +774,10 @@ title L2JDP Installer - Custom Server Tables
 cls
 set cstprompt=n
 echo.
-set /p cstprompt=Install Custom Server Tables: (y) yes or (n) no 
+echo L2J provides some "Custom Server Tables" for non-retail modifications
+echo in order to avoid override the original Server Tables.
+echo.
+set /p cstprompt=Install Custom Server Tables: (y) yes or (n) no :
 if /i %cstprompt%==y goto cstinstall
 if /i %cstprompt%==n goto mod
 goto newbie_helper
@@ -804,7 +807,13 @@ title L2JDP Installer - Mod Server Tables
 cls
 set cstprompt=n
 echo.
-set /p cstprompt=Install Mod Server Tables: (y) yes or (n) no 
+echo L2J provides a basic infraestructure for some non-retail features
+echo (aka L2J mods) to get enabled with a minimum of changes.
+echo.
+echo Some of these mods would require extra tables in order to work
+echo and those tables could be created now if you wanted to.
+echo.
+set /p cstprompt=Install Mod Server Tables: (y) yes or (n) no :
 if /i %cstprompt%==y goto modinstall
 if /i %cstprompt%==n goto newbie_helper
 goto newbie_helper
