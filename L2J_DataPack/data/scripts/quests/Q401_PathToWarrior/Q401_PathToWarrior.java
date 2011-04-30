@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 
 /**
- * Path to Warrior
+ * Path of the Warrior (401)
  * @author jython script by ElgarL, Mr.
  * @version 2010-12-29 (Freya)
  */
@@ -153,15 +153,19 @@ public class Q401_PathToWarrior extends Quest
 			}
 			else if (st.getInt("cond") == 6)
 			{
-				st.set("cond", "0");
-				st.exitQuest(false);
-				player.sendPacket(new SocialAction(player, 3));
 				st.takeItems(RustedBronzeSword3, 1);
-				st.giveAdena(163800, false);
-				st.takeItems(PoisonSpiderLeg, 20);
+				st.takeItems(PoisonSpiderLeg, -1);
 				st.giveItems(MedallionOfWarrior, 1);
-				st.addExpAndSp(456128, 27710);
+				if (player.getLevel() >= 20)
+					st.addExpAndSp(320534, 21012);
+				else if (player.getLevel() == 19)
+					st.addExpAndSp(456128, 27710);
+				else
+					st.addExpAndSp(160267, 34408);
+				st.giveItems(57, 163800);
 				st.playSound("ItemSound.quest_finish");
+				player.sendPacket(new SocialAction(player, 3));
+				st.exitQuest(false);
 				st.saveGlobalQuestVar("1ClassQuestFinished", "1");
 				htmltext = "30010-13.html";
 			}
@@ -256,6 +260,6 @@ public class Q401_PathToWarrior extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q401_PathToWarrior(401, qn, "Path to Warrior");
+		new Q401_PathToWarrior(401, qn, "Path of the Warrior");
 	}
 }

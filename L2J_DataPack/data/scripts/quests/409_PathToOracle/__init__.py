@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "409_PathToOracle"
 
@@ -94,12 +95,18 @@ class Quest (JQuest) :
             st.giveItems(LEAF_OF_ORACLE,1)
             isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
             if isFinished == "" : 
-              st.giveItems(57,81900)
-              st.addExpAndSp(295862,16894)
+              if player.getLevel() >= 20 :
+                st.addExpAndSp(320534, 20392)
+              elif player.getLevel() == 19 :
+                st.addExpAndSp(456128, 27090)
+              else:
+                st.addExpAndSp(591724, 33788)
+              st.giveItems(57, 163800)
             st.set("cond","0")
             st.exitQuest(False)
             st.saveGlobalQuestVar("1ClassQuestFinished","1")
             st.playSound("ItemSound.quest_finish")
+            player.sendPacket(SocialAction(player,3))
           else:
             htmltext = "30293-07.htm"
    elif npcId == 30424 and st.getInt("cond") and st.getQuestItemsCount(CRYSTAL_MEDALLION) :

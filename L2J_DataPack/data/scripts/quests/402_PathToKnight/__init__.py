@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "402_PathToKnight"
 
@@ -39,6 +40,7 @@ class Quest (JQuest) :
     classid = st.getPlayer().getClassId().getId()
     level = st.getPlayer().getLevel()
     squire = st.getQuestItemsCount(MARK_OF_ESQUIRE)
+    player = st.getPlayer()
     coin1,coin2,coin3,coin4,coin5,coin6 = st.getQuestItemsCount(COIN_OF_LORDS1),st.getQuestItemsCount(COIN_OF_LORDS2),st.getQuestItemsCount(COIN_OF_LORDS3),st.getQuestItemsCount(COIN_OF_LORDS4),st.getQuestItemsCount(COIN_OF_LORDS5),st.getQuestItemsCount(COIN_OF_LORDS6)
     guards_mark1,guards_mark2,guards_mark3=st.getQuestItemsCount(GLUDIO_GUARDS_MARK1),st.getQuestItemsCount(GLUDIO_GUARDS_MARK2),st.getQuestItemsCount(GLUDIO_GUARDS_MARK3)
     church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
@@ -96,6 +98,13 @@ class Quest (JQuest) :
           htmltext = Quest.getNoQuestMsg(player)
     elif event == "30417-13.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
+          if player.getLevel() >= 20 :
+              st.addExpAndSp(160267, 11576)
+          elif player.getLevel() == 19 :
+              st.addExpAndSp(228064, 14925)
+          else:
+              st.addExpAndSp(295862, 18274)
+          st.giveItems(57, 81900)
           for item in range(1162,1180) :
                st.takeItems(item,-1)
           st.takeItems(MARK_OF_ESQUIRE,-1)
@@ -104,10 +113,18 @@ class Quest (JQuest) :
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
+          player.sendPacket(SocialAction(player,3))
         else:
           htmltext = Quest.getNoQuestMsg(player)
     elif event == "30417-14.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
+          if player.getLevel() >= 20 :
+              st.addExpAndSp(160267, 11576)
+          elif player.getLevel() == 19 :
+              st.addExpAndSp(228064, 14925)
+          else:
+              st.addExpAndSp(295862, 18274)
+          st.giveItems(57, 81900)
           for item in range(1162,1180) :
                st.takeItems(item,-1)
           st.takeItems(MARK_OF_ESQUIRE,-1)
@@ -115,6 +132,7 @@ class Quest (JQuest) :
           st.set("cond","0")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
+          player.sendPacket(SocialAction(player,3))
         else:
           htmltext = Quest.getNoQuestMsg(player)
     return htmltext
@@ -149,6 +167,13 @@ class Quest (JQuest) :
            htmltext = "30417-11.htm"
         elif (coin1+coin2+coin3+coin4+coin5+coin6) == 6 :
            htmltext = "30417-12.htm"
+           if player.getLevel() >= 20 :
+               st.addExpAndSp(320534, 23152)
+           elif player.getLevel() == 19 :
+               st.addExpAndSp(456128, 29850)
+           else:
+               st.addExpAndSp(591724, 36542)
+           st.giveItems(57, 163800)
            for item in range(1162,1180) :
                st.takeItems(item,-1)
            st.takeItems(MARK_OF_ESQUIRE,-1)
@@ -156,6 +181,7 @@ class Quest (JQuest) :
            st.set("cond","0")
            st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
+           player.sendPacket(SocialAction(player,3))
    elif npcId == 30332 and cond==1 and squire :
        if not guards_mark1 and not coin1 :
           htmltext = "30332-01.htm"

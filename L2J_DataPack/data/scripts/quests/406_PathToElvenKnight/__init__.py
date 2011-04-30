@@ -88,8 +88,13 @@ class Quest (JQuest) :
             st.takeItems(KLUTO_BOX,-1)
             isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
             if isFinished == "" : 
-              st.giveItems(57,81900)
-              st.addExpAndSp(228064,14925)
+              if player.getLevel() >= 20 :
+                st.addExpAndSp(320534, 23152)
+              elif player.getLevel() == 19 :
+                st.addExpAndSp(456128, 29850)
+              else:
+                st.addExpAndSp(591724, 33328)
+              st.giveItems(57, 163800)
             player.sendPacket(SocialAction(player,3))
             st.set("cond","0")
             st.exitQuest(False)

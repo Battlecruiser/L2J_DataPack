@@ -76,8 +76,13 @@ class Quest (JQuest) :
         st.giveItems(MARK_OF_FAITH,1)
         isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
         if isFinished == "" : 
-          st.addExpAndSp(295862,17664)
-          st.giveItems(57,81900)
+            if player.getLevel() >= 20 :
+              st.addExpAndSp(320534, 23152)
+            elif player.getLevel() == 19 :
+              st.addExpAndSp(456128, 28630)
+            else:
+              st.addExpAndSp(591724, 35328)
+            st.giveItems(57, 163800)
         st.set("cond","0")
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")

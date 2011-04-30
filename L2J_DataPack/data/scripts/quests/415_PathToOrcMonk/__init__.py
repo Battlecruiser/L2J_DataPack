@@ -87,9 +87,14 @@ class Quest (JQuest) :
         st.takeItems(SCROLL_FIERY_SPIRIT,1)
         st.giveItems(KHAVATARI_TOTEM,1)
         isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
-        if isFinished == "" : 
-          st.giveItems(57,81900)
-          st.addExpAndSp(295862,19344)
+        if isFinished == "" :
+          if player.getLevel() >= 20 :
+            st.addExpAndSp(160267, 12646)
+          elif player.getLevel() == 19 :
+            st.addExpAndSp(228064, 15995)
+          else:
+            st.addExpAndSp(295862, 19344)
+          st.giveItems(57, 81900)
         player.sendPacket(SocialAction(player,3))
         st.set("cond","0")
         st.set("onlyone","1")
@@ -175,8 +180,13 @@ class Quest (JQuest) :
         st.takeItems(SCROLL_FIERY_SPIRIT,1)
         st.takeItems(TORUKUS_LETTER,1)
         st.giveItems(KHAVATARI_TOTEM,1)
-        st.giveItems(57,81900)
-        st.addExpAndSp(295862,19344)
+        if player.getLevel() >= 20 :
+             st.addExpAndSp(320534, 25292)
+        elif player.getLevel() == 19 :
+             st.addExpAndSp(456128, 31990)
+        else:
+             st.addExpAndSp(591724, 38688)
+        st.giveItems(57, 163800)
         player.sendPacket(SocialAction(player,3))
         st.set("cond","0")
         st.set("onlyone","1")

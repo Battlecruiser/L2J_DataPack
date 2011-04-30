@@ -102,10 +102,14 @@ class Quest (JQuest) :
           st.giveItems(MASK_OF_MEDIUM,1)
           isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
           if isFinished == "" : 
-            st.giveItems(57,81900)
-            st.addExpAndSp(295862,18194)
+            if player.getLevel() >= 20 :
+              st.addExpAndSp(320534, 22992)
+            elif player.getLevel() == 19 :
+              st.addExpAndSp(456128, 29690)
+            else:
+              st.addExpAndSp(591724, 36388)
+            st.giveItems(57, 163800)
           player.sendPacket(SocialAction(player,3))
-          player.sendPacket(SocialAction(player,15))
           st.set("cond","0")
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
@@ -141,10 +145,14 @@ class Quest (JQuest) :
    elif npcId == 31979 and st.getInt("cond") == 21:
         htmltext = "31979-03.htm"
         st.giveItems(MASK_OF_MEDIUM,1)
-        st.giveItems(57,81900)
-        st.addExpAndSp(295862,18194)
+        if player.getLevel() >= 20 :
+             st.addExpAndSp(160267, 11496)
+        elif player.getLevel() == 19 :
+             st.addExpAndSp(228064, 14845)
+        else:
+             st.addExpAndSp(295862, 18194)
+        st.giveItems(57, 81900)
         player.sendPacket(SocialAction(player,3))
-        player.sendPacket(SocialAction(player,15))
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")

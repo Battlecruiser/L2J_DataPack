@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "417_PathToScavenger"
 
@@ -261,12 +262,18 @@ class Quest (JQuest) :
           st.giveItems(RING_OF_RAVEN,1)
           isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
           if isFinished == "" : 
-            st.giveItems(57,81900)
-            st.addExpAndSp(295862,24404)
+            if player.getLevel() >= 20 :
+              st.addExpAndSp(160267, 17706)
+            elif player.getLevel() == 19 :
+              st.addExpAndSp(228064, 21055)
+            else:
+              st.addExpAndSp(295862, 24404)
+            st.giveItems(57, 81900)
           st.set("cond","0")
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
+          player.sendPacket(SocialAction(player,3))
    elif npcId == 30557 and cond and st.getQuestItemsCount(ROUTS_TP_SCROLL)==1 :
           htmltext = "30557-01.htm"
    return htmltext
