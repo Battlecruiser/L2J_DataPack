@@ -98,8 +98,13 @@ class Quest (JQuest) :
             st.giveItems(GAZE_OF_ABYSS,1)
             isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
             if isFinished == "" : 
-              st.giveItems(57,81900)
-              st.addExpAndSp(295862,19804)
+              if player.getLevel() >= 20 :
+                st.addExpAndSp(320534, 26212)
+              elif player.getLevel() == 19 :
+                st.addExpAndSp(456128, 32910)
+              else:
+                st.addExpAndSp(591724, 39608)
+              st.giveItems(57, 163800)
             player.sendPacket(SocialAction(player,3))
             st.set("cond","0")
             st.exitQuest(False)

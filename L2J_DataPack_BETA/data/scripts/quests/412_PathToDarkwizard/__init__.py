@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "412_PathToDarkwizard"
 
@@ -98,12 +99,18 @@ class Quest (JQuest) :
             st.giveItems(JEWEL_OF_DARKNESS,1)
             isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
             if isFinished == "" : 
-              st.giveItems(57,81900)
-              st.addExpAndSp(295862,17664)
+              if player.getLevel() >= 20 :
+                st.addExpAndSp(320534, 28630)
+              elif player.getLevel() == 19 :
+                st.addExpAndSp(456128, 28630)
+              else:
+                st.addExpAndSp(591724, 35328)
+              st.giveItems(57, 163800)
             st.set("cond","0")
             st.exitQuest(False)
             st.saveGlobalQuestVar("1ClassQuestFinished","1")
             st.playSound("ItemSound.quest_finish")
+            player.sendPacket(SocialAction(player,3))
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getQuestItemsCount(FAMILYS_ASHES) == 0 and st.getQuestItemsCount(LUCKY_KEY) == 0 and st.getQuestItemsCount(CANDLE) == 0 and st.getQuestItemsCount(HUB_SCENT) == 0 and st.getQuestItemsCount(KNEE_BONE) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY) == 0 :
           htmltext = "30421-17.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getInt("id") == 1 and st.getQuestItemsCount(SEEDS_OF_ANGER) == 0 :
