@@ -6,6 +6,7 @@ from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "403_PathToRogue"
 
@@ -96,8 +97,13 @@ class Quest (JQuest) :
           htmltext = "30379-09.htm"
           isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
           if isFinished == "" : 
-            st.giveItems(57,81900)
-            st.addExpAndSp(295862,16814)
+            if player.getLevel() >= 20 :
+              st.addExpAndSp(320534, 20232)
+            elif player.getLevel() == 19 :
+              st.addExpAndSp(456128, 26930)
+            else:
+              st.addExpAndSp(591724, 33628)
+            st.giveItems(57, 163800)
           st.giveItems(BEZIQUES_RECOMMENDATION,1)
           st.takeItems(NETIS_BOW,1)
           st.takeItems(NETIS_DAGGER,1)
@@ -108,6 +114,7 @@ class Quest (JQuest) :
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
+          player.sendPacket(SocialAction(player,3))
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
           htmltext = "30379-07.htm"
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT)>0 :

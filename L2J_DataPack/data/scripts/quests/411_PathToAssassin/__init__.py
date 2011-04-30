@@ -84,8 +84,13 @@ class Quest (JQuest) :
           st.giveItems(IRON_HEART,1)
           isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
           if isFinished == "" : 
-            st.giveItems(57,81900)
-            st.addExpAndSp(295862,21264)
+            if player.getLevel() >= 20 :
+              st.addExpAndSp(320534, 35830)
+            elif player.getLevel() == 19 :
+              st.addExpAndSp(456128, 35830)
+            else:
+              st.addExpAndSp(591724, 42528)
+            st.giveItems(57, 163800)
           player.sendPacket(SocialAction(player,3))
           st.set("cond","0")
           st.exitQuest(False)

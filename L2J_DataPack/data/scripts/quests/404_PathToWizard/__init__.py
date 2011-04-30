@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "404_PathToWizard"
 
@@ -202,9 +203,17 @@ class Quest (JQuest) :
         st.takeItems(WIND_BANGEL,st.getQuestItemsCount(WIND_BANGEL))
         st.takeItems(WATER_NECKLACE,st.getQuestItemsCount(WATER_NECKLACE))
         st.takeItems(EARTH_RING,st.getQuestItemsCount(EARTH_RING))
+        if player.getLevel() >= 20 :
+          st.addExpAndSp(320534, 23152)
+        elif player.getLevel() == 19 :
+          st.addExpAndSp(456128, 29850)
+        else:
+          st.addExpAndSp(591724, 36548)
+        st.giveItems(57, 163800)
         st.set("cond","0")
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")
+        player.sendPacket(SocialAction(player,3))
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
           st.giveItems(BEAD_OF_SEASON,1)
