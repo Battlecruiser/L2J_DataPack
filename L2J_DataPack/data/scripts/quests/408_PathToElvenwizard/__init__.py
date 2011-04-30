@@ -5,6 +5,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      import SocialAction
 
 qn = "408_PathToElvenwizard"
 
@@ -159,11 +160,18 @@ class Quest (JQuest) :
         st.takeItems(FERTILITY_PERIDOT,st.getQuestItemsCount(FERTILITY_PERIDOT))
         isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
         if isFinished == "" : 
-          st.addExpAndSp(228064,14615)
+          if player.getLevel() >= 20 :
+            st.addExpAndSp(320534, 22532)
+          elif player.getLevel() == 19 :
+            st.addExpAndSp(456128, 29230)
+          else:
+            st.addExpAndSp(591724, 35928)
+          st.giveItems(57, 163800)
         st.set("cond","0")
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")
         st.playSound("ItemSound.quest_finish")
+        player.sendPacket(SocialAction(player,3))
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)
         htmltext = "30414-24.htm"

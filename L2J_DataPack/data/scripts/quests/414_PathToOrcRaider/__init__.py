@@ -113,8 +113,13 @@ class Quest (JQuest) :
      st.giveItems(MARK_OF_RAIDER,1)
      isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
      if isFinished == "" : 
-       st.giveItems(57,81900)
-       st.addExpAndSp(295862,17354)
+       if player.getLevel() >= 20 :
+         st.addExpAndSp(320534, 21312)
+       elif player.getLevel() == 19 :
+         st.addExpAndSp(456128, 28010)
+       else:
+          st.addExpAndSp(591724, 34708)
+       st.giveItems(57, 163800)
      player.sendPacket(SocialAction(player,3))
      st.unset("cond")
      st.exitQuest(False)
@@ -128,9 +133,14 @@ class Quest (JQuest) :
      elif cond == 7:
         htmltext = "31978-05.htm"
         st.takeItems(TIMORA_ORC_HEAD,-1) 
-        st.giveItems(MARK_OF_RAIDER,1) 
-        st.giveItems(57,81900)
-        st.addExpAndSp(160267,10656)
+        st.giveItems(MARK_OF_RAIDER,1)
+        if player.getLevel() >= 20 :
+          st.addExpAndSp(160267, 10656)
+        elif player.getLevel() == 19 :
+          st.addExpAndSp(228064, 14005)
+        else:
+          st.addExpAndSp(295862, 17354)
+        st.giveItems(57, 81900)
         player.sendPacket(SocialAction(player,3))
         st.unset("cond") 
         st.exitQuest(False) 
