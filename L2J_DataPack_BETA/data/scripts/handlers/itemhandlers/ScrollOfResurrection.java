@@ -24,7 +24,9 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -45,6 +47,13 @@ public class ScrollOfResurrection implements IItemHandler
 			return;
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
+		
+		if (!TvTEvent.onScrollUse(playable.getObjectId()))
+		{
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		if (activeChar.isSitting())
 		{
 			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_MOVE_SITTING));
