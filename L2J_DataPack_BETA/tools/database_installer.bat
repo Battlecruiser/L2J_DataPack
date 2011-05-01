@@ -393,7 +393,7 @@ call :colors 17
 set cmdline=
 title L2JDP Installer - Login Server DataBase Setup - Full Install
 echo Deleting loginserver tables for new content.
-set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< login_install.sql 2^> NUL
+set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ls_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
@@ -526,7 +526,7 @@ call :colors 17
 set cmdline=
 title L2JDP Installer - Community Board Server DataBase Setup - Full Install
 echo Deleting communityserver tables for new content.
-set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< community_install.sql 2^> NUL
+set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< cs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
@@ -665,7 +665,7 @@ set stage=9
 set cmdline=
 title L2JDP Installer - Game Server DataBase Setup - Full Install
 echo Deleting all gameserver tables for new content...
-set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< full_install.sql 2^> NUL
+set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< gs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
