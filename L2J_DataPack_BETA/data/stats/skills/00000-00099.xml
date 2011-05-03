@@ -428,6 +428,7 @@
 		<table name="#mpConsume"> 8 8 9 10 11 11 14 15 15 18 18 18 19 20 21 22 23 24 26 26 26 28 29 30 </table>
 		<table name="#power"> 73 80 88 115 126 137 178 193 210 268 291 314 367 396 427 494 531 571 656 703 752 859 916 977 </table>
 		<table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
+		<set name="blowChance" val="20" />
 		<set name="weaponsAllowed" val="Dagger" /> <!-- Dagger -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -770,6 +771,7 @@
 		<table name="#enchElementPower"> 11 12 14 15 16 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 42 43 44 46 47 48 50 </table>
 		<table name="#enchDuel"> 5552 5624 5697 5769 5842 5914 5987 6059 6132 6204 6277 6350 6422 6495 6567 6640 6712 6785 6857 6930 7002 7075 7147 7220 7292 7365 7437 7510 7583 7655 </table>
 		<set name="baseCritRate" val="#baseCritLethal" />
+		<set name="blowChance" val="40" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="24" /> <!-- Behind/Crit -->
 		<set name="coolTime" val="720" />

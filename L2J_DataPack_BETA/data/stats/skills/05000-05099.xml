@@ -624,6 +624,7 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5049" levels="12" name="Castle Blow">
+		<set name="blowChance" val="20" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="6000" />
@@ -956,13 +957,15 @@
 	</skill>
 	<skill id="5081" levels="4" name="Silence">
 		<table name="#mpConsume"> 75 75 75 20 </table>
+		<table name="#power"> 1715 3540 7306 8602 </table>
+		<set name="blowChance" val="20" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="80" />
-		<set name="power" val="40" />
+		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="800" />
-		<set name="skillType" val="DEBUFF" />
+		<set name="skillType" val="BLOW" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
@@ -1003,6 +1006,7 @@
 		</for>
 	</skill>
 	<skill id="5084" levels="4" name="NPC Blinding Blow">
+		<set name="blowChance" val="15" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="83" />
 		<set name="condition" val="16" /> <!-- Crit -->

@@ -510,7 +510,8 @@
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
 		<!-- H5 Skill -->
-		<set name="baseCritRate" val="10" />
+		<set name="baseCritRate" val="20" />
+		<set name="blowChance" val="40" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="400" />

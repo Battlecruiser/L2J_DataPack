@@ -178,6 +178,7 @@
 		<table name="#power"> 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
 		<table name="#magicLvl"> 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#enchDuel"> 5574 5670 5766 5862 5957 6053 6149 6245 6340 6436 6532 6628 6723 6819 6915 7011 7107 7202 7298 7394 7490 7585 7681 7777 7873 7968 8064 8160 8256 8352 </table>
+		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="coolTime" val="300" />
@@ -1973,6 +1974,7 @@
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#power"> 3749 4217 4703 5199 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
+		<set name="blowChance" val="20" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="lethal1" val="10" /> <!-- Half-Kill -->
 		<set name="mpConsume" val="#mpConsume" />
