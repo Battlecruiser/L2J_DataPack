@@ -1140,21 +1140,23 @@
 		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
+		<set name="blowChance" val="20" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1800" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
+		<set name="skillType" val="BLOW" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectType="BLEED" effectPower="100">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
