@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.BaseStats;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.skills.funcs.Func;
 import com.l2jserver.gameserver.templates.item.L2WeaponType;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
@@ -49,15 +48,13 @@ public class Blow implements ISkillHandler
 	{
 		L2SkillType.BLOW
 	};
-	
-	public final static byte FRONT = 50;
-	public final static byte SIDE = 60;
-	public final static byte BEHIND = 70;
+
 	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar.isAlikeDead())
 			return;
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (target.isAlikeDead())
@@ -66,22 +63,7 @@ public class Blow implements ISkillHandler
 			// Check firstly if target dodges skill
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
 			
-			byte _successChance = SIDE;
-			
-			if (activeChar.isBehindTarget())
-				_successChance = BEHIND;
-			else if (activeChar.isInFrontOfTarget())
-				_successChance = FRONT;
-			
-			
-			//If skill requires Crit or skill requires behind,
-			//calculate chance based on DEX, Position and on self BUFF
-			boolean success = true;
-			if ((skill.getCondition() & L2Skill.COND_BEHIND) != 0)
-				success = (_successChance == BEHIND);
-			if ((skill.getCondition() & L2Skill.COND_CRIT) != 0)
-				success = (success && Formulas.calcBlow(activeChar, target, _successChance));
-			if (!skillIsEvaded && success)
+			if (!skillIsEvaded && Formulas.calcBlowSuccess(activeChar, target, skill))
 			{
 				final byte reflect = Formulas.calcSkillReflect(target, skill);
 				
@@ -115,14 +97,11 @@ public class Blow implements ISkillHandler
 						}
 					}
 				}
+				
 				L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
 				boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && (weapon.getItemType() == L2WeaponType.DAGGER || weapon.getItemType() == L2WeaponType.DUALDAGGER || weapon.getItemType() == L2WeaponType.RAPIER));
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
-				// Crit rate base crit rate for skill, modified with STR bonus
-				boolean crit = false;
-				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), target))
-					crit = true;
 				double damage = (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
 				if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
 				{
@@ -147,26 +126,10 @@ public class Blow implements ISkillHandler
 							break;
 					}
 				}
-				if (crit)
-				{
+				
+				// Crit rate base crit rate for skill, modified with STR bonus
+				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), target))
 					damage *= 2;
-					// Vicious Stance is special after C5, and only for BLOW skills
-					// Adds directly to damage
-					L2Effect vicious = activeChar.getFirstEffect(312);
-					if (vicious != null && damage > 1)
-					{
-						for (Func func : vicious.getStatFuncs())
-						{
-							Env env = new Env();
-							env.player = activeChar;
-							env.target = target;
-							env.skill = skill;
-							env.value = damage;
-							func.calc(env);
-							damage = (int) env.value;
-						}
-					}
-				}
 				
 				if (soul)
 					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
@@ -248,6 +211,8 @@ public class Blow implements ISkillHandler
 			}
 		}
 	}
+
+	
 	
 	public L2SkillType[] getSkillIds()
 	{
