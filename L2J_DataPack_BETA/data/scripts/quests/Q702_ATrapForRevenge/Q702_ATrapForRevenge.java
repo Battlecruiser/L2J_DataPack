@@ -53,14 +53,14 @@ public class Q702_ATrapForRevenge extends Quest
 		{
 			st.set("cond", "1");
 			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound("ItemSound.quest_accept");
 		}
 		else if (event.equalsIgnoreCase("32563-07.html"))
 		{
-			if (st.getQuestItemsCount(DrakeFlesh) < 1)
-				htmltext = "32563-07.html";
-			else
+			if (st.hasQuestItems(DrakeFlesh))
 				htmltext = "32563-08.html";
+			else
+				htmltext = "32563-07.html";
 		}
 		else if (event.equalsIgnoreCase("32563-09.html"))
 		{
@@ -70,15 +70,15 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-11.html"))
 		{
-			if (st.getQuestItemsCount(VariantDrakeWingHorns) < 1)
-				htmltext = "32563-11.html";
-			else
+			if (st.hasQuestItems(VariantDrakeWingHorns))
 			{
 				long count = st.getQuestItemsCount(VariantDrakeWingHorns);
 				st.giveItems(57, count * 200000);
 				st.takeItems(VariantDrakeWingHorns, count);
 				htmltext = "32563-12.html";
 			}
+			else
+				htmltext = "32563-11.html";
 		}
 		else if (event.equalsIgnoreCase("32563-14.html"))
 		{
@@ -87,13 +87,13 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
-			if (st.getQuestItemsCount(RottenBlood) < 1 && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
+			if (!st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
 				htmltext = "32557-03.html";
-			else if (st.getQuestItemsCount(RottenBlood) >= 1 && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
+			else if (st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
 				htmltext = "32557-04.html";
-			else if (st.getQuestItemsCount(RottenBlood) < 1 && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
+			else if (!st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
 				htmltext = "32557-05.html";
-			else if (st.getQuestItemsCount(RottenBlood) >= 1 && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
+			else if (st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
 			{
 				st.giveItems(BaitForDrakes, 1);
 				st.takeItems(RottenBlood, 1);
@@ -125,10 +125,10 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-10.html"))
 		{
-			if (st.getQuestItemsCount(VariantDrakeWingHorns) < 1)
-				htmltext = "32555-10.html";
-			else
+			if (st.hasQuestItems(VariantDrakeWingHorns))
 				htmltext = "32555-11.html";
+			else
+				htmltext = "32555-10.html";
 		}
 		else if (event.equalsIgnoreCase("32555-15.html"))
 		{

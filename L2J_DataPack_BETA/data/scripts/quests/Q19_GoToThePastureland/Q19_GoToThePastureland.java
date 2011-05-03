@@ -52,18 +52,18 @@ public class Q19_GoToThePastureland extends Quest
 		}
 		else if (event.equalsIgnoreCase("31537-02.html"))
 		{
-			if (st.getQuestItemsCount(YoungWildBeastMeat) >= 1)
+			if (st.hasQuestItems(YoungWildBeastMeat))
 			{
-				st.takeItems(YoungWildBeastMeat, 1);
+				st.takeItems(YoungWildBeastMeat, -1);
 				st.giveItems(57, 50000);
 				st.addExpAndSp(136766, 12688);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 				htmltext = "31537-02.html";
 			}
-			else if (st.getQuestItemsCount(Veal) >= 1)
+			else if (st.hasQuestItems(Veal))
 			{
-				st.takeItems(Veal, 1);
+				st.takeItems(Veal, -1);
 				st.giveItems(57, 147200);
 				st.addExpAndSp(385040, 75250);
 				st.playSound("ItemSound.quest_finish");
