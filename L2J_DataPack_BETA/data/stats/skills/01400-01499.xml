@@ -1196,65 +1196,72 @@
 		</enchant2for>
 	</skill>
 	<skill id="1444" levels="1" name="Pride of Kamael" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchIncrease"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.2 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 </table>
 		<table name="#ench4Time"> 186 192 198 204 210 216 222 228 234 240 246 252 258 264 270 276 282 288 294 300 306 312 318 324 330 336 342 348 354 360 </table>
-		<set name="mpConsume" val="44" />
+		<set name="aggroPoints" val="669" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="49" />
+		<set name="mpConsume" val="35" />
+		<set name="mpInitialConsume" val="9" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
-		<set name="hitTime" val="3000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<target race="Kamael" />
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="kamael_special">
-				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="pAtk" val="1.1">
 					<using kind="Ancient,Crossbow,Rapier" />
 				</mul>
-				<mul order="0x30" stat="lethalRate" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="kamael_special">
-				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="pAtk" val="#enchIncrease">
 					<using kind="Ancient,Crossbow,Rapier" />
 				</mul>
-				<mul order="0x30" stat="lethalRate" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="kamael_special">
-				<mul order="0x30" stat="mAtk" val="#enchIncrease" />
 				<mul order="0x30" stat="pAtk" val="1.1">
 					<using kind="Ancient,Crossbow,Rapier" />
 				</mul>
-				<mul order="0x30" stat="lethalRate" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="#enchIncrease" />
+				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="kamael_special">
-				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="pAtk" val="1.1">
 					<using kind="Ancient,Crossbow,Rapier" />
 				</mul>
-				<mul order="0x30" stat="lethalRate" val="#enchIncrease" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="blowRate" val="#enchIncrease" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Buff" abnormalTime="#ench4Time" val="0" abnormalLvl="1" abnormalType="kamael_special">
-				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="pAtk" val="1.1">
 					<using kind="Ancient,Crossbow,Rapier" />
 				</mul>
-				<mul order="0x30" stat="lethalRate" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</enchant4for>
 	</skill>

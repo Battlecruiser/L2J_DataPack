@@ -993,7 +993,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="evasion_buff">
-				<mul order="0x30" stat="lethalRate" val="1.1" />
+				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</for>
 	</skill>
