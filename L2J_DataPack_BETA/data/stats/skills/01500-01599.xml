@@ -1016,10 +1016,8 @@
 		<set name="triggeredId" val="6060" />
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="30" />
-		<set name="chanceType" val="ON_HIT" />
-		<cond>
-			<target active_effect_id="927" />
-		</cond>
+		<set name="activationSkills" val="927" />
+		<set name="chanceType" val="ON_CAST" />
 	</skill>
 	<skill id="1544" levels="7" name="Death Beam">
 		<!-- Kamael Final Form Skill -->
