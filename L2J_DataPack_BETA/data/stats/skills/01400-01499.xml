@@ -708,8 +708,8 @@
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="1800000" />
+		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="1200000" />
 		<set name="staticReuse" val="true" />
 		<set name="castRange" val="900" />
 		<set name="skillRadius" val="180" />
@@ -2540,11 +2540,11 @@
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5568" chanceType="ON_ATTACKED" activationChance="10">
-				<add order="0x40" stat="waterRes" val="10" />
+				<add order="0x40" stat="waterRes" val="60" />
 			</effect>
 		</for>
 	</skill>
@@ -2580,9 +2580,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="180000" />
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
+		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="ultimate_debuff" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="ultimate_debuff" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />

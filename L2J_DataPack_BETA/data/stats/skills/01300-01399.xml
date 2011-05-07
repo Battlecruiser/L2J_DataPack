@@ -1065,7 +1065,7 @@
 	</skill>
 	<skill id="1343" levels="1" name="Dark Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 118 118 118 119 119 119 119 120 120 120 121 121 121 121 122 </table>
+		<table name="#ench1Power"> 147 147 148 148 148 149 149 149 150 150 151 151 151 152 152 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
@@ -1073,7 +1073,7 @@
 		<set name="mpInitialConsume" val="21" />
 		<set name="mpConsume" val="84" />
 		<set name="magicLvl" val="76" />
-		<set name="power" val="111" />
+		<set name="power" val="139" />
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="6000" />
@@ -1087,7 +1087,7 @@
 		<set name="castRange" val="900" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1400" />
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of inflicted damage as HP -->
+		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of inflicted damage as HP -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2229,7 +2229,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="5000" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />

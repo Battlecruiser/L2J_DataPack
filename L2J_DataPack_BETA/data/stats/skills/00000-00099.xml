@@ -1976,9 +1976,9 @@
 		</enchant4for>
 	</skill>
 	<skill id="98" levels="5" name="Sword Symphony">
-		<table name="#mpConsume"> 116 128 137 146 154 </table>
+		<table name="#mpConsume"> 58 64 69 73 77 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
-		<table name="#power"> 550 682 796 915 1036 </table>
+		<table name="#power"> 825 1023 1194 1373 1554 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="MEN" />
@@ -1995,7 +1995,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="60" effectType="FEAR" />
+			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence" effectPower="60" effectType="MUTE" />
 		</for>
 	</skill>
 	<skill id="99" levels="2" name="Rapid Shot" enchantGroup1="1" enchantGroup2="1">
