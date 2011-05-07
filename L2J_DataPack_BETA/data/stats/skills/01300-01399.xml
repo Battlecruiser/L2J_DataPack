@@ -482,8 +482,8 @@
 				<add order="0x40" stat="pDef" val="3000" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
-				<mul order="0x30" stat="bowWpnVuln" val="0.2" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.2" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="maxCp" val="0.8" />
 			</effect>
 		</for>
@@ -715,9 +715,9 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<!-- should be consumed over 4 regular intervals -->
-		<set name="target" val="TARGET_CORPSE_MOB" />
+		<set name="target" val="TARGET_ONE" /> <!-- TODO: Check if possibly should be TARGET_GROUND -->
 		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
