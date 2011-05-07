@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="205" levels="45" name="Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="205" levels="45" name="Sword/Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 54 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -23,31 +23,31 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<add order="0x40" stat="runSpd" val="#ench1runSpd">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<add order="0x40" stat="cAtkAdd" val="#ench2cAtkAdd">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</enchant2for>
 		<enchant3for>
 			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<add order="0x40" stat="pAtkSpd" val="#ench3pAtkSpd">
-				<using kind="Blunt,Big Blunt" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</enchant3for>
 	</skill>

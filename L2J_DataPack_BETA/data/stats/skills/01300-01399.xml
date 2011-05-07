@@ -2257,12 +2257,9 @@
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
-		<table name="#itemConsumeCount"> 4 4 4 5 5 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
-		<set name="itemConsumeId" val="2508" />
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="12000" />
 		<set name="hitTime" val="6000" />
 		<set name="target" val="TARGET_AREA_SUMMON" />
 		<set name="skillRadius" val="230" />
@@ -2282,7 +2279,13 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down">
-				<mul order="0x30" stat="mDef" val="0.77" />
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="6" />
+				<sub order="0x40" stat="fireRes" val="6" />
+				<sub order="0x40" stat="windRes" val="6" />
+				<sub order="0x40" stat="earthRes" val="6" />
+				<sub order="0x40" stat="holyRes" val="6" />
+				<sub order="0x40" stat="darkRes" val="6" />
 			</effect>
 		</for>
 	</skill>

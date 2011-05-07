@@ -1819,7 +1819,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
@@ -1835,12 +1835,24 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down">
-				<mul order="0x30" stat="mDef" val="0.77" />
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="6" />
+				<sub order="0x40" stat="fireRes" val="6" />
+				<sub order="0x40" stat="windRes" val="6" />
+				<sub order="0x40" stat="earthRes" val="6" />
+				<sub order="0x40" stat="holyRes" val="6" />
+				<sub order="0x40" stat="darkRes" val="6" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="md_down">
-				<mul order="0x30" stat="mDef" val="0.77" />
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="6" />
+				<sub order="0x40" stat="fireRes" val="6" />
+				<sub order="0x40" stat="windRes" val="6" />
+				<sub order="0x40" stat="earthRes" val="6" />
+				<sub order="0x40" stat="holyRes" val="6" />
+				<sub order="0x40" stat="darkRes" val="6" />
 			</effect>
 		</enchant2for>
 	</skill>

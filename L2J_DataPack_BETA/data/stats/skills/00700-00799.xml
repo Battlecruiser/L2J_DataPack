@@ -1240,6 +1240,7 @@
 			<effect count="4" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee">
 				<mul order="0x30" stat="mDef" val="0.7" />
 				<mul order="0x30" stat="pDef" val="0.7" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1382,7 +1383,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="5750" />
+		<set name="power" val="8049" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="80" /> <!-- Guess -->
 		<set name="skillType" val="PDAM" />
@@ -1444,6 +1445,8 @@
 		<for>
 			<effect count="4" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee">
 				<mul order="0x30" stat="runSpd" val="0.67" />
+				<mul order="0x30" stat="pDef" val="0.67" />
+				<sub order="0x40" stat="rEvas" val="10" />
 			</effect>
 		</for>
 	</skill>
