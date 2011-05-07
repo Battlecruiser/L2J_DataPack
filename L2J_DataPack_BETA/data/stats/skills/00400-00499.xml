@@ -987,7 +987,7 @@
 	</skill>
 	<skill id="425" levels="1" name="Hawk Spirit Totem">
 		<set name="magicLvl" val="74" />
-		<set name="mpConsume" val="34" />
+		<set name="mpConsume" val="68" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="2000" />
@@ -995,7 +995,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<add order="0x40" stat="accCombat" val="6">
 					<using kind="Dual Fist" />
 				</add>

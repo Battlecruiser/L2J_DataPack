@@ -1443,7 +1443,7 @@
 	</skill>
 	<skill id="76" levels="1" name="Bear Spirit Totem">
 		<set name="magicLvl" val="28" />
-		<set name="mpConsume" val="13" />
+		<set name="mpConsume" val="25" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="23000" />
 		<set name="hitTime" val="2000" />
@@ -1452,7 +1452,7 @@
 		<set name="aggroPoints" val="268" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="pAtk" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>
@@ -1590,7 +1590,7 @@
 	</skill>
 	<skill id="83" levels="1" name="Wolf Spirit Totem">
 		<set name="magicLvl" val="20" />
-		<set name="mpConsume" val="10" />
+		<set name="mpConsume" val="19" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="23000" />
 		<set name="hitTime" val="2000" />
@@ -1599,7 +1599,7 @@
 		<set name="aggroPoints" val="204" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>
