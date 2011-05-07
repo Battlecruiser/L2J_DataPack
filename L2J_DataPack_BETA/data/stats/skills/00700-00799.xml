@@ -1420,7 +1420,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="6037" />
+		<set name="power" val="8452" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="80" /> <!-- Guess -->
 		<set name="skillType" val="PDAM" />
@@ -1486,7 +1486,7 @@
 		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="2516" />
+		<set name="power" val="4500" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="CHARGEDAM" />
@@ -1503,14 +1503,14 @@
 	<skill id="777" levels="1" name="Demolition Impact">
 		<!-- Confirmed CT2.5 -->
 		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="5750" />
+		<set name="power" val="7475" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="500" />
 		<set name="skillType" val="PDAM" />
@@ -1796,7 +1796,7 @@
 		<set name="mpConsume" val="120" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="5750" />
+		<set name="power" val="7475" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
@@ -1822,7 +1822,11 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Paralyze" abnormalTime="9" val="0" effectPower="50" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="ChanceSkillTrigger" abnormalTime="5" val="0" triggeredId="6092" triggeredLevel="1" chanceType="ON_EXIT" effectPower="50" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze">
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">

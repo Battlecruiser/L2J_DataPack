@@ -181,8 +181,9 @@
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="90" abnormal="poison" noicon="1" />
+			<effect name="Root" abnormalTime="10" val="0" abnormal="poison" abnormalLvl="1" abnormalType="root_magically" />
+			<effect count="2" name="DamOverTime" abnormalTime="5" val="180" noicon="1" />
+			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="60" noicon="1" />
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
