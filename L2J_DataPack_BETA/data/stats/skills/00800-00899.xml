@@ -397,10 +397,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</mul>
@@ -420,10 +420,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
@@ -443,10 +443,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Bow,Crossbow" />
 				</mul>
@@ -466,10 +466,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using kind="Heavy" />
 				</mul>
@@ -486,10 +486,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Light" />
 				</mul>
@@ -509,10 +509,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Magic" />
 				</mul>

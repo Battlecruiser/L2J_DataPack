@@ -353,22 +353,22 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pd_up_bow">
-				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="mDef" val="2" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="1" abnormalType="pd_up_bow">
-				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="mDef" val="2" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pd_up_bow">
-				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="mDef" val="2" />
 				<add order="0x40" stat="pDef" val="#ench2pDef" />
 			</effect>
