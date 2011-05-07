@@ -1022,14 +1022,19 @@
 		<enchant4 name="element" val="5" /> <!-- Dark -->
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect count="5" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" effectType="FEAR" />
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" effectType="DEBUFF">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
 		</for>
 		<enchant3for>
-			<effect count="5" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="#ench3Power" effectType="FEAR" />
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="#ench3Power" effectType="DEBUFF">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
 		</enchant3for>
 		<enchant5for>
-			<effect count="5" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" effectType="FEAR">
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" effectType="DEBUFF">
 				<sub order="0x40" stat="darkRes" val="#ench5DarkhVuln" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant5for>
 	</skill>
@@ -2528,7 +2533,7 @@
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5567" chanceType="ON_ATTACKED" activationChance="10">
-				<add order="0x40" stat="fireRes" val="10" />
+				<add order="0x40" stat="fireRes" val="60" />
 			</effect>
 		</for>
 	</skill>
@@ -2555,12 +2560,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5569" chanceType="ON_ATTACKED" activationChance="10">
-				<add order="0x40" stat="windRes" val="10" />
+				<add order="0x40" stat="windRes" val="60" />
 			</effect>
 		</for>
 	</skill>

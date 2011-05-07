@@ -417,7 +417,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
-		<set name="mpConsume" val="43" />
+		<set name="mpConsume" val="34" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="166" />
 		<set name="reuseDelay" val="15000" />
@@ -1065,12 +1065,15 @@
 		<set name="reuseDelay" val="5000" />
 	</skill>
 	<skill id="1547" levels="3" name="Spirit Sharing">
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#magicLvl"> 44 62 70 </table>
 		<table name="#mpInitialConsume"> 8 12 13 </table>
 		<table name="#mpConsume"> 31 46 52 </table>
 		<table name="#amount"> 1.03 1.04 1.05 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#pAtkSpd"> 1.02 1.05 1.07 </table>
+		<table name="#mAtkSpd"> 1.01 1.03 1.05 </table>
 		<table name="#physicalSkillPower"> 1.05 1.07 1.1 </table>
+		<table name="#rCrit"> 0.05 0.07 0.1 </table>
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1083,8 +1086,11 @@
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="public_slot">
 				<mul order="0x30" stat="pAtk" val="#amount" />
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#amount" />
+				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 				<mul order="0x30" stat="physicalSkillPower" val="#physicalSkillPower" />
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 	</skill>

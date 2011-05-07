@@ -2468,32 +2468,10 @@
 		</enchant2for>
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
-		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			2508,25,30;2508,50,50;2508,100,20
-			2508,50,30;2508,100,50;2508,200,20
-			2508,100,30;2508,200,50;2508,400,20
-		</table>
-		<table name="#itemConsumeCount"> 40 80 160 </table>
-		<table name="#magicLvl"> 58 66 74 </table>
-		<table name="#mpConsume"> 318 366 407 </table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="hitTime" val="10000" />
-		<set name="isMagic" val="true" />
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="EXTRACTABLE" />
-		<set name="target" val="TARGET_SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="1388" levels="3" name="Greater Might" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1MpConsume"> 68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33 </table>
