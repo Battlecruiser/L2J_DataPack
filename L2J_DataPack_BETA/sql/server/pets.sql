@@ -7,5 +7,7 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `exp` decimal(20, 0) ,
   `sp` decimal(11) ,
   `fed` decimal(11) ,
+  `ownerId` decimal(11) NOT NULL default 0 ,
+  `restore` enum('true','false') NOT NULL DEFAULT 'false' ,
   PRIMARY KEY (`item_obj_id`)
 );
