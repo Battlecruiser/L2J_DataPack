@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS castle_manor_production;
 DROP TABLE IF EXISTS castle_siege_guards;
 DROP TABLE IF EXISTS char_creation_items;
 DROP TABLE IF EXISTS char_templates;
+DROP TABLE IF EXISTS character_contacts;
 DROP TABLE IF EXISTS character_friends;
 DROP TABLE IF EXISTS character_hennas;
 DROP TABLE IF EXISTS character_instance_time;
