@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS `character_summons` (
-  `ownerId` INT UNSIGNED NOT NULL DEFAULT 0,
-  `summonSkillId` INT UNSIGNED NOT NULL DEFAULT 0,
-  `curHp` MEDIUMINT UNSIGNED DEFAULT NULL,
-  `curMp` MEDIUMINT UNSIGNED DEFAULT NULL,
-  `time` decimal(11),
+  `ownerId` int(10) unsigned NOT NULL,
+  `summonSkillId` int(10) unsigned NOT NULL,
+  `curHp` int(9) unsigned DEFAULT '0',
+  `curMp` int(9) unsigned DEFAULT '0',
+  `time` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`ownerId`,`summonSkillId`)
 );
