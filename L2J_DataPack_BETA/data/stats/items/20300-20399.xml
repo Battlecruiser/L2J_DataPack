@@ -30,6 +30,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21045-1;23051-1" />
 		<for>
@@ -65,6 +66,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21046-1;23052-1" />
 		<for>
@@ -136,6 +138,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21047-1;23053-1" />
 		<for>
@@ -171,6 +174,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21048-1;23054-1" />
 		<for>
@@ -188,6 +192,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21049-1;23055-1" />
 		<for>
@@ -223,6 +228,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21050-1;23056-1" />
 		<for>
@@ -257,6 +263,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20320,1,1,100" />
 	</item>
 	<item id="20315" type="EtcItem" name="Goggle Pack">
@@ -270,6 +277,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20321,1,1,100" />
 	</item>
@@ -284,6 +292,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20322,1,1,100" />
 	</item>
@@ -298,6 +307,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20323,1,1,100" />
 	</item>
@@ -312,6 +322,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20324,1,1,100" />
 	</item>
@@ -326,6 +337,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20325,1,1,100" />
 	</item>
@@ -354,8 +366,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<for>
-		</for>
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20322" type="Armor" name="Napoleon Hat">
 		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
@@ -368,8 +379,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<for>
-		</for>
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20323" type="Armor" name="Horn Hairband">
 		<set name="icon" val="BranchSys.icon.br_horn_hairband_i00" />
@@ -382,9 +392,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="equip_condition" val="{{ec_sex;1}}" />
-		<for>
-		</for>
 	</item>
 	<item id="20324" type="Armor" name="Black Gem Mask">
 		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
@@ -397,8 +406,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<for>
-		</for>
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20325" type="Armor" name="Plastic Hair">
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
@@ -411,8 +419,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<for>
-		</for>
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20326" type="EtcItem" name="Beast Soulshot Pack">
 		<set name="icon" val="BranchSys.icon.br_box_beast_soul_shot_i00" />
@@ -422,6 +429,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20332,5000,5000,100" />
 	</item>
 	<item id="20327" type="EtcItem" name="Beast Spiritshot Pack">
@@ -432,6 +440,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20333,5000,5000,100" />
 	</item>
 	<item id="20328" type="EtcItem" name="Blessed Beast Spiritshot Pack">
@@ -442,6 +451,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20334,5000,5000,100" />
 	</item>
 	<item id="20329" type="EtcItem" name="Beast Soulshot Large Pack">
@@ -452,6 +462,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20332,10000,10000,100" />
 	</item>
 	<item id="20330" type="EtcItem" name="Beast Spiritshot Large Pack">
@@ -462,6 +473,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20333,10000,10000,100" />
 	</item>
 	<item id="20331" type="EtcItem" name="Blessed Beast Spiritshot Large Pack">
@@ -472,6 +484,7 @@
 		<set name="weight" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20334,10000,10000,100" />
 	</item>
 	<item id="20332" type="EtcItem" name="Beast Soulshot">
@@ -485,6 +498,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSoulShot" />
 		<set name="item_skill" val="22036-1" />
 	</item>
@@ -499,6 +513,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
 		<set name="item_skill" val="22037-1" />
 	</item>
@@ -513,6 +528,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
 		<set name="item_skill" val="22038-1" />
 	</item>
@@ -783,6 +799,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22043-2" />
 	</item>
@@ -802,6 +819,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22043-3" />
 	</item>
@@ -821,6 +839,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22043-4" />
 	</item>
@@ -840,6 +859,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22043-5" />
 	</item>
@@ -859,6 +879,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22043-6" />
 	</item>
@@ -878,6 +899,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22044-2" />
 	</item>
@@ -897,6 +919,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22044-3" />
 	</item>
@@ -916,6 +939,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22044-4" />
 	</item>
@@ -935,6 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22044-5" />
 	</item>
@@ -954,6 +979,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="22044-6" />
 	</item>
@@ -969,6 +995,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22045-1" />
 	</item>
@@ -984,6 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22046-1" />
 	</item>
@@ -999,6 +1027,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22047-1" />
 	</item>
@@ -1014,6 +1043,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22048-1" />
 	</item>
@@ -1029,6 +1059,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22049-1" />
 	</item>
@@ -1044,6 +1075,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22050-1" />
 	</item>
@@ -1059,6 +1091,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22051-1" />
 	</item>
@@ -1074,6 +1107,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22052-1" />
 	</item>
@@ -1088,6 +1122,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1103,6 +1138,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-2" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1118,6 +1154,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-3" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1133,6 +1170,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-4" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1148,6 +1186,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-5" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1163,6 +1202,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-6" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1178,6 +1218,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-7" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1193,6 +1234,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-8" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1208,6 +1250,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-9" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1223,6 +1266,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-10" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1238,6 +1282,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-11" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1253,6 +1298,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-12" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1268,6 +1314,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-13" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1283,6 +1330,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-14" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1298,6 +1346,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-15" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1313,6 +1362,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-16" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1328,6 +1378,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-17" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1343,6 +1394,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-18" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1358,6 +1410,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22053-19" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
@@ -1377,6 +1430,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22054-1" />
 	</item>
@@ -1395,6 +1449,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22055-1" />
 	</item>
@@ -1412,6 +1467,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22056-1;22057-1;22064-1;22058-1;22059-1;22060-1;22061-1;22065-1" />
 	</item>
@@ -1429,6 +1485,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22066-1;22067-1;22068-1;22062-1;22063-1;22069-1;22065-1;22070-1" />
 	</item>
@@ -1443,6 +1500,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20396,1,1,100" />
 	</item>
@@ -1457,6 +1515,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="21051-1" />
 		<for>

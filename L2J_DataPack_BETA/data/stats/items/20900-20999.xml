@@ -38,6 +38,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20205,1,1,100" />
 	</item>
 	<item id="20903" type="EtcItem" name="Rose Petal">
@@ -179,6 +180,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20915" type="EtcItem" name="Improved Deseloph Rose Necklace - Event - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -191,6 +193,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -206,6 +209,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -221,6 +225,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -236,6 +241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -251,6 +257,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -266,6 +273,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
@@ -372,6 +380,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20930" type="Armor" name="Royal Circlet of Vesper">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
@@ -386,6 +395,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20931" type="Armor" name="Noblesse Oblige">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
@@ -400,6 +410,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20932" type="Armor" name="Royal Crown of Vesper - 30 day limited period">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
@@ -456,6 +467,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20936" type="Armor" name="Royal Circlet of Vesper">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
@@ -467,6 +479,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20937" type="Armor" name="Noblesse Oblige">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
@@ -478,6 +491,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20938" type="Armor" name="Jet Bike Mounting Bracelet - 7 day limited period">
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
@@ -558,6 +572,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20943" type="Armor" name="Fox Mask - Silent Move - 7 day limited period">
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
@@ -588,6 +603,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20945" type="Armor" name="Paiwan Hat - Power of Guardian Deity - 7 day limited period">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
@@ -616,6 +632,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20938,1,1,100" />
 	</item>
@@ -630,6 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20939,1,1,100" />
 	</item>
@@ -645,6 +663,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20940,1,1,100" />
 	</item>
@@ -660,6 +679,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20941,1,1,100" />
 	</item>
@@ -675,6 +695,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20942,1,1,100" />
 	</item>
 	<item id="20951" type="EtcItem" name="Fox Mask 7 Day Pack - Silent Move">
@@ -689,6 +710,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20943,1,1,100" />
 	</item>
 	<item id="20952" type="EtcItem" name="Paiwan Hat Pack">
@@ -703,6 +725,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20944,1,1,100" />
 	</item>
 	<item id="20953" type="EtcItem" name="Paiwan Hat 7 Day Pack - Power of Guardian Deity">
@@ -717,6 +740,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20945,1,1,100" />
 	</item>
 	<item id="20954" type="EtcItem" name="Small Placid">
@@ -730,6 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="22165-1" />
 	</item>
 	<item id="20955" type="EtcItem" name="Medium Placid">
@@ -743,6 +768,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="22166-1" />
 	</item>
 	<item id="20956" type="Armor" name="Agathion Seal Bracelet - Frozen Corpse - Soul Stealth - 7 day limited period">
@@ -774,6 +800,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20956,1,1,100" />
 	</item>
 	<item id="20958" type="EtcItem" name="April Fools' Day Special Gift - For Event">
@@ -798,6 +825,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20929,1,1,100" />
 	</item>
 	<item id="20960" type="EtcItem" name="Royal Circlet of Vesper Pack">
@@ -812,6 +840,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20930,1,1,100" />
 	</item>
 	<item id="20961" type="EtcItem" name="Noblesse Oblige Pack">
@@ -826,6 +855,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20931,1,1,100" />
 	</item>
 	<item id="20962" type="EtcItem" name="Royal Crown of Vesper 30 Day Pack">
@@ -840,6 +870,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20932,1,1,100" />
 	</item>
 	<item id="20963" type="EtcItem" name="Royal Circlet of Vesper 30 Day Pack">
@@ -854,6 +885,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20933,1,1,100" />
 	</item>
 	<item id="20964" type="EtcItem" name="Noblesse Oblige 30 Day Pack">
@@ -868,6 +900,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20934,1,1,100" />
 	</item>
 	<item id="20965" type="EtcItem" name="Royal Crown of Vesper Pack">
@@ -882,6 +915,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20935,1,1,100" />
 	</item>
 	<item id="20966" type="EtcItem" name="Royal Circlet of Vesper Pack">
@@ -896,6 +930,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20936,1,1,100" />
 	</item>
 	<item id="20967" type="EtcItem" name="Noblesse Oblige Pack">
@@ -910,6 +945,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20937,1,1,100" />
 	</item>
 	<item id="20968" type="Armor" name="Agathion Seal Bracelet - Guangong">
@@ -925,6 +961,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="3267-1" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="3267-1;21142-1;23123-1" />
 	</item>
 	<item id="20969" type="EtcItem" name="Guangong Agathion Pack">
@@ -939,6 +976,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20968,1,1,100" />
 	</item>
 	<item id="20970" type="Armor" name="Agathion Seal Bracelet - Three-headed Dragon - Wind Walk">
@@ -973,6 +1011,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="21195-1" />
 		<for>
@@ -998,6 +1037,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="21196-1" />
 		<for>
@@ -1020,6 +1060,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21197-1;21200-1" />
 	</item>
 	<item id="20974" type="Armor" name="Opera Mask - Guan Yu - Silence of Fidelity, Age of the Three Kingdoms">
@@ -1035,6 +1076,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21198-1;21200-1" />
 	</item>
 	<item id="20975" type="Armor" name="Opera Mask - Zhang Fei - Vitality of Courage, Age of the Three Kingdoms">
@@ -1050,6 +1092,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21199-1;21200-1" />
 	</item>
 	<item id="20976" type="EtcItem" name="Proof of a Warrior - 30 Day Expiration Period">
@@ -1073,6 +1116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20978" type="EtcItem" name="Zhongzi (B-Grade)">
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_a_i00" />
@@ -1086,6 +1130,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="2517-1" />
 	</item>
 	<item id="20979" type="EtcItem" name="Zhongzi (A-Grade)">
@@ -1100,6 +1145,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="2518-1" />
 	</item>
 	<item id="20980" type="EtcItem" name="Zhongzi (S-Grade)">
@@ -1114,6 +1160,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="2519-1" />
 	</item>
 	<item id="20981" type="Armor" name="Dragon Boat">
@@ -1129,6 +1176,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20982" type="Armor" name="Dragon Boat - Haste - 7 day limited period">
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
@@ -1159,6 +1207,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21202-1;23201-1;23183-1;23184-1" />
 	</item>
@@ -1175,6 +1224,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21203-1;23202-1;23185-1;23186-1" />
 	</item>
@@ -1191,6 +1241,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21204-1;23203-1;23187-1;23188-1" />
 	</item>
@@ -1207,6 +1258,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21205-1;23204-1;23189-1;23190-1" />
 	</item>
@@ -1223,6 +1275,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21206-1;23205-1;23191-1;23192-1" />
 	</item>
@@ -1239,6 +1292,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21207-1;23206-1;23193-1;23194-1" />
 	</item>
@@ -1255,6 +1309,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21208-1;23207-1;23195-1;23196-1" />
 	</item>
@@ -1271,6 +1326,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21209-1;23208-1;23197-1;23198-1" />
 	</item>
@@ -1287,6 +1343,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21210-1;23209-1;23199-1;23200-1" />
 	</item>
@@ -1301,6 +1358,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="22168-1" />
 	</item>
 	<item id="20993" type="EtcItem" name="Soccer Ball of Cheers">
@@ -1316,6 +1374,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="22169-1" />
 	</item>
 	<item id="20994" type="EtcItem" name="Three-headed Dragon Agathion Pack - Wind Walk">
@@ -1330,6 +1389,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20970,1,1,100" />
 	</item>
@@ -1345,6 +1405,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20973,1,1,100" />
 	</item>
 	<item id="20996" type="EtcItem" name="Guan Yu Opera Mask Pack - Silence of Fidelity, Age of the Three Kingdoms">
@@ -1359,6 +1420,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20974,1,1,100" />
 	</item>
 	<item id="20997" type="EtcItem" name="Zhang Fei Opera Mask Pack - Vitality of Courage, Age of the Three Kingdoms">
@@ -1373,6 +1435,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20975,1,1,100" />
 	</item>
 	<item id="20998" type="EtcItem" name="Dragon Boat Pack">
@@ -1387,6 +1450,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20981,1,1,100" />
 	</item>
 	<item id="20999" type="EtcItem" name="Dragon Boat 7 Day Pack - Haste">
@@ -1401,6 +1465,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20982,1,1,100" />
 	</item>
 </list>
