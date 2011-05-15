@@ -16,7 +16,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe Use">
+	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -47,7 +47,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13003" type="EtcItem" name="Pathfinder's Reward - D-Grade">
+	<item id="13003" type="EtcItem" name="Pathfinder's Reward (C-Grade)">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -60,7 +60,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2572-1" />
 	</item>
-	<item id="13004" type="EtcItem" name="Pathfinder's Reward - C-Grade">
+	<item id="13004" type="EtcItem" name="Pathfinder's Reward (C-Grade)">
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -73,7 +73,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2573-1" />
 	</item>
-	<item id="13005" type="EtcItem" name="Pathfinder's Reward - B-Grade">
+	<item id="13005" type="EtcItem" name="Pathfinder's Reward (B-Grade)">
 		<set name="icon" val="icon.etc_bead_green_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -86,7 +86,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2574-1" />
 	</item>
-	<item id="13006" type="EtcItem" name="Pathfinder's Reward - A-Grade">
+	<item id="13006" type="EtcItem" name="Pathfinder's Reward (A-Grade)">
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -99,7 +99,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2575-1" />
 	</item>
-	<item id="13007" type="EtcItem" name="Pathfinder's Reward - S-Grade">
+	<item id="13007" type="EtcItem" name="Pathfinder's Reward (S-Grade)">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -121,6 +121,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13009" type="EtcItem" name="inven_toll_iii">
+		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -283,7 +284,7 @@
 		<set name="is_freightable" val="true" /> 
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13022" type="Armor" name="Light Purple-Maned Horse Mounting Bracelet - 7 day limited period">
+	<item id="13022" type="Armor" name="Light Purple-Maned Horse Mount Bracelet - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -358,7 +359,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30 day limited period">
+	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30-day limited period">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />

@@ -323,7 +323,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14510" type="Weapon" name="Vesper Thrower {PvP} - Crt. Slow">
+	<item id="14510" type="Weapon" name="Vesper Thrower {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -462,7 +462,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14514" type="Weapon" name="Vesper Sheutjeh {PvP} - Cheap Shot">
+	<item id="14514" type="Weapon" name="Vesper Shooter {PvP} - Cheap Shot">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -502,7 +502,7 @@
 			</set>
 		</for>
 	</item>
-	<item id="14515" type="Weapon" name="Vesper Sheutjeh {PvP} - Focus">
+	<item id="14515" type="Weapon" name="Vesper Shooter {PvP} - Focus">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -537,7 +537,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14516" type="Weapon" name="Vesper Sheutjeh {PvP} - Crt. Slow">
+	<item id="14516" type="Weapon" name="Vesper Shooter {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1060,7 +1060,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2953-1" />
 	</item>
-	<item id="14537" type="EtcItem" name="Goddard Supply Box - Magic Pin - Grade S, A">
+	<item id="14537" type="EtcItem" name="Goddard Supply Box: Magic Pin - Grade S, A">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1177,7 +1177,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2962-1" />
 	</item>
-	<item id="14546" type="EtcItem" name="Goddard Supply Box - Magic Pouch - Grade S, A">
+	<item id="14546" type="EtcItem" name="Goddard Supply Box: Magic Pouch - Grade S, A">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1294,7 +1294,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2971-1" />
 	</item>
-	<item id="14555" type="EtcItem" name="Goddard Supply Box - Belt - Grade S, A">
+	<item id="14555" type="EtcItem" name="Goddard Supply Box: Belt - Grade S, A">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -2093,7 +2093,7 @@
 			<!-- Elder -->
 		</cond>
 	</item>
-	<item id="14584" type="Armor" name="Apella Combat Gauntlet - Heavy Armor Use">
+	<item id="14584" type="Armor" name="Apella Combat Gauntlet - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -2119,7 +2119,7 @@
 			<!-- Elder -->
 		</cond>
 	</item>
-	<item id="14585" type="Armor" name="Apella Combat Boots - Heavy Armor Use">
+	<item id="14585" type="Armor" name="Apella Combat Boots - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -2237,7 +2237,7 @@
 			<!-- Elder -->
 		</cond>
 	</item>
-	<item id="14590" type="Armor" name="Apella Combat Silk Gloves - Robe Use">
+	<item id="14590" type="Armor" name="Apella Combat Silk Gloves - Robe">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -2263,7 +2263,7 @@
 			<!-- Elder -->
 		</cond>
 	</item>
-	<item id="14591" type="Armor" name="Apella Combat Sandals - Robe Use">
+	<item id="14591" type="Armor" name="Apella Combat Sandals - Robe">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -2289,7 +2289,7 @@
 			<!-- Elder -->
 		</cond>
 	</item>
-	<item id="14592" type="Armor" name="Gludio Earth Protection Ring">
+	<item id="14592" type="Armor" name="Gludio Earth Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2309,7 +2309,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14593" type="Armor" name="Dion Water Protection Ring">
+	<item id="14593" type="Armor" name="Dion Water Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2329,7 +2329,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14594" type="Armor" name="Giran Fire Protection Ring">
+	<item id="14594" type="Armor" name="Giran Fire Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2349,7 +2349,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14595" type="Armor" name="Oren Earth Protection Ring">
+	<item id="14595" type="Armor" name="Oren Earth Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2369,7 +2369,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14596" type="Armor" name="Aden Divinity Protection Ring">
+	<item id="14596" type="Armor" name="Aden Holy Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2389,7 +2389,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14597" type="Armor" name="Innadril Divinity Protection Ring">
+	<item id="14597" type="Armor" name="Innadril Holy Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2409,7 +2409,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14598" type="Armor" name="Goddard Dark Protection Ring">
+	<item id="14598" type="Armor" name="Goddard Dark Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2429,7 +2429,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14599" type="Armor" name="Rune Wind Protection Ring">
+	<item id="14599" type="Armor" name="Rune Wind Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />

@@ -88,7 +88,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16841" type="Armor" name="Vesper Noble Leather Breastplate">
+	<item id="16841" type="Armor" name="Vesper Noble Houberk">
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -328,7 +328,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16852" type="EtcItem" name="Hero's Treasure Chest - 90 day limited period">
+	<item id="16852" type="EtcItem" name="Hero's Treasure Chest - 90-day limited period">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -340,7 +340,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="capsuled_items" val="16853,1,1,100;13273,1,1,100;15426,1,1,100" />
 	</item>
-	<item id="16853" type="EtcItem" name="Equipment Set 90 Day Pack - 90 day limited period">
+	<item id="16853" type="EtcItem" name="Equipment Set Pack - 90-day limited period">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -353,7 +353,7 @@
 		<set name="item_skill" val="2914-3" />
 		<set name="time" val="129600" />
 	</item>
-	<item id="16854" type="Armor" name="Majestic Earring of Friendship - 90 day limited period">
+	<item id="16854" type="Armor" name="Majestic Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -370,7 +370,7 @@
 			<add order="0x40" stat="maxMp" val="25" />
 		</for>
 	</item>
-	<item id="16855" type="Armor" name="Majestic Necklace of Friendship - 90 day limited period">
+	<item id="16855" type="Armor" name="Majestic Necklace of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -387,7 +387,7 @@
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</item>
-	<item id="16856" type="Armor" name="Majestic Ring of Friendship - 90 day limited period">
+	<item id="16856" type="Armor" name="Majestic Ring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -404,7 +404,7 @@
 			<add order="0x40" stat="maxMp" val="17" />
 		</for>
 	</item>
-	<item id="16857" type="Armor" name="Friendship Earring of Black Ore - 90 day limited period">
+	<item id="16857" type="Armor" name="Fortune Earring of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -420,7 +420,7 @@
 			<add order="0x10" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="16858" type="Armor" name="Friendship Necklace of Black Ore - 90 day limited period">
+	<item id="16858" type="Armor" name="Fortune Necklace of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -436,7 +436,7 @@
 			<add order="0x10" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="16859" type="Armor" name="Friendship Ring of Black Ore - 90 day limited period">
+	<item id="16859" type="Armor" name="Fortune Ring of Black Ore - 90-day limited period">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -452,7 +452,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="16860" type="Armor" name="Friendship Earring of Binding - 90 day limited period">
+	<item id="16860" type="Armor" name="Fortune Earring of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -468,7 +468,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="16861" type="Armor" name="Friendship Necklace of Binding - 90 day limited period">
+	<item id="16861" type="Armor" name="Fortune Necklace of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -484,7 +484,7 @@
 			<add order="0x10" stat="mDef" val="64" />
 		</for>
 	</item>
-	<item id="16862" type="Armor" name="Friendship Ring of Binding - 90 day limited period">
+	<item id="16862" type="Armor" name="Fortune Ring of Seal - 90-day limited period">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -500,7 +500,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="16863" type="Armor" name="Elven Earring of Friendship - 90 day limited period">
+	<item id="16863" type="Armor" name="Elven Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -516,7 +516,7 @@
 			<add order="0x10" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="16864" type="Armor" name="Elven Earring of Friendship - 90 day limited period">
+	<item id="16864" type="Armor" name="Elven Earring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -532,7 +532,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="16865" type="Armor" name="Elven Ring of Friendship - 90 day limited period">
+	<item id="16865" type="Armor" name="Elven Ring of Fortune - 90-day limited period">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -548,7 +548,7 @@
 			<add order="0x10" stat="mDef" val="22" />
 		</for>
 	</item>
-	<item id="16866" type="Armor" name="Dark Crystal Robe of Friendship - 90 day limited period">
+	<item id="16866" type="Armor" name="Dark Crystal Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -571,7 +571,7 @@
 			<add order="0x40" stat="maxMp" val="665" />
 		</for>
 	</item>
-	<item id="16867" type="Armor" name="Dark Crystal Helmet of Friendship - 90 day limited period">
+	<item id="16867" type="Armor" name="Dark Crystal Helmet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -587,7 +587,7 @@
 			<add order="0x10" stat="pDef" val="69" />
 		</for>
 	</item>
-	<item id="16868" type="Armor" name="Dark Crystal Gloves of Friendship - Robe - 90 day limited period">
+	<item id="16868" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -608,7 +608,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="16869" type="Armor" name="Dark Crystal Boots of Friendship - Robe - 90 day limited period">
+	<item id="16869" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -629,7 +629,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="16870" type="Armor" name="Dark Crystal Shield of Friendship - 90 day limited period">
+	<item id="16870" type="Armor" name="Dark Crystal Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -653,7 +653,7 @@
 			<set order="0x08" stat="sDef" val="243" />
 		</for>
 	</item>
-	<item id="16871" type="Armor" name="Avadon Robe of Friendship - 90 day limited period">
+	<item id="16871" type="Armor" name="Avadon Robe of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -676,7 +676,7 @@
 			<add order="0x40" stat="maxMp" val="561" />
 		</for>
 	</item>
-	<item id="16872" type="Armor" name="Avadon Circlet of Friendship - 90 day limited period">
+	<item id="16872" type="Armor" name="Avadon Circlet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -692,7 +692,7 @@
 			<add order="0x10" stat="pDef" val="62" />
 		</for>
 	</item>
-	<item id="16873" type="Armor" name="Avadon Gloves of Friendship - Robe - 90 day limited period">
+	<item id="16873" type="Armor" name="Avadon Gloves of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -713,7 +713,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="16874" type="Armor" name="Avadon Boots of Friendship - Robe - 90 day limited period">
+	<item id="16874" type="Armor" name="Avadon Boots of Fortune - Robe - 90-day limited period">
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -734,7 +734,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="16875" type="Armor" name="Avadon Shield of Friendship - 90 day limited period">
+	<item id="16875" type="Armor" name="Avadon Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -758,7 +758,7 @@
 			<set order="0x08" stat="sDef" val="216" />
 		</for>
 	</item>
-	<item id="16876" type="Armor" name="Karmian Tunic of Friendship - 90 day limited period">
+	<item id="16876" type="Armor" name="Karmian Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -781,7 +781,7 @@
 			<add order="0x40" stat="maxMp" val="225" />
 		</for>
 	</item>
-	<item id="16877" type="Armor" name="Karmian Stockings of Friendship - 90 day limited period">
+	<item id="16877" type="Armor" name="Karmian Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -804,7 +804,7 @@
 			<add order="0x40" stat="maxMp" val="141" />
 		</for>
 	</item>
-	<item id="16878" type="Armor" name="Karmian Gloves of Friendship - 90 day limited period">
+	<item id="16878" type="Armor" name="Karmian Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -820,7 +820,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="16879" type="Armor" name="Karmian Boots of Friendship - 90 day limited period">
+	<item id="16879" type="Armor" name="Karmian Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -836,7 +836,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="16880" type="Armor" name="Mithril Tunic of Friendship - 90 day limited period">
+	<item id="16880" type="Armor" name="Mithril Tunic of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -859,7 +859,7 @@
 			<add order="0x40" stat="maxMp" val="169" />
 		</for>
 	</item>
-	<item id="16881" type="Armor" name="Mithril Stockings of Friendship - 90 day limited period">
+	<item id="16881" type="Armor" name="Mithril Stockings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -882,7 +882,7 @@
 			<add order="0x40" stat="maxMp" val="105" />
 		</for>
 	</item>
-	<item id="16882" type="Armor" name="Elven Mithril Gloves of Friendship - 90 day limited period">
+	<item id="16882" type="Armor" name="Elven Mithril Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -898,7 +898,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="16883" type="Armor" name="Elven Mithril Boots of Friendship - 90 day limited period">
+	<item id="16883" type="Armor" name="Elven Mithril Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -914,7 +914,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="16884" type="Armor" name="Dark Crystal Leather Armor of Friendship - 90 day limited period">
+	<item id="16884" type="Armor" name="Dark Crystal Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -931,7 +931,7 @@
 			<add order="0x10" stat="pDef" val="128" />
 		</for>
 	</item>
-	<item id="16885" type="Armor" name="Dark Crystal Leggings of Friendship - 90 day limited period">
+	<item id="16885" type="Armor" name="Dark Crystal Leggings of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -948,7 +948,7 @@
 			<add order="0x10" stat="pDef" val="80" />
 		</for>
 	</item>
-	<item id="16886" type="Armor" name="Dark Crystal Gloves of Friendship - Light Armor - 90 day limited period">
+	<item id="16886" type="Armor" name="Dark Crystal Gloves of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -964,7 +964,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="16887" type="Armor" name="Dark Crystal Boots of Friendship - Light Armor - 90 day limited period">
+	<item id="16887" type="Armor" name="Dark Crystal Boots of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -980,7 +980,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="16888" type="Armor" name="Leather Armor of Doom of Friendship - 90 day limited period">
+	<item id="16888" type="Armor" name="Leather Armor of Doom of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -997,7 +997,7 @@
 			<add order="0x10" stat="pDef" val="202" />
 		</for>
 	</item>
-	<item id="16889" type="Armor" name="Doom Helmet of Friendship - 90 day limited period">
+	<item id="16889" type="Armor" name="Doom Helmet of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1013,7 +1013,7 @@
 			<add order="0x10" stat="pDef" val="66" />
 		</for>
 	</item>
-	<item id="16890" type="Armor" name="Doom Gloves of Friendship - Heavy Armor - 90 day limited period">
+	<item id="16890" type="Armor" name="Doom Gloves of Fortune - Heavy Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1034,7 +1034,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="16891" type="Armor" name="Doom Gloves of Friendship - Light Armor - 90 day limited period">
+	<item id="16891" type="Armor" name="Doom Gloves of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1050,7 +1050,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="16892" type="Armor" name="Doom Boots of Friendship - Heavy Armor - 90 day limited period">
+	<item id="16892" type="Armor" name="Doom Boots of Fortune - Heavy Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1071,7 +1071,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="16893" type="Armor" name="Doom Boots of Friendship - Light Armor - 90 day limited period">
+	<item id="16893" type="Armor" name="Doom Boots of Fortune - Light Armor - 90-day limited period">
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1087,7 +1087,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="16894" type="Armor" name="Doom Plate Armor of Friendship - 90 day limited period">
+	<item id="16894" type="Armor" name="Doom Plate Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1109,7 +1109,7 @@
 			<add order="0x10" stat="pDef" val="270" />
 		</for>
 	</item>
-	<item id="16895" type="Armor" name="Doom Shield of Friendship - 90 day limited period">
+	<item id="16895" type="Armor" name="Doom Shield of Fortune - 90-day limited period">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1133,7 +1133,7 @@
 			<set order="0x08" stat="sDef" val="230" />
 		</for>
 	</item>
-	<item id="16896" type="Armor" name="Plate Leather Armor of Friendship - 90 day limited period">
+	<item id="16896" type="Armor" name="Plate Leather Armor of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1150,7 +1150,7 @@
 			<add order="0x10" stat="pDef" val="94" />
 		</for>
 	</item>
-	<item id="16897" type="Armor" name="Plate Leather Gaiters of Friendship - 90 day limited period">
+	<item id="16897" type="Armor" name="Plate Leather Gaiters of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1167,7 +1167,7 @@
 			<add order="0x10" stat="pDef" val="59" />
 		</for>
 	</item>
-	<item id="16898" type="Armor" name="Plate Leather Boots of Friendship - 90 day limited period">
+	<item id="16898" type="Armor" name="Plate Leather Boots of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1183,7 +1183,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="16899" type="Armor" name="Plate Leather Gloves of Friendship - 90 day limited period">
+	<item id="16899" type="Armor" name="Plate Leather Gloves of Fortune - 90-day limited period">
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />

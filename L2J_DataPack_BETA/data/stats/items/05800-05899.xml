@@ -25,7 +25,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5801" type="Weapon" name="Dusk">
+	<item id="5801" type="Weapon" name="For NPC (Dusk)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -50,7 +50,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5802" type="Weapon" name="Dawn">
+	<item id="5802" type="Weapon" name="For NPC (Dawn)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -75,7 +75,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5803" type="EtcItem" name="Lucky Charm: D-Grade">
+	<item id="5803" type="EtcItem" name="Lucky Charm (D-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -89,7 +89,7 @@
 		<set name="item_skill" val="2168-2" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="5804" type="EtcItem" name="Lucky Charm: C-Grade">
+	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -103,7 +103,7 @@
 		<set name="item_skill" val="2168-3" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="5805" type="EtcItem" name="Lucky Charm: B-Grade">
+	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -117,7 +117,7 @@
 		<set name="item_skill" val="2168-4" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="5806" type="EtcItem" name="Lucky Charm: A-Grade">
+	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -131,7 +131,7 @@
 		<set name="item_skill" val="2168-5" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="5807" type="EtcItem" name="Lucky Charm: S Grade">
+	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />

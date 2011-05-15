@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="20100" type="Armor" name="Saving Santa Hat - 24 Hour Expiration Period">
+	<item id="20100" type="Armor" name="Saving Santa Hat - 24-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -30,7 +30,7 @@
 		<set name="weight" val="100" />
 		<set name="capsuled_items" val="20075,1,1,100;20076,1,1,100;20078,1,1,100" />
 	</item>
-	<item id="20103" type="EtcItem" name="Holiday Scroll: Heavy Armor Fighter - 8 Hour Expiration Period">
+	<item id="20103" type="EtcItem" name="Holiday Scroll: Heavy Armor Fighter - 8-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="call_skill" />
 		<set name="etcitem_type" val="scroll" />
@@ -44,7 +44,7 @@
 		<set name="item_skill" val="22013-1" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20104" type="EtcItem" name="Holiday Scroll: Light Armor Fighter - 8 Hour Expiration Period">
+	<item id="20104" type="EtcItem" name="Holiday Scroll: Light Armor Fighter - 8-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="call_skill" />
 		<set name="etcitem_type" val="scroll" />
@@ -58,7 +58,7 @@
 		<set name="item_skill" val="22014-1" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20105" type="EtcItem" name="Holiday Scroll: Healer - 8 Hour Expiration Period">
+	<item id="20105" type="EtcItem" name="Holiday Scroll: Healer - 8-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="call_skill" />
 		<set name="etcitem_type" val="scroll" />
@@ -72,7 +72,7 @@
 		<set name="item_skill" val="22015-1" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20106" type="EtcItem" name="Holiday Scroll: Mage - 8 Hour Expiration Period">
+	<item id="20106" type="EtcItem" name="Holiday Scroll: Mage - 8-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="call_skill" />
 		<set name="etcitem_type" val="scroll" />
@@ -86,7 +86,7 @@
 		<set name="item_skill" val="22016-1" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20107" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket - 12 Hour Expiration Period">
+	<item id="20107" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket - 12-hour limited period">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -96,7 +96,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20108" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket - 12 Hour Expiration Period">
+	<item id="20108" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket - 12-hour limited period">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -106,7 +106,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20109" type="Weapon" name="Sword of Revolution - Event - 4 Hour Expiration Period">
+	<item id="20109" type="Weapon" name="Sword of Revolution (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -136,7 +136,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20110" type="Weapon" name="Titan Sword - Event - 4 Hour Expiration Period">
+	<item id="20110" type="Weapon" name="Titan Sword (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_giants_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -165,7 +165,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20111" type="Weapon" name="Maingauche - Event - 4 Hour Expiration Period">
+	<item id="20111" type="Weapon" name="Maingauche (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -195,7 +195,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20112" type="Weapon" name="Tarbar - Event - 4 Hour Expiration Period">
+	<item id="20112" type="Weapon" name="Tarbar (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_tarbar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -225,7 +225,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20113" type="Weapon" name="Titan Hammer - Event - 4 Hour Expiration Period">
+	<item id="20113" type="Weapon" name="Titan Hammer (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_giants_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -255,7 +255,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20114" type="Weapon" name="Priest Mace - Event - 4 Hour Expiration Period">
+	<item id="20114" type="Weapon" name="Priest Mace (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -285,7 +285,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20115" type="Weapon" name="Goat Head Staff - Event - 4 Hour Expiration Period">
+	<item id="20115" type="Weapon" name="Goat Head Staff (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -315,7 +315,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20116" type="Weapon" name="Bich'Hwa - Event - 4 Hour Expiration Period">
+	<item id="20116" type="Weapon" name="Bich'Hwa (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -345,7 +345,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20117" type="Weapon" name="Strengthened Long Bow - Event - 4 Hour Expiration Period">
+	<item id="20117" type="Weapon" name="Strengthened Long Bow (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -377,7 +377,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20118" type="Weapon" name="Winged Spear - Event - 4 Hour Expiration Period">
+	<item id="20118" type="Weapon" name="Winged Spear (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -407,7 +407,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20119" type="Weapon" name="Artisan's Sword*Artisan's Sword - Event - 4 Hour Expiration Period">
+	<item id="20119" type="Weapon" name="Artisan's Sword*Artisan's Sword (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -436,7 +436,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20120" type="Weapon" name="Epee - Event - 4 Hour Expiration Period">
+	<item id="20120" type="Weapon" name="Epee (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -470,7 +470,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20121" type="Weapon" name="Katzbalger - Event - 4 Hour Expiration Period">
+	<item id="20121" type="Weapon" name="Katzbalger (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -503,7 +503,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20122" type="Weapon" name="Arm Breaker - Event - 4 Hour Expiration Period">
+	<item id="20122" type="Weapon" name="Arm Breaker (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -537,7 +537,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20123" type="Weapon" name="Samurai Longsword - Event - 4 Hour Expiration Period">
+	<item id="20123" type="Weapon" name="Samurai Longsword (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -566,7 +566,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20124" type="Weapon" name="Berserker Blade - Event - 4 Hour Expiration Period">
+	<item id="20124" type="Weapon" name="Berserker Blade (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -595,7 +595,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20125" type="Weapon" name="Crystal Dagger - Event - 4 Hour Expiration Period">
+	<item id="20125" type="Weapon" name="Crystal Dagger (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -625,7 +625,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20126" type="Weapon" name="Yaksa Mace - Event - 4 Hour Expiration Period">
+	<item id="20126" type="Weapon" name="Yaksa Mace (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -655,7 +655,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20127" type="Weapon" name="Dwarven Hammer - Event - 4 Hour Expiration Period">
+	<item id="20127" type="Weapon" name="Dwarven Hammer (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -685,7 +685,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20128" type="Weapon" name="Ecliptic Axe - Event - 4 Hour Expiration Period">
+	<item id="20128" type="Weapon" name="Ecliptic Axe (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -715,7 +715,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20129" type="Weapon" name="Demon's Staff - Event - 4 Hour Expiration Period">
+	<item id="20129" type="Weapon" name="Demon's Staff (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -745,7 +745,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20130" type="Weapon" name="Great Pata - Event - 4 Hour Expiration Period">
+	<item id="20130" type="Weapon" name="Great Pata (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -775,7 +775,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20131" type="Weapon" name="Eminence Bow - Event - 4 Hour Expiration Period">
+	<item id="20131" type="Weapon" name="Eminence Bow (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -807,7 +807,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20132" type="Weapon" name="Orcish Poleaxe - Event - 4 Hour Expiration Period">
+	<item id="20132" type="Weapon" name="Orcish Poleaxe (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -837,7 +837,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20133" type="Weapon" name="Katana*Katana - Event - 4 Hour Expiration Period">
+	<item id="20133" type="Weapon" name="Katana*Katana (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -867,7 +867,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20134" type="Weapon" name="Admiral's Estoc - Event - 4 Hour Expiration Period">
+	<item id="20134" type="Weapon" name="Admiral's Estoc (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -901,7 +901,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20135" type="Weapon" name="Saber Tooth - Event - 4 Hour Expiration Period">
+	<item id="20135" type="Weapon" name="Saber Tooth (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -934,7 +934,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20136" type="Weapon" name="Sharpshooter - Event - 4 Hour Expiration Period">
+	<item id="20136" type="Weapon" name="Sharpshooter (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -968,7 +968,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20137" type="Weapon" name="Sword of Damascus - Event - 4 Hour Expiration Period">
+	<item id="20137" type="Weapon" name="Sword of Damascus (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -997,7 +997,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20138" type="Weapon" name="Guardian Sword - Event - 4 Hour Expiration Period">
+	<item id="20138" type="Weapon" name="Guardian Sword (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1026,7 +1026,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20139" type="Weapon" name="Demon's Dagger - Event - 4 Hour Expiration Period">
+	<item id="20139" type="Weapon" name="Demon's Dagger (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1056,7 +1056,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20140" type="Weapon" name="Art of Battle Axe - Event - 4 Hour Expiration Period">
+	<item id="20140" type="Weapon" name="Art of Battle Axe (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1086,7 +1086,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20141" type="Weapon" name="Star Buster - Event - 4 Hour Expiration Period">
+	<item id="20141" type="Weapon" name="Star Buster (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1116,7 +1116,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20142" type="Weapon" name="Kaim Vanul's Bones - Event - 4 Hour Expiration Period">
+	<item id="20142" type="Weapon" name="Kaim Vanul's Bones (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1146,7 +1146,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20143" type="Weapon" name="Staff of Evil Spirits - Event - 4 Hour Expiration Period">
+	<item id="20143" type="Weapon" name="Staff of Evil Spirits (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1176,7 +1176,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20144" type="Weapon" name="Bellion Cestus - Event - 4 Hour Expiration Period">
+	<item id="20144" type="Weapon" name="Bellion Cestus (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1206,7 +1206,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20145" type="Weapon" name="Bow of Peril - Event - 4 Hour Expiration Period">
+	<item id="20145" type="Weapon" name="Bow of Peril (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1238,7 +1238,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20146" type="Weapon" name="Lance - Event - 4 Hour Expiration Period">
+	<item id="20146" type="Weapon" name="Lance (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1268,7 +1268,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20147" type="Weapon" name="Samurai Long Sword*Samurai Long Sword - Event - 4 Hour Expiration Period">
+	<item id="20147" type="Weapon" name="Samurai Long Sword*Samurai Long Sword (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1298,7 +1298,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20148" type="Weapon" name="Colichemarde - Event - 4 Hour Expiration Period">
+	<item id="20148" type="Weapon" name="Colichemarde (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1332,7 +1332,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20149" type="Weapon" name="Dismantler - Event - 4 Hour Expiration Period">
+	<item id="20149" type="Weapon" name="Dismantler (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1365,7 +1365,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20150" type="Weapon" name="Hell Hound - Event - 4 Hour Expiration Period">
+	<item id="20150" type="Weapon" name="Hell Hound (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1399,7 +1399,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20151" type="Weapon" name="Dark Legion - Event - 4 Hour Expiration Period">
+	<item id="20151" type="Weapon" name="Dark Legion's Edge (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1428,7 +1428,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20152" type="Weapon" name="Dragon Slayer - Event - 4 Hour Expiration Period">
+	<item id="20152" type="Weapon" name="Dragon Slayer (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1457,7 +1457,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20153" type="Weapon" name="Soul Separator - Event - 4 Hour Expiration Period">
+	<item id="20153" type="Weapon" name="Soul Separator (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1487,7 +1487,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20154" type="Weapon" name="Elysian - Event - 4 Hour Expiration Period">
+	<item id="20154" type="Weapon" name="Elysian (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1517,7 +1517,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20155" type="Weapon" name="Doom Crusher - Event - 4 Hour Expiration Period">
+	<item id="20155" type="Weapon" name="Doom Crusher (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1547,7 +1547,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20156" type="Weapon" name="Flaming Dragon Skull - Event - 4 Hour Expiration Period">
+	<item id="20156" type="Weapon" name="Flaming Dragon Skull (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1577,7 +1577,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20157" type="Weapon" name="Branch of the Mother Tree - Event - 4 Hour Expiration Period">
+	<item id="20157" type="Weapon" name="Branch of the Mother Tree (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1607,7 +1607,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20158" type="Weapon" name="Dragon Grinder - Event - 4 Hour Expiration Period">
+	<item id="20158" type="Weapon" name="Dragon Grinder (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1637,7 +1637,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20159" type="Weapon" name="Soul Bow - Event - 4 Hour Expiration Period">
+	<item id="20159" type="Weapon" name="Soul Bow (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1669,7 +1669,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20160" type="Weapon" name="Tallum Glaive - Event - 4 Hour Expiration Period">
+	<item id="20160" type="Weapon" name="Tallum Glaive (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1699,7 +1699,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20161" type="Weapon" name="Damascus*Damascus - Event - 4 Hour Expiration Period">
+	<item id="20161" type="Weapon" name="Damascus*Damascus (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1729,7 +1729,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20162" type="Weapon" name="Lacerator - Event - 4 Hour Expiration Period">
+	<item id="20162" type="Weapon" name="Lacerator (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1763,7 +1763,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20163" type="Weapon" name="Undertaker - Event - 4 Hour Expiration Period">
+	<item id="20163" type="Weapon" name="Undertaker (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1796,7 +1796,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20164" type="Weapon" name="Reaper - Event - 4 Hour Expiration Period">
+	<item id="20164" type="Weapon" name="Reaper (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1830,7 +1830,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20165" type="Weapon" name="Forgotten Blade - Event - 4 Hour Expiration Period">
+	<item id="20165" type="Weapon" name="Forgotten Blade (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1859,7 +1859,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20166" type="Weapon" name="Heaven's Divider - Event - 4 Hour Expiration Period">
+	<item id="20166" type="Weapon" name="Heaven's Divider (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1888,7 +1888,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20167" type="Weapon" name="Angel Slayer - Event - 4 Hour Expiration Period">
+	<item id="20167" type="Weapon" name="Angel Slayer (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1918,7 +1918,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20168" type="Weapon" name="Basalt Battlehammer - Event - 4 Hour Expiration Period">
+	<item id="20168" type="Weapon" name="Basalt Battlehammer (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1948,7 +1948,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20169" type="Weapon" name="Dragon Hunter Axe - Event - 4 Hour Expiration Period">
+	<item id="20169" type="Weapon" name="Dragon Hunter Axe (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1978,7 +1978,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20170" type="Weapon" name="Arcana Mace - Event - 4 Hour Expiration Period">
+	<item id="20170" type="Weapon" name="Arcana Mace (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2008,7 +2008,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20171" type="Weapon" name="Imperial Staff - Event - 4 Hour Expiration Period">
+	<item id="20171" type="Weapon" name="Imperial Staff (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2038,7 +2038,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20172" type="Weapon" name="Demon Splinter - Event - 4 Hour Expiration Period">
+	<item id="20172" type="Weapon" name="Demon Splinter (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2068,7 +2068,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20173" type="Weapon" name="Draconic Bow - Event - 4 Hour Expiration Period">
+	<item id="20173" type="Weapon" name="Draconic Bow (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2100,7 +2100,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20174" type="Weapon" name="Saint Spear - Event - 4 Hour Expiration Period">
+	<item id="20174" type="Weapon" name="Saint Spear (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2130,7 +2130,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20175" type="Weapon" name="Tallum Blade*Dark Legion - Event - 4 Hour Expiration Period">
+	<item id="20175" type="Weapon" name="Tallum Blade*Dark Legion's Edge (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -2160,7 +2160,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20176" type="Weapon" name="Laevateinn - Event - 4 Hour Expiration Period">
+	<item id="20176" type="Weapon" name="Laevateinn (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2194,7 +2194,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20177" type="Weapon" name="Gram - Event - 4 Hour Expiration Period">
+	<item id="20177" type="Weapon" name="Gram (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2227,7 +2227,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="20178" type="Weapon" name="Sarnga - Event - 4 Hour Expiration Period">
+	<item id="20178" type="Weapon" name="Sarunga (Event) - 4-hour limited period">
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2376,7 +2376,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20190,1,1,100" />
 	</item>
-	<item id="20190" type="EtcItem" name="Premium Valentine Decoration - 15 Day Expiration Period">
+	<item id="20190" type="EtcItem" name="Premium Valentine Decoration - 15-day limited period">
 		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2459,7 +2459,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22026-1" />
 	</item>
-	<item id="20199" type="EtcItem" name="Heavenly Valentine Cake - 30 Day Expiration Period">
+	<item id="20199" type="EtcItem" name="Heavenly Valentine Cake - 30-day limited period">
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_5_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -2468,6 +2468,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22027-1" />
 		<set name="time" val="43200" />
 	</item>

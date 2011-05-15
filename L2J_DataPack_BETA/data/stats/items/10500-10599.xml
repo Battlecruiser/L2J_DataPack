@@ -302,7 +302,7 @@
 		<set name="item_skill" val="3429-1" />
 		<set name="duration" val="70" />
 	</item>
-	<item id="10519" type="Armor" name="White Talisman - Earth">
+	<item id="10519" type="Armor" name="White Talisman -  Earth">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -326,7 +326,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2487-1" />
 	</item>
-	<item id="10521" type="EtcItem" name="Rough Ore of Fire">
+	<item id="10521" type="EtcItem" name="Rough Fire Ore">
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -341,7 +341,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-1" />
 	</item>
-	<item id="10522" type="EtcItem" name="Rough Ore of Water">
+	<item id="10522" type="EtcItem" name="Rough Water Ore">
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -356,7 +356,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-1" />
 	</item>
-	<item id="10523" type="EtcItem" name="Rough Ore of the Earth">
+	<item id="10523" type="EtcItem" name="Rough Earth Ore">
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-1" />
 	</item>
-	<item id="10524" type="EtcItem" name="Rough Ore of Wind">
+	<item id="10524" type="EtcItem" name="Rough Wind Ore">
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -386,7 +386,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-1" />
 	</item>
-	<item id="10525" type="EtcItem" name="Rough Ore of Darkness">
+	<item id="10525" type="EtcItem" name="Rough Dark Ore">
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -401,7 +401,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
 	</item>
-	<item id="10526" type="EtcItem" name="Rough Ore of Divinity">
+	<item id="10526" type="EtcItem" name="Rough Holy Ore">
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -593,7 +593,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10533" type="Armor" name="Blue Talisman - Attack Power">
+	<item id="10533" type="Armor" name="Blue Talisman - P. Atk.">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -621,7 +621,7 @@
 		<set name="item_skill" val="3488-1" />
 		<set name="duration" val="65" />
 	</item>
-	<item id="10535" type="Armor" name="Yellow Talisman - Defense Power">
+	<item id="10535" type="Armor" name="Yellow Talisman - P. Def.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -634,7 +634,7 @@
 		<set name="item_skill" val="3490-1" />
 		<set name="duration" val="60" />
 	</item>
-	<item id="10536" type="Armor" name="Yellow Talisman - Magic Power">
+	<item id="10536" type="Armor" name="Yellow Talisman - M. Atk.">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -699,7 +699,7 @@
 		<set name="item_skill" val="3493-1" />
 		<set name="duration" val="60" />
 	</item>
-	<item id="10541" type="Armor" name="Yellow Talisman - Low Grade MP regeneration rate">
+	<item id="10541" type="Armor" name="Yellow Talisman - Low Grade MP Recovery Rate">
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -1184,7 +1184,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2479-1" />
 	</item>
-	<item id="10588" type="EtcItem" name="Forgotten Scroll - Throne Root">
+	<item id="10588" type="EtcItem" name="Forgotten Scroll - Thorn Root">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />

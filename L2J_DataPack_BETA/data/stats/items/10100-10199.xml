@@ -80,7 +80,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10110" type="EtcItem" name="Spellbook - Meteor">
+	<item id="10110" type="EtcItem" name="Forgotten Scroll - Meteor">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -88,7 +88,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10111" type="EtcItem" name="Spellbook - Star Fall">
+	<item id="10111" type="EtcItem" name="Forgotten Scroll - Star Fall">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -423,7 +423,7 @@
 		<set name="item_skill" val="2364-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="10131" type="EtcItem" name="Onyx Beast Transform Scroll">
+	<item id="10131" type="EtcItem" name="Transformation Scroll: Onyx Beast">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -434,7 +434,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2371-1" />
 	</item>
-	<item id="10132" type="EtcItem" name="Death Blader Transform Scroll">
+	<item id="10132" type="EtcItem" name="Transformation Scroll: Death Blader">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -445,7 +445,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2372-1" />
 	</item>
-	<item id="10133" type="EtcItem" name="Grail Apostle Transform Scroll">
+	<item id="10133" type="EtcItem" name="Transformation Scroll: Grail Apostle">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -456,7 +456,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2373-1" />
 	</item>
-	<item id="10134" type="EtcItem" name="Unicorn Transform Scroll">
+	<item id="10134" type="EtcItem" name="Transformation Scroll: Unicorn">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -467,7 +467,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2374-1" />
 	</item>
-	<item id="10135" type="EtcItem" name="Lilim Knight Transform Scroll">
+	<item id="10135" type="EtcItem" name="Transformation Scroll: Lilim Knight">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -478,7 +478,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2375-1" />
 	</item>
-	<item id="10136" type="EtcItem" name="Golem Guardian Transform Scroll">
+	<item id="10136" type="EtcItem" name="Transformation Scroll: Golem Guardian">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -489,7 +489,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2376-1" />
 	</item>
-	<item id="10137" type="EtcItem" name="Inferno Drake Transform Scroll">
+	<item id="10137" type="EtcItem" name="Transformation Scroll: Inferno Drake">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -500,7 +500,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2377-1" />
 	</item>
-	<item id="10138" type="EtcItem" name="Dragon Bomber Transform Scroll">
+	<item id="10138" type="EtcItem" name="Transformation Scroll: Dragon Bomber">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1205,7 +1205,7 @@
 		<set name="price" val="9300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10197" type="EtcItem" name="Alternative Dark Coda Seed">
+	<item id="10197" type="EtcItem" name="Seed: Alternative Dark Coda">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -1216,7 +1216,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="10198" type="EtcItem" name="Alternative Red Coda Seed">
+	<item id="10198" type="EtcItem" name="Seed: Alternative Red Coda">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />

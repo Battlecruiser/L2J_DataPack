@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="700" type="EtcItem" name="Hobgoblin Amulet">
+	<item id="700" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal05" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="703" type="EtcItem" name="Poison Sac">
+	<item id="703" type="EtcItem" name="Giant Spider's Poison Sac">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -55,7 +55,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="705" type="EtcItem" name="Orc's Amulet">
+	<item id="705" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal48" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -391,7 +391,7 @@
 		<set name="item_skill" val="10001-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A)">
+	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_wp" />
@@ -404,7 +404,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2006-1" />
 	</item>
-	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A)">
+	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_am" />
@@ -417,7 +417,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2007-1" />
 	</item>
-	<item id="731" type="EtcItem" name="Crystal Scroll: Enchant Weapon (A)">
+	<item id="731" type="EtcItem" name="Crystal Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -427,7 +427,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="732" type="EtcItem" name="Crystal Scroll: Enchant Armor (A)">
+	<item id="732" type="EtcItem" name="Crystal Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -463,7 +463,7 @@
 		<set name="item_skill" val="2011-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="735" type="EtcItem" name="Potion of Alacrity">
+	<item id="735" type="EtcItem" name="Alacrity Potion">
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -874,7 +874,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="764" type="EtcItem" name="Arbon's Letter">
+	<item id="764" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -940,7 +940,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="770" type="EtcItem" name="Shield of Honor">
+	<item id="770" type="EtcItem" name="_">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1050,7 +1050,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="780" type="EtcItem" name="Arbon's Letter">
+	<item id="780" type="EtcItem" name="_">
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />

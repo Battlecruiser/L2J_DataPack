@@ -500,7 +500,7 @@
 		<set name="price" val="91551" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9531" type="EtcItem" name="Sealed Dynasty Gaiter Piece">
+	<item id="9531" type="EtcItem" name="Sealed Dynasty Gaiters Piece">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -695,7 +695,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
 	</item>
-	<item id="9551" type="EtcItem" name="Divine Stone">
+	<item id="9551" type="EtcItem" name="Holy Stone">
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -767,7 +767,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-2" />
 	</item>
-	<item id="9557" type="EtcItem" name="Divine Crystal">
+	<item id="9557" type="EtcItem" name="Holy Crystal">
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -834,7 +834,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-3" />
 	</item>
-	<item id="9563" type="EtcItem" name="Divine Jewel">
+	<item id="9563" type="EtcItem" name="Holy Jewel">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -900,7 +900,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-4" />
 	</item>
-	<item id="9569" type="EtcItem" name="Divine Energy">
+	<item id="9569" type="EtcItem" name="Holy Energy">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -941,7 +941,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="9573" type="EtcItem" name="Life Stone: level 80">
+	<item id="9573" type="EtcItem" name="Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -950,7 +950,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
 	</item>
-	<item id="9574" type="EtcItem" name="Mid-Grade Life Stone: level 80">
+	<item id="9574" type="EtcItem" name="Mid-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
 	</item>
-	<item id="9575" type="EtcItem" name="High-Grade Life Stone: level 80">
+	<item id="9575" type="EtcItem" name="High-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -968,7 +968,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
 	</item>
-	<item id="9576" type="EtcItem" name="Top-Grade Life Stone: level 80">
+	<item id="9576" type="EtcItem" name="Top-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1083,7 +1083,7 @@
 			<add order="0x10" stat="pDef" val="8" />
 		</for>
 	</item>
-	<item id="9584" type="Armor" name="Striped Linen Shirt">
+	<item id="9584" type="Armor" name="Stripe Linen Shirt">
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />

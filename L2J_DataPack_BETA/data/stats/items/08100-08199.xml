@@ -304,7 +304,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8112" type="Weapon" name="Mysterious Sword - Magic Power">
+	<item id="8112" type="Weapon" name="Mysterious Sword - M. Atk.">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -389,7 +389,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8115" type="Weapon" name="Ecliptic Sword - Magic Power">
+	<item id="8115" type="Weapon" name="Ecliptic Sword - M. Atk.">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -474,7 +474,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8118" type="Weapon" name="Wizard's Tear - Magic Power">
+	<item id="8118" type="Weapon" name="Wizard's Tear - M. Atk.">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1068,7 +1068,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8139" type="Weapon" name="Ecliptic Axe - Magic Power">
+	<item id="8139" type="Weapon" name="Ecliptic Axe - M. Atk.">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1156,7 +1156,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8142" type="Weapon" name="Spell Breaker - Magic Mental Shield">
+	<item id="8142" type="Weapon" name="Spell Breaker - Mental Shield">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1422,7 +1422,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8151" type="Weapon" name="Flaming Dragon Skull - Magic Power">
+	<item id="8151" type="Weapon" name="Flaming Dragon Skull - M. Atk.">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1517,118 +1517,118 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2247-1" />
 	</item>
-	<item id="8158" type="EtcItem" name="Memento Mori: C-Grade">
+	<item id="8158" type="EtcItem" name="Memento Mori (C-Grade)">
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8159" type="EtcItem" name="Memento Mori: B-Grade">
+	<item id="8159" type="EtcItem" name="Memento Mori (B-Grade)">
 		<set name="icon" val="icon.etc_raid_a_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8160" type="EtcItem" name="Memento Mori: A-Grade">
+	<item id="8160" type="EtcItem" name="Memento Mori (A-Grade)">
 		<set name="icon" val="icon.etc_raid_a_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8161" type="EtcItem" name="Dragon Heart: C-Grade">
+	<item id="8161" type="EtcItem" name="Dragon Heart (C-Grade)">
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8162" type="EtcItem" name="Dragon Heart: B-Grade">
+	<item id="8162" type="EtcItem" name="Dragon Heart (B-Grade)">
 		<set name="icon" val="icon.etc_raid_b_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8163" type="EtcItem" name="Dragon Heart: A-Grade">
+	<item id="8163" type="EtcItem" name="Dragon Heart (A-Grade)">
 		<set name="icon" val="icon.etc_raid_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8164" type="EtcItem" name="Earth Egg: C-Grade">
+	<item id="8164" type="EtcItem" name="Earth Egg (C-Grade)">
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8165" type="EtcItem" name="Earth Egg: B-Grade">
+	<item id="8165" type="EtcItem" name="Earth Egg (B-Grade)">
 		<set name="icon" val="icon.etc_raid_c_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8166" type="EtcItem" name="Earth Egg: A-Grade">
+	<item id="8166" type="EtcItem" name="Earth Egg (A-Grade)">
 		<set name="icon" val="icon.etc_raid_c_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8167" type="EtcItem" name="Nonliving Nucleus: C-Grade">
+	<item id="8167" type="EtcItem" name="Nonliving Nucleus (C-Grade)">
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8168" type="EtcItem" name="Nonliving Nucleus: B-Grade">
+	<item id="8168" type="EtcItem" name="Nonliving Nucleus (B-Grade)">
 		<set name="icon" val="icon.etc_raid_d_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8169" type="EtcItem" name="Nonliving Nucleus: A-Grade">
+	<item id="8169" type="EtcItem" name="Nonliving Nucleus (A-Grade)">
 		<set name="icon" val="icon.etc_raid_d_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8170" type="EtcItem" name="Angelic Essence: C-Grade">
+	<item id="8170" type="EtcItem" name="Angelic Essence (C-Grade)">
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8171" type="EtcItem" name="Angelic Essence: B-Grade">
+	<item id="8171" type="EtcItem" name="Angelic Essence (B-Grade)">
 		<set name="icon" val="icon.etc_raid_e_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8172" type="EtcItem" name="Angelic Essence: A-Grade">
+	<item id="8172" type="EtcItem" name="Angelic Essence (A-Grade)">
 		<set name="icon" val="icon.etc_raid_e_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8173" type="EtcItem" name="Cradle of Creation: C-Grade (Not used)">
+	<item id="8173" type="EtcItem" name="Cradle of Creation (C-Grade) (Not In Use)">
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8174" type="EtcItem" name="Cradle of Creation: B-Grade (Not used)">
+	<item id="8174" type="EtcItem" name="Cradle of Creation (B-Grade) (Not In Use)">
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
@@ -1819,7 +1819,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8191" type="Armor" name="Frintezza's Necklace">
+	<item id="8191" type="Armor" name="Necklace of Frintezza">
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />

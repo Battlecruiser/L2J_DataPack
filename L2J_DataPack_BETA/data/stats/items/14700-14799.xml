@@ -213,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="capsuled_items" val="14687,2,2,100;14693,2,2,100;14699,2,2,100" />
 	</item>
-	<item id="14719" type="EtcItem" name="Full Energy Event Pack">
+	<item id="14719" type="EtcItem" name="Full Vitality Event Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -298,7 +298,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2881-1" />
 	</item>
-	<item id="14728" type="EtcItem" name="Event - Orr Cube - 30 day limited period">
+	<item id="14728" type="EtcItem" name="Event - Orr Cube - 30-day limited period">
 		<set name="icon" val="icon.etc_ore_cube_event_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -407,7 +407,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="capsuled_items" val="14722,60,60,100;14723,15,15,100;14724,1,1,100;14725,1,1,100" />
 	</item>
-	<item id="14741" type="EtcItem" name="Event - Energy Replenishing Herb Tea 5 minutes">
+	<item id="14741" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 5 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -418,7 +418,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14742" type="EtcItem" name="Event - Energy Replenishing Herb Tea 10 minutes">
+	<item id="14742" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 10 minutes">
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -430,7 +430,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2883-1" />
 	</item>
-	<item id="14743" type="EtcItem" name="Event - Energy Replenishing Herb Tea 20 minutes">
+	<item id="14743" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 20 minutes">
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -442,7 +442,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2884-1" />
 	</item>
-	<item id="14744" type="EtcItem" name="Event - Energy Replenishing Herb Tea 30 minutes">
+	<item id="14744" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 30 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -457,7 +457,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9166-1" />
 	</item>
-	<item id="14745" type="EtcItem" name="Event - Energy Replenishing Herb Tea 60 minutes">
+	<item id="14745" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 60 minutes">
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -811,7 +811,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2893-1" />
 	</item>
-	<item id="14771" type="Armor" name="Kat the Cat Hat - 14 day limited period">
+	<item id="14771" type="Armor" name="Kat the Cat Hat - 14-day limited period">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -833,7 +833,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="equip_condition" val="{{ec_sex;1}}" />
 	</item>
-	<item id="14773" type="Armor" name="Suit - 14 day limited period">
+	<item id="14773" type="Armor" name="Suit - 14-day limited period">
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -849,7 +849,7 @@
 			<add order="0x40" stat="maxMp" val="15" />
 		</for>
 	</item>
-	<item id="14774" type="Weapon" name="Wild Rose Pig Candy - 14 day limited period">
+	<item id="14774" type="Weapon" name="Wild Rose Pig Candy - 14-day limited period">
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -872,7 +872,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14775" type="Armor" name="Agathion Seal Bracelet - Love - 14 day limited period">
+	<item id="14775" type="Armor" name="Agathion Seal Bracelet - Love - 14-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -886,7 +886,7 @@
 		<set name="item_skill" val="5763-1;8245-1;3267-1" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="14776" type="Armor" name="Agathion Seal Bracelet - Juju - 14 day limited period">
+	<item id="14776" type="Armor" name="Agathion Seal Bracelet - Juju - 14-day limited period">
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />

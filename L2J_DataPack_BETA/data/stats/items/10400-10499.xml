@@ -122,7 +122,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="item_skill" val="2499-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 		<cond msgId="113" addName="1">
 			<player SiegeZone="126" />
 		</cond>
@@ -1757,7 +1756,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10483" type="EtcItem" name="Life Stone - level 82">
+	<item id="10483" type="EtcItem" name="Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1766,7 +1765,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
 	</item>
-	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - level 82">
+	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1775,7 +1774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
 	</item>
-	<item id="10485" type="EtcItem" name="High-Grade Life Stone - level 82">
+	<item id="10485" type="EtcItem" name="High-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1784,7 +1783,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
 	</item>
-	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - level 82">
+	<item id="10486" type="EtcItem" name="Top-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />

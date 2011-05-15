@@ -487,7 +487,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13536" type="Weapon" name="Flag of Goddard">
+	<item id="13536" type="Weapon" name="Goddard Flag">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="flag" />
@@ -653,7 +653,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 	</item>
-	<item id="13546" type="Armor" name="Steam Sledge Mounting Bracelet">
+	<item id="13546" type="Armor" name="Steam Sledge Mount Bracelet">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -668,7 +668,7 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="8261-1" />
 	</item>
-	<item id="13547" type="Armor" name="Tawny-Maned Lion Mounting Bracelet">
+	<item id="13547" type="Armor" name="Tawny-Maned Lion Mount Bracelet">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -1051,7 +1051,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13569" type="EtcItem" name="Gludio Human Mercenary Transformation Scroll">
+	<item id="13569" type="EtcItem" name="Transformation Scroll: Gludio Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1066,7 +1066,7 @@
 		<set name="item_skill" val="2672-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13570" type="EtcItem" name="Gludio Elf Mercenary Transformation Scroll">
+	<item id="13570" type="EtcItem" name="Transformation Scroll: Gludio Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1081,7 +1081,7 @@
 		<set name="item_skill" val="2673-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13571" type="EtcItem" name="Gludio Dark Elf Mercenary Transformation Scroll">
+	<item id="13571" type="EtcItem" name="Transformation Scroll: Gludio Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1096,7 +1096,7 @@
 		<set name="item_skill" val="2674-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13572" type="EtcItem" name="Gludio Orc Mercenary Transformation Scroll">
+	<item id="13572" type="EtcItem" name="Transformation Scroll: Gludio Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1111,7 +1111,7 @@
 		<set name="item_skill" val="2675-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13573" type="EtcItem" name="Gludio Dwarf Mercenary Transformation Scroll">
+	<item id="13573" type="EtcItem" name="Transformation Scroll: Gludio Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1126,7 +1126,7 @@
 		<set name="item_skill" val="2676-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13574" type="EtcItem" name="Gludio Kamael Mercenary Transformation Scroll">
+	<item id="13574" type="EtcItem" name="Transformation Scroll: Gludio Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1141,7 +1141,7 @@
 		<set name="item_skill" val="2677-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13575" type="EtcItem" name="Gludio Knight Mercenary Transformation Scroll">
+	<item id="13575" type="EtcItem" name="Transformation Scroll: Gludio Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1156,7 +1156,7 @@
 		<set name="item_skill" val="2678-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13576" type="EtcItem" name="Gludio Archer Mercenary Transformation Scroll">
+	<item id="13576" type="EtcItem" name="Transformation Scroll: Gludio Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1171,7 +1171,7 @@
 		<set name="item_skill" val="2679-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13577" type="EtcItem" name="Gludio Wizard Mercenary Transformation Scroll">
+	<item id="13577" type="EtcItem" name="Transformation Scroll: Gludio Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1186,7 +1186,7 @@
 		<set name="item_skill" val="2680-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13578" type="EtcItem" name="Gludio Kamael Captain Mercenary Transformation Scroll">
+	<item id="13578" type="EtcItem" name="Transformation Scroll: Gludio Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1201,7 +1201,7 @@
 		<set name="item_skill" val="2681-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13579" type="EtcItem" name="Gludio Knight Captain Mercenary Transformation Scroll">
+	<item id="13579" type="EtcItem" name="Transformation Scroll: Gludio Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1216,7 +1216,7 @@
 		<set name="item_skill" val="2682-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13580" type="EtcItem" name="Gludio Commander Mercenary Transformation Scroll">
+	<item id="13580" type="EtcItem" name="Transformation Scroll: Gludio Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1231,7 +1231,7 @@
 		<set name="item_skill" val="2683-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13581" type="EtcItem" name="Dion Human Mercenary Transformation Scroll">
+	<item id="13581" type="EtcItem" name="Transformation Scroll: Dion Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1246,7 +1246,7 @@
 		<set name="item_skill" val="2684-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13582" type="EtcItem" name="Dion Elf Mercenary Transformation Scroll">
+	<item id="13582" type="EtcItem" name="Transformation Scroll: Dion Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1261,7 +1261,7 @@
 		<set name="item_skill" val="2685-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13583" type="EtcItem" name="Dion Dark Elf Mercenary Transformation Scroll">
+	<item id="13583" type="EtcItem" name="Transformation Scroll: Dion Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1276,7 +1276,7 @@
 		<set name="item_skill" val="2686-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13584" type="EtcItem" name="Dion Orc Mercenary Transformation Scroll">
+	<item id="13584" type="EtcItem" name="Transformation Scroll: Dion Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1291,7 +1291,7 @@
 		<set name="item_skill" val="2687-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13585" type="EtcItem" name="Dion Dwarf Mercenary Transformation Scroll">
+	<item id="13585" type="EtcItem" name="Transformation Scroll: Dion Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1306,7 +1306,7 @@
 		<set name="item_skill" val="2688-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13586" type="EtcItem" name="Dion Kamael Mercenary Transformation Scroll">
+	<item id="13586" type="EtcItem" name="Transformation Scroll: Dion Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1321,7 +1321,7 @@
 		<set name="item_skill" val="2689-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13587" type="EtcItem" name="Dion Knight Mercenary Transformation Scroll">
+	<item id="13587" type="EtcItem" name="Transformation Scroll: Dion Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1336,7 +1336,7 @@
 		<set name="item_skill" val="2690-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13588" type="EtcItem" name="Dion Archer Mercenary Transformation Scroll">
+	<item id="13588" type="EtcItem" name="Transformation Scroll: Dion Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1351,7 +1351,7 @@
 		<set name="item_skill" val="2691-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13589" type="EtcItem" name="Dion Wizard Mercenary Transformation Scroll">
+	<item id="13589" type="EtcItem" name="Transformation Scroll: Dion Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1366,7 +1366,7 @@
 		<set name="item_skill" val="2692-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13590" type="EtcItem" name="Dion Kamael Captain Mercenary Transformation Scroll">
+	<item id="13590" type="EtcItem" name="Transformation Scroll: Dion Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1381,7 +1381,7 @@
 		<set name="item_skill" val="2693-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13591" type="EtcItem" name="Dion Knight Captain Mercenary Transformation Scroll">
+	<item id="13591" type="EtcItem" name="Transformation Scroll: Dion Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1396,7 +1396,7 @@
 		<set name="item_skill" val="2694-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13592" type="EtcItem" name="Dion Commander Mercenary Transformation Scroll">
+	<item id="13592" type="EtcItem" name="Transformation Scroll: Dion Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1411,7 +1411,7 @@
 		<set name="item_skill" val="2695-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13593" type="EtcItem" name="Giran Human Mercenary Transformation Scroll">
+	<item id="13593" type="EtcItem" name="Transformation Scroll: Giran Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1426,7 +1426,7 @@
 		<set name="item_skill" val="2696-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13594" type="EtcItem" name="Giran Elf Mercenary Transformation Scroll">
+	<item id="13594" type="EtcItem" name="Transformation Scroll: Giran Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1441,7 +1441,7 @@
 		<set name="item_skill" val="2697-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13595" type="EtcItem" name="Giran Dark Elf Mercenary Transformation Scroll">
+	<item id="13595" type="EtcItem" name="Transformation Scroll: Giran Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1456,7 +1456,7 @@
 		<set name="item_skill" val="2698-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13596" type="EtcItem" name="Giran Orc Mercenary Transformation Scroll">
+	<item id="13596" type="EtcItem" name="Transformation Scroll: Giran Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1471,7 +1471,7 @@
 		<set name="item_skill" val="2699-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13597" type="EtcItem" name="Giran Dwarf Mercenary Transformation Scroll">
+	<item id="13597" type="EtcItem" name="Transformation Scroll: Giran Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1486,7 +1486,7 @@
 		<set name="item_skill" val="2700-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13598" type="EtcItem" name="Giran Kamael Mercenary Transformation Scroll">
+	<item id="13598" type="EtcItem" name="Transformation Scroll: Giran Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1501,7 +1501,7 @@
 		<set name="item_skill" val="2701-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 	</item>
-	<item id="13599" type="EtcItem" name="Giran Knight Mercenary Transformation Scroll">
+	<item id="13599" type="EtcItem" name="Transformation Scroll: Giran Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
