@@ -1456,7 +1456,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<for>
-			<effect name="TargetMe" abnormalAbnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
+			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
 		</for>
 	</skill>
 	<skill id="985" levels="1" name="Challenge for Fate">
@@ -1473,8 +1473,8 @@
 		<set name="skillType" val="AGGDEBUFF" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="TargetMe" AbnormalAbnormalTime="15" val="0" />
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" AbnormalAbnormalTime="15" val="0" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" triggeredLevel="1" />
+			<effect name="TargetMe" abnormalTime="15" val="0" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" abnormalTime="15" val="0" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" triggeredLevel="1" />
 		</for>
 	</skill>
 	<skill id="986" levels="25" name="Deadly Strike">

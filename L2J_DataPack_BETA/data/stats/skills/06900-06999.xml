@@ -86,7 +86,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" AbnormalTime="15" val="0">
+			<effect name="Buff" abnormalTime="15" val="0">
 				<add order="0x40" stat="pDef" val="360" />
 				<add order="0x40" stat="mDef" val="270" />
 			</effect>
