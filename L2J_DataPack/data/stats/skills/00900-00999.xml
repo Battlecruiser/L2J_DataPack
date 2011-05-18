@@ -3,10 +3,10 @@
 	<skill id="900" levels="6" name="Energy Blast">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 5280 5390 5498 5603 5704 5800 </table>
-		<table name="#power"> 15838 16170 16494 16807 17110 17400 </table>
+		<table name="#pvePower"> 15838 16170 16494 16807 17110 17400 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_FRONT_AURA" />
@@ -20,11 +20,11 @@
 	<skill id="901" levels="6" name="Dark Strike">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
@@ -39,10 +39,10 @@
 	<skill id="902" levels="6" name="Bursting Flame">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
@@ -57,10 +57,10 @@
 	<skill id="903" levels="6" name="Stratum Explosion">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
-		<table name="#power"> 5068 5175 5278 5379 5475 5568 </table>
+		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
@@ -73,12 +73,14 @@
 	</skill>
 	<skill id="904" levels="6" name="Corpse Burst">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 348 351 355 358 361 364 </table>
+		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
+		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="83" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
 		<set name="skillRadius" val="200" />
 		<set name="saveVs" val="CON" />
@@ -95,9 +97,11 @@
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 12670 12936 13195 13446 13688 13920 </table>
+		<table name="#pvpPower"> 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_AURA" />
@@ -114,9 +118,11 @@
 	</skill>
 	<skill id="906" levels="6" name="Lance Step">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_FRONT_AURA" />
 		<set name="skillRadius" val="100" />
@@ -128,9 +134,11 @@
 	</skill>
 	<skill id="907" levels="6" name="Aqua Blast">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -145,9 +153,11 @@
 	</skill>
 	<skill id="908" levels="6" name="Spin Slash">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 5068 5175 5278 5379 5475 5568 </table>
+		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
+		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="80" />
@@ -159,11 +169,13 @@
 	</skill>
 	<skill id="909" levels="6" name="Ice Focus">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 348 351 355 358 361 364 </table>
+		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
+		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="saveVs" val="CON" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -186,9 +198,11 @@
 	</skill>
 	<skill id="910" levels="6" name="Water Jet">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 12670 12936 13195 13446 13688 13920 </table>
+		<table name="#pvpPower"> 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="element" val="1" /> <!-- Water -->

@@ -1559,9 +1559,11 @@
 	</skill>
 	<skill id="896" levels="6" name="Rolling Step">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="1000" />
@@ -1575,9 +1577,11 @@
 	</skill>
 	<skill id="897" levels="6" name="Double Blast">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
+		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
@@ -1590,9 +1594,11 @@
 	</skill>
 	<skill id="898" levels="6" name="Tornado Slash">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 9503 9702 9896 10084 10266 10440 </table>
+		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
+		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="100" />
@@ -1604,10 +1610,12 @@
 	</skill>
 	<skill id="899" levels="6" name="Cat Roar">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
-		<table name="#power"> 3168 3234 3299 3362 3422 3480 </table>
+		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
+		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
-		<set name="power" val="#power" />
+		<set name="power" val="#pvePower" />
+		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="100" />
