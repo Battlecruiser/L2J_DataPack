@@ -202,14 +202,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108" />
-		</cond>
 	</item>
 	<item id="10809" type="Armor" name="Dynasty Leather Armor {PvP} - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
@@ -613,14 +612,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108" />
-		</cond>
 	</item>
 	<item id="10826" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />

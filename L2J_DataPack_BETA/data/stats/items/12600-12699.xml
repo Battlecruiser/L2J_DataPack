@@ -769,7 +769,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 		</for>
@@ -1082,7 +1084,9 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 	</item>
 	<item id="12677" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_ub_i00" />

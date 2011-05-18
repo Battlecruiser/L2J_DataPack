@@ -408,7 +408,9 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -876,7 +878,9 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_category;{@dagger_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
