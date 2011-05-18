@@ -381,7 +381,7 @@ public class Stage1 extends Quest
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : channel.getMembers())
 		{
 			if (partyMember.getLevel() < 75)
 			{
