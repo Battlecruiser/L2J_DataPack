@@ -266,7 +266,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8357-1" />
 		<set name="time" val="7200" />
-		<set name="equip_condition" val="{{ec_inzone_num;{112}}}" />
+		<cond msgId="1518">
+			<player instanceId="112" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="7" />
 			<set order="0x08" stat="mAtk" val="5" />
