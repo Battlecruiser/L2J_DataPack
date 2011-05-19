@@ -453,7 +453,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_inzone_num;{43}}}" />
+		<cond msgId="1518">
+			<player instanceId="43" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="107" />
 			<set order="0x08" stat="mAtk" val="72" />
@@ -462,11 +464,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="43" />
-			</and>
-		</cond>
 	</item>
 	<item id="13035" type="Weapon" name="Enhanced Sprite's Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -487,7 +484,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8237-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{43}}}" />
+		<cond msgId="1518">
+			<player instanceId="43" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="127" />
 			<set order="0x08" stat="mAtk" val="82" />
@@ -496,11 +495,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="43" />
-			</and>
-		</cond>
 	</item>
 	<item id="13036" type="Weapon" name="Sword of Ice and Fire">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -521,7 +515,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8238-1;8237-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{43}}}" />
+		<cond msgId="1518">
+			<player instanceId="43" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="147" />
 			<set order="0x08" stat="mAtk" val="92" />
@@ -530,11 +526,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="43" />
-			</and>
-		</cond>
 	</item>
 	<item id="13037" type="EtcItem" name="Pailaka Soulshot - Grade D">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -634,7 +625,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8250-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{44}}}" />
+		<cond msgId="1518">
+			<player instanceId="44" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="259" />
 			<set order="0x08" stat="mAtk" val="143" />
@@ -643,11 +636,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="44" />
-			</and>
-		</cond>
 	</item>
 	<item id="13043" type="Weapon" name="Enhanced Ancient Legacy Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
@@ -668,7 +656,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8250-1;8242-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{44}}}" />
+		<cond msgId="1518">
+			<player instanceId="44" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="279" />
 			<set order="0x08" stat="mAtk" val="153" />
@@ -677,11 +667,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="44" />
-			</and>
-		</cond>
 	</item>
 	<item id="13044" type="Weapon" name="Complete Ancient Legacy Sword">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
@@ -702,7 +687,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="8250-2;8242-1;8243-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{44}}}" />
+		<cond msgId="1518">
+			<player instanceId="44" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="299" />
 			<set order="0x08" stat="mAtk" val="163" />
@@ -711,11 +698,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1518">
-			<and>
-				<player instanceId="44" />
-			</and>
-		</cond>
 	</item>
 	<item id="13045" type="EtcItem" name="Pailaka Soulshot - Grade C">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -805,7 +787,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_inzone_num;{43;44;45}}}" />
+		<cond msgId="1518">
+			<player instanceId="43,44,45" />
+		</cond>
 		<for>
 			<add order="0x10" stat="mDef" val="49" />
 			<add order="0x10" stat="pDef" val="49" />
@@ -838,7 +822,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
 		<set name="item_skill" val="8239-1;8240-1;3599-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{45}}}" />
+		<cond msgId="1518">
+			<player instanceId="45" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="161" />
@@ -869,7 +855,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
 		<set name="item_skill" val="8239-1;8240-2;3599-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{45}}}" />
+		<cond msgId="1518">
+			<player instanceId="45" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="271" />
 			<set order="0x08" stat="mAtk" val="171" />
@@ -900,7 +888,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
 		<set name="item_skill" val="8239-1;8240-3;3599-1" />
-		<set name="equip_condition" val="{{ec_inzone_num;{45}}}" />
+		<cond msgId="1518">
+			<player instanceId="45" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="291" />
 			<set order="0x08" stat="mAtk" val="181" />
