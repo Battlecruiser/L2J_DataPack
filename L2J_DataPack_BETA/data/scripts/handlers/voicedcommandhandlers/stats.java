@@ -14,8 +14,6 @@
  */
 package handlers.voicedcommandhandlers;
 
-import java.util.Iterator;
-
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -47,25 +45,21 @@ public class stats implements IVoicedCommandHandler
 			{
 				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = StringUtil.startAppend(
-						300 + pc.kills.size() * 50,
+						300 + pc.getEventStatus().kills.size() * 50,
 						"<html><body>" +
 						"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>" +
 						"<br>Statistics for player <font color=\"LEVEL\">",
 						pc.getName(),
 						"</font><br>" +
 						"Total kills <font color=\"FF0000\">",
-						String.valueOf(pc.kills.size()),
+						String.valueOf(pc.getEventStatus().kills.size()),
 						"</font><br>" +
 						"<br>Detailed list: <br>"
 				);
-				
-				Iterator<String> it = pc.kills.iterator();
-				
-				while (it.hasNext()) {
-					StringUtil.append(replyMSG,
-							"<font color=\"FF0000\">",
-							it.next(),
-					"</font><br>");
+
+				for (L2PcInstance plr : pc.getEventStatus().kills)
+				{
+					StringUtil.append(replyMSG, "<font color=\"FF0000\">", plr.getName(), "</font><br>");
 				}
 				
 				replyMSG.append("</body></html>");

@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -293,7 +294,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in the Olympiad now.");
 			return false;
 		}
-		else if (partner.atEvent)
+		else if (L2Event.isParticipant(partner))
 		{
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;
@@ -366,7 +367,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are in the Olympiad now.");
 			return false;
 		}
-		else if (activeChar.atEvent)
+		else if (L2Event.isParticipant(activeChar))
 		{
 			activeChar.sendMessage("You are in an event.");
 			return false;
@@ -434,11 +435,11 @@ public class Wedding implements IVoicedCommandHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private L2PcInstance _activeChar;
-		private int _partnerx;
-		private int _partnery;
-		private int _partnerz;
-		private boolean _to7sDungeon;
+		private final L2PcInstance _activeChar;
+		private final int _partnerx;
+		private final int _partnery;
+		private final int _partnerz;
+		private final boolean _to7sDungeon;
 		
 		EscapeFinalizer(L2PcInstance activeChar, int x, int y, int z, boolean to7sDungeon)
 		{

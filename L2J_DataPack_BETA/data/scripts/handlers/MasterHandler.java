@@ -107,6 +107,7 @@ import handlers.bypasshandlers.CPRecovery;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.DrawHenna;
+import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FishSkillList;
 import handlers.bypasshandlers.FortSiege;
@@ -392,6 +393,7 @@ public class MasterHandler
 		BYPASS.registerBypassHandler(new ClanWarehouse());
 		BYPASS.registerBypassHandler(new CPRecovery());
 		BYPASS.registerBypassHandler(new DrawHenna());
+		BYPASS.registerBypassHandler(new EventEngine());
 		BYPASS.registerBypassHandler(new Festival());
 		BYPASS.registerBypassHandler(new FishSkillList());
 		BYPASS.registerBypassHandler(new FortSiege());
