@@ -255,7 +255,7 @@ public class Q401_PathToWarrior extends Quest
 		{
 			addKillId(i);
 		}
-		questItemIds = new int[] { AuronsLetter, WarriorGuildMark, RustedBronzeSword1, RustedBronzeSword2, RustedBronzeSword3, SimplonsLetter, PoisonSpiderLeg, MedallionOfWarrior };
+		questItemIds = new int[] { AuronsLetter, WarriorGuildMark, RustedBronzeSword1, RustedBronzeSword2, RustedBronzeSword3, SimplonsLetter, PoisonSpiderLeg };
 	}
 	
 	public static void main(String[] args)
