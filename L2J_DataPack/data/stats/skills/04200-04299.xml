@@ -2,7 +2,7 @@
 <list>
 	<skill id="4200" levels="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
-		<table name="#pAtkSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -653,7 +653,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="12" abnormalType="hp_regen_down">
-				<mul order="0x30" stat="regHp" val="0.40" />
+				<mul order="0x30" stat="regHp" val="0.4" />
 			</effect>
 		</for>
 	</skill>
@@ -665,7 +665,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="13" abnormalType="hp_regen_down">
-				<mul order="0x30" stat="regHp" val="0.70" />
+				<mul order="0x30" stat="regHp" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -745,7 +745,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.50" />
+			<mul order="0x30" stat="bowWpnVuln" val="0.5" />
 			<mul order="0x30" stat="mDef" val="2.0" />
 			<sub order="0x40" stat="bleedVuln" val="50" />
 		</for>
