@@ -1073,7 +1073,7 @@
 	<skill id="4162" levels="3" name="Decrease P. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<table name="#pAtkSpd"> 0.83 0.80 0.77 </table>
+		<table name="#pAtkSpd"> 0.83 0.8 0.77 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -1180,7 +1180,7 @@
 		<for>
 			<effect name="Debuff" abnormalTime="3600" val="0" abnormalLvl="99" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
-				<mul order="0x30" stat="runSpd" val="0.70" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -1461,7 +1461,7 @@
 	</skill>
 	<skill id="4183" levels="12" name="Decrease P. Atk.">
 		<!-- Freya retail confirmed -->
-		<table name="#pAtk"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1483,7 +1483,7 @@
 	</skill>
 	<skill id="4184" levels="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
-		<table name="#pAtkSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />

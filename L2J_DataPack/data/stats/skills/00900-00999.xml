@@ -190,9 +190,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON">
-				<mul order="0x30" stat="runSpd" val="0.30" />
-				<mul order="0x30" stat="pAtkSpd" val="0.80" />
-				<mul order="0x30" stat="mAtkSpd" val="0.80" />
+				<mul order="0x30" stat="runSpd" val="0.3" />
+				<mul order="0x30" stat="pAtkSpd" val="0.8" />
+				<mul order="0x30" stat="mAtkSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
