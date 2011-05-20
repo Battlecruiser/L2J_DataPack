@@ -977,15 +977,15 @@
 		<for>
 			<!-- Custom Implementation: -->
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
-					<mul order="0x30" stat="pAtk" val="#pAtkDef" />
+				<mul order="0x30" stat="pAtk" val="#pAtkDef" />
 			</effect>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up" noicon="1">
-					<mul order="0x30" stat="pDef" val="#pAtkDef" />
+				<mul order="0x30" stat="pDef" val="#pAtkDef" />
 			</effect>
 			<!-- TODO: Create Core support for abnormalType parents. -->
 			<!-- effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_pd_up" -->
-				<!-- mul order="0x30" stat="pAtk" val="#pAtkDef" / -->
-				<!-- mul order="0x30" stat="pDef" val="#pAtkDef" / -->
+			<!-- mul order="0x30" stat="pAtk" val="#pAtkDef" / -->
+			<!-- mul order="0x30" stat="pDef" val="#pAtkDef" / -->
 			<!-- /effect -->
 		</for>
 	</skill>
@@ -1299,7 +1299,6 @@
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="0" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1319,10 +1318,9 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 387 </table>
-		<set name="hitTime" val="0" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="OP_ACTIVE" />>
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MANADAM" />
@@ -1411,7 +1409,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="50"/>
+			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="50" />
 		</for>
 	</skill>
 	<skill id="4494" levels="1" name="Raid Boss">

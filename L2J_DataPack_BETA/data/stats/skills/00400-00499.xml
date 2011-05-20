@@ -152,7 +152,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0"/> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
 		</for>
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
