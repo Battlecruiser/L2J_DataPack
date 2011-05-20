@@ -1194,7 +1194,7 @@
 			</not>
 		</cond>
 		<for>
-			<mul order="0x30" stat="vitalityConsumeRate" val="0.00">
+			<mul order="0x30" stat="vitalityConsumeRate" val="0">
 				<not>
 					<player level="10" /> <!-- TEMP FIX until skill tree rework done -->
 				</not>
