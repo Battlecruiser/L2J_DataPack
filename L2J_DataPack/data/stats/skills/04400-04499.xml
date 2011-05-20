@@ -977,15 +977,15 @@
 		<for>
 			<!-- Custom Implementation: -->
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
-					<mul order="0x30" stat="pAtk" val="#pAtkDef" />
+				<mul order="0x30" stat="pAtk" val="#pAtkDef" />
 			</effect>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up" noicon="1">
-					<mul order="0x30" stat="pDef" val="#pAtkDef" />
+				<mul order="0x30" stat="pDef" val="#pAtkDef" />
 			</effect>
 			<!-- TODO: Create Core support for abnormalType parents. -->
 			<!-- effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_pd_up" -->
-				<!-- mul order="0x30" stat="pAtk" val="#pAtkDef" / -->
-				<!-- mul order="0x30" stat="pDef" val="#pAtkDef" / -->
+			<!-- mul order="0x30" stat="pAtk" val="#pAtkDef" / -->
+			<!-- mul order="0x30" stat="pDef" val="#pAtkDef" / -->
 			<!-- /effect -->
 		</for>
 	</skill>
@@ -1322,7 +1322,7 @@
 		<set name="hitTime" val="0" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="OP_ACTIVE" />>
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MANADAM" />
@@ -1411,7 +1411,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="50"/>
+			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="50" />
 		</for>
 	</skill>
 	<skill id="4494" levels="1" name="Raid Boss">
