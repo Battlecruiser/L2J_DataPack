@@ -42,7 +42,7 @@ CREATE TABLE `npc`(
   `show_name` tinyint(1) NOT NULL DEFAULT '1',
   `dropHerbGroup` tinyint(1) NOT NULL DEFAULT '0',
   `basestats` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`,`idTemplate`)
 );
 
 INSERT INTO `npc` VALUES 
