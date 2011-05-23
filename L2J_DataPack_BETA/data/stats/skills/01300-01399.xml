@@ -2252,42 +2252,67 @@
 	</skill>
 	<skill id="1382" levels="5" name="Mass Gloom" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
-		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench1Chance"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
+		<table name="#ench2Chance"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench2Vuln"> 26 27 28 29 30 30 31 32 33 34 34 35 36 37 38 38 39 40 41 42 42 43 44 45 46 46 47 48 49 50 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="12000" />
-		<set name="hitTime" val="6000" />
-		<set name="target" val="TARGET_AREA_SUMMON" />
-		<set name="skillRadius" val="230" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<table name="#power"> 33 36 39 41 44 </table>
+		<table name="#vuln"> 5 10 15 20 25 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="6000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="12000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="230" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA_SUMMON" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="mDef" val="0.85" />
-				<sub order="0x40" stat="waterRes" val="6" />
-				<sub order="0x40" stat="fireRes" val="6" />
-				<sub order="0x40" stat="windRes" val="6" />
-				<sub order="0x40" stat="earthRes" val="6" />
-				<sub order="0x40" stat="holyRes" val="6" />
-				<sub order="0x40" stat="darkRes" val="6" />
+				<sub order="0x40" stat="waterRes" val="vuln" />
+				<sub order="0x40" stat="fireRes" val="vuln" />
+				<sub order="0x40" stat="windRes" val="vuln" />
+				<sub order="0x40" stat="earthRes" val="vuln" />
+				<sub order="0x40" stat="holyRes" val="vuln" />
+				<sub order="0x40" stat="darkRes" val="vuln" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench1Chance" effectType="DEBUFF">
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="25" />
+				<sub order="0x40" stat="fireRes" val="25" />
+				<sub order="0x40" stat="windRes" val="25" />
+				<sub order="0x40" stat="earthRes" val="25" />
+				<sub order="0x40" stat="holyRes" val="25" />
+				<sub order="0x40" stat="darkRes" val="25" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench2Chance" effectType="DEBUFF">
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="fireRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="windRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="earthRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="holyRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="darkRes" val="#ench2Vuln" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="1383" levels="5" name="Mass Surrender to Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
