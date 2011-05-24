@@ -1001,7 +1001,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
 				<add order="0x40" stat="accCombat" val="6">
 					<using kind="Dual Fist" />
 				</add>
@@ -2011,6 +2011,7 @@
 	</skill>
 	<skill id="474" levels="45" name="Rapier Mastery" enchantGroup1="1" enchantGroup2="1">
 		<table name="#pAtk"> 3.2 5.28 6.48 7.84 9.36 11.12 13.04 15.2 17.52 18.8 20.08 21.44 22.88 24.4 25.92 27.6 29.28 30.96 32.8 34.64 36.56 38.56 40.64 42.72 44.88 47.12 49.44 51.76 54.16 56.56 59.04 61.52 64.08 66.72 69.36 72 74.64 77.36 80.08 82.8 85.52 88.24 90.96 93.68 96.4 </table>
+		<table name="#mAtkSpd"> 1 1 1 1 1 1 1 1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
 		<table name="#ench1pAtk"> 103 104 105 107 108 110 111 112 114 115 116 118 119 121 122 123 125 126 128 129 130 132 133 134 136 137 139 140 141 143 </table>
 		<table name="#ench2pAtkSpd"> 1.011 1.012 1.014 1.015 1.016 1.018 1.019 1.020 1.022 1.023 1.024 1.026 1.027 1.028 1.030 1.031 1.032 1.034 1.035 1.036 1.038 1.039 1.040 1.042 1.043 1.044 1.046 1.047 1.048 1.050 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -2020,16 +2021,25 @@
 			<add order="0x40" stat="pAtk" val="#pAtk">
 				<using kind="Rapier" />
 			</add>
+			<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd">
+				<using kind="Rapier" />
+			</mul>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="#ench1pAtk">
 				<using kind="Rapier" />
 			</add>
+			<mul order="0x30" stat="mAtkSpd" val="1.15">
+				<using kind="Rapier" />
+			</mul>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="96.4">
 				<using kind="Rapier" />
 			</add>
+			<mul order="0x30" stat="mAtkSpd" val="1.15">
+				<using kind="Rapier" />
+			</mul>
 			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
 				<using kind="Rapier" />
 			</mul>

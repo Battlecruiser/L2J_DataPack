@@ -1008,7 +1008,7 @@
 		<set name="elementPower" val="20" />
 		<set name="lvlDepend" val="1" />
 		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -2584,7 +2584,7 @@
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="180000" />
+		<set name="reuseDelay" val="60000" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="ultimate_debuff" effectPower="80" effectType="DEBUFF">

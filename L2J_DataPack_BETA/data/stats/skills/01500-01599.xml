@@ -175,7 +175,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="8000" />
+		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="ROOT" />
@@ -262,12 +262,12 @@
 	<skill id="1512" levels="1" name="Soul Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 113 114 115 116 117 118 119 119 120 121 122 123 124 125 126 </table>
-		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 15 14 13 12 12 11 10 </table>
-		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 45 42 </table>
+		<table name="#ench2mpInitialConsume"> 16 15 15 14 14 13 12 12 11 11 10 10 9 9 8 </table>
+		<table name="#ench2mpConsume"> 64 62 60 58 56 53 51 49 47 45 42 40 38 36 33 </table>
 		<table name="#ench3effectPower"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
 		<table name="#ench4Duel"> 114 116 118 119 121 123 124 126 128 130 131 133 135 136 138 </table>
-		<set name="mpInitialConsume" val="21" />
-		<set name="mpConsume" val="84" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="mpConsume" val="68" />
 		<set name="magicLvl" val="77" />
 		<set name="power" val="112" />
 		<set name="lvlDepend" val="2" />

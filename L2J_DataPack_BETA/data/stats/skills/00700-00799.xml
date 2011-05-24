@@ -1431,6 +1431,10 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
+		<for>
+			<!-- 300HP * 1 Sec during 10 seconds -->
+			<effect count="10" name="DamOverTime" val="300" effectPower="50" effectType="DOT" /> <!-- FIXME: effectPower unconfirmed -->
+		</for>
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
 		<!-- Confirmed CT2.5 -->

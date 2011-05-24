@@ -1452,7 +1452,7 @@
 		<set name="aggroPoints" val="268" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
 				<mul order="0x30" stat="pAtk" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>
@@ -1596,7 +1596,7 @@
 		<set name="aggroPoints" val="204" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>

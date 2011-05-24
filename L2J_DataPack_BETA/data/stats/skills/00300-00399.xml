@@ -2072,10 +2072,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</for>
 		<enchant2for>
-			<effect name="Petrification" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="#ench2Time" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</enchant2for>
 	</skill>
 	<skill id="368" levels="1" name="Vengeance" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">

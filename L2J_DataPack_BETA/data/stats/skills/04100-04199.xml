@@ -257,7 +257,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Petrification" abnormalTime="120" val="0" effectType="PARALYZE" effectPower="50" abnormalLvl="1" abnormalType="turn_stone">
+			<effect name="Petrification" abnormalTime="120" val="0" effectType="PARALYZE" effectPower="50" abnormalLvl="2" abnormalType="turn_stone">
 				<mul order="0x30" stat="regHp" val="0" />
 			</effect>
 		</for>
