@@ -1862,12 +1862,12 @@
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="mDef" val="0.85" />
-				<sub order="0x40" stat="waterRes" val="#vuln" />
-				<sub order="0x40" stat="fireRes" val="#vuln" />
-				<sub order="0x40" stat="windRes" val="#vuln" />
-				<sub order="0x40" stat="earthRes" val="#vuln" />
-				<sub order="0x40" stat="holyRes" val="#vuln" />
-				<sub order="0x40" stat="darkRes" val="#vuln" />
+				<sub order="0x40" stat="waterRes" val="25" />
+				<sub order="0x40" stat="fireRes" val="25" />
+				<sub order="0x40" stat="windRes" val="25" />
+				<sub order="0x40" stat="earthRes" val="25" />
+				<sub order="0x40" stat="holyRes" val="25" />
+				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</enchant2for>
 	</skill>
