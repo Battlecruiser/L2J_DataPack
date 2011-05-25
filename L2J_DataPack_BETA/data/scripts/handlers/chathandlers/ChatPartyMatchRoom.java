@@ -14,11 +14,15 @@
  */
 package handlers.chathandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.PartyMatchRoom;
 import com.l2jserver.gameserver.model.PartyMatchRoomList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
@@ -43,6 +47,12 @@ public class ChatPartyMatchRoom implements IChatHandler
 			PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
 			if(_room != null)
 			{
+				if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+					return;
+				}
+				
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 				for(L2PcInstance _member : _room.getPartyMembers())
 				{

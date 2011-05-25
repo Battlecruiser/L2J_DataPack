@@ -24,7 +24,10 @@ import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 
 /**
@@ -81,19 +84,29 @@ public class ChatAll implements IChatHandler
 		}
 		if (!vcd_used)
 		{
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			
-			Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-			//synchronized (activeChar.getKnownList().getKnownPlayers())
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 			{
-				for (L2PcInstance player : plrs)
-				{
-					if (player != null && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
-						player.sendPacket(cs);
-				}
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+				return;
 			}
 			
-			activeChar.sendPacket(cs);
+			if (text.startsWith(".") || !text.startsWith(".."))
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_SYNTAX));
+			else
+			{			
+				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
+				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
+				//synchronized (activeChar.getKnownList().getKnownPlayers())
+				{
+					for (L2PcInstance player : plrs)
+					{
+						if (player != null && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
+							player.sendPacket(cs);
+					}
+				}
+				
+				activeChar.sendPacket(cs);
+			}
 		}
 	}
 	
