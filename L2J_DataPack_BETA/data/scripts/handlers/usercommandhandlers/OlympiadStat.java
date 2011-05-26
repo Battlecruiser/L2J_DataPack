@@ -37,13 +37,20 @@ public class OlympiadStat implements IUserCommandHandler
 	 */
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
-		if (id != COMMAND_IDS[0])
+		if (id != COMMAND_IDS[0] || !activeChar.isNoble())
 			return false;
+		
+		L2PcInstance noble = activeChar;
+		L2PcInstance target = (L2PcInstance) activeChar.getTarget();
+		
+		if (target != null && target.isNoble())
+			noble = target;
+		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
-		sm.addNumber(Olympiad.getInstance().getCompetitionDone(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getCompetitionWon(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getCompetitionLost(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getNoblePoints(activeChar.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getCompetitionDone(noble.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getCompetitionWon(noble.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getCompetitionLost(noble.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getNoblePoints(noble.getObjectId()));
 		activeChar.sendPacket(sm);
 		return true;
 	}
