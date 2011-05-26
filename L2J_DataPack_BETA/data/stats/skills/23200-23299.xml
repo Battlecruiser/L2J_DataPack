@@ -643,15 +643,32 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
-		<!-- Envelops in flames to inflict 300 fire damage every second for 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- FIXME: Chance & Reuse values are guessed -->
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- 300HP * 1 Sec during 10 seconds -->
+			<effect count="10" name="DamOverTime" val="300" />
+		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
-		<!-- Envelops in a hurricane to inflict 300 wind damage every second for 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- 300HP * 1 Sec during 10 seconds -->
+			<effect count="10" name="DamOverTime" val="300" />
+		</for>
 	</skill>
 </list>

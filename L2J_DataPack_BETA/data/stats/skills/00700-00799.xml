@@ -1395,6 +1395,9 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="baseCritRate" val="15" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23298" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
 		<set name="castRange" val="600" />
@@ -1413,6 +1416,9 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="baseCritRate" val="15" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23299" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="773" levels="1" name="Ghost Piercing">
 		<set name="baseCritRate" val="15" />
@@ -1432,8 +1438,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<for>
-			<!-- 300HP * 1 Sec during 10 seconds -->
-			<effect count="10" name="DamOverTime" val="300" effectPower="50" effectType="DOT" /> <!-- FIXME: effectPower unconfirmed -->
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23300" triggeredLevel="1" />
 		</for>
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">

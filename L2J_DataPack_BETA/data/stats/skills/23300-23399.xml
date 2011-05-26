@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="23300" levels="1" name="Ghost Piercing">
-		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- FIXME: Chance & Reuse values are guessed -->
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- 300HP * 1 Sec during 10 seconds -->
+			<effect count="10" name="DamOverTime" val="300" />
+		</for>
 	</skill>
 	<skill id="23301" levels="1" name="Dimensional Door A">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
