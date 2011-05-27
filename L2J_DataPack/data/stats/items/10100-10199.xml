@@ -346,14 +346,19 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@force_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="88, 114" />
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10127" type="Armor" name="Dynasty Leather Armor - Weapon Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />

@@ -1282,7 +1282,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_social_class;5};{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="2453">
+			<and>
+				<player castle="-1" /> <!-- owns a castle -->
+				<player pledgeClass="5" /> <!-- Baron -->
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 		</for>
@@ -1299,20 +1308,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_social_class;5}}" />
+		<cond msgId="2453">
+			<and>
+				<player castle="-1" /> <!-- owns a castle -->
+				<player pledgeClass="5" /> <!-- Baron -->
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player pledgeClass="5" />
-				<!-- Baron -->
-				<player castle="-1" />
-				<!-- owns a castle -->
-				<player cloakStatus="1" />
-			</and>
-		</cond>
 	</item>
 	<item id="13688" type="Armor" name="Knight's Cloak - Light Armor exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -1326,26 +1332,22 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_category;{@rogue_cloack}};{ec_social_class;5};{ec_race;{0;1;2;3;4}}}" />
+		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
+		<cond msgId="2453">
+			<and>
+				<player castle="-1" /> <!-- owns a castle -->
+				<player class_id_restriction="92, 102, 109, 93, 101, 108" /> <!-- Bow Masters and Dagger Masters -->
+				<player pledgeClass="5" /> <!-- Baron -->
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player pledgeClass="5" />
-				<!-- Baron -->
-				<player castle="-1" />
-				<!-- owns a castle -->
-				<player class_id_restriction="92, 102, 109, 93, 101, 108" />
-				<!-- Bow Masters and Dagger Masters -->
-				<player cloakStatus="1" />
-				<not>
-					<player race="Kamael" />
-					<!-- excluding Kamaels -->
-				</not>
-			</and>
-		</cond>
 	</item>
 	<item id="13689" type="Armor" name="Knight's Cloak - Robe exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -1359,26 +1361,22 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_category;{@mage_cloack}};{ec_social_class;5};{ec_race;{0;1;2;3;4}}}" />
+		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
+		<cond msgId="2453">
+			<and>
+				<player castle="-1" /> <!-- owns a castle -->
+				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player pledgeClass="5" /> <!-- Baron -->
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player pledgeClass="5" />
-				<!-- Baron -->
-				<player castle="-1" />
-				<!-- owns a castle -->
-				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" />
-				<!-- Healer, Enchanter, Summoner and Wizard -->
-				<player cloakStatus="1" />
-				<not>
-					<player race="Kamael" />
-					<!-- excluding Kamaels -->
-				</not>
-			</and>
-		</cond>
 	</item>
 	<item id="13690" type="Armor" name="Knight's Cloak - Kamael exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -1392,22 +1390,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_social_class;5};{ec_race;{5}}}" />
+		<cond msgId="2453">
+			<and>
+				<player castle="-1" /> <!-- owns a castle -->
+				<player pledgeClass="5" /> <!-- Baron -->
+				<player race="Kamael" />
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player pledgeClass="5" />
-				<!-- Baron -->
-				<player castle="-1" />
-				<!-- owns a castle -->
-				<player race="Kamael" />
-				<!-- Kamael exclusive cloak -->
-				<player cloakStatus="1" />
-			</and>
-		</cond>
 	</item>
 	<item id="13691" type="EtcItem" name="Mark of Keucereus - Stage 1">
 		<set name="icon" val="icon.etc_badge_black_i00" />
