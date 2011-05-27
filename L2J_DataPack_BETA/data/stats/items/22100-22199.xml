@@ -763,7 +763,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="22157" type="Armor" name="Forget-me-not Hairpin">
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
@@ -775,7 +777,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="22158" type="Armor" name="Outlaw's Eyepatch">
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
@@ -874,7 +878,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="22167" type="Armor" name="Raccoon Ears">
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />

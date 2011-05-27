@@ -544,7 +544,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="17142" type="Armor" name="Refined Wizard Hat - Promotion">
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />

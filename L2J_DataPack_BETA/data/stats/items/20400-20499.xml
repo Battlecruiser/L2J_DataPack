@@ -337,7 +337,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21057-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="20421" type="Armor" name="Visor - Mana Regeneration - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_Eye_Visor_i00" />
@@ -354,7 +356,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21058-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;0}}" />
+		<cond msgId="1518">
+			<player sex="0" />
+		</cond>
 	</item>
 	<item id="20422" type="Armor" name="Kat the Cat Hat - Greater Heal - 7-Day Limited Period">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
@@ -467,7 +471,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21065-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="20429" type="Armor" name="Black Gem Mask - Vitality - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
@@ -515,7 +521,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21068-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="20432" type="Armor" name="Forget-me-not Hairpin - Wind Walk - 7-Day Limited Period">
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
@@ -532,7 +540,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21069-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="20433" type="Armor" name="Outlaw's Eyepatch - Death Whisper - 7-Day Limited Period">
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
@@ -676,7 +686,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21078-1" />
 		<set name="time" val="10080" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="20442" type="Armor" name="Raccoon Ears - Agility - 7-day limited period">
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />

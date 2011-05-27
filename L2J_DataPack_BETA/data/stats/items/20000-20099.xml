@@ -289,7 +289,6 @@
 		<set name="weight" val="10" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
@@ -303,7 +302,6 @@
 		<set name="weight" val="10" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="equip_condition" val="{{ec_sex;0}}" />
 		<cond msgId="1518">
 			<player sex="0" />
 		</cond>

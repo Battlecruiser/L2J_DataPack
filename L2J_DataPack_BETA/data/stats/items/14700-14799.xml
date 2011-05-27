@@ -831,7 +831,9 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="is_depositable" val="false" />
-		<set name="equip_condition" val="{{ec_sex;1}}" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="14773" type="Armor" name="Suit - 14-day limited period">
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
