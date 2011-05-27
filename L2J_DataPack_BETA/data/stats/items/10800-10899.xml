@@ -86,14 +86,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@shield_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="90, 91, 99, 106" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="90, 91, 99, 106" />
-		</cond>
 	</item>
 	<item id="10804" type="Armor" name="Dynasty Breastplate {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
@@ -110,14 +115,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@weapon_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="89, 113, 117, 118" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118" />
-		</cond>
 	</item>
 	<item id="10805" type="Armor" name="Dynasty Breastplate {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
@@ -134,14 +144,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@force_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="88, 114" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10806" type="Armor" name="Dynasty Breastplate {PvP} - Bard">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
@@ -158,13 +173,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@bard}}}" />
+		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<player class_id_restriction="100, 107" />
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="100, 107" />
+			</and>
 		</cond>
 	</item>
 	<item id="10807" type="Armor" name="Dynasty Leather Armor {PvP}">
@@ -275,15 +295,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@heal_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="97, 105, 112" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="97, 105, 112" />
-		</cond>
 	</item>
 	<item id="10812" type="Armor" name="Dynasty Tunic {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
@@ -300,15 +325,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@buff_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="98, 115, 116" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116" />
-		</cond>
 	</item>
 	<item id="10813" type="Armor" name="Dynasty Tunic {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t93_us_i00" />
@@ -325,15 +355,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@summon_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10814" type="Armor" name="Dynasty Tunic {PvP} - Wizard">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
@@ -350,15 +385,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@wizard_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="94, 95, 103, 110" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="94, 95, 103, 110" />
-		</cond>
 	</item>
 	<item id="10815" type="Armor" name="Dynasty Leather Armor {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
@@ -375,14 +415,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@force_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="88, 114" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10816" type="Armor" name="Dynasty Leather Armor {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
@@ -496,14 +541,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@shield_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="90, 91, 99, 106" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="90, 91, 99, 106" />
-		</cond>
 	</item>
 	<item id="10821" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
@@ -520,14 +570,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@weapon_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="89, 113, 117, 118" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118" />
-		</cond>
 	</item>
 	<item id="10822" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
@@ -544,14 +599,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@force_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="88, 114" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10823" type="Armor" name="Dynasty Platinum Breastplate {PvP} - Bard">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
@@ -568,14 +628,19 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@bard}}}" />
+		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="100, 107" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="100, 107" />
-		</cond>
 	</item>
 	<item id="10824" type="Armor" name="Dynasty Jewel Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -685,15 +750,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@heal_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="97, 105, 112" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="97, 105, 112" />
-		</cond>
 	</item>
 	<item id="10829" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
@@ -710,15 +780,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@buff_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="98, 115, 116" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116" />
-		</cond>
 	</item>
 	<item id="10830" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t93_us_i00" />
@@ -735,15 +810,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@summon_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10831" type="Armor" name="Dynasty Silver Satin Tunic {PvP} - Wizard">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
@@ -760,15 +840,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@wizard_master}}}" />
+		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="94, 95, 103, 110" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
 			<add order="0x40" stat="maxMp" val="592" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="94, 95, 103, 110" />
-		</cond>
 	</item>
 	<item id="10832" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Force Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />

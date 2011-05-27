@@ -32,16 +32,20 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="1380" />
 		<set name="price" val="9900" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_agit;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player clanHall="-1" />
+			</and>	
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
 			<set order="0x08" stat="sDef" val="90" />
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
-		<cond msgId="1518">
-			<player clanHall="-1" />
-		</cond>
 	</item>
 	<item id="6903" type="EtcItem" name="Music Box M">
 		<set name="icon" val="icon.etc_m_i00" />

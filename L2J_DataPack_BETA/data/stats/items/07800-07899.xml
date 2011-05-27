@@ -1002,15 +1002,19 @@
 		<set name="weight" val="9870" />
 		<set name="price" val="253900" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="158" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7852" type="Armor" name="Clan Oath Gauntlets - Heavy Armor">
 		<set name="icon" val="icon.armor_t1001_g_i00" />
@@ -1023,15 +1027,19 @@
 		<set name="weight" val="640" />
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7853" type="Armor" name="Clan Oath Sabaton - Heavy Armor">
 		<set name="icon" val="icon.armor_t1001_b_i00" />
@@ -1044,15 +1052,19 @@
 		<set name="weight" val="1280" />
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7854" type="Armor" name="Clan Oath Brigandine">
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
@@ -1130,16 +1142,20 @@
 		<set name="weight" val="2450" />
 		<set name="price" val="190400" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="79" />
 			<add order="0x40" stat="maxMp" val="239" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7858" type="Armor" name="Clan Oath Padded Gloves - Robe">
 		<set name="icon" val="icon.armor_t1003_g_i00" />
@@ -1152,15 +1168,19 @@
 		<set name="weight" val="640" />
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7859" type="Armor" name="Clan Oath Sandals - Robe">
 		<set name="icon" val="icon.armor_t1003_b_i00" />
@@ -1173,15 +1193,19 @@
 		<set name="weight" val="1280" />
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_academy;1}}" />
+		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+			</and>>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7860" type="Armor" name="Apella Helm">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -1193,15 +1217,13 @@
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="69" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7861" type="Armor" name="Apella Plate Armor">
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
@@ -1214,15 +1236,18 @@
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="278" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7862" type="Armor" name="Apella Gauntlet - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
@@ -1234,15 +1259,18 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>	
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7863" type="Armor" name="Apella Solleret - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
@@ -1254,15 +1282,18 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>			
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7864" type="Armor" name="Apella Brigandine">
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
@@ -1275,15 +1306,13 @@
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="209" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7865" type="Armor" name="Apella Leather Gloves - Light Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
@@ -1295,15 +1324,13 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7866" type="Armor" name="Apella Boots - Light Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
@@ -1315,15 +1342,13 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7867" type="Armor" name="Apella Doublet">
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
@@ -1336,16 +1361,19 @@
 		<set name="weight" val="2450" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="139" />
 			<add order="0x40" stat="maxMp" val="665" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7868" type="Armor" name="Apella Silk Gloves - Robe">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
@@ -1357,15 +1385,18 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7869" type="Armor" name="Apella Sandals - Robe">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
@@ -1377,15 +1408,18 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7870" type="Armor" name="Sealed Apella Helm">
 		<set name="icon" val="icon.armor_helmet_i02" />
@@ -1397,15 +1431,13 @@
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="69" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
@@ -1418,15 +1450,18 @@
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="278" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
 		<set name="icon" val="icon.armor_t1004_g_i02" />
@@ -1438,15 +1473,18 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7873" type="Armor" name="Sealed Apella Solleret">
 		<set name="icon" val="icon.armor_t1004_b_i02" />
@@ -1458,15 +1496,18 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
@@ -1479,15 +1520,13 @@
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="209" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
 		<set name="icon" val="icon.armor_t1005_g_i02" />
@@ -1499,15 +1538,13 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7876" type="Armor" name="Sealed Apella Boots">
 		<set name="icon" val="icon.armor_t1005_b_i02" />
@@ -1519,15 +1556,13 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7877" type="Armor" name="Sealed Apella Doublet">
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
@@ -1540,16 +1575,19 @@
 		<set name="weight" val="2450" />
 		<set name="price" val="4341000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="139" />
 			<add order="0x40" stat="maxMp" val="665" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
 		<set name="icon" val="icon.armor_t1006_g_i02" />
@@ -1561,15 +1599,18 @@
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7879" type="Armor" name="Sealed Apella Sandals">
 		<set name="icon" val="icon.armor_t1006_b_i02" />
@@ -1581,15 +1622,18 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_social_class;4}}" />
+		<cond msgId="1518">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="46" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="7880" type="Weapon" name="Steel Sword">
 		<set name="icon" val="icon.weapon_iron_sword_i00" />

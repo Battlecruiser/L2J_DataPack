@@ -1199,22 +1199,20 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@rogue_cloack}}}" />
+		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
+		<cond msgId="2453">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player class_id_restriction="93, 101, 108, 92, 102, 109" />
-				<!-- Dagger Master and Bow Master -->
-				<player cloakStatus="1" />
-				<not>
-					<player race="Kamael" />
-					<!-- excluding Kamaels -->
-				</not>
-			</and>
-		</cond>
 	</item>
 	<item id="13892" type="Armor" name="Holy Spirit's Cloak - Robe exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -1225,22 +1223,20 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}};{ec_category;{@mage_cloack}}}" />
+		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
+		<cond msgId="2453">
+			<and>
+				<not>
+					<player race="Kamael" />
+				</not>
+				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" />
-				<!-- Healer, Enchanter, Summoner and Wizard -->
-				<player cloakStatus="1" />
-				<not>
-					<player race="Kamael" />
-					<!-- excluding Kamaels -->
-				</not>
-			</and>
-		</cond>
 	</item>
 	<item id="13893" type="EtcItem" name="Sealed Holy Spirit's Cloak">
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
