@@ -639,22 +639,27 @@
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 		</for>
 	</skill>
-	<skill id="3559" levels="1" name="Earring of Zaken">
+	<skill id="3559" levels="2" name="Earring of Zaken">
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
-		<set name="magicLvl" val="75" />
+		<table name="#darkRes"> 0 15 </table>
+		<table name="#derangementProfVuln"> 20 30 </table>
+		<table name="#hpGain"> 1.1 1.15 </table>
+		<table name="#magicLvl"> 75 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="30" />
 			<sub order="0x40" stat="stunVuln" val="20" />
-			<sub order="0x40" stat="derangementVuln" val="20" />
+			<sub order="0x40" stat="derangementVuln" val="#derangementProfVuln" />
 			<add order="0x40" stat="bleedProf" val="30" />
 			<add order="0x40" stat="stunProf" val="20" />
-			<add order="0x40" stat="derangementProf" val="20" />
-			<mul order="0x30" stat="gainHp" val="1.1" />
+			<add order="0x40" stat="derangementProf" val="#derangementProfVuln" />
+			<mul order="0x30" stat="gainHp" val="#hpGain" />
 			<add order="0x40" stat="absorbDam" val="4" />
+			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="3560" levels="1" name="Earring of Orfen">
