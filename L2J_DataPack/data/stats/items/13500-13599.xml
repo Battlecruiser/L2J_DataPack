@@ -747,7 +747,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2789-1" />
-		<set name="use_condition" val="{{uc_requiredlevel;75}}" />
+		<cond msgId="113">
+			<player level="75" />
+		</cond>
 	</item>
 	<item id="13553" type="EtcItem" name="Spellbook - Aurabird Falcon">
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
@@ -757,7 +759,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2790-1" />
-		<set name="use_condition" val="{{uc_requiredlevel;75}}" />
+		<cond msgId="113">
+			<player level="75" />
+		</cond>
 	</item>
 	<item id="13554" type="EtcItem" name="Spellbook - Aurabird Owl">
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
@@ -767,7 +771,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2791-1" />
-		<set name="use_condition" val="{{uc_requiredlevel;75}}" />
+		<cond msgId="113">
+			<player level="75" />
+		</cond>
 	</item>
 	<item id="13555" type="EtcItem" name="Combined Transformation Scroll">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
