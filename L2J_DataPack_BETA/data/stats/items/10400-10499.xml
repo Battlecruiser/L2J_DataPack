@@ -1763,7 +1763,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
+		<cond msgId="113">
+			<player level="82" />
+		</cond>
 	</item>
 	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
@@ -1772,7 +1774,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="138240" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
+		<cond msgId="113">
+			<player level="82" />
+		</cond>
 	</item>
 	<item id="10485" type="EtcItem" name="High-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
@@ -1781,7 +1785,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1382400" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
+		<cond msgId="113">
+			<player level="82" />
+		</cond>
 	</item>
 	<item id="10486" type="EtcItem" name="Top-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
@@ -1790,7 +1796,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="6912000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
+		<cond msgId="113">
+			<player level="82" />
+		</cond>
 	</item>
 	<item id="10487" type="Armor" name="Dynasty Jeweled Leather Armor - Force Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />

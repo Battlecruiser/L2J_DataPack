@@ -477,7 +477,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2128-1" />
-		<set name="use_condition" val="{{uc_race;{0;1;2;3;4}};{uc_transmode_exclude;{tt_flying}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
 		<cond msgId="1518">
 			<not>
 				<player race="Kamael" />

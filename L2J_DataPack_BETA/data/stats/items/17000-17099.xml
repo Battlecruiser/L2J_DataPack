@@ -1356,7 +1356,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9115-1" />
-		<set name="use_condition" val="{{uc_level;{1;19}}}" />
+		<cond msgId="1902">
+			<player levelRange="1;19" />
+		</cond>
 	</item>
 	<item id="17096" type="EtcItem" name="Nevit's Hourglass - 1.5 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -1370,7 +1372,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9116-1" />
-		<set name="use_condition" val="{{uc_level;{1;19}}}" />
+		<cond msgId="1902">
+			<player levelRange="1;19" />
+		</cond>
 	</item>
 	<item id="17097" type="EtcItem" name="Nevit's Hourglass - 2 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -1384,7 +1388,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9117-1" />
-		<set name="use_condition" val="{{uc_level;{1;19}}}" />
+		<cond msgId="1902">
+			<player levelRange="1;19" />
+		</cond>
 	</item>
 	<item id="17098" type="EtcItem" name="Nevit's Hourglass - 2.5 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -1398,7 +1404,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9118-1" />
-		<set name="use_condition" val="{{uc_level;{1;19}}}" />
+		<cond msgId="1902">
+			<player levelRange="1;19" />
+		</cond>
 	</item>
 	<item id="17099" type="EtcItem" name="Nevit's Hourglass - 3 hour - 1~19">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -1412,6 +1420,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9119-1" />
-		<set name="use_condition" val="{{uc_level;{1;19}}}" />
+		<cond msgId="1902">
+			<player levelRange="1;19" />
+		</cond>
 	</item>
 </list>

@@ -250,7 +250,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;46}}" />
+		<cond msgId="113">
+			<player level="46" />
+		</cond>
 	</item>
 	<item id="8724" type="EtcItem" name="Life Stone -  Level 49">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -259,7 +261,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;49}}" />
+		<cond msgId="113">
+			<player level="49" />
+		</cond>
 	</item>
 	<item id="8725" type="EtcItem" name="Life Stone -  Level 52">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -268,7 +272,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="7200" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;52}}" />
+		<cond msgId="113">
+			<player level="52" />
+		</cond>
 	</item>
 	<item id="8726" type="EtcItem" name="Life Stone -  Level 55">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -277,7 +283,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="8640" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;55}}" />
+		<cond msgId="113">
+			<player level="55" />
+		</cond>
 	</item>
 	<item id="8727" type="EtcItem" name="Life Stone -  Level 58">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
@@ -286,7 +294,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;58}}" />
+		<cond msgId="113">
+			<player level="58" />
+		</cond>
 	</item>
 	<item id="8728" type="EtcItem" name="Life Stone -  Level 61">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
@@ -295,7 +305,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="12000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;61}}" />
+		<cond msgId="113">
+			<player level="61" />
+		</cond>
 	</item>
 	<item id="8729" type="EtcItem" name="Life Stone -  Level 64">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -304,7 +316,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="15000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;64}}" />
+		<cond msgId="113">
+			<player level="64" />
+		</cond>
 	</item>
 	<item id="8730" type="EtcItem" name="Life Stone -  Level 67">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -313,7 +327,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="18000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;67}}" />
+		<cond msgId="113">
+			<player level="67" />
+		</cond>
 	</item>
 	<item id="8731" type="EtcItem" name="Life Stone -  Level 70">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -322,7 +338,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;70}}" />
+		<cond msgId="113">
+			<player level="70" />
+		</cond>
 	</item>
 	<item id="8732" type="EtcItem" name="Life Stone -  Level 76">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -331,7 +349,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;76}}" />
+		<cond msgId="113">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="8733" type="EtcItem" name="Mid-Grade Life Stone -  Level 46">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
@@ -340,7 +360,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;46}}" />
+		<cond msgId="113">
+			<player level="46" />
+		</cond>
 	</item>
 	<item id="8734" type="EtcItem" name="Mid-Grade Life Stone -  Level 49">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
@@ -349,7 +371,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;49}}" />
+		<cond msgId="113">
+			<player level="49" />
+		</cond>
 	</item>
 	<item id="8735" type="EtcItem" name="Mid-Grade Life Stone -  Level 52">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
@@ -358,7 +382,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;52}}" />
+		<cond msgId="113">
+			<player level="52" />
+		</cond>
 	</item>
 	<item id="8736" type="EtcItem" name="Mid-Grade Life Stone -  Level 55">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
@@ -367,7 +393,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;55}}" />
+		<cond msgId="113">
+			<player level="55" />
+		</cond>
 	</item>
 	<item id="8737" type="EtcItem" name="Mid-Grade Life Stone -  Level 58">
 		<set name="icon" val="icon.etc_mineral_special_i01" />
@@ -376,7 +404,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;58}}" />
+		<cond msgId="113">
+			<player level="58" />
+		</cond>
 	</item>
 	<item id="8738" type="EtcItem" name="Mid-Grade Life Stone -  Level 61">
 		<set name="icon" val="icon.etc_mineral_special_i01" />
@@ -385,7 +415,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="48000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;61}}" />
+		<cond msgId="113">
+			<player level="61" />
+		</cond>
 	</item>
 	<item id="8739" type="EtcItem" name="Mid-Grade Life Stone -  Level 64">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
@@ -394,7 +426,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="60000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;64}}" />
+		<cond msgId="113">
+			<player level="64" />
+		</cond>
 	</item>
 	<item id="8740" type="EtcItem" name="Mid-Grade Life Stone -  Level 67">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
@@ -403,7 +437,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="72000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;67}}" />
+		<cond msgId="113">
+			<player level="67" />
+		</cond>
 	</item>
 	<item id="8741" type="EtcItem" name="Mid-Grade Life Stone -  Level 70">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
@@ -412,7 +448,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="86400" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;70}}" />
+		<cond msgId="113">
+			<player level="70" />
+		</cond>
 	</item>
 	<item id="8742" type="EtcItem" name="Mid-Grade Life Stone -  Level 76">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
@@ -421,7 +459,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="96000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;76}}" />
+		<cond msgId="113">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="8743" type="EtcItem" name="High-Grade Life Stone -  Level 46">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
@@ -430,7 +470,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="200000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;46}}" />
+		<cond msgId="113">
+			<player level="46" />
+		</cond>
 	</item>
 	<item id="8744" type="EtcItem" name="High-Grade Life Stone -  Level 49">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
@@ -439,7 +481,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="240000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;49}}" />
+		<cond msgId="113">
+			<player level="49" />
+		</cond>
 	</item>
 	<item id="8745" type="EtcItem" name="High-Grade Life Stone -  Level 52">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
@@ -448,7 +492,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="288000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;52}}" />
+		<cond msgId="113">
+			<player level="52" />
+		</cond>
 	</item>
 	<item id="8746" type="EtcItem" name="High-Grade Life Stone -  Level 55">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
@@ -457,7 +503,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="345600" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;55}}" />
+		<cond msgId="113">
+			<player level="55" />
+		</cond>
 	</item>
 	<item id="8747" type="EtcItem" name="High-Grade Life Stone -  Level 58">
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
@@ -466,7 +514,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="400000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;58}}" />
+		<cond msgId="113">
+			<player level="58" />
+		</cond>
 	</item>
 	<item id="8748" type="EtcItem" name="High-Grade Life Stone -  Level 61">
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
@@ -475,7 +525,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="480000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;61}}" />
+		<cond msgId="113">
+			<player level="61" />
+		</cond>
 	</item>
 	<item id="8749" type="EtcItem" name="High-Grade Life Stone -  Level 64">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
@@ -484,7 +536,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="600000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;64}}" />
+		<cond msgId="113">
+			<player level="64" />
+		</cond>
 	</item>
 	<item id="8750" type="EtcItem" name="High-Grade Life Stone -  Level 67">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
@@ -493,7 +547,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="720000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;67}}" />
+		<cond msgId="113">
+			<player level="67" />
+		</cond>
 	</item>
 	<item id="8751" type="EtcItem" name="High-Grade Life Stone -  Level 70">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
@@ -502,7 +558,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="864000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;70}}" />
+		<cond msgId="113">
+			<player level="70" />
+		</cond>
 	</item>
 	<item id="8752" type="EtcItem" name="High-Grade Life Stone -  Level 76">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
@@ -511,7 +569,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="960000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;76}}" />
+		<cond msgId="113">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="8753" type="EtcItem" name="Top-Grade Life Stone -  Level 46">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
@@ -520,7 +580,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;46}}" />
+		<cond msgId="113">
+			<player level="46" />
+		</cond>
 	</item>
 	<item id="8754" type="EtcItem" name="Top-Grade Life Stone -  Level 49">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
@@ -529,7 +591,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1200000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;49}}" />
+		<cond msgId="113">
+			<player level="49" />
+		</cond>
 	</item>
 	<item id="8755" type="EtcItem" name="Top-Grade Life Stone -  Level 52">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
@@ -538,7 +602,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1440000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;52}}" />
+		<cond msgId="113">
+			<player level="52" />
+		</cond>
 	</item>
 	<item id="8756" type="EtcItem" name="Top-Grade Life Stone -  Level 55">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
@@ -547,7 +613,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1728000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;55}}" />
+		<cond msgId="113">
+			<player level="55" />
+		</cond>
 	</item>
 	<item id="8757" type="EtcItem" name="Top-Grade Life Stone -  Level 58">
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
@@ -556,7 +624,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="2000000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;58}}" />
+		<cond msgId="113">
+			<player level="58" />
+		</cond>
 	</item>
 	<item id="8758" type="EtcItem" name="Top-Grade Life Stone -  Level 61">
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
@@ -565,7 +635,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="2400000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;61}}" />
+		<cond msgId="113">
+			<player level="61" />
+		</cond>
 	</item>
 	<item id="8759" type="EtcItem" name="Top-Grade Life Stone -  Level 64">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
@@ -574,7 +646,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="3000000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;64}}" />
+		<cond msgId="113">
+			<player level="64" />
+		</cond>
 	</item>
 	<item id="8760" type="EtcItem" name="Top-Grade Life Stone -  Level 67">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
@@ -583,7 +657,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="3600000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;67}}" />
+		<cond msgId="113">
+			<player level="67" />
+		</cond>
 	</item>
 	<item id="8761" type="EtcItem" name="Top-Grade Life Stone -  Level 70">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
@@ -592,7 +668,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="4320000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;70}}" />
+		<cond msgId="113">
+			<player level="70" />
+		</cond>
 	</item>
 	<item id="8762" type="EtcItem" name="Top-Grade Life Stone -  Level 76">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
@@ -601,7 +679,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="4800000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;76}}" />
+		<cond msgId="113">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="8763" type="Weapon" name="Elrokian Trap">
 		<set name="icon" val="icon.weapon_seize_mace_i00" />

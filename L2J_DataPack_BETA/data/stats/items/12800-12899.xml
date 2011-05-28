@@ -457,7 +457,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="12822" type="EtcItem" name="Accessory Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -466,7 +468,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;82}}" />
+		<cond msgId="113">
+			<player level="82" />
+		</cond>
 	</item>
 	<item id="12823" type="EtcItem" name="Casian's Blue Crystal">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
@@ -697,7 +701,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;46}}" />
+		<cond msgId="113">
+			<player level="46" />
+		</cond>
 	</item>
 	<item id="12841" type="EtcItem" name="Accessory Life Stone -  Level 49">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -706,7 +712,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;49}}" />
+		<cond msgId="113">
+			<player level="49" />
+		</cond>
 	</item>
 	<item id="12842" type="EtcItem" name="Accessory Life Stone -  Level 52">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -715,7 +723,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="7200" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;52}}" />
+		<cond msgId="113">
+			<player level="52" />
+		</cond>
 	</item>
 	<item id="12843" type="EtcItem" name="Accessory Life Stone -  Level 55">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
@@ -724,7 +734,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="8640" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;55}}" />
+		<cond msgId="113">
+			<player level="55" />
+		</cond>
 	</item>
 	<item id="12844" type="EtcItem" name="Accessory Life Stone -  Level 58">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
@@ -733,7 +745,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;58}}" />
+		<cond msgId="113">
+			<player level="58" />
+		</cond>
 	</item>
 	<item id="12845" type="EtcItem" name="Accessory Life Stone -  Level 61">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
@@ -742,7 +756,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="12000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;61}}" />
+		<cond msgId="113">
+			<player level="61" />
+		</cond>
 	</item>
 	<item id="12846" type="EtcItem" name="Accessory Life Stone -  Level 64">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -751,7 +767,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="15000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;64}}" />
+		<cond msgId="113">
+			<player level="64" />
+		</cond>
 	</item>
 	<item id="12847" type="EtcItem" name="Accessory Life Stone -  Level 67">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -760,7 +778,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="18000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;67}}" />
+		<cond msgId="113">
+			<player level="67" />
+		</cond>
 	</item>
 	<item id="12848" type="EtcItem" name="Accessory Life Stone -  Level 70">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
@@ -769,7 +789,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;70}}" />
+		<cond msgId="113">
+			<player level="70" />
+		</cond>
 	</item>
 	<item id="12849" type="EtcItem" name="Accessory Life Stone -  Level 76">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -778,7 +800,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;75}}" />
+		<cond msgId="113">
+			<player level="75" />
+		</cond>
 	</item>
 	<item id="12850" type="EtcItem" name="Accessory Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -787,7 +811,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="21600" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="12851" type="EtcItem" name="Accessory Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
@@ -796,7 +822,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="24000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="12852" type="Weapon" name="Naga Storm - Molar {PvP} - Focus">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />

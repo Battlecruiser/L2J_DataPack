@@ -948,7 +948,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="28800" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="9574" type="EtcItem" name="Mid-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
@@ -957,7 +959,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="115200" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="9575" type="EtcItem" name="High-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
@@ -966,7 +970,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="1152000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="9576" type="EtcItem" name="Top-Grade Life Stone -  Level 80">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
@@ -975,7 +981,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="5760000" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;80}}" />
+		<cond msgId="113">
+			<player level="80" />
+		</cond>
 	</item>
 	<item id="9577" type="Armor" name="Cotton Shirt">
 		<set name="icon" val="icon.etc_shirts_none_i00" />
