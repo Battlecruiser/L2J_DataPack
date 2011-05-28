@@ -149,9 +149,12 @@ public class Loc implements IUserCommandHandler
 				msg = SystemMessageId.LOC_ADEN_S1_S2_S3;
 		}
 		SystemMessage sm = SystemMessage.getSystemMessage(msg);
-		sm.addNumber(activeChar.getX());
-		sm.addNumber(activeChar.getY());
-		sm.addNumber(activeChar.getZ());
+		if(msg.getParamCount() == 3)
+		{
+			sm.addNumber(activeChar.getX());
+			sm.addNumber(activeChar.getY());
+			sm.addNumber(activeChar.getZ());
+		}
 		activeChar.sendPacket(sm);
 		return true;
 	}
