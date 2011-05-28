@@ -71,7 +71,9 @@
 		<set name="weight" val="2" />
 		<set name="price" val="41400" />
 		<set name="is_stackable" val="true" />
-		<set name="use_condition" val="{{uc_requiredlevel;84}}" />
+		<cond msgId="113">
+			<player level="84" />
+		</cond>
 	</item>
 	<item id="14009" type="EtcItem" name="Extracted Red Star Stone">
 		<set name="icon" val="icon.general_star_stone_piece_i00" />

@@ -1888,7 +1888,9 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 		<set name="price" val="45000" />
-		<set name="use_condition" val="{{uc_requiredlevel;20}}" />
+		<cond msgId="113">
+			<player level="20" />
+		</cond>
 	</item>
 	<item id="8872" type="EtcItem" name="Flash Gunpowder">
 		<set name="icon" val="icon.etc_powder_gray_i00" />

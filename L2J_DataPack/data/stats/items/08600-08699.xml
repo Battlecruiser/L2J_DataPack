@@ -831,7 +831,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2297-1" />
-		<set name="use_condition" val="{{uc_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 	</item>
 	<item id="8671" type="EtcItem" name="Hair Style Change Potion - A (Event)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
