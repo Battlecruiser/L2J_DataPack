@@ -849,4 +849,438 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="capsuled_items" val="6622,1,1,100" />
 	</item>
+	<item id="17170" type="Armor" name="Soccer Ball Afro Hair - White">
+		<!-- Description: Afro hair that has been dyed like a white soccer ball. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="17171" type="Armor" name="Soccer Ball Afro Hair - Blue">
+		<!-- Description: Afro hair that has been dyed like a blue soccer ball. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="17172" type="Armor" name="Soccer Ball Afro Hair - Red">
+		<!-- Description: Afro hair that has been dyed like a red soccer ball. When equipped, you can receive the blessing of victory effect that raises Speed by 2%. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="17173" type="Armor" name="Mark of Victory - Korea">
+		<!-- Description: Mark that wishes for victory by the Korean team. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_face_deco_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hair" />
+		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="17174" type="Armor" name="Mark of Cheers">
+		<!-- Description: Mark containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_face_deco_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hair" />
+		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="17175" type="Weapon" name="Balloon Stick of Cheers - Red">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17176" type="Weapon" name="Balloon Stick of Cheers - Orange">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17177" type="Weapon" name="Balloon Stick of Cheers - Yellow">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i02" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17178" type="Weapon" name="Balloon Stick of Cheers - Green">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i03" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17179" type="Weapon" name="Balloon Stick of Cheers - Blue">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i04" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17180" type="Weapon" name="Balloon Stick of Cheers - Indigo Blue">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i05" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17181" type="Weapon" name="Balloon Stick of Cheers - Purple">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i06" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17182" type="Weapon" name="Balloon Stick of Cheers - Black">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i07" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17183" type="Weapon" name="Balloon Stick of Cheers - White">
+		<!-- Description: Balloon stick containing a cheering heart. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_stick_i08" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="1" />
+		<set name="material" val="blood_steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="17184" type="EtcItem" name="500,000 SP scroll">
+		<!-- Description: Scroll that replenishes 500,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17185" type="EtcItem" name="1,000,000 SP scroll">
+		<!-- Description: Scroll that replenishes 1,000,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="17186" type="Armor" name="National Representative Warrior's Ring - 3-day limited period">
+		<!-- Description: National Representative Warrior's Ring. Limited time item available for 3 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="4320" />
+		<for>
+			<add order="0x10" stat="mDef" val="48" />
+			<add order="0x40" stat="maxMp" val="21" />
+		</for>
+	</item>
+	<item id="17187" type="Armor" name="National Representative Warrior's Necklace - 3-day limited period">
+		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 3 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="4320" />
+		<for>
+			<add order="0x10" stat="mDef" val="95" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
+	<item id="17188" type="Armor" name="National Representative Warrior's Earring - 3-day limited period">
+		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 3 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="4320" />
+		<for>
+			<add order="0x10" stat="mDef" val="71" />
+			<add order="0x40" stat="maxMp" val="31" />
+		</for>
+	</item>
+	<item id="17189" type="Armor" name="National Representative Warrior's Ring - 7-day limited period">
+		<!-- Description: National Representative Warrior's Ring. Limited time item available for 7 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="10080" />
+		<for>
+			<add order="0x10" stat="mDef" val="48" />
+			<add order="0x40" stat="maxMp" val="21" />
+		</for>
+	</item>
+	<item id="17190" type="Armor" name="National Representative Warrior's Necklace - 7-day limited period">
+		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 7 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="10080" />
+		<for>
+			<add order="0x10" stat="mDef" val="95" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
+	<item id="17191" type="Armor" name="National Representative Warrior's Earring - 7-day limited period">
+		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 7 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="10080" />
+		<for>
+			<add order="0x10" stat="mDef" val="71" />
+			<add order="0x40" stat="maxMp" val="31" />
+		</for>
+	</item>
+	<item id="17192" type="Armor" name="National Representative Warrior's Ring - 10-day limited period">
+		<!-- Description: National Representative Warrior's Ring. Limited time item available for 10 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="14400" />
+		<for>
+			<add order="0x10" stat="mDef" val="48" />
+			<add order="0x40" stat="maxMp" val="21" />
+		</for>
+	</item>
+	<item id="17193" type="Armor" name="National Representative Warrior's Necklace - 10-day limited period">
+		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 10 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="14400" />
+		<for>
+			<add order="0x10" stat="mDef" val="95" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
+	<item id="17194" type="Armor" name="National Representative Warrior's Earring - 10-day limited period">
+		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 10 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="14400" />
+		<for>
+			<add order="0x10" stat="mDef" val="71" />
+			<add order="0x40" stat="maxMp" val="31" />
+		</for>
+	</item>
+	<item id="17195" type="Armor" name="National Representative Warrior's Ring - 30-day limited period">
+		<!-- Description: National Representative Warrior's Ring. Limited time item available for 30 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="43200" />
+		<for>
+			<add order="0x10" stat="mDef" val="48" />
+			<add order="0x40" stat="maxMp" val="21" />
+		</for>
+	</item>
+	<item id="17196" type="Armor" name="National Representative Warrior's Necklace - 30-day limited period">
+		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 30 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="43200" />
+		<for>
+			<add order="0x10" stat="mDef" val="95" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
+	<item id="17197" type="Armor" name="National Representative Warrior's Earring - 30-day limited period">
+		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 30 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="43200" />
+		<for>
+			<add order="0x10" stat="mDef" val="71" />
+			<add order="0x40" stat="maxMp" val="31" />
+		</for>
+	</item>
+	<item id="17198" type="Armor" name="National Representative Warrior's Ring">
+		<!-- Description: National Representative Warrior's Ring. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="48" />
+			<add order="0x40" stat="maxMp" val="21" />
+		</for>
+	</item>
+	<item id="17199" type="Armor" name="National Representative Warrior's Necklace">
+		<!-- Description: National Representative Warrior's Necklace. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="95" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
 </list>
