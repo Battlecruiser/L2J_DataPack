@@ -129,10 +129,22 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6920" levels="1" name="Collector's Fortune">
-		<!-- "A collector's luck. Increases P. Atk. by 15%, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 3%, and Speed by 5." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- Triggered Skill for Collector's Experience -->
+		<set name="magicLvl" val="74" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="15000" /> <!-- Guess -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="fortune">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<basemul order="0x30" stat="rCrit" val="0.1" />
+				<mul order="0x30" stat="cAtk" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.03" />
+				<add order="0x40" stat="runSpd" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6921" levels="1" name="Penetration Attack">
 		<!-- P. Def. is decreased momentarily. -->
