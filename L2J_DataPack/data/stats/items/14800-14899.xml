@@ -374,7 +374,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="2913-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="14824" type="EtcItem" name="Ancient Herb - Slayer">
 		<set name="icon" val="icon.freed_soul_core_i00" />
