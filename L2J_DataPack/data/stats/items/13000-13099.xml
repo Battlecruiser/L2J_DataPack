@@ -403,7 +403,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2577-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -423,7 +422,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2592-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -545,7 +543,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43" />
+		</cond>
 	</item>
 	<item id="13039" type="EtcItem" name="Essence of Fire">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
@@ -559,7 +559,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43" />
+		</cond>
 	</item>
 	<item id="13040" type="EtcItem" name="Fire Attribute Enhancer">
 		<set name="icon" val="icon.etc_fire_potion_i00" />
@@ -575,7 +577,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2335-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43" />
 		</cond>
@@ -594,7 +595,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2336-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43" />
 		</cond>
@@ -704,7 +704,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2151-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13046" type="EtcItem" name="Pailaka Weapon Upgrade Stage 1">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
@@ -718,7 +720,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13047" type="EtcItem" name="Pailaka Weapon Upgrade Stage 2">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
@@ -732,7 +736,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13048" type="EtcItem" name="Pailaka Antidote">
 		<set name="icon" val="icon.etc_potion_red_i00" />
@@ -747,7 +753,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2578-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{44}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
@@ -764,7 +769,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2340-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{44}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
@@ -906,7 +910,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2153-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13056" type="EtcItem" name="Weapon Upgrade Stage 1">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
@@ -919,7 +925,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13057" type="EtcItem" name="Weapon Upgrade Stage 2">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
@@ -932,7 +940,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13058" type="Armor" name="Silenos Hair Accessory">
 		<set name="icon" val="icon.accessory_barka_karm_i00" />
@@ -959,7 +969,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2593-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{44}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>

@@ -1587,7 +1587,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="23" />
 			<set order="0x08" stat="mAtk" val="24" />
@@ -1613,7 +1615,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -1639,7 +1643,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="21" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -1665,7 +1671,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="29" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -1693,7 +1701,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="49" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -1719,7 +1729,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
-		<set name="equip_condition" val="{{ec_chao;0}}" />
+		<cond msgId="1518">
+			<player chaotic="False" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />
 			<set order="0x08" stat="mAtk" val="17" />
