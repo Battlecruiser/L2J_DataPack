@@ -874,7 +874,7 @@
 		</for>
 	</item>
 	<item id="21581" type="EtcItem" name="Olf's T-shirt Enchant Scroll">
-		<!-- Description: Enchant scroll exclusive to Olf's T-shirt.. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Addtional options are added at +5, +7, +8 and +9. Cannot be dropped. Can be stored in a private warehouse. -->
+		<!-- Description: Enchant scroll exclusive to Olf's T-shirt. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Addtional options are added at +5, +7, +8 and +9. Cannot be dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
@@ -882,7 +882,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21582" type="EtcItem" name="Blessed Olf's T-shirt Enchant Scroll">
-		<!-- Description: Dimensional item. Enchant scroll exclusive to Olf's T-shirt.. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Additional options are added at +5, +7, +8 and +9. If the enchant fails, the existing enchant value becomes 0. Cannot be dropped. Can be stored in a private warehouse. -->
+		<!-- Description: Dimensional item. Enchant scroll exclusive to Olf's T-shirt. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Additional options are added at +5, +7, +8 and +9. If the enchant fails, the existing enchant value becomes 0. Cannot be dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21583" type="Armor" name="7th Anniversary Cloak - Pitch Black">
-		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item.. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. -->
+		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -899,6 +899,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
 		</for>
@@ -923,6 +926,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
 		</for>
@@ -938,7 +944,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21587" type="Armor" name="7th Anniversary Cloak - Blood Red">
-		<!-- Description: Dimensional Item. Lineage II 7th anniversary commemorative item.. Cloak for the true heroes who have made history since the beginning of Lineage II. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped, or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- Description: Dimensional Item. Lineage II 7th anniversary commemorative item. Cloak for the true heroes who have made history since the beginning of Lineage II. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped, or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -947,12 +953,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="21588" type="Armor" name="7th Anniversary Cloak - Pearl White">
-		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item.. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -961,6 +970,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
 		</for>
@@ -985,6 +997,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="25" />
 		</for>
