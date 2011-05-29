@@ -522,7 +522,7 @@
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow" />
-			</and>
+			</not>
 		</cond>
 		<for>
 			<effect count="10" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormal="flame" effectPower="50" effectType="DOT" />
