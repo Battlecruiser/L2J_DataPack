@@ -403,7 +403,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2594-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{44}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="44" />
+		</cond>
 	</item>
 	<item id="13130" type="EtcItem" name="Temple Book of Secrets">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
@@ -768,7 +770,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2607-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{44}}}" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
@@ -786,7 +787,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2586-2" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13152" type="EtcItem" name="Pailaka Vitality Replenishing Potion (50%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
@@ -801,7 +804,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2586-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{43;44;45}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="43,44,45" />
+		</cond>
 	</item>
 	<item id="13153" type="Weapon" name="For PC Cafe - Great Spear - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_long_spear_i00" />

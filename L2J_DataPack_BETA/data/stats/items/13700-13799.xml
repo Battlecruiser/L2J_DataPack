@@ -930,7 +930,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2622-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{120}};{uc_category;{@warsmith_group}}}" />
+		<set name="use_condition" val="{{uc_category;{@warsmith_group}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="120" />
+		</cond>
 	</item>
 	<item id="13770" type="Armor" name="Shadow Item - Shield of Yehan Miakesh">
 		<set name="icon" val="icon.immo_branded_shield_i00" />
@@ -965,7 +968,9 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2623-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{119;120}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="119,120" />
+		</cond>
 	</item>
 	<item id="13772" type="EtcItem" name="Life Aid Bandage">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
@@ -977,7 +982,9 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2624-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="13773" type="EtcItem" name="Scent of Preservation">
 		<set name="icon" val="icon.etc_potion_red_i00" />
@@ -989,7 +996,9 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2625-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="13774" type="EtcItem" name="Scent of Exorcism">
 		<set name="icon" val="icon.etc_holy_grail_i00" />
@@ -1001,7 +1010,9 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2626-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="13775" type="EtcItem" name="Miracle Cure of Resuscitation">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
@@ -1013,7 +1024,9 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2627-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="13776" type="EtcItem" name="Structure Scarab">
 		<set name="icon" val="icon.etc_beetle_i00" />
@@ -1027,7 +1040,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2628-1" />
-		<set name="use_condition" val="{{uc_inzone_num;{115;116;119;120;121;122}}}" />
+		<cond msgId="113" addName="1">
+			<player instanceId="115,116,119,120,121,122" />
+		</cond>
 	</item>
 	<item id="13777" type="EtcItem" name="Jewel Ornamented Duel Supplies">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
