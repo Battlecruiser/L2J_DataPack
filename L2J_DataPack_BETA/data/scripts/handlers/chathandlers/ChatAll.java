@@ -90,7 +90,7 @@ public class ChatAll implements IChatHandler
 				return;
 			}
 			
-			if (text.startsWith(".") || !text.startsWith(".."))
+			if (text.startsWith(".") && !text.startsWith(".."))
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_SYNTAX));
 			else
 			{			
