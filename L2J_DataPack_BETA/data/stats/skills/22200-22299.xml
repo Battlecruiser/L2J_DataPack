@@ -416,6 +416,7 @@
 	</skill>
 	<skill id="22269" levels="6" name="Concentration">
 		<!-- Decreases magic cancel damage by 53 for 60 minutes. -->
+		<!-- This skill only has one level, 6. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

@@ -1023,6 +1023,7 @@
 		</for>
 	</skill>
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
+		<!-- This skill only has one level, 2. -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />

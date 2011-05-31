@@ -383,10 +383,58 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="21259" levels="1" name="Release Seal on Agathion - Hanbok">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21259" levels="1" name="Release Seal on Agathion - Chorong">
+		<!-- Description: Removes the Agathion's seal. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21260" levels="1" name="Notifier">
+		<!-- Description: You can use to learn the number of received gifts and the number of remaining gifts. The gift provision time is reset every morning at 6:30. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21261" levels="1" name="Bad Bunny's Necklace">
+		<!-- Description: Its effects are MP+250, HP+500, CP+1035, increased P. Atk., increased M. Atk., wild magic effect, and increased Critical attack power. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21262" levels="1" name="Bad Bunny's Earring">
+		<!-- Description: Its effects are HP+250, Vampiric Rage effect, increased accuracy, decreased re-use time for magic skills, and decreased MP consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21263" levels="1" name="Bad Bunny's Ring">
+		<!-- Description: Its effects are increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21264" levels="1" name="Summon Friend">
+		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Shining Couple Ring and be a party member. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21265" levels="1" name="Summon Friend">
+		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21266" levels="1" name="Release Seal on Agathion - Juju">
+		<!-- Description: Removes the seal of Agathion. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="21267" levels="1" name="Notifier">
+		<!-- Description: Notifies the number of received gifts and remaining gifts when used. The gift supply time is initialized at 6:30 am every day. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 </list>

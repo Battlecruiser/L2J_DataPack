@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
@@ -219,7 +220,8 @@ public class Continuous implements ISkillHandler
 				else
 				{
 					L2Effect[] effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					if (target.getPet() != null && target.getPet() != activeChar && effects.length > 0)
+					L2Summon summon = target.getPet();
+					if (summon != null && summon != activeChar && summon instanceof L2SummonInstance && effects.length > 0)
 					{
 						if (effects[0].canBeStolen())
 							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));

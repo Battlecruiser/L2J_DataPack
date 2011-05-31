@@ -143,12 +143,14 @@
 	</skill>
 	<skill id="23322" levels="10" name="Demonic Desire">
 		<!-- P. Def. is temporarily decreased. -->
+		<!-- This skill only has one level, 10. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23323" levels="10" name="Fury of Darkness">
 		<!-- "Temporarily, P. Def. is decreased and you cannot move due to shock." -->
+		<!-- This skill only has one level, 10. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -180,5 +182,69 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23329" levels="1" name="Lantern Agathion's Gift1">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23330" levels="1" name="Lantern Agathion's Gift2">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23331" levels="1" name="Lantern Agathion's Gift3">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23332" levels="1" name="Lantern Agathion's Gift4">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23333" levels="1" name="Agathion's New Year's Wish">
+		<!-- Description: Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23334" levels="1" name="Lantern Agathion Cute Trick">
+		<!-- Description: Able to see the summoned Lantern's perform cute tricks. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23335" levels="1" name="Agathion's New Year's Wish">
+		<!-- Description: Vitality is maintained with the power of Juju Agathion. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23336" levels="1" name="Juju Agathion Cute Trick">
+		<!-- Description: Summoned Juju performs cute tricks. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23337" levels="1" name="Juju Agathion's Gift 1">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23337" levels="1" name="Juju Agathion's Gift 2">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23337" levels="1" name="Juju Agathion's Gift 3">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
+	</skill>
+	<skill id="23337" levels="1" name="Juju Agathion's Gift 4">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 </list>
