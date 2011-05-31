@@ -36,6 +36,7 @@
 		<set name="aggroPoints" val="100" />
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">
+		<!-- This skill only has one level, 2. -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
@@ -46,6 +47,7 @@
 		<set name="aggroPoints" val="566" />
 	</skill>
 	<skill id="7005" levels="4" name="Greater Chant of Vampire">
+		<!-- This skill only has one level, 4. -->
 		<set name="magicLvl" val="74" />
 		<set name="mpInitialConsume" val="55" />
 		<set name="mpConsume" val="217" />
@@ -66,6 +68,7 @@
 	</skill>
 	<skill id="7006" levels="13" name="The Love of Pa'agrio">
 		<!-- Needs to be done -->
+		<!-- This skill only has one level, 13. -->
 		<set name="mpConsume" val="272" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
@@ -79,6 +82,7 @@
 	</skill>
 	<skill id="7007" levels="4" name="Greater Seal of Flame">
 		<!-- Needs to be done -->
+		<!-- This skill only has one level, 4. -->
 		<set name="mpConsume" val="153" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="saveVs" val="MEN" />

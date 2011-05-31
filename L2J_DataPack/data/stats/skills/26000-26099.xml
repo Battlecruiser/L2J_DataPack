@@ -254,6 +254,7 @@
 		</for>
 	</skill>
 	<skill id="26027" levels="6" name="Secret medicine of Will">
+		<!-- Level 1 doesn't exist in client. -->
 		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
@@ -276,6 +277,7 @@
 		</cond>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
+		<!-- Level 1 doesn't exist in client. -->
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
 		<set name="itemConsumeCount" val="1" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="4200" levels="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
@@ -1032,8 +1032,9 @@
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
-	<skill id="4262" levels="1" name="Holiday Wind Walk">
+	<skill id="4262" levels="2" name="Holiday Wind Walk">
 		<!-- Freya retail confirmed -->
+		<!-- This skill only has one level, 2. -->
 		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1083,8 +1084,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4265" levels="1" name="Holiday Might">
+	<skill id="4265" levels="3" name="Holiday Might">
 		<!-- Freya retail confirmed -->
+			<!-- This skill only has one level, 3. -->
 		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1100,8 +1102,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4266" levels="1" name="Holiday Shield">
+	<skill id="4266" levels="3" name="Holiday Shield">
 		<!-- Freya retail confirmed -->
+			<!-- This skill only has one level, 3. -->
 		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
