@@ -6,6 +6,7 @@
 -- for more details.
 
 DROP TABLE IF EXISTS access_levels;
+DROP TABLE IF EXISTS account_gsdata;
 DROP TABLE IF EXISTS admin_command_access_rights;
 DROP TABLE IF EXISTS airships;
 DROP TABLE IF EXISTS armorsets;
