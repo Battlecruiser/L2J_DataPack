@@ -51,10 +51,10 @@ read LSDBHOST
 if [ -z "$LSDBHOST" ]; then
   LSDBHOST="localhost"
 fi
-echo -ne "\nPlease enter MySQL Login Server database name (default l2jdb): "
+echo -ne "\nPlease enter MySQL Login Server database name (default l2jls): "
 read LSDB
 if [ -z "$LSDB" ]; then
-  LSDB="l2jdb"
+  LSDB="l2jls"
 fi
 echo -ne "\nPlease enter MySQL Login Server user (default root): "
 read LSUSER
@@ -77,10 +77,10 @@ read CBDBHOST
 if [ -z "$CBDBHOST" ]; then
   CBDBHOST="localhost"
 fi
-echo -ne "\nPlease enter MySQL Community Server database name (default l2jcb): "
+echo -ne "\nPlease enter MySQL Community Server database name (default l2jcs): "
 read CBDB
 if [ -z "$CBDB" ]; then
-  CBDB="l2jcb"
+  CBDB="l2jcs"
 fi
 echo -ne "\nPlease enter MySQL Community Server user (default root): "
 read CBUSER
@@ -101,17 +101,17 @@ fi
 echo -ne "\nPlease enter MySQL Game Server hostname (default $LSDBHOST): "
 read GSDBHOST
 if [ -z "$GSDBHOST" ]; then
-  GSDBHOST="$LSDBHOST"
+  GSDBHOST="localhost"
 fi
-echo -ne "\nPlease enter MySQL Game Server database name (default $LSDB): "
+echo -ne "\nPlease enter MySQL Game Server database name (default l2jgs): "
 read GSDB
 if [ -z "$GSDB" ]; then
-  GSDB="$LSDB"
+  GSDB="l2jgs"
 fi
 echo -ne "\nPlease enter MySQL Game Server user (default $LSUSER): "
 read GSUSER
 if [ -z "$GSUSER" ]; then
-  GSUSER="$LSUSER"
+  GSUSER="root"
 fi
 echo -ne "\nPlease enter MySQL Game Server $GSUSER's password (won't be displayed): "
 stty -echo
@@ -228,7 +228,7 @@ while :
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the original gameserver database."
-     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > gameserver_backup.sql
+     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > gs_backup.sql
      if [ $? -ne 0 ];then
 	 clear
      echo ""
@@ -251,7 +251,7 @@ while :
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the original communityserver database."
-     $MYSQLDUMPPATH --add-drop-table -h $CBDBHOST -u $CBUSER --password=$CBPASS $CBDB > communityserver_backup.sql
+     $MYSQLDUMPPATH --add-drop-table -h $CBDBHOST -u $CBUSER --password=$CBPASS $CBDB > cs_backup.sql
      if [ $? -ne 0 ];then
      clear
 	 echo ""
@@ -274,7 +274,7 @@ while :
    read LSB
    if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
      echo "Making a backup of the original loginserver database."
-     $MYSQLDUMPPATH --add-drop-table -h $LSDBHOST -u $LSUSER --password=$LSPASS $LSDB > loginserver_backup.sql
+     $MYSQLDUMPPATH --add-drop-table -h $LSDBHOST -u $LSUSER --password=$LSPASS $LSDB > ls_backup.sql
      if [ $? -ne 0 ];then
         clear
 		echo ""
