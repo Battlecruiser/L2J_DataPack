@@ -90,7 +90,11 @@ public class ChatAll implements IChatHandler
 				return;
 			}
 			
-			if (text.startsWith(".") && !text.startsWith(".."))
+			/**
+			 * Match the character "." literally (Exactly 1 time)
+			 * Match any character that is NOT a . character. Between one and unlimited times as possible, giving back as needed (greedy)
+			 */
+			if (text.matches("\\.{1}[^\\.]+"))
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_SYNTAX));
 			else
 			{			
