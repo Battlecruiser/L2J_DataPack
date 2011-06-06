@@ -387,7 +387,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateAbnormals" val="bleed,3" />
+		<set name="negateAbnormals" val="bleeding,3" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
@@ -397,7 +397,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
-		<set name="negateAbnormals" val="bleed,7" />
+		<set name="negateAbnormals" val="bleeding,7" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
