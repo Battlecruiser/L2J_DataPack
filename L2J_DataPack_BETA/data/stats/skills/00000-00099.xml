@@ -843,7 +843,7 @@
 	<skill id="34" levels="3" name="Bandage">
 		<table name="#mpConsume"> 19 41 55 </table>
 		<table name="#magicLvl"> 20 46 62 </table>
-		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
+		<table name="#negateAbnormals"> bleeding,3 bleeding,7 bleeding,9 </table>
 		<table name="#aggro"> 204 438 582 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -971,7 +971,7 @@
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
 		<table name="#magicLvl"> 40 49 62 </table>
-		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
+		<table name="#negateAbnormals"> bleeding,3 bleeding,7 bleeding,9 </table>
 		<table name="#aggro"> 379 467 582 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1227,7 +1227,7 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="negateAbnormals" val="bleed,9" />
+		<enchant4 name="negateAbnormals" val="bleeding,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
@@ -1250,7 +1250,7 @@
 		<table name="#mpInitialConsume"> 5 9 11 </table>
 		<table name="#mpConsume"> 17 33 44 </table>
 		<table name="#magicLvl"> 24 46 62 </table>
-		<table name="#negateAbnormals"> bleed,3 bleed,7 bleed,9 </table>
+		<table name="#negateAbnormals"> bleeding,3 bleeding,7 bleeding,9 </table>
 		<table name="#aggro"> 235 438 582 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1347,7 +1347,7 @@
 		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="hpConsume" val="#ench34HpConsume" />
-		<enchant4 name="negateAbnormals" val="bleed,9" />
+		<enchant4 name="negateAbnormals" val="bleeding,9" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>
@@ -1924,6 +1924,11 @@
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
+		<enchant2for>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="100" effectType="BLEED">
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</enchant2for>
 		<enchant3for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#ench3dot" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
