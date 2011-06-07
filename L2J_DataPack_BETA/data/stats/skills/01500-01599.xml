@@ -202,9 +202,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="limit">
-				<mul order="0x30" stat="regHp" val="0.3" />
-				<mul order="0x30" stat="regCp" val="0.3" />
-				<mul order="0x30" stat="regMp" val="0.3" />
+				<mul order="0x30" stat="maxRecoverableHp" val="0.3" />
+				<mul order="0x30" stat="maxRecoverableMp" val="0.3" />
+				<mul order="0x30" stat="maxRecoverableCp" val="0.3" />
 			</effect>
 		</for>
 	</skill>

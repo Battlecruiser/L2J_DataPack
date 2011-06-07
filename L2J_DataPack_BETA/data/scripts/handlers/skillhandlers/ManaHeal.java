@@ -93,8 +93,11 @@ public class ManaHeal implements ISkillHandler
 			}
 			
 			//from CT2 u will receive exact MP, u can't go over it, if u have full MP and u get MP buff, u will receive 0MP restored message
-			if ((target.getCurrentMp() + mp) >= target.getMaxMp())
-				mp = target.getMaxMp() - target.getCurrentMp();
+			mp = Math.min(mp, target.getMaxRecoverableMp() - target.getCurrentMp());
+			
+			// Prevent negative amounts
+			if (mp < 0)
+				mp = 0;
 			
 			target.setCurrentMp(mp + target.getCurrentMp());
 			StatusUpdate sump = new StatusUpdate(target);

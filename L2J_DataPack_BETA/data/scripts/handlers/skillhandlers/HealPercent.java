@@ -117,8 +117,15 @@ public class HealPercent implements ISkillHandler
 				else
 					amount = target.getMaxCp() * skill.getPower() / 100.0;
 				
-				amount = Math.min(amount, target.getMaxCp() - target.getCurrentCp());
-				target.setCurrentCp(amount + target.getCurrentCp());
+				amount = Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp());
+				
+				// Prevent negative amounts
+				if (amount < 0)
+					amount = 0;
+				
+				// To prevent -value heals, set the value only if current cp is less than max recoverable.
+				if (target.getCurrentCp() < target.getMaxRecoverableCp())
+					target.setCurrentCp(amount + target.getCurrentCp());
 				
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 				sm.addNumber((int)amount);
@@ -133,8 +140,15 @@ public class HealPercent implements ISkillHandler
 				else
 					amount = target.getMaxHp() * skill.getPower() / 100.0;
 				
-				amount = Math.min(amount, target.getMaxHp() - target.getCurrentHp());
-				target.setCurrentHp(amount + target.getCurrentHp());
+				amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
+				
+				// Prevent negative amounts
+				if (amount < 0)
+					amount = 0;
+				
+				// To prevent -value heals, set the value only if current hp is less than max recoverable.
+				if (target.getCurrentHp() < target.getMaxRecoverableHp())
+					target.setCurrentHp(amount + target.getCurrentHp());
 				
 				if (targetPlayer)
 				{
@@ -158,8 +172,15 @@ public class HealPercent implements ISkillHandler
 				else
 					amount = target.getMaxMp() * skill.getPower() / 100.0;
 				
-				amount = Math.min(amount, target.getMaxMp() - target.getCurrentMp());
-				target.setCurrentMp(amount + target.getCurrentMp());
+				amount = Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp());
+				
+				// Prevent negative amounts
+				if (amount < 0)
+					amount = 0;
+				
+				// To prevent -value heals, set the value only if current mp is less than max recoverable.
+				if (target.getCurrentMp() < target.getMaxRecoverableMp())
+					target.setCurrentMp(amount + target.getCurrentMp());
 				
 				if (targetPlayer)
 				{

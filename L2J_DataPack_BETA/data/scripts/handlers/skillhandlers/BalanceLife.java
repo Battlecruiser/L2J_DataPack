@@ -95,8 +95,17 @@ public class BalanceLife implements ISkillHandler
 			
 			double newHP = target.getMaxHp() * percentHP;
 			
-			target.setCurrentHp(newHP);
+			if (newHP > target.getCurrentHp()) // The target gets healed
+			{
+				// The heal will be blocked if the current hp passes the limit
+				if (target.getCurrentHp() > target.getMaxRecoverableHp())
+					newHP = target.getCurrentHp();
+				// Else dont let the newHP pass the limit
+				else if (newHP > target.getMaxRecoverableHp())
+					newHP = target.getMaxRecoverableHp();
+			}
 			
+			target.setCurrentHp(newHP);
 			StatusUpdate su = new StatusUpdate(target);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
