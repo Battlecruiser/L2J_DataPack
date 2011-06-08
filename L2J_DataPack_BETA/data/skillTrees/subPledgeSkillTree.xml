@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<skill_tree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="subPledgeSkillTree.xsd">
-	<!-- Clan Level 7 -->
-	<skill id="612" level="1" name="Water Squad" reputation="10400" clan_level="7" itemId="9910" count="4" />
-	<skill id="615" level="1" name="Holy Squad" reputation="10400" clan_level="7" itemId="9910" count="4" />
-	<!-- Clan Level 8 -->
-	<skill id="611" level="1" name="Fire Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<skill id="612" level="2" name="Water Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<skill id="613" level="1" name="Wind Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<skill id="614" level="1" name="Earth Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<skill id="615" level="2" name="Holy Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<skill id="616" level="1" name="Dark Squad" reputation="12000" clan_level="8" itemId="9910" count="8" />
-	<!-- Clan Level 9 -->
-	<skill id="611" level="2" name="Fire Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<skill id="612" level="3" name="Water Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<skill id="613" level="2" name="Wind Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<skill id="614" level="2" name="Earth Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<skill id="615" level="3" name="Holy Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<skill id="616" level="2" name="Dark Squad" reputation="17400" clan_level="9" itemId="9910" count="11" />
-	<!-- Clan Level 10 -->
-	<skill id="611" level="3" name="Fire Squad" reputation="24000" clan_level="10" itemId="9911" count="2" />
-	<skill id="613" level="3" name="Wind Squad" reputation="24000" clan_level="10" itemId="9911" count="2" />
-	<skill id="614" level="3" name="Earth Squad" reputation="24000" clan_level="10" itemId="9911" count="2" />
-	<skill id="616" level="3" name="Dark Squad" reputation="24000" clan_level="10" itemId="9911" count="2" />
-</skill_tree>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skillTrees.xsd">
+	<skillTree type="subPledgeSkillTree">
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Fire Squad" skillIdLvl="611,1" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Fire Squad" skillIdLvl="611,2" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Fire Squad" skillIdLvl="611,3" getLevel="10" levelUpSp="24000" itemsIdCount="9911,2" socialClass="4" />
+		<skill skillName="Water Squad" skillIdLvl="612,1" getLevel="7" levelUpSp="10400" itemsIdCount="9910,4" socialClass="4" />
+		<skill skillName="Water Squad" skillIdLvl="612,2" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Water Squad" skillIdLvl="612,3" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Wind Squad" skillIdLvl="613,1" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Wind Squad" skillIdLvl="613,2" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Wind Squad" skillIdLvl="613,3" getLevel="10" levelUpSp="24000" itemsIdCount="9911,2" socialClass="4" />
+		<skill skillName="Earth Squad" skillIdLvl="614,1" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Earth Squad" skillIdLvl="614,2" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Earth Squad" skillIdLvl="614,3" getLevel="10" levelUpSp="24000" itemsIdCount="9911,2" socialClass="4" />
+		<skill skillName="Divine Squad" skillIdLvl="615,1" getLevel="7" levelUpSp="10400" itemsIdCount="9910,4" socialClass="4" />
+		<skill skillName="Divine Squad" skillIdLvl="615,2" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Divine Squad" skillIdLvl="615,3" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Dark Squad" skillIdLvl="616,1" getLevel="8" levelUpSp="12000" itemsIdCount="9910,8" socialClass="4" />
+		<skill skillName="Dark Squad" skillIdLvl="616,2" getLevel="9" levelUpSp="17400" itemsIdCount="9910,11" socialClass="4" />
+		<skill skillName="Dark Squad" skillIdLvl="616,3" getLevel="10" levelUpSp="24000" itemsIdCount="9911,2" socialClass="4" />
+	</skillTree>
+</list>

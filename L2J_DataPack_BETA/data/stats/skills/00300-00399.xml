@@ -2171,7 +2171,6 @@
 		<table name="#maxHp"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2184,7 +2183,6 @@
 		<table name="#maxCp"> 1.06 1.1 1.12 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2197,7 +2195,6 @@
 		<table name="#maxMp"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2210,7 +2207,6 @@
 		<table name="#regHp"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2223,7 +2219,6 @@
 		<table name="#regCp"> 1.06 1.1 1.12 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -2236,7 +2231,6 @@
 		<table name="#regMp"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2249,7 +2243,6 @@
 		<table name="#pAtk"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="3" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2262,7 +2255,6 @@
 		<table name="#pDef"> 1.03 1.05 1.06 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="3" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2275,7 +2267,6 @@
 		<table name="#mAtk"> 1.06 1.1 1.12 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2288,7 +2279,6 @@
 		<table name="#mDef"> 1.06 1.1 1.12 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2301,7 +2291,6 @@
 		<table name="#accCombat"> 1 2 3 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2314,7 +2303,6 @@
 		<table name="#rEvas"> 1 2 3 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2327,7 +2315,6 @@
 		<table name="#rShld"> 1.12 1.2 1.24 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2340,7 +2327,6 @@
 		<table name="#sDef"> 1.24 1.4 1.48 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2353,7 +2339,6 @@
 		<table name="#res"> 3 5 6 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -2367,7 +2352,6 @@
 		<table name="#res"> 3 5 6 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2381,7 +2365,6 @@
 		<table name="#vuln"> 12 20 24 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2394,7 +2377,6 @@
 		<table name="#vuln"> 12 20 24 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2407,7 +2389,6 @@
 		<table name="#vuln"> 12 20 24 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -2420,7 +2401,6 @@
 		<table name="#runSpd"> 3 5 6 </table>
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="7" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -2433,7 +2413,6 @@
 		<!-- TODO: Still missing info about other penalties than exp. loss -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="COREDONE" />
 		<set name="target" val="TARGET_SELF" />
@@ -2442,7 +2421,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="COREDONE" />
 		<set name="target" val="TARGET_SELF" />

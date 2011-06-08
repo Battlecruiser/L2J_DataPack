@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<skill_tree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="collectSkillTree.xsd">
-	<skill id="932" name="Star Stone Gathering" level="1" minLevel="1" spCost="0" itemId="13728" count="1" learnedByNpc="true" learnedByFS="true" />
-	<skill id="932" name="Star Stone Gathering" level="2" minLevel="1" spCost="0" itemId="57" count="400000" learnedByNpc="true" learnedByFS="false" />
-	<skill id="932" name="Star Stone Gathering" level="3" minLevel="1" spCost="0" itemId="57" count="1200000" learnedByNpc="true" learnedByFS="false" />
-</skill_tree>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skillTrees.xsd">
+	<skillTree type="collectSkillTree">
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Star Stone Gathering" skillIdLvl="932,1" getLevel="1" itemsIdCount="13728,1" />
+		<skill skillName="Star Stone Gathering" skillIdLvl="932,2" getLevel="1" itemsIdCount="57,400000" />
+		<skill skillName="Star Stone Gathering" skillIdLvl="932,3" getLevel="1" itemsIdCount="57,1200000" />
+	</skillTree>
+</list>
