@@ -1185,21 +1185,16 @@
 		</enchant1for>
 	</skill>
 	<skill id="194" levels="1" name="Lucky">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="LUCK" />
+		<!-- Confirmed CT2.5 -->
+		<!-- At lv 9 or lower, the user will not experience loss of Exp. and Vitality points, and after-death effect upon death. -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<cond>
-			<not>
-				<player level="10" /> <!-- TEMP FIX until skill tree rework done -->
-			</not>
-		</cond>
-		<for>
-			<mul order="0x30" stat="vitalityConsumeRate" val="0">
-				<not>
-					<player level="10" /> <!-- TEMP FIX until skill tree rework done -->
-				</not>
-			</mul>
-		</for>
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<!-- Uncomment when Lucky effect and effect for passive skills is implemented. -->
+		<!-- for -->
+		<!-- effect name="Lucky" abnormalTime="-1" val="0" /-->
+		<!--/for -->
 	</skill>
 	<skill id="195" levels="2" name="Breath Boost">
 		<table name="#breath"> 180 300 </table>

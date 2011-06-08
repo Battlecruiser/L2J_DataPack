@@ -52,7 +52,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setFile(activeChar.getHtmlPrefix(), filename);
 					html.replace("%objectId%", String.valueOf(npc.getObjectId()));
-					html.replace("%dp_price%", String.valueOf(pen_clear_price[activeChar.getExpertiseIndex()]));
+					html.replace("%dp_price%", String.valueOf(pen_clear_price[activeChar.getExpertiseLevel()]));
 					activeChar.sendPacket(html);
 					break;
 				case 2:
@@ -63,9 +63,9 @@ public class RemoveDeathPenalty implements IBypassHandler
 					
 					if (activeChar.getDeathPenaltyBuffLevel() > 0)
 					{
-						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseIndex()])
+						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseLevel()])
 						{
-							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseIndex()], npc, true))
+							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseLevel()], npc, true))
 								return false;
 							activeChar.setDeathPenaltyBuffLevel(activeChar.getDeathPenaltyBuffLevel() - 1);
 							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DEATH_PENALTY_LIFTED));
