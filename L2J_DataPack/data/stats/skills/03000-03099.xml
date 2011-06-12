@@ -30,9 +30,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="66" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="66" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="3006" levels="1" name="Equip Set Items">
@@ -202,9 +200,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
@@ -220,9 +216,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
@@ -676,9 +670,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
