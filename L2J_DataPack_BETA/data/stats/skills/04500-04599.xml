@@ -1156,9 +1156,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectType="BLEED" effectPower="100">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectType="BLEED" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1594,9 +1592,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1618,9 +1614,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1642,9 +1636,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1300" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

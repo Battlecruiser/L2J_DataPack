@@ -2539,19 +2539,13 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</enchant1for>
 		<enchant2for>
-			<effect count="20" name="DamOverTime" val="134" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="#ench2Chance" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="20" name="DamOverTime" val="134" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="#ench2Chance" effectType="BLEED" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">

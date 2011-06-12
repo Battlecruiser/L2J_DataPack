@@ -84,9 +84,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
