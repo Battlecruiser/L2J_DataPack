@@ -349,38 +349,39 @@
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
 	<skill id="11" levels="12" name="Trick">
-		<table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- NOTE: skill desc says "Requires a dagger" but is client typo -->
 		<table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="50" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="1200" />
-		<set name="skillType" val="AGGREDUCE_CHAR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1200" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="AGGREDUCE_CHAR" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="12" levels="14" name="Switch">
-		<table name="#mpConsume"> 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- NOTE: skill desc says "Requires a dagger" but is client typo -->
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="1200" />
-		<set name="saveVs" val="NULL" />
-		<set name="skillType" val="DEBUFF" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DEBUFF" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
