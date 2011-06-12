@@ -81,7 +81,11 @@ public class ChainHeal implements ISkillHandler
 			else
 				amount = character.getMaxHp() * power / 100.0;
 			
-			amount = Math.min(amount, character.getMaxHp() - character.getCurrentHp());
+			amount = Math.min(amount, character.getMaxRecoverableHp() - character.getCurrentHp());
+			
+			if (amount < 0)
+				amount = 0;
+			
 			character.setCurrentHp(amount + character.getCurrentHp());
 			
 			if (activeChar != character)
