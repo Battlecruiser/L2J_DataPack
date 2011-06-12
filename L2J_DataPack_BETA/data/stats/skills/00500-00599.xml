@@ -384,14 +384,10 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 * 1 Sec -->
-			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant3for>
-			<effect count="20" name="DamOverTime" val="67" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed" effectPower="#ench3Power" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="20" name="DamOverTime" val="67" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed" effectPower="#ench3Power" effectType="BLEED" />
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -1596,7 +1592,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="2" name="DamOverTime" abnormalTime="5" abnormalLvl="#abnormalLvl" val="615" effectPower="50" effectType="BLEED" abnormal="bleed" />
+			<effect count="2" name="DamOverTime" abnormalTime="5" abnormalLvl="#abnormalLvl" val="615" effectPower="50" effectType="BLEED" abnormal="bleed" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2034,9 +2030,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect count="3" name="DamOverTime" abnormalTime="3" val="369" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="369" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
