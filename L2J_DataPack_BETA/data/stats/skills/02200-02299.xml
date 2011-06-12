@@ -603,55 +603,75 @@
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
 		</cond>
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Door Key">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160010,19160011" />
 		</cond>
 	</skill>
 	<skill id="2237" levels="1" name="Key of Darkness">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="19160012,19160013" />
 		</cond>
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
-			<target npcId="268436041" />
+			<target npcId="23150003,23150004" />
 		</cond>
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
