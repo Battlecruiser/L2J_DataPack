@@ -793,42 +793,57 @@
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="8000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="20260001" />
 		</cond>
 	</skill>
 	<skill id="2355" levels="1" name="Gate Key of Destruction">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="8000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
 			<target npcId="20260006" />
 		</cond>
 	</skill>
 	<skill id="2356" levels="1" name="Gate Key of Blood">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
-		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="reuseDelay" val="8000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
-		<set name="power" val="35" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
 		<cond msgId="113" addName="1">
-			<target npcId="20260005,20260002" />
+			<target npcId="20260002" />
 		</cond>
 	</skill>
 	<skill id="2357" levels="1" name="Fiery Demon Blood">
