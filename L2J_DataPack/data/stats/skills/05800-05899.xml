@@ -783,9 +783,7 @@
 		<set name="effectRange" val="400" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="5880" levels="2" name="Vicious Mutilation">
@@ -841,9 +839,7 @@
 		<set name="effectRange" val="400" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">
