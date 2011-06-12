@@ -1122,6 +1122,7 @@
 	</skill>
 	<skill id="1549" levels="1" name="Chant of Elements">
 		<!-- H5 Skill -->
+		<!-- NOTE: skill desc says "increases the elemental attribute" but is client typo, it increase defense (see skill icon) -->
 		<set name="aggroPoints" val="624" /> <!-- Guess -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="true" />
@@ -1135,12 +1136,10 @@
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="md_up_attr">
-				<add order="0x40" stat="firePower" val="20" />
-				<add order="0x40" stat="waterPower" val="20" />
-				<add order="0x40" stat="windPower" val="20" />
-				<add order="0x40" stat="earthPower" val="20" />
-				<add order="0x40" stat="holyPower" val="20" />
-				<add order="0x40" stat="darkPower" val="20" />
+				<add order="0x40" stat="fireRes" val="20" />
+				<add order="0x40" stat="waterRes" val="20" />
+				<add order="0x40" stat="windRes" val="20" />
+				<add order="0x40" stat="earthRes" val="20" />
 			</effect>
 		</for>
 	</skill>
