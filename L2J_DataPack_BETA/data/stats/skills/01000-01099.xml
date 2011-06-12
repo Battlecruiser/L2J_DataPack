@@ -706,7 +706,6 @@
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_derangement">
 				<sub order="0x40" stat="rootVuln" val="#vuln" />
 				<sub order="0x40" stat="sleepVuln" val="#vuln" />
-				<sub order="0x40" stat="confusionVuln" val="#vuln" />
 				<sub order="0x40" stat="derangementVuln" val="#vuln" />
 			</effect>
 		</for>
@@ -715,7 +714,6 @@
 				<sub order="0x40" stat="rootVuln" val="50" />
 				<sub order="0x40" stat="sleepVuln" val="50" />
 				<sub order="0x40" stat="confusionVuln" val="50" />
-				<sub order="0x40" stat="derangementVuln" val="50" />
 			</effect>
 		</enchant1for>
 	</skill>
