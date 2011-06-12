@@ -405,7 +405,7 @@
 		<for>
 			<sub order="0x40" stat="rootVuln" val="100" />
 			<sub order="0x40" stat="sleepVuln" val="100" />
-			<sub order="0x40" stat="confusionVuln" val="100" />
+			<sub order="0x40" stat="derangementVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4333" levels="5" name="Resist Dark Attack">
@@ -612,7 +612,6 @@
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_derangement">
 				<sub stat="rootVuln" val="#vuln" order="0x40" />
 				<sub stat="sleepVuln" val="#vuln" order="0x40" />
-				<sub stat="confusionVuln" val="#vuln" order="0x40" />
 				<sub stat="derangementVuln" val="#vuln" order="0x40" />
 			</effect>
 		</for>
@@ -1321,7 +1320,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="confusionVuln" val="#power" />
+			<sub order="0x40" stat="derangementVuln" val="#power" />
 		</for>
 	</skill>
 	<skill id="4390" levels="1" name="NPC Abnormal Immunity">
