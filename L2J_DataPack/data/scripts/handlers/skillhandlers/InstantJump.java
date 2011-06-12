@@ -14,10 +14,13 @@
  */
 package handlers.skillhandlers;
 
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -80,13 +83,17 @@ public class InstantJump implements ISkillHandler
 		y = (int) (py + (25 * Math.sin(ph)));
 		z = target.getZ();
 		
+		Location loc = new Location(x, y, z);
+		
+		if (Config.GEODATA > 0)
+			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		activeChar.broadcastPacket(new FlyToLocation(activeChar, x, y, z, FlyType.DUMMY));
+		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		activeChar.abortAttack();
 		activeChar.abortCast();
 		
-		activeChar.setXYZ(x, y, z);
+		activeChar.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
 		
 		if (skill.hasEffects())
