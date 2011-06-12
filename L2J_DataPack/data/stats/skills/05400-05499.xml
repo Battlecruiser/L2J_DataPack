@@ -587,9 +587,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
+			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">

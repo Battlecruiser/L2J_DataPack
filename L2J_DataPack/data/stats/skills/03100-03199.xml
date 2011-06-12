@@ -1840,7 +1840,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dmg" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dmg" abnormal="bleed" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="3197" levels="10" name="Item Skill: Silence">
