@@ -125,7 +125,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="giveHp" val="40" />
+			<add order="0x40" stat="bonusHp" val="40" />
 		</for>
 	</skill>
 	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
@@ -573,7 +573,7 @@
 			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="giveHp" val="20" /> <!-- Increase amount of heal +20 -->
+			<add order="0x40" stat="bonusHp" val="20" /> <!-- Increase amount of heal +20 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
