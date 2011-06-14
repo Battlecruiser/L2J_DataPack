@@ -449,7 +449,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="0.0" />
+			<mul order="0x30" stat="gainHp" val="0" />
 		</for>
 	</skill>
 	<skill id="4227" levels="1" name="Zaken Regeneration">
