@@ -1160,7 +1160,7 @@
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="heal_power_up">
-				<mul order="0x30" stat="gainHp" val="1.08" />
+				<add order="0x40" stat="bonusHp" val="100" />
 			</effect>
 		</for>
 	</skill>
