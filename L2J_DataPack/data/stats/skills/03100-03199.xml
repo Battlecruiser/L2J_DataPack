@@ -640,7 +640,7 @@
 	<skill id="3138" levels="10" name="Item Skill: Heal Empower">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
-		<table name="#giveHp"> 44 49 53 57 61 64 68 72 75 79 </table>
+		<table name="#bonusHp"> 44 49 53 57 61 64 68 72 75 79 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -654,7 +654,7 @@
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="giveHp" val="#giveHp" />
+				<add order="0x40" stat="bonusHp" val="#bonusHp" />
 			</effect>
 		</for>
 	</skill>
