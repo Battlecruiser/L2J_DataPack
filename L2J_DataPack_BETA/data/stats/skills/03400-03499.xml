@@ -450,7 +450,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
-				<mul order="0x30" stat="gainHp" val="1.3" />
+				<add order="0x40" stat="bonusHp" val="1000" />
 			</effect>
 		</for>
 	</skill>
@@ -956,7 +956,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="gainHp" val="8" />
+			<add order="0x40" stat="bonusHp" val="8" />
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
