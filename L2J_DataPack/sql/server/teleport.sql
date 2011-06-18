@@ -137,17 +137,17 @@ INSERT INTO `teleport` VALUES
 ('TOI - 14th Floor Outside Door',214,112714,14111,10077,800000,0,57),
 ('TOI - 14th Floor Inside On Roof',215,113098,14532,10077,900000,0,57),
 
-('Cat Heretics Entrance',250,-53174,-250275,-7911,0,0,57),-- Interlude (undersea)
+('Cat Heretics Entrance',250,-53174,-250275,-7911,0,0,57), -- Interlude (undersea)
 ('Cat Heretics Exit',251,42514,143917,-5385,0,0,57),
 ('Cat Branded Entrance',252,46217,170290,-4983,0,0,57),
 ('Cat Branded Exit',253,45770,170299,-4985,0,0,57),
-('Cat Apostate Entrance',254,-20230,-250780,-8168,0,0,57),-- Interlude (undersea)
+('Cat Apostate Entrance',254,-20230,-250780,-8168,0,0,57), -- Interlude (undersea)
 ('Cat Apostate Exit',255,77225,78362,-5119,0,0,57),
 ('Cat Witch Entrance',256,140404,79678,-5431,0,0,57),
 ('Cat Witch Exit',257,139965,79678,-5433,0,0,57),
 ('Cat DarkOmen Entrance',258,-19500,13508,-4905,0,0,57),
 ('Cat DarkOmen Exit',259,-19931,13502,-4905,0,0,57),
-('Cat ForbiddenPath Entrance',260,12521,-248481,-9585,0,0,57),-- Interlude (undersea)
+('Cat ForbiddenPath Entrance',260,12521,-248481,-9585,0,0,57), -- Interlude (undersea)
 ('Cat ForbiddenPath Exit',261,113429,84540,-6545,0,0,57),
 ('Necro Sacrifice Entrance',262,-41570,209785,-5089,0,0,57),
 ('Necro Sacrifice Exit',263,-41567,209292,-5091,0,0,57),
@@ -628,104 +628,16 @@ INSERT INTO `teleport` VALUES
 ('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0,57),
 ('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0,57),
 ('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0,57),
-('Dragonspine Fort -> Fort North Gate', 12100, 12468, 93196, -3424, 0, 0, 57),
-('Dragonspine Fort -> Fort South Gate', 12101, 10494, 96881, -3424, 0, 0, 57),
-('Dragonspine Fort -> Dion Town Square', 12102, 19025, 145245, -3107, 0, 0, 57),
-('Dragonspine Fort -> Oren Town Square', 12103, 82323, 55466, -1480, 0, 0, 57),
-('Dragonspine Fort -> The Ant Nest', 12104, -9959, 176184, -4160, 500, 0, 57),
-('Dragonspine Fort -> Windawood Manor', 12105, -28327, 155125, -3496, 500, 0, 57),
-('Dragonspine Fort -> Sea of Spores', 12106, 64328, 26803, -3768, 500, 0, 57),
-('Dragonspine Fort -> Ancient Battleground', 12107, 118509, -4779, -4000, 500, 0, 57),
-('Fantasy Isle -> Krateis Cube', 12108, -70293, -71029, -1416, 0, 0, 57),
-('Krateis Cube -> Fantasy Isle', 12109, -59224, -56837, -2032, 0, 0, 57),
-('Demon Fort -> Fortress West Gate', 12110, 98920, -56423, -624, 0, 0, 57),
-('Demon Fort -> Fortress East Gate', 12111, 102390, -54320, -632, 0, 0, 57),
-('Demon Fort -> Rune Town Square', 12112, 43889, -49101, -792, 0, 0, 57),
-('Demon Fort -> Goddard Town Square', 12113, 147728, -56331, -2776, 0, 0, 57),
-('Demon Fort -> Swamp of Screams', 12114, 69340, -50203, -3314, 500, 0, 57),
-('Demon Fort -> Valley of Saints', 12115, 65307, -71445, -3696, 500, 0, 57),
-('Demon Fort -> Entrance to the Forge of the Gods', 12116, 169018, -116303, -2432, 500, 0, 57),
-('Demon Fort -> Wall of Argos', 12117, 165054, -47861, -3560, 500, 0, 57),
-('Gludio -> Airship dock', 12118, -149406, 255247, -80, 0, 0, 57),
-('Airship dock -> Talking Island', 12119, -84752, 243122, -3728, 0, 0, 57),
-('Talking Island -> Airship dock', 12120, -149406, 255247, -80, 0, 0, 57),
-('Fantasy Isle -> Handys Block', 12121, -57328, -60566, -2360, 0, 0, 57),
-('Keucereus -> Heart of Infinity', 12122, -204288, 242026, 1744, 0, 0, 57),
-('Guide of Immortality -> Seed of Infinity', 14000, -183292, 206063, -12888, 0, 0, 57),
-('Gatekeeper of the Abyss -> Seed of Infinity', 14001, -212836, 209824, 4288, 0, 0, 57),
-('Valley Fort -> Fortress North Gate', 12123, 126066, 120350, -2584, 0, 0, 57),
-('Valley Fort -> Fortress South Gate', 12124, 126023, 125853, -2584, 0, 0, 57),
-('Valley Fort -> Giran Town Square', 12125, 81749, 149171, -3464, 0, 0, 57),
-('Valley Fort -> Front of the Giran Castle Gate', 12126, 107954, 145841, -3224, 0, 0, 57),
-('Valley Fort -> Brekas Stronghold', 12127, 85546, 131328, -3672, 500, 0, 57),
-('Valley Fort -> Devils Isle', 12128, 43408, 206811, -3752, 500, 0, 57),
-('Valley Fort -> Dragon Valley', 12129, 73024, 118485, -3720, 500, 0, 57),
-('Valley Fort -> Tanor Canyon', 12130, 60374, 164301, -2856, 500, 0, 57),
-('Tanor Fort -> Fortress North Gate', 12131, 58923, 137789, -1752, 0, 0, 57),
-('Tanor Fort -> Fortress South Gate', 12132, 61551, 141036, -1752, 0, 0, 57),
-('Tanor Fort -> Dion Town Square', 12133, 19025, 145245, -3107, 0, 0, 57),
-('Tanor Fort -> Giran Town Square', 12134, 81749, 149171, -3464, 0, 0, 57),
-('Tanor Fort -> The Ant Nest', 12135, -9959, 176184, -4160, 500, 0, 57),
-('Tanor Fort -> Windawood Manor', 12136, -28327, 155125, -3496, 500, 0, 57),
-('Tanor Fort -> Dragon Valley', 12137, 73024, 118485, -3720, 500, 0, 57),
-('Tanor Fort -> Tanor Canyon', 12138, 60374, 164301, -2856, 500, 0, 57),
-('Handys Block -> Fantasy Isle', 12139, -59157, -56906, -2032, 0, 0, 57),
-('Monastic Fort -> Fortress North Gate', 12140, 72388, -96770, -1424, 0, 0, 57),
-('Monastic Fort -> Fortress South Gate', 12141, 71937, -92600, -1416, 0, 0, 57),
-('Monastic Fort -> Rune Town Square', 12142, 43889, -49101, -792, 0, 0, 57),
-('Monastic Fort -> Schuttgart Town Square', 12143, 87379, -142322, -1336, 0, 0, 57),
-('Monastic Fort -> Swamp of Screams', 12144, 69340, -50203, -3314, 500, 0, 57),
-('Monastic Fort -> Valley of Saints', 12145, 65307, -71445, -3696, 500, 0, 57),
-('Monastic Fort -> Den of Evil', 12146, 68693, -110438, -1946, 500, 0, 57),
-('Monastic Fort -> Ice Merchant Cabin', 12147, 113903, -108752, -860, 500, 0, 57),
-('Narsell Fortress -> Fortress West Gate', 12148, 153112, 56872, -3256, 0, 0, 57),
-('Narsell Fortress -> Fortress East Gate', 12149, 156730, 53921, -3256, 0, 0, 57),
-('Narsell Fortress -> Aden Town Square', 12150, 147450, 28081, -2294, 0, 0, 57),
-('Narsell Fortress -> Front of the Aden Castle Gate', 12151, 147428, 20161, -2008, 0, 0, 57),
-('Narsell Fortress -> Ancient Battleground', 12152, 118509, -4779, -4000, 500, 0, 57),
-('Narsell Fortress -> Enchanted Valley, Southern Region', 12153, 124904, 61992, -3973, 500, 0, 57),
-('Narsell Fortress -> Enchanted Valley, Northern Region', 12154, 104426, 33746, -3825, 500, 0, 57),
-('Narsell Fortress -> Blazing Swamp', 12155, 155310, -16339, -3320, 500, 0, 57),
-('Hive Fortress -> Fortress North Gate', 12156, 15383, 186025, -2920, 0, 0, 57),
-('Hive Fortress -> Fortress South Gate', 12157, 18046, 190017, -2920, 0, 0, 57),
-('Hive Fortress -> Dion Town Square', 12158, 19025, 145245, -3107, 0, 0, 57),
-('Hive Fortress -> Front of the Dion Castle Gate', 12159, 19888, 153395, -3144, 0, 0, 57),
-('Hive Fortress -> Cruma Marshlands', 12160, 5106, 126916, -3664, 500, 0, 57),
-('Hive Fortress -> Fortress of Resistance', 12161, 47382, 111278, -2104, 500, 0, 57),
-('Hive Fortress -> Plains of Dion', 12162, 630, 179184, -3720, 500, 0, 57),
-('Hive Fortress -> Tanor Canyon', 12163, 60374, 164301, -2856, 500, 0, 57),
-('White Sands Fortress -> Fortress West Gate', 12164, 116336, 203775, -3336, 0, 0, 57),
-('White Sands Fortress -> Fortress East Gate', 12165, 120487, 206093, -3336, 0, 0, 57),
-('White Sands Fortress -> Heine Town Square', 12166, 111455, 219400, -3546, 0, 0, 57),
-('White Sands Fortress -> Front of the Innadril Castle Gate', 12167, 117608, 241660, -1408, 0, 0, 57),
-('White Sands Fortress -> Field of Silence (Western Section)', 12168, 80987, 182423, -3504, 500, 0, 57),
-('White Sands Fortress -> Field of Whispers (Eastern Section)', 12169, 86147, 218268, -3592, 500, 0, 57),
-('White Sands Fortress -> The Center of Alligator Island', 12170, 113708, 178387, -3232, 500, 0, 57),
-('White Sands Fortress -> Inside the Garden of Eva', 12171, 82693, 242220, -6712, 500, 0, 57),
-('Archaic Fortress -> Fortress West Gate', 12172, 107248, -140450, -2960, 0, 0, 57),
-('Archaic Fortress -> Fortress East Gate', 12173, 111769, -141775, -2920, 0, 0, 57),
-('Archaic Fortress -> Schuttgart Town Square', 12174, 87379, -142322, -1336, 0, 0, 57),
-('Archaic Fortress -> Front of the Schuttgart Castle Gate', 12175, 76358, -145548, -1176, 0, 0, 57),
-('Archaic Fortress -> Crypts of Disgrace', 12176, 47692, -115745, -3744, 500, 0, 57),
-('Archaic Fortress -> Plunderous Plains', 12177, 111965, -154172, -1528, 500, 0, 57),
-('Archaic Fortress -> Den of Evil', 12178, 68693, -110438, -1946, 500, 0, 57),
-('Archaic Fortress -> Ice Merchant Cabin', 12179, 113903, -108752, -860, 500, 0,57),
-('Shanty Fortress -> Fortress West Gate', 12180, -55240, 157193, -2048, 0, 0, 57),
-('Shanty Fortress -> Fortress East Gate', 12181, -50296, 155793, -2056, 0, 0, 57),
-('Shanty Fortress -> Gludio Town Square', 12182, -14393, 123671, -3144, 0, 0, 57),
-('Shanty Fortress -> Front of the Gludio Castle Gate', 12183, -15043, 116596, -3208, 0, 0, 57),
-('Shanty Fortress -> Ruins of Agony', 12184, -41248, 122848, -2912, 500, 0, 57),
-('Shanty Fortress -> Ruins of Despair', 12185, -19120, 136816, -3762, 500, 0, 57),
-('Shanty Fortress -> The Ant Nest', 12186, -9959, 176184, -4160, 500, 0, 57),
-('Shanty Fortress -> Windawood Manor', 12187, -28327, 155125, -3496, 500, 0,57),
-('Ivory Fortress -> Fortress North Gate', 12188, 74367, 2533, -3040, 0, 0, 57),
-('Ivory Fortress -> Fortress South Gate', 12189, 71388, 6235, -3032, 0, 0, 57),
-('Ivory Fortress -> Oren Town Square', 12190, 82323, 55466, -1480, 0, 0, 57),
-('Ivory Fortress -> Front of the Oren Castle Gate', 12191, 75648, 39380, -2952, 0, 0, 57),
-('Ivory Fortress -> Sea of Spores', 12192, 64328, 26803, -3768, 500, 0, 57),
-('Ivory Fortress -> Enchanted Valley, Southern Region', 12193, 124904, 61992, -3973, 500, 0, 57),
-('Ivory Fortress -> Enchanted Valley, Northern Region', 12194, 104426, 33746, -3825, 500, 0, 57),
-('Ivory Fortress -> Ancient Battleground', 12195, 118509, -4779, -4000, 500, 0,57),
+('Fantasy Isle -> Krateis Cube',12108,-70293,-71029,-1416,0,0,57),
+('Krateis Cube -> Fantasy Isle',12109,-59224,-56837,-2032,0,0,57),
+('Gludio -> Airship dock',12118,-149406,255247,-80,0,0,57),
+('Airship dock -> Talking Island',12119,-84752,243122,-3728,0,0,57),
+('Talking Island -> Airship dock',12120,-149406,255247,-80,0,0,57),
+('Fantasy Isle -> Handys Block',12121,-57328,-60566,-2360,0,0,57),
+('Keucereus -> Heart of Infinity',12122,-204288,242026,1744,0,0,57),
+('Handys Block -> Fantasy Isle',12139,-59157,-56906,-2032,0,0,57),
+('Guide of Immortality -> Seed of Infinity',14000,-183292,206063,-12888,0,0,57),
+('Gatekeeper of the Abyss -> Seed of Infinity',14001,-212836,209824,4288,0,0,57),
 ('Gludio Castle -> Front of the Gludio Castle',13000,-15043,116596,-3208,0,0,57),
 ('Gludio Castle -> Gludio Town Square',13001,-14393,123671,-3144,0,0,57),
 ('Gludio Castle -> Front of the Shanty Fortress',13002,-58761,154663,-2701,0,0,57),
@@ -799,78 +711,7 @@ INSERT INTO `teleport` VALUES
 ('Schuttgart Castle -> Plunderous Plains',13067,111965,-154172,-1528,500,0,57),
 ('Schuttgart Castle -> Den of Evil',13068,68693,-110438,-1946,500,0,57),
 ('Schuttgart Castle -> Ice Merchant Cabin',13069,113903,-108752,-860,500,0,57),
-('Schuttgart Castle -> Crypts of Disgrace',13070,47692,-115745,-3744,500,0,57),
-('Borderland Fort -> Fortress West Gate', 14071,157017,-68977,-2864,0,0,57),
-('Borderland Fort -> Fortress East Gate', 14064,161618,-72057,-2864,0,0,57),
-('Borderland Fort -> Goddard Town Square', 14065,147728,-56331,-2776,0,0,57),
-('Borderland Fort -> Front of Goddard Castle',14066,153996,-50182,-2992,500,0,57),
-('Borderland Fort -> Varka Silenos Stronghold', 14067,125740,-40864,-3736,500,0,57),
-('Borderland Fort -> Ketra Orc Outpost',14068,146990,-67128,-3640,500,0,57),
-('Borderland Fort -> Forge of the Gods Entrance',14069,169018,-116303,-2432,500,0,57),
-('Borderland Fort -> Wall of Argos', 14070,165054,-47861,-3560,500,0,57),
-('Floran Fort -> Fortress West Gate',14072,3798,148797,-2888,0,0,57),
-('Floran Fort -> Fortress East Gate',14073,7693,150682,-2888,0,0,57),
-('Floran Fort -> Gludio Town Square',14074,-14393,123671,-3144,0,0,57),
-('Floran Fort -> Dion Town Square',14075,19025,145245,-3107,0,0,57),
-('Floran Fort -> The Ant Nest',14076,-9959,176184,-4160,500,0,57),
-('Floran Fort -> Windawood Manor',14077,-28327,155125,-3496,500,0,57),
-('Floran Fort -> Plains of Dion',14078,630,179184,-3720,500,0,57),
-('Floran Fort -> Tanor Canyon',14079,60374,164301,-2856,500,0,57),
-('Swamp Fortress -> Fortress North Gate',14080,68692,-63928,-2784,0,0,57),
-('Swamp Fortress -> Fortress South Gate',14081,70820,-58862,-2784,0,0,57),
-('Swamp Fortress -> Rune Town Square',14082,43889,-49101,-792,0,0,57),
-('Swamp Fortress -> Front of the Rune Castle Gate',14083,27400,-49180,-1320,0,0,57),
-('Swamp Fortress -> Forest of the Dead',14084,52107,-54328,-3158,500,0,57),
-('Swamp Fortress -> Wild Beast Pastures',14085,43805,-88010,-2780,500,0,57),
-('Swamp Fortress -> Swamp of Screams',14086,69340,-50203,-3314,500,0,57),
-('Swamp Fortress -> Valley of Saints',14087,65307,-71445,-3696,500,0,57),
-('Swamp Fortress -> Shyeeds Cavern',14088,76911,-55295,-5824,500,0,57),
-('Cloud Mountain -> Fortress North Gate',14089,-54275,89255,-2824,0,0,57),
-('Cloud Mountain -> Fortress South Gate',14090,-52274,93334,-2816,0,0,57),
-('Cloud Mountain -> Gludio Town Square',14091,-14393,123671,-3144,0,0,57),
-('Cloud Mountain -> Oren Town Square',14092,82323,55466,-1480,0,0,57),
-('Cloud Mountain -> The Ant Nest',14093,-9959,176184,-4160,500,0,57),
-('Cloud Mountain -> Windawood Manor',14094,-28327,155125,-3496,500,0,57),
-('Cloud Mountain -> Sea of Spores',14095,64328,26803,-3768,500,0,57),
-('Cloud Mountain -> Ancient Battleground',14096,118509,-4779,-4000,500,0,57),
-('Antharas Fortress -> Fortress West Gate',14097,77834,89176,-2880,0,0,57),
-('Antharas Fortress -> Fortress East Gate',14098,80441,92831,-2880,0,0,57),
-('Antharas Fortress -> Oren Town Square',14099,82323,55466,-1480,0,0,57),
-('Antharas Fortress -> Giran Town Square',14100,81749,149171,-3464,0,0,57),
-('Antharas Fortress -> Sea of Spores',14101,64328,26803,-3768,500,0,57),
-('Antharas Fortress -> Ancient Battleground',14102,118509,-4779,-4000,500,0,57),
-('Antharas Fortress -> Dragon Valley',14103,73024,118485,-3720,500,0,57),
-('Antharas Fortress -> Tanor Canyon',14104,60374,164301,-2856,500,0,57),
-('Western Fortress -> Fortress North Gate',14105,112356,-17243,-992,0,0,57),
-('Western Fortress -> Fortress South Gate',14106,110349,-13288,-922,0,0,57),
-('Western Fortress -> Aden Town Square',14107,147450,28081,-2294,0,0,57),
-('Western Fortress -> Oren Town Square',14108,82323,55466,-1480,0,0,57),
-('Western Fortress -> Goddard Town Square',14109,147728,-56331,-2776,0,0,57),
-('Western Fortress -> Enchanted Valley, Northern Region',14110,104426,33746,-3825,500,0,57),
-('Western Fortress -> Blazing Swamp',14111,155310,-16339,-3320,500,0,57),
-('Western Fortress -> Ancient Battleground',14112,118509,4779,-4000,500,0,57),
-('Western Fortress -> Entrance to the Forge of the Gods',14113,169018,-116303,-2432,500,0,57),
-('Western Fortress -> Wall of Argos',14114,165054,-47861,-3560,500,0,57),
-('Western Fortress -> The Giants Cave Upper Layer',14115,183985,61424,-3992,500,0,57),
-('Western Fortress -> The Giants Cave Lower Layer',14116,191754,56760,-7624,500,0,57),
-('Hunters Fortress -> Fortress North Gate',14117,124180,93249,-2144,0,0,57),
-('Hunters Fortress -> Fortress South Gate',14118,126155,97124,-2144,0,0,57),
-('Hunters Fortress -> Aden Town Square',14119,147450,28081,-2294,0,0,57),
-('Hunters Fortress -> Giran Town Square',14120,81749,149171,-3464,0,0,57),
-('Hunters Fortress -> Enchanted Valley, Northern Region',14121,104426,33746,-3825,500,0,57),
-('Hunters Fortress -> Blazing Swamp',14122,155310,-16339,-3320,500,0,57),
-('Hunters Fortress -> Dragon Valley',14123,73024,118485,-3720,500,0,57),
-('Hunters Fortress -> Tanor Canyon',14124,60374,164301,-2856,500,0,57),
-('Hunters Fortress -> The Giants Cave Upper Layer',14125,183985,61424,-3992,500,0,57),
-('Hunters Fortress -> The Giants Cave Lower Layer',14126,191754,56760,-7624,500,0,57),
-('Aaru Fortress -> Fortress North Gate',14127,73205,183893,-2584,0,0,57),
-('Aaru Fortress -> Fortress South Gate',14128,72822,188128,-2584,0,0,57),
-('Aaru Fortress -> Heine Town Square',14129,111455,219400,-3546,0,0,57),
-('Aaru Fortress -> Giran Town Square',14130,81749,149171,-3464,0,0,57),
-('Aaru Fortress -> Inside the Garden of Eva',14131,82693,242220,-6712,500,0,57),
-('Aaru Fortress -> The Center of Alligator Island',14132,113708,178387,-3232,500,0,57),
-('Aaru Fortress -> Dragon Valley',14133,73024,118485,-3720,500,0,57),
-('Aaru Fortress -> Tanor Canyon',14134,60374,164301,-2856,500,0,57);
+('Schuttgart Castle -> Crypts of Disgrace',13070,47692,-115745,-3744,500,0,57);
 
 -- Castle teleports
 INSERT INTO `teleport` VALUES
@@ -972,3 +813,208 @@ INSERT INTO `teleport` VALUES
 ('Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57), -- retail
 ('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57), -- retail
 ('Seed of Annihilation Dock',15008,-175520,154505,2712,150000,0,57); -- retail
+
+-- Fortress Teleports
+INSERT INTO `teleport` VALUES
+-- Shanty Fortress
+('Shanty Fortress -> Fortress West Gate',20000,-55240,157193,-2048,0,0,57), -- retail
+('Shanty Fortress -> Fortress East Gate',20001,-50296,155793,-2056,0,0,57), -- retail
+('Shanty Fortress -> Gludio Town Square',20002,-14393,123671,-3144,0,0,57), -- retail
+('Shanty Fortress -> Front of the Gludio Castle Gate',20003,-15043,116596,-3208,0,0,57), -- retail
+('Shanty Fortress -> Ruins of Agony',20004,-41248,122848,-2912,500,0,57), -- retail
+('Shanty Fortress -> Ruins of Despair',20005,-19120,136816,-3762,500,0,57), -- retail
+('Shanty Fortress -> The Ant Nest',20006,-9959,176184,-4160,500,0,57), -- retail
+('Shanty Fortress -> Windawood Manor',20007,-28327,155125,-3496,500,0,57), -- retail
+-- Southern Fortress
+('Southern Fortress -> Fortress West Gate',20008,-25480,219848,-3248,0,0,57), -- retail
+('Southern Fortress -> Fortress East Gate',20009,-19886,219821,-3256,0,0,57), -- retail
+('Southern Fortress -> Gludio Town Square',20010,-14393,123671,-3144,0,0,57), -- retail
+('Southern Fortress -> Front of the Gludio Castle Gate',20011,-15043,116596,-3208,0,0,57), -- retail
+('Southern Fortress -> Ruins of Agony',20012,-41248,122848,-2912,500,0,57), -- retail
+('Southern Fortress -> Ruins of Despair',20013,-19120,136816,-3762,500,0,57), -- retail
+('Southern Fortress -> The Ant Nest',20014,-9959,176184,-4160,500,0,57), -- retail
+('Southern Fortress -> Windawood Manor',20015,-28327,155125,-3496,500,0,57), -- retail
+-- Hive Fortress
+('Hive Fortress -> Fortress North Gate',20016,15383,186025,-2920,0,0,57), -- retail
+('Hive Fortress -> Fortress South Gate',20017,18046,190017,-2920,0,0,57), -- retail
+('Hive Fortress -> Dion Town Square',20018,19025,145245,-3107,0,0,57), -- retail
+('Hive Fortress -> Front of the Dion Castle Gate',20019,19888,153395,-3144,0,0,57), -- retail
+('Hive Fortress -> Cruma Marshlands',20020,5106,126916,-3664,500,0,57), -- retail
+('Hive Fortress -> Fortress of Resistance',20021,47382,111278,-2104,500,0,57), -- retail
+('Hive Fortress -> Plains of Dion',20022,630,179184,-3720,500,0,57), -- retail
+('Hive Fortress -> Tanor Canyon',20023,60374,164301,-2856,500,0,57), -- retail
+-- Valley Fortress
+('Valley Fortress -> Fortress North Gate',20024,126066,120350,-2584,0,0,57), -- retail
+('Valley Fortress -> Fortress South Gate',20025,126023,125853,-2584,0,0,57), -- retail
+('Valley Fortress -> Giran Town Square',20026,81749,149171,-3464,0,0,57), -- retail
+('Valley Fortress -> Front of the Giran Castle Gate',20027,107954,145841,-3224,0,0,57), -- retail
+('Valley Fortress -> Breka\'s Stronghold',20028,85546,131328,-3672,500,0,57), -- retail
+('Valley Fortress -> Devil\'s Isle',20029,43408,206881,-3752,500,0,57), -- retail
+('Valley Fortress -> Dragon Valley',20030,73024,118485,-3720,500,0,57), -- retail
+('Valley Fortress -> Tanor Canyon',20031,60374,164301,-2856,500,0,57), -- retail
+-- Ivory Fortress
+('Ivory Fortress -> Fortress North Gate',20032,74367,2533,-3040,0,0,57), -- retail
+('Ivory Fortress -> Fortress South Gate',20033,71388,6235,-3032,0,0,57), -- retail
+('Ivory Fortress -> Oren Town Square',20034,82323,55466,-1480,0,0,57), -- retail
+('Ivory Fortress -> Front of the Oren Castle Gate',20035,75648,39380,-2952,0,0,57), -- retail
+('Ivory Fortress -> Sea of Spores',20036,64328,26803,-3768,500,0,57), -- retail
+('Ivory Fortress -> Enchanted Valley, Southern Region',20037,124904,61992,-3973,500,0,57), -- retail
+('Ivory Fortress -> Enchanted Valley, Northern Region',20038,104426,33746,-3825,500,0,57), -- retail
+('Ivory Fortress -> Ancient Battleground',20039,118509,-4779,-4000,500,0,57), -- retail
+-- Narsell Fortress
+('Narsell Fortress -> Fortress West Gate',20040,153112,56872,-3256,0,0,57), -- retail
+('Narsell Fortress -> Fortress East Gate',20041,156730,53921,-3256,0,0,57), -- retail
+('Narsell Fortress -> Aden Town Square',20042,147450,28081,-2294,0,0,57), -- retail
+('Narsell Fortress -> Front of the Aden Castle Gate',20043,147428,20161,-2008,0,0,57), -- retail
+('Narsell Fortress -> Ancient Battleground',20044,118509,-4779,-4000,500,0,57), -- retail
+('Narsell Fortress -> Enchanted Valley, Southern Region',20045,124904,61992,-3973,500,0,57), -- retail
+('Narsell Fortress -> Enchanted Valley, Northern Region',20046,104426,33746,-3825,500,0,57), -- retail
+('Narsell Fortress -> Blazing Swamp',20047,155310,-16339,-3320,500,0,57), -- retail
+('Narsell Fortress -> The Giant\'s Cave Upper Layer',20048,183985,61424,-3992,500,0,57), -- retail
+('Narsell Fortress -> The Giant\'s Cave Lower Layer',20049,191754,56760,-7624,500,0,57), -- retail
+-- Bayou Fortress
+('Bayou Fortress -> Fortress North Gate',20050,189894,36746,-3408,0,0,57), -- retail
+('Bayou Fortress -> Fortress South Gate',20051,189914,42242,-3408,0,0,57), -- retail
+('Bayou Fortress -> Aden Town Square',20052,147450,28081,-2294,0,0,57), -- retail
+('Bayou Fortress -> Front of the Aden Castle Gate',20053,147428,20161,-2008,0,0,57), -- retail
+('Bayou Fortress -> Ancient Battleground',20054,118509,-4779,-4000,500,0,57), -- retail
+('Bayou Fortress -> Enchanted Valley, Southern Region',20055,124904,61992,-3973,500,0,57), -- retail
+('Bayou Fortress -> Enchanted Valley, Northern Region',20056,104426,33746,-3825,500,0,57), -- retail
+('Bayou Fortress -> Blazing Swamp',20057,155310,-16339,-3320,500,0,57), -- retail
+('Bayou Fortress -> The Giant\'s Cave Upper Layer',20058,183985,61424,-3992,500,0,57), -- retail
+('Bayou Fortress -> The Giant\'s Cave Lower Layer',20059,191754,56760,-7624,500,0,57), -- retail
+-- White Sands Fortress
+('White Sands Fortress -> Fortress West Gate',20060,116336,203775,-3336,0,0,57), -- retail
+('White Sands Fortress -> Fortress East Gate',20061,120487,206093,-3336,0,0,57), -- retail
+('White Sands Fortress -> Heine Town Square',20062,111455,219400,-3546,0,0,57), -- retail
+('White Sands Fortress -> Front of the Innadril Castle Gate',20063,117608,241660,-1408,0,0,57), -- retail
+('White Sands Fortress -> Field of Silence Center',20064,80987,182423,-3504,500,0,57), -- retail
+('White Sands Fortress -> Field of Whispers Center',20065,86147,218268,-3592,500,0,57), -- retail
+('White Sands Fortress -> The Center of Alligator Island',20066,113708,178387,-3232,500,0,57), -- retail
+('White Sands Fortress -> Inside the Garden of Eva',20067,82693,242220,-6712,500,0,57), -- retail
+-- Borderland Fortress
+('Borderland Fortress -> Fortress West Gate',20068,157017,-68977,-2864,0,0,57), -- retail
+('Borderland Fortress -> Fortress East Gate',20069,161618,-72057,-2864,0,0,57), -- retail
+('Borderland Fortress -> Goddard Town Square',20070,147728,-56331,-2776,0,0,57), -- retail
+('Borderland Fortress -> Front of the Goddard Castle Gate',20071,153996,-50182,-2992,500,0,57), -- retail
+('Borderland Fortress -> Varka Silenos Stronghold',20072,125740,-40864,-3736,500,0,57), -- retail
+('Borderland Fortress -> Ketra Orc Outpost',20073,146990,-67128,-3640,500,0,57), -- retail
+('Borderland Fortress -> Entrance to the Forge of the Gods',20074,169018,-116303,-2432,500,0,57), -- retail
+('Borderland Fortress -> Wall of Argos',20075,165054,-47861,-3560,500,0,57), -- retail
+-- Swamp Fortress
+('Swamp Fortress -> Fortress North Gate',20076,68692,-63928,-2784,0,0,57), -- retail
+('Swamp Fortress -> Fortress South Gate',20077,70820,-58862,-2784,0,0,57), -- retail
+('Swamp Fortress -> Rune Town Square',20078,43889,-49101,-792,0,0,57), -- retail
+('Swamp Fortress -> Front of the Rune Castle Gate',20079,27400,-49180,-1320,0,0,57), -- retail
+('Swamp Fortress -> Forest of the Dead',20080,52107,-54328,-3158,500,0,57), -- retail
+('Swamp Fortress -> Wild Beast Pastures',20081,43805,-88010,-2780,500,0,57), -- retail
+('Swamp Fortress -> Swamp of Screams',20082,69340,-50203,-3314,500,0,57), -- retail
+('Swamp Fortress -> Valley of Saints',20083,65307,-71445,-3696,500,0,57), -- retail
+('Swamp Fortress -> Shyeed\'s Cavern',20084,76911,-55295,-5824,500,0,57), -- retail
+-- Archaic Fortress
+('Archaic Fortress -> Fortress West Gate',20085,107248,-140450,-2960,0,0,57), -- retail
+('Archaic Fortress -> Fortress East Gate',20086,111769,-141775,-2920,0,0,57), -- retail
+('Archaic Fortress -> Schuttgart Town Square',20087,87379,-142322,-1336,0,0,57), -- retail
+('Archaic Fortress -> Front of the Schuttgart Castle Gate',20088,76358,-145548,-1176,0,0,57), -- retail
+('Archaic Fortress -> Crypts of Disgrace',20089,47692,-115745,-3744,500,0,57), -- retail
+('Archaic Fortress -> Plunderous Plains',20090,111965,-154172,-1528,500,0,57), -- retail
+('Archaic Fortress -> Den of Evil',20091,68693,-110438,-1946,500,0,57), -- retail
+('Archaic Fortress -> Ice Merchant Cabin',20092,113903,-108752,-860,500,0,57), -- retail
+-- Floran Fortress
+('Floran Fortress -> Fortress West Gate',20093,3798,148797,-2888,0,0,57), -- retail
+('Floran Fortress -> Fortress East Gate',20094,7693,150682,-2888,0,0,57), -- retail
+('Floran Fortress -> Gludio Town Square',20095,-14393,123671,-3144,0,0,57), -- retail
+('Floran Fortress -> Dion Town Square',20096,19025,145245,-3107,0,0,57), -- retail
+('Floran Fortress -> The Ant Nest',20097,-9959,176184,-4160,500,0,57), -- retail
+('Floran Fortress -> Windawood Manor',20098,-28327,155125,-3496,500,0,57), -- retail
+('Floran Fortress -> Plains of Dion',20099,630,179184,-3720,500,0,57), -- retail
+('Floran Fortress -> Tanor Canyon',20100,60374,164301,-2856,500,0,57), -- retail
+-- Cloud Mountain Fortress
+('Cloud Mountain Fortress -> Fortress North Gate',20101,-54275,89255,-2824,0,0,57), -- retail
+('Cloud Mountain Fortress -> Fortress South Gate',20102,-52274,93334,-2816,0,0,57), -- retail
+('Cloud Mountain Fortress -> Gludio Town Square',20103,-14393,123671,-3144,0,0,57), -- retail
+('Cloud Mountain Fortress -> Oren Town Square',20104,82323,55466,-1480,0,0,57), -- retail
+('Cloud Mountain Fortress -> The Ant Nest',20105,-9959,176184,-4160,500,0,57), -- retail
+('Cloud Mountain Fortress -> Windawood Manor',20106,-28327,155125,-3496,500,0,57), -- retail
+('Cloud Mountain Fortress -> Sea of Spores',20107,64328,26803,-3768,500,0,57), -- retail
+('Cloud Mountain Fortress -> Ancient Battleground',20108,118509,-4779,-4000,500,0,57), -- retail
+-- Tanor Fortress
+('Tanor Fortress -> Fortress North Gate',20109,58923,137789,-1752,0,0,57), -- retail
+('Tanor Fortress -> Fortress South Gate',20110,61551,141036,-1752,0,0,57), -- retail
+('Tanor Fortress -> Dion Town Square',20111,19025,145245,-3107,0,0,57), -- retail
+('Tanor Fortress -> Giran Town Square',20112,81749,149171,-3464,0,0,57), -- retail
+('Tanor Fortress -> The Ant Nest',20113,-9959,176184,-4160,500,0,57), -- retail
+('Tanor Fortress -> Windawood Manor',20114,-28327,155125,-3496,500,0,57), -- retail
+('Tanor Fortress -> Dragon Valley',20115,73024,118485,-3720,500,0,57), -- retail
+('Tanor Fortress -> Tanor Canyon',20116,60374,164301,-2856,500,0,57), -- retail
+-- Dragonspine Fortress
+('Dragonspine Fortress -> Fortress North Gate',20117,12468,93196,-3424,0,0,57), -- retail
+('Dragonspine Fortress -> Fortress South Gate',20118,10494,96881,-3424,0,0,57), -- retail
+('Dragonspine Fortress -> Dion Town Square',20119,19025,145245,-3107,0,0,57), -- retail
+('Dragonspine Fortress -> Oren Town Square',20120,82323,55466,-1480,0,0,57), -- retail
+('Dragonspine Fortress -> The Ant Nest',20121,-9959,176184,-4160,500,0,57), -- retail
+('Dragonspine Fortress -> Windawood Manor',20122,-28327,155125,-3496,500,0,57), -- retail
+('Dragonspine Fortress -> Sea of Spores',20123,64328,26803,-3768,500,0,57), -- retail
+('Dragonspine Fortress -> Ancient Battleground',20124,118509,-4779,-4000,500,0,57), -- retail
+-- Antharas Fortress
+('Antharas Fortress -> Fortress West Gate',20125,77834,89176,-2880,0,0,57), -- retail
+('Antharas Fortress -> Fortress East Gate',20126,80441,92831,-2880,0,0,57), -- retail
+('Antharas Fortress -> Oren Town Square',20127,82323,55466,-1480,0,0,57), -- retail
+('Antharas Fortress -> Giran Town Square',20128,81749,149171,-3464,0,0,57), -- retail
+('Antharas Fortress -> Sea of Spores',20129,64328,26803,-3768,500,0,57), -- retail
+('Antharas Fortress -> Ancient Battleground',20130,118509,-4779,-4000,500,0,57), -- retail
+('Antharas Fortress -> Dragon Valley',20131,73024,118485,-3720,500,0,57), -- retail
+('Antharas Fortress -> Tanor Canyon',20132,60374,164301,-2856,500,0,57), -- retail
+-- Western Fortress
+('Western Fortress -> Fortress North Gate',20133,112356,-17243,-992,0,0,57), -- retail
+('Western Fortress -> Fortress South Gate',20134,110349,-13288,-922,0,0,57), -- retail
+('Western Fortress -> Aden Town Square',20135,147450,28081,-2294,0,0,57), -- retail
+('Western Fortress -> Oren Town Square',20136,82323,55466,-1480,0,0,57), -- retail
+('Western Fortress -> Goddard Town Square',20137,147728,-56331,-2776,0,0,57), -- retail
+('Western Fortress -> Enchanted Valley, Northern Region',20138,104426,33746,-3825,500,0,57), -- retail
+('Western Fortress -> Blazing Swamp',20139,155310,-16339,-3320,500,0,57), -- retail
+('Western Fortress -> Ancient Battleground',20140,118509,-4779,-4000,500,0,57), -- retail
+('Western Fortress -> Entrance to the Forge of the Gods',20141,169018,-116303,-2432,500,0,57), -- retail
+('Western Fortress -> Wall of Argos',20142,165054,-47861,-3560,500,0,57), -- retail
+('Western Fortress -> The Giant\'s Cave Upper Layer',20143,183985,61424,-3992,500,0,57), -- retail
+('Western Fortress -> The Giant\'s Cave Lower Layer',20144,191754,56760,-7624,500,0,57), -- retail
+-- Hunter's Fortress
+('Hunters Fortress -> Fortress North Gate',20145,124180,93249,-2144,0,0,57), -- retail
+('Hunters Fortress -> Fortress South Gate',20146,126155,97124,-2144,0,0,57), -- retail
+('Hunters Fortress -> Aden Town Square',20147,147450,28081,-2294,0,0,57), -- retail
+('Hunters Fortress -> Giran Town Square',20148,81749,149171,-3464,0,0,57), -- retail
+('Hunters Fortress -> Enchanted Valley, Northern Region',20149,104426,33746,-3825,500,0,57), -- retail
+('Hunters Fortress -> Blazing Swamp',20150,155310,-16339,-3320,500,0,57), -- retail
+('Hunters Fortress -> Dragon Valley',20151,73024,118485,-3720,500,0,57), -- retail
+('Hunters Fortress -> Tanor Canyon',20152,60374,164301,-2856,500,0,57), -- retail
+('Hunters Fortress -> The Giant\'s Cave Upper Layer',20153,183985,61424,-3992,500,0,57), -- retail
+('Hunters Fortress -> The Giant\'s Cave Lower Layer',20154,191754,56760,-7624,500,0,57), -- retail
+-- Aaru Fortress
+('Aaru Fortress -> Fortress North Gate',20155,73205,183893,-2584,0,0,57), -- retail
+('Aaru Fortress -> Fortress South Gate',20156,72822,188128,-2584,0,0,57), -- retail
+('Aaru Fortress -> Heine Town Square',20157,111455,219400,-3546,0,0,57), -- retail
+('Aaru Fortress -> Giran Town Square',20158,81749,149171,-3464,0,0,57), -- retail
+('Aaru Fortress -> Inside the Garden of Eva',20159,82693,242220,-6712,500,0,57), -- retail
+('Aaru Fortress -> The Center of Alligator Island',20160,113708,178387,-3232,500,0,57), -- retail
+('Aaru Fortress -> Dragon Valley',20161,73024,118485,-3720,500,0,57), -- retail
+('Aaru Fortress -> Tanor Canyon',20162,60374,164301,-2856,500,0,57), -- retail
+-- Demon Fortress
+('Demon Fortress -> Fortress West Gate',20163,98920,-56423,-624,0,0,57), -- retail
+('Demon Fortress -> Fortress East Gate',20164,102390,-54320,-632,0,0,57), -- retail
+('Demon Fortress -> Rune Town Square',20165,43889,-49101,-792,0,0,57), -- retail
+('Demon Fortress -> Goddard Town Square',20166,147728,-56331,-2776,0,0,57), -- retail
+('Demon Fortress -> Swamp of Screams',20167,69340,-50203,-3314,500,0,57), -- retail
+('Demon Fortress -> Valley of Saints',20168,65307,-71445,-3696,500,0,57), -- retail
+('Demon Fortress -> Entrance to the Forge of the Gods',20169,169018,-116303,-2432,500,0,57), -- retail
+('Demon Fortress -> Wall of Argos',20170,165054,-47861,-3560,500,0,57), -- retail
+('Demon Fortress -> Shyeed\'s Cavern',20171,76911,-55295,-5824,500,0,57), -- retail
+-- Monastic Fortress
+('Monastic Fortress -> Fortress North Gate',20172,72388,-96770,-1424,0,0,57), -- retail
+('Monastic Fortress -> Fortress South Gate',20173,71937,-92600,-1416,0,0,57), -- retail
+('Monastic Fortress -> Rune Town Square',20174,43889,-49101,-792,0,0,57), -- retail
+('Monastic Fortress -> Schuttgart Town Square',20175,87379,-142322,-1336,0,0,57), -- retail
+('Monastic Fortress -> Swamp of Screams',20176,69340,-50203,-3314,500,0,57), -- retail
+('Monastic Fortress -> Valley of Saints',20177,65307,-71445,-3696,500,0,57), -- retail
+('Monastic Fortress -> Den of Evil',20178,68693,-110438,-1946,500,0,57), -- retail
+('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
+('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
