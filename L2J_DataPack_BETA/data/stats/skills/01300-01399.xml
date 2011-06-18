@@ -715,14 +715,14 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<!-- should be consumed over 4 regular intervals -->
-		<set name="target" val="TARGET_ONE" /> <!-- TODO: Check if possibly should be TARGET_GROUND -->
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<!-- set name="castRange" val="40" / -->
+		<!-- set name="effectRange" val="400" / -->
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
