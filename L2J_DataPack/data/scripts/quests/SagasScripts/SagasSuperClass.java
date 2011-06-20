@@ -146,7 +146,7 @@ public class SagasSuperClass extends QuestJython
 				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
 			}
 			else
-				st2.giveItems(Items[3], 1);
+				st2.giveItems(Items[3], Rnd.get(1, 4));
 		}
 	}
 	
