@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Polski" translator="deedlit">
+	<message id="toolName" text="SQL Account Manager" />
+
+	<message id="yesChar" text="t" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="Prawda" />
+	<message id="falseString" text="Fa³sz" />
+
+	<message id="functChooser" text="Dokonaj wyboru" />
+	<message id="functCreateAccount" text="1 - Utwórz nowe konto lub modyfikuj istniej¹ce (zmiana has³a i access level)" />
+	<message id="functAccessLevel" text="2 - Zmieñ access level" />
+	<message id="functDeleteAccount" text="3 - Usuñ konto" />
+	<message id="functListAccount" text="4 - Wyswietl konta i access levele" />
+	<message id="functExit" text="5 - Wyjscie" />
+
+	<message id="inputChoice" text="Wybór" />
+	<message id="inputUsername" text="Nazwa konta (login)" />
+	<message id="inputPassword" text="Has³o" />
+	<message id="inputAccessLevel" text="Access level" />
+
+	<message id="functListAccountChooser" text="Listing kont" />
+	<message id="functListAccountBanned" text="1 - Tylko zablokowane (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM/uprzywilejowane konta (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Zwyk³e konta (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Wszystkie" />
+	<message id="functListAccountDisplayed" text="Ilosæ wyswietlonych kont: %d" />
+
+	<message id="functAccessLevelUpdated" text="Konto %s zosta³o zaktualizowane" />
+	<message id="functAccessLevelNotExist" text="Konto %s nie istnieje" />
+
+	<message id="functDeleteAccountConfirm" text="Czy na pewno chcesz usun¹c to konto? T/N" />
+	<message id="functDeleteAccountAbort" text="Usuwanie konta przerwane" />
+	<message id="functDeleteAccountCancel" text="Usuwanie anulowane" />
+	<message id="functDeleteAccountChar" text="Usuwanie postaci %s" />
+	<message id="functDeleteAccountClan" text="Usuwanie klanu %s" />
+	<message id="functDeleteAccountComplete" text="Konto %s zosta³o usuniête" />
+	<message id="functDeleteAccountNotExist" text="Konto %s nie istnieje" />
+</localization>

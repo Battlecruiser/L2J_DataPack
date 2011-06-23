@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Chinese (China)" translator="Labman">
+	<message id="toolName" text="SQL 帐号管理" />
+
+	<message id="yesChar" text="y" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="是" />
+	<message id="falseString" text="否" />
+
+	<message id="functChooser" text="请选一个您要的功能" />
+	<message id="functCreateAccount" text="1 - 创立新帐号 或 变更已存在的帐号 (更改密码与权限等级)" />
+	<message id="functAccessLevel" text="2 - 变更权限等级" />
+	<message id="functDeleteAccount" text="3 - 删除已存在的帐号" />
+	<message id="functListAccount" text="4 - 列出现有帐号 与 权限等级" />
+	<message id="functExit" text="5 - 离开" />
+
+	<message id="inputChoice" text="您的选择" />
+	<message id="inputUsername" text="使用者名称" />
+	<message id="inputPassword" text="密码" />
+	<message id="inputAccessLevel" text="权限等级" />
+
+	<message id="functListAccountChooser" text="请选一个下面列出的模式" />
+	<message id="functListAccountBanned" text="1 - 已被封锁帐号 (权限等级 &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM/特权 帐号 (权限等级 &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - 一般玩家帐号 (权限等级 = 0)" />
+	<message id="functListAccountAll" text="4 - 列出全部" />
+	<message id="functListAccountDisplayed" text="您查询的帐号种类数量: %d" />
+
+	<message id="functAccessLevelUpdated" text="帐号 %s 已经变更完成" />
+	<message id="functAccessLevelNotExist" text="帐号 %s 不存在" />
+
+	<message id="functDeleteAccountConfirm" text="您真的要删除这个帐号? Y/N" />
+	<message id="functDeleteAccountAbort" text="略过删除" />
+	<message id="functDeleteAccountCancel" text="放弃删除" />
+	<message id="functDeleteAccountChar" text="进行删除玩家角色 %s" />
+	<message id="functDeleteAccountClan" text="进行删除血盟 %s" />
+	<message id="functDeleteAccountComplete" text="帐号 %s 已被删除" />
+	<message id="functDeleteAccountNotExist" text="帐号 %s 并不存在" />
+</localization>

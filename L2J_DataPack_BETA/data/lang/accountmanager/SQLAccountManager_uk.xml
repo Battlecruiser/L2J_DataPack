@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Українська" translator="qwerty13">
+	<message id="toolName" text="SQL Менеджер управління обліковими записами" />
+
+	<message id="yesChar" text="т" />
+	<message id="noChar" text="н" />
+	<message id="trueString" text="True" />
+	<message id="falseString" text="False" />
+
+	<message id="functChooser" text="Будь-ласка, оберіть дію" />
+	<message id="functCreateAccount" text="1 - Створити новий або поновити існуючий обліковий запис (змінити пароль та рівень доступу)" />
+	<message id="functAccessLevel" text="2 - Змінити рівень доступу" />
+	<message id="functDeleteAccount" text="3 - Видалити існуючий обліковий запис" />
+	<message id="functListAccount" text="4 - Показати облікові записи та рівень доступу" />
+	<message id="functExit" text="5 - Вихід" />
+
+	<message id="inputChoice" text="Оберіть" />
+	<message id="inputUsername" text="Логін" />
+	<message id="inputPassword" text="Пароль" />
+	<message id="inputAccessLevel" text="Рівень доступу" />
+
+	<message id="functListAccountChooser" text="Будь-ласка, оберіть режим перегляду" />
+	<message id="functListAccountBanned" text="1 - Тільки заблоковані облікові записи (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - ГМ\привілегії або облікові записи з рівнем доступу (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Облікові записи користувачів (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Показати все" />
+	<message id="functListAccountDisplayed" text="Відображені облікові записи: %d" />
+
+	<message id="functAccessLevelUpdated" text="Обліковий запис %s був змінений" />
+	<message id="functAccessLevelNotExist" text="Обліковий запис %s не існує" />
+
+	<message id="functDeleteAccountConfirm" text="Ви дійсно бажаєте видалити цей обліковий запис? Т/Н" />
+	<message id="functDeleteAccountAbort" text="Видалення скасовано" />
+	<message id="functDeleteAccountCancel" text="Видалення скасовано" />
+	<message id="functDeleteAccountChar" text="Видалення персонажа %s" />
+	<message id="functDeleteAccountClan" text="Видалення клану %s" />
+	<message id="functDeleteAccountComplete" text="Обліковий запис %s було змінено" />
+	<message id="functDeleteAccountNotExist" text="Обліковий запис %s не існує" />
+</localization>

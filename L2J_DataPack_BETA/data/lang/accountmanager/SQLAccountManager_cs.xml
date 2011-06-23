@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Czech" translator="St3et/Gladicek">
+	<message id="toolName" text="SQL Account Manager" />
+
+	<message id="yesChar" text="A" />
+	<message id="noChar" text="N" />
+	<message id="trueString" text="Pravda" />
+	<message id="falseString" text="Lež" />
+
+	<message id="functChooser" text="Prosím vyberte si z uvedených možností" />
+	<message id="functCreateAccount" text="1 - Vytvoøit nový úèet nebo upravit stávající (zmìna hesla a acess levelu)" />
+	<message id="functAccessLevel" text="2 - Zmìna acess levelu" />
+	<message id="functDeleteAccount" text="3 - Odstranit úèet" />
+	<message id="functListAccount" text="4 - Seznam úètù a access levlù" />
+	<message id="functExit" text="5 - Odejít" />
+
+	<message id="inputChoice" text="Váš výbìr" />
+	<message id="inputUsername" text="Název úètu (login)" />
+	<message id="inputPassword" text="Heslo" />
+	<message id="inputAccessLevel" text="Access level" />
+
+	<message id="functListAccountChooser" text="Prosím vyberte si režim výpisu" />
+	<message id="functListAccountBanned" text="1 - Pouze zablokované (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM úèet (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Obyèejný úèet (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Všechny" />
+	<message id="functListAccountDisplayed" text="Ukázat úèty: %d" />
+
+	<message id="functAccessLevelUpdated" text="Úèet %s byl aktualizován" />
+	<message id="functAccessLevelNotExist" text="Úèet %s neexistuje" />
+
+	<message id="functDeleteAccountConfirm" text="Jste si jistý, že chcete smazat tento úèet? A/N" />
+	<message id="functDeleteAccountAbort" text="Odstranìní zrušeno" />
+	<message id="functDeleteAccountCancel" text="Odstranìní zrušeno" />
+	<message id="functDeleteAccountChar" text="Odstranìní %s" />
+	<message id="functDeleteAccountClan" text="Odstranìní klanu %s" />
+	<message id="functDeleteAccountComplete" text="Úèet %s byl smazán" />
+	<message id="functDeleteAccountNotExist" text="Úèet %s neexistuje" />
+</localization>
