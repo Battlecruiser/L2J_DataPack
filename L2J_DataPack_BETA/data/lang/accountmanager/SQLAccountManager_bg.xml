@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="български" translator="UnAfraid">
+	<message id="toolName" text="Управление на акаунти" />
+
+	<message id="yesChar" text="y" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="True" />
+	<message id="falseString" text="False" />
+
+	<message id="functChooser" text="Моля изберете опция" />
+	<message id="functCreateAccount" text="1 - Създаване или промяна на акаунт (смяна на парола и access level)" />
+	<message id="functAccessLevel" text="2 - Промяна на access level" />
+	<message id="functDeleteAccount" text="3 - Изтриване на акаунт" />
+	<message id="functListAccount" text="4 - Списък с акаунти и access levels" />
+	<message id="functExit" text="5 - Изход" />
+
+	<message id="inputChoice" text="Вашият избор" />
+	<message id="inputUsername" text="Потребителско име" />
+	<message id="inputPassword" text="Парола" />
+	<message id="inputAccessLevel" text="Access level" />
+
+	<message id="functListAccountChooser" text="Покажи само акаунтите, които са" />
+	<message id="functListAccountBanned" text="1 - Баннати (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM/Привилигировани (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Нормални (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Всички" />
+	<message id="functListAccountDisplayed" text="Показани акаунти: %d" />
+
+	<message id="functAccessLevelUpdated" text="Акаунтът %s беше променен" />
+	<message id="functAccessLevelNotExist" text="Акаунтът %s не съществува" />
+
+	<message id="functDeleteAccountConfirm" text="Желаете ли да изтриете този акаунт? Y/N" />
+	<message id="functDeleteAccountAbort" text="Изтриването беше отменено" />
+	<message id="functDeleteAccountCancel" text="Изтриването беше отказано" />
+	<message id="functDeleteAccountChar" text="Изтриване на герой %s" />
+	<message id="functDeleteAccountClan" text="Изтриване на клан %s" />
+	<message id="functDeleteAccountComplete" text="Акаунтът %s беше изтрит" />
+	<message id="functDeleteAccountNotExist" text="Акаунътъ %s не съществува" />
+</localization>

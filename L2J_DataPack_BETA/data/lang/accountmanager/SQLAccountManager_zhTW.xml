@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Chinese (Taiwan)" translator="Labman">
+	<message id="toolName" text="SQL 帳號管理" />
+
+	<message id="yesChar" text="y" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="是" />
+	<message id="falseString" text="否" />
+
+	<message id="functChooser" text="請選一個您要的功能" />
+	<message id="functCreateAccount" text="1 - 創立新帳號 或 變更已存在的帳號 (更改密碼與權限等級)" />
+	<message id="functAccessLevel" text="2 - 變更權限等級" />
+	<message id="functDeleteAccount" text="3 - 刪除已存在的帳號" />
+	<message id="functListAccount" text="4 - 列出現有帳號 與 權限等級" />
+	<message id="functExit" text="5 - 離開" />
+
+	<message id="inputChoice" text="您的選擇" />
+	<message id="inputUsername" text="使用者名稱" />
+	<message id="inputPassword" text="密碼" />
+	<message id="inputAccessLevel" text="權限等級" />
+
+	<message id="functListAccountChooser" text="請選一個下面列出的模式" />
+	<message id="functListAccountBanned" text="1 - 已被封鎖帳號 (權限等級 &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM/特權 帳號 (權限等級 &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - 一般玩家帳號 (權限等級 = 0)" />
+	<message id="functListAccountAll" text="4 - 列出全部" />
+	<message id="functListAccountDisplayed" text="您查詢的帳號種類數量: %d" />
+
+	<message id="functAccessLevelUpdated" text="帳號 %s 已經變更完成" />
+	<message id="functAccessLevelNotExist" text="帳號 %s 不存在" />
+
+	<message id="functDeleteAccountConfirm" text="您真的要刪除這個帳號? Y/N" />
+	<message id="functDeleteAccountAbort" text="略過刪除" />
+	<message id="functDeleteAccountCancel" text="放棄刪除" />
+	<message id="functDeleteAccountChar" text="進行刪除玩家角色 %s" />
+	<message id="functDeleteAccountClan" text="進行刪除血盟 %s" />
+	<message id="functDeleteAccountComplete" text="帳號 %s 已被刪除" />
+	<message id="functDeleteAccountNotExist" text="帳號 %s 並不存在" />
+</localization>
