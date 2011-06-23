@@ -804,9 +804,14 @@
 		</cond>
 	</skill>
 	<skill id="6686" levels="1" name="Sacred Protector Cancel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Monastery of Silence Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateAbnormals" val="pa_up,9;pd_up,9" />
+		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 	</skill>
 	<skill id="6687" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
@@ -822,11 +827,25 @@
 		</for>
 	</skill>
 	<skill id="6688" levels="1" name="Soup of Failure">
-		<!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="350" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
+		<for>
+			<!-- 0.02%HP * 3 during 180 seconds (NOTE: using 3 in dot for now, due support for dot in % is not done) -->
+			<effect count="60" name="DamOverTime" abnormalTime="3" val="3" abnormalLvl="2" abnormalType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6689" levels="1" name="Absorb HP MP">
 		<set name="target" val="TARGET_NONE" />
