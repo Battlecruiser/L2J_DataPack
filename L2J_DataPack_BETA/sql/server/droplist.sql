@@ -33450,79 +33450,79 @@ INSERT INTO `droplist` VALUES
 (22793,15637,1,1,-1,2000),-- Vesper Shaper Piece
 (22793,9628,1,1,-1,60000),-- Leonard
 -- Solina Knights
-(18809,57,1300,2268,0,700000),-- Adena
-(18809,15667,1,1,1,2000),-- Sealed Vesper Gauntlet Piece
-(18809,15671,1,1,1,2000),-- Sealed Vesper Leather Gloves Piece
-(18809,15674,1,1,1,2000),-- Sealed Vesper Gloves Piece
-(18809,15668,1,1,1,2000),-- Sealed Vesper Boots Piece
-(18809,15672,1,1,1,2000),-- Sealed Vesper Leather Boots Piece
-(18809,15675,1,1,1,2000),-- Sealed Vesper Shoes Piece
-(18809,14109,1,1,1,6),-- Sealed Vesper Gauntlet
-(18809,14113,1,1,1,6),-- Sealed Vesper Leather Gloves
-(18809,14116,1,1,1,6),-- Sealed Vesper Gloves
-(18809,14110,1,1,1,6),-- Sealed Vesper Boots
-(18809,14114,1,1,1,6),-- Sealed Vesper Leather Boots
-(18809,14117,1,1,1,6),-- Sealed Vesper Shoes
-(18809,15801,1,1,2,60),-- Recipe - Sealed Vesper Gauntlet (60%)
-(18809,15802,1,1,2,60),-- Recipe - Sealed Vesper Leather Gloves (60%)
-(18809,15803,1,1,2,60),-- Recipe - Sealed Vesper Gloves (60%)
-(18809,15804,1,1,2,60),-- Recipe - Sealed Vesper Boots (60%)
-(18809,15805,1,1,2,60),-- Recipe - Sealed Vesper Leather Boots (60%)
-(18809,15806,1,1,2,60),-- Recipe - Sealed Vesper Shoes (60%)
-(18809,1879,1,1,2,58200),-- Cokes
-(18809,1885,1,1,2,26200),-- High Grade Suede
-(18809,9628,1,1,2,3200),-- Leonard
-(18809,9629,1,1,2,1400),-- Adamantine
-(18809,9630,1,1,2,1600),-- Orichalcum
-(18809,9573,1,1,200,4500),-- Life Stone: level 80
-(18809,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
-(18809,9575,1,1,200,110),-- High-Grade Life Stone: level 80
-(18809,15801,1,1,-1,600),-- Recipe - Sealed Vesper Gauntlet (60%)
-(18809,15802,1,1,-1,600),-- Recipe - Sealed Vesper Leather Gloves (60%)
-(18809,15803,1,1,-1,600),-- Recipe - Sealed Vesper Gloves (60%)
-(18809,15804,1,1,-1,600),-- Recipe - Sealed Vesper Boots (60%)
-(18809,15805,1,1,-1,600),-- Recipe - Sealed Vesper Leather Boots (60%)
-(18809,15806,1,1,-1,600),-- Recipe - Sealed Vesper Shoes (60%)
-(18809,15667,1,1,-1,6000),-- Sealed Vesper Gauntlet Piece
-(18809,15671,1,1,-1,6000),-- Sealed Vesper Leather Gloves Piece
-(18809,15674,1,1,-1,6000),-- Sealed Vesper Gloves Piece
-(18809,15668,1,1,-1,6000),-- Sealed Vesper Boots Piece
-(18809,15672,1,1,-1,6000),-- Sealed Vesper Leather Boots Piece
-(18809,15675,1,1,-1,6000),-- Sealed Vesper Shoes Piece
-(18809,9630,1,1,-1,40000),-- Orichalcum
+(18909,15667,1,1,-1,8451),-- [sealed_vesper_gauntlet_piece]
+(18909,15671,1,1,-1,8451),-- [sealed_vesper_leather_gloves_piece]
+(18909,15674,1,1,-1,8451),-- [sealed_vesper_gloves_piece]
+(18909,15668,1,1,-1,8451),-- [sealed_vesper_boots_piece]
+(18909,15672,1,1,-1,8451),-- [sealed_vesper_leather_boots_piece]
+(18909,15675,1,1,-1,8451),-- [sealed_vesper_shoes_piece]
+(18909,9630,1,1,-1,5805),-- [oricalcum]
+(18909,15801,1,1,-1,945),-- [rp_sealed_vesper_gauntlet_i]
+(18909,15802,1,1,-1,945),-- [rp_sealed_vesper_leather_gloves_i]
+(18909,15803,1,1,-1,945),-- [rp_sealed_vesper_gloves_i]
+(18909,15804,1,1,-1,945),-- [rp_sealed_vesper_boots_i]
+(18909,15805,1,1,-1,945),-- [rp_sealed_vesper_leather_boots_i]
+(18909,15806,1,1,-1,945),-- [rp_sealed_vesper_shoes_i]
+(18909,57,1170,2361,0,700000),-- [adena]
+(18909,14109,1,1,1,3),-- [sealed_vesper_gauntlet]
+(18909,14113,1,1,1,3),-- [sealed_vesper_leather_gloves]
+(18909,14116,1,1,1,3),-- [sealed_vesper_gloves]
+(18909,14110,1,1,1,3),-- [sealed_vesper_boots]
+(18909,14114,1,1,1,3),-- [sealed_vesper_leather_boots]
+(18909,14117,1,1,1,3),-- [sealed_vesper_shoes]
+(18909,15667,1,1,1,1503),-- [sealed_vesper_gauntlet_piece]
+(18909,15671,1,1,1,1503),-- [sealed_vesper_leather_gloves_piece]
+(18909,15674,1,1,1,1503),-- [sealed_vesper_gloves_piece]
+(18909,15668,1,1,1,1503),-- [sealed_vesper_boots_piece]
+(18909,15672,1,1,1,1503),-- [sealed_vesper_leather_boots_piece]
+(18909,15675,1,1,1,1503),-- [sealed_vesper_shoes_piece]
+(18909,1879,1,1,2,28026),-- [cokes]
+(18909,1885,1,1,2,14013),-- [high_grade_suede]
+(18909,9628,1,1,2,1318),-- [renad]
+(18909,9630,1,1,2,885),-- [oricalcum]
+(18909,9629,1,1,2,731),-- [adamantium]
+(18909,9573,1,1,2,1167),-- [general_80_s]
+(18909,9574,1,1,2,291),-- [special_80_s]
+(18909,9575,1,1,2,29),-- [rare_80_s]
+(18909,15801,1,1,2,144),-- [rp_sealed_vesper_gauntlet_i]
+(18909,15802,1,1,2,144),-- [rp_sealed_vesper_leather_gloves_i]
+(18909,15803,1,1,2,144),-- [rp_sealed_vesper_gloves_i]
+(18909,15804,1,1,2,144),-- [rp_sealed_vesper_boots_i]
+(18909,15805,1,1,2,144),-- [rp_sealed_vesper_leather_boots_i]
+(18909,15806,1,1,2,144),-- [rp_sealed_vesper_shoes_i]
 -- Solina Knight Captain
-(18810,57,1809,3358,0,700000),-- Adena
-(18810,15667,1,1,1,2500),-- Sealed Vesper Gauntlet Piece
-(18810,15671,1,1,1,2500),-- Sealed Vesper Leather Gloves Piece
-(18810,15674,1,1,1,2500),-- Sealed Vesper Gloves Piece
-(18810,15668,1,1,1,2500),-- Sealed Vesper Boots Piece
-(18810,15672,1,1,1,2500),-- Sealed Vesper Leather Boots Piece
-(18810,15675,1,1,1,2500),-- Sealed Vesper Shoes Piece
-(18810,14109,1,1,1,8),-- Sealed Vesper Gauntlet
-(18810,14113,1,1,1,8),-- Sealed Vesper Leather Gloves
-(18810,14116,1,1,1,8),-- Sealed Vesper Gloves
-(18810,14110,1,1,1,8),-- Sealed Vesper Boots
-(18810,14114,1,1,1,8),-- Sealed Vesper Leather Boots
-(18810,14117,1,1,1,8),-- Sealed Vesper Shoes
-(18810,1895,1,1,2,81200),-- Metallic Fiber
-(18810,4043,1,1,2,8200),-- Asofe
-(18810,4040,1,1,2,5200),-- Mold Lubricant
-(18810,4042,1,1,2,4500),-- Enria
-(18810,10483,1,1,200,4500),-- Life Stone: level 82
-(18810,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
-(18810,10485,1,1,200,110),-- High-Grade Life Stone: level 82
-(18810,15801,1,1,-1,600),-- Recipe - Sealed Vesper Gauntlet (60%)
-(18810,15802,1,1,-1,600),-- Recipe - Sealed Vesper Leather Gloves (60%)
-(18810,15803,1,1,-1,600),-- Recipe - Sealed Vesper Gloves (60%)
-(18810,15804,1,1,-1,600),-- Recipe - Sealed Vesper Boots (60%)
-(18810,15805,1,1,-1,600),-- Recipe - Sealed Vesper Leather Boots (60%)
-(18810,15806,1,1,-1,600),-- Recipe - Sealed Vesper Shoes (60%)
-(18810,15667,1,1,-1,6000),-- Sealed Vesper Gauntlet Piece
-(18810,15671,1,1,-1,6000),-- Sealed Vesper Leather Gloves Piece
-(18810,15674,1,1,-1,6000),-- Sealed Vesper Gloves Piece
-(18810,15668,1,1,-1,6000),-- Sealed Vesper Boots Piece
-(18810,15672,1,1,-1,6000),-- Sealed Vesper Leather Boots Piece
-(18810,15675,1,1,-1,6000),-- Sealed Vesper Shoes Piece
+(18910,15667,1,1,-1,13541),-- [sealed_vesper_gauntlet_piece]
+(18910,15671,1,1,-1,13541),-- [sealed_vesper_leather_gloves_piece]
+(18910,15674,1,1,-1,13541),-- [sealed_vesper_gloves_piece]
+(18910,15668,1,1,-1,13541),-- [sealed_vesper_boots_piece]
+(18910,15672,1,1,-1,13541),-- [sealed_vesper_leather_boots_piece]
+(18910,15675,1,1,-1,13541),-- [sealed_vesper_shoes_piece]
+(18910,15801,1,1,-1,1515),-- [rp_sealed_vesper_gauntlet_i]
+(18910,15802,1,1,-1,1515),-- [rp_sealed_vesper_leather_gloves_i]
+(18910,15803,1,1,-1,1515),-- [rp_sealed_vesper_gloves_i]
+(18910,15804,1,1,-1,1515),-- [rp_sealed_vesper_boots_i]
+(18910,15805,1,1,-1,1515),-- [rp_sealed_vesper_leather_boots_i]
+(18910,15806,1,1,-1,1515),-- [rp_sealed_vesper_shoes_i]
+(18910,57,1730,3492,0,700000),-- [adena]
+(18910,14109,1,1,1,4),-- [sealed_vesper_gauntlet]
+(18910,14113,1,1,1,4),-- [sealed_vesper_leather_gloves]
+(18910,14116,1,1,1,4),-- [sealed_vesper_gloves]
+(18910,14110,1,1,1,4),-- [sealed_vesper_boots]
+(18910,14114,1,1,1,4),-- [sealed_vesper_leather_boots]
+(18910,14117,1,1,1,4),-- [sealed_vesper_shoes]
+(18910,15667,1,1,1,2223),-- [sealed_vesper_gauntlet_piece]
+(18910,15671,1,1,1,2223),-- [sealed_vesper_leather_gloves_piece]
+(18910,15674,1,1,1,2223),-- [sealed_vesper_gloves_piece]
+(18910,15668,1,1,1,2223),-- [sealed_vesper_boots_piece]
+(18910,15672,1,1,1,2223),-- [sealed_vesper_leather_boots_piece]
+(18910,15675,1,1,1,2223),-- [sealed_vesper_shoes_piece]
+(18910,1895,1,1,2,142118),-- [metallic_fiber]
+(18910,4040,1,1,2,9948),-- [mold_lubricant]
+(18910,4042,1,1,2,8290),-- [enria]
+(18910,4043,1,1,2,16580),-- [asofe]
+(18910,10483,1,1,2,3454),-- [general_82_s]
+(18910,10484,1,1,2,863),-- [special_82_s]
+(18910,10485,1,1,2,86),-- [rare_82_s]
 -- Divinity Judge (84)
 (22794,15639,1,1,-1,13732), -- [vesper_stormer_piece]
 (22794,959,1,1,-1,922), -- [scrl_of_ench_wp_s]
