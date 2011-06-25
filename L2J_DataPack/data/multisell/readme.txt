@@ -78,7 +78,9 @@ of this directory a little bit.
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 306893002.xml -> Shadow weaponry system. C-grade coupons exchange
 306893003.xml -> Shadow weaponry system. D/C-grade coupons exchange
-319463001.xml -> Shadow weaponry system. Adena exchange
+319463001.xml -> Shadow weaponry system. D-grade adena exchange
+319463002.xml -> Shadow weaponry system. C-grade adena exchange
+319463003.xml -> Shadow weaponry system. B-grade adena exchange
 
 300974001.xml -> Prestigious Items Hall: Galladucci (weapons)
 300984001.xml -> Prestigious Items Hall: Alexandria (armors)
