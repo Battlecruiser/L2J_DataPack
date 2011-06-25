@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="localization">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="message" minOccurs="1" maxOccurs="30">
+					<xs:complexType>
+						<xs:attribute name="id" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="falseString" />
+									<xs:enumeration value="functAccessLevel" />
+									<xs:enumeration value="functAccessLevelNotExist" />
+									<xs:enumeration value="functAccessLevelUpdated" />
+									<xs:enumeration value="functChooser" />
+									<xs:enumeration value="functCreateAccount"></xs:enumeration>
+									<xs:enumeration value="functDeleteAccount" />
+									<xs:enumeration value="functDeleteAccountAbort" />
+									<xs:enumeration value="functDeleteAccountCancel" />
+									<xs:enumeration value="functDeleteAccountChar" />
+									<xs:enumeration value="functDeleteAccountClan" />
+									<xs:enumeration value="functDeleteAccountComplete" />
+									<xs:enumeration value="functDeleteAccountConfirm" />
+									<xs:enumeration value="functDeleteAccountNotExist" />
+									<xs:enumeration value="functExit" />
+									<xs:enumeration value="functListAccount" />
+									<xs:enumeration value="functListAccountAll" />
+									<xs:enumeration value="functListAccountBanned" />
+									<xs:enumeration value="functListAccountChooser" />
+									<xs:enumeration value="functListAccountDisplayed" />
+									<xs:enumeration value="functListAccountPrivileged" />
+									<xs:enumeration value="functListAccountRegular" />
+									<xs:enumeration value="inputAccessLevel" />
+									<xs:enumeration value="inputChoice" />
+									<xs:enumeration value="inputPassword" />
+									<xs:enumeration value="inputUsername" />
+									<xs:enumeration value="noChar" />
+									<xs:enumeration value="toolName" />
+									<xs:enumeration value="trueString" />
+									<xs:enumeration value="yesChar" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="text" type="xs:normalizedString" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="extends" type="xs:normalizedString" use="optional" />
+			<xs:attribute name="lang" type="xs:normalizedString" use="required" />
+			<xs:attribute name="translator" type="xs:normalizedString" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
