@@ -494,98 +494,105 @@
 		</for>
 	</skill>
 	<skill id="5230" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
+		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="195" />
-		<set name="power" val="2784" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
-		<set name="hitTime" val="5000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isDebuff" val="true" />
+		<set name="power" val="2784" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5231" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="390" />
-		<set name="power" val="5704" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
-		<set name="hitTime" val="3000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isDebuff" val="true" />
+		<set name="power" val="5704" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5232" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="779" />
-		<set name="power" val="11407" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
-		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isDebuff" val="true" />
+		<set name="power" val="11407" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5233" levels="1" name="Weight Spin Attack - Weak">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
+		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="149" />
-		<set name="power" val="4563" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
-		<set name="hitTime" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5234" levels="1" name="Weight Spin Attack - Mid">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="149" />
-		<set name="power" val="7985" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
 		<set name="hitTime" val="3000" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="260" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="7685" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5235" levels="1" name="Weight Spin Attack - Strong">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="149" />
-		<set name="power" val="13688" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="445" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="13688" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5236" levels="1" name="Speed Up">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="25" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="aggroPoints" val="100" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -593,14 +600,15 @@
 		</for>
 	</skill>
 	<skill id="5237" levels="1" name="Speed Down">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Tully Skills -->
 		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="25" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
