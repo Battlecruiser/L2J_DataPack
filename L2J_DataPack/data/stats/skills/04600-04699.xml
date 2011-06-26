@@ -322,18 +322,19 @@
 		<set name="aggroPoints" val="100" />
 	</skill>
 	<skill id="4614" levels="12" name="NPC Death Bomb">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
-		<table name="#power"> 18 26 38 52 68 85 102 119 136 153 170 187 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 387 </table>
+		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
+		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="4615" levels="12" name="Bleed">
 		<table name="#dmg"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>

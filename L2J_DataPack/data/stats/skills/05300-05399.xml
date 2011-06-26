@@ -1097,9 +1097,19 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="isMagic" val="true" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
 		<set name="target" val="TARGET_NONE" />
