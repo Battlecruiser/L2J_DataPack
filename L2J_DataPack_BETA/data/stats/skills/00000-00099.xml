@@ -1854,38 +1854,40 @@
 		</enchant2for>
 	</skill>
 	<skill id="95" levels="20" name="Cripple" enchantGroup1="1" enchantGroup2="1">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
 		<table name="#magicLvl"> 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 10 11 13 14 16 18 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<table name="#abnormalLvl"> 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
+		<table name="#runSpd"> 0.8 0.8 0.8 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="296" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1604" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="2" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1600" />
-		<set name="coolTime" val="296" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="3" abnormalType="speed_down">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant2for>
 	</skill>
