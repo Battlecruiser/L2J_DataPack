@@ -38,8 +38,6 @@ public class Cancel implements ISkillHandler
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.CANCEL,
-		L2SkillType.MAGE_BANE,
-		L2SkillType.WARRIOR_BANE
 	};
 	
 	/**
@@ -82,19 +80,9 @@ public class Cancel implements ISkillHandler
 		final int cancelLvl, minRate, maxRate;
 		
 		cancelLvl = skill.getMagicLevel();
-		switch (skill.getSkillType())
-		{
-			case MAGE_BANE:
-			case WARRIOR_BANE:
-				minRate = 40;
-				maxRate = 95;
-				break;
-			default:
-				minRate = 25;
-				maxRate = 75;
-				break;
-		}
-		
+		minRate = 25;
+		maxRate = 80;
+
 		for (L2Object obj : targets)
 		{
 			if (!(obj instanceof L2Character))
