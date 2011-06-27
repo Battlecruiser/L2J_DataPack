@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS `random_spawn_loc`;
 CREATE TABLE `random_spawn_loc` (
-  `groupId` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `x` mediumint(6) NOT NULL DEFAULT '0',
-  `y` mediumint(6) NOT NULL DEFAULT '0',
-  `z` mediumint(6) NOT NULL DEFAULT '0',
-  `heading` mediumint(6) NOT NULL DEFAULT '-1',
+  `groupId` tinyint(3) unsigned NOT NULL,
+  `x` mediumint(6) NOT NULL,
+  `y` mediumint(6) NOT NULL,
+  `z` mediumint(6) NOT NULL,
+  `heading` mediumint(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`groupId`,`x`,`y`,`z`,`heading`)
 );
 
@@ -19,8 +19,8 @@ INSERT INTO `random_spawn_loc` VALUES
 (8,146986,29566,-2271,32500),
 
 -- Gatekeeper Spirit
-(9,183280,-11905,-4904,-1),
-(10,185662,-13093,-5498,-1),
+(9,184410,-13102,-5488,0), -- exit_necropolis_boss_anakim
+(10,184410,-10111,-5488,0), -- exit_necropolis_boss_lilith
 
 -- Merchant of Mammon
 (11,-52172,78884,-4741,-1), -- Necropolis of Devotion
