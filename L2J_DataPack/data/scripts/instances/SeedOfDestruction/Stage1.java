@@ -62,17 +62,18 @@ import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-/*
-Todo:
-- no random mob spawns after mob kill
-- implement Seed of Destruction Defense state and one party instances
-- use proper zone spawn system
-Contributing authors: Gigiikun
-Please maintain consistency between the Seed scripts.
-*/
+/**
+ * TODO:
+ * <ul>
+ * 	<li>No random mob spawns after mob kill.</li>
+ * 	<li>Implement Seed of Destruction Defense state and one party instances.</li>
+ * 	<li>Use proper zone spawn system.</li>
+ * </ul>
+ * Please maintain consistency between the Seed scripts.
+ * @author Gigiikun
+ */
 public class Stage1 extends Quest
 {
-
 	private class SOD1World extends InstanceWorld
 	{
 		public           Map<L2Npc,Boolean> npcList                      = new FastMap<L2Npc,Boolean>();
@@ -102,7 +103,6 @@ public class Stage1 extends Quest
 	private static final int MIN_PLAYERS = 36;
 	private static final int MAX_PLAYERS = 45;
 	private static final int MAX_DEVICESPAWNEDMOBCOUNT = 100; // prevent too much mob spawn
-	private static final boolean debug = false;
 	
 	private TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<L2Territory>();
 	private TIntObjectHashMap<List<SODSpawn>> _spawnList = new TIntObjectHashMap<List<SODSpawn>>();
@@ -333,7 +333,7 @@ public class Stage1 extends Quest
 		{
 			_log.log(Level.WARNING, "[Seed of Destruction] Could not parse data.xml file: " + e.getMessage(), e);
 		}
-		if (debug)
+		if (Config.DEBUG)
 		{
 			_log.info("[Seed of Destruction] Loaded " + spawnCount + " spawns data.");
 			_log.info("[Seed of Destruction] Loaded " + _spawnZoneList.size() + " spawn zones data.");
@@ -357,15 +357,13 @@ public class Stage1 extends Quest
 
 	private boolean checkConditions(L2PcInstance player)
 	{
-		if (debug)
-			return true;
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
 			return false;
 		}
-		L2CommandChannel channel = player.getParty().getCommandChannel();
+		final L2CommandChannel channel = player.getParty().getCommandChannel();
 		if (channel == null)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER));
