@@ -1247,42 +1247,44 @@
 		<enchant7 name="pvpPower" val="#ench7Duel" />
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
-		<set name="magicLvl" val="78" />
-		<set name="nextActionAttack" val="true" />
-		<set name="hpConsume" val="50" />
-		<set name="mpConsume" val="5" />
-		<set name="SSBoost" val="2.0" />
-		<set name="overHit" val="true" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="baseCritRate" val="15" />
-		<!-- Possible up to stage 8 -->
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="8" />
+		<set name="hitTime" val="1500" />
+		<set name="hpConsume" val="50" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="5" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="weaponsAllowed" val="Dual Sword" />
+		<for>
+			<effect self="1" count="8" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
-		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
-		<set name="magicLvl" val="78" />
-		<set name="nextActionAttack" val="true" />
-		<set name="hpConsume" val="50" />
-		<set name="mpConsume" val="5" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="baseCritRate" val="15" />
-		<!-- Possible up to stage 8 -->
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="8" />
+		<set name="hitTime" val="1500" />
+		<set name="hpConsume" val="50" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="5" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="weaponsAllowed" val="Dual Fist" />
+		<for>
+			<effect self="1" count="8" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

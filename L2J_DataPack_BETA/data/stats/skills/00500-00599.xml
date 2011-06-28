@@ -1775,20 +1775,21 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#maxCharges"> 1 2 3 4 </table>
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="baseCritRate" val="10" />
-		<set name="hpConsume" val="50" />
-		<set name="mpConsume" val="5" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="hpConsume" val="50" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="5" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="1" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="1500" />
-		<set name="power" val="1" />
-		<set name="overHit" val="true" />
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="#maxCharges" />
+		<for>
+			<effect self="1" count="#maxCharges" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">
 		<!-- Confirmed CT2.5 -->
