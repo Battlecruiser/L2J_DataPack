@@ -247,23 +247,26 @@
 		</cond>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="weaponsAllowed" val="Sword, Blunt, Dual Sword, Big Blunt, Big Sword" /> <!-- Dual Sword/Sword/Big Sword/Blunt/Big Blunt -->
-		<set name="mpConsume" val="5" />
-		<set name="hpConsume" val="25" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="900" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="200" />
-		<!-- Can be charged up to level 8 -->
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="#maxCharges" />
-		<cond msgId="113" addName="1">
+		<set name="hitTime" val="900" />
+		<set name="hpConsume" val="25" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="5" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="weaponsAllowed" val="Dual Sword, Sword, Big Sword, Blunt, Big Blunt" />
+		<cond msgId="324">
 			<not>
 				<player Charges="#maxCharges" />
 			</not>
 		</cond>
+		<for>
+			<effect count="#maxCharges" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="9" levels="34" name="Sonic Buster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1103,23 +1106,26 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 	</skill>
 	<skill id="50" levels="8" name="Focused Force">
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="mpConsume" val="5" />
-		<set name="hpConsume" val="20" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="900" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="150" />
-		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
-		<!-- Can be charged up to Level 8 -->
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="#maxCharges" />
-		<cond msgId="113" addName="1">
+		<set name="hitTime" val="900" />
+		<set name="hpConsume" val="20" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="5" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="weaponsAllowed" val="Dual Fist" />
+		<cond msgId="324">
 			<not>
 				<player Charges="#maxCharges" />
 			</not>
 		</cond>
+		<for>
+			<effect count="#maxCharges" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="51" levels="1" name="Lure" enchantGroup1="1">
 		<table name="#ench1mpConsume"> 43 43 43 42 42 42 41 41 41 40 40 40 39 39 39 38 38 38 37 37 37 36 36 36 35 35 35 34 34 34 </table>

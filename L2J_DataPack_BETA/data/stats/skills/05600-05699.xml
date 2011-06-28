@@ -1312,10 +1312,22 @@
 		</for>
 	</skill>
 	<skill id="5695" levels="1" name="Talisman - Increase Force">
-		<set name="target" val="TARGET_NONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="324">
+			<not>
+				<player Charges="5" />
+			</not>
+		</cond>
+		<for>
+			<effect count="5" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="5696" levels="1" name="Dizziness">
 		<set name="magicLvl" val="60" />
