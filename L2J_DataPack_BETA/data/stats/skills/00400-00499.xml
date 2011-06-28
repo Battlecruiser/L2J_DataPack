@@ -2259,14 +2259,12 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="maxChance" val="70" />
 		<set name="saveVs" val="STR" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant1 name="maxChance" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Disarm" abnormalTime="5" val="0" abnormal="bleed" abnormalLvl="1" abnormalType="disarm">
