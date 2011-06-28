@@ -1788,7 +1788,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect self="1" count="#maxCharges" name="IncreaseCharges" val="1" />
+			<effect self="1" count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">

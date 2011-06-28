@@ -1263,7 +1263,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="weaponsAllowed" val="Dual Sword" />
 		<for>
-			<effect self="1" count="8" name="IncreaseCharges" val="1" />
+			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
@@ -1283,7 +1283,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="weaponsAllowed" val="Dual Fist" />
 		<for>
-			<effect self="1" count="8" name="IncreaseCharges" val="1" />
+			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">

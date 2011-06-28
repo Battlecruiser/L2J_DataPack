@@ -89,7 +89,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect count="#maxCharges" name="IncreaseCharges" val="1" />
+			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="6814" levels="8" name="Focus Force">
@@ -103,7 +103,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect count="#maxCharges" name="IncreaseCharges" val="1" />
+			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="6815" levels="16" name="Deadly Poison">
