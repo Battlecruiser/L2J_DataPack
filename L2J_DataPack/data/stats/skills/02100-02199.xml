@@ -660,17 +660,19 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2165" levels="1" name="Energy Stone">
+		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Can be recharged up to 2 stages -->
-		<set name="numCharges" val="1" />
-		<set name="maxCharges" val="2" />
 		<set name="simultaneousCast" val="true" />
-		<cond msgId="113" addName="1">
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1"> <!-- FIXME: This condition should be inside item -->
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect count="2" name="IncreaseCharges" val="1" />
+		</for>
 	</skill>
 	<skill id="2166" levels="2" name="CP Gauge Potion">
 		<table name="#power"> 50 200 </table>

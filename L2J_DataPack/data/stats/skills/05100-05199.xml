@@ -335,9 +335,10 @@
 	</skill>
 	<skill id="5127" levels="1" name="Recover Force">
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="CONT" /> <!-- FIXME: this is not retail like -->
+		<set name="target" val="TARGET_AURA" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Buff" abnormalTime="7" val="0" abnormalLvl="1" abnormalType="combination">
 				<mul order="0x30" stat="pAtk" val="1.2" />
