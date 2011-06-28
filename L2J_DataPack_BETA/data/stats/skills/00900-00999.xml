@@ -354,28 +354,44 @@
 		</for>
 	</skill>
 	<skill id="918" levels="1" name="Maximum Focus Force">
-		<set name="mpConsume" val="20" />
-		<set name="hpConsume" val="80" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="numCharges" val="8" />
-		<set name="maxCharges" val="8" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="150" />
 		<set name="hitTime" val="900" />
+		<set name="hpConsume" val="80" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="324">
+			<not>
+				<player Charges="8" />
+			</not>
+		</cond>
+		<for>
+			<effect count="8" name="IncreaseCharges" noicon="1" val="8" />
+		</for>
 	</skill>
 	<skill id="919" levels="1" name="Maximum Focus Sonic">
-		<set name="mpConsume" val="20" />
-		<set name="hpConsume" val="80" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="numCharges" val="8" />
-		<set name="maxCharges" val="8" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="150" />
 		<set name="hitTime" val="900" />
+		<set name="hpConsume" val="80" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="324">
+			<not>
+				<player Charges="8" />
+			</not>
+		</cond>
+		<for>
+			<effect count="8" name="IncreaseCharges" noicon="1" val="8" />
+		</for>
 	</skill>
 	<skill id="920" levels="37" name="Power Crush">
 		<!-- Confirmed CT2.5 -->
