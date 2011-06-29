@@ -1369,7 +1369,9 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BLOW" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Dual Dagger" /> <!-- Dual Daggers -->
+		<cond msgId="113" addName="1">
+			<using kind="Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>

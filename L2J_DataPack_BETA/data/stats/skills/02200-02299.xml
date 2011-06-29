@@ -601,6 +601,9 @@
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">
 		<!-- Confirmed CT2.5 -->

@@ -212,7 +212,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -228,6 +227,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_aqua_guard">
 				<add order="0x40" stat="waterRes" val="30" />
@@ -273,7 +275,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -289,6 +290,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_earth_guard">
 				<add order="0x40" stat="earthRes" val="30" />
@@ -304,7 +308,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -318,6 +321,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_vampire">
 				<add order="0x40" stat="absorbDam" val="8" /> <!-- absorb 8% HP from damage inflicted on enemies -->
@@ -333,7 +339,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -349,6 +354,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_protection">
 				<mul order="0x30" stat="fall" val="0.7" />
@@ -406,7 +414,6 @@
 		<table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#pAtkRange"> 50 50 100 100 150 150 200 200 </table>
 		<table name="#ench2decreasePenalty"> 0.07 0.08 0.1 0.11 0.13 0.14 0.16 0.17 0.19 0.2 0.22 0.23 0.25 0.26 0.28 0.29 0.31 0.32 0.34 0.35 0.37 0.38 0.4 0.41 0.43 0.44 0.46 0.47 0.49 0.50 </table>
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="75000" />
@@ -417,6 +424,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 		<for>
 			<effect name="ImmobileBuff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="snipe">
 				<add order="0x40" stat="pAtk" val="#pAtk">
@@ -476,7 +486,6 @@
 		<table name="#ench2mpConsume"> 148 145 143 140 138 135 132 130 127 125 122 120 117 115 112 110 107 105 102 100 97 95 92 90 87 85 82 80 77 75 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchDuel"> 4955 5040 5125 5210 5295 5380 5465 5551 5636 5721 5806 5891 5976 6061 6147 6232 6317 6402 6487 6572 6657 6742 6828 6913 6998 7083 7168 7253 7338 7424 </table>
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -507,6 +516,9 @@
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 	</skill>
 	<skill id="315" levels="16" name="Crush of Doom" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -518,7 +530,6 @@
 		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchDuel"> 7768 7901 8035 8168 8302 8435 8569 8702 8836 8969 9103 9236 9370 9503 9637 9770 9903 10037 10170 10304 10437 10571 10704 10838 10971 11105 11238 11372 11505 11639 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -552,6 +563,9 @@
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="316" levels="1" name="Aegis">
 		<set name="target" val="TARGET_SELF" />
@@ -565,7 +579,6 @@
 		<table name="#mpConsume"> 18 22 27 31 34 </table>
 		<table name="#cAtk"> 1.1 1.15 1.2 1.25 1.3 </table>
 		<table name="#accCombat"> 2 3 4 5 6 </table>
-		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CONT" />
@@ -643,7 +656,6 @@
 		<table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 7 10 12 15 17 20 22 25 27 30 </table>
 		<table name="#ench1Power"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
-		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -661,6 +673,9 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Pole" />
+		</cond>
 	</skill>
 	<skill id="321" levels="10" name="Blinding Blow" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -670,7 +685,6 @@
 		<table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
 		<set name="blowChance" val="25" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -691,6 +705,9 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect self="1" name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="speed_up_special">
 				<add order="0x40" stat="runSpd" val="40" />
@@ -1169,7 +1186,6 @@
 		<table name="#enchelementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
 		<table name="#ench7Duel"> 7905 8113 8321 8528 8736 8944 9151 9359 9567 9774 9982 10190 10397 10605 10813 </table>
 		<set name="mpConsume" val="153" />
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="magicLvl" val="76" />
 		<set name="power" val="7698" />
 		<set name="target" val="TARGET_ONE" />
@@ -1201,6 +1217,9 @@
 		<enchant6 name="elementPower" val="#enchelementPower" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#ench7Duel" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 	</skill>
 	<skill id="344" levels="1" name="Lethal Blow" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
 		<!-- Confirmed CT2.5 -->
@@ -1226,7 +1245,6 @@
 		<set name="skillType" val="BLOW" />
 		<set name="SSBoost" val="1.5" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1245,6 +1263,9 @@
 		<enchant6 name="elementPower" val="#enchelementPower" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#ench7Duel" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">
 		<!-- Confirmed CT2.5 & Updated to H5 -->
@@ -1258,10 +1279,12 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
-		<set name="weaponsAllowed" val="Dual Sword" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
@@ -1278,10 +1301,12 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
-		<set name="weaponsAllowed" val="Dual Fist" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Fist" />
+		</cond>
 		<for>
 			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
@@ -1295,7 +1320,6 @@
 		<set name="baseCritRate" val="20" />
 		<set name="hpConsume" val="340" />
 		<set name="mpConsume" val="78" />
-		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 		<set name="magicLvl" val="78" />
 		<set name="power" val="4848" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -1318,6 +1342,9 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="element" val="3" /> <!-- Earth -->
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<cond msgId="113" addName="1">
+			<using kind="Pole" />
+		</cond>
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
@@ -1338,7 +1365,9 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Sword, Big Sword, Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
+		<cond msgId="113" addName="1">
+			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+		</cond>
 		<for>
 			<effect name="Spoil" val="0" />
 		</for>
@@ -1380,7 +1409,6 @@
 	</skill>
 	<skill id="350" levels="1" name="Physical Mirror">
 		<set name="mpConsume" val="36" />
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<set name="magicLvl" val="78" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1388,6 +1416,9 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="2000" />
 		<set name="aggroPoints" val="669" />
+		<cond msgId="113" addName="1">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="reflect_abnormal">
 				<add order="0x40" stat="reflectSkillPhysic" val="30">
@@ -1401,7 +1432,6 @@
 	</skill>
 	<skill id="351" levels="1" name="Magical Mirror">
 		<set name="mpConsume" val="36" />
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<set name="magicLvl" val="78" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1409,6 +1439,9 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="2000" />
 		<set name="aggroPoints" val="669" />
+		<cond msgId="113" addName="1">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="reflect_abnormal">
 				<add order="0x40" stat="reflectSkillPhysic" val="10">
@@ -1426,7 +1459,6 @@
 		<table name="#ench-Res"> 7 10 13 15 18 21 23 26 29 31 34 37 39 42 45 </table>
 		<set name="magicLvl" val="77" />
 		<set name="nextActionAttack" val="true" />
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="mpConsume" val="18" />
@@ -1445,6 +1477,9 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="stun" />
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -1480,7 +1515,6 @@
 		<table name="#ench-Res"> 7 10 13 15 18 21 23 26 29 31 34 37 39 42 45 </table>
 		<set name="magicLvl" val="77" />
 		<set name="nextActionAttack" val="true" />
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="mpConsume" val="35" />
@@ -1497,6 +1531,9 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<effect name="PhysicalMute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_physical" />
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -1519,7 +1556,6 @@
 		<table name="#ench1Power"> 2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322 </table>
 		<table name="#ench2effectPower"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
 		<set name="magicLvl" val="77" />
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="mpConsume" val="78" />
 		<set name="power" val="1973" />
 		<set name="target" val="TARGET_ONE" />
@@ -1538,6 +1574,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" effectPower="40" effectType="DEBUFF" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1556,7 +1595,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="effectPoint" val="669" />
 		<set name="magicLvl" val="78" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="2000" />
@@ -1565,6 +1603,9 @@
 		<set name="aggroPoints" val="669" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3" /> <!-- Decreases critical attack rate by 30% -->
@@ -1609,7 +1650,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="effectPoint" val="669" />
 		<set name="magicLvl" val="78" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="2000" />
@@ -1618,6 +1658,9 @@
 		<set name="aggroPoints" val="669" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Decreases frontal critical attack rate by 30% -->
@@ -1674,7 +1717,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="effectPoint" val="669" />
 		<set name="magicLvl" val="78" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="2000" />
@@ -1683,6 +1725,9 @@
 		<set name="aggroPoints" val="669" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Decreases frontal critical attack damage by 30% -->
@@ -1735,7 +1780,6 @@
 	<skill id="358" levels="1" name="Bluff" enchantGroup1="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="35" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
@@ -1751,6 +1795,9 @@
 		<set name="hitTime" val="1000" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" effectType="STUN" />
 			<effect name="Bluff" noicon="1" val="0" />
@@ -1840,7 +1887,6 @@
 		<table name="#ench2mpConsume"> 51 49 48 46 45 43 41 40 38 37 35 33 32 30 29 </table>
 		<table name="#ench3effectPower"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<set name="baseCritRate" val="20" />
-		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="53" />
 		<set name="hpConsume" val="507" />
@@ -1865,6 +1911,9 @@
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Pole" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="8" val="0" effectPower="40" effectType="STUN" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
@@ -1888,7 +1937,6 @@
 		<table name="#ench3effectPower"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<set name="baseCritRate" val="20" />
 		<set name="magicLvl" val="77" />
-		<set name="weaponsAllowed" val="Sword, Blunt, Big Blunt, Big Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<set name="mpConsume" val="35" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hpConsume" val="338" />
@@ -1913,6 +1961,9 @@
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Blunt,Big Blunt,Sword,Big Sword" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
@@ -1994,7 +2045,6 @@
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
@@ -2009,6 +2059,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_siren">
 				<basemul order="0x30" stat="mCritRate" val="1" />
@@ -2024,7 +2077,6 @@
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
@@ -2039,6 +2091,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="SilentMove" abnormalTime="120" abnormal="stealth" val="0" abnormalLvl="1" abnormalType="dance_of_shadow">
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -2058,7 +2113,6 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="53" />
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="skillRadius" val="150" />
 		<set name="target" val="TARGET_AURA" />
@@ -2073,6 +2127,9 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</for>
@@ -2085,7 +2142,6 @@
 		<table name="#ench1Power"> 8454 8770 9087 9403 9720 10036 10353 10669 10985 11302 11618 11935 12251 12568 12884 </table>
 		<table name="#ench2decreasePenalty"> 0.1 0.12 0.13 0.15 0.16 0.17 0.19 0.2 0.21 0.23 0.24 0.26 0.27 0.28 0.3 </table>
 		<table name="#ench3Reuse"> 870000 840000 811000 781000 751000 722000 692000 662000 633000 603000 573000 544000 514000 484000 455000 </table>
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<set name="mpConsume" val="35" />
 		<set name="power" val="7987" />
 		<set name="target" val="TARGET_AURA" />
@@ -2100,6 +2156,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
+		<cond msgId="113" addName="1">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<effect self="1" name="ImmobileBuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="5400" />
@@ -2125,7 +2184,6 @@
 		<table name="#ench3MpConsume"> 110 106 102 98 95 91 87 83 80 76 72 68 65 61 57 </table>
 		<table name="#enchelementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
 		<table name="#enchDuel"> 2077 2134 2191 2248 2305 2362 2419 2476 2533 2590 2647 2704 2761 2818 2875 </table>
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="mpConsume" val="114" />
 		<set name="power" val="2020" />
 		<set name="target" val="TARGET_ONE" />
@@ -2157,6 +2215,9 @@
 		<enchant7 name="elementPower" val="#enchelementPower" />
 		<enchant8 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant8 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 		<for>
 			<effect self="1" name="Buff" abnormalTime="30" val="0" abnormalLvl="2" abnormalType="speed_up_special">
 				<add order="0x40" stat="rEvas" val="6" />

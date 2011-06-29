@@ -427,6 +427,9 @@
 		</for>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 	</skill>
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
 		<!-- Freya retail confirmed -->

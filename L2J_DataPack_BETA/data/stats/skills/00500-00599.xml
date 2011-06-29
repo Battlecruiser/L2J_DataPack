@@ -146,7 +146,6 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Rapier" /> <!-- Rapier -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -166,6 +165,9 @@
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Rapier" />
+		</cond>
 	</skill>
 	<skill id="505" levels="28" name="Shining Edge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
@@ -195,7 +197,6 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Rapier" /> <!-- Rapier -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -215,6 +216,9 @@
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Rapier" />
+		</cond>
 	</skill>
 	<skill id="506" levels="4" name="Checkmate" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 -->
@@ -243,7 +247,6 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Rapier" /> <!-- Rapier -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -255,7 +258,10 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
-			<target active_effect_id="1435" />
+			<and>
+				<using kind="Rapier" />
+				<target active_effect_id="1435" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="507" levels="37" name="Twin Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -283,7 +289,6 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -302,6 +307,9 @@
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow" />
+		</cond>
 	</skill>
 	<skill id="508" levels="31" name="Rising Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
@@ -327,7 +335,6 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -346,6 +353,9 @@
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow" />
+		</cond>
 	</skill>
 	<skill id="509" levels="34" name="Bleeding Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#dot"> 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 </table>
@@ -357,7 +367,6 @@
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
 		<set name="lvlDepend" val="1" />
-		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<set name="itemConsumeId" val="10113" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -382,6 +391,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow" />
+		</cond>
 		<for>
 			<!-- Retail Values CT2.3: 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 * 1 Sec -->
 			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
@@ -410,13 +422,15 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="lethal2" val="#ench1lethal2" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<cond msgId="113" addName="1">
-			<player hp="10" />
+			<and>
+				<using kind="Crossbow" />
+				<player hp="10" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="511" levels="1" name="Temptation">
@@ -615,7 +629,6 @@
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#enchabnormalLvl"> 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 12 </table>
 		<table name="#aggroPoints"> 566 582 597 611 624 635 646 655 </table>
-		<set name="weaponsAllowed" val="Crossbow" /> <!-- Crossbow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="75000" />
@@ -623,6 +636,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggroPoints" />
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow" />
+		</cond>
 		<for>
 			<effect name="ImmobileBuff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="snipe">
 				<add order="0x40" stat="pAtk" val="#pAtk">
@@ -918,7 +934,6 @@
 	<skill id="530" levels="1" name="Dance of Alignment" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="54" />
 		<set name="nextDanceCost" val="27" />
 		<set name="target" val="TARGET_PARTY" />
@@ -930,6 +945,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="523" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_alignment">
 				<add order="0x40" stat="darkRes" val="30" />
@@ -957,8 +975,10 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="nextActionAttack" val="true" />
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger" />
+		</cond>
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="t_crt_rate_up">
 				<mul order="0x30" stat="critVuln" val="1.3" />
