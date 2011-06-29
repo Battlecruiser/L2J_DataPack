@@ -340,6 +340,10 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="FISHING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_cast" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1313" levels="27" name="Pumping">
 		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -349,6 +353,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="PUMPING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_pumping" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1314" levels="27" name="Reeling">
 		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -358,6 +366,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="REELING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_reeling" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1315" levels="27" name="Fishing Expertise">
 		<set name="target" val="TARGET_SELF" />

@@ -217,7 +217,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="815" levels="43" name="Blade Hurricane">
 		<!-- Vanguard Stance Skill -->
@@ -238,7 +240,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 	</skill>
 	<skill id="816" levels="43" name="Cleave">
 		<!-- Vanguard Stance Skill -->
@@ -262,7 +266,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="817" levels="43" name="Double Strike">
 		<!-- Vanguard Stance Skill -->
@@ -284,8 +290,10 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="nextActionAttack" val="true" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
 		<set name="magicLvl" val="74" />

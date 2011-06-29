@@ -6,7 +6,6 @@
 		<table name="#power"> 36 39 42 49 53 57 66 71 77 88 94 101 115 123 131 </table>
 		<table name="#ench1Power"> 794 799 803 808 813 817 822 827 831 836 840 845 850 854 859 864 868 873 878 882 887 891 896 901 905 910 915 919 924 928 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
-		<set name="weaponsAllowed" val="Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -26,6 +25,9 @@
 		<set name="effectRange" val="400" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<cond msgId="113" addName="1">
+			<using kind="Blunt,Big Blunt" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -39,7 +41,6 @@
 		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#ench1effectPower"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#ench2Power"> 2211 2231 2251 2270 2290 2310 2330 2349 2369 2389 2409 2428 2448 2468 2488 2507 2527 2547 2566 2586 2606 2626 2645 2665 2685 2705 2724 2744 2764 2784 </table>
-		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -62,6 +63,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
@@ -279,7 +283,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="438" />
-		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
+		<cond msgId="113" addName="1">
+			<using kind="Dual Fist" />
+		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
 				<mul order="0x30" stat="pAtk" val="1.3">
@@ -533,7 +539,6 @@
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 19 19 20 21 21 22 24 25 26 27 28 29 31 32 33 </table>
 		<table name="#power"> 42 46 49 57 62 67 77 83 89 103 110 117 134 143 152 </table>
-		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -551,6 +556,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Fist" />
+		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1125,7 +1133,6 @@
 		<table name="#ench1Power"> 3692 3731 3770 3810 3849 3888 3927 3966 4005 4044 4083 4122 4161 4201 4240 4279 4318 4357 4396 4435 4474 4513 4553 4592 4631 4670 4709 4748 4787 4826 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="weaponsAllowed" val="Sword, Blunt, Big Blunt, Big Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -1157,6 +1164,9 @@
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<cond msgId="113" addName="1">
+			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="191" levels="6" name="Focus Mind" enchantGroup1="1">
 		<table name="#regMp"> 3.1 3.5 3.9 4.3 4.7 5.1 </table>
