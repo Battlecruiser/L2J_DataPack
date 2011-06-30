@@ -552,9 +552,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
-			<not>
-				<using kind="Bow,Crossbow" />
-			</not>
+			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
 			<effect count="10" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormal="flame" effectPower="50" effectType="DOT" />

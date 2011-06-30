@@ -1120,46 +1120,46 @@
 		</for>
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="triggeredId" val="5559" />
-		<set name="triggeredLevel" val="1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="activationChance" val="3" />
 		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5559" />
+		<set name="triggeredLevel" val="1" />
 		<cond>
-			<not>
-				<using kind="Bow,Crossbow" />
-			</not>
+			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
 			<add order="0x40" stat="pAtk" val="100">
-				<using kind="Sword,Blunt,Dagger,Pole,Fist,Dual Sword,Dual Fist,Big Sword,Big Blunt,Ancient,Rapier,Dual Dagger" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 			</add>
 			<mul order="0x30" stat="pAtkSpd" val="1.1">
-				<using kind="Sword,Blunt,Dagger,Pole,Fist,Dual Sword,Dual Fist,Big Sword,Big Blunt,Ancient,Rapier,Dual Dagger" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 			</mul>
 		</for>
 	</skill>
 	<skill id="759" levels="1" name="Archer's Will">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="triggeredId" val="5559" />
-		<set name="triggeredLevel" val="1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="activationChance" val="3" />
 		<set name="chanceType" val="ON_HIT" />
-		<cond msgId="113" addName="1">
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5559" />
+		<set name="triggeredLevel" val="1" />
+		<cond>
 			<using kind="Bow,Crossbow" />
 		</cond>
 		<for>
 			<add order="0x40" stat="accCombat" val="8">
-				<using kind="Bow,Crossbow" />
+				<using kind="Crossbow,Bow" />
 			</add>
 			<add order="0x40" stat="pAtkRange" val="50">
-				<using kind="Bow,Crossbow" />
+				<using kind="Crossbow,Bow" />
 			</add>
 		</for>
 	</skill>
