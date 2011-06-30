@@ -87,34 +87,42 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 	</skill>
 	<skill id="1402" levels="5" name="Major Group Heal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1183 1196 1209 1222 1235 1248 1261 1274 1287 1300 1313 1326 1339 1352 1365 1378 1391 1404 1417 1430 1443 1456 1469 1482 1495 1508 1521 1534 1547 1561 </table>
-		<table name="#ench2MpConsume"> 233 231 227 225 221 218 215 212 208 206 202 198 196 192 190 186 183 180 177 173 171 167 165 161 157 155 151 148 145 142 </table>
+		<table name="#ench2MpConsume"> 187 184 180 177 174 171 168 165 161 158 155 152 149 145 142 139 136 133 130 126 123 120 117 114 111 107 104 101 98 95 </table>
+		<table name="#ench2mpInitialConsume"> 46 46 45 44 43 42 42 41 40 39 38 38 37 36 35 34 34 33 32 31 30 30 29 28 27 26 26 25 24 23 </table>
+		<table name="#ench3negateAbnormals"> poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,8 poison,9 </table>
 		<table name="#ench34Power"> 1174 1178 1183 1187 1191 1196 1200 1204 1209 1213 1218 1222 1226 1231 1235 1239 1244 1248 1252 1257 1261 1266 1270 1274 1279 1283 1287 1292 1296 1301 </table>
+		<table name="#ench4negateAbnormals"> bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,8 bleeding,9 </table>
+		<table name="#aggro"> 421 457 490 520 546 </table>
+		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 189 199 214 228 239 </table>
 		<table name="#power"> 902 979 1050 1115 1170 </table>
-		<set name="aggroPoints" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="itemConsumeId" val="3031" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="hitTime" val="7000" />
+		<set name="isMagic" val="true" />
 		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="7000" />
 		<set name="skillRadius" val="1000" />
-		<set name="target" val="TARGET_PARTY" />
 		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isMagic" val="true" />
+		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="negateAbnormals" val="#ench3negateAbnormals" />
 		<enchant3 name="power" val="#ench34Power" />
-		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="negateAbnormals" val="#ench4negateAbnormals" />
 		<enchant4 name="power" val="#ench34Power" />
-		<enchant4 name="negateAbnormals" val="bleeding,9" />
 		<enchant3for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>
@@ -2046,22 +2054,25 @@
 		</enchant1for>
 	</skill>
 	<skill id="1475" levels="3" name="Erase Mark">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#mpConsume_Init"> 4 7 11 </table>
-		<table name="#mpConsume"> 15 29 44 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggro"> 235 438 611 </table>
 		<table name="#magicLvl"> 24 46 66 </table>
-		<set name="mpInitialConsume" val="#mpConsume_Init" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="2500" />
-		<set name="skillType" val="NEGATE" />
-		<set name="isMagic" val="true" />
-		<set name="negateId" val="1435" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 12 23 35 </table>
+		<table name="#mpInitialConsume"> 3 6 9 </table>
+		<table name="#negateAbnormals"> death_mark,3 death_mark,7 death_mark,10 </table>
+		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="600" />
-		<set name="effectRange" val="1600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="negateAbnormals" val="#negateAbnormals" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1476" levels="3" name="Appetite for Destruction" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
