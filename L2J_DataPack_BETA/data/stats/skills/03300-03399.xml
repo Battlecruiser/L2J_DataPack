@@ -176,6 +176,7 @@
 		</for>
 	</skill>
 	<skill id="3318" levels="1" name="Flag Display">
+		<!-- Flag Skill -->
 		<set name="target" val="TARGET_FLAGPOLE" />
 		<set name="hitTime" val="180000" />
 		<set name="reuseDelay" val="5000" />
@@ -634,11 +635,19 @@
 		</for>
 	</skill>
 	<skill id="3358" levels="1" name="Flag Equip">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Flag Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="runSpd" val="0.5" />
+			<mul order="0x30" stat="runSpd" val="0.2" />
+			<mul order="0x30" stat="pAtkSpd" val="0.2" />
+			<mul order="0x30" stat="pAtk" val="0.2" />
+			<mul order="0x30" stat="mAtkSpd" val="0.2" />
+			<mul order="0x30" stat="mAtk" val="0.2" />
+
 		</for>
 	</skill>
 	<skill id="3359" levels="1" name="Transform Native">
@@ -658,9 +667,15 @@
 		</for>
 	</skill>
 	<skill id="3360" levels="1" name="Cheap Shot">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.88" />
+		</for>
 	</skill>
 	<skill id="3361" levels="1" name="Summon Agathion - Fortress">
 		<set name="target" val="TARGET_SELF" />
