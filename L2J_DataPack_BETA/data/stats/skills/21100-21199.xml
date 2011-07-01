@@ -901,6 +901,8 @@
 		</for>
 	</skill>
 	<skill id="21171" levels="1" name="Riding Jet Bike">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -909,9 +911,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
-				<mul order="0x30" stat="runSpd" val="1.5" />
-			</effect>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
