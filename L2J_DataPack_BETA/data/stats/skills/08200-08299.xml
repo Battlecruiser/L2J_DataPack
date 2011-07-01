@@ -807,6 +807,8 @@
 		</for>
 	</skill>
 	<skill id="8247" levels="1" name="Mount Light Purple Maned Horse">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -815,9 +817,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
-				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
-			</effect>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
@@ -922,6 +922,8 @@
 		<set name="npcId" val="16060" />
 	</skill>
 	<skill id="8261" levels="1" name="Steam Beatle Mount">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -930,12 +932,12 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
-				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
-			</effect>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8262" levels="1" name="Tawny Maned Lion Mount">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -944,15 +946,15 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
-				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
-			</effect>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8263" levels="1" name="Transform Snow King">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="114" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -962,9 +964,11 @@
 		</for>
 	</skill>
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="115" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -974,9 +978,11 @@
 		</for>
 	</skill>
 	<skill id="8265" levels="1" name="Transform Tin Golem">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="116" />
 		<cond msgId="1509">
 			<player olympiad="false" />
