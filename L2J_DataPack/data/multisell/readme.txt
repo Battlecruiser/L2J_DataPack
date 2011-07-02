@@ -8,7 +8,10 @@ of this directory a little bit.
 009.xml  -> Proof of Catching a Fish
 
 101.xml  -> Tickets for pet collars Exchange
-102.xml  -> Noblesse Gate Pass for items
+
+102.xml  -> Olympiad: Purchase an item using Noblesse Gate Pass
+103.xml  -> Olympiad: Purchase an item using Olympiad Tokens
+
 201.xml  -> Test server helper - Purchase wearable items
 202.xml  -> Test server helper - Purchase quest items and rare spellbooks
 382.xml  -> Quest 382: Head Blacksmith Vergara
