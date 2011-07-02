@@ -18,10 +18,6 @@ INSERT INTO `random_spawn_loc` VALUES
 (7,80129,56947,-1552,32500),
 (8,146986,29566,-2271,32500),
 
--- Gatekeeper Spirit
-(9,184410,-13102,-5488,0), -- exit_necropolis_boss_anakim
-(10,184410,-10111,-5488,0), -- exit_necropolis_boss_lilith
-
 -- Merchant of Mammon
 (11,-52172,78884,-4741,-1), -- Necropolis of Devotion
 (11,-41350,209876,-5087,-1), -- Necropolis of Sacrifice

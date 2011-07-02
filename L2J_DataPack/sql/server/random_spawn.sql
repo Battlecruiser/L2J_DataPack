@@ -19,8 +19,6 @@ INSERT INTO `random_spawn` VALUES
 -- (6,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
 -- (7,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
 -- (8,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
-(9,31112,1,-1,-1,-1,'false','false'),-- Gatekeeper Spirit (Exit Boss)
-(10,31112,1,-1,-1,-1,'false','false'),-- Gatekeeper Spirit (Exit Boss)
 (11,31113,1,-1,-1,-1,'true','true'), -- Merchant of Mammon
 (12,31126,1,-1,-1,-1,'true','true'), -- Blacksmith of Mammon
 (13,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
