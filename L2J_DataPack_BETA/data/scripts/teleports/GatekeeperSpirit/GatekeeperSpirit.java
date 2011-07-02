@@ -21,14 +21,19 @@ import com.l2jserver.gameserver.model.quest.Quest;
 
 public class GatekeeperSpirit extends Quest
 {
-	private final static int npcId = 31111;
+	private final static int EnterGk = 31111;
+	private final static int ExitGk = 31112;
+	private final static int Lilith = 25283;
+	private final static int Anakim = 25286;
 	
 	public GatekeeperSpirit(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(npcId);
-		addFirstTalkId(npcId);
-		addTalkId(npcId);
+		addStartNpc(EnterGk);
+		addFirstTalkId(EnterGk);
+		addTalkId(EnterGk);
+		this.addEventId(Lilith, Quest.QuestEventType.ON_KILL);
+		this.addEventId(Anakim, Quest.QuestEventType.ON_KILL);
 	}
 	
 	@Override
@@ -58,6 +63,26 @@ public class GatekeeperSpirit extends Quest
 			npc.showChatWindow(player);
 		
 		return htmltext;
+	}
+	
+	@Override
+	/**
+	 * TODO: Should be spawned 10 seconds after boss dead
+	 */
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		int npcId = npc.getNpcId();
+		if (npcId == Lilith)
+		{
+			// exit_necropolis_boss_lilith
+			addSpawn(ExitGk, 184410, -10111, -5488, 0, false, 900000);
+		}
+		else if (npcId == Anakim)
+		{
+			// exit_necropolis_boss_anakim
+			addSpawn(ExitGk, 184410, -13102, -5488, 0, false, 900000);
+		}
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)
