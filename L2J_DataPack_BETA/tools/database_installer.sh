@@ -334,7 +334,7 @@ fi
 if [ "$1" == "I" ]; then
 	for cb in $(ls ../cb_sql/*.sql);do
 		echo "Installing Community Board table : $cb"
-		$MYG < $cb
+		$MYC < $cb
 	done
 fi
 newbie_helper_cb
