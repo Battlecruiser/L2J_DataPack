@@ -1085,7 +1085,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<player hp="30" />
+			<player hp="60" />
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="#abnormalLvl" abnormalType="pinch">
