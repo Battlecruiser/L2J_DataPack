@@ -480,19 +480,18 @@
 		</for>
 	</skill>
 	<skill id="924" levels="1" name="Seven Arrow">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="hitTime" val="15000" />
-		<set name="hitTimings" val="35,11,17,10,12,10,10" />
+		<set name="effectRange" val="1000" />
+		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="37" />
+		<set name="mpConsume" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="11440" />
-		<set name="reuseDelay" val="600000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
