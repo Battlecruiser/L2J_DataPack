@@ -1898,38 +1898,50 @@
 		</for>
 	</skill>
 	<skill id="1467" levels="1" name="Meteor">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="castRange" val="600" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="11000" />
-		<set name="hitTimings" val="18,18,18,18,18" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="72" />
+		<set name="mpConsume" val="116" />
+		<set name="mpInitialConsume" val="29" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
-		<set name="reuseDelay" val="900000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_AREA" />
+		<for>
+			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
+			<!-- 117HP * 3 sec during 10 seconds -->
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="351" effectPower="100" effectType="DOT" />
+		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="11000" />
-		<set name="hitTimings" val="18,18,18,18,18" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="72" />
+		<set name="mpConsume" val="116" />
+		<set name="mpInitialConsume" val="29" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
-		<set name="reuseDelay" val="900000" />
+		<set name="reuseDelay" val="300000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_AREA" />
+		<for>
+			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
+			<!-- 117HP * 3 sec during 10 seconds -->
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="351" effectPower="100" effectType="DOT" />
+		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
