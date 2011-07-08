@@ -1326,6 +1326,9 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" activationChance="5" chanceType="ON_START" triggeredId="5571" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="1559" levels="3" name="Potential Ability">
 		<!-- H5 Skill -->
