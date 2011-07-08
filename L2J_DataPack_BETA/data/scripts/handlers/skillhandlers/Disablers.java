@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2AttackableAI;
+import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Effect;
@@ -31,7 +32,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.base.Experience;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
@@ -544,7 +544,7 @@ public class Disablers implements ISkillHandler
 								case BUFF:
 									int lvlmodifier = 52 + skill.getMagicLevel() * 2;
 									if (skill.getMagicLevel() == 12)
-										lvlmodifier = (Experience.MAX_LEVEL - 1);
+										lvlmodifier = (ExperienceTable.getInstance().getMaxLevel()-1);
 									int landrate = 90;
 									if ((target.getLevel() - lvlmodifier) > 0)
 										landrate = 90 - 4 * (target.getLevel() - lvlmodifier);
