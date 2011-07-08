@@ -467,6 +467,9 @@
 	</skillTree>
 	<!-- Male Soul Breaker -->
 	<skillTree type="classSkillTree" classId="128">
+		<skill skillName="Soul to Empower" skillIdLvl="1441,3" getLevel="64" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Expert Casting" skillIdLvl="1527,2" getLevel="49" levelUpSp="70000" learnedByNpc="true" />
+		<skill skillName="Expert Casting" skillIdLvl="1527,3" getLevel="55" levelUpSp="141000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,1" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,2" getLevel="49" levelUpSp="70000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,3" getLevel="58" levelUpSp="130000" learnedByNpc="true" />
@@ -476,6 +479,9 @@
 	</skillTree>
 	<!-- Female Soul Breaker -->
 	<skillTree type="classSkillTree" classId="129">
+		<skill skillName="Soul to Empower" skillIdLvl="1441,3" getLevel="64" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Expert Casting" skillIdLvl="1527,2" getLevel="49" levelUpSp="70000" learnedByNpc="true" />
+		<skill skillName="Expert Casting" skillIdLvl="1527,3" getLevel="55" levelUpSp="141000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,1" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,2" getLevel="49" levelUpSp="70000" learnedByNpc="true" />
 		<skill skillName="Mana Pump" skillIdLvl="1565,3" getLevel="58" levelUpSp="130000" learnedByNpc="true" />
@@ -499,5 +505,9 @@
 	<skillTree type="classSkillTree" classId="134">
 		<skill skillName="Multiple Shot" skillIdLvl="987,1" getLevel="82" levelUpSp="90000000" learnedByNpc="true" />
 		<skill skillName="Death Shot" skillIdLvl="990,1" getLevel="83" levelUpSp="100000000" learnedByNpc="true" />
+	</skillTree>
+	<!-- Inspector -->
+	<skillTree type="classSkillTree" classId="135" parentClassId="126">
+		<skill skillName="Thin Skin" skillIdLvl="1483,7" getLevel="74" levelUpSp="2200000" learnedByNpc="true" />
 	</skillTree>
 </list>

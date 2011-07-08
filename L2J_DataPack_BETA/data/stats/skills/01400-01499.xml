@@ -1119,12 +1119,13 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="1441" levels="2" name="Soul to Empower">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#mpConsume_Init"> 5 8 </table>
-		<table name="#mpConsume"> 33 42 </table>
-		<table name="#mAtk"> 1.55 1.65 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
+	<skill id="1441" levels="3" name="Soul to Empower">
+		<!-- CT2.5 retail confirmed & Updated to H5-->
+		<table name="#magicLvl"> 43 55 64 </table>
+		<table name="#mpConsume_Init"> 8 10 12 </table>
+		<table name="#mpConsume"> 30 40 48 </table>
+		<table name="#mAtk"> 1.55 1.65 1.75 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
