@@ -68,14 +68,14 @@ public class StarStones extends L2AttackableAIScript
 			if (Rnd.get(100) < 33)
 			{
 				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
-				caster.addItem("Loot", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
+				caster.addItem("StarStone", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
 			}
 			else if ((skill.getLevel() == 1 && Rnd.get(100) < 15) ||
 					(skill.getLevel() == 2 && Rnd.get(100) < 50) ||
 					(skill.getLevel() == 3 && Rnd.get(100) < 75))
 			{
 				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
-				caster.addItem("Loot", itemId, Rnd.get(1, RATE), null, true);
+				caster.addItem("StarStone", itemId, Rnd.get(1, RATE), null, true);
 			}
 			else
 				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_FAILED));
