@@ -58,8 +58,8 @@ CREATE TABLE `mapregion` (
 -- 35 = "inside Aerial Cleft"
 -- default = "Town of Aden"
 
-INSERT INTO mapregion VALUES 
---	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26
+INSERT INTO mapregion VALUES
+--	11_	12_	13_	14_	15_	16_	17_	18_	19_	20_	21_	22_	23_	24_	25_	26_
 (0,	0,	0,	0,	0,	3,	3,	3,	3,	3,	3,	4,	4,	4,	4,	4,	4),	-- _8
 (1,	0,	0,	0,	0,	3,	3,	3,	3,	3,	3,	4,	4,	4,	4,	4,	4),	-- _9
 (2,	0,	0,	0,	0,	3,	3,	3,	7,	9,	11,	4,	4,	4,	4,	4,	4),	-- _10
