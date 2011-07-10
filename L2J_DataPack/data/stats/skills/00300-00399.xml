@@ -2465,48 +2465,52 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="395" levels="1" name="Heroic Miracle">
-		<set name="mpConsume" val="72" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="40" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="676" />
 		<set name="hitTime" val="1000" />
+		<set name="itemConsumeCount" val="40" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="72" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="hero_buff">
-				<add order="0x40" stat="pDef" val="5400" />
-				<add order="0x40" stat="mDef" val="4050" />
-				<add order="0x40" stat="runSpd" val="5" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
+				<add order="0x40" stat="mDef" val="4050" />
+				<add order="0x40" stat="pDef" val="5400" />
+				<add order="0x40" stat="runSpd" val="5" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="396" levels="1" name="Heroic Berserker">
-		<set name="mpConsume" val="72" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="40" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="676" />
 		<set name="hitTime" val="1000" />
+		<set name="itemConsumeCount" val="40" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="72" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="2" abnormalType="hero_buff">
 				<add order="0x40" stat="accCombat" val="8" />
-				<add order="0x40" stat="pAtk" val="500" />
-				<add order="0x40" stat="mAtk" val="500" />
-				<add order="0x40" stat="pAtkSpd" val="100" />
-				<add order="0x40" stat="mAtkSpd" val="100" />
-				<add order="0x40" stat="runSpd" val="20" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
-				<mul order="0x30" stat="gainHp" val="2" />
 				<sub order="0x40" stat="debuffVuln" val="100" />
-				<sub order="0x40" stat="rEvas" val="8" />
-				<mul order="0x30" stat="pDef" val="0.75" />
+				<mul order="0x30" stat="gainHp" val="2" />
+				<add order="0x40" stat="mAtk" val="500" />
+				<add order="0x40" stat="mAtkSpd" val="100" />
 				<sub order="0x40" stat="mDef" val="25" />
+				<add order="0x40" stat="pAtk" val="500" />
+				<add order="0x40" stat="pAtkSpd" val="100" />
+				<mul order="0x30" stat="pDef" val="0.75" />
+				<sub order="0x40" stat="rEvas" val="8" />
+				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
 	</skill>
