@@ -350,6 +350,15 @@ public class Antharas extends L2AttackableAIScript
 		}
 	}
 	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if(event.equalsIgnoreCase("waiting"))
+			setAntharasSpawnTask();
+
+		return super.onAdvEvent(event, npc, player);
+	}
+	
 	private void startMinionSpawns(int antharasId)
 	{
 		int intervalOfMobs;
