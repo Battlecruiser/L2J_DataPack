@@ -2348,12 +2348,13 @@
 		</for>
 	</skill>
 	<skill id="295" levels="1" name="Iron Body">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="15" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="fall" val="0.6" />
+			<!-- mul order="0x30" stat="damageZoneVuln" val="0.6" / TODO: Require Support -->
 		</for>
 	</skill>
 	<skill id="296" levels="1" name="Chameleon Rest">
