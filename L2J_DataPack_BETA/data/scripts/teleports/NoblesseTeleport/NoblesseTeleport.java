@@ -37,7 +37,7 @@ public class NoblesseTeleport extends Quest
 		
 		if (event.equalsIgnoreCase("teleportWithToken"))
 		{
-			if (st.getQuestItemsCount(13722) > 0)
+			if (st.hasQuestItems(13722))
 				npc.showChatWindow(player, 3);
 			else
 				return"noble-nopass.htm";

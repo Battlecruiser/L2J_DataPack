@@ -65,13 +65,12 @@ public class GrandBossTeleporters extends Quest
 		if (st == null)
 			st = newQuestState(player);
 		
-		if (st.getQuestItemsCount(7267) > 0)
+		if (st.hasQuestItems(7267))
 		{
 			st.takeItems(7267, 1);
 			player.teleToLocation(183813, -115157, -3303);
 			st.set("allowEnter", "1");
 		}
-		
 		else
 			htmltext = "31540-06.htm";
 		
@@ -105,7 +104,7 @@ public class GrandBossTeleporters extends Quest
 					
 					else if (status == 0 || status == 1) //If entrance to see Antharas is unlocked (he is Dormant or Waiting)
 					{
-						if (st.getQuestItemsCount(3865) > 0)
+						if (st.hasQuestItems(3865))
 						{
 							st.takeItems(3865, 1);
 							L2BossZone zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
