@@ -128,8 +128,8 @@ public class AdminMenu implements IAdminCommandHandler
 					teleportCharacter(player, x, y, z, activeChar, "Admin is teleporting you.");
 					return true;
 				}
-				L2PcInstance[] members = clan.getOnlineMembers(0);
-				for (L2PcInstance member: members)
+				
+				for (L2PcInstance member : clan.getOnlineMembers(0))
 					teleportCharacter(member, x, y, z, activeChar, "Your clan is being teleported by an Admin.");
 			}
 			catch (Exception e)
