@@ -32,8 +32,9 @@ public class PaganTeleporters extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("Close_Door1"))
+		{
 			DoorTable.getInstance().getDoor(19160001).closeMe();
-		
+		}
 		else if (event.equalsIgnoreCase("Close_Door2"))
 		{
 			DoorTable.getInstance().getDoor(19160010).closeMe();
@@ -48,7 +49,6 @@ public class PaganTeleporters extends Quest
 	{
 		if (npc.getNpcId() == 32039)
 			player.teleToLocation(-12766, -35840, -10856);
-		
 		else if (npc.getNpcId() == 32040)
 			player.teleToLocation(36640, -51218, 718);
 		
@@ -67,9 +67,8 @@ public class PaganTeleporters extends Quest
 		switch (npc.getNpcId())
 		{
 			case 32034:
-				if (st.getQuestItemsCount(8064) == 0 && st.getQuestItemsCount(8065) == 0 && st.getQuestItemsCount(8067) == 0)
+				if (!st.hasQuestItems(8064) && !st.hasQuestItems(8065) && !st.hasQuestItems(8067))
 					htmltext = "noItem.htm";
-				
 				else
 				{
 					htmltext = "FadedMark.htm";
@@ -77,17 +76,14 @@ public class PaganTeleporters extends Quest
 					startQuestTimer("Close_Door1", 10000, null, null);
 				}
 				break;
-			
 			case 32035:
 				DoorTable.getInstance().getDoor(19160001).openMe();
 				startQuestTimer("Close_Door1", 10000, null, null);
 				htmltext = "FadedMark.htm";
 				break;
-			
 			case 32036:
-				if (st.getQuestItemsCount(8067) == 0)
+				if (!st.hasQuestItems(8067))
 					htmltext = "noMark.htm";
-				
 				else
 				{
 					htmltext = "openDoor.htm";
@@ -96,7 +92,6 @@ public class PaganTeleporters extends Quest
 					DoorTable.getInstance().getDoor(19160011).openMe();
 				}
 				break;
-			
 			case 32037:
 				DoorTable.getInstance().getDoor(19160010).openMe();
 				DoorTable.getInstance().getDoor(19160011).openMe();

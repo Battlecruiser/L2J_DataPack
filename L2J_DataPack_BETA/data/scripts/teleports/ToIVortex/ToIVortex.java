@@ -50,7 +50,7 @@ public class ToIVortex extends Quest
 		//1st Floor
 		if (event.equalsIgnoreCase("1"))
 		{
-			if (st.getQuestItemsCount(GREEN_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
 			{
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114356, 13423, -5096);
@@ -65,7 +65,7 @@ public class ToIVortex extends Quest
 		//2nd Floor
 		else if (event.equalsIgnoreCase("2"))
 		{
-			if (st.getQuestItemsCount(GREEN_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
 			{
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114666, 13380, -3608);
@@ -80,7 +80,7 @@ public class ToIVortex extends Quest
 		//3rd Floor
 		else if (event.equalsIgnoreCase("3"))
 		{
-			if (st.getQuestItemsCount(GREEN_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
 			{
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(111982, 16028, -2120);
@@ -95,7 +95,7 @@ public class ToIVortex extends Quest
 		//4th Floor
 		else if (event.equalsIgnoreCase("4"))
 		{
-			if (st.getQuestItemsCount(BLUE_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
 			{
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114636, 13413, -640);
@@ -110,7 +110,7 @@ public class ToIVortex extends Quest
 		//5th Floor
 		else if (event.equalsIgnoreCase("5"))
 		{
-			if (st.getQuestItemsCount(BLUE_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
 			{
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114152, 19902, 928);
@@ -125,7 +125,7 @@ public class ToIVortex extends Quest
 		//6th Floor
 		else if (event.equalsIgnoreCase("6"))
 		{
-			if (st.getQuestItemsCount(BLUE_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
 			{
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(117131, 16044, 1944);
@@ -140,7 +140,7 @@ public class ToIVortex extends Quest
 		//7th Floor
 		else if (event.equalsIgnoreCase("7"))
 		{
-			if (st.getQuestItemsCount(RED_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(RED_DIMENSION_STONE))
 			{
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(113026, 17687, 2952);
@@ -155,7 +155,7 @@ public class ToIVortex extends Quest
 		//8th Floor
 		else if (event.equalsIgnoreCase("8"))
 		{
-			if (st.getQuestItemsCount(RED_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(RED_DIMENSION_STONE))
 			{
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(115571, 13723, 3960);
@@ -170,7 +170,7 @@ public class ToIVortex extends Quest
 		//9th Floor
 		else if (event.equalsIgnoreCase("9"))
 		{
-			if (st.getQuestItemsCount(RED_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(RED_DIMENSION_STONE))
 			{
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114649, 14144, 4976);
@@ -185,7 +185,7 @@ public class ToIVortex extends Quest
 		//10 Floor
 		else if (event.equalsIgnoreCase("10"))
 		{
-			if (st.getQuestItemsCount(RED_DIMENSION_STONE) > 0)
+			if (st.hasQuestItems(RED_DIMENSION_STONE))
 			{
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(118507, 16605, 5984);
@@ -239,7 +239,6 @@ public class ToIVortex extends Quest
 				htmltext = npcId + "no-adena.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	

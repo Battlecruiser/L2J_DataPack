@@ -256,7 +256,7 @@ public class OracleTeleport extends Quest
 				htmltext = "1a.htm";
 				st.exitQuest(true);
 			}
-			else if (st.getQuestItemsCount(7079) < 1)
+			else if (!st.hasQuestItems(7079))
 				htmltext = "3.htm";
 			else
 			{
@@ -277,7 +277,7 @@ public class OracleTeleport extends Quest
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TOO_MANY_QUESTS));
 				st.exitQuest(true);
 			}
-			else if (st.getQuestItemsCount(7079) < 1)
+			else if (!st.hasQuestItems(7079))
 			{
 				htmltext = "ziggurat_nofrag.htm";
 				st.exitQuest(true);

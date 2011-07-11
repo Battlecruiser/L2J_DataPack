@@ -46,17 +46,16 @@ public class NewbieTravelToken extends Quest
 		{
 			if (DATA.keySet().contains(new Integer(event)))
 			{
-				if (st.getQuestItemsCount(TOKEN) > 0)
+				if (st.hasQuestItems(TOKEN))
 				{
-		             st.takeItems(TOKEN,1);
-		             st.getPlayer().teleToLocation(DATA.get(event)[0], DATA.get(event)[1], DATA.get(event)[2]);
+					st.takeItems(TOKEN,1);
+					st.getPlayer().teleToLocation(DATA.get(event)[0], DATA.get(event)[1], DATA.get(event)[2]);
 				}
-				
 				else
 				{
-					 st.exitQuest(true);
-		             player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
-		             return "";
+					st.exitQuest(true);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
+					return "";
 				}
 			}
 		}
@@ -79,10 +78,9 @@ public class NewbieTravelToken extends Quest
 		
 		if (player.getLevel() >= 20)
 		{
-		     htmltext="cant-travel.htm";
-		     st.exitQuest(true);
+			htmltext="cant-travel.htm";
+			st.exitQuest(true);
 		}
-		
 		else
 			htmltext = String.valueOf(npc.getNpcId())+".htm";
 		

@@ -42,7 +42,6 @@ public class ElrokiTeleporters extends Quest
 				else
 					player.teleToLocation(4990,-1879,-3178);
 				break;
-			
 			case 32112:
 				player.teleToLocation(7557,-5513,-3221);
 				break;

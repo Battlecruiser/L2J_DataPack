@@ -45,11 +45,11 @@ public class TeleportWithCharm extends Quest
 		switch (npc.getNpcId())
 		{
 			case WHIRPY:
-				if (st.getQuestItemsCount(DWARF_GATEKEEPER_TOKEN) >= 1)
+				if (st.hasQuestItems(DWARF_GATEKEEPER_TOKEN))
 				{
 					st.takeItems(DWARF_GATEKEEPER_TOKEN,1);
-				    st.getPlayer().teleToLocation(-80826,149775,-3043);
-				    st.exitQuest(true);
+					st.getPlayer().teleToLocation(-80826,149775,-3043);
+					st.exitQuest(true);
 				}
 				else
 				{
@@ -57,13 +57,12 @@ public class TeleportWithCharm extends Quest
 					htmltext = "30576-01.htm";
 				}
 				break;
-				
 			case TAMIL:
-				if (st.getQuestItemsCount(ORC_GATEKEEPER_CHARM) >= 1)
+				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM))
 				{
 					st.takeItems(ORC_GATEKEEPER_CHARM,1);
 					st.getPlayer().teleToLocation(-80826,149775,-3043);
-				    st.exitQuest(true);
+					st.exitQuest(true);
 				}
 				else
 				{
