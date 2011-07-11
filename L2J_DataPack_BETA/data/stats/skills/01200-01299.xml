@@ -2760,23 +2760,20 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 	</skill>
 	<skill id="1297" levels="6" name="Clear Mind">
-		<table name="#regMpWalk"> 3.2 4 4.3 5.1 5.8 6.2 </table>
-		<table name="#regMpStand"> 2.6 3.2 3.5 4.1 4.7 4.9 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 40 48 56 62 68 74 </table>
+		<table name="#Stand"> 2.6 3.2 3.5 4.1 4.7 4.9 </table>
+		<table name="#Walk"> 3.2 4 4.3 5.1 5.8 6.2 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="regMp" val="#regMpWalk">
-				<and>
-					<player moving="true" />
-					<player running="false" />
-				</and>
+			<add order="0x40" stat="regMp" val="#Walk">
+				<player moving="true" />
 			</add>
-			<add order="0x40" stat="regMp" val="#regMpStand">
-				<and>
-					<player moving="false" />
-					<player resting="false" />
-				</and>
+			<add order="0x40" stat="regMp" val="#Stand">
+				<player standing="true" />
 			</add>
 		</for>
 	</skill>
