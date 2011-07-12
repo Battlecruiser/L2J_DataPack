@@ -326,7 +326,7 @@
 		<set name="power" val="115" />
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_AURA" /> <!-- TODO: plz confirm if this should affect all monsters around or only clan monsters around -->
+		<set name="target" val="TARGET_CLAN" />
 	</skill>
 	<skill id="5431" levels="1" name="Slow">
 		<!-- Condition causing target to temporarily decrease attack speed and casting speed. -->
