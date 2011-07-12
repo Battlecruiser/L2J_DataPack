@@ -14075,6 +14075,735 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8200,-1,3234800,26),
 (8202,-1,3234800,27),
 
+-- Recipe Merchants
+
+-- Lyann (Gludin)
+(1814,-1,3287400,1), -- Recipe: Leather
+(2135,-1,3287400,2), -- Recipe: Braided Hemp
+(2136,-1,3287400,3), -- Recipe: Cokes
+(2137,-1,3287400,4), -- Recipe: Steel
+(2138,-1,3287400,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287400,6), -- Recipe: Cord
+(2139,-1,3287400,7), -- Recipe: Steel Mold
+(2140,-1,3287400,8), -- Recipe: High-Grade Suede
+(2141,-1,3287400,9), -- Recipe: Silver Mold
+(2142,-1,3287400,10), -- Recipe: Varnish of Purity
+(2143,-1,3287400,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287400,12), -- Recipe: Compound Braid
+(1825,-1,3287400,13), -- Recipe: Oriharukon
+(2145,-1,3287400,14), -- Recipe: Mithril Alloy
+(2146,-1,3287400,15), -- Recipe: Artisan's frame
+(2147,-1,3287400,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287400,17), -- Recipe: Crafted Leather
+(2149,-1,3287400,18), -- Recipe: Metallic Fiber
+(5231,-1,3287400,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287400,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287400,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287400,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287400,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287400,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287400,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287400,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287400,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287400,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287400,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287400,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287400,31), -- Recipe: Spiritshot D
+(1805,-1,3287400,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287400,33), -- Recipe: Spiritshot C
+(3953,-1,3287400,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287400,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287400,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287400,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3287400,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287400,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287400,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287400,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287400,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287400,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287400,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287400,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287400,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287400,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287400,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287400,49), -- Recipe: Spiritshot B
+(1807,-1,3287400,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287400,51), -- Recipe: Spiritshot A
+(3955,-1,3287400,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287400,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287400,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287400,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287400,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287400,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287400,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287400,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287400,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287400,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287400,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287400,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287400,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287400,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Tahoo (Gludio)
+(1814,-1,3287500,1), -- Recipe: Leather
+(2135,-1,3287500,2), -- Recipe: Braided Hemp
+(2136,-1,3287500,3), -- Recipe: Cokes
+(2137,-1,3287500,4), -- Recipe: Steel
+(2138,-1,3287500,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287500,6), -- Recipe: Cord
+(2139,-1,3287500,7), -- Recipe: Steel Mold
+(2140,-1,3287500,8), -- Recipe: High-Grade Suede
+(2141,-1,3287500,9), -- Recipe: Silver Mold
+(2142,-1,3287500,10), -- Recipe: Varnish of Purity
+(2143,-1,3287500,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287500,12), -- Recipe: Compound Braid
+(1825,-1,3287500,13), -- Recipe: Oriharukon
+(2145,-1,3287500,14), -- Recipe: Mithril Alloy
+(2146,-1,3287500,15), -- Recipe: Artisan's frame
+(2147,-1,3287500,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287500,17), -- Recipe: Crafted Leather
+(2149,-1,3287500,18), -- Recipe: Metallic Fiber
+(5231,-1,3287500,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287500,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287500,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287500,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287500,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287500,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287500,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287500,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287500,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287500,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287500,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287500,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287500,31), -- Recipe: Spiritshot D
+(1805,-1,3287500,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287500,33), -- Recipe: Spiritshot C
+(3953,-1,3287500,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287500,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287500,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287500,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3287500,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287500,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287500,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287500,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287500,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287500,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287500,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287500,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287500,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287500,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287500,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287500,49), -- Recipe: Spiritshot B
+(1807,-1,3287500,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287500,51), -- Recipe: Spiritshot A
+(3955,-1,3287500,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287500,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287500,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287500,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287500,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287500,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287500,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287500,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287500,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287500,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287500,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287500,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287500,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287500,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Desian (Dion)
+(1814,-1,3287600,1), -- Recipe: Leather
+(2135,-1,3287600,2), -- Recipe: Braided Hemp
+(2136,-1,3287600,3), -- Recipe: Cokes
+(2137,-1,3287600,4), -- Recipe: Steel
+(2138,-1,3287600,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287600,6), -- Recipe: Cord
+(2139,-1,3287600,7), -- Recipe: Steel Mold
+(2140,-1,3287600,8), -- Recipe: High-Grade Suede
+(2141,-1,3287600,9), -- Recipe: Silver Mold
+(2142,-1,3287600,10), -- Recipe: Varnish of Purity
+(2143,-1,3287600,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287600,12), -- Recipe: Compound Braid
+(1825,-1,3287600,13), -- Recipe: Oriharukon
+(2145,-1,3287600,14), -- Recipe: Mithril Alloy
+(2146,-1,3287600,15), -- Recipe: Artisan's frame
+(2147,-1,3287600,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287600,17), -- Recipe: Crafted Leather
+(2149,-1,3287600,18), -- Recipe: Metallic Fiber
+(5231,-1,3287600,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287600,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287600,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287600,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287600,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287600,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287600,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287600,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287600,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287600,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287600,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287600,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287600,31), -- Recipe: Spiritshot D
+(1805,-1,3287600,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287600,33), -- Recipe: Spiritshot C
+(3953,-1,3287600,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287600,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287600,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287600,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3287600,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287600,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287600,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287600,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287600,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287600,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287600,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287600,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287600,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287600,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287600,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287600,49), -- Recipe: Spiritshot B
+(1807,-1,3287600,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287600,51), -- Recipe: Spiritshot A
+(3955,-1,3287600,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287600,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287600,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287600,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287600,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287600,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287600,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287600,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287600,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287600,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287600,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287600,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287600,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287600,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Plani (Giran)
+(1814,-1,3287700,1), -- Recipe: Leather
+(2135,-1,3287700,2), -- Recipe: Braided Hemp
+(2136,-1,3287700,3), -- Recipe: Cokes
+(2137,-1,3287700,4), -- Recipe: Steel
+(2138,-1,3287700,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287700,6), -- Recipe: Cord
+(2139,-1,3287700,7), -- Recipe: Steel Mold
+(2140,-1,3287700,8), -- Recipe: High-Grade Suede
+(2141,-1,3287700,9), -- Recipe: Silver Mold
+(2142,-1,3287700,10), -- Recipe: Varnish of Purity
+(2143,-1,3287700,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287700,12), -- Recipe: Compound Braid
+(1825,-1,3287700,13), -- Recipe: Oriharukon
+(2145,-1,3287700,14), -- Recipe: Mithril Alloy
+(2146,-1,3287700,15), -- Recipe: Artisan's frame
+(2147,-1,3287700,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287700,17), -- Recipe: Crafted Leather
+(2149,-1,3287700,18), -- Recipe: Metallic Fiber
+(5231,-1,3287700,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287700,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287700,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287700,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287700,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287700,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287700,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287700,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287700,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287700,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287700,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287700,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287700,31), -- Recipe: Spiritshot D
+(1805,-1,3287700,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287700,33), -- Recipe: Spiritshot C
+(3953,-1,3287700,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287700,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287700,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287700,37), -- Recipe: Spiritshot (D )Compressed Package (100%)
+(5163,-1,3287700,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287700,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287700,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287700,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287700,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287700,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287700,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287700,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287700,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287700,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287700,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287700,49), -- Recipe: Spiritshot B
+(1807,-1,3287700,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287700,51), -- Recipe: Spiritshot A
+(3955,-1,3287700,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287700,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287700,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287700,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287700,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287700,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287700,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287700,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287700,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287700,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287700,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287700,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287700,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287700,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Sparky (Heine)
+(1814,-1,3287800,1), -- Recipe: Leather
+(2135,-1,3287800,2), -- Recipe: Braided Hemp
+(2136,-1,3287800,3), -- Recipe: Cokes
+(2137,-1,3287800,4), -- Recipe: Steel
+(2138,-1,3287800,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287800,6), -- Recipe: Cord
+(2139,-1,3287800,7), -- Recipe: Steel Mold
+(2140,-1,3287800,8), -- Recipe: High-Grade Suede
+(2141,-1,3287800,9), -- Recipe: Silver Mold
+(2142,-1,3287800,10), -- Recipe: Varnish of Purity
+(2143,-1,3287800,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287800,12), -- Recipe: Compound Braid
+(1825,-1,3287800,13), -- Recipe: Oriharukon
+(2145,-1,3287800,14), -- Recipe: Mithril Alloy
+(2146,-1,3287800,15), -- Recipe: Artisan's frame
+(2147,-1,3287800,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287800,17), -- Recipe: Crafted Leather
+(2149,-1,3287800,18), -- Recipe: Metallic Fiber
+(5231,-1,3287800,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287800,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287800,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287800,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287800,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287800,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287800,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287800,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287800,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287800,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287800,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287800,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287800,31), -- Recipe: Spiritshot D
+(1805,-1,3287800,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287800,33), -- Recipe: Spiritshot C
+(3953,-1,3287800,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287800,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287800,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287800,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3287800,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287800,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287800,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287800,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287800,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287800,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287800,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287800,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287800,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287800,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287800,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287800,49), -- Recipe: Spiritshot B
+(1807,-1,3287800,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287800,51), -- Recipe: Spiritshot A
+(3955,-1,3287800,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287800,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287800,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287800,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287800,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287800,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287800,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287800,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287800,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287800,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287800,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287800,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287800,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287800,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Drawin (Oren)
+(1814,-1,3287900,1), -- Recipe: Leather
+(2135,-1,3287900,2), -- Recipe: Braided Hemp
+(2136,-1,3287900,3), -- Recipe: Cokes
+(2137,-1,3287900,4), -- Recipe: Steel
+(2138,-1,3287900,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3287900,6), -- Recipe: Cord
+(2139,-1,3287900,7), -- Recipe: Steel Mold
+(2140,-1,3287900,8), -- Recipe: High-Grade Suede
+(2141,-1,3287900,9), -- Recipe: Silver Mold
+(2142,-1,3287900,10), -- Recipe: Varnish of Purity
+(2143,-1,3287900,11), -- Recipe: Synthetic Cokes
+(2144,-1,3287900,12), -- Recipe: Compound Braid
+(1825,-1,3287900,13), -- Recipe: Oriharukon
+(2145,-1,3287900,14), -- Recipe: Mithril Alloy
+(2146,-1,3287900,15), -- Recipe: Artisan's frame
+(2147,-1,3287900,16), -- Recipe: Blacksmith's frame
+(2148,-1,3287900,17), -- Recipe: Crafted Leather
+(2149,-1,3287900,18), -- Recipe: Metallic Fiber
+(5231,-1,3287900,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3287900,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3287900,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3287900,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3287900,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3287900,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3287900,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3287900,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3287900,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3287900,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3287900,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3287900,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3287900,31), -- Recipe: Spiritshot D
+(1805,-1,3287900,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3287900,33), -- Recipe: Spiritshot C
+(3953,-1,3287900,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3287900,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3287900,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3287900,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3287900,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3287900,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3287900,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3287900,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3287900,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3287900,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3287900,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3287900,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3287900,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3287900,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3287900,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3287900,49), -- Recipe: Spiritshot B
+(1807,-1,3287900,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3287900,51), -- Recipe: Spiritshot A
+(3955,-1,3287900,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3287900,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3287900,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3287900,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3287900,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3287900,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3287900,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3287900,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3287900,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3287900,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3287900,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3287900,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3287900,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3287900,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Dolphren (Aden)
+(1814,-1,3288000,1), -- Recipe: Leather
+(2135,-1,3288000,2), -- Recipe: Braided Hemp
+(2136,-1,3288000,3), -- Recipe: Cokes
+(2137,-1,3288000,4), -- Recipe: Steel
+(2138,-1,3288000,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3288000,6), -- Recipe: Cord
+(2139,-1,3288000,7), -- Recipe: Steel Mold
+(2140,-1,3288000,8), -- Recipe: High-Grade Suede
+(2141,-1,3288000,9), -- Recipe: Silver Mold
+(2142,-1,3288000,10), -- Recipe: Varnish of Purity
+(2143,-1,3288000,11), -- Recipe: Synthetic Cokes
+(2144,-1,3288000,12), -- Recipe: Compound Braid
+(1825,-1,3288000,13), -- Recipe: Oriharukon
+(2145,-1,3288000,14), -- Recipe: Mithril Alloy
+(2146,-1,3288000,15), -- Recipe: Artisan's frame
+(2147,-1,3288000,16), -- Recipe: Blacksmith's frame
+(2148,-1,3288000,17), -- Recipe: Crafted Leather
+(2149,-1,3288000,18), -- Recipe: Metallic Fiber
+(5231,-1,3288000,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3288000,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3288000,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3288000,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3288000,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3288000,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3288000,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3288000,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3288000,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3288000,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3288000,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3288000,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3288000,31), -- Recipe: Spiritshot D
+(1805,-1,3288000,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3288000,33), -- Recipe: Spiritshot C
+(3953,-1,3288000,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3288000,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3288000,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3288000,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3288000,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3288000,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3288000,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3288000,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3288000,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3288000,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3288000,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3288000,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3288000,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3288000,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3288000,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3288000,49), -- Recipe: Spiritshot B
+(1807,-1,3288000,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3288000,51), -- Recipe: Spiritshot A
+(3955,-1,3288000,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3288000,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3288000,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3288000,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3288000,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3288000,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3288000,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3288000,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3288000,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3288000,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3288000,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3288000,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3288000,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3288000,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Denver (Goddard)
+(1814,-1,3288100,1), -- Recipe: Leather
+(2135,-1,3288100,2), -- Recipe: Braided Hemp
+(2136,-1,3288100,3), -- Recipe: Cokes
+(2137,-1,3288100,4), -- Recipe: Steel
+(2138,-1,3288100,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3288100,6), -- Recipe: Cord
+(2139,-1,3288100,7), -- Recipe: Steel Mold
+(2140,-1,3288100,8), -- Recipe: High-Grade Suede
+(2141,-1,3288100,9), -- Recipe: Silver Mold
+(2142,-1,3288100,10), -- Recipe: Varnish of Purity
+(2143,-1,3288100,11), -- Recipe: Synthetic Cokes
+(2144,-1,3288100,12), -- Recipe: Compound Braid
+(1825,-1,3288100,13), -- Recipe: Oriharukon
+(2145,-1,3288100,14), -- Recipe: Mithril Alloy
+(2146,-1,3288100,15), -- Recipe: Artisan's frame
+(2147,-1,3288100,16), -- Recipe: Blacksmith's frame
+(2148,-1,3288100,17), -- Recipe: Crafted Leather
+(2149,-1,3288100,18), -- Recipe: Metallic Fiber
+(5231,-1,3288100,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3288100,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3288100,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3288100,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3288100,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3288100,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3288100,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3288100,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3288100,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3288100,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3288100,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3288100,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3288100,31), -- Recipe: Spiritshot D
+(1805,-1,3288100,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3288100,33), -- Recipe: Spiritshot C
+(3953,-1,3288100,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3288100,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3288100,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3288100,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3288100,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3288100,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3288100,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3288100,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3288100,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3288100,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3288100,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3288100,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3288100,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3288100,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3288100,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3288100,49), -- Recipe: Spiritshot B
+(1807,-1,3288100,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3288100,51), -- Recipe: Spiritshot A
+(3955,-1,3288100,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3288100,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3288100,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3288100,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3288100,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3288100,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3288100,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3288100,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3288100,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3288100,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3288100,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3288100,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3288100,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3288100,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Prouse (Schuttgart)
+(1814,-1,3288200,1), -- Recipe: Leather
+(2135,-1,3288200,2), -- Recipe: Braided Hemp
+(2136,-1,3288200,3), -- Recipe: Cokes
+(2137,-1,3288200,4), -- Recipe: Steel
+(2138,-1,3288200,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3288200,6), -- Recipe: Cord
+(2139,-1,3288200,7), -- Recipe: Steel Mold
+(2140,-1,3288200,8), -- Recipe: High-Grade Suede
+(2141,-1,3288200,9), -- Recipe: Silver Mold
+(2142,-1,3288200,10), -- Recipe: Varnish of Purity
+(2143,-1,3288200,11), -- Recipe: Synthetic Cokes
+(2144,-1,3288200,12), -- Recipe: Compound Braid
+(1825,-1,3288200,13), -- Recipe: Oriharukon
+(2145,-1,3288200,14), -- Recipe: Mithril Alloy
+(2146,-1,3288200,15), -- Recipe: Artisan's frame
+(2147,-1,3288200,16), -- Recipe: Blacksmith's frame
+(2148,-1,3288200,17), -- Recipe: Crafted Leather
+(2149,-1,3288200,18), -- Recipe: Metallic Fiber
+(5231,-1,3288200,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3288200,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3288200,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3288200,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3288200,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3288200,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3288200,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3288200,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3288200,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3288200,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3288200,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3288200,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3288200,31), -- Recipe: Spiritshot D
+(1805,-1,3288200,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3288200,33), -- Recipe: Spiritshot C
+(3953,-1,3288200,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3288200,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3288200,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3288200,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3288200,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3288200,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3288200,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3288200,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3288200,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3288200,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3288200,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3288200,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3288200,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3288200,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3288200,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3288200,49), -- Recipe: Spiritshot B
+(1807,-1,3288200,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3288200,51), -- Recipe: Spiritshot A
+(3955,-1,3288200,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3288200,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3288200,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3288200,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3288200,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3288200,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3288200,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3288200,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3288200,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3288200,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3288200,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3288200,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3288200,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3288200,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Hedinger (Rune)
+(1814,-1,3288300,1), -- Recipe: Leather
+(2135,-1,3288300,2), -- Recipe: Braided Hemp
+(2136,-1,3288300,3), -- Recipe: Cokes
+(2137,-1,3288300,4), -- Recipe: Steel
+(2138,-1,3288300,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3288300,6), -- Recipe: Cord
+(2139,-1,3288300,7), -- Recipe: Steel Mold
+(2140,-1,3288300,8), -- Recipe: High-Grade Suede
+(2141,-1,3288300,9), -- Recipe: Silver Mold
+(2142,-1,3288300,10), -- Recipe: Varnish of Purity
+(2143,-1,3288300,11), -- Recipe: Synthetic Cokes
+(2144,-1,3288300,12), -- Recipe: Compound Braid
+(1825,-1,3288300,13), -- Recipe: Oriharukon
+(2145,-1,3288300,14), -- Recipe: Mithril Alloy
+(2146,-1,3288300,15), -- Recipe: Artisan's frame
+(2147,-1,3288300,16), -- Recipe: Blacksmith's frame
+(2148,-1,3288300,17), -- Recipe: Crafted Leather
+(2149,-1,3288300,18), -- Recipe: Metallic Fiber
+(5231,-1,3288300,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3288300,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3288300,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3288300,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3288300,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3288300,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3288300,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3288300,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3288300,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3288300,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3288300,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3288300,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3288300,31), -- Recipe: Spiritshot D
+(1805,-1,3288300,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3288300,33), -- Recipe: Spiritshot C
+(3953,-1,3288300,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3288300,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3288300,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3288300,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3288300,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3288300,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3288300,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3288300,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3288300,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3288300,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3288300,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3288300,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3288300,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3288300,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3288300,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3288300,49), -- Recipe: Spiritshot B
+(1807,-1,3288300,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3288300,51), -- Recipe: Spiritshot A
+(3955,-1,3288300,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3288300,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3288300,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3288300,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3288300,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3288300,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3288300,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3288300,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3288300,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3288300,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3288300,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3288300,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3288300,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3288300,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+-- Metar (Hunters)
+(1814,-1,3288700,1), -- Recipe: Leather
+(2135,-1,3288700,2), -- Recipe: Braided Hemp
+(2136,-1,3288700,3), -- Recipe: Cokes
+(2137,-1,3288700,4), -- Recipe: Steel
+(2138,-1,3288700,5), -- Recipe: Coarse Bone Powder (100%)
+(1817,-1,3288700,6), -- Recipe: Cord
+(2139,-1,3288700,7), -- Recipe: Steel Mold
+(2140,-1,3288700,8), -- Recipe: High-Grade Suede
+(2141,-1,3288700,9), -- Recipe: Silver Mold
+(2142,-1,3288700,10), -- Recipe: Varnish of Purity
+(2143,-1,3288700,11), -- Recipe: Synthetic Cokes
+(2144,-1,3288700,12), -- Recipe: Compound Braid
+(1825,-1,3288700,13), -- Recipe: Oriharukon
+(2145,-1,3288700,14), -- Recipe: Mithril Alloy
+(2146,-1,3288700,15), -- Recipe: Artisan's frame
+(2147,-1,3288700,16), -- Recipe: Blacksmith's frame
+(2148,-1,3288700,17), -- Recipe: Crafted Leather
+(2149,-1,3288700,18), -- Recipe: Metallic Fiber
+(5231,-1,3288700,19), -- Recipe: Metal Hardener (100%)
+(5472,-1,3288700,20), -- Recipe: Metallic Thread (100%)
+(5473,-1,3288700,21), -- Recipe: Durable Metal Plate (100%)
+(4122,-1,3288700,22), -- Recipe: Maestro Holder (100%)
+(4123,-1,3288700,23), -- Recipe: Maestro Anvil Lock (100%)
+(4124,-1,3288700,24), -- Recipe: Craftsman Mold (100%)
+(4125,-1,3288700,25), -- Recipe: Maestro Mold (100%)
+(5474,-1,3288700,26), -- Recipe: Reorin's Mold (100%)
+(5475,-1,3288700,27), -- Recipe: Warsmith's Mold (100%)
+(5476,-1,3288700,28), -- Recipe: Arcsmith's Anvil (100%)
+(5477,-1,3288700,29), -- Recipe: Warsmith's Holder (100%)
+(1804,-1,3288700,30), -- Recipe: Soulshot (D-Grade)
+(3032,-1,3288700,31), -- Recipe: Spiritshot D
+(1805,-1,3288700,32), -- Recipe: Soulshot (C-Grade)
+(3033,-1,3288700,33), -- Recipe: Spiritshot C
+(3953,-1,3288700,34), -- Recipe: Blessed Spiritshot D
+(3954,-1,3288700,35), -- Recipe: Blessed Spiritshot C
+(5153,-1,3288700,36), -- Recipe: Soulshot (D) Compressed Package (100%)
+(5158,-1,3288700,37), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(5163,-1,3288700,38), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+(5268,-1,3288700,39), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
+(5273,-1,3288700,40), -- Recipe: Greater Spiritshot (D) Compressed Package(100%)
+(5278,-1,3288700,41), -- Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+(5154,-1,3288700,42), -- Recipe: Soulshot (C) Compressed Package (100%)
+(5159,-1,3288700,43), -- Recipe: Spiritshot (C) Compressed Package (100%)
+(5164,-1,3288700,44), -- Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+(5269,-1,3288700,45), -- Recipe: Greater Soulshot (C) Compressed Package(100%)
+(5274,-1,3288700,46), -- Recipe: Greater Spiritshot (C) Compressed Package(100%)
+(5279,-1,3288700,47), -- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+(1806,-1,3288700,48), -- Recipe: Soulshot (B-Grade)
+(3034,-1,3288700,49), -- Recipe: Spiritshot B
+(1807,-1,3288700,50), -- Recipe: Soulshot (A-Grade)
+(3035,-1,3288700,51), -- Recipe: Spiritshot A
+(3955,-1,3288700,52), -- Recipe: Blessed Spiritshot B
+(3956,-1,3288700,53), -- Recipe: Blessed Spiritshot A
+(5155,-1,3288700,54), -- Recipe: Soulshot (B) Compressed Package (100%)
+(5160,-1,3288700,55), -- Recipe: Spiritshot (B) Compressed Package (100%)
+(5165,-1,3288700,56), -- Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+(5270,-1,3288700,57), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
+(5275,-1,3288700,58), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
+(5280,-1,3288700,59), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+(5156,-1,3288700,60), -- Recipe: Soulshot (A) Compressed Package (100%)
+(5161,-1,3288700,61), -- Recipe: Spiritshot (A) Compressed Package (100%)
+(5166,-1,3288700,62), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+(5271,-1,3288700,63), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
+(5276,-1,3288700,64), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(5281,-1,3288700,65), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+
 -- GM Shops
 -- Weapons
 (1,0,9001,1),
