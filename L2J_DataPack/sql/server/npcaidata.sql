@@ -10121,5 +10121,5 @@ UPDATE `npcaidata` SET clan='baium' WHERE npc_id=29020;
 UPDATE `npcaidata` SET enemyRange=300, enemyClan='archangel_clan' WHERE clan='baium_clan';
 UPDATE `npcaidata` SET enemyRange=300, enemyClan='baium_clan' WHERE clan='archangel_clan';
 
--- Eggs Shouldn't Walk
-UPDATE `npcaidata` SET can_move=0 WHERE npc_id IN (18344,32118) OR (npc_id>=18793 AND npc_id<=18798);
+-- NPCs that Shouldn't Walk (Eggs, Core, Powder Keg)
+UPDATE `npcaidata` SET can_move=0 WHERE npc_id IN (18344,18622,29006,32118) OR (npc_id>=18793 AND npc_id<=18798);
