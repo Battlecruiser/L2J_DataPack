@@ -2468,6 +2468,11 @@
 		<set name="reuseDelay" val="3000" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<cond msgId="113" addName="1">
+			<not>
+				<target npcType="L2Attackable" />
+			</not>
+		</cond>
 		<for>
 			<effect count="5" name="HealOverTime" abnormalTime="3" val="#hot" abnormalLvl="2" abnormalType="life_force_kamael" />
 		</for>
