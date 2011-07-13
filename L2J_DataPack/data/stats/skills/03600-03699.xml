@@ -195,10 +195,11 @@
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="25">
 				<using kind="Heavy" />
@@ -206,7 +207,9 @@
 			<add order="0x40" stat="regMp" val="1.518">
 				<and>
 					<player resting="true" />
-					<player moving="false" />
+					<or>
+						<player standing="true" />
+					</or>
 				</and>
 			</add>
 		</for>
@@ -238,10 +241,11 @@
 		</for>
 	</skill>
 	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="38">
 				<using kind="Heavy" />
@@ -249,7 +253,9 @@
 			<add order="0x40" stat="regMp" val="2.019">
 				<and>
 					<player resting="true" />
-					<player moving="false" />
+					<or>
+						<player standing="true" />
+					</or>
 				</and>
 			</add>
 		</for>
@@ -281,10 +287,11 @@
 		</for>
 	</skill>
 	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="44">
 				<using kind="Heavy" />
@@ -292,7 +299,9 @@
 			<add order="0x40" stat="regMp" val="2.25">
 				<and>
 					<player resting="true" />
-					<player moving="false" />
+					<or>
+						<player standing="true" />
+					</or>
 				</and>
 			</add>
 		</for>
@@ -324,10 +333,11 @@
 		</for>
 	</skill>
 	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="50">
 				<using kind="Heavy" />
@@ -335,7 +345,9 @@
 			<add order="0x40" stat="regMp" val="2.43">
 				<and>
 					<player resting="true" />
-					<player moving="false" />
+					<or>
+						<player standing="true" />
+					</or>
 				</and>
 			</add>
 		</for>
@@ -367,10 +379,11 @@
 		</for>
 	</skill>
 	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="59">
 				<using kind="Heavy" />
@@ -378,7 +391,9 @@
 			<add order="0x40" stat="regMp" val="2.823">
 				<and>
 					<player resting="true" />
-					<player moving="false" />
+					<or>
+						<player standing="true" />
+					</or>
 				</and>
 			</add>
 		</for>
