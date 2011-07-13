@@ -24,7 +24,6 @@
 	<property name="build" location="build" />
 	<property name="build.dist" location="${build}/dist" />
 	<property name="build.dist.game" location="${build.dist}/gameserver" />
-	<property name="build.dist.lang" location="${build.dist}/data/lang" />
 	<property name="build.dist.languages" location="${build.dist}/languages" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 	<property name="build.dist.cb" location="${build.dist}/community" />
@@ -41,7 +40,6 @@
 		<mkdir dir="${build.dist.cb_sql}" />
 		<mkdir dir="${build.dist.game}" />
 		<mkdir dir="${build.dist.doc}" />
-		<mkdir dir="${build.dist.lang}" />
 		<mkdir dir="${build.dist.languages}" />
 		<mkdir dir="${build.dist.login}" />
 		<mkdir dir="${build.dist.sql}" />
@@ -69,9 +67,6 @@
 		</sync>
 		<sync todir="${build.dist.tools}">
 			<fileset dir="${basedir}/tools" />
-		</sync>
-		<sync todir="${build.dist.lang}">
-			<fileset dir="${basedir}/data/lang" />
 		</sync>
 		<sync todir="${build.dist.languages}">
 			<fileset dir="${basedir}/languages" />
