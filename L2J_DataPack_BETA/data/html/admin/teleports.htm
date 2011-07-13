@@ -1,12 +1,11 @@
 <html><title>Admin Teleports</title><body>
 <center>
-<table width=260><tr>
-<td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>Admin Teleport Menu</center></td>
-<td width=45><button value="Back" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<table width=256><tr>
+<td align=center><button value="Main" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td align=center width=176>Admin Teleport Menu</td>
+<td align=center><button value="Back" action="bypass -h admin_admin" width=40 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr></table><br>
-<table width=276>
-<tr>
+<table width=256><tr>
 <td align=center><button action="bypass -h admin_help teleports/TownAreas.htm" value="Town Areas" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td align=center><button action="bypass -h admin_help teleports/WorldAreas.htm" value="World Areas" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
@@ -33,9 +32,21 @@
 <tr>
 <td align=center><button action="bypass -h admin_help teleports/others.htm" value="Other Ports" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td align=center><button action="bypass -h admin_help teleports/epilogue.htm" value="Gracia Epilogue" width=128 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+<button value="Additional Movement Options" action="bypass -h admin_tele" width=180 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+Move to the given coordinates<br1>
+<table width=256><tr>
+<td align=center width=85><font color="LEVEL">X</font></td>
+<td align=center width=85><font color="LEVEL">Y</font></td>
+<td align=center width=85><font color="LEVEL">Z</font></td>
+</tr></table>
+<table width=256><tr>
+<td align=center><edit var="char_cord_x" width=75></td>
+<td align=center><edit var="char_cord_y" width=75></td>
+<td align=center><edit var="char_cord_z" width=75></td>
+</tr></table>
+<table width=256><tr>
+<td align=center><button value="Go" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=31 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr></table>
 </center>
-<br>
-<center><button value="Additional Movement Options" action="bypass -h admin_tele" width=200 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
-Move to the given coordinates<br1>
-<table width=260><tr><td width=15>X:</td><td><edit var="char_cord_x" width=55></td><td width=15>Y:</td><td><edit var="char_cord_y" width=55></td><td width=15>Z:</td><td><edit var="char_cord_z" width=55></td><td><button value="Go" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=55 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr></table><br></center></body></html>
+</body></html>
