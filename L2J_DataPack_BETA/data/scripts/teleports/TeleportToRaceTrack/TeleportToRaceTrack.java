@@ -113,6 +113,9 @@ public class TeleportToRaceTrack extends Quest
 			addStartNpc(npcId);
 			addTalkId(npcId);
 		}
+		
+		addStartNpc(RACE_MANAGER);
+        addTalkId(RACE_MANAGER);
 	}
 	
 	public static void main(String[] args)
