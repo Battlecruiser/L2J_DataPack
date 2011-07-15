@@ -82,7 +82,7 @@ INSERT INTO `class_list` VALUES
 ('O_Titan', 113, 46), 
 ('O_Monk', 47, 44), 
 ('O_Tyrant', 48, 47), 
-('O_GrandKhauatari', 114, 48), 
+('O_GrandKhavatari', 114, 48), 
 ('O_Mage', 49, -1), 
 ('O_Shaman', 50, 49), 
 ('O_Overlord', 51, 50), 
