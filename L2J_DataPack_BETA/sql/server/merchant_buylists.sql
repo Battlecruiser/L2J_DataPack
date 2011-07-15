@@ -20346,7 +20346,23 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Sealed Cloaks
 (13686,0,9909,13),
 (13893,0,9909,14),
-(14603,0,9909,15);
+(14603,0,9909,15),
+-- (GM-Shop) Raid Boss Cloaks
+(21713,0,9909,16), -- Sealed Cloak of Zaken
+(21716,0,9909,17), -- Cloak of Zaken
+(21719,0,9909,18), -- Soul Cloak of Zaken
+(21714,0,9909,19), -- Sealed Cloak of Freya
+(21717,0,9909,20), -- Cloak of Freya
+(21720,0,9909,21), -- Soul Cloak of Freya
+(21715,0,9909,22), -- Sealed Cloak of Frintezza
+(21718,0,9909,23), -- Cloak of Frintezza
+(21721,0,9909,24), -- Soul Cloak of Frintezza
+-- (GM-Shop) Event Cloaks
+(21583,0,9909,25), -- 7th Anniversary Cloak - Pitch Black
+(21587,0,9909,26), -- 7th Anniversary Cloak - Blood Red
+(21588,0,9909,27), -- 7th Anniversary Cloak - Pearl White
+(21585,0,9909,28), -- Festival Cloak - Pitch Black - Event
+(21590,0,9909,29); -- Festival Cloak - Pearl White - Event
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Belts
