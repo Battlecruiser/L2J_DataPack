@@ -67,7 +67,7 @@ public class GrandBossTeleporters extends Quest
 		
 		if (st.hasQuestItems(7267))
 		{
-			st.takeItems(7267, 1);
+			// st.takeItems(7267, 1); // No longer consumed in h5
 			player.teleToLocation(183813, -115157, -3303);
 			st.set("allowEnter", "1");
 		}
@@ -106,7 +106,7 @@ public class GrandBossTeleporters extends Quest
 					{
 						if (st.hasQuestItems(3865))
 						{
-							st.takeItems(3865, 1);
+							// st.takeItems(3865, 1); // No longer consumed in h5
 							L2BossZone zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
 							
 							if (zone != null)
