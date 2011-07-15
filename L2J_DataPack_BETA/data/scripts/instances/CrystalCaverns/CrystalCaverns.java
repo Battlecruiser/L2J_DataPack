@@ -1683,7 +1683,7 @@ public class CrystalCaverns extends Quest
 						for (L2PcInstance partyMember : party.getPartyMembers())
 						{
 							//int rnd = Rnd.get(100);
-							//partyMember.destroyItemByItemId("Quest", (rnd < 33 ? BOSS_CRYSTAL_1:(rnd < 67 ? BOSS_CRYSTAL_2:BOSS_CRYSTAL_3)), 1, partyMember, true); Crystals are no longer beign cunsumed while Baylor
+							//partyMember.destroyItemByItemId("Quest", (rnd < 33 ? BOSS_CRYSTAL_1:(rnd < 67 ? BOSS_CRYSTAL_2:BOSS_CRYSTAL_3)), 1, partyMember, true); Crystals are no longer beign cunsumed while entering to Baylor Lair.
 							world._raiders.add(partyMember);
 						}
 					}
