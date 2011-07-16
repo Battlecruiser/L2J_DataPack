@@ -281,9 +281,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -303,9 +301,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="43" />
@@ -357,9 +353,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -379,9 +373,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="43" />

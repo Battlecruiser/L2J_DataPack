@@ -32,9 +32,7 @@
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -511,9 +509,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -550,9 +546,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -572,9 +566,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -611,9 +603,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -633,9 +623,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -672,9 +660,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -694,9 +680,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -716,9 +700,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -738,9 +720,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -1457,7 +1437,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="83" />
@@ -1490,7 +1470,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="100" />
@@ -1524,7 +1504,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="117" />
@@ -1874,7 +1854,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="141" />
@@ -1908,7 +1888,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="169" />
@@ -1943,7 +1923,7 @@
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="198" />

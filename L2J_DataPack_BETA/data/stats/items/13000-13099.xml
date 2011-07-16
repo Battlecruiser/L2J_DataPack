@@ -28,9 +28,7 @@
 		<set name="price" val="2032000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="73" />
@@ -1157,9 +1155,7 @@
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1180,9 +1176,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8310-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1190,9 +1184,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="13079" type="EtcItem" name="My Teleport Spellbook 1-Sheet Pack">

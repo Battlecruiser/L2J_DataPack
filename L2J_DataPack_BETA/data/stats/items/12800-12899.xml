@@ -277,9 +277,7 @@
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -287,9 +285,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="12812" type="Armor" name="Dynasty Sigil">
@@ -305,9 +301,7 @@
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -315,9 +309,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="12813" type="Armor" name="Vesper Sigil">
@@ -334,9 +326,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -344,9 +334,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="12814" type="Weapon" name="Shadow Item - Gatekeeper Transformation Stick">
@@ -1133,7 +1121,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3360-1;3868-4;3552-3;3360-1;3655-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -1169,7 +1157,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3868-4;3655-1;3552-1;3050-2" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -1204,7 +1192,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3868-4;3655-1;3552-3" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="318" />
@@ -1331,7 +1319,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3050-2" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -1365,7 +1353,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3068-3" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -1399,7 +1387,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3849-1;3653-1;3552-1;3013-5" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="272" />
@@ -1814,7 +1802,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3834-1;3650-1;3552-1;3068-3" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -1849,7 +1837,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3834-1;3650-1;3552-1;3013-5" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -1885,7 +1873,7 @@
 		<set name="oncrit_skill" val="3061-3" />
 		<set name="item_skill" val="3834-1;3650-1;3552-3" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="228" />
@@ -2241,7 +2229,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3564-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
@@ -2275,7 +2263,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3013-3" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />
@@ -2309,7 +2297,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3850-1;3653-1;3552-1;3566-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="304" />

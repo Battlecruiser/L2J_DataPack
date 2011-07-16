@@ -1135,9 +1135,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="duration" val="600" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1159,7 +1157,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="10" />
@@ -1181,7 +1179,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="8" />
@@ -1203,7 +1201,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="rCrit" val="10" />
@@ -1240,9 +1238,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />

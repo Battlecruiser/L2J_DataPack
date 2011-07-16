@@ -345,9 +345,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1430" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -356,9 +354,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="13530" type="Weapon" name="Flag of Gludio">

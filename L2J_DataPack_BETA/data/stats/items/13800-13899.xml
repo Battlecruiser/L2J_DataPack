@@ -1061,9 +1061,7 @@
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1071,9 +1069,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="13886" type="Armor" name="Sealed Dynasty Sigil">
@@ -1089,9 +1085,7 @@
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1099,9 +1093,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="13887" type="Armor" name="Sealed Vesper Sigil">
@@ -1118,9 +1110,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1128,9 +1118,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="13888" type="Armor" name="Sealed Lord's Cloak">
@@ -1143,9 +1131,7 @@
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="2" />
@@ -1167,7 +1153,7 @@
 		</for>
 		<cond msgId="2453">
 			<and>
-				<player race="Kamael" />
+				<player races="Kamael" />
 				<!-- Kamael exclusive cloak -->
 				<player cloakStatus="1" />
 			</and>
@@ -1202,9 +1188,7 @@
 		<set name="equip_condition" val="{{ec_category;{@rogue_cloack}}}" />
 		<cond msgId="2453">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
 				<player cloakStatus="1" />
 			</and>
@@ -1226,9 +1210,7 @@
 		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
 		<cond msgId="2453">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
 				<player cloakStatus="1" />
 			</and>

@@ -410,7 +410,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;3564-3;3833-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -445,7 +445,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;3013-3;3833-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -480,7 +480,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3650-1;8289-1;3833-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="359" />
@@ -515,7 +515,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-3;3655-1;3870-1;3360-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -550,7 +550,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3655-1;8289-1;3870-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -586,7 +586,7 @@
 		<set name="oncrit_skill" val="3574-2" />
 		<set name="item_skill" val="3552-3;3655-1;3870-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="444" />
@@ -620,7 +620,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3564-3;3846-2" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -654,7 +654,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3013-3;3846-2" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -688,7 +688,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3552-1;3653-1;3566-3;3846-2" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="429" />
@@ -708,9 +708,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -735,9 +733,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -752,9 +748,7 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="33673000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="225" />
@@ -781,9 +775,7 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="25255000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="112" />
@@ -799,9 +791,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="21046000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="141" />
@@ -828,9 +818,7 @@
 		<set name="weight" val="850" />
 		<set name="price" val="15784000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="70" />
@@ -845,9 +833,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -872,9 +858,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -888,9 +872,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -915,9 +897,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -931,9 +911,7 @@
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -949,9 +927,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -965,9 +941,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -992,9 +966,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -1009,9 +981,7 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
@@ -1038,9 +1008,7 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
@@ -1056,9 +1024,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
@@ -1085,9 +1051,7 @@
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
@@ -1102,9 +1066,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1129,9 +1091,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1145,9 +1105,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1172,9 +1130,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1188,9 +1144,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1206,9 +1160,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1223,9 +1175,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -1252,9 +1202,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -1270,9 +1218,7 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="33673000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="238" />
@@ -1301,9 +1247,7 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="25255000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="119" />
@@ -1320,9 +1264,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="21046000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="149" />
@@ -1351,9 +1293,7 @@
 		<set name="weight" val="850" />
 		<set name="price" val="15784000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1369,9 +1309,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -1398,9 +1336,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -1415,9 +1351,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -1444,9 +1378,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
@@ -1461,9 +1393,7 @@
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1481,9 +1411,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1500,9 +1428,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -1529,9 +1455,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
@@ -1547,9 +1471,7 @@
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
@@ -1578,9 +1500,7 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
@@ -1597,9 +1517,7 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
@@ -1628,9 +1546,7 @@
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
@@ -1646,9 +1562,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1675,9 +1589,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1692,9 +1604,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1721,9 +1631,7 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
@@ -1738,9 +1646,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1758,9 +1664,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1781,9 +1685,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8418-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -1822,9 +1724,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8429-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
@@ -1846,9 +1746,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8419-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="238" />
@@ -1889,9 +1787,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8430-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="119" />
@@ -1914,9 +1810,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8420-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="149" />
@@ -1957,9 +1851,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8431-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1981,9 +1873,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8421-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
