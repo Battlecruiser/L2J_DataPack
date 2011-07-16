@@ -852,7 +852,7 @@
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="396" />
@@ -884,7 +884,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="473" />
@@ -917,7 +917,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="487" />
@@ -1264,7 +1264,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="376" />
@@ -1296,7 +1296,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="449" />
@@ -1329,7 +1329,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="471" />
@@ -1354,9 +1354,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="110" />
@@ -1393,9 +1391,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="110" />
@@ -1416,9 +1412,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="272" />
@@ -1457,9 +1451,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="136" />
@@ -1481,9 +1473,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -1522,9 +1512,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="85" />
@@ -1545,9 +1533,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1584,9 +1570,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1606,9 +1590,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1645,9 +1627,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
@@ -1667,9 +1647,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1692,9 +1670,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1702,9 +1678,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="15589" type="Armor" name="Vorpal Helmet">
@@ -1720,9 +1694,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="107" />
@@ -1759,9 +1731,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="107" />
@@ -1782,9 +1752,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="263" />
@@ -1823,9 +1791,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="132" />
@@ -1847,9 +1813,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="164" />
@@ -1888,9 +1852,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="82" />
@@ -1911,9 +1873,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />

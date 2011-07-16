@@ -1237,7 +1237,7 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
-			<target race="Kamael" />
+			<target races="Kamael" />
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="kamael_special">
@@ -1445,7 +1445,7 @@
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
-			<target race="Kamael" />
+			<target races="Kamael" />
 		</cond>
 	</skill>
 	<skill id="1450" levels="1" name="Chain Lightning">

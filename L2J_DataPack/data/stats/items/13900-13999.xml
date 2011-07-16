@@ -1026,9 +1026,7 @@
 		<set name="weight" val="1430" />
 		<set name="price" val="30" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
