@@ -335,6 +335,9 @@
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<cond> <!-- TEMP FIX: Until proper AI for Suicide Skills on mobs is done -->
+			<player hp="6" />
+		</cond>
 	</skill>
 	<skill id="4615" levels="12" name="Bleed">
 		<table name="#dmg"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
