@@ -80,12 +80,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<cond msgId="113" addName="1">
-			<and>
-				<not>
-					<target mindistance="200" />
-				</not>
-				<target npcId="18793,18794,18795,18796,18797,18798" />
-			</and>
+			<target npcId="18793,18794,18795,18796,18797,18798" />
 		</cond>
 	</skill>
 	<skill id="2906" levels="1" name="Incubation Accelerator">
