@@ -832,9 +832,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2297-1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
 	<item id="8671" type="EtcItem" name="Hair Style Change Potion - A (Event)">

@@ -30,9 +30,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="147" />
@@ -52,9 +50,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
@@ -73,9 +69,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
@@ -422,9 +416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="600" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
