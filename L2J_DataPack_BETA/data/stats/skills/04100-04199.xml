@@ -761,6 +761,9 @@
 		<set name="isMagic" val="true" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<cond> <!-- TEMP FIX: Until proper AI for Suicide Skills on mobs is done -->
+			<player hp="6" />
+		</cond>
 	</skill>
 	<skill id="4144" levels="80" name="Mimic Strong Attack">
 		<!-- Freya retail confirmed -->
