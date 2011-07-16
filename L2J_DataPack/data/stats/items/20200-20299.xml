@@ -1150,9 +1150,7 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
@@ -1182,7 +1180,7 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="1" />
@@ -1213,7 +1211,7 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="1" />
@@ -1245,7 +1243,7 @@
 		<set name="item_skill" val="21042-1" />
 		<set name="time" val="10080" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="1" />

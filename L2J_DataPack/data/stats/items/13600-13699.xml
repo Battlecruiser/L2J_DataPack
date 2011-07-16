@@ -1286,9 +1286,7 @@
 			<and>
 				<player castle="-1" /> <!-- owns a castle -->
 				<player pledgeClass="5" /> <!-- Baron -->
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
@@ -1338,9 +1336,7 @@
 				<player castle="-1" /> <!-- owns a castle -->
 				<player class_id_restriction="92, 102, 109, 93, 101, 108" /> <!-- Bow Masters and Dagger Masters -->
 				<player pledgeClass="5" /> <!-- Baron -->
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
@@ -1367,9 +1363,7 @@
 				<player castle="-1" /> <!-- owns a castle -->
 				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
 				<player pledgeClass="5" /> <!-- Baron -->
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
@@ -1394,7 +1388,7 @@
 			<and>
 				<player castle="-1" /> <!-- owns a castle -->
 				<player pledgeClass="5" /> <!-- Baron -->
-				<player race="Kamael" />
+				<player races="Kamael" />
 				<player cloakStatus="1" />
 			</and>
 		</cond>
