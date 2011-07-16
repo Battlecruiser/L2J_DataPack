@@ -1110,6 +1110,9 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<cond> <!-- TEMP FIX: Until proper AI for Suicide Skills on mobs is done -->
+			<player hp="6" />
+		</cond>
 	</skill>
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
 		<set name="target" val="TARGET_NONE" />
