@@ -154,7 +154,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="Human" />
+			<player races="Human" />
 		</cond>
 	</item>
 	<item id="9411" type="Armor" name="Elven Veteran's Circlet">
@@ -165,7 +165,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="Elf" />
+			<player races="Elf" />
 		</cond>
 	</item>
 	<item id="9412" type="Armor" name="Dark Elven Veteran's Circlet">
@@ -176,7 +176,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="DarkElf" />
+			<player races="DarkElf" />
 		</cond>
 	</item>
 	<item id="9413" type="Armor" name="Orcish Veteran's Circlet">
@@ -187,7 +187,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="Orc" />
+			<player races="Orc" />
 		</cond>
 	</item>
 	<item id="9414" type="Armor" name="Dwarf Veteran's Circlet">
@@ -198,7 +198,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="Dwarf" />
+			<player races="Dwarf" />
 		</cond>
 	</item>
 	<item id="9415" type="Armor" name="Kamaelic Veteran's Circlet">
@@ -209,7 +209,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
-			<player race="Kamael" />
+			<player races="Kamael" />
 		</cond>
 	</item>
 	<item id="9416" type="Armor" name="Dynasty Breast Plate">
@@ -226,9 +226,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="226" />
@@ -251,9 +249,7 @@
 		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="90, 91, 99, 106" />
 			</and>
 		</cond>
@@ -278,9 +274,7 @@
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="89, 113, 117, 118" />
 			</and>
 		</cond>
@@ -305,9 +299,7 @@
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="88, 114" />
 			</and>
 		</cond>
@@ -332,9 +324,7 @@
 		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="100, 107" />
 			</and>
 		</cond>
@@ -357,9 +347,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="141" />
@@ -379,9 +367,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="92" />
@@ -401,9 +387,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -423,9 +407,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -576,9 +558,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="113" />
@@ -602,9 +582,7 @@
 		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="97, 105, 112" />
 			</and>
 		</cond>
@@ -630,9 +608,7 @@
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="98, 115, 116" />
 			</and>
 		</cond>
@@ -658,9 +634,7 @@
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="96, 104, 111" />
 			</and>
 		</cond>
@@ -686,9 +660,7 @@
 		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="94, 95, 103, 110" />
 			</and>
 		</cond>
@@ -712,9 +684,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
@@ -735,9 +705,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="92" />
@@ -757,9 +725,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -779,9 +745,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
@@ -801,9 +765,7 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
+			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />

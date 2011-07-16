@@ -34,9 +34,7 @@
 		<set name="price" val="9900" />
 		<cond msgId="1518">
 			<and>
-				<not>
-					<player race="Kamael" />
-				</not>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player clanHall="-1" />
 			</and>
 		</cond>
