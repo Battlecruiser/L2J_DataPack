@@ -33,16 +33,20 @@
 		</for>
 	</skill>
 	<skill id="5602" levels="1" name="Transform Sacrifice">
+		<!-- Confirmed CT2.5 -->
 		<set name="canBeDispeled" val="false" />
 		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- set name="power" val="-99" / -->
+		<!-- set name="skillType" val="HEAL_PERCENT" / -->
 		<set name="power" val="100" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="10" abnormalType="transform_scrifice_p">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-				<mul order="0x50" stat="regHp" val="0.01" />
+				<mul order="0x50" stat="limitHp" val="0.1" /> <!-- TEMP FIX: Until support for HEAL_PERCENT with negative numbers is done -->
+				<mul order="0x30" stat="maxRecoverableHp" val="0.1" />
 			</effect>
 		</for>
 	</skill>
