@@ -40,18 +40,20 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="703" levels="1" name="Sacrifice Healer">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="676" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
-		<set name="skillRadius" val="1000" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="HPMPHEAL_PERCENT" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player mp="10" />
-			</not>
+			<player mp="10" />
 		</cond>
 		<for>
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT" />
@@ -195,20 +197,22 @@
 		</for>
 	</skill>
 	<skill id="709" levels="1" name="Sacrifice Enchanter">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillRadius" val="1000" />
-		<set name="staticReuse" val="true" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<add order="0x40" stat="runSpd" val="10" />
 				<add order="0x40" stat="accCombat" val="2" />
@@ -299,20 +303,22 @@
 		<set name="target" val="TARGET_PET" />
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
-		<set name="skillRadius" val="1000" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />

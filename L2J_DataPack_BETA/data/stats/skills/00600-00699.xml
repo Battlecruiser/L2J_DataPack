@@ -1364,20 +1364,22 @@
 		</for>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillRadius" val="1000" />
-		<set name="staticReuse" val="true" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
@@ -1477,20 +1479,22 @@
 		</for>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
-		<set name="skillRadius" val="1000" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
@@ -1588,20 +1592,22 @@
 		</for>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillRadius" val="1000" />
-		<set name="staticReuse" val="true" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
@@ -1695,20 +1701,22 @@
 		</for>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
-		<set name="skillRadius" val="1000" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
-				<mul order="0x50" stat="limitHp" val="0.1" />
-			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
