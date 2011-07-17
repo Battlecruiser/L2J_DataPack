@@ -790,9 +790,9 @@
 	<skill id="239" levels="7" name="Expertise S84">
 		<table name="#magicLvl"> 20 40 52 61 76 80 84 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="magicLvl" val="#magicLvl />
-		<set name=" skillType " val="PASSIVE" />
+		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="#magicLvl" />
 	</skill>
 	<skill id="244" levels="3" name="Armor Mastery">
 		<table name="#pDef"> 6.7 8 9.2 </table>
