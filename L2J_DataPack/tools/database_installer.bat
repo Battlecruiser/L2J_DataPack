@@ -376,14 +376,14 @@ echo.
 echo (q) Quit
 echo.
 set /p loginprompt= Choose (default upgrade):
-if /i %loginprompt%==f goto ls_install
+if /i %loginprompt%==f goto ls_cleanup
 if /i %loginprompt%==u goto ls_upgrade
 if /i %loginprompt%==s goto cb_backup
 if /i %loginprompt%==r goto configure
 if /i %loginprompt%==q goto end
 goto ls_ask
 
-:ls_install
+:ls_cleanup
 set stage=3
 call :colors 17
 set cmdline=
@@ -396,9 +396,18 @@ if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
 echo Login Server tables has been deleted.
-goto ls_upgrade
+goto ls_install
 
 :ls_upgrade
+echo @echo off> temp.bat
+if exist ls_errors.txt del ls_errors.txt
+for %%i in (..\sql\login\updates\*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %%i 2^>^> ls_errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move ls_errors.txt %workdir%
+goto ls_install
+
+:ls_install
 set stage=3
 set cmdline=
 if %full% == 1 (
@@ -527,14 +536,14 @@ echo.
 echo (q) Quit
 echo.
 set /p communityprompt= Choose (default upgrade):
-if /i %communityprompt%==f goto cs_install
+if /i %communityprompt%==f goto cs_cleanup
 if /i %communityprompt%==u goto cs_upgrade
 if /i %communityprompt%==s goto gs_backup
 if /i %communityprompt%==r goto configure
 if /i %communityprompt%==q goto end
 goto cs_ask
 
-:cs_install
+:cs_cleanup
 set stage=6
 call :colors 17
 set cmdline=
@@ -547,9 +556,18 @@ if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
 echo Community Server tables has been deleted.
-goto cs_upgrade
+goto cs_install
 
 :cs_upgrade
+echo @echo off> temp.bat
+if exist cs_errors.txt del cs_errors.txt
+for %%i in (..\cb_sql\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %%i 2^>^> cs_errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move cs_errors.txt %workdir%
+goto cs_install
+
+:cs_install
 set stage=6
 set cmdline=
 if %full% == 1 (
@@ -673,13 +691,13 @@ echo.
 echo (q) Quit
 echo.
 set /p installtype= Choose (default upgrade):
-if /i %installtype%==f goto gs_install
+if /i %installtype%==f goto gs_cleanup
 if /i %installtype%==u goto gs_upgrade
 if /i %installtype%==s goto custom_ask
 if /i %installtype%==q goto end
 goto gs_ask
 
-:gs_install
+:gs_cleanup
 call :colors 17
 set stage=9
 set cmdline=
@@ -692,9 +710,18 @@ if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
 echo Game Server tables has been deleted.
-goto gs_upgrade
+goto gs_install
 
 :gs_upgrade
+echo @echo off> temp.bat
+if exist gs_errors.txt del gs_errors.txt
+for %%i in (..\sql\server\updates\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> gs_errors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move gs_errors.txt %workdir%
+goto gs_install
+
+:gs_install
 set stage=9
 set cmdline=
 if %full% == 1 (
@@ -802,15 +829,14 @@ echo.
 set /p cstprompt=Install Custom Server Tables: (y) yes or (n) no (default no):
 if /i %cstprompt%==y goto custom_install
 if /i %cstprompt%==n goto mod_ask
-goto mod_ask
+
 :custom_install
 cls
 echo.
 echo Installing Custom content.
-cd ..\sql\server\custom\
 echo @echo off> temp.bat
 if exist custom_errors.txt del custom_errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
+for %%i in (..\sql\server\custom\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move custom_errors.txt %workdir%
@@ -822,7 +848,7 @@ echo Remember that in order to get these additions actually working
 echo you need to edit your configuration files. 
 echo.
 pause
-cd %workdir%
+goto mod_ask
 
 :mod_ask
 title L2JDP Installer - Mod Server Tables
@@ -837,16 +863,15 @@ echo and those tables could be created now if you wanted to.
 echo.
 set /p cstprompt=Install Mod Server Tables: (y) yes or (n) no (default no):
 if /i %cstprompt%==y goto mod_install
-if /i %cstprompt%==n goto tables_updates
-goto tables_updates
+if /i %cstprompt%==n goto end
+
 :mod_install
 cls
 echo.
 echo Installing Mods content.
-cd ..\sql\server\mods\
 echo @echo off> temp.bat
 if exist mods_errors.txt del mods_errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.txt >> temp.bat
+for %%i in (..\sql\server\mods\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move mods_errors.txt %workdir%
@@ -856,78 +881,6 @@ echo Database structure for L2J Mods finished.
 echo.
 echo Remember that in order to get these additions actually working 
 echo you need to edit your configuration files. 
-echo.
-pause
-cd %workdir%
-goto tables_updates
-
-:tables_updates
-call :colors 17
-set stage=10
-title L2JDP Installer - Automatic Tables Updates
-if %full% == 1 goto end
-:tables_updates_ask
-cls
-set nbprompt=a
-echo.
-echo Automatic Tables Updates:
-echo.
-echo This will update tables automatically depending of your chooise, due some
-echo Changesets require updates in specific tables to work properly, due new
-echo columns are introduced or table structure is modified.
-echo.
-echo (a) All LS/CS/GS Tables Updates.
-echo.
-echo (l) LS Tables Updates only.
-echo.
-echo (c) CS Tables Updates only.
-echo.
-echo (g) GS Tables Updates only.
-echo.
-echo (q) Quit.
-echo.
-set /p nbprompt= Choose (default auto-all):
-if /i %nbprompt%==a goto ls_tables_updates
-if /i %nbprompt%==l goto ls_tables_updates
-if /i %nbprompt%==c goto cs_tables_updates
-if /i %nbprompt%==g goto gs_tables_updates
-if /i %nbprompt%==q goto end
-goto tables_updates_ask
-:ls_tables_updates
-cd ..\sql\login\updates\
-echo @echo off> temp.bat
-if exist ls_errors.txt del ls_errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %%i 2^>^> ls_errors.txt >> temp.bat
-call temp.bat> nul
-del temp.bat
-move ls_errors.txt %workdir%
-cd %workdir%
-if /i %nbprompt%==l goto tables_updates_done
-:cs_tables_updates
-cd ..\cb_sql\updates\
-echo @echo off> temp.bat
-if exist cs_errors.txt del cs_errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %%i 2^>^> cs_errors.txt >> temp.bat
-call temp.bat> nul
-del temp.bat
-move cs_errors.txt %workdir%
-cd %workdir%
-if /i %nbprompt%==c goto tables_updates_done
-:gs_tables_updates
-cd ..\sql\server\updates\
-echo @echo off> temp.bat
-if exist gs_errors.txt del gs_errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> gs_errors.txt >> temp.bat
-call temp.bat> nul
-del temp.bat
-move gs_errors.txt %workdir%
-cd %workdir%
-:tables_updates_done
-title L2JDP Installer - Automatic Tables Updates Process Complete
-cls
-echo.
-echo Automagic processing finished, i'm leaving 'ls/cs/gs_errors.txt' files
-echo for your consideration.
 echo.
 pause
 goto end
@@ -990,16 +943,17 @@ call :colors 17
 title L2JDP Installer - Script Execution Finished
 cls
 echo.
-echo L2JDP database_installer version 0.2.4
-echo (C) 2007-2011 L2J Datapack Team
-echo database_installer comes with ABSOLUTELY NO WARRANTY;
+echo L2JDP Database Installer 2011
+echo.
+echo (C) 2007-2011 L2J DataPack Team
+echo Database Installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
 echo details.
 echo.
 echo Thanks for using our software.
 echo visit http://www.l2jdp.com for more info about
-echo the L2J Datapack project.
+echo the L2J DataPack Project.
 echo.
 pause
 color
