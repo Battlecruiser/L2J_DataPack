@@ -1624,34 +1624,29 @@
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="2498" levels="1" name="Bottle of Empty Soul">
-		<set name="itemConsumeCount" val="1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="10410" />
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="soulConsumeCount" val="5" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="create_item_id" val="10410" />
-		<set name="create_item_count" val="1" />
-		<set name="soulConsumeCount" val="5" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player races="Kamael" />
-				<player souls="5" />
-			</and>
+		<cond msgId="2195">
+			<player souls="5" />
 		</cond>
 	</skill>
 	<skill id="2499" levels="1" name="Bottle of Full Soul">
+		<!-- Confirmed CT2.5 -->
+		<set name="isPotion" val="true" /> <!-- TEMP FIX -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CHARGESOUL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="1" />
 		<set name="num_souls" val="5" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player races="Kamael" />
-			</and>
-		</cond>
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CHARGESOUL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 </list>
