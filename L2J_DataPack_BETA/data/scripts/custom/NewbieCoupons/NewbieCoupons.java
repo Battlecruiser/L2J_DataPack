@@ -112,14 +112,20 @@ public class NewbieCoupons extends Quest
 		else if (event.equals("newbie_show_weapon"))
 		{
 			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level == 0)
+			{
 				MultiSell.getInstance().separateAndSend(WEAPON_MULTISELL, player, npc, false);
+				return null;
+			}
 			else
 				htmltext = "30598-7.htm"; // you're not eligible to use warehouse
 		}
 		else if (event.equals("newbie_show_armor"))
 		{
 			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level > 0)
+			{
 				MultiSell.getInstance().separateAndSend(ACCESORIES_MULTISELL, player, npc, false);
+				return null;
+			}
 			else
 				htmltext = "30598-8.htm"; // you're not eligible to use warehouse
 		}
