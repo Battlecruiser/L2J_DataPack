@@ -1444,6 +1444,9 @@
 		<set name="soulConsumeCount" val="1" />
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="target" val="TARGET_ONE" />
+		<cond msgId="2195">
+			<player souls="1" />
+		</cond>
 		<cond msgId="113" addName="1">
 			<target races="Kamael" />
 		</cond>
