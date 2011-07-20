@@ -14,41 +14,26 @@
  */
 package handlers.skillhandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Attackable.RewardItem;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.l2skills.L2SkillSweeper;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
- * @author _drunk_
- *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ * @author _drunk_, Zoey76
  */
 public class Sweep implements ISkillHandler
 {
-	//private static Logger _log = Logger.getLogger(Sweep.class.getName());
+	private static final L2SkillType[] SKILL_IDS = { L2SkillType.SWEEP };
 	
-	private static final L2SkillType[] SKILL_IDS =
-	{
-		L2SkillType.SWEEP
-	};
-	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
@@ -56,16 +41,19 @@ public class Sweep implements ISkillHandler
 			return;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
-		InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		boolean send = false;
+		final L2PcInstance player = activeChar.getActingPlayer();
+		RewardItem[] items = null;
+		L2Attackable target;
+		L2SkillSweeper sweep;
+		SystemMessage sm;
 		
-		for (L2Object tgt: targets)
+		for (L2Object tgt : targets)
 		{
 			if (!(tgt instanceof L2Attackable))
+			{
 				continue;
-			L2Attackable target = (L2Attackable) tgt;
-			L2Attackable.RewardItem[] items = null;
+			}
+			target = (L2Attackable) tgt;
 			boolean isSweeping = false;
 			synchronized (target)
 			{
@@ -77,87 +65,56 @@ public class Sweep implements ISkillHandler
 			}
 			if (isSweeping)
 			{
-				if (items == null || items.length == 0)
+				if ((items == null) || (items.length == 0))
+				{
 					continue;
-				for (L2Attackable.RewardItem ritem : items)
+				}
+				for (RewardItem ritem : items)
 				{
 					if (player.isInParty())
+					{
 						player.getParty().distributeItem(player, ritem, true, target);
+					}
 					else
 					{
-						L2ItemInstance item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
-						if (iu != null)
-							iu.addItem(item);
-						send = true;
-						
-						SystemMessage smsg;
-						if (ritem.getCount() > 1)
-						{
-							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S); // earned $s2$s1
-							smsg.addItemName(ritem.getItemId());
-							smsg.addNumber(ritem.getCount());
-						}
-						else
-						{
-							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1); // earned $s1
-							smsg.addItemName(ritem.getItemId());
-						}
-						player.sendPacket(smsg);
+						player.addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, true);
 					}
 				}
 			}
 			target.endDecayTask();
 			
-			if (send)
-			{
-				if (iu != null)
-					player.sendPacket(iu);
-				else
-					player.sendPacket(new ItemList(player, false));
-			}
-			
-			L2SkillSweeper sweep = (L2SkillSweeper) skill;
+			sweep = (L2SkillSweeper) skill;
 			if (sweep.getAbsorbAbs() != -1)
 			{
+				int restored = 0;
+				double absorb = 0;
+				final StatusUpdate su = new StatusUpdate(activeChar);
+				final int abs = sweep.getAbsorbAbs();
 				if (sweep.isAbsorbHp())
 				{
-					int hpAdd = sweep.getAbsorbAbs();
-					double hp = ((activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd));
-					int restored = (int) (hp - activeChar.getCurrentHp());
-					activeChar.setCurrentHp(hp);
+					absorb = ((activeChar.getCurrentHp() + abs) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + abs));
+					restored = (int) (absorb - activeChar.getCurrentHp());
+					activeChar.setCurrentHp(absorb);
 					
-					StatusUpdate suhp = new StatusUpdate(activeChar);
-					suhp.addAttribute(StatusUpdate.CUR_HP, (int)hp);
-					activeChar.sendPacket(suhp);
-					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-					sm.addNumber(restored);
-					activeChar.sendPacket(sm);
+					su.addAttribute(StatusUpdate.CUR_HP, (int) absorb);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 				}
 				else
 				{
-					int mpAdd = sweep.getAbsorbAbs();
-					double mp = ((activeChar.getCurrentMp() + mpAdd) > activeChar.getMaxMp() ? activeChar.getMaxMp() : (activeChar.getCurrentMp() + mpAdd));
-					int restored = (int) (mp - activeChar.getCurrentMp());
-					activeChar.setCurrentMp(mp);
+					absorb = ((activeChar.getCurrentMp() + abs) > activeChar.getMaxMp() ? activeChar.getMaxMp() : (activeChar.getCurrentMp() + abs));
+					restored = (int) (absorb - activeChar.getCurrentMp());
+					activeChar.setCurrentMp(absorb);
 					
-					StatusUpdate suhp = new StatusUpdate(activeChar);
-					suhp.addAttribute(StatusUpdate.CUR_MP, (int)mp);
-					activeChar.sendPacket(suhp);
-					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-					sm.addNumber(restored);
-					activeChar.sendPacket(sm);
+					su.addAttribute(StatusUpdate.CUR_MP, (int) absorb);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 				}
-				
+				activeChar.sendPacket(su);
+				sm.addNumber(restored);
+				activeChar.sendPacket(sm);
 			}
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

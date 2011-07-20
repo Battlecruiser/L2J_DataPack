@@ -1433,7 +1433,7 @@
 			<effect name="Invincible" abnormalTime="10" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="444" levels="1" name="Festive Sweeper">
+	<skill id="444" levels="1" name="Sweeper Festival">
 		<!-- H5 Skill -->
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="78" />
@@ -1442,7 +1442,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="SWEEP" />
-		<set name="target" val="TARGET_CORPSE_MOB" />
+		<set name="target" val="TARGET_AURA_CORPSE_MOB" />
 	</skill>
 	<skill id="445" levels="1" name="Mirage">
 		<!-- Confirmed CT2.5 -->
