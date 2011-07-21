@@ -747,7 +747,7 @@ public class AdminEffects implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 					return false;
 				}
-				if ((target instanceof L2PcInstance) && (action < 2 || action > 16))
+				if ((target instanceof L2PcInstance) && (action < 2 || action > 18 && action != SocialAction.LEVEL_UP))
 				{
 					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 					return false;
