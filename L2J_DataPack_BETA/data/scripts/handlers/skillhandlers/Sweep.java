@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.templates.skills.L2SkillType;
 public class Sweep implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS = { L2SkillType.SWEEP };
+	private static final int maxSweepTime = 15000;
 	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -40,13 +41,13 @@ public class Sweep implements ISkillHandler
 		{
 			return;
 		}
-		
 		final L2PcInstance player = activeChar.getActingPlayer();
+		
 		RewardItem[] items = null;
 		L2Attackable target;
 		L2SkillSweeper sweep;
 		SystemMessage sm;
-		
+		boolean canSweep = true;
 		for (L2Object tgt : targets)
 		{
 			if (!(tgt instanceof L2Attackable))
@@ -54,30 +55,38 @@ public class Sweep implements ISkillHandler
 				continue;
 			}
 			target = (L2Attackable) tgt;
-			boolean isSweeping = false;
-			synchronized (target)
+			
+			canSweep &= target.checkSpoilOwner(player, true);
+			canSweep &= target.checkCorpseTime(player, maxSweepTime, true);
+			canSweep &= player.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, false);
+			
+			if (canSweep)
 			{
-				if (target.isSweepActive())
+				boolean isSweeping = false;
+				synchronized (target)
 				{
-					items = target.takeSweep();
-					isSweeping = true;
-				}
-			}
-			if (isSweeping)
-			{
-				if ((items == null) || (items.length == 0))
-				{
-					continue;
-				}
-				for (RewardItem ritem : items)
-				{
-					if (player.isInParty())
+					if (target.isSweepActive())
 					{
-						player.getParty().distributeItem(player, ritem, true, target);
+						items = target.takeSweep();
+						isSweeping = true;
 					}
-					else
+				}
+				if (isSweeping)
+				{
+					if ((items == null) || (items.length == 0))
 					{
-						player.addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, true);
+						continue;
+					}
+					for (RewardItem ritem : items)
+					{
+						if (player.isInParty())
+						{
+							player.getParty().distributeItem(player, ritem, true, target);
+						}
+						else
+						{
+							player.addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, true);
+						}
 					}
 				}
 			}
