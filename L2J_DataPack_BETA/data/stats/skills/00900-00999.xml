@@ -997,7 +997,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 				</add>
@@ -1539,7 +1539,7 @@
 		<set name="power" val="7987" /> <!-- Guess -->
 		<set name="reuseDelay" val="45000" />
 		<set name="skillRadius" val="100" /> <!-- Guess -->
-		<set name="skillType" val="AGGDEBUFF" />
+		<set name="skillType" val="AGGDAMAGE" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="TargetMe" abnormalTime="15" val="0" />
