@@ -1274,7 +1274,7 @@
 	</skill>
 	<skill id="1557" levels="1" name="Servitor Share">
 		<!-- H5 Skill -->
-		<!-- Self Effect Unconfirmed -->
+		<!-- Totally Unconfirmed -->
 		<set name="aggroPoints" val="669" /> <!-- Guess -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1287,7 +1287,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PET" />
 		<for>
-			<effect self="1" name="Debuff" abnormalTime="1200" val="0">
+			<effect self="1" name="Debuff" abnormalTime="1200" noicon="1" val="0">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<mul order="0x30" stat="mAtk" val="0.75" />

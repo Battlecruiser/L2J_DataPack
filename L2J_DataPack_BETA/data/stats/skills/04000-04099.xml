@@ -1376,7 +1376,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="0.85" />
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
@@ -1392,7 +1392,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="1.4" />
 			</effect>
 		</for>
@@ -1414,7 +1414,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Grow" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
+			<effect name="Grow" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
@@ -1435,7 +1435,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="possession">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
 				<add order="0x40" stat="rEvas" val="4" />
 				<mul order="0x30" stat="pDef" val="0.8" />
