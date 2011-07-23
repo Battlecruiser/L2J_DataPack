@@ -446,11 +446,22 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="512" levels="10" name="Create Bio Potion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 20 28 36 43 49 55 60 64 68 72 </table>
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="soulMaxConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="513" levels="1" name="Create Dark Seed">
 		<!-- Confirmed CT2.5 -->
@@ -1875,10 +1886,22 @@
 		</for>
 	</skill>
 	<skill id="574" levels="4" name="Bomb Installation">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 60 63 66 69 </table>
+		<table name="#npcTrapId"> 13040 13041 13042 13043 </table>
+		<table name="#triggerSkillLvl"> 4 5 6 7 </table>
 		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="#npcTrapId" />
+		<set name="triggerSkillId" val="5267" />
+		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 	</skill>
 	<skill id="575" levels="4" name="Steel Cutter">
 		<!-- Confirmed CT2.5 -->

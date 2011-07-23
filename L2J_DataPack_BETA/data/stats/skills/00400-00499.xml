@@ -1642,14 +1642,16 @@
 		</enchant1for>
 	</skill>
 	<skill id="453" levels="1" name="Escape Shackle">
-		<set name="mpConsume" val="60" />
-		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="597" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="60" />
+		<set name="mpConsume" val="60" />
+		<set name="negateAbnormals" val="root_physically,3" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="NEGATE" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="negateAbnormals" val="root_physically,3" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
 		<set name="target" val="TARGET_SELF" />
@@ -2454,11 +2456,22 @@
 		</enchant1for>
 	</skill>
 	<skill id="491" levels="1" name="Not In Use">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="36" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="1461" />
+		<set name="magicLvl" val="36" />
+		<set name="mpInitialConsume" val="366" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="492" levels="25" name="Spread Wing" enchantGroup1="2" enchantGroup2="2">
 		<!-- CT2.2 retail confirmed -->

@@ -594,14 +594,20 @@
 		</for>
 	</skill>
 	<skill id="635" levels="3" name="Not In Use">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 60 75 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="636" levels="3" name="Not In Use">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 60 75 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="637" levels="1" name="Master Ability - Attack">
 		<!-- CT2.5 retail confirmed -->

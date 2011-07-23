@@ -941,18 +941,25 @@
 		</for>
 	</skill>
 	<skill id="332" levels="1" name="Extra Inventory">
-		<!-- Increases size of inventory. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="inventoryLimit" val="1" />
+		</for>
 	</skill>
 	<skill id="333" levels="1" name="Extra Sales Slots">
-		<!-- Increases private store sales slots. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="PrivateBuyLimit" val="1" />
+			<add order="0x40" stat="PrivateSellLimit" val="1" />
+		</for>
 	</skill>
 	<skill id="334" levels="1" name="Focus Skill Mastery">
 		<!-- Skill for Daggers & Archers -->
@@ -2510,22 +2517,25 @@
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="392" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="393" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="394" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="395" levels="1" name="Heroic Miracle">
 		<!-- Confirmed CT2.5 -->
@@ -2578,21 +2588,24 @@
 		</for>
 	</skill>
 	<skill id="397" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="398" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="399" levels="1" name="none">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 </list>

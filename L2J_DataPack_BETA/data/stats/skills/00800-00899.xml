@@ -58,9 +58,11 @@
 		</for>
 	</skill>
 	<skill id="805" levels="1" name="not used">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="806" levels="1" name="Magic Obstacle">
 		<set name="mpConsume" val="49" />
@@ -734,10 +736,16 @@
 		</for>
 	</skill>
 	<skill id="843" levels="1" name="Shooting Star">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="3480" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="844" levels="1" name="Outpost Construction">
 		<set name="mpInitialConsume" val="30" />

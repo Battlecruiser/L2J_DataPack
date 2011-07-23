@@ -811,10 +811,24 @@
 		</for>
 	</skill>
 	<skill id="1534" levels="1" name="Courage of Pa'agrio">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="affectLimit" = "50;50" / -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="30" />
+		<set name="mpConsume" val="1" />
+		<set name="mpInitialConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
+		<for>
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="pa_up">
+				<mul order="0x30" stat="maxCp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1535" levels="1" name="Chant of Movement">
 		<set name="mpConsume" val="69" />
