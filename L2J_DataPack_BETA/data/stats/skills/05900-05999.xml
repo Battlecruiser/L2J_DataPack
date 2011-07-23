@@ -874,7 +874,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="BigHead" time="1800" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="1800" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="5995" levels="1" name="not_used">

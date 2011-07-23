@@ -1312,7 +1312,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,blackafro">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,blackafro">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
@@ -1329,7 +1329,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,yellowafro">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,yellowafro">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
@@ -1351,7 +1351,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,pinkafro">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,pinkafro">
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 			</effect>

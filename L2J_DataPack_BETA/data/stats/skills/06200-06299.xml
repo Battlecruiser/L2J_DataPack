@@ -67,7 +67,7 @@
 		<set name="transformId" val="113" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
-			<effect name="Transformation" time="-1" val="0" abnormalLvl="99" abnormalType="speed_up">
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="99" abnormalType="speed_up">
 				<set order="0x08" stat="STR" val="40" />
 				<set order="0x08" stat="DEX" val="30" />
 				<set order="0x08" stat="CON" val="43" />
@@ -287,7 +287,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Debuff" time="10" val="0" special="stakatoroot" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
 		</for>
@@ -305,7 +305,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Debuff" time="10" val="0" special="stakatoroot" effectPower="100" effectType="DEBUFF" abnormalLvl="4" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" effectPower="100" effectType="DEBUFF" abnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
