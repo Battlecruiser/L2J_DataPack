@@ -262,18 +262,40 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="saveVs" val="MEN" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="magicLvl" val="84" />
+		<set name="power" val="100" />
 		<set name="lvlDepend" val="1" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="300" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" time="10" val="0" special="stakatoroot" stackOrder="3" stackType="speed_down">
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="84" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="power" val="18162" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" time="10" val="0" special="stakatoroot" effectPower="100" effectType="DEBUFF" stackOrder="4" stackType="speed_down">
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6239" levels="1" name="Proof of Space and Time">
 		<!-- Confirmed CT2.5 -->
