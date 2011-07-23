@@ -678,7 +678,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_s">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_s">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -697,7 +697,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_c">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_c">
 				<add order="0x40" stat="rCrit" val="15" />
 				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -717,7 +717,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_d">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_d">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<add order="0x40" stat="runSpd" val="20" />
