@@ -364,9 +364,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="num_souls" val="40" />
+		<set name="num_souls" val="50" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
+		<cond msgId="2163">
+			<not>
+				<player souls="50" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1rCrit"> 0.251 0.253 0.255 0.256 0.258 0.260 0.261 0.263 0.265 0.266 0.268 0.270 0.271 0.273 0.275 0.276 0.278 0.280 0.281 0.283 0.285 0.286 0.288 0.290 0.291 0.293 0.295 0.296 0.298 0.300 </table>
