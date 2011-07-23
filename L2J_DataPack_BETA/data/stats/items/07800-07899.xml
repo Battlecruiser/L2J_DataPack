@@ -306,6 +306,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="23" />
 			<set order="0x08" stat="mAtk" val="24" />
@@ -313,9 +316,6 @@
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7817" type="Weapon" name="Apprentice Adventurer's Bone Club">
 		<set name="icon" val="icon.weapon_club_i00" />
@@ -333,6 +333,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -340,9 +343,6 @@
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7818" type="Weapon" name="Apprentice Adventurer's Knife">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
@@ -360,6 +360,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="21" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -367,9 +370,6 @@
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7819" type="Weapon" name="Apprentice Adventurer's Cestus">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
@@ -387,6 +387,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="29" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -394,9 +397,6 @@
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7820" type="Weapon" name="Apprentice Adventurer's Bow">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
@@ -416,6 +416,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="49" />
 			<set order="0x08" stat="mAtk" val="17" />
@@ -423,9 +426,6 @@
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7821" type="Weapon" name="Apprentice Adventurer's Long Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
@@ -443,15 +443,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />
 			<set order="0x08" stat="mAtk" val="17" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7822" type="Weapon" name="Traveler's Mace">
 		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
@@ -471,6 +471,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="41" />
 			<set order="0x08" stat="mAtk" val="43" />
@@ -480,9 +483,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7823" type="Weapon" name="Traveler's Dark Elven Bow">
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
@@ -503,6 +503,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="105" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -512,9 +515,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7824" type="Weapon" name="Traveler's Long Bow">
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
@@ -535,6 +535,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="105" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -544,9 +547,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7825" type="Weapon" name="Traveler's Staff">
 		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
@@ -566,6 +566,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="50" />
 			<set order="0x08" stat="mAtk" val="47" />
@@ -575,9 +578,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7826" type="Weapon" name="Traveler's Bastard Sword">
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
@@ -596,6 +596,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="51" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -604,9 +607,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7827" type="Weapon" name="Traveler's Wand">
 		<set name="icon" val="icon.weapon_divine_tome_i00" />
@@ -626,6 +626,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="41" />
 			<set order="0x08" stat="mAtk" val="43" />
@@ -634,9 +637,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7828" type="Weapon" name="Traveler's Jamadhr">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
@@ -655,6 +655,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="62" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -664,9 +667,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7829" type="Weapon" name="Traveler's Tomahawk">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
@@ -685,6 +685,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="51" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -694,9 +697,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7830" type="Weapon" name="Traveler's Poniard Dagger">
 		<set name="icon" val="icon.weapon_dirk_i00" />
@@ -715,6 +715,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="45" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -724,9 +727,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7831" type="Weapon" name="Traveler's Pike">
 		<set name="icon" val="icon.weapon_pike_i00" />
@@ -746,6 +746,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3599-1" />
+		<cond msgId="1685">
+			<player pkCount="0" />
+		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="51" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -755,9 +758,6 @@
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
-		<cond msgId="1685">
-			<player pkCount="0" />
-		</cond>
 	</item>
 	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
@@ -981,14 +981,13 @@
 		<set name="price" val="58600" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="37" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7851" type="Armor" name="Clan Oath Armor">
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
@@ -1073,14 +1072,13 @@
 		<set name="price" val="190400" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="119" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7855" type="Armor" name="Clan Oath Leather Gloves - Light Armor">
 		<set name="icon" val="icon.armor_t1002_g_i00" />
@@ -1094,14 +1092,13 @@
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7856" type="Armor" name="Clan Oath Boots - Light Armor">
 		<set name="icon" val="icon.armor_t1002_b_i00" />
@@ -1115,14 +1112,13 @@
 		<set name="price" val="39100" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
+		<cond msgId="1518">
+			<player pledgeClass="1" /> <!-- Vassal (Academy) -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="24" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 	</item>
 	<item id="7857" type="Armor" name="Clan Oath Aketon">
 		<set name="icon" val="icon.armor_t1003_ul_i00" />

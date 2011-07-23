@@ -323,18 +323,18 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-			<set order="0x08" stat="pAtk" val="200" />
-			<set order="0x08" stat="mAtk" val="6" />
-			<set order="0x08" stat="rCrit" val="8" />
-			<set order="0x08" stat="pAtkSpd" val="325" />
-		</for>
 		<cond msgId="1518">
 			<and>
 				<player class_id_restriction="93, 101, 108" />
 				<player subclass="false" />
 			</and>
 		</cond>
+		<for>
+			<set order="0x08" stat="pAtk" val="200" />
+			<set order="0x08" stat="mAtk" val="6" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+		</for>
 	</item>
 	<item id="13529" type="Armor" name="Test Sigil">
 		<set name="icon" val="icon.shield_arcana_sigil_i00" />
@@ -353,9 +353,6 @@
 			<set order="0x08" stat="sDef" val="47" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-		</cond>
 	</item>
 	<item id="13530" type="Weapon" name="Flag of Gludio">
 		<set name="icon" val="icon.weapon_fort_flag_i00" />

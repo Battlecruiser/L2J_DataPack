@@ -1826,13 +1826,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="88, 114" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10488" type="Armor" name="Dynasty Jeweled Leather Armor - Weapon Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1848,13 +1848,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
-		</cond>
 	</item>
 	<item id="10489" type="Armor" name="Dynasty Jeweled Leather Armor - Enchanter">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1870,13 +1870,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="98, 115, 116, 136" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
-		</cond>
 	</item>
 	<item id="10490" type="Armor" name="Dynasty Jeweled Leather Armor - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -1892,13 +1892,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="96, 104, 111" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10491" type="Armor" name="Silk Shirt - HP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />

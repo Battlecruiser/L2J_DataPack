@@ -2049,14 +2049,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="73" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14583" type="Armor" name="Apella Combat Armor">
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
@@ -2072,16 +2071,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="293" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14584" type="Armor" name="Apella Combat Gauntlet - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
@@ -2096,16 +2094,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14585" type="Armor" name="Apella Combat Boots - Heavy Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
@@ -2120,16 +2117,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14586" type="Armor" name="Apella Combat Clothes">
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
@@ -2144,14 +2140,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="220" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14587" type="Armor" name="Apella Combat Leather Gloves - Tans Armor Use">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
@@ -2165,14 +2160,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14588" type="Armor" name="Apella Combat Shoes - Tans Armor Use">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
@@ -2186,14 +2180,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player pledgeClass="4" /> <!-- Elder -->
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14589" type="Armor" name="Apella Combat Overcoat">
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
@@ -2209,17 +2202,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="147" />
 			<add order="0x40" stat="maxMp" val="718" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14590" type="Armor" name="Apella Combat Silk Gloves - Robe">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
@@ -2234,16 +2226,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14591" type="Armor" name="Apella Combat Sandals - Robe">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
@@ -2258,16 +2249,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player pledgeClass="4" /> <!-- Elder -->
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="49" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player pledgeClass="4" />
-			<!-- Elder -->
-		</cond>
 	</item>
 	<item id="14592" type="Armor" name="Gludio Earth Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />

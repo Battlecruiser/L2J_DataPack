@@ -196,13 +196,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="96, 104, 111" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10215" type="Weapon" name="Icarus Sawsword">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
@@ -733,13 +733,13 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="92, 102, 109, 134" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
-		</cond>
 	</item>
 	<item id="10235" type="Armor" name="Dynasty Silver Satin Tunic">
 		<set name="icon" val="icon.armor_t93_u_i00" />
