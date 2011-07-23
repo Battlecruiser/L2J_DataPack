@@ -668,24 +668,61 @@
 	</skill>
 	<skill id="9161" levels="1" name="Vesper's Mighty Power">
 		<!-- Increase Physical Attack by 15%, Magical Attack by 20%, and Moving Speed by 10 for 10 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_s">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<add order="0x40" stat="runSpd" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9162" levels="1" name="Vesper's Critical Attack Power">
 		<!-- Increase Physical Critical Attack Rate by 15, Magic Critical Attack Rate by 2, and Moving Speed by 10 for 10 minutes. Recovers 5% of the standard short-range physical damage inflicted on the enemy as HP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_c">
+				<add order="0x40" stat="rCrit" val="15" />
+				<add order="0x40" stat="mCritRate" val="2" />
+				<add order="0x40" stat="runSpd" val="10" />
+				<add order="0x40" stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9163" levels="1" name="Invincible Vesper">
 		<!-- Increase Max. Attack Speed by 20%, Magic Speed by 20%, and Moving Speed by 20 for 10 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_d">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<add order="0x40" stat="runSpd" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9164" levels="1" name="Special Gift of April Fool's Day - Event">
 		<!-- Confirmed CT2.5 -->

@@ -1302,24 +1302,59 @@
 		</cond>
 	</skill>
 	<skill id="2897" levels="1" name="Baguette's Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,blackafro">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="regHp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2898" levels="1" name="Fresh Cream Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,yellowafro">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="mAtkSpd" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.1" />
+				<mul order="0x30" stat="mDef" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<add order="0x40" stat="runSpd" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2899" levels="1" name="Cheesecake Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,pinkafro">
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 </list>
