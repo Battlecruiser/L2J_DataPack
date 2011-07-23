@@ -420,6 +420,11 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="2163">
+			<not>
+				<player souls="1" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="5549" levels="1" name="Physical Short-range Weakness">
 		<set name="target" val="TARGET_NONE" />
