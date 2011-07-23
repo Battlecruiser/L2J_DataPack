@@ -885,7 +885,7 @@
 		<set name="hitTime" val="500" />
 		<set name="skillRadius" val="600" />
 		<for>
-			<effect name="Buff" time="70" val="0" stackType="br_event_buf2" event="evaswrath" />
+			<effect name="Buff" time="70" val="0" abnormalLvl="1" abnormalType="br_event_buf2" event="evaswrath" />
 		</for>
 	</skill>
 	<skill id="23073" levels="1" name="Switch Mode">

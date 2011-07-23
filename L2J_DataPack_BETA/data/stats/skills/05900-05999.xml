@@ -865,9 +865,17 @@
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="ignoreResists" val="true" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="BigHead" time="1800" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" />
+		</for>
 	</skill>
 	<skill id="5995" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
