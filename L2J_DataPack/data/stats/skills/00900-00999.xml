@@ -909,6 +909,11 @@
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="num_souls" val="5" />
+		<cond msgId="2163">
+			<not>
+				<player souls="5" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="954" levels="1" name="Strider Bite">
 		<!-- Confirmed CT2.5 -->
