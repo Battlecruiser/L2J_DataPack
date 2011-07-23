@@ -1068,9 +1068,6 @@
 			<add order="0x10" stat="pDef" val="13" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-		</cond>
 	</item>
 	<item id="13886" type="Armor" name="Sealed Dynasty Sigil">
 		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
@@ -1092,9 +1089,6 @@
 			<add order="0x10" stat="pDef" val="15" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-		</cond>
 	</item>
 	<item id="13887" type="Armor" name="Sealed Vesper Sigil">
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
@@ -1117,9 +1111,6 @@
 			<add order="0x10" stat="pDef" val="17" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
-		</cond>
 	</item>
 	<item id="13888" type="Armor" name="Sealed Lord's Cloak">
 		<set name="icon" val="icon.feud_load_cloak_i01" />
@@ -1147,17 +1138,16 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
+		<cond msgId="2453">
+			<and>
+				<player races="Kamael" />
+				<player cloakStatus="1" />
+			</and>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player races="Kamael" />
-				<!-- Kamael exclusive cloak -->
-				<player cloakStatus="1" />
-			</and>
-		</cond>
 	</item>
 	<item id="13890" type="Armor" name="Holy Spirit's Cloak">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -1168,13 +1158,13 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="220" />
 		<set name="price" val="28671000" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
-		<cond msgId="2453">
-			<player cloakStatus="1" />
-		</cond>
 	</item>
 	<item id="13891" type="Armor" name="Holy Spirit's Cloak - Light Armor exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
