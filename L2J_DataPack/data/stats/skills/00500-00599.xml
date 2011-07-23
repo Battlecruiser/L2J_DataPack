@@ -100,6 +100,11 @@
 		<enchant1 name="num_souls" val="#ench1num_souls" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
+		<cond msgId="2163">
+			<not>
+				<player souls="#num_souls" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="503" levels="3" name="Scorn">
 		<!-- Confirmed CT2.5 -->
