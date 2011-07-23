@@ -164,16 +164,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
-		<for>
-			<add order="0x10" stat="pDef" val="226" />
-			<enchant order="0x0C" stat="pDef" val="0" />
-		</for>
 		<cond msgId="1518">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 				<player class_id_restriction="100, 107" />
 			</and>
 		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="226" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
 	</item>
 	<item id="10807" type="Armor" name="Dynasty Leather Armor {PvP}">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -234,13 +234,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="92, 102, 109, 134" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
-		</cond>
 	</item>
 	<item id="10810" type="Armor" name="Dynasty Tunic {PvP}">
 		<set name="icon" val="icon.armor_t93_u_i00" />
@@ -421,13 +421,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
-		</cond>
 	</item>
 	<item id="10817" type="Armor" name="Dynasty Leather Armor {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
@@ -445,13 +445,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="98, 115, 116, 136" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
-		</cond>
 	</item>
 	<item id="10818" type="Armor" name="Dynasty Leather Armor {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -469,13 +469,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="96, 104, 111" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10819" type="Armor" name="Dynasty Platinum Breastplate {PvP}">
 		<set name="icon" val="icon.armor_t91_u_i00" />
@@ -667,13 +667,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="92, 102, 109, 134" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="92, 102, 109, 134" />
-		</cond>
 	</item>
 	<item id="10827" type="Armor" name="Dynasty Silver Satin Tunic {PvP}">
 		<set name="icon" val="icon.armor_t93_u_i00" />
@@ -827,13 +827,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="88, 114" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="88, 114" />
-		</cond>
 	</item>
 	<item id="10833" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Weapon Master">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -851,13 +851,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
-		</cond>
 	</item>
 	<item id="10834" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Enchanter">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -875,13 +875,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="98, 115, 116, 136" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="98, 115, 116, 136" />
-		</cond>
 	</item>
 	<item id="10835" type="Armor" name="Dynasty Jewel Leather Armor {PvP} - Summoner">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -899,13 +899,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
+		<cond msgId="1518">
+			<player class_id_restriction="96, 104, 111" />
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<player class_id_restriction="96, 104, 111" />
-		</cond>
 	</item>
 	<item id="10836" type="EtcItem" name="Pathfinder Supplies (Level 2)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />

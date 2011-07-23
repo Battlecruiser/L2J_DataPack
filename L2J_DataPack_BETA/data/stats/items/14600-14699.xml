@@ -31,16 +31,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-			<add order="0x10" stat="pDef" val="20" />
-		</for>
 		<cond msgId="2453">
 			<and>
 				<player races="Kamael" />
-				<!-- Kamael exclusive cloak -->
 				<player cloakStatus="1" />
 			</and>
 		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
 	</item>
 	<item id="14602" type="Armor" name="Ancient Cloak">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -53,19 +52,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+		<cond msgId="2453">
+			<and>
+				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
+				<player cloakStatus="1" />
+			</and>
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="20" />
 		</for>
-		<cond msgId="2453">
-			<and>
-				<player races="Kamael" />
-				<!-- Kamael exclusive cloak -->
-				<player cloakStatus="1" />
-			</and>
-		</cond>
 	</item>
 	<item id="14603" type="EtcItem" name="Sealed Ancient Cloak">
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
@@ -181,12 +176,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-			<add order="0x10" stat="pDef" val="20" />
-		</for>
 		<cond msgId="2453">
 			<player cloakStatus="1" />
 		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
 	</item>
 	<item id="14610" type="Armor" name="Ancient Cloak: Robe exclusive">
 		<set name="icon" val="icon.vesper_cloack_i00" />
@@ -200,9 +195,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_category;{@mage_cloack}}}" />
-		<for>
-			<add order="0x10" stat="pDef" val="20" />
-		</for>
 		<cond msgId="2453">
 			<and>
 				<player races="Human,Elf,DarkElf,Orc,Dwarf" />
@@ -210,6 +202,9 @@
 				<player cloakStatus="1" />
 			</and>
 		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
 	</item>
 	<item id="14611" type="Armor" name="Rudolph's Nose">
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
