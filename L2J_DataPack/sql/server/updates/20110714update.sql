@@ -7,6 +7,3 @@ DELETE FROM `item_elementals` WHERE `itemId` IN (SELECT `object_id` FROM `items`
 -- Hero Items
 DELETE FROM `item_attributes` WHERE `itemId` IN (SELECT `object_id` FROM `items` WHERE (item_id>=6611 AND item_id<=6621) OR item_id=6842 OR (item_id>=9388 AND item_id<=9390));
 DELETE FROM `item_elementals` WHERE `itemId` IN (SELECT `object_id` FROM `items` WHERE (item_id>=6611 AND item_id<=6621) OR item_id=6842 OR (item_id>=9388 AND item_id<=9390));
--- PVP Items
-DELETE FROM `item_attributes` WHERE `itemId` IN (SELECT `object_id` FROM `items` WHERE (item_id>=10667 AND item_id<=10835) OR (item_id>=12852 AND item_id<=12977) OR (item_id>=14363 AND item_id<=14525) OR item_id IN (14528,14529,14558) OR (item_id>=15913 AND item_id<=16024) OR (item_id>=16134 AND item_id<=16147) OR item_id IN (16149,16151,16153,16155,16157,16159) OR (item_id>=16168 AND item_id<=16176) OR (item_id>=16179 AND item_id<=16220));
-DELETE FROM `item_elementals` WHERE `itemId` IN (SELECT `object_id` FROM `items` WHERE (item_id>=10667 AND item_id<=10835) OR (item_id>=12852 AND item_id<=12977) OR (item_id>=14363 AND item_id<=14525) OR item_id IN (14528,14529,14558) OR (item_id>=15913 AND item_id<=16024) OR (item_id>=16134 AND item_id<=16147) OR item_id IN (16149,16151,16153,16155,16157,16159) OR (item_id>=16168 AND item_id<=16176) OR (item_id>=16179 AND item_id<=16220));
