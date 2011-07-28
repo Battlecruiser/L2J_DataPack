@@ -422,7 +422,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="2163">
 			<not>
-				<player souls="1" />
+				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
 	</skill>
