@@ -386,7 +386,7 @@
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<cond msgId="2163">
 			<not>
-				<player souls="50" />
+				<player souls="50" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
 	</skill>
