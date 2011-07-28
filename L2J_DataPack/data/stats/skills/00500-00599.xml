@@ -102,7 +102,7 @@
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<cond msgId="2163">
 			<not>
-				<player souls="#num_souls" />
+				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
 	</skill>
