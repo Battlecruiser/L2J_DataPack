@@ -1005,7 +1005,7 @@
 		<set name="num_souls" val="5" />
 		<cond msgId="2163">
 			<not>
-				<player souls="5" />
+				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
 	</skill>
