@@ -219,9 +219,7 @@ public class AdminSiege implements IAdminCommandHandler
 			{
 				L2ClanHallZone zone = clanhall.getZone();
 				if (zone != null)
-				{
 					activeChar.teleToLocation(zone.getSpawnLoc(), true);
-				}
 			}
 			else if (command.equalsIgnoreCase("admin_spawn_doors"))
 			{

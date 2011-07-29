@@ -14,9 +14,9 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.MapRegionTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Manor;
 import com.l2jserver.gameserver.model.L2Object;
@@ -78,7 +78,7 @@ public class Seed implements IItemHandler
 		}
 		
 		final int seedId = item.getItemId();
-		if (areaValid(seedId, MapRegionTable.getInstance().getAreaCastle(playable)))
+		if (areaValid(seedId, MapRegionManager.getInstance().getAreaCastle(playable)))
 		{
 			target.setSeeded(seedId, (L2PcInstance)playable);
 			final SkillHolder[] skills = item.getEtcItem().getSkills();

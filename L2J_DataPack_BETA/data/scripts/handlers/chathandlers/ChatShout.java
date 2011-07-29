@@ -17,8 +17,8 @@ package handlers.chathandlers;
 import java.util.Collection;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MapRegionTable;
 import com.l2jserver.gameserver.handler.IChatHandler;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -58,10 +58,10 @@ public class ChatShout implements IChatHandler
 		
 		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.isGM()))
 		{
-			int region = MapRegionTable.getInstance().getMapRegion(activeChar.getX(), activeChar.getY());
+			int region = MapRegionManager.getInstance().getMapRegion(activeChar).getLocId();
 			for (L2PcInstance player : pls)
 			{
-				if (region == MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY()) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
+				if (region == MapRegionManager.getInstance().getMapRegion(player).getLocId() && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
 					player.sendPacket(cs);
 			}
 		}
