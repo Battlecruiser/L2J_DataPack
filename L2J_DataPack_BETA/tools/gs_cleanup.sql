@@ -92,7 +92,6 @@ DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS itemsonground;
 DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS lvlupgain;
-DROP TABLE IF EXISTS mapregion;
 DROP TABLE IF EXISTS merchant_buylists;
 DROP TABLE IF EXISTS merchant_lease;
 DROP TABLE IF EXISTS merchant_shopids;
