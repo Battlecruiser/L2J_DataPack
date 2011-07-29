@@ -46,25 +46,33 @@
 															<xs:attribute name="name" use="required">
 																<xs:simpleType>
 																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="attack_speed_on_ride" />
 																		<xs:enumeration value="consume_meal_in_battle" />
+																		<xs:enumeration value="consume_meal_in_battle_on_ride" />
 																		<xs:enumeration value="consume_meal_in_normal" />
+																		<xs:enumeration value="consume_meal_in_normal_on_ride" />
 																		<xs:enumeration value="exp" />
 																		<xs:enumeration value="get_exp_type" />
-																		<xs:enumeration value="hp" />
-																		<xs:enumeration value="hpreg" />
-																		<xs:enumeration value="matk" />
+																		<xs:enumeration value="mattack_on_ride" />
+																		<xs:enumeration value="max_hp_on_ride" />
+																		<xs:enumeration value="max_mp_on_ride" />
 																		<xs:enumeration value="max_meal" />
-																		<xs:enumeration value="mdef" />
-																		<xs:enumeration value="mp" />
-																		<xs:enumeration value="mpreg" />
-																		<xs:enumeration value="patk" />
-																		<xs:enumeration value="pdef" />
+																		<xs:enumeration value="org_hp" />
+																		<xs:enumeration value="org_hp_regen" />
+																		<xs:enumeration value="org_mattack" />
+																		<xs:enumeration value="org_mdefend" />
+																		<xs:enumeration value="org_mp" />
+																		<xs:enumeration value="org_mp_regen" />
+																		<xs:enumeration value="org_pattack" />
+																		<xs:enumeration value="org_pdefend" />
+																		<xs:enumeration value="pattack_on_ride" />
 																		<xs:enumeration value="soulshot_count" />
+																		<xs:enumeration value="speed_on_ride" />
 																		<xs:enumeration value="spiritshot_count" />
 																	</xs:restriction>
 																</xs:simpleType>
 															</xs:attribute>
-															<xs:attribute name="val" type="xs:integer" use="required" />
+															<xs:attribute name="val" type="xs:token" use="required" />
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
