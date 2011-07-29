@@ -105,7 +105,7 @@ public class Baium extends L2AttackableAIScript
 	};
 	
 	private long _LastAttackVsBaiumTime = 0;
-	private List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
+	private final List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
 	private L2BossZone _Zone;
 	
 	public Baium (int questId, String name, String descr)
@@ -154,6 +154,7 @@ public class Baium extends L2AttackableAIScript
 			GrandBossManager.getInstance().addBoss(baium);
 			final L2Npc _baium = baium;
 			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+				@Override
 				public void run()
 				{
 					try
@@ -204,6 +205,7 @@ public class Baium extends L2AttackableAIScript
 				startQuestTimer("skill_range", 500, npc, null, true);
 				final L2Npc baium = npc;
 				ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+					@Override
 					public void run()
 					{
 						try
@@ -257,7 +259,18 @@ public class Baium extends L2AttackableAIScript
 				{
 					npc.setIsCastingNow(false); //just in case
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4135,1));
+					L2Skill skill = SkillTable.getInstance().getInfo(4135, 1);
+					if (skill.isMagic())
+					{
+						if (npc.isMuted())
+							return super.onAdvEvent(event, npc, player);
+					}
+					else
+					{
+						if (npc.isPhysicalMuted())
+							return super.onAdvEvent(event, npc, player);
+					}
+					npc.doCast(skill);
 					npc.setIsCastingNow(true);
 				}
 				else if (!_Zone.isInsideZone(npc))
@@ -288,6 +301,7 @@ public class Baium extends L2AttackableAIScript
 				GrandBossManager.getInstance().addBoss(baium);
 				final L2Npc _baium = baium;
 				ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+					@Override
 					public void run()
 					{
 						try
@@ -383,7 +397,18 @@ public class Baium extends L2AttackableAIScript
 				if (sk_4258 == 0)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4258,1));
+					L2Skill skill = SkillTable.getInstance().getInfo(4258,1);
+					if (skill.isMagic())
+					{
+						if (npc.isMuted())
+							return super.onAttack(npc, attacker, damage, isPet);
+					}
+					else
+					{
+						if (npc.isPhysicalMuted())
+							return super.onAttack(npc, attacker, damage, isPet);
+					}
+					npc.doCast(skill);
 				}
 			}
 			// update a variable with the last action against baium
@@ -472,7 +497,8 @@ public class Baium extends L2AttackableAIScript
 	
 	public synchronized void callSkillAI(L2Npc npc)
 	{
-		if (npc.isInvul() || npc.isCastingNow()) return;
+		if (npc.isInvul() || npc.isCastingNow())
+			return;
 		
 		if (_target == null || _target.isDead() || !(_Zone.isInsideZone(_target)))
 		{
@@ -485,6 +511,18 @@ public class Baium extends L2AttackableAIScript
 		L2Skill skill = _skill;
 		if (skill == null)
 			skill = SkillTable.getInstance().getInfo(getRandomSkill(npc),1);
+		
+		if (skill.isMagic())
+		{
+			if (npc.isMuted())
+				return;
+		}
+		else
+		{
+			if (npc.isPhysicalMuted())
+				return;
+		}
+		
 		if (target == null || target.isDead() || !(_Zone.isInsideZone(target)))
 		{
 			npc.setIsCastingNow(false);
