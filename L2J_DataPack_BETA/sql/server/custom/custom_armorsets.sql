@@ -15,4 +15,4 @@ CREATE TABLE IF NOT EXISTS `custom_armorsets` (
   `mw_feet` smallint(5) unsigned NOT NULL DEFAULT '0',
   `mw_shield` smallint(5) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`chest`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

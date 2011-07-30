@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `ownerId` int(10) NOT NULL DEFAULT '0',
   `restore` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`item_obj_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

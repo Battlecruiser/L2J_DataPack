@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `auto_announcements` (
   `cycle` INT(11) NOT NULL,
   `memo` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

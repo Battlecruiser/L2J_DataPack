@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `clanhall_functions` (
   `rate` decimal(20,0) NOT NULL default '0',
   `endTime` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`hall_id`,`type`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

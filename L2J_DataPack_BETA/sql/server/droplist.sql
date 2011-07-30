@@ -44,7 +44,7 @@ CREATE TABLE `droplist` (
   `chance` mediumint(7) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`mobId`,`itemId`,`category`),
   KEY `key_mobId` (`mobId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `droplist` VALUES
 (18001,1806,1,1,-1,10868),-- Recipe: Soulshot: B-Grade

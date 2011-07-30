@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_nobles_eom` (
   `competitions_lost` decimal(3,0) NOT NULL default 0,
   `competitions_drawn` decimal(3,0) NOT NULL default 0,
   PRIMARY KEY (`charId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

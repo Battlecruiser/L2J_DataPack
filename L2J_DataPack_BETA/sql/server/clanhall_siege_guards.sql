@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `clanhall_siege_guards` (
   `heading` mediumint(6) NOT NULL DEFAULT '0',
   `respawnDelay` mediumint(5) NOT NULL DEFAULT '0',
   `isSiegeBoss` enum('false','true') NOT NULL DEFAULT 'false'
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `clanhall_siege_guards` VALUES
 -- Devasted Castle

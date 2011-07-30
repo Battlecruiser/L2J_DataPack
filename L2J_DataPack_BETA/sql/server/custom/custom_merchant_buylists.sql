@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `custom_merchant_buylists` (
   `time` int(11) NOT NULL DEFAULT '0',
   `savetimer` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`shop_id`,`order`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

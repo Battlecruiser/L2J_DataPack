@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `character_offline_trade_items` (
   `item` int(10) unsigned NOT NULL DEFAULT '0', -- itemId(for buy) & ObjectId(for sell)
   `count` bigint(20) unsigned NOT NULL DEFAULT '0',
   `price` bigint(20) unsigned NOT NULL DEFAULT '0'
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

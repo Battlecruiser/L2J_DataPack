@@ -5,7 +5,7 @@ CREATE TABLE `minions` (
   `amount_min` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `amount_max` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`boss_id`,`minion_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `minions` VALUES
 (20117,20118,1,3),

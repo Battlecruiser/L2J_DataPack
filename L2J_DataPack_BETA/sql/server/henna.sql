@@ -12,7 +12,7 @@ CREATE TABLE `henna` (
   `stat_DEX` tinyint(1) DEFAULT NULL,
   `stat_WIT` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`symbol_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `henna` VALUES
 (1,'symbol_s+1c-3_d',4445,10,37000,0,1,-3,0,0,0),

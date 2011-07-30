@@ -3,7 +3,7 @@ CREATE TABLE `merchant_shopids` (
   `shop_id` mediumint(7) unsigned NOT NULL DEFAULT '0',
   `npc_id` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`shop_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `merchant_shopids` VALUES
 -- Golem shop

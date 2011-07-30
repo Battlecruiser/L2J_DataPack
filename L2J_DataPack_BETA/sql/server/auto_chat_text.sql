@@ -3,7 +3,7 @@ CREATE TABLE `auto_chat_text` (
   `groupId` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `chatText` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`groupId`,`chatText`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `auto_chat_text` VALUES 
 (1,'%player_cabal_loser%! All is lost! Prepare to meet the goddess of death!'),

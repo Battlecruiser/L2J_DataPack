@@ -451,6 +451,7 @@
 	</skill>
 	<skill id="922" levels="1" name="Hide">
 		<!-- Confirmed CT2.5 -->
+		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
 		<set name="aggroPoints" val="679" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1191,7 +1192,7 @@
 		</for>
 	</skill>
 	<skill id="963" levels="1" name="Guard's Ambush">
-		<!-- Confirmed CT2.5 -->
+		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="19" />
 		<set name="target" val="TARGET_SELF" />

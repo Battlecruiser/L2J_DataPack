@@ -7,7 +7,7 @@ CREATE TABLE `pets_skills` (
   `skillId` smallint(5) unsigned NOT NULL DEFAULT '0',
   `skillLvl` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`templateId`,`skillId`,`skillLvl`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `pets_skills` VALUES
 -- SUMMON CORRUPTED MAN ACTIVE SKILLS

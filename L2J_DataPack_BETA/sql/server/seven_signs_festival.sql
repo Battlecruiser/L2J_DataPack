@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `seven_signs_festival` (
   `score` int(5) NOT NULL default '0',
   `members` varchar(255) NOT NULL default '',
   PRIMARY KEY (`festivalId`,`cabal`,`cycle`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `seven_signs_festival` VALUES 
 (0, "dawn", 1, 0, 0, ""),
