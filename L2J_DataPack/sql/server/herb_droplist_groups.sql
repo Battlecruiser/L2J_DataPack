@@ -24,7 +24,7 @@ CREATE TABLE `herb_droplist_groups` (
   `chance` mediumint(7) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`groupId`,`itemId`,`category`),
   KEY `key_mobId` (`groupId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `herb_droplist_groups` VALUES
 -- default group

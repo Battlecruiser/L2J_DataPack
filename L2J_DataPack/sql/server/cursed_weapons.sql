@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `cursed_weapons` (
   `nbKills` INT DEFAULT 0,
   `endTime` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`itemId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

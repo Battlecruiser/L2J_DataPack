@@ -20,7 +20,7 @@ CREATE TABLE `npcaidata` (
   `dodge` int(3) DEFAULT NULL,
   `ai_type` varchar(8) DEFAULT 'fighter',
   PRIMARY KEY (`npc_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `npcaidata` VALUES 
 (1,15,NULL,1,NULL,NULL,NULL,NULL,0,0,0,0,NULL,'',0,NULL,NULL,NULL,'fighter'),

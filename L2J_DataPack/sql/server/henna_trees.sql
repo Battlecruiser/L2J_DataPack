@@ -3,7 +3,7 @@ CREATE TABLE `henna_trees` (
   `class_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `symbol_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`class_id`,`symbol_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `henna_trees` VALUES
 (1,1),

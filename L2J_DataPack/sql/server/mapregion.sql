@@ -18,7 +18,7 @@ CREATE TABLE `mapregion` (
   `sec14` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `sec15` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`region`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- 0 = "Talking Island Village"
 -- 1 = "Elven Village"

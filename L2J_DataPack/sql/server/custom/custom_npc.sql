@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `custom_npc`(
   `dropHerbGroup` tinyint(1) NOT NULL DEFAULT '0',
   `basestats` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `custom_npc` VALUES
 (50007,31324,'Andromeda',1,'L2J Wedding Manager',1,'NPC.a_casino_FDarkElf',8.00,23.00,70,'female','L2WeddingManager',40,2444,2444,0.00,0.00,10,10,10,10,10,10,0,0,500,500,500,500,278,1,0,333,0,0,0,28,120,0,0,0,0),

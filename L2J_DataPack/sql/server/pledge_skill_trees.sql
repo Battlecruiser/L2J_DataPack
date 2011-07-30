@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `pledge_skill_trees` (
   `repCost` smallint(5) unsigned NOT NULL,
   `itemId` smallint(5) unsigned NOT NULL,
   `itemCount` tinyint(2) unsigned NOT NULL
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `pledge_skill_trees` VALUES
 -- Clan Level 5

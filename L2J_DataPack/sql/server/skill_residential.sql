@@ -4,7 +4,7 @@ CREATE TABLE `skill_residential` (
   `skillId` smallint(5) unsigned NOT NULL DEFAULT '0',
   `skillLevel` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entityId`,`skillId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `skill_residential` VALUES
 -- Gludio castle

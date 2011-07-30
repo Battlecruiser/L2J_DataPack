@@ -9,7 +9,7 @@ CREATE TABLE `helper_buff_list` (
   `is_magic_class` varchar(5) DEFAULT NULL,
   `forSummon` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `helper_buff_list` VALUES
 (0,5627,'WindWalk',1,6,75,'false','true'),

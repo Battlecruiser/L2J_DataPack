@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `grandboss_data` (
   `currentMP` decimal(30,15) NOT NULL,
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`boss_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `grandboss_data` VALUES 
 (29001, -21610, 181594, -5734, 0, 0, 229898.48, 667.776, 0), -- Queen Ant (40)

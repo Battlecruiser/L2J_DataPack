@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_shortcuts` (
   `class_index` int(1) NOT NULL default '0',
   PRIMARY KEY (`charId`,`slot`,`page`,`class_index`),
   KEY `shortcut_id` (`shortcut_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `special_skill_trees` (
   `learned_by_npc` enum('true','false') DEFAULT 'true' NOT NULL,
   `learned_by_fs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`skill_id`,`level`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `special_skill_trees` VALUES
 (932,1,'Star Stone',13728,1,'false','true'),

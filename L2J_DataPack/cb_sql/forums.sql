@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `forums` (
   `forum_type` int(8) NOT NULL DEFAULT '0',
   `forum_owner_id` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`serverId`,`forum_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
