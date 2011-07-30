@@ -6,7 +6,7 @@
 				<xs:element name="region" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="spawn" minOccurs="1" maxOccurs="unbounded">
+							<xs:element name="respawnPoint" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="isChaotic" type="xs:boolean" />
 									<xs:attribute name="X" type="xs:integer" use="required" />
