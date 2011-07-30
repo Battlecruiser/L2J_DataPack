@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `account_gsdata` (
   `var`  VARCHAR(20) NOT NULL DEFAULT '',
   `value` VARCHAR(255) ,
   PRIMARY KEY (`account_name`,`var`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `npc_elementals` (
   `holyDefValue` int(3) NOT NULL default 0,
   `darkDefValue` int(3) NOT NULL default 0,
   PRIMARY KEY (`npc_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `npc_elementals` VALUES
 (20001,0,0,20,20,53,20,20,20),

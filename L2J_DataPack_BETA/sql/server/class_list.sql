@@ -4,7 +4,7 @@ CREATE TABLE `class_list` (
   `id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `parent_id` smallint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `class_list` VALUES
 ('H_Fighter', 0, -1),

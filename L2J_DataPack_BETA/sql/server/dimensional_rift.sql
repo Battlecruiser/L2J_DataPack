@@ -13,7 +13,7 @@ CREATE TABLE `dimensional_rift` (
   `zT` mediumint(6) NOT NULL,
   `boss` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`type`,`room_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `dimensional_rift` VALUES
 (0, 0, -115440, -114160, -182160, -178048, -6816, -6240, -114790, -180576, -6752, 0),	-- peace zone (waiting room)

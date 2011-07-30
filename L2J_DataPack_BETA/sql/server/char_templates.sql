@@ -29,7 +29,7 @@ CREATE TABLE `char_templates` (
   `F_COL_R` decimal(3,1) NOT NULL default '0.0',
   `F_COL_H` decimal(4,1) NOT NULL default '0.0',
   PRIMARY KEY (`ClassId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `char_templates` VALUES
 (0, 'Human Fighter', 0, 40, 43, 30, 21, 11, 25, 4, 80, 6, 41, 300, 333, 33, 44, 33, 115, 81900, -71338, 258271, -3104, 0, 9.0, 23.0, 8.0, 23.5),

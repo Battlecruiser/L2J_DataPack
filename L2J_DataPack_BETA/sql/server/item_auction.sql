@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `item_auction` (
   `endingTime` bigint(13) unsigned NOT NULL DEFAULT '0',
   `auctionStateId` tinyint(1) NOT NULL,
   PRIMARY KEY (`auctionId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

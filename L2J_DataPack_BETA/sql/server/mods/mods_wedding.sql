@@ -1,7 +1,3 @@
--- 
--- Table structure for table `mods_couples`
--- 
-
 CREATE TABLE IF NOT EXISTS `mods_wedding` (
   `id` int(11) NOT NULL auto_increment,
   `player1Id` int(11) NOT NULL default '0',
@@ -10,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `mods_wedding` (
   `affianceDate` decimal(20,0) default '0',
   `weddingDate` decimal(20,0) default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

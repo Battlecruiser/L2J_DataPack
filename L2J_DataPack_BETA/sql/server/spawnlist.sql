@@ -12,7 +12,7 @@ CREATE TABLE `spawnlist` (
   `respawn_delay` mediumint(5) NOT NULL DEFAULT '0',
   `loc_id` int(9) NOT NULL DEFAULT '0',
   `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0'
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `spawnlist` VALUES
 ('partisan_agit_2121_01',1,35372,44368,107440,-2032,0,0,0,60,0,0),

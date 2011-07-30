@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_recipeshoplist` (
   `Price` bigint(20) NOT NULL DEFAULT '0',
   `Pos` int(5) NOT NULL DEFAULT '0',
   PRIMARY KEY (`charId`,`Recipeid`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_tpbookmark` (
   `tag` varchar(50) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`charId`,`Id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

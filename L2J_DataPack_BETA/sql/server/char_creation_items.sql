@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `char_creation_items` (
   `amount` int(10) unsigned NOT NULL DEFAULT '1',
   `equipped` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`classId`,`itemId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `char_creation_items` VALUES
 (-1,5588,1,'false'), -- All classes - Tutorial Guide

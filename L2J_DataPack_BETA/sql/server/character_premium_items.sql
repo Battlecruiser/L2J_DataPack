@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `character_premium_items` (
   `itemSender` varchar(50) NOT NULL,
   KEY `charId` (`charId`),
   KEY `itemNum` (`itemNum`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

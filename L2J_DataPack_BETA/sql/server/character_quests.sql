@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_quests` (
   `value` VARCHAR(255) ,
   `class_index` int(1) NOT NULL default '0',
   PRIMARY KEY (`charId`,`name`,`var`,`class_index`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

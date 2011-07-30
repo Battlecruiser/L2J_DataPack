@@ -9,7 +9,7 @@ CREATE TABLE `random_spawn` (
   `broadcastSpawn` enum('true','false') NOT NULL DEFAULT 'false',
   `randomSpawn` enum('true','false') NOT NULL DEFAULT 'true',
   PRIMARY KEY (`groupId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `random_spawn` VALUES 
 -- (2,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon

@@ -10,7 +10,7 @@ CREATE TABLE `territory_spawnlist` (
   `spawnType` tinyint(1) unsigned NOT NULL DEFAULT '0', -- 0-spawned when castle have owner, 1-fortress spawns in TW time, 2-Castle spawns in TW time, 3-Ward spawn places
   PRIMARY KEY (`id`),
   KEY `id` (`castleId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `territory_spawnlist` VALUES
 (1,null,36481,-15094,124113,-3119,50948,0),
