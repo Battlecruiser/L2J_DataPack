@@ -43,4 +43,4 @@ CREATE TABLE IF NOT EXISTS `custom_droplist` (
   `chance` mediumint(7) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`mobId`,`itemId`,`category`),
   KEY `key_mobId` (`mobId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

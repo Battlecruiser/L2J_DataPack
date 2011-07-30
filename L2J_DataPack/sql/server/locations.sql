@@ -8,7 +8,7 @@ CREATE TABLE `locations` (
   `proc` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`loc_id`,`loc_x`,`loc_y`),
   KEY `proc` (`proc`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES
   (1,42988,109652,-2032,-1032,0),

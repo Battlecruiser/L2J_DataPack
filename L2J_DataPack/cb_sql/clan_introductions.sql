@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `clan_introductions` (
   `clanId` int(8) NOT NULL,
   `introduction` text NOT NULL,
   PRIMARY KEY (`serverId`,`clanId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -3,7 +3,7 @@ CREATE TABLE `skill_learn` (
   `npc_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   `class_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`npc_id`,`class_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `skill_learn` VALUES
 (30010,0),

@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `admin_command_access_rights` (
   `accessLevels` tinyint(3) NOT NULL DEFAULT '1',
   `confirmDlg` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`adminCommand`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN ADMIN

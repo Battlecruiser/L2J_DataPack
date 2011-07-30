@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_topic_id` int(8) NOT NULL DEFAULT '0',
   `comment_forum_id` int(8) NOT NULL DEFAULT '0',
   `comment_txt` text NOT NULL
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

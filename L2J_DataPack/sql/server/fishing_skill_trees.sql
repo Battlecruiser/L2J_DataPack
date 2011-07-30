@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `learned_by_npc` enum('true','false') DEFAULT 'true' NOT NULL,
   `learned_by_fs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`skill_id`,`level`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `fishing_skill_trees` VALUES
 (1313,1,'Pumping',0,1,57,10,'false','true','false'),

@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_ui_actions` (
   `tgKey2` int(8) DEFAULT NULL,
   `show` tinyint(4) NOT NULL,
   PRIMARY KEY (`charId`,`cat`,`cmd`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

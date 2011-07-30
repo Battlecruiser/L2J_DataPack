@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_title` text,
   `post_type` int(8) NOT NULL DEFAULT '0',
   `post_read_count` int(8) NOT NULL DEFAULT '0'
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

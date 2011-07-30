@@ -20,7 +20,7 @@ CREATE TABLE `fort_staticobjects` (
   `objectType` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `id` (`fortId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `fort_staticobjects` VALUES
 (113,18200001,'Fort Gate',-54247,89585,-2870,0,0,0,0,0,0,203652,644,518,'false','false',0),

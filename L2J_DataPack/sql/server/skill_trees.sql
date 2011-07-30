@@ -11,7 +11,7 @@ CREATE TABLE `skill_trees` (
   `is_transfer` enum('true','false') NOT NULL DEFAULT 'false',
   `is_autoget` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`class_id`,`skill_id`,`level`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- GLOSSARY FOR CLASS ID'S
 

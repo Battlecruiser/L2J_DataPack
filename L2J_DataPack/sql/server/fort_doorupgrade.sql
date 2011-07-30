@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `fort_doorupgrade` (
   `pDef` int(11) NOT NULL default '0',
   `mDef` int(11) NOT NULL default '0',
   PRIMARY KEY (`doorId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

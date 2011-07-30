@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `showNpcCrest` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `castle` VALUES
 (1,'Gludio',0,0,0,'true',0,'false'),
