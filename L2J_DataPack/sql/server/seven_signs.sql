@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `seven_signs` (
   `ancient_adena_amount` DECIMAL(20,0) NOT NULL default 0,
   `contribution_score` DECIMAL(20,0) NOT NULL default 0,
   PRIMARY KEY (`charId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

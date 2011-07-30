@@ -14,7 +14,7 @@ CREATE TABLE `four_sepulchers_spawnlist` (
   `key_npc_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   `spawntype` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `four_sepulchers_spawnlist` VALUES
 ('1', '', '1', '31468', '182074', '-85579', '-7216', '0', '0', '-32600', '3600', '31921', '0'),

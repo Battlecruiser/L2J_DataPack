@@ -9,7 +9,7 @@ CREATE TABLE `merchant_buylists` (
   `time` int(11) NOT NULL DEFAULT '0',
   `savetimer` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`shop_id`,`order`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- golem shop

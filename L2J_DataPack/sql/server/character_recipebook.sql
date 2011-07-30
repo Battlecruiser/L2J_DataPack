@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_recipebook` (
   `classIndex` TINYINT NOT NULL DEFAULT 0,
   `type` INT NOT NULL default 0,
   PRIMARY KEY (`id`,`charId`,`classIndex`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

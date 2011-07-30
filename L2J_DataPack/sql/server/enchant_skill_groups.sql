@@ -16,7 +16,7 @@ CREATE TABLE `enchant_skill_groups` (
   `success_rate84` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `success_rate85` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`group_id`,`level`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `enchant_skill_groups` VALUES
 -- 2nd Class Buffs Debuffs Toogle and Summons

@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
   PRIMARY KEY (`boss_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25001,1,-54416,146480,-2887,0,43200,129600,0,95986,514), -- Greyclaw Kutus (23)

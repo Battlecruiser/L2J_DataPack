@@ -18,7 +18,7 @@ CREATE TABLE `castle_door` (
   `isWall` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`id`),
   KEY `id` (`castleId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `castle_door` VALUES
 (1,19210001,'Outer Castle Gate',-18481,113065,-2476,-18481,113058,-2799,-18350,113072,-2479,949500,644,518,'false'),

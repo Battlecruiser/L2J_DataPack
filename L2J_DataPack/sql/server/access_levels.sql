@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `access_levels` (
   `takeAggro` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   `gainExp` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY  (`accessLevel`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `access_levels` VALUES 
 (1,'Admin','0FF000','0FF000','2;3;4;5;6;7',1,1,1,1,1,1,1,1),

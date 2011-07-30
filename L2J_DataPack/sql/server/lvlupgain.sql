@@ -12,7 +12,7 @@ CREATE TABLE `lvlupgain` (
   `defaultmpmod` decimal(3,2) NOT NULL DEFAULT '0.14',
   `class_lvl` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`classid`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `lvlupgain` (`classid`,`defaulthpbase`,`defaulthpadd`,`defaultcpbase`,`defaultcpadd`,`defaultmpbase`,`defaultmpadd`,`class_lvl`) VALUES
 -- HUMANS

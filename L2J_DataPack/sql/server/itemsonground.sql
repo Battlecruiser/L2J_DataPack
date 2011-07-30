@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `itemsonground` (
   `drop_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `equipable` int(1) default '0',
   PRIMARY KEY (`object_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

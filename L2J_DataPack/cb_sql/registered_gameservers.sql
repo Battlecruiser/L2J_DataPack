@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `registered_gameservers` (
   `hex_id` varchar(50) NOT NULL default '',
   `host` varchar(50) NOT NULL default '',
   PRIMARY KEY (`serverId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

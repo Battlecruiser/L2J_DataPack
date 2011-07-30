@@ -43,7 +43,7 @@ CREATE TABLE `npc`(
   `dropHerbGroup` tinyint(1) NOT NULL DEFAULT '0',
   `basestats` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`idTemplate`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `npc` VALUES 
 (1,1,'Thomas D. Turkey',0,'Misguided Holiday Scrooge',0,'LineageMonster4.br_crazy_turkey','25','35',80,'male','L2Npc',40,'680','2000','0','0.9',40,43,30,21,20,20,0,0,'8.47458','60000','5.78704','200000',253,1,0,333,0,0,0,19.5,160,1,1,0,1),

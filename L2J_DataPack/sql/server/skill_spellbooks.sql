@@ -3,7 +3,7 @@ CREATE TABLE `skill_spellbooks` (
   `skill_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   `item_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   KEY `skill_id` (`skill_id`,`item_id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- NOTES:
 -- (0,1393),

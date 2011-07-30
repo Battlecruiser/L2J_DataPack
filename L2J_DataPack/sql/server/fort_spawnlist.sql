@@ -11,7 +11,7 @@ CREATE TABLE `fort_spawnlist` (
   `castleId` tinyint(1) unsigned NOT NULL DEFAULT '0',  -- Castle ID for Special Envoys
   PRIMARY KEY (`id`),
   KEY `id` (`fortId`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `fort_spawnlist` VALUES
 (101,null,35658,-53273,156650,-1896,62000,0,0),

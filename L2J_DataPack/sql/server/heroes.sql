@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `heroes` (
   `played` decimal(1,0) NOT NULL default 0,
   `message` varchar(300) NOT NULL default '',
   PRIMARY KEY (`charId`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

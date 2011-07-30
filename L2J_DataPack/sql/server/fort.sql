@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `fort` (
   `blood` int(3) NOT NULL default 0,
   `supplyLvL` int(2) NOT NULL default 0,
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `fort` VALUES 
 (101,'Shanty',0,0,0,0,0,0,0,0),

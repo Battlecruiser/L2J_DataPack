@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS `custom_npc_elementals`;
 CREATE TABLE IF NOT EXISTS `custom_npc_elementals` (
   `npc_id` decimal(11,0) NOT NULL default '0',
   `elemAtkType` tinyint(1) NOT NULL default -1,
@@ -10,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `custom_npc_elementals` (
   `holyDefValue` int(3) NOT NULL default 0,
   `darkDefValue` int(3) NOT NULL default 0,
   PRIMARY KEY (`npc_id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

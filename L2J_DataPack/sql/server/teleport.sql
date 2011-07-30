@@ -9,7 +9,7 @@ CREATE TABLE `teleport` (
   `fornoble` tinyint(1) NOT NULL DEFAULT '0',
   `itemId` smallint(5) unsigned NOT NULL DEFAULT '57',
   PRIMARY KEY (`id`)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `teleport` VALUES
 ('DE Village -> Town of Gludio',1,-12787,122779,-3112,10000,0,57),

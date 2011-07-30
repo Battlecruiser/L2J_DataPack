@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `custom_teleport` (
   `fornoble` tinyint(1) NOT NULL DEFAULT '0',
   `itemId` smallint(5) unsigned NOT NULL DEFAULT '57',
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
