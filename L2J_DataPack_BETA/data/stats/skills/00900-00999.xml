@@ -529,10 +529,12 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="927" levels="14" name="Burning Chop">
-		<!-- Confirmed CT2.5 -->
+	<skill id="927" levels="14" name="Burning Chop" enchantGroup1="2">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#power"> 167 210 261 319 384 419 455 492 531 570 610 651 691 731 </table>
+		<table name="#ench1Power"> 758 766 773 781 788 796 803 811 818 826 833 841 848 856 863 871 878 886 893 901 908 916 923 931 939 946 954 961 969 976 </table>
 		<table name="#dot"> 43 43 43 53 53 53 61 61 61 61 61 66 66 66 </table>
 		<table name="#abnormalLvl"> 5 5 5 6 6 6 7 7 7 7 7 8 8 8 </table>
 		<set name="baseCritRate" val="10" />
@@ -552,6 +554,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
