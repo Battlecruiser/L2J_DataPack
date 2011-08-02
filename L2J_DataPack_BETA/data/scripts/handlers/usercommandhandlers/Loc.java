@@ -16,7 +16,10 @@ package handlers.usercommandhandlers;
 
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
+import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.Race;
+import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class Loc implements IUserCommandHandler
@@ -32,7 +35,15 @@ public class Loc implements IUserCommandHandler
 	 */
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
-		SystemMessage sm = SystemMessage.getSystemMessage(MapRegionManager.getInstance().getMapRegionId(activeChar));
+		int region;
+		L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
+		
+		if (zone != null)
+			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(Race.Human)).getLocId();
+		else
+			region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
+		
+		SystemMessage sm = SystemMessage.getSystemMessage(region);
 		if(sm.getSystemMessageId().getParamCount() == 3)
 		{
 			sm.addNumber(activeChar.getX());
