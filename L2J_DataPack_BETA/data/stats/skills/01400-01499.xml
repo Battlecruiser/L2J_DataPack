@@ -289,7 +289,7 @@
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<for>
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="abnormal_invincibility">
-				<sub order="0x40" stat="debuffVuln" val="100" />
+				<set order="0x08" stat="debuffImmunity" val="1" />
 			</effect>
 		</for>
 	</skill>
