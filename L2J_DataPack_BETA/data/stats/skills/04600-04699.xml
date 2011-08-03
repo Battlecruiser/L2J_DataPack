@@ -1554,7 +1554,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="valakasRes" val="8" />
-			<sub order="0x40" stat="debuffVuln" val="100" />
+			<set order="0x08" stat="debuffImmunity" val="1" />
 		</for>
 	</skill>
 	<skill id="4680" levels="1" name="Valakas Lava Skin">

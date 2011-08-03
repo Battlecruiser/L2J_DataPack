@@ -451,7 +451,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="80" />
-			<sub order="0x40" stat="debuffVuln" val="100" />
+			<set order="0x08" stat="debuffImmunity" val="1" />
 		</for>
 	</skill>
 	<skill id="4123" levels="12" name="Hostile Feeling">
