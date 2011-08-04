@@ -192,7 +192,7 @@ class Quest (JQuest) :
                if classId in QTEXMTWO.keys():
                   voice, htmltext = QTEXMTWO[classId]
                   st.playTutorialVoice(voice)
-                  if st.getQuestItemsCount(5588) == 0 :
+                  if player.isOnline() and st.getQuestItemsCount(5588) == 0 :
                      st.giveItems(5588,1)
                   st.startQuestTimer("QT",30000)
                   st.set("Ex","-3")
