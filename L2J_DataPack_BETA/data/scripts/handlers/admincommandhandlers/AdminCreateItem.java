@@ -14,7 +14,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -42,6 +41,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		"admin_give_item_to_all"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_itemcreate"))
@@ -184,16 +184,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.sendMessage("This item does not stack - Creation aborted.");
 				return false;
 			}
-			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
+			for (L2PcInstance onlinePlayer : L2World.getInstance().getAllPlayersArray())
 			{
-				for (L2PcInstance onlinePlayer : pls)
+				if (activeChar != onlinePlayer && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
 				{
-					if (activeChar != onlinePlayer && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
-					{
-						onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
-						onlinePlayer.sendMessage("Admin spawned "+numval+" "+template.getName()+" in your inventory.");
-						counter++;
-					}
+					onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
+					onlinePlayer.sendMessage("Admin spawned "+numval+" "+template.getName()+" in your inventory.");
+					counter++;
 				}
 			}
 			activeChar.sendMessage(counter +" players rewarded with " + template.getName());
@@ -201,6 +198,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

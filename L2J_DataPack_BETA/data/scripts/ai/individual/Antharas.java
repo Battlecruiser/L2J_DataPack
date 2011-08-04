@@ -803,7 +803,7 @@ public class Antharas extends L2AttackableAIScript
 		{
 			GrandBossManager.getInstance().setBossStatus(_bossId,DORMANT);
 			if (FWA_DOSERVEREARTHQUAKE)
-				for(L2PcInstance p : L2World.getInstance().getAllPlayers().values())
+				for(L2PcInstance p : L2World.getInstance().getAllPlayersArray())
 					p.broadcastPacket(new Earthquake(185708,114298,-8221,20,10));
 		}
 	}

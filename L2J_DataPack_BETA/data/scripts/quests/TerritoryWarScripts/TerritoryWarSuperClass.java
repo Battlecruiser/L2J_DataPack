@@ -130,7 +130,9 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
 			if (territoryId >= 81 && territoryId <= 89)
-				for(L2PcInstance pl : L2World.getInstance().getAllPlayers().values())
+			{
+				for(L2PcInstance pl : L2World.getInstance().getAllPlayersArray())
+				{
 					if (pl.getSiegeSide() == territoryId)
 					{
 						QuestState st = pl.getQuestState(getName());
@@ -142,6 +144,8 @@ public class TerritoryWarSuperClass extends Quest
 							st.setStateAndNotSave(State.STARTED);
 						}
 					}
+				}
+			}
 		}
 		return super.onAttack(npc, player, damage, isPet);
 	}
@@ -404,7 +408,8 @@ public class TerritoryWarSuperClass extends Quest
 	{
 		super.setOnEnterWorld(val);
 		
-		for(L2PcInstance player: L2World.getInstance().getAllPlayers().values())
+		for(L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+		{
 			if (player.getSiegeSide() > 0)
 			{
 				TerritoryWarSuperClass territoryQuest = _forTheSakeScripts.get(player.getSiegeSide());
@@ -452,6 +457,7 @@ public class TerritoryWarSuperClass extends Quest
 					}
 				}
 			}
+		}
 	}
 	
 	public TerritoryWarSuperClass(int questId, String name, String descr)

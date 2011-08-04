@@ -14,8 +14,6 @@
  */
 package handlers.chathandlers;
 
-import java.util.Collection;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.BlockList;
@@ -43,6 +41,7 @@ public class ChatHeroVoice implements IChatHandler
 	 * Handle chat type 'hero voice'
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
 		if (activeChar.isHero() || activeChar.isGM())
@@ -60,8 +59,7 @@ public class ChatHeroVoice implements IChatHandler
 			}
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			
-			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-			for (L2PcInstance player : pls)
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 			{
 				if (player != null && !BlockList.isBlocked(player, activeChar))
 					player.sendPacket(cs);
@@ -73,6 +71,7 @@ public class ChatHeroVoice implements IChatHandler
 	 * Returns the chat types registered to this handler
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
+	@Override
 	public int[] getChatTypeList()
 	{
 		return COMMAND_IDS;
