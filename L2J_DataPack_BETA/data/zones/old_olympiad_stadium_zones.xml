@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
-	<!-- Olympiad Stadium Zones -->
+	<!-- Old Olympiad Stadium Zones -->
 	<zone name="olimpiad_stadium_23" type="OlympiadStadiumZone" shape="NPoly" minZ="-4000" maxZ="500">
 		<node X="-155469" Y="-253929" />
 		<node X="-151578" Y="-253934" />
@@ -925,4 +925,116 @@
 		<spawn X="-148048" Y="-173325" Z="-3320" />
 		<spawn X="-148048" Y="-173295" Z="-3320" />
 	</zone>
+	<!-- No Bookmark Zones -->
+	<zone name="no_boormark_olympiad_stadium_01" type="ConditionZone" shape="NPoly" minZ="-4096" maxZ="32767">
+		<stat name="NoBookmark" val="true" />
+		<node X="-131072" Y="-262144" />
+		<node X="-58898" Y="-262253" />
+		<node X="-58898" Y="-222151" />
+		<node X="-131072" Y="-222151" />
+	</zone>
+	<zone name="no_boormark_olympiad_stadium_02" type="ConditionZone" shape="NPoly" minZ="-10380" maxZ="32767">
+		<stat name="NoBookmark" val="true" />
+		<node X="-31890" Y="-31548" />
+		<node X="-2490" Y="-31567" />
+		<node X="-2489" Y="-188" />
+		<node X="-31916" Y="-179" />
+	</zone>
+	<zone name="no_boormark_olympiad_stadium_03" type="ConditionZone" shape="NPoly" minZ="-5000" maxZ="32767">
+		<stat name="NoBookmark" val="true" />
+		<node X="-155585" Y="-253925" />
+		<node X="-139294" Y="-253916" />
+		<node X="-139298" Y="-237620" />
+		<node X="-155615" Y="-237611" />
+	</zone>
+	<zone name="no_boormark_olympiad_stadium_04" type="ConditionZone" shape="NPoly" minZ="-4968" maxZ="32767">
+		<stat name="NoBookmark" val="true" />
+		<node X="-155584" Y="-221153" />
+		<node X="-139293" Y="-221144" />
+		<node X="-139297" Y="-204849" />
+		<node X="-155614" Y="-204839" />
+	</zone>
+	<zone name="no_boormark_olympiad_stadium_05" type="ConditionZone" shape="NPoly" minZ="-4936" maxZ="32767">
+		<stat name="NoBookmark" val="true" />
+		<node X="-155577" Y="-188340" />
+		<node X="-139287" Y="-188331" />
+		<node X="-139291" Y="-172035" />
+		<node X="-155608" Y="-172026" />
+	</zone>
+	<!-- No Landing Zones -->
+	<zone name="olympiad_stadium_01" type="NoLandingZone" shape="NPoly" minZ="-4096" maxZ="32767">
+		<node X="-131072" Y="-262144" />
+		<node X="-58898" Y="-262253" />
+		<node X="-58898" Y="-222151" />
+		<node X="-131072" Y="-222151" />
+	</zone>
+	<zone name="olympiad_stadium_02" type="NoLandingZone" shape="NPoly" minZ="-10380" maxZ="32767">
+		<node X="-31890" Y="-31548" />
+		<node X="-2490" Y="-31567" />
+		<node X="-2489" Y="-188" />
+		<node X="-31916" Y="-179" />
+	</zone>
+	<zone name="olympiad_stadium_03" type="NoLandingZone" shape="NPoly" minZ="-5000" maxZ="32767">
+		<node X="-155585" Y="-253925" />
+		<node X="-139294" Y="-253916" />
+		<node X="-139298" Y="-237620" />
+		<node X="-155615" Y="-237611" />
+	</zone>
+	<zone name="olympiad_stadium_04" type="NoLandingZone" shape="NPoly" minZ="-4968" maxZ="32767">
+		<node X="-155584" Y="-221153" />
+		<node X="-139293" Y="-221144" />
+		<node X="-139297" Y="-204849" />
+		<node X="-155614" Y="-204839" />
+	</zone>
+	<zone name="olympiad_stadium_05" type="NoLandingZone" shape="NPoly" minZ="-4936" maxZ="32767">
+		<node X="-155577" Y="-188340" />
+		<node X="-139287" Y="-188331" />
+		<node X="-139291" Y="-172035" />
+		<node X="-155608" Y="-172026" />
+	</zone>
+	<!-- No Restart Zones -->
+	<!--
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-6440" maxZ="3560"> 17_10
+		<stat name="restartTime" val="0" />
+		<node X="-98038" Y="-261656" />
+		<node X="-66164" Y="-261694" />
+		<node X="-66141" Y="-230048" />
+		<node X="-97916" Y="-229940" />
+	</zone>
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-6940" maxZ="3060"> 17_11
+		<stat name="restartTime" val="0" />
+		<node X="-98125" Y="-228906" />
+		<node X="-66083" Y="-228726" />
+		<node X="-66058" Y="-197359" />
+		<node X="-97729" Y="-197424" />
+	</zone>
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-6560" maxZ="3440"> 16_11
+		<stat name="restartTime" val="0" />
+		<node X="-130930" Y="-229015" />
+		<node X="-99357" Y="-228549" />
+		<node X="-98826" Y="-197290" />
+		<node X="-130890" Y="-197075" />
+	</zone>
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-5000" maxZ="32767"> 15_10
+		<stat name="restartTime" val="0" />
+		<node X="-155585" Y="-253925" />
+		<node X="-139294" Y="-253916" />
+		<node X="-139298" Y="-237620" />
+		<node X="-155615" Y="-237611" />
+	</zone>
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-4968" maxZ="32767"> 15_11
+		<stat name="restartTime" val="0" />
+		<node X="-155584" Y="-221153" />
+		<node X="-139293" Y="-221144" />
+		<node X="-139297" Y="-204849" />
+		<node X="-155614" Y="-204839" />
+	</zone>
+	<zone name="olympiad_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-4936" maxZ="32767"> 15_12
+		<stat name="restartTime" val="0" />
+		<node X="-155577" Y="-188340" />
+		<node X="-139287" Y="-188331" />
+		<node X="-139291" Y="-172035" />
+		<node X="-155608" Y="-172026" />
+	</zone>
+	-->
 </list>
