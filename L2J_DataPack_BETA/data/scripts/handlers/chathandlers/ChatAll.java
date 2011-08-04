@@ -48,6 +48,7 @@ public class ChatAll implements IChatHandler
 	 * Handle chat type 'all'
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String params, String text)
 	{
 		boolean vcd_used = false;
@@ -100,13 +101,10 @@ public class ChatAll implements IChatHandler
 			{			
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				//synchronized (activeChar.getKnownList().getKnownPlayers())
+				for (L2PcInstance player : plrs)
 				{
-					for (L2PcInstance player : plrs)
-					{
-						if (player != null && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
-							player.sendPacket(cs);
-					}
+					if (player != null && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
+						player.sendPacket(cs);
 				}
 				
 				activeChar.sendPacket(cs);
@@ -118,6 +116,7 @@ public class ChatAll implements IChatHandler
 	 * Returns the chat types registered to this handler
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
+	@Override
 	public int[] getChatTypeList()
 	{
 		return COMMAND_IDS;

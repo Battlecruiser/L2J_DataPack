@@ -14,17 +14,15 @@
  */
 package handlers.itemhandlers;
 
-import javolution.util.FastMap;
-
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -32,6 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.templates.item.L2EtcItemType;
+import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 
 /**
  * Template for item skills handler
@@ -43,6 +42,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		L2PcInstance activeChar;
@@ -188,7 +188,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
-		final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
+		final L2TIntObjectHashMap<TimeStamp> timeStamp = player.getReuseTimeStamp();
 		
 		if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
 		{
