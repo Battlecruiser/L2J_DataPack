@@ -14,7 +14,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -61,6 +60,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		"admin_del_autoann"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_list_announcements"))
@@ -81,12 +81,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_announce_announcements"))
 		{
-			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-			// synchronized (L2World.getInstance().getAllPlayers())
-			{
-				for (L2PcInstance player : pls)
-					Announcements.getInstance().showAnnouncements(player);
-			}
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+				Announcements.getInstance().showAnnouncements(player);
 			Announcements.getInstance().listAnnouncements(activeChar);
 		}
 		else if (command.startsWith("admin_add_announcement"))
@@ -221,6 +217,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
