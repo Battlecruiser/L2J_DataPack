@@ -29,35 +29,43 @@
 		</for>
 	</skill>
 	<skill id="2003" levels="1" name="Squash Seed">
-		<!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Summer Squash Event Skill -->
+		<set name="despawnDelay" val="120000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="hitTime" val="1500" />
-		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="10000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12774" />
-		<set name="despawnDelay" val="120000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2004" levels="1" name="Large Squash Seed">
-		<!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Summer Squash Event Skill -->
+		<set name="despawnDelay" val="120000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="hitTime" val="1500" />
-		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="10000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12777" />
-		<set name="despawnDelay" val="120000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2005" levels="1" name="Nectar">
-		<!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Summer Squash Event Skill -->
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="300" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="neutral" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" /> <!-- FIXME: This should be TARGET_OTHERS -->
 	</skill>
 	<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
 		<set name="target" val="TARGET_SELF" />
