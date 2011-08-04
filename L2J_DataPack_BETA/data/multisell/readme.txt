@@ -9,8 +9,8 @@ of this directory a little bit.
 
 101.xml  -> Tickets for pet collars Exchange
 
-102.xml  -> Olympiad: Purchase an item using Noblesse Gate Pass
-103.xml  -> Olympiad: Purchase an item using Olympiad Tokens
+102.xml  -> Olympiad: Equipment Rewards
+103.xml  -> Olympiad: Misc. Rewards
 
 201.xml  -> Test server helper - Purchase wearable items
 202.xml  -> Test server helper - Purchase quest items and rare spellbooks
