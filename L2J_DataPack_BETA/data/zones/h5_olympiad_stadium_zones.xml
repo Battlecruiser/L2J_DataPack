@@ -45,4 +45,23 @@
 		<spawn X="-74158" Y="-239182" Z="-8218" />
 		<spawn X="-74143" Y="-239182" Z="-8218" />
 	</zone>
+	<!-- No Bookmark Zone -->
+	<zone name="no_boormark_olympiad_stadiums" type="ConditionZone" shape="Cuboid" minZ="-8485" maxZ="1149">
+		<stat name="NoBookmark" val="true" />
+		<node X="-98296" Y="-262136" />
+		<node X="-65544" Y="-229384" />
+	</zone>
+	<!-- No Landing Zone -->
+	<zone name="olympiad_stadiums" type="NoLandingZone" shape="Cuboid" minZ="-8485" maxZ="1149">
+		<node X="-98296" Y="-262136" />
+		<node X="-65544" Y="-229384" />
+	</zone>
+	<!-- No Restart Zone -->
+	<!--
+	<zone name="olympiad_no_restart" type="NoRestartZone" shape="Cuboid" minZ="-8485" maxZ="1149">
+		<stat name="restartTime" val="0" />
+		<node X="-98296" Y="-262136" />
+		<node X="-65544" Y="-229384" />
+	</zone>
+	-->
 </list>
