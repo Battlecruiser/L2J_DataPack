@@ -23,20 +23,20 @@ public class InquisitorElvenElder extends L2Transformation
 	
 	public void transformedSkills()
 	{
+		int lvl = 1;
 		if (getPlayer().getLevel() > 43)
-		{
-			// Divine Punishment
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false);
-			// Divine Flash
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false);
-			// Surrender to the Holy
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
-			// Divine Curse
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,1523,1528,1524,1525,1430,1043,1400,1303});
-		}
-		else
-			getPlayer().setTransformAllowedSkills(new int[]{838,1430,1043,1400,1303});
+			lvl = (getPlayer().getLevel() - 43);
+		
+		// Divine Punishment
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, lvl), false);
+		// Divine Flash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, lvl), false);
+		// Surrender to the Holy
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, lvl), false);
+		// Divine Curse
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, lvl), false);
+		// Set allowed skills
+		getPlayer().setTransformAllowedSkills(new int[]{838,1523,1528,1524,1525,1430,1043,1400,1303});
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
@@ -49,14 +49,18 @@ public class InquisitorElvenElder extends L2Transformation
 	
 	public void removeSkills()
 	{
+		int lvl = 1;
+		if (getPlayer().getLevel() > 43)
+			lvl = (getPlayer().getLevel() - 43);
+		
 		// Divine Punishment
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, lvl), false);
 		// Divine Flash
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, lvl), false);
 		// Surrender to the Holy
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, lvl), false);
 		// Divine Curse
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, lvl), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		
