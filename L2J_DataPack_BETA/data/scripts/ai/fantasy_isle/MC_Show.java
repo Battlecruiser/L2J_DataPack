@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import ai.group_template.L2AttackableAIScript;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -26,7 +27,6 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
  * MC show script
  * @author Kerberos
  */
-public class MC_Show extends Quest
+public class MC_Show extends L2AttackableAIScript
 {
 	private static int mc = 32433;
 	private static int[] singers = {32431,32432};
@@ -187,19 +187,7 @@ public class MC_Show extends Quest
 	public MC_Show(int id,String name,String descr)
 	{
 		super(id,name,descr);
-		addEventId(32433, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32431, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32432, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32442, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32443, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32444, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32445, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32446, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32424, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32425, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32426, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32427, Quest.QuestEventType.ON_SPAWN);
-		addEventId(32428, Quest.QuestEventType.ON_SPAWN);
+		registerMobs(new int[] { 32433, 32431, 32432, 32442, 32443, 32444, 32445, 32446, 32424, 32425, 32426, 32427, 32428 }, QuestEventType.ON_SPAWN);
 		load();
 		scheduleTimer();
 	}

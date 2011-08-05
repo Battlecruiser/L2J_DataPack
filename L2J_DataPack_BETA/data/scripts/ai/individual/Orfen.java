@@ -90,7 +90,7 @@ public class Orfen extends L2AttackableAIScript
 		{
 				ORFEN, RAIKEL_LEOS, RIBA_IREN
 		};
-		this.registerMobs(mobs);
+		registerMobs(mobs);
 		_IsTeleported = false;
 		_Zone = GrandBossManager.getInstance().getZone(Pos[0][0], Pos[0][1], Pos[0][2]);
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
@@ -102,7 +102,7 @@ public class Orfen extends L2AttackableAIScript
 			// if Orfen is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
-				this.startQuestTimer("orfen_unlock", temp, null, null);
+				startQuestTimer("orfen_unlock", temp, null, null);
 			else
 			{
 				// the time has already expired while the server was offline. Immediately spawn Orfen.
@@ -130,7 +130,7 @@ public class Orfen extends L2AttackableAIScript
 				}
 				L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, x, y, z, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
-				this.spawnBoss(orfen);
+				spawnBoss(orfen);
 			}
 		}
 		else
@@ -143,7 +143,7 @@ public class Orfen extends L2AttackableAIScript
 			int mp = info.getInteger("currentMP");
 			L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 			orfen.setCurrentHpMp(hp, mp);
-			this.spawnBoss(orfen);
+			spawnBoss(orfen);
 		}
 	}
 	
@@ -162,7 +162,7 @@ public class Orfen extends L2AttackableAIScript
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		this.startQuestTimer("check_orfen_pos", 10000, npc, null, true);
+		startQuestTimer("check_orfen_pos", 10000, npc, null, true);
 		//Spawn minions
 		int x = npc.getX();
 		int y = npc.getY();
@@ -179,7 +179,7 @@ public class Orfen extends L2AttackableAIScript
 		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_Minions.add(mob);
-		this.startQuestTimer("check_minion_loc", 10000, npc, null, true);
+		startQuestTimer("check_minion_loc", 10000, npc, null, true);
 	}
 	
 	@Override
@@ -211,7 +211,7 @@ public class Orfen extends L2AttackableAIScript
 			}
 			L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, x, y, z, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
-			this.spawnBoss(orfen);
+			spawnBoss(orfen);
 		}
 		else if (event.equalsIgnoreCase("check_orfen_pos"))
 		{
@@ -342,20 +342,20 @@ public class Orfen extends L2AttackableAIScript
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 			//time is 48hour	+/- 20hour
 			long respawnTime = (long) Config.Interval_Of_Orfen_Spawn + Rnd.get(Config.Random_Of_Orfen_Spawn);
-			this.startQuestTimer("orfen_unlock", respawnTime, null, null);
+			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(ORFEN, info);
-			this.cancelQuestTimer("check_minion_loc", npc, null);
-			this.cancelQuestTimer("check_orfen_pos", npc, null);
-			this.startQuestTimer("despawn_minions", 20000, null, null);
-			this.cancelQuestTimers("spawn_minion");
+			cancelQuestTimer("check_minion_loc", npc, null);
+			cancelQuestTimer("check_orfen_pos", npc, null);
+			startQuestTimer("despawn_minions", 20000, null, null);
+			cancelQuestTimers("spawn_minion");
 		}
 		else if (GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE && npc.getNpcId() == RAIKEL_LEOS)
 		{
 			_Minions.remove(npc);
-			this.startQuestTimer("spawn_minion", 360000, npc, null);
+			startQuestTimer("spawn_minion", 360000, npc, null);
 		}
 		return super.onKill(npc, killer, isPet);
 	}

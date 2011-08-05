@@ -116,10 +116,9 @@ public class Baium extends L2AttackableAIScript
 		this.registerMobs(mob);
 		
 		// Quest NPC starter initialization
-		addStartNpc(STONE_BAIUM);
-		addStartNpc(ANGELIC_VORTEX);
-		addTalkId(STONE_BAIUM);
-		addTalkId(ANGELIC_VORTEX);
+		addStartNpc(STONE_BAIUM, ANGELIC_VORTEX);
+		addTalkId(STONE_BAIUM, ANGELIC_VORTEX);
+		
 		_Zone = GrandBossManager.getInstance().getZone(113100,14500,10077);
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
 		int status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);

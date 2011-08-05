@@ -274,10 +274,9 @@ public class Frintezza extends L2AttackableAIScript
 		int[] mob = {SCARLET1, SCARLET2, FRINTEZZA, 18328, 18329, 18330, 18331, 18332, 18333, 18334, 18335, 18336, 18337, 18338, 18339, 29048, 29049, 29050, 29051};
 		_Zone = GrandBossManager.getInstance().getZone(getXFix(174232), getYFix(-88020), getZFix(-5116));
 		registerMobs(mob);
-		addStartNpc(GUIDE);
-		addTalkId(GUIDE);
-		addStartNpc(CUBE);
-		addTalkId(CUBE);
+		addStartNpc(GUIDE, CUBE);
+		addTalkId(GUIDE, CUBE);
+		
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
 		int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		if (status == DEAD)

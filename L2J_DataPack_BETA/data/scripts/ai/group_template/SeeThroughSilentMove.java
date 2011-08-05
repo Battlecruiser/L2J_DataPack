@@ -30,8 +30,7 @@ public class SeeThroughSilentMove extends L2AttackableAIScript
 		for (L2Spawn npc : SpawnTable.getInstance().getSpawnTable())
 			if (Util.contains(MOBIDS,npc.getNpcid()) && npc.getLastSpawn() != null && npc.getLastSpawn() instanceof L2Attackable)
 				((L2Attackable)npc.getLastSpawn()).setSeeThroughSilentMove(true);
-		for (int npcId : MOBIDS)
-			this.addSpawnId(npcId);
+		registerMobs(MOBIDS, QuestEventType.ON_SPAWN);
 	}
 	
 	@Override

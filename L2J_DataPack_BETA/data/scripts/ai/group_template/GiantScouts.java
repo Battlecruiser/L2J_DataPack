@@ -34,8 +34,7 @@ public class GiantScouts extends L2AttackableAIScript
 	public GiantScouts(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : _scouts)
-			addAggroRangeEnterId(id);
+		registerMobs(_scouts, QuestEventType.ON_AGGRO_RANGE_ENTER);
 	}
 	
 	@Override
