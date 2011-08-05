@@ -1443,6 +1443,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 		replyMSG.append("</tr></table><table width=\"100%\" border=0><tr><td>Skill name [skill id-skill lvl]</td><td>Delete</td></tr>");
 		TIntObjectIterator<L2Skill> skillite = skills.iterator();
 		
+		for (int i = 0; i < SkillsStart; i++)
+		{
+			if (skillite.hasNext())
+				skillite.advance();
+		}
+		
 		int cnt = SkillsStart;
 		while (skillite.hasNext())
 		{
@@ -1450,6 +1456,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			if (cnt > SkillsEnd)
 				break;
 			
+			skillite.advance();
 			replyMSG.append("<tr><td width=240><a action=\"bypass -h admin_edit_skill_npc ");
 			replyMSG.append(npcData.npcId);
 			replyMSG.append(" ");
