@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -56,11 +55,10 @@ public class IceFairySirra extends L2AttackableAIScript
 	public IceFairySirra(int id,String name,String descr)
 	{
 		super(id,name,descr);
-		int[] mob = {STEWARD, 22100, 22102, 22104, 29056};
-		this.registerMobs(mob);
-		this.addEventId(STEWARD, Quest.QuestEventType.QUEST_START);
-		this.addEventId(STEWARD, Quest.QuestEventType.ON_TALK);
-		this.addEventId(STEWARD, Quest.QuestEventType.ON_FIRST_TALK);
+		int[] mob = {22100, 22102, 22104, 29056};
+		registerMobs(mob);
+		registerMobs(new int[] { STEWARD } , QuestEventType.QUEST_START, QuestEventType.ON_TALK, QuestEventType.ON_FIRST_TALK);
+		
 		String test = loadGlobalQuestVar("Sirra_Respawn");
 		if (!test.equalsIgnoreCase(""))
 		{

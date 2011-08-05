@@ -57,8 +57,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 	public PolymorphingOnAttack(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : MOBSPAWNS.keys())
-			super.addAttackId(id);
+		registerMobs(MOBSPAWNS.keys(), QuestEventType.ON_ATTACK);
 	}
 	
 	@Override
