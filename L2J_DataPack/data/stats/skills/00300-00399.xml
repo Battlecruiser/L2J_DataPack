@@ -2501,7 +2501,7 @@
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="2" abnormalType="hero_buff">
 				<add order="0x40" stat="accCombat" val="8" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
-				<sub order="0x40" stat="debuffVuln" val="100" />
+				<set order="0x08" stat="debuffImmunity" val="1" />
 				<mul order="0x30" stat="gainHp" val="2" />
 				<add order="0x40" stat="mAtk" val="500" />
 				<add order="0x40" stat="mAtkSpd" val="100" />
