@@ -677,7 +677,7 @@
 			<sub order="0x40" stat="stunVuln" val="100" />
 			<sub order="0x40" stat="paralyzeVuln" val="100" />
 			<sub order="0x40" stat="derangementVuln" val="100" />
-			<!-- missing 100 resist for hp regeneration debuffs / physical blockade debuffs -->
+			<set order="0x08" stat="debuffImmunity" val="1" /> <!-- TEMP FIX: Until support for trait resist is done -->
 		</for>
 	</skill>
 	<skill id="4046" levels="12" name="Sleep">
