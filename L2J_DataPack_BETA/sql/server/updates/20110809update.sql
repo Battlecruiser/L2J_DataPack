@@ -1,5 +1,5 @@
 ALTER TABLE `custom_npcaidata`
-CHANGE `npc_id` `npcId` smallint(5) unsigned NOT NULL,
+CHANGE `npc_id` `npcId` mediumint(7) unsigned NOT NULL,
 ADD `minSkillChance` tinyint(3) unsigned NOT NULL DEFAULT '7' AFTER `npcId`,
 CHANGE `skill_chance` `maxSkillChance` tinyint(3) unsigned NOT NULL DEFAULT '15',
 CHANGE `primary_attack` `primarySkillId` smallint(5) unsigned DEFAULT '0',
