@@ -34,7 +34,7 @@ public class TheTerritoryOren extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36526, 36528, 36531, 36594};
 		GUARD_IDS = new int[]{36527, 36529, 36530};
 		qn = qn1;
-		Text = new String[]{"The catapult of Oren has been destroyed!"};
+		npcString = new int[]{72964};
 		registerKillIds();
 	}
 }

@@ -43,13 +43,13 @@ public class FreyaCelebration extends Quest
 	
 	private static final int[] _skills = { 9150, 9151, 9152, 9153, 9154, 9155, 9156 };
 	
-	private static final String[] _freya_texts =
+	private static final int[] _freya_texts = 
 	{
-		"It has been so long since I have felt this... I almost miss it.",
-		"I have no idea what I'm feeling right now.  Are all human emotions like this?",
-		"You humans bring me such nonsense... a gift.  I have no need of such things.",
-		"I would 'appreciate' this, however it has been far too long since I have felt appreciation for anything.",
-		" I am Freya the Ice Queen!  Feelings and emotions of Felicia are nothing but memories to me."
+		1801190,
+		1801191,
+		1801192,
+		1801193,
+		1801194
 	};
 	
 	private static final int[][] _spawns = {
@@ -141,7 +141,11 @@ public class FreyaCelebration extends Quest
 		{
 			if (Rnd.get(100) < 5)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), "Dear " + caster.getName() + "... I want to express my appreciation for the gift. Take this with you. Why are you shocked? I'm a very generous person."));
+				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), 1801195);
+				cs.addStringParameter(caster.getName());
+				
+				npc.broadcastPacket(cs);
+				
 				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
 			}
 			else

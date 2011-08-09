@@ -33,6 +33,6 @@ public class KillTheKeyTargets extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 3;
 		RANDOM_MAX = 8;
-		Text = new String[]{"Out of MAX Production and Curse you have defeated KILL.","You weakened the enemy's attack!"};
+		npcString = new int[]{73861,73862};
 	}
 }

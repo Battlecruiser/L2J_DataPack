@@ -34,7 +34,7 @@ public class TheTerritorySchuttgart extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36556, 36558, 36561, 36599};
 		GUARD_IDS = new int[]{36557, 36559, 36560};
 		qn = qn1;
-		Text = new String[]{"The catapult of Schuttgart has been destroyed!"};
+		npcString = new int[]{72969};
 		registerKillIds();
 	}
 }

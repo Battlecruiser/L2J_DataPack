@@ -34,7 +34,7 @@ public class TheTerritoryGoddard extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36544, 36546, 36549, 36597};
 		GUARD_IDS = new int[]{36545, 36547, 36548};
 		qn = qn1;
-		Text = new String[]{"The catapult of Goddard has been destroyed!"};
+		npcString = new int[]{72967};
 		registerKillIds();
 	}
 }

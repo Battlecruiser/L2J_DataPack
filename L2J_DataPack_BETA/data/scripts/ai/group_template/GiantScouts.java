@@ -45,7 +45,7 @@ public class GiantScouts extends L2AttackableAIScript
 		if(GeoData.getInstance().canSeeTarget(npc, target))
 		{
 			if (!npc.isInCombat() && npc.getTarget() == null)
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), "Oh Giants, an intruder has been discovered."));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), 1800861));
 			
 			npc.setTarget(target);
 			npc.setRunning();

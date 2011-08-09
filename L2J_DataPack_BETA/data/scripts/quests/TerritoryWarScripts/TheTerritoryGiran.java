@@ -34,7 +34,7 @@ public class TheTerritoryGiran extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36520, 36522, 36525, 36593};
 		GUARD_IDS = new int[]{36521, 36523, 36524};
 		qn = qn1;
-		Text = new String[]{"The catapult of Giran has been destroyed!"};
+		npcString = new int[]{72963};
 		registerKillIds();
 	}
 }

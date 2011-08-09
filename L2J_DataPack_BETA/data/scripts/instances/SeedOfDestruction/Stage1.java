@@ -517,7 +517,7 @@ public class Stage1 extends Quest
 					spawnFlaggedNPCs(world, 0);
 					break;
 				case 1:
-					ExShowScreenMessage message1 = new ExShowScreenMessage(1,0,5,0,1,0,0,false,10000,1,"The enemies have attacked. Everyone come out and fight!!!! ... Urgh~!");
+					ExShowScreenMessage message1 = new ExShowScreenMessage(1800273,5,10000);
 					sendScreenMessage(world, message1);
 					for(int i : ENTRANCE_ROOM_DOORS)
 						openDoor(i,world.instanceId);
@@ -528,7 +528,7 @@ public class Stage1 extends Quest
 					// handled elsewhere
 					return true;
 				case 4:
-					ExShowScreenMessage message2 = new ExShowScreenMessage(1,0,5,0,1,0,0,false,10000,1,"Obelisk has collapsed. Don't let the enemies jump around wildly anymore!!!!");
+					ExShowScreenMessage message2 = new ExShowScreenMessage(1800295,5,10000);
 					sendScreenMessage(world, message2);
 					for(int i : SQUARE_DOORS)
 						openDoor(i,world.instanceId);
@@ -546,7 +546,7 @@ public class Stage1 extends Quest
 					spawnFlaggedNPCs(world, 7);
 					break;
 				case 8:
-					ExShowScreenMessage message4 = new ExShowScreenMessage(1,0,5,0,1,0,0,false,10000,1,"Come out, warriors. Protect Seed of Destruction");
+					ExShowScreenMessage message4 = new ExShowScreenMessage(1800297,5,10000);
 					sendScreenMessage(world, message4);
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world, 8);
@@ -743,7 +743,7 @@ public class Stage1 extends Quest
 				{
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world,6);
-					ExShowScreenMessage message3 = new ExShowScreenMessage(1,0,5,0,1,0,0,false,10000,1,"Enemies are trying to destroy the fortress. Everyone defend the fortress!!!!");
+					ExShowScreenMessage message3 = new ExShowScreenMessage(1800296,5,10000);
 					sendScreenMessage(world, message3);
 				}
 				else
