@@ -33,6 +33,6 @@ public class KillTheKnights extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 10;
 		RANDOM_MAX = 15;
-		Text = new String[]{"Out of MAX Knights you have defeated KILL.","You weakened the enemy's attack!"};
+		npcString = new int[]{73461,73462};
 	}
 }

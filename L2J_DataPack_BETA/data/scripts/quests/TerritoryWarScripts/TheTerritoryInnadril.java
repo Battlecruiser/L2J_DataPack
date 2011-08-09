@@ -34,7 +34,7 @@ public class TheTerritoryInnadril extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36538, 36540, 36543, 36596};
 		GUARD_IDS = new int[]{36539, 36541, 36542};
 		qn = qn1;
-		Text = new String[]{"The catapult of Innadril has been destroyed!"};
+		npcString = new int[]{72966};
 		registerKillIds();
 	}
 }

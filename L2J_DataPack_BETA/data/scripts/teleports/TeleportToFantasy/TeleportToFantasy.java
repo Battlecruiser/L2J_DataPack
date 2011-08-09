@@ -86,7 +86,7 @@ public class TeleportToFantasy extends Quest
 			
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"You've arrived here from a different way. I'll send you to Rune Township which is the nearest town."));
+				player.sendPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),1600019));
 		        st.getPlayer().teleToLocation(43835,-47749,-792);
 			}
 			

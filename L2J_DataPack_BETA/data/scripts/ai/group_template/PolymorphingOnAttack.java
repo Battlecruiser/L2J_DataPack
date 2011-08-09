@@ -47,11 +47,11 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 		MOBSPAWNS.put(21533,new Integer[]{21534,100,30 ,-1}); //Alliance of Splendor
 		MOBSPAWNS.put(21537,new Integer[]{21538,100,30 ,-1}); //Fang of Splendor
 	}
-	protected static final String[][] MOBTEXTS =
+	protected static final int[][] MOBTEXTS =
 	{
-		new String[]{"Enough fooling around. Get ready to die!", "You idiot! I've just been toying with you!", "Now the fun starts!"},
-		new String[]{"I must admit, no one makes my blood boil quite like you do!", "Now the battle begins!", "Witness my true power!"},
-		new String[]{"Prepare to die!", "I'll double my strength!", "You have more skill than I thought"}
+		new int[]{1000407, 1000408, 1000406},
+		new int[]{1000411, 1000410, 1000409},
+		new int[]{1000414, 1000413, 1000412}
 	};
 	
 	public PolymorphingOnAttack(int questId, String name, String descr)
@@ -72,8 +72,8 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 				{
 					if (tmp[3] >= 0)
 					{
-						String text = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),text));
+						int npcString = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),npcString));
 					}
 					npc.deleteMe();
 					L2Attackable newNpc = (L2Attackable) addSpawn(tmp[0], npc.getX(), npc.getY(), npc.getZ()+10, npc.getHeading(), false, 0, true);

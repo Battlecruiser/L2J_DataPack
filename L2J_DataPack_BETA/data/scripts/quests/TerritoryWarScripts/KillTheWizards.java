@@ -33,6 +33,6 @@ public class KillTheWizards extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 10;
 		RANDOM_MAX = 15;
-		Text = new String[]{"Out of MAX Wizards and Summoners you have defeated KILL.","You weakened the enemy's attack!"};
+		npcString = new int[]{73661,73662};
 	}
 }
