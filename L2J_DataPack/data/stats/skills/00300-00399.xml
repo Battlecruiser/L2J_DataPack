@@ -683,7 +683,6 @@
 		<set name="skillType" val="BLOW" />
 		<set name="lethal1" val="5" /> <!-- Half-Kill -->
 		<set name="overHit" val="true" />
-		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -695,7 +694,7 @@
 			<effect self="1" name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="speed_up_special">
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
-			<effect name="Bluff" val="0" effectPower="40" effectType="STUN" />
+			<effect name="Bluff" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="322" levels="6" name="Shield Fortress" enchantGroup1="1" enchantGroup2="1">
