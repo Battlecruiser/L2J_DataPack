@@ -124,7 +124,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_unsummon",
 		"admin_summon_setlvl",
 		"admin_show_pet_inv",
-		"admin_partyinfo"
+		"admin_partyinfo",
+		"admin_setnoble"
 	};
 	
 	@Override
@@ -767,6 +768,22 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			
 		}
+		else if (command.equals("admin_setnoble"))
+		{
+			L2PcInstance player = null;
+			if (activeChar.getTarget() == null)
+			{
+				player = activeChar;
+			}
+			else if (activeChar.getTarget() != null && activeChar.getTarget() instanceof L2PcInstance)
+				player = (L2PcInstance)activeChar.getTarget();
+			player.setNoble(!player.isNoble());
+			if (player.getObjectId() != activeChar.getObjectId())
+			{
+				activeChar.sendMessage("You've changed nobless status of: " + player.getName());
+			}
+			player.sendMessage("GM changed your nobless status!");
+		}
 		return true;
 	}
 	
@@ -923,7 +940,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%account%", account);
 		adminReply.replace("%ip%", ip);
 		adminReply.replace("%ai%", String.valueOf(player.getAI().getIntention().name()));
-		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns "+String.valueOf(player.getInstanceId())+"\">"+String.valueOf(player.getInstanceId())+"</a></td></tr>" : "");
+		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</t/d><td><a action=\"bypass -h admin_instance_spawns "+String.valueOf(player.getInstanceId())+"\">"+String.valueOf(player.getInstanceId())+"</a></td></tr>" : "");
+		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
 	

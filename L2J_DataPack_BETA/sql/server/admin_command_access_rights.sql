@@ -150,6 +150,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_summon_setlvl',1,'false'),
 ('admin_show_pet_inv',1,'false'),
 ('admin_partyinfo',1,'false'),
+('admin_setnoble',1,'true'),
 
 -- ADMIN EDIT NPC
 ('admin_edit_npc',1,'false'),
