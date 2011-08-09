@@ -71,8 +71,12 @@
 							<xs:element name="spawn" minOccurs="0" maxOccurs="unbounded">
  								<xs:complexType>
 									<xs:attribute name="isBanish" type="xs:boolean" use="optional" />
+									<xs:attribute name="isBlueBanishPoint" type="xs:boolean" use="optional" />
+									<xs:attribute name="isBlueStartPoint" type="xs:boolean" use="optional" />
 									<xs:attribute name="isChaotic" type="xs:boolean" use="optional" />
 									<xs:attribute name="isOther" type="xs:boolean" use="optional" />
+									<xs:attribute name="isRedBanishPoint" type="xs:boolean" use="optional" />
+									<xs:attribute name="isRedStartPoint" type="xs:boolean" use="optional" />
 									<xs:attribute name="X" type="xs:integer" use="required" />
 									<xs:attribute name="Y" type="xs:integer" use="required" />
 									<xs:attribute name="Z" type="xs:integer" use="required" />
@@ -100,6 +104,7 @@
 									<xs:enumeration value="BossZone" />
 									<xs:enumeration value="CastleZone" />
 									<xs:enumeration value="ClanHallZone" />
+									<xs:enumeration value="CleftZone" />
 									<xs:enumeration value="ConditionZone" />
 									<xs:enumeration value="DamageZone" />
 									<xs:enumeration value="DerbyTrackZone" />
