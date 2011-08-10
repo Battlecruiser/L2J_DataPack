@@ -1041,12 +1041,18 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="21595" type="EtcItem" name="Birthday Cake">
-		<!-- Description: Sweet and tasty birthday cake that you can share with others. This special cake casts a Vitality maintenance buff on all party members for 5 minutes - meaning that you will not lose Vitality while this buff is active. Your cake will disappear after 20 minutes. This item cannot be exchanged or dropped, but can be stored in your private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22249-1" />
 	</item>
 	<item id="21596" type="EtcItem" name="Blessing Package 100">
 		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 6 feathers of blessing. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->

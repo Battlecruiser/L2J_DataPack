@@ -295,16 +295,28 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22249" levels="1" name="Birthday Cake">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
+		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="npcId" val="139" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22250" levels="1" name="Birthday Cake Effect">
-		<!-- Birthday Cake Energy Effect. Energy is maintained for 5 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="vp_up">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22251" levels="1" name="Honey Rice Cakes">
 		<!-- none -->
