@@ -487,30 +487,36 @@
 		</cond>
 	</skill>
 	<skill id="2137" levels="1" name="Summon Regular Tree">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="npcId" val="13006" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2138" levels="1" name="Summon Special Tree">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="npcId" val="13007" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="99" abnormalType="hp_regen_up">
-				<mul order="0x30" stat="regHp" val="1.4" />
 				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="regHp" val="1.4" />
 			</effect>
 		</for>
 	</skill>
