@@ -117,26 +117,30 @@
 		</cond>
 	</skill>
 	<skill id="2508" levels="1" name="Squash Seed">
+		<!-- Confirmed CT2.5 -->
+		<!-- Summer Squash Event Skill -->
+		<set name="despawnDelay" val="180000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="hitTime" val="1500" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SPAWN" />
+		<set name="magicLvl" val="1" />
+		<set name="npcId" val="12774" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="hitTime" val="1500" />
-		<set name="staticHitTime" val="true" />
-		<set name="npcId" val="12774" />
-		<set name="despawnDelay" val="120000" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2509" levels="1" name="Large Squash Seed">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SPAWN" />
-		<set name="reuseDelay" val="10000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Summer Squash Event Skill -->
+		<set name="despawnDelay" val="180000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="hitTime" val="1500" />
-		<set name="staticHitTime" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12777" />
-		<set name="despawnDelay" val="120000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2510" levels="1" name="Mysterious Cube">
 		<!-- Confirmed CT2.5 -->
