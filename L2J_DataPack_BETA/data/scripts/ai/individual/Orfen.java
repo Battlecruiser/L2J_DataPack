@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.templates.StatsSet;
@@ -62,12 +63,12 @@ public class Orfen extends L2AttackableAIScript
 		}
 	};
 	
-	private static final int[] Text =
+	private static final NpcStringId[] Text =
 	{
-		1000028, // $s1. Stop kidding yourself about your own powerlessness!
-		1000029, // $s1. I'll make you feel what true fear is!
-		1000030, // You're really stupid to have challenged me. $s1! Get ready!
-		1000031  //$s1. Do you think that's going to work?!
+		NpcStringId.S1_STOP_KIDDING_YOURSELF_ABOUT_YOUR_OWN_POWERLESSNESS,
+		NpcStringId.S1_ILL_MAKE_YOU_FEEL_WHAT_TRUE_FEAR_IS,
+		NpcStringId.YOURE_REALLY_STUPID_TO_HAVE_CHALLENGED_ME_S1_GET_READY,
+		NpcStringId.S1_DO_YOU_THINK_THATS_GOING_TO_WORK
 	};
 	
 	private static final int ORFEN = 29014;

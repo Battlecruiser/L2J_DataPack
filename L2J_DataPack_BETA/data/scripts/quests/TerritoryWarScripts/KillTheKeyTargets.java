@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -33,6 +35,6 @@ public class KillTheKeyTargets extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 3;
 		RANDOM_MAX = 8;
-		npcString = new int[]{73861,73862};
+		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_WARSMITHS_AND_OVERLORDS,NpcStringId.YOU_DESTROYED_THE_ENEMYS_PROFESSIONALS};
 	}
 }

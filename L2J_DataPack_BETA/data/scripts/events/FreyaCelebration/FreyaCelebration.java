@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -43,13 +44,13 @@ public class FreyaCelebration extends Quest
 	
 	private static final int[] _skills = { 9150, 9151, 9152, 9153, 9154, 9155, 9156 };
 	
-	private static final int[] _freya_texts = 
+	private static final NpcStringId[] _freya_texts =
 	{
-		1801190,
-		1801191,
-		1801192,
-		1801193,
-		1801194
+		NpcStringId.EVEN_THOUGH_YOU_BRING_SOMETHING_CALLED_A_GIFT_AMONG_YOUR_HUMANS_IT_WOULD_JUST_BE_PROBLEMATIC_FOR_ME,
+		NpcStringId.I_JUST_DONT_KNOW_WHAT_EXPRESSION_I_SHOULD_HAVE_IT_APPEARED_ON_ME_ARE_HUMANS_EMOTIONS_LIKE_THIS_FEELING,
+		NpcStringId.THE_FEELING_OF_THANKS_IS_JUST_TOO_MUCH_DISTANT_MEMORY_FOR_ME,
+		NpcStringId.BUT_I_KIND_OF_MISS_IT_LIKE_I_HAD_FELT_THIS_FEELING_BEFORE,
+		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
 	
 	private static final int[][] _spawns = {
@@ -141,11 +142,11 @@ public class FreyaCelebration extends Quest
 		{
 			if (Rnd.get(100) < 5)
 			{
-				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), 1801195);
+				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
-				
+
 				npc.broadcastPacket(cs);
-				
+
 				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
 			}
 			else

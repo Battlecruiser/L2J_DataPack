@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
@@ -109,7 +110,7 @@ public class PinsAndPouchUnseal extends Quest
 					st.takeItems(itemIds[0], 1);
 					int rand = Rnd.get(100);
 					if (rand < CHANCES[0])
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 1300162));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
 					else if (rand < CHANCES[1])
 						st.giveItems(itemIds[1], 1);
 					else if (rand < CHANCES[2])

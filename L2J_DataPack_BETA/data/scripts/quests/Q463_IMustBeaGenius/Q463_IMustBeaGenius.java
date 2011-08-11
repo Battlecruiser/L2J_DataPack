@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -136,23 +137,23 @@ public class Q463_IMustBeaGenius extends Quest
 			{
 				st.giveItems(_corpse_log, _number);
 				st.playSound("ItemSound.quest_itemget");
-				
-				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 46350);
+				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(_number));
-				
+
 				npc.broadcastPacket(ns);
+
 			}
 			else if (_number < 0 && ((st.getQuestItemsCount(_corpse_log)+_number) > 0))
 			{
 				st.takeItems(_corpse_log, Math.abs(_number));
 				st.playSound("ItemSound.quest_itemget");
-
-				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 46350);
+				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(_number));
-				
+
 				npc.broadcastPacket(ns);
+
 			}
 			
 			if (st.getQuestItemsCount(_corpse_log) == _day_number)
