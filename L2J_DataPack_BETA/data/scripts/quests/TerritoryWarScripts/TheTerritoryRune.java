@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -34,7 +36,7 @@ public class TheTerritoryRune extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36550, 36552, 36555, 36598};
 		GUARD_IDS = new int[]{36551, 36553, 36554};
 		qn = qn1;
-		npcString = new int[]{72968};
+		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_RUNE_HAS_BEEN_DESTROYED};
 		registerKillIds();
 	}
 }

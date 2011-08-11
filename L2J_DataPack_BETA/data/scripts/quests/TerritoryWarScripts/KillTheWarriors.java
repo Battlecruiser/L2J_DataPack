@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -33,6 +35,6 @@ public class KillTheWarriors extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 15;
 		RANDOM_MAX = 20;
-		npcString = new int[]{73561,73562};
+		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_WARRIORS_AND_ROGUES,NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK};
 	}
 }

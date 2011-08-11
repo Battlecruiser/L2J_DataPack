@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
 import com.l2jserver.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -94,17 +95,17 @@ public class BoatInnadrilTour implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, 998);
-		LEAVE_INNADRIL5 = new CreatureSay(0, Say2.BOAT, 801, 999);
-		LEAVE_INNADRIL1 = new CreatureSay(0, Say2.BOAT, 801, 1000);
-		LEAVE_INNADRIL0 = new CreatureSay(0, Say2.BOAT, 801, 1001);
-		LEAVING_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, 1002);
+		ARRIVED_AT_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ANCHOR_10_MINUTES);
+		LEAVE_INNADRIL5 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_LEAVE_IN_5_MINUTES);
+		LEAVE_INNADRIL1 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_LEAVE_IN_1_MINUTE);
+		LEAVE_INNADRIL0 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_LEAVE_SOON);
+		LEAVING_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_LEAVING);
 		
-		ARRIVAL20 = new CreatureSay(0, Say2.BOAT, 801, 1171);
-		ARRIVAL15 = new CreatureSay(0, Say2.BOAT, 801, 1172);
-		ARRIVAL10 = new CreatureSay(0, Say2.BOAT, 801, 1173);
-		ARRIVAL5 = new CreatureSay(0, Say2.BOAT, 801, 1174);
-		ARRIVAL1 = new CreatureSay(0, Say2.BOAT, 801, 1175);
+		ARRIVAL20 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ARRIVE_20_MINUTES);
+		ARRIVAL15 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ARRIVE_15_MINUTES);
+		ARRIVAL10 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ARRIVE_10_MINUTES);
+		ARRIVAL5 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ARRIVE_5_MINUTES);
+		ARRIVAL1 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ARRIVE_1_MINUTE);
 		
 		INNADRIL_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), DOCK.x, DOCK.y, DOCK.z);
 	}

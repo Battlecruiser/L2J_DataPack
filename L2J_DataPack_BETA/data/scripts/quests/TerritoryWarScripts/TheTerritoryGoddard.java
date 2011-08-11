@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -34,7 +36,7 @@ public class TheTerritoryGoddard extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36544, 36546, 36549, 36597};
 		GUARD_IDS = new int[]{36545, 36547, 36548};
 		qn = qn1;
-		npcString = new int[]{72967};
+		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_GODDARD_HAS_BEEN_DESTROYED};
 		registerKillIds();
 	}
 }

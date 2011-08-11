@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -34,7 +36,7 @@ public class TheTerritoryInnadril extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36538, 36540, 36543, 36596};
 		GUARD_IDS = new int[]{36539, 36541, 36542};
 		qn = qn1;
-		npcString = new int[]{72966};
+		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_INNADRIL_HAS_BEEN_DESTROYED};
 		registerKillIds();
 	}
 }

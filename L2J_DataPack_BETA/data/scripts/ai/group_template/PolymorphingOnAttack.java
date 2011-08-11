@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.util.Rnd;
@@ -34,24 +35,25 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 	static
 	{
 		MOBSPAWNS.put(21258,new Integer[]{21259,100,100,-1}); //Fallen Orc Shaman -> Sharp Talon Tiger (always polymorphs)
-		MOBSPAWNS.put(21261,new Integer[]{21262,100,20 ,0}); //Ol Mahum Transcender 1st stage
-		MOBSPAWNS.put(21262,new Integer[]{21263,100,10 ,1}); //Ol Mahum Transcender 2nd stage
-		MOBSPAWNS.put(21263,new Integer[]{21264,100,5  ,2}); //Ol Mahum Transcender 3rd stage
-		MOBSPAWNS.put(21265,new Integer[]{21271,100,33 ,0}); //Cave Ant Larva -> Cave Ant
+		MOBSPAWNS.put(21261,new Integer[]{21262,100,20,0}); //Ol Mahum Transcender 1st stage
+		MOBSPAWNS.put(21262,new Integer[]{21263,100,10,1}); //Ol Mahum Transcender 2nd stage
+		MOBSPAWNS.put(21263,new Integer[]{21264,100,5,2}); //Ol Mahum Transcender 3rd stage
+		MOBSPAWNS.put(21265,new Integer[]{21271,100,33,0}); //Cave Ant Larva -> Cave Ant
 		MOBSPAWNS.put(21266,new Integer[]{21269,100,100,-1}); //Cave Ant Larva -> Cave Ant (always polymorphs)
 		MOBSPAWNS.put(21267,new Integer[]{21270,100,100,-1}); //Cave Ant Larva -> Cave Ant Soldier (always polymorphs)
-		MOBSPAWNS.put(21271,new Integer[]{21272,66,10 ,1}); //Cave Ant -> Cave Ant Soldier
-		MOBSPAWNS.put(21272,new Integer[]{21273,33 ,5  ,2}); //Cave Ant Soldier -> Cave Noble Ant
-		MOBSPAWNS.put(21521,new Integer[]{21522,100,30 ,-1}); //Claws of Splendor
-		MOBSPAWNS.put(21527,new Integer[]{21528,100,30 ,-1}); //Anger of Splendor
-		MOBSPAWNS.put(21533,new Integer[]{21534,100,30 ,-1}); //Alliance of Splendor
-		MOBSPAWNS.put(21537,new Integer[]{21538,100,30 ,-1}); //Fang of Splendor
+		MOBSPAWNS.put(21271,new Integer[]{21272,66,10,1}); //Cave Ant -> Cave Ant Soldier
+		MOBSPAWNS.put(21272,new Integer[]{21273,33,5,2}); //Cave Ant Soldier -> Cave Noble Ant
+		MOBSPAWNS.put(21521,new Integer[]{21522,100,30,-1}); //Claws of Splendor
+		MOBSPAWNS.put(21527,new Integer[]{21528,100,30,-1}); //Anger of Splendor
+		MOBSPAWNS.put(21533,new Integer[]{21534,100,30,-1}); //Alliance of Splendor
+		MOBSPAWNS.put(21537,new Integer[]{21538,100,30,-1}); //Fang of Splendor
 	}
-	protected static final int[][] MOBTEXTS =
+	protected static final NpcStringId[][] MOBTEXTS =
 	{
-		new int[]{1000407, 1000408, 1000406},
-		new int[]{1000411, 1000410, 1000409},
-		new int[]{1000414, 1000413, 1000412}
+		new NpcStringId[]{NpcStringId.ENOUGH_FOOLING_AROUND_GET_READY_TO_DIE, NpcStringId.YOU_IDIOT_IVE_JUST_BEEN_TOYING_WITH_YOU, NpcStringId.NOW_THE_FUN_STARTS},
+		new NpcStringId[]{NpcStringId.I_MUST_ADMIT_NO_ONE_MAKES_MY_BLOOD_BOIL_QUITE_LIKE_YOU_DO, NpcStringId.NOW_THE_BATTLE_BEGINS, NpcStringId.WITNESS_MY_TRUE_POWER},
+		new NpcStringId[]{NpcStringId.PREPARE_TO_DIE, NpcStringId.ILL_DOUBLE_MY_STRENGTH, NpcStringId.YOU_HAVE_MORE_SKILL_THAN_I_THOUGHT}
+
 	};
 	
 	public PolymorphingOnAttack(int questId, String name, String descr)
@@ -72,8 +74,9 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 				{
 					if (tmp[3] >= 0)
 					{
-						int npcString = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
+						NpcStringId npcString = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
 						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),npcString));
+
 					}
 					npc.deleteMe();
 					L2Attackable newNpc = (L2Attackable) addSpawn(tmp[0], npc.getX(), npc.getY(), npc.getZ()+10, npc.getHeading(), false, 0, true);

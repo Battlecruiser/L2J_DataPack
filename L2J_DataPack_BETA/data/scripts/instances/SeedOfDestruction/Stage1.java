@@ -55,6 +55,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -517,7 +518,7 @@ public class Stage1 extends Quest
 					spawnFlaggedNPCs(world, 0);
 					break;
 				case 1:
-					ExShowScreenMessage message1 = new ExShowScreenMessage(1800273,5,10000);
+					ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1);
 					sendScreenMessage(world, message1);
 					for(int i : ENTRANCE_ROOM_DOORS)
 						openDoor(i,world.instanceId);
@@ -528,7 +529,7 @@ public class Stage1 extends Quest
 					// handled elsewhere
 					return true;
 				case 4:
-					ExShowScreenMessage message2 = new ExShowScreenMessage(1800295,5,10000);
+					ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DONT_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
 					sendScreenMessage(world, message2);
 					for(int i : SQUARE_DOORS)
 						openDoor(i,world.instanceId);
@@ -546,7 +547,7 @@ public class Stage1 extends Quest
 					spawnFlaggedNPCs(world, 7);
 					break;
 				case 8:
-					ExShowScreenMessage message4 = new ExShowScreenMessage(1800297,5,10000);
+					ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 1);
 					sendScreenMessage(world, message4);
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world, 8);
@@ -743,7 +744,7 @@ public class Stage1 extends Quest
 				{
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world,6);
-					ExShowScreenMessage message3 = new ExShowScreenMessage(1800296,5,10000);
+					ExShowScreenMessage message3 = new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 1);
 					sendScreenMessage(world, message3);
 				}
 				else

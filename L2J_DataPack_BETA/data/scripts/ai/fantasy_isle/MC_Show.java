@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -44,31 +45,32 @@ public class MC_Show extends L2AttackableAIScript
 	private static int[] individuals = {32439,32440,32441};
 	private static int[] showstuff = {32424,32425,32426,32427,32428};
 	private static boolean isStarted = false;
-	private static int[] messages = {
-		1800105, // How come people are not here... We are about to start the show.. Hmm
-		1800082, // Ugh, I have butterflies in my stomach.. The show starts soon...
-		1800083, // Thank you all for coming here tonight.
-		1800084, // It is an honor to have the special show today.
-		1800085, // Our Fantasy Isle is fully committed to your happiness.
-		1800086, // Now I'd like to introduce the most beautiful singer in Aden. Please welcome Leyla Mira!
-		1800087, // Here she comes!
-		1800088, // Thank you very much, Leyla!
-		// 1800089 Now we're in for a real treat.
-		1800090, // Just back from their world tour≈put your hands together for the Fantasy Isle Circus!
-		1800091, // Come on ~ everyone
-		1800092, // Did you like it? That was so amazing.
-		1800093, // Now we also invited individuals with special talents.
-		1800094, // Let's welcome the first person here!
-		1800095, // ;;;;;;Oh
-		1800096, // Okay, now here comes the next person. Come on up please.
-		1800097, // Oh, it looks like something great is going to happen, right?
-		1800098, // Oh, my ;;;;
-		1800099, // That's g- .. great. Now, here comes the last person.
-		1800100, // Now this is the end of today's show.
-		1800101, // How was it? I am not sure if you really enjoyed it.
-		1800102, // Please remember that Fantasy Isle is always planning a lot of great shows for you.
-		1800103, // Well, I wish I could continue all night long, but this is it for today. Thank you.
-		1800104 // We love you
+	private static NpcStringId[] messages = {
+		NpcStringId.HOW_COME_PEOPLE_ARE_NOT_HERE_WE_ARE_ABOUT_TO_START_THE_SHOW_HMM,
+		NpcStringId.UGH_I_HAVE_BUTTERFLIES_IN_MY_STOMACH_THE_SHOW_STARTS_SOON,
+		NpcStringId.THANK_YOU_ALL_FOR_COMING_HERE_TONIGHT,
+		NpcStringId.IT_IS_AN_HONOR_TO_HAVE_THE_SPECIAL_SHOW_TODAY,
+		NpcStringId.FANTASY_ISLE_IS_FULLY_COMMITTED_TO_YOUR_HAPPINESS,
+		NpcStringId.NOW_ID_LIKE_TO_INTRODUCE_THE_MOST_BEAUTIFUL_SINGER_IN_ADEN_PLEASE_WELCOMELEYLA_MIRA,
+		NpcStringId.HERE_SHE_COMES,
+		NpcStringId.THANK_YOU_VERY_MUCH_LEYLA,
+		//NpcStringId.1800089 Now we're in for a real treat.
+		NpcStringId.JUST_BACK_FROM_THEIR_WORLD_TOUR_PUT_YOUR_HANDS_TOGETHER_FOR_THE_FANTASY_ISLE_CIRCUS,
+		NpcStringId.COME_ON_EVERYONE,
+		NpcStringId.DID_YOU_LIKE_IT_THAT_WAS_SO_AMAZING,
+		NpcStringId.NOW_WE_ALSO_INVITED_INDIVIDUALS_WITH_SPECIAL_TALENTS,
+		NpcStringId.LETS_WELCOME_THE_FIRST_PERSON_HERE,
+		NpcStringId.OH,
+		NpcStringId.OKAY_NOW_HERE_COMES_THE_NEXT_PERSON_COME_ON_UP_PLEASE,
+		NpcStringId.OH_IT_LOOKS_LIKE_SOMETHING_GREAT_IS_GOING_TO_HAPPEN_RIGHT,
+		NpcStringId.OH_MY,
+		NpcStringId.THATS_G_GREAT_NOW_HERE_COMES_THE_LAST_PERSON,
+		NpcStringId.NOW_THIS_IS_THE_END_OF_TODAYS_SHOW,
+		NpcStringId.HOW_WAS_IT_I_HOPE_YOU_ALL_ENJOYED_IT,
+		NpcStringId.PLEASE_REMEMBER_THAT_FANTASY_ISLE_IS_ALWAYS_PLANNING_A_LOT_OF_GREAT_SHOWS_FOR_YOU,
+		NpcStringId.WELL_I_WISH_I_COULD_CONTINUE_ALL_NIGHT_LONG_BUT_THIS_IS_IT_FOR_TODAY_THANK_YOU,
+		NpcStringId.WE_LOVE_YOU
+
 	};
 	
 	private static Map<String, Object[]> talks = new FastMap<String, Object[]>();
@@ -222,9 +224,9 @@ public class MC_Show extends L2AttackableAIScript
 		
 	}
 	
-	 private void autoChat(L2Npc npc, int stringId, int type)
+	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
 	{
-		 npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), stringId));
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), npcString));
 	}
 	
 	@Override
@@ -383,10 +385,10 @@ public class MC_Show extends L2AttackableAIScript
 			{
 				if (talks.containsKey(event))
 				{
-					int stringId = (Integer) talks.get(event)[0];
+					NpcStringId npcString = (NpcStringId) talks.get(event)[0];
 					String nextEvent = (String) talks.get(event)[1];
 					int time = (Integer) talks.get(event)[2];
-					autoChat(npc,stringId,1);
+					autoChat(npc,npcString, 1);
 					startQuestTimer(nextEvent,time, npc, null);
 				}
 				else if (walks.containsKey(event))
