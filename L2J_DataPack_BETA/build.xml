@@ -23,70 +23,62 @@
 
 	<property name="build" location="build" />
 	<property name="build.dist" location="${build}/dist" />
+	<property name="build.dist.cb" location="${build.dist}/community" />
+	<property name="build.dist.cb_sql" location="${build.dist}/cb_sql" />
+	<property name="build.dist.doc" location="${build.dist}/doc" />
 	<property name="build.dist.game" location="${build.dist}/gameserver" />
 	<property name="build.dist.languages" location="${build.dist}/languages" />
 	<property name="build.dist.login" location="${build.dist}/login" />
-	<property name="build.dist.login.data" location="${build.dist}/login/data" />
-	<property name="build.dist.cb" location="${build.dist}/community" />
 	<property name="build.dist.sql" location="${build.dist}/sql" />
-	<property name="build.dist.cb_sql" location="${build.dist}/cb_sql" />
 	<property name="build.dist.tools" location="${build.dist}/tools" />
-	<property name="build.dist.doc" location="${build.dist}/doc" />
-	<property name="properties-file" location="${build.dist.game}/config/l2jdp-version.properties" />
 
 	<target name="init" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
 		<mkdir dir="${build.dist}" />
 		<mkdir dir="${build.dist.cb}" />
 		<mkdir dir="${build.dist.cb_sql}" />
-		<mkdir dir="${build.dist.game}" />
 		<mkdir dir="${build.dist.doc}" />
+		<mkdir dir="${build.dist.game}" />
 		<mkdir dir="${build.dist.languages}" />
 		<mkdir dir="${build.dist.login}" />
 		<mkdir dir="${build.dist.sql}" />
 		<mkdir dir="${build.dist.tools}" />
 	</target>
 
-	<target name="export" depends="version" description="Syncronizes build space contents with project.">
+	<target name="dist" depends="distclean, version" description="Syncronizes build space contents with project.">
 		<sync todir="${build.dist.doc}">
-			<fileset dir="${basedir}">
-				<include name="gpl.txt" />
-				<include name="readme-dp.txt" />
-			</fileset>
+			<fileset dir="doc" />
 		</sync>
 		<sync todir="${build.dist.game}/data" includeemptydirs="true">
-			<fileset dir="${basedir}/data" />
+			<fileset dir="data" />
 		</sync>
 		<sync todir="${build.dist.cb}/data">
-			<fileset dir="${basedir}/cb_data" />
+			<fileset dir="cb_data" />
 		</sync>
 		<sync todir="${build.dist.cb_sql}">
-			<fileset dir="${basedir}/cb_sql" />
-		</sync>
-		<sync todir="${build.dist.sql}">
-			<fileset dir="${basedir}/sql" />
-		</sync>
-		<sync todir="${build.dist.tools}">
-			<fileset dir="${basedir}/tools" />
+			<fileset dir="cb_sql" />
 		</sync>
 		<sync todir="${build.dist.languages}">
-			<fileset dir="${basedir}/languages" />
+			<fileset dir="languages" />
 		</sync>
-		<sync todir="${build.dist.login.data}">
-			<fileset dir="${basedir}/logindata" />
+		<sync todir="${build.dist.login}/data">
+			<fileset dir="logindata" />
 			<fileset dir="${build.dist.game}/data">
 				<include name="servername.xml" />
 				<include name="servername.xsd" />
 			</fileset>
 		</sync>
+		<sync todir="${build.dist.sql}">
+			<fileset dir="sql" />
+		</sync>
+		<sync todir="${build.dist.tools}">
+			<fileset dir="tools" />
+		</sync>
+		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" />
 	</target>
 
-	<target name="dist" depends="distclean" description="Creates a ZIP file. Suitable for distribution but building takes longer. See dist-deflate for faster builds.">
-		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" update="true" />
-	</target>
-
-	<target name="dist-deflate" depends="distclean" description="Creates a datapack ZIP file with NO compression (bigger ZIP file but faster than regular dist target)">
-		<zip destfile="${build}/L2J_DataPack_BETA-nocompress.zip" basedir="${build.dist}" update="true" compress="false" />
+	<target name="distclean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
+		<delete file="${build}/L2J_DataPack_BETA.zip" />
 	</target>
 
 	<target name="version" depends="init" description="Create l2jdp-version.properties file">
@@ -96,12 +88,12 @@
 		<exec dir="." executable="svnversion" outputproperty="l2jdp.revision">
 			<arg line="-n ." />
 		</exec>
-		<concat destfile="${properties-file}">
+		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">
 			version=${l2jdp.revision}
 			builddate=${build.tstamp}
 			detailed info:
 		</concat>
-		<concat destfile="${properties-file}" append="true">
+		<concat destfile="${build.dist.game}/config/l2jdp-version.properties" append="true">
 			<filelist dir="${src}/../.svn/" files="entries" />
 			<filterchain>
 				<prefixlines prefix="          " />
@@ -111,14 +103,5 @@
 				</tokenfilter>
 			</filterchain>
 		</concat>
-	</target>
-
-	<target name="clean" description="Deletes the whole build space and existing packages.">
-		<delete dir="${build}" />
-	</target>
-
-	<target name="distclean" depends="export" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
-		<delete file="${build}/L2J_DataPack_BETA.zip" />
-		<delete file="${build}/L2J_DataPack_BETA-nocompress.zip" />
 	</target>
 </project>
