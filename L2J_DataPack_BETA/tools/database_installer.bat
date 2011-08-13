@@ -561,7 +561,7 @@ goto cs_install
 :cs_upgrade
 echo @echo off> temp.bat
 if exist cs_errors.txt del cs_errors.txt
-for %%i in (..\cb_sql\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %%i 2^>^> cs_errors.txt >> temp.bat
+for %%i in (..\sql\community\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %%i 2^>^> cs_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move cs_errors.txt %workdir%
@@ -583,7 +583,7 @@ echo.
 )
 if %logging% == 0 set output=NUL
 set dest=cb
-for %%i in (..\cb_sql\*.sql) do call :dump %%i
+for %%i in (..\sql\community\*.sql) do call :dump %%i
 
 echo done...
 echo.
