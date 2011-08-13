@@ -332,7 +332,7 @@ else
 echo "Upgrading communityserver content"
 fi
 if [ "$1" == "I" ]; then
-	for cb in $(ls ../cb_sql/*.sql);do
+	for cb in $(ls ../sql/community/*.sql);do
 		echo "Installing Community Board table : $cb"
 		$MYC < $cb
 	done
@@ -471,7 +471,7 @@ while :
 	 echo ""
      echo "There we go, it may take some time..."
      echo "updates parser results. Last run: "`date` >cb_database_installer.log
-     for file in $(ls ../cb_sql/updates/*sql);do
+     for file in $(ls ../sql/community/updates/*sql);do
         echo $file|cut -d/ -f4 >> cb_database_installer.log
         $MYC < $file 2>> cb_database_installer.log
         if [ $? -eq 0 ];then
