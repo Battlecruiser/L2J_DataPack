@@ -68,13 +68,14 @@ of this directory a little bit.
 311262503.xml -> Seven Signs - Blacksmith of Mammon - Duals S-Grade.
 311262504.xml -> Seven Signs - Blacksmith of Mammon - Unseal S-Grade Armor.
 311262505.xml -> Seven Signs - Blacksmith of Mammon - Unseal S-grade Accesories
-311262506.xml -> Seven Signs - Blacksmith of Mammon - Unseal A-Grade Armor
-311262507.xml -> Seven Signs - Blacksmith of Mammon - Unseal A-grade Accesories
-311262508.xml -> Seven Signs - Blacksmith of Mammon - Reseal A-grade Armor
+311262506.xml -> Unseal A-Grade Armor
+311262507.xml -> Unseal A-grade Accesories
+311262508.xml -> Reseal A-grade Armor
 311262509.xml -> Seven Signs - Blacksmith of Mammon - SA removal
 311262510.xml -> Seven Signs - Blacksmith of Mammon - SA: A-grade
 311262511.xml -> Seven Signs - Blacksmith of Mammon - Weapon Upgrade
-311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange
+311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange (D~B grade)
+311262519.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange (A-grade)
 311262513.xml -> Seven Signs - Blacksmith of Mammon - Foundation Items
 311262516.xml -> Seven Signs - Blacksmith of Mammon - Exchange rare armor for superior armor.
 
