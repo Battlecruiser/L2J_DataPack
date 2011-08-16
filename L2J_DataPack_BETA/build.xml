@@ -78,25 +78,12 @@
 
 	<target name="version" depends="init" description="Create l2jdp-version.properties file">
 		<tstamp>
-			<format property="build.tstamp" pattern="yyyyMMdd_HHmm" />
+			<format property="build.tstamp" pattern="dd/MM/yyyy HH:mm" />
 		</tstamp>
-		<exec dir="." executable="svnversion" outputproperty="l2jdp.revision">
-			<arg line="-n ." />
-		</exec>
+		<exec dir="." executable="svnversion" outputproperty="l2jdp.revision" />
 		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">
 			version=${l2jdp.revision}
 			builddate=${build.tstamp}
-			detailed info:
-		</concat>
-		<concat destfile="${build.dist.game}/config/l2jdp-version.properties" append="true">
-			<filelist dir="${src}/../.svn/" files="entries" />
-			<filterchain>
-				<prefixlines prefix="          " />
-				<headfilter lines="8" skip="4" />
-				<tokenfilter>
-					<ignoreblank />
-				</tokenfilter>
-			</filterchain>
 		</concat>
 	</target>
 </project>
