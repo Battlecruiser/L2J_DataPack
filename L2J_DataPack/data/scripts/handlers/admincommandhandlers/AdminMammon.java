@@ -20,36 +20,32 @@ import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Admin Command Handler for Mammon NPCs
- *
- * @author Tempy
- * Typo fix by Zoey76 24/02/2011
+ * @author Tempy, Zoey76
  */
 public class AdminMammon implements IAdminCommandHandler
 {
-	
-	private static final String[] ADMIN_COMMANDS =
-	{
-		"admin_mammon_find",
-		"admin_mammon_respawn",
-	};
+	private static final String[] ADMIN_COMMANDS = { "admin_mammon_find", "admin_mammon_respawn", };
 	
 	private boolean _isSealValidation = SevenSigns.getInstance().isSealValidationPeriod();
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		int teleportIndex = -1;
-		AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
-		AutoSpawnInstance merchSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
+		final AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
+		final AutoSpawnInstance merchSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
 		
 		if (command.startsWith("admin_mammon_find"))
 		{
 			try
 			{
 				if (command.length() > 17)
+				{
 					teleportIndex = Integer.parseInt(command.substring(18));
+				}
 			}
 			catch (Exception NumberFormatException)
 			{
@@ -59,59 +55,73 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (!_isSealValidation)
 			{
-				activeChar.sendMessage("The competition period is currently in effect.");
+				activeChar.sendPacket(SystemMessageId.SSQ_COMPETITION_UNDERWAY);
 				return false;
 			}
 			
 			if (blackSpawnInst != null)
 			{
-				L2Npc[] blackInst = blackSpawnInst.getNPCInstanceList();
+				final L2Npc[] blackInst = blackSpawnInst.getNPCInstanceList();
 				if (blackInst.length > 0)
 				{
-					int x1 = blackInst[0].getX(), y1 = blackInst[0].getY(), z1 = blackInst[0].getZ();
+					final int x1 = blackInst[0].getX(), y1 = blackInst[0].getY(), z1 = blackInst[0].getZ();
 					activeChar.sendMessage("Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
 					if (teleportIndex == 1)
+					{
 						activeChar.teleToLocation(x1, y1, z1, true);
+					}
 				}
 			}
 			else
+			{
 				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
+			}
 			
 			if (merchSpawnInst != null)
 			{
-				L2Npc[] merchInst = merchSpawnInst.getNPCInstanceList();
+				final L2Npc[] merchInst = merchSpawnInst.getNPCInstanceList();
 				if (merchInst.length > 0)
 				{
-					int x2 = merchInst[0].getX(), y2 = merchInst[0].getY(), z2 = merchInst[0].getZ();
+					final int x2 = merchInst[0].getX(), y2 = merchInst[0].getY(), z2 = merchInst[0].getZ();
 					activeChar.sendMessage("Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
 					if (teleportIndex == 2)
+					{
 						activeChar.teleToLocation(x2, y2, z2, true);
+					}
 				}
 			}
 			else
+			{
 				activeChar.sendMessage("Merchant of Mammon isn't registered for spawn.");
+			}
 		}
 		else if (command.startsWith("admin_mammon_respawn"))
 		{
 			if (!_isSealValidation)
 			{
-				activeChar.sendMessage("The competition period is currently in effect.");
+				activeChar.sendPacket(SystemMessageId.SSQ_COMPETITION_UNDERWAY);
 				return true;
 			}
+			
 			if (merchSpawnInst != null)
 			{
 				long merchRespawn = AutoSpawnHandler.getInstance().getTimeToNextSpawn(merchSpawnInst);
 				activeChar.sendMessage("The Merchant of Mammon will respawn in " + (merchRespawn / 60000) + " minute(s).");
 			}
 			else
+			{
 				activeChar.sendMessage("Merchant of Mammon isn't registered for spawn.");
+			}
+			
 			if (blackSpawnInst != null)
 			{
 				long blackRespawn = AutoSpawnHandler.getInstance().getTimeToNextSpawn(blackSpawnInst);
 				activeChar.sendMessage("The Blacksmith of Mammon will respawn in " + (blackRespawn / 60000) + " minute(s).");
 			}
 			else
+			{
 				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
+			}
 		}
 		return true;
 	}
