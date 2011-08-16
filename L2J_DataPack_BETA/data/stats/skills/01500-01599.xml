@@ -1280,8 +1280,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="mana_shield">
-				<add order="0x40" stat="manaShield" val="70" /> <!-- FIXME: Support Done ? -->
+			<effect name="Buff" abnormalTime="10" val="0" abnormal="arcane_shield" abnormalLvl="1" abnormalType="mana_shield">
+				<add order="0x40" stat="manaShield" val="70" />
 			</effect>
 		</for>
 	</skill>
