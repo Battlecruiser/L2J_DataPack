@@ -571,7 +571,7 @@
 	<skill id="22043" levels="6" name="Secret medicine of Will">
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
-		<table name="#levelRange"> 0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;1 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -589,7 +589,7 @@
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">
 		<!-- Level 1 doesn't exist in client. -->
-		<table name="#levelRange"> 0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;1 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />
