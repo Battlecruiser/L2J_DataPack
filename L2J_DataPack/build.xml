@@ -31,7 +31,7 @@
 	<property name="build.dist.sql" location="${build.dist}/sql" />
 	<property name="build.dist.tools" location="${build.dist}/tools" />
 
-	<target name="init" description="Create the output directories. Do nothing if dirs were already created">
+	<target name="init" depends="clean, getVersionAndDate" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
 		<mkdir dir="${build.dist}" />
 		<mkdir dir="${build.dist.cb}" />
@@ -43,7 +43,7 @@
 		<mkdir dir="${build.dist.tools}" />
 	</target>
 
-	<target name="dist" depends="distclean, version" description="Syncronizes build space contents with project.">
+	<target name="dist" depends="init" description="Syncronizes build space contents with project.">
 		<sync todir="${build.dist.cb}/data">
 			<fileset dir="cb_data" />
 		</sync>
@@ -71,11 +71,11 @@
 		<zip destfile="${build}/L2J_DataPack.zip" basedir="${build.dist}" />
 	</target>
 
-	<target name="distclean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
+	<target name="clean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
 		<delete file="${build}/L2J_DataPack.zip" />
 	</target>
 
-	<target name="version" depends="init" description="Create l2jdp-version.properties file">
+	<target name="getVersionAndDate" description="Create l2jdp-version.properties file">
 		<tstamp>
 			<format property="build.tstamp" pattern="dd/MM/yyyy HH:mm" />
 		</tstamp>
