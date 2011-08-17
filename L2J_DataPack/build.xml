@@ -50,6 +50,10 @@
 		<sync todir="${build.dist.doc}">
 			<fileset dir="doc" />
 		</sync>
+		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">
+			version=${l2jdp.revision}
+			builddate=${build.tstamp}
+		</concat>
 		<sync todir="${build.dist.game}/data" includeemptydirs="true">
 			<fileset dir="data" />
 		</sync>
@@ -80,9 +84,5 @@
 			<format property="build.tstamp" pattern="dd/MM/yyyy HH:mm" />
 		</tstamp>
 		<exec dir="." executable="svnversion" outputproperty="l2jdp.revision" />
-		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">
-			version=${l2jdp.revision}
-			builddate=${build.tstamp}
-		</concat>
 	</target>
 </project>
