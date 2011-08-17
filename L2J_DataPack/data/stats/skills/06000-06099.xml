@@ -489,9 +489,7 @@
 		<for>
 			<effect name="Buff" abnormalTime="8" val="0" abnormalLvl="1" abnormalType="counter_critical_trigger">
 				<mul order="0x30" stat="cAtk" val="2">
-					<not>
-						<using kind="Bow,Crossbow" />
-					</not>
+					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dagger,Dual Dagger,Dual Sword,Dual Fist,Pole,Ancient,Rapier" />
 				</mul>
 			</effect>
 		</for>
