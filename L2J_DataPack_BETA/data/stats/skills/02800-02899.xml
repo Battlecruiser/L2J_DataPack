@@ -974,9 +974,8 @@
 	</skill>
 	<skill id="2860" levels="6" name="Highest Power Secret Medicine of Life">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 500 1300 2200 3000 3800 4600 </table>
-		<table name="#minLvl"> 1 20 40 52 61 76 </table>
-		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -988,18 +987,14 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<player flyMounted="False" />
-				<player level="#minLvl" />
-				<not>
-					<player level="#maxLvl" />
-				</not>
+				<player levelRange="#levelRange" />
 			</and>
 		</cond>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 120 280 440 580 720 840 </table>
-		<table name="#minLvl"> 0 20 40 52 61 76 </table>
-		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -1011,18 +1006,14 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<player flyMounted="False" />
-				<player level="#minLvl" />
-				<not>
-					<player level="#maxLvl" />
-				</not>
+				<player levelRange="#levelRange" />
 			</and>
 		</cond>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 300 700 1200 1600 2000 2400 </table>
-		<table name="#minLvl"> 0 20 40 52 61 76 </table>
-		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -1034,10 +1025,7 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<player flyMounted="False" />
-				<player level="#minLvl" />
-				<not>
-					<player level="#maxLvl" />
-				</not>
+				<player levelRange="#levelRange" />
 			</and>
 		</cond>
 	</skill>
