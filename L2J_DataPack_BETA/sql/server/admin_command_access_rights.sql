@@ -68,6 +68,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_stopallbuffs',1,'true'),
 ('admin_areacancel',1,'false'),
 ('admin_removereuse',1,'false'),
+('admin_switch_gm_buffs',1,'false'),
 
 -- ADMIN CACHE
 ('admin_cache_htm_rebuild',1,'false'),
