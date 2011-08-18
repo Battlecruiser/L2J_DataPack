@@ -1177,10 +1177,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="chanceType" val="ON_CRIT" />
-		<set name="activationChance" val="10" />
-		<set name="triggeredId" val="3592" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<add order="0x40" stat="atkCountMax" val="5" />
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
@@ -1191,8 +1187,9 @@
 			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+			<!-- NOTE: The skill reflection rate has been increased in H5, values unconfirmed -->
+			<add order="0x40" stat="reflectSkillPhysic" val="20" /> <!-- Reflect Skills 20% of the time -->
+			<add order="0x40" stat="reflectSkillMagic" val="20" /> <!-- Reflect Skills 20% of the time -->
 		</for>
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
@@ -1201,8 +1198,10 @@
 		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="maxNegated" val="5" />
-		<set name="power" val="80" />
+		<!-- NOTE: Number of buffs canceled have been reduced to 2 in H5 -->
+		<set name="maxNegated" val="2" />
+		<!-- NOTE: The Cancel effect have been reduced in H5, value unconfirmed -->
+		<set name="power" val="5" />
 	</skill>
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<set name="target" val="TARGET_SELF" />
