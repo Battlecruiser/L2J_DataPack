@@ -283,76 +283,246 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23238" levels="1" name="Master's Blessing - Eye of Pa'agrio">
-		<!-- "The GM is always by your side. Combines the increased accuracy effect and critical defense effect for a more advanced effect. For 1 hour(s), increases accuracy by 4 and decreases the rate of being hit by a critical attack by 30%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="495" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" noicon="1" abnormalLvl="90" abnormalType="critDamEvas">
+				<mul order="0x30" stat="critDamEvas" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23239" levels="1" name="Master's Blessing - Soul of Pa'agrio">
-		<!-- "The GM is always by your side. Combines the increased M. Atk. effect and M. Def. effect for a more advanced effect. For 1 hour(s), increases nearby clan members' M. Atk. by 75% and M. Def. by 30%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="666" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" noicon="1" val="0" abnormalLvl="9" abnormalType="md_up">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23240" levels="1" name="Master's Blessing - Chant of Magnus">
-		<!-- "The GM is always by your side. For 1 hour(s), receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, resistance to fire/water/wind/earth by 10, resistance to de-buff attacks by 25, and resistance to buff canceling attacks by 40." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxMp" val="1.15" />
+				<add order="0x40" stat="regMp" val="1.5">
+					<using kind="Heavy,Light" />
+				</add>
+				<add order="0x40" stat="regMp" val="4">
+					<using kind="Magic" />
+				</add>
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul order="0x30" stat="mAtk" val="1.3" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<add order="0x40" stat="fireRes" val="10" />
+				<add order="0x40" stat="waterRes" val="10" />
+				<add order="0x40" stat="windRes" val="10" />
+				<add order="0x40" stat="earthRes" val="10" />
+				<sub order="0x40" stat="debuffVuln" val="25" />
+				<sub order="0x40" stat="cancelVuln" val="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23241" levels="1" name="Master's Blessing - Chant of Blood Awakening">
-		<!-- "The GM is always by your side. Combines general attack damage absorption and attack speed increase for a more advanced blood awakening effect. For 1 hour(s), increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on an enemy." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="655" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="74" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="attack_time_down" noicon="1">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23242" levels="1" name="Master's Blessing - Spike">
-		<!-- The GM is always by your side. Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pAtk" val="1.05">
+					<using kind="Blunt,Big Blunt" />
+				</mul>
+				<add order="0x40" stat="stunProf" val="8">
+					<using kind="Blunt,Big Blunt" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23243" levels="1" name="Master's Blessing - Bowstring">
-		<!-- The GM is always by your side. Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pAtk" val="1.05">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Bow,Crossbow" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23244" levels="1" name="Master's Blessing - Hard Tanning">
-		<!-- The GM is always by your side. Tans armor to increase P. Def. by 5% and evasion by 2 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+				<mul order="0x30" stat="pDef" val="1.05">
+					<using kind="Light" />
+				</mul>
+				<add order="0x40" stat="rEvas" val="2">
+					<using kind="Light" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23245" levels="1" name="Master's Blessing - Embroider">
-		<!-- The GM is always by your side. Embroiders a robe to increase P. Def. by 5% and MP recovery bonus by 2 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+				<mul order="0x30" stat="pDef" val="1.05">
+					<using kind="Magic" />
+				</mul>
+				<add order="0x40" stat="regMp" val="2">
+					<using kind="Magic" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23246" levels="1" name="Master's Blessing - Counter Critical">
-		<!-- "The GM is always by your side. For 1 hour(s), increases P. Def. against critical by 30%. When an attack above a certain amount of damage is received, the Critical Damage of general short-range physical attack is increased for 8 seconds." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="679" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="3600" val="0" triggeredId="6059" chanceType="ON_ATTACKED_HIT" activationChance="80" activationMinDamage="300" abnormalLvl="1" abnormalType="counter_critical">
+				<mul order="0x30" stat="critVuln" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23247" levels="1" name="Master's Blessing - Elemental Protection">
-		<!-- "The GM is always by your side. For 1 hour(s), increases resistance to fire/water/wind/earth attacks by 20." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="662" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="md_up_attr">
+				<add order="0x40" stat="waterRes" val="20" />
+				<add order="0x40" stat="fireRes" val="20" />
+				<add order="0x40" stat="windRes" val="20" />
+				<add order="0x40" stat="earthRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23248" levels="1" name="Master's Blessing - Arcane Protection">
-		<!-- "The GM is always by your side. For 1 hour(s), increases resistance to buff canceling attacks by 30 and resistance to de-buff attacks by 20." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="aggroPoints" val="662" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="resist_debuff_dispel">
+				<sub order="0x40" stat="cancelVuln" val="30" />
+				<sub order="0x40" stat="debuffVuln" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23249" levels="1" name="Master's Call">
-		<!-- Summons the target's party member somewhere near the target. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="castRange" val="2000" />
+		<set name="effectRange" val="2500" />
+		<set name="hitTime" val="500" />
+		<set name="skillType" val="SUMMON_FRIEND" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="23250" levels="1" name="Kau Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
@@ -373,268 +543,795 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23253" levels="1" name="Master's Blessing - Focus">
-		<!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23254" levels="1" name="Master's Blessing - Death Whisper">
-		<!-- The GM is always by your side. Increases Critical attack power by 35% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23255" levels="1" name="Master's Blessing - Haste">
-		<!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23256" levels="1" name="Master's Blessing - Guidance">
-		<!-- The GM is always by your side. Increases accuracy by 4 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23257" levels="1" name="Master's Blessing - Blessed Body">
-		<!-- The GM is always by your side. Increases Max HP by 35% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="6" abnormalType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23258" levels="1" name="Master's Blessing - Blessed Soul">
-		<!-- The GM is always by your side. Increases Max MP by 35% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="6" abnormalType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23259" levels="1" name="Master's Blessing - Agility">
-		<!-- The GM is always by your side. Increase Evasion by 4 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="avoid_up">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23260" levels="1" name="Master's Blessing - Acumen">
-		<!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23261" levels="1" name="Master's Blessing - Decrease Weight">
-		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="decrease_weight_penalty">
+				<add order="0x40" stat="maxLoad" val="9000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23262" levels="1" name="Master's Blessing - Might">
-		<!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23263" levels="1" name="Master's Blessing - Shield">
-		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23264" levels="1" name="Master's Blessing - Magic Barrier">
-		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="md_up">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23265" levels="1" name="Master's Blessing - Vampiric Rage">
-		<!-- "The GM is always by your side. For 1 hour(s), 9% of the standard short-range physical damage inflicted on an enemy is recovered as HP." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="23266" levels="1" name="Master's Blessing - Empower">
-		<!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23267" levels="1" name="Master's Blessing - Wind Walk">
-		<!-- The GM is always by your side. Increases Speed by 33 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23268" levels="1" name="Master's Blessing - Berserker Spirit">
-		<!-- "The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="berserker">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<sub order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23269" levels="1" name="Master's Blessing - Greater Might">
-		<!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
+				<mul order="0x30" stat="pAtk" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23270" levels="1" name="Master's Blessing - Greater Shield">
-		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23271" levels="1" name="Master's Blessing - Wild Magic">
-		<!-- "The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="magic_critical_up">
+				<basemul order="0x30" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23272" levels="1" name="Master's Blessing - Clarity">
-		<!-- "The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="cheap_magic">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23273" levels="1" name="Master's Blessing - Prophecy of Water">
-		<!-- "The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="78" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<basemul order="0x30" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23274" levels="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- "The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases Speed by 20%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<add order="0x40" stat="accCombat" val="4" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23275" levels="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- "The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+				<add order="0x40" stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="23276" levels="1" name="Master's Blessing - Chant of Victory">
-		<!-- "The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to de-buffs by 10%, and accuracy by 4." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="20" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<add order="0x40" stat="accCombat" val="4" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23277" levels="1" name="Master's Blessing - Improve Combat">
-		<!-- "The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour(s), increases P. Atk. by 15% and P. Def. by 15%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="pd_up" noicon="1">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23278" levels="1" name="Master's Blessing - Improve Magic">
-		<!-- "The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 1 hour(s), increases M. Atk. by 75% and M. Def. by 30%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="md_up" noicon="1">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23279" levels="1" name="Master's Blessing - Improve Condition">
-		<!-- "The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour(s), increases Max HP by 35% and Max MP by 35%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="max_mp_up" noicon="1">
+				<mul order="0x30" stat="maxMp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical">
-		<!-- "The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour(s), increases Critical Rate by 30% and Critical Damage by 35%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="critical_prob_up">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="critical_dmg_up" noicon="1">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23281" levels="1" name="Master's Blessing - Improve Shield Defense">
-		<!-- "The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 1 hour(s), increases shield defense rate by 30% and shield P. Def. by 50%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="shield_prob_up">
+				<mul order="0x30" stat="rShld" val="1.3" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="shield_defence_up" noicon="1">
+				<mul order="0x30" stat="sDef" val="1.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23282" levels="1" name="Master's Blessing - Improve Movement">
-		<!-- "The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour(s), increases Speed by 33 and evasion by 4." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="avoid_up" noicon="1">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23283" levels="1" name="Master's Blessing - Sharpen Edge">
-		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pAtk" val="1.05">
+					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+				</mul>
+				<basemul order="0x30" stat="rCrit" val="0.2">
+					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+				</basemul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23284" levels="1" name="Master's Blessing - Face Harden">
-		<!-- The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="4000" />
+		<set name="coolTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pDef" val="1.1">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23285" levels="1" name="Master's Blessing - Blessing of Noblesse">
-		<!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Blessing of Noblesse and the Amulet of Luck disappear. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="canBeDispeled" val="false" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="NoblesseBless" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="preserve_abnormal" />
+		</for>
 	</skill>
 	<skill id="23286" levels="1" name="Master's Blessing - Eye of Pa'agrio">
-		<!-- "The GM is always by your side. Combines the increased accuracy effect and critical defense effect for a more advanced effect. For 1 hour(s), increases accuracy by 4 and decreases the rate of being hit by a critical attack by 30%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" noicon="1" abnormalLvl="90" abnormalType="critDamEvas">
+				<mul order="0x30" stat="critDamEvas" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23287" levels="1" name="Master's Blessing - Soul of Pa'agrio">
-		<!-- "The GM is always by your side. Combines the increased M. Atk. effect and M. Def. effect for a more advanced effect. For 1 hour(s), increases nearby clan members' M. Atk. by 75% and M. Def. by 30%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" noicon="1" val="0" abnormalLvl="9" abnormalType="md_up">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23288" levels="1" name="Master's Blessing - Chant of Magnus">
-		<!-- "The GM is always by your side. For 1 hour(s), receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, resistance to fire/water/wind/earth by 10, resistance to de-buff attacks by 25, and resistance to buff canceling attacks by 40." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxMp" val="1.15" />
+				<add order="0x40" stat="regMp" val="1.5">
+					<using kind="Heavy,Light" />
+				</add>
+				<add order="0x40" stat="regMp" val="4">
+					<using kind="Magic" />
+				</add>
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul order="0x30" stat="mAtk" val="1.3" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<add order="0x40" stat="fireRes" val="10" />
+				<add order="0x40" stat="waterRes" val="10" />
+				<add order="0x40" stat="windRes" val="10" />
+				<add order="0x40" stat="earthRes" val="10" />
+				<sub order="0x40" stat="debuffVuln" val="25" />
+				<sub order="0x40" stat="cancelVuln" val="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23289" levels="1" name="Master's Blessing - Chant of Blood Awakening">
-		<!-- "The GM is always by your side. Combines general attack damage absorption and attack speed increase for a more advanced blood awakening effect. For 1 hour(s), increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on an enemy." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="74" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="9" abnormalType="attack_time_down" noicon="1">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23290" levels="1" name="Master's Blessing - Spike">
-		<!-- The GM is always by your side. Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pAtk" val="1.05">
+					<using kind="Blunt,Big Blunt" />
+				</mul>
+				<add order="0x40" stat="stunProf" val="8">
+					<using kind="Blunt,Big Blunt" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23291" levels="1" name="Master's Blessing - Bowstring">
-		<!-- The GM is always by your side. Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+				<mul order="0x30" stat="pAtk" val="1.05">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Bow,Crossbow" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23292" levels="1" name="Master's Blessing - Hard Tanning">
-		<!-- The GM is always by your side. Tans armor to increase P. Def. by 5% and evasion by 2 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+				<mul order="0x30" stat="pDef" val="1.05">
+					<using kind="Light" />
+				</mul>
+				<add order="0x40" stat="rEvas" val="2">
+					<using kind="Light" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23293" levels="1" name="Master's Blessing - Embroider">
-		<!-- The GM is always by your side. Embroiders a robe to increase P. Def. by 5% and MP recovery bonus by 2 for 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+				<mul order="0x30" stat="pDef" val="1.05">
+					<using kind="Magic" />
+				</mul>
+				<add order="0x40" stat="regMp" val="2">
+					<using kind="Magic" />
+				</add>
+			</effect>
+		</for>
 	</skill>
 	<skill id="23294" levels="1" name="Master's Blessing - Counter Critical">
-		<!-- "The GM is always by your side. For 1 hour(s), increases P. Def. against critical by 30%. When an attack above a certain amount of damage is received, the Critical Damage of general short-range physical attack is increased for 8 seconds." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="3600" val="0" triggeredId="6059" chanceType="ON_ATTACKED_HIT" activationChance="80" activationMinDamage="300" abnormalLvl="1" abnormalType="counter_critical">
+				<mul order="0x30" stat="critVuln" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23295" levels="1" name="Master's Blessing - Elemental Protection">
-		<!-- "The GM is always by your side. For 1 hour(s), increases resistance to fire/water/wind/earth attacks by 20." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="md_up_attr">
+				<add order="0x40" stat="waterRes" val="20" />
+				<add order="0x40" stat="fireRes" val="20" />
+				<add order="0x40" stat="windRes" val="20" />
+				<add order="0x40" stat="earthRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23296" levels="1" name="Master's Blessing - Arcane Protection">
-		<!-- "The GM is always by your side. For 1 hour(s), increases resistance to buff canceling attacks by 30 and resistance to de-buff attacks by 20." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<!-- GM Skill -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="resist_debuff_dispel">
+				<sub order="0x40" stat="cancelVuln" val="30" />
+				<sub order="0x40" stat="debuffVuln" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23297" levels="1" name="Santa Claus's Blessing">
 		<!-- "Rudolph's Blessing. For 20 minutes, increases Atk. Spd. by 10%, Casting Spd. by 10%, and Speed by 10. Rudolph consumes 2 fresh herbs." -->

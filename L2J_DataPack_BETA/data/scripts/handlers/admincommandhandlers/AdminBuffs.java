@@ -3,6 +3,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.GMSkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2World;
@@ -24,7 +25,8 @@ public class AdminBuffs implements IAdminCommandHandler
 		"admin_stopbuff",
 		"admin_stopallbuffs",
 		"admin_areacancel",
-		"admin_removereuse"
+		"admin_removereuse",
+		"admin_switch_gm_buffs"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -73,7 +75,6 @@ public class AdminBuffs implements IAdminCommandHandler
 				return false;
 			}
 		}
-		
 		else if (command.startsWith("admin_stopbuff"))
 		{
 			try
@@ -182,9 +183,26 @@ public class AdminBuffs implements IAdminCommandHandler
 				return false;
 			}
 		}
+		else if (command.startsWith("admin_switch_gm_buffs"))
+		{
+			if (Config.GM_GIVE_SPECIAL_SKILLS != Config.GM_GIVE_SPECIAL_AURA_SKILLS)
+			{
+				final boolean toAuraSkills = activeChar.getKnownSkill(7041) != null;
+				GMSkillTable.getInstance().switchSkills(activeChar, toAuraSkills);
+				activeChar.sendSkillList();
+				activeChar.sendMessage("You have succefully changed to target " + (toAuraSkills ? "aura" : "one") + " special skills.");
+				return true;
+			}
+			else
+			{
+				activeChar.sendMessage("There is nothing to switch.");
+				return false;
+			}
+		}
 		else
+		{
 			return true;
-		
+		}
 	}
 	
 	public String[] getAdminCommandList()
