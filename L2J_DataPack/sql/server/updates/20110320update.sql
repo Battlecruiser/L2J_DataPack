@@ -8,7 +8,8 @@ MODIFY `pdef` decimal(12,5) DEFAULT NULL,
 MODIFY `matk` decimal(12,5) DEFAULT NULL,
 MODIFY `mdef` decimal(12,5) DEFAULT NULL,
 MODIFY `walkspd` decimal(10,5) NOT NULL DEFAULT '60',
-MODIFY `runspd` decimal(10,5) NOT NULL DEFAULT '120';
+MODIFY `runspd` decimal(10,5) NOT NULL DEFAULT '120',
+ADD `basestats` tinyint(1) NOT NULL DEFAULT '0' AFTER `dropHerbGroup`;
 
 ALTER TABLE `grandboss_data`
 MODIFY `boss_id` smallint(5) unsigned NOT NULL DEFAULT '0',
