@@ -1410,7 +1410,7 @@
 		<table name="#ench2Radius"> 513 526 540 553 566 580 593 606 620 633 646 660 673 686 700 713 726 740 753 766 780 793 806 820 833 846 860 873 886 900 </table>
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
-		<set name="hitTime" val="600" /> <!-- Higher than on offi to match casting style -->
+		<set name="hitTime" val="300" /> <!-- NOTE: Real hitTime is 0.1 sec, but here is increased to 0.3 sec, to match retail animation -->
 		<set name="coolTime" val="200" />
 		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
