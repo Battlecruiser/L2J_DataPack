@@ -431,7 +431,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				player.setName(val);
 				player.store();
-				CharNameTable.getInstance().addName(player);
 				
 				activeChar.sendMessage("Changed name to "+val);
 				player.sendMessage("Your name has been changed by a GM.");
