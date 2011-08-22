@@ -755,10 +755,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="20000" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player active_effect_id="5753" />
-			</and>
+			<player active_effect_id="5753" />
 		</cond>
 	</skill>
 	<skill id="5753" levels="1" name="Awakening">
@@ -961,9 +958,6 @@
 		<set name="effectRange" val="600" />
 		<cond msgId="2292">
 			<player agathionId="16061" />
-		</cond>
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
 		</cond>
 		<cond msgId="109">
 			<target npcId="18678, 18679, 18680, 18681, 18682, 18683" />

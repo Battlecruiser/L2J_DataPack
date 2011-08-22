@@ -139,6 +139,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2589-1" />
 	</item>
 	<item id="13011" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka">
@@ -152,6 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2590-1" />
 	</item>
 	<item id="13012" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
@@ -165,6 +167,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2591-1" />
 	</item>
 	<item id="13013" type="EtcItem" name="Gesto's Box">
@@ -221,7 +224,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13018" type="EtcItem" name="Fairy Princess Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i00" />
@@ -236,7 +242,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13019" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -251,7 +260,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13020" type="EtcItem" name="Fox Shaman Hunting Helper Necklace">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -266,7 +278,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13021" type="EtcItem" name="Color Name">
 		<set name="icon" val="icon.color_name_i00" />
@@ -366,6 +381,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2606-1" />
 		<set name="time" val="43200" />
 	</item>
@@ -528,6 +544,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2150-1" />
 	</item>
 	<item id="13038" type="EtcItem" name="Essence of Water">
@@ -696,6 +713,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2151-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
@@ -896,6 +914,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2153-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />

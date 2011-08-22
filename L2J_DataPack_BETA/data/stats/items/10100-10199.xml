@@ -401,7 +401,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2365-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10130" type="EtcItem" name="Blessed Scroll of Escape: Fortress">
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
@@ -414,7 +416,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2364-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10131" type="EtcItem" name="Transformation Scroll: Onyx Beast">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -802,6 +806,7 @@
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2399-1" />
 		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 	</item>
@@ -844,7 +849,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10164" type="EtcItem" name="Animal Slayer's List">
 		<set name="icon" val="icon.etc_letter_white_i00" />

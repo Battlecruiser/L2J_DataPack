@@ -268,8 +268,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8251-1;3267-1;5780-3" />
-		<for>
-		</for>
 	</item>
 	<item id="14028" type="EtcItem" name="Design: Stone of Stamina">
 		<set name="icon" val="icon.scroll_of_verification_i01" />
@@ -403,7 +401,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2792-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14039" type="EtcItem" name="Greater Stone of Stamina">
 		<set name="icon" val="icon.stone_9_i00" />
@@ -417,7 +417,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2792-2" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14040" type="EtcItem" name="Stone of Mana">
 		<set name="icon" val="icon.stone_10_i00" />
@@ -431,7 +433,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2793-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14041" type="EtcItem" name="High-quality Stone of Mana">
 		<set name="icon" val="icon.stone_10_i00" />
@@ -445,7 +449,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2793-2" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14042" type="EtcItem" name="Stone of Recovery">
 		<set name="icon" val="icon.stone_11_i00" />
@@ -459,7 +465,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2794-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14043" type="EtcItem" name="Greater Stone of Recovery">
 		<set name="icon" val="icon.stone_11_i00" />
@@ -473,7 +481,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2794-2" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14044" type="EtcItem" name="Stone of Destruction">
 		<set name="icon" val="icon.stone_1_i00" />
@@ -487,7 +497,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2795-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14045" type="EtcItem" name="Stone of Invincibility">
 		<set name="icon" val="icon.stone_2_i00" />
@@ -501,7 +513,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2796-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14046" type="EtcItem" name="Stone of Great Speed">
 		<set name="icon" val="icon.stone_3_i00" />
@@ -515,7 +529,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2797-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14047" type="EtcItem" name="Stone of Speed">
 		<set name="icon" val="icon.stone_8_i00" />
@@ -529,7 +545,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2798-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14048" type="EtcItem" name="Stone of Concentration">
 		<set name="icon" val="icon.stone_7_i00" />
@@ -543,7 +561,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2799-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14049" type="EtcItem" name="Stone of Ease">
 		<set name="icon" val="icon.stone_4_i00" />
@@ -557,7 +577,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2800-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14050" type="EtcItem" name="Stone of Abundance">
 		<set name="icon" val="icon.stone_5_i00" />
@@ -571,7 +593,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2801-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14051" type="EtcItem" name="Recovery Stone">
 		<set name="icon" val="icon.stone_1_i00" />
@@ -583,8 +607,11 @@
 		<set name="price" val="1200" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2802-1" />
-		<set name="use_condition" val="{{uc_transmode_include;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="True" />
+		</cond>
 	</item>
 	<item id="14052" type="EtcItem" name="Noble Enhancement Stone">
 		<set name="icon" val="icon.energy_condenser_i01" />
@@ -608,8 +635,6 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14054" type="Armor" name="Steam Beatle Mount Bracelet - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -626,8 +651,6 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14055" type="EtcItem" name="Vitality Replenishing Beverage">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
@@ -644,6 +667,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
 	<item id="14056" type="Weapon" name="Snow Kung Transformation Stick - 30-day limited period">
@@ -732,8 +756,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14060" type="Armor" name="Teddy Girl Agathion Bracelet - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -749,8 +771,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14061" type="EtcItem" name="Toy Knight Summon Bracelet">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -765,7 +785,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14062" type="EtcItem" name="Spirit Shaman Summon Bracelet">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -780,7 +803,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14063" type="EtcItem" name="Owl Monk Summon Bracelet">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -795,7 +821,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14064" type="EtcItem" name="Turtle Ascetic Summon Bracelet">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -810,7 +839,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14065" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon - 5 hours">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
@@ -839,8 +871,6 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14067" type="Armor" name="Steam Beatle Mount Bracelet (event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -857,8 +887,6 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14068" type="EtcItem" name="Vitality Replenishing Beverage (event)">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
@@ -876,6 +904,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
 	<item id="14069" type="Weapon" name="Snow Kung Transformation Stick (event) - 30-day limited period">
@@ -964,8 +993,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14073" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -981,8 +1008,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14074" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon (Event) - 5 hours">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
@@ -1010,8 +1035,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14076" type="Armor" name="Shiny Agathion (Event) - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1027,8 +1050,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14077" type="Armor" name="Sobbing Agathion (Event) - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1044,8 +1065,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="43200" />
-		<for>
-		</for>
 	</item>
 	<item id="14078" type="EtcItem" name="Weapon-type Enhance Backup Stone (D-Grade) (event)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
@@ -1059,6 +1078,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
 	<item id="14079" type="EtcItem" name="Weapon-type Enhance Backup Stone (C-Grade) (event)">
@@ -1073,6 +1093,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
 	<item id="14080" type="EtcItem" name="Weapon-type Enhance Backup Stone (B-Grade) (event)">
@@ -1087,6 +1108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
 	<item id="14081" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade) (event)">
@@ -1101,6 +1123,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
 	<item id="14082" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade) (event)">
@@ -1115,6 +1138,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
 	<item id="14083" type="EtcItem" name="Armor-type Enhance Backup Stone (D-Grade) (event)">
@@ -1129,6 +1153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
 	<item id="14084" type="EtcItem" name="Armor-type Enhance Backup Stone (C-Grade) (event)">
@@ -1143,6 +1168,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
 	<item id="14085" type="EtcItem" name="Armor-type Enhance Backup Stone (B-Grade) (event)">
@@ -1157,6 +1183,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
 	<item id="14086" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade) (event)">
@@ -1171,6 +1198,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
 	<item id="14087" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade) (event)">
@@ -1185,6 +1213,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2524-1" />
 	</item>
 	<item id="14088" type="Weapon" name="Snow Kung Transformation Stick - 7-day limited period">
@@ -1273,8 +1302,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14092" type="Armor" name="Teddy Girl Agathion Bracelet - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1290,8 +1317,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14093" type="Armor" name="Sudden Agathion - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1307,8 +1332,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14094" type="Armor" name="Shiny Agathion - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1324,8 +1347,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14095" type="Armor" name="Sobbing Agathion - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -1341,8 +1362,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14096" type="Weapon" name="Snow Kung Transformation Stick (event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
@@ -1430,7 +1449,5 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 </list>

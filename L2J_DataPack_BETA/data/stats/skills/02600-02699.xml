@@ -89,10 +89,7 @@
 		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player level="76" />
-			</and>
+			<player level="76" />
 		</cond>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
@@ -274,18 +271,34 @@
 		</for>
 	</skill>
 	<skill id="2633" levels="1" name="Elmore-Aden's Holy Water">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<cond msgId="113" addName="1">
+			<target npcId="17240101,17240105,17240109" />
+		</cond>
 	</skill>
 	<skill id="2634" levels="1" name="Court Magician's Blessing">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<cond msgId="113" addName="1">
+			<target npcId="17240103,17240107" />
+		</cond>
 	</skill>
 	<skill id="2635" levels="1" name="Blessing of Fire">
 		<set name="target" val="TARGET_SELF" />
@@ -832,14 +845,26 @@
 		</cond>
 	</skill>
 	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="121" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="122" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="2672" levels="1" name="Gludio Human Mercenary">
 		<set name="target" val="TARGET_SELF" />

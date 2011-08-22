@@ -350,6 +350,7 @@
 		<set name="material" val="steel" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2362-1" />
 	</item>
 	<item id="10016" type="EtcItem" name="Underground Warehouse Key">
@@ -358,6 +359,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2363-1" />
 	</item>
 	<item id="10017" type="EtcItem" name="Coral Treasure Chest Key">
@@ -365,6 +367,7 @@
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2400-1" />
 	</item>
 	<item id="10018" type="Armor" name="Agathion Seal Bracelet - Fortress">

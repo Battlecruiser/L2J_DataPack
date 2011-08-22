@@ -88,8 +88,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8308-1" />
 		<set name="duration" val="66" />
-		<for>
-		</for>
 	</item>
 	<item id="14605" type="Armor" name="Red Talisman - Territory Guard">
 		<set name="icon" val="icon.etc_talisman_i00" />
@@ -104,8 +102,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8309-1" />
 		<set name="duration" val="66" />
-		<for>
-		</for>
 	</item>
 	<item id="14606" type="Weapon" name="Gracian Soldier Two-Handed Sword">
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
@@ -217,8 +213,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
-		<for>
-		</for>
 	</item>
 	<item id="14612" type="EtcItem" name="Christmas Red Sock">
 		<set name="icon" val="icon.xmas_present_i00" />
@@ -241,8 +235,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="6097-1;6098-1;6099-1" />
-		<for>
-		</for>
 	</item>
 	<item id="14614" type="EtcItem" name="Santa's Buff Gift Set">
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
@@ -254,6 +246,7 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2856-1" />
 	</item>
 	<item id="14615" type="EtcItem" name="Scroll of Christmas Festival - Mage Type">
@@ -266,6 +259,7 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2857-1" />
 	</item>
 	<item id="14616" type="EtcItem" name="Gift from Santa Claus">
@@ -275,6 +269,7 @@
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2858-1" />
 	</item>
 	<item id="14617" type="Armor" name="Agathion Seal Bracelet - Rudolph">
@@ -290,8 +285,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5537-1;3425-1;3267-1" />
 		<set name="time" val="20160" />
-		<for>
-		</for>
 	</item>
 	<item id="14618" type="EtcItem" name="Agathion Seal Bracelet - Rudolph">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -681,6 +674,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2852-1" />
 	</item>
 	<item id="14636" type="EtcItem" name="Middle Quality Battle Reward Chest">
@@ -693,6 +687,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2853-1" />
 	</item>
 	<item id="14637" type="EtcItem" name="High-Grade Battle Reward Chest">
@@ -705,6 +700,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2854-1" />
 	</item>
 	<item id="14638" type="EtcItem" name="Best Quality Battle Reward Chest">
@@ -717,6 +713,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2855-1" />
 	</item>
 	<item id="14639" type="EtcItem" name="Event - Claymore">
@@ -1244,8 +1241,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8314-1;6124-1;8323-1;3267-1" />
 		<set name="time" val="47520" />
-		<for>
-		</for>
 	</item>
 	<item id="14676" type="EtcItem" name="Agathion's New Year's Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
@@ -1254,6 +1249,7 @@
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2865-1" />
 	</item>
 	<item id="14677" type="EtcItem" name="Agathion's New Year's Gift">
@@ -1263,6 +1259,7 @@
 		<set name="material" val="fish" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2866-1" />
 	</item>
 	<item id="14678" type="EtcItem" name="Neolithic Crystal - B">
@@ -1306,7 +1303,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14683" type="EtcItem" name="Greater Elixir of Life (D-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
@@ -1322,7 +1321,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14684" type="EtcItem" name="Greater Elixir of Life (C-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
@@ -1338,7 +1339,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14685" type="EtcItem" name="Greater Elixir of Life (B-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
@@ -1354,7 +1357,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14686" type="EtcItem" name="Greater Elixir of Life (A-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
@@ -1370,7 +1375,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14687" type="EtcItem" name="Greater Elixir of Life (S-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
@@ -1386,7 +1393,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2860-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14688" type="EtcItem" name="Greater Elixir of Mental Strength (No-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
@@ -1401,7 +1410,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14689" type="EtcItem" name="Greater Elixir of Mental Strength (D-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
@@ -1417,7 +1428,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14690" type="EtcItem" name="Greater Elixir of Mental Strength (C-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
@@ -1433,7 +1446,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14691" type="EtcItem" name="Greater Elixir of Mental Strength (B-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
@@ -1449,7 +1464,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14692" type="EtcItem" name="Greater Elixir of Mental Strength (A-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
@@ -1465,7 +1482,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14693" type="EtcItem" name="Greater Elixir of Mental Strength (S-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
@@ -1481,7 +1500,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2861-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14694" type="EtcItem" name="Greater Elixir of CP (No Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />

@@ -270,6 +270,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2907-5" />
 		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 	</item>
@@ -286,6 +287,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2908-5" />
 		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 	</item>
@@ -302,6 +304,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2909-5" />
 		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 	</item>
@@ -330,7 +333,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14820" type="EtcItem" name="Skull Key of Suffering">
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
@@ -341,6 +347,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2910-1" />
 	</item>
 	<item id="14821" type="EtcItem" name="Skull Key of Erosion">
@@ -352,6 +359,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2911-1" />
 	</item>
 	<item id="14822" type="EtcItem" name="Skull Key of the Heart">
@@ -363,6 +371,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2912-1" />
 	</item>
 	<item id="14823" type="EtcItem" name="Soul Extraction Device">
@@ -373,6 +382,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2913-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -428,7 +438,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14829" type="EtcItem" name="Cave Exploration Text 1 Sheet">
 		<set name="icon" val="icon.etc_cave_page_i00" />

@@ -430,9 +430,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper1" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -450,9 +447,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper2" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<add order="0x40" stat="rCrit" val="15" />
@@ -471,9 +465,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper3" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />

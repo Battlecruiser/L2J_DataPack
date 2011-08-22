@@ -11,7 +11,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13401" type="EtcItem" name="Scroll of Escape: Town of Gludio">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -24,7 +26,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-7" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13402" type="EtcItem" name="Scroll of Escape: Town of Dion">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -37,7 +41,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-8" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13403" type="EtcItem" name="Scroll of Escape: Floran Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -50,7 +56,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-9" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13404" type="EtcItem" name="Scroll of Escape: Town of Giran">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -63,7 +71,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-10" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13405" type="EtcItem" name="Scroll of Escape: Hardin's Academy">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -76,7 +86,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-11" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13406" type="EtcItem" name="Scroll of Escape: Heine">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -89,7 +101,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-12" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13407" type="EtcItem" name="Scroll of Escape: Town of Oren">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -102,7 +116,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-13" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13408" type="EtcItem" name="Scroll of Escape: Ivory Tower">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -115,7 +131,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-14" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13409" type="EtcItem" name="Scroll of Escape: Hunters Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -128,7 +146,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-15" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13410" type="EtcItem" name="Scroll of Escape: Town of Aden">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -141,7 +161,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-16" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13411" type="EtcItem" name="Scroll of Escape: Town of Goddard">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -154,7 +176,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-17" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13412" type="EtcItem" name="Scroll of Escape: Rune Township">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -167,7 +191,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-18" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13413" type="EtcItem" name="Scroll of Escape: Town of Schuttgart">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -180,7 +206,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-19" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13414" type="EtcItem" name="Scroll of Escape: Kamael Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -193,7 +221,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-20" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13415" type="Armor" name="Frog Hat">
 		<set name="icon" val="icon.accessory_frog_cap_i00" />
@@ -248,6 +278,7 @@
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2645-1" />
 	</item>
 	<item id="13421" type="EtcItem" name="Honey Wheat Cake">
@@ -262,6 +293,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2646-1" />
 	</item>
 	<item id="13422" type="EtcItem" name="Medium Parchment Box">
@@ -274,6 +306,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2644-1" />
 	</item>
 	<item id="13423" type="EtcItem" name="Medium Mineral Box">
@@ -286,6 +319,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2639-1" />
 	</item>
 	<item id="13424" type="EtcItem" name="Large Libation Box">
@@ -298,6 +332,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2642-1" />
 	</item>
 	<item id="13425" type="EtcItem" name="Small Parchment Box">
@@ -310,6 +345,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2643-1" />
 	</item>
 	<item id="13426" type="EtcItem" name="Small Mineral Box">
@@ -322,6 +358,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2638-1" />
 	</item>
 	<item id="13427" type="EtcItem" name="Medium Libation Box">
@@ -334,6 +371,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2641-1" />
 	</item>
 	<item id="13428" type="EtcItem" name="Small Libation Box">
@@ -346,6 +384,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2640-1" />
 	</item>
 	<item id="13429" type="Armor" name="Teddy Bear Hat (Event)">

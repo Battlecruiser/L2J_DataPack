@@ -659,7 +659,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2310-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9147" type="EtcItem" name="Scroll of Death Whisper (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -671,7 +673,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2311-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9148" type="EtcItem" name="Scroll of Focus (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -683,7 +687,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2312-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9149" type="EtcItem" name="Scroll of Acumen (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -695,7 +701,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2313-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9150" type="EtcItem" name="Scroll of Haste (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -707,7 +715,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2314-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9151" type="EtcItem" name="Scroll of Agility (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -719,7 +729,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2315-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9152" type="EtcItem" name="Scroll of Empower (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -731,7 +743,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2316-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9153" type="EtcItem" name="Scroll of Might (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -743,7 +757,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2317-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9154" type="EtcItem" name="Scroll of Wind Walk (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -755,7 +771,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2318-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9155" type="EtcItem" name="Scroll of Shield (Event)">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -767,7 +785,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2319-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9156" type="EtcItem" name="Blessed Scroll of Escape (Event)">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />

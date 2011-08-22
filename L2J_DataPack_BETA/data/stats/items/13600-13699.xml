@@ -13,7 +13,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2703-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13601" type="EtcItem" name="Transformation Scroll: Giran Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -28,7 +30,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2704-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13602" type="EtcItem" name="Transformation Scroll: Giran Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -43,7 +47,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2705-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13603" type="EtcItem" name="Transformation Scroll: Giran Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -58,7 +64,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2706-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13604" type="EtcItem" name="Transformation Scroll: Giran Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -73,7 +81,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2707-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13605" type="EtcItem" name="Transformation Scroll: Oren Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -88,7 +98,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2708-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13606" type="EtcItem" name="Transformation Scroll: Oren Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -103,7 +115,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2709-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13607" type="EtcItem" name="Transformation Scroll: Oren Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -118,7 +132,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2710-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13608" type="EtcItem" name="Transformation Scroll: Oren Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -133,7 +149,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2711-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13609" type="EtcItem" name="Transformation Scroll: Oren Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -148,7 +166,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2712-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13610" type="EtcItem" name="Transformation Scroll: Oren Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -163,7 +183,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2713-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13611" type="EtcItem" name="Transformation Scroll: Oren Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -178,7 +200,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2714-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13612" type="EtcItem" name="Transformation Scroll: Oren Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -193,7 +217,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2715-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13613" type="EtcItem" name="Transformation Scroll: Oren Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -208,7 +234,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2716-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13614" type="EtcItem" name="Transformation Scroll: Oren Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -223,7 +251,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2717-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13615" type="EtcItem" name="Transformation Scroll: Oren Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -238,7 +268,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2718-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13616" type="EtcItem" name="Transformation Scroll: Oren Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -253,7 +285,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2719-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13617" type="EtcItem" name="Transformation Scroll: Aden Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -268,7 +302,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2720-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13618" type="EtcItem" name="Transformation Scroll: Aden Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -283,7 +319,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2721-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13619" type="EtcItem" name="Transformation Scroll: Aden Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -298,7 +336,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2722-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13620" type="EtcItem" name="Transformation Scroll: Aden Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -313,7 +353,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2723-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13621" type="EtcItem" name="Transformation Scroll: Aden Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -328,7 +370,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2724-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13622" type="EtcItem" name="Transformation Scroll: Aden Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -343,7 +387,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2725-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13623" type="EtcItem" name="Transformation Scroll: Aden Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -358,7 +404,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2726-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13624" type="EtcItem" name="Transformation Scroll: Aden Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -373,7 +421,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2727-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13625" type="EtcItem" name="Transformation Scroll: Aden Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -388,7 +438,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2728-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13626" type="EtcItem" name="Transformation Scroll: Aden Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -403,7 +455,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2729-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13627" type="EtcItem" name="Transformation Scroll: Aden Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -418,7 +472,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2730-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13628" type="EtcItem" name="Transformation Scroll: Aden Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -433,7 +489,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2731-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13629" type="EtcItem" name="Transformation Scroll: Innadril Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -448,7 +506,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2732-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13630" type="EtcItem" name="Transformation Scroll: Innadril Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -463,7 +523,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2733-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13631" type="EtcItem" name="Transformation Scroll: Innadril Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -478,7 +540,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2734-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13632" type="EtcItem" name="Transformation Scroll: Innadril Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -493,7 +557,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2735-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13633" type="EtcItem" name="Transformation Scroll: Innadril Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -508,7 +574,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2736-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13634" type="EtcItem" name="Transformation Scroll: Innadril Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -523,7 +591,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2737-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13635" type="EtcItem" name="Transformation Scroll: Innadril Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -538,7 +608,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2738-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13636" type="EtcItem" name="Transformation Scroll: Innadril Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -553,7 +625,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2739-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13637" type="EtcItem" name="Transformation Scroll: Innadril Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -568,7 +642,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2740-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13638" type="EtcItem" name="Transformation Scroll: Innadril Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -583,7 +659,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2741-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13639" type="EtcItem" name="Transformation Scroll: Innadril Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -598,7 +676,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2742-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13640" type="EtcItem" name="Transformation Scroll: Innadril Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -613,7 +693,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2743-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13641" type="EtcItem" name="Transformation Scroll: Goddard Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -628,7 +710,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2744-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13642" type="EtcItem" name="Transformation Scroll: Goddard Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -643,7 +727,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2745-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13643" type="EtcItem" name="Transformation Scroll: Goddard Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -658,7 +744,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2746-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13644" type="EtcItem" name="Transformation Scroll: Goddard Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -673,7 +761,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2747-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13645" type="EtcItem" name="Transformation Scroll: Goddard Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -688,7 +778,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2748-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13646" type="EtcItem" name="Transformation Scroll: Goddard Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -703,7 +795,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2749-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13647" type="EtcItem" name="Transformation Scroll: Goddard Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -718,7 +812,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2750-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13648" type="EtcItem" name="Transformation Scroll: Goddard Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -733,7 +829,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2751-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13649" type="EtcItem" name="Transformation Scroll: Goddard Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -748,7 +846,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2752-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13650" type="EtcItem" name="Transformation Scroll: Goddard Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -763,7 +863,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2753-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13651" type="EtcItem" name="Transformation Scroll: Goddard Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -778,7 +880,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2754-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13652" type="EtcItem" name="Transformation Scroll: Goddard Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -793,7 +897,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2755-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13653" type="EtcItem" name="Transformation Scroll: Rune Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -808,7 +914,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2756-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13654" type="EtcItem" name="Transformation Scroll: Rune Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -823,7 +931,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2757-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13655" type="EtcItem" name="Transformation Scroll: Rune Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -838,7 +948,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2758-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13656" type="EtcItem" name="Transformation Scroll: Rune Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -853,7 +965,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2759-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13657" type="EtcItem" name="Transformation Scroll: Rune Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -868,7 +982,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2760-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13658" type="EtcItem" name="Transformation Scroll: Rune Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -883,7 +999,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2761-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13659" type="EtcItem" name="Transformation Scroll: Rune Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -898,7 +1016,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2762-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13660" type="EtcItem" name="Transformation Scroll: Rune Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -913,7 +1033,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2763-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13661" type="EtcItem" name="Transformation Scroll: Rune Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -928,7 +1050,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2764-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13662" type="EtcItem" name="Transformation Scroll: Rune Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -943,7 +1067,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2765-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13663" type="EtcItem" name="Transformation Scroll: Rune Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -958,7 +1084,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2766-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13664" type="EtcItem" name="Transformation Scroll: Rune Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -973,7 +1101,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2767-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13665" type="EtcItem" name="Transformation Scroll: Schuttgart Human Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -988,7 +1118,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2768-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13666" type="EtcItem" name="Transformation Scroll: Schuttgart Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1003,7 +1135,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2769-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13667" type="EtcItem" name="Transformation Scroll: Schuttgart Dark Elf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1018,7 +1152,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2770-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13668" type="EtcItem" name="Transformation Scroll: Schuttgart Orc Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1033,7 +1169,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2771-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13669" type="EtcItem" name="Transformation Scroll: Schuttgart Dwarf Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1048,7 +1186,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2772-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13670" type="EtcItem" name="Transformation Scroll: Schuttgart Kamael Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1063,7 +1203,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2773-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13671" type="EtcItem" name="Transformation Scroll: Schuttgart Knight Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1078,7 +1220,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2774-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13672" type="EtcItem" name="Transformation Scroll: Schuttgart Archer Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1093,7 +1237,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2775-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13673" type="EtcItem" name="Transformation Scroll: Schuttgart Wizard Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1108,7 +1254,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2776-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13674" type="EtcItem" name="Transformation Scroll: Schuttgart Kamael Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1123,7 +1271,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2777-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13675" type="EtcItem" name="Transformation Scroll: Schuttgart Knight Captain Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1138,7 +1288,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2778-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13676" type="EtcItem" name="Transformation Scroll: Schuttgart Commander Mercenary">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1153,7 +1305,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2779-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13677" type="EtcItem" name="Gludio Disguise Scroll">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
@@ -1438,6 +1592,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2837-1" />
 	</item>
 	<item id="13695" type="EtcItem" name="Gludio Supply Box - Magic Pin - Grade B, C">

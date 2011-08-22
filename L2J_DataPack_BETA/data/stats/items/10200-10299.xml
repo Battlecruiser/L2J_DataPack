@@ -57,6 +57,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2420-1" />
 	</item>
 	<item id="10206" type="EtcItem" name="Black Seed of Evil Lump">
@@ -67,6 +68,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="21000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2421-1" />
 	</item>
 	<item id="10207" type="Armor" name="Enhanced Striped Scale Shirt">
@@ -1040,6 +1042,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2422-1" />
 	</item>
 	<item id="10255" type="EtcItem" name="2nd Place Treasure Sack">
@@ -1048,6 +1051,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2423-2" />
 	</item>
 	<item id="10256" type="EtcItem" name="3rd Place Treasure Sack">
@@ -1056,6 +1060,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2424-3" />
 	</item>
 	<item id="10257" type="EtcItem" name="4th Place Treasure Sack">
@@ -1064,6 +1069,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2425-4" />
 	</item>
 	<item id="10258" type="EtcItem" name="5th Place Treasure Sack">
@@ -1072,6 +1078,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2426-5" />
 	</item>
 	<item id="10259" type="EtcItem" name="6th Place Treasure Sack">
@@ -1080,6 +1087,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2427-6" />
 	</item>
 	<item id="10260" type="EtcItem" name="Alacrity Juice">
@@ -1094,7 +1102,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2429-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10261" type="EtcItem" name="Accuracy Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
@@ -1108,7 +1118,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2430-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10262" type="EtcItem" name="Critical Hit Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
@@ -1122,7 +1134,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2431-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10263" type="EtcItem" name="Critical Rate Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
@@ -1136,7 +1150,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2432-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10264" type="EtcItem" name="Casting Spd. Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
@@ -1150,7 +1166,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2433-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10265" type="EtcItem" name="Evasion Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
@@ -1164,7 +1182,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2434-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10266" type="EtcItem" name="M. Atk. Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
@@ -1178,7 +1198,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2435-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10267" type="EtcItem" name="Power Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
@@ -1192,7 +1214,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2436-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10268" type="EtcItem" name="Speed Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
@@ -1206,7 +1230,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2437-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10269" type="EtcItem" name="Defense Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
@@ -1220,7 +1246,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2438-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10270" type="EtcItem" name="MP Consumption Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
@@ -1233,7 +1261,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2439-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10271" type="EtcItem" name="Marvelous Fruit Juice #12">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
@@ -1277,7 +1307,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2428-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10275" type="EtcItem" name="Battle Manual - Warp">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />

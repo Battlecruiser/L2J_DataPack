@@ -393,8 +393,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3666-1" />
 		<set name="duration" val="65" />
-		<for>
-		</for>
 	</item>
 	<item id="12818" type="Armor" name="Yellow Talisman - Damage Transition">
 		<set name="icon" val="icon.etc_talisman_i02" />
@@ -418,6 +416,7 @@
 		<set name="weight" val="10" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2530-1" />
 		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 	</item>
