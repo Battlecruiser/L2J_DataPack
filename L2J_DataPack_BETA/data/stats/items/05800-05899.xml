@@ -87,7 +87,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -101,7 +103,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -115,7 +119,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -129,7 +135,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -143,7 +151,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5808" type="Armor" name="Party Mask">
 		<set name="icon" val="icon.etc_party_mask_i00" />
@@ -569,7 +579,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2177-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5859" type="EtcItem" name="Blessed Scroll of Escape: Castle">
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
@@ -582,7 +594,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2178-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="5860" type="EtcItem" name="Lienrik Egg">
 		<set name="icon" val="icon.etc_dragon_egg_i02" />

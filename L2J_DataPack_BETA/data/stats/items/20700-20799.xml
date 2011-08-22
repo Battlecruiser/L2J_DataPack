@@ -107,6 +107,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22105-1" />
 	</item>
 	<item id="20708" type="EtcItem" name="Verdandi Summon Scroll (Event)">
@@ -118,6 +119,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22106-1" />
 	</item>
 	<item id="20709" type="EtcItem" name="Skooldy Summon Scroll (Event)">
@@ -132,6 +134,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22107-1" />
 	</item>
 	<item id="20710" type="EtcItem" name="Halloween Toy Box (Event)">
@@ -145,6 +148,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22108-1" />
 	</item>
 	<item id="20711" type="Armor" name="Jack O'Lantern Mask (Event)">
@@ -160,8 +164,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21132-1;21120-1;21121-1" />
-		<for>
-		</for>
 	</item>
 	<item id="20712" type="Armor" name="Super Strong Giant's Mask (Event) - Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_frankenstein_mask_i00" />
@@ -177,8 +179,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21122-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="120" />
-		<for>
-		</for>
 	</item>
 	<item id="20713" type="Armor" name="Mask of Silent Scream (Event) - Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_scream_mask_i00" />
@@ -194,8 +194,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21123-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="120" />
-		<for>
-		</for>
 	</item>
 	<item id="20714" type="Armor" name="Spirit of Wrath Mask (Event) - Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_doccabi_mask_i00" />
@@ -211,8 +209,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21124-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="120" />
-		<for>
-		</for>
 	</item>
 	<item id="20715" type="Armor" name="Undecaying Corpse Mask (Event) - Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_mummy_mask_i00" />
@@ -228,8 +224,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21125-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="120" />
-		<for>
-		</for>
 	</item>
 	<item id="20716" type="Armor" name="Planet X235 Alien Mask (Event) - Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_alien_mask_i00" />
@@ -245,8 +239,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21126-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="120" />
-		<for>
-		</for>
 	</item>
 	<item id="20717" type="EtcItem" name="Shiny Halloween Toy Box (Event)">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
@@ -259,7 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22109-1" />
 	</item>
 	<item id="20718" type="Armor" name="Shiny Super Strong Giant's Mask (Event) - Blessing of Halloween - 4-Hour Limited Period">
@@ -276,8 +268,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21127-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="240" />
-		<for>
-		</for>
 	</item>
 	<item id="20719" type="Armor" name="Shiny Mask of Silent Scream (Event) - Blessing of Halloween - 4-Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
@@ -293,8 +283,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21128-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="240" />
-		<for>
-		</for>
 	</item>
 	<item id="20720" type="Armor" name="Shiny Spirit of Wrath Mask (Event) - Blessing of Halloween - 4-Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
@@ -310,8 +298,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21129-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="240" />
-		<for>
-		</for>
 	</item>
 	<item id="20721" type="Armor" name="Shiny Undecaying Corpse Mask (Event) - Blessing of Halloween - 4-Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
@@ -327,8 +313,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21130-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="240" />
-		<for>
-		</for>
 	</item>
 	<item id="20722" type="Armor" name="Shiny Planet X235 Alien Mask (Event) - Blessing of Halloween - 4-Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
@@ -344,8 +328,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21131-1;21132-1;21120-1;21121-1" />
 		<set name="time" val="240" />
-		<for>
-		</for>
 	</item>
 	<item id="20723" type="Armor" name="Golden Jack O'Lantern Mask.">
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
@@ -359,8 +341,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<for>
-		</for>
 	</item>
 	<item id="20724" type="Armor" name="Golden Jack O'Lantern Mask. - Authority of Golden Jack O'Lantern - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
@@ -377,8 +357,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21136-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20725" type="Armor" name="Red Flame of Valakas">
 		<set name="icon" val="BranchSys.icon.br_valakas_the_flame_i00" />
@@ -411,8 +389,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21133-1;23117-1" />
-		<for>
-		</for>
 	</item>
 	<item id="20727" type="Armor" name="Agathion Seal Bracelet - Zombie - Escape from Death - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
@@ -430,8 +406,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21133-1;23117-1;23174-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20728" type="EtcItem" name="Lucky Sky Lantern Summon Scroll">
 		<set name="icon" val="BranchSys.icon.br_lamp_orange_i00" />
@@ -445,6 +419,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22110-1" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
@@ -460,6 +435,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22111-1" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
@@ -475,6 +451,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22112-1" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
@@ -490,6 +467,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22113-1" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
@@ -509,8 +487,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21134-1;23119-1" />
-		<for>
-		</for>
 	</item>
 	<item id="20733" type="Armor" name="Agathion Seal Bracelet - Kwanwoo Hwamae">
 		<set name="icon" val="BranchSys.icon.br_aga_hatbird_i00" />
@@ -528,8 +504,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21135-1;23120-1" />
-		<for>
-		</for>
 	</item>
 	<item id="20734" type="EtcItem" name="Golden Jack O'Lantern Mask 7-Day Pack - Authority of Golden Jack O'Lantern Mask.">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
@@ -616,6 +590,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22114-1" />
 	</item>
 	<item id="20740" type="EtcItem" name="Cocktail Pack">
@@ -642,6 +617,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22040-1" />
 		<set name="time" val="60" />
 	</item>
@@ -656,6 +632,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22039-1" />
 		<set name="time" val="60" />
 	</item>
@@ -674,8 +651,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21137-1;21132-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20744" type="Armor" name="Shiny Mask of Silent Scream. - Blessing of Halloween - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
@@ -692,8 +667,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21138-1;21132-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20745" type="Armor" name="Shiny Spirit of Wrath Mast. - Blessing of Halloween - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
@@ -710,8 +683,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21139-1;21132-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20746" type="Armor" name="Shiny Undecaying Corpse Mask. - Blessing of Halloween - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
@@ -728,8 +699,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21140-1;21132-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20747" type="Armor" name="Shiny Planet X235 Alien Mask. - Blessing of Halloween - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
@@ -746,8 +715,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21141-1;21132-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20748" type="EtcItem" name="Shiny Super Strong Giant's Mask 7-Day Pack - Blessing of Halloween">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
@@ -905,6 +872,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22115-1" />
 	</item>
 	<item id="20759" type="Armor" name="Christmas Shirt - 24-hour limited period">
@@ -932,8 +900,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20761" type="EtcItem" name="Rudolph Necklace">
 		<set name="icon" val="BranchSys.br_rudolf_necklace_i01" />
@@ -948,8 +920,12 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20762" type="EtcItem" name="Rudolph Pet Exchange Ticket - 7 days limit">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
@@ -990,6 +966,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22137-1" />
 	</item>
 	<item id="20765" type="EtcItem" name="Blue Star Candy">
@@ -1006,6 +983,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22137-1" />
 	</item>
 	<item id="20766" type="EtcItem" name="Red Star Candy">
@@ -1022,6 +1000,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22137-1" />
 	</item>
 	<item id="20767" type="EtcItem" name="Orange Star Candy">
@@ -1038,6 +1017,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22137-1" />
 	</item>
 	<item id="20768" type="EtcItem" name="Food of Doubt">
@@ -1054,6 +1034,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22130-1" />
 	</item>
 	<item id="20769" type="EtcItem" name="Rudolph Baby Food">
@@ -1067,6 +1048,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22126-1" />
 	</item>
 	<item id="20770" type="EtcItem" name="Apple Basket Herb">
@@ -1076,6 +1058,7 @@
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22128-1" />
 	</item>
 	<item id="20771" type="EtcItem" name="Orange Basket Herb">
@@ -1085,6 +1068,7 @@
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22128-2" />
 	</item>
 	<item id="20772" type="EtcItem" name="Banana Basket Herb">
@@ -1094,6 +1078,7 @@
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22128-3" />
 	</item>
 	<item id="20773" type="EtcItem" name="Rudolph's Gift">
@@ -1364,6 +1349,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22116-1" />
 	</item>
 	<item id="20789" type="Armor" name="Rocket Gun Hat - Fireworks">
@@ -1397,8 +1383,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21153-4" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20791" type="Armor" name="Pink Paper Mask Set - Blessed Soul - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
@@ -1415,8 +1399,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="21154-4" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="20792" type="Armor" name="Flavorful Cheese Hat">
 		<set name="icon" val="BranchSys.icon.br_bigrat_cap_i00" />

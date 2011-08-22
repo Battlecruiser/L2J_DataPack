@@ -21,6 +21,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2610-1" />
 	</item>
 	<item id="13302" type="EtcItem" name="My Teleport Scroll (Event)">
@@ -47,7 +48,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13304" type="EtcItem" name="Fairy Princess Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i00" />
@@ -61,7 +65,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13305" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -75,7 +82,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13306" type="EtcItem" name="Fox Shaman Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -89,7 +99,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13307" type="EtcItem" name="Color Name (Event)">
 		<set name="icon" val="icon.color_name_i00" />
@@ -1220,6 +1233,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2606-1" />
 		<set name="time" val="43200" />
 	</item>
@@ -1413,7 +1427,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13396" type="EtcItem" name="Scroll of Escape: Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -1426,7 +1442,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13397" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -1439,7 +1457,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13398" type="EtcItem" name="Scroll of Escape: Orc Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -1452,7 +1472,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13399" type="EtcItem" name="Scroll of Escape: Dwarven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -1465,6 +1487,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 </list>

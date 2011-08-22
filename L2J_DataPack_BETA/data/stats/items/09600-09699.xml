@@ -683,7 +683,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-22" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9648" type="EtcItem" name="Transformation Sealbook: Onyx Beast">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
@@ -1249,6 +1251,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-8" />
 	</item>
 	<item id="9695" type="EtcItem" name="Blue Crystal">

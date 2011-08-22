@@ -12,7 +12,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2863-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14701" type="EtcItem" name="Greater Quick Healing Potion">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
@@ -26,7 +28,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2864-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14702" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
@@ -36,6 +40,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
 	<item id="14703" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (C-Grade)">
@@ -46,6 +51,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
 	<item id="14704" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (B-Grade)">
@@ -56,6 +62,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
 	<item id="14705" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (A-Grade)">
@@ -66,6 +73,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
 	<item id="14706" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (S-Grade)">
@@ -76,6 +84,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
 	<item id="14707" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (D-Grade)">
@@ -86,6 +95,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
 	<item id="14708" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (C-Grade)">
@@ -96,6 +106,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
 	<item id="14709" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (B-Grade)">
@@ -106,6 +117,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
 	<item id="14710" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (A-Grade)">
@@ -116,6 +128,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
 	<item id="14711" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Armor (S-Grade)">
@@ -126,6 +139,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2524-1" />
 	</item>
 	<item id="14712" type="Armor" name="Cow Hair Accessory">
@@ -138,8 +152,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-		</for>
 	</item>
 	<item id="14713" type="EtcItem" name="Greater Elixir Gift Box (No-Grade)">
 		<set name="icon" val="icon.etc_treasure_box_i02" />
@@ -248,8 +260,11 @@
 		<set name="shared_reuse_group" val="13" />
 		<set name="reuse_delay" val="2000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2867-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14723" type="EtcItem" name="Event - Cupid's Powerful Fatigue Recovery Potion">
 		<set name="icon" val="icon.etc_nutrients_of_cupid_i00" />
@@ -259,8 +274,11 @@
 		<set name="shared_reuse_group" val="14" />
 		<set name="reuse_delay" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2868-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="14724" type="EtcItem" name="Event - Milk Cow Summon Scroll">
 		<set name="icon" val="icon.etc_scroll_of_milkcattle_i00" />
@@ -269,6 +287,7 @@
 		<set name="material" val="paper" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2869-1" />
 	</item>
 	<item id="14725" type="EtcItem" name="Event - Head Milk Cow Summon Scroll">
@@ -278,6 +297,7 @@
 		<set name="material" val="paper" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2870-1" />
 	</item>
 	<item id="14726" type="EtcItem" name="Event - Gloomy Milk Cow Summon Scroll">
@@ -287,6 +307,7 @@
 		<set name="material" val="paper" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2880-1" />
 	</item>
 	<item id="14727" type="EtcItem" name="Event - Gloomy Head Milk Cow Summon Scroll">
@@ -296,6 +317,7 @@
 		<set name="material" val="paper" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2881-1" />
 	</item>
 	<item id="14728" type="EtcItem" name="Event - Orr Cube - 30-day limited period">
@@ -306,6 +328,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2510-1" />
 		<set name="time" val="43200" />
 	</item>
@@ -317,6 +340,7 @@
 		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2882-1" />
 	</item>
 	<item id="14730" type="EtcItem" name="Event - Gold Crystal Cube Fragment">
@@ -393,6 +417,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2873-1;2874-1;2875-1;2876-1;2877-1;2878-1;2879-1;2885-1;2886-1;2887-1;2888-1;2889-1;2890-1;2891-6" />
 	</item>
 	<item id="14740" type="EtcItem" name="Event - Save the Cow Event Pack">
@@ -428,6 +453,7 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2883-1" />
 	</item>
 	<item id="14743" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 20 minutes">
@@ -440,6 +466,7 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2884-1" />
 	</item>
 	<item id="14744" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 30 minutes">
@@ -455,6 +482,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9166-1" />
 	</item>
 	<item id="14745" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 60 minutes">
@@ -478,8 +506,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-		</for>
 	</item>
 	<item id="14747" type="Armor" name="For Events - Refined Black Feather Mask">
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
@@ -491,8 +517,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-		</for>
 	</item>
 	<item id="14748" type="Armor" name="For Events - Refined Carnival Circlet">
 		<set name="icon" val="icon.accessory_carnival_circlet2_i00" />
@@ -504,8 +528,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<for>
-		</for>
 	</item>
 	<item id="14749" type="Armor" name="Afro Perm Wig">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
@@ -515,8 +537,6 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
-		<for>
-		</for>
 	</item>
 	<item id="14750" type="Armor" name="Bamboo Hat">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
@@ -526,8 +546,6 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
-		<for>
-		</for>
 	</item>
 	<item id="14751" type="Armor" name="Smart Glasses">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
@@ -537,8 +555,6 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
-		<for>
-		</for>
 	</item>
 	<item id="14752" type="Armor" name="For Events - Refined Medieval Style Party Mask">
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
@@ -742,6 +758,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2892-1" />
 		<set name="time" val="1440" />
 	</item>
@@ -756,6 +773,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2895-1" />
 	</item>
 	<item id="14767" type="EtcItem" name="White Day Candy Basket">
@@ -769,6 +787,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2896-1" />
 	</item>
 	<item id="14768" type="EtcItem" name="White Day Solo Package">
@@ -796,6 +815,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2894-1" />
 	</item>
 	<item id="14770" type="EtcItem" name="Solo Escape Petition">
@@ -809,6 +829,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2893-1" />
 	</item>
 	<item id="14771" type="Armor" name="Kat the Cat Hat - 14-day limited period">
@@ -907,6 +928,7 @@
 		<set name="ex_immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2897-1" />
 	</item>
 	<item id="14778" type="EtcItem" name="Fresh Cream Herb">
@@ -914,6 +936,7 @@
 		<set name="ex_immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2898-1" />
 	</item>
 	<item id="14779" type="EtcItem" name="Cheesecake Herb">
@@ -921,6 +944,7 @@
 		<set name="ex_immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2899-1" />
 	</item>
 	<item id="14780" type="Weapon" name="Baguette's Bread Sword">

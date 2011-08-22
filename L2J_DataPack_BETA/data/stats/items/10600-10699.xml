@@ -113,7 +113,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
 		</cond>
@@ -631,8 +634,12 @@
 		<set name="etcitem_type" val="pet_collar" />
 		<set name="material" val="leather" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10662" type="EtcItem" name="Pet Summon Item - Wizard Use">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
@@ -640,8 +647,12 @@
 		<set name="etcitem_type" val="pet_collar" />
 		<set name="material" val="leather" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10663" type="EtcItem" name="Pet Summon Item - Mixing Use">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i02" />
@@ -649,8 +660,12 @@
 		<set name="etcitem_type" val="pet_collar" />
 		<set name="material" val="leather" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10664" type="EtcItem" name="Pet Summon Item - Warrior Pet">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
@@ -658,8 +673,12 @@
 		<set name="etcitem_type" val="pet_collar" />
 		<set name="material" val="leather" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10665" type="EtcItem" name="Pet Summon Item - Warrior Pet">
 		<set name="icon" val="icon.accessory_necklace_of_pet_i01" />
@@ -667,8 +686,12 @@
 		<set name="etcitem_type" val="pet_collar" />
 		<set name="material" val="leather" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10666" type="EtcItem" name="Potion of Replenish Vitality">
 		<set name="icon" val="icon.etc_potion_red_i00" />

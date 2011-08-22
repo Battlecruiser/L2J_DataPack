@@ -9,6 +9,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2631-1" />
 	</item>
 	<item id="13801" type="EtcItem" name="Transformation Scroll: Young Child">
@@ -20,6 +21,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2632-1" />
 	</item>
 	<item id="13802" type="Armor" name="Native's Hood">
@@ -139,9 +141,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2633-1" />
 	</item>
-	<item id="13809" type="Weapon" name="Court Magician's Magic Staff">
+	<item id="13809" type="EtcItem" name="Court Magician's Magic Staff">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -150,6 +153,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2634-1" />
 	</item>
 	<item id="13810" type="EtcItem" name="High Priest Orven's Letter">
@@ -649,6 +653,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2839-1" />
 	</item>
 	<item id="13856" type="EtcItem" name="Rider's Mark">
@@ -894,6 +899,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5822-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_non_transform}}}" />
 	</item>
@@ -906,6 +912,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5822-1" />
 	</item>
 	<item id="13881" type="Weapon" name="Attribute Master Yang's Sword">

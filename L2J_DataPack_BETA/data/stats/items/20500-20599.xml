@@ -30,7 +30,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20502" type="EtcItem" name="Gold Maned Lion Mount Bracelet">
+	<item id="20502" type="Armor" name="Gold Maned Lion Mount Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -47,7 +47,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20503" type="EtcItem" name="Gold Maned Lion Mount Bracelet - 30-day limited period">
+	<item id="20503" type="Armor" name="Gold Maned Lion Mount Bracelet - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -64,7 +64,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20504" type="EtcItem" name="Steam Beatle Mount Bracelet - 30-day limited period">
+	<item id="20504" type="Armor" name="Steam Beatle Mount Bracelet - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -254,6 +254,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22071-1" />
 	</item>
 	<item id="20516" type="EtcItem" name="Huge Fortuna Cube">
@@ -269,6 +270,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22072-1" />
 	</item>
 	<item id="20517" type="EtcItem" name="Scroll: Enchant Weapon (S-Grade)">
@@ -319,6 +321,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22075-1" />
 	</item>
 	<item id="20520" type="EtcItem" name="Ancient Armor Enchant Crystal (S-Grade)">
@@ -386,6 +389,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22079-1" />
 	</item>
 	<item id="20524" type="EtcItem" name="Resist Wind Scroll">
@@ -402,6 +406,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22080-1" />
 	</item>
 	<item id="20525" type="EtcItem" name="Resist Fire Scroll">
@@ -418,6 +423,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22081-1" />
 	</item>
 	<item id="20526" type="EtcItem" name="Resist Holy Scroll">
@@ -434,6 +440,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22082-1" />
 	</item>
 	<item id="20527" type="EtcItem" name="Resist Unholy Scroll">
@@ -450,6 +457,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22083-1" />
 	</item>
 	<item id="20528" type="EtcItem" name="Mental Shield Scroll">
@@ -466,6 +474,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22084-1" />
 	</item>
 	<item id="20529" type="EtcItem" name="Focus Scroll">
@@ -482,6 +491,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22085-1" />
 	</item>
 	<item id="20530" type="EtcItem" name="Concentration Scroll">
@@ -498,6 +508,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22086-1" />
 	</item>
 	<item id="20531" type="EtcItem" name="Bless Shield Scroll">
@@ -514,6 +525,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22087-1" />
 	</item>
 	<item id="20532" type="EtcItem" name="Agility Scroll">
@@ -530,6 +542,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22088-1" />
 	</item>
 	<item id="20533" type="EtcItem" name="Regeneration Scroll">
@@ -546,6 +559,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22089-1" />
 	</item>
 	<item id="20534" type="EtcItem" name="Advanced Block Scroll">
@@ -562,6 +576,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22090-1" />
 	</item>
 	<item id="20535" type="Armor" name="Steam Beatle Mount Bracelet - 30-day limited period">
@@ -728,9 +743,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2429-1" />
 		<set name="is_freightable" val="true" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20546" type="EtcItem" name="Critical Attack Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
@@ -746,9 +764,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2432-1" />
 		<set name="is_freightable" val="true" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20547" type="EtcItem" name="Moving Speed Increasing Beverage">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
@@ -764,9 +785,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2437-1" />
 		<set name="is_freightable" val="true" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20548" type="EtcItem" name="Rune of Experience Points 30%- 5-Hour Pack (Event)">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
@@ -1110,6 +1134,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22091-1" />
 		<set name="time" val="300" />
 	</item>
@@ -1124,6 +1149,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22091-1" />
 		<set name="time" val="4320" />
 	</item>
@@ -1138,6 +1164,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22039-1" />
 		<set name="time" val="180" />
 	</item>
@@ -1152,6 +1179,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22092-1" />
 	</item>
 	<item id="20574" type="EtcItem" name="Large Scroll Chest (Event)">
@@ -1267,8 +1295,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2436-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20583" type="EtcItem" name="Blessed Scroll of Escape (Event)">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
@@ -1279,6 +1310,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22103-1" />
 	</item>
 	<item id="20584" type="EtcItem" name="Blessed Scroll of Resurrection (Event)">
@@ -1290,6 +1322,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22104-1" />
 	</item>
 	<item id="20585" type="EtcItem" name="Seed of Fire (event)">
@@ -1439,6 +1472,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22097-1" />
 	</item>
 	<item id="20596" type="EtcItem" name="Boy's Gift of Gratitude">
@@ -1449,6 +1483,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22098-1" />
 	</item>
 	<item id="20597" type="EtcItem" name="Girl's Soul Ore">

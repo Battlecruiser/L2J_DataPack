@@ -9,9 +9,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="MPHOT" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect count="3" name="ManaHealOverTime" abnormalTime="5" val="1.5" abnormalLvl="1" abnormalType="mp_recover" />
 		</for>
@@ -25,9 +22,6 @@
 		<set name="power" val="100" />
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 	</skill>
 	<skill id="10002" levels="1" name="Custom Trap skill">
 		<!-- Use this skill if you want to handle trap activation in scripts(example Seed of Destruction Spawn Traps) -->

@@ -26,17 +26,12 @@ import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.item.L2EtcItem;
 import com.l2jserver.util.Rnd;
 
-
 /**
- *
  * @author FBIagent 11/12/2006
- *
  */
-
 public class ExtractableItems implements IItemHandler
 {
 	private static Logger _log = Logger.getLogger(ItemTable.class.getName());
@@ -44,26 +39,28 @@ public class ExtractableItems implements IItemHandler
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
+		{
 			return;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		
-		int itemID = item.getItemId();
-		L2EtcItem etcitem = (L2EtcItem) item.getItem();
-		List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
-		
+		final int itemID = item.getItemId();
+		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
+		final List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
 		if (exitem == null)
 		{
-			_log.info("No extractable data defined for "+etcitem);
+			_log.info("No extractable data defined for " + etcitem);
 			return;
 		}
 		
 		//destroy item
 		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
+		{
 			return;
+		}
 		
-		boolean created= false;
-		
+		boolean created = false;
 		// calculate extraction
 		for (L2ExtractableProduct expi : exitem)
 		{
@@ -71,27 +68,22 @@ public class ExtractableItems implements IItemHandler
 			{
 				int min = expi.getMin();
 				int max = expi.getMax();
-				int createItemID = expi.getId();
 				
-				if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483))
+				if (((itemID >= 6411) && (itemID <= 6518)) || ((itemID >= 7726) && (itemID <= 7860)) || ((itemID >= 8403) && (itemID <= 8483)))
 				{
 					min *= Config.RATE_EXTR_FISH;
 					max *= Config.RATE_EXTR_FISH;
 				}
 				
-				int createitemAmount = 0;
-				if (max == min)
-					createitemAmount = min;
-				else
-					createitemAmount = Rnd.get(max-min+1) + min;
-				activeChar.addItem("Extract", createItemID, createitemAmount, activeChar, true);
+				final int createitemAmount = (max == min) ? min : (Rnd.get(max - min + 1) + min);
+				activeChar.addItem("Extract", expi.getId(), createitemAmount, activeChar, true);
 				created = true;
 			}
 		}
 		
 		if (!created)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			activeChar.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 		}
 	}
 }

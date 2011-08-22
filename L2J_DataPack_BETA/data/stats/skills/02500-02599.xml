@@ -1150,22 +1150,27 @@
 		<set name="isMagic" val="true" />
 		<set name="buffDuration" val="5000" />
 		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
 	<skill id="2578" levels="1" name="Cure Poison Paralyze">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="negateAbnormals" val="poison,9" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2579" levels="1" name="Cure Death Clock">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="negateAbnormals" val="death_clack,1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2580" levels="1" name="Vitality Replenishing Herb">
 		<set name="hitTime" val="100" />
@@ -1250,9 +1255,6 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 	</skill>
 	<skill id="2593" levels="1" name="Bow/Crossbow Attack Resistance Potion">
 		<set name="itemConsumeCount" val="1" />

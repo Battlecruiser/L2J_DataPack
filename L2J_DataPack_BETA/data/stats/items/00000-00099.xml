@@ -1065,7 +1065,9 @@
 		<set name="price" val="40" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="66" type="Weapon" name="Gladius">
 		<set name="icon" val="icon.weapon_gladius_i00" />

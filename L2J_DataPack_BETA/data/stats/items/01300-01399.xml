@@ -1052,7 +1052,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2034-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="1375" type="EtcItem" name="Greater Swift Attack Potion">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
@@ -1067,7 +1069,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2035-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="1376" type="Weapon" name="Guard Spear">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />

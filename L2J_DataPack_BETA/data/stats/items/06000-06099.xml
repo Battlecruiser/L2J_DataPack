@@ -285,7 +285,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2169-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="6037" type="EtcItem" name="Waking Scroll">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />

@@ -1905,9 +1905,6 @@
 		<set name="skillType" val="HEAL_STATIC" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="100" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 	</skill>
 	<skill id="2793" levels="2" name="Stone of Mana">
 		<table name="#power"> 500 20000 </table> <!-- Need Fix -->
@@ -1920,16 +1917,21 @@
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="100" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 	</skill>
 	<skill id="2794" levels="2" name="Stone of Recovery">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Missing Core Support for different HP/MP Heal Percent. -->
+		<table name="#hpHeal"> 15 25 </table>
+		<table name="#mpHeal"> 11 18 </table>
+		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#hpHeal" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="HPMPHEAL_PERCENT" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2795" levels="1" name="Stone of Destruction">
 		<set name="itemConsumeCount" val="1" />
@@ -1938,9 +1940,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.12" />
@@ -1954,9 +1953,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.12" />
@@ -1971,9 +1967,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
@@ -1990,9 +1983,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -2006,9 +1996,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="critical_prob_up">
 				<mul order="0x30" stat="cAtk" val="1.3" />

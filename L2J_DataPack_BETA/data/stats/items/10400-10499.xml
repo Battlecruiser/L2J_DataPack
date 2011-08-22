@@ -79,6 +79,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2504-1" />
 	</item>
 	<item id="10409" type="EtcItem" name="A Bottle of Souls">
@@ -329,7 +330,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10427" type="EtcItem" name="Tully's Platinum Medal">
 		<set name="icon" val="icon.etc_jewel_silver_i00" />

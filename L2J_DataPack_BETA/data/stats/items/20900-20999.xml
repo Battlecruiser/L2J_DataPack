@@ -48,6 +48,7 @@
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22158-1" />
 	</item>
 	<item id="20904" type="EtcItem" name="Rose Essense">
@@ -97,7 +98,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20909" type="EtcItem" name="Hyum Rose Necklace (Event) - Summon duration - 3 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
@@ -111,7 +115,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20910" type="EtcItem" name="Rekang Rose Necklace (Event) - Summon duration - 3 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
@@ -125,7 +132,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20911" type="EtcItem" name="Lilias Rose Necklace (Event) - Summon duration - 3 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
@@ -139,7 +149,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20912" type="EtcItem" name="Lapham Rose Necklace (Event) - Summon duration - 3 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
@@ -153,7 +166,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20913" type="EtcItem" name="Mafum Rose Necklace (Event) - Summon duration - 3 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
@@ -167,7 +183,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20914" type="EtcItem" name="Improved Rose Spirit Exchange Ticket - 5 hours">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
@@ -196,7 +215,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20916" type="EtcItem" name="Improved Hyum Rose Necklace (Event) - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -212,7 +234,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20917" type="EtcItem" name="Improved Rekang Rose Necklace (Event) - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -228,7 +253,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20918" type="EtcItem" name="Improved Lilias Rose Necklace (Event) - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -244,7 +272,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20919" type="EtcItem" name="Improved Lapham Rose Necklace (Event) - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -260,7 +291,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20920" type="EtcItem" name="Improved Mafum Rose Necklace (Event) - Summon duration - 5 hours">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
@@ -276,7 +310,10 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="20921" type="EtcItem" name="Rose Spirit Test Report - 24-hour limited period">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
@@ -343,6 +380,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22162-1" />
 	</item>
 	<item id="20927" type="EtcItem" name="Hawk Herb">
@@ -354,6 +392,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22163-1" />
 	</item>
 	<item id="20928" type="EtcItem" name="Eggplant Herb">
@@ -365,6 +404,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22164-1" />
 	</item>
 	<item id="20929" type="Armor" name="Royal Crown of Vesper">
@@ -755,6 +795,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22165-1" />
 	</item>
 	<item id="20955" type="EtcItem" name="Medium Placid">
@@ -769,6 +810,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22166-1" />
 	</item>
 	<item id="20956" type="Armor" name="Agathion Seal Bracelet - Frozen Corpse - Soul Stealth - 7-day limited period">
@@ -811,6 +853,7 @@
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22167-1" />
 	</item>
 	<item id="20959" type="EtcItem" name="Royal Crown of Vesper Pack">
@@ -1131,6 +1174,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
 	<item id="20979" type="EtcItem" name="Zhongzi (A-Grade)">
@@ -1146,6 +1190,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
 	<item id="20980" type="EtcItem" name="Zhongzi (S-Grade)">
@@ -1161,6 +1206,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
 	<item id="20981" type="Armor" name="Dragon Boat">
@@ -1359,6 +1405,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22168-1" />
 	</item>
 	<item id="20993" type="EtcItem" name="Soccer Ball of Cheers">
@@ -1375,6 +1422,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22169-1" />
 	</item>
 	<item id="20994" type="EtcItem" name="Three-headed Dragon Agathion Pack - Wind Walk">

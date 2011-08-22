@@ -190,7 +190,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7118" type="EtcItem" name="Scroll of Escape: Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -202,7 +204,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7119" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -214,7 +218,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7120" type="EtcItem" name="Scroll of Escape: Orc Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -226,7 +232,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7121" type="EtcItem" name="Scroll of Escape: Dwarven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -238,7 +246,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7122" type="EtcItem" name="Scroll of Escape: Gludin Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -250,7 +260,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7123" type="EtcItem" name="Scroll of Escape: Town of Gludio">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -262,7 +274,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-7" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7124" type="EtcItem" name="Scroll of Escape: Town of Dion">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -274,7 +288,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-8" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7125" type="EtcItem" name="Scroll of Escape: Floran Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -286,7 +302,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-9" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7126" type="EtcItem" name="Scroll of Escape: Town of Giran">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -298,7 +316,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-10" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7127" type="EtcItem" name="Scroll of Escape: Hardin's Academy">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -310,7 +330,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-11" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7128" type="EtcItem" name="Scroll of Escape: Heine">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -322,7 +344,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-12" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7129" type="EtcItem" name="Scroll of Escape: Town of Oren">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -334,7 +358,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-13" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7130" type="EtcItem" name="Scroll of Escape: Ivory Tower">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -346,7 +372,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-14" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7131" type="EtcItem" name="Scroll of Escape: Hunters Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -358,7 +386,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-15" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7132" type="EtcItem" name="Scroll of Escape: Town of Aden">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -370,7 +400,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-16" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7133" type="EtcItem" name="Scroll of Escape: Town of Goddard">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -382,7 +414,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-17" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7134" type="EtcItem" name="Scroll of Escape: Rune Township">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -394,7 +428,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-18" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7135" type="EtcItem" name="Scroll of Escape: Town of Schuttgart">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -406,7 +442,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-19" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="7136" type="EtcItem" name="Fruit Basket">
 		<set name="icon" val="icon.etc_handbag_i00" />
