@@ -705,7 +705,11 @@
 	<skill id="4047" levels="12" name="Hold">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
+		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
@@ -721,8 +725,6 @@
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4048" levels="3" name="NPC Dash">
 		<!-- Freya retail confirmed -->
@@ -961,7 +963,13 @@
 	</skill>
 	<skill id="4065" levels="12" name="NPC Heal">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 83.0 151.0 245.0 362.0 494.0 628.0 743.0 789.0 826.0 867.0 895.0 913.0 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 13 24 35 49 64 78 91 97 101 104 105 105 </table>
+		<table name="#mpInitialConsume"> 4 6 9 13 16 20 23 25 26 26 27 27 </table>
+		<table name="#power"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2000" />
@@ -972,8 +980,6 @@
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="aggroPoints" val="100" />
-		<table name="#mpConsume"> 17 30 44 62 80 98 114 122 127 130 132 132 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4066" levels="12" name="NPC Twister">
 		<!-- Freya retail confirmed -->
@@ -1192,9 +1198,13 @@
 	</skill>
 	<skill id="4077" levels="12" name="NPC Aura Burn">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 14 21 30 42 55 68 82 88 93 98 101 104 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
+		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
+		<table name="#power"> 14 21 30 42 55 68 82 88 93 98 101 104 </table>
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
@@ -1204,8 +1214,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4078" levels="12" name="NPC Flamestrike">
 		<!-- Freya retail confirmed -->
