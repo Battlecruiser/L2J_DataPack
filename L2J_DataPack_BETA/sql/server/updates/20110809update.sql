@@ -17,5 +17,5 @@ MODIFY `clan` varchar(40) DEFAULT NULL,
 CHANGE `clan_range` `clanRange` smallint(4) unsigned DEFAULT '0',
 MODIFY `enemyRange` smallint(4) unsigned DEFAULT '0' AFTER `enemyClan`,
 MODIFY `dodge` tinyint(3) unsigned DEFAULT '0',
-cHANGE `ai_type` `aiType` varchar(8) NOT NULL DEFAULT 'fighter',
+CHANGE `ai_type` `aiType` varchar(8) NOT NULL DEFAULT 'fighter',
 DROP PRIMARY KEY, ADD PRIMARY KEY (`npcId`);
