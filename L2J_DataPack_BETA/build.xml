@@ -50,7 +50,7 @@
 		<sync todir="${build.dist.doc}">
 			<fileset dir="doc" />
 		</sync>
-		<concat destfile="${build.dist.doc}/Changelog.txt">${l2j.changelog}</concat>
+		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
 		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
 		<sync todir="${build.dist.game}/data" includeemptydirs="true">
 			<fileset dir="data" />
