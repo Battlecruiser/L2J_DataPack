@@ -37737,378 +37737,331 @@ INSERT INTO `droplist` VALUES
 (18342,57,7,13,0,1000000); -- Adena
 
 INSERT INTO `droplist` VALUES
-(29001,70,1,1,0,60000),-- Claymore
-(29001,159,1,1,0,55000),-- Bonebreaker
-(29001,188,1,1,0,55000),-- Ghost Staff
-(29001,189,1,1,0,55000),-- Staff of Life
-(29001,225,1,1,0,55000),-- Mithril Dagger
-(29001,262,1,1,0,50000),-- Scallop Jamadhr
-(29001,280,1,1,0,55000),-- Light Crossbow
-(29001,297,1,1,0,55000),-- Glaive
-(29001,2499,1,1,0,60000),-- Elven Long Sword
-(29001,851,1,2,1,350000),-- Omen Beast\'s Eye Earring
-(29001,882,1,2,1,350000),-- Mithril Ring
-(29001,914,1,2,1,300000),-- Necklace of Darkness
-(29001,353,1,2,2,375000),-- Half Plate Armor
-(29001,380,1,2,2,375000),-- Plate Gaiters
-(29001,396,1,2,3,425000),-- Salamander Skin Mail
-(29001,438,1,2,3,425000),-- Sage\'s Rag
-(29001,607,1,3,4,200000),-- Ogre Power Gauntlets
-(29001,630,1,3,4,200000),-- Square Shield
-(29001,955,1,3,4,200000),-- Scroll: Enchant Weapon (Grade D)
-(29001,1125,1,3,4,200000),-- Assault Boots
-(29001,2412,1,3,4,200000),-- Plate Helmet
-(29001,57,140000,170000,5,1000000),-- Adena
-(29001,57,140000,170000,6,1000000),-- Adena
-(29001,57,140000,170000,7,1000000),-- Adena
-(29001,57,140000,170000,8,1000000),-- Adena
-(29001,57,140000,170000,9,1000000),-- Adena
-(29001,57,140000,170000,10,1000000),-- Adena
-(29001,57,120000,150000,11,1000000),-- Adena
-(29001,6660,1,1,12,300000),-- Ring of Queen Ant
-(29006,75,1,1,0,48000),-- Caliburs
-(29006,84,1,1,0,40000),-- Homunkulus\'s Sword
-(29006,162,1,1,0,48000),-- War Axe
-(29006,174,1,1,0,40000),-- Nirvana Axe
-(29006,200,1,1,0,40000),-- Sage\'s Staff
-(29006,233,1,1,0,48000),-- Dark Screamer
-(29006,265,1,1,0,40000),-- Fist Blade
-(29006,283,1,1,0,48000),-- Akat Long Bow
-(29006,301,1,1,0,48000),-- Scorpion
-(29006,60,1,1,1,120000),-- Composite Armor
-(29006,400,1,1,1,120000),-- Theca Leather Armor
-(29006,420,1,1,1,120000),-- Theca Leather Gaiters
-(29006,441,1,1,1,120000),-- Demon\'s Tunic
-(29006,472,1,1,1,120000),-- Demon\'s Stockings
-(29006,107,1,1,2,140000),-- Composite Shield
-(29006,517,1,1,2,140000),-- Composite Helmet
-(29006,951,1,1,2,140000),-- Scroll: Enchant Weapon (Grade C)
-(29006,2435,1,1,2,140000),-- Demon\'s Boots
-(29006,2459,1,1,2,140000),-- Demon\'s Gloves
-(29006,57,100000,150000,3,1000000),-- Adena
-(29006,57,100000,150000,4,1000000),-- Adena
-(29006,57,100000,150000,5,1000000),-- Adena
-(29006,57,100000,150000,6,1000000),-- Adena
-(29006,57,100000,150000,7,1000000),-- Adena
-(29006,6662,1,1,8,300000),-- Ring of Core
-(29006,8754,1,2,200,100000),-- Top-Grade Life Stone: level 49
-(29006,8744,2,4,200,450000),-- High-Grade Life Stone: level 49
-(29006,8745,2,4,200,400000),-- High-Grade Life Stone: level 52
-(29006,8755,1,2,200,50000),-- Top-Grade Life Stone: level 52
-(29014,76,1,1,0,42000),-- Sword of Delusion
-(29014,145,1,1,0,35000),-- Sword of Whispering Death
-(29014,162,1,1,0,42000),-- War Axe
-(29014,199,1,1,0,35000),-- Pa\'agrian Hammer
-(29014,201,1,1,0,35000),-- Club of Nature
-(29014,231,1,1,0,42000),-- Grace Dagger
-(29014,265,1,1,0,35000),-- Fist Blade
-(29014,283,1,1,0,42000),-- Akat Long Bow
-(29014,303,1,1,0,42000),-- Widow Maker
-(29014,854,1,2,1,350000),-- Earring of Binding
-(29014,885,1,2,1,350000),-- Ring of Ages
-(29014,917,1,2,1,300000),-- Necklace of Mermaid
-(29014,60,1,1,2,100000),-- Composite Armor
-(29014,400,1,1,2,100000),-- Theca Leather Armor
-(29014,420,1,1,2,100000),-- Theca Leather Gaiters
-(29014,441,1,1,2,100000),-- Demon\'s Tunic
-(29014,472,1,1,2,100000),-- Demon\'s Stockings
-(29014,64,1,2,3,100000),-- Composite Boots
-(29014,103,1,2,3,100000),-- Tower Shield
-(29014,517,1,2,3,100000),-- Composite Helmet
-(29014,608,1,2,3,100000),-- Mithril Gauntlets
-(29014,951,1,2,3,100000),-- Scroll: Enchant Weapon (Grade C)
-(29014,57,110000,150000,4,1000000),-- Adena
-(29014,57,110000,150000,5,1000000),-- Adena
-(29014,57,110000,150000,6,1000000),-- Adena
-(29014,57,110000,150000,7,1000000),-- Adena
-(29014,57,110000,150000,8,1000000),-- Adena
-(29014,6661,1,1,9,300000),-- Earring of Orfen
-(29014,8754,1,2,200,100000),-- Top-Grade Life Stone: level 49
-(29014,8744,2,4,200,450000),-- High-Grade Life Stone: level 49
-(29014,8745,2,4,200,400000),-- High-Grade Life Stone: level 52
-(29014,8755,1,2,200,50000),-- Top-Grade Life Stone: level 52
-(29019,80,1,2,0,250000),-- Tallum Blade
-(29019,98,1,2,0,250000),-- Halberd
-(29019,269,1,2,0,250000),-- Blood Tornado
-(29019,2504,1,2,0,250000),-- Meteor Shower
-(29019,150,1,2,1,250000),-- Elemental Sword
-(29019,212,1,2,1,250000),-- Dasparion\'s Staff
-(29019,235,1,2,1,250000),-- Bloody Orchid
-(29019,288,1,2,1,250000),-- Carnage Bow
-(29019,81,1,2,2,250000),-- Dragon Slayer
-(29019,151,1,2,2,250000),-- Sword of Miracles 
-(29019,164,1,2,2,250000),-- Elysian
-(29019,2500,1,2,2,250000),-- Dark Legion\'s Edge
-(29019,213,1,2,3,200000),-- Branch of The Mother Tree
-(29019,236,1,2,3,200000),-- Soul Separator
-(29019,270,1,2,3,200000),-- Dragon Grinder
-(29019,289,1,2,3,200000),-- Soul Bow
-(29019,305,1,2,3,200000),-- Tallum Glaive
-(29019,6364,1,1,4,170000),-- Forgotten Blade
-(29019,6365,1,1,4,170000),-- Basalt Battlehammer
-(29019,6369,1,1,4,170000),-- Dragon Hunter Axe
-(29019,6370,1,1,4,170000),-- Saint Spear
-(29019,6372,1,1,4,160000),-- Heaven\'s Divider
-(29019,6580,1,1,4,160000),-- Tallum Blade*Dark Legion\'s Edge
-(29019,6366,1,1,5,200000),-- Imperial Staff
-(29019,6367,1,1,5,200000),-- Angel Slayer
-(29019,6371,1,1,5,200000),-- Demon Splinter
-(29019,6579,1,1,5,200000),-- Arcana Mace
-(29019,7575,1,1,5,200000),-- Draconic Bow
-(29019,6326,1,5,6,300000),-- Sealed Majestic Necklace
-(29019,6327,1,5,6,350000),-- Sealed Majestic Earring
-(29019,6328,1,5,6,350000),-- Sealed Majestic Ring
-(29019,6323,1,5,7,300000),-- Sealed Phoenix Necklace
-(29019,6324,1,5,7,350000),-- Sealed Phoenix Earring
-(29019,6325,1,5,7,350000),-- Sealed Phoenix Ring
-(29019,6724,1,1,8,350000),-- Sealed Tateossian Earring 
-(29019,6725,1,1,8,350000),-- Sealed Tateossian Ring
-(29019,6726,1,1,8,300000),-- Sealed Tateossian Necklace
-(29019,5287,1,3,9,500000),-- Sealed Dark Crystal breastplate
-(29019,5297,1,3,9,250000),-- Sealed Dark Crystal Leather Armor
-(29019,5304,1,3,9,250000),-- Sealed Tallum Tunic
-(29019,5311,1,3,10,350000),-- Sealed Armor of Nightmare
-(29019,5320,1,3,10,350000),-- Sealed Leather Armor of Nightmare
-(29019,5326,1,3,10,300000),-- Sealed Robe of Nightmare
-(29019,5293,1,3,11,250000),-- Sealed Tallum Plate Armor
-(29019,5301,1,3,11,250000),-- Sealed Tallum Leather Armor
-(29019,5308,1,3,11,250000),-- Sealed Dark Crystal Robe
-(29019,5316,1,3,11,80000),-- Sealed Majestic Plate Armor
-(29019,5323,1,3,11,80000),-- Sealed Majestic Leather Armor
-(29019,5329,1,3,11,90000),-- Sealed Majestic Robe
-(29019,5288,1,3,12,350000),-- Sealed Dark Crystal Gaiters
-(29019,5298,1,3,12,350000),-- Sealed Dark Crystalline Leggings
-(29019,5305,1,3,12,300000),-- Sealed Tallum Stockings
-(29019,6674,1,1,13,150000),-- Sealed Imperial Crusader Breastplate
-(29019,6675,1,1,13,150000),-- Sealed Imperial Crusader Gaiters
-(29019,6680,1,1,13,350000),-- Sealed Draconic Leather Armor
-(29019,6684,1,1,13,350000),-- Sealed Major Arcana Robe
-(29019,5289,1,3,14,250000),-- Sealed Dark Crystal Helmet
-(29019,5294,1,3,14,250000),-- Sealed Tallum Helmet
-(29019,5312,1,3,14,250000),-- Sealed Helm of Nightmare
-(29019,5317,1,3,14,250000),-- Sealed Majestic Circlet
-(29019,5291,1,3,15,250000),-- Sealed Dark Crystal Boots
-(29019,5296,1,3,15,250000),-- Sealed Tallum Boots
-(29019,5314,1,3,15,250000),-- Sealed Boots of Nightmare
-(29019,5319,1,3,15,250000),-- Sealed Majestic Boots
-(29019,5290,1,3,16,250000),-- Sealed Dark Crystal Gloves
-(29019,5295,1,3,16,250000),-- Sealed Tallum Gloves
-(29019,5313,1,3,16,250000),-- Sealed Gloves of Nightmare
-(29019,5318,1,3,16,250000),-- Sealed Majestic Gloves
-(29019,5292,1,3,17,400000),-- Sealed Dark Crystal Shield
-(29019,5315,1,3,17,400000),-- Sealed Shield of Nightmare
-(29019,6678,1,1,17,200000),-- Sealed Imperial Crusader Shield
-(29019,6676,1,1,18,340000),-- Sealed Imperial Crusader Gauntlet
-(29019,6681,1,1,18,330000),-- Sealed Draconic Leather Glove
-(29019,6685,1,1,18,330000),-- Sealed Major Arcana Glove
-(29019,6677,1,1,19,340000),-- Sealed Imperial Crusader Boots
-(29019,6682,1,1,19,330000),-- Sealed Draconic Leather Boots
-(29019,6686,1,1,19,330000),-- Sealed Major Arcana Boots
-(29019,6679,1,1,20,340000),-- Sealed Imperial Crusader Helmet
-(29019,6683,1,1,20,330000),-- Sealed Draconic Leather Helmet
-(29019,6687,1,1,20,330000),-- Sealed Major Arcana Circlet
-(29019,729,1,19,21,1000000),-- Scroll: Enchant Weapon (Grade A)
-(29019,1538,1,59,22,1000000),-- Blessed Scroll of Escape
-(29019,3936,1,39,23,1000000),-- Blessed Scroll of Resurrection
-(29019,57,14000000,18000000,24,1000000),-- Adena
-(29019,57,14000000,18000000,25,1000000),-- Adena
-(29019,57,14000000,18000000,26,1000000),-- Adena
-(29019,57,14000000,18000000,27,1000000),-- Adena
-(29019,57,14000000,18000000,28,1000000),-- Adena
-(29019,57,14000000,18000000,29,1000000),-- Adena
-(29019,57,9000000,13000000,30,1000000),-- Adena
-(29019,6656,1,1,31,1000000),-- Earring of Antharas
-(29019,10549,1,1,32,333334),-- Forgotten Scroll - Protection of Rune
-(29019,10550,1,1,32,333333),-- Forgotten Scroll - Protection of Elemental
-(29019,10551,1,1,32,333333),-- Forgotten Scroll - Protection of Alignment
-(29019,13893,1,2,33,1000000),-- Sealed Holy Spirit's Cloak
-(29019,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29019,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29019,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29019,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
-(29020,80,1,1,0,60000),-- Tallum Blade
-(29020,98,1,1,0,60000),-- Halberd
-(29020,150,1,1,0,60000),-- Elemental Sword
-(29020,288,1,1,0,60000),-- Carnage Bow
-(29020,6364,1,1,0,12000),-- Forgotten Blade
-(29020,6365,1,1,0,12000),-- Basalt Battlehammer
-(29020,6367,1,1,0,9000),-- Angel Slayer
-(29020,6369,1,1,0,9000),-- Dragon Hunter Axe
-(29020,6370,1,1,0,9000),-- Saint Spear
-(29020,6580,1,1,0,9000),-- Tallum Blade*Dark Legion\'s Edge
-(29020,212,1,1,1,60000),-- Dasparion\'s Staff
-(29020,235,1,1,1,60000),-- Bloody Orchid
-(29020,269,1,1,1,60000),-- Blood Tornado
-(29020,2504,1,1,1,60000),-- Meteor Shower
-(29020,6366,1,1,1,12000),-- Imperial Staff
-(29020,6371,1,1,1,12000),-- Demon Splinter
-(29020,6372,1,1,1,12000),-- Heaven\'s Divider
-(29020,6579,1,1,1,12000),-- Arcana Mace
-(29020,7575,1,1,1,12000),-- Draconic Bow
-(29020,6658,1,1,2,1000000),-- Ring of Baium
-(29020,8751,1,2,200,450000),-- High-Grade Life Stone: level 70
-(29020,8761,1,1,200,100000),-- Top-Grade Life Stone: level 70
-(29020,8752,1,2,200,400000),-- High-Grade Life Stone: level 76
-(29020,8762,1,1,200,50000),-- Top-Grade Life Stone: level 76
-(29022,135,1,1,0,48000),-- Samurai Longsword
-(29022,204,1,1,0,12000),-- Deadman\'s Staff
-(29022,205,1,1,0,12000),-- Ghoul\'s Staff
-(29022,206,1,1,0,15000),-- Demon\'s Staff
-(29022,228,1,1,0,48000),-- Crystal Dagger
-(29022,266,1,1,0,30000),-- Great Pata
-(29022,286,1,1,0,39000),-- Eminence Bow
-(29022,299,1,1,0,30000),-- Orcish Poleaxe
-(29022,2503,1,1,0,36000),-- Yaksa Mace
-(29022,5286,1,1,0,30000),-- Berserker Blade
-(29022,78,1,1,1,10000),-- Great Sword
-(29022,91,1,1,1,12000),-- Heavy War Axe
-(29022,92,1,1,1,13000),-- Sprite\'s Staff
-(29022,142,1,1,1,8000),-- Keshanberk
-(29022,148,1,1,1,8000),-- Sword of Valhalla
-(29022,229,1,1,1,8000),-- Kris
-(29022,243,1,1,1,8000),-- Hell Knife
-(29022,267,1,1,1,10000),-- Arthro Nail
-(29022,284,1,1,1,13000),-- Dark Elven Long Bow
-(29022,300,1,1,1,10000),-- Great Axe
-(29022,357,1,1,2,50000),-- Zubei\'s Breastplate
-(29022,2376,1,1,2,50000),-- Avadon Breastplate
-(29022,2384,1,1,2,50000),-- Zubei\'s Leather Shirt
-(29022,2397,1,1,2,50000),-- Tunic of Zubei
-(29022,383,1,1,3,50000),-- Zubei\'s Gaiters
-(29022,2379,1,1,3,50000),-- Avadon Gaiters
-(29022,2388,1,1,3,50000),-- Zubei\'s Leather Gaiters
-(29022,2402,1,1,3,50000),-- Stockings of Zubei
-(29022,2390,1,1,4,100000),-- Avadon Leather Armor
-(29022,2406,1,1,4,100000),-- Avadon Robe
-(29022,503,1,1,5,30000),-- Zubei\'s Helmet
-(29022,554,1,1,5,30000),-- Zubei\'s Boots
-(29022,600,1,1,5,30000),-- Avadon Boots
-(29022,612,1,1,5,30000),-- Zubei\'s Gauntlets
-(29022,633,1,1,5,30000),-- Zubei\'s Shield
-(29022,673,1,1,5,30000),-- Avadon Shield
-(29022,947,1,1,5,60000),-- Scroll: Enchant Weapon (Grade B)
-(29022,2415,1,1,5,30000),-- Avadon Circlet
-(29022,2464,1,1,5,30000),-- Avadon Gloves
-(29022,57,180000,220000,6,1000000),-- Adena
-(29022,57,180000,220000,7,1000000),-- Adena
-(29022,57,180000,220000,8,1000000),-- Adena
-(29022,57,180000,220000,9,1000000),-- Adena
-(29022,57,180000,220000,10,1000000),-- Adena
-(29022,57,180000,220000,11,1000000),-- Adena
-(29022,57,180000,220000,12,1000000),-- Adena
-(29022,6659,1,1,13,1000000),-- Zaken\'s Earring
-(29022,8922,1,1,14,100000),-- Pirate Hat
-(29022,10295,1,1,15,50000),-- Transform Sealbook - Zaken
-(29022,8747,2,4,200,450000),-- High-Grade Life Stone: level 58
-(29022,8757,1,2,200,100000),-- Top-Grade Life Stone: level 58
-(29022,8748,2,4,200,400000),-- High-Grade Life Stone: level 61
-(29022,8758,1,2,200,50000),-- Top-Grade Life Stone: level 61
+-- Queen Ant
+(29001,2499,1,1,0,60000), -- [elven_long_sword]
+(29001,70,1,1,0,60000), -- [claymore]
+(29001,159,1,1,0,55000), -- [bonebreaker]
+(29001,189,1,1,0,55000), -- [life_stick]
+(29001,188,1,1,0,55000), -- [ghost_staff]
+(29001,225,1,1,0,55000), -- [mithril_dagger]
+(29001,262,1,1,0,50000), -- [scallop_jamadhr]
+(29001,280,1,1,0,55000), -- [cyclone_bow]
+(29001,297,1,1,0,55000), -- [glaive]
+(29001,851,1,2,1,350000), -- [onyxbeast'seye_earing]
+(29001,914,1,2,1,300000), -- [necklace_of_darkness]
+(29001,882,1,2,1,350000), -- [mithril_ring]
+(29001,353,1,2,2,375000), -- [half_plate]
+(29001,380,1,2,2,375000), -- [plate_gaiters]
+(29001,396,1,2,3,425000), -- [slamander_skin_mail]
+(29001,438,1,2,3,425000), -- [sage's_rag]
+(29001,2412,1,3,4,200000), -- [plate_helmet]
+(29001,1125,1,3,4,200000), -- [assault_boots]
+(29001,607,1,3,4,200000), -- [ogre_power_gauntlet]
+(29001,630,1,3,4,200000), -- [square_shield]
+(29001,955,1,3,4,200000), -- [scrl_of_ench_wp_d]
+(29001,57,140000,170000,5,1000000), -- [adena]
+(29001,57,140000,170000,6,1000000), -- [adena]
+(29001,57,140000,170000,7,1000000), -- [adena]
+(29001,57,140000,170000,8,1000000), -- [adena]
+(29001,57,140000,170000,9,1000000), -- [adena]
+(29001,57,140000,170000,10,1000000), -- [adena]
+(29001,57,120000,150000,11,1000000), -- [adena]
+(29001,6660,1,1,12,300000), -- [ring_of_queen_ant]
+-- Core
+(29006,75,1,1,0,48000), -- [caliburs]
+(29006,84,1,1,0,40000), -- [homunkulus's_sword]
+(29006,162,1,1,0,48000), -- [war_axe]
+(29006,174,1,1,0,40000), -- [nirvana_axe]
+(29006,200,1,1,0,40000), -- [sage's_staff]
+(29006,233,1,1,0,48000), -- [dark_screamer]
+(29006,265,1,1,0,40000), -- [fist_blade]
+(29006,283,1,1,0,48000), -- [akat_long_bow]
+(29006,301,1,1,0,48000), -- [scorpion]
+(29006,60,1,1,1,120000), -- [composite_armor]
+(29006,400,1,1,1,120000), -- [theca_leather_mail]
+(29006,420,1,1,1,120000), -- [theca_leather_gaiters]
+(29006,441,1,1,1,120000), -- [demon's_tunic]
+(29006,472,1,1,1,120000), -- [demon's_hose]
+(29006,517,1,1,2,140000), -- [composite_helmet]
+(29006,2435,1,1,2,140000), -- [demon's_boots]
+(29006,2459,1,1,2,140000), -- [demon's_gloves]
+(29006,107,1,1,2,140000), -- [composite_shield]
+(29006,951,1,1,2,140000), -- [scrl_of_ench_wp_c]
+(29006,57,100000,150000,3,1000000), -- [adena]
+(29006,57,100000,150000,4,1000000), -- [adena]
+(29006,57,100000,150000,5,1000000), -- [adena]
+(29006,57,100000,150000,6,1000000), -- [adena]
+(29006,57,100000,150000,7,1000000), -- [adena]
+(29006,8744,2,4,8,450000), -- [rare_49_c]
+(29006,8745,2,4,8,400000), -- [rare_52_c]
+(29006,8754,1,2,8,100000), -- [unique_49_c]
+(29006,8755,1,2,8,50000), -- [unique_52_c]
+(29006,6662,1,1,9,300000), -- [ring_of_core]
+-- Orfen
+(29014,76,1,1,0,42000), -- [sword_of_delusion]
+(29014,145,1,1,0,35000), -- [deathbreath_sword]
+(29014,162,1,1,0,42000), -- [war_axe]
+(29014,201,1,1,0,35000), -- [club_of_nature]
+(29014,199,1,1,0,35000), -- [paagrio_hammer]
+(29014,231,1,1,0,42000), -- [grace_dagger]
+(29014,265,1,1,0,35000), -- [fist_blade]
+(29014,283,1,1,0,42000), -- [akat_long_bow]
+(29014,303,1,1,0,42000), -- [widow_maker]
+(29014,854,1,2,1,350000), -- [earing_of_binding]
+(29014,917,1,2,1,300000), -- [necklace_of_mermaid]
+(29014,885,1,2,1,350000), -- [ring_of_ages]
+(29014,60,1,1,2,100000), -- [composite_armor]
+(29014,400,1,1,2,100000), -- [theca_leather_mail]
+(29014,420,1,1,2,100000), -- [theca_leather_gaiters]
+(29014,441,1,1,2,100000), -- [demon's_tunic]
+(29014,472,1,1,2,100000), -- [demon's_hose]
+(29014,517,1,2,3,100000), -- [composite_helmet]
+(29014,64,1,2,3,100000), -- [composite_boots]
+(29014,608,1,2,3,100000), -- [mithril_gauntlet]
+(29014,103,1,2,3,100000), -- [tower_shield]
+(29014,951,1,2,3,100000), -- [scrl_of_ench_wp_c]
+(29014,57,110000,150000,4,1000000), -- [adena]
+(29014,57,110000,150000,5,1000000), -- [adena]
+(29014,57,110000,150000,6,1000000), -- [adena]
+(29014,57,110000,150000,7,1000000), -- [adena]
+(29014,57,110000,150000,8,1000000), -- [adena]
+(29014,8744,2,4,9,450000), -- [rare_49_c]
+(29014,8745,2,4,9,400000), -- [rare_52_c]
+(29014,8754,1,2,9,100000), -- [unique_49_c]
+(29014,8755,1,2,9,50000), -- [unique_52_c]
+(29014,6661,1,1,10,300000), -- [earring_of_orfen]
+-- Antharas
+(29019,8620,10,30,100,500000), -- [sb_increase_of_divinity_s]
+(29019,13893,1,2,100,500000), -- [sealed_holly_sprit's_cloak]
+(29019,80,1,2,0,250000), -- [tallum_blade]
+(29019,98,1,2,0,250000), -- [halbard]
+(29019,269,1,2,0,250000), -- [blood_tornado]
+(29019,2504,1,2,0,250000), -- [meteor_shower]
+(29019,235,1,2,1,250000), -- [bloody_orchid]
+(29019,288,1,2,1,250000), -- [carnium_bow]
+(29019,150,1,2,1,250000), -- [elemental_sword]
+(29019,212,1,2,1,250000), -- [dasparion's_staff]
+(29019,81,1,2,2,250000), -- [dragon_slayer]
+(29019,151,1,2,2,250000), -- [sword_of_miracle]
+(29019,2500,1,2,2,250000), -- [dark_legion's_edge]
+(29019,164,1,2,2,250000), -- [elysian]
+(29019,236,1,2,3,200000), -- [soul_separator]
+(29019,270,1,2,3,200000), -- [dragon_grinder]
+(29019,289,1,2,3,200000), -- [soul_bow]
+(29019,213,1,2,3,200000), -- [worldtree's_branch]
+(29019,305,1,2,3,200000), -- [tallum_glaive]
+(29019,6364,1,1,4,170000), -- [forgotten_blade]
+(29019,6365,1,1,4,170000), -- [basalt_battlehammer]
+(29019,6369,1,1,4,170000), -- [dragon_hunter_axe]
+(29019,6370,1,1,4,170000), -- [saint_spear]
+(29019,6372,1,1,4,160000), -- [heavens_divider]
+(29019,6580,1,1,4,160000), -- [tallum_blade*dark_legion's_edge]
+(29019,7575,1,1,5,200000), -- [draconic_bow]
+(29019,6366,1,1,5,200000), -- [imperial_staff]
+(29019,6367,1,1,5,200000), -- [angel_slayer]
+(29019,6371,1,1,5,200000), -- [demon_splinter]
+(29019,6579,1,1,5,200000), -- [arcana_mace]
+(29019,6326,1,5,6,300000), -- [sealed_majestic_necklace]
+(29019,6327,1,5,6,350000), -- [sealed_majestic_earing]
+(29019,6328,1,5,6,350000), -- [sealed_majestic_ring]
+(29019,6323,1,5,7,300000), -- [sealed_phoenix's_necklace]
+(29019,6324,1,5,7,350000), -- [sealed_phoenix's_earing]
+(29019,6325,1,5,7,350000), -- [sealed_phoenix's_ring]
+(29019,6724,1,1,8,350000), -- [sealed_sanddragon's_earing]
+(29019,6725,1,1,8,350000), -- [sealed_ring_of_aurakyria]
+(29019,6726,1,1,8,300000), -- [sealed_dragon_necklace]
+(29019,5287,1,3,9,500000), -- [sealed_dark_crystal_breastplate]
+(29019,5297,1,3,9,250000), -- [sealed_dark_crystal_leather_mail]
+(29019,5304,1,3,9,250000), -- [sealed_tallum_tunic]
+(29019,5311,1,3,10,350000), -- [sealed_armor_of_nightmare]
+(29019,5320,1,3,10,350000), -- [sealed_leather_mail_of_nightmare]
+(29019,5326,1,3,10,300000), -- [sealed_robe_of_nightmare]
+(29019,5293,1,3,11,250000), -- [sealed_tallum_plate_armor]
+(29019,5301,1,3,11,250000), -- [sealed_tallum_leather_mail]
+(29019,5308,1,3,11,250000), -- [sealed_dark_crystal_robe]
+(29019,5316,1,3,11,80000), -- [sealed_majestic_platte_armor]
+(29019,5323,1,3,11,80000), -- [sealed_majestic_leather_mail]
+(29019,5329,1,3,11,90000), -- [sealed_majestic_robe]
+(29019,5288,1,3,12,350000), -- [sealed_dark_crystal_gaiters]
+(29019,5298,1,3,12,350000), -- [sealed_legging_of_dark_crystal]
+(29019,5305,1,3,12,300000), -- [sealed_tallum_hose]
+(29019,6674,1,1,13,150000), -- [sealed_imperial_crusader_armor]
+(29019,6675,1,1,13,150000), -- [sealed_imperial_crusader_gaiters]
+(29019,6680,1,1,13,350000), -- [sealed_draconic_leather_armor]
+(29019,6684,1,1,13,350000), -- [sealed_major_arcana_robe]
+(29019,5289,1,3,14,250000), -- [sealed_dark_crystal_helmet]
+(29019,5294,1,3,14,250000), -- [sealed_tallum_bonnet]
+(29019,5312,1,3,14,250000), -- [sealed_helm_of_nightmare]
+(29019,5317,1,3,14,250000), -- [sealed_magestic_circlet]
+(29019,5291,1,3,15,250000), -- [sealed_dark_crystal_boots]
+(29019,5296,1,3,15,250000), -- [sealed_tallum_boots]
+(29019,5314,1,3,15,250000), -- [sealed_boots_of_nightmare]
+(29019,5319,1,3,15,250000), -- [sealed_magestic_boots]
+(29019,5290,1,3,16,250000), -- [sealed_dark_crystal_gloves]
+(29019,5295,1,3,16,250000), -- [sealed_tallum_gloves]
+(29019,5313,1,3,16,250000), -- [sealed_gloves_of_nightmare]
+(29019,5318,1,3,16,250000), -- [sealed_magestic_gloves]
+(29019,5292,1,3,17,400000), -- [sealed_dark_crystal_shield]
+(29019,5315,1,3,17,400000), -- [sealed_shield_of_nightmare]
+(29019,6678,1,1,17,200000), -- [sealed_imperial_crusader_shield]
+(29019,6676,1,1,18,340000), -- [sealed_imperial_crusader_gauntlet]
+(29019,6681,1,1,18,330000), -- [sealed_draconic_leather_gloves]
+(29019,6685,1,1,18,330000), -- [sealed_major_arcana_gloves]
+(29019,6677,1,1,19,340000), -- [sealed_imperial_crusader_boots]
+(29019,6682,1,1,19,330000), -- [sealed_draconic_leather_boots]
+(29019,6686,1,1,19,330000), -- [sealed_major_arcana_boots]
+(29019,6679,1,1,20,340000), -- [sealed_imperial_crusader_helmet]
+(29019,6683,1,1,20,330000), -- [sealed_draconic_leather_helmet]
+(29019,6687,1,1,20,330000), -- [sealed_major_arcana_hood]
+(29019,729,1,19,21,1000000), -- [scrl_of_ench_wp_a]
+(29019,1538,1,59,22,1000000), -- [blessed_scroll_of_escape]
+(29019,3936,1,39,23,1000000), -- [blessed_scroll_of_resurrection]
+(29019,57,14000000,18000000,24,1000000), -- [adena]
+(29019,57,14000000,18000000,25,1000000), -- [adena]
+(29019,57,14000000,18000000,26,1000000), -- [adena]
+(29019,57,14000000,18000000,27,1000000), -- [adena]
+(29019,57,14000000,18000000,28,1000000), -- [adena]
+(29019,57,14000000,18000000,29,1000000), -- [adena]
+(29019,57,9000000,13000000,30,1000000), -- [adena]
+(29019,6656,1,1,31,1000000), -- [earring_of_antaras]
+-- Baium
+(29020,8620,5,15,100,1000000), -- [sb_increase_of_divinity_s]
+(29020,80,1,1,0,60000), -- [tallum_blade]
+(29020,98,1,1,0,60000), -- [halbard]
+(29020,288,1,1,0,60000), -- [carnium_bow]
+(29020,150,1,1,0,60000), -- [elemental_sword]
+(29020,6364,1,1,0,12000), -- [forgotten_blade]
+(29020,6365,1,1,0,12000), -- [basalt_battlehammer]
+(29020,6580,1,1,0,9000), -- [tallum_blade*dark_legion's_edge]
+(29020,6367,1,1,0,9000), -- [angel_slayer]
+(29020,6369,1,1,0,9000), -- [dragon_hunter_axe]
+(29020,6370,1,1,0,9000), -- [saint_spear]
+(29020,269,1,1,1,60000), -- [blood_tornado]
+(29020,2504,1,1,1,60000), -- [meteor_shower]
+(29020,235,1,1,1,60000), -- [bloody_orchid]
+(29020,212,1,1,1,60000), -- [dasparion's_staff]
+(29020,7575,1,1,1,12000), -- [draconic_bow]
+(29020,6366,1,1,1,12000), -- [imperial_staff]
+(29020,6371,1,1,1,12000), -- [demon_splinter]
+(29020,6579,1,1,1,12000), -- [arcana_mace]
+(29020,6372,1,1,1,12000), -- [heavens_divider]
+(29020,8751,1,2,2,450000), -- [rare_70_a]
+(29020,8752,1,2,2,400000), -- [rare_75_s]
+(29020,8761,1,1,2,100000), -- [unique_70_a]
+(29020,8762,1,1,2,50000), -- [unique_75_s]
+(29020,6658,1,1,3,1000000), -- [ring_of_baium]
+-- Zaken
+(29022,135,1,1,0,48000), -- [samurai_longsword]
+(29022,204,1,1,0,12000), -- [deadman's_staff]
+(29022,205,1,1,0,12000), -- [ghoul's_staff]
+(29022,206,1,1,0,15000), -- [demon's_staff]
+(29022,228,1,1,0,48000), -- [crystal_dagger]
+(29022,266,1,1,0,30000), -- [great_pata]
+(29022,286,1,1,0,39000), -- [eminence_bow]
+(29022,299,1,1,0,30000), -- [orcish_poleaxe]
+(29022,2503,1,1,0,36000), -- [yaksa_mace]
+(29022,5286,1,1,0,30000), -- [berserker_blade]
+(29022,78,1,1,1,10000), -- [great_sword]
+(29022,91,1,1,1,12000), -- [heavy_war_axe]
+(29022,92,1,1,1,13000), -- [sprite's_staff]
+(29022,142,1,1,1,8000), -- [kshanberk]
+(29022,148,1,1,1,8000), -- [sword_of_valhalla]
+(29022,229,1,1,1,8000), -- [kris]
+(29022,243,1,1,1,8000), -- [hell_knife]
+(29022,267,1,1,1,10000), -- [arthro_nail]
+(29022,284,1,1,1,13000), -- [dark_elven_long_bow]
+(29022,300,1,1,1,10000), -- [great_axe]
+(29022,357,1,1,2,50000), -- [shrnoen's_breastplate]
+(29022,2384,1,1,2,50000), -- [shrnoen's_leather_shirts]
+(29022,2376,1,1,2,50000), -- [avadon_breastplate]
+(29022,2397,1,1,2,50000), -- [tunic_of_shrnoen]
+(29022,383,1,1,3,50000), -- [shrnoen's_gaiters]
+(29022,2379,1,1,3,50000), -- [avadon_gaiters]
+(29022,2388,1,1,3,50000), -- [shrnoen's_leather_gaiters]
+(29022,2402,1,1,3,50000), -- [hose_of_shrnoen]
+(29022,2390,1,1,4,100000), -- [avadon_leather_mail]
+(29022,2406,1,1,4,100000), -- [avadon_robe]
+(29022,503,1,1,5,30000), -- [shrnoen's_helmet]
+(29022,554,1,1,5,30000), -- [shrnoen's_boots]
+(29022,600,1,1,5,30000), -- [avadon_boots]
+(29022,612,1,1,5,30000), -- [shrnoen's_gauntlet]
+(29022,633,1,1,5,30000), -- [shrnoen's_shield]
+(29022,673,1,1,5,30000), -- [avadon_shield]
+(29022,2415,1,1,5,30000), -- [avadon_circlet]
+(29022,2464,1,1,5,30000), -- [avadon_gloves]
+(29022,947,1,1,5,60000), -- [scrl_of_ench_wp_b]
+(29022,57,180000,220000,6,1000000), -- [adena]
+(29022,57,180000,220000,7,1000000), -- [adena]
+(29022,57,180000,220000,8,1000000), -- [adena]
+(29022,57,180000,220000,9,1000000), -- [adena]
+(29022,57,180000,220000,10,1000000), -- [adena]
+(29022,57,180000,220000,11,1000000), -- [adena]
+(29022,57,180000,220000,12,1000000), -- [adena]
+(29022,6659,1,1,13,850000), -- [earring_of_zaken]
+(29022,8747,2,4,14,450000), -- [rare_58_b]
+(29022,8748,2,4,14,400000), -- [rare_61_b]
+(29022,8757,1,2,14,100000), -- [unique_58_b]
+(29022,8758,1,2,14,50000), -- [unique_61_b]
+(29022,8922,1,1,15,10000), -- [sea_robber]
 (29023,1061,4,8,2,200000),-- Healing Potion
 (29024,1061,4,8,2,200000),-- Healing Potion
 (29026,1061,4,8,2,200000),-- Healing Potion
 (29027,1061,4,8,2,200000),-- Healing Potion
-(29028,80,1,2,0,250000),-- Tallum Blade
-(29028,98,1,2,0,250000),-- Halberd
-(29028,269,1,2,0,250000),-- Blood Tornado
-(29028,2504,1,2,0,250000),-- Meteor Shower
-(29028,150,1,2,1,250000),-- Elemental Sword
-(29028,212,1,2,1,250000),-- Dasparion\'s Staff
-(29028,235,1,2,1,250000),-- Bloody Orchid
-(29028,288,1,2,1,250000),-- Carnage Bow
-(29028,81,1,2,2,250000),-- Dragon Slayer
-(29028,151,1,2,2,250000),-- Sword of Miracles 
-(29028,164,1,2,2,250000),-- Elysian
-(29028,2500,1,2,2,250000),-- Dark Legion\'s Edge
-(29028,213,1,2,3,200000),-- Branch of The Mother Tree
-(29028,236,1,2,3,200000),-- Soul Separator
-(29028,270,1,2,3,200000),-- Dragon Grinder
-(29028,289,1,2,3,200000),-- Soul Bow
-(29028,305,1,2,3,200000),-- Tallum Glaive
-(29028,6364,1,1,4,170000),-- Forgotten Blade
-(29028,6365,1,1,4,170000),-- Basalt Battlehammer
-(29028,6369,1,1,4,170000),-- Dragon Hunter Axe
-(29028,6370,1,1,4,170000),-- Saint Spear
-(29028,6372,1,1,4,160000),-- Heaven\'s Divider
-(29028,6580,1,1,4,160000),-- Tallum Blade*Dark Legion\'s Edge
-(29028,6366,1,1,5,200000),-- Imperial Staff
-(29028,6367,1,1,5,200000),-- Angel Slayer
-(29028,6371,1,1,5,200000),-- Demon Splinter
-(29028,6579,1,1,5,200000),-- Arcana Mace
-(29028,7575,1,1,5,200000),-- Draconic Bow
-(29028,6326,1,5,6,300000),-- Sealed Majestic Necklace
-(29028,6327,1,5,6,350000),-- Sealed Majestic Earring
-(29028,6328,1,5,6,350000),-- Sealed Majestic Ring
-(29028,6323,1,5,7,300000),-- Sealed Phoenix Necklace
-(29028,6324,1,5,7,350000),-- Sealed Phoenix Earring
-(29028,6325,1,5,7,350000),-- Sealed Phoenix Ring
-(29028,6724,1,1,8,350000),-- Sealed Tateossian Earring 
-(29028,6725,1,1,8,350000),-- Sealed Tateossian Ring
-(29028,6726,1,1,8,300000),-- Sealed Tateossian Necklace
-(29028,5287,1,3,9,500000),-- Sealed Dark Crystal breastplate
-(29028,5297,1,3,9,250000),-- Sealed Dark Crystal Leather Armor
-(29028,5304,1,3,9,250000),-- Sealed Tallum Tunic
-(29028,5311,1,3,10,350000),-- Sealed Armor of Nightmare
-(29028,5320,1,3,10,350000),-- Sealed Leather Armor of Nightmare
-(29028,5326,1,3,10,300000),-- Sealed Robe of Nightmare
-(29028,5293,1,3,11,250000),-- Sealed Tallum Plate Armor
-(29028,5301,1,3,11,250000),-- Sealed Tallum Leather Armor
-(29028,5308,1,3,11,250000),-- Sealed Dark Crystal Robe
-(29028,5316,1,3,11,80000),-- Sealed Majestic Plate Armor
-(29028,5323,1,3,11,80000),-- Sealed Majestic Leather Armor
-(29028,5329,1,3,11,90000),-- Sealed Majestic Robe
-(29028,5288,1,3,12,350000),-- Sealed Dark Crystal Gaiters
-(29028,5298,1,3,12,350000),-- Sealed Dark Crystalline Leggings
-(29028,5305,1,3,12,300000),-- Sealed Tallum Stockings
-(29028,6674,1,1,13,150000),-- Sealed Imperial Crusader Breastplate
-(29028,6675,1,1,13,150000),-- Sealed Imperial Crusader Gaiters
-(29028,6680,1,1,13,350000),-- Sealed Draconic Leather Armor
-(29028,6684,1,1,13,350000),-- Sealed Major Arcana Robe
-(29028,5289,1,3,14,250000),-- Sealed Dark Crystal Helmet
-(29028,5294,1,3,14,250000),-- Sealed Tallum Helmet
-(29028,5312,1,3,14,250000),-- Sealed Helm of Nightmare
-(29028,5317,1,3,14,250000),-- Sealed Majestic Circlet
-(29028,5291,1,3,15,250000),-- Sealed Dark Crystal Boots
-(29028,5296,1,3,15,250000),-- Sealed Tallum Boots
-(29028,5314,1,3,15,250000),-- Sealed Boots of Nightmare
-(29028,5319,1,3,15,250000),-- Sealed Majestic Boots
-(29028,5290,1,3,16,250000),-- Sealed Dark Crystal Gloves
-(29028,5295,1,3,16,250000),-- Sealed Tallum Gloves
-(29028,5313,1,3,16,250000),-- Sealed Gloves of Nightmare
-(29028,5318,1,3,16,250000),-- Sealed Majestic Gloves
-(29028,5292,1,3,17,400000),-- Sealed Dark Crystal Shield
-(29028,5315,1,3,17,400000),-- Sealed Shield of Nightmare
-(29028,6678,1,1,17,200000),-- Sealed Imperial Crusader Shield
-(29028,6676,1,1,18,340000),-- Sealed Imperial Crusader Gauntlet
-(29028,6681,1,1,18,330000),-- Sealed Draconic Leather Glove
-(29028,6685,1,1,18,330000),-- Sealed Major Arcana Glove
-(29028,6677,1,1,19,340000),-- Sealed Imperial Crusader Boots
-(29028,6682,1,1,19,330000),-- Sealed Draconic Leather Boots
-(29028,6686,1,1,19,330000),-- Sealed Major Arcana Boots
-(29028,6679,1,1,20,340000),-- Sealed Imperial Crusader Helmet
-(29028,6683,1,1,20,330000),-- Sealed Draconic Leather Helmet
-(29028,6687,1,1,20,330000),-- Sealed Major Arcana Circlet
-(29028,729,1,19,21,1000000),-- Scroll: Enchant Weapon (Grade A)
-(29028,1538,1,59,22,1000000),-- Blessed Scroll of Escape
-(29028,3936,1,39,23,1000000),-- Blessed Scroll of Resurrection
-(29028,57,14000000,18000000,24,1000000),-- Adena
-(29028,57,14000000,18000000,25,1000000),-- Adena
-(29028,57,14000000,18000000,26,1000000),-- Adena
-(29028,57,14000000,18000000,27,1000000),-- Adena
-(29028,57,14000000,18000000,28,1000000),-- Adena
-(29028,57,14000000,18000000,29,1000000),-- Adena
-(29028,57,14000000,18000000,30,1000000),-- Adena
-(29028,57,14000000,18000000,31,1000000),-- Adena
-(29028,57,14000000,18000000,32,1000000),-- Adena
-(29028,57,2000000,6000000,33,1000000),-- Adena
-(29028,6657,1,1,34,1000000),-- Necklace of Valakas
-(29028,10549,1,1,35,333334),-- Forgotten Scroll - Protection of Rune
-(29028,10550,1,1,35,333333),-- Forgotten Scroll - Protection of Elemental
-(29028,10551,1,1,35,333333),-- Forgotten Scroll - Protection of Alignment
-(29028,13893,1,2,36,1000000),-- Sealed Holy Spirit's Cloak
-(29028,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29028,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29028,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29028,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
+-- Valakas
+(29028,8620,10,30,100,500000), -- [sb_increase_of_divinity_s]
+(29028,13893,1,2,100,500000), -- [sealed_holly_sprit's_cloak]
+(29028,15560,1,1,0,63700), -- [vigwik_axe]
+(29028,15561,1,1,0,63630), -- [evildeity_maul]
+(29028,15562,1,1,0,63630), -- [feathereye_blade]
+(29028,15563,1,1,0,63630), -- [octo_claw]
+(29028,15564,1,1,0,63630), -- [doubletopa_spear]
+(29028,15565,1,1,0,63630), -- [cuticle]
+(29028,15566,1,1,0,63630), -- [blackvisage]
+(29028,15567,1,1,0,63630), -- [veniplant_sword]
+(29028,15568,1,1,0,63630), -- [skullcarnium_bow]
+(29028,15558,1,1,0,63630), -- [peri_el_sword]
+(29028,15559,1,1,0,63630), -- [skul_edge]
+(29028,15544,1,1,1,45450), -- [incessantcore_sword]
+(29028,15545,1,1,1,45450), -- [mamba_edge]
+(29028,15546,1,1,1,45450), -- [expowder_mace]
+(29028,15547,1,1,1,45450), -- [pereztear_hammer]
+(29028,15548,1,1,1,45450), -- [lavamond_saw]
+(29028,15549,1,1,1,45450), -- [jademice_claw]
+(29028,15550,1,1,1,45450), -- [ghostcleaner]
+(29028,15551,1,1,1,45450), -- [sacredumors]
+(29028,15552,1,1,1,45450), -- [psyskilt_cane]
+(29028,15553,1,1,1,45450), -- [archangel_sword]
+(29028,15554,1,1,1,45450), -- [recurvethorne_bow]
+(29028,15743,1,1,2,91000), -- [sealed_verpes_helmet]
+(29028,15744,1,1,2,90900), -- [sealed_verpes_leather_helmet]
+(29028,15745,1,1,2,90900), -- [sealed_verpes_circlet]
+(29028,15752,1,1,2,90900), -- [sealed_verpes_gauntlet]
+(29028,15753,1,1,2,90900), -- [sealed_verpes_leather_gloves]
+(29028,15754,1,1,2,90900), -- [sealed_verpes_gloves]
+(29028,15755,1,1,2,90900), -- [sealed_verpes_boots]
+(29028,15756,1,1,2,90900), -- [sealed_verpes_leather_boots]
+(29028,15757,1,1,2,90900), -- [sealed_verpes_shoes]
+(29028,15758,1,1,2,90900), -- [sealed_verpes_shield]
+(29028,15759,1,1,2,90900), -- [sealed_verpes_sigil]
+(29028,15746,1,1,3,166600), -- [sealed_verpes_cuirass]
+(29028,15747,1,1,3,166600), -- [sealed_verpes_houberk]
+(29028,15748,1,1,3,166600), -- [sealed_verpes_jaket]
+(29028,15749,1,1,3,167000), -- [sealed_verpes_gaiter]
+(29028,15750,1,1,3,166600), -- [sealed_verpes_leather_legging]
+(29028,15751,1,1,3,166600), -- [sealed_verpes_hose]
+(29028,15763,1,1,4,167000), -- [sealed_verpes_ring]
+(29028,15764,1,1,4,166500), -- [sealed_verpes_earring]
+(29028,15765,1,1,4,166500), -- [sealed_verpes_necklace]
+(29028,959,1,19,5,1000000), -- [scrl_of_ench_wp_s]
+(29028,1538,1,59,6,1000000), -- [blessed_scroll_of_escape]
+(29028,3936,1,39,7,1000000), -- [blessed_scroll_of_resurrection]
+(29028,57,14000000,18000000,8,1000000), -- [adena]
+(29028,57,2000000,6000000,9,1000000), -- [adena]
+(29028,16162,2,4,10,450000), -- [rare_85_s]
+(29028,16166,2,4,10,400000), -- [rare_86_s]
+(29028,16163,1,2,10,100000), -- [unique_85_s]
+(29028,16167,1,2,10,50000), -- [unique_86_s]
+(29028,6657,1,1,11,1000000), -- [necklace_of_valakas]
 (29030,6652,2,6,2,186739),-- Amulet: Protection of Valakas
 (29030,6654,18,54,2,64840),-- Amulet: Flames of Valakas
 (29030,6655,14,42,2,41683),-- Amulet: Slay Valakas
@@ -38124,99 +38077,44 @@ INSERT INTO `droplist` VALUES
 (29040,6652,2,6,2,197626),-- Amulet: Protection of Valakas
 (29040,6654,18,54,2,68620),-- Amulet: Flames of Valakas
 (29040,6655,14,42,2,44113),-- Amulet: Slay Valakas
-(29047,57,9000000,11000000,0,1000000),-- Adena
-(29047,57,9000000,11000000,19,1000000),-- Adena
-(29047,1538,1,30,14,1000000),-- Blessed Scroll of Escape
-(29047,3936,1,10,13,1000000),-- Blessed Scroll of Resurrection
-(29047,8191,1,1,12,1000000),-- Frintezza's Necklace
-(29047,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29047,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29047,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29047,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
-(29047,5304,1,1,9,210000),-- Sealed Tallum Tunic
-(29047,5292,1,1,8,250000),-- Sealed Dark Crystal Shield 
-(29047,6326,1,1,11,210000),-- Sealed Majestic Necklace
-(29047,5305,1,1,9,175000),-- Sealed Tallum Stockings
-(29047,5326,1,1,7,175000),-- Sealed Nightmare Robe
-(29047,6684,1,1,17,100000),-- Sealed Major Arcana Robe
-(29047,6675,1,1,16,100000),-- Sealed Imperial Crusader Gaiters
-(29047,6724,1,1,18,140000),-- Sealed Tateossian Earring
-(29047,5291,1,1,10,150000),-- Sealed Dark Crystal Boots
-(29047,5308,1,1,10,108000),-- Sealed Dark Crystal Robe
-(29047,150,1,1,4,100000),-- Elemental Sword
-(29047,5287,1,1,10,210000),-- Sealed Dark Crystal breastplate
-(29047,6686,1,1,17,136000),-- Sealed Major arcana boots
-(29047,5315,1,1,8,150000),-- Sealed Shield of Nightmare
-(29047,2504,1,1,4,100000),-- Meteor Shower
-(29047,6676,1,1,16,132000),-- Sealed Imperial Crusade Gauntlet
-(29047,6327,1,1,11,180000),-- Sealed Majestic Earring
-(29047,6323,1,1,11,175000),-- Sealed Phoenix Necklace
-(29047,6683,1,1,1,132000),-- Sealed Draconic Leather Helmet
-(29047,5311,1,1,7,150000),-- Sealed Armor of Nightmare
-(29047,5293,1,1,9,120000),-- Sealed Tallum Plate Armor
-(29047,98,1,1,4,100000),-- Halberd
-(29047,6679,1,1,16,132000),-- Sealed Imperial Crusade Helmet
-(29047,5314,1,1,7,100000),-- Sealed Boots of Nightmare
-(29047,5317,1,1,15,100000),-- Sealed Majestic Circlet
-(29047,6726,1,1,18,140000),-- Sealed Tateossian Necklace
-(29047,6685,1,1,17,136000),-- Sealed Major Arcana Glove
-(29047,6687,1,1,17,136000),-- Sealed Major Arcana Circlet
-(29047,5288,1,1,10,150000),-- Sealed Dark Crystal Gaiters
-(29047,164,1,1,5,75000),-- Elysian
-(29047,6725,1,1,18,120000),-- Sealed Tateossian Ring
-(29047,6328,1,1,11,210000),-- Sealed Majestic Ring
-(29047,5297,1,1,10,180000),-- Sealed Dark Crystal Leather Armor
-(29047,6682,1,1,1,132000),-- Sealed Draconic Leather Boots
-(29047,5298,1,1,10,175000),-- Sealed Dark Crystal Leggings
-(29047,5320,1,1,7,175000),-- Sealed Leather Armor of Nightmare
-(29047,5289,1,1,10,150000),-- Sealed Dark Crystal Helmet
-(29047,6325,1,1,11,175000),-- Sealed Phoenix Ring
-(29047,5294,1,1,9,150000),-- Sealed Tallum Helmet
-(29047,6680,1,1,1,100000),-- Sealed Draconic Leather Armor
-(29047,288,1,1,4,100000),-- Carnage Bow
-(29047,5319,1,1,15,100000),-- Sealed Majestic Boots
-(29047,5329,1,1,15,102000),-- Sealed Majestic Robe
-(29047,5312,1,1,7,100000),-- Sealed Helm of Nightmare
-(29047,80,1,1,4,100000),-- Tallum Blade
-(29047,6681,1,1,1,132000),-- Sealed Draconic Leather Glove
-(29047,6324,1,1,11,150000),-- Sealed Phoenix Earring
-(29047,6677,1,1,16,132000),-- Sealed Imperial Crusade Boots
-(29047,5313,1,1,7,100000),-- Sealed Gauntlets of Nightmare
-(29047,289,1,1,5,60000),-- Soul Bow
-(29047,5290,1,1,10,150000),-- Sealed Dark Crystal Gloves
-(29047,5296,1,1,9,150000),-- Sealed Tallum Boots
-(29047,5295,1,1,9,150000),-- Sealed Tallum Gloves
-(29047,6369,1,1,6,36000),-- Dragon Hunter Axe
-(29047,2500,1,1,5,75000),-- Dark Legion's Edge
-(29047,235,1,1,4,100000),-- Bloody Orchid
-(29047,269,1,1,4,100000),-- Blood Tornado
-(29047,5323,1,1,15,102000),-- Sealed Majestic Leather Armor
-(29047,212,1,1,4,100000),-- Dasparion's Staff
-(29047,5301,1,1,9,108000),-- Sealed Tallum Leather Armor
-(29047,213,1,1,5,60000),-- Branch of the Mother Tree
-(29047,5318,1,1,15,100000),-- Sealed Majestic Gauntlets
-(29047,5316,1,1,15,60000),-- Sealed Majestic Plate Armor
-(29047,270,1,1,5,60000),-- Dragon Grinder
-(29047,6674,1,1,16,100000),-- Sealed Imperial Crusade Breastplate
-(29047,151,1,1,5,75000),-- Sword of Miracles
-(29047,7575,1,1,6,40000),-- Draconic Bow
-(29047,6372,1,1,6,36000),-- Heaven's Divider
-(29047,6370,1,1,6,36000),-- Saint Spear
-(29047,6365,1,1,6,36000),-- Basalt Battlegammer
-(29047,81,1,1,5,75000),-- Dragon Slayer
-(29047,6580,1,1,6,20000),-- Tallum Blade*Dark Legion's Edge
-(29047,6678,1,1,8,100000),-- Sealed Imperial Crusader Shield
-(29047,6366,1,1,6,40000),-- Imperial staff
-(29047,305,1,1,5,60000),-- Tallum Glaive
-(29047,6371,1,1,6,40000),-- Demon Splinter
-(29047,6579,1,1,6,40000),-- Arcana Mace
-(29047,236,1,1,5,60000),-- Soul Separator
-(29047,6367,1,1,6,40000),-- Angel Slayer
-(29047,6364,1,1,6,36000),-- Forgotten Blade
-(29047,10549,1,1,20,333334),-- Forgotten Scroll - Protection of Rune
-(29047,10550,1,1,20,333333),-- Forgotten Scroll - Protection of Elemental
-(29047,10551,1,1,20,333333),-- Forgotten Scroll - Protection of Alignment
-(29047,13893,1,2,21,700000),-- Sealed Holy Spirit's Cloak
+-- Scarlet Van Halisha
+(29047,8620,5,25,100,600000), -- [sb_increase_of_divinity_s]
+(29047,13893,1,1,100,400000), -- [sealed_holly_sprit's_cloak]
+(29047,15743,1,1,0,63700), -- [sealed_verpes_helmet]
+(29047,15744,1,1,0,63630), -- [sealed_verpes_leather_helmet]
+(29047,15745,1,1,0,63630), -- [sealed_verpes_circlet]
+(29047,15752,1,1,0,63630), -- [sealed_verpes_gauntlet]
+(29047,15753,1,1,0,63630), -- [sealed_verpes_leather_gloves]
+(29047,15754,1,1,0,63630), -- [sealed_verpes_gloves]
+(29047,15755,1,1,0,63630), -- [sealed_verpes_boots]
+(29047,15756,1,1,0,63630), -- [sealed_verpes_leather_boots]
+(29047,15757,1,1,0,63630), -- [sealed_verpes_shoes]
+(29047,15758,1,1,0,63630), -- [sealed_verpes_shield]
+(29047,15759,1,1,0,63630), -- [sealed_verpes_sigil]
+(29047,15746,1,1,1,116900), -- [sealed_verpes_cuirass]
+(29047,15747,1,1,1,116620), -- [sealed_verpes_houberk]
+(29047,15748,1,1,1,116620), -- [sealed_verpes_jaket]
+(29047,15749,1,1,1,116620), -- [sealed_verpes_gaiter]
+(29047,15750,1,1,1,116620), -- [sealed_verpes_leather_legging]
+(29047,15751,1,1,1,116620), -- [sealed_verpes_hose]
+(29047,13457,1,1,2,45500), -- [vesper_cutter]
+(29047,13458,1,1,2,45450), -- [vesper_slasher]
+(29047,13459,1,1,2,45450), -- [vesper_burster]
+(29047,13460,1,1,2,45450), -- [vesper_shaper]
+(29047,13466,1,1,2,45450), -- [vesper_singer]
+(29047,13461,1,1,2,45450), -- [vesper_fighter]
+(29047,13462,1,1,2,45450), -- [vesper_stormer]
+(29047,13463,1,1,2,45450), -- [vesper_avenger]
+(29047,13464,1,1,2,45450), -- [vesper_retributer]
+(29047,13465,1,1,2,45450), -- [vesper_caster]
+(29047,13467,1,1,2,45450), -- [vesper_thrower]
+(29047,1538,1,30,3,600000), -- [blessed_scroll_of_escape]
+(29047,3936,1,10,4,600000), -- [blessed_scroll_of_resurrection]
+(29047,57,9000000,11000000,5,1000000), -- [adena]
+(29047,57,9000000,11000000,6,1000000), -- [adena]
+(29047,16162,2,4,7,600000), -- [rare_85_s]
+(29047,16166,2,4,7,400000), -- [rare_86_s]
+(29047,8191,1,1,8,300000), -- [necklace_of_frintessa]
 (29054,6364,1,1,1,7859),-- Forgotten Blade
 (29054,6372,1,1,1,7859),-- Heaven\'s Divider
 (29054,6688,8,22,1,276329),-- Forgotten Blade Edge
@@ -38262,303 +38160,258 @@ INSERT INTO `droplist` VALUES
 (29065,6577,1,1,2,3046),-- Blessed Scroll: Enchant Weapon (Grade S)
 (29065,6680,1,1,0,7303),-- Sealed Draconic Leather Armor
 (29065,6707,3,9,0,524645),-- Sealed Draconic Leather Armor Part
-(29066,80,1,2,0,250000),-- Tallum Blade
-(29066,98,1,2,0,250000),-- Halberd
-(29066,269,1,2,0,250000),-- Blood Tornado
-(29066,2504,1,2,0,250000),-- Meteor Shower
-(29066,150,1,2,1,250000),-- Elemental Sword
-(29066,212,1,2,1,250000),-- Dasparion\'s Staff
-(29066,235,1,2,1,250000),-- Bloody Orchid
-(29066,288,1,2,1,250000),-- Carnage Bow
-(29066,81,1,2,2,250000),-- Dragon Slayer
-(29066,151,1,2,2,250000),-- Sword of Miracles 
-(29066,164,1,2,2,250000),-- Elysian
-(29066,2500,1,2,2,250000),-- Dark Legion\'s Edge
-(29066,213,1,2,3,200000),-- Branch of The Mother Tree
-(29066,236,1,2,3,200000),-- Soul Separator
-(29066,270,1,2,3,200000),-- Dragon Grinder
-(29066,289,1,2,3,200000),-- Soul Bow
-(29066,305,1,2,3,200000),-- Tallum Glaive
-(29066,6364,1,1,4,170000),-- Forgotten Blade
-(29066,6365,1,1,4,170000),-- Basalt Battlehammer
-(29066,6369,1,1,4,170000),-- Dragon Hunter Axe
-(29066,6370,1,1,4,170000),-- Saint Spear
-(29066,6372,1,1,4,160000),-- Heaven\'s Divider
-(29066,6580,1,1,4,160000),-- Tallum Blade*Dark Legion\'s Edge
-(29066,6366,1,1,5,200000),-- Imperial Staff
-(29066,6367,1,1,5,200000),-- Angel Slayer
-(29066,6371,1,1,5,200000),-- Demon Splinter
-(29066,6579,1,1,5,200000),-- Arcana Mace
-(29066,7575,1,1,5,200000),-- Draconic Bow
-(29066,6326,1,5,6,300000),-- Sealed Majestic Necklace
-(29066,6327,1,5,6,350000),-- Sealed Majestic Earring
-(29066,6328,1,5,6,350000),-- Sealed Majestic Ring
-(29066,6323,1,5,7,300000),-- Sealed Phoenix Necklace
-(29066,6324,1,5,7,350000),-- Sealed Phoenix Earring
-(29066,6325,1,5,7,350000),-- Sealed Phoenix Ring
-(29066,6724,1,1,8,350000),-- Sealed Tateossian Earring 
-(29066,6725,1,1,8,350000),-- Sealed Tateossian Ring
-(29066,6726,1,1,8,300000),-- Sealed Tateossian Necklace
-(29066,5287,1,3,9,500000),-- Sealed Dark Crystal breastplate
-(29066,5297,1,3,9,250000),-- Sealed Dark Crystal Leather Armor
-(29066,5304,1,3,9,250000),-- Sealed Tallum Tunic
-(29066,5311,1,3,10,350000),-- Sealed Armor of Nightmare
-(29066,5320,1,3,10,350000),-- Sealed Leather Armor of Nightmare
-(29066,5326,1,3,10,300000),-- Sealed Robe of Nightmare
-(29066,5293,1,3,11,250000),-- Sealed Tallum Plate Armor
-(29066,5301,1,3,11,250000),-- Sealed Tallum Leather Armor
-(29066,5308,1,3,11,250000),-- Sealed Dark Crystal Robe
-(29066,5316,1,3,11,80000),-- Sealed Majestic Plate Armor
-(29066,5323,1,3,11,80000),-- Sealed Majestic Leather Armor
-(29066,5329,1,3,11,90000),-- Sealed Majestic Robe
-(29066,5288,1,3,12,350000),-- Sealed Dark Crystal Gaiters
-(29066,5298,1,3,12,350000),-- Sealed Dark Crystalline Leggings
-(29066,5305,1,3,12,300000),-- Sealed Tallum Stockings
-(29066,6674,1,1,13,150000),-- Sealed Imperial Crusader Breastplate
-(29066,6675,1,1,13,150000),-- Sealed Imperial Crusader Gaiters
-(29066,6680,1,1,13,350000),-- Sealed Draconic Leather Armor
-(29066,6684,1,1,13,350000),-- Sealed Major Arcana Robe
-(29066,5289,1,3,14,250000),-- Sealed Dark Crystal Helmet
-(29066,5294,1,3,14,250000),-- Sealed Tallum Helmet
-(29066,5312,1,3,14,250000),-- Sealed Helm of Nightmare
-(29066,5317,1,3,14,250000),-- Sealed Majestic Circlet
-(29066,5291,1,3,15,250000),-- Sealed Dark Crystal Boots
-(29066,5296,1,3,15,250000),-- Sealed Tallum Boots
-(29066,5314,1,3,15,250000),-- Sealed Boots of Nightmare
-(29066,5319,1,3,15,250000),-- Sealed Majestic Boots
-(29066,5290,1,3,16,250000),-- Sealed Dark Crystal Gloves
-(29066,5295,1,3,16,250000),-- Sealed Tallum Gloves
-(29066,5313,1,3,16,250000),-- Sealed Gloves of Nightmare
-(29066,5318,1,3,16,250000),-- Sealed Majestic Gloves
-(29066,5292,1,3,17,400000),-- Sealed Dark Crystal Shield
-(29066,5315,1,3,17,400000),-- Sealed Shield of Nightmare
-(29066,6678,1,1,17,200000),-- Sealed Imperial Crusader Shield
-(29066,6676,1,1,18,340000),-- Sealed Imperial Crusader Gauntlet
-(29066,6681,1,1,18,330000),-- Sealed Draconic Leather Glove
-(29066,6685,1,1,18,330000),-- Sealed Major Arcana Glove
-(29066,6677,1,1,19,340000),-- Sealed Imperial Crusader Boots
-(29066,6682,1,1,19,330000),-- Sealed Draconic Leather Boots
-(29066,6686,1,1,19,330000),-- Sealed Major Arcana Boots
-(29066,6679,1,1,20,340000),-- Sealed Imperial Crusader Helmet
-(29066,6683,1,1,20,330000),-- Sealed Draconic Leather Helmet
-(29066,6687,1,1,20,330000),-- Sealed Major Arcana Circlet
-(29066,729,1,19,21,1000000),-- Scroll: Enchant Weapon (Grade A)
-(29066,1538,1,59,22,1000000),-- Blessed Scroll of Escape
-(29066,3936,1,39,23,1000000),-- Blessed Scroll of Resurrection
-(29066,57,14000000,18000000,24,1000000),-- Adena
-(29066,57,14000000,18000000,25,1000000),-- Adena
-(29066,57,14000000,18000000,26,1000000),-- Adena
-(29066,57,14000000,18000000,27,1000000),-- Adena
-(29066,57,14000000,18000000,28,1000000),-- Adena
-(29066,57,14000000,18000000,29,1000000),-- Adena
-(29066,57,9000000,13000000,30,1000000),-- Adena
-(29066,6656,1,1,31,1000000),-- Earring of Antharas
-(29066,10549,1,1,32,333334),-- Forgotten Scroll - Protection of Rune
-(29066,10550,1,1,32,333333),-- Forgotten Scroll - Protection of Elemental
-(29066,10551,1,1,32,333333),-- Forgotten Scroll - Protection of Alignment
-(29066,13893,1,2,33,1000000),-- Sealed Holy Spirit's Cloak
-(29066,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29066,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29066,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29066,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
-(29067,80,1,2,0,250000),-- Tallum Blade
-(29067,98,1,2,0,250000),-- Halberd
-(29067,269,1,2,0,250000),-- Blood Tornado
-(29067,2504,1,2,0,250000),-- Meteor Shower
-(29067,150,1,2,1,250000),-- Elemental Sword
-(29067,212,1,2,1,250000),-- Dasparion\'s Staff
-(29067,235,1,2,1,250000),-- Bloody Orchid
-(29067,288,1,2,1,250000),-- Carnage Bow
-(29067,81,1,2,2,250000),-- Dragon Slayer
-(29067,151,1,2,2,250000),-- Sword of Miracles 
-(29067,164,1,2,2,250000),-- Elysian
-(29067,2500,1,2,2,250000),-- Dark Legion\'s Edge
-(29067,213,1,2,3,200000),-- Branch of The Mother Tree
-(29067,236,1,2,3,200000),-- Soul Separator
-(29067,270,1,2,3,200000),-- Dragon Grinder
-(29067,289,1,2,3,200000),-- Soul Bow
-(29067,305,1,2,3,200000),-- Tallum Glaive
-(29067,6364,1,1,4,170000),-- Forgotten Blade
-(29067,6365,1,1,4,170000),-- Basalt Battlehammer
-(29067,6369,1,1,4,170000),-- Dragon Hunter Axe
-(29067,6370,1,1,4,170000),-- Saint Spear
-(29067,6372,1,1,4,160000),-- Heaven\'s Divider
-(29067,6580,1,1,4,160000),-- Tallum Blade*Dark Legion\'s Edge
-(29067,6366,1,1,5,200000),-- Imperial Staff
-(29067,6367,1,1,5,200000),-- Angel Slayer
-(29067,6371,1,1,5,200000),-- Demon Splinter
-(29067,6579,1,1,5,200000),-- Arcana Mace
-(29067,7575,1,1,5,200000),-- Draconic Bow
-(29067,6326,1,5,6,300000),-- Sealed Majestic Necklace
-(29067,6327,1,5,6,350000),-- Sealed Majestic Earring
-(29067,6328,1,5,6,350000),-- Sealed Majestic Ring
-(29067,6323,1,5,7,300000),-- Sealed Phoenix Necklace
-(29067,6324,1,5,7,350000),-- Sealed Phoenix Earring
-(29067,6325,1,5,7,350000),-- Sealed Phoenix Ring
-(29067,6724,1,1,8,350000),-- Sealed Tateossian Earring 
-(29067,6725,1,1,8,350000),-- Sealed Tateossian Ring
-(29067,6726,1,1,8,300000),-- Sealed Tateossian Necklace
-(29067,5287,1,3,9,500000),-- Sealed Dark Crystal breastplate
-(29067,5297,1,3,9,250000),-- Sealed Dark Crystal Leather Armor
-(29067,5304,1,3,9,250000),-- Sealed Tallum Tunic
-(29067,5311,1,3,10,350000),-- Sealed Armor of Nightmare
-(29067,5320,1,3,10,350000),-- Sealed Leather Armor of Nightmare
-(29067,5326,1,3,10,300000),-- Sealed Robe of Nightmare
-(29067,5293,1,3,11,250000),-- Sealed Tallum Plate Armor
-(29067,5301,1,3,11,250000),-- Sealed Tallum Leather Armor
-(29067,5308,1,3,11,250000),-- Sealed Dark Crystal Robe
-(29067,5316,1,3,11,80000),-- Sealed Majestic Plate Armor
-(29067,5323,1,3,11,80000),-- Sealed Majestic Leather Armor
-(29067,5329,1,3,11,90000),-- Sealed Majestic Robe
-(29067,5288,1,3,12,350000),-- Sealed Dark Crystal Gaiters
-(29067,5298,1,3,12,350000),-- Sealed Dark Crystalline Leggings
-(29067,5305,1,3,12,300000),-- Sealed Tallum Stockings
-(29067,6674,1,1,13,150000),-- Sealed Imperial Crusader Breastplate
-(29067,6675,1,1,13,150000),-- Sealed Imperial Crusader Gaiters
-(29067,6680,1,1,13,350000),-- Sealed Draconic Leather Armor
-(29067,6684,1,1,13,350000),-- Sealed Major Arcana Robe
-(29067,5289,1,3,14,250000),-- Sealed Dark Crystal Helmet
-(29067,5294,1,3,14,250000),-- Sealed Tallum Helmet
-(29067,5312,1,3,14,250000),-- Sealed Helm of Nightmare
-(29067,5317,1,3,14,250000),-- Sealed Majestic Circlet
-(29067,5291,1,3,15,250000),-- Sealed Dark Crystal Boots
-(29067,5296,1,3,15,250000),-- Sealed Tallum Boots
-(29067,5314,1,3,15,250000),-- Sealed Boots of Nightmare
-(29067,5319,1,3,15,250000),-- Sealed Majestic Boots
-(29067,5290,1,3,16,250000),-- Sealed Dark Crystal Gloves
-(29067,5295,1,3,16,250000),-- Sealed Tallum Gloves
-(29067,5313,1,3,16,250000),-- Sealed Gloves of Nightmare
-(29067,5318,1,3,16,250000),-- Sealed Majestic Gloves
-(29067,5292,1,3,17,400000),-- Sealed Dark Crystal Shield
-(29067,5315,1,3,17,400000),-- Sealed Shield of Nightmare
-(29067,6678,1,1,17,200000),-- Sealed Imperial Crusader Shield
-(29067,6676,1,1,18,340000),-- Sealed Imperial Crusader Gauntlet
-(29067,6681,1,1,18,330000),-- Sealed Draconic Leather Glove
-(29067,6685,1,1,18,330000),-- Sealed Major Arcana Glove
-(29067,6677,1,1,19,340000),-- Sealed Imperial Crusader Boots
-(29067,6682,1,1,19,330000),-- Sealed Draconic Leather Boots
-(29067,6686,1,1,19,330000),-- Sealed Major Arcana Boots
-(29067,6679,1,1,20,340000),-- Sealed Imperial Crusader Helmet
-(29067,6683,1,1,20,330000),-- Sealed Draconic Leather Helmet
-(29067,6687,1,1,20,330000),-- Sealed Major Arcana Circlet
-(29067,729,1,19,21,1000000),-- Scroll: Enchant Weapon (Grade A)
-(29067,1538,1,59,22,1000000),-- Blessed Scroll of Escape
-(29067,3936,1,39,23,1000000),-- Blessed Scroll of Resurrection
-(29067,57,14000000,18000000,24,1000000),-- Adena
-(29067,57,14000000,18000000,25,1000000),-- Adena
-(29067,57,14000000,18000000,26,1000000),-- Adena
-(29067,57,14000000,18000000,27,1000000),-- Adena
-(29067,57,14000000,18000000,28,1000000),-- Adena
-(29067,57,14000000,18000000,29,1000000),-- Adena
-(29067,57,9000000,13000000,30,1000000),-- Adena
-(29067,6656,1,1,31,1000000),-- Earring of Antharas
-(29067,10549,1,1,32,333334),-- Forgotten Scroll - Protection of Rune
-(29067,10550,1,1,32,333333),-- Forgotten Scroll - Protection of Elemental
-(29067,10551,1,1,32,333333),-- Forgotten Scroll - Protection of Alignment
-(29067,13893,1,2,33,1000000),-- Sealed Holy Spirit's Cloak
-(29067,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29067,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29067,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29067,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
-(29068,80,1,2,0,250000),-- Tallum Blade
-(29068,98,1,2,0,250000),-- Halberd
-(29068,269,1,2,0,250000),-- Blood Tornado
-(29068,2504,1,2,0,250000),-- Meteor Shower
-(29068,150,1,2,1,250000),-- Elemental Sword
-(29068,212,1,2,1,250000),-- Dasparion\'s Staff
-(29068,235,1,2,1,250000),-- Bloody Orchid
-(29068,288,1,2,1,250000),-- Carnage Bow
-(29068,81,1,2,2,250000),-- Dragon Slayer
-(29068,151,1,2,2,250000),-- Sword of Miracles 
-(29068,164,1,2,2,250000),-- Elysian
-(29068,2500,1,2,2,250000),-- Dark Legion\'s Edge
-(29068,213,1,2,3,200000),-- Branch of The Mother Tree
-(29068,236,1,2,3,200000),-- Soul Separator
-(29068,270,1,2,3,200000),-- Dragon Grinder
-(29068,289,1,2,3,200000),-- Soul Bow
-(29068,305,1,2,3,200000),-- Tallum Glaive
-(29068,6364,1,1,4,170000),-- Forgotten Blade
-(29068,6365,1,1,4,170000),-- Basalt Battlehammer
-(29068,6369,1,1,4,170000),-- Dragon Hunter Axe
-(29068,6370,1,1,4,170000),-- Saint Spear
-(29068,6372,1,1,4,160000),-- Heaven\'s Divider
-(29068,6580,1,1,4,160000),-- Tallum Blade*Dark Legion\'s Edge
-(29068,6366,1,1,5,200000),-- Imperial Staff
-(29068,6367,1,1,5,200000),-- Angel Slayer
-(29068,6371,1,1,5,200000),-- Demon Splinter
-(29068,6579,1,1,5,200000),-- Arcana Mace
-(29068,7575,1,1,5,200000),-- Draconic Bow
-(29068,6326,1,5,6,300000),-- Sealed Majestic Necklace
-(29068,6327,1,5,6,350000),-- Sealed Majestic Earring
-(29068,6328,1,5,6,350000),-- Sealed Majestic Ring
-(29068,6323,1,5,7,300000),-- Sealed Phoenix Necklace
-(29068,6324,1,5,7,350000),-- Sealed Phoenix Earring
-(29068,6325,1,5,7,350000),-- Sealed Phoenix Ring
-(29068,6724,1,1,8,350000),-- Sealed Tateossian Earring 
-(29068,6725,1,1,8,350000),-- Sealed Tateossian Ring
-(29068,6726,1,1,8,300000),-- Sealed Tateossian Necklace
-(29068,5287,1,3,9,500000),-- Sealed Dark Crystal breastplate
-(29068,5297,1,3,9,250000),-- Sealed Dark Crystal Leather Armor
-(29068,5304,1,3,9,250000),-- Sealed Tallum Tunic
-(29068,5311,1,3,10,350000),-- Sealed Armor of Nightmare
-(29068,5320,1,3,10,350000),-- Sealed Leather Armor of Nightmare
-(29068,5326,1,3,10,300000),-- Sealed Robe of Nightmare
-(29068,5293,1,3,11,250000),-- Sealed Tallum Plate Armor
-(29068,5301,1,3,11,250000),-- Sealed Tallum Leather Armor
-(29068,5308,1,3,11,250000),-- Sealed Dark Crystal Robe
-(29068,5316,1,3,11,80000),-- Sealed Majestic Plate Armor
-(29068,5323,1,3,11,80000),-- Sealed Majestic Leather Armor
-(29068,5329,1,3,11,90000),-- Sealed Majestic Robe
-(29068,5288,1,3,12,350000),-- Sealed Dark Crystal Gaiters
-(29068,5298,1,3,12,350000),-- Sealed Dark Crystalline Leggings
-(29068,5305,1,3,12,300000),-- Sealed Tallum Stockings
-(29068,6674,1,1,13,150000),-- Sealed Imperial Crusader Breastplate
-(29068,6675,1,1,13,150000),-- Sealed Imperial Crusader Gaiters
-(29068,6680,1,1,13,350000),-- Sealed Draconic Leather Armor
-(29068,6684,1,1,13,350000),-- Sealed Major Arcana Robe
-(29068,5289,1,3,14,250000),-- Sealed Dark Crystal Helmet
-(29068,5294,1,3,14,250000),-- Sealed Tallum Helmet
-(29068,5312,1,3,14,250000),-- Sealed Helm of Nightmare
-(29068,5317,1,3,14,250000),-- Sealed Majestic Circlet
-(29068,5291,1,3,15,250000),-- Sealed Dark Crystal Boots
-(29068,5296,1,3,15,250000),-- Sealed Tallum Boots
-(29068,5314,1,3,15,250000),-- Sealed Boots of Nightmare
-(29068,5319,1,3,15,250000),-- Sealed Majestic Boots
-(29068,5290,1,3,16,250000),-- Sealed Dark Crystal Gloves
-(29068,5295,1,3,16,250000),-- Sealed Tallum Gloves
-(29068,5313,1,3,16,250000),-- Sealed Gloves of Nightmare
-(29068,5318,1,3,16,250000),-- Sealed Majestic Gloves
-(29068,5292,1,3,17,400000),-- Sealed Dark Crystal Shield
-(29068,5315,1,3,17,400000),-- Sealed Shield of Nightmare
-(29068,6678,1,1,17,200000),-- Sealed Imperial Crusader Shield
-(29068,6676,1,1,18,340000),-- Sealed Imperial Crusader Gauntlet
-(29068,6681,1,1,18,330000),-- Sealed Draconic Leather Glove
-(29068,6685,1,1,18,330000),-- Sealed Major Arcana Glove
-(29068,6677,1,1,19,340000),-- Sealed Imperial Crusader Boots
-(29068,6682,1,1,19,330000),-- Sealed Draconic Leather Boots
-(29068,6686,1,1,19,330000),-- Sealed Major Arcana Boots
-(29068,6679,1,1,20,340000),-- Sealed Imperial Crusader Helmet
-(29068,6683,1,1,20,330000),-- Sealed Draconic Leather Helmet
-(29068,6687,1,1,20,330000),-- Sealed Major Arcana Circlet
-(29068,729,1,19,21,1000000),-- Scroll: Enchant Weapon (Grade A)
-(29068,1538,1,59,22,1000000),-- Blessed Scroll of Escape
-(29068,3936,1,39,23,1000000),-- Blessed Scroll of Resurrection
-(29068,57,14000000,18000000,24,1000000),-- Adena
-(29068,57,14000000,18000000,25,1000000),-- Adena
-(29068,57,14000000,18000000,26,1000000),-- Adena
-(29068,57,14000000,18000000,27,1000000),-- Adena
-(29068,57,14000000,18000000,28,1000000),-- Adena
-(29068,57,14000000,18000000,29,1000000),-- Adena
-(29068,57,9000000,13000000,30,1000000),-- Adena
-(29068,6656,1,1,31,1000000),-- Earring of Antharas
-(29068,10549,1,1,32,333334),-- Forgotten Scroll - Protection of Rune
-(29068,10550,1,1,32,333333),-- Forgotten Scroll - Protection of Elemental
-(29068,10551,1,1,32,333333),-- Forgotten Scroll - Protection of Alignment
-(29068,13893,1,2,33,1000000),-- Sealed Holy Spirit's Cloak
-(29068,8751,2,4,200,450000),-- High-Grade Life Stone: level 70
-(29068,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
-(29068,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
-(29068,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
+-- Antharas
+(29066,8620,10,30,100,500000), -- [sb_increase_of_divinity_s]
+(29066,13893,1,2,100,500000), -- [sealed_holly_sprit's_cloak]
+(29066,80,1,2,0,250000), -- [tallum_blade]
+(29066,98,1,2,0,250000), -- [halbard]
+(29066,269,1,2,0,250000), -- [blood_tornado]
+(29066,2504,1,2,0,250000), -- [meteor_shower]
+(29066,235,1,2,1,250000), -- [bloody_orchid]
+(29066,288,1,2,1,250000), -- [carnium_bow]
+(29066,150,1,2,1,250000), -- [elemental_sword]
+(29066,212,1,2,1,250000), -- [dasparion's_staff]
+(29066,81,1,2,2,250000), -- [dragon_slayer]
+(29066,151,1,2,2,250000), -- [sword_of_miracle]
+(29066,2500,1,2,2,250000), -- [dark_legion's_edge]
+(29066,164,1,2,2,250000), -- [elysian]
+(29066,236,1,2,3,200000), -- [soul_separator]
+(29066,270,1,2,3,200000), -- [dragon_grinder]
+(29066,289,1,2,3,200000), -- [soul_bow]
+(29066,213,1,2,3,200000), -- [worldtree's_branch]
+(29066,305,1,2,3,200000), -- [tallum_glaive]
+(29066,6364,1,1,4,170000), -- [forgotten_blade]
+(29066,6365,1,1,4,170000), -- [basalt_battlehammer]
+(29066,6369,1,1,4,170000), -- [dragon_hunter_axe]
+(29066,6370,1,1,4,170000), -- [saint_spear]
+(29066,6372,1,1,4,160000), -- [heavens_divider]
+(29066,6580,1,1,4,160000), -- [tallum_blade*dark_legion's_edge]
+(29066,7575,1,1,5,200000), -- [draconic_bow]
+(29066,6366,1,1,5,200000), -- [imperial_staff]
+(29066,6367,1,1,5,200000), -- [angel_slayer]
+(29066,6371,1,1,5,200000), -- [demon_splinter]
+(29066,6579,1,1,5,200000), -- [arcana_mace]
+(29066,6326,1,5,6,300000), -- [sealed_majestic_necklace]
+(29066,6327,1,5,6,350000), -- [sealed_majestic_earing]
+(29066,6328,1,5,6,350000), -- [sealed_majestic_ring]
+(29066,6323,1,5,7,300000), -- [sealed_phoenix's_necklace]
+(29066,6324,1,5,7,350000), -- [sealed_phoenix's_earing]
+(29066,6325,1,5,7,350000), -- [sealed_phoenix's_ring]
+(29066,6724,1,1,8,350000), -- [sealed_sanddragon's_earing]
+(29066,6725,1,1,8,350000), -- [sealed_ring_of_aurakyria]
+(29066,6726,1,1,8,300000), -- [sealed_dragon_necklace]
+(29066,5287,1,3,9,500000), -- [sealed_dark_crystal_breastplate]
+(29066,5297,1,3,9,250000), -- [sealed_dark_crystal_leather_mail]
+(29066,5304,1,3,9,250000), -- [sealed_tallum_tunic]
+(29066,5311,1,3,10,350000), -- [sealed_armor_of_nightmare]
+(29066,5320,1,3,10,350000), -- [sealed_leather_mail_of_nightmare]
+(29066,5326,1,3,10,300000), -- [sealed_robe_of_nightmare]
+(29066,5293,1,3,11,250000), -- [sealed_tallum_plate_armor]
+(29066,5301,1,3,11,250000), -- [sealed_tallum_leather_mail]
+(29066,5308,1,3,11,250000), -- [sealed_dark_crystal_robe]
+(29066,5316,1,3,11,80000), -- [sealed_majestic_platte_armor]
+(29066,5323,1,3,11,80000), -- [sealed_majestic_leather_mail]
+(29066,5329,1,3,11,90000), -- [sealed_majestic_robe]
+(29066,5288,1,3,12,350000), -- [sealed_dark_crystal_gaiters]
+(29066,5298,1,3,12,350000), -- [sealed_legging_of_dark_crystal]
+(29066,5305,1,3,12,300000), -- [sealed_tallum_hose]
+(29066,6674,1,1,13,150000), -- [sealed_imperial_crusader_armor]
+(29066,6675,1,1,13,150000), -- [sealed_imperial_crusader_gaiters]
+(29066,6680,1,1,13,350000), -- [sealed_draconic_leather_armor]
+(29066,6684,1,1,13,350000), -- [sealed_major_arcana_robe]
+(29066,5289,1,3,14,250000), -- [sealed_dark_crystal_helmet]
+(29066,5294,1,3,14,250000), -- [sealed_tallum_bonnet]
+(29066,5312,1,3,14,250000), -- [sealed_helm_of_nightmare]
+(29066,5317,1,3,14,250000), -- [sealed_magestic_circlet]
+(29066,5291,1,3,15,250000), -- [sealed_dark_crystal_boots]
+(29066,5296,1,3,15,250000), -- [sealed_tallum_boots]
+(29066,5314,1,3,15,250000), -- [sealed_boots_of_nightmare]
+(29066,5319,1,3,15,250000), -- [sealed_magestic_boots]
+(29066,5290,1,3,16,250000), -- [sealed_dark_crystal_gloves]
+(29066,5295,1,3,16,250000), -- [sealed_tallum_gloves]
+(29066,5313,1,3,16,250000), -- [sealed_gloves_of_nightmare]
+(29066,5318,1,3,16,250000), -- [sealed_magestic_gloves]
+(29066,5292,1,3,17,400000), -- [sealed_dark_crystal_shield]
+(29066,5315,1,3,17,400000), -- [sealed_shield_of_nightmare]
+(29066,6678,1,1,17,200000), -- [sealed_imperial_crusader_shield]
+(29066,6676,1,1,18,340000), -- [sealed_imperial_crusader_gauntlet]
+(29066,6681,1,1,18,330000), -- [sealed_draconic_leather_gloves]
+(29066,6685,1,1,18,330000), -- [sealed_major_arcana_gloves]
+(29066,6677,1,1,19,340000), -- [sealed_imperial_crusader_boots]
+(29066,6682,1,1,19,330000), -- [sealed_draconic_leather_boots]
+(29066,6686,1,1,19,330000), -- [sealed_major_arcana_boots]
+(29066,6679,1,1,20,340000), -- [sealed_imperial_crusader_helmet]
+(29066,6683,1,1,20,330000), -- [sealed_draconic_leather_helmet]
+(29066,6687,1,1,20,330000), -- [sealed_major_arcana_hood]
+(29066,729,1,19,21,1000000), -- [scrl_of_ench_wp_a]
+(29066,1538,1,59,22,1000000), -- [blessed_scroll_of_escape]
+(29066,3936,1,39,23,1000000), -- [blessed_scroll_of_resurrection]
+(29066,57,14000000,18000000,24,1000000), -- [adena]
+(29066,57,14000000,18000000,25,1000000), -- [adena]
+(29066,57,14000000,18000000,26,1000000), -- [adena]
+(29066,57,14000000,18000000,27,1000000), -- [adena]
+(29066,57,14000000,18000000,28,1000000), -- [adena]
+(29066,57,14000000,18000000,29,1000000), -- [adena]
+(29066,57,9000000,13000000,30,1000000), -- [adena]
+(29066,8751,2,4,31,450000), -- [rare_70_a]
+(29066,8752,2,4,31,400000), -- [rare_75_s]
+(29066,8761,1,2,31,100000), -- [unique_70_a]
+(29066,8762,1,2,31,50000), -- [unique_75_s]
+(29066,6656,1,1,32,1000000), -- [earring_of_antaras]
+-- Antharas
+(29067,8620,10,30,100,500000), -- [sb_increase_of_divinity_s]
+(29067,13893,1,2,100,500000), -- [sealed_holly_sprit's_cloak]
+(29067,80,1,2,0,250000), -- [tallum_blade]
+(29067,98,1,2,0,250000), -- [halbard]
+(29067,269,1,2,0,250000), -- [blood_tornado]
+(29067,2504,1,2,0,250000), -- [meteor_shower]
+(29067,235,1,2,1,250000), -- [bloody_orchid]
+(29067,288,1,2,1,250000), -- [carnium_bow]
+(29067,150,1,2,1,250000), -- [elemental_sword]
+(29067,212,1,2,1,250000), -- [dasparion's_staff]
+(29067,81,1,2,2,250000), -- [dragon_slayer]
+(29067,151,1,2,2,250000), -- [sword_of_miracle]
+(29067,2500,1,2,2,250000), -- [dark_legion's_edge]
+(29067,164,1,2,2,250000), -- [elysian]
+(29067,236,1,2,3,200000), -- [soul_separator]
+(29067,270,1,2,3,200000), -- [dragon_grinder]
+(29067,289,1,2,3,200000), -- [soul_bow]
+(29067,213,1,2,3,200000), -- [worldtree's_branch]
+(29067,305,1,2,3,200000), -- [tallum_glaive]
+(29067,6364,1,1,4,170000), -- [forgotten_blade]
+(29067,6365,1,1,4,170000), -- [basalt_battlehammer]
+(29067,6369,1,1,4,170000), -- [dragon_hunter_axe]
+(29067,6370,1,1,4,170000), -- [saint_spear]
+(29067,6372,1,1,4,160000), -- [heavens_divider]
+(29067,6580,1,1,4,160000), -- [tallum_blade*dark_legion's_edge]
+(29067,7575,1,1,5,200000), -- [draconic_bow]
+(29067,6366,1,1,5,200000), -- [imperial_staff]
+(29067,6367,1,1,5,200000), -- [angel_slayer]
+(29067,6371,1,1,5,200000), -- [demon_splinter]
+(29067,6579,1,1,5,200000), -- [arcana_mace]
+(29067,6326,1,5,6,300000), -- [sealed_majestic_necklace]
+(29067,6327,1,5,6,350000), -- [sealed_majestic_earing]
+(29067,6328,1,5,6,350000), -- [sealed_majestic_ring]
+(29067,6323,1,5,7,300000), -- [sealed_phoenix's_necklace]
+(29067,6324,1,5,7,350000), -- [sealed_phoenix's_earing]
+(29067,6325,1,5,7,350000), -- [sealed_phoenix's_ring]
+(29067,6724,1,1,8,350000), -- [sealed_sanddragon's_earing]
+(29067,6725,1,1,8,350000), -- [sealed_ring_of_aurakyria]
+(29067,6726,1,1,8,300000), -- [sealed_dragon_necklace]
+(29067,5287,1,3,9,500000), -- [sealed_dark_crystal_breastplate]
+(29067,5297,1,3,9,250000), -- [sealed_dark_crystal_leather_mail]
+(29067,5304,1,3,9,250000), -- [sealed_tallum_tunic]
+(29067,5311,1,3,10,350000), -- [sealed_armor_of_nightmare]
+(29067,5320,1,3,10,350000), -- [sealed_leather_mail_of_nightmare]
+(29067,5326,1,3,10,300000), -- [sealed_robe_of_nightmare]
+(29067,5293,1,3,11,250000), -- [sealed_tallum_plate_armor]
+(29067,5301,1,3,11,250000), -- [sealed_tallum_leather_mail]
+(29067,5308,1,3,11,250000), -- [sealed_dark_crystal_robe]
+(29067,5316,1,3,11,80000), -- [sealed_majestic_platte_armor]
+(29067,5323,1,3,11,80000), -- [sealed_majestic_leather_mail]
+(29067,5329,1,3,11,90000), -- [sealed_majestic_robe]
+(29067,5288,1,3,12,350000), -- [sealed_dark_crystal_gaiters]
+(29067,5298,1,3,12,350000), -- [sealed_legging_of_dark_crystal]
+(29067,5305,1,3,12,300000), -- [sealed_tallum_hose]
+(29067,6674,1,1,13,150000), -- [sealed_imperial_crusader_armor]
+(29067,6675,1,1,13,150000), -- [sealed_imperial_crusader_gaiters]
+(29067,6680,1,1,13,350000), -- [sealed_draconic_leather_armor]
+(29067,6684,1,1,13,350000), -- [sealed_major_arcana_robe]
+(29067,5289,1,3,14,250000), -- [sealed_dark_crystal_helmet]
+(29067,5294,1,3,14,250000), -- [sealed_tallum_bonnet]
+(29067,5312,1,3,14,250000), -- [sealed_helm_of_nightmare]
+(29067,5317,1,3,14,250000), -- [sealed_magestic_circlet]
+(29067,5291,1,3,15,250000), -- [sealed_dark_crystal_boots]
+(29067,5296,1,3,15,250000), -- [sealed_tallum_boots]
+(29067,5314,1,3,15,250000), -- [sealed_boots_of_nightmare]
+(29067,5319,1,3,15,250000), -- [sealed_magestic_boots]
+(29067,5290,1,3,16,250000), -- [sealed_dark_crystal_gloves]
+(29067,5295,1,3,16,250000), -- [sealed_tallum_gloves]
+(29067,5313,1,3,16,250000), -- [sealed_gloves_of_nightmare]
+(29067,5318,1,3,16,250000), -- [sealed_magestic_gloves]
+(29067,5292,1,3,17,400000), -- [sealed_dark_crystal_shield]
+(29067,5315,1,3,17,400000), -- [sealed_shield_of_nightmare]
+(29067,6678,1,1,17,200000), -- [sealed_imperial_crusader_shield]
+(29067,6676,1,1,18,340000), -- [sealed_imperial_crusader_gauntlet]
+(29067,6681,1,1,18,330000), -- [sealed_draconic_leather_gloves]
+(29067,6685,1,1,18,330000), -- [sealed_major_arcana_gloves]
+(29067,6677,1,1,19,340000), -- [sealed_imperial_crusader_boots]
+(29067,6682,1,1,19,330000), -- [sealed_draconic_leather_boots]
+(29067,6686,1,1,19,330000), -- [sealed_major_arcana_boots]
+(29067,6679,1,1,20,340000), -- [sealed_imperial_crusader_helmet]
+(29067,6683,1,1,20,330000), -- [sealed_draconic_leather_helmet]
+(29067,6687,1,1,20,330000), -- [sealed_major_arcana_hood]
+(29067,729,1,19,21,1000000), -- [scrl_of_ench_wp_a]
+(29067,1538,1,59,22,1000000), -- [blessed_scroll_of_escape]
+(29067,3936,1,39,23,1000000), -- [blessed_scroll_of_resurrection]
+(29067,57,14000000,18000000,24,1000000), -- [adena]
+(29067,57,14000000,18000000,25,1000000), -- [adena]
+(29067,57,14000000,18000000,26,1000000), -- [adena]
+(29067,57,14000000,18000000,27,1000000), -- [adena]
+(29067,57,14000000,18000000,28,1000000), -- [adena]
+(29067,57,14000000,18000000,29,1000000), -- [adena]
+(29067,57,9000000,13000000,30,1000000), -- [adena]
+(29067,8751,2,4,31,450000), -- [rare_70_a]
+(29067,8752,2,4,31,400000), -- [rare_75_s]
+(29067,8761,1,2,31,100000), -- [unique_70_a]
+(29067,8762,1,2,31,50000), -- [unique_75_s]
+(29067,959,8,12,32,1000000), -- [scrl_of_ench_wp_s]
+(29067,6656,1,1,33,1000000), -- [earring_of_antaras]
+-- Antharas
+(29068,8620,10,30,100,500000), -- [sb_increase_of_divinity_s]
+(29068,13893,1,2,100,500000), -- [sealed_holly_sprit's_cloak]
+(29068,15560,1,1,0,63700), -- [vigwik_axe]
+(29068,15561,1,1,0,63630), -- [evildeity_maul]
+(29068,15562,1,1,0,63630), -- [feathereye_blade]
+(29068,15563,1,1,0,63630), -- [octo_claw]
+(29068,15564,1,1,0,63630), -- [doubletopa_spear]
+(29068,15565,1,1,0,63630), -- [cuticle]
+(29068,15566,1,1,0,63630), -- [blackvisage]
+(29068,15567,1,1,0,63630), -- [veniplant_sword]
+(29068,15568,1,1,0,63630), -- [skullcarnium_bow]
+(29068,15558,1,1,0,63630), -- [peri_el_sword]
+(29068,15559,1,1,0,63630), -- [skul_edge]
+(29068,15544,1,1,1,45500), -- [incessantcore_sword]
+(29068,15545,1,1,1,45450), -- [mamba_edge]
+(29068,15546,1,1,1,45450), -- [expowder_mace]
+(29068,15547,1,1,1,45450), -- [pereztear_hammer]
+(29068,15548,1,1,1,45450), -- [lavamond_saw]
+(29068,15549,1,1,1,45450), -- [jademice_claw]
+(29068,15550,1,1,1,45450), -- [ghostcleaner]
+(29068,15551,1,1,1,45450), -- [sacredumors]
+(29068,15552,1,1,1,45450), -- [psyskilt_cane]
+(29068,15553,1,1,1,45450), -- [archangel_sword]
+(29068,15554,1,1,1,45450), -- [recurvethorne_bow]
+(29068,15743,1,1,2,91000), -- [sealed_verpes_helmet]
+(29068,15744,1,1,2,90900), -- [sealed_verpes_leather_helmet]
+(29068,15745,1,1,2,90900), -- [sealed_verpes_circlet]
+(29068,15752,1,1,2,90900), -- [sealed_verpes_gauntlet]
+(29068,15753,1,1,2,90900), -- [sealed_verpes_leather_gloves]
+(29068,15754,1,1,2,90900), -- [sealed_verpes_gloves]
+(29068,15755,1,1,2,90900), -- [sealed_verpes_boots]
+(29068,15756,1,1,2,90900), -- [sealed_verpes_leather_boots]
+(29068,15757,1,1,2,90900), -- [sealed_verpes_shoes]
+(29068,15758,1,1,2,90900), -- [sealed_verpes_shield]
+(29068,15759,1,1,2,90900), -- [sealed_verpes_sigil]
+(29068,15746,1,1,3,167000), -- [sealed_verpes_cuirass]
+(29068,15747,1,1,3,166600), -- [sealed_verpes_houberk]
+(29068,15748,1,1,3,166600), -- [sealed_verpes_jaket]
+(29068,15749,1,1,3,166600), -- [sealed_verpes_gaiter]
+(29068,15750,1,1,3,166600), -- [sealed_verpes_leather_legging]
+(29068,15751,1,1,3,166600), -- [sealed_verpes_hose]
+(29068,15763,1,1,4,167000), -- [sealed_verpes_ring]
+(29068,15764,1,1,4,166500), -- [sealed_verpes_earring]
+(29068,15765,1,1,4,166500), -- [sealed_verpes_necklace]
+(29068,959,1,19,5,1000000), -- [scrl_of_ench_wp_s]
+(29068,1538,1,59,6,600000), -- [blessed_scroll_of_escape]
+(29068,3936,1,39,7,600000), -- [blessed_scroll_of_resurrection]
+(29068,57,14000000,18000000,8,1000000), -- [adena]
+(29068,57,2000000,6000000,9,1000000), -- [adena]
+(29068,16162,2,4,10,450000), -- [rare_85_s]
+(29068,16166,2,4,10,400000), -- [rare_86_s]
+(29068,16163,1,2,10,100000), -- [unique_85_s]
+(29068,16167,1,2,10,50000), -- [unique_86_s]
+(29068,6656,1,1,11,1000000), -- [earring_of_antaras]
 (29095,6711,12,36,2,236814),-- Sealed Major Arcane Robe Part
 (29095,6684,1,1,2,13185),-- Sealed Major Arcane Robe
 (29095,6695,3,9,3,700327),-- Demon Splinter Blade
@@ -38685,33 +38538,230 @@ INSERT INTO `droplist` VALUES
 (29147,6706,60,180,0,82810),-- Sealed Imperial Crusader Helmet Pattern
 (29147,6710,116,346,0,43019),-- Sealed Draconic Leather Helmet Pattern
 (29147,6714,16,48,0,310540),-- Sealed Major Arcana Circlet Pattern
-(29163,10215,1,1,0,65632), -- Icarus Sawsword
-(29163,10216,1,1,0,65046), -- Icarus Disperser
-(29163,10217,1,1,0,65046), -- Icarus Spirit
-(29163,10218,1,1,0,65046), -- Icarus Heavy Arms
-(29163,10219,1,1,0,65046), -- Icarus Trident
-(29163,10220,1,1,0,65046), -- Icarus Hammer
-(29163,10221,1,1,0,65046), -- Icarus Hand
-(29163,10222,1,1,0,65046), -- Icarus Hall
-(29163,10223,1,1,0,65046), -- Icarus Spitter
-(29163,13466,1,1,1,37674), -- Vesper Singer
-(29163,13457,1,1,1,37633), -- Vesper Cutter
-(29163,13458,1,1,1,37633), -- Vesper Slasher
-(29163,13459,1,1,1,37633), -- Vesper Buster
-(29163,13460,1,1,1,37633), -- Vesper Shaper
-(29163,13461,1,1,1,37633), -- Vesper Fighter
-(29163,13462,1,1,1,37633), -- Vesper Stormer
-(29163,13463,1,1,1,37633), -- Vesper Avenger
-(29163,13464,1,1,1,37633), -- Vesper Retributer
-(29163,13465,1,1,1,37633), -- Vesper Caster
-(29163,13467,1,1,1,37633), -- Vesper Thrower
-(29163,10550,1,1,2,300000), -- Forgotten Scroll - Protection of Elemental
-(29163,10552,1,1,3,300000), -- Forgotten Scroll - Fighter's Will
-(29163,10553,1,1,4,300000), -- Forgotten Scroll - Archer's Will
-(29163,14219,1,1,5,300000), -- Forgotten Scroll - Magician's Will
-(29163,13893,1,1,6,200000); -- Sealed Holy Spirit's Cloak
+-- Ekimus
+(29150,14160,1,1,100,350000), -- [sealed_vesper_earring]
+(29150,14161,1,1,100,300000), -- [sealed_vesper_necklace]
+(29150,14162,1,1,100,350000), -- [sealed_vesper_ring]
+(29150,13143,1,1,0,29400), -- [sealed_vesper_helmet]
+(29150,13144,1,1,0,29400), -- [sealed_vesper_leather_helmet]
+(29150,13145,1,1,0,29400), -- [sealed_vesper_circlet]
+(29150,13887,1,1,0,29400), -- [sealed_vesper_sigil]
+(29150,14105,1,1,0,29400), -- [sealed_vesper_cuirass]
+(29150,14106,1,1,0,29400), -- [sealed_vesper_houberk]
+(29150,14107,1,1,0,29400), -- [sealed_vesper_jaket]
+(29150,14108,1,1,0,29400), -- [sealed_vesper_gaiter]
+(29150,14109,1,1,0,29400), -- [sealed_vesper_gauntlet]
+(29150,14110,1,1,0,29400), -- [sealed_vesper_boots]
+(29150,14111,1,1,0,29400), -- [sealed_vesper_verteidiger]
+(29150,14112,1,1,0,29400), -- [sealed_vesper_leather_legging]
+(29150,14113,1,1,0,29400), -- [sealed_vesper_leather_gloves]
+(29150,14114,1,1,0,29400), -- [sealed_vesper_leather_boots]
+(29150,14115,1,1,0,29400), -- [sealed_vesper_hose]
+(29150,14116,1,1,0,29400), -- [sealed_vesper_gloves]
+(29150,14117,1,1,0,29400), -- [sealed_vesper_shoes]
+(29150,13146,1,1,0,29400), -- [sealed_vesper_noble_helmet]
+(29150,13147,1,1,0,29400), -- [sealed_vesper_noble_leather_helmet]
+(29150,13148,1,1,0,29400), -- [sealed_vesper_noble_circlet]
+(29150,13886,1,1,0,29400), -- [sealed_dynasty_sigil]
+(29150,17006,1,1,0,29400), -- [sealed_vesper_noble_cuirass]
+(29150,17007,1,1,0,29400), -- [sealed_vesper_noble_houberk]
+(29150,17008,1,1,0,29400), -- [sealed_vesper_noble_jaket]
+(29150,17009,1,1,0,29400), -- [sealed_vesper_noble_gaiter]
+(29150,17010,1,1,0,29400), -- [sealed_vesper_noble_gauntlet]
+(29150,17011,1,1,0,29400), -- [sealed_vesper_noble_boots]
+(29150,9529,1,1,0,29400), -- [sealed_dynasty_shield]
+(29150,17012,1,1,0,29400), -- [sealed_vesper_noble_leather_legging]
+(29150,17013,1,1,0,29400), -- [sealed_vesper_noble_leather_gloves]
+(29150,17014,1,1,0,29400), -- [sealed_vesper_noble_leather_boots]
+(29150,17015,1,1,0,29400), -- [sealed_vesper_noble_hose]
+(29150,17016,1,1,0,29400), -- [sealed_vesper_noble_gloves]
+(29150,17017,1,1,0,29800), -- [sealed_vesper_noble_shoes]
+-- Tiat
+(29163,13893,1,1,100,200000), -- [sealed_holly_sprit's_cloak]
+(29163,10550,1,1,100,400000), -- [sb_protection_of_elemental]
+(29163,10552,1,1,100,400000), -- [sb_fighter_will]
+(29163,13457,1,1,0,37700), -- [vesper_cutter]
+(29163,13458,1,1,0,37600), -- [vesper_slasher]
+(29163,13459,1,1,0,37600), -- [vesper_burster]
+(29163,13460,1,1,0,37700), -- [vesper_shaper]
+(29163,13461,1,1,0,37700), -- [vesper_fighter]
+(29163,13462,1,1,0,37600), -- [vesper_stormer]
+(29163,13463,1,1,0,37700), -- [vesper_avenger]
+(29163,13464,1,1,0,37600), -- [vesper_retributer]
+(29163,13465,1,1,0,37600), -- [vesper_caster]
+(29163,13467,1,1,0,37600), -- [vesper_thrower]
+(29163,13466,1,1,0,37600), -- [vesper_singer]
+(29163,10215,1,1,0,65200), -- [icarus_sowsword]
+(29163,10216,1,1,0,65100), -- [icarus_disperser]
+(29163,10217,1,1,0,65100), -- [icarus_spirits]
+(29163,10218,1,1,0,65100), -- [icarus_heavy_arms]
+(29163,10219,1,1,0,65100), -- [icarus_trident]
+(29163,10220,1,1,0,65100), -- [icarus_chopper]
+(29163,10221,1,1,0,65100), -- [icarus_knuckle]
+(29163,10222,1,1,0,65100), -- [icarus_wand]
+(29163,10223,1,1,0,65100), -- [icarus_accipiter]
+-- Tiat
+(29175,7575,1,1,0,10599), -- [draconic_bow]
+(29175,7579,12,36,0,206447), -- [draconic_bow_shaft]
+(29175,6676,1,1,1,35463), -- [sealed_imperial_crusader_gauntlet]
+(29175,6677,1,1,1,35463), -- [sealed_imperial_crusader_boots]
+(29175,6681,1,1,1,35463), -- [sealed_draconic_leather_gloves]
+(29175,6682,1,1,1,35463), -- [sealed_draconic_leather_boots]
+(29175,6685,1,1,1,35463), -- [sealed_major_arcana_gloves]
+(29175,6686,1,1,1,35463), -- [sealed_major_arcana_boots]
+(29175,6703,112,336,1,36009), -- [sealed_imperial_crusader_gauntlet_design]
+(29175,6704,203,607,1,19916), -- [sealed_imperial_crusader_boots_design]
+(29175,6708,320,960,1,12603), -- [sealed_draconic_leather_gloves_fabric]
+(29175,6709,28,82,1,146656), -- [sealed_draconic_leather_boots_design]
+(29175,6712,36,108,1,112029), -- [sealed_major_arcana_gloves_fabric]
+(29175,6713,46,136,1,88639), -- [sealed_major_arcana_boots_design]
+(29175,6578,1,1,2,97917), -- [blessed_scrl_of_ench_am_s]
+(29175,3936,1,3,2,550787), -- [blessed_scroll_of_resurrection]
+-- Zaken
+(29176,80,1,1,0,21233), -- [tallum_blade]
+(29176,150,1,1,0,21233), -- [elemental_sword]
+(29176,5548,24,72,0,106089), -- [tallum_blade_edge]
+(29176,5547,8,22,0,339486), -- [elemental_sword_edge]
+(29176,729,1,1,1,86233), -- [scrl_of_ench_wp_a]
+(29176,730,1,1,1,646755), -- [scrl_of_ench_am_a]
+(29176,6569,1,1,1,10347), -- [blessed_scrl_of_ench_wp_a]
+(29176,6659,1,1,2,900), -- [earring_of_zaken]
+(29176,8922,1,1,3,900), -- [sea_robber]
+(29176,8619,1,1,4,1800), -- [sb_increase_of_divinity_a]
+-- Freya
+(29179,15560,1,1,0,13650), -- [vigwik_axe]
+(29179,15561,1,1,0,13635), -- [evildeity_maul]
+(29179,15562,1,1,0,13635), -- [feathereye_blade]
+(29179,15563,1,1,0,13635), -- [octo_claw]
+(29179,15564,1,1,0,13635), -- [doubletopa_spear]
+(29179,15565,1,1,0,13635), -- [cuticle]
+(29179,15566,1,1,0,13635), -- [blackvisage]
+(29179,15567,1,1,0,13635), -- [veniplant_sword]
+(29179,15568,1,1,0,13635), -- [skullcarnium_bow]
+(29179,15558,1,1,0,13635), -- [peri_el_sword]
+(29179,15559,1,1,0,13635), -- [skul_edge]
+(29179,13143,1,1,1,45500), -- [sealed_vesper_helmet]
+(29179,13144,1,1,1,45450), -- [sealed_vesper_leather_helmet]
+(29179,13145,1,1,1,45450), -- [sealed_vesper_circlet]
+(29179,14109,1,1,1,45450), -- [sealed_vesper_gauntlet]
+(29179,14113,1,1,1,45450), -- [sealed_vesper_leather_gloves]
+(29179,14116,1,1,1,45450), -- [sealed_vesper_gloves]
+(29179,14110,1,1,1,45450), -- [sealed_vesper_boots]
+(29179,14114,1,1,1,45450), -- [sealed_vesper_leather_boots]
+(29179,14117,1,1,1,45450), -- [sealed_vesper_shoes]
+(29179,14111,1,1,1,45450), -- [sealed_vesper_verteidiger]
+(29179,13887,1,1,1,45450), -- [sealed_vesper_sigil]
+(29179,14105,1,1,2,83500), -- [sealed_vesper_cuirass]
+(29179,14106,1,1,2,83300), -- [sealed_vesper_houberk]
+(29179,14107,1,1,2,83300), -- [sealed_vesper_jaket]
+(29179,14108,1,1,2,83300), -- [sealed_vesper_gaiter]
+(29179,14112,1,1,2,83300), -- [sealed_vesper_leather_legging]
+(29179,14115,1,1,2,83300), -- [sealed_vesper_hose]
+(29179,14162,1,1,3,167000), -- [sealed_vesper_ring]
+(29179,14160,1,1,3,166500), -- [sealed_vesper_earring]
+(29179,14161,1,1,3,166500), -- [sealed_vesper_necklace]
+(29179,6577,1,1,4,5357), -- [blessed_scrl_of_ench_wp_s]
+(29179,6578,1,1,4,35718), -- [blessed_scrl_of_ench_am_s]
+(29179,16164,2,4,5,600000), -- [general_86_s]
+(29179,16165,2,4,5,400000), -- [special_86_s]
+(29179,16025,1,1,6,250000), -- [necklace_of_freya]
+-- Freya
+(29180,15560,1,1,0,27300), -- [vigwik_axe]
+(29180,15561,1,1,0,27270), -- [evildeity_maul]
+(29180,15562,1,1,0,27270), -- [feathereye_blade]
+(29180,15563,1,1,0,27270), -- [octo_claw]
+(29180,15564,1,1,0,27270), -- [doubletopa_spear]
+(29180,15565,1,1,0,27270), -- [cuticle]
+(29180,15566,1,1,0,27270), -- [blackvisage]
+(29180,15567,1,1,0,27270), -- [veniplant_sword]
+(29180,15568,1,1,0,27270), -- [skullcarnium_bow]
+(29180,15558,1,1,0,27270), -- [peri_el_sword]
+(29180,15559,1,1,0,27270), -- [skul_edge]
+(29180,15726,1,1,1,45500), -- [sealed_elegia_helmet]
+(29180,15727,1,1,1,45450), -- [sealed_elegia_leather_helmet]
+(29180,15728,1,1,1,45450), -- [sealed_elegia_circlet]
+(29180,15735,1,1,1,45450), -- [sealed_elegia_gauntlet]
+(29180,15736,1,1,1,45450), -- [sealed_elegia_leather_gloves]
+(29180,15737,1,1,1,45450), -- [sealed_elegia_gloves]
+(29180,15738,1,1,1,45450), -- [sealed_elegia_boots]
+(29180,15739,1,1,1,45450), -- [sealed_elegia_leather_boots]
+(29180,15740,1,1,1,45450), -- [sealed_elegia_shoes]
+(29180,15741,1,1,1,45450), -- [sealed_elegia_shield]
+(29180,15742,1,1,1,45450), -- [sealed_elegia_sigil]
+(29180,15729,1,1,2,83500), -- [sealed_elegia_cuirass]
+(29180,15730,1,1,2,83300), -- [sealed_elegia_houberk]
+(29180,15731,1,1,2,83300), -- [sealed_elegia_jaket]
+(29180,15732,1,1,2,83300), -- [sealed_elegia_gaiter]
+(29180,15733,1,1,2,83300), -- [sealed_elegia_leather_legging]
+(29180,15734,1,1,2,83300), -- [sealed_elegia_hose]
+(29180,15760,1,1,3,167000), -- [sealed_elegia_ring]
+(29180,15761,1,1,3,166500), -- [sealed_elegia_earring]
+(29180,15762,1,1,3,166500), -- [sealed_elegia_necklace]
+(29180,6577,1,1,4,5357), -- [blessed_scrl_of_ench_wp_s]
+(29180,6578,1,1,4,35718), -- [blessed_scrl_of_ench_am_s]
+(29180,16026,1,1,5,300000), -- [blessed_necklace_of_freya]
+(29180,16027,1,1,6,500000), -- [bottle_of_freya_soul]
+-- Zaken
+(29181,13143,1,1,0,17760), -- [sealed_vesper_helmet]
+(29181,13144,1,1,0,17640), -- [sealed_vesper_leather_helmet]
+(29181,13145,1,1,0,17640), -- [sealed_vesper_circlet]
+(29181,14109,1,1,0,17640), -- [sealed_vesper_gauntlet]
+(29181,14113,1,1,0,17640), -- [sealed_vesper_leather_gloves]
+(29181,14116,1,1,0,17640), -- [sealed_vesper_gloves]
+(29181,14110,1,1,0,17640), -- [sealed_vesper_boots]
+(29181,14114,1,1,0,17640), -- [sealed_vesper_leather_boots]
+(29181,14117,1,1,0,17640), -- [sealed_vesper_shoes]
+(29181,14111,1,1,0,17640), -- [sealed_vesper_verteidiger]
+(29181,13887,1,1,0,17640), -- [sealed_vesper_sigil]
+(29181,14105,1,1,0,17640), -- [sealed_vesper_cuirass]
+(29181,14106,1,1,0,17640), -- [sealed_vesper_houberk]
+(29181,14107,1,1,0,17640), -- [sealed_vesper_jaket]
+(29181,14108,1,1,0,17640), -- [sealed_vesper_gaiter]
+(29181,14112,1,1,0,17640), -- [sealed_vesper_leather_legging]
+(29181,14115,1,1,0,17640), -- [sealed_vesper_hose]
+(29181,15694,1,1,1,41440), -- [sealed_destino_helmet]
+(29181,15695,1,1,1,41160), -- [sealed_destino_leather_helmet]
+(29181,15696,1,1,1,41160), -- [sealed_destino_circlet]
+(29181,15703,1,1,1,41160), -- [sealed_destino_gauntlet]
+(29181,15704,1,1,1,41160), -- [sealed_destino_leather_gloves]
+(29181,15705,1,1,1,41160), -- [sealed_destino_gloves]
+(29181,15706,1,1,1,41160), -- [sealed_destino_boots]
+(29181,15707,1,1,1,41160), -- [sealed_destino_leather_boots]
+(29181,15708,1,1,1,41160), -- [sealed_destino_shoes]
+(29181,15710,1,1,1,41160), -- [sealed_destino_shield]
+(29181,15709,1,1,1,41160), -- [sealed_destino_sigil]
+(29181,15697,1,1,1,41160), -- [sealed_destino_cuirass]
+(29181,15698,1,1,1,41160), -- [sealed_destino_houberk]
+(29181,15699,1,1,1,41160), -- [sealed_destino_jaket]
+(29181,15700,1,1,1,41160), -- [sealed_destino_gaiter]
+(29181,15701,1,1,1,41160), -- [sealed_destino_leather_legging]
+(29181,15702,1,1,1,41160), -- [sealed_destino_hose]
+(29181,14162,1,1,2,167000), -- [sealed_vesper_ring]
+(29181,14160,1,1,2,166500), -- [sealed_vesper_earring]
+(29181,14161,1,1,2,166500), -- [sealed_vesper_necklace]
+(29181,1538,1,30,3,1000000), -- [blessed_scroll_of_escape]
+(29181,3936,1,10,4,1000000), -- [blessed_scroll_of_resurrection]
+(29181,57,9000000,11000000,5,1000000), -- [adena]
+(29181,16162,2,4,6,600000), -- [rare_85_s]
+(29181,16166,2,4,6,400000), -- [rare_86_s]
+(29181,6659,1,1,7,900), -- [earring_of_zaken]
+-- Balor
+(29186,13143,1,1,0,83700), -- [sealed_vesper_helmet]
+(29186,13144,1,1,0,83300), -- [sealed_vesper_leather_helmet]
+(29186,13145,1,1,0,83300), -- [sealed_vesper_circlet]
+(29186,14109,1,1,0,83300), -- [sealed_vesper_gauntlet]
+(29186,14113,1,1,0,83300), -- [sealed_vesper_leather_gloves]
+(29186,14116,1,1,0,83300), -- [sealed_vesper_gloves]
+(29186,14110,1,1,0,83300), -- [sealed_vesper_boots]
+(29186,14114,1,1,0,83300), -- [sealed_vesper_leather_boots]
+(29186,14117,1,1,0,83300), -- [sealed_vesper_shoes]
+(29186,14111,1,1,0,83300), -- [sealed_vesper_verteidiger]
+(29186,13887,1,1,0,83300), -- [sealed_vesper_sigil]
+(29186,10170,1,1,0,83300), -- [barler_earring]
+(29186,6577,1,1,1,5357), -- [blessed_scrl_of_ench_wp_s]
+(29186,6578,1,1,1,35718); -- [blessed_scrl_of_ench_am_s]
 
-INSERT INTO `droplist` VALUES 
+INSERT INTO `droplist` VALUES
 -- RB drops for clan skill items
 -- admins who have drop multipliers might want to edit chances
 -- Memento Mori
@@ -38963,16 +39013,7 @@ INSERT INTO `droplist` VALUES
 (25269,8619,1,1,102,520000),-- Beast Lord Behemoth (70)
 (25325,8619,1,1,102,520000),-- Flame of Splendor Barakiel (70)
 (25470,8619,1,1,102,500000),-- Last Titan Utenus (66)
-(25296,8619,1,1,102,560000),-- Icicle Emperor Bumbalump (74)
-
--- Ancient Book - Divine Inspiration (Manuscript)
-(29019,8620,12,29,102,1000000),-- Antharas (79)
-(29020,8620,5,15,102,1000000),-- Baium (75)
-(29028,8620,10,30,102,1000000),-- Valakas (85)
-(29047,8620,6,25,102,1000000), -- Scarlet Van Halisha (90)
-(29066,8620,12,29,102,1000000),-- Antharas (79)
-(29067,8620,12,29,102,1000000),-- Antharas (79)
-(29068,8620,12,29,102,1000000);-- Antharas (79)
+(25296,8619,1,1,102,560000);-- Icicle Emperor Bumbalump (74)
 
 INSERT INTO `droplist` VALUES
 -- Shanty Fortress
