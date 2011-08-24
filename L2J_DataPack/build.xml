@@ -25,7 +25,7 @@
 	<property name="build.dist" location="${build}/dist" />
 	<property name="build.dist.cb" location="${build.dist}/community" />
 	<property name="build.dist.doc" location="${build.dist}/doc" />
-	<property name="build.dist.game" location="${build.dist}/gameserver" />
+	<property name="build.dist.gameserver" location="${build.dist}/gameserver" />
 	<property name="build.dist.languages" location="${build.dist}/languages" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 	<property name="build.dist.sql" location="${build.dist}/sql" />
@@ -33,30 +33,22 @@
 
 	<target name="init" depends="clean, getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
-		<mkdir dir="${build.dist}" />
-		<mkdir dir="${build.dist.cb}" />
-		<mkdir dir="${build.dist.doc}" />
-		<mkdir dir="${build.dist.game}" />
-		<mkdir dir="${build.dist.languages}" />
-		<mkdir dir="${build.dist.login}" />
-		<mkdir dir="${build.dist.sql}" />
-		<mkdir dir="${build.dist.tools}" />
 	</target>
 
 	<target name="dist" depends="init" description="Syncronizes build space contents with project.">
-		<sync todir="${build.dist.cb}/data">
-			<fileset dir="cb_data" />
+		<sync todir="${build.dist.cb}">
+			<fileset dir="dist/community" />
 		</sync>
 		<sync todir="${build.dist.doc}">
-			<fileset dir="doc" />
+			<fileset dir="dist/doc" />
 		</sync>
 		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
-		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
-		<sync todir="${build.dist.game}/data" includeemptydirs="true">
+		<concat destfile="${build.dist.gameserver}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
+		<sync todir="${build.dist.gameserver}/data" includeemptydirs="true">
 			<fileset dir="data" />
 		</sync>
 		<sync todir="${build.dist.languages}">
-			<fileset dir="languages" />
+			<fileset dir="dist/languages" />
 		</sync>
 		<sync todir="${build.dist.login}/data">
 			<fileset dir="data">
@@ -65,10 +57,10 @@
 			</fileset>
 		</sync>
 		<sync todir="${build.dist.sql}">
-			<fileset dir="sql" />
+			<fileset dir="dist/sql" />
 		</sync>
 		<sync todir="${build.dist.tools}">
-			<fileset dir="tools" />
+			<fileset dir="dist/tools" />
 		</sync>
 		<zip destfile="${build}/L2J_DataPack.zip" basedir="${build.dist}" />
 	</target>
