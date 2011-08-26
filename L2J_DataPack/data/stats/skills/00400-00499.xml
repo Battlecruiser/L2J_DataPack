@@ -308,19 +308,22 @@
 		</enchant3for>
 	</skill>
 	<skill id="406" levels="3" name="Angelic Icon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1def"> 1.503 1.506 1.51 1.513 1.516 1.52 1.523 1.526 1.53 1.533 1.536 1.54 1.543 1.546 1.55 1.553 1.556 1.56 1.563 1.566 1.57 1.573 1.576 1.58 1.583 1.586 1.59 1.593 1.596 1.6 </table>
 		<table name="#ench1pAtkSpd"> 1.305 1.31 1.315 1.32 1.325 1.33 1.335 1.34 1.345 1.35 1.35 1.36 1.365 1.37 1.375 1.38 1.385 1.39 1.395 1.4 1.405 1.41 1.415 1.42 1.425 1.43 1.435 1.44 1.445 1.45 </table>
 		<table name="#ench2mpConsume"> 167 164 161 158 155 153 150 147 144 141 138 136 133 130 127 124 121 119 116 113 110 107 104 102 99 96 93 90 87 85 </table>
 		<table name="#ench3reuseDelay"> 295000 290000 285000 280000 275000 270000 265000 260000 255000 250000 245000 240000 235000 230000 225000 220000 215000 210000 205000 200000 195000 190000 185000 180000 175000 170000 165000 160000 155000 150000 </table>
 		<table name="#ench4time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#aggroPoints"> 549 611 655 </table>
+		<table name="#cAtk"> 1.33 1.66 2 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 133 153 170 </table>
-		<table name="#runSpd"> 10 20 30 </table>
 		<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
 		<table name="#rCrit"> 33 66 100 </table>
-		<table name="#cAtk"> 1.33 1.66 2 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#runSpd"> 10 20 30 </table>
+		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
