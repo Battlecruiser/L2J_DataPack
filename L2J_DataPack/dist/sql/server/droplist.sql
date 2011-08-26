@@ -38463,6 +38463,31 @@ INSERT INTO `droplist` VALUES
 (29117,6683,1,1,2,13876),-- Sealed Draconic Leather Helmet
 (29117,6687,1,1,2,13876),-- Sealed Major Arcana Circlet
 (29117,6577,1,1,1,10715), -- Blessed Scroll: Enchant Weapon (S)
+-- Beleth
+(29118,13893,1,1,100,400000), -- [sealed_holly_sprit's_cloak]
+(29118,10552,1,1,100,200000), -- [sb_fighter_will]
+(29118,10553,1,1,100,200000), -- [sb_archer_will]
+(29118,14219,1,1,100,200000), -- [sb_magicians_will1]
+(29118,13457,1,1,0,37700), -- [vesper_cutter]
+(29118,13458,1,1,0,37600), -- [vesper_slasher]
+(29118,13459,1,1,0,37600), -- [vesper_burster]
+(29118,13460,1,1,0,37700), -- [vesper_shaper]
+(29118,13461,1,1,0,37700), -- [vesper_fighter]
+(29118,13462,1,1,0,37600), -- [vesper_stormer]
+(29118,13463,1,1,0,37700), -- [vesper_avenger]
+(29118,13464,1,1,0,37600), -- [vesper_retributer]
+(29118,13465,1,1,0,37600), -- [vesper_caster]
+(29118,13467,1,1,0,37600), -- [vesper_thrower]
+(29118,13466,1,1,0,37600), -- [vesper_singer]
+(29118,10215,1,1,0,65200), -- [icarus_sowsword]
+(29118,10216,1,1,0,65100), -- [icarus_disperser]
+(29118,10217,1,1,0,65100), -- [icarus_spirits]
+(29118,10218,1,1,0,65100), -- [icarus_heavy_arms]
+(29118,10219,1,1,0,65100), -- [icarus_trident]
+(29118,10220,1,1,0,65100), -- [icarus_chopper]
+(29118,10221,1,1,0,65100), -- [icarus_knuckle]
+(29118,10222,1,1,0,65100), -- [icarus_wand]
+(29118,10223,1,1,0,65100), -- [icarus_accipiter]
 (29129,395,1,1,0,337100),-- Manticore Skin Shirt
 (29129,417,4,12,0,67295),-- Manticore Skin Gaiters
 (29129,1942,53,157,0,140832),-- Manticore Skin Shirt Texture
