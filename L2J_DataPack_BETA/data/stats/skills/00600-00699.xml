@@ -546,7 +546,7 @@
 		</for>
 	</skill>
 	<skill id="632" levels="6" name="Emergent Ability - Defense">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#pDefHeavy"> 17.9 35.7 53.6 71.4 89.3 107.1 </table>
 		<table name="#pDefLight"> 13.4 26.8 40.2 53.6 67 80.3 </table>
@@ -558,17 +558,17 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDefHeavy">
-				<using kind="Magic" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pDef" val="#pDefRobe">
 				<using kind="Heavy" />
 			</add>
 		</for>
 		<for>
 			<add order="0x40" stat="pDef" val="#pDefLight">
 				<using kind="Light" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pDef" val="#pDefRobe">
+				<using kind="Magic" />
 			</add>
 		</for>
 	</skill>
