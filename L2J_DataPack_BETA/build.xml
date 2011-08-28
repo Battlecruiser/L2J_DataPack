@@ -71,7 +71,7 @@
 	</target>
 
 	<target name="getChangelogDateVersion" description="Get Changelog, Date, Version">
-		<exec dir="." executable="svn" outputproperty="l2j.changelog" >
+		<exec dir="." executable="svn" outputproperty="l2j.changelog">
 			<arg value="log" />
 			<arg value="--stop-on-copy" />
 		</exec>
