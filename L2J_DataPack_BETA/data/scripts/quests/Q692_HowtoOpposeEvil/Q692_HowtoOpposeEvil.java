@@ -24,9 +24,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 
  * @author Gigiikun
- *
  */
 public final class Q692_HowtoOpposeEvil extends Quest
 {
@@ -160,15 +158,14 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		if (st == null)
 			return getNoQuestMsg(player);
 		
-		final byte id = st.getState();
 		final int cond = st.getInt("cond");
 		String htmltext = "";
-		if (id == State.CREATED)
+		if (st.isCreated())
 		{
 			if (player.getLevel() >= 75)
+			{
 				htmltext = "32549-01.htm";
-			else
-				htmltext = "32549-00.htm";
+			}
 		}
 		else
 		{
@@ -202,20 +199,21 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player,"3");
+		final L2PcInstance partyMember = getRandomPartyMember(player, "3");
 		if (partyMember == null)
 			return null;
 		final QuestState st = partyMember.getQuestState(QN);
-		if (st != null && _questMobs.containsKey(npc.getNpcId()))
+		final int npcId = npc.getNpcId();
+		if (st != null && _questMobs.containsKey(npcId))
 		{
-			int chance = (int) (_questMobs.get(npc.getNpcId())[1] * Config.RATE_QUEST_DROP);
+			int chance = (int) (_questMobs.get(npcId)[1] * Config.RATE_QUEST_DROP);
 			int numItems = chance / 1000;
 			chance = chance % 1000;
 			if (st.getRandom(1000) < chance)
 				numItems++;
 			if (numItems > 0)
 			{
-				st.giveItems(_questMobs.get(npc.getNpcId())[0],numItems);
+				st.giveItems(_questMobs.get(npcId)[0],numItems);
 				st.playSound("ItemSound.quest_itemget");
 			}
 		}
