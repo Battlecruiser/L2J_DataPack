@@ -166,6 +166,10 @@ public final class Q692_HowtoOpposeEvil extends Quest
 			{
 				htmltext = "32549-01.htm";
 			}
+			else
+			{
+				htmltext = "32549-00.htm";
+			}
 		}
 		else
 		{
