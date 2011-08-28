@@ -828,9 +828,10 @@
 	</skill>
 	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
 			<add order="0x40" stat="maxHp" val="185" />
@@ -840,11 +841,12 @@
 	</skill>
 	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.083" />
+			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
 			<sub order="0x40" stat="sleepVuln" val="7" />
 			<sub order="0x40" stat="rootVuln" val="7" />
@@ -852,11 +854,12 @@
 	</skill>
 	<skill id="3785" levels="1" name="Imperial Crusader Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.083" />
+			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
 			<sub order="0x40" stat="sleepVuln" val="7" />
 			<sub order="0x40" stat="rootVuln" val="7" />
