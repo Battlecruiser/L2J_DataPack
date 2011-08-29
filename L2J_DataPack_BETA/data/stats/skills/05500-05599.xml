@@ -524,13 +524,13 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#triggeredLevel"> 2 3 3 </table>
-		<table name="#rCrit"> 0.1 0.3 0.3 </table>
-		<table name="#cAtk"> 1 1 1.35 </table>
+		<table name="#cAtk"> 1 1 1.25 </table>
+		<table name="#rCrit"> 0 0.3 0.3 </table>
+		<table name="#triggeredLevel"> 2 3 0 </table>
 		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5561" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
 				<add order="0x40" stat="pAtk" val="300" />
@@ -543,19 +543,18 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#triggeredLevel"> 2 3 3 </table>
-		<table name="#fireRes"> 0 30 30 </table>
-		<table name="#darkRes"> 0 30 30 </table>
+		<table name="#elementRes"> 0 30 30 </table>
 		<table name="#gainHp"> 1 1 1.3 </table>
+		<table name="#triggeredLevel"> 2 3 0 </table>
 		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5562" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
 				<add order="0x40" stat="pDef" val="500" />
-				<add order="0x40" stat="fireRes" val="#fireRes" />
-				<add order="0x40" stat="darkRes" val="#darkRes" />
+				<add order="0x40" stat="fireRes" val="#elementRes" />
+				<add order="0x40" stat="darkRes" val="#elementRes" />
 				<mul order="0x30" stat="gainHp" val="#gainHp" />
 			</effect>
 		</for>
@@ -564,9 +563,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#triggeredLevel"> 2 3 3 </table>
+		<table name="#rCrit"> 0 0 0.2 </table>
+		<table name="#triggeredLevel"> 2 3 0 </table>
 		<table name="#waterPower"> 0 20 20 </table>
-		<table name="#rCrit"> 0.1 0.1 0.2 </table>
 		<set name="magicLvl" val="81" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -582,18 +581,17 @@
 	<skill id="5564" levels="3" name="Pain of Shilen">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
-		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#triggeredLevel"> 2 3 3 </table>
-		<table name="#cAtk"> 1.35 1.35 1.35 </table>
-		<table name="#windPower"> 0 20 20 </table>
 		<table name="#absorbDam"> 0 0 8 </table>
+		<table name="#activationChance"> 10 10 0 </table>
+		<table name="#triggeredLevel"> 2 3 0 </table>
+		<table name="#windPower"> 0 20 20 </table>
 		<set name="magicLvl" val="81" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5564" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
-				<mul order="0x30" stat="cAtk" val="#cAtk" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
 				<add order="0x40" stat="windPower" val="#windPower" />
 				<add order="0x40" stat="absorbDam" val="#absorbDam" />
 			</effect>
