@@ -1184,16 +1184,19 @@
 		</for>
 	</skill>
 	<skill id="761" levels="1" name="Seed of Revenge">
-		<set name="mpConsume" val="37" />
-		<set name="magicLvl" val="81" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="15000" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5561" triggeredLevel="1" activationChance="30" chanceType="ON_ATTACKED" val="0" abnormalLvl="1" abnormalType="seed_of_knight">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5561" triggeredLevel="1" activationChance="8" chanceType="ON_ATTACKED" val="0" abnormalLvl="1" abnormalType="seed_of_knight">
 				<add order="0x40" stat="pAtk" val="100" />
 			</effect>
 		</for>
@@ -1688,16 +1691,19 @@
 		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="784" levels="1" name="Spirit of Phoenix">
-		<set name="mpConsume" val="37" />
-		<set name="magicLvl" val="81" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="15000" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5562" triggeredLevel="1" activationChance="30" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5562" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
 				<add order="0x40" stat="pDef" val="200" />
 			</effect>
 		</for>
@@ -1736,16 +1742,19 @@
 		</for>
 	</skill>
 	<skill id="786" levels="1" name="Eva's Will">
-		<set name="mpConsume" val="37" />
-		<set name="magicLvl" val="81" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="15000" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5563" triggeredLevel="1" activationChance="30" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5563" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
 				<add order="0x40" stat="mDef" val="200" />
 			</effect>
 		</for>
@@ -1780,17 +1789,20 @@
 		</for>
 	</skill>
 	<skill id="788" levels="1" name="Pain of Shilen">
-		<set name="mpConsume" val="37" />
-		<set name="magicLvl" val="81" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="15000" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5564" triggeredLevel="1" activationChance="30" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
-				<mul order="0x30" stat="cAtk" val="1.15" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5564" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+				<mul order="0x30" stat="cAtk" val="1.1" />
 			</effect>
 		</for>
 	</skill>
