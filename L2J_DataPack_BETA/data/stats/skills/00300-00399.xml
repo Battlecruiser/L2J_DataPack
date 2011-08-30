@@ -371,12 +371,12 @@
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="dance_of_protection">
-				<!-- mul order="0x30" stat="damageZoneVuln" val="0.7" / TODO: Require Support -->
+				<sub order="0x40" stat="damageZoneVuln" val="30" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="1" abnormalType="dance_of_protection">
-				<!-- mul order="0x30" stat="damageZoneVuln" val="0.7" / TODO: Require Support -->
+				<sub order="0x40" stat="damageZoneVuln" val="30" />
 			</effect>
 		</enchant1for>
 	</skill>
