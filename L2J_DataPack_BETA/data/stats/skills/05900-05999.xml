@@ -719,8 +719,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-			</effect>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
 	<skill id="5983" levels="1" name="Aura Bird - Owl">
@@ -740,8 +739,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-			</effect>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
 	<skill id="5984" levels="1" name="Hand of Death">
