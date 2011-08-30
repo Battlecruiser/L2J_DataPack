@@ -2354,7 +2354,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<!-- mul order="0x30" stat="damageZoneVuln" val="0.6" / TODO: Require Support -->
+			<add order="0x40" stat="damageZoneVuln" val="40" />
 		</for>
 	</skill>
 	<skill id="296" levels="1" name="Chameleon Rest">
