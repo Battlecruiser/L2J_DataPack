@@ -34,6 +34,7 @@ public class Recipes implements IItemHandler
 		{
 			return;
 		}
+		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		
 		if (activeChar.isInCraftMode())
@@ -48,56 +49,62 @@ public class Recipes implements IItemHandler
 			return;
 		}
 		
-		SystemMessage sm;
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.RECIPE_ALREADY_REGISTERED);
+			return;
+		}
+		
+		boolean canCraft = false;
+		boolean recipeLevel = false;
+		boolean recipeLimit = false;
+		if (rp.isDwarvenRecipe() && (canCraft = activeChar.hasDwarvenCraft()))
+		{
+			if (recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft()))
+			{
+				recipeLimit = activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit();
+			}
+		}
+		else if (canCraft = activeChar.hasCommonCraft())
+		{
+			if (recipeLevel = (rp.getLevel() > activeChar.getCommonCraft()))
+			{
+				recipeLimit = activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit();
+			}
+		}
+		
+		if (!canCraft)
+		{
+			activeChar.sendPacket(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
+			return;
+		}
+		
+		if (recipeLevel)
+		{
+			activeChar.sendPacket(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
+			return;
+		}
+		
+		if (recipeLimit)
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
+			sm.addNumber(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
+			activeChar.sendPacket(sm);
+			return;
+		}
+		
+		if (rp.isDwarvenRecipe())
+		{
+			activeChar.registerDwarvenRecipeList(rp, true);
 		}
 		else
 		{
-			boolean canCraft = false;
-			boolean recipeLevel = false;
-			boolean recipeLimit = false;
-			if (rp.isDwarvenRecipe() && (canCraft = activeChar.hasDwarvenCraft()))
-			{
-				if (recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft()))
-				{
-					recipeLimit = activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit();
-				}
-			}
-			else if (canCraft = activeChar.hasCommonCraft())
-			{
-				if (recipeLevel = (rp.getLevel() > activeChar.getCommonCraft()))
-				{
-					recipeLimit = activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit();
-				}
-			}
-			
-			if (canCraft)
-			{
-				if (recipeLevel)
-				{
-					activeChar.sendPacket(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-				}
-				else if (recipeLimit)
-				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-					sm.addNumber(activeChar.getDwarfRecipeLimit());
-					activeChar.sendPacket(sm);
-				}
-				else
-				{
-					activeChar.registerDwarvenRecipeList(rp, true);
-					activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED);
-					sm.addItemName(item);
-					activeChar.sendPacket(sm);
-				}
-			}
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-			}
+			activeChar.registerCommonRecipeList(rp, true);
 		}
+		
+		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED);
+		sm.addItemName(item);
+		activeChar.sendPacket(sm);
 	}
 }
