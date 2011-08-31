@@ -1053,6 +1053,9 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22249-1" />
+		<cond msgId="113" addName="1">
+			<player vehicleMounted="false" /> <!-- TEMP FIX: To prevent retail bug lose a cake in ship/airship -->
+		</cond>
 	</item>
 	<item id="21596" type="EtcItem" name="Blessing Package 100">
 		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 6 feathers of blessing. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->

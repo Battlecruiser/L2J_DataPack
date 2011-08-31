@@ -709,20 +709,31 @@
 	<item id="21169" type="EtcItem" name="Birthday Present Pack">
 		<!-- Description: Birthday present given to you by Alegria on your birthday. When used, you will obtain (1) Cake Topper hat, (1) Birthday Vitality Potion and (1) Birthday Cake. Cannot be exchanged or dropped. Can be stored in private warehouse. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="capsuled_items" val="21170,1,1,100;21595,1,1,100;21594,1,1,100" />
 	</item>
 	<item id="21170" type="EtcItem" name="Birthday Vitality Potion">
 		<!-- Description: Upon use, for 12 hours, when Exp. is acquired through hunting, vitality is recovered. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="80" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22182-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="21171" type="EtcItem" name="Transformation Scroll: Treasure Hunter - Event">
 		<!-- Description: Transformation scroll that transforms you into a Treasure Hunter for 10 minutes. If used on Fantasy Isle, you can find Event Treasure Chests. No effect if used while already transformed. -->

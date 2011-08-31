@@ -1080,20 +1080,31 @@
 	<item id="22187" type="EtcItem" name="Birthday Present Pack">
 		<!-- Description: Birthday present received from Alegria on the character's birthday. When used, you can obtain (3) Birthday Vitality Potion(s), a birthday cake, and a Birthday Hat. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="capsuled_items" val="22188,3,3,100;21595,1,1,100;21594,1,1,100" />
 	</item>
 	<item id="22188" type="EtcItem" name="Birthday Vitality Potion">
 		<!-- Description: Upon use, for 4 hours, when Exp. is acquired through hunting, vitality is recovered. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="80" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22312-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="22189" type="Armor" name="Child's Hat - Boy">
 		<!-- Description: Taiwanese child exclusive hat (boy). Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Item that can be stored in a private warehouse. -->

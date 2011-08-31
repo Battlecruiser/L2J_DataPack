@@ -327,6 +327,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22034-1" />
 		<set name="time" val="1440" />
+		<cond msgId="113" addName="1">
+			<player vehicleMounted="false" /> <!-- TEMP FIX: To prevent retail bug lose a cake in ship/airship -->
+		</cond>
 	</item>
 	<item id="20321" type="Armor" name="Goggle">
 		<set name="icon" val="BranchSys.icon.br_goggles_i00" />
