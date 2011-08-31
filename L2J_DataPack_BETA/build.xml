@@ -23,7 +23,7 @@
 
 	<property name="build" location="build" />
 	<property name="build.dist" location="${build}/dist" />
-	<property name="build.dist.cb" location="${build.dist}/community" />
+	<property name="build.dist.community" location="${build.dist}/community" />
 	<property name="build.dist.doc" location="${build.dist}/doc" />
 	<property name="build.dist.gameserver" location="${build.dist}/gameserver" />
 	<property name="build.dist.languages" location="${build.dist}/languages" />
@@ -36,7 +36,7 @@
 	</target>
 
 	<target name="dist" depends="init" description="Syncronizes build space contents with project.">
-		<sync todir="${build.dist.cb}">
+		<sync todir="${build.dist.community}">
 			<fileset dir="dist/community" />
 		</sync>
 		<sync todir="${build.dist.doc}">
@@ -50,13 +50,15 @@
 		<sync todir="${build.dist.languages}">
 			<fileset dir="dist/languages" />
 		</sync>
-		<sync todir="${build.dist.login}/data">
-			<fileset dir="logindata" />
+		<sync todir="${build.dist.login}">
+			<fileset dir="dist/login" />
+		</sync>
+		<copy todir="${build.dist.login}/data">
 			<fileset dir="data">
 				<include name="servername.xml" />
 				<include name="servername.xsd" />
 			</fileset>
-		</sync>
+		</copy>
 		<sync todir="${build.dist.sql}">
 			<fileset dir="dist/sql" />
 		</sync>
