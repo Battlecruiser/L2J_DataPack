@@ -635,9 +635,21 @@
 	</skill>
 	<skill id="22182" levels="1" name="Birthday Joy">
 		<!-- "Birthday gift received once a year. For 12 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Birthday Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="stayOnSubclassChange" val="false" />
+		<set name="canBeDispeled" val="false" />
+		<for>
+			<effect name="Buff" abnormalTime="43200" val="0" abnormalLvl="3" abnormalType="vp_up">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
 		<!-- Transformed into Dragon Master Lee. -->
