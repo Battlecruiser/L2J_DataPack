@@ -48,23 +48,24 @@
 		</cond>
 	</skill>
 	<skill id="2" levels="19" name="Confusion">
-		<table name="#mpInitialConsume"> 3 3 3 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
-		<table name="#mpConsume"> 9 10 11 13 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="CONFUSE_MOB_ONLY" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 9 10 11 13 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
+		<table name="#mpInitialConsume"> 3 3 3 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="CONFUSION" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="5" name="Confusion" abnormalTime="4" val="0" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
+			<effect name="RandomizeHate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3" levels="9" name="Power Strike">
@@ -399,9 +400,10 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DEBUFF" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
+		<set name="skillType" val="CONFUSION" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
+			<effect name="RandomizeHate" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>

@@ -636,18 +636,22 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
-		<set name="itemConsumeCount" val="1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
+		<set name="isDebuff" val="true" />
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
-		<set name="skillType" val="CONFUSION" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="CONFUSION" />
+		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect count="2" name="Confusion" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="speed_down"> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			<effect name="RandomizeHate" noicon="1" val="0" />
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="speed_down">
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
