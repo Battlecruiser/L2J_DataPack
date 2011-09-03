@@ -361,8 +361,10 @@
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="3" val="0">
 				<mul order="0x30" stat="bluntWpnVuln" val="1.7" />
+				<mul order="0x30" stat="bigBluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="daggerWpnVuln" val="1.7" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.7" />
+				<mul order="0x30" stat="bigSwordWpnVuln" val="1.7" />
 				<mul order="0x30" stat="dualFistWpnVuln" val="1.7" />
 				<mul order="0x30" stat="dualWpnVuln" val="1.7" />
 				<mul order="0x30" stat="poleWpnVuln" val="1.7" />
