@@ -51,6 +51,7 @@
 			<mul order="0x30" stat="daggerWpnVuln" val="0.7" />
 			<mul order="0x30" stat="dualDaggerWpnVuln" val="0.7" />
 			<mul order="0x30" stat="bluntWpnVuln" val="1.1" />
+			<mul order="0x30" stat="bigBluntWpnVuln" val="1.1" />
 		</for>
 	</skill>
 	<skill id="4004" levels="1" name="Fragile Skull">
@@ -61,6 +62,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="bluntWpnVuln" val="1.1" />
+			<mul order="0x30" stat="bigBluntWpnVuln" val="1.1" />
 		</for>
 	</skill>
 	<skill id="4005" levels="1" name="Floating Target">
