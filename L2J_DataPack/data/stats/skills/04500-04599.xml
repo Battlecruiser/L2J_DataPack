@@ -192,7 +192,9 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="swordWpnVuln" val="0" />
+			<mul order="0x30" stat="bigSwordWpnVuln" val="0" />
 			<mul order="0x30" stat="bluntWpnVuln" val="0" />
+			<mul order="0x30" stat="bigBluntWpnVuln" val="0" />
 			<mul order="0x30" stat="daggerWpnVuln" val="0" />
 			<mul order="0x30" stat="poleWpnVuln" val="0" />
 			<mul order="0x30" stat="dualFistWpnVuln" val="0" />
