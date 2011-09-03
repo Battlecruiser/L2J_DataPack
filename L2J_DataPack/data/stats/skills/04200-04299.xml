@@ -1194,6 +1194,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="bluntWpnVuln" val="#bluntVuln" />
+			<mul order="0x30" stat="bigBluntWpnVuln" val="#bluntVuln" />
 		</for>
 	</skill>
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
