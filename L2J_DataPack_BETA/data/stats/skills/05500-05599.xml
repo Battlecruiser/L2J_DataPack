@@ -90,60 +90,140 @@
 		</for>
 	</skill>
 	<skill id="5505" levels="1" name="Fire Blossom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5506" levels="1" name="Water Blossom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5507" levels="1" name="Wind Blossom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5508" levels="1" name="Earth Blossom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5509" levels="1" name="Fire Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
-		<set name="saveVs" val="MEN" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="800" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="0" abnormalType="armor_fire">
+				<sub order="0x40" stat="fireRes" val="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5510" levels="1" name="Water Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
-		<set name="saveVs" val="MEN" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="800" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="0" abnormalType="armor_water">
+				<sub order="0x40" stat="waterRes" val="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5511" levels="1" name="Wind Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
-		<set name="saveVs" val="MEN" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="800" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="0" abnormalType="armor_wind">
+				<sub order="0x40" stat="windRes" val="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5512" levels="1" name="Earth Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
-		<set name="saveVs" val="MEN" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="800" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="0" abnormalType="armor_earth">
+				<sub order="0x40" stat="earthRes" val="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5513" levels="1" name="Fire Taint">
 		<set name="target" val="TARGET_NONE" />
@@ -170,9 +250,17 @@
 		<set name="hitTime" val="15000" />
 	</skill>
 	<skill id="5517" levels="1" name="Nurture">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="100" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="hp_regen_up">
+				<mul order="0x30" stat="regHp" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5518" levels="1" name="Last Stand">
 		<set name="target" val="TARGET_NONE" />
@@ -180,53 +268,161 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5519" levels="1" name="Chain Buff - Power Up">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="mAtk" val="1.75" />
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<add order="0x40" stat="runSpd" val="33" />							
+			</effect>
+		</for>
 	</skill>
 	<skill id="5520" levels="1" name="Chain Buff - Vampiric Shield">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
+				<add order="0x40" stat="reflectDam" val="60" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5521" levels="1" name="Chain Buff - Critical Sense">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+				<basemul order="0x30" stat="mCritRate" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5522" levels="1" name="Chain Magic - Dark Explosion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="500" />
+		<set name="dependOnTargetBuff" val="0.2" /> <!-- NOTE: Divine Inspiration/Dance/Song/Trigger slots are ignored, so using (20 Default Buff Slots / 100) -->		
+		<set name="effectRange" val="900" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="80" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="MDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="85" />
 	</skill>
 	<skill id="5523" levels="1" name="Chain Magic - Unholy Castle">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
-		<set name="saveVs" val="MEN" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="maxNegated" val="3" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="armor_unholy">
+				<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
+				<sub order="0x40" stat="darkRes" val="50" />
+			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+		</for>
 	</skill>
 	<skill id="5524" levels="1" name="Chain Buff - Resistance to Bow and Magic attacks">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="md_up">
+				<sub order="0x40" stat="cancelVuln" val="100" />
+				<!-- TODO: Missing support to resist category "multi_buff". -->
+				<mul order="0x30" stat="bowWpnVuln" val="0.6" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5525" levels="1" name="Chain Buff - Resistance to Melee Attacks">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul order="0x30" stat="swordWpnVuln" val="0.75" />
+				<mul order="0x30" stat="bigSwordWpnVuln" val="0.75" />
+				<mul order="0x30" stat="poleWpnVuln" val="0.75" />
+				<mul order="0x30" stat="bluntWpnVuln" val="0.75" />
+				<mul order="0x30" stat="bigBluntWpnVuln" val="0.75" />
+				<mul order="0x30" stat="daggerWpnVuln" val="0.75" />
+				<mul order="0x30" stat="fistWpnVuln" val="0.75" />
+				<mul order="0x30" stat="dualWpnVuln" val="0.75" />
+				<mul order="0x30" stat="dualFistWpnVuln" val="0.75" />
+				<mul order="0x30" stat="dualDaggerWpnVuln" val="0.75" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5526" levels="1" name="Challenger's Blessing">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="66" />
+		<set name="mpInitialConsume" val="17" />		
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="shield_prob_up">
+				<mul order="0x30" stat="rShld" val="1.9" />
+				<add order="0x40" stat="pDef" val="1000" />
+				<add order="0x40" stat="darkRes" val="50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5527" levels="1" name="Overflow">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="66" />
+		<set name="mpInitialConsume" val="17" />		
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="971" />
+		<set name="skillRadius" val="2000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_PARTY_OTHER" />
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
 		<set name="target" val="TARGET_NONE" />
@@ -432,37 +628,78 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5550" levels="12" name="NPC Trigger Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#triggeredLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5551" />
+		<set name="triggeredLevel" val="#triggeredLvl" />
 	</skill>
 	<skill id="5551" levels="12" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
-		<set name="saveVs" val="CON" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base land rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Stun" abnormalTime="9" val="0"  abnormalLvl="1" abnormalType="stun" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
+		</for>
 	</skill>
 	<skill id="5552" levels="12" name="NPC Hill Up">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#power"> 10 20 30 40 50 60 70 80 90 100 110 120 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="gainHp" val="#power" />
+		</for>
 	</skill>
 	<skill id="5553" levels="12" name="NPC HP Region">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#power"> 1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="regHp" val="#power" />
+		</for>
 	</skill>
 	<skill id="5554" levels="12" name="NPC Silence Resistance enhanced">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="derangementVuln" val="#vuln" />
+		</for>
 	</skill>
 	<skill id="5555" levels="12" name="NPC Silence Resistance weakened">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="derangementVuln" val="#vuln" />
+		</for>
 	</skill>
 	<skill id="5556" levels="1" name="Protection Power">
 		<!-- Confirmed CT2.5 -->
@@ -1099,9 +1336,13 @@
 		</for>
 	</skill>
 	<skill id="5597" levels="1" name="Invalid Skill cancel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="cancel" val="10000" />
+		</for>
 	</skill>
 	<skill id="5598" levels="12" name="Flash Resistance">
 		<set name="target" val="TARGET_NONE" />
@@ -1109,8 +1350,14 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5599" levels="12" name="Stun Resistance">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="stunVuln" val="#vuln" />
+		</for>
 	</skill>
 </list>
