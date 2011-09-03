@@ -849,32 +849,56 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5765" levels="1" name="Naia Sprout">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="76" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="power" val="4472" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5766" levels="1" name="Naia Sprout">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="76" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="power" val="4472" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5767" levels="1" name="Naia Sprout">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="76" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="power" val="4472" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5768" levels="1" name="Naia Sprout">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="78" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="power" val="4472" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5769" levels="12" name="not_used">
 		<set name="target" val="TARGET_NONE" />
