@@ -26,6 +26,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="2" val="0" />
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
@@ -225,6 +226,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="speed_down" abnormal="poison">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -244,6 +246,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -361,6 +364,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
@@ -379,6 +383,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
@@ -508,6 +513,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>
@@ -549,6 +555,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -674,6 +681,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="PARALYZE" />
 	</skill>
 	<skill id="5460" levels="1" name="Fear">
 		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
@@ -682,6 +690,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5461" levels="12" name="Castle Gunner Shot">
 		<!-- Confirmed CT2.5 -->
@@ -944,6 +953,7 @@
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 71HP * 5 during 20 seconds -->
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="355" abnormal="bleed" effectPower="100" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />

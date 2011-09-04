@@ -724,6 +724,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#hpConsume"> 131 209 280 318 366 </table>
@@ -934,6 +935,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
+		<set name="trait" val="POISON" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -969,6 +971,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 21 24 32 41 50 58 63HP * 3 Sec -->
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
@@ -998,6 +1001,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="FEAR" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
@@ -1034,6 +1038,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="PARALYZE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="power" val="#ench2Power" />

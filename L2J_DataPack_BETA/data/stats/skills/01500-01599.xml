@@ -180,6 +180,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="10" val="0" abnormal="poison" abnormalLvl="1" abnormalType="root_magically" />
 			<effect count="2" name="DamOverTime" abnormalTime="5" val="180" noicon="1" />
@@ -249,6 +250,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
@@ -997,6 +999,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="ultimate_debuff">
 				<mul order="0x30" stat="pAtk" val="0.5" />
@@ -1082,6 +1085,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="5000" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="1547" levels="3" name="Spirit Sharing">
 		<table name="#abnormalLvl"> 1 2 3 </table>

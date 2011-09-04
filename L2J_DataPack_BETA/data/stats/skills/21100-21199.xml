@@ -520,6 +520,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
@@ -1114,6 +1115,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
 		<!-- Recovers all energy with the power of courage, and maintains the energy stage for 5 minutes. Reuse delay 30 minutes. When you use the skill, 1 Proof of a Warrior is consumed. -->

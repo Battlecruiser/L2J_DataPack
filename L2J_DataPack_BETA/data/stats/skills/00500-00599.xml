@@ -391,6 +391,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="soulMaxConsumeCount" val="5" />
+		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -427,6 +428,7 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="lethal2" val="#ench1lethal2" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -449,6 +451,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="512" levels="10" name="Create Bio Potion">
 		<!-- Confirmed CT2.5 -->
@@ -789,10 +792,11 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
+		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="dark_seed" abnormal="poison" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="dark_seed" abnormal="bleed" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5447" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1627,6 +1631,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="nextActionAttack" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="2" name="DamOverTime" abnormalTime="5" abnormalLvl="#abnormalLvl" val="615" effectPower="50" effectType="BLEED" abnormal="bleed" abnormalType="bleeding" />
 		</for>
@@ -1847,6 +1852,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="174" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -1886,6 +1892,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="baseCritRate" val="15" />
 		<set name="reuseDelay" val="15000" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
 		</for>
@@ -2078,6 +2085,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="3" name="DamOverTime" abnormalTime="3" val="369" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>

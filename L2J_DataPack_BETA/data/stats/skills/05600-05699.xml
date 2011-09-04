@@ -890,6 +890,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -904,6 +905,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -918,6 +920,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -932,6 +935,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="100" abnormalLvl="8" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -946,6 +950,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -960,6 +965,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -974,6 +980,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -988,6 +995,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1004,6 +1012,7 @@
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1369,6 +1378,7 @@
 		<set name="skillType" val="MUTE" />
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
 		</for>

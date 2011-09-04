@@ -29,6 +29,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="66" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -154,6 +155,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -199,6 +201,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -215,6 +218,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -264,6 +268,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="12000" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -488,6 +493,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -507,6 +513,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -669,6 +676,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -684,6 +692,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="264" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -701,6 +710,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="768" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -718,6 +728,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="384" abnormalLvl="7" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -815,6 +826,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -832,6 +844,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="672" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -947,6 +960,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1012,6 +1026,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
@@ -1029,6 +1044,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6126" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
@@ -1076,6 +1092,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
@@ -1094,6 +1111,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6126" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
@@ -1130,6 +1148,7 @@
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5165" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
@@ -1186,6 +1205,7 @@
 		<set name="triggeredId" val="5168" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="3086" levels="10" name="Item Skill: Hold">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1200,6 +1220,7 @@
 		<set name="triggeredId" val="5169" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="3087" levels="10" name="Item Skill: Sleep">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1214,6 +1235,7 @@
 		<set name="triggeredId" val="5170" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="SLEEP" />
 	</skill>
 	<skill id="3088" levels="10" name="Item Skill: Paralyze">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1228,6 +1250,7 @@
 		<set name="triggeredId" val="5171" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="PARALYZE" />
 	</skill>
 	<skill id="3089" levels="10" name="Item Skill: Medusa">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1256,6 +1279,7 @@
 		<set name="triggeredId" val="5173" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="3091" levels="10" name="Item Skill: Poison">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1270,6 +1294,7 @@
 		<set name="triggeredId" val="5174" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="3092" levels="10" name="Item Skill: Bleed">
 		<set name="nextActionAttack" val="true" />
@@ -1285,6 +1310,7 @@
 		<set name="triggeredId" val="5175" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="3093" levels="10" name="Item Skill: Silence">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1299,6 +1325,7 @@
 		<set name="triggeredId" val="5176" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="3094" levels="10" name="Item Skill: Doom">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1313,6 +1340,7 @@
 		<set name="triggeredId" val="5177" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
@@ -1369,6 +1397,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="3099" levels="10" name="Item Skill: Hold">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1383,5 +1412,6 @@
 		<set name="lvlDepend" val="1" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="HOLD" />
 	</skill>
 </list>

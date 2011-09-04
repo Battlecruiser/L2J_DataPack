@@ -69,6 +69,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="120" abnormalType="big_head" />
 		</for>
@@ -852,6 +853,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>

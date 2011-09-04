@@ -1192,6 +1192,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1226,6 +1227,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="lethal1" val="10" /> <!-- Half-Kill -->
 		<set name="hitTime" val="4000" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1272,6 +1274,7 @@
 		<set name="skillType" val="BLOW" />
 		<set name="SSBoost" val="1.5" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1498,6 +1501,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1000" />
+		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1554,6 +1558,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1820,6 +1825,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1000" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
@@ -1932,6 +1938,7 @@
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1982,6 +1989,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="400" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />

@@ -36,6 +36,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -55,6 +56,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -99,6 +101,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
@@ -118,6 +121,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -174,6 +178,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -365,6 +370,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -984,6 +990,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="#cast" />
 		<set name="effectRange" val="1000" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>

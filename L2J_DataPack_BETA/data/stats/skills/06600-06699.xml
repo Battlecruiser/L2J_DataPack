@@ -211,6 +211,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6623" levels="1" name="Fungus Hub">
 		<set name="target" val="TARGET_NONE" />
@@ -224,6 +225,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6625" levels="1" name="Energy of Life">
 		<set name="target" val="TARGET_NONE" />
@@ -312,6 +314,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
 		<set name="target" val="TARGET_NONE" />
@@ -691,6 +694,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6678" levels="1" name="Hold Cancel">
 		<set name="target" val="TARGET_NONE" />
@@ -859,6 +863,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="coolTime" val="2000" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6691" levels="1" name="Dualsword Deadly Move">
 		<set name="target" val="TARGET_NONE" />
@@ -895,6 +900,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6697" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->

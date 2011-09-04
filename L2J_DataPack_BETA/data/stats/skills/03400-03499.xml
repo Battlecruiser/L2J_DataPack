@@ -41,6 +41,7 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player transformationId="103" />
