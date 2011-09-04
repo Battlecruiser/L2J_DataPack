@@ -24,6 +24,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="HOLD" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -139,6 +140,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -169,6 +171,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 14 19 24 30 34 37HP * 3 Sec -->
 			<effect count="10" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dot" abnormal="poison" />
@@ -216,6 +219,7 @@
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Confusion" abnormalTime="4" val="0" />
 		</for>
@@ -489,6 +493,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="1400" />
+		<set name="trait" val="POISON" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1273,6 +1278,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1306,6 +1312,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="BOSS" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2109,6 +2116,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -2128,6 +2136,7 @@
 		<set name="skillType" val="AGGREMOVE" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="1274" levels="4" name="Energy Bolt">
 		<table name="#mpInitialConsume"> 2 3 3 3 </table>

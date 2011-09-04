@@ -106,6 +106,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
@@ -604,10 +605,11 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="MDOT" />
+		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="poison" effectType="POISON" />
+			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="bleed" effectType="BLEED" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1257,6 +1259,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -1336,6 +1339,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1400,6 +1404,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
 		</for>
@@ -1423,6 +1428,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
 		</for>
@@ -1633,6 +1639,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pDef" val="0.6" />

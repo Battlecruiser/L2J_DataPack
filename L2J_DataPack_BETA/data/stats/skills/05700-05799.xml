@@ -72,11 +72,13 @@
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5707" levels="1" name="Paralysis">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="PARALYZE" />
 	</skill>
 	<skill id="5708" levels="2" name="Water Cannon">
 		<set name="power" val="160" />
@@ -173,6 +175,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5717" levels="1" name="Fire Breath">
 		<set name="target" val="TARGET_NONE" />
@@ -450,6 +453,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="1" abnormalType="turn_flee" val="0" effectPower="20" effectType="FEAR" />
 		</for>
@@ -499,6 +503,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="5" abnormalLvl="1" abnormalType="sleep" val="0" effectPower="25" effectType="SLEEP" />
 		</for>
@@ -669,6 +674,7 @@
 		<set name="coolTime" val="720" />
 		<set name="nextActionAttack" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
 		</for>
@@ -844,6 +850,7 @@
 		<set name="hitTime" val="2060" />
 		<set name="coolTime" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5765" levels="1" name="Naia Sprout">
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1080,6 +1087,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5796" levels="1" name="Decrease Spd.">
 		<set name="target" val="TARGET_NONE" />
@@ -1112,5 +1120,6 @@
 		<set name="hitTime" val="1800" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="BLEED" />
 	</skill>
 </list>

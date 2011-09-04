@@ -17,6 +17,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="#abnormalLvl" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="#pDef" />
@@ -174,6 +175,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" effectPower="35" effectType="POISON" />
 		</for>
@@ -355,6 +357,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -430,6 +433,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -884,6 +888,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -1040,6 +1045,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -1166,6 +1172,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1190,6 +1197,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1214,6 +1222,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1239,6 +1248,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -1263,6 +1273,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -1287,6 +1298,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -1441,6 +1453,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1610,6 +1623,7 @@
 		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="trait" val="VALAKAS" />
 	</skill>
 	<skill id="4682" levels="1" name="Valakas Trample">
 		<!-- Confirmed CT2.5 -->
@@ -1629,6 +1643,7 @@
 		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="trait" val="VALAKAS" />
 	</skill>
 	<skill id="4683" levels="1" name="Valakas Dragon Breath">
 		<!-- Confirmed CT2.5 -->
@@ -1738,6 +1753,7 @@
 		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" />
@@ -1764,6 +1780,7 @@
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_FRONT_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="15" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>

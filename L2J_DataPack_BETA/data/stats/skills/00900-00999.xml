@@ -93,6 +93,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON" />
 		</for>
@@ -190,6 +191,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON">
 				<mul order="0x30" stat="runSpd" val="0.3" />
@@ -217,6 +219,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="911" levels="11" name="Energy Burst">
 		<!-- Aurabird Falcon & Owl -->
@@ -584,6 +587,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BLOW" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Dagger" />
 		</cond>
@@ -933,6 +937,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
 			<using kind="Blunt,Big Blunt" />
 		</cond>
@@ -1034,6 +1039,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="156" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="100" effectType="BLEED" />
 		</for>
@@ -1365,6 +1371,7 @@
 		<set name="castRange" val="40" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
@@ -1388,6 +1395,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
@@ -1486,6 +1494,7 @@
 		<set name="coolTime" val="200" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
+		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
@@ -1553,6 +1562,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>

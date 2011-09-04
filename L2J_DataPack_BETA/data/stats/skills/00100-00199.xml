@@ -23,6 +23,7 @@
 		<set name="castRange" val="40" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
@@ -57,6 +58,7 @@
 		<set name="castRange" val="900" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1400" />
+		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -153,6 +155,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 41 50 58 63HP * 3 Sec -->
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
@@ -235,6 +238,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="turn_passive">
 				<sub order="0x40" stat="aggression" val="100000" />
@@ -260,6 +264,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -562,6 +567,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
 		</cond>
@@ -741,6 +747,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 24 41 50 58 63HP * 3 Sec -->
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />

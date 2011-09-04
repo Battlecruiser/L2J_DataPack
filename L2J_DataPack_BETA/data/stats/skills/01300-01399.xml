@@ -785,6 +785,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -818,6 +819,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -865,6 +867,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2021,6 +2024,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2174,6 +2178,7 @@
 		<set name="skillType" val="MUTE" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="hero_debuff">
 				<add order="0x40" stat="cancel" val="100" />
@@ -2205,6 +2210,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="15" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="hero_debuff">
 				<add order="0x40" stat="runSpd" val="66" />
@@ -2252,6 +2258,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Betray" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="derangement" />
 		</for>
@@ -2278,6 +2285,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2782,6 +2790,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="SLEEP" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2813,6 +2822,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="skillType" val="ERASE" />
 		<set name="target" val="TARGET_ENEMY_SUMMON" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
