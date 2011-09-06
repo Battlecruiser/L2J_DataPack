@@ -1,7 +1,6 @@
 ALTER TABLE `characters`
 ADD KEY `account_name` (`account_name`),
 ADD KEY `char_name` (`char_name`),
-ADD KEY `clanid` (`clanid`),
 ADD KEY `online` (`online`);
 
 ALTER TABLE `clan_subpledges`
