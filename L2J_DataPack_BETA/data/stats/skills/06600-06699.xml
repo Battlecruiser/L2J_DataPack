@@ -504,6 +504,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="#ignoreResists" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -820,6 +821,7 @@
 	<skill id="6687" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
@@ -927,6 +929,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />

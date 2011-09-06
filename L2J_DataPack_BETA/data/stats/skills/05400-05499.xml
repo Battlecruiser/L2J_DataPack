@@ -255,6 +255,7 @@
 	</skill>
 	<skill id="5425" levels="1" name="Iron Shield">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
@@ -268,6 +269,7 @@
 	</skill>
 	<skill id="5426" levels="1" name="Counter Chance">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
@@ -282,6 +284,7 @@
 	</skill>
 	<skill id="5427" levels="1" name="Counter Rapid Shot">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
@@ -298,6 +301,7 @@
 	</skill>
 	<skill id="5428" levels="1" name="Counter Dash">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
@@ -312,6 +316,7 @@
 	</skill>
 	<skill id="5429" levels="1" name="Counter Mind">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="49" />
@@ -324,6 +329,7 @@
 		<!-- Spoil Bomb effect -->
 		<set name="isMagic" val="true" />
 		<set name="isSuicideAttack" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="115" />
@@ -549,6 +555,7 @@
 		<!-- Imbue Dark Seed effect -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
@@ -561,6 +568,7 @@
 		</for>
 	</skill>
 	<skill id="5448" levels="1" name="Oblivion">
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -573,6 +581,7 @@
 	<skill id="5449" levels="1" name="Weak Constitution">
 		<set name="isDebuff" val="true" />
 		<set name="ignoreResists" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="STUN" />
@@ -586,6 +595,7 @@
 		<table name="#abnormalLvl"> 4 5 5 6 7 8 8 </table>
 		<set name="isDebuff" val="true" />
 		<set name="ignoreResists" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="BLEED" />
@@ -598,6 +608,7 @@
 	<skill id="5451" levels="1" name="Enervation">
 		<set name="isDebuff" val="true" />
 		<set name="ignoreResists" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
@@ -614,6 +625,7 @@
 		<!-- TODO: Missing levels 1-2 -->
 		<set name="isDebuff" val="true" />
 		<set name="ignoreResists" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
@@ -626,6 +638,7 @@
 	</skill>
 	<skill id="5453" levels="4" name="Mental Impoverish">
 		<!-- TODO: Missing levels 1-3 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="1000" />
 		<set name="skillType" val="MANADAM" />
@@ -932,6 +945,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="flyRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="DUMMY" />

@@ -481,6 +481,7 @@
 	</skill>
 	<skill id="6059" levels="1" name="Counter Critical">
 		<!-- Confirmed CT2.5 -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="15000" />
@@ -497,6 +498,7 @@
 	<skill id="6060" levels="1" name="Great Fury">
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillType" val="BUFF" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="1000" />
@@ -658,6 +660,7 @@
 		<!-- Lightning Strike effect -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -672,6 +675,7 @@
 		<!-- Anchor effect -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="PARALYZE" />
@@ -685,6 +689,7 @@
 		<!-- Lightning Shock effect -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="PARALYZE" />
