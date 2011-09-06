@@ -59,5 +59,8 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `createTime` bigint(13) unsigned NOT NULL DEFAULT '0',
   `language` VARCHAR(2) DEFAULT NULL,
   PRIMARY KEY (`charId`),
-  KEY `clanid` (`clanid`)
+  KEY `account_name` (`account_name`),
+  KEY `char_name` (`char_name`),
+  KEY `clanid` (`clanid`),
+  KEY `online` (`online`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
