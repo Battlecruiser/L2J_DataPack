@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS `items` (
   `mana_left` decimal(5,0) NOT NULL default -1,
   `time` decimal(13) NOT NULL default 0,
   PRIMARY KEY (`object_id`),
-  KEY `key_owner_id` (`owner_id`),
-  KEY `key_loc` (`loc`),
-  KEY `key_item_id` (`item_id`),
-  KEY `key_time_of_use` (`time_of_use`)
+  KEY `owner_id` (`owner_id`),
+  KEY `item_id` (`item_id`),
+  KEY `loc` (`loc`),
+  KEY `time_of_use` (`time_of_use`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

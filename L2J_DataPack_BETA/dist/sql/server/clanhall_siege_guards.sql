@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS `clanhall_siege_guards` (
   `z` mediumint(6) NOT NULL DEFAULT '0',
   `heading` mediumint(6) NOT NULL DEFAULT '0',
   `respawnDelay` mediumint(5) NOT NULL DEFAULT '0',
-  `isSiegeBoss` enum('false','true') NOT NULL DEFAULT 'false'
+  `isSiegeBoss` enum('false','true') NOT NULL DEFAULT 'false',
+  KEY `clanHallId` (`clanHallId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `clanhall_siege_guards` VALUES
