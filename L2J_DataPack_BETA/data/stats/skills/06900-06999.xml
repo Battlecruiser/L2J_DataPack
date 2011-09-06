@@ -80,6 +80,7 @@
 	</skill>
 	<skill id="6913" levels="1" name="Challenge of Faith">
 		<!-- H5 Skill -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" /> <!-- Guess -->
@@ -131,6 +132,7 @@
 	<skill id="6920" levels="1" name="Collector's Fortune">
 		<!-- H5 Skill -->
 		<!-- Triggered Skill for Collector's Experience -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="15000" /> <!-- Guess -->
