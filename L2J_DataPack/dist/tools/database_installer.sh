@@ -354,7 +354,7 @@ else
 echo "Upgrading gameserver content"
 fi
 
-for gs in $(ls ../sql/server/*.sql);do
+for gs in $(ls ../sql/game/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
@@ -398,7 +398,7 @@ while :
   done 
 clear
 echo "Installing custom content."
-for custom in $(ls ../sql/server/custom/*.sql);do 
+for custom in $(ls ../sql/game/custom/*.sql);do 
 	echo "Installing custom table: $custom"
 	$MYG < $custom
 done
@@ -409,7 +409,7 @@ done
 	echo -ne "Install "Wedding Mod" tables? (y/N): "
 	read modprompt
 	if [ "$modprompt" == "y" -o "$modprompt" == "Y" ]; then
-		for mod in $(ls ../sql/server/mods/*.sql);do
+		for mod in $(ls ../sql/game/mods/*.sql);do
 			echo "Installing custom mod table : $mod"
 			$MYG < $mod
 		done
@@ -446,7 +446,7 @@ while :
 	 echo ""
      echo "There we go, it may take some time..."
 	 echo "Installing Gameserver Updates"
-     for file in $(ls ../sql/server/updates/*.sql);do
+     for file in $(ls ../sql/game/updates/*.sql);do
         $MYG < $file 2>> gserror.log
 	 done
 	 echo "Installing Loginserver Updates"
