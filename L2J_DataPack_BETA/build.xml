@@ -47,6 +47,9 @@
 		<sync todir="${build.dist.gameserver}/data" includeemptydirs="true">
 			<fileset dir="data" />
 		</sync>
+		<copy todir="${build.dist.gameserver}/data">
+			<fileset dir="misc" />
+		</copy>
 		<sync todir="${build.dist.languages}">
 			<fileset dir="dist/languages" />
 		</sync>
@@ -54,10 +57,7 @@
 			<fileset dir="dist/login" />
 		</sync>
 		<copy todir="${build.dist.login}/data">
-			<fileset dir="data">
-				<include name="servername.xml" />
-				<include name="servername.xsd" />
-			</fileset>
+			<fileset dir="misc" />
 		</copy>
 		<sync todir="${build.dist.sql}">
 			<fileset dir="dist/sql" />
