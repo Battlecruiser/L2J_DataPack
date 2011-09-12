@@ -35,6 +35,7 @@ import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
 import handlers.admincommandhandlers.AdminBan;
 import handlers.admincommandhandlers.AdminBuffs;
+import handlers.admincommandhandlers.AdminCHSiege;
 import handlers.admincommandhandlers.AdminCache;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
@@ -315,6 +316,7 @@ public class MasterHandler
 		ADMIN.registerAdminCommandHandler(new AdminCache());
 		ADMIN.registerAdminCommandHandler(new AdminCamera());
 		ADMIN.registerAdminCommandHandler(new AdminChangeAccessLevel());
+		ADMIN.registerAdminCommandHandler(new AdminCHSiege());
 		ADMIN.registerAdminCommandHandler(new AdminClan());
 		ADMIN.registerAdminCommandHandler(new AdminCreateItem());
 		ADMIN.registerAdminCommandHandler(new AdminCursedWeapons());
