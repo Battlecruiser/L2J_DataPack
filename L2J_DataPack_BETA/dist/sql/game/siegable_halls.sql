@@ -18,7 +18,7 @@ CREATE TABLE `siegable_clanhall` (
   `siegeLenght` int(10) DEFAULT NULL,
   `schedule_config` varchar(20) DEFAULT NULL, 
   PRIMARY KEY (`clanHallId`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
 (21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '7;0;0;12;00'),
