@@ -2,7 +2,7 @@
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
 	<!-- Territory War HQ Zones -->
 	<!-- Gludio Territory War HQ Zones -->
-	<zone name="gludio_dominion_headquarter_territory1" type="HQZone" shape="NPoly" minZ="-4484" maxZ="3515">
+	<zone name="gludio_dominion_headquarter_territory1" type="HqZone" shape="NPoly" minZ="-4484" maxZ="3515">
 		<stat name="territoryId" val="81" />
 		<!-- headquarter_territory -->
 		<node X="-22052" Y="114025" />
@@ -10,7 +10,7 @@
 		<node X="-14197" Y="116558" />
 		<node X="-22032" Y="116566" />
 	</zone>
-	<zone name="gludio_dominion_headquarter_territory2" type="HQZone" shape="NPoly" minZ="-4420" maxZ="3579">
+	<zone name="gludio_dominion_headquarter_territory2" type="HqZone" shape="NPoly" minZ="-4420" maxZ="3579">
 		<stat name="territoryId" val="81" />
 		<!-- headquarter_territory -->
 		<node X="-22030" Y="104809" />
@@ -18,7 +18,7 @@
 		<node X="-20266" Y="113735" />
 		<node X="-22031" Y="113732" />
 	</zone>
-	<zone name="gludio_dominion_headquarter_territory3" type="HQZone" shape="NPoly" minZ="-4388" maxZ="3611">
+	<zone name="gludio_dominion_headquarter_territory3" type="HqZone" shape="NPoly" minZ="-4388" maxZ="3611">
 		<stat name="territoryId" val="81" />
 		<!-- headquarter_territory -->
 		<node X="-15554" Y="104834" />
@@ -27,7 +27,7 @@
 		<node X="-15554" Y="113757" />
 	</zone>
 	<!-- Dion Territory War HQ Zones -->
-	<zone name="dion_dominion_headquarter_territory1" type="HQZone" shape="NPoly" minZ="-4678" maxZ="4000">
+	<zone name="dion_dominion_headquarter_territory1" type="HqZone" shape="NPoly" minZ="-4678" maxZ="4000">
 		<stat name="territoryId" val="82" />
 		<!-- headquarter_territory -->
 		<node X="26012" Y="155725" />
@@ -35,7 +35,7 @@
 		<node X="18157" Y="153192" />
 		<node X="25992" Y="153184" />
 	</zone>
-	<zone name="dion_dominion_headquarter_territory2" type="HQZone" shape="NPoly" minZ="-4614" maxZ="4000">
+	<zone name="dion_dominion_headquarter_territory2" type="HqZone" shape="NPoly" minZ="-4614" maxZ="4000">
 		<stat name="territoryId" val="82" />
 		<!-- headquarter_territory -->
 		<node X="25990" Y="164941" />
@@ -43,7 +43,7 @@
 		<node X="24226" Y="156015" />
 		<node X="25991" Y="156018" />
 	</zone>
-	<zone name="dion_dominion_headquarter_territory3" type="HQZone" shape="NPoly" minZ="-4582" maxZ="4000">
+	<zone name="dion_dominion_headquarter_territory3" type="HqZone" shape="NPoly" minZ="-4582" maxZ="4000">
 		<stat name="territoryId" val="82" />
 		<!-- headquarter_territory -->
 		<node X="19514" Y="164916" />
@@ -52,7 +52,7 @@
 		<node X="19514" Y="155993" />
 	</zone>
 	<!-- Giran Territory War HQ Zones -->
-	<zone name="giran_dominion_headquarter_territory1" type="HQZone" shape="NPoly" minZ="-4551" maxZ="19899">
+	<zone name="giran_dominion_headquarter_territory1" type="HqZone" shape="NPoly" minZ="-4551" maxZ="19899">
 		<stat name="territoryId" val="83" />
 		<!-- headquarter_territory -->
 		<node X="111897" Y="141157" />
@@ -60,7 +60,7 @@
 		<node X="109364" Y="149012" />
 		<node X="109356" Y="141177" />
 	</zone>
-	<zone name="giran_dominion_headquarter_territory2" type="HQZone" shape="NPoly" minZ="-4487" maxZ="19963">
+	<zone name="giran_dominion_headquarter_territory2" type="HqZone" shape="NPoly" minZ="-4487" maxZ="19963">
 		<stat name="territoryId" val="83" />
 		<!-- headquarter_territory -->
 		<node X="121113" Y="141179" />
@@ -68,7 +68,7 @@
 		<node X="112187" Y="142943" />
 		<node X="112190" Y="141178" />
 	</zone>
-	<zone name="giran_dominion_headquarter_territory3" type="HQZone" shape="NPoly" minZ="-4455" maxZ="19995">
+	<zone name="giran_dominion_headquarter_territory3" type="HqZone" shape="NPoly" minZ="-4455" maxZ="19995">
 		<stat name="territoryId" val="83" />
 		<!-- headquarter_territory -->
 		<node X="121088" Y="147655" />
@@ -77,7 +77,7 @@
 		<node X="112165" Y="147655" />
 	</zone>
 	<!-- Oren Territory War HQ Zones -->
-	<zone name="oren_dominion_headquarter_territory1" type="HQZone" shape="NPoly" minZ="-4278" maxZ="19899">
+	<zone name="oren_dominion_headquarter_territory1" type="HqZone" shape="NPoly" minZ="-4278" maxZ="19899">
 		<stat name="territoryId" val="84" />
 		<!-- headquarter_territory -->
 		<node X="77973" Y="33252" />
@@ -85,7 +85,7 @@
 		<node X="75440" Y="41107" />
 		<node X="75432" Y="33272" />
 	</zone>
-	<zone name="oren_dominion_headquarter_territory2" type="HQZone" shape="NPoly" minZ="-4214" maxZ="19963">
+	<zone name="oren_dominion_headquarter_territory2" type="HqZone" shape="NPoly" minZ="-4214" maxZ="19963">
 		<stat name="territoryId" val="84" />
 		<!-- headquarter_territory -->
 		<node X="87189" Y="33274" />
@@ -93,7 +93,7 @@
 		<node X="78263" Y="35038" />
 		<node X="78266" Y="33273" />
 	</zone>
-	<zone name="oren_dominion_headquarter_territory3" type="HQZone" shape="NPoly" minZ="-4182" maxZ="19995">
+	<zone name="oren_dominion_headquarter_territory3" type="HqZone" shape="NPoly" minZ="-4182" maxZ="19995">
 		<stat name="territoryId" val="84" />
 		<!-- headquarter_territory -->
 		<node X="87164" Y="39750" />
@@ -102,7 +102,7 @@
 		<node X="78241" Y="39750" />
 	</zone>
 	<!-- Aden Territory War HQ Zones -->
-	<zone name="aden_dominion_headquarter_territory" type="HQZone" shape="NPoly" minZ="-1158" maxZ="42">
+	<zone name="aden_dominion_headquarter_territory" type="HqZone" shape="NPoly" minZ="-1158" maxZ="42">
 		<stat name="territoryId" val="85" />
 		<!-- headquarter_territory -->
 		<node X="144365" Y="9902" />
@@ -123,7 +123,7 @@
 		<node X="144053" Y="4830" />
 	</zone>
 	<!-- Innadril Territory War HQ Zones -->
-	<zone name="innadrile_dominion_headquarter_territory1" type="HQZone" shape="NPoly" minZ="-2774" maxZ="4000">
+	<zone name="innadrile_dominion_headquarter_territory1" type="HqZone" shape="NPoly" minZ="-2774" maxZ="4000">
 		<stat name="territoryId" val="86" />
 		<!-- headquarter_territory -->
 		<node X="119963" Y="244504" />
@@ -131,7 +131,7 @@
 		<node X="112108" Y="241971" />
 		<node X="119943" Y="241963" />
 	</zone>
-	<zone name="innadrile_dominion_headquarter_territory2" type="HQZone" shape="NPoly" minZ="-2710" maxZ="4000">
+	<zone name="innadrile_dominion_headquarter_territory2" type="HqZone" shape="NPoly" minZ="-2710" maxZ="4000">
 		<stat name="territoryId" val="86" />
 		<!-- headquarter_territory -->
 		<node X="119941" Y="253720" />
@@ -139,7 +139,7 @@
 		<node X="118177" Y="244794" />
 		<node X="119942" Y="244797" />
 	</zone>
-	<zone name="innadrile_dominion_headquarter_territory3" type="HQZone" shape="NPoly" minZ="-2678" maxZ="4000">
+	<zone name="innadrile_dominion_headquarter_territory3" type="HqZone" shape="NPoly" minZ="-2678" maxZ="4000">
 		<stat name="territoryId" val="86" />
 		<!-- headquarter_territory -->
 		<node X="113465" Y="253695" />
@@ -148,7 +148,7 @@
 		<node X="113465" Y="244772" />
 	</zone>
 	<!-- Goddard Territory War HQ Zones -->
-	<zone name="godad_dominion_headquarter_territory" type="HQZone" shape="NPoly" minZ="-2625" maxZ="1875">
+	<zone name="godad_dominion_headquarter_territory" type="HqZone" shape="NPoly" minZ="-2625" maxZ="1875">
 		<stat name="territoryId" val="87" />
 		<!-- headquarter_territory -->
 		<node X="144715" Y="-43884" />
@@ -162,7 +162,7 @@
 		<node X="144692" Y="-42822" />
 	</zone>
 	<!-- Rune Territory War HQ Zones -->
-	<zone name="rune_dominion_headquarter_territory" type="HQZone" shape="NPoly" minZ="-1780" maxZ="-680">
+	<zone name="rune_dominion_headquarter_territory" type="HqZone" shape="NPoly" minZ="-1780" maxZ="-680">
 		<stat name="territoryId" val="88" />
 		<!-- headquarter_territory -->
 		<node X="26755" Y="-49171" />
@@ -179,7 +179,7 @@
 		<node X="26755" Y="-49082" />
 	</zone>
 	<!-- Schuttgart Territory War HQ Zones -->
-	<zone name="schuttgart_dominion_headquarter_territory" type="HQZone" shape="NPoly" minZ="-3800" maxZ="1700">
+	<zone name="schuttgart_dominion_headquarter_territory" type="HqZone" shape="NPoly" minZ="-3800" maxZ="1700">
 		<stat name="territoryId" val="89" />
 		<!-- headquarter_territory -->
 		<node X="74554" Y="-148009" />
