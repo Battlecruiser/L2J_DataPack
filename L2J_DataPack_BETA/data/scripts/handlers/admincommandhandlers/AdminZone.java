@@ -56,6 +56,7 @@ public class AdminZone implements IAdminCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
@@ -129,7 +130,7 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%TOWN%", (activeChar.isInsideZone(L2Character.ZONE_TOWN) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%CASTLE%", (activeChar.isInsideZone(L2Character.ZONE_CASTLE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%FORT%", (activeChar.isInsideZone(L2Character.ZONE_FORT) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
-		adminReply.replace("%NOHQ%", (activeChar.isInsideZone(L2Character.ZONE_NOHQ) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+		adminReply.replace("%HQ%", (activeChar.isInsideZone(L2Character.ZONE_HQ) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%CLANHALL%", (activeChar.isInsideZone(L2Character.ZONE_CLANHALL) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%LAND%", (activeChar.isInsideZone(L2Character.ZONE_LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%NOLAND%", (activeChar.isInsideZone(L2Character.ZONE_NOLANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
@@ -172,6 +173,7 @@ public class AdminZone implements IAdminCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
