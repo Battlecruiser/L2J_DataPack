@@ -6,7 +6,7 @@
 -- mm = Minutes of the day when siege must start
 -- Example for a siege each 7 days which starts at 12 o clock: 7;0;0;12;00
 
-CREATE TABLE `siegable_clanhall` (
+CREATE TABLE IF NOT EXISTS `siegable_clanhall` (
   `clanHallId` int(10) NOT NULL DEFAULT '0',
   `name` varchar(45) DEFAULT NULL,
   `ownerId` int(10) DEFAULT NULL,
