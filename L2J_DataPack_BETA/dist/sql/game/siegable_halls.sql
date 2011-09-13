@@ -1,5 +1,3 @@
-DROP TABLE IF EXISTS `siegable_clanhall`;
-
 -- schedule_config format: Time to add from the last siege in this format DD;MM;YY;HH;mm
 -- DD = Days to add to the current date for next siege
 -- MM = Month to add to the current date for the next siege
@@ -18,7 +16,7 @@ CREATE TABLE `siegable_clanhall` (
   `siegeLenght` int(10) DEFAULT NULL,
   `schedule_config` varchar(20) DEFAULT NULL, 
   PRIMARY KEY (`clanHallId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
 (21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '7;0;0;12;00'),
