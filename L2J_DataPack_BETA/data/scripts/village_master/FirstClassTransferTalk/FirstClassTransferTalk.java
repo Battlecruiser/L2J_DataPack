@@ -1,10 +1,9 @@
 package village_master.FirstClassTransferTalk;
 
-import ai.group_template.L2AttackableAIScript;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.Race;
+import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
@@ -13,7 +12,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Everything is 100% retail-like including htmls.
  * @author jurchiks
  */
-public class FirstClassTransferTalk extends L2AttackableAIScript
+public class FirstClassTransferTalk extends Quest
 {
 	private static final int BITZ = 30026; // TI Fighter Guild Head Master
 	private static final int BIOTIN = 30031; // TI Einhasad Temple High Priest
@@ -151,8 +150,14 @@ public class FirstClassTransferTalk extends L2AttackableAIScript
 	public FirstClassTransferTalk(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		int[] npcs = new int[] { BITZ, BIOTIN, ASTERIOS, THIFIELL, KAKAI, REED, BRONK, HOFFA, FISLER, MOKA, DEVON, RIVIAN, TOOK, PRANA, ALDENIA };
-		registerMobs(npcs, QuestEventType.QUEST_START, QuestEventType.ON_TALK);
+		for (int npc : new int[]
+		{
+			BITZ, BIOTIN, ASTERIOS, THIFIELL, KAKAI, REED, BRONK, HOFFA, FISLER, MOKA, DEVON, RIVIAN, TOOK, PRANA, ALDENIA
+		})
+		{
+			addStartNpc(npc);
+			addTalkId(npc);
+		}
 	}
 	
 	public static void main(String[] args)
