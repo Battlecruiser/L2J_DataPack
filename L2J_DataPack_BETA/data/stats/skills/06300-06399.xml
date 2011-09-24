@@ -785,34 +785,99 @@
 		</for>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="reuseDelay" val="500" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="121" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="900" />
+		<set name="skillRadius" val="200" />
 	</skill>
 	<skill id="6342" levels="1" name="Trap Over Steam">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2000" />
+		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="400" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
 	</skill>
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#mAtk"> 1.08 1.15 </table>
+		<table name="#pAtk"> 1.02 1.03 </table>
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#pmAtkSpd"> 1.04 1.08 </table>
+		<table name="#runSpd"> 5 10 </table>
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
+				<mul order="0x30" stat="pAtkSpd" val="#pmAtkSpd" />
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6366" levels="2" name="Maguen Plasma - Critical">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#rCrit"> 0.04 0.08 </table>
+		<table name="#cAtk"> 1.05 1.1 </table>
+		<table name="#mCritRate"> 0.02 0.04 </table>
+		<set name=" target " val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<set name="reuseDelay" val="2000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x30" stat="cAtk" val="#cAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
 		<set name="target" val="TARGET_NONE" />
