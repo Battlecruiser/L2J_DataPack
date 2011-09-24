@@ -98,15 +98,15 @@ public class Pdam implements ISkillHandler
 			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			// PDAM critical chance not affected by buffs, only by STR. Only some skills are meant to crit.
 			boolean crit = false;
-			if (skill.getBaseCritRate() > 0)
+			if (!skill.isStaticDamage() && skill.getBaseCritRate() > 0)
 				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
 			
 			
 			if (!crit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
 				damage = 0;
 			else
-				damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, dual, soul);
-			if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+				damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, dual, soul);
+			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
 			{
 				switch (((L2PcInstance) activeChar).getSouls())
 				{
