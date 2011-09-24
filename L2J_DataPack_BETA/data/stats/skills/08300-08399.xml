@@ -640,12 +640,15 @@
 		<set name="hitTime" val="1300" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="PDAM" />
-		<set name="skillRadius" val="300" />
+		<set name="skillScope" val="fan;300;90" />
 		<set name="staticDamage" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
 		<set name="coolTime" val="700" />
+		<cond msgId="113" addName="1">
+			<player instanceId="112" />
+		</cond>
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<set name="target" val="TARGET_NONE" />
