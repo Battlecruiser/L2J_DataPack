@@ -10,6 +10,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author BiggBoss
@@ -22,6 +23,7 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 	private static final int TROPHY_OF_ALLIANCE = 5009;
 	// Quest npc
 	private static final int MESSENGER = 35437;
+	private static final int[] MOBS = {20570,20571,20572,20573,20574};
 	
 	private static final SiegableHall BANDIT_STRONGHOLD = CHSiegeManager.getInstance().getSiegableHall(35);
 	
@@ -35,65 +37,59 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 		super(questId, name, descr);
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
-		
-		addKillId(20570); // TARLK BUGBEAR
-		addKillId(20571); // TARLK BUGBEAR WARRIOR
-		addKillId(20572); // TARLK BUGBEAR HIGH WARRIOR
-		addKillId(20573); // TARLK BASILISK
-		addKillId(20574); // ELDER TARLK BASILISK
+		for(int mob : MOBS)
+			addKillId(mob);
 	}
 	
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String result = null;
+		String result = "azit_messenger_q0504_01.htm";
 		QuestState st = player.getQuestState(qn);
 		final L2Clan clan = player.getClan();
 		
 		if(st == null)
+			result = getNoQuestMsg(player);
+		else if(!BANDIT_STRONGHOLD.isInSiege())
 		{
-			newQuestState(player);
-			result = "azit_messenger_q0504_01.htm";
+			sendDatePage("azit_messenger_q0504_09.htm", player, npc);
+			result = null;
 		}
-		else if(!canRunQuest())
-			sendDatePage("azit_messenger_q0504_03.htm", player);
-		else if(clan != null && (clan.getHasHideout() > 0 || clan.getHasFort() > 0
-				|| clan.getHasCastle() > 0))
+		else if(player.getClan() == null || player.getClan().getLevel() < 4)
+			 result = "azit_messenger_q0504_04.htm";
+		else if(!player.isClanLeader())
+			 result = "azit_messenger_q0504_05.htm";
+		else if(clan.getHasHideout() > 0 || clan.getHasFort() > 0 || clan.getHasCastle() > 0)
 			result = "azit_messenger_q0504_10.htm";
-		else if(st.getState() == State.CREATED)
+		else
 		{
-			 if(!canRunQuest())
-				 sendDatePage("azit_messenger_q0504_09.htm", player);
-			 else if(player.getClan() == null || player.getClan().getLevel() < 4)
-				 result = "azit_messenger_q0504_04.htm";
-			 else if(!player.isClanLeader())
-				 result = "azit_messenger_q0504_05.htm";
-			 else if(BANDIT_STRONGHOLD.getSiege().getAttackers().size() >= 5)
-				 result = "35437-3.htm";
-			 else 
-				 result = "azit_messenger_q0504_02.htm";
-	
-			 st.setState(State.STARTED);
-		}
-		else if(st.getState() == State.STARTED)
-		{
-			 if(!canRunQuest())
-				 sendDatePage("azit_messenger_q0504_09.htm", player);
-			 else if(st.getQuestItemsCount(TARLK_AMULET) < 30)
-				result = "azit_messenger_q0504_07.htm";
-			 else
-			 {
-				 st.takeItems(TARLK_AMULET, 30);
-				 st.rewardItems(TROPHY_OF_ALLIANCE, 1);
-				 st.exitQuest(true);
-				 result = "azit_messenger_q0504_08.htm";
-			 }
-		}
-		else if(st.getState() == State.COMPLETED)
-		{
-			if(!canRunQuest())
-				sendDatePage("azit_messenger_q0504_09.htm", player);
-			result = "azit_messenger_q0504_07a.htm";
+			switch(st.getState())
+			{
+				case State.CREATED:
+					if(BANDIT_STRONGHOLD.getSiege().getAttackers().size() >= 5)
+						result = "35437-3.htm";
+					else 
+					{
+						result = "azit_messenger_q0504_02.htm";
+						st.setState(State.STARTED);
+						st.set("cond", "1");
+					}
+					break;
+				case State.STARTED:
+					if(st.getQuestItemsCount(TARLK_AMULET) < 30)
+						result = "azit_messenger_q0504_07.htm";
+					else
+					{
+						st.takeItems(TARLK_AMULET, 30);
+						st.rewardItems(TROPHY_OF_ALLIANCE, 1);
+						st.exitQuest(true);
+						result = "azit_messenger_q0504_08.htm";
+					}
+					break;
+				case State.COMPLETED:
+					result = "azit_messenger_q0504_07a.htm";
+					break;
+			}
 		}
 		return result;
 	}
@@ -101,7 +97,7 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if(!canRunQuest())
+		if(!BANDIT_STRONGHOLD.isInSiege())
 			return null;
 		
 		QuestState st = killer.getQuestState(qn);
@@ -109,32 +105,33 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 		if(st == null)
 			return null;
 		
-		if(st.isStarted())
+		if(!Util.contains(MOBS, npc.getNpcId()))
+			return null;
+		
+		if(st.isStarted() && st.getInt("cond") == 1)
 		{
 			st.giveItems(TARLK_AMULET, 1);
 			if(st.getQuestItemsCount(TARLK_AMULET) < 30)
 				st.playSound("Itemsound.quest_itemget");
 			else
+			{
 				st.playSound("Itemsound.quest_middle");
+				st.set("cond", "2");
+			}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return null;
 	}
 	
-	public final boolean canRunQuest()
-	{
-		// Siegable halls register status is just true 1 hour before siege
-		return BANDIT_STRONGHOLD.isRegistering();
-	}
-	
-	private final void sendDatePage(final String page, final L2PcInstance player)
+	private final void sendDatePage(final String page, final L2PcInstance player, final L2Npc npc)
 	{
 		String result = HtmCache.getInstance().getHtm(null, "data/scripts/quests/Q504_CompetitionfortheBanditStronghold/"+page+".htm");
 		if(result != null)
 		{
-			NpcHtmlMessage msg = new NpcHtmlMessage(5);
+			NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
 			msg.setHtml(result);
 			msg.replace("%nextSiege%", BANDIT_STRONGHOLD.getSiegeDate().getTime().toString());
+			msg.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		
 			player.sendPacket(msg);
 		}

@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 
 /**
  * @author BiggBoss
@@ -343,41 +344,49 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 		{
 			try
 			{
+				L2NpcTemplate flagTemplate = null;
+				L2NpcTemplate mahumTemplate = null;
+				
+				assert (flagTemplate = NpcTable.getInstance().getTemplate(data.flag)) != null
+						&& (mahumTemplate = NpcTable.getInstance().getTemplate(data.npc)) != null;
+						
+				data.flagInstance = new L2Spawn(flagTemplate);
+				int index = 35423 - data.flag;
+				int[] flagCoords = FLAGS_COORDS[index];		
+				data.flagInstance.setLocx(FLAGS_COORDS[index][0]);
+				data.flagInstance.setLocy(FLAGS_COORDS[index][1]);
+				data.flagInstance.setLocz(FLAGS_COORDS[index][2]);
+				data.flagInstance.setRespawnDelay(10000);
+				data.flagInstance.setAmount(1);
+				data.flagInstance.init();
+				
 				for(int objId : data.players)
 				{
 					L2PcInstance plr = L2World.getInstance().getPlayer(objId);
 					if(plr != null)
+					{
 						data.playersInstance.add(plr);
-					
-					data.flagInstance = new L2Spawn(NpcTable.getInstance().getTemplate(data.flag));
-					int index = 35423 - data.flag;
-					data.flagInstance.setLocx(FLAGS_COORDS[index][0]);
-					data.flagInstance.setLocy(FLAGS_COORDS[index][1]);
-					data.flagInstance.setLocz(FLAGS_COORDS[index][2]);
-					data.flagInstance.setRespawnDelay(10000);
-					data.flagInstance.setAmount(1);
-					data.flagInstance.init();
-					
-					data.warrior = new L2Spawn(NpcTable.getInstance().getTemplate(data.npc));
-					int indexx = 35428 - data.npc;
-					data.warrior.setLocx(MAHUM_COORDS[indexx][0]);
-					data.warrior.setLocy(MAHUM_COORDS[indexx][1]);
-					data.warrior.setLocz(MAHUM_COORDS[indexx][2]);
-					data.warrior.setRespawnDelay(10000);
-					data.warrior.setAmount(1);
-					data.warrior.init();
-					
-					((L2SpecialSiegeGuardAI)data.warrior.getLastSpawn().getAI()).getAlly().addAll(data.players);
+						plr.teleToLocation(flagCoords[0] + 50, flagCoords[1] + 50, flagCoords[2]);
+					}
 				}
+				
+				data.warrior = new L2Spawn(mahumTemplate);
+				int indexx = 35428 - data.npc;
+				data.warrior.setLocx(MAHUM_COORDS[indexx][0]);
+				data.warrior.setLocy(MAHUM_COORDS[indexx][1]);
+				data.warrior.setLocz(MAHUM_COORDS[indexx][2]);
+				data.warrior.setRespawnDelay(10000);
+				data.warrior.setAmount(1);
+				data.warrior.init();
+				
+				((L2SpecialSiegeGuardAI)data.warrior.getLastSpawn().getAI()).getAlly().addAll(data.players);	
 			}
 			catch(Exception e)
 			{
+				_log.warning(_hall.getName()+": Problems in siege initialization!");
 				e.printStackTrace();
 			}
 		}	
-		
-		_hall.getDoor(22170001).closeMe();
-		_hall.getDoor(22170002).closeMe();
 	}
 	
 	@Override
