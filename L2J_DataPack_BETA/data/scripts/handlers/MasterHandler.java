@@ -245,6 +245,7 @@ import handlers.usercommandhandlers.OlympiadStat;
 import handlers.usercommandhandlers.PartyInfo;
 import handlers.usercommandhandlers.Time;
 import handlers.voicedcommandhandlers.Banking;
+import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Lang;
@@ -565,6 +566,8 @@ public class MasterHandler
 			VOICE.registerVoicedCommandHandler(new Lang());
 		if (Config.L2JMOD_DEBUG_VOICE_COMMAND)
 			VOICE.registerVoicedCommandHandler(new Debug());
+		if (Config.L2JMOD_ALLOW_CHANGE_PASSWORD)
+			VOICE.registerVoicedCommandHandler(new ChangePassword());
 		_log.config("Loaded " + VOICE.size() + " VoicedHandlers");
 	}
 	
