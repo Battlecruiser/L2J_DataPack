@@ -635,9 +635,15 @@
 		</for>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="200" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1300" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="skillRadius" val="300" />
+		<set name="staticDamage" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
 		<set name="coolTime" val="700" />
 	</skill>
