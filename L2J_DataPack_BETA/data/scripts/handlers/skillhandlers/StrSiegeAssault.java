@@ -97,7 +97,7 @@ public class StrSiegeAssault implements ISkillHandler
 				if (!crit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
 					damage = 0;
 				else
-					damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, crit, dual, soul);
+					damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcPhysDam(activeChar, target, skill, shld, crit, dual, soul);
 				
 				if (damage > 0)
 				{

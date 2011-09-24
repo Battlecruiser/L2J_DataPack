@@ -102,8 +102,8 @@ public class Blow implements ISkillHandler
 				boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && (weapon.getItemType() == L2WeaponType.DAGGER || weapon.getItemType() == L2WeaponType.DUALDAGGER || weapon.getItemType() == L2WeaponType.RAPIER));
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
-				double damage = (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
-				if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
+				if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
 				{
 					switch (((L2PcInstance) activeChar).getSouls())
 					{
@@ -128,7 +128,7 @@ public class Blow implements ISkillHandler
 				}
 				
 				// Crit rate base crit rate for skill, modified with STR bonus
-				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
+				if (!skill.isStaticDamage() && Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
 					damage *= 2;
 				
 				if (soul)
