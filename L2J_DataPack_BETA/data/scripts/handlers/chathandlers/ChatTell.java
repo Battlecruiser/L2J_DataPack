@@ -63,7 +63,7 @@ public class ChatTell implements IChatHandler
 		
 		receiver = L2World.getInstance().getPlayer(target);
 		
-		if (receiver != null && !receiver.isSilenceMode())
+		if (receiver != null && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
 			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM())
 			{
@@ -82,6 +82,10 @@ public class ChatTell implements IChatHandler
 			}
 			if (!BlockList.isBlocked(receiver, activeChar))
 			{
+				// Allow reciever to send PMs to this char, which is in silence mode.
+				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode())
+					activeChar.addSilenceModeExcluded(receiver.getObjectId());
+				
 				receiver.sendPacket(cs);
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
 			}
