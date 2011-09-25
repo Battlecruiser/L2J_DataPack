@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `siegable_clanhall` (
   PRIMARY KEY (`clanHallId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
+INSERT IGNORE INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
 (21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '7;0;0;12;00'),
 (34, 'Devastated Castle', 0, 'Contestable Clan Hall', 'Aden', 0, 3600000, '7;0;0;12;00'),
 (35, 'Bandit StrongHold', 0, 'Contestable Clan Hall', 'Oren', 0, 3600000, '7;0;0;12;00'),
