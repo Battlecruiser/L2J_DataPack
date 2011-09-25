@@ -892,6 +892,7 @@
 		</cond>
 	</skill>
 	<skill id="9088" levels="1" name="Cupid's Arrow">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -899,6 +900,7 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9089" levels="1" name="Cupid's Major Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

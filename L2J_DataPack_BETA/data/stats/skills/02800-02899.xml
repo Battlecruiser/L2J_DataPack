@@ -1110,6 +1110,7 @@
 		</cond>
 	</skill>
 	<skill id="2867" levels="1" name="Cupid's Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
@@ -1117,6 +1118,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2868" levels="1" name="Cupid's Enhanced Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="4000" />

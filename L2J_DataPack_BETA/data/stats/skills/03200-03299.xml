@@ -777,8 +777,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DRAIN" /> <!-- FIXME: This appears to be a different type of PDAM STATIC -->
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -812,8 +813,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="40000" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DRAIN" /> <!-- FIXME: This appears to be a different type of PDAM STATIC -->
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />

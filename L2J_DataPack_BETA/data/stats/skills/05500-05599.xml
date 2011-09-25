@@ -266,6 +266,7 @@
 		</for>
 	</skill>
 	<skill id="5518" levels="1" name="Last Stand">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -429,6 +430,7 @@
 		<set name="target" val="TARGET_PARTY_OTHER" />
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -610,6 +612,7 @@
 		</cond>
 	</skill>
 	<skill id="5546" levels="1" name="Alert">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
