@@ -653,15 +653,23 @@
 	</skill>
 	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
 		<!-- Transformed into Dragon Master Lee. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="20005" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
 		<!-- Transformed into Dragon Master Karin. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="20006" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="22185" levels="1" name="Shiny Lighting">
 		<!-- Lighting shines brightly above the character's head. -->
