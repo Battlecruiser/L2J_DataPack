@@ -23,48 +23,26 @@
 
 	<property name="build" location="build" />
 	<property name="build.dist" location="${build}/dist" />
-	<property name="build.dist.community" location="${build.dist}/community" />
 	<property name="build.dist.doc" location="${build.dist}/doc" />
-	<property name="build.dist.gameserver" location="${build.dist}/gameserver" />
-	<property name="build.dist.languages" location="${build.dist}/languages" />
+	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
-	<property name="build.dist.sql" location="${build.dist}/sql" />
-	<property name="build.dist.tools" location="${build.dist}/tools" />
 
 	<target name="init" depends="clean, getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
 	</target>
 
 	<target name="dist" depends="init" description="Syncronizes build space contents with project.">
-		<sync todir="${build.dist.community}">
-			<fileset dir="dist/community" />
-		</sync>
-		<sync todir="${build.dist.doc}">
-			<fileset dir="dist/doc" />
+		<sync todir="${build.dist}" includeemptydirs="true">
+			<fileset dir="dist" />
 		</sync>
 		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
-		<concat destfile="${build.dist.gameserver}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
-		<sync todir="${build.dist.gameserver}/data" includeemptydirs="true">
-			<fileset dir="data" />
-		</sync>
-		<copy todir="${build.dist.gameserver}/data">
+		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
+		<copy todir="${build.dist.game}/data">
 			<fileset dir="misc" />
 		</copy>
-		<sync todir="${build.dist.languages}">
-			<fileset dir="dist/languages" />
-		</sync>
-		<sync todir="${build.dist.login}">
-			<fileset dir="dist/login" />
-		</sync>
 		<copy todir="${build.dist.login}/data">
 			<fileset dir="misc" />
 		</copy>
-		<sync todir="${build.dist.sql}">
-			<fileset dir="dist/sql" />
-		</sync>
-		<sync todir="${build.dist.tools}">
-			<fileset dir="dist/tools" />
-		</sync>
 		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" />
 	</target>
 
