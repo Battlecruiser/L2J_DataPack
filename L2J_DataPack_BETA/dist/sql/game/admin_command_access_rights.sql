@@ -620,4 +620,5 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_chsiege_addAttacker', 1, 'false'),
 ('admin_chsiege_removeAttacker', 1, 'false'),
 ('admin_chsiege_listAttackers', 1, 'false'),
-('admin_chsiege_clearAttackers', 1, 'false');
+('admin_chsiege_clearAttackers', 1, 'false'),
+('admin_chsiege_forwardSiege', 1, 'false');

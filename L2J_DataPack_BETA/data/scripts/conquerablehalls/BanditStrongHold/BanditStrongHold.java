@@ -3,12 +3,12 @@
  */
 package conquerablehalls.BanditStrongHold;
 
+import gnu.trove.TIntObjectHashMap;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
-import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.Announcements;
@@ -39,12 +39,12 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 {
 	private class ClanData
 	{
-		private int flag = 0;
-		private int npc = 0;
-		private ArrayList<Integer> players = new ArrayList<Integer>(18);
-		private ArrayList<L2PcInstance> playersInstance = new ArrayList<L2PcInstance>(18);
-		private L2Spawn warrior = null;
-		private L2Spawn flagInstance = null;
+		int flag = 0;
+		int npc = 0;
+		ArrayList<Integer> players = new ArrayList<Integer>(18);
+		ArrayList<L2PcInstance> playersInstance = new ArrayList<L2PcInstance>(18);
+		L2Spawn warrior = null;
+		L2Spawn flagInstance = null;
 	}
 	
 	private static final String qn = "BanditStrongHold";
@@ -94,7 +94,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 	// Custom values
 	private static final L2CharPosition CENTER = new L2CharPosition(82882,-16280,-1894,0);
 	
-	private FastMap<Integer, ClanData> _data;
+	private TIntObjectHashMap<ClanData> _data = new  TIntObjectHashMap<ClanData>();
 	private L2Clan _winner;
 	
 	public BanditStrongHold(int questId, String name, String descr, final int hallId)
@@ -110,19 +110,11 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 		addKillId(BLUE_FLAG);
 		addKillId(PURPLE_FLAG);
 		
-		addAttackId(RED_FLAG);
-		addAttackId(YELLOW_FLAG);
-		addAttackId(GREEN_FLAG);
-		addAttackId(BLUE_FLAG);
-		addAttackId(PURPLE_FLAG);
-		
 		addSpawnId(OEL_MAHUM_BERSERKER);
 		addSpawnId(OEL_MAHUM_SCOUT);
 		addSpawnId(OEL_MAHUM_LEADER);
 		addSpawnId(OEL_MAHUM_CLERIC);
 		addSpawnId(OEL_MAHUM_THIEF);
-		
-		_data = new FastMap<Integer, ClanData>();
 		
 		// Load alredy registered attackers
 		loadAttackers();
@@ -155,11 +147,10 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 				msg.replace("%objectId%", String.valueOf(npc.getObjectId()));
 				msg.replace("%nextSiege%", _hall.getSiegeDate().getTime().toString());
 				player.sendPacket(msg);
+				return null;
 			}
 			else if(clan == null || !player.isClanLeader())
 				html = "agit_oel_mahum_messenger_2.htm";
-			else if(!_hall.isRegistering())
-				html = "agit_oel_mahum_messenger_3.htm";
 			else if((_hall.getOwnerId() > 0 && getAttackers().size() >= 4)
 					|| getAttackers().size() >= 5)
 				html = "agit_oel_mahum_messenger_21.htm";
@@ -175,7 +166,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 					// Register passing the quest
 					if(arg[1].equals("wQuest"))
 					{
-						if(player.destroyItemByItemId("BanditStrongHold Siege", 5009, 1, npc, true)) // Quest passed
+						if(player.destroyItemByItemId("BanditStrongHold Siege", 5009, 1, npc, false)) // Quest passed
 						{
 							registerClan(clan);
 							html = getFlagHtml(_data.get(clan.getClanId()).flag);
@@ -210,10 +201,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 				if(var.length >= 2)
 				{
 					int id = 0;
-					try
-					{
-						id = Integer.parseInt(var[1]);
-					}
+					try { id = Integer.parseInt(var[1]); }
 					catch(Exception e)
 					{
 						_log.warning("BanditStronghold->select_clan_npc->Wrong mahum warrior id: "+var[1]);
@@ -224,6 +212,8 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 						saveNpc(id, clan.getClanId());
 					}
 				}
+				else
+					_log.warning("BanditStrongHold Siege: Not enough parameters to save clan npc for clan: "+clan.getName());
 			}
 		}
 		// View (and change ? ) the current selected mahum warrior
@@ -266,40 +256,25 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if(_hall.isInSiege())
-		{
-			final int clan = attacker.getClan().getClanId();
-			// Attacking own flag or non-registered players
-			if((_data.containsKey(clan) && npc.getNpcId() == _data.get(clan).flag)
-					|| !_data.containsKey(clan))
-				npc.setCurrentHp(npc.getCurrentHp() + damage);
-		}
-		return null;
-	}
-	
-	@Override
 	public synchronized String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		if(_hall.isInSiege())
 		{
-			final int id = npc.getNpcId();
-			if(id == RED_FLAG || id == YELLOW_FLAG || id == GREEN_FLAG
-					|| id == BLUE_FLAG || id == PURPLE_FLAG)
+			final int npcId = npc.getNpcId();
+			for(int keys : _data.keys())
+				if(_data.get(keys).flag == npcId)
+					removeParticipant(keys, true);
+			
+			synchronized(this)
 			{
-				final int index = id - 35423;
-				removeParticipant(index, true);
-				
-				synchronized(this)
+				// Siege ends if just 1 flag is alive
+				if(_data.size() == 1)
 				{
-					// Siege ends if just 1 flag is alive
-					if(_data.size() == 1)
-					{
-						_winner = removeParticipant(0, false);
-						cancelSiegeTask();
-						endSiege();
-					}
+					_missionAccomplished = true;
+					_winner = ClanTable.getInstance().getClan(_data.keys()[0]);
+					removeParticipant(_data.keys()[0], false);
+					cancelSiegeTask();
+					endSiege();
 				}
 			}
 		}
@@ -340,22 +315,32 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 	@Override
 	public void onSiegeStarts()
 	{
-		for(ClanData data : _data.values())
+		for(Object obj : _data.getValues())
 		{
 			try
 			{
-				L2NpcTemplate flagTemplate = null;
-				L2NpcTemplate mahumTemplate = null;
+				ClanData data = (ClanData)obj;
 				
-				assert (flagTemplate = NpcTable.getInstance().getTemplate(data.flag)) != null
-						&& (mahumTemplate = NpcTable.getInstance().getTemplate(data.npc)) != null;
+				L2NpcTemplate flagTemplate = NpcTable.getInstance().getTemplate(data.flag);
+				L2NpcTemplate mahumTemplate = NpcTable.getInstance().getTemplate(data.npc);
+				
+				if(flagTemplate == null)
+				{
+					_log.warning("BanditStrongHoldSiege: Flag L2NpcTemplate["+data.flag+"] does not exist!");
+					continue;
+				}
+				if(mahumTemplate == null)
+				{
+					_log.warning("BanditStrongHoldSiege: Mahum L2NpcTemplate["+data.npc+"] does not exist!");
+					continue;
+				}
 						
 				data.flagInstance = new L2Spawn(flagTemplate);
-				int index = 35423 - data.flag;
+				int index = data.flag - 35423;
 				int[] flagCoords = FLAGS_COORDS[index];		
-				data.flagInstance.setLocx(FLAGS_COORDS[index][0]);
-				data.flagInstance.setLocy(FLAGS_COORDS[index][1]);
-				data.flagInstance.setLocz(FLAGS_COORDS[index][2]);
+				data.flagInstance.setLocx(flagCoords[0]);
+				data.flagInstance.setLocy(flagCoords[1]);
+				data.flagInstance.setLocz(flagCoords[2]);
 				data.flagInstance.setRespawnDelay(10000);
 				data.flagInstance.setAmount(1);
 				data.flagInstance.init();
@@ -371,7 +356,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 				}
 				
 				data.warrior = new L2Spawn(mahumTemplate);
-				int indexx = 35428 - data.npc;
+				int indexx = data.npc - 35428;
 				data.warrior.setLocx(MAHUM_COORDS[indexx][0]);
 				data.warrior.setLocy(MAHUM_COORDS[indexx][1]);
 				data.warrior.setLocz(MAHUM_COORDS[indexx][2]);
@@ -383,6 +368,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 			}
 			catch(Exception e)
 			{
+				endSiege();
 				_log.warning(_hall.getName()+": Problems in siege initialization!");
 				e.printStackTrace();
 			}
@@ -394,15 +380,12 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 	{
 		if(_data.size() > 0)
 		{
-			for(int clanId : _data.keySet())
+			for(int clanId : _data.keys())
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(clanId);
-				if(clan == null)
-					continue;
-				if(_hall.getOwnerId() == clan.getClanId())
-					removeParticipant(clan, false);
+				if(_hall.getOwnerId() == clanId)
+					removeParticipant(clanId, false);
 				else
-					removeParticipant(clan, true);
+					removeParticipant(clanId, true);
 			}
 		}
 		clearTables();
@@ -416,23 +399,17 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 		getAttackers().put(clanId, sc);
 		
 		ClanData data = new ClanData();
-		_data.put(clanId, data);
-		data.flag = 35422 + _data.size();
+		data.flag = 35423 + _data.size();
 		data.players.add(clan.getLeaderId());
+		_data.put(clanId, data);
 		
 		saveClan(clanId, data.flag);
 		saveMember(clanId, clan.getLeaderId());
 	}
 	
-	private final L2Clan removeParticipant(int index, boolean teleport)
+	private final void removeParticipant(int clanId, boolean teleport)
 	{
-		final L2Clan clan = (L2Clan)(_data.keySet().toArray()[index]);
-		return removeParticipant(clan, teleport);
-	}
-	
-	private final L2Clan removeParticipant(L2Clan clan, boolean teleport)
-	{
-		ClanData dat = _data.remove(clan);
+		ClanData dat = _data.remove(clanId);
 		
 		if(dat != null)
 		{	
@@ -440,30 +417,30 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 			if(dat.flagInstance != null)
 			{
 				dat.flagInstance.stopRespawn();
-				dat.flagInstance.getLastSpawn().deleteMe();
+				if(dat.flagInstance.getLastSpawn() != null)
+					dat.flagInstance.getLastSpawn().deleteMe();
 			}
 		
 			if(dat.warrior != null)
 			{
 				// Destroy clan warrior
 				dat.warrior.stopRespawn();
-				dat.warrior.getLastSpawn().deleteMe();
+				if(dat.warrior.getLastSpawn() != null)
+					dat.warrior.getLastSpawn().deleteMe();
 			}
 		
 			dat.players.clear();
+			
+			if(teleport)
+			{
+				// Teleport players outside
+				for(L2PcInstance pc : dat.playersInstance)
+					if(pc != null)
+						pc.teleToLocation(TeleportWhereType.Town);
+			}
+			
+			dat.playersInstance.clear();
 		}
-		
-		if(teleport)
-		{
-			// Teleport players outside
-			for(L2PcInstance pc : dat.playersInstance)
-				if(pc != null)
-					pc.teleToLocation(TeleportWhereType.Town);
-		}
-		
-		dat.playersInstance.clear();
-		
-		return clan;
 	}
 	
 	private String getFlagHtml(int flag)
@@ -624,7 +601,7 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 		}
 	}
 	
-	private final void saveNpc(int clanId, int npc)
+	private final void saveNpc(int npc, int clanId)
 	{
 		Connection con = null;
 		try

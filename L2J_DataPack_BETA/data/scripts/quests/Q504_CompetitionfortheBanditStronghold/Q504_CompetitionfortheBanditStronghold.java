@@ -17,7 +17,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class Q504_CompetitionfortheBanditStronghold extends Quest
 {
-	private static final String qn = "504_CompetitionfortheBanditStronghold";
+	private static final String qn = 	"504_CompetitionfortheBanditStronghold";
 	// Quest reward item
 	private static final int TARLK_AMULET = 4332;
 	private static final int TROPHY_OF_ALLIANCE = 5009;
@@ -50,7 +50,7 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 		
 		if(st == null)
 			result = getNoQuestMsg(player);
-		else if(!BANDIT_STRONGHOLD.isInSiege())
+		else if(!BANDIT_STRONGHOLD.isWaitingBattle())
 		{
 			sendDatePage("azit_messenger_q0504_09.htm", player, npc);
 			result = null;

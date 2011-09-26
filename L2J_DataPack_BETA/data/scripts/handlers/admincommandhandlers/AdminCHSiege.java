@@ -31,7 +31,8 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		"admin_chsiege_addAttacker",
 		"admin_chsiege_removeAttacker",
 		"admin_chsiege_clearAttackers",
-		"admin_chsiege_listAttackers"
+		"admin_chsiege_listAttackers",
+		"admin_chsiege_forwardSiege"
 	};
 	
 	@Override
@@ -51,6 +52,8 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			activeChar.sendMessage("You have to specify the hall id at least");
 		else if((hall = getHall(split[1], activeChar)) == null)
 			activeChar.sendMessage("Couldnt find he desired siegable hall ("+split[1]+")");
+		else if(hall.getSiege() == null)
+			activeChar.sendMessage("The given hall dont have any attached siege!");
 		else if(split[0].equals(COMMANDS[1]))
 		{
 			if(hall.isInSiege())
@@ -214,6 +217,23 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		}
 		else if(split[0].equals(COMMANDS[7]))
 			activeChar.sendPacket(new SiegeInfo(hall));
+		else if(split[0].equals(COMMANDS[8]))
+		{
+			ClanHallSiegeEngine siegable = hall.getSiege();
+			siegable.cancelSiegeTask();
+			switch(hall.getSiegeStatus())
+			{
+				case REGISTERING:
+					siegable.prepareOwner();
+					break;
+				case WAITING_BATTLE:
+					siegable.startSiege();
+					break;
+				case RUNNING:
+					siegable.endSiege();
+					break;
+			}
+		}
 			
 		sendSiegableHallPage(activeChar, split[1], hall);
 		return false;
