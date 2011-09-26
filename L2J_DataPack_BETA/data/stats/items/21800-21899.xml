@@ -1303,8 +1303,18 @@
 	<item id="21899" type="EtcItem" name="Totem of Body">
 		<!-- Description: Summons a totem that increases HP recovery speed by 30% and decreases damage from the topography by 80%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
+		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22294-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 </list>

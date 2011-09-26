@@ -10113,4 +10113,8 @@ INSERT INTO `npc_elementals` VALUES
 (132,0,0,150,150,150,150,150,150),
 (133,0,0,150,150,150,150,150,150),
 (134,0,0,20,20,20,20,20,20), -- TODO: Stats require check
-(135,0,0,20,20,20,20,20,20); -- TODO: Stats require check
+(135,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(143,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(144,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(145,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(146,0,0,20,20,20,20,20,20); -- TODO: Stats require check
