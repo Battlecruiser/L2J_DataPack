@@ -39,12 +39,6 @@ public class OlympiadStat implements IUserCommandHandler
 			return false;
 		}
 		
-		if (!activeChar.isNoble())
-		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOBLESSE_ONLY));
-			return false;
-		}
-		
 		int nobleObjId = activeChar.getObjectId();
 		final L2Object target = activeChar.getTarget();
 		if (target != null)
@@ -55,9 +49,14 @@ public class OlympiadStat implements IUserCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOBLESSE_ONLY));
+				activeChar.sendPacket(SystemMessageId.NOBLESSE_ONLY);
 				return false;
 			}
+		}
+		else if (!activeChar.isNoble())
+		{
+			activeChar.sendPacket(SystemMessageId.NOBLESSE_ONLY);
+			return false;
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
@@ -66,6 +65,13 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addNumber(Olympiad.getInstance().getCompetitionLost(nobleObjId));
 		sm.addNumber(Olympiad.getInstance().getNoblePoints(nobleObjId));
 		activeChar.sendPacket(sm);
+		
+		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_MATCHES_REMAINING_THAT_YOU_CAN_PARTECIPATE_IN_THIS_WEEK_S2_CLASSED_S3_NON_CLASSED_S4_TEAM);
+		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
+		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesClassed(nobleObjId));
+		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(nobleObjId));
+		sm2.addNumber(Olympiad.getInstance().getRemainingWeeklyMatchesTeam(nobleObjId));
+		activeChar.sendPacket(sm2);
 		return true;
 	}
 	
