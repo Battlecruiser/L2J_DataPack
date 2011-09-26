@@ -3,23 +3,53 @@
 	<item id="21900" type="EtcItem" name="Totem of Spirit">
 		<!-- Description: Summons a totem that increases MP recovery speed by 15%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
+		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22295-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 	<item id="21901" type="EtcItem" name="Totem of Courage">
 		<!-- Description: Summons a totem that increases P. Def. by 30%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
+		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22296-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 	<item id="21902" type="EtcItem" name="Totem of Fortitude">
 		<!-- Description: Summons a totem that increases M. Def. by 25% and cancels petrification at a certain cycle. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
+		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22297-1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="12010, 12001" />
+		</cond>
 	</item>
 	<item id="21903" type="EtcItem" name="Refined Red Dragon Blood">
 		<!-- Description: When used, instantly recovers some HP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->

@@ -65,7 +65,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="totem_energy">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="totem_energy">
 				<mul order="0x30" stat="regHp" val="1.3" />
 				<mul order="0x40" stat="damageZoneVuln" val="80" />				
 			</effect>
@@ -78,7 +78,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="totem_energy">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="totem_energy">
 				<mul order="0x30" stat="regMp" val="1.3" />				
 			</effect>
 		</for>
@@ -90,7 +90,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="totem_energy">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="totem_energy">
 				<mul order="0x30" stat="pDef" val="1.15" />				
 			</effect>
 		</for>
@@ -102,7 +102,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="totem_energy">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="totem_energy">
 				<mul order="0x30" stat="mDef" val="1.25" />				
 			</effect>
 		</for>
