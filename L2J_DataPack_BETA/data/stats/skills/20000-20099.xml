@@ -14,38 +14,38 @@
 	</skill>
 	<skill id="20002" levels="1" name="Dragon Blow">
 		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
-		<!-- Missing reuseDelay -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BLOW" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="magicLvl" val="85" /> <!-- guessed -->
 		<set name="power" val="3420" />
 		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- gussed -->
+		<set name="effectRange" val="550" /> <!-- guessed -->
 		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" /> <!-- guessed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
 		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
-		<!-- Missing reuseDelay -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="magicLvl" val="85" /> <!-- guessed -->
 		<set name="power" val="3420" />
 		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- gussed -->
+		<set name="effectRange" val="550" /> <!-- guessed -->
 		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="5000" /> <!-- guessed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
-		<!-- Missing reuseDelay -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="30000" /> <!-- guessed -->
 		<set name="isMagic" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_up_special">
@@ -55,11 +55,11 @@
 	</skill>
 	<skill id="20005" levels="1" name="Dragon Aura">
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
-		<!-- Missing reuseDelay -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="mpConsume" val="1" />
+		<set name="reuseDelay" val="5000" /> <!-- guessed -->
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
 		<for>
