@@ -378,16 +378,18 @@
 		</enchant1for>
 	</skill>
 	<skill id="225" levels="3" name="Acrobatic Move">
-		<table name="#gain"> 4 5 6 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#evas"> 4 5 6 </table>
 		<table name="#magicLvl"> 28 43 55 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#gain">
+			<add order="0x40" stat="rEvas" val="#evas">
 				<player running="true" />
 			</add>
+			<add order="0x40" stat="stunVuln" val="11" />
 		</for>
 	</skill>
 	<skill id="226" levels="1" name="Relax">

@@ -418,7 +418,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2530-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="12820" type="EtcItem" name="Blueprint - Summon Merchant Golem">
 		<set name="icon" val="icon.etc_plan_i00" />

@@ -408,19 +408,20 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="6426" levels="1" name="Priest's Ire">
-		<set name="target" val="TARGET_ONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="magicLvl" val="84" />
-		<set name="skillType" val="MDAM" />
-		<set name="power" val="120" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="800" />
-		<set name="effectRange" val="1200" />
-		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1200" />
 		<set name="element" val="3" />	<!-- Earth -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="120" />
 		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
 		<!-- Fantasy Mushroom Skill -->

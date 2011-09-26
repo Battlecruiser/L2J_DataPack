@@ -1058,19 +1058,21 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="1545" levels="1" name="Soul Sucking">
+		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
-		<!-- TODO: Related with Quest "Long live the Pa'agrio Lord! -->
-		<!-- TODO: This skill require retail check -->
+		<!-- TODO: Synch with animation. -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="true" />
-		<set name="mpConsume" val="36" />
+		<set name="magicLvl" val="79" />
+		<set name="mpInitialConsume" val="36" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1078,14 +1080,24 @@
 		</for>
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
-		<!-- Frightens the enemy and causes him to flee for 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="saveVs" val="MEN" />
+		<set name="magicLvl" val="56" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="trait" val="DERANGEMENT" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="100" /> <!-- 900, 100 -->
+		<set name="skillType" val="FEAR" />
+		<set name="target" val="TARGET_FRONT_AREA" /> <!-- TODO: TARGET_AURA_SQUARE -->
+		<for>
+			<effect count="5" name="Fear" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+		</for>
 	</skill>
 	<skill id="1547" levels="3" name="Spirit Sharing">
 		<table name="#abnormalLvl"> 1 2 3 </table>

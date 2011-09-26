@@ -635,20 +635,20 @@
 		</for>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
+		<!-- Confirmed CT2.5 -->
+		<!-- TODO: Implement proper target type. -->
 		<set name="castRange" val="200" />
+		<set name="coolTime" val="700" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1300" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillType" val="PDAM" />
-		<set name="skillRadius" val="300" />
-		<set name="staticDamage" val="true" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
-		<set name="coolTime" val="700" />
-		<cond msgId="113" addName="1">
-			<player instanceId="112" />
-		</cond>
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<set name="target" val="TARGET_NONE" />

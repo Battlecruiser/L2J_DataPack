@@ -1191,7 +1191,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2342-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="9689" type="EtcItem" name="Spirit of the Lake">
 		<set name="icon" val="icon.etc_talisman_i01" />

@@ -45,22 +45,41 @@
 		</for>
 	</skill>
 	<skill id="3804" levels="1" name="Dynasty Silver Satin Tunic">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+		</for>
 	</skill>
 	<skill id="3805" levels="1" name="Dynasty Jewel Leather Mail">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="accCombat" val="3.4" />
+			<add order="0x40" stat="darkRes" val="3.2" />
+			<add order="0x30" stat="maxMp" val="492" />
+			<mul order="0x30" stat="pAtkSpd" val="1.0477" />
+			<add order="0x40" stat="rEvas" val="3.4" />
+		</for>
 	</skill>
 	<skill id="3806" levels="1" name="Dynasty Platinum Plate">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="darkRes" val="3.2" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			<add order="0x30" stat="maxHp" val="1023" />
+			<mul order="0x30" stat="pDef" val="1.0724" />
+		</for>
 	</skill>
 	<skill id="3807" levels="1" name="Adamantite Earring">
 		<!-- Confirmed CT2.5 -->

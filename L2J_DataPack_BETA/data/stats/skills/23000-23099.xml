@@ -267,9 +267,11 @@
 		<set name="skillRadius" val="500" />
 	</skill>
 	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>

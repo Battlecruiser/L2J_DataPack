@@ -206,7 +206,12 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<and>
+				<player flyMounted="False" />
+				<not>
+					<player transformationId="103" />
+				</not>
+			</and>
 		</cond>
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head">

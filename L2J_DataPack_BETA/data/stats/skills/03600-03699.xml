@@ -1083,10 +1083,10 @@
 	</skill>
 	<skill id="3669" levels="1" name="Zubei's Leather Shirt">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="9.55" />
 		</for>
@@ -1151,21 +1151,24 @@
 	</skill>
 	<skill id="3676" levels="1" name="Zubei's Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0724" />
 			<add order="0x40" stat="maxHp" val="294" />
+			<mul order="0x30" stat="pDef" val="1.0724" />
 		</for>
 	</skill>
 	<skill id="3677" levels="1" name="Tunic of Zubei">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.15" />
+		</for>
 	</skill>
 	<skill id="3678" levels="1" name="Stockings of Zubei">
 		<!-- Confirmed CT2.5 -->
@@ -1241,10 +1244,13 @@
 	</skill>
 	<skill id="3686" levels="1" name="Avadon Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxHp" val="833" />
+		</for>
 	</skill>
 	<skill id="3687" levels="1" name="Avadon Shield">
 		<!-- Confirmed CT2.5 -->
@@ -1277,10 +1283,14 @@
 	</skill>
 	<skill id="3690" levels="1" name="Avadon Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxLoad" val="11038" />
+			<mul order="0x30" stat="mDef" val="1.1708" />
+		</for>
 	</skill>
 	<skill id="3691" levels="1" name="Avadon Boots">
 		<!-- Confirmed CT2.5 -->
@@ -1312,10 +1322,14 @@
 	</skill>
 	<skill id="3694" levels="1" name="Avadon Robe">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<mul order="0x30" stat="mDef" val="1.1708" />
+		</for>
 	</skill>
 	<skill id="3695" levels="1" name="Avadon Boots">
 		<!-- Confirmed CT2.5 -->
@@ -1348,10 +1362,14 @@
 	</skill>
 	<skill id="3698" levels="1" name="Doom Plate Armor">
 		<!-- Confirmed CT2.5 -->
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="breath" val="383" />
+			<add order="0x40" stat="maxHp" val="1093" />
+		</for>
 	</skill>
 	<skill id="3699" levels="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->

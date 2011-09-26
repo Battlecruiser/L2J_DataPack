@@ -304,10 +304,25 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6637" levels="1" name="Vampiric Aura">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="2000" />
+		<set name="effectRange" val="2000" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player transformationId="103" />
+			</not>
+		</cond>
+		<for>
+			<effect name="BigHead" abnormalTime="1200" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head">
+				<mul order="0x30" stat="regHp" val="2" />
+				<mul order="0x30" stat="regMp" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
 		<set name="target" val="TARGET_NONE" />
