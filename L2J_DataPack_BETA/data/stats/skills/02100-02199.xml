@@ -24,13 +24,19 @@
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2103" levels="1" name="Mystery Potion">
+		<!-- Confirmed CT2.5 -->
+		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="ETC" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player transformationId="103" />
+			</not>
+		</cond>
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>

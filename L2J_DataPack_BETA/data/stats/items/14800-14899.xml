@@ -272,7 +272,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2907-5" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="14816" type="EtcItem" name="Territory Mana Recovery Potion">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
@@ -289,7 +291,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2908-5" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="14817" type="EtcItem" name="Territory CP Recovery Potion">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
@@ -306,7 +310,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2909-5" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="14818" type="EtcItem" name="Enriched Pet Food for Wolves">
 		<set name="icon" val="icon.etc_pouch_red_i00" />

@@ -10,10 +10,17 @@
 		</for>
 	</skill>
 	<skill id="3701" levels="1" name="Leather Armor of Doom">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="breath" val="383" />
+			<mul order="0x30" stat="pAtk" val="1.0827" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<mul order="0x30" stat="regMp" val="1.0827" />
+		</for>
 	</skill>
 	<skill id="3702" levels="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
@@ -74,10 +81,16 @@
 		</for>
 	</skill>
 	<skill id="3707" levels="1" name="Tunic of Doom">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="breath" val="200" />
+			<mul order="0x30" stat="regMp" val="1.0724" />
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
 	</skill>
 	<skill id="3708" levels="1" name="Stockings of Doom">
 		<!-- Confirmed CT2.5 -->
@@ -102,10 +115,15 @@
 		</for>
 	</skill>
 	<skill id="3710" levels="1" name="Blue Wolf Breastplate">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="regHp" val="1.0724" />
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
 	</skill>
 	<skill id="3711" levels="1" name="Blue Wolf Gaiters">
 		<!-- Confirmed CT2.5 -->
@@ -148,10 +166,15 @@
 		</for>
 	</skill>
 	<skill id="3715" levels="1" name="Blue Wolf Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<mul order="0x30" stat="pDef" val="1.0219" />
+		</for>
 	</skill>
 	<skill id="3716" levels="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
@@ -201,10 +224,15 @@
 		</for>
 	</skill>
 	<skill id="3721" levels="1" name="Blue Wolf Tunic">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxMp" val="205" />
+			<mul order="0x30" stat="regMp" val="1.0724" />
+		</for>
 	</skill>
 	<skill id="3722" levels="1" name="Blue Wolf Stockings">
 		<!-- Confirmed CT2.5 -->
@@ -237,10 +265,15 @@
 		</for>
 	</skill>
 	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="gainHp" val="1.12" />
+			<add order="0x40" stat="paralyzeVuln" val="20" />
+		</for>
 	</skill>
 	<skill id="3726" levels="1" name="Dark Crystal Gaiters">
 		<!-- Confirmed CT2.5 -->
@@ -282,10 +315,16 @@
 		</for>
 	</skill>
 	<skill id="3730" levels="1" name="Dark Crystal Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="paralyzeVuln" val="20" />
+			<mul order="0x30" stat="pAtkSpd" val="1.0724" />
+			<mul order="0x30" stat="pAtk" val="1.0724" />
+		</for>
 	</skill>
 	<skill id="3731" levels="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
@@ -344,10 +383,18 @@
 		</for>
 	</skill>
 	<skill id="3736" levels="1" name="Dark Crystal Robe">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="cancelVuln" val="8.33" />
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<add order="0x40" stat="paralyzeVuln" val="20" />
+			<mul order="0x30" stat="pDef" val="1.0333" />
+			<add order="0x40" stat="runSpd" val="2.91" />
+		</for>
 	</skill>
 	<skill id="3737" levels="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
@@ -398,10 +445,17 @@
 		</for>
 	</skill>
 	<skill id="3741" levels="1" name="Tallum Plate Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="bleedVuln" val="52" />
+			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="poisonVuln" val="52" />
+			<mul order="0x30" stat="pAtkSpd" val="1.0932" />
+		</for>
 	</skill>
 	<skill id="3742" levels="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
@@ -416,10 +470,17 @@
 		</for>
 	</skill>
 	<skill id="3743" levels="1" name="Tallum Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="bleedVuln" val="52" />
+			<add order="0x40" stat="maxMp" val="315" />
+			<add order="0x40" stat="poisonVuln" val="52" />
+			<mul order="0x30" stat="regMp" val="1.0932" />
+		</for>
 	</skill>
 	<skill id="3744" levels="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
@@ -480,10 +541,14 @@
 		</for>
 	</skill>
 	<skill id="3749" levels="1" name="Tallum Tunic">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+		</for>
 	</skill>
 	<skill id="3750" levels="1" name="Tallum Stockings">
 		<!-- Confirmed CT2.5 -->
@@ -530,10 +595,16 @@
 		</for>
 	</skill>
 	<skill id="3754" levels="1" name="Majestic Plate Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="accCombat" val="0.579" />
+			<mul order="0x30" stat="pAtk" val="1.0827" />
+			<add order="0x40" stat="stunVuln" val="20.83" />
+		</for>
 	</skill>
 	<skill id="3755" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
@@ -561,10 +632,19 @@
 		</for>
 	</skill>
 	<skill id="3757" levels="1" name="Majestic Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="maxMp" val="340" />
+			<mul order="0x30" stat="pAtk" val="1.0932">
+				<using kind="Bow,Crossbow" />
+			</mul>
+			<add order="0x40" stat="stunVuln" val="20.83" />
+		</for>
 	</skill>
 	<skill id="3758" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
@@ -606,10 +686,16 @@
 		</for>
 	</skill>
 	<skill id="3761" levels="1" name="Majestic Robe">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<mul order="0x30" stat="regMp" val="1.0333" />
+			<add order="0x40" stat="stunVuln" val="20.83" />
+		</for>
 	</skill>
 	<skill id="3762" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
@@ -634,10 +720,16 @@
 		</for>
 	</skill>
 	<skill id="3764" levels="1" name="Armor of Nightmare">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="pAtk" val="1.1708" />
+			<sub order="0x40" stat="rootVuln" val="29.16" />
+			<sub order="0x40" stat="sleepVuln" val="29.16" />
+		</for>
 	</skill>
 	<skill id="3765" levels="1" name="Gauntlet of Nightmare">
 		<!-- Confirmed CT2.5 -->
@@ -673,10 +765,17 @@
 		</for>
 	</skill>
 	<skill id="3768" levels="1" name="Nightmarish Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="absorbDam" val="3" />
+			<mul order="0x30" stat="mDef" val="1.0827" />
+			<sub order="0x40" stat="rootVuln" val="29.16" />
+			<sub order="0x40" stat="sleepVuln" val="29.16" />
+		</for>
 	</skill>
 	<skill id="3769" levels="1" name="Gauntlet of Nightmare">
 		<!-- Confirmed CT2.5 -->
@@ -713,10 +812,17 @@
 		</for>
 	</skill>
 	<skill id="3772" levels="1" name="Nightmare Robe">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.0827" />
+			<mul order="0x30" stat="regMp" val="1.0827" />
+			<sub order="0x40" stat="rootVuln" val="29.16" />
+			<sub order="0x40" stat="sleepVuln" val="29.16" />
+		</for>
 	</skill>
 	<skill id="3773" levels="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
@@ -764,10 +870,17 @@
 		</for>
 	</skill>
 	<skill id="3777" levels="1" name="Draconic Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="maxMp" val="630" />
+			<mul order="0x30" stat="pAtk" val="1.058" />
+			<mul order="0x30" stat="pAtkSpd" val="1.058" />
+		</for>
 	</skill>
 	<skill id="3778" levels="1" name="Draconic Leather Helmet">
 		<!-- Confirmed CT2.5 -->
@@ -795,10 +908,18 @@
 		</for>
 	</skill>
 	<skill id="3780" levels="1" name="Major Arcana Robe">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="cancel" val="21" />
+			<add order="0x40" stat="maxLoad" val="8159" />
+			<mul order="0x30" stat="mAtk" val="1.1603" />
+			<mul order="0x30" stat="runSpd" val="1.0991" />
+			<sub order="0x40" stat="stunVuln" val="20.83" />
+		</for>
 	</skill>
 	<skill id="3781" levels="1" name="Major Arcana Boots">
 		<!-- Confirmed CT2.5 -->
@@ -887,16 +1008,29 @@
 		</for>
 	</skill>
 	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxHp" val="889" />
+			<mul order="0x30" stat="pDef" val="1.0724" />
+			<sub order="0x40" stat="rootVuln" val="28" />
+			<sub order="0x40" stat="sleepVuln" val="28" />
+		</for>
 	</skill>
 	<skill id="3789" levels="1" name="Dynasty Breastplate">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="darkRes" val="3.2" />
+			<add order="0x40" stat="maxHp" val="984" />
+			<mul order="0x30" stat="pDef" val="1.0724" />
+		</for>
 	</skill>
 	<skill id="3790" levels="1" name="Dynasty Gaiters">
 		<!-- Confirmed CT2.5 -->
@@ -952,10 +1086,18 @@
 		</for>
 	</skill>
 	<skill id="3795" levels="1" name="Dynasty Leather Armor">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="accCombat" val="3.4" />
+			<add order="0x40" stat="darkRes" val="3.2" />
+			<add order="0x40" stat="maxMp" val="492" />
+			<mul order="0x30" stat="pAtkSpd" val="1.0477" />
+			<add order="0x40" stat="rEvas" val="3.4" />
+		</for>
 	</skill>
 	<skill id="3796" levels="1" name="Dynasty Leather Leggings">
 		<!-- Confirmed CT2.5 -->
@@ -997,9 +1139,13 @@
 		</for>
 	</skill>
 	<skill id="3799" levels="1" name="Dynasty Tunic">
-		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+		</for>
 	</skill>
 </list>

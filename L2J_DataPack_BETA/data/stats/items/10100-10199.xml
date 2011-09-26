@@ -586,7 +586,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2379-1;2380-1;2381-1;2382-1;2383-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10144" type="EtcItem" name="Battleground Spell - Wizard">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -600,7 +602,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2379-1;2380-1;2381-1;2384-1;2385-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10145" type="EtcItem" name="Battleground Spell - Healer">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -614,7 +618,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2379-1;2380-1;2381-1;2384-1;2386-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10146" type="EtcItem" name="Battleground Spell - Dagger Master">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -628,7 +634,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2379-1;2387-1;2381-1;2388-1;2383-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10147" type="EtcItem" name="Battleground Spell - Bow Master">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -642,7 +650,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2379-1;2387-1;2381-1;2389-1;2383-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10148" type="EtcItem" name="Battleground Spell - Berserker">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -656,7 +666,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2390-1;2391-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10149" type="EtcItem" name="Battleground Blessed Scroll of Escape">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
@@ -670,7 +682,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2392-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10150" type="EtcItem" name="Battleground Blessed Scroll of Resurrection">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
@@ -682,7 +696,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ScrollOfResurrection" />
 		<set name="item_skill" val="2393-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10151" type="EtcItem" name="Battleground Transform Spell">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
@@ -696,7 +712,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2394-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10152" type="EtcItem" name="Battle Health Recovery Potion">
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
@@ -711,7 +729,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2395-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10153" type="EtcItem" name="Battle Mana Recovery Potion">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
@@ -726,7 +746,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2401-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10154" type="EtcItem" name="Battle CP Recovery Potion">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
@@ -741,7 +763,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2402-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10155" type="EtcItem" name="Mental Strengthening Potion">
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
@@ -754,7 +778,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2396-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10156" type="EtcItem" name="Medusa's Potion">
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
@@ -769,7 +795,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2397-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10157" type="EtcItem" name="Instant Haste Potion">
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
@@ -782,7 +810,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2398-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10158" type="Armor" name="Grey Talisman of Upper Grade Fishing">
 		<set name="icon" val="icon.etc_talisman_i07" />
@@ -808,7 +838,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2399-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
+		<cond msgId="113" addName="1">
+			<player SiegeZone="126" />
+		</cond>
 	</item>
 	<item id="10160" type="EtcItem" name="Cursed Red Soul Crystal - Stage 14">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />

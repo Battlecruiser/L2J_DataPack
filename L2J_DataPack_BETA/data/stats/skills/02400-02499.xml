@@ -27,10 +27,7 @@
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player SiegeZone="126" />
-				<player level="52" />
-			</and>
+			<player level="52" />
 		</cond>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
@@ -44,10 +41,7 @@
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player SiegeZone="126" />
-				<player level="52" />
-			</and>
+			<player level="52" />
 		</cond>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
