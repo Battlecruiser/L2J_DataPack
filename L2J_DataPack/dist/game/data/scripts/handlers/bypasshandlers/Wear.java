@@ -70,7 +70,7 @@ public class Wear implements IBypassHandler
 		
 		if (list != null)
 		{
-			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseIndex());
+			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseLevel());
 			player.sendPacket(bl);
 		}
 		else
