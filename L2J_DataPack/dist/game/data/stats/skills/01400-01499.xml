@@ -2008,36 +2008,43 @@
 		</enchant3for>
 	</skill>
 	<skill id="1471" levels="1" name="Death Beam">
+		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="true" />
-		<set name="mpConsume" val="73" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="58" />
+		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="138" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillRadius" val="200" />
+		<set name="skillRadius" val="400" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="1472" levels="1" name="Soul Sucking">
+		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
-		<!-- TODO: This skill require retail check -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="15000" />
+		<set name="hitTimings" val="10,15,15,15,15,15,15" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="30" />
 		<set name="reuseDelay" val="300000" />
+		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DOT" />
+		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
-		<for>
-			<effect count="15" name="DamOverTime" val="1" />
-		</for>
 	</skill>
 	<skill id="1473" levels="1" name="Change Weapon">
 		<!-- CT2.2 retail confirmed -->
