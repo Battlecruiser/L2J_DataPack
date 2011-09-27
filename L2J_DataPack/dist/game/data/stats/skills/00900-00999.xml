@@ -851,37 +851,42 @@
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
+		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
+		<table name="#magicLvl"> 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 71 72 72 73 74 74 74 </table>
 		<table name="#power"> 2583 2640 2695 2749 2802 2852 2900 </table>
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="720" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="951" levels="7" name="Wing Assault">
+		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
+		<table name="#magicLvl"> 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 71 71 72 72 73 74 74 </table>
 		<table name="#power"> 2067 2112 2156 2200 2241 2282 2320 </table>
 		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="600" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="magicLvl" val="76" />
-		<set name="nextActionAttack" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
-		<set name="skillRadius" val="600" />
+		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
