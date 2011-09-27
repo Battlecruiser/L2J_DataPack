@@ -43,11 +43,13 @@ import com.l2jserver.util.StringUtil;
  * - get_skills
  * - reset_skills
  * - give_all_skills
+ * - give_all_skills_fs
  * - remove_all_skills
  * - add_clan_skills
- *
+ * - admin_setskill
+ * 
  * @version $Revision: 1.2.4.7 $ $Date: 2005/04/11 10:06:02 $
- * Small fixes by Zoey76 24/02/2011
+ * Small fixes by Zoey76 05/03/2011
  */
 public class AdminSkill implements IAdminCommandHandler
 {
@@ -64,6 +66,7 @@ public class AdminSkill implements IAdminCommandHandler
 		"admin_get_skills",
 		"admin_reset_skills",
 		"admin_give_all_skills",
+		"admin_give_all_skills_fs",
 		"admin_remove_all_skills",
 		"admin_add_clan_skill",
 		"admin_setskill"
@@ -136,9 +139,12 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_give_all_skills"))
 		{
-			adminGiveAllSkills(activeChar);
+			adminGiveAllSkills(activeChar, false);
 		}
-		
+		else if (command.equals("admin_give_all_skills_fs"))
+		{
+			adminGiveAllSkills(activeChar, true);
+		}
 		else if (command.equals("admin_remove_all_skills"))
 		{
 			if (activeChar.getTarget() instanceof L2PcInstance)
@@ -181,7 +187,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * This function will give all the skills that the target can learn at his/her level
 	 * @param activeChar: the gm char
 	 */
-	private void adminGiveAllSkills(L2PcInstance activeChar)
+	private void adminGiveAllSkills(L2PcInstance activeChar, boolean includedByFs)
 	{
 		L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
@@ -193,7 +199,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		//Notify player and admin
-		activeChar.sendMessage("You gave " + player.giveAvailableSkills() + " skills to " + player.getName());
+		activeChar.sendMessage("You gave " + player.giveAvailableSkills(includedByFs, true) + " skills to " + player.getName());
 		player.sendSkillList();
 	}
 	
