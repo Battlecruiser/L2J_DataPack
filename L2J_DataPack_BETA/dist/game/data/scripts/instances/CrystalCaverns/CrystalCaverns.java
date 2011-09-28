@@ -1,15 +1,17 @@
 /*
-Todo:
-1. Kechi's Henchmans spawn animation is missing.
-2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working.
-3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done).
-4. Baylor Raid is missing a lot of things
-This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.
-Original sources: theone, L2JEmu, L2JOfficial, L2JFree
-Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT
-Please maintain consistency between the Crystal Caverns scripts.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package instances.CrystalCaverns;
 
 import java.util.List;
@@ -60,6 +62,17 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * TODO:
+ * 1. Kechi's Henchmans spawn animation is missing.
+ * 2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working.
+ * 3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done).
+ * 4. Baylor Raid is missing a lot of things
+ * This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.
+ * Original sources: theone, L2JEmu, L2JOfficial, L2JFree
+ * Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT
+ * Please maintain consistency between the Crystal Caverns scripts.
+ */
 public class CrystalCaverns extends Quest
 {
 	

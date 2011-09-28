@@ -30,7 +30,6 @@ import com.l2jserver.util.Rnd;
  ** 
  ** 2010-06-26 Based on official server Franz
  */
-
 public class Q423_TakeYourBestShot extends Quest
 {
 	private static final String qn = "423_TakeYourBestShot";

@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author Gnacik. Updated to H5 by Nyaran
- * 
  */
-
 public class CharacterBirthday extends Quest
 {
 	private static final int _npc = 32600;

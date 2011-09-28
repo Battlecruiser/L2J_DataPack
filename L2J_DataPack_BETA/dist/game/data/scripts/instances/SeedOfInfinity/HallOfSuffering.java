@@ -41,13 +41,13 @@ import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-/*
-Todo:
-- after 15mins mobs are despawned
-- bound instance to quests
-
-Contributing authors: Gigiikun, ZakaX, Didldak
-Please maintain consistency between the Seed scripts.
+/**
+ * TODO:
+ * - after 15mins mobs are despawned
+ * - bound instance to quests
+ * 
+ * Contributing authors: Gigiikun, ZakaX, Didldak
+ * Please maintain consistency between the Seed scripts.
  */
 public class HallOfSuffering extends Quest
 {

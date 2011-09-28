@@ -33,7 +33,6 @@ import com.l2jserver.util.Rnd;
  **
  ** Dummy AI for spawns/respawns only for testing.
  */
-
 public class DenOfEvil extends L2AttackableAIScript
 {
 	// private static final int _buffer_id = 32656;
