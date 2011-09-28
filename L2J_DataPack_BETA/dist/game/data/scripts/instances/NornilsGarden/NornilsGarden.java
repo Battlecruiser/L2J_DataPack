@@ -42,7 +42,6 @@ import com.l2jserver.util.Rnd;
  **
  ** 2010-10-15 Based on official server Naia
  */
-
 public class NornilsGarden extends Quest
 {
 	private class NornilsWorld extends InstanceWorld

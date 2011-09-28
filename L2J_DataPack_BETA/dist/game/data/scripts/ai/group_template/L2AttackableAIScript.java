@@ -34,10 +34,8 @@ import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * 
  * Overarching Superclass for all mob AI
  * @author Fulminus
- *
  */
 public class L2AttackableAIScript extends QuestJython
 {

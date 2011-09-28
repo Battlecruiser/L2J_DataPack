@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.stat.PcStat;
 /**
  * @author Psychokiller1888
  */
-
 public class AdminVitality implements IAdminCommandHandler
 {
 	

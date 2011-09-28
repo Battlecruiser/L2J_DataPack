@@ -1,14 +1,4 @@
 /*
- * $Header: AdminTest.java, 25/07/2005 17:15:21 luisantonioa Exp $
- *
- * $Author: luisantonioa $
- * $Date: 25/07/2005 17:15:21 $
- * $Revision: 1 $
- * $Log: AdminTest.java,v $
- * Revision 1  25/07/2005 17:15:21  luisantonioa
- * Added copyright notice
- *
- *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
