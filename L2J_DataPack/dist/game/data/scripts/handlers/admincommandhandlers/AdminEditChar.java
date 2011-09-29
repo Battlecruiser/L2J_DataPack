@@ -18,7 +18,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -125,9 +124,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_unsummon",
 		"admin_summon_setlvl",
 		"admin_show_pet_inv",
-		"admin_partyinfo"
+		"admin_partyinfo",
+		"admin_setnoble"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_current_player"))
@@ -353,7 +354,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(15);
+				String val = command.substring(15).trim();
 				int classidval = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
@@ -382,6 +383,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			catch (StringIndexOutOfBoundsException e)
 			{
 				AdminHelpPage.showHelpPage(activeChar, "charclasses.htm");
+			}
+			catch (NumberFormatException e)
+			{
+				activeChar.sendMessage("Usage: //setclass <valid_new_classid>");
 			}
 		}
 		else if (command.startsWith("admin_settitle"))
@@ -426,7 +431,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				player.setName(val);
 				player.store();
-				CharNameTable.getInstance().addName(player);
 				
 				activeChar.sendMessage("Changed name to "+val);
 				player.sendMessage("Your name has been changed by a GM.");
@@ -763,9 +767,26 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			
 		}
+		else if (command.equals("admin_setnoble"))
+		{
+			L2PcInstance player = null;
+			if (activeChar.getTarget() == null)
+			{
+				player = activeChar;
+			}
+			else if (activeChar.getTarget() != null && activeChar.getTarget() instanceof L2PcInstance)
+				player = (L2PcInstance)activeChar.getTarget();
+			player.setNoble(!player.isNoble());
+			if (player.getObjectId() != activeChar.getObjectId())
+			{
+				activeChar.sendMessage("You've changed nobless status of: " + player.getName());
+			}
+			player.sendMessage("GM changed your nobless status!");
+		}
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -773,12 +794,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(L2PcInstance activeChar, int page)
 	{
-		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
-		L2PcInstance[] players;
-		//synchronized (L2World.getInstance().getAllPlayers())
-		{
-			players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
-		}
+		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		
 		int maxCharactersPerPage = 20;
 		int maxPages = players.length / maxCharactersPerPage;
@@ -924,6 +940,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%ip%", ip);
 		adminReply.replace("%ai%", String.valueOf(player.getAI().getIntention().name()));
 		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns "+String.valueOf(player.getInstanceId())+"\">"+String.valueOf(player.getInstanceId())+"</a></td></tr>" : "");
+		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
 	
@@ -1053,12 +1070,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		int CharactersFound = 0;
 		String name;
-		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
-		L2PcInstance[] players;
-		//synchronized (L2World.getInstance().getAllPlayers())
-		{
-			players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
-		}
+		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charfind.htm");
 		
@@ -1121,12 +1133,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
 				throw new IllegalArgumentException("Malformed IPv4 number");
 		}
-		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
-		L2PcInstance[] players;
-		//synchronized (L2World.getInstance().getAllPlayers())
-		{
-			players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
-		}
+		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		int CharactersFound = 0;
 		L2GameClient client;
 		String name, ip = "0.0.0.0";
@@ -1233,8 +1240,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findDualbox(L2PcInstance activeChar, int multibox)
 	{
-		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
-		L2PcInstance[] players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
+		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		
 		Map<String, List<L2PcInstance>> ipMap = new HashMap<String, List<L2PcInstance>>();
 		
@@ -1268,6 +1274,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		List<String> keys = new ArrayList<String>(dualboxIPs.keySet());
 		Collections.sort(keys, new Comparator<String>() {
+			@Override
 			public int compare(String left, String right)
 			{
 				return dualboxIPs.get(left).compareTo(dualboxIPs.get(right));
@@ -1291,8 +1298,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void findDualboxStrict(L2PcInstance activeChar, int multibox)
 	{
-		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
-		L2PcInstance[] players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
+		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		
 		Map<IpPack, List<L2PcInstance>> ipMap = new HashMap<IpPack, List<L2PcInstance>>();
 		
@@ -1325,6 +1331,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		List<IpPack> keys = new ArrayList<IpPack>(dualboxIPs.keySet());
 		Collections.sort(keys, new Comparator<IpPack>() {
+			@Override
 			public int compare(IpPack left, IpPack right)
 			{
 				return dualboxIPs.get(left).compareTo(dualboxIPs.get(right));

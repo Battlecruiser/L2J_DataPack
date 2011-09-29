@@ -639,22 +639,27 @@
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 		</for>
 	</skill>
-	<skill id="3559" levels="1" name="Earring of Zaken">
+	<skill id="3559" levels="2" name="Earring of Zaken">
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
-		<set name="magicLvl" val="75" />
+		<table name="#darkRes"> 0 15 </table>
+		<table name="#derangementProfVuln"> 20 30 </table>
+		<table name="#hpGain"> 1.1 1.15 </table>
+		<table name="#magicLvl"> 75 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="30" />
 			<sub order="0x40" stat="stunVuln" val="20" />
-			<sub order="0x40" stat="derangementVuln" val="20" />
+			<sub order="0x40" stat="derangementVuln" val="#derangementProfVuln" />
 			<add order="0x40" stat="bleedProf" val="30" />
 			<add order="0x40" stat="stunProf" val="20" />
-			<add order="0x40" stat="derangementProf" val="20" />
-			<mul order="0x30" stat="gainHp" val="1.1" />
+			<add order="0x40" stat="derangementProf" val="#derangementProfVuln" />
+			<mul order="0x30" stat="gainHp" val="#hpGain" />
 			<add order="0x40" stat="absorbDam" val="4" />
+			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="3560" levels="1" name="Earring of Orfen">
@@ -834,6 +839,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -930,6 +936,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -948,9 +955,10 @@
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="sDef" val="1.33" /> <!-- Shield P.Def. +33% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 		</for>
 	</skill>
@@ -984,9 +992,10 @@
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="rShld" val="1.39" /> <!-- Shield Block Rate +39% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 		</for>
 	</skill>
@@ -1012,9 +1021,10 @@
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<add order="0x40" stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 		</for>
@@ -1032,9 +1042,10 @@
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 		</for>
@@ -1049,6 +1060,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1067,9 +1079,10 @@
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<add order="0x40" stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 		</for>
@@ -1084,6 +1097,7 @@
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="PhysicalMute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_physical" />
 		</for>
@@ -1102,9 +1116,10 @@
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<add order="0x40" stat="rEvas" val="3.15" /> <!-- Evasion +3.15 -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
 			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 		</for>
@@ -1119,6 +1134,7 @@
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1140,9 +1156,10 @@
 			<add order="0x40" stat="rCrit" val="220"> <!-- Critical +220 from behind target -->
 				<player behind="True" />
 			</add>
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="absorbDam" val="2" /> <!-- absorb 2% HP from damage inflicted on enemies -->
 		</for>
 	</skill>
@@ -1156,6 +1173,7 @@
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
@@ -1165,21 +1183,19 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="chanceType" val="ON_CRIT" />
-		<set name="activationChance" val="10" />
-		<set name="triggeredId" val="3592" />
-		<set name="triggeredLevel" val="1" />
 		<for>
 			<add order="0x40" stat="atkCountMax" val="5" />
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.07" /> <!-- Atk. Spd. +7% -->
 			<add order="0x40" stat="accCombat" val="4.89" /> <!-- Accuracy +4.89 -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
-			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<!-- NOTE: The skill reflection rate has been increased in H5, values unconfirmed -->
+			<add order="0x40" stat="reflectSkillPhysic" val="20" /> <!-- Reflect Skills 20% of the time -->
+			<add order="0x40" stat="reflectSkillMagic" val="20" /> <!-- Reflect Skills 20% of the time -->
 		</for>
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
@@ -1188,8 +1204,10 @@
 		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="maxNegated" val="5" />
-		<set name="power" val="80" />
+		<!-- NOTE: Number of buffs canceled have been reduced to 2 in H5 -->
+		<set name="maxNegated" val="2" />
+		<!-- NOTE: The Cancel effect have been reduced in H5, value unconfirmed -->
+		<set name="power" val="5" />
 	</skill>
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<set name="target" val="TARGET_SELF" />
@@ -1203,9 +1221,10 @@
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 		</for>
 	</skill>
 	<skill id="3594" levels="1" name="Slow">
@@ -1238,9 +1257,10 @@
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<add order="0x40" stat="mAtk" val="29.67" /> <!-- M.Atk. +29.67 -->
 			<basemul order="0x30" stat="mCritRate" val="0.1" /> <!-- Magic Critical Rate +1% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" /> <!-- Magic MP Cost -4% -->
 			<sub order="0x40" stat="cancel" val="106" /> <!-- Chance of Magic Cancelation -106 -->
 		</for>
@@ -1273,9 +1293,10 @@
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 		</for>
 	</skill>
 	<skill id="3598" levels="1" name="Full Recover">
@@ -1293,12 +1314,11 @@
 		</cond>
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
-		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="atkCountMax" val="4" />
+			<add order="0x40" stat="atkCountMax" val="2" />
 		</for>
 	</skill>
 </list>

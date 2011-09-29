@@ -1,3 +1,17 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package instances.DarkCloudMansion;
 
 import javolution.util.FastList;
@@ -14,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -112,34 +127,34 @@ public class DarkCloudMansion extends Quest
 	private static int W6 = 24230012; //Wall 6
 	private static int W7 = 24230013; //Wall 7*/
 	
-	private static int[] _spawnChat =
+	private static NpcStringId[] _spawnChat =
 	{
-		1800043, // I'm the real one!
-		1800044, // Pick me!
-		1800045, // Trust me!
-		1800046, // Not that dude, I'm the real one!
-		1800047  // Don't be fooled! Don't be fooled! I'm the real one!!
+		NpcStringId.IM_THE_REAL_ONE,
+		NpcStringId.PICK_ME,
+		NpcStringId.TRUST_ME,
+		NpcStringId.NOT_THAT_DUDE_IM_THE_REAL_ONE,
+		NpcStringId.DONT_BE_FOOLED_DONT_BE_FOOLED_IM_THE_REAL_ONE
 	};
 	
-	private static int[] _decayChat =
+	private static NpcStringId[] _decayChat =
 	{
-		1800051, // I'm the real one! Phew!!
-		1800052, // Can't you even find out?
-		1800053  // Find me!
+		NpcStringId.IM_THE_REAL_ONE_PHEW,
+		NpcStringId.CANT_YOU_EVEN_FIND_OUT,
+		NpcStringId.FIND_ME
 	};
 	
-	private static int[] _successChat =
+	private static NpcStringId[] _successChat =
 	{
-		1800054, // Huh?! How did you know it was me?
-		1800055, // Excellent choice! Teehee!
-		1800056, // You've done well!
-		1800057  // Oh... very sensible?
+		NpcStringId.HUH_HOW_DID_YOU_KNOW_IT_WAS_ME,
+		NpcStringId.EXCELLENT_CHOICE_TEEHEE,
+		NpcStringId.YOUVE_DONE_WELL,
+		NpcStringId.OH_VERY_SENSIBLE
 	};
 	
-	private static int[] _faildChat =
+	private static NpcStringId[] _faildChat =
 	{
-		1800049, // You've been fooled!
-		1800050  // Sorry, but...I'm the fake one.		
+		NpcStringId.YOUVE_BEEN_FOOLED,
+		NpcStringId.SORRY_BUT_IM_THE_FAKE_ONE		
 	};
 	
 	//Second room - random monolith order

@@ -142,6 +142,7 @@
 		<set name="skillRadius" val="1100" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AURA" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -164,6 +165,7 @@
 		<set name="skillRadius" val="1500" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="100" effectType="STUN" />
@@ -187,6 +189,7 @@
 		<set name="skillRadius" val="400" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="10" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -205,6 +208,7 @@
 		<set name="skillRadius" val="850" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="antaras_debuff">
 				<mul order="0x30" stat="pAtk" val="0.85" />
@@ -257,7 +261,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Petrification" abnormalTime="120" val="0" effectType="PARALYZE" effectPower="50" abnormalLvl="1" abnormalType="turn_stone">
+			<effect name="Petrification" abnormalTime="120" val="0" effectType="PARALYZE" effectPower="50" abnormalLvl="2" abnormalType="turn_stone">
 				<mul order="0x30" stat="regHp" val="0" />
 			</effect>
 		</for>
@@ -355,6 +359,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -376,6 +381,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="800" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -424,11 +430,15 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<cond msgId="113" addName="1">
+			<using kind="Bow" />
+		</cond>
 	</skill>
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
 		<!-- Freya retail confirmed -->
@@ -584,6 +594,7 @@
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="2" abnormalType="paralyze" />
 		</for>
@@ -837,6 +848,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="POISON" />
 		<for>
 			<!-- 16 24 32 41 50 58 63 63 66 66 68 68HP * 1 during 5 seconds -->
 			<effect count="5" name="DamOverTime" val="#dot" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
@@ -856,6 +868,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 18 25 34 44 54 62 67 67 70 70 71 71HP * 1 during 5 seconds -->
 			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
@@ -1129,6 +1142,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6125" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -1172,6 +1186,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1225,6 +1240,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1278,6 +1294,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1423,6 +1440,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
@@ -1463,6 +1481,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
@@ -1525,6 +1544,7 @@
 		<set name="skillType" val="SLEEP" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
@@ -1543,6 +1563,7 @@
 		<set name="hitTime" val="3300" />
 		<set name="skillType" val="ROOT" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1585,6 +1606,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
@@ -1603,6 +1625,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -1751,6 +1774,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1772,6 +1796,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>

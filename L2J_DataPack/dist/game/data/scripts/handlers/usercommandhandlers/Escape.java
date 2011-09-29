@@ -20,10 +20,10 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.MapRegionTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
@@ -150,7 +150,7 @@ public class Escape implements IUserCommandHandler
 			
 			try
 			{
-				_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				_activeChar.teleToLocation(MapRegionManager.TeleportWhereType.Town);
 			}
 			catch (Exception e)
 			{

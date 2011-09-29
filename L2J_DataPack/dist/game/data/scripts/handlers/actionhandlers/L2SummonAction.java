@@ -42,10 +42,10 @@ public class L2SummonAction implements IActionHandler
 			return false;
 		}
 		
-		
 		if (activeChar == ((L2Summon)target).getOwner() && activeChar.getTarget() == target)
 		{
 			activeChar.sendPacket(new PetStatusShow((L2Summon)target));
+			activeChar.updateNotMoveUntil();
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 		else if (activeChar.getTarget() != target)
@@ -87,7 +87,9 @@ public class L2SummonAction implements IActionHandler
 			{
 				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				if (Config.GEODATA > 0)
+				if(((L2Summon)target).isInsideRadius(activeChar, 150, false, false))
+					activeChar.updateNotMoveUntil();
+				else if (Config.GEODATA > 0)
 				{
 					if (GeoData.getInstance().canSeeTarget(activeChar, target))
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);

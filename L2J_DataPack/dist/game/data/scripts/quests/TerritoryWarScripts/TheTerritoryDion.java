@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -34,7 +36,7 @@ public class TheTerritoryDion extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36514, 36516, 36519, 36592};
 		GUARD_IDS = new int[]{36515, 36517, 36518};
 		qn = qn1;
-		Text = new String[]{"The catapult of Dion has been destroyed!"};
+		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_DION_HAS_BEEN_DESTROYED};
 		registerKillIds();
 	}
 }

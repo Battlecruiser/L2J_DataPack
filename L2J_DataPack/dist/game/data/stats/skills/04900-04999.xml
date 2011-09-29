@@ -625,6 +625,7 @@
 	</skill>
 	<skill id="4989" levels="1" name="Npc - Hot Spring Nectar">
 		<!-- TODO -->
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -648,6 +649,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="4993" levels="1" name="Venom - Strike">
 		<!-- Benom Skills -->

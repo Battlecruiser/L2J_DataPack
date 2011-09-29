@@ -29,8 +29,7 @@ public class SearchingMaster extends L2AttackableAIScript
 	public SearchingMaster(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : mobs)
-			addAttackId(id);
+		registerMobs(mobs, QuestEventType.ON_ATTACK);
 	}
 	
 	@Override

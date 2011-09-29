@@ -6,7 +6,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -18,13 +18,13 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="11601" type="Armor" name="Dynasty Earring">
+	<item id="11601" type="Armor" name="Dynasty Earrings">
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -42,7 +42,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="258" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
@@ -58,7 +58,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="129" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
@@ -74,7 +74,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="194" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
@@ -108,7 +108,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11606" type="Weapon" name="Common Item - Strengthened Bow">
+	<item id="11606" type="Weapon" name="Common Item - Reinforced Bow">
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -125,7 +125,7 @@
 		<set name="change_weaponId" val="11624" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="82" />
@@ -701,7 +701,7 @@
 		<set name="change_weaponId" val="11654" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="105" />
@@ -778,7 +778,7 @@
 		<set name="change_weaponId" val="11652" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<for>
 			<set order="0x08" stat="pAtk" val="114" />
@@ -979,7 +979,7 @@
 		<set name="change_weaponId" val="11653" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="105" />
@@ -1475,7 +1475,7 @@
 		<set name="change_weaponId" val="11674" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="132" />
@@ -1943,7 +1943,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11678" type="Weapon" name="Common Item - Blood of Saints">
+	<item id="11678" type="Weapon" name="Common Item - Sage's Blood">
 		<set name="icon" val="icon.weapon_blood_of_saints_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="etc" />
@@ -2059,7 +2059,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11683" type="Weapon" name="Common Item - Strengthened Long Bow">
+	<item id="11683" type="Weapon" name="Common Item - Reinforced Long Bow">
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2076,7 +2076,7 @@
 		<set name="change_weaponId" val="11701" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="5" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<for>
 			<set order="0x08" stat="pAtk" val="179" />

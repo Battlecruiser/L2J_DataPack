@@ -110,12 +110,12 @@ public class Mdam implements ISkillHandler
 			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
-			int damage = (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
+			int damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
 			
-			if (skill.getDependOnTargetBuff() != 0)
+			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff() != 0)
 				damage += (int) (damage * target.getBuffCount() * skill.getDependOnTargetBuff());
 			
-			if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
 			{
 				switch (((L2PcInstance) activeChar).getSouls())
 				{

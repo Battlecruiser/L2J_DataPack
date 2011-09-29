@@ -14,6 +14,7 @@
 												<xs:enumeration value="affectedLvlMin" />
 												<xs:enumeration value="affectedRace" />
 												<xs:enumeration value="castleId" />
+												<xs:enumeration value="residenceId" />
 												<xs:enumeration value="chance" />
 												<xs:enumeration value="clanHallId" />
 												<xs:enumeration value="EnabledByDefault" />
@@ -23,6 +24,7 @@
 												<xs:enumeration value="HpRegenBonus" />
 												<xs:enumeration value="initialDelay" />
 												<xs:enumeration value="instanceId" />
+												<xs:enumeration value="instanceTemplate" />
 												<xs:enumeration value="InvadeTime" />
 												<xs:enumeration value="leaveMsgId" />
 												<xs:enumeration value="maxDynamicSkillCount" />
@@ -61,14 +63,26 @@
 									<xs:attribute name="Y" type="xs:integer" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="spawn" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="race" maxOccurs="unbounded" minOccurs="0">
 								<xs:complexType>
+									<xs:attribute name="point" type="xs:token" use="required" />
+									<xs:attribute name="name" type="xs:token" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="spawn" minOccurs="0" maxOccurs="unbounded">
+ 								<xs:complexType>
+									<xs:attribute name="isBanish" type="xs:boolean" use="optional" />
+									<xs:attribute name="isBlueBanishPoint" type="xs:boolean" use="optional" />
+									<xs:attribute name="isBlueStartPoint" type="xs:boolean" use="optional" />
 									<xs:attribute name="isChaotic" type="xs:boolean" use="optional" />
+									<xs:attribute name="isOther" type="xs:boolean" use="optional" />
+									<xs:attribute name="isRedBanishPoint" type="xs:boolean" use="optional" />
+									<xs:attribute name="isRedStartPoint" type="xs:boolean" use="optional" />
 									<xs:attribute name="X" type="xs:integer" use="required" />
 									<xs:attribute name="Y" type="xs:integer" use="required" />
 									<xs:attribute name="Z" type="xs:integer" use="required" />
-								</xs:complexType>
-							</xs:element>
+ 								</xs:complexType>
+ 							</xs:element>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:positiveInteger" use="optional" />
 						<xs:attribute name="maxZ" type="xs:integer" use="required" />
@@ -89,21 +103,20 @@
 								<xs:restriction base="xs:token">
 									<xs:enumeration value="ArenaZone" />
 									<xs:enumeration value="BossZone" />
-									<xs:enumeration value="CastleTeleportZone" />
 									<xs:enumeration value="CastleZone" />
 									<xs:enumeration value="ClanHallZone" />
+									<xs:enumeration value="CleftZone" />
 									<xs:enumeration value="ConditionZone" />
 									<xs:enumeration value="DamageZone" />
 									<xs:enumeration value="DerbyTrackZone" />
 									<xs:enumeration value="EffectZone" />
 									<xs:enumeration value="FishingZone" />
 									<xs:enumeration value="FortZone" />
-									<xs:enumeration value="HQZone" />
+									<xs:enumeration value="HqZone" />
 									<xs:enumeration value="JailZone" />
 									<xs:enumeration value="LandingZone" />
 									<xs:enumeration value="MotherTreeZone" />
 									<xs:enumeration value="NoDropItemZone" />
-									<xs:enumeration value="NoHqZone" />
 									<xs:enumeration value="NoLandingZone" />
 									<xs:enumeration value="NoRestartZone" />
 									<xs:enumeration value="NoStoreZone" />
@@ -111,6 +124,7 @@
 									<xs:enumeration value="OlympiadStadiumZone" />
 									<xs:enumeration value="PeaceZone" />
 									<xs:enumeration value="ResidenceTeleportZone" />
+									<xs:enumeration value="RespawnZone" />
 									<xs:enumeration value="ScriptZone" />
 									<xs:enumeration value="SiegeZone" />
 									<xs:enumeration value="SwampZone" />

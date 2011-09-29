@@ -73,6 +73,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 			<effect name="Stun" abnormalTime="2" val="0" effectPower="100" effectType="STUN" />
@@ -136,6 +137,7 @@
 		<table name="#effectPower"> 0 0 0 0 20 </table>
 		<table name="#effectType"> BUFF BUFF BUFF BUFF CANCEL </table>
 		<table name="#maxNegated"> 0 0 0 0 10 </table>
+		<table name="#traits"> NONE NONE NONE DERANGEMENT DERANGEMENT </table>
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="isDebuff" val="#isDebuff" />
 		<set name="isMagic" val="#isMagic" />
@@ -147,6 +149,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="#skillType" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="#traits" />
 		<for>
 			<effect name="#effectname1" abnormalTime="#time" val="0" abnormalLvl="1" abnormalType="#abnormalType">
 				<mul order="0x30" stat="pAtk" val="#attackAndSpeed" />
@@ -219,6 +222,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormal="dancestun" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -295,6 +299,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Paralyze" abnormalTime="20" val="0" abnormal="floatroot" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -354,6 +359,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="2000" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
 		<set name="target" val="TARGET_NONE" />
@@ -378,6 +384,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
 		<set name="target" val="TARGET_NONE" />
@@ -1002,6 +1009,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="10" effectType="DEBUFF" />
@@ -1043,6 +1051,7 @@
 		<set name="hitTime" val="3300" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
 		<!-- CT2.5 retail confirmed -->
@@ -1116,6 +1125,7 @@
 		<set name="skillRadius" val="400" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="7" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>

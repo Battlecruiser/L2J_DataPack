@@ -48,7 +48,7 @@
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -87,7 +87,7 @@
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -104,7 +104,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12903" type="Weapon" name="Draconic Bow - Earth {PvP} - Crt. Slow">
+	<item id="12903" type="Weapon" name="Draconic Bow - Earth {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -120,7 +120,7 @@
 		<set name="price" val="42759400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -500,7 +500,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12915" type="Weapon" name="Sarunga - Earth {PvP} - Crt. Slow">
+	<item id="12915" type="Weapon" name="Sarunga - Earth {PvP} - Critical Slow">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -725,7 +725,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12922" type="Weapon" name="Angel Slayer - Concentration {PvP} - Crt. Damage">
+	<item id="12922" type="Weapon" name="Angel Slayer - Concentration {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -916,7 +916,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12928" type="Weapon" name="Tallum Blade*Dark Legion - Lightning {PvP}">
+	<item id="12928" type="Weapon" name="Tallum Blade*Dark Legion's Edge - Lightning {PvP}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1137,7 +1137,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1171,7 +1171,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1205,7 +1205,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1239,7 +1239,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1270,7 +1270,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1301,7 +1301,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1332,7 +1332,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1363,7 +1363,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1398,7 +1398,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1433,7 +1433,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1468,7 +1468,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1500,7 +1500,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1532,7 +1532,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1564,7 +1564,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1595,7 +1595,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1626,7 +1626,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1657,13 +1657,13 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1695,13 +1695,13 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1728,13 +1728,13 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1761,7 +1761,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1791,7 +1791,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1821,7 +1821,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1851,7 +1851,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1881,7 +1881,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1911,7 +1911,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1941,7 +1941,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1973,7 +1973,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2005,7 +2005,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2037,7 +2037,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2068,7 +2068,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2099,7 +2099,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2130,7 +2130,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2161,7 +2161,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2192,7 +2192,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2223,7 +2223,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2259,7 +2259,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2294,7 +2294,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2329,7 +2329,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2360,7 +2360,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2391,7 +2391,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2422,7 +2422,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2453,7 +2453,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2485,7 +2485,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2523,7 +2523,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12979" type="Armor" name="Zubei's Helmet - Robe Use">
+	<item id="12979" type="Armor" name="Zubei's Helmet - Robe">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2560,7 +2560,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12981" type="Armor" name="Avadon Circlet - Robe Use">
+	<item id="12981" type="Armor" name="Avadon Circlet - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2597,7 +2597,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12983" type="Armor" name="Doom Helmet - Robe Use">
+	<item id="12983" type="Armor" name="Doom Helmet - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2634,7 +2634,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12985" type="Armor" name="Blue Wolf Helmet - Robe Use">
+	<item id="12985" type="Armor" name="Blue Wolf Helmet - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2671,7 +2671,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12987" type="Armor" name="Dark Crystal Helmet - Robe Use">
+	<item id="12987" type="Armor" name="Dark Crystal Helmet - Robe">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2708,7 +2708,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12989" type="Armor" name="Tallum Helmet - Robe Use">
+	<item id="12989" type="Armor" name="Tallum Helmet - Robe">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2745,7 +2745,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12991" type="Armor" name="Majestic Circlet - Robe Use">
+	<item id="12991" type="Armor" name="Majestic Circlet - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2782,7 +2782,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12993" type="Armor" name="Helm of Nightmare - Robe Use">
+	<item id="12993" type="Armor" name="Helm of Nightmare - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2818,7 +2818,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12995" type="Armor" name="Sealed Dark Crystal Helmet - Robe Use">
+	<item id="12995" type="Armor" name="Sealed Dark Crystal Helmet - Robe">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2853,7 +2853,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12997" type="Armor" name="Sealed Tallum Helmet - Robe Use">
+	<item id="12997" type="Armor" name="Sealed Tallum Helmet - Robe">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2888,7 +2888,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="12999" type="Armor" name="Sealed Majestic Circlet - Robe Use">
+	<item id="12999" type="Armor" name="Sealed Majestic Circlet - Robe">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />

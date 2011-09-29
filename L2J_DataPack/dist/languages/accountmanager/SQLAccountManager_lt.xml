@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Lietuvių" translator="surskis" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="accountmanager.xsd">
+	<message id="toolName" text="SQL Manager Sąskaitos valdymas" />
+
+	<message id="yesChar" text="T" />
+	<message id="noChar" text="N" />
+	<message id="trueString" text="True" />
+	<message id="falseString" text="False" />
+
+	<message id="functChooser" text="Prašome, išsirinkite veiksmą" />
+	<message id="functCreateAccount" text="1 - Sukurti naują arba atnaujinti esamą sąskaitą (pakeisti slaptažodį ir prieigos lygį)" />
+	<message id="functAccessLevel" text="2 - Keisti prieigos lygį" />
+	<message id="functDeleteAccount" text="3 - Ištrinti esamą paskyrą" />
+	<message id="functListAccount" text="4 - Parodyti sąskaitas ir priegos lygius" />
+	<message id="functExit" text="5 - Išėjimas" />
+
+	<message id="inputChoice" text="Pasirinkite" />
+	<message id="inputUsername" text="Vartotojo vardas" />
+	<message id="inputPassword" text="Slaptažodis" />
+	<message id="inputAccessLevel" text="Prieigos lygis" />
+
+	<message id="functListAccountChooser" text="Prašome išsirinkti peržiūros rėžimą" />
+	<message id="functListAccountBanned" text="1 - Tik užblokuotos sąskaitos (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="GM / privilegijas arba sąskaitas su prieigos lygiu (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Vartotojų sąskaitos (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Parodyti visus" />
+	<message id="functListAccountDisplayed" text="Rodoma sąskaitų: %d" />
+
+	<message id="functAccessLevelUpdated" text="Sąskaita %s buvo atnaujinta" />
+	<message id="functAccessLevelNotExist" text="Sąskaita %s nerasta arba tokios nėra" />
+
+	<message id="functDeleteAccountConfirm" text="Ar tikrai norite ištrinti šią sąskaitą? T/N" />
+	<message id="functDeleteAccountAbort" text="Trinymas nutrauktas" />
+	<message id="functDeleteAccountCancel" text="Trinimas atšauktas" />
+	<message id="functDeleteAccountChar" text="Šalinamas %s personažas" />
+	<message id="functDeleteAccountClan" text="Šalinamas %s klanas" />
+	<message id="functDeleteAccountComplete" text="Sąskaita %s buvo ištinta" />
+	<message id="functDeleteAccountNotExist" text="Sąskaita %s nebuvo rasta arba tokios nėra" />
+</localization>

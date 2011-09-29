@@ -29,7 +29,7 @@
 		</for>
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -42,6 +42,9 @@
 			<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+			<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
+			<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
 			<add order="0x10" stat="cloak" val="1" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -68,7 +71,7 @@
 		</for>
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -81,6 +84,9 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
 			<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
+			<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
+			<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Increases Resistance to Paralysis by 50% -->
 			<add order="0x10" stat="cloak" val="1" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -108,7 +114,7 @@
 		</for>
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -122,6 +128,8 @@
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
 			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 			<add order="0x10" stat="cloak" val="1" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -267,6 +275,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="20000" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
 		<set name="target" val="TARGET_NONE" />
@@ -626,11 +635,20 @@
 		</for>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="4000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- TODO: Implement proper target type. -->
+		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1300" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="10000" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<set name="target" val="TARGET_NONE" />

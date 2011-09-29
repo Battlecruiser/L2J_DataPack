@@ -7,9 +7,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.2" />
@@ -23,9 +20,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="True" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -940,14 +934,59 @@
 		</cond>
 	</skill>
 	<skill id="2856" levels="1" name="Santa's Buff Gift Set">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="4000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="multi_buff">
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2857" levels="1" name="Christmas Event - Magic Use Enhancement Scroll">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="4000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="multi_buff">
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2858" levels="1" name="Christmas Red Sock">
 		<!-- Confirmed CT2.5 -->
@@ -973,60 +1012,54 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2860" levels="6" name="Highest Power Secret Medicine of Life">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 500 1300 2200 3000 3800 4600 </table>
+		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="isPotion" val="true" />
+		<set name="skillType" val="HEAL_STATIC" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player levelRange="#levelRange" />
-			</and>
+			<player levelRange="#levelRange" />
 		</cond>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 120 280 440 580 720 840 </table>
+		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="isPotion" val="true" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player levelRange="#levelRange" />
-			</and>
+			<player levelRange="#levelRange" />
 		</cond>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#power"> 300 700 1200 1600 2000 2400 </table>
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="isPotion" val="true" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player levelRange="#levelRange" />
-			</and>
+			<player levelRange="#levelRange" />
 		</cond>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
@@ -1041,9 +1074,6 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 	</skill>
 	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1">
 		<!-- Confirmed CT2.5 -->
@@ -1080,6 +1110,7 @@
 		</cond>
 	</skill>
 	<skill id="2867" levels="1" name="Cupid's Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
@@ -1087,6 +1118,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2868" levels="1" name="Cupid's Enhanced Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="4000" />
@@ -1290,24 +1322,59 @@
 		</cond>
 	</skill>
 	<skill id="2897" levels="1" name="Baguette's Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,blackafro">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="regHp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2898" levels="1" name="Fresh Cream Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,yellowafro">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="mAtkSpd" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.1" />
+				<mul order="0x30" stat="mDef" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<add order="0x40" stat="runSpd" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2899" levels="1" name="Cheesecake Herb">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="2000" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="baguettesword,pinkafro">
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 </list>

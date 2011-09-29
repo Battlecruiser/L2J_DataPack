@@ -81,10 +81,10 @@ public class EnergySeeds extends L2AttackableAIScript
 	
 	private class ESSpawn
 	{
-		private int _spawnId;
-		private GraciaSeeds _seedId;
-		private int[] _npcIds;
-		private int[] _spawnCoords;
+		private final int _spawnId;
+		private final GraciaSeeds _seedId;
+		private final int[] _npcIds;
+		private final int[] _spawnCoords;
 		
 		public ESSpawn(int spawnId, GraciaSeeds seedId, int[] spawnCoords, int[] npcIds)
 		{
@@ -98,6 +98,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		{
 			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
 			{
+				@Override
 				public void run()
 				{
 					// if the AI is inactive, do not spawn the NPC
@@ -218,7 +219,7 @@ public class EnergySeeds extends L2AttackableAIScript
 				if (doorInstance != null)
 					doorInstance.closeMe();
 			}
-			for(L2Character chars : ZoneManager.getInstance().getZoneById(SOD_ZONE).getCharactersInside().values())
+			for(L2Character chars : ZoneManager.getInstance().getZoneById(SOD_ZONE).getCharactersInsideArray())
 				if (chars instanceof L2PcInstance)
 					chars.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
 			stopAI(GraciaSeeds.DESTRUCTION);

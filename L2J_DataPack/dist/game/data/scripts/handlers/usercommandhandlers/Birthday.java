@@ -38,15 +38,13 @@ public class Birthday implements IUserCommandHandler
 		if (id != COMMAND_IDS[0])
 			return false;
 		
-		Calendar cal = Calendar.getInstance();
-		cal.setTimeInMillis(activeChar.getCreateTime());
+		Calendar date = activeChar.getCreateDate();
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_BIRTHDAY_IS_S3_S4_S2);
 		sm.addPcName(activeChar);
-		sm.addString(Integer.toString(cal.get(Calendar.YEAR)));
-		sm.addString(Integer.toString(cal.get(Calendar.MONTH)+1));
-		sm.addString(Integer.toString(cal.get(Calendar.DATE)));
-		
+		sm.addString(Integer.toString(date.get(Calendar.YEAR)));
+		sm.addString(Integer.toString(date.get(Calendar.MONTH)+1));
+		sm.addString(Integer.toString(date.get(Calendar.DATE)));
 		
 		activeChar.sendPacket(sm);
 		return true;

@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.skills.Formulas;
+import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.StringUtil;
@@ -44,6 +45,7 @@ public class Cancel implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
@@ -95,8 +97,8 @@ public class Cancel implements ISkillHandler
 			int lastCanceledSkillId = 0;
 			int count = skill.getMaxNegatedEffects();
 			double rate = skill.getPower();
-			final double vulnModifier = Formulas.calcSkillTypeVulnerability(0, target, skill.getSkillType());
-			final double profModifier = Formulas.calcSkillTypeProficiency(0, activeChar, target, skill.getSkillType());
+			final double vulnModifier = target.calcStat(Stats.CANCEL_VULN, 0, target, null);
+			final double profModifier = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
 			double res = vulnModifier + profModifier;
 			double resMod = 1;
 			if (res != 0)
@@ -252,6 +254,7 @@ public class Cancel implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

@@ -372,7 +372,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16135" type="Weapon" name="Vesper Slasher- Gail {PvP}">
+	<item id="16135" type="Weapon" name="Vesper Slasher- Gale {PvP}">
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -433,7 +433,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16137" type="Weapon" name="Vesper Shaper - Gail {PvP}">
+	<item id="16137" type="Weapon" name="Vesper Shaper - Gale {PvP}">
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -464,7 +464,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16138" type="Weapon" name="Vesper Fighter - Gail {PvP}">
+	<item id="16138" type="Weapon" name="Vesper Fighter - Gale {PvP}">
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -557,7 +557,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16141" type="Weapon" name="Vesper Retributer - Gail {PvP}">
+	<item id="16141" type="Weapon" name="Vesper Retributer - Gale {PvP}">
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -620,7 +620,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16143" type="Weapon" name="Vesper Singer - Tidal Wave {PvP}">
+	<item id="16143" type="Weapon" name="Vesper Singer - Hail {PvP}">
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -668,7 +668,7 @@
 		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -720,7 +720,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16146" type="Weapon" name="Vesper Schutze - Clairvoyance {PvP}">
+	<item id="16146" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP}">
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -755,7 +755,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16147" type="Weapon" name="Vesper Nagan - Gail {PvP}">
+	<item id="16147" type="Weapon" name="Vesper Nagan - Gale {PvP}">
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -812,7 +812,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -851,7 +851,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -948,7 +948,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="84" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -987,7 +987,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="84" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1084,7 +1084,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="85" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1123,7 +1123,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="85" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -1197,7 +1197,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16160" type="EtcItem" name="Life Stone - level 85">
+	<item id="16160" type="EtcItem" name="Life Stone -  Level 85">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1208,7 +1208,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16161" type="EtcItem" name="Mid-Grade Life Stone - level 85">
+	<item id="16161" type="EtcItem" name="Mid-Grade Life Stone -  Level 85">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1219,7 +1219,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16162" type="EtcItem" name="High-Grade Life Stone - level 85">
+	<item id="16162" type="EtcItem" name="High-Grade Life Stone -  Level 85">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1230,7 +1230,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16163" type="EtcItem" name="Top-Grade Life Stone - level 85">
+	<item id="16163" type="EtcItem" name="Top-Grade Life Stone -  Level 85">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1241,7 +1241,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16164" type="EtcItem" name="Life Stone - level 86">
+	<item id="16164" type="EtcItem" name="Life Stone -  Level 86">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1252,7 +1252,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16165" type="EtcItem" name="Mid-Grade Life Stone - level 86">
+	<item id="16165" type="EtcItem" name="Mid-Grade Life Stone -  Level 86">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1263,7 +1263,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16166" type="EtcItem" name="High-Grade Life Stone - level 86">
+	<item id="16166" type="EtcItem" name="High-Grade Life Stone -  Level 86">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1274,7 +1274,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16167" type="EtcItem" name="Top-Grade Life Stone - level 86">
+	<item id="16167" type="EtcItem" name="Top-Grade Life Stone -  Level 86">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1285,7 +1285,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16168" type="Armor" name="Vesper Breastplate {PvP}">
+	<item id="16168" type="Armor" name="Elegia Breastplate {PvP}">
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1486,7 +1486,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16177" type="EtcItem" name="Accessory Type Life Stone - level 85">
+	<item id="16177" type="EtcItem" name="Accessory Type Life Stone -  Level 85">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1497,7 +1497,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16178" type="EtcItem" name="Accessory Type Life Stone - level 86">
+	<item id="16178" type="EtcItem" name="Accessory Type Life Stone -  Level 86">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1508,7 +1508,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16179" type="Weapon" name="Vesper Cutter- Thunder {PvP}">
+	<item id="16179" type="Weapon" name="Vesper Cutter- Thunder {PvP} - Haste">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1538,7 +1538,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16180" type="Weapon" name="Vesper Cutter- Thunder {PvP}">
+	<item id="16180" type="Weapon" name="Vesper Cutter- Thunder {PvP} - Health">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1568,7 +1568,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16181" type="Weapon" name="Vesper Cutter- Thunder {PvP}">
+	<item id="16181" type="Weapon" name="Vesper Cutter- Thunder {PvP} - Focus">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1598,7 +1598,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16182" type="Weapon" name="Vesper Slasher- Gail {PvP}">
+	<item id="16182" type="Weapon" name="Vesper Slasher- Gale {PvP} - Haste">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1628,7 +1628,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16183" type="Weapon" name="Vesper Slasher- Gail {PvP}">
+	<item id="16183" type="Weapon" name="Vesper Slasher- Gale {PvP} - Health">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1658,7 +1658,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16184" type="Weapon" name="Vesper Slasher- Gail {PvP}">
+	<item id="16184" type="Weapon" name="Vesper Slasher- Gale {PvP} - Focus">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1688,7 +1688,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16185" type="Weapon" name="Vesper Buster - Cleverness {PvP}">
+	<item id="16185" type="Weapon" name="Vesper Buster - Cleverness {PvP} - Mana Up">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1719,7 +1719,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16186" type="Weapon" name="Vesper Buster - Cleverness {PvP}">
+	<item id="16186" type="Weapon" name="Vesper Buster - Cleverness {PvP} - Acumen">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1750,7 +1750,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16187" type="Weapon" name="Vesper Buster - Cleverness {PvP}">
+	<item id="16187" type="Weapon" name="Vesper Buster - Cleverness {PvP} - Magic Hold">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1783,7 +1783,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16188" type="Weapon" name="Vesper Shaper - Gail {PvP}">
+	<item id="16188" type="Weapon" name="Vesper Shaper - Gale {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1814,7 +1814,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16189" type="Weapon" name="Vesper Shaper - Gail {PvP}">
+	<item id="16189" type="Weapon" name="Vesper Shaper - Gale {PvP} - HP Drain">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1845,7 +1845,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16190" type="Weapon" name="Vesper Shaper - Gail {PvP}">
+	<item id="16190" type="Weapon" name="Vesper Shaper - Gale {PvP} - Haste">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1876,7 +1876,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16191" type="Weapon" name="Vesper Fighter - Gail {PvP}">
+	<item id="16191" type="Weapon" name="Vesper Fighter - Gale {PvP} - Focus">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1907,7 +1907,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16192" type="Weapon" name="Vesper Fighter - Gail {PvP}">
+	<item id="16192" type="Weapon" name="Vesper Fighter - Gale {PvP} - Health">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1938,7 +1938,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16193" type="Weapon" name="Vesper Fighter - Gail {PvP}">
+	<item id="16193" type="Weapon" name="Vesper Fighter - Gale {PvP} - Critical Stun">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1970,7 +1970,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16194" type="Weapon" name="Vesper Stormer - Thunder {PvP}">
+	<item id="16194" type="Weapon" name="Vesper Stormer - Thunder {PvP} - Health">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2001,7 +2001,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16195" type="Weapon" name="Vesper Stormer - Thunder {PvP}">
+	<item id="16195" type="Weapon" name="Vesper Stormer - Thunder {PvP} - Guidance">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2032,7 +2032,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16196" type="Weapon" name="Vesper Stormer - Thunder {PvP}">
+	<item id="16196" type="Weapon" name="Vesper Stormer - Thunder {PvP} - Haste">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2063,7 +2063,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16197" type="Weapon" name="Vesper Avenger - Landslide {PvP}">
+	<item id="16197" type="Weapon" name="Vesper Avenger - Landslide {PvP} - HP Drain">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2094,7 +2094,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16198" type="Weapon" name="Vesper Avenger - Landslide {PvP}">
+	<item id="16198" type="Weapon" name="Vesper Avenger - Landslide {PvP} - Health">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2125,7 +2125,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16199" type="Weapon" name="Vesper Avenger - Landslide {PvP}">
+	<item id="16199" type="Weapon" name="Vesper Avenger - Landslide {PvP} - HP Regeneration">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />

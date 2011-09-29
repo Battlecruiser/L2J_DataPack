@@ -1,15 +1,17 @@
 /*
-Todo:
-1. Kechi's Henchmans spawn animation is missing.
-2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working.
-3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done).
-4. Baylor Raid is missing a lot of things
-This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.
-Original sources: theone, L2JEmu, L2JOfficial, L2JFree
-Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT
-Please maintain consistency between the Crystal Caverns scripts.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package instances.CrystalCaverns;
 
 import java.util.List;
@@ -45,6 +47,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -59,6 +62,17 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * TODO:
+ * 1. Kechi's Henchmans spawn animation is missing.
+ * 2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working.
+ * 3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done).
+ * 4. Baylor Raid is missing a lot of things
+ * This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.
+ * Original sources: theone, L2JEmu, L2JOfficial, L2JFree
+ * Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT
+ * Please maintain consistency between the Crystal Caverns scripts.
+ */
 public class CrystalCaverns extends Quest
 {
 	
@@ -1135,7 +1149,7 @@ public class CrystalCaverns extends Quest
 					world._alarm = addSpawn(ALARMID,spawnLoc[0],spawnLoc[1],spawnLoc[2],10800,false,0,false,world.instanceId);
 					world._alarm.disableCoreAI(true);
 					world._alarm.setIsImmobilized(true);
-					world._alarm.broadcastPacket(new CreatureSay(world._alarm.getObjectId(),1,world._alarm.getName(),"Alarm signal was switched off! All will in the danger, if we do not take measures immediately!"));
+					world._alarm.broadcastPacket(new CreatureSay(world._alarm.getObjectId(),1,world._alarm.getName(),NpcStringId.AN_ALARM_HAS_BEEN_SET_OFF_EVERYBODY_WILL_BE_IN_DANGER_IF_THEY_ARE_NOT_TAKEN_CARE_OF_IMMEDIATELY));
 				}
 			}
 			else if (event.equalsIgnoreCase("baylor_skill"))
@@ -1155,12 +1169,12 @@ public class CrystalCaverns extends Quest
 						if (nowHp < maxHp * 0.15 && world._raidStatus == 2)
 						{
 							npc.doCast(SkillTable.getInstance().getInfo(5225, 1));
-							npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),"Demons King Beleth, give me power! Aaaaa!!!"));
+							npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
 						}
 						else if (rand < 10 || nowHp < maxHp * 0.15)
 						{
 							npc.doCast(SkillTable.getInstance().getInfo(5225, 1));
-							npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),"Demons King Beleth, give me power! Aaaaa!!!"));
+							npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),NpcStringId.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH));
 							startQuestTimer("baylor_remove_invul",30000, world._baylor, null);
 						}
 					}
@@ -1220,7 +1234,7 @@ public class CrystalCaverns extends Quest
 				else
 				{
 					if (Rnd.get(100) < 5)
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),"ah ... I am so hungry ..."));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),1,npc.getName(),NpcStringId.AH_IM_HUNGRY));
 					startQuestTimer("autoFood",2000,npc,null);
 				}
 				return "";
@@ -1682,8 +1696,8 @@ public class CrystalCaverns extends Quest
 					{
 						for (L2PcInstance partyMember : party.getPartyMembers())
 						{
-							int rnd = Rnd.get(100);
-							partyMember.destroyItemByItemId("Quest", (rnd < 33 ? BOSS_CRYSTAL_1:(rnd < 67 ? BOSS_CRYSTAL_2:BOSS_CRYSTAL_3)), 1, partyMember, true);
+							//int rnd = Rnd.get(100);
+							//partyMember.destroyItemByItemId("Quest", (rnd < 33 ? BOSS_CRYSTAL_1:(rnd < 67 ? BOSS_CRYSTAL_2:BOSS_CRYSTAL_3)), 1, partyMember, true); Crystals are no longer beign cunsumed while entering to Baylor Lair.
 							world._raiders.add(partyMember);
 						}
 					}

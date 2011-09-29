@@ -1,4 +1,3 @@
-
 /*
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -30,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.Util;
@@ -40,10 +40,10 @@ public class Monastery extends L2AttackableAIScript
 	static final int[] mobs1 = {22124, 22125, 22126, 22127, 22129};
 	static final int[] mobs2 = {22134, 22135};
 	
-	static final int[] messages = {
-		1121006, // You cannot carry a weapon without authorization!
-		10077, // $s1, why would you choose the path of darkness?!
-		10078 // $s1! How dare you defy the will of Einhasad!
+	static final NpcStringId[] messages = {
+		NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION,
+		NpcStringId.S1_WHY_WOULD_YOU_CHOOSE_THE_PATH_OF_DARKNESS,
+		NpcStringId.S1_HOW_DARE_YOU_DEFY_THE_WILL_OF_EINHASAD
 	};
 	public Monastery(int questId, String name, String descr)
 	{

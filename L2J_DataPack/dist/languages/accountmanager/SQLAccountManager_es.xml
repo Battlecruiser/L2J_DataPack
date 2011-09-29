@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Español" translator="MELERIX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="accountmanager.xsd">
+	<message id="toolName" text="Administrador de Cuentas" />
+
+	<message id="yesChar" text="s" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="True" />
+	<message id="falseString" text="False" />
+
+	<message id="functChooser" text="Por favor elija una opcion" />
+	<message id="functCreateAccount" text="1 - Crear nueva Cuenta o actualizar una existente" />
+	<message id="functAccessLevel" text="2 - Cambiar Nivel de Acceso" />
+	<message id="functDeleteAccount" text="3 - Borrar una Cuenta existente" />
+	<message id="functListAccount" text="4 - Listar las Cuentas y Niveles de Acceso" />
+	<message id="functExit" text="5 - Salir" />
+
+	<message id="inputChoice" text="Su Eleccion" />
+	<message id="inputUsername" text="Nombre de Usuario" />
+	<message id="inputPassword" text="Contraseña" />
+	<message id="inputAccessLevel" text="Nivel de Acceso" />
+
+	<message id="functListAccountChooser" text="Por favor elija un modo para listado" />
+	<message id="functListAccountBanned" text="1 - Solo cuentas Baneadas (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - Cuentas GM/Privilegidas (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Solo cuentas regulares (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Listar Todo" />
+	<message id="functListAccountDisplayed" text="Mostrando cuentas: %d" />
+
+	<message id="functAccessLevelUpdated" text="La Cuenta %s ha sido actualizada" />
+	<message id="functAccessLevelNotExist" text="La Cuenta %s no existe" />
+
+	<message id="functDeleteAccountConfirm" text="Realmente deseas borrar esta Cuenta ? S/N" />
+	<message id="functDeleteAccountAbort" text="Borrado Abortado" />
+	<message id="functDeleteAccountCancel" text="Borrado Cancelado" />
+	<message id="functDeleteAccountChar" text="Borrando Personaje %s" />
+	<message id="functDeleteAccountClan" text="Borrando Clan %s" />
+	<message id="functDeleteAccountComplete" text="La Cuenta %s ha sido borrada" />
+	<message id="functDeleteAccountNotExist" text="La Cuenta %s no existe" />
+</localization>

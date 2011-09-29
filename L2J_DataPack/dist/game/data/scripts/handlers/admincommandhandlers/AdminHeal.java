@@ -42,6 +42,7 @@ public class AdminHeal implements IAdminCommandHandler
 		"admin_heal"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -64,6 +65,7 @@ public class AdminHeal implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -90,19 +92,17 @@ public class AdminHeal implements IAdminCommandHandler
 				{
 					int radius = Integer.parseInt(player);
 					Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-					//synchronized (activeChar.getKnownList().getKnownObjects())
+					for (L2Object object : objs)
 					{
-						for (L2Object object : objs)
+						if (object instanceof L2Character)
 						{
-							if (object instanceof L2Character)
-							{
-								L2Character character = (L2Character) object;
-								character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
-								if (object instanceof L2PcInstance)
-									character.setCurrentCp(character.getMaxCp());
-							}
+							L2Character character = (L2Character) object;
+							character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
+							if (object instanceof L2PcInstance)
+								character.setCurrentCp(character.getMaxCp());
 						}
 					}
+				
 					activeChar.sendMessage("Healed within " + radius + " unit radius.");
 					return;
 				}

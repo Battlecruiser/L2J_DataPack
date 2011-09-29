@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Ελληνικά (Ελλάδα)" translator="Giorgos_TS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="accountmanager.xsd">
+	<message id="toolName" text="Διαχειριστής Λογαριασμών SQL" />
+
+	<message id="yesChar" text="Ναι" />
+	<message id="noChar" text="Όχι" />
+	<message id="trueString" text="Σωστό" />
+	<message id="falseString" text="Λάθος" />
+
+	<message id="functChooser" text="Παρακαλώ επιλέξτε μια επιλογή" />
+	<message id="functCreateAccount" text="1 - Δημιουργία νέου λογαριασμού ή ενημέρωση υπάρχοντος (αλλαγή κωδικού και επίπεδου πρόσβασης)" />
+	<message id="functAccessLevel" text="2 - Αλλαγή επίπεδου πρόσβασης" />
+	<message id="functDeleteAccount" text="3 - Διαγραφή υπάρχοντος λογαριασμού" />
+	<message id="functListAccount" text="4 - Λίστα λογαριασμών και επιπέδου πρόσβασης" />
+	<message id="functExit" text="5 - Έξοδος" />
+
+	<message id="inputChoice" text="Η επιλογή σας" />
+	<message id="inputUsername" text="Όνομα Χρήστη" />
+	<message id="inputPassword" text="Κωδικός" />
+	<message id="inputAccessLevel" text="Επίπεδο πρόσβασης" />
+
+	<message id="functListAccountChooser" text="Παρακαλώ επιλέξτε μια επιλογή λίστας" />
+	<message id="functListAccountBanned" text="1 - Αποκλεισμένοι λογαριασμοί μόνο (Επίπεδο πρόσβασης &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - GM/Προνομιουχοι λογαριασμοί μόνο (Επίπεδο πρόσβασης &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Κανονικοί λογαριασμοί μόνο (Επίπεδο πρόσβασης = 0)" />
+	<message id="functListAccountAll" text="4 - Δείξε τους όλους" />
+	<message id="functListAccountDisplayed" text="Εμφανισμένοι λογαριασμοί: %d" />
+
+	<message id="functAccessLevelUpdated" text="Ο λογαριασμός %s έχει ενημερωθεί" />
+	<message id="functAccessLevelNotExist" text="Ο λογαριασμός %s δεν υπάρχει" />
+
+	<message id="functDeleteAccountConfirm" text="Θέλετε πραγματικά να διαγράψετε αυτόν τον λογαριασμό? Ναι/Όχι" />
+	<message id="functDeleteAccountAbort" text="Η διαγραφή ακυρώθηκε" />
+	<message id="functDeleteAccountCancel" text="Η διαγραφή ακυρώθηκε" />
+	<message id="functDeleteAccountChar" text="Διαγραφή του χαρακτήρα %s" />
+	<message id="functDeleteAccountClan" text="Διαγραφή της οικογένιας %s" />
+	<message id="functDeleteAccountComplete" text="Ο λογαριασμός %s έχει διαγραφθεί" />
+	<message id="functDeleteAccountNotExist" text="Ο λογαριασμός %s δεν υπάρχει" />
+</localization>

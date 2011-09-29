@@ -26,6 +26,7 @@
 			</xs:sequence>
 			<xs:attribute name="applyTaxes" type="xs:boolean" use="optional" />
 			<xs:attribute name="maintainEnchantment" type="xs:boolean" use="optional" />
+			<xs:attribute name="useRate" type="xs:token" use="optional" />
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

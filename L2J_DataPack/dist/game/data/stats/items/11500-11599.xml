@@ -254,7 +254,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="732" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -275,7 +275,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -296,7 +296,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -317,7 +317,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -336,7 +336,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -355,7 +355,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -374,14 +374,14 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
@@ -395,7 +395,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -414,7 +414,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -436,7 +436,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -458,7 +458,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -477,7 +477,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -495,7 +495,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -513,7 +513,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -531,7 +531,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -553,7 +553,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -575,7 +575,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -597,7 +597,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -619,7 +619,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -641,7 +641,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -662,7 +662,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
@@ -685,7 +685,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -707,7 +707,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -730,7 +730,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -753,7 +753,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -776,7 +776,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -799,7 +799,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -821,7 +821,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -836,14 +836,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11540" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11540" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -855,35 +855,35 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11541" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11541" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11542" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11542" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -895,14 +895,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11543" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11543" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -914,14 +914,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11544" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11544" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -933,14 +933,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11545" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11545" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -952,14 +952,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="11546" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="11546" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -978,7 +978,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1001,7 +1001,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1024,7 +1024,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1047,7 +1047,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1070,7 +1070,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1093,7 +1093,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1115,7 +1115,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1137,7 +1137,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1159,7 +1159,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1181,7 +1181,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1202,7 +1202,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1224,7 +1224,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -1247,7 +1247,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="732" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -1267,7 +1267,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1287,7 +1287,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1307,7 +1307,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1325,7 +1325,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -1343,7 +1343,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -1360,7 +1360,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1377,7 +1377,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1394,7 +1394,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1415,7 +1415,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -1435,7 +1435,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="steel" />
 		<set name="weight" val="1370" />
 		<set name="price" val="6404000" />
@@ -1457,7 +1457,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1477,7 +1477,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1498,7 +1498,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1519,7 +1519,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1540,7 +1540,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -1969,7 +1969,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />

@@ -111,9 +111,9 @@ public class Manadam implements ISkillHandler
 					}
 				}
 				
-				double damage = Formulas.calcManaDam(activeChar, target, skill, ss, bss);
+				double damage = skill.isStaticDamage() ? skill.getPower() : Formulas.calcManaDam(activeChar, target, skill, ss, bss);
 				
-				if (Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
+				if (!skill.isStaticDamage() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				{
 					damage *= 3.;
 					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));

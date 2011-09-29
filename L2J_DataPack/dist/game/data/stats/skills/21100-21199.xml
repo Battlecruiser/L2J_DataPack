@@ -270,16 +270,24 @@
 		</for>
 	</skill>
 	<skill id="21120" levels="1" name="Jack O'Lantern Card">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="500" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="500" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
@@ -520,6 +528,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
@@ -1114,6 +1123,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
 		<!-- Recovers all energy with the power of courage, and maintains the energy stage for 5 minutes. Reuse delay 30 minutes. When you use the skill, 1 Proof of a Warrior is consumed. -->

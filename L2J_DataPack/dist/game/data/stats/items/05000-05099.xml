@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5005" type="EtcItem" name="Recipe: Demon Dagger (60%)">
+	<item id="5005" type="EtcItem" name="Recipe: Demon's Dagger (60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -685,6 +685,7 @@
 		<set name="weight" val="20" />
 		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
 	<item id="5063" type="EtcItem" name="Trash">
@@ -693,6 +694,7 @@
 		<set name="weight" val="20" />
 		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-2" />
 	</item>
 	<item id="5064" type="EtcItem" name="Trash">
@@ -701,6 +703,7 @@
 		<set name="weight" val="20" />
 		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-3" />
 	</item>
 	<item id="5065" type="EtcItem" name="Chilly Coda">

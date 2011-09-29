@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.State;
  **
  ** 2010-08-07 Based on Freya PTS
  */
-
 public class Q10283_RequestOfIceMerchant extends Quest
 {
 	private static final String qn = "10283_RequestOfIceMerchant";
@@ -110,7 +109,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 						htmltext = "32020-08.htm";
 					break;
 				case State.COMPLETED:
-					htmltext = "31350-08.htm";
+					htmltext = "32020-09.htm";
 					break;
 			}
 		}
@@ -129,12 +128,15 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-			return null;
-		if (npc.getNpcId() == _jinia && st.getInt("cond") == 2)
+
+		if (npc.getInstanceId() > 0)
+			return "32760-10.html";
+		if (npc.getNpcId() == _jinia && st != null && st.getInt("cond") == 2)
 			return "32760-01.html";
+		
 		return null;
 	}
+	
 	public static void main(String[] args)
 	{
 		new Q10283_RequestOfIceMerchant(10283, qn, "Request of Ice Merchant");

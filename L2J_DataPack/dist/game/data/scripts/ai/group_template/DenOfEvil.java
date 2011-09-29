@@ -33,7 +33,6 @@ import com.l2jserver.util.Rnd;
  **
  ** Dummy AI for spawns/respawns only for testing.
  */
-
 public class DenOfEvil extends L2AttackableAIScript
 {
 	// private static final int _buffer_id = 32656;
@@ -164,7 +163,7 @@ public class DenOfEvil extends L2AttackableAIScript
 	
 	private class RespawnNewEye implements Runnable
 	{
-		private int _x, _y, _z, _h;
+		private final int _x, _y, _z, _h;
 		
 		public RespawnNewEye(int x, int y, int z, int h) {
 			_x = x;
@@ -173,6 +172,7 @@ public class DenOfEvil extends L2AttackableAIScript
 			_h = h;
 		}
 		
+		@Override
 		public void run()
 		{
 			addSpawn(_eye_ids[Rnd.get(0, _eye_ids.length-1)], _x, _y, _z, _h, false, 0);
@@ -207,7 +207,7 @@ public class DenOfEvil extends L2AttackableAIScript
 		
 		private void destroyZone()
 		{
-			for (L2Character character : _zone.getCharactersInside().values())
+			for (L2Character character : _zone.getCharactersInsideArray())
 			{
 				if (character == null)
 					continue;

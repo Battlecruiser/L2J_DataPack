@@ -14,13 +14,15 @@
  */
 package handlers.chathandlers;
 
-import java.util.Collection;
-
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
@@ -38,13 +40,19 @@ public class ChatBattlefield implements IChatHandler
 	 * Handle chat type 'battlefield'
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
 		if (TerritoryWarManager.getInstance().isTWChannelOpen() && activeChar.getSiegeSide() > 0)
 		{
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
+			{
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+				return;
+			}
+			
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-			for (L2PcInstance player : pls)
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 				if (player.getSiegeSide() == activeChar.getSiegeSide())
 					player.sendPacket(cs);
 		}
@@ -54,6 +62,7 @@ public class ChatBattlefield implements IChatHandler
 	 * Returns the chat types registered to this handler
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
+	@Override
 	public int[] getChatTypeList()
 	{
 		return COMMAND_IDS;

@@ -69,6 +69,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="120" abnormalType="big_head" />
 		</for>
@@ -680,16 +681,26 @@
 		</for>
 	</skill>
 	<skill id="3253" levels="10" name="Item Skill: Acrobatics">
-		<!-- Lvl 1-10 - Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="fall" val="100" />
+		</for>
 	</skill>
 	<skill id="3254" levels="10" name="Item Skill: Iron Body">
-		<!-- Lvl 1-10 - Passive: Raises resistance to damage from falling when equipped. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="damageZoneVuln" val="40" />
+		</for>
 	</skill>
 	<skill id="3255" levels="3" name="Item Skill: Skill Clarity">
 		<!-- Confirmed CT2.5 -->
@@ -766,8 +777,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DRAIN" /> <!-- FIXME: This appears to be a different type of PDAM STATIC -->
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -801,8 +813,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="40000" />
+		<set name="skillType" val="PDAM" />
+		<set name="staticDamage" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DRAIN" /> <!-- FIXME: This appears to be a different type of PDAM STATIC -->
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -842,6 +855,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
 		<for>
 			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>

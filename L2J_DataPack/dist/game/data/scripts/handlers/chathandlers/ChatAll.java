@@ -24,7 +24,10 @@ import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 
 /**
@@ -45,6 +48,7 @@ public class ChatAll implements IChatHandler
 	 * Handle chat type 'all'
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String params, String text)
 	{
 		boolean vcd_used = false;
@@ -81,19 +85,30 @@ public class ChatAll implements IChatHandler
 		}
 		if (!vcd_used)
 		{
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			
-			Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-			//synchronized (activeChar.getKnownList().getKnownPlayers())
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 			{
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+				return;
+			}
+			
+			/**
+			 * Match the character "." literally (Exactly 1 time)
+			 * Match any character that is NOT a . character. Between one and unlimited times as possible, giving back as needed (greedy)
+			 */
+			if (text.matches("\\.{1}[^\\.]+"))
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_SYNTAX));
+			else
+			{			
+				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
+				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
 					if (player != null && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
 						player.sendPacket(cs);
 				}
+				
+				activeChar.sendPacket(cs);
 			}
-			
-			activeChar.sendPacket(cs);
 		}
 	}
 	
@@ -101,6 +116,7 @@ public class ChatAll implements IChatHandler
 	 * Returns the chat types registered to this handler
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
+	@Override
 	public int[] getChatTypeList()
 	{
 		return COMMAND_IDS;

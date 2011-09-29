@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<!-- set name="giveContribution" val="10" / -->
 		<set name="hitTime" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10017" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<cond msgId="113" addName="1">
+			<target npcId="18477" />
+		</cond>
 	</skill>
 	<skill id="2401" levels="1" name="Lesser Battlefield Mana Potion">
 		<!-- Confirmed CT2.5 -->
@@ -18,10 +27,7 @@
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player SiegeZone="126" />
-				<player level="52" />
-			</and>
+			<player level="52" />
 		</cond>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
@@ -35,10 +41,7 @@
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player SiegeZone="126" />
-				<player level="52" />
-			</and>
+			<player level="52" />
 		</cond>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
@@ -60,9 +63,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.12" />
@@ -77,9 +77,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.12" />
@@ -94,9 +91,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -111,9 +105,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.25" />
@@ -128,9 +119,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.3" />
@@ -145,9 +133,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="3" />
@@ -162,9 +147,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="shield_prob_up">
 				<mul order="0x30" stat="rShld" val="1.1" />
@@ -179,9 +161,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.2" />
@@ -196,9 +175,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
@@ -213,9 +189,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="7" /> <!-- absorb 7% HP from damage inflicted on enemies -->
@@ -230,9 +203,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="1.1" />
@@ -254,9 +224,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.23" />
@@ -271,9 +238,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -288,9 +252,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.65" />
@@ -305,9 +266,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.23" />
@@ -322,9 +280,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="cheap_magic">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
@@ -476,9 +431,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="105" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 10 minutes -->
 		</for>
@@ -492,9 +444,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -510,9 +459,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -528,9 +474,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -546,9 +489,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
@@ -564,9 +504,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -582,9 +519,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
@@ -600,9 +534,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -618,9 +549,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -636,9 +564,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -654,9 +579,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -672,9 +594,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="cheap_magic">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
@@ -1524,9 +1443,12 @@
 		</cond>
 	</skill>
 	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2488" levels="1" name="Wild Shot">
 		<set name="itemConsumeCount" val="1" />
@@ -1582,52 +1504,74 @@
 		</cond>
 	</skill>
 	<skill id="2491" levels="1" name="Transform Zaken">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="663" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2492" levels="1" name="Transform Anakim">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="664" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2493" levels="1" name="Transform Venom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="665" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2494" levels="1" name="Transform Gordon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="666" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2495" levels="1" name="Transform Ranku">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="667" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2496" levels="1" name="Transform Kietch">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="668" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2497" levels="1" name="Transform Demon Prince">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
+		<set name="learnSkillId" val="669" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2498" levels="1" name="Bottle of Empty Soul">
 		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="10410" />
 		<set name="hitTime" val="500" />
+		<set name="isPotion" val="true" /> <!-- TEMP FIX -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />

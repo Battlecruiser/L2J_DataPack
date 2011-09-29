@@ -14,28 +14,20 @@
  */
 package events.CharacterBirthday;
 
-import java.util.Calendar;
-
-import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Gnacik
- * 
+ * @author Gnacik. Updated to H5 by Nyaran
  */
-
 public class CharacterBirthday extends Quest
 {
 	private static final int _npc = 32600;
-	private static boolean is_spawned = false;
+	private static int _spawns = 0;
 	
 	private final static int[] _gk =
 	{
@@ -47,7 +39,6 @@ public class CharacterBirthday extends Quest
 	{
 		super(questId, name, descr);
 		addStartNpc(_npc);
-		addFirstTalkId(_npc);
 		addTalkId(_npc);
 		for (int id : _gk)
 		{
@@ -59,40 +50,30 @@ public class CharacterBirthday extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		htmltext = event;
 		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
-			is_spawned = false;
+			_spawns--;
 			
 			htmltext = null;
 		}
-		if (event.equalsIgnoreCase("receive_reward"))
+		if (event.equalsIgnoreCase("change"))
 		{
-			// Give Adventurer Hat (Event)
-			st.giveItems(10250, 1);
-			
-			// Give Buff
-			L2Skill skill;
-			skill = SkillTable.getInstance().getInfo(5950, 1);
-			if (skill != null)
-				skill.getEffects(npc, player);
-			npc.setTarget(player);
-			npc.broadcastPacket(new MagicSkillUse(player, 5950, 1, 1000, 0));
-			
-			// Despawn npc
-			npc.doDie(player);
-			is_spawned = false;
-			
-			// Update for next year
-			Calendar now = Calendar.getInstance();
-			now.setTimeInMillis(System.currentTimeMillis());
-			st.set("Birthday", String.valueOf(now.get(Calendar.YEAR)+1));
-			
-			htmltext = "32600-ok.htm";
+			// Change Hat
+			if (st.hasQuestItems(10250))
+			{
+				st.takeItems(10250, 1); // Adventurer Hat (Event)
+				st.giveItems(21594, 1); // Birthday Hat
+				htmltext = null; // FIXME: Probably has html
+				// Despawn npc
+				npc.doDie(player);
+				_spawns--;
+			}
+			else
+				htmltext = "32600-nohat.htm";
 		}
 		return htmltext;
 	}
@@ -100,44 +81,24 @@ public class CharacterBirthday extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if(is_spawned)
+		if(_spawns >= 3)
+			return "busy.htm";
+		
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
 			return null;
 		
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (!Util.checkIfInRange(10, npc, player, true))
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
-		}
-		if (st != null && player.checkBirthDay() == 0)
-		{
-			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
 			L2Npc spawned = st.addSpawn(32600, player.getX()+10, player.getY()+10, player.getZ()+10, 0, false, 0, true);
 			st.setState(State.STARTED);
-			st.startQuestTimer("despawn_npc", 60000, spawned);
-			is_spawned = true;
+			st.startQuestTimer("despawn_npc", 180000, spawned);
+			_spawns++;
 		}
 		else
-			return "32600-no.htm";
+			return "tooclose.htm";
 		
 		return null;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
-		}
-		if (player.checkBirthDay() == 0)
-			htmltext = "32600.htm";
-		else
-			htmltext = "32600-no.htm";
-		return htmltext;
 	}
 	
 	public static void main(String[] args)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="20200" type="Armor" name="Agathion of Love - 3 Day Expiration Period">
+	<item id="20200" type="Armor" name="Agathion of Love - 3-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="4320" />
 	</item>
-	<item id="20201" type="Armor" name="Agathion of Love - 7 Day Expiration Period">
+	<item id="20201" type="Armor" name="Agathion of Love - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -30,7 +30,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20202" type="Armor" name="Agathion of Love - 15 Day Expiration Period">
+	<item id="20202" type="Armor" name="Agathion of Love - 15-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -45,7 +45,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="21600" />
 	</item>
-	<item id="20203" type="Armor" name="Agathion of Love - 30 Day Expiration Period">
+	<item id="20203" type="Armor" name="Agathion of Love - 30-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -60,7 +60,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20204" type="Armor" name="Queen Ant's Ring (Event) - 3 Day Expiration Period">
+	<item id="20204" type="Armor" name="Queen Ant's Ring (Event) - 3-day limited period">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -80,7 +80,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20205" type="Armor" name="Queen Ant's Ring (Event) - 7 Day Expiration Period">
+	<item id="20205" type="Armor" name="Queen Ant's Ring (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -100,7 +100,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20206" type="Armor" name="Queen Ant's Ring (Event) - 15 Day Expiration Period">
+	<item id="20206" type="Armor" name="Queen Ant's Ring (Event) - 15-day limited period">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -120,7 +120,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20207" type="Armor" name="Zaken's Earring (Event) - 3 Day Expiration Period">
+	<item id="20207" type="Armor" name="Earring of Zaken (Event) - 3-day limited period">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -140,7 +140,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20208" type="Armor" name="Zaken's Earring (Event) - 7 Day Expiration Period">
+	<item id="20208" type="Armor" name="Earring of Zaken (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20209" type="Armor" name="Zaken's Earring (Event) - 15 Day Expiration Period">
+	<item id="20209" type="Armor" name="Earring of Zaken (Event) - 15-day limited period">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -191,6 +191,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20212,1,1,100;20214,15,15,100" />
 	</item>
 	<item id="20211" type="EtcItem" name="Naughty Valentine Gift Set">
@@ -204,6 +206,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20213,1,1,100;20214,15,15,100" />
 	</item>
 	<item id="20212" type="Armor" name="Agathion Seal Bracelet - Charming Cupid">
@@ -217,6 +221,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21031-1;23025-1" />
 	</item>
@@ -231,6 +236,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21032-1;23026-1" />
 	</item>
@@ -247,6 +253,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22028-1" />
 	</item>
 	<item id="20215" type="EtcItem" name="White Maneki Neko Agathion Pack">
@@ -260,6 +268,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20221,1,1,100" />
 	</item>
@@ -274,6 +283,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20222,1,1,100" />
 	</item>
@@ -288,6 +298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20223,1,1,100" />
 	</item>
@@ -302,6 +313,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20224,1,1,100" />
 	</item>
@@ -316,6 +328,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20225,1,1,100" />
 	</item>
@@ -330,6 +343,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20226,1,1,100" />
 	</item>
@@ -344,6 +358,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21033-1;23027-1;23046-1" />
 	</item>
@@ -358,6 +373,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21034-1;23028-1;23047-1" />
 	</item>
@@ -372,10 +388,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21035-1;23029-1;23048-1" />
 	</item>
-	<item id="20224" type="Armor" name="Agathion Seal Bracelet - White Maneki Neko - Resurrection - 7 Day Expiration Period">
+	<item id="20224" type="Armor" name="Agathion Seal Bracelet - White Maneki Neko - Resurrection - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -391,7 +408,7 @@
 		<set name="item_skill" val="3267-1;21033-1;23030-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20225" type="Armor" name="Agathion Seal Bracelet - Black Maneki Neko - Escape - 7 Day Expiration Period">
+	<item id="20225" type="Armor" name="Agathion Seal Bracelet - Black Maneki Neko - Escape - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -434,6 +451,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20230,1,1,100" />
 	</item>
@@ -448,6 +466,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20231,1,1,100" />
 	</item>
@@ -462,6 +481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20232,1,1,100" />
 	</item>
@@ -476,10 +496,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21036-1;23033-1" />
 	</item>
-	<item id="20231" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Resist Unholy - 7 Day Expiration Period">
+	<item id="20231" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Resist Unholy - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -495,7 +516,7 @@
 		<set name="item_skill" val="3267-1;21036-1;23034-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20232" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Vitality - 7 Day Expiration Period">
+	<item id="20232" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Vitality - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -522,6 +543,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20236,1,1,100" />
 	</item>
@@ -536,6 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20237,1,1,100" />
 	</item>
@@ -550,6 +573,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20238,1,1,100" />
 	</item>
@@ -564,10 +588,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21037-1;23036-1" />
 	</item>
-	<item id="20237" type="Armor" name="Agathion Seal Bracelet - Pegasus - Wind Walk - 7 Day Expiration Period">
+	<item id="20237" type="Armor" name="Agathion Seal Bracelet - Pegasus - Wind Walk - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -583,7 +608,7 @@
 		<set name="item_skill" val="3267-1;21037-1;23037-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20238" type="Armor" name="Agathion Seal Bracelet - Pegasus - Escape - 7 Day Expiration Period">
+	<item id="20238" type="Armor" name="Agathion Seal Bracelet - Pegasus - Escape - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -610,6 +635,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20245,1,1,100" />
 	</item>
@@ -624,6 +650,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20246,1,1,100" />
 	</item>
@@ -638,6 +665,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20247,1,1,100" />
 	</item>
@@ -652,6 +680,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20248,1,1,100" />
 	</item>
@@ -666,6 +695,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20249,1,1,100" />
 	</item>
@@ -680,6 +710,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20250,1,1,100" />
 	</item>
@@ -694,6 +725,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21038-1;23039-1" />
 	</item>
@@ -708,6 +740,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21039-1;23040-1" />
 	</item>
@@ -722,10 +755,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21040-1;23041-1" />
 	</item>
-	<item id="20248" type="Armor" name="Agathion Seal Bracelet - Yellow-Robed Tojigong - Greater Heal - 7 Day Expiration Period">
+	<item id="20248" type="Armor" name="Agathion Seal Bracelet - Yellow-Robed Tojigong - Greater Heal - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -741,7 +775,7 @@
 		<set name="item_skill" val="3267-1;21038-1;23042-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20249" type="Armor" name="Agathion Seal Bracelet - Blue-Robed Tojigong - Reflect Damage - 7 Day Expiration Period">
+	<item id="20249" type="Armor" name="Agathion Seal Bracelet - Blue-Robed Tojigong - Reflect Damage - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -757,7 +791,7 @@
 		<set name="item_skill" val="3267-1;21039-1;23043-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20250" type="Armor" name="Agathion Seal Bracelet - Green-Robed Tojigong - Mana Regeneration - 7 Day Expiration Period">
+	<item id="20250" type="Armor" name="Agathion Seal Bracelet - Green-Robed Tojigong - Mana Regeneration - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -784,6 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20252,1,1,100" />
 	</item>
@@ -798,6 +833,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21041-1;23045-1" />
 	</item>
@@ -827,7 +863,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20253,1,1,100" />
 	</item>
-	<item id="20255" type="Weapon" name="Baguette Sword - 7 Day Expiration Period">
+	<item id="20255" type="Weapon" name="Baguette Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -854,7 +890,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20256" type="Weapon" name="Baguette Dagger - 7 Day Expiration Period">
+	<item id="20256" type="Weapon" name="Baguette Dagger - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dagger_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -882,7 +918,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="20257" type="Weapon" name="Baguette Dual Sword - 7 Day Expiration Period">
+	<item id="20257" type="Weapon" name="Baguette Dual Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -909,7 +945,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20258" type="Weapon" name="Baguette Mace - 7 Day Expiration Period">
+	<item id="20258" type="Weapon" name="Baguette Mace - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_blunt_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -937,7 +973,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20259" type="Weapon" name="Baguette Heavy Hammer - 7 Day Expiration Period">
+	<item id="20259" type="Weapon" name="Baguette Heavy Hammer - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_blunt_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -965,7 +1001,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20260" type="Weapon" name="Baguette Spear - 7 Day Expiration Period">
+	<item id="20260" type="Weapon" name="Baguette Spear - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_pole_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -993,7 +1029,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20261" type="Weapon" name="Baguette Bow - 7 Day Expiration Period">
+	<item id="20261" type="Weapon" name="Baguette Bow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_bow_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1006,7 +1042,7 @@
 		<set name="weight" val="500" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="5" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1023,7 +1059,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="20262" type="Weapon" name="Baguette Fist - 7 Day Expiration Period">
+	<item id="20262" type="Weapon" name="Baguette Fist - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dualfist_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1051,7 +1087,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20263" type="Weapon" name="Baguette Magic Sword - 7 Day Expiration Period">
+	<item id="20263" type="Weapon" name="Baguette Magic Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_mage_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1078,7 +1114,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20264" type="Weapon" name="Baguette Staff - 7 Day Expiration Period">
+	<item id="20264" type="Weapon" name="Baguette Staff - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_1h_mage_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1106,7 +1142,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20265" type="Weapon" name="Baguette Great Staff - 7 Day Expiration Period">
+	<item id="20265" type="Weapon" name="Baguette Great Staff - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_2h_mage_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1134,7 +1170,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20266" type="Armor" name="Baguette Shield - 7 Day Expiration Period">
+	<item id="20266" type="Armor" name="Baguette Shield - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1158,7 +1194,7 @@
 			<set order="0x08" stat="sDef" val="5" />
 		</for>
 	</item>
-	<item id="20267" type="Weapon" name="Baguette Rapier - 7 Day Expiration Period">
+	<item id="20267" type="Weapon" name="Baguette Rapier - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_rapier_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1190,7 +1226,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="20268" type="Weapon" name="Baguette Ancient Sword - 7 Day Expiration Period">
+	<item id="20268" type="Weapon" name="Baguette Ancient Sword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_ancientsword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1221,7 +1257,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="20269" type="Weapon" name="Baguette Crossbow - 7 Day Expiration Period">
+	<item id="20269" type="Weapon" name="Baguette Crossbow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_crossbow_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1253,7 +1289,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7 Day Expiration Period">
+	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_dual_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1292,6 +1328,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22032-1" />
 	</item>
 	<item id="20272" type="EtcItem" name="Baguette Herb">
@@ -1332,6 +1370,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="20276" type="Armor" name="Pink Afro">
@@ -1345,6 +1384,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="20277" type="EtcItem" name="Baguette Legacy - Kamael">
@@ -1359,6 +1399,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22033-1" />
 	</item>
 	<item id="20278" type="EtcItem" name="Gold Afro Hair Pack">
@@ -1373,6 +1415,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20275,1,1,100" />
 	</item>
@@ -1388,6 +1431,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20276,1,1,100" />
 	</item>
@@ -1402,6 +1446,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20297,1,1,100" />
 	</item>
@@ -1416,6 +1461,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20298,1,1,100" />
 	</item>
@@ -1430,6 +1476,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20299,1,1,100" />
 	</item>
@@ -1444,6 +1491,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20300,1,1,100" />
 	</item>
@@ -1458,6 +1506,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20301,1,1,100" />
 	</item>
@@ -1472,6 +1521,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20302,1,1,100" />
 	</item>
@@ -1486,6 +1536,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20303,1,1,100" />
 	</item>
@@ -1500,6 +1551,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20304,1,1,100" />
 	</item>
@@ -1514,6 +1566,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20305,1,1,100" />
 	</item>
@@ -1528,6 +1581,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20306,1,1,100" />
 	</item>
@@ -1542,6 +1596,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20307,1,1,100" />
 	</item>
@@ -1556,6 +1611,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20308,1,1,100" />
 	</item>
@@ -1570,6 +1626,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20309,1,1,100" />
 	</item>
@@ -1584,6 +1641,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20310,1,1,100" />
 	</item>
@@ -1598,6 +1656,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20311,1,1,100" />
 	</item>
@@ -1612,6 +1671,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20312,1,1,100" />
 	</item>
@@ -1626,6 +1686,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20313,1,1,100" />
 	</item>
@@ -1641,10 +1702,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21043-1;23049-1" />
 	</item>
-	<item id="20298" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler - Death Whisper - 7 Day Expiration Period">
+	<item id="20298" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler - Death Whisper - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1672,6 +1734,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21044-1;23050-1" />
 	</item>

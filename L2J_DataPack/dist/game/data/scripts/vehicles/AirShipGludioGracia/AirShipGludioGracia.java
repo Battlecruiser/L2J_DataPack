@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2AirShipInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -196,7 +197,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			switch (_cycle)
 			{
 				case 0:
-					broadcastInGludio(1800223); // The regularly scheduled airship that flies to the Gracia continent has departed.
+					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_GRACIA_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
@@ -209,13 +210,13 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(WARPGATE_TO_GRACIA);
 					break;
 				case 3:
-					broadcastInGracia(1800220); // The regularly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.
+					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
 					break;
 				case 4:
-					broadcastInGracia(1800221); // The regularly scheduled airship that flies to the Aden continent has departed.
+					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_ADEN_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
@@ -228,7 +229,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(WARPGATE_TO_GLUDIO);
 					break;
 				case 7:
-					broadcastInGludio(1800222); // The regularly scheduled airship has arrived. It will depart for the Gracia continent in 1 minute.
+					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
@@ -244,7 +245,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 	}
 	
-	private final void broadcastInGludio(int msg)
+	private final void broadcastInGludio(NpcStringId npcString)
 	{
 		if (!_foundAtcGludio)
 		{
@@ -252,10 +253,10 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGludio = findController();
 		}
 		if (_atcGludio != null)
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), msg));
+			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), npcString));
 	}
 	
-	private final void broadcastInGracia(int msg)
+	private final void broadcastInGracia(NpcStringId npcStringId)
 	{
 		if (!_foundAtcGracia)
 		{
@@ -263,7 +264,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGracia = findController();
 		}
 		if (_atcGracia != null)
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.SHOUT, _atcGracia.getNpcId(), msg));
+			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.SHOUT, _atcGracia.getNpcId(), npcStringId));
 	}
 	
 	private final L2Npc findController()

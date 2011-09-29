@@ -43,6 +43,7 @@
 		<!-- Freya Skills (Triggered from 6662 & 6698) -->
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
@@ -90,6 +91,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -130,6 +132,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 139HP * 3 during 10 seconds -->
 			<effect count="3" name="DamOverTime" abnormalTime="3" val="417" abnormal="bleed" abnormalLvl="3" abnormalType="bleeding" />
@@ -645,6 +648,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
 			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormal="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
@@ -667,6 +671,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" effectType="STUN" />
 		</for>
@@ -750,6 +755,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
 			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormal="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
@@ -772,40 +778,106 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<!-- FIXME: effectPower should be 0.05% but we use 1% for now -->
 			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="1" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="reuseDelay" val="500" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="121" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="900" />
+		<set name="skillRadius" val="200" />
 	</skill>
 	<skill id="6342" levels="1" name="Trap Over Steam">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2000" />
+		<set name="power" val="4563" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="400" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
 	</skill>
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#mAtk"> 1.08 1.15 </table>
+		<table name="#pAtk"> 1.02 1.03 </table>
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#pmAtkSpd"> 1.04 1.08 </table>
+		<table name="#runSpd"> 5 10 </table>
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
+				<mul order="0x30" stat="pAtkSpd" val="#pmAtkSpd" />
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6366" levels="2" name="Maguen Plasma - Critical">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#rCrit"> 0.04 0.08 </table>
+		<table name="#cAtk"> 1.05 1.1 </table>
+		<table name="#mCritRate"> 0.02 0.04 </table>
+		<set name=" target " val="TARGET_AREA" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
 		<set name="reuseDelay" val="2000" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="isMagic" val="ture" />
+		<set name="skillRadius" val="1000" />
+		<set name="reuseDelay" val="2000" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<mul order="0x30" stat="cAtk" val="#cAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
 		<set name="target" val="TARGET_NONE" />
@@ -891,6 +963,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6380" levels="1" name="Bistakon Roar">
 		<set name="hitTime" val="1500" />
@@ -906,6 +979,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
 		</for>
@@ -926,6 +1000,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="#abnormalLvl" abnormalType="silence_all" />
 		</for>
@@ -945,6 +1020,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" />
@@ -965,6 +1041,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
 		</for>
@@ -998,6 +1075,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" />
@@ -1018,6 +1096,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1106,6 +1185,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="5" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1174,6 +1254,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" />
@@ -1195,6 +1276,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="3" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -1214,6 +1296,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -1233,6 +1316,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="2" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
