@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -33,6 +35,6 @@ public class KillThePriests extends TerritoryWarSuperClass
 		qn = qn1;
 		RANDOM_MIN = 3;
 		RANDOM_MAX = 8;
-		Text = new String[]{"Out of MAX Priests you have defeated KILL.","You weakened the enemy's attack!"};
+		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_HEALERS_AND_BUFFERS,NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK};
 	}
 }

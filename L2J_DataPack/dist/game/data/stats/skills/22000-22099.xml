@@ -431,6 +431,9 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<for>
 			<effect name="Buff" event="afrobaguette1" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
@@ -462,6 +465,9 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<for>
 			<effect name="Buff" event="afrobaguette3" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="mAtkSpd" val="1.08" />
@@ -506,9 +512,10 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
 		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="7" />
+		<set name="npcId" val="106" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
@@ -564,45 +571,40 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1000" />
 		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 	</skill>
 	<skill id="22043" levels="6" name="Secret medicine of Will">
+		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
-		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
+		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="isPotion" val="true" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player levelRange="#levelRange" />
-			</and>
+			<player levelRange="#levelRange" />
 		</cond>
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">
+		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="50" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="isPotion" val="true" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<player levelRange="#levelRange" />
-			</and>
+			<player levelRange="#levelRange" />
 		</cond>
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
@@ -734,9 +736,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="vp_up" abnormal="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -751,9 +750,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
 		<set name="itemConsumeCount" val="1" />
@@ -762,9 +758,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -777,9 +770,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -792,9 +782,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -807,9 +794,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -822,9 +806,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -837,9 +818,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -853,9 +831,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -868,9 +843,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -883,9 +855,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
@@ -898,9 +867,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
@@ -913,9 +879,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="berserker">
 				<mul order="0x30" stat="pDef" val="0.92" />
@@ -935,9 +898,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
@@ -950,9 +910,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />

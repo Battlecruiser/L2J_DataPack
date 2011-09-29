@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `clanhall` VALUES
-('21','Fortress of Resistance','0','0','Contestable Clan Hall','Dion','0','0','0'),
 ('22','Moonstone Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
 ('23','Onyx Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
 ('24','Topaz Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
@@ -26,8 +25,6 @@ INSERT IGNORE INTO `clanhall` VALUES
 ('31','The Atramental Barracks','0','200000','Clan hall located in the Town of Dion','Dion','0','1','0'),
 ('32','The Scarlet Barracks','0','200000','Clan hall located in the Town of Dion','Dion','0','1','0'),
 ('33','The Viridian Barracks','0','200000','Clan hall located in the Town of Dion','Dion','0','1','0'),
-('34','Devastated Castle','0','0','Contestable Clan Hall','Aden','0','0','0'),
-('35','Bandit Stronghold','0','0','Contestable Clan Hall','Oren','0','0','0'),
 ('36','The Golden Chamber','0','1000000','Clan hall located in the Town of Aden','Aden','0','3','0'),
 ('37','The Silver Chamber','0','1000000','Clan hall located in the Town of Aden','Aden','0','3','0'),
 ('38','The Mithril Chamber','0','1000000','Clan hall located in the Town of Aden','Aden','0','3','0'),
@@ -53,7 +50,4 @@ INSERT IGNORE INTO `clanhall` VALUES
 ('58','Eisen Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
 ('59','Heavy Metal Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
 ('60','Molten Ore Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
-('61','Titan Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
-('62','Rainbow Springs','0','0','Contestable Clan Hall','Goddard','0','0','0'),
-('63','Beast Farm','0','0','Contestable Clan Hall','Rune','0','0','0'),
-('64','Fortress of the Dead','0','0','Contestable Clan Hall','Rune','0','0','0');
+('61','Titan Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0');

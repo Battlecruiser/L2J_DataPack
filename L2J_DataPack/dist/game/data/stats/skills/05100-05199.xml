@@ -43,6 +43,7 @@
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -57,6 +58,7 @@
 	</skill>
 	<skill id="5107" levels="4" name="Capture B State">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -71,6 +73,7 @@
 	</skill>
 	<skill id="5108" levels="4" name="Capture C State">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -128,6 +131,7 @@
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -165,6 +169,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -195,6 +200,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -215,6 +221,7 @@
 		<set name="power" val="829" />
 		<set name="isDebuff" val="true" />
 		<set name="aggroPoints" val="100" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" effectType="STUN" />
 		</for>
@@ -265,6 +272,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -450,6 +458,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -474,6 +483,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -577,6 +587,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -614,6 +625,7 @@
 	<skill id="5146" levels="10" name="Heal">
 		<table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -626,6 +638,7 @@
 	<skill id="5147" levels="10" name="Blessed Body">
 		<table name="#maxHp"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -641,6 +654,7 @@
 	</skill>
 	<skill id="5148" levels="10" name="Prayer">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -657,11 +671,12 @@
 	<skill id="5149" levels="10" name="Recharge">
 		<table name="#power"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="6000" />
 		<set name="staticHitTime" val="true" />
@@ -669,6 +684,7 @@
 	<skill id="5150" levels="10" name="Blessed Soul">
 		<table name="#maxMp"> 16 32 48 68 80 96 112 128 144 160 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -684,6 +700,7 @@
 	</skill>
 	<skill id="5151" levels="10" name="Mana Gain">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -700,6 +717,7 @@
 	<skill id="5152" levels="10" name="Ritual">
 		<table name="#rateCp"> 264 289 313 337 361 384 406 427 446 473 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#rateCp" />
 		<set name="reuseDelay" val="300000" />
@@ -712,6 +730,7 @@
 	<skill id="5153" levels="10" name="Cheer">
 		<table name="#power"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -728,6 +747,7 @@
 	<skill id="5154" levels="10" name="Might">
 		<table name="#value"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -744,6 +764,7 @@
 	<skill id="5156" levels="10" name="Empower">
 		<table name="#value"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -759,6 +780,7 @@
 	</skill>
 	<skill id="5157" levels="10" name="Duel Might">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -776,6 +798,7 @@
 	<skill id="5158" levels="10" name="Shield">
 		<table name="#value"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -792,6 +815,7 @@
 	<skill id="5159" levels="10" name="Magic Barrier">
 		<table name="#value"> 37 40 44 48 52 56 61 68 70 77 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -807,6 +831,7 @@
 	</skill>
 	<skill id="5160" levels="10" name="Duel Weakness">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="power" val="80" />
@@ -829,6 +854,7 @@
 	<skill id="5161" levels="10" name="Agility">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -845,6 +871,7 @@
 	<skill id="5162" levels="10" name="Guidance">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
@@ -861,6 +888,7 @@
 	<skill id="5163" levels="10" name="Focus">
 		<table name="#rCrit"> 0.05 0.05 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -877,6 +905,7 @@
 	<skill id="5164" levels="10" name="Wild Magic">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
@@ -893,6 +922,7 @@
 	<skill id="5165" levels="10" name="Charm">
 		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="180000" />
 		<set name="power" val="#power" />
@@ -904,9 +934,11 @@
 		<set name="staticHitTime" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5166" levels="10" name="Slow">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="30000" />
 		<set name="power" val="40" />
@@ -929,6 +961,7 @@
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
@@ -945,6 +978,7 @@
 	</skill>
 	<skill id="5168" levels="10" name="Stun">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="30000" />
 		<set name="power" val="40" />
@@ -956,6 +990,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -965,6 +1000,7 @@
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
@@ -973,6 +1009,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -982,6 +1019,7 @@
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
@@ -990,12 +1028,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 	</skill>
 	<skill id="5171" levels="10" name="Paralyze">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1007,12 +1047,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5172" levels="10" name="Medusa">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1025,11 +1067,12 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</for>
 	</skill>
 	<skill id="5173" levels="10" name="Fear">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1041,6 +1084,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -1049,6 +1093,7 @@
 		<table name="#dmg"> 123 123 150 150 150 174 174 174 189 189 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1060,6 +1105,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -1068,6 +1114,7 @@
 		<table name="#dmg"> 132 132 162 162 162 186 186 186 201 201 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1080,12 +1127,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1097,12 +1146,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
 	<skill id="5177" levels="10" name="Doom">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlDepend" val="1" />
@@ -1114,6 +1165,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
 		</for>
@@ -1169,6 +1221,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" />
 		</for>
@@ -1521,6 +1574,7 @@
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="2" />

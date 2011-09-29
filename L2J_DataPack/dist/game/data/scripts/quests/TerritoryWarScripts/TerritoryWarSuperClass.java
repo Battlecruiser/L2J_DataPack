@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.L2FastMap;
@@ -48,7 +49,7 @@ public class TerritoryWarSuperClass extends Quest
 	public int TERRITORY_ID;
 	public int[] LEADER_IDS;
 	public int[] GUARD_IDS;
-	public String[] Text = {};
+	public NpcStringId[] npcString = {};
 	// "Protect the ..." quests variables
 	public int[] NPC_IDS;
 	// "Kill The ..."
@@ -130,7 +131,9 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
 			if (territoryId >= 81 && territoryId <= 89)
-				for(L2PcInstance pl : L2World.getInstance().getAllPlayers().values())
+			{
+				for(L2PcInstance pl : L2World.getInstance().getAllPlayersArray())
+				{
 					if (pl.getSiegeSide() == territoryId)
 					{
 						QuestState st = pl.getQuestState(getName());
@@ -142,6 +145,8 @@ public class TerritoryWarSuperClass extends Quest
 							st.setStateAndNotSave(State.STARTED);
 						}
 					}
+				}
+			}
 		}
 		return super.onAttack(npc, player, damage, isPet);
 	}
@@ -153,7 +158,7 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			TerritoryWarManager.getInstance().territoryCatapultDestroyed(TERRITORY_ID - 80);
 			TerritoryWarManager.getInstance().giveTWPoint(killer, TERRITORY_ID, 4);
-			TerritoryWarManager.getInstance().announceToParticipants(new ExShowScreenMessage(Text[0],10000), 135000, 13500);
+			TerritoryWarManager.getInstance().announceToParticipants(new ExShowScreenMessage(npcString[0],2,10000), 135000, 13500);
 			handleBecomeMercenaryQuest(killer,true);
 		}
 		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
@@ -226,12 +231,17 @@ public class TerritoryWarSuperClass extends Quest
 				st.set("doneDate", String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
 				st.setState(State.COMPLETED);
 				st.exitQuest(true);
-				player.sendPacket(new ExShowScreenMessage(Text[1],10000));
+				player.sendPacket(new ExShowScreenMessage(npcString[1],2,10000));
 			}
 			else
 			{
 				st.set("kill", String.valueOf(kill));
-				player.sendPacket(new ExShowScreenMessage(Text[0].replace("MAX", String.valueOf(max)).replace("KILL", String.valueOf(kill)),10000));
+				
+				ExShowScreenMessage message = new ExShowScreenMessage(npcString[0],2,10000);
+				message.addStringParameter(String.valueOf(max));
+				message.addStringParameter(String.valueOf(kill));
+				player.sendPacket(message);
+				
 			}
 		}
 		else if (st.getInt("doneDate") != Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
@@ -241,7 +251,11 @@ public class TerritoryWarSuperClass extends Quest
 			st.set("kill", "1");
 			max = Rnd.get(RANDOM_MIN, RANDOM_MAX);
 			st.set("max", String.valueOf(max));
-			player.sendPacket(new ExShowScreenMessage(Text[0].replace("MAX", String.valueOf(max)).replace("KILL", String.valueOf(kill)),10000));
+			
+			ExShowScreenMessage message = new ExShowScreenMessage(npcString[0],2,10000);
+			message.addStringParameter(String.valueOf(max));
+			message.addStringParameter(String.valueOf(kill));
+			player.sendPacket(message);
 		}
 		else if (player.isGM())
 		{
@@ -252,7 +266,11 @@ public class TerritoryWarSuperClass extends Quest
 			st.set("kill", "1");
 			max = Rnd.get(RANDOM_MIN, RANDOM_MAX);
 			st.set("max", String.valueOf(max));
-			player.sendPacket(new ExShowScreenMessage(Text[0].replace("MAX", String.valueOf(max)).replace("KILL", String.valueOf(kill)),10000));
+
+			ExShowScreenMessage message = new ExShowScreenMessage(npcString[0],2,10000);
+			message.addStringParameter(String.valueOf(max));
+			message.addStringParameter(String.valueOf(kill));
+			player.sendPacket(message);
 		}
 	}
 	
@@ -404,7 +422,8 @@ public class TerritoryWarSuperClass extends Quest
 	{
 		super.setOnEnterWorld(val);
 		
-		for(L2PcInstance player: L2World.getInstance().getAllPlayers().values())
+		for(L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+		{
 			if (player.getSiegeSide() > 0)
 			{
 				TerritoryWarSuperClass territoryQuest = _forTheSakeScripts.get(player.getSiegeSide());
@@ -452,6 +471,7 @@ public class TerritoryWarSuperClass extends Quest
 					}
 				}
 			}
+		}
 	}
 	
 	public TerritoryWarSuperClass(int questId, String name, String descr)

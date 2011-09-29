@@ -14,6 +14,8 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 
 /**
  *
@@ -34,7 +36,7 @@ public class TheTerritoryGludio extends TerritoryWarSuperClass
 		LEADER_IDS = new int[]{36508, 36510, 36513, 36591};
 		GUARD_IDS = new int[]{36509, 36511, 36512};
 		qn = qn1;
-		Text = new String[]{"The catapult of Gludio has been destroyed!"};
+		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED};
 		registerKillIds();
 	}
 }

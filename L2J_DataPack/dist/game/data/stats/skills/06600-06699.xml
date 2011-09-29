@@ -211,6 +211,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6623" levels="1" name="Fungus Hub">
 		<set name="target" val="TARGET_NONE" />
@@ -224,6 +225,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6625" levels="1" name="Energy of Life">
 		<set name="target" val="TARGET_NONE" />
@@ -302,16 +304,32 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6637" levels="1" name="Vampiric Aura">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="2000" />
+		<set name="effectRange" val="2000" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player transformationId="103" />
+			</not>
+		</cond>
+		<for>
+			<effect name="BigHead" abnormalTime="1200" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head">
+				<mul order="0x30" stat="regHp" val="2" />
+				<mul order="0x30" stat="regMp" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
 		<set name="target" val="TARGET_NONE" />
@@ -501,6 +519,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="#ignoreResists" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -691,6 +710,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6678" levels="1" name="Hold Cancel">
 		<set name="target" val="TARGET_NONE" />
@@ -816,6 +836,7 @@
 	<skill id="6687" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
@@ -859,6 +880,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="coolTime" val="2000" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6691" levels="1" name="Dualsword Deadly Move">
 		<set name="target" val="TARGET_NONE" />
@@ -895,6 +917,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6697" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
@@ -921,6 +944,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -936,5 +960,11 @@
 			<effect count="3" name="ManaDamOverTime" abnormalTime="5" noicon="1" val="25" />
 			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_EXIT" />
 		</for>
+	</skill>
+	<skill id="6699" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 </list>

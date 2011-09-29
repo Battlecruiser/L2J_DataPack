@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="3400" levels="1" name="Traits Strengthen Earring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="derangementProf" val="6" />
+		</for>
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
 		<set name="target" val="TARGET_SELF" />
@@ -30,10 +35,21 @@
 		</for>
 	</skill>
 	<skill id="3404" levels="1" name="Mystery Effect">
-		<set name="target" val="TARGET_NONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player transformationId="103" />
+			</not>
+		</cond>
+		<for>
+			<effect name="BigHead" abnormalTime="1200" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
+		</for>
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
 		<set name="operateType" val="OP_ACTIVE" />
@@ -42,29 +58,49 @@
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="3406" levels="1" name="Weight Decrease Ring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="maxLoad" val="9000" />
+		</for>
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="avoidAggro" val="100" / -->
+		<set name="magicLvl" val="1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SilentMove" abnormal="stealth" abnormalTime="120" val="0" abnormalLvl="0" abnormalType="stealth">
+				<mul order="0x30" stat="runSpd" val="0.6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3408" levels="1" name="Blessed Ring of Escape">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="600000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="200" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="60000" />
+		<set name="skillType" val="RECALL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="300000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
 		<set name="mpConsume" val="50" />
@@ -283,9 +319,10 @@
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
 			<mul order="0x30" stat="sDef" val="1.33" /> <!-- Shield P.Def. +33% -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 		</for>
 	</skill>
@@ -414,12 +451,17 @@
 		</for>
 	</skill>
 	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="affectLimit = "6;12" / -->
 		<set name="hitTime" val="3000" />
-		<set name="staticReuse" val="true" />
 		<set name="hpConsume" val="800" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="200" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
 		<set name="mpConsume" val="50" />
@@ -993,9 +1035,13 @@
 		</for>
 	</skill>
 	<skill id="3499" levels="1" name="Transform Dispel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="10" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="56" />
+		<set name="negateAbnormals" val="transform,9" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 </list>

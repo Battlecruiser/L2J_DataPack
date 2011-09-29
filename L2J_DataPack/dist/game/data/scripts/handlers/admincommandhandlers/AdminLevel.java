@@ -1,14 +1,4 @@
 /*
- * $Header: AdminTest.java, 25/07/2005 17:15:21 luisantonioa Exp $
- *
- * $Author: luisantonioa $
- * $Date: 25/07/2005 17:15:21 $
- * $Revision: 1 $
- * $Log: AdminTest.java,v $
- * Revision 1  25/07/2005 17:15:21  luisantonioa
- * Added copyright notice
- *
- *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
@@ -26,11 +16,11 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Experience;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -83,10 +73,10 @@ public class AdminLevel implements IAdminCommandHandler
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
 				byte lvl = Byte.parseByte(val);
-				if (lvl >= 1 && lvl <= Experience.MAX_LEVEL)
+				if (lvl >= 1 && lvl <= ExperienceTable.getInstance().getMaxLevel())
 				{
 					long pXp = targetPlayer.getExp();
-					long tXp = Experience.LEVEL[lvl];
+					long tXp = ExperienceTable.getInstance().getExpForLevel(lvl);
 					
 					if (pXp > tXp)
 					{
@@ -99,13 +89,13 @@ public class AdminLevel implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("You must specify level between 1 and " + Experience.MAX_LEVEL + ".");
+					activeChar.sendMessage("You must specify level between 1 and " + ExperienceTable.getInstance().getMaxLevel() + ".");
 					return false;
 				}
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("You must specify level between 1 and " + Experience.MAX_LEVEL + ".");
+				activeChar.sendMessage("You must specify level between 1 and " + ExperienceTable.getInstance().getMaxLevel() + ".");
 				return false;
 			}
 		}

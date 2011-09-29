@@ -22,18 +22,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.Announcements;
+import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
+import com.l2jserver.gameserver.model.entity.L2Event.EventState;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
@@ -73,8 +71,11 @@ public class AdminEventEngine implements IAdminCommandHandler
 		"admin_event_control_res",
 		"admin_event_control_poly",
 		"admin_event_control_unpoly",
+		"admin_event_control_transform", 
+		"admin_event_control_untransform",
 		"admin_event_control_prize",
 		"admin_event_control_chatban",
+		"admin_event_control_kick",
 		"admin_event_control_finish"
 	};
 	
@@ -84,304 +85,353 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (command.equals("admin_event"))
-			showMainPage(activeChar);
-		
-		else if (command.equals("admin_event_new"))
+		try
 		{
-			showNewEventPage(activeChar);
-		}
-		else if (command.startsWith("admin_add"))
-		{
-			tempBuffer += command.substring(10);
-			showNewEventPage(activeChar);
-			
-		}
-		else if (command.startsWith("admin_event_see"))
-		{
-			String eventName = command.substring(16);
-			try
+			if (command.equals("admin_event"))
 			{
-				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+				if (L2Event.eventState != EventState.OFF)
+					showEventControl(activeChar);
+				else
+					showMainPage(activeChar);
+			}
+			
+			else if (command.equals("admin_event_new"))
+			{
+				showNewEventPage(activeChar);
+			}
+			else if (command.startsWith("admin_add"))
+			{
+				tempBuffer += command.substring(10);
+				showNewEventPage(activeChar);
 				
-				DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream("data/events/" + eventName)));
-				BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
+			}
+			else if (command.startsWith("admin_event_see"))
+			{
+				String eventName = command.substring(16);
+				try
+				{
+					NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+					
+					DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream("data/events/" + eventName)));
+					BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
+					
+					final String replyMSG = StringUtil.concat(
+							"<html><body>" +
+							"<center><font color=\"LEVEL\">",
+							eventName,
+							"</font><font color=\"FF0000\"> bY ",
+							inbr.readLine(),
+							"</font></center><br>" +
+							"<br>",
+							inbr.readLine(),
+							"</body></html>"
+					);
+					adminReply.setHtml(replyMSG);
+					activeChar.sendPacket(adminReply);
+					inbr.close();
+				}
+				catch (Exception e)
+				{
+					
+					e.printStackTrace();
+					
+				}
+				
+			}
+			else if (command.startsWith("admin_event_del"))
+			{
+				String eventName = command.substring(16);
+				File file = new File("data/events/" + eventName);
+				file.delete();
+				showMainPage(activeChar);
+				
+			}
+			
+			else if (command.startsWith("admin_event_name"))
+			{
+				tempName += command.substring(17);
+				showNewEventPage(activeChar);
+				
+			}
+			
+			else if (command.equalsIgnoreCase("admin_delete_buffer"))
+			{
+				try
+				{
+					tempBuffer += tempBuffer.substring(0, tempBuffer.length() - 10);
+					showNewEventPage(activeChar);
+				}
+				catch (Exception e)
+				{
+					tempBuffer = "";
+				}
+			}
+			
+			else if (command.startsWith("admin_event_store"))
+			{
+				
+				try
+				{
+					FileOutputStream file = new FileOutputStream("data/events/" + tempName);
+					PrintStream p = new PrintStream(file);
+					p.println(activeChar.getName());
+					p.println(tempBuffer);
+					file.close();
+					p.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+				tempBuffer = "";
+				tempName = "";
+				showMainPage(activeChar);
+			}
+			else if (command.startsWith("admin_event_set"))
+			{
+				L2Event._eventName = command.substring(16);
+				showEventParameters(activeChar, 2);
+				
+			}
+			else if (command.startsWith("admin_event_change_teams_number"))
+			{
+				showEventParameters(activeChar, Integer.parseInt(command.substring(32)));
+			}
+			else if (command.startsWith("admin_event_panel"))
+			{
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_announce"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(21));
+				L2Event._npcId = Integer.parseInt(st.nextToken());
+				L2Event._teamsNumber = Integer.parseInt(st.nextToken());
+				String temp = " ";
+				String temp2 = "";
+				while (st.hasMoreElements())
+				{
+					temp += st.nextToken() + " ";
+				}
+				
+				st = new StringTokenizer(temp, "-");
+				
+				Integer i = 1;
+				
+				while (st.hasMoreElements())
+				{
+					temp2 = st.nextToken();
+					if (!temp2.equals(" "))
+					{
+						L2Event._teamNames.put(i++, temp2.substring(1, temp2.length() - 1));
+					}
+				}
+				
+				activeChar.sendMessage(L2Event.startEventParticipation());
+				Announcements.getInstance().announceToAll(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
+				
+				PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
+				activeChar.sendPacket(_snd);
+				activeChar.broadcastPacket(_snd);
+				
+				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 				
 				final String replyMSG = StringUtil.concat(
 						"<html><body>" +
-						"<center><font color=\"LEVEL\">",
-						eventName,
-						"</font><font color=\"FF0000\"> bY ",
-						inbr.readLine(),
-						"</font></center><br>" +
-						"<br>",
-						inbr.readLine(),
+						"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE</font></center><br>" +
+						"<center>The event <font color=\"LEVEL\">",
+						L2Event._eventName,
+						"</font> has been announced, now you can type //event_panel to see the event panel control</center><br>" +
 						"</body></html>"
 				);
 				adminReply.setHtml(replyMSG);
 				activeChar.sendPacket(adminReply);
-				inbr.close();
 			}
-			catch (Exception e)
+			else if (command.startsWith("admin_event_control_begin"))
 			{
+				// Starts the event and sends a message of the result
+				activeChar.sendMessage(L2Event.startEvent());
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_finish"))
+			{
+				// Finishes the event and sends a message of the result
+				activeChar.sendMessage(L2Event.finishEvent());
+			}
+			else if (command.startsWith("admin_event_control_teleport"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(29), "-");
 				
-				e.printStackTrace();
-				
-			}
-			
-		}
-		else if (command.startsWith("admin_event_del"))
-		{
-			String eventName = command.substring(16);
-			File file = new File("data/events/" + eventName);
-			file.delete();
-			showMainPage(activeChar);
-			
-		}
-		
-		else if (command.startsWith("admin_event_name"))
-		{
-			tempName += command.substring(17);
-			showNewEventPage(activeChar);
-			
-		}
-		
-		else if (command.equalsIgnoreCase("admin_delete_buffer"))
-		{
-			try
-			{
-				tempBuffer += tempBuffer.substring(0, tempBuffer.length() - 10);
-				showNewEventPage(activeChar);
-			}
-			catch (Exception e)
-			{
-				tempBuffer = "";
-			}
-		}
-		
-		else if (command.startsWith("admin_event_store"))
-		{
-			
-			try
-			{
-				FileOutputStream file = new FileOutputStream("data/events/" + tempName);
-				PrintStream p = new PrintStream(file);
-				p.println(activeChar.getName());
-				p.println(tempBuffer);
-				file.close();
-				p.close();
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			
-			tempBuffer = "";
-			tempName = "";
-			showMainPage(activeChar);
-		}
-		else if (command.startsWith("admin_event_set"))
-		{
-			L2Event.eventName = command.substring(16);
-			showEventParameters(activeChar, 2);
-			
-		}
-		else if (command.startsWith("admin_event_change_teams_number"))
-		{
-			showEventParameters(activeChar, Integer.parseInt(command.substring(32)));
-		}
-		else if (command.startsWith("admin_event_panel"))
-		{
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_begin"))
-		{
-			
-			try
-			{
-				
-				L2Event.active = true;
-				L2Event.players.clear();
-				L2Event.connectionLossData.clear();
-				
-				for (int j = 0; j < L2Event.teamsNumber; j++)
+				while (st.hasMoreElements())
 				{
-					LinkedList<String> link = new LinkedList<String>();
-					L2Event.players.put(j + 1, link);
+					int teamId = Integer.parseInt(st.nextToken());
 					
-				}
-				int i = 0;
-				
-				while (!L2Event.participatingPlayers.isEmpty())
-				{
-					String target = getMaxLeveledPlayer();
-					
-					if (!target.isEmpty())
+					for (L2PcInstance player : L2Event._teams.get(teamId))
 					{
+						player.setTitle(L2Event._teamNames.get(teamId));
+						player.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
+						player.setInstanceId(activeChar.getInstanceId());
+					}
+				}
+				showEventControl(activeChar);
+			}
+			
+			else if (command.startsWith("admin_event_control_sit"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(24), "-");
+				
+				while (st.hasMoreElements())
+				{
+					// Integer.parseInt(st.nextToken()) == teamId
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+					{
+						if (player.getEventStatus() == null)
+							continue;
 						
-						L2Event.players.get(i + 1).add(target);
-						i = (i + 1) % L2Event.teamsNumber;
-					}
-					else
-					{
-						break;
+						player.getEventStatus().eventSitForced = !player.getEventStatus().eventSitForced;
+						if (player.getEventStatus().eventSitForced)
+							player.sitDown();
+						else
+							player.standUp();
 					}
 				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_kill"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(25), "-");
 				
-				destroyEventNpcs();
-				npcsDeleted = true;
-				
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_teleport"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(29), "-");
-			
-			while (st.hasMoreElements())
-			{
-				teleportTeam(activeChar, Integer.parseInt(st.nextToken()));
-			}
-			showEventControl(activeChar);
-		}
-		
-		else if (command.startsWith("admin_event_control_sit"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(24), "-");
-			
-			while (st.hasMoreElements())
-			{
-				sitTeam(Integer.parseInt(st.nextToken()));
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_kill"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(25), "-");
-			
-			while (st.hasMoreElements())
-			{
-				killTeam(activeChar, Integer.parseInt(st.nextToken()));
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_res"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(24), "-");
-			
-			while (st.hasMoreElements())
-			{
-				resTeam(Integer.parseInt(st.nextToken()));
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_poly"))
-		{
-			StringTokenizer st0 = new StringTokenizer(command.substring(25));
-			StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
-			String id = st0.nextToken();
-			while (st.hasMoreElements())
-			{
-				polyTeam(Integer.parseInt(st.nextToken()), id);
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_unpoly"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(27), "-");
-			
-			while (st.hasMoreElements())
-			{
-				unpolyTeam(Integer.parseInt(st.nextToken()));
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_prize"))
-		{
-			StringTokenizer st0 = new StringTokenizer(command.substring(26));
-			StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
-			String n = st0.nextToken();
-			StringTokenizer st1 = new StringTokenizer(n, "*");
-			n = st1.nextToken();
-			String type = "";
-			if (st1.hasMoreElements())
-				type = st1.nextToken();
-			
-			String id = st0.nextToken();
-			while (st.hasMoreElements())
-			{
-				regardTeam(activeChar, Integer.parseInt(st.nextToken()), Integer.parseInt(n), Integer.parseInt(id), type);
-			}
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_finish"))
-		{
-			for (int i = 0; i < L2Event.teamsNumber; i++)
-			{
-				telePlayersBack(i + 1);
-			}
-			
-			L2Event.eventName = "";
-			L2Event.teamsNumber = 0;
-			L2Event.names.clear();
-			L2Event.participatingPlayers.clear();
-			L2Event.players.clear();
-			L2Event.id = 12760;
-			L2Event.npcs.clear();
-			L2Event.active = false;
-			npcsDeleted = false;
-			
-		}
-		
-		else if (command.startsWith("admin_event_announce"))
-		{
-			StringTokenizer st = new StringTokenizer(command.substring(21));
-			L2Event.id = Integer.parseInt(st.nextToken());
-			L2Event.teamsNumber = Integer.parseInt(st.nextToken());
-			String temp = " ";
-			String temp2 = "";
-			while (st.hasMoreElements())
-			{
-				temp += st.nextToken() + " ";
-			}
-			
-			st = new StringTokenizer(temp, "-");
-			
-			Integer i = 1;
-			
-			while (st.hasMoreElements())
-			{
-				temp2 = st.nextToken();
-				if (!temp2.equals(" "))
+				while (st.hasMoreElements())
 				{
-					L2Event.names.put(i++, temp2.substring(1, temp2.length() - 1));
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1, activeChar, null);
 				}
+				showEventControl(activeChar);
 			}
-			
-			L2Event.participatingPlayers.clear();
-			
-			muestraNpcConInfoAPlayers(activeChar, L2Event.id);
-			
-			PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
-			activeChar.sendPacket(_snd);
-			activeChar.broadcastPacket(_snd);
-			
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
-			final String replyMSG = StringUtil.concat(
-					"<html><body>" +
-					"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE</font></center><br>" +
-					"<center>The event <font color=\"LEVEL\">",
-					L2Event.eventName,
-					"</font> has been announced, now you can type //event_panel to see the event panel control</center><br>" +
-					"</body></html>"
-			);
-			adminReply.setHtml(replyMSG);
-			activeChar.sendPacket(adminReply);
+			else if (command.startsWith("admin_event_control_res"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(24), "-");
+				
+				while (st.hasMoreElements())
+				{
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+					{
+						if (player == null || !player.isDead())
+							continue;
+						player.restoreExp(100.0);
+						player.doRevive();
+						player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
+						player.setCurrentCp(player.getMaxCp());
+					}
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_poly"))
+			{
+				StringTokenizer st0 = new StringTokenizer(command.substring(25));
+				StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
+				String id = st0.nextToken();
+				while (st.hasMoreElements())
+				{
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+					{
+						player.getPoly().setPolyInfo("npc", id);
+						player.teleToLocation(player.getX(), player.getY(), player.getZ(), true);
+						CharInfo info1 = new CharInfo(player);
+						player.broadcastPacket(info1);
+						UserInfo info2 = new UserInfo(player);
+						player.sendPacket(info2);
+						player.broadcastPacket(new ExBrExtraUserInfo(player));
+					}
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_unpoly"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(27), "-");
+				
+				while (st.hasMoreElements())
+				{
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+					{
+						player.getPoly().setPolyInfo(null, "1");
+						player.decayMe();
+						player.spawnMe(player.getX(), player.getY(), player.getZ());
+						CharInfo info1 = new CharInfo(player);
+						player.broadcastPacket(info1);
+						UserInfo info2 = new UserInfo(player);
+						player.sendPacket(info2);
+						player.broadcastPacket(new ExBrExtraUserInfo(player));
+					}
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_transform"))
+			{
+				StringTokenizer st0 = new StringTokenizer(command.substring(30));
+				StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
+				while (st.hasMoreElements())
+				{
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+					{
+						int id = Integer.parseInt(st0.nextToken());
+						if (!TransformationManager.getInstance().transformPlayer(id, player))
+							GmListTable.broadcastMessageToGMs("EventEngine: Unknow transformation id: " + id);
+					}
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_untransform"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(32), "-");
+				
+				while (st.hasMoreElements())
+				{
+					for (L2PcInstance player : L2Event._teams.get(Integer.parseInt(st.nextToken())))
+						player.stopTransformation(true);
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_kick"))
+			{
+				StringTokenizer st = new StringTokenizer(command.substring(25), "-");
+				
+				if (st.hasMoreElements())
+				{
+					L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+					if (player != null)
+						L2Event.removeAndResetPlayer(player);
+				}
+				else
+				{
+					if (activeChar.getTarget() != null && activeChar.getTarget() instanceof L2PcInstance)
+						L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
+				}
+				showEventControl(activeChar);
+			}
+			else if (command.startsWith("admin_event_control_prize"))
+			{
+				StringTokenizer st0 = new StringTokenizer(command.substring(26));
+				StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
+				String n = st0.nextToken();
+				StringTokenizer st1 = new StringTokenizer(n, "*");
+				n = st1.nextToken();
+				String type = "";
+				if (st1.hasMoreElements())
+					type = st1.nextToken();
+				
+				String id = st0.nextToken();
+				while (st.hasMoreElements())
+				{
+					rewardTeam(activeChar, Integer.parseInt(st.nextToken()), Integer.parseInt(n), Integer.parseInt(id), type);
+				}
+				showEventControl(activeChar);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace(); 
+			GmListTable.broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?"); 
 		}
 		
 		return true;
@@ -398,7 +448,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 		String[] files = dir.list();
 		
 		if (files == null) {
-			return "No 'data/events' directory!";
+			return "<font color=\"FF0000\"> No 'data/events' directory! <font> <BR>" + 
+					"<font color=\"FF0000\"> UNABLE TO CREATE AN EVENT!!! Please create this folder. <font>";
 		}
 		
 		final StringBuilder result = new StringBuilder(files.length * 500);
@@ -476,7 +527,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				"<html><body>" +
 				"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>" +
 				"<center><font color=\"LEVEL\">",
-				L2Event.eventName,
+				L2Event._eventName,
 				"</font></center><br>" +
 				"<br><center><button value=\"Change number of teams to\" action=\"bypass -h admin_event_change_teams_number $event_teams_number\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"> <edit var=\"event_teams_number\" width=100 height=20><br><br>" +
 				"<font color=\"LEVEL\">Team's Names</font><br>"
@@ -508,37 +559,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	void muestraNpcConInfoAPlayers(L2PcInstance activeChar, int id)
-	{
-		L2Event.npcs.clear();
-		LinkedList<L2PcInstance> temp = new LinkedList<L2PcInstance>();
-		temp.clear();
-		Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-		//synchronized (L2World.getInstance().getAllPlayers())
-		{
-			for (L2PcInstance player : pls)
-			{
-				if (!temp.contains(player))
-				{
-					L2Event.spawn(player, id);
-					temp.add(player);
-				}
-				Collection<L2PcInstance> plrs = player.getKnownList().getKnownPlayers().values();
-				//synchronized (player.getKnownList().getKnownPlayers())
-				{
-					for (L2PcInstance playertemp : plrs)
-					{
-						if ((Math.abs(playertemp.getX() - player.getX()) < 500) && (Math.abs(playertemp.getY() - player.getY()) < 500) && (Math.abs(playertemp.getZ() - player.getZ()) < 500))
-							temp.add(playertemp);
-					}
-				}
-			}
-			
-		}
-		L2Event.announceAllPlayers(activeChar.getName() + " wants to make an event !!! (you'll find a npc with the details around)");
-	}
-	
-	void showEventControl(L2PcInstance activeChar)
+	private void showEventControl(L2PcInstance activeChar)
 	{
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -546,7 +567,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		final StringBuilder replyMSG = StringUtil.startAppend(1000,
 				"<html><body>" +
 				"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><font color=\"LEVEL\">",
-				L2Event.eventName,
+				L2Event._eventName,
 				"</font><br><br><table width=200>" +
 				"<tr><td>Apply this command to teams number </td><td><edit var=\"team_number\" width=100 height=15></td></tr>" +
 				"<tr><td>&nbsp;</td></tr>"
@@ -569,9 +590,15 @@ public class AdminEventEngine implements IAdminCommandHandler
 				"<tr><td>&nbsp;</td></tr>" +
 				"<tr><td><button value=\"UnPolymorph\" action=\"bypass -h admin_event_control_unpoly $team_number\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Unpolymorph the team</font></td></tr>" +
 				"<tr><td>&nbsp;</td></tr>" +
+				"<tr><td><button value=\"Transform\" action=\"bypass -h admin_event_control_transform $team_number $transf_id\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><edit var=\"transf_id\" width=100 height=15><font color=\"LEVEL\">Transforms the team into the transformation with the id specified</font></td></tr>" +
+				"<tr><td>&nbsp;</td></tr>" +
+				"<tr><td><button value=\"UnTransform\" action=\"bypass -h admin_event_control_untransform $team_number\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Untransforms the team</font></td></tr>" +
+				"<tr><td>&nbsp;</td></tr>" +
 				"<tr><td>&nbsp;</td></tr>" +
 				"<tr><td><button value=\"Give Item\" action=\"bypass -h admin_event_control_prize $team_number $n $id\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"> number <edit var=\"n\" width=100 height=15> item id <edit var=\"id\" width=100 height=15></td><td><font color=\"LEVEL\">Give the specified item id to every single member of the team, you can put 5*level, 5*kills or 5 in the number field for example</font></td></tr>" +
 				"<tr><td>&nbsp;</td></tr>" +
+				"<tr><td><button value=\"Kick Player\" action=\"bypass -h admin_event_control_kick $player_name\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><edit var=\"player_name\" width=100 height=15><font color=\"LEVEL\">Kicks the specified player from the event. Blank field kicks target.</font></td></tr>" +  
+				"<tr><td>&nbsp;</td></tr>" +  
 				"<tr><td><button value=\"End\" action=\"bypass -h admin_event_control_finish\" width=90 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Will finish the event teleporting back all the players</font></td></tr>" +
 		"</table></body></html>");
 		
@@ -579,238 +606,29 @@ public class AdminEventEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	String getMaxLeveledPlayer()
+	private void rewardTeam(L2PcInstance activeChar, int team, int n, int id, String type)
 	{
-		L2PcInstance pc = null;
-		int max = 0;
-		String name = "";
-		for (String tempName2: L2Event.participatingPlayers)
+		int num = n;
+		for (L2PcInstance player : L2Event._teams.get(team))
 		{
-			try
+			if (type.equalsIgnoreCase("level"))
+				num = n * player.getLevel();
+			else if (type.equalsIgnoreCase("kills") && player.getEventStatus() != null)
 			{
-				pc = L2World.getInstance().getPlayer(tempName2);
-				if (max < pc.getLevel())
-				{
-					max = pc.getLevel();
-					name = tempName2;
-				}
+				num = n * player.getEventStatus().kills.size();
 			}
-			catch (Exception e)
-			{
-				L2Event.participatingPlayers.remove(tempName2);
-			}
-		}
-		L2Event.participatingPlayers.remove(name);
-		return name;
-	}
-	
-	void destroyEventNpcs()
-	{
-		L2Npc npc;
-		while (!L2Event.npcs.isEmpty())
-		{
-			try
-			{
-				npc = (L2Npc) L2World.getInstance().findObject(Integer.parseInt(L2Event.npcs.getFirst()));
-				
-				L2Spawn spawn = npc.getSpawn();
-				
-				if (spawn != null)
-				{
-					spawn.stopRespawn();
-					SpawnTable.getInstance().deleteSpawn(spawn, true);
-				}
-				npc.deleteMe();
-				L2Event.npcs.removeFirst();
-			}
-			catch (Exception e)
-			{
-				L2Event.npcs.removeFirst();
-			}
-		}
-	}
-	
-	void teleportTeam(L2PcInstance activeChar, int team)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance pc = L2World.getInstance().getPlayer(it.next());
-				pc.setTitle(L2Event.names.get(team));
-				pc.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void sitTeam(int team)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance pc = L2World.getInstance().getPlayer(it.next());
-				pc.eventSitForced = !pc.eventSitForced;
-				if (pc.eventSitForced)
-					pc.sitDown();
-				else
-					pc.standUp();
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void killTeam(L2PcInstance activeChar, int team)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance target = L2World.getInstance().getPlayer(it.next());
-				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null);
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void resTeam(int team)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			L2PcInstance character = L2World.getInstance().getPlayer(it.next());
-			if (character == null || !character.isDead())
-				continue;
-			character.restoreExp(100.0);
-			character.doRevive();
-			character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
-			character.setCurrentCp(character.getMaxCp());
-		}
-	}
-	
-	void polyTeam(int team, String id)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance target = L2World.getInstance().getPlayer(it.next());
-				target.getPoly().setPolyInfo("npc", id);
-				target.teleToLocation(target.getX(), target.getY(), target.getZ(), true);
-				CharInfo info1 = new CharInfo(target);
-				target.broadcastPacket(info1);
-				UserInfo info2 = new UserInfo(target);
-				target.sendPacket(info2);
-				target.broadcastPacket(new ExBrExtraUserInfo(target));
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void unpolyTeam(int team)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance target = L2World.getInstance().getPlayer(it.next());
-				
-				target.getPoly().setPolyInfo(null, "1");
-				target.decayMe();
-				target.spawnMe(target.getX(), target.getY(), target.getZ());
-				CharInfo info1 = new CharInfo(target);
-				target.broadcastPacket(info1);
-				UserInfo info2 = new UserInfo(target);
-				target.sendPacket(info2);
-				target.broadcastPacket(new ExBrExtraUserInfo(target));
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	private void createItem(L2PcInstance activeChar, L2PcInstance player, int id, int num)
-	{
-		player.getInventory().addItem("Event", id, num, player, activeChar);
-		ItemList il = new ItemList(player, true);
-		player.sendPacket(il);
-		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setHtml(
-				"<html><body>" +
-				"CONGRATULATIONS, you should have a present in your inventory" +
-		"</body></html>");
-		player.sendPacket(adminReply);
-	}
-	
-	void regardTeam(L2PcInstance activeChar, int team, int n, int id, String type)
-	{
-		LinkedList<String> linked = L2Event.players.get(team);
-		int temp = n;
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance target = L2World.getInstance().getPlayer(it.next());
-				if (type.equalsIgnoreCase("level"))
-					temp = n * target.getLevel();
-				else if (type.equalsIgnoreCase("kills"))
-					temp = n * target.kills.size();
-				else
-					temp = n;
-				createItem(activeChar, target, id, temp);
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void telePlayersBack(int team)
-	{
-		resTeam(team);
-		unpolyTeam(team);
-		LinkedList<String> linked = L2Event.players.get(team);
-		Iterator<String> it = linked.iterator();
-		while (it.hasNext())
-		{
-			try
-			{
-				L2PcInstance target = L2World.getInstance().getPlayer(it.next());
-				target.setTitle(target.eventTitle);
-				target.setKarma(target.eventkarma);
-				target.setPvpKills(target.eventpvpkills);
-				target.setPkKills(target.eventpkkills);
-				target.teleToLocation(target.eventX, target.eventY, target.eventZ, true);
-				target.kills.clear();
-				target.eventSitForced = false;
-				target.atEvent = false;
-			}
-			catch (Exception e)
-			{
-			}
+			else
+				num = n;
+			
+			player.getInventory().addItem("Event", id, num, player, activeChar);
+			player.sendPacket(new ItemList(player, true));
+			
+			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			adminReply.setHtml(
+					"<html><body>" +
+					"CONGRATULATIONS, you should have a present in your inventory" +
+			"</body></html>");
+			player.sendPacket(adminReply);
 		}
 	}
 }

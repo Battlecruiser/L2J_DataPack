@@ -58,9 +58,24 @@
 		</for>
 	</skill>
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="true" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
+		<set name="transformId" val="113" />
+		<for>
+			<!-- speed_up here is for block speed buffs on target -->
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="99" abnormalType="speed_up">
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="11" />
+				<set order="0x08" stat="MEN" val="25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6205" levels="19" name="Strider Bite">
 		<!-- TODO: This skill needs retail check -->
@@ -83,6 +98,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED" />
 		</for>
@@ -103,6 +119,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -262,18 +279,40 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="saveVs" val="MEN" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="magicLvl" val="84" />
+		<set name="power" val="100" />
 		<set name="lvlDepend" val="1" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="300" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" abnormalLvl="3" abnormalType="speed_down">
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="84" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="power" val="18162" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" effectPower="100" effectType="DEBUFF" abnormalLvl="4" abnormalType="speed_down">
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6239" levels="1" name="Proof of Space and Time">
 		<!-- Confirmed CT2.5 -->
@@ -360,6 +399,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6252" levels="1" name="Humidity Attack">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -425,6 +465,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6264" levels="1" name="Golem Boom">
 		<set name="target" val="TARGET_NONE" />
@@ -447,6 +488,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6267" levels="1" name="Power Attack">
 		<set name="target" val="TARGET_NONE" />
@@ -464,11 +506,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6270" levels="1" name="Grima Power Up">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
 		<set name="target" val="TARGET_NONE" />
@@ -486,6 +530,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="1000" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6274" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
@@ -608,6 +653,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6280) -->
 		<set name="isMagic" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="18560" />

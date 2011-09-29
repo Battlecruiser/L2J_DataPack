@@ -182,7 +182,7 @@ def exit503(completed,st):
       st.exitQuest(1)
     st.takeItems(Scepter_Judgement,-1)
     try:
-      members = st.getPlayer().getClan().getOnlineMembers(0)[0]
+      members = st.getPlayer().getClan().getOnlineMembers(0)
       for i in members:
         st.getPlayer().getClan().getClanMember(i).getPlayerInstance().getQuestState(qn).exitQuest(1)
       offlineMemberExit(st)
@@ -223,7 +223,7 @@ class Quest (JQuest) :
       st.set("cond","2")
       suscribe_members(st)
       try:
-        members = st.getPlayer().getClan().getOnlineMembers(0)[0]
+        members = st.getPlayer().getClan().getOnlineMembers(0)
         for i in members:
           pst = QuestManager.getInstance().getQuest(qn).newQuestState(st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance())
           pst.setState(State.STARTED)

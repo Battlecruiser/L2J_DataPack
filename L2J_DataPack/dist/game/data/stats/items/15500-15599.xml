@@ -94,6 +94,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9075-1" />
 	</item>
 	<item id="15508" type="EtcItem" name="Sel Mahum Training Diary">
@@ -253,7 +254,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15521" type="EtcItem" name="Broken Golem Fragment">
+	<item id="15521" type="EtcItem" name="Broken Golem Shard">
 		<set name="icon" val="icon.etc_plate_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -816,7 +817,7 @@
 		<set name="change_weaponId" val="15557" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -1229,7 +1230,7 @@
 		<set name="change_weaponId" val="15571" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />

@@ -8,6 +8,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13301" type="EtcItem" name="My Teleport Spellbook (Event)">
 		<set name="icon" val="icon.bookmark_book_i00" />
@@ -19,6 +20,8 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2610-1" />
 	</item>
 	<item id="13302" type="EtcItem" name="My Teleport Scroll (Event)">
@@ -31,6 +34,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13303" type="EtcItem" name="White Weasel Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i00" />
@@ -44,7 +48,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13304" type="EtcItem" name="Fairy Princess Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i00" />
@@ -58,7 +65,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13305" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -72,7 +82,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13306" type="EtcItem" name="Fox Shaman Hunting Helper Necklace (Event)">
 		<set name="icon" val="icon.pet_controler_i01" />
@@ -86,7 +99,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13307" type="EtcItem" name="Color Name (Event)">
 		<set name="icon" val="icon.color_name_i00" />
@@ -99,9 +115,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13308" type="Armor" name="Light Purple-Maned Horse Mounting Bracelet (Event) - 7-day Limited Period">
+	<item id="13308" type="Armor" name="Light Purple-Maned Horse Mount Bracelet (Event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -248,7 +265,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13319" type="Weapon" name="O-type Stick (Event) - 30-day limited period">
+	<item id="13319" type="Weapon" name="O Stick (Event) - 30-day limited period">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -270,7 +287,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13320" type="Weapon" name="X-type Stick (Event) - 30-day limited period">
+	<item id="13320" type="Weapon" name="X Stick (Event) - 30-day limited period">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -292,7 +309,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13321" type="Weapon" name="Scissors-type Stick (Event) - 30-day limited period">
+	<item id="13321" type="Weapon" name="Scissors Stick (Event) - 30-day limited period">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -382,7 +399,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13325" type="Armor" name="Kat the Cat Hat (Event) - 7-day Limited Period">
+	<item id="13325" type="Armor" name="Kat the Cat Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -395,7 +412,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13326" type="Armor" name="Feline Queen Hat (Event) - 7-day Limited Period">
+	<item id="13326" type="Armor" name="Feline Queen Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -408,7 +425,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13327" type="Armor" name="Monster Eye Hat (Event) - 7-day Limited Period">
+	<item id="13327" type="Armor" name="Monster Eye Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -421,7 +438,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13328" type="Armor" name="Brown Bear Hat (Event) - 7-day Limited Period">
+	<item id="13328" type="Armor" name="Brown Bear Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -434,7 +451,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13329" type="Armor" name="Fungus Hat (Event) - 7-day Limited Period">
+	<item id="13329" type="Armor" name="Fungus Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -447,7 +464,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13330" type="Armor" name="Skull Hat (Event) - 7-day Limited Period">
+	<item id="13330" type="Armor" name="Skull Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -460,7 +477,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13331" type="Armor" name="Ornithomimus Hat (Event) - 7-day Limited Period">
+	<item id="13331" type="Armor" name="Ornithomimus Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -473,7 +490,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13332" type="Armor" name="Feline King Hat (Event) - 7-day Limited Period">
+	<item id="13332" type="Armor" name="Feline King Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -486,7 +503,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13333" type="Armor" name="Kai the Cat Hat (Event) - 7-day Limited Period">
+	<item id="13333" type="Armor" name="Kai the Cat Hat (Event) - 7-day limited period">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -499,7 +516,7 @@
 		<set name="is_premium" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13334" type="Weapon" name="O-type Stick (Event) - 7-day Limited Period">
+	<item id="13334" type="Weapon" name="O Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -521,7 +538,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13335" type="Weapon" name="X-type Stick (Event) - 7-day Limited Period">
+	<item id="13335" type="Weapon" name="X Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -543,7 +560,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13336" type="Weapon" name="Scissors-type Stick (Event) - 7-day Limited Period">
+	<item id="13336" type="Weapon" name="Scissors Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -565,7 +582,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13337" type="Weapon" name="Rock-type Stick (Event) - 7-day Limited Period">
+	<item id="13337" type="Weapon" name="Rock-type Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -587,7 +604,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13338" type="Weapon" name="Paper-type Stick (Event) - 7-day Limited Period">
+	<item id="13338" type="Weapon" name="Paper-type Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -609,7 +626,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13339" type="Weapon" name="Pumpkin Transformation Stick (Event) - 7-day Limited Period">
+	<item id="13339" type="Weapon" name="Pumpkin Transformation Stick (Event) - 7-day limited period">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -633,7 +650,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13340" type="Armor" name="Agathion of Love (Event) - 7-day Limited Period">
+	<item id="13340" type="Armor" name="Agathion of Love (Event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1206,7 +1223,7 @@
 		<set name="is_premium" val="true" />
 		<set name="capsuled_items" val="13336,1,1,100;13337,1,1,100;13338,1,1,100" />
 	</item>
-	<item id="13382" type="EtcItem" name="Gran Kain's Gift Box (Event) - 30 day limited period">
+	<item id="13382" type="EtcItem" name="Gran Kain's Gift Box (Event) - 30-day limited period">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -1216,6 +1233,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2606-1" />
 		<set name="time" val="43200" />
 	</item>
@@ -1229,6 +1247,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13384" type="EtcItem" name="Hunting Helper Exchange Coupon 3-Sheet Pack (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
@@ -1397,7 +1416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="100" />
 	</item>
-	<item id="13395" type="EtcItem" name="Escape - Talking Island Village">
+	<item id="13395" type="EtcItem" name="Scroll of Escape: Talking Island Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1408,9 +1427,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13396" type="EtcItem" name="Escape - Elven Village">
+	<item id="13396" type="EtcItem" name="Scroll of Escape: Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1421,9 +1442,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13397" type="EtcItem" name="Escape - Dark Elven Village">
+	<item id="13397" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1434,9 +1457,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13398" type="EtcItem" name="Escape - Orc Village">
+	<item id="13398" type="EtcItem" name="Scroll of Escape: Orc Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1447,9 +1472,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13399" type="EtcItem" name="Escape - Dwarven Village">
+	<item id="13399" type="EtcItem" name="Scroll of Escape: Dwarven Village">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1460,6 +1487,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 </list>

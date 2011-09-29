@@ -184,7 +184,7 @@
 		<set name="price" val="3340000" />
 		<set name="soulshots" val="9" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="7" />
+		<set name="mp_consume" val="3" />
 		<set name="reuse_delay" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -691,7 +691,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1342" type="EtcItem" name="Iron Arrow">
+	<item id="1342" type="EtcItem" name="Steel Arrow">
 		<set name="icon" val="icon.etc_fine_steel_quiver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="arrow" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1347" type="EtcItem" name="Monster Eye Carcass">
+	<item id="1347" type="EtcItem" name="Monster Eye Meat">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -941,7 +941,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1364" type="EtcItem" name="Spider Venom Sac">
+	<item id="1364" type="EtcItem" name="Spider's Poison Sac">
 		<set name="icon" val="icon.item_canuse28" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1052,7 +1052,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2034-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="1375" type="EtcItem" name="Greater Swift Attack Potion">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
@@ -1067,7 +1069,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2035-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="1376" type="Weapon" name="Guard Spear">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />

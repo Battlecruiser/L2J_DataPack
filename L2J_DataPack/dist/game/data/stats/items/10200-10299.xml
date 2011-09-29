@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="10200" type="EtcItem" name="Alternative Blue Coda Seed">
+	<item id="10200" type="EtcItem" name="Seed: Alternative Blue Coda">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -57,6 +57,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2420-1" />
 	</item>
 	<item id="10206" type="EtcItem" name="Black Seed of Evil Lump">
@@ -67,6 +68,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="21000" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2421-1" />
 	</item>
 	<item id="10207" type="Armor" name="Enhanced Striped Scale Shirt">
@@ -153,7 +155,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="10212" type="Weapon" name="npc Only (Bow)">
+	<item id="10212" type="Weapon" name="For NPC (Bow)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -189,7 +191,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -447,7 +449,7 @@
 		<set name="change_weaponId" val="10226" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -566,7 +568,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -587,7 +589,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -612,7 +614,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -637,7 +639,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -662,7 +664,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -680,14 +682,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10232" type="Armor" name="Dynasty Jewel Leather Mail">
+	<item id="10232" type="Armor" name="Dynasty Jewel Leather Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -698,35 +700,35 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10233" type="Armor" name="Dynasty Jewel Leather Mail - Dagger Master">
+	<item id="10233" type="Armor" name="Dynasty Jewel Leather Armor - Dagger Master">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
-			<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10234" type="Armor" name="Dynasty Jewel Leather Mail - Bow Master">
+	<item id="10234" type="Armor" name="Dynasty Jewel Leather Armor - Bow Master">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -748,7 +750,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -770,7 +772,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -796,7 +798,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -822,7 +824,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -848,7 +850,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -987,7 +989,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="wood" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1016,7 +1018,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1040,6 +1042,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2422-1" />
 	</item>
 	<item id="10255" type="EtcItem" name="2nd Place Treasure Sack">
@@ -1048,6 +1051,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2423-2" />
 	</item>
 	<item id="10256" type="EtcItem" name="3rd Place Treasure Sack">
@@ -1056,6 +1060,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2424-3" />
 	</item>
 	<item id="10257" type="EtcItem" name="4th Place Treasure Sack">
@@ -1064,6 +1069,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2425-4" />
 	</item>
 	<item id="10258" type="EtcItem" name="5th Place Treasure Sack">
@@ -1072,6 +1078,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2426-5" />
 	</item>
 	<item id="10259" type="EtcItem" name="6th Place Treasure Sack">
@@ -1080,9 +1087,10 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2427-6" />
 	</item>
-	<item id="10260" type="EtcItem" name="Haste Juice">
+	<item id="10260" type="EtcItem" name="Alacrity Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1094,7 +1102,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2429-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10261" type="EtcItem" name="Accuracy Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
@@ -1108,9 +1118,11 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2430-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="10262" type="EtcItem" name="Critical Power Juice">
+	<item id="10262" type="EtcItem" name="Critical Hit Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1122,9 +1134,11 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2431-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="10263" type="EtcItem" name="Critical Attack Juice">
+	<item id="10263" type="EtcItem" name="Critical Rate Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1136,7 +1150,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2432-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10264" type="EtcItem" name="Casting Spd. Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
@@ -1150,7 +1166,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2433-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10265" type="EtcItem" name="Evasion Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
@@ -1164,9 +1182,11 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2434-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="10266" type="EtcItem" name="Magic Power Juice">
+	<item id="10266" type="EtcItem" name="M. Atk. Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1178,7 +1198,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2435-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10267" type="EtcItem" name="Power Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
@@ -1192,7 +1214,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2436-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10268" type="EtcItem" name="Speed Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
@@ -1206,7 +1230,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2437-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10269" type="EtcItem" name="Defense Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
@@ -1220,7 +1246,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2438-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10270" type="EtcItem" name="MP Consumption Juice">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
@@ -1233,7 +1261,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2439-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10271" type="EtcItem" name="Marvelous Fruit Juice #12">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
@@ -1265,7 +1295,7 @@
 		<set name="item_skill" val="3421-1;3422-1" />
 		<set name="duration" val="200" />
 	</item>
-	<item id="10274" type="EtcItem" name="Rabbit Transformation Scroll">
+	<item id="10274" type="EtcItem" name="Transformation Scroll: Rabbit">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1277,7 +1307,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2428-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10275" type="EtcItem" name="Battle Manual - Warp">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
@@ -1341,7 +1373,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10279" type="EtcItem" name="Onyx Beast Transform Scroll">
+	<item id="10279" type="EtcItem" name="Transformation Scroll: Onyx Beast">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1444,7 +1476,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10288" type="EtcItem" name="Transform Sealbook - Divine Knight">
+	<item id="10288" type="EtcItem" name="Transformation Sealbook: Divine Knight">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1456,7 +1488,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10289" type="EtcItem" name="Transform Sealbook - Divine Warrior">
+	<item id="10289" type="EtcItem" name="Transformation Sealbook: Divine Warrior">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1468,7 +1500,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10290" type="EtcItem" name="Transform Sealbook - Divine Rogue">
+	<item id="10290" type="EtcItem" name="Transformation Sealbook: Divine Rogue">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1480,7 +1512,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10291" type="EtcItem" name="Transform Sealbook - Divine Healer">
+	<item id="10291" type="EtcItem" name="Transformation Sealbook: Divine Healer">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1492,7 +1524,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10292" type="EtcItem" name="Transform Sealbook - Divine Wizard">
+	<item id="10292" type="EtcItem" name="Transformation Sealbook: Divine Wizard">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1504,7 +1536,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10293" type="EtcItem" name="Transform Sealbook - Divine Enchanter">
+	<item id="10293" type="EtcItem" name="Transformation Sealbook: Divine Enchanter">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1516,7 +1548,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10294" type="EtcItem" name="Transform Sealbook - Divine Summoner">
+	<item id="10294" type="EtcItem" name="Transformation Sealbook: Divine Summoner">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1528,35 +1560,35 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10295" type="EtcItem" name="Transform Sealbook - Zaken">
+	<item id="10295" type="EtcItem" name="Transformation Sealbook: Zaken">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10296" type="EtcItem" name="Transform Sealbook - Anakim">
+	<item id="10296" type="EtcItem" name="Transformation Sealbook: Anakim">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10297" type="EtcItem" name="Transform Sealbook - Venom">
+	<item id="10297" type="EtcItem" name="Transformation Sealbook: Venom">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10298" type="EtcItem" name="Transform Sealbook - Gordon">
+	<item id="10298" type="EtcItem" name="Transformation Sealbook: Gordon">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10299" type="EtcItem" name="Transform Sealbook - Ranku">
+	<item id="10299" type="EtcItem" name="Transformation Sealbook: Ranku">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />

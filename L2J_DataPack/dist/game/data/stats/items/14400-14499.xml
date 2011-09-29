@@ -1102,7 +1102,7 @@
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1135,7 +1135,7 @@
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1169,7 +1169,7 @@
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1202,7 +1202,7 @@
 		<set name="price" val="103439000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -2001,7 +2001,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -2372,7 +2372,7 @@
 		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -2424,7 +2424,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14475" type="Weapon" name="Vesper Sheutjeh {PvP}">
+	<item id="14475" type="Weapon" name="Vesper Shooter {PvP}">
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2518,7 +2518,7 @@
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
-				<player class_id_restriction="93, 101, 108" /> <!-- Dagger Masters -->
+				<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 				<player subclass="false" /> <!-- TEMP FIX only for customs subclass 80+ -->
 			</and>
 		</cond>
@@ -2807,7 +2807,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14487" type="Weapon" name="Vesper Shaper {PvP} - Crt. Damage">
+	<item id="14487" type="Weapon" name="Vesper Shaper {PvP} - Critical Damage">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -2962,7 +2962,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14492" type="Weapon" name="Vesper Fighter {PvP} - Crt. Stun">
+	<item id="14492" type="Weapon" name="Vesper Fighter {PvP} - Critical Stun">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />

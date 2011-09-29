@@ -64,7 +64,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2281-1" />
 	</item>
-	<item id="8608" type="EtcItem" name="Herb of Atk. Spd.">
+	<item id="8608" type="EtcItem" name="Herb of Alacrity">
 		<set name="icon" val="icon.etc_attack_sp_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="1" />
@@ -152,14 +152,14 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8618" type="EtcItem" name="Ancient Book - Divine Inspiration (Modern Language Version)">
+	<item id="8618" type="EtcItem" name="Ancient Book: Divine Inspiration (Modern Language Version)">
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8619" type="EtcItem" name="Ancient Book - Divine Inspiration (Original Language Version)">
+	<item id="8619" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Language Version)">
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -167,7 +167,7 @@
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8620" type="EtcItem" name="Ancient Book - Divine Inspiration (Manuscript)">
+	<item id="8620" type="EtcItem" name="Ancient Book: Divine Inspiration (Manuscript)">
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -175,7 +175,7 @@
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8621" type="EtcItem" name="Ancient Book - Divine Inspiration (Original Version)">
+	<item id="8621" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Version)">
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -200,7 +200,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8623" type="EtcItem" name="Elixir of Life (D-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
@@ -217,7 +219,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8624" type="EtcItem" name="Elixir of Life (C-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
@@ -234,7 +238,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8625" type="EtcItem" name="Elixir of Life (B-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
@@ -251,7 +257,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8626" type="EtcItem" name="Elixir of Life (A-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
@@ -268,7 +276,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8627" type="EtcItem" name="Elixir of Life (S-Grade)">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
@@ -285,7 +295,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8628" type="EtcItem" name="Elixir of Mental Strength (No Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
@@ -301,7 +313,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8629" type="EtcItem" name="Elixir of Mental Strength (D-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
@@ -318,7 +332,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8630" type="EtcItem" name="Elixir of Mental Strength (C-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
@@ -335,7 +351,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8631" type="EtcItem" name="Elixir of Mental Strength (B-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
@@ -352,7 +370,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8632" type="EtcItem" name="Elixir of Mental Strength (A-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
@@ -369,7 +389,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8633" type="EtcItem" name="Elixir of Mental Strength (S-Grade)">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
@@ -386,7 +408,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="8634" type="EtcItem" name="Elixir of CP (No Grade)">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
@@ -714,6 +738,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2290-1" />
 	</item>
 	<item id="8660" type="Armor" name="Demon Horns">
@@ -1092,7 +1117,7 @@
 		<set name="change_weaponId" val="9360" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="10" />
+		<set name="mp_consume" val="5" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>

@@ -171,11 +171,13 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -186,10 +188,12 @@
 		<set name="isMagic" val="true" />
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" />
 		</for>
@@ -214,6 +218,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
 		<set name="target" val="TARGET_NONE" />
@@ -224,6 +229,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="2000" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6131" levels="1" name="Decrease Spd">
 		<set name="target" val="TARGET_NONE" />
@@ -247,6 +253,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6134" levels="1" name="Curse of the Mutant Animal">
 		<set name="target" val="TARGET_NONE" />
@@ -263,9 +270,11 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
+		<set name="staticDamage" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
 		<set name="coolTime" val="2000" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju">
 		<set name="target" val="TARGET_SELF" />
@@ -284,6 +293,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1500" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6138" levels="1" name="Agathion Juju - Large Firework">
 		<set name="target" val="TARGET_NONE" />
@@ -378,6 +388,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence">
 				<sub order="0x40" stat="accCombat" val="99" />
@@ -464,6 +475,7 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="Debuff" abnormalTime="11" val="0" abnormal="bleed" abnormalLvl="4" abnormalType="max_hp_down">
 				<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -474,6 +486,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6166" levels="1" name="Hold">
 		<set name="target" val="TARGET_NONE" />
@@ -482,6 +495,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6167" levels="12" name="Shock">
 		<set name="target" val="TARGET_NONE" />
@@ -490,6 +504,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6168" levels="12" name="Shock">
 		<set name="target" val="TARGET_NONE" />
@@ -498,6 +513,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6169" levels="1" name="Shyeed's Fury">
 		<!-- Confirmed CT2.5 -->
@@ -640,11 +656,13 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6190" levels="1" name="Presentation - Lilith's Bodyguards Battle1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6191" levels="1" name="Presentation - Anakim Battle">
 		<set name="target" val="TARGET_NONE" />

@@ -1134,7 +1134,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Petrification" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="20" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</for>
 	</skill>
 	<skill id="4579" levels="12" name="Bleed">
@@ -1157,6 +1157,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectType="BLEED" effectPower="100" />
 		</for>
@@ -1204,6 +1205,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1227,6 +1229,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -1273,6 +1276,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="#abnormalLvl" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="#pDef" />
@@ -1593,6 +1597,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -1615,6 +1620,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>
@@ -1637,6 +1643,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1300" />
+		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
 		</for>

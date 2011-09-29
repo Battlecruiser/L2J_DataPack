@@ -7,6 +7,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<table name="#hitTime"> 2000 22940 </table>
@@ -16,10 +17,12 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
@@ -74,6 +77,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="MEN" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5906" levels="1" name="Ritual of Revive">
 		<set name="target" val="TARGET_NONE" />
@@ -132,6 +136,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5913" levels="1" name="Putrefection Cleanse">
 		<set name="target" val="TARGET_NONE" />
@@ -144,6 +149,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5915" levels="9" name="Mummifying Aura">
 		<set name="target" val="TARGET_NONE" />
@@ -462,6 +468,7 @@
 	</skill>
 	<skill id="5950" levels="1" name="Birthday Cake">
 		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -552,6 +559,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5961" levels="1" name="Barrier Thunder Storm">
 		<set name="target" val="TARGET_NONE" />
@@ -560,6 +568,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5962" levels="1" name="Air Defense Cannon">
 		<set name="target" val="TARGET_NONE" />
@@ -719,8 +728,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-			</effect>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
 	<skill id="5983" levels="1" name="Aura Bird - Owl">
@@ -740,8 +748,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
-			</effect>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
 	<skill id="5984" levels="1" name="Hand of Death">
@@ -862,15 +869,25 @@
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormal="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" triggeredLevel="1" abnormalLvl="8" abnormalType="oblivion" />
 			<effect name="SilenceMagicPhysical" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="ignoreResists" val="true" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="ETC" />
+		<for>
+			<effect name="BigHead" abnormalTime="1800" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" />
+		</for>
 	</skill>
 	<skill id="5995" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />

@@ -329,9 +329,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
+		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1559" />
 		</cond>
@@ -546,6 +544,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23166" levels="1" name="Energized Rose Spirit">
 		<set name="target" val="TARGET_NONE" />
@@ -563,18 +562,21 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23169" levels="1" name="Mesmerized">
 		<!-- Critical Seduction has left you mesmerized. You cannot be buffed with Critical Seduction again during the next 40 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23170" levels="1" name="Mesmerized">
 		<!-- Rosy Seduction has left you mesmerized. You cannot be buffed with Rosy Seduction again during the next 10 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23171" levels="1" name="Phoenix Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
@@ -668,9 +670,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="GIVE_VITALITY" />
 		<set name="power" val="20000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="7210" val="0" abnormalLvl="26" abnormalType="vp_keep" abnormal="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />

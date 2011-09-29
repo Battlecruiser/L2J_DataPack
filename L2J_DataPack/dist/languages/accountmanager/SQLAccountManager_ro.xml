@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Romana" translator="007Florin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="accountmanager.xsd">
+	<message id="toolName" text="Manager Utilizatori - SQL" />
+
+	<message id="yesChar" text="d" />
+	<message id="noChar" text="n" />
+	<message id="trueString" text="Adevarat" />
+	<message id="falseString" text="Fals" />
+
+	<message id="functChooser" text="Selectaţi o opţiune" />
+	<message id="functCreateAccount" text="1 - Creează un cont nou sau actualizeaza unul deja existent (schimbare parola şi nivel de acces)" />
+	<message id="functAccessLevel" text="2 - Schimba nivelul de acces" />
+	<message id="functDeleteAccount" text="3 - Ştergeţi cont existent" />
+	<message id="functListAccount" text="4 - Lista de conturi si nivele de acces" />
+	<message id="functExit" text="5 - Iesire" />
+
+	<message id="inputChoice" text="Alegerea ta" />
+	<message id="inputUsername" text="Utilizator" />
+	<message id="inputPassword" text="Parola" />
+	<message id="inputAccessLevel" text="Nivel de acces" />
+
+	<message id="functListAccountChooser" text="Vă rugăm să alegeţi un mod de listare" />
+	<message id="functListAccountBanned" text="1 - Doar conturile banate (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - Conturi privilegiate (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Conturi normale (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Arata tot" />
+	<message id="functListAccountDisplayed" text="Conturile Afişate: %d" />
+
+	<message id="functAccessLevelUpdated" text="Contul %s a fost actualizat" />
+	<message id="functAccessLevelNotExist" text="Contul %s nu exista" />
+
+	<message id="functDeleteAccountConfirm" text="Sigur doriţi să ştergeţi acest cont? D/N" />
+	<message id="functDeleteAccountAbort" text="Stergere anulata" />
+	<message id="functDeleteAccountCancel" text="Stergere anulata" />
+	<message id="functDeleteAccountChar" text="Stergere caracter %s" />
+	<message id="functDeleteAccountClan" text="Stergere clan %s" />
+	<message id="functDeleteAccountComplete" text="Contul %s a fost sters" />
+	<message id="functDeleteAccountNotExist" text="Contul %s nu exista" />
+</localization>

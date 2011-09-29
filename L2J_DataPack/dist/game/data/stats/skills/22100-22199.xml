@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="22100" levels="1" name="Soul Scent">
-		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="5000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="DRAIN" />
+		<set name="target" val="TARGET_CORPSE_MOB" />
+		<for>
+			<effect self="1" name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="br_event_buf6">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="mAtk" val="1.45" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22101" levels="1" name="Fortune of Love Box">
 		<!-- Confirmed CT2.5 -->
@@ -15,6 +33,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
@@ -44,35 +63,96 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="22103" levels="1" name="Blessed Scroll of Escape - event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="22103" levels="1" name="Blessed Scroll of Escape (Event)">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="200" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20583" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="RECALL" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection - event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection (Event)">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20584" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
-	<skill id="22105" levels="1" name="Wooldy Summon Scroll - Event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20707" />
+		<set name="magicLvl" val="1" />
+		<set name="npcDistance" val="40" />
+		<set name="npcId" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="12000" />
+		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player active_skill_id="21120" />
+		</cond>
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
-	<skill id="22106" levels="1" name="Verdandi Summon Scroll - Event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20707" />
+		<set name="magicLvl" val="1" />
+		<set name="npcDistance" val="40" />
+		<set name="npcId" val="21" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="12000" />
+		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player active_skill_id="21120" />
+		</cond>
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
-	<skill id="22107" levels="1" name="Skooldy Summon Scroll - Event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20707" />
+		<set name="magicLvl" val="1" />
+		<set name="npcDistance" val="40" />
+		<set name="npcId" val="19" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="12000" />
+		<set name="skillType" val="SUMMON" /> <!-- TODO: SUMMON_NPC_NEAR" -->
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player active_skill_id="21120" />
+		</cond>
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22108" levels="1" name="Halloween Toy Box">
 		<!-- Confirmed CT2.5 -->
@@ -173,80 +253,174 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22118" levels="1" name="Warmth of Kotatz">
-		<!-- The Warmth of Kotatz can be felt. HP regeneration is increased by 40%. CP regeneration is increased by 30%. MP regeneration is increased by 20%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" abnormalTime="25" val="0" abnormalLvl="99" abnormalType="hp_regen_up">
+				<mul order="0x30" stat="regCp" val="1.3" />
+				<mul order="0x30" stat="regHp" val="1.4" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22119" levels="1" name="Love for All Seasons">
-		<!-- For 1 hour, increases M. Atk. by 75% and the chance of Prominent Damage occurring through damage magic by 2. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22120" levels="1" name="Happy New Year">
-		<!-- For 1 hour, increases Critical attack power by 35%, Critical attack rate by 30, and accuracy by 4. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul order="0x30" stat="rCrit" val="1.3" />
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22121" levels="1" name="Female Aniruddha">
-		<!-- For 1 hour, increases P. Def. by 15%, Magic Resistance by 30%, and Shield Defense Rate by 15. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul order="0x30" stat="pDef" val="1.15" />
+				<add order="0x40" stat="sDef" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22122" levels="1" name="Kung Hei Fat Choy">
-		<!-- For 1 hour, decreases party members' P. Def. by 8%, M. Def. by 16%, and Evasion by 4. Increases P. Atk. by 15%, P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8. 9% of the standard short-range physical damage inflicted on the enemy is recovered by HP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<sub order="0x40" stat="rEvas" val="4" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22123" levels="1" name="Chinese Feast">
-		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Increases Casting Spd. by 30% and Max MP by 35%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul order="0x30" stat="maxHp" val="1.35" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22124" levels="1" name="Hwa Gei Bu Gwi">
-		<!-- For 1 hour, increases Atk. Spd. by 33% and weight penalty interval by 9000. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<add order="0x40" stat="maxLoad" val="9000" />
+				<add order="0x40" stat="pAtkSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22125" levels="1" name="Fire Stamp">
-		<!-- For 1 hour, increases moving speed by 33, Evasion rate by 4, and Max HP by 35%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+				<add order="0x40" stat="rEvas" val="4" />
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22126" levels="1" name="Baby Food Skill">
-		<set name="target" val="TARGET_NONE" />
+		<!-- TODO: Implement. -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="500" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="109">
+			<target npcId="1538" />
+		</cond>
 	</skill>
 	<skill id="22127" levels="1" name="Summon Warm Kotatz">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="despawnDelay" val="7200" /> <!-- Custom -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="npcId" val="28" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="SPAWN" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">
-		<!-- Lvl 1: For 5 minutes, raises Atk. Spd. by 10% and Magic Casting Spd. by 10%. -->
-		<!-- Lvl 2: For 5 minutes, raises Atk. Spd. by 15% and Magic Casting Spd. by 15%. -->
-		<!-- Lvl 3: For 5 minutes, raises Atk. Spd. by 20% and Magic Casting Spd. by 20%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#AtkSpd"> 1.1 1.15 1.2 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="br_event_buf2">
+				<mul order="0x30" stat="pAtkSpd" val="#AtkSpd" />
+				<mul order="0x30" stat="mAtkSpd" val="#AtkSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22129" levels="1" name="Red Dimensional Stone">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- TODO: Implement. -->
+		<set name="hitTime" val="3000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="reuseDelay" val="18000000" />
+		<set name="resetQuest" val="128;129;144" />
+		<set name="skillType" val="NOTDONE" /> <!-- TODO: RESET_QUESTS -->
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22130" levels="1" name="Food of Doubt's Effect">
 		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
@@ -255,171 +429,332 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22131" levels="1" name="Red Firework Flames">
-		<!-- For 10 minutes, increases water type defense by 30 and STR by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x40" stat="waterRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22132" levels="1" name="Gold Firework Flames">
-		<!-- For 10 minutes, increases divinity type defense by 30 and CON by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x40" stat="holyRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22133" levels="1" name="Blue Firework Flames">
-		<!-- For 10 minutes, increases fire type defense by 30 and DEX by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x40" stat="fireRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22134" levels="1" name="Pink Firework Flames">
-		<!-- For 10 minutes, increases earth type defense by 30 and MEN by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="MEN" val="1" />
+				<add order="0x40" stat="earthRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22135" levels="1" name="White Firework Flames">
-		<!-- For 10 minutes, increases wind type defense by 30 and WIT by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="WIT" val="1" />
+				<add order="0x40" stat="windRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22136" levels="1" name="Silver Firework Flames">
-		<!-- For 10 minutes, increases darkness type defense by 30 and INT by 1. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf10">
+				<add order="0x10" stat="INT" val="1" />
+				<add order="0x40" stat="darkRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22137" levels="1" name="Star Food">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="20000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22138" levels="1" name="Mango Dessert">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="20000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22139" levels="1" name="Branding Wind Walk">
-		<!-- Increases moving speed by 33 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22140" levels="1" name="Hwa Gei Bu Gwi Haste">
-		<!-- Increases Atk. Spd. by 33% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22141" levels="1" name="Branding Agility">
-		<!-- Increases evasion rate by 4 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="avoid_up">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22142" levels="1" name="Female Aniruddha's Shield">
-		<!-- Increases P. Def. by 15% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22143" levels="1" name="Happy New Year Death Whisper">
-		<!-- Increases Critical attack power by 35% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
+				<mul order="0x30" stat="rCrit" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22144" levels="1" name="Happy New Year Guidance">
-		<!-- Increases accuracy by 4 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22145" levels="1" name="Love for All Seasons Empower">
-		<!-- Increases M. Atk. by 75% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22146" levels="1" name="Chinese Feast Greater Acumen">
-		<!-- Increases Casting Spd. by 30% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22147" levels="1" name="Kung Hei Fat Choy Vampiric Rage">
-		<!-- For 1 hour, 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22148" levels="1" name="Branding Blessed Body">
-		<!-- Increases Max HP by 35% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22149" levels="1" name="Kung Hei Fat Choy Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="berserker">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<sub order="0x40" stat="rEvas" val="4" />
+				<add order="0x40" stat="runSpd" val="8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22150" levels="1" name="Female Aniruddha's Magic Barrier">
-		<!-- Increases magic resistance by 30% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="md_up">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22151" levels="1" name="Chinese Feast Blessed Soul">
-		<!-- Increases Max MP by 35% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22152" levels="1" name="Chinese Feast Clarity">
-		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="cheap_magic">
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22153" levels="1" name="Love for All Seasons Wild Magic">
-		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by damage magic. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22154" levels="1" name="Happy New Year Focus">
-		<!-- Increases Critical attack rate by 30% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="critical_prob_up">
+				<mul order="0x30" stat="rCrit" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22155" levels="1" name="Female Aniruddha's Blessed Shield">
-		<!-- Increases Shield defense rate by 15 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="shield_prob_up">
+				<add order="0x40" stat="rShld" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22156" levels="1" name="Hwa Gei Bu Gwi Decrease Weight">
-		<!-- Increases the weight penalty interval by 9000 for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="decrease_weight_penalty">
+				<add order="0x40" stat="maxLoad" val="9000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22157" levels="1" name="Kung Hei Fat Choy Might">
-		<!-- Increases P. Atk. by 15% for 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22158" levels="10" name="Rose Petal">
-		<!-- Increase HP/MP recovery by 20% for 5 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="br_event_buf1">
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22159" levels="1" name="Vesper Super Power">
 		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
@@ -430,9 +765,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper1" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -450,9 +782,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper2" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<add order="0x40" stat="rCrit" val="15" />
@@ -471,9 +800,6 @@
 		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" event="vesper3" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -483,25 +809,53 @@
 		</for>
 	</skill>
 	<skill id="22162" levels="1" name="Mt. Fuji Herb">
-		<!-- Energy is recovered for 10 minutes when acquiring Exp. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" /> <!-- Custom. -->
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="2" abnormalType="vp_up">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22163" levels="1" name="Hawk Herb">
-		<!-- Physical Atk Speed is increased by 15% and physical Critical Atk rate is increased by 10% for 10 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" /> <!-- Custom. -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<basemul order="0x30" stat="rCrit" val="0.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22164" levels="1" name="Eggplant Herb">
-		<!-- Magic Atk Speed is increased by 10% and magic Critical Rate is increased by 2 for 10 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" /> <!-- Custom. -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
+				<mul order="0x30" stat="mAtkSpd" val="1.1" />
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22165" levels="1" name="Energy Replenish">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
@@ -629,5 +983,145 @@
 				<player weight="80" />
 			</and>
 		</cond>
+	</skill>
+	<skill id="22180" levels="1" name="Wondrous Cubic - 1 time use">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22182" levels="1" name="Birthday Joy">
+		<!-- "Birthday gift received once a year. For 12 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
+		<!-- Birthday Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="stayOnSubclassChange" val="false" />
+		<set name="canBeDispeled" val="false" />
+		<for>
+			<effect name="Buff" abnormalTime="43200" val="0" abnormalLvl="3" abnormalType="vp_up">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+		<!-- Transformed into Dragon Master Lee. -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="20005" />
+		<for>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+		<!-- Transformed into Dragon Master Karin. -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="20006" />
+		<for>
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+	<skill id="22185" levels="1" name="Shiny Lighting">
+		<!-- Lighting shines brightly above the character's head. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22186" levels="1" name="Echo Crystal - Theme of Celebration">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Energy">
+		<!-- State in which the Energy Stage is maintained. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22188" levels="1" name="Summon Big Wedding Cake">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22189" levels="1" name="Flower Shower">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
+		<!-- Transformed into a cute block checker. Look for a treasure chest on Fantasy Isle. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">
+		<!-- Transformed into an Onyx Beast. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader">
+		<!-- Transformed into a Death Blader. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle">
+		<!-- Transformed into a Grail Apostle. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn">
+		<!-- Transformed into a Unicorn. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight">
+		<!-- Transformed into a Lilim Knight. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian">
+		<!-- Transformed into a Golem Guardian. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake">
+		<!-- Transformed into an Inferno Drake. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber">
+		<!-- Transformed into a Dragon Bomber. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="22199" levels="1" name="Transformation Scroll - Heretic">
+		<!-- Transformed into a Heretic. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 </list>

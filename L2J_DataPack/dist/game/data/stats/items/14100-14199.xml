@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="14100" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 7-day Limited Period">
+	<item id="14100" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -14,10 +14,8 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
-	<item id="14101" type="Armor" name="Sudden Agathion (Event) - 7-day Limited Period">
+	<item id="14101" type="Armor" name="Sudden Agathion (Event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -31,10 +29,8 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
-	<item id="14102" type="Armor" name="Shiny Agathion (Event) - 7-day Limited Period">
+	<item id="14102" type="Armor" name="Shiny Agathion (Event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -48,10 +44,8 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
-	<item id="14103" type="Armor" name="Sobbing Agathion (Event) - 7-day Limited Period">
+	<item id="14103" type="Armor" name="Sobbing Agathion (Event) - 7-day limited period">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -65,8 +59,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="10080" />
-		<for>
-		</for>
 	</item>
 	<item id="14104" type="Armor" name="Shadow Item - Collection Agathion Summon Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
@@ -82,8 +74,6 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8251-1;3267-1;5780-3" />
 		<set name="duration" val="600" />
-		<for>
-		</for>
 	</item>
 	<item id="14105" type="Armor" name="Sealed Vesper Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i02" />
@@ -1242,7 +1232,7 @@
 		<set name="change_weaponId" val="14154" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -1275,7 +1265,7 @@
 		<set name="change_weaponId" val="14155" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -1307,7 +1297,7 @@
 		<set name="change_weaponId" val="14156" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="12" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -1426,7 +1416,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14154" type="Weapon" name="Vesper Sheutjeh - Cheap Shot">
+	<item id="14154" type="Weapon" name="Vesper Shooter - Cheap Shot">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1465,7 +1455,7 @@
 			</set>
 		</for>
 	</item>
-	<item id="14155" type="Weapon" name="Vesper Sheutjeh - Focus">
+	<item id="14155" type="Weapon" name="Vesper Shooter - Focus">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1499,7 +1489,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14156" type="Weapon" name="Vesper Sheutjeh - Critical Slow">
+	<item id="14156" type="Weapon" name="Vesper Shooter - Critical Slow">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1733,7 +1723,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="14166" type="EtcItem" name="Life Stone - level 84">
+	<item id="14166" type="EtcItem" name="Life Stone -  Level 84">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1744,7 +1734,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14167" type="EtcItem" name="Mid-Grade Life Stone - level 84">
+	<item id="14167" type="EtcItem" name="Mid-Grade Life Stone -  Level 84">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1755,7 +1745,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14168" type="EtcItem" name="High-Grade Life Stone - level 84">
+	<item id="14168" type="EtcItem" name="High-Grade Life Stone -  Level 84">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1766,7 +1756,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14169" type="EtcItem" name="Top-Grade Life Stone - level 84">
+	<item id="14169" type="EtcItem" name="Top-Grade Life Stone -  Level 84">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1783,9 +1773,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2803-1" />
@@ -1796,9 +1783,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2804-1" />
@@ -1809,9 +1793,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2805-1" />
@@ -1822,9 +1803,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2806-1" />
@@ -1835,9 +1813,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2807-1" />
@@ -1848,9 +1823,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2808-1" />
@@ -1861,9 +1833,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2809-1" />
@@ -1874,9 +1843,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2810-1" />
@@ -1887,9 +1853,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2811-1" />
@@ -1900,9 +1863,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2812-1" />
@@ -1913,9 +1873,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2813-1" />
@@ -1926,9 +1883,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2814-1" />
@@ -1939,9 +1893,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2815-1" />
@@ -1952,9 +1903,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2816-1" />
@@ -1965,9 +1913,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2817-1" />
@@ -1978,9 +1923,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2818-1" />
@@ -1991,9 +1933,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2819-1" />
@@ -2004,9 +1943,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2820-1" />
@@ -2017,9 +1953,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2821-1" />
@@ -2030,9 +1963,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2822-1" />
@@ -2043,9 +1973,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2823-1" />
@@ -2076,9 +2003,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2826-1" />
@@ -2089,9 +2013,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2827-1" />
@@ -2102,14 +2023,11 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2828-1" />
 	</item>
-	<item id="14196" type="EtcItem" name="Forgotten Scroll - Throne Route">
+	<item id="14196" type="EtcItem" name="Forgotten Scroll - Thorn Root">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -2128,9 +2046,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2830-1" />
@@ -2141,9 +2056,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2652-1" />
@@ -2154,9 +2066,6 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="price" val="120000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2653-1" />

@@ -7,17 +7,18 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
   `regTimeEnd` bigint(13) unsigned NOT NULL DEFAULT '0',
   `showNpcCrest` enum('true','false') DEFAULT 'false' NOT NULL,
+  `bloodAlliance` int(3) NOT NULL default 0,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `castle` VALUES
-(1,'Gludio',0,0,0,'true',0,'false'),
-(2,'Dion',0,0,0,'true',0,'false'),
-(3,'Giran',0,0,0,'true',0,'false'),
-(4,'Oren',0,0,0,'true',0,'false'),
-(5,'Aden',0,0,0,'true',0,'false'),
-(6,'Innadril',0,0,0,'true',0,'false'),
-(7,'Goddard',0,0,0,'true',0,'false'),
-(8,'Rune',0,0,0,'true',0,'false'),
-(9,'Schuttgart',0,0,0,'true',0,'false');
+(1,'Gludio',0,0,0,'true',0,'false',0),
+(2,'Dion',0,0,0,'true',0,'false',0),
+(3,'Giran',0,0,0,'true',0,'false',0),
+(4,'Oren',0,0,0,'true',0,'false',0),
+(5,'Aden',0,0,0,'true',0,'false',0),
+(6,'Innadril',0,0,0,'true',0,'false',0),
+(7,'Goddard',0,0,0,'true',0,'false',0),
+(8,'Rune',0,0,0,'true',0,'false',0),
+(9,'Schuttgart',0,0,0,'true',0,'false',0);

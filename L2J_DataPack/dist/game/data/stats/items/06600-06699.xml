@@ -350,10 +350,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="437" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="524" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6612" type="Weapon" name="Infinity Cleaver">
@@ -381,10 +382,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="532" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="638" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6613" type="Weapon" name="Infinity Axe">
@@ -413,11 +415,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="437" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="524" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6614" type="Weapon" name="Infinity Rod">
@@ -447,11 +450,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="350" />
-			<set order="0x08" stat="mAtk" val="256" />
+			<set order="0x08" stat="pAtk" val="420" />
+			<set order="0x08" stat="mAtk" val="307" />
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6615" type="Weapon" name="Infinity Crusher">
@@ -480,11 +484,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="532" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="638" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6616" type="Weapon" name="Infinity Scepter">
@@ -514,11 +519,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="426" />
-			<set order="0x08" stat="mAtk" val="281" />
+			<set order="0x08" stat="pAtk" val="511" />
+			<set order="0x08" stat="mAtk" val="337" />
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6617" type="Weapon" name="Infinity Stinger">
@@ -547,11 +553,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="382" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="458" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="433" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6618" type="Weapon" name="Infinity Fang">
@@ -580,11 +587,12 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="532" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="638" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="4" />
 			<add order="0x10" stat="accCombat" val="4.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6619" type="Weapon" name="Infinity Bow">
@@ -601,7 +609,7 @@
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1398" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -615,8 +623,8 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="794" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="952" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="293" />
@@ -625,6 +633,7 @@
 					<game skill="false" chance="26" />
 				</and>
 			</set>
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6620" type="Weapon" name="Infinity Wing">
@@ -653,10 +662,11 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="532" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="638" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6621" type="Weapon" name="Infinity Spear">
@@ -679,17 +689,19 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="oncrit_chance" val="100" />
 		<set name="oncrit_skill" val="3592-1" />
 		<set name="item_skill" val="3591-1" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
 		<for>
-			<set order="0x08" stat="pAtk" val="437" />
-			<set order="0x08" stat="mAtk" val="192" />
+			<set order="0x08" stat="pAtk" val="524" />
+			<set order="0x08" stat="mAtk" val="230" />
 			<set order="0x08" stat="rCrit" val="8" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
 	<item id="6622" type="EtcItem" name="Giant's Codex">
@@ -935,7 +947,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="6649" type="EtcItem" name="Baby Cougar Chime">
 		<set name="icon" val="icon.etc_cougar_chime_i00" />
@@ -947,7 +962,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="6650" type="EtcItem" name="Baby Kookaburra Ocarina">
 		<set name="icon" val="icon.etc_kukaburo_ocarina_i00" />
@@ -959,18 +977,20 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="6651" type="EtcItem" name="Noblesse Gate Pass">
 		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
+		<set name="price" val="200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6652" type="EtcItem" name="Scroll: Protection of Valakas">
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
@@ -1026,8 +1046,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3558-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="71" />
-			<add order="0x40" stat="maxMp" val="31" />
+			<add order="0x10" stat="mDef" val="94" />
+			<add order="0x40" stat="maxMp" val="37" />
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1044,8 +1064,8 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3557-1" />
 		<for>
-			<add order="0x10" stat="mDef" val="95" />
-			<add order="0x40" stat="maxMp" val="42" />
+			<add order="0x10" stat="mDef" val="125" />
+			<add order="0x40" stat="maxMp" val="50" />
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1067,7 +1087,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6659" type="Armor" name="Zaken's Earring">
+	<item id="6659" type="Armor" name="Earring of Zaken">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />

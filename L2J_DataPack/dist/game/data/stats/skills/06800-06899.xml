@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6802" levels="1" name="Presentation - SSQ2 General Purpose 6">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6803" levels="1" name="Arena Haste">
+		<!-- Increases Atk. Spd. by 33% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6804" levels="1" name="Arena Wind Walk">
+		<!-- Increases Speed by 33 for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6805" levels="1" name="Arena Empower">
+		<!-- Increases M. Atk. by 75% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6806" levels="1" name="Arena Acumen">
+		<!-- Increases Casting Spd. by 30% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6807" levels="1" name="Arena Concentration">
+		<!-- Decreases magic cancel damage by 53 for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="6" abnormalType="cancel_prob_down">
+				<sub order="0x40" stat="cancel" val="53" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6808" levels="1" name="Arena Might">
+		<!-- Increases P. Atk. by 15% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6809" levels="1" name="Arena Guidance">
+		<!-- Increases accuracy by 4 for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6810" levels="1" name="Arena Focus">
+		<!-- Increases critical attack rate by 30% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6811" levels="1" name="Arena Death Whisper">
+		<!-- Increases critical attack effect by 35% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6812" levels="1" name="Arena Berserker Spirit">
+		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 5 minutes." -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="berserker">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<sub order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6813" levels="8" name="Focus Sonic">
+		<!-- H5 Skill -->
+		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
+		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
+		<set name="aggroPoints" val="200" /> <!-- Guess -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+		</for>
+	</skill>
+	<skill id="6814" levels="8" name="Focus Force">
+		<!-- H5 Skill -->
+		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
+		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
+		<set name="aggroPoints" val="150" /> <!-- Guess -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+		</for>
+	</skill>
+	<skill id="6815" levels="16" name="Deadly Poison">
+		<!-- "Poison seeps deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the poison will worsen." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6816" levels="16" name="Deadly Bleed">
+		<!-- "Bleed becomes deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the bleed will worsen." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6817" levels="1" name="Arena HP Recovery">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6818" levels="1" name="Powerful Rage">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6819" levels="1" name="Banshee's Curse">
+		<!-- "For 15 seconds, Atk. Spd. is decreased by 20%." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6820" levels="1" name="P. Def. Enhance">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6821" levels="1" name="P. Def. Decrease">
+		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6822" levels="1" name="P. Def. Decrease">
+		<!-- "For 4 seconds, P. Def. decreases by 40%." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6823" levels="1" name="Reflect Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6824" levels="1" name="Piercing Storm">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6825" levels="2" name="Bleed">
+		<!-- "For 8 seconds, inflicts bleed and decreases 120 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6826" levels="1" name="Critical Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6827" levels="1" name="Petrify">
+		<!-- "Inflicted with petrification, the body is rigid like stone for 30 seconds." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6828" levels="1" name="Dust Storm">
+		<!-- "For 30 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6829" levels="1" name="Vampiric Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6830" levels="1" name="Bleed">
+		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6831" levels="1" name="Blood Burst">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6832" levels="1" name="Summon Parasite Leech">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6833" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6834" levels="1" name="Range Magic Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6835" levels="1" name="Summon Skeleton">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6836" levels="1" name="Silence">
+		<!-- Magic skills are blocked. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6837" levels="1" name="Range Magic Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6838" levels="1" name="Self-destruction">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6839" levels="2" name="Power Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6840" levels="1" name="Paralysis">
+		<!-- Temporarily inflicted with paralysis and cannot move. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6841" levels="1" name="Summon Subordinate">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6842" levels="2" name="Enhance">
+		<!-- Atk. Spd. is increased by 40%. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6843" levels="1" name="Enhance">
+		<!-- Atk. Spd. is increased by 33%. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6844" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6845" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6846" levels="1" name="Vampiric Claw">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6847" levels="1" name="Self Heal">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6848" levels="1" name="Summoner Appearance">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6849" levels="1" name="Summoner Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6850" levels="1" name="Self-destruction">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6851" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6852" levels="1" name="Magic Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6853" levels="1" name="Sleep">
+		<!-- Inflicts sleep for 6 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6854" levels="1" name="Hold">
+		<!-- Temporarily inflicted with hold and unable to move. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6855" levels="1" name="Magic Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6856" levels="1" name="Heal">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6857" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6858" levels="1" name="Summon">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6859" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6860" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6861" levels="1" name="Enhance">
+		<!-- Increases P. Atk. by 20% and Atk. Spd. by 30%. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6862" levels="1" name="Poison">
+		<!-- "For 6 seconds, inflicts poison and decreases 100 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6863" levels="1" name="Poison">
+		<!-- "For 10 seconds, inflicts poison and decreases 120 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6864" levels="1" name="Summon">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6865" levels="1" name="Poison">
+		<!-- "For 8 seconds, inflicts bleed and decreases 100 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6866" levels="1" name="Vampiric Claw">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6867" levels="1" name="Magic Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6868" levels="1" name="Summon">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6869" levels="1" name="Detonate">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6870" levels="1" name="Vampiric Claw">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6871" levels="1" name="Range Magic Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6872" levels="1" name="Self-destruction">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6873" levels="2" name="Hex">
+		<!-- P. Def. is decreased by 33%. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6874" levels="1" name="Range Magic Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6875" levels="2" name="Poison">
+		<!-- "For 8 seconds, inflicts bleed and decreases 140 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6876" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6877" levels="1" name="Power Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6878" levels="1" name="Paralysis">
+		<!-- Temporarily inflicted with paralysis and cannot move. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6879" levels="1" name="Vampiric Claw">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6880" levels="1" name="Silence">
+		<!-- Magic skills are blocked. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6881" levels="1" name="Critical Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6882" levels="1" name="Petrify">
+		<!-- "Inflicted with petrification, the body is rigid like stone temporarily." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6883" levels="1" name="Energy Abundance Effect">
+		<!-- "For 5 minutes, energy is filled to stage 4. Returns to before as time goes on." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6884" levels="1" name="Morale Boost">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6885" levels="3" name="Morale Boost">
+		<!-- "The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +90, Critical Rate +50%, Critical Damage +15%, P. Atk. +15%, M. Atk. +15%, Atk. Spd. +15%, Casting Spd. +15%, and EXP bonus +20%." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6886" levels="1" name="Complete Recovery">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6887" levels="1" name="Fatal Strike">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6888" levels="1" name="Fatal Shot">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6889" levels="1" name="Range Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6890" levels="1" name="Bleed">
+		<!-- "For 10 seconds, inflicts bleed and decreases 100 HP every second." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6891" levels="1" name="Power Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6892" levels="1" name="Power Shot">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6893" levels="1" name="Power Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6894" levels="1" name="Power Shot">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6895" levels="1" name="Power Attack">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6896" levels="1" name="Power Shot">
+		<!-- none -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6897" levels="12" name="Shock">
+		<!-- Temporarily in shock and unable to move. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6898" levels="1" name="84 level Raid Boss">
+		<!-- "It was one of the dragons that was born out of the blood that was thrown up by Antharas. After swallowing the Ancient Weird Drake and absorbing its power, it quickly arose as a Commander that rules over the monsters nearby. It has good hearing but its vision is very poor, so it waits in a quiet, dark place, listening to an enemy's heartbeat, before swooping in for an attack." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6899" levels="1" name="84 level Raid Boss">
+		<!-- "It was one of the dragons that was born out of the blood that was thrown up by Antharas. It swallowed up its brethren and gained a greater power. Antharas, whose heart was filled with innate cruelty and madness of a Dust Rider, appointed him as the Valley's Eradicator and commanded him to build the Tower of Corpses." -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+</list>

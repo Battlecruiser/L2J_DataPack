@@ -32,6 +32,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_endolympiad',1,'true'),
 ('admin_setconfig',1,'false'),
 ('admin_config_server',1,'false'),
+('admin_gmon',1,'false'),
 
 -- ADMIN ANNOUNCEMENTS
 ('admin_list_announcements',1,'false'),
@@ -67,6 +68,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_stopallbuffs',1,'true'),
 ('admin_areacancel',1,'false'),
 ('admin_removereuse',1,'false'),
+('admin_switch_gm_buffs',1,'false'),
 
 -- ADMIN CACHE
 ('admin_cache_htm_rebuild',1,'false'),
@@ -149,6 +151,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_summon_setlvl',1,'false'),
 ('admin_show_pet_inv',1,'false'),
 ('admin_partyinfo',1,'false'),
+('admin_setnoble',1,'true'),
 
 -- ADMIN EDIT NPC
 ('admin_edit_npc',1,'false'),
@@ -607,4 +610,15 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- VOICE COMMANDS
 ('banchat', 7,'false'),
 ('debug',1,'false'),
-('unbanchat', 7,'false');
+('unbanchat', 7,'false'),
+
+-- SIEGABLE HALLS
+('admin_chsiege_siegablehall', 1, 'false'),
+('admin_chsiege_startSiege', 1, 'false'),
+('admin_chsiege_endsSiege', 1, 'false'),
+('admin_chsiege_setSiegeDate', 1, 'false'),
+('admin_chsiege_addAttacker', 1, 'false'),
+('admin_chsiege_removeAttacker', 1, 'false'),
+('admin_chsiege_listAttackers', 1, 'false'),
+('admin_chsiege_clearAttackers', 1, 'false'),
+('admin_chsiege_forwardSiege', 1, 'false');

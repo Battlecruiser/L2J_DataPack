@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="20600" type="Weapon" name="Twilight Staff - Dance of Shadow - 7 day limited period">
+	<item id="20600" type="Weapon" name="Twilight Staff - Dance of Shadow - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -25,7 +25,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20601" type="Armor" name="Anniversary Hat - Soul of Phoenix - 7 day limited period">
+	<item id="20601" type="Armor" name="Anniversary Hat - Soul of Phoenix - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -41,7 +41,7 @@
 		<set name="item_skill" val="21090-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20602" type="EtcItem" name="Soul Silver Foil - Event">
+	<item id="20602" type="EtcItem" name="Soul Silver Foil (Event)">
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -51,9 +51,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22099-1" />
 	</item>
-	<item id="20603" type="EtcItem" name="Soul Scent - Event">
+	<item id="20603" type="EtcItem" name="Soul Scent (Event)">
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -63,9 +64,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22100-1" />
 	</item>
-	<item id="20604" type="EtcItem" name="Low Class Certificate (Event)">
+	<item id="20604" type="EtcItem" name="Low-Class Certificate (Event)">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -76,7 +78,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20605" type="EtcItem" name="Mid Class Certificate (Event)">
+	<item id="20605" type="EtcItem" name="Mid-Class Certificate (Event)">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -87,7 +89,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20606" type="EtcItem" name="High Class Certificate (Event) - 8 hours limited time">
+	<item id="20606" type="EtcItem" name="High-Class Certificate (Event) - 8-hour limited period">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -111,6 +113,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20613,1,1,100" />
 	</item>
 	<item id="20608" type="EtcItem" name="Headphone Pack - Hero Theme">
@@ -125,6 +128,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20614,1,1,100" />
 	</item>
 	<item id="20609" type="EtcItem" name="Headphone Pack - Theme Park">
@@ -139,9 +143,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20615,1,1,100" />
 	</item>
-	<item id="20610" type="EtcItem" name="Headphone 7 day Pack - Town Theme : Great Adventurer's Soul Power">
+	<item id="20610" type="EtcItem" name="Headphone 7-Day Pack - Town Theme : Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -153,9 +158,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20616,1,1,100" />
 	</item>
-	<item id="20611" type="EtcItem" name="Headphone 7 day Pack - Hero Theme : Great Warrior's Soul Power">
+	<item id="20611" type="EtcItem" name="Headphone 7-Day Pack - Hero Theme : Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -167,9 +173,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20617,1,1,100" />
 	</item>
-	<item id="20612" type="EtcItem" name="Headphone 7 day Pack - Park theme : Great Wizard's Soul Power">
+	<item id="20612" type="EtcItem" name="Headphone 7-Day Pack - Park theme : Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -181,6 +188,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20618,1,1,100" />
 	</item>
 	<item id="20613" type="Armor" name="Headphone - Town Theme">
@@ -195,6 +203,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21092-1" />
 	</item>
 	<item id="20614" type="Armor" name="Headphone - Hero Theme">
@@ -209,6 +218,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21093-1" />
 	</item>
 	<item id="20615" type="Armor" name="Headphone - Park Theme">
@@ -223,9 +233,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21094-1" />
 	</item>
-	<item id="20616" type="Armor" name="Headphone - Town Theme - 7 day limited period">
+	<item id="20616" type="Armor" name="Headphone - Town Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -240,7 +251,7 @@
 		<set name="item_skill" val="21092-1;21111-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20617" type="Armor" name="Headphone - Hero Theme - 7 day limited period">
+	<item id="20617" type="Armor" name="Headphone - Hero Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -255,7 +266,7 @@
 		<set name="item_skill" val="21093-1;21112-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20618" type="Armor" name="Headphone - Park Theme - 7 day limited period">
+	<item id="20618" type="Armor" name="Headphone - Park Theme - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -270,7 +281,7 @@
 		<set name="item_skill" val="21094-1;21113-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20619" type="EtcItem" name="Female Weaver Agathion 24 Hour Pack - Flute Sound">
+	<item id="20619" type="EtcItem" name="Female Weaver Agathion 24-Hour Pack - Flute Sound">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -280,9 +291,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20621,1,1,100" />
 	</item>
-	<item id="20620" type="EtcItem" name="Female Weaver Agathion 3 Day Pack - Flute Sound">
+	<item id="20620" type="EtcItem" name="Female Weaver Agathion 3-Day Pack - Flute Sound">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -292,9 +304,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20622,1,1,100" />
 	</item>
-	<item id="20621" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 24 hours limited time">
+	<item id="20621" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 24-hour limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -311,7 +324,7 @@
 		<set name="item_skill" val="3267-1;21091-1;23078-1" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="20622" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 3 day limited time">
+	<item id="20622" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 3-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -354,7 +367,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="capsuled_items" val="20603,100,100,100" />
 	</item>
-	<item id="20625" type="EtcItem" name="Anniversary Hat 7 Day Pack - Resurrection">
+	<item id="20625" type="EtcItem" name="Anniversary Hat 7-Day Pack - Resurrection">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -366,9 +379,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20626,1,1,100" />
 	</item>
-	<item id="20626" type="Armor" name="Anniversary Hat - Resurrection - 7 day limited period">
+	<item id="20626" type="Armor" name="Anniversary Hat - Resurrection - 7-Day Limited Period">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -384,7 +398,7 @@
 		<set name="item_skill" val="21095-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20627" type="EtcItem" name="Summon of Love Bracelet 7 day pack">
+	<item id="20627" type="EtcItem" name="Summon of Love Bracelet 7-Day Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -396,9 +410,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20628,1,1,100" />
 	</item>
-	<item id="20628" type="Armor" name="Summon of Love Bracelet - 7 day limited period">
+	<item id="20628" type="Armor" name="Summon of Love Bracelet - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_ring_of_friendship_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -421,6 +436,7 @@
 		<set name="material" val="steel" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22101-1" />
 	</item>
 	<item id="20630" type="EtcItem" name="Soul Magic Box">
@@ -434,9 +450,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22102-1" />
 	</item>
-	<item id="20631" type="EtcItem" name="Laborer Hat 7 Day Pack">
+	<item id="20631" type="EtcItem" name="Laborer Hat 7-Day Pack">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -448,6 +465,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20633,1,1,100" />
 	</item>
 	<item id="20632" type="EtcItem" name="Watermelon Hat Pack">
@@ -462,9 +480,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20634,1,1,100" />
 	</item>
-	<item id="20633" type="Armor" name="Watermelon Hat - Ability of a Cool Watermelon - 7 day limited period">
+	<item id="20633" type="Armor" name="Watermelon Hat - Ability of a Cool Watermelon - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -505,7 +524,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="capsuled_items" val="8973,1,1,100;8977,1,1,100;9030,1,1,100;9031,1,1,100;9032,1,1,100;9033,1,1,100;9034,1,1,100;9035,1,1,100;21093,3,3,100;21094,3,3,100" />
 	</item>
-	<item id="20636" type="EtcItem" name="D Grade Fighter Support Pack">
+	<item id="20636" type="EtcItem" name="D-Grade Fighter Support Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -518,7 +537,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="capsuled_items" val="20639,1,1,100;20640,1,1,100;20641,1,1,100;20642,1,1,100;20643,1,1,100;20644,1,1,100;20645,1,1,100;20646,1,1,100;20647,1,1,100;20648,1,1,100" />
 	</item>
-	<item id="20637" type="EtcItem" name="D Grade Mage Support Pack">
+	<item id="20637" type="EtcItem" name="D-Grade Mage Support Pack">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -545,7 +564,7 @@
 		<set name="is_premium" val="true" />
 		<set name="capsuled_items" val="20415,1,1,100;21091,1,1,100;21092,1,1,100" />
 	</item>
-	<item id="20639" type="Weapon" name="Standard Item - Elven Long Sword">
+	<item id="20639" type="Weapon" name="Common Item - Elven Long Sword">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -570,7 +589,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20640" type="Weapon" name="Standard Item - Light Crossbow">
+	<item id="20640" type="Weapon" name="Common Item - Light Crossbow">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -584,7 +603,7 @@
 		<set name="weight" val="100" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="6" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -598,7 +617,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="20641" type="Weapon" name="Standard Item - Knight's Sword*Elven Sword">
+	<item id="20641" type="Weapon" name="Common Item - Knight's Sword*Elven Sword">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -623,7 +642,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20642" type="Armor" name="Standard Item - Mithril Gloves">
+	<item id="20642" type="Armor" name="Common Item - Mithril Gloves">
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -639,7 +658,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20643" type="Armor" name="Standard Item - Plate Boots">
+	<item id="20643" type="Armor" name="Common Item - Plate Boots">
 		<set name="icon" val="icon.armor_t46_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -655,7 +674,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20644" type="Armor" name="Standard Item - Plate Shield">
+	<item id="20644" type="Armor" name="Common Item - Plate Shield">
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -676,7 +695,7 @@
 			<set order="0x08" stat="sDef" val="154" />
 		</for>
 	</item>
-	<item id="20645" type="Armor" name="Standard Item - Plate Helmet">
+	<item id="20645" type="Armor" name="Common Item - Plate Helmet">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -692,7 +711,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="20646" type="Armor" name="Standard Item - Plate Gaiters">
+	<item id="20646" type="Armor" name="Common Item - Plate Gaiters">
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -712,7 +731,7 @@
 			<add order="0x10" stat="pDef" val="70" />
 		</for>
 	</item>
-	<item id="20647" type="Armor" name="Standard Item - Half Plate Armor">
+	<item id="20647" type="Armor" name="Common Item - Half Plate Armor">
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -732,7 +751,7 @@
 			<add order="0x10" stat="pDef" val="111" />
 		</for>
 	</item>
-	<item id="20648" type="Armor" name="Standard Item - Salamander Skin Mail">
+	<item id="20648" type="Armor" name="Common Item - Salamander Skin Mail">
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -749,7 +768,7 @@
 			<add order="0x10" stat="pDef" val="136" />
 		</for>
 	</item>
-	<item id="20649" type="Weapon" name="Standard Item - Ghost Staff">
+	<item id="20649" type="Weapon" name="Common Item - Ghost Staff">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -776,7 +795,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20650" type="Armor" name="Standard Item - Mithril Tunic">
+	<item id="20650" type="Armor" name="Common Item - Mithril Tunic">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -797,7 +816,7 @@
 			<add order="0x40" stat="maxMp" val="169" />
 		</for>
 	</item>
-	<item id="20651" type="Armor" name="Standard Item - Mithril Stockings">
+	<item id="20651" type="Armor" name="Common Item - Mithril Stockings">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -818,7 +837,7 @@
 			<add order="0x40" stat="maxMp" val="105" />
 		</for>
 	</item>
-	<item id="20652" type="Armor" name="Standard Item - Salamander Skin Boots">
+	<item id="20652" type="Armor" name="Common Item - Salamander Skin Boots">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -834,7 +853,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20653" type="Armor" name="Standard Item - Ogre Power Gauntlet">
+	<item id="20653" type="Armor" name="Common Item - Ogre Power Gauntlet">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -863,10 +882,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21105-1;23079-1" />
 	</item>
-	<item id="20655" type="Armor" name="Agathion Seal Bracelet - Chon-chon - Great Warrior's Soul Power - 7 days limited time">
+	<item id="20655" type="Armor" name="Agathion Seal Bracelet - Chon-chon - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -896,10 +916,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21106-1;23081-1" />
 	</item>
-	<item id="20657" type="Armor" name="Agathion Seal Bracelet - Tang-tang - Great Wizard's Soul Power - 7 days limited time">
+	<item id="20657" type="Armor" name="Agathion Seal Bracelet - Tang-tang - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -929,10 +950,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21107-1;23083-1" />
 	</item>
-	<item id="20659" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid - Great Adventurer's Soul Power - 7 days limited time">
+	<item id="20659" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -962,10 +984,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21108-1;23085-1" />
 	</item>
-	<item id="20661" type="Armor" name="Agathion Seal Bracelet - Monkey King - Great Wizard's Soul Power - 7 days limited time">
+	<item id="20661" type="Armor" name="Agathion Seal Bracelet - Monkey King - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -995,10 +1018,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21109-1;23087-1" />
 	</item>
-	<item id="20663" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion - Great Warrior's Soul Power - 7 days limited time">
+	<item id="20663" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1028,10 +1052,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21110-1;23089-1" />
 	</item>
-	<item id="20665" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion - Great Adventurer's Soul Power - 7 days limited time">
+	<item id="20665" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1061,8 +1086,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20667" type="Armor" name="Valkyrie Hat - Great Adventurer's Soul Power - 7 day limited time">
+	<item id="20667" type="Armor" name="Valkyrie Hat - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1091,8 +1117,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20669" type="Armor" name="Tiger Hat - Great Warrior's Soul Power - 7 days limited time">
+	<item id="20669" type="Armor" name="Tiger Hat - Great Warrior's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1121,8 +1148,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20671" type="Armor" name="Maid Hairband - Great Wizard's Soul Power - 7 days limited time">
+	<item id="20671" type="Armor" name="Maid Hairband - Great Wizard's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1151,8 +1179,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20673" type="Armor" name="Baby Panda Hat - Blessed Escape - 7 day limited period">
+	<item id="20673" type="Armor" name="Baby Panda Hat - Blessed Escape - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1181,8 +1210,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20675" type="Armor" name="Bamboo Panda Hat - Great Adventurer's Soul Power - 7 days limited time">
+	<item id="20675" type="Armor" name="Bamboo Panda Hat - Great Adventurer's Soul Power - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1211,8 +1241,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20677" type="Armor" name="Sexy Panda Hat - Blessed Resurrection - 7 day limited period">
+	<item id="20677" type="Armor" name="Sexy Panda Hat - Blessed Resurrection - 7-day limited period">
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1228,7 +1259,7 @@
 		<set name="item_skill" val="21102-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20678" type="Armor" name="Gate Keeper Hat">
+	<item id="20678" type="Armor" name="Gatekeeper Hat">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1241,8 +1272,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20679" type="Armor" name="Gate Keeper Hat - Destroy Instinct - 7 day limited period">
+	<item id="20679" type="Armor" name="Gatekeeper Hat - Destroy Instinct - 7-day limited period ">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1270,9 +1302,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20654,1,1,100" />
 	</item>
-	<item id="20681" type="EtcItem" name="Chon-chon Agathion 7 Day Pack - Great Warrior's Soul Power">
+	<item id="20681" type="EtcItem" name="Chon-chon Agathion 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1284,6 +1317,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20655,1,1,100" />
 	</item>
 	<item id="20682" type="EtcItem" name="Tang-tang Agathion Pack">
@@ -1298,9 +1332,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20656,1,1,100" />
 	</item>
-	<item id="20683" type="EtcItem" name="Tang-tang Agathion 7 Day Pack - Great Wizard's Soul Power">
+	<item id="20683" type="EtcItem" name="Tang-tang Agathion 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1312,6 +1347,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20657,1,1,100" />
 	</item>
 	<item id="20684" type="EtcItem" name="Dancing Lucky Kid Agathion Pack">
@@ -1326,6 +1362,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20658,1,1,100" />
 	</item>
 	<item id="20685" type="EtcItem" name="Dancing Lucky Kid Agathion Pack (7 day) - Great Adventurer's Soul Power">
@@ -1340,6 +1377,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20659,1,1,100" />
 	</item>
 	<item id="20686" type="EtcItem" name="Monkey King Agathion Pack">
@@ -1354,9 +1392,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20660,1,1,100" />
 	</item>
-	<item id="20687" type="EtcItem" name="Monkey King Agathion 7 Day Pack - Great Wizard's Soul Power">
+	<item id="20687" type="EtcItem" name="Monkey King Agathion 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1368,6 +1407,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20661,1,1,100" />
 	</item>
 	<item id="20688" type="EtcItem" name="Utanka Agathion Pack">
@@ -1382,9 +1422,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20662,1,1,100" />
 	</item>
-	<item id="20689" type="EtcItem" name="Utanka Agathion 7 Day Pack - Great Warrior's Soul Power">
+	<item id="20689" type="EtcItem" name="Utanka Agathion 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1396,6 +1437,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20663,1,1,100" />
 	</item>
 	<item id="20690" type="EtcItem" name="Bonus B Agathion Pack">
@@ -1410,6 +1452,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20664,1,1,100" />
 	</item>
 	<item id="20691" type="EtcItem" name="Bonus B Agathion 7-day Pack - Great Adventurer's Soul Power">
@@ -1424,6 +1467,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20665,1,1,100" />
 	</item>
 	<item id="20692" type="EtcItem" name="Valkyrie Hat Pack">
@@ -1438,9 +1482,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20666,1,1,100" />
 	</item>
-	<item id="20693" type="EtcItem" name="Valkyrie Hat 7 Day Pack - Great Adventurer's Soul Power">
+	<item id="20693" type="EtcItem" name="Valkyrie Hat 7-Day Pack - Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1452,6 +1497,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20667,1,1,100" />
 	</item>
 	<item id="20694" type="EtcItem" name="Tiger Hat Pack">
@@ -1466,9 +1512,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20668,1,1,100" />
 	</item>
-	<item id="20695" type="EtcItem" name="Tiger Hat 7 Day Pack - Great Warrior's Soul Power">
+	<item id="20695" type="EtcItem" name="Tiger Hat 7-Day Pack - Great Warrior's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1480,6 +1527,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20669,1,1,100" />
 	</item>
 	<item id="20696" type="EtcItem" name="Maid Hairband Pack">
@@ -1494,9 +1542,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20670,1,1,100" />
 	</item>
-	<item id="20697" type="EtcItem" name="Maid Hairband 7 day Pack - Great Wizard's Soul Power">
+	<item id="20697" type="EtcItem" name="Maid Hairband 7-Day Pack - Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1508,6 +1557,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20671,1,1,100" />
 	</item>
 	<item id="20698" type="EtcItem" name="Baby Panda Hat Pack">
@@ -1522,9 +1572,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20672,1,1,100" />
 	</item>
-	<item id="20699" type="EtcItem" name="Agathion of Baby Panda 7 Day Pack - Blessing of Escape">
+	<item id="20699" type="EtcItem" name="Agathion of Baby Panda 7-Day Pack - Blessing of Escape ">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1536,6 +1587,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="capsuled_items" val="20673,1,1,100" />
 	</item>
 </list>

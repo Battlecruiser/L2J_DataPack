@@ -58,9 +58,11 @@
 		</for>
 	</skill>
 	<skill id="805" levels="1" name="not used">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="806" levels="1" name="Magic Obstacle">
 		<set name="mpConsume" val="49" />
@@ -104,6 +106,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
@@ -217,7 +220,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="815" levels="43" name="Blade Hurricane">
 		<!-- Vanguard Stance Skill -->
@@ -238,7 +243,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 	</skill>
 	<skill id="816" levels="43" name="Cleave">
 		<!-- Vanguard Stance Skill -->
@@ -262,7 +269,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword,Big Blunt" />
+		</cond>
 	</skill>
 	<skill id="817" levels="43" name="Double Strike">
 		<!-- Vanguard Stance Skill -->
@@ -284,8 +293,10 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="nextActionAttack" val="true" />
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword" />
+		</cond>
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
 		<set name="magicLvl" val="74" />
@@ -397,10 +408,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</mul>
@@ -420,10 +431,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
@@ -443,10 +454,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Bow,Crossbow" />
 				</mul>
@@ -466,10 +477,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using kind="Heavy" />
 				</mul>
@@ -486,10 +497,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Light" />
 				</mul>
@@ -509,10 +520,10 @@
 		<set name="coolTime" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Magic" />
 				</mul>
@@ -532,7 +543,7 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<!-- Summon-specific -->
-		<set name="summonTotalLifeTime" val="180000" /> <!-- FIXME: This don't have life time for spawn in retail, probably should dissapear when all items are selled -->
+		<set name="summonTotalLifeTime" val="180000" /> <!-- FIXME: This don't have life time for spawn in retail, probably should dissapear when all items are sold -->
 		<set name="summonTimeLostIdle" val="1000" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="13128" />
@@ -594,10 +605,11 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="MDOT" />
+		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="poison" effectType="POISON" />
+			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="bleed" effectType="BLEED" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -726,10 +738,16 @@
 		</for>
 	</skill>
 	<skill id="843" levels="1" name="Shooting Star">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="3480" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="844" levels="1" name="Outpost Construction">
 		<set name="mpInitialConsume" val="30" />
@@ -1241,6 +1259,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
@@ -1320,6 +1339,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -1384,6 +1404,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
 		</for>
@@ -1407,6 +1428,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
 		</for>
@@ -1617,6 +1639,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pDef" val="0.6" />

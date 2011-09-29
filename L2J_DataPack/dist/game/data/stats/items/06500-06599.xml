@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="6521" type="EtcItem" name="Green Colored Lure - High Grade">
+	<item id="6521" type="EtcItem" name="Green Colored Lure (High Grade)">
 		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="6524" type="EtcItem" name="Purple Colored Lure - High Grade">
+	<item id="6524" type="EtcItem" name="Purple Colored Lure (High Grade)">
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="6527" type="EtcItem" name="Yellow Colored Lure - High Grade">
+	<item id="6527" type="EtcItem" name="Yellow Colored Lure (High Grade)">
 		<set name="icon" val="icon.etc_bait_i02" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -483,7 +483,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6535" type="EtcItem" name="Fishing Shot: non-grade">
+	<item id="6535" type="EtcItem" name="Fishing Shot (No-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i00" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -495,7 +495,7 @@
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2181-1" />
 	</item>
-	<item id="6536" type="EtcItem" name="Fishing Shot: D-grade">
+	<item id="6536" type="EtcItem" name="Fishing Shot (D-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i01" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -508,7 +508,7 @@
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2182-1" />
 	</item>
-	<item id="6537" type="EtcItem" name="Fishing Shot: C-grade">
+	<item id="6537" type="EtcItem" name="Fishing Shot (C-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i02" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -521,7 +521,7 @@
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2183-1" />
 	</item>
-	<item id="6538" type="EtcItem" name="Fishing Shot: B-grade">
+	<item id="6538" type="EtcItem" name="Fishing Shot (B-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i03" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -534,7 +534,7 @@
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2184-1" />
 	</item>
-	<item id="6539" type="EtcItem" name="Fishing Shot: A-grade">
+	<item id="6539" type="EtcItem" name="Fishing Shot (A-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i04" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -547,7 +547,7 @@
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2185-1" />
 	</item>
-	<item id="6540" type="EtcItem" name="Fishing Shot: S-grade">
+	<item id="6540" type="EtcItem" name="Fishing Shot (S-Grade)">
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
 		<set name="default_action" val="fishingshot" />
 		<set name="immediate_effect" val="1" />
@@ -784,7 +784,7 @@
 		<set name="price" val="2750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6569" type="EtcItem" name="Blessed Scroll: Enchant Weapon (A)">
+	<item id="6569" type="EtcItem" name="Blessed Scroll: Enchant Weapon (A-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_wp" />
@@ -797,7 +797,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2027-1" />
 	</item>
-	<item id="6570" type="EtcItem" name="Blessed Scroll: Enchant Armor (A)">
+	<item id="6570" type="EtcItem" name="Blessed Scroll: Enchant Armor (A-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_am" />
@@ -810,7 +810,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2209-1" />
 	</item>
-	<item id="6571" type="EtcItem" name="Blessed Scroll: Enchant Weapon (B)">
+	<item id="6571" type="EtcItem" name="Blessed Scroll: Enchant Weapon (B-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_wp" />
@@ -823,7 +823,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2028-1" />
 	</item>
-	<item id="6572" type="EtcItem" name="Blessed Scroll: Enchant Armor (B)">
+	<item id="6572" type="EtcItem" name="Blessed Scroll: Enchant Armor (B-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_am" />
@@ -836,7 +836,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2210-1" />
 	</item>
-	<item id="6573" type="EtcItem" name="Blessed Scroll: Enchant Weapon (C)">
+	<item id="6573" type="EtcItem" name="Blessed Scroll: Enchant Weapon (C-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_wp" />
@@ -849,7 +849,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2029-1" />
 	</item>
-	<item id="6574" type="EtcItem" name="Blessed Scroll: Enchant Armor (C)">
+	<item id="6574" type="EtcItem" name="Blessed Scroll: Enchant Armor (C-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_am" />
@@ -862,7 +862,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2211-1" />
 	</item>
-	<item id="6575" type="EtcItem" name="Blessed Scroll: Enchant Weapon (D)">
+	<item id="6575" type="EtcItem" name="Blessed Scroll: Enchant Weapon (D-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_wp" />
@@ -875,7 +875,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2030-1" />
 	</item>
-	<item id="6576" type="EtcItem" name="Blessed Scroll: Enchant Armor (D)">
+	<item id="6576" type="EtcItem" name="Blessed Scroll: Enchant Armor (D-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_am" />
@@ -888,7 +888,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2212-1" />
 	</item>
-	<item id="6577" type="EtcItem" name="Blessed Scroll: Enchant Weapon (S)">
+	<item id="6577" type="EtcItem" name="Blessed Scroll: Enchant Weapon (S-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_wp" />
@@ -901,7 +901,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2026-1" />
 	</item>
-	<item id="6578" type="EtcItem" name="Blessed Scroll: Enchant Armor (S)">
+	<item id="6578" type="EtcItem" name="Blessed Scroll: Enchant Armor (S-Grade)">
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="bless_scrl_enchant_am" />
@@ -1341,7 +1341,7 @@
 		<set name="price" val="48800000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -1376,7 +1376,7 @@
 		<set name="price" val="48800000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -1406,7 +1406,7 @@
 		<set name="price" val="48800000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />

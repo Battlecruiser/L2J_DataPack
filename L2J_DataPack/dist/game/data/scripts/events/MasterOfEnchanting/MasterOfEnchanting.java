@@ -14,6 +14,8 @@
  */
 package events.MasterOfEnchanting;
 
+import java.util.Date;
+
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -46,6 +48,9 @@ public class MasterOfEnchanting extends Quest
 	private static final int[] _hat_shadow_reward	= { 13074, 13075, 13076 };
 	private static final int[] _hat_event_reward	= { 13518, 13519, 13522 };
 	private static final int[] _crystal_reward 		= { 9570, 9571, 9572 };
+	
+	@SuppressWarnings("deprecation")
+	private static final Date _eventStart = new Date(2009, 7, 1); 
 	
 	private static final int[][] _spawns =
 	{
@@ -120,10 +125,9 @@ public class MasterOfEnchanting extends Quest
 			long _curr_time = System.currentTimeMillis();
 			String value = q.loadGlobalQuestVar(player.getAccountName());
 			long _reuse_time = value == "" ? 0 : Long.parseLong(value);
-			if( player.getCreateTime() > Long.parseLong("1246913000000"))
-			{
+			if(player.getCreateDate().after(_eventStart))
 				return "32599-bidth.htm";
-			}
+			
 			if (_curr_time > _reuse_time)
 			{
 				if (st.getQuestItemsCount(_adena) > _scroll_24_price)

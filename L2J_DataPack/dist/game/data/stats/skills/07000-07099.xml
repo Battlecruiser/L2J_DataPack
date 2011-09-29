@@ -803,6 +803,7 @@
 		<set name="hitTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="200" />
+		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
@@ -816,6 +817,7 @@
 		<set name="coolTime" val="200" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="BLEED" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
@@ -891,11 +893,13 @@
 		<set name="coolTime" val="720" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="7077" levels="1" name="Test - Delay Debuff - Call">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="7078" levels="1" name="Test - Blink">
 		<set name="target" val="TARGET_NONE" />
@@ -906,6 +910,7 @@
 		<set name="coolTime" val="200" />
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
 		<set name="target" val="TARGET_NONE" />

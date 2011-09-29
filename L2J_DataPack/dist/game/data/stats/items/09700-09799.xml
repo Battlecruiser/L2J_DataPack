@@ -22,6 +22,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-8" />
 	</item>
 	<item id="9702" type="EtcItem" name="Caravaner's Remedy">
@@ -146,6 +147,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2354-1" />
 	</item>
 	<item id="9715" type="EtcItem" name="Giant Key">
@@ -155,6 +157,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2355-1" />
 	</item>
 	<item id="9716" type="EtcItem" name="Scroll of Escape: Kamael Village">
@@ -168,7 +171,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="9717" type="EtcItem" name="Information on Eranus">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
@@ -515,7 +520,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="9750" type="EtcItem" name="Venomous Spider Leg">
+	<item id="9750" type="EtcItem" name="Venomous Spider's Leg">
 		<set name="icon" val="icon.etc_sting_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -930,7 +935,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="9791" type="EtcItem" name="Transform Sealbook - Onyx Beast">
+	<item id="9791" type="EtcItem" name="Transformation Sealbook: Onyx Beast">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />

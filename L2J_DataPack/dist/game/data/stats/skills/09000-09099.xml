@@ -51,11 +51,21 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="9010" levels="1" name="Cool air cannon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="1000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1300" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="109">
+			<target npcId="13270" />
+		</cond>
 	</skill>
 	<skill id="9011" levels="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
@@ -655,9 +665,6 @@
 		<set name="staticReuse" val="true" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="2" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -674,9 +681,6 @@
 		<set name="staticReuse" val="true" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="1800000" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -898,6 +902,7 @@
 		</cond>
 	</skill>
 	<skill id="9088" levels="1" name="Cupid's Arrow">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -905,6 +910,7 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9089" levels="1" name="Cupid's Major Cure">
+		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

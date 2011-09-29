@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -43,13 +44,13 @@ public class FreyaCelebration extends Quest
 	
 	private static final int[] _skills = { 9150, 9151, 9152, 9153, 9154, 9155, 9156 };
 	
-	private static final String[] _freya_texts =
+	private static final NpcStringId[] _freya_texts =
 	{
-		"It has been so long since I have felt this... I almost miss it.",
-		"I have no idea what I'm feeling right now.  Are all human emotions like this?",
-		"You humans bring me such nonsense... a gift.  I have no need of such things.",
-		"I would 'appreciate' this, however it has been far too long since I have felt appreciation for anything.",
-		" I am Freya the Ice Queen!  Feelings and emotions of Felicia are nothing but memories to me."
+		NpcStringId.EVEN_THOUGH_YOU_BRING_SOMETHING_CALLED_A_GIFT_AMONG_YOUR_HUMANS_IT_WOULD_JUST_BE_PROBLEMATIC_FOR_ME,
+		NpcStringId.I_JUST_DONT_KNOW_WHAT_EXPRESSION_I_SHOULD_HAVE_IT_APPEARED_ON_ME_ARE_HUMANS_EMOTIONS_LIKE_THIS_FEELING,
+		NpcStringId.THE_FEELING_OF_THANKS_IS_JUST_TOO_MUCH_DISTANT_MEMORY_FOR_ME,
+		NpcStringId.BUT_I_KIND_OF_MISS_IT_LIKE_I_HAD_FELT_THIS_FEELING_BEFORE,
+		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
 	
 	private static final int[][] _spawns = {
@@ -141,7 +142,11 @@ public class FreyaCelebration extends Quest
 		{
 			if (Rnd.get(100) < 5)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), "Dear " + caster.getName() + "... I want to express my appreciation for the gift. Take this with you. Why are you shocked? I'm a very generous person."));
+				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
+				cs.addStringParameter(caster.getName());
+
+				npc.broadcastPacket(cs);
+
 				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
 			}
 			else

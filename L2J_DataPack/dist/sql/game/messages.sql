@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `isDeletedBySender` enum('true','false') DEFAULT 'false' NOT NULL,
   `isDeletedByReceiver` enum('true','false') DEFAULT 'false' NOT NULL,
   `isLocked` enum('true','false') DEFAULT 'false' NOT NULL,
-  `isFourStars` enum('true','false') DEFAULT 'false' NOT NULL,
-  `isNews` enum('true','false') DEFAULT 'false' NOT NULL,
+  `sendBySystem` tinyint(1) NOT NULL DEFAULT 0,
+  `isReturned` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`messageId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

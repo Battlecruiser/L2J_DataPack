@@ -346,7 +346,7 @@
 		<set name="is_premium" val="true" />
 		<set name="capsuled_items" val="13016,10,10,100" />
 	</item>
-	<item id="13126" type="EtcItem" name="Vitamin Experience Pack - used for events">
+	<item id="13126" type="EtcItem" name="Dimensional Experience Pack - used for events">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -371,6 +371,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13128" type="EtcItem" name="Phoenix Feather">
 		<set name="icon" val="icon.etc_feather_gold_i00" />
@@ -384,9 +385,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2013-1" />
 	</item>
-	<item id="13129" type="EtcItem" name="Pailaka Scroll of Escape">
+	<item id="13129" type="EtcItem" name="Scroll of Escape: Pailaka">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -752,7 +755,7 @@
 			<player instanceId="44" />
 		</cond>
 	</item>
-	<item id="13151" type="EtcItem" name="Pailaka Energy Replenishing Potion (100%)">
+	<item id="13151" type="EtcItem" name="Pailaka Vitality Replenishing Potion (100%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -764,12 +767,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13152" type="EtcItem" name="Pailaka Energy Replenishing Potion (50%)">
+	<item id="13152" type="EtcItem" name="Pailaka Vitality Replenishing Potion (50%)">
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -781,12 +785,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13153" type="Weapon" name="For PC cafe use - Great Spear - Weapons for PC Cafe Use">
+	<item id="13153" type="Weapon" name="For PC Cafe - Great Spear - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -813,7 +818,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13154" type="Weapon" name="For PC cafe use - Falchion - Weapons for PC Cafe Use">
+	<item id="13154" type="Weapon" name="For PC Cafe - Falchion - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -838,7 +843,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13155" type="Weapon" name="For PC cafe use - Iron Hammer - Weapons for PC Cafe Use">
+	<item id="13155" type="Weapon" name="For PC Cafe - Iron Hammer - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -864,7 +869,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13156" type="Weapon" name="For PC cafe use - Voodoo Doll - Weapons for PC Cafe Use">
+	<item id="13156" type="Weapon" name="For PC Cafe - Voodoo Doll - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="etc" />
@@ -890,7 +895,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13157" type="Weapon" name="For PC cafe use - Flanged Mace - Weapons for PC Cafe Use">
+	<item id="13157" type="Weapon" name="For PC Cafe - Flanged Mace - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -916,7 +921,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13158" type="Weapon" name="For PC Cafe Use - Mage's Wand - Weapons for PC Cafe Use">
+	<item id="13158" type="Weapon" name="For PC Cafe - Mage's Wand - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -943,7 +948,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13159" type="Weapon" name="For PC Cafe Use - Sword Breaker - Weapons for PC Cafe Use">
+	<item id="13159" type="Weapon" name="For PC Cafe - Sword Breaker - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -969,7 +974,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="13160" type="Weapon" name="For PC Cafe Use - Viper Fang - Weapons for PC Cafe Use">
+	<item id="13160" type="Weapon" name="For PC Cafe - Viper Fang - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -995,7 +1000,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13161" type="Weapon" name="For PC Cafe Use - Compound Bow - Weapons for PC Cafe Use">
+	<item id="13161" type="Weapon" name="For PC Cafe - Compound Bow - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1008,7 +1013,7 @@
 		<set name="weight" val="1880" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1023,7 +1028,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="13162" type="Weapon" name="For PC Cafe Use - Crucifix of Blessing - Weapons for PC Cafe Use">
+	<item id="13162" type="Weapon" name="For PC Cafe - Crucifix of Blessing - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="etc" />
@@ -1049,7 +1054,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13163" type="Weapon" name="For PC Cafe Use - Bastard*Crimson Sword - Weapons for PC Cafe Use">
+	<item id="13163" type="Weapon" name="For PC Cafe - Bastard*Crimson Sword - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1078,7 +1083,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13164" type="Weapon" name="For PC cafe use - Claymore - Weapons for PC Cafe Use">
+	<item id="13164" type="Weapon" name="For PC Cafe - Claymore - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1107,7 +1112,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13165" type="Weapon" name="For PC cafe use - Bonebreaker - Weapons for PC Cafe Use">
+	<item id="13165" type="Weapon" name="For PC Cafe - Bonebreaker - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1137,7 +1142,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13166" type="Weapon" name="For PC Cafe Use - Atuba Hammer - Weapons for PC Cafe Use">
+	<item id="13166" type="Weapon" name="For PC Cafe - Atuba Hammer - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1168,7 +1173,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13167" type="Weapon" name="For PC Cafe Use - Ghost's Wand - Weapons for PC Cafe Use">
+	<item id="13167" type="Weapon" name="For PC Cafe - Ghost's Wand - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1199,7 +1204,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13168" type="Weapon" name="For PC Cafe Use - Hall of Life - Weapons for PC Cafe Use">
+	<item id="13168" type="Weapon" name="For PC Cafe - Hall of Life - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1230,7 +1235,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13169" type="Weapon" name="For PC cafe use - Atuba Mace - Weapons for PC Cafe Use">
+	<item id="13169" type="Weapon" name="For PC Cafe - Atuba Mace - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1261,7 +1266,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13170" type="Weapon" name="For PC Cafe USE - Mithril Dagger - Weapons for PC Cafe Use">
+	<item id="13170" type="Weapon" name="For PC Cafe - Mithril Dagger - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1291,7 +1296,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13171" type="Weapon" name="For PC Cafe Use - Scallop Jamadhr - Weapons for PC Cafe Use">
+	<item id="13171" type="Weapon" name="For PC Cafe - Scallop Jamadhr - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1321,7 +1326,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13172" type="Weapon" name="For PC cafe use - Crossbow - Weapons for PC Cafe Use">
+	<item id="13172" type="Weapon" name="For PC Cafe - Crossbow - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1335,7 +1340,7 @@
 		<set name="weight" val="1810" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="6" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1353,7 +1358,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13173" type="Weapon" name="For PC cafe use - Glaive - Weapons for PC Cafe Use">
+	<item id="13173" type="Weapon" name="For PC Cafe - Glaive - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1384,7 +1389,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13174" type="Weapon" name="For PC Cafe Use - Elven Long Sword - Weapons for PC Cafe Use">
+	<item id="13174" type="Weapon" name="For PC Cafe - Elven Long Sword - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1413,7 +1418,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13175" type="Weapon" name="For PC Cafe Use - Grand Épée - Weapons for PC Cafe Use">
+	<item id="13175" type="Weapon" name="For PC Cafe - Grand Épée - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1447,7 +1452,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13176" type="Weapon" name="For PC Cafe Use - General Katzbalger - Weapons for PC Cafe Use">
+	<item id="13176" type="Weapon" name="For PC Cafe - General  Katzbalger - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1480,7 +1485,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13177" type="Weapon" name="For PC Cafe Use - Cranequin - Weapons for PC Cafe Use">
+	<item id="13177" type="Weapon" name="For PC Cafe - Cranequin - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1514,7 +1519,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13178" type="Weapon" name="For PC Cafe Use - Samurai Long Sword - Weapons for PC Cafe Use">
+	<item id="13178" type="Weapon" name="For PC Cafe - Samurai Long Sword - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1544,7 +1549,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13179" type="Weapon" name="For PC Cafe Use - Ghost's Wand - Weapons for PC Cafe Use">
+	<item id="13179" type="Weapon" name="For PC Cafe - Ghost's Wand - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1577,7 +1582,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13180" type="Weapon" name="For PC Cafe Use - Ghoul's Wand - Weapons for PC Cafe Use">
+	<item id="13180" type="Weapon" name="For PC Cafe - Ghoul's Wand - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1609,7 +1614,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13181" type="Weapon" name="For PC Cafe Use - Devil's Wand - Weapons for PC Cafe Use">
+	<item id="13181" type="Weapon" name="For PC Cafe - Devil's Wand - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1642,7 +1647,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13182" type="Weapon" name="For PC Cafe USE - Crystal Dagger - Weapons for PC Cafe Use">
+	<item id="13182" type="Weapon" name="For PC Cafe - Crystal Dagger - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1673,7 +1678,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13183" type="Weapon" name="For PC cafe use - Great Pata - Weapons for PC Cafe Use">
+	<item id="13183" type="Weapon" name="For PC Cafe - Great Pata - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1704,7 +1709,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13184" type="Weapon" name="For PC cafe use - Eminence Bow - Weapons for PC Cafe Use">
+	<item id="13184" type="Weapon" name="For PC Cafe - Eminence Bow - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1718,7 +1723,7 @@
 		<set name="weight" val="1720" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="8" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1737,7 +1742,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13185" type="Weapon" name="For PC Cafe Use - Orcish Poleaxe - Weapons for PC Cafe Use">
+	<item id="13185" type="Weapon" name="For PC Cafe - Orcish Poleaxe - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1768,7 +1773,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13186" type="Weapon" name="For PC cafe use - Yaksa Mace - Weapons for PC Cafe Use">
+	<item id="13186" type="Weapon" name="For PC Cafe - Yaksa Mace - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1799,7 +1804,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13187" type="Weapon" name="For PC Cafe Use - Shamshir*Shamshir - Weapons for PC Cafe Use">
+	<item id="13187" type="Weapon" name="For PC Cafe - Shamshir*Shamshir - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1829,7 +1834,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13188" type="Weapon" name="PC Cafe Use - Admiral's Estoc - Weapons for PC Cafe Use">
+	<item id="13188" type="Weapon" name="For PC Cafe - Admiral's Estoc - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1864,7 +1869,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13189" type="Weapon" name="For PC cafe use - Saber Tooth - Weapons for PC Cafe Use">
+	<item id="13189" type="Weapon" name="For PC Cafe - Saber Tooth - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1898,7 +1903,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13190" type="Weapon" name="For PC Cafe Use - Sharpshooter - Weapons for PC Cafe Use">
+	<item id="13190" type="Weapon" name="For PC Cafe - Sharpshooter - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1933,7 +1938,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13191" type="Weapon" name="For PC Cafe Use - Ecliptic Sword - Weapons for PC Cafe Use">
+	<item id="13191" type="Weapon" name="For PC Cafe - Ecliptic Sword - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1964,7 +1969,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13192" type="Weapon" name="For PC Cafe Use - Ecliptic Axe - Weapons for PC Cafe Use">
+	<item id="13192" type="Weapon" name="For PC Cafe - Ecliptic Axe - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1997,7 +2002,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13193" type="Weapon" name="For PC Cafe Use - Dwarven Hammer - Weapons for PC Cafe Use">
+	<item id="13193" type="Weapon" name="For PC Cafe - Dwarven Hammer - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2028,7 +2033,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13194" type="Weapon" name="For PC Cafe Use - Damascus Sword - Weapons for PC Cafe Use">
+	<item id="13194" type="Weapon" name="For PC Cafe - Damascus Sword - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2058,7 +2063,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13195" type="Weapon" name="For PC cafe use - Lance - Weapons for PC Cafe Use">
+	<item id="13195" type="Weapon" name="For PC Cafe - Lance - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2090,7 +2095,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13196" type="Weapon" name="For PC Cafe Use - Deadman's Glory - Weapons for PC Cafe Use">
+	<item id="13196" type="Weapon" name="For PC Cafe - Deadman's Glory - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2121,7 +2126,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13197" type="Weapon" name="For PC Cafe Use - Art of Battle Axe - Weapons for PC Cafe Use">
+	<item id="13197" type="Weapon" name="For PC Cafe - Art of Battle Axe - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2152,7 +2157,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13198" type="Weapon" name="For PC Cafe Use - Staff of Evil Spirits - Weapons for PC Cafe Use">
+	<item id="13198" type="Weapon" name="For PC Cafe - Staff of Evil Spirits - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2185,7 +2190,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13199" type="Weapon" name="For PC Cafe USE - Devil's Dagger - Weapons for PC Cafe Use">
+	<item id="13199" type="Weapon" name="For PC Cafe - Devil's Dagger - Weapons For PC Cafe">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />

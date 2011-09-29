@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="8400" levels="1" name="Vorpal Armor Set">
-		<!-- Confirmed CT2.5 -->
+	<skill id="8400" levels="1" name="Vorpal Heavy Armor Set">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -20,11 +20,13 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8401" levels="1" name="Vorpal Leather Armor Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -37,16 +39,18 @@
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun +50% -->
 			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+			<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8402" levels="1" name="Vorpal Robe Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -63,6 +67,8 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -113,7 +119,7 @@
 		</for>
 	</skill>
 	<skill id="8405" levels="1" name="Elegia Robe Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -130,6 +136,9 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -201,8 +210,8 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="8409" levels="1" name="Vorpal Armor Set - PvP">
-		<!-- Confirmed CT2.5 -->
+	<skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PvP">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -221,6 +230,8 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
@@ -228,7 +239,7 @@
 		</for>
 	</skill>
 	<skill id="8410" levels="1" name="Vorpal Leather Armor Set - PvP">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -241,11 +252,13 @@
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun +50% -->
 			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+			<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
@@ -253,7 +266,7 @@
 		</for>
 	</skill>
 	<skill id="8411" levels="1" name="Vorpal Robe Set - PvP">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -270,6 +283,8 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
@@ -329,7 +344,7 @@
 		</for>
 	</skill>
 	<skill id="8414" levels="1" name="Elegia Robe Set - PvP">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -346,6 +361,9 @@
 			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
 			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
 			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->

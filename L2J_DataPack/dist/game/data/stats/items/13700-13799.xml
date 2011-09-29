@@ -13,7 +13,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2926-1" />
 	</item>
-	<item id="13701" type="EtcItem" name="Goddard Supply Box - Magic Pin - Grade B, C">
+	<item id="13701" type="EtcItem" name="Goddard Supply Box: Magic Pin - Grade B, C">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -130,7 +130,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2935-1" />
 	</item>
-	<item id="13710" type="EtcItem" name="Goddard Supply Box - Magic Pouch - Grade B, C">
+	<item id="13710" type="EtcItem" name="Goddard Supply Box: Magic Pouch - Grade B, C">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -247,7 +247,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2944-1" />
 	</item>
-	<item id="13719" type="EtcItem" name="Goddard Supply Box - Belt - Grade B, C">
+	<item id="13719" type="EtcItem" name="Goddard Supply Box: Belt - Grade B, C">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -298,7 +298,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13723" type="EtcItem" name="Design - High Quality MP Recovery Stone">
+	<item id="13723" type="EtcItem" name="Design: High Quality MP Recovery Stone">
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -310,7 +310,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13724" type="EtcItem" name="Design - High Quality HP MP Recovery Stone">
+	<item id="13724" type="EtcItem" name="Design: High Quality HP MP Recovery Stone">
 		<set name="icon" val="icon.scroll_of_verification_i02" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -322,7 +322,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13725" type="EtcItem" name="Design - Recovery Stone">
+	<item id="13725" type="EtcItem" name="Design: Recovery Stone">
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -334,7 +334,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13726" type="EtcItem" name="Design - Energy Star Stone">
+	<item id="13726" type="EtcItem" name="Design: Energy Star Stone">
 		<set name="icon" val="icon.scroll_of_verification_i04" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -346,7 +346,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13727" type="EtcItem" name="Design - High Quality Energy Star Stone">
+	<item id="13727" type="EtcItem" name="Design: Greater Quality Energy Star Stone">
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -382,7 +382,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="13731" type="EtcItem" name="Gludio Blessed Scroll of Escape">
+	<item id="13731" type="EtcItem" name="Blessed Scroll of Escape: Gludio">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -391,9 +391,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13732" type="EtcItem" name="Dion Blessed Scroll of Escape">
+	<item id="13732" type="EtcItem" name="Blessed Scroll of Escape: Dion">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -402,9 +404,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-2" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13733" type="EtcItem" name="Giran Blessed Scroll of Escape">
+	<item id="13733" type="EtcItem" name="Blessed Scroll of Escape: Giran">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -413,9 +417,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-3" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13734" type="EtcItem" name="Oren Blessed Scroll of Escape">
+	<item id="13734" type="EtcItem" name="Blessed Scroll of Escape: Oren">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -424,9 +430,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-5" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13735" type="EtcItem" name="Aden Blessed Scroll of Escape">
+	<item id="13735" type="EtcItem" name="Blessed Scroll of Escape: Aden">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -435,9 +443,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-6" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13736" type="EtcItem" name="Innadril Blessed Scroll of Escape">
+	<item id="13736" type="EtcItem" name="Blessed Scroll of Escape: Innadril">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -446,9 +456,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-4" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13737" type="EtcItem" name="Goddard Blessed Scroll of Escape">
+	<item id="13737" type="EtcItem" name="Blessed Scroll of Escape: Goddard">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -457,9 +469,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-7" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13738" type="EtcItem" name="Rune Blessed Scroll of Escape">
+	<item id="13738" type="EtcItem" name="Blessed Scroll of Escape: Rune">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -468,9 +482,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-8" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13739" type="EtcItem" name="Schuttgart Blessed Scroll of Escape">
+	<item id="13739" type="EtcItem" name="Blessed Scroll of Escape: Schuttgart">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -479,9 +495,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2649-9" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
-	<item id="13740" type="Armor" name="Gludio Water Protection Necklace">
+	<item id="13740" type="Armor" name="Gludio Water Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -500,7 +518,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13741" type="Armor" name="Dion Divinity Protection Necklace">
+	<item id="13741" type="Armor" name="Dion Holy Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -519,7 +537,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13742" type="Armor" name="Giran Wind Protection Necklace">
+	<item id="13742" type="Armor" name="Giran Wind Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -538,7 +556,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13743" type="Armor" name="Oren Darkness Protection Necklace">
+	<item id="13743" type="Armor" name="Oren Dark Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -557,7 +575,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13744" type="Armor" name="Aden Earth Protection Necklace">
+	<item id="13744" type="Armor" name="Aden Earth Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -576,7 +594,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13745" type="Armor" name="Innadril Water Protection Necklace">
+	<item id="13745" type="Armor" name="Innadril Water Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -595,7 +613,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13746" type="Armor" name="Goddard Fire Protection Necklace">
+	<item id="13746" type="Armor" name="Goddard Fire Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -614,7 +632,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13747" type="Armor" name="Rune Fire Protection Necklace">
+	<item id="13747" type="Armor" name="Rune Fire Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -633,7 +651,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="13748" type="Armor" name="Schuttgart Wind Protection Necklace">
+	<item id="13748" type="Armor" name="Schuttgart Wind Resistance Necklace">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -677,7 +695,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2592-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="13751" type="Armor" name="Warrior's T-shirt">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
@@ -709,7 +729,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8292-1" />
-		<set name="time" val="43200" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0x10" stat="mDef" val="42" />
 			<add order="0x40" stat="maxMp" val="21" />
@@ -728,7 +748,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8294-1" />
-		<set name="time" val="43200" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0x10" stat="mDef" val="85" />
 			<add order="0x40" stat="maxMp" val="26" />
@@ -747,7 +767,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8293-1" />
-		<set name="time" val="43200" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0x10" stat="mDef" val="63" />
 			<add order="0x40" stat="maxMp" val="31" />
@@ -929,6 +949,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2622-1" />
 		<set name="use_condition" val="{{uc_category;{@warsmith_group}}}" />
 		<cond msgId="113" addName="1">
@@ -958,7 +979,7 @@
 			<set order="0x08" stat="sDef" val="101" />
 		</for>
 	</item>
-	<item id="13771" type="EtcItem" name="Strong Alkali Type Ointment">
+	<item id="13771" type="EtcItem" name="Strong Alkaline Ointment">
 		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -967,6 +988,7 @@
 		<set name="weight" val="20" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2623-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="119,120" />
@@ -981,6 +1003,7 @@
 		<set name="weight" val="20" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2624-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -995,6 +1018,7 @@
 		<set name="weight" val="80" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2625-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -1009,6 +1033,7 @@
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2626-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -1023,6 +1048,7 @@
 		<set name="weight" val="100" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2627-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -1039,6 +1065,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2628-1" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
@@ -1182,6 +1209,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2616-1" />
 	</item>
 	<item id="13788" type="EtcItem" name="Land Mine">
@@ -1192,6 +1220,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2617-1" />
 	</item>
 	<item id="13789" type="Weapon" name="Red Boing Hammer">
@@ -1310,9 +1339,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2371-1" />
 	</item>
-	<item id="13794" type="EtcItem" name="Transformed Object - Handy's Block Checker Transformation Scroll Blue">
+	<item id="13794" type="EtcItem" name="Transformed Object: Handy's Block Checker Transformation Scroll Blue">
 		<set name="icon" val="icon.block_scroll_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1322,9 +1352,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2671-1" />
 	</item>
-	<item id="13795" type="EtcItem" name="Transformed Object - Handy's Block Checker Transformation Scroll Red">
+	<item id="13795" type="EtcItem" name="Transformed Object: Handy's Block Checker Transformation Scroll Red">
 		<set name="icon" val="icon.block_scroll_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1334,6 +1365,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2670-1" />
 	</item>
 	<item id="13796" type="EtcItem" name="Freed Soul">

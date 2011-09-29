@@ -340,6 +340,10 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="FISHING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_cast" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1313" levels="27" name="Pumping">
 		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -349,6 +353,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="PUMPING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_pumping" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1314" levels="27" name="Reeling">
 		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -358,31 +366,43 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="REELING" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<!-- TODO: Missing condition for "op_fishing_reeling" -->
+		<cond msgId="113" addName="1">
+			<using kind="Rod" />
+		</cond>
 	</skill>
 	<skill id="1315" levels="27" name="Fishing Expertise">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="1316" levels="1" name="Fishing Expertise -C-Grade">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="1317" levels="1" name="Fishing Expertise -B-Grade">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="1317" levels="1" name="Fishing Expertise: B Grade">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="1318" levels="1" name="Fishing Expertise -A-Grade">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="1318" levels="1" name="Fishing Expertise: A-Grade">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="1319" levels="1" name="Fishing Expertise -S-Grade">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="1319" levels="1" name="Fishing Expertise: S-Grade">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1320" levels="9" name="Create Common Item">
 		<set name="target" val="TARGET_SELF" />
@@ -482,9 +502,11 @@
 				<add order="0x40" stat="pDef" val="3000" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
-				<mul order="0x30" stat="bowWpnVuln" val="0.2" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.2" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="maxCp" val="0.8" />
+				<mul order="0x30" stat="maxRecoverableCp" val="0.6" />
+				<mul order="0x30" stat="maxRecoverableHp" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -514,6 +536,8 @@
 				<mul order="0x30" stat="bowWpnVuln" val="0.2" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.2" />
 				<mul order="0x30" stat="maxCp" val="0.8" />
+				<mul order="0x30" stat="maxRecoverableCp" val="0.6" />
+				<mul order="0x30" stat="maxRecoverableHp" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -616,7 +640,7 @@
 	<skill id="1331" levels="10" name="Summon Feline Queen" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
-		<table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
+		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 </table>
 		<table name="#itemConsumeCount"> 1 1 2 2 4 1 1 4 1 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
 		<table name="#npcIds"> 14251 14252 14253 14254 14255 14256 14257 14258 14259 14260 14261 14262 14263 14264 </table>
@@ -644,7 +668,7 @@
 	<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
-		<table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
+		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 </table>
 		<table name="#itemConsumeCount"> 1 1 2 2 4 1 1 4 1 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
 		<table name="#npcIds"> 14435 14436 14437 14438 14439 14440 14441 14442 14443 14444 14445 14446 14447 14448 </table>
@@ -672,7 +696,7 @@
 	<skill id="1333" levels="10" name="Summon Nightshade" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
-		<table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
+		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 </table>
 		<table name="#itemConsumeCount"> 1 1 2 2 4 1 1 4 1 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
 		<table name="#npcIds"> 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631 14632 </table>
@@ -715,14 +739,14 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<!-- should be consumed over 4 regular intervals -->
-		<set name="target" val="TARGET_CORPSE_MOB" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<!-- set name="castRange" val="40" / -->
+		<!-- set name="effectRange" val="400" / -->
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -761,6 +785,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -794,6 +819,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -841,6 +867,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1065,7 +1092,7 @@
 	</skill>
 	<skill id="1343" levels="1" name="Dark Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 118 118 118 119 119 119 119 120 120 120 121 121 121 121 122 </table>
+		<table name="#ench1Power"> 147 147 148 148 148 149 149 149 150 150 151 151 151 152 152 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
@@ -1073,7 +1100,7 @@
 		<set name="mpInitialConsume" val="21" />
 		<set name="mpConsume" val="84" />
 		<set name="magicLvl" val="76" />
-		<set name="power" val="111" />
+		<set name="power" val="139" />
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="6000" />
@@ -1087,7 +1114,7 @@
 		<set name="castRange" val="900" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1400" />
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of inflicted damage as HP -->
+		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of inflicted damage as HP -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1997,6 +2024,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2150,6 +2178,7 @@
 		<set name="skillType" val="MUTE" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="SilenceMagicPhysical" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="hero_debuff">
 				<add order="0x40" stat="cancel" val="100" />
@@ -2181,6 +2210,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="15" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="hero_debuff">
 				<add order="0x40" stat="runSpd" val="66" />
@@ -2188,19 +2218,25 @@
 		</for>
 	</skill>
 	<skill id="1377" levels="1" name="none">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="1378" levels="1" name="none">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="1379" levels="1" name="none">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="1380" levels="10" name="Betray">
 		<table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2222,6 +2258,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Betray" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="derangement" />
 		</for>
@@ -2236,7 +2273,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="5000" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
@@ -2248,6 +2285,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2259,39 +2297,67 @@
 	</skill>
 	<skill id="1382" levels="5" name="Mass Gloom" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
-		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench1Chance"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
+		<table name="#ench2Chance"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench2Vuln"> 26 27 28 29 30 30 31 32 33 34 34 35 36 37 38 38 39 40 41 42 42 43 44 45 46 46 47 48 49 50 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
-		<table name="#itemConsumeCount"> 4 4 4 5 5 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
-		<set name="itemConsumeId" val="2508" />
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="reuseDelay" val="15000" />
-		<set name="hitTime" val="6000" />
-		<set name="target" val="TARGET_AREA_SUMMON" />
-		<set name="skillRadius" val="230" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<table name="#power"> 33 36 39 41 44 </table>
+		<table name="#vuln"> 5 10 15 20 25 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="6000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="12000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="230" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down">
-				<mul order="0x30" stat="mDef" val="0.77" />
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="40" effectType="DEBUFF">
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="#vuln" />
+				<sub order="0x40" stat="fireRes" val="#vuln" />
+				<sub order="0x40" stat="windRes" val="#vuln" />
+				<sub order="0x40" stat="earthRes" val="#vuln" />
+				<sub order="0x40" stat="holyRes" val="#vuln" />
+				<sub order="0x40" stat="darkRes" val="#vuln" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench1Chance" effectType="DEBUFF">
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="25" />
+				<sub order="0x40" stat="fireRes" val="25" />
+				<sub order="0x40" stat="windRes" val="25" />
+				<sub order="0x40" stat="earthRes" val="25" />
+				<sub order="0x40" stat="holyRes" val="25" />
+				<sub order="0x40" stat="darkRes" val="25" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench2Chance" effectType="DEBUFF">
+				<mul order="0x30" stat="mDef" val="0.85" />
+				<sub order="0x40" stat="waterRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="fireRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="windRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="earthRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="holyRes" val="#ench2Vuln" />
+				<sub order="0x40" stat="darkRes" val="#ench2Vuln" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="1383" levels="5" name="Mass Surrender to Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -2473,6 +2539,7 @@
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
 		<!-- Confirmed CT2.5 -->
+		<!-- Not Used Anymore -->
 		<table name="#extractableItems">
 			2508,25,30;2508,50,50;2508,100,20
 			2508,50,30;2508,100,50;2508,200,20
@@ -2723,6 +2790,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
+		<set name="trait" val="SLEEP" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2754,6 +2822,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="skillType" val="ERASE" />
 		<set name="target" val="TARGET_ENEMY_SUMMON" />
+		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />

@@ -49,6 +49,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -185,6 +186,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="100" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -239,6 +241,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -380,6 +383,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
+		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -404,19 +408,20 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="6426" levels="1" name="Priest's Ire">
-		<set name="target" val="TARGET_ONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="magicLvl" val="84" />
-		<set name="skillType" val="MDAM" />
-		<set name="power" val="120" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="800" />
-		<set name="effectRange" val="1200" />
-		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1200" />
 		<set name="element" val="3" />	<!-- Earth -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="120" />
 		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
 		<!-- Fantasy Mushroom Skill -->
@@ -442,6 +447,7 @@
 		<set name="hitTime" val="500" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="5" val="0" effectPower="50" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
@@ -602,6 +608,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormal="poison" />
 		</for>
@@ -612,6 +619,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6439" levels="1" name="Energy of Wisdom">
 		<set name="target" val="TARGET_NONE" />
@@ -619,6 +627,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6440" levels="1" name="Energy of Strong">
 		<set name="target" val="TARGET_NONE" />
@@ -626,6 +635,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6441" levels="1" name="Energy of Agile">
 		<set name="target" val="TARGET_NONE" />
@@ -633,6 +643,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6442" levels="1" name="Efficacy of Wisdom">
 		<set name="target" val="TARGET_ONE" />
@@ -641,6 +652,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="signal_e">
 				<mul order="0x30" stat="pveMagicalDmg" val="2.0" />
@@ -654,6 +666,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="signal_e">
 				<mul order="0x30" stat="pvePhysDmg" val="2.0" />
@@ -668,6 +681,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
+		<set name="trait" val="POISON" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="signal_e">
 				<mul order="0x30" stat="pveBowDmg" val="2.0" />
@@ -775,6 +789,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6465" levels="1" name="Jack O'Lantern Card">
 		<set name="target" val="TARGET_NONE" />

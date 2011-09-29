@@ -14,7 +14,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -30,6 +29,7 @@ public class AdminKick implements IAdminCommandHandler
 		"admin_kick_non_gm"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.startsWith("admin_kick"))
@@ -50,21 +50,20 @@ public class AdminKick implements IAdminCommandHandler
 		if (command.startsWith("admin_kick_non_gm"))
 		{
 			int counter = 0;
-			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-			//synchronized (L2World.getInstance().getAllPlayers())
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 			{
-				for (L2PcInstance player : pls)
-					if (!player.isGM())
-					{
-						counter++;
-						player.logout();
-					}
+				if (!player.isGM())
+				{
+					counter++;
+					player.logout();
+				}
 			}
 			activeChar.sendMessage("Kicked " + counter + " players");
 		}
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

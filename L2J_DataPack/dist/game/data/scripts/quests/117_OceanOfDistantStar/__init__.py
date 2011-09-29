@@ -64,6 +64,7 @@ class Quest (JQuest) :
       st.giveItems(57,17647)
       st.addExpAndSp(107387,7369)
       st.playSound("ItemSound.quest_finish")
+      st.setState(State.COMPLETED)
       st.exitQuest(False)
     return htmltext
 

@@ -102,7 +102,7 @@ public class L2PetInstanceAction implements IActionHandler
 			{
 				if (isOwner)
 					activeChar.sendPacket(new PetStatusShow((L2PetInstance)target));
-			}
+				activeChar.updateNotMoveUntil();			}
 		}
 		return true;
 	}

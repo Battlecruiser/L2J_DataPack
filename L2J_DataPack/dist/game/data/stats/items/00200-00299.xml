@@ -56,7 +56,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="202" type="Weapon" name="Mace of the Underworld">
+	<item id="202" type="Weapon" name="Mace of Underworld">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -908,7 +908,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="234" type="Weapon" name="Demon Dagger">
+	<item id="234" type="Weapon" name="Demon's Dagger">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1802,7 +1802,7 @@
 		<set name="price" val="41600" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="2" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="34" />
@@ -1826,7 +1826,7 @@
 		<set name="price" val="105000" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="49" />
@@ -1850,7 +1850,7 @@
 		<set name="price" val="188000" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="64" />
@@ -1860,7 +1860,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="274" type="Weapon" name="Strengthened Bow">
+	<item id="274" type="Weapon" name="Reinforced Bow">
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1877,7 +1877,7 @@
 		<set name="change_weaponId" val="9212" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -1907,7 +1907,7 @@
 		<set name="change_weaponId" val="9217" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -1937,7 +1937,7 @@
 		<set name="change_weaponId" val="9995" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -1967,7 +1967,7 @@
 		<set name="change_weaponId" val="9996" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -1997,7 +1997,7 @@
 		<set name="change_weaponId" val="9221" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2010,7 +2010,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="279" type="Weapon" name="Strengthened Long Bow">
+	<item id="279" type="Weapon" name="Reinforced Long Bow">
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2027,7 +2027,7 @@
 		<set name="change_weaponId" val="9224" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="5" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -2057,7 +2057,7 @@
 		<set name="change_weaponId" val="9227" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="6" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2087,7 +2087,7 @@
 		<set name="change_weaponId" val="9236" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="6" />
+		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2117,7 +2117,7 @@
 		<set name="change_weaponId" val="9256" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="7" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -2147,7 +2147,7 @@
 		<set name="change_weaponId" val="9288" />
 		<set name="soulshots" val="9" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="7" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -2177,7 +2177,7 @@
 		<set name="change_weaponId" val="9312" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="8" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -2207,7 +2207,7 @@
 		<set name="change_weaponId" val="9260" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="7" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2237,7 +2237,7 @@
 		<set name="change_weaponId" val="9300" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="8" />
+		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2267,7 +2267,7 @@
 		<set name="change_weaponId" val="9324" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="9" />
+		<set name="mp_consume" val="4" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2297,7 +2297,7 @@
 		<set name="change_weaponId" val="9336" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="9" />
+		<set name="mp_consume" val="4" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -2327,7 +2327,7 @@
 		<set name="change_weaponId" val="9348" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="10" />
+		<set name="mp_consume" val="5" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
 		<for>
@@ -2356,7 +2356,7 @@
 		<set name="price" val="35300000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="10" />
+		<set name="mp_consume" val="5" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>

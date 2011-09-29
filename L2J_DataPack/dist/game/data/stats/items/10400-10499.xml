@@ -79,6 +79,7 @@
 		<set name="material" val="liquid" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2504-1" />
 	</item>
 	<item id="10409" type="EtcItem" name="A Bottle of Souls">
@@ -122,7 +123,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="item_skill" val="2499-1" />
-		<set name="use_condition" val="{{uc_in_residence_siege_field}}" />
 		<cond msgId="113" addName="1">
 			<player SiegeZone="126" />
 		</cond>
@@ -330,7 +330,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2046-1" />
-		<set name="use_condition" val="{{uc_transmode_exclude;{tt_flying;tt_pure_stat}}}" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</item>
 	<item id="10427" type="EtcItem" name="Tully's Platinum Medal">
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
@@ -679,7 +682,7 @@
 		<set name="change_weaponId" val="10467" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -716,7 +719,7 @@
 		<set name="change_weaponId" val="10468" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -748,7 +751,7 @@
 		<set name="change_weaponId" val="10469" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="11" />
+		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -1695,7 +1698,7 @@
 		<set name="weight" val="1900" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1769,7 +1772,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10483" type="EtcItem" name="Life Stone - level 82">
+	<item id="10483" type="EtcItem" name="Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1780,7 +1783,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - level 82">
+	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1791,7 +1794,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10485" type="EtcItem" name="High-Grade Life Stone - level 82">
+	<item id="10485" type="EtcItem" name="High-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1802,7 +1805,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - level 82">
+	<item id="10486" type="EtcItem" name="Top-Grade Life Stone -  Level 82">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1820,7 +1823,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1842,7 +1845,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1864,7 +1867,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1886,7 +1889,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="s80" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization lang="Русский" translator="qwerty13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="accountmanager.xsd">
+	<message id="toolName" text="SQL Менеджер управления учетными записями" />
+
+	<message id="yesChar" text="д" />
+	<message id="noChar" text="н" />
+	<message id="trueString" text="True" />
+	<message id="falseString" text="False" />
+
+	<message id="functChooser" text="Пожалуйста, выберите действие" />
+	<message id="functCreateAccount" text="1 - Создать новую или обновить существующую учетную запись (изменить пароль и уровень доступа)" />
+	<message id="functAccessLevel" text="2 - Изменить уровень доступа" />
+	<message id="functDeleteAccount" text="3 - Удалить существующую учетную запись" />
+	<message id="functListAccount" text="4 - Показать учетные записи и уровни доступа" />
+	<message id="functExit" text="5 - Выход" />
+
+	<message id="inputChoice" text="Выберите" />
+	<message id="inputUsername" text="Логин" />
+	<message id="inputPassword" text="Пароль" />
+	<message id="inputAccessLevel" text="Уровень доступа" />
+
+	<message id="functListAccountChooser" text="Пожалуйста, выберите режим просмотра" />
+	<message id="functListAccountBanned" text="1 - Только заблокированные учетные записи (accessLevel &lt; 0)" />
+	<message id="functListAccountPrivileged" text="2 - ГМ\привилегии или учетные записи с уровнем доступа (accessLevel &gt; 0)" />
+	<message id="functListAccountRegular" text="3 - Пользовательские учетные записи (accessLevel = 0)" />
+	<message id="functListAccountAll" text="4 - Показать все" />
+	<message id="functListAccountDisplayed" text="Отображаемые аккаунты: %d" />
+
+	<message id="functAccessLevelUpdated" text="Учетная запись %s была изменена" />
+	<message id="functAccessLevelNotExist" text="Учетная запись %s не существует" />
+
+	<message id="functDeleteAccountConfirm" text="Вы действительно хотите удалить эту учетную запись? Д/Н" />
+	<message id="functDeleteAccountAbort" text="Удаление прервано" />
+	<message id="functDeleteAccountCancel" text="Удаление прервано" />
+	<message id="functDeleteAccountChar" text="Удаление персонажа %s" />
+	<message id="functDeleteAccountClan" text="Удаление клана %s" />
+	<message id="functDeleteAccountComplete" text="Учетная запись %s была удалена" />
+	<message id="functDeleteAccountNotExist" text="Учетная запись %s не существует" />
+</localization>

@@ -77,7 +77,7 @@
 		<set name="price" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8507" type="EtcItem" name="Green Colored Lure - High Grade">
+	<item id="8507" type="EtcItem" name="Green Colored Lure (High Grade)">
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -110,7 +110,7 @@
 		<set name="price" val="180" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8510" type="EtcItem" name="Purple Luminous Lure - High Grade">
+	<item id="8510" type="EtcItem" name="Purple Luminous Lure (High Grade)">
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -143,7 +143,7 @@
 		<set name="price" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8513" type="EtcItem" name="Yellow Luminous Lure - High Grade">
+	<item id="8513" type="EtcItem" name="Yellow Luminous Lure (High Grade)">
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="lure" />
@@ -176,7 +176,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5041-1" />
 	</item>
-	<item id="8516" type="EtcItem" name="Charm of Courage: D-Grade">
+	<item id="8516" type="EtcItem" name="Charm of Courage (D-Grade)">
 		<set name="icon" val="icon.etc_charm_of_courage_i01" />
 		<set name="default_action" val="keep_exp" />
 		<set name="etcitem_type" val="scroll" />
@@ -190,7 +190,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5041-1" />
 	</item>
-	<item id="8517" type="EtcItem" name="Charm of Courage: C-Grade">
+	<item id="8517" type="EtcItem" name="Charm of Courage (C-Grade)">
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="default_action" val="keep_exp" />
 		<set name="etcitem_type" val="scroll" />
@@ -204,7 +204,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5041-1" />
 	</item>
-	<item id="8518" type="EtcItem" name="Charm of Courage: B-Grade">
+	<item id="8518" type="EtcItem" name="Charm of Courage (B-Grade)">
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="default_action" val="keep_exp" />
 		<set name="etcitem_type" val="scroll" />
@@ -218,7 +218,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5041-1" />
 	</item>
-	<item id="8519" type="EtcItem" name="Charm of Courage: A-Grade">
+	<item id="8519" type="EtcItem" name="Charm of Courage (A-Grade)">
 		<set name="icon" val="icon.etc_charm_of_courage_i04" />
 		<set name="default_action" val="keep_exp" />
 		<set name="etcitem_type" val="scroll" />
@@ -232,7 +232,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="5041-1" />
 	</item>
-	<item id="8520" type="EtcItem" name="Charm of Courage: S-Grade">
+	<item id="8520" type="EtcItem" name="Charm of Courage (S-Grade)">
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="keep_exp" />
 		<set name="etcitem_type" val="scroll" />
@@ -312,7 +312,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8527" type="Weapon" name="For Monsters Only (Strengthened Bow)">
+	<item id="8527" type="Weapon" name="For Monsters Only (Reinforced Bow)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -327,7 +327,7 @@
 		<set name="weight" val="1870" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<for>
@@ -618,6 +618,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="1500" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2271-1" />
 	</item>
 	<item id="8548" type="EtcItem" name="Hot Springs Lure">
@@ -655,6 +656,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2273-1" />
 	</item>
 	<item id="8552" type="Armor" name="Mask of Spirits">
@@ -703,6 +705,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2276-1" />
 	</item>
 	<item id="8557" type="Armor" name="Blue Party Hat">
@@ -840,6 +843,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-1" />
 	</item>
 	<item id="8571" type="EtcItem" name="Event Gift Box">
@@ -852,6 +856,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-2" />
 	</item>
 	<item id="8572" type="EtcItem" name="Event Gift Box">
@@ -864,6 +869,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-3" />
 	</item>
 	<item id="8573" type="EtcItem" name="Event Gift Box">
@@ -876,6 +882,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-4" />
 	</item>
 	<item id="8574" type="EtcItem" name="Event Gift Box">
@@ -888,6 +895,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-5" />
 	</item>
 	<item id="8575" type="EtcItem" name="Event Gift Box">
@@ -900,6 +908,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2277-6" />
 	</item>
 	<item id="8576" type="Weapon" name="Apprentice's Staff (Event)">
@@ -1012,7 +1021,7 @@
 		<set name="weight" val="1900" />
 		<set name="soulshots" val="7" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1088,7 +1097,7 @@
 		<set name="weight" val="1830" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1115,7 +1124,7 @@
 		<set name="weight" val="1830" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="mp_consume" val="2" />
 		<set name="reuse_delay" val="820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1313,7 +1322,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8593" type="EtcItem" name="Weapon Exchange Coupon - D Grade">
+	<item id="8593" type="EtcItem" name="Weapon Exchange Coupon (C-Grade)">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="etcitem_type" val="coupon" />
 		<set name="material" val="paper" />
