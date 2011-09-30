@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instance name="Demon Prince">
+<instance name="Demon Prince" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance.xsd">
 	<activityTime val="30" />
 	<allowSummon val="false" />
 	<emptyDestroyTime val="600" />
-	<spawnpoint spawnX="-22213" spawnY="277138" spawnZ="-9930" />
+	<spawnPoint spawnX="-22213" spawnY="277138" spawnZ="-9930" />
 	<spawnlist>
-		<spawn npcId="25540" x="-22199" y="278407" z="-8264" heading="0" respawn="0" amount="1" />
+		<spawn npcId="25540" x="-22199" y="278407" z="-8264" heading="0" respawn="0" />
 	</spawnlist>
 </instance>
