@@ -1940,6 +1940,41 @@
 		<node X="209405" Y="-115798" />
 		<node X="209059" Y="-115803" />
 	</zone>
+	<!-- Effect zones for Tower of Naia -->
+	<!-- Poison Zone for Naia's door -->
+	<zone name="18_25_core_naia" id="200100" type="EffectZone" shape="NPoly" minZ="-14240" maxZ="-13340">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="5000" />
+		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
+		<node X="-46980" Y="245979" />
+		<node X="-43925" Y="245982" />
+		<node X="-43925" Y="248990" />
+		<node X="-46986" Y="248990" />
+	</zone>
+	<zone name="18_25_naia_pillar_green" id="200101" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="false" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="10000" />
+		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
+		<node X="-45029" Y="247050" />
+		<node X="-45009" Y="247046" />
+		<node X="-45008" Y="247062" />
+		<node X="-45026" Y="247065" />
+	</zone>
+	<zone name="18_25_naia_pillar_red" id="200102" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="initialDelay" val="1000" />
+		<stat name="reuse" val="10000" />
+		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
+		<node X="-45029" Y="247050" />
+		<node X="-45009" Y="247046" />
+		<node X="-45008" Y="247062" />
+		<node X="-45026" Y="247065" />
+	</zone>
 	<!-- Hellbound Anomic Foundry Lava -->
 	<zone name="20_25_factory_lava01" type="EffectZone" shape="NPoly" minZ="-2916" maxZ="-2266">
 		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->

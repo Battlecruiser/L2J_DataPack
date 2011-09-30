@@ -28,9 +28,13 @@ public class Budenka extends Quest
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (player.getInventory().getInventoryItemCount(PREMIUM_CERT, -1, false) > 0)
+		{
 			return "32294-premium.htm";
+		}
 		if (player.getInventory().getInventoryItemCount(STANDART_CERT, -1, false) > 0)
+		{
 			return "32294-standart.htm";
+		}
 		
 		npc.showChatWindow(player);
 		return null;
@@ -44,6 +48,6 @@ public class Budenka extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Budenka(-1, Budenka.class.getSimpleName(), "hellbound");
+		new Budenka(-1, "Budenka", "hellbound");
 	}
 }
