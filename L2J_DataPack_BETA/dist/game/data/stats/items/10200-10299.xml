@@ -150,6 +150,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3409-1" />
 		<set name="duration" val="180" />
+		<set name="useSkillDisTime" val="6" />
 		<for>
 			<add order="0x10" stat="mDef" val="24" />
 			<enchant order="0x0C" stat="mDef" val="0" />
@@ -1294,6 +1295,7 @@
 		<set name="unequip_skill" val="3422-1" />
 		<set name="item_skill" val="3421-1;3422-1" />
 		<set name="duration" val="200" />
+		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10274" type="EtcItem" name="Transformation Scroll: Rabbit">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />

@@ -21,6 +21,7 @@
 		<set name="item_skill" val="3034-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -53,6 +54,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="400" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -84,6 +86,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -114,6 +117,7 @@
 		<set name="item_skill" val="3013-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -145,6 +149,7 @@
 		<set name="item_skill" val="3047-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -176,6 +181,7 @@
 		<set name="item_skill" val="3014-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -207,6 +213,7 @@
 		<set name="item_skill" val="3036-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -239,6 +246,7 @@
 		<set name="item_skill" val="3010-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -273,6 +281,7 @@
 		<set name="oncrit_skill" val="3022-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -308,6 +317,7 @@
 		<set name="item_skill" val="3360-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -342,6 +352,7 @@
 		<set name="item_skill" val="3013-5" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -372,6 +383,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -402,6 +414,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -433,6 +446,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -464,6 +478,7 @@
 		<set name="item_skill" val="3051-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="220" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -495,6 +510,7 @@
 		<set name="item_skill" val="3552-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -528,6 +544,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="570" />
 			<set order="0x08" stat="mAtk" val="133" />
@@ -559,6 +576,7 @@
 		<set name="item_skill" val="3068-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -591,6 +609,7 @@
 		<set name="item_skill" val="3014-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="202" />
 			<set order="0x08" stat="mAtk" val="161" />
@@ -622,6 +641,7 @@
 		<set name="item_skill" val="3048-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="202" />
 			<set order="0x08" stat="mAtk" val="161" />
@@ -654,6 +674,7 @@
 		<set name="item_skill" val="3047-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="245" />
 			<set order="0x08" stat="mAtk" val="177" />
@@ -685,6 +706,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -716,6 +738,7 @@
 		<set name="item_skill" val="3068-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -750,6 +773,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -785,6 +809,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
