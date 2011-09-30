@@ -9,7 +9,7 @@ CREATE TABLE `hellbound_spawnlist` (
   `respawn_random` mediumint(5) NOT NULL DEFAULT '0',
   `min_hellbound_level` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `max_hellbound_level` tinyint(2) unsigned NOT NULL DEFAULT '0'
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `hellbound_spawnlist` VALUES
 -- NPC's
