@@ -14,9 +14,73 @@
  */
 package handlers;
 
-import com.l2jserver.gameserver.handler.EffectHandler;
+import handlers.effecthandlers.EffectAbortCast;
+import handlers.effecthandlers.EffectBetray;
+import handlers.effecthandlers.EffectBigHead;
+import handlers.effecthandlers.EffectBlockResurrection;
+import handlers.effecthandlers.EffectBluff;
+import handlers.effecthandlers.EffectBuff;
+import handlers.effecthandlers.EffectCancel;
+import handlers.effecthandlers.EffectCancelAll;
+import handlers.effecthandlers.EffectCancelDebuff;
+import handlers.effecthandlers.EffectChameleonRest;
+import handlers.effecthandlers.EffectChanceSkillTrigger;
+import handlers.effecthandlers.EffectCharmOfCourage;
+import handlers.effecthandlers.EffectCharmOfLuck;
+import handlers.effecthandlers.EffectClanGate;
+import handlers.effecthandlers.EffectCombatPointHealOverTime;
+import handlers.effecthandlers.EffectConfuseMob;
+import handlers.effecthandlers.EffectConfusion;
+import handlers.effecthandlers.EffectCpDamPercent;
+import handlers.effecthandlers.EffectDamOverTime;
+import handlers.effecthandlers.EffectDebuff;
+import handlers.effecthandlers.EffectDisarm;
+import handlers.effecthandlers.EffectDispelBySlot;
+import handlers.effecthandlers.EffectEnemyCharge;
+import handlers.effecthandlers.EffectFakeDeath;
+import handlers.effecthandlers.EffectFear;
+import handlers.effecthandlers.EffectFusion;
+import handlers.effecthandlers.EffectGrow;
+import handlers.effecthandlers.EffectHealOverTime;
+import handlers.effecthandlers.EffectHide;
+import handlers.effecthandlers.EffectImmobileBuff;
+import handlers.effecthandlers.EffectImmobilePetBuff;
+import handlers.effecthandlers.EffectIncreaseCharges;
+import handlers.effecthandlers.EffectInvincible;
+import handlers.effecthandlers.EffectManaDamOverTime;
+import handlers.effecthandlers.EffectManaHealOverTime;
+import handlers.effecthandlers.EffectMpConsumePerLevel;
+import handlers.effecthandlers.EffectMute;
+import handlers.effecthandlers.EffectNegate;
+import handlers.effecthandlers.EffectNoblesseBless;
+import handlers.effecthandlers.EffectParalyze;
+import handlers.effecthandlers.EffectPetrification;
+import handlers.effecthandlers.EffectPhoenixBless;
+import handlers.effecthandlers.EffectPhysicalAttackMute;
+import handlers.effecthandlers.EffectPhysicalMute;
+import handlers.effecthandlers.EffectProtectionBlessing;
+import handlers.effecthandlers.EffectRandomizeHate;
+import handlers.effecthandlers.EffectRecovery;
+import handlers.effecthandlers.EffectRelax;
+import handlers.effecthandlers.EffectRemoveTarget;
+import handlers.effecthandlers.EffectRoot;
+import handlers.effecthandlers.EffectSignet;
+import handlers.effecthandlers.EffectSignetAntiSummon;
+import handlers.effecthandlers.EffectSignetMDam;
+import handlers.effecthandlers.EffectSignetNoise;
+import handlers.effecthandlers.EffectSilenceMagicPhysical;
+import handlers.effecthandlers.EffectSilentMove;
+import handlers.effecthandlers.EffectSleep;
+import handlers.effecthandlers.EffectSpoil;
+import handlers.effecthandlers.EffectStun;
+import handlers.effecthandlers.EffectStunSelf;
+import handlers.effecthandlers.EffectTargetMe;
+import handlers.effecthandlers.EffectThrowUp;
+import handlers.effecthandlers.EffectTransferDamage;
+import handlers.effecthandlers.EffectTransformation;
+import handlers.effecthandlers.EffectWarp;
 
-import handlers.effecthandlers.*;
+import com.l2jserver.gameserver.handler.EffectHandler;
 
 /**
  * @author BiggBoss
@@ -45,6 +109,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CpDamPercent", EffectCpDamPercent.class);
 		EffectHandler.getInstance().registerHandler("DamOverTime", EffectDamOverTime.class);
 		EffectHandler.getInstance().registerHandler("Debuff", EffectDebuff.class);
+		EffectHandler.getInstance().registerHandler("DispelBySlot", EffectDispelBySlot.class);
 		EffectHandler.getInstance().registerHandler("Disarm", EffectDisarm.class);
 		EffectHandler.getInstance().registerHandler("EnemyCharge", EffectEnemyCharge.class);
 		EffectHandler.getInstance().registerHandler("FakeDeath", EffectFakeDeath.class);
