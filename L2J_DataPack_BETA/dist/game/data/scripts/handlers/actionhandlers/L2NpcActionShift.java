@@ -52,6 +52,7 @@ public class L2NpcActionShift implements IActionHandler
 	 * <B><U> Example of use </U> :</B><BR><BR>
 	 * <li> Client packet : Action</li><BR><BR>
 	 */
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Check if the L2PcInstance is a GM
@@ -250,7 +251,7 @@ public class L2NpcActionShift implements IActionHandler
 			{
 				StringUtil.append(html1,
 						"<br><center><font color=\"LEVEL\">[Drop Info]</font></center>" +
-						"<br>Rates legend: <font color=\"ff0000\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0000ff\">less than 30%</font>" +
+						"<br>Rates legend: <font color=\"ff9999\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0066ff\">less than 30%</font>" +
 						"<table border=0 width=\"100%\">"
 				);
 				for (L2DropCategory cat : ((L2Npc)target).getTemplate().getDropData())
@@ -264,20 +265,18 @@ public class L2NpcActionShift implements IActionHandler
 						final String color;
 						
 						if (drop.getChance() >= 500000)
-							color = "ff0000";
+							color = "ff9999";
 						else if (drop.getChance() >= 300000)
 							color = "00ff00";
 						else
-							color = "0000ff";
+							color = "0066ff";
 						
 						StringUtil.append(html1,
-								"<tr><td><font color=\"",
-								color,
-								"\">",
-								item.getName(),
-								"</font></td><td>",
-								(drop.isQuestDrop() ? "Quest" : (cat.isSweep() ? "Sweep" : "Drop")),
-								"</td></tr>"
+								"<tr>",
+								"<td>","<img src=\"", item.getIcon(), "\" /></td>",
+								"<td><font color=\"", color, "\">", item.getName(), "</font></td>",
+								"<td>", (drop.isQuestDrop() ? "Quest" : (cat.isSweep() ? "Sweep" : "Drop")),"</td>",
+								"</tr>"
 						);
 					}
 				}
@@ -291,6 +290,7 @@ public class L2NpcActionShift implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Npc;
