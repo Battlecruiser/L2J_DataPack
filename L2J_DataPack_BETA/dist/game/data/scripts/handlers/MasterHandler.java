@@ -62,6 +62,7 @@ import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminHeal;
+import handlers.admincommandhandlers.AdminHellbound;
 import handlers.admincommandhandlers.AdminHelpPage;
 import handlers.admincommandhandlers.AdminInstance;
 import handlers.admincommandhandlers.AdminInstanceZone;
@@ -282,6 +283,7 @@ import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
+import handlers.voicedcommandhandlers.Hellbound;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
@@ -378,6 +380,7 @@ public class MasterHandler
 		ADMIN.registerAdminCommandHandler(new AdminGmChat());
 		ADMIN.registerAdminCommandHandler(new AdminGraciaSeeds());
 		ADMIN.registerAdminCommandHandler(new AdminHeal());
+		ADMIN.registerAdminCommandHandler(new AdminHellbound());
 		ADMIN.registerAdminCommandHandler(new AdminHelpPage());
 		ADMIN.registerAdminCommandHandler(new AdminInstance());
 		ADMIN.registerAdminCommandHandler(new AdminInstanceZone());
@@ -605,6 +608,8 @@ public class MasterHandler
 			VOICE.registerVoicedCommandHandler(new Debug());
 		if (Config.L2JMOD_ALLOW_CHANGE_PASSWORD)
 			VOICE.registerVoicedCommandHandler(new ChangePassword());
+		if (Config.L2JMOD_HELLBOUND_STATUS)
+			VOICE.registerVoicedCommandHandler(new Hellbound());
 		_log.log(Level.INFO, "Loaded " + VOICE.size() + " VoicedHandlers");
 	}
 	

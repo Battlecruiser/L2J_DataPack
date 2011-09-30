@@ -40,19 +40,25 @@ public class Warpgate extends Quest
 	private static final boolean canEnter(L2PcInstance player)
 	{
 		if (player.isFlying())
+		{
 			return false;
+		}
 		
 		QuestState st;
 		if (!HellboundManager.getInstance().isLocked())
 		{
 			st = player.getQuestState(PATH_TO_HELLBOUND);
-			if (st != null && st.getState() == State.COMPLETED)
+			if ((st != null) && (st.getState() == State.COMPLETED))
+			{
 				return true;
+			}
 		}
 		
 		st = player.getQuestState(THATS_BLOODY_HOT);
-		if (st != null && st.getState() == State.COMPLETED)
+		if ((st != null) && (st.getState() == State.COMPLETED))
+		{
 			return true;
+		}
 		
 		return false;
 	}
@@ -63,7 +69,9 @@ public class Warpgate extends Quest
 		if (!canEnter(player))
 		{
 			if (HellboundManager.getInstance().isLocked())
+			{
 				return "warpgate-locked.htm";
+			}
 		}
 		
 		return npc.getNpcId() + ".htm";
@@ -73,9 +81,12 @@ public class Warpgate extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (!canEnter(player))
+		{
 			return "warpgate-no.htm";
+		}
 		
 		player.teleToLocation(-11272, 236464, -3248, true);
+		HellboundManager.getInstance().unlock();
 		return null;
 	}
 	
@@ -84,18 +95,22 @@ public class Warpgate extends Quest
 	{
 		if (character instanceof L2PcInstance)
 		{
-			if (!canEnter((L2PcInstance)character) && !character.isGM())
+			if (!canEnter((L2PcInstance) character) && !character.isGM())
+			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character), 1000);
-			else if (!((L2PcInstance)character).isMinimapAllowed())
+			}
+			else if (!((L2PcInstance) character).isMinimapAllowed())
 			{
 				if (character.getInventory().getItemByItemId(MAP) != null)
-					((L2PcInstance)character).setMinimapAllowed(true);
+				{
+					((L2PcInstance) character).setMinimapAllowed(true);
+				}
 			}
 		}
 		return null;
 	}
 	
-	static final class Teleport implements Runnable
+	private static final class Teleport implements Runnable
 	{
 		private final L2Character _char;
 		
@@ -104,6 +119,7 @@ public class Warpgate extends Quest
 			_char = c;
 		}
 		
+		@Override
 		public void run()
 		{
 			try

@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
   PRIMARY KEY (`boss_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25001,1,-54416,146480,-2887,0,43200,129600,0,95986,514), -- Greyclaw Kutus (23)
 (25004,1,-94208,100240,-3520,0,43200,129600,0,168366,731), -- Turek Mercenary Captain (30)
@@ -207,11 +207,11 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25532,1,0,0,0,0,43200,129600,0,534278,9999), -- Kechi (82) -- stats to be done
 -- (25534,1,0,0,0,0,43200,129600,0,2129066,9999), -- Tears (83) -- stats to be done
 -- (25536,1,0,0,0,0,43200,129600,0,1027906,9999), -- Hannibal (83) -- stats to be done
--- (25539,1,-17475,253163,-3432,0,43200,129600,0,2076371,9999), -- Typhoon (84) -- stats to be done
+(25539,1,-17475,253163,-3432,0,43200,129600,0,2076371,9999), -- Typhoon (84)
 -- (25540,1,0,0,0,0,43200,129600,0,3524173,9999), -- Demon Prince (83) -- stats to be done
 -- (25542,1,0,0,0,0,43200,129600,0,3524173,9999), -- Ranku (83) -- stats to be done
--- (25544,1,0,0,0,0,43200,129600,0,2682423,9999), -- Tully (83) -- stats to be done
--- (25603,1,0,0,0,0,43200,129600,0,2308600,9999), -- Darion (87) -- stats to be done
+(25544,1,0,0,0,0,43200,129600,0,2682423,9999), -- Tully (83)
+(25603,1,0,0,0,0,43200,129600,0,2308600,9999), -- Darion (87)
 -- (25609,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25610,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25611,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done

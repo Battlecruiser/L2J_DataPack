@@ -327,6 +327,10 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN HEAL
 ('admin_heal',1,'false'),
 
+-- HELLBOUND
+('admin_hellbound_setlevel',1,'false'),
+('admin_hellbound',1,'false'),
+
 -- ADMIN HELP PAGE
 ('admin_help',1,'false'),
 
