@@ -37,28 +37,28 @@
 		<node X="-43926" Y="-78026" />
 		<node X="-53311" Y="-77966" />
 	</zone>
-	<!-- zone name="cratae_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-8375" maxZ="-8095" --> <!-- 17_17 -->
-	<!-- stat name="defaultStatus" val="on" / -->
-	<!-- stat name="restartTime val="0" / -->
-	<!-- node X="-86726" Y="-21076" / -->
-	<!-- node X="-77193" Y="-21079" / -->
-	<!-- node X="-77321" Y="-11710" / -->
-	<!-- node X="-86670" Y="-11714" / -->
-	<!-- /zone -->
-	<!-- zone name="cratae_no_restart2" type="NoRestartZone" shape="NPoly" minZ="-8483" maxZ="-8233" --> <!-- 17_15 -->
-	<!-- stat name="defaultStatus" val="on" / -->
-	<!-- stat name="restartTime val="0" / -->
-	<!-- node X="-86608" Y="-86506" / -->
-	<!-- node X="-77222" Y="-86479" / -->
-	<!-- node X="-77064" Y="-76900" / -->
-	<!-- node X="-86576" Y="-76829" / -->
-	<!-- /zone -->
-	<!-- zone name="cratae_no_restart3" type="NoRestartZone" shape="NPoly" minZ="-8471" maxZ="-8221" --> <!-- 18_15 -->
-	<!-- stat name="defaultStatus" val="on" / -->
-	<!-- stat name="restartTime val="0" / -->
-	<!-- node X="-53365" Y="-87679" / -->
-	<!-- node X="-43940" Y="-87683" / -->
-	<!-- node X="-43926" Y="-78026" / -->
-	<!-- node X="-53311" Y="-77966" / -->
-	<!-- /zone -->
+	<zone name="cratae_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-8375" maxZ="-8095"> <!-- 17_17 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-86726" Y="-21076" />
+		<node X="-77193" Y="-21079" />
+		<node X="-77321" Y="-11710" />
+		<node X="-86670" Y="-11714" />
+	</zone>
+	<zone name="cratae_no_restart2" type="NoRestartZone" shape="NPoly" minZ="-8483" maxZ="-8233"> <!-- 17_15 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-86608" Y="-86506" />
+		<node X="-77222" Y="-86479" />
+		<node X="-77064" Y="-76900" />
+		<node X="-86576" Y="-76829" />
+	</zone>
+	<zone name="cratae_no_restart3" type="NoRestartZone" shape="NPoly" minZ="-8471" maxZ="-8221"> <!-- 18_15 -->
+		<stat name="default_enabled" val="true" />
+		<stat name="restartTime" val="0" />
+		<node X="-53365" Y="-87679" />
+		<node X="-43940" Y="-87683" />
+		<node X="-43926" Y="-78026" />
+		<node X="-53311" Y="-77966" />
+	</zone>
 </list>
