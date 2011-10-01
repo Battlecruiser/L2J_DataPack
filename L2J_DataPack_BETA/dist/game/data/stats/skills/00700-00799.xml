@@ -1869,19 +1869,20 @@
 		</cond>
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
-		<!-- CT2.5 retail confirmed -->
-		<set name="hitTime" val="1080" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
 		<set name="coolTime" val="720" />
+		<set name="hitTime" val="1080" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="saveVs" val="MEN" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="52" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1510" />
+		<set name="power" val="69" />
 		<set name="reuseDelay" val="5000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="150" />
-		<set name="skillType" val="PDAM" />
+		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
