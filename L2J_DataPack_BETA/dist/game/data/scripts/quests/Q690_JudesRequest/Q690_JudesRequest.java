@@ -28,7 +28,7 @@ import com.l2jserver.util.Rnd;
  */
 public class Q690_JudesRequest extends Quest
 {
-	private static final String qn = "690_JudeRequest";
+	private static final String qn = "690_JudesRequest";
 	// NPC
 	private static final int JUDE = 32356;
 	private static final int LESSER_EVIL = 22398;
