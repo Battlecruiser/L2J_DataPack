@@ -193,6 +193,7 @@ public class FinalEmperialTomb extends Quest
 		17130061, 17130062, 17130063, 17130064, 17130065,
 		17130066, 17130067, 17130068, 17130069, 17130070
 	};
+	
 	private static final int[] FIRST_ROUTE_DOORS = { 17130042, 17130043 };
 	private static final int[] SECOND_ROUTE_DOORS = { 17130045, 17130046 };
 	private static final L2CharPosition MOVE_TO_CENTER = new L2CharPosition( -87904, -141296, -9168, 0 );
@@ -529,7 +530,7 @@ public class FinalEmperialTomb extends Quest
 		}
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, FETWorld world)
+	protected synchronized boolean checkKillProgress(L2Npc mob, FETWorld world)
 	{
 		if (world.npcList.contains(mob))
 			world.npcList.remove(mob);
