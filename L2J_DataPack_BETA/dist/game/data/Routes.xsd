@@ -31,15 +31,15 @@
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="repeat" type="xs:boolean" use="required" />
-						<xs:attribute name="repeatStyle" use="required" >
+						<xs:attribute name="repeatStyle" use="required">
 							<xs:simpleType>
-									<xs:restriction base="xs:token">
-										<xs:enumeration value="back" />
-										<xs:enumeration value="cycle" />
-										<xs:enumeration value="conveyor" />
-										<xs:enumeration value="random" />
-									</xs:restriction>
-								</xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="back" />
+									<xs:enumeration value="cycle" />
+									<xs:enumeration value="conveyor" />
+									<xs:enumeration value="random" />
+								</xs:restriction>
+							</xs:simpleType>
 						</xs:attribute>
 					</xs:complexType>
 				</xs:element>
