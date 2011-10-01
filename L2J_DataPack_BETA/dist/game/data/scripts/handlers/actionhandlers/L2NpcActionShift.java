@@ -273,7 +273,7 @@ public class L2NpcActionShift implements IActionHandler
 						
 						StringUtil.append(html1,
 								"<tr>",
-								"<td>","<img src=\"", item.getIcon(), "\" /></td>",
+								"<td><img src=\"" + item.getIcon() + "\" height=32 width=32></td>" + 
 								"<td><font color=\"", color, "\">", item.getName(), "</font></td>",
 								"<td>", (drop.isQuestDrop() ? "Quest" : (cat.isSweep() ? "Sweep" : "Drop")),"</td>",
 								"</tr>"
