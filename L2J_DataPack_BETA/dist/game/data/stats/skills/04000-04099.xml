@@ -1474,20 +1474,23 @@
 		</for>
 	</skill>
 	<skill id="4094" levels="12" name="NPC Cancel Magic">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="6000" />
-		<set name="skillType" val="CANCEL" />
-		<set name="isMagic" val="true" />
-		<set name="power" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
+		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="maxNegated" val="1" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="hitTime" val="6000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="CancelAll" val="0" noicon="1" effectType="CANCEL_ALL" />
+		</for>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">
 		<!-- Freya retail confirmed -->

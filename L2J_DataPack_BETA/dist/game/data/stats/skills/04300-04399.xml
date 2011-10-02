@@ -422,14 +422,17 @@
 		</for>
 	</skill>
 	<skill id="4334" levels="1" name="SSQ Cancel">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="2000" />
-		<set name="skillType" val="CANCEL_ALL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AREA" />
+		<for>
+			<effect name="CancelAll" val="0" noicon="1" effectType="CANCEL_ALL" />
+		</for>
 	</skill>
 	<skill id="4335" levels="1" name="Sacred Attack">
 		<!-- Freya retail confirmed -->
