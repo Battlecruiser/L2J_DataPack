@@ -426,10 +426,9 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
-		<set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="2000" />
-		<set name="skillType" val="CANCEL" /> <!-- Needs core support for CANCEL_ALL -->
+		<set name="skillType" val="CANCEL_ALL" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4335" levels="1" name="Sacred Attack">
