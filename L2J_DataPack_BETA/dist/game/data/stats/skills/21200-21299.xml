@@ -208,9 +208,18 @@
 	</skill>
 	<skill id="21232" levels="1" name="Shiny Lit Platform">
 		<!-- Steps onto the shiny lit platform. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="20004" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
+				<mul order="0x30" stat="runSpd" val="1.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21233" levels="1" name="Release Seal on Agathion - Singer Dancer">
 		<!-- Removes the seal of Agathion. -->
