@@ -14,8 +14,8 @@
  */
 package handlers.admincommandhandlers;
 
-import gnu.trove.TIntObjectHashMap;
-import gnu.trove.TIntObjectIterator;
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

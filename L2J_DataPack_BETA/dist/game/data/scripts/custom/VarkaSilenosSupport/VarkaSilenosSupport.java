@@ -14,7 +14,7 @@
  */
 package custom.VarkaSilenosSupport;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.L2Skill;

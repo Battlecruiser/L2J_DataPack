@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;

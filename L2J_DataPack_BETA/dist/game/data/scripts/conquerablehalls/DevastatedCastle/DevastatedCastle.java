@@ -14,7 +14,7 @@
  */
 package conquerablehalls.DevastatedCastle;
 
-import gnu.trove.TIntIntHashMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.ClanTable;
