@@ -14,7 +14,7 @@
  */
 package conquerablehalls.RainbowSpringsChateau;
 
-import gnu.trove.TIntLongHashMap;
+import gnu.trove.map.hash.TIntLongHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -60,7 +60,7 @@ import com.l2jserver.util.Rnd;
 
 /**
  * @author BiggBoss
- * Rainbow Springs Cheateau clan hall siege script
+ * Rainbow Springs Chateau clan hall siege script
  */
 public class RainbowSpringsChateau extends Quest
 {
@@ -176,7 +176,7 @@ public class RainbowSpringsChateau extends Quest
 			for(int arenaId : ARENA_ZONES)
 			{
 				L2ZoneType zone = ZoneManager.getInstance().getZoneById(arenaId);
-				for(L2Character cha : (L2Character[])zone.getCharactersInside().getValues())
+				for(L2Character cha : (L2Character[])zone.getCharactersInside().values())
 					cha.teleToLocation(TeleportWhereType.Town);
 			}
 		}
@@ -638,7 +638,7 @@ public class RainbowSpringsChateau extends Quest
 			if(id == myArena)
 				continue;
 			
-			for(L2Character plr : (L2Character[])ZoneManager.getInstance().getZoneById(id).getCharactersInside().getValues())
+			for(L2Character plr : (L2Character[])ZoneManager.getInstance().getZoneById(id).getCharactersInside().values())
 			{
 				for(L2Skill sk : DEBUFFS)
 					sk.getEffects(plr, plr);

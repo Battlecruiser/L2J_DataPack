@@ -14,8 +14,8 @@
  */
 package ai.group_template;
 
-import gnu.trove.TIntHashSet;
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 

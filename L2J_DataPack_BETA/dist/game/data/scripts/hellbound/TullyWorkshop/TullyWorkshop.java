@@ -14,7 +14,7 @@
  */
 package hellbound.TullyWorkshop;
 
-import gnu.trove.TIntHashSet;
+import gnu.trove.set.hash.TIntHashSet;
 
 import java.util.Arrays;
 import java.util.List;

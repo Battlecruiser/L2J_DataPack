@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import gnu.trove.TIntHashSet;
+import gnu.trove.set.hash.TIntHashSet;
 import ai.group_template.L2AttackableAIScript;
 
 import com.l2jserver.gameserver.model.L2Skill;

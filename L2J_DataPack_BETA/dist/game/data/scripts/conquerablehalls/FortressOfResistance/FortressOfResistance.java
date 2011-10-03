@@ -14,7 +14,7 @@
  */
 package conquerablehalls.FortressOfResistance;
 
-import gnu.trove.TIntLongHashMap;
+import gnu.trove.map.hash.TIntLongHashMap;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
