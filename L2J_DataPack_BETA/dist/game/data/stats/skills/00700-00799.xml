@@ -702,26 +702,29 @@
 		<set name="isMagic" val="true" />
 	</skill>
 	<skill id="736" levels="1" name="Devil Seed">
-		<!-- This skill is wrong, needs core support! -->
-		<set name="magicLvl" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="mpConsume" val="82" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="800" />
+		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="3300" />
-		<set name="coolTime" val="800" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="82" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1800" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="15" name="DamOverTime" val="144" abnormalLvl="9" abnormalType="dark_seed" />
+			<!-- 351HP * 3 during 15 seconds -->
+			<effect count="5" name="DamOverTime" abnormalTime="3" val="1053" abnormal="bleed" abnormalLvl="9" abnormalType="dark_seed" />
+			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="5248" triggeredLevel="9" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="737" levels="1" name="Devil Ultimate Defense">

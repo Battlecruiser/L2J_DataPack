@@ -1043,17 +1043,13 @@
 		</for>
 	</skill>
 	<skill id="165" levels="5" name="Trade">
-		<!-- Not Done "Needs Core Support" -->
-		<!-- Lvl 1: Enables you to purchase high quality weapons with a discount up to 5 percent. -->
-		<!-- Lvl 2: Enables you to purchase high quality weapons with a discount up to 10 percent. -->
-		<!-- Lvl 3: Receives 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price. -->
-		<!-- Lvl 4: Receives 5 percent discount on grade C items, 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price. -->
-		<!-- Lvl 5: Receives 10 percent discount on grade C items, 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price. -->
+		<!-- Confirmed CT2.5 -->
+		<!-- This Skill Is Only For Description In The Client -->
 		<table name="#magicLvl"> 15 24 36 43 49 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="168" levels="3" name="Boost Attack Speed" enchantGroup1="1">
 		<table name="#rate"> 1.05 1.07 1.1 </table>

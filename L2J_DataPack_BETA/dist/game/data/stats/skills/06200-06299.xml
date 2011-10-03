@@ -78,20 +78,22 @@
 		</for>
 	</skill>
 	<skill id="6205" levels="19" name="Strider Bite">
-		<!-- TODO: This skill needs retail check -->
-		<table name="#dot"> 201 231 231 252 252 252 252 252 261 261 261 261 261 261 261 261 261 261 267 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#dot"> 195 225 225 246 246 246 246 246 255 255 255 255 255 255 255 255 255 255 261 </table>
+		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105 </table>
 		<table name="#power"> 1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="lvlDepend" val="2" />
-		<set name="nextActionAttack" val="true" />
-		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
-		<set name="overHit" val="true" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
@@ -100,34 +102,39 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED" />
+			<!-- 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87HP * 3 during 20 seconds -->
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="80" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
-		<!-- TODO: This skill needs retail check -->
-		<table name="#mpConsume"> 50 55 60 65 67 69 70 72 73 73 74 74 75 75 75 77 77 77 77 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
+		<table name="#mpConsume"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
+		<table name="#mpInitialConsume"> 10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="skillRadius" val="100" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="300" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="MEN" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="6207" levels="1" name="Strider Dash">
-		<!-- TODO: This skill needs retail check -->
+		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="56" />
 		<set name="mpConsume" val="55" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
