@@ -26,14 +26,19 @@
 		<set name="aggroPoints" val="100" />
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
-		<set name="magicLvl" val="99" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="NEGATE" />
-		<set name="negateStats" val="BUFF DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="100" />
+		<set name="magicLvl" val="99" />
+		<set name="maxNegated" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" effectType="CANCEL_DEBUFF" />
+		</for>
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">
 		<!-- This skill only has one level, 2. -->
