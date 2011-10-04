@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -59,6 +58,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
@@ -910,12 +910,12 @@ public class CrystalCaverns extends Quest
 				else if (!world.copys.isEmpty())
 				{
 					boolean notAOE = true;
-					if (skill != null && (skill.getTargetType() == SkillTargetType.TARGET_AREA
-							|| skill.getTargetType() == SkillTargetType.TARGET_FRONT_AREA
-							|| skill.getTargetType() == SkillTargetType.TARGET_BEHIND_AREA
-							|| skill.getTargetType() == SkillTargetType.TARGET_AURA
-							|| skill.getTargetType() == SkillTargetType.TARGET_FRONT_AURA
-							|| skill.getTargetType() == SkillTargetType.TARGET_BEHIND_AURA))
+					if (skill != null && (skill.getTargetType() == L2TargetType.TARGET_AREA
+							|| skill.getTargetType() == L2TargetType.TARGET_FRONT_AREA
+							|| skill.getTargetType() == L2TargetType.TARGET_BEHIND_AREA
+							|| skill.getTargetType() == L2TargetType.TARGET_AURA
+							|| skill.getTargetType() == L2TargetType.TARGET_FRONT_AURA
+							|| skill.getTargetType() == L2TargetType.TARGET_BEHIND_AURA))
 						notAOE = false;
 					if (notAOE)
 					{

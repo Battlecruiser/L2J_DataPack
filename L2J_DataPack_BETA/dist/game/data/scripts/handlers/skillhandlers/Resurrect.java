@@ -21,19 +21,13 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
-
-/**
- * This class ...
- *
- * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
- */
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 public class Resurrect implements ISkillHandler
 {
@@ -42,10 +36,6 @@ public class Resurrect implements ISkillHandler
 		L2SkillType.RESURRECT
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2PcInstance player = null;
@@ -62,7 +52,7 @@ public class Resurrect implements ISkillHandler
 				targetPlayer = (L2PcInstance) target;
 				
 				// Check for same party or for same clan, if target is for clan.
-				if (skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN)
+				if (skill.getTargetType() == L2TargetType.TARGET_CORPSE_CLAN)
 				{
 					if (player.getClanId() != targetPlayer.getClanId())
 						continue;
@@ -93,10 +83,6 @@ public class Resurrect implements ISkillHandler
 			}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

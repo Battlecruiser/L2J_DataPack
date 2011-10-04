@@ -38,6 +38,7 @@ import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -328,7 +329,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							if (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_UNDEAD)
+							if (skill.getTargetType() == L2TargetType.TARGET_UNDEAD)
 							{
 								if (target.isUndead())
 									((L2Attackable) target).reduceHate(null, ((L2Attackable) target).getHating(((L2Attackable) target).getMostHated()));
