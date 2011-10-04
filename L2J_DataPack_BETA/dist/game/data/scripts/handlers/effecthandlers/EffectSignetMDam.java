@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2ItemInstance;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -41,6 +40,7 @@ import com.l2jserver.gameserver.skills.l2skills.L2SkillSignetCasttime;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.util.Point3D;
 
 public class EffectSignetMDam extends L2Effect
@@ -85,7 +85,7 @@ public class EffectSignetMDam extends L2Effect
 		int z = getEffector().getZ();
 		
 		if (getEffector() instanceof L2PcInstance
-				&& getSkill().getTargetType() == L2Skill.SkillTargetType.TARGET_GROUND)
+				&& getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
 		{
 			Point3D wordPosition = ((L2PcInstance) getEffector()).getCurrentSkillWorldPosition();
 			

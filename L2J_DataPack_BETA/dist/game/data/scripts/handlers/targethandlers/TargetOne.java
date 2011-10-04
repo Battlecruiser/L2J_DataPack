@@ -14,10 +14,10 @@
  */
 package handlers.targethandlers;
 
-import com.l2jserver.gameserver.handler.ISkillTargetTypeHandler;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author UnAfraid
  */
-public class TargetOne implements ISkillTargetTypeHandler
+public class TargetOne implements ITargetTypeHandler
 {
 	
 	@Override
@@ -64,8 +64,8 @@ public class TargetOne implements ISkillTargetTypeHandler
 	}
 	
 	@Override
-	public Enum<SkillTargetType> getTargetType()
+	public Enum<L2TargetType> getTargetType()
 	{
-		return SkillTargetType.TARGET_ONE;
+		return L2TargetType.TARGET_ONE;
 	}
 }

@@ -19,10 +19,10 @@ import java.util.List;
 
 import javolution.util.FastList;
 
-import com.l2jserver.gameserver.handler.ISkillTargetTypeHandler;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class TargetAreaCorpseMob implements ISkillTargetTypeHandler
+public class TargetAreaCorpseMob implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
@@ -71,8 +71,8 @@ public class TargetAreaCorpseMob implements ISkillTargetTypeHandler
 	}
 	
 	@Override
-	public Enum<SkillTargetType> getTargetType()
+	public Enum<L2TargetType> getTargetType()
 	{
-		return SkillTargetType.TARGET_AREA_CORPSE_MOB;
+		return L2TargetType.TARGET_AREA_CORPSE_MOB;
 	}
 }
