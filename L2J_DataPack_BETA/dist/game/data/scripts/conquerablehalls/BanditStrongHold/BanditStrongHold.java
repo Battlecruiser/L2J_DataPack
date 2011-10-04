@@ -326,12 +326,10 @@ public final class BanditStrongHold extends ClanHallSiegeEngine
 	@Override
 	public void onSiegeStarts()
 	{
-		for(Object obj : _data.values())
+		for(ClanData data : _data.valueCollection())
 		{
 			try
 			{
-				ClanData data = (ClanData)obj;
-				
 				L2NpcTemplate flagTemplate = NpcTable.getInstance().getTemplate(data.flag);
 				L2NpcTemplate mahumTemplate = NpcTable.getInstance().getTemplate(data.npc);
 				
