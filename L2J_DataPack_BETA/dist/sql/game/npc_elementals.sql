@@ -2437,6 +2437,104 @@ INSERT INTO `npc_elementals` VALUES
 (22810,0,0,20,20,20,20,20,20),
 (22811,0,0,20,20,20,20,20,20),
 (22812,0,0,20,20,20,20,20,20),
+-- Demon's Banquet
+(22813,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Demon's Banquet
+(22814,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drakos
+(22815,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Maiden of the Valley
+(22816,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Summoner of the Valley
+(22817,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Exploding Orc Ghost
+(22818,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Wrathful Orc Ghost
+(22819,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Mesmer Drake
+(22820,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Immortal Necromancer
+(22821,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drakos Warrior
+(22822,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drakos Assassin
+(22823,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drakos Guardian
+(22824,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Giant Scorpion Bones
+(22825,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Scorpion Bones
+(22826,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Batwing Drake
+(22827,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Parasitic Leech
+(22828,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Emerald Drake
+(22829,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gem Dragon
+(22830,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Tracker of the Valley
+(22831,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Scout of the Valley
+(22832,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sand Drake Tracker
+(22833,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dust Dragon Tracker
+(22834,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Magma Drake Mother
+(22835,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Magma Drake Hatchling
+(22836,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gem Dragon Hatchling
+(22837,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Leader
+(22838,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Warlord
+(22839,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Hunter
+(22840,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Princess
+(22841,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Banshee
+(22842,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Maluk Sniper 
+(22843,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Knight
+(22844,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Knight
+(22845,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elite Dragon Knight
+(22846,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Knight Warrior 
+(22847,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Leader
+(22848,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Warrior
+(22849,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Scout
+(22850,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Mage
+(22851,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Guard
+(22852,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Mage
+(22853,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Bloody Karik
+(22854,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Bloody Berserker
+(22855,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Bloody Karinness
+(22856,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Knoriks
+(22857,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Necromancer of the Valley
+(22858,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Howl
+(22859,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Hard Scorpion Bones
+(22861,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drakos Hunter
+(22862,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (25001,0,0,20,20,20,20,20,20),
 (25002,0,0,20,20,20,20,20,20),
 (25003,0,0,20,20,20,20,20,20),
@@ -3142,6 +3240,174 @@ INSERT INTO `npc_elementals` VALUES
 (25715,0,250,250,150,200,200,200,200),
 (25716,1,250,150,250,200,200,200,200),
 (25717,1,250,150,250,200,200,200,200),
+-- Emerald Horn
+(25718,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dust Rider
+(25719,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Bleeding Fly
+(25720,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Blackdagger Wing
+(25721,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Shadow Summoner
+(25722,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Spike Slasher
+(25723,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Muscle Bomber
+(25724,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Lord
+(25725,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Behemoth Leader
+(25726,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Beast
+(25727,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Death Knight
+(25728,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Death Knight
+(25729,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Demon's Banquet
+(25730,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Demon's Banquet
+(25731,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Beast
+(25732,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gem Dragon
+(25733,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Parasitic Leech
+(25734,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Greyclaw Kutus
+(25735,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Kutus' Guard
+(25736,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Kutus' Pawn
+(25737,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Lead Tracker Sharuk
+(25738,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sharuk's Minion
+(25739,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sharuk's Marksman
+(25740,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sukar Wererat Chief
+(25741,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sukar Wererat Guard
+(25742,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sukar Wererat Priest
+(25743,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ikuntai
+(25744,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ikuntai's Servitor
+(25745,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ikuntai's Pawn
+(25746,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Zombie Lord Crowl
+(25747,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Evil Spirit Archer
+(25748,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Evil Spirit Warrior
+(25749,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Zombie Lord Ferkel
+(25750,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ferkel's Warrior
+(25751,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ferkel's Priest
+(25752,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guillotine Warden
+(25753,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Fire Lord Shadar
+(25754,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sword of Shadar
+(25755,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Whip of Shadar
+(25756,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Soul Collector Acheron
+(25757,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Soul Slasher
+(25758,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Soul Strainer
+(25759,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Lord Ishka
+(25760,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ishka's Elite Officer
+(25761,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ishka's Elite Soldier
+(25762,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Demon Kuri
+(25763,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Kuri's Wife
+(25764,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Devil Blader of Chaos
+(25765,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ancient Drake
+(25766,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Carnage Lord Gato
+(25767,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gato's Marksman
+(25768,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gato's Champion
+(25769,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ketra Commander Atis
+(25770,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ketra Marksman
+(25771,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ketra Raider
+(25772,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Beacon of Blue Sky
+(25773,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Beacon's Shooter
+(25774,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Beacon's Warrior
+(25775,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Earth Protector Panathen
+(25776,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Panathen's Knight
+(25777,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Panathen's Protectors
+(25778,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Betrayer of Urutu Freki
+(25779,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Freki's Vampire Bat
+(25780,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Freki's Wild Bear
+(25781,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Nellis' Vengeful Spirit
+(25782,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Nellis' Follower
+(25783,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Rayito the Looter
+(25784,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Rayito's Henchman
+(25785,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Rayito's Henchman
+(25786,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ketra's Hero Hekaton
+(25787,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Scout of Hekaton
+(25788,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Servant of Hekaton
+(25789,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Varka's Hero Shadith
+(25790,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Shadith's Royal Guard Captain
+(25791,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Shadith's Sentinel
+(25792,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Doom Blade Tanatos
+(25793,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Kernon
+(25794,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Taliadon
+(25795,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Vemsk
+(25796,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Meanas Anor
+(25797,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Wyvern of Marsh
+(25798,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Succubus of Marsh
+(25799,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Mammon Collector Talos
+(25800,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Talos' Cohort
+(25801,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (29001,0,0,-83,20,20,20,20,20),
 (29002,0,0,20,20,20,20,20,20),
 (29003,0,0,20,20,20,20,20,20),
@@ -4259,6 +4525,76 @@ INSERT INTO `npc_elementals` VALUES
 (18934,0,0,20,20,20,20,20,20),
 (18935,0,0,20,20,20,20,20,20),
 (18936,0,0,20,20,20,20,20,20),
+-- Target Dummy
+(18937,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18938,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18939,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18940,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18941,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18942,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18943,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18944,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18945,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18946,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Target Dummy
+(18947,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Etis van Etina
+(18948,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Etis van Etina
+(18949,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Etis van Etina's Phantom
+(18950,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Etis van Etina's Phantom
+(18951,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina's Guardian
+(18952,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina's Guardian
+(18953,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina's Guardian
+(18954,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina's Guardian
+(18955,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guardian of the Tomb
+(18956,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guardian of the Tomb
+(18957,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guardian of the Tomb
+(18958,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guardian of the Tomb
+(18959,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Lord
+(18960,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Behemoth Leader
+(18961,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Beast
+(18962,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- none
+(18963,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Antharas's Symbol
+(18964,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Antharas's Symbol
+(18965,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Antharas's Symbol
+(18966,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- none
+(18967,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- none
+(18968,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Magma Drake Mother
+(18969,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Magma Drake Hatchling
+(18970,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gem Dragon Hatchling
+(18971,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (27001,0,0,20,20,20,20,20,20),
 (27002,0,0,20,20,20,20,20,20),
 (27003,0,0,20,20,20,20,20,20),
@@ -4634,6 +4970,50 @@ INSERT INTO `npc_elementals` VALUES
 (27400,0,0,20,20,20,20,20,20),
 (27401,0,0,20,20,20,20,20,20),
 (27402,5,200,170,170,170,170,120,200),
+-- Trainee of Rest
+(27403,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Supplicant of Rest
+(27404,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Monastic Pilgrim
+(27405,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Monastic Crusader
+(27406,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina Lay Brother
+(27407,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Savior Solina
+(27408,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina Knight Captain
+(27409,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina Knights
+(27410,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Divinity Manager
+(27411,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Divinity Supervisor
+(27412,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Divinity Fighter
+(27413,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Divinity Magus
+(27414,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guide Solina
+(27415,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Manager Golem
+(27416,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Mutant Archer
+(27417,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Mutant Warrior
+(27418,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Divinity Watcher
+(27419,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Instructor Solina
+(27420,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Creature of the Dusk
+(27421,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Creature of the Dusk
+(27422,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Creature of the Dusk
+(27423,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Creature of the Dusk
+(27424,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (30001,0,0,150,150,150,150,150,150),
 (30002,0,0,150,150,150,150,150,150),
 (30003,0,0,150,150,150,150,150,150),
@@ -7106,17 +7486,222 @@ INSERT INTO `npc_elementals` VALUES
 (32781,0,0,20,20,20,20,20,20),
 (32782,0,0,20,20,20,20,20,20),
 (32783,0,0,20,20,20,20,20,20),
-(32874,0,0,150,150,150,150,150,150),
-(32875,0,0,150,150,150,150,150,150),
-(32876,0,0,150,150,150,150,150,150),
-(32877,0,0,150,150,150,150,150,150),
-(32878,0,0,150,150,150,150,150,150),
-(32879,0,0,150,150,150,150,150,150),
-(32880,0,0,150,150,150,150,150,150),
-(32881,0,0,150,150,150,150,150,150),
-(32882,0,0,150,150,150,150,150,150),
-(32883,0,0,150,150,150,150,150,150),
-(32887,0,0,150,150,150,150,150,150),
+-- Elcadia
+(32784,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32785,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32786,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32787,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32788,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32789,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32790,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32791,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Eris's Evil Thoughts
+(32792,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina's Evil Thoughts
+(32793,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina
+(32794,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Eris
+(32795,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Anais
+(32796,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Jude van Etina
+(32797,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Elcadia
+(32798,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Hardin
+(32799,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Frikios
+(32800,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina Bodyguard
+(32801,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Solina Bodyguard
+(32802,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Guardian
+(32803,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Watcher
+(32804,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Watcher
+(32805,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Watcher
+(32806,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Relic Watcher
+(32807,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Etis van Etina
+(32808,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32809,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32810,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32811,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32812,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32813,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Pile of Books
+(32814,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Odd Globe
+(32815,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32816,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32817,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32818,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32819,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32820,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32821,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32822,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32823,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32824,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32825,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32826,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32827,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32828,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32829,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32830,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32831,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32832,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32833,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32834,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32835,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Reading Desk
+(32836,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32837,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Powerful Device
+(32838,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Powerful Device
+(32839,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Powerful Device
+(32840,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Powerful Device
+(32841,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32842,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Tomb of the Saintess
+(32843,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Control Device
+(32844,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32845,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32846,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32847,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32848,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32849,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32850,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32851,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Treasure Chest
+(32852,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32853,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32854,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32855,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32856,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32857,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32858,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32859,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar of Hallows
+(32860,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sophia
+(32861,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Gruff-looking Man
+(32862,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sophia
+(32863,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32864,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32865,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32866,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32867,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32868,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32869,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32870,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Vortex
+(32871,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Tightly Shut Door
+(32872,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Cracked Wall
+(32873,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Lyann
+(32874,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Tahoo
+(32875,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Desian
+(32876,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Plani
+(32877,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Sparky
+(32878,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drawin
+(32879,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dolphren
+(32880,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Denver
+(32881,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prouse
+(32882,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Hedinger
+(32883,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Drake Lord
+(32884,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Behemoth Leader
+(32885,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Beast
+(32886,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Metar
+(32887,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Jude van Etina's Evil Thoughts
+(32888,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Jude van Etina's Evil Thoughts
+(32889,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ruiman
+(32890,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Separated Soul
+(32891,0,0,20,20,20,20,20,20),
 (35010,0,0,20,20,20,20,20,20),
 (35011,0,0,20,20,20,20,20,20),
 (35012,0,0,20,20,20,20,20,20),
@@ -9671,6 +10256,18 @@ INSERT INTO `npc_elementals` VALUES
 (16071,0,0,20,20,20,20,20,20),
 (16072,0,0,20,20,20,20,20,20),
 (16073,0,0,20,20,20,20,20,20),
+-- Ball Trapping Gnosian
+(16074,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Ball Trapping Orodriel
+(16075,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Penalty Kick
+(16076,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Antharas
+(16077,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Nevit's Messenger Kanna
+(16078,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Guardian of Dawn Kallesin
+(16079,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (12077,0,0,20,20,20,20,20,20),
 (12311,0,0,20,20,20,20,20,20),
 (12312,0,0,20,20,20,20,20,20),
@@ -9979,6 +10576,10 @@ INSERT INTO `npc_elementals` VALUES
 (13294,0,0,20,20,20,20,20,20),
 (13295,0,0,20,20,20,20,20,20),
 (13296,0,0,20,20,20,20,20,20),
+-- World Cup Cat
+(13297,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Game Manager
+(13298,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (4301,0,0,150,150,150,150,150,150),
 (4302,0,0,20,20,20,20,20,20),
 (4303,0,0,150,150,150,150,150,150),
@@ -10078,6 +10679,88 @@ INSERT INTO `npc_elementals` VALUES
 (1591,0,0,20,20,20,20,20,20),
 (1592,0,0,20,20,20,20,20,20),
 (1593,0,0,20,20,20,20,20,20),
+-- Singer & Dancer Agathion
+(1594,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Zakensword Agathion
+(1595,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Cow Agathion
+(1596,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Tow Agathion
+(1597,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Rudolph Agathion
+(1598,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Zinyanzi Agathion
+(1599,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Zinyanzi Agathion
+(1600,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Super Feline Queen Z
+(1601,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Super Kat the Cat Z
+(1602,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Super Mew the Cat Z
+(1603,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Hanbok Agathion
+(1604,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Juju Agathion
+(1605,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Plague Kanabion
+(2081,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Plague Kanabion
+(2082,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Plague Kanabion
+(2083,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Lucky Pig
+(2501,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Wingless Lucky Pig
+(2502,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Wingless Lucky Pig
+(2503,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Santa Claus
+(4307,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Angel Cat
+(4308,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4309,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4310,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4311,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4312,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Angel Cat
+(4313,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Device
+(4314,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Warehouse Keeper
+(4315,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4316,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4317,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4318,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4319,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4320,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4321,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4322,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4323,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Worshipper
+(4324,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar Guard
+(4325,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Nevit's Herald
+(4326,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Worshipper
+(4327,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar Guard
+(4328,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Miss Queen
+(4329,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (100,0,0,20,20,20,20,20,20),
 (101,0,0,150,150,150,150,150,150),
 (102,0,0,150,150,150,150,150,150),
@@ -10112,10 +10795,53 @@ INSERT INTO `npc_elementals` VALUES
 (131,0,0,150,150,150,150,150,150),
 (132,0,0,150,150,150,150,150,150),
 (133,0,0,150,150,150,150,150,150),
+-- Dragon Master Lee
 (134,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dragon Master Karin
 (135,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Shiny Platform
 (136,0,0,20,20,20,20,20,20), -- TODO: Stats require check
-(143,0,0,20,20,20,20,20,20), -- TODO: Stats require check
-(144,0,0,20,20,20,20,20,20), -- TODO: Stats require check
-(145,0,0,20,20,20,20,20,20), -- TODO: Stats require check
-(146,0,0,20,20,20,20,20,20); -- TODO: Stats require check
+-- Big Wedding Cake
+(137,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Jetbike
+(138,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Birthday Cake
+(139,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Block Checker Blue
+(140,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dimensional Door
+(141,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Dimensional Door
+(142,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+-- Totem of Body
+(143,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+-- Totem of Spirit
+(144,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+-- Totem of Bravery
+(145,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+-- Totem of Fortitude
+(146,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+-- Party Cake
+(147,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Campfire
+(148,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Angry Bunny
+(149,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Large Angry Bunny
+(150,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Fearless Angry Bunny
+(151,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Large Fearless Angry Bunny
+(152,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Magic Research Institute Employee
+(153,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- none
+(154,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- none
+(155,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Raging Bunny
+(156,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Large Raging Bunny
+(157,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Wood Horse
+(158,0,0,20,20,20,20,20,20); -- TODO: Stats require check
