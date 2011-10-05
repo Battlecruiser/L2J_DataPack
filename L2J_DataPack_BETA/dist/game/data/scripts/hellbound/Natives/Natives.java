@@ -49,7 +49,11 @@ public class Natives extends Quest
 		String htmltext = "";
 		final int hellboundLevel = HellboundManager.getInstance().getLevel();
 		final int npcId = npc.getNpcId();
-		
+		QuestState qs = player.getQuestState(getName());
+		if (qs == null)
+		{
+			qs = newQuestState(player);
+		}
 		switch (npcId)
 		{
 			case NATIVE:
@@ -80,16 +84,11 @@ public class Natives extends Quest
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
-			qs = newQuestState(player);
-		}
-		
 		if (npc.getNpcId() == TRAITOR)
 		{
 			if (event.equalsIgnoreCase("open_door"))
 			{
+				final QuestState qs = player.getQuestState(getName());
 				if (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 10)
 				{
 					qs.takeItems(MARK_OF_BETRAYAL, 10);
@@ -138,15 +137,14 @@ public class Natives extends Quest
 		{
 			if (event.equalsIgnoreCase("FreeSlaves"))
 			{
-				if (player.getInventory().getInventoryItemCount(BADGES, -1, false) >= 5)
+				final QuestState qs = player.getQuestState(getName());
+				if (qs.getQuestItemsCount(BADGES) >= 5)
 				{
-					if (player.destroyItemByItemId("Quest", BADGES, 5, npc, true))
-					{
-						npc.setBusy(true); // Prevent Native from take items more, than once
-						HellboundManager.getInstance().updateTrust(100, true);
-						htmltext = "32357-02.htm";
-						startQuestTimer("delete_me", 3000, npc, null);
-					}
+					qs.takeItems(BADGES, 5);
+					npc.setBusy(true); // Prevent Native from take items more, than once
+					HellboundManager.getInstance().updateTrust(100, true);
+					htmltext = "32357-02.htm";
+					startQuestTimer("delete_me", 3000, npc, null);
 				}
 				else
 				{
