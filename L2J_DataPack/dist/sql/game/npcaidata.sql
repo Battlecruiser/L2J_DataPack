@@ -30,7 +30,7 @@ INSERT INTO `npcaidata` VALUES
 (103,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (104,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (105,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(106,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+(106,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (107,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (108,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (109,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -60,10 +60,51 @@ INSERT INTO `npcaidata` VALUES
 (133,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (134,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (135,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(143,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(144,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(145,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(146,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+(136,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Big Wedding Cake
+(137,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Jetbike
+(138,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Birthday Cake
+(139,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Block Checker Blue
+(140,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dimensional Door
+(141,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dimensional Door
+(142,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Totem of Body
+(143,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Totem of Spirit
+(144,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Totem of Bravery
+(145,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Totem of Fortitude
+(146,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Party Cake
+(147,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Campfire
+(148,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Angry Bunny
+(149,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Large Angry Bunny
+(150,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Fearless Angry Bunny
+(151,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Large Fearless Angry Bunny
+(152,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Magic Research Institute Employee
+(153,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- none
+(154,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- none
+(155,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Raging Bunny
+(156,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Large Raging Bunny
+(157,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Wood Horse
+(158,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (1501,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (1502,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (1503,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -157,12 +198,94 @@ INSERT INTO `npcaidata` VALUES
 (1591,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (1592,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (1593,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Singer & Dancer Agathion
+(1594,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Zakensword Agathion
+(1595,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Cow Agathion
+(1596,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Tow Agathion
+(1597,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Rudolph Agathion
+(1598,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Zinyanzi Agathion
+(1599,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Zinyanzi Agathion
+(1600,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Super Feline Queen Z
+(1601,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Super Kat the Cat Z
+(1602,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Super Mew the Cat Z
+(1603,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Hanbok Agathion
+(1604,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Juju Agathion
+(1605,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Plague Kanabion
+(2081,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Plague Kanabion
+(2082,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Plague Kanabion
+(2083,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Lucky Pig
+(2501,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Wingless Lucky Pig
+(2502,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Wingless Lucky Pig
+(2503,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (4301,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (4302,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (4303,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (4304,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (4305,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (4306,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
+-- Santa Claus
+(4307,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Angel Cat
+(4308,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Prophet
+(4309,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Prophet
+(4310,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Prophet
+(4311,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Prophet
+(4312,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Angel Cat
+(4313,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Device
+(4314,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Warehouse Keeper
+(4315,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4316,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4317,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4318,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4319,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4320,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4321,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4322,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Photo Snow
+(4323,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Worshipper
+(4324,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar Guard
+(4325,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Nevit's Herald
+(4326,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Worshipper
+(4327,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar Guard
+(4328,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Miss Queen
+(4329,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (12077,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (12311,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (12312,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -471,6 +594,10 @@ INSERT INTO `npcaidata` VALUES
 (13294,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (13295,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (13296,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- World Cup Cat
+(13297,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Game Manager
+(13298,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (14001,7,15,0,1,0,0,0,0,3,1,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (14002,7,15,0,1,0,0,0,0,3,1,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (14003,7,15,0,1,0,0,0,0,4,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -1436,6 +1563,18 @@ INSERT INTO `npcaidata` VALUES
 (16071,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (16072,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (16073,7,15,0,1,0,0,0,0,2,2,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ball Trapping Gnosian
+(16074,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ball Trapping Orodriel
+(16075,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Penalty Kick
+(16076,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Antharas
+(16077,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Nevit's Messenger Kanna
+(16078,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guardian of Dawn Kallesin
+(16079,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (18001,7,15,0,1,0,0,0,0,0,0,0,0,0,'cave_servant_clan',400,NULL,0,0,'fighter'),
 (18002,7,15,0,1,0,0,0,0,0,0,0,0,0,'cave_servant_clan',300,NULL,0,0,'fighter'),
 (18003,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'balanced'),
@@ -1910,7 +2049,7 @@ INSERT INTO `npcaidata` VALUES
 (18481,7,15,0,1,0,0,0,0,0,0,0,0,0,'castle_clan',300,NULL,0,0,'balanced'),
 (18482,7,15,0,1,0,0,0,0,0,0,0,0,0,'dark_clan',500,NULL,0,0,'balanced'),
 (18483,7,15,0,1,0,0,0,0,0,0,0,0,0,'ndg_clan',300,NULL,0,0,'archer'),
-(18484,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',800,NULL,0,0,'balanced'),
+(18484,7,15,0,0,0,0,0,0,0,0,0,0,0,'hell_clan',800,NULL,0,0,'balanced'),
 (18485,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'balanced'),
 (18486,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'balanced'),
 (18487,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'balanced'),
@@ -2363,6 +2502,76 @@ INSERT INTO `npcaidata` VALUES
 (18934,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (18935,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (18936,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
+-- Target Dummy
+(18937,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18938,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18939,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18940,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18941,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18942,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18943,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18944,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18945,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18946,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Target Dummy
+(18947,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Etis van Etina
+(18948,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Etis van Etina
+(18949,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Etis van Etina's Phantom
+(18950,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Etis van Etina's Phantom
+(18951,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina's Guardian
+(18952,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina's Guardian
+(18953,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina's Guardian
+(18954,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina's Guardian
+(18955,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guardian of the Tomb
+(18956,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guardian of the Tomb
+(18957,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guardian of the Tomb
+(18958,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guardian of the Tomb
+(18959,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Lord
+(18960,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Behemoth Leader
+(18961,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Beast
+(18962,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- none
+(18963,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Antharas's Symbol
+(18964,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Antharas's Symbol
+(18965,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Antharas's Symbol
+(18966,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- none
+(18967,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- none
+(18968,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Magma Drake Mother
+(18969,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Magma Drake Hatchling
+(18970,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gem Dragon Hatchling
+(18971,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (20001,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (20002,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (20003,7,15,0,1,0,0,0,0,0,0,0,0,0,'goblin_clan',300,NULL,0,0,'fighter'),
@@ -4321,10 +4530,10 @@ INSERT INTO `npcaidata` VALUES
 (22341,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'balanced'),
 (22342,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'fighter'),
 (22343,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'mage'),
-(22344,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'balanced'),
-(22345,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'mage'),
-(22346,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'fighter'),
-(22347,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,NULL,0,0,'fighter'),
+(22344,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,'quarry_slaves',300,0,'balanced'),
+(22345,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,'quarry_slaves',300,0,'mage'),
+(22346,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,'quarry_slaves',300,0,'fighter'),
+(22347,7,15,0,1,0,0,0,0,0,0,0,0,0,'hell_clan',300,'quarry_slaves',300,0,'fighter'),
 (22349,7,15,0,1,0,0,0,0,0,0,0,0,0,'test_clan',300,NULL,0,0,'fighter'),
 (22350,7,15,0,1,0,0,0,0,0,0,0,0,0,'test_clan',300,NULL,0,0,'mage'),
 (22351,7,15,0,1,0,0,0,0,0,0,0,0,0,'test_clan',300,NULL,0,0,'mage'),
@@ -4787,6 +4996,104 @@ INSERT INTO `npcaidata` VALUES
 (22810,7,15,0,1,0,0,0,0,0,0,0,0,0,'golem_p_clan',300,NULL,0,0,'fighter'),
 (22811,7,15,0,1,0,0,0,0,0,0,0,0,0,'golem_p_clan',300,NULL,0,0,'fighter'),
 (22812,7,15,0,1,0,0,0,0,0,0,0,0,0,'golem_p_clan',300,NULL,0,0,'fighter'),
+-- Demon's Banquet
+(22813,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Demon's Banquet
+(22814,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drakos
+(22815,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Maiden of the Valley
+(22816,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Summoner of the Valley
+(22817,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Exploding Orc Ghost
+(22818,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Wrathful Orc Ghost
+(22819,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Mesmer Drake
+(22820,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Immortal Necromancer
+(22821,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drakos Warrior
+(22822,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drakos Assassin
+(22823,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drakos Guardian
+(22824,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Giant Scorpion Bones
+(22825,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Scorpion Bones
+(22826,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Batwing Drake
+(22827,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Parasitic Leech
+(22828,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Emerald Drake
+(22829,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gem Dragon
+(22830,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Tracker of the Valley
+(22831,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Scout of the Valley
+(22832,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sand Drake Tracker
+(22833,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dust Dragon Tracker
+(22834,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Magma Drake Mother
+(22835,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Magma Drake Hatchling
+(22836,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gem Dragon Hatchling
+(22837,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Leader
+(22838,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Warlord
+(22839,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Hunter
+(22840,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Princess
+(22841,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Banshee
+(22842,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Maluk Sniper 
+(22843,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Knight
+(22844,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Knight
+(22845,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elite Dragon Knight
+(22846,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Knight Warrior 
+(22847,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Leader
+(22848,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Warrior
+(22849,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Scout
+(22850,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Mage
+(22851,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Guard
+(22852,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Mage
+(22853,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Bloody Karik
+(22854,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Bloody Berserker
+(22855,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Bloody Karinness
+(22856,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Knoriks
+(22857,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Necromancer of the Valley
+(22858,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Howl
+(22859,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Hard Scorpion Bones
+(22861,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drakos Hunter
+(22862,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (25001,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'balanced'),
 (25002,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (25003,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
@@ -5492,6 +5799,174 @@ INSERT INTO `npcaidata` VALUES
 (25715,7,15,0,1,0,0,0,0,0,0,0,0,0,'granisko_clan',300,NULL,0,0,'fighter'),
 (25716,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (25717,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
+-- Emerald Horn
+(25718,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dust Rider
+(25719,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Bleeding Fly
+(25720,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Blackdagger Wing
+(25721,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Shadow Summoner
+(25722,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Spike Slasher
+(25723,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Muscle Bomber
+(25724,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Lord
+(25725,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Behemoth Leader
+(25726,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Beast
+(25727,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Death Knight
+(25728,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Death Knight
+(25729,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Demon's Banquet
+(25730,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Demon's Banquet
+(25731,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Beast
+(25732,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gem Dragon
+(25733,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Parasitic Leech
+(25734,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Greyclaw Kutus
+(25735,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Kutus' Guard
+(25736,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Kutus' Pawn
+(25737,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Lead Tracker Sharuk
+(25738,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sharuk's Minion
+(25739,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sharuk's Marksman
+(25740,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sukar Wererat Chief
+(25741,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sukar Wererat Guard
+(25742,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sukar Wererat Priest
+(25743,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ikuntai
+(25744,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ikuntai's Servitor
+(25745,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ikuntai's Pawn
+(25746,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Zombie Lord Crowl
+(25747,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Evil Spirit Archer
+(25748,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Evil Spirit Warrior
+(25749,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Zombie Lord Ferkel
+(25750,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ferkel's Warrior
+(25751,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ferkel's Priest
+(25752,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guillotine Warden
+(25753,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Fire Lord Shadar
+(25754,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sword of Shadar
+(25755,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Whip of Shadar
+(25756,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Soul Collector Acheron
+(25757,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Soul Slasher
+(25758,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Soul Strainer
+(25759,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Lord Ishka
+(25760,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ishka's Elite Officer
+(25761,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ishka's Elite Soldier
+(25762,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Demon Kuri
+(25763,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Kuri's Wife
+(25764,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Devil Blader of Chaos
+(25765,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ancient Drake
+(25766,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Carnage Lord Gato
+(25767,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gato's Marksman
+(25768,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gato's Champion
+(25769,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ketra Commander Atis
+(25770,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ketra Marksman
+(25771,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ketra Raider
+(25772,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Beacon of Blue Sky
+(25773,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Beacon's Shooter
+(25774,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Beacon's Warrior
+(25775,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Earth Protector Panathen
+(25776,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Panathen's Knight
+(25777,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Panathen's Protectors
+(25778,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Betrayer of Urutu Freki
+(25779,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Freki's Vampire Bat
+(25780,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Freki's Wild Bear
+(25781,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Nellis' Vengeful Spirit
+(25782,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Nellis' Follower
+(25783,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Rayito the Looter
+(25784,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Rayito's Henchman
+(25785,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Rayito's Henchman
+(25786,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ketra's Hero Hekaton
+(25787,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Scout of Hekaton
+(25788,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Servant of Hekaton
+(25789,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Varka's Hero Shadith
+(25790,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Shadith's Royal Guard Captain
+(25791,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Shadith's Sentinel
+(25792,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Doom Blade Tanatos
+(25793,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Kernon
+(25794,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Taliadon
+(25795,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Vemsk
+(25796,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Meanas Anor
+(25797,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Wyvern of Marsh
+(25798,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Succubus of Marsh
+(25799,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Mammon Collector Talos
+(25800,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Talos' Cohort
+(25801,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (27001,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,15,'archer'),
 (27002,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (27003,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
@@ -5867,6 +6342,50 @@ INSERT INTO `npcaidata` VALUES
 (27400,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (27401,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (27402,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
+-- Trainee of Rest
+(27403,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Supplicant of Rest
+(27404,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Monastic Pilgrim
+(27405,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Monastic Crusader
+(27406,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina Lay Brother
+(27407,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Savior Solina
+(27408,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina Knight Captain
+(27409,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina Knights
+(27410,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Divinity Manager
+(27411,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Divinity Supervisor
+(27412,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Divinity Fighter
+(27413,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Divinity Magus
+(27414,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Guide Solina
+(27415,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Manager Golem
+(27416,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Mutant Archer
+(27417,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Mutant Warrior
+(27418,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Divinity Watcher
+(27419,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Instructor Solina
+(27420,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Creature of the Dusk
+(27421,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Creature of the Dusk
+(27422,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Creature of the Dusk
+(27423,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Creature of the Dusk
+(27424,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (29001,7,15,0,1,0,0,0,0,0,0,0,0,0,'queen_ant_clan',2000,NULL,0,0,'balanced'),
 (29002,7,15,0,1,0,0,0,0,0,0,0,0,0,'queen_ant_clan',4500,NULL,0,0,'fighter'),
 (29003,7,15,0,1,0,0,0,0,0,0,0,0,0,'queen_ant_clan',700,NULL,0,0,'balanced'),
@@ -5912,8 +6431,8 @@ INSERT INTO `npcaidata` VALUES
 (29043,7,15,0,1,0,0,0,0,0,0,0,0,0,'fire_clan',300,NULL,0,0,'balanced'),
 (29044,7,15,0,1,0,0,0,0,0,0,0,0,0,'fire_clan',300,NULL,0,0,'balanced'),
 (29045,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',0,NULL,0,0,'balanced'),
-(29046,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',2000,NULL,0,0,'balanced'),
-(29047,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',2000,NULL,0,0,'balanced'),
+(29046,7,15,5014,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',2000,NULL,0,0,'balanced'),
+(29047,7,15,5014,1,5019,10,0,0,0,0,0,0,0,'frintessa_clan',2000,NULL,0,0,'balanced'),
 (29048,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',1000,NULL,0,0,'corpse'),
 (29049,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',1000,NULL,0,0,'corpse'),
 (29050,7,15,0,1,0,0,0,0,0,0,0,0,0,'frintessa_clan',2000,NULL,0,0,'balanced'),
@@ -8059,7 +8578,7 @@ INSERT INTO `npcaidata` VALUES
 (32296,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
 (32297,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
 (32298,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
-(32299,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
+(32299,7,15,0,1,0,0,0,0,0,0,0,0,0,'quarry_slaves',100,NULL,0,0,'balanced'),
 (32300,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
 (32301,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'balanced'),
 (32302,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'mage'),
@@ -8529,17 +9048,222 @@ INSERT INTO `npcaidata` VALUES
 (32781,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (32782,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (32783,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
-(32874,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32875,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32876,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32877,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32878,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32879,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32880,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32881,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32882,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32883,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
-(32887,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
+-- Elcadia
+(32784,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32785,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32786,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32787,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32788,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32789,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32790,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32791,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Eris's Evil Thoughts
+(32792,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina's Evil Thoughts
+(32793,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina
+(32794,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Eris
+(32795,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Anais
+(32796,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Jude van Etina
+(32797,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Elcadia
+(32798,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Hardin
+(32799,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Frikios
+(32800,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina Bodyguard
+(32801,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Solina Bodyguard
+(32802,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Guardian
+(32803,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Watcher
+(32804,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Watcher
+(32805,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Watcher
+(32806,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Relic Watcher
+(32807,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Etis van Etina
+(32808,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32809,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32810,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32811,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32812,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32813,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Pile of Books
+(32814,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Odd Globe
+(32815,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32816,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32817,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32818,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32819,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32820,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32821,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32822,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32823,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32824,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32825,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32826,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32827,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32828,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32829,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32830,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32831,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32832,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32833,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32834,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32835,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Reading Desk
+(32836,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32837,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Powerful Device
+(32838,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Powerful Device
+(32839,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Powerful Device
+(32840,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Powerful Device
+(32841,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32842,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Tomb of the Saintess
+(32843,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Teleport Control Device
+(32844,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32845,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32846,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32847,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32848,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32849,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32850,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32851,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Treasure Chest
+(32852,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32853,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32854,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32855,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32856,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32857,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32858,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32859,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Altar of Hallows
+(32860,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sophia
+(32861,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Gruff-looking Man
+(32862,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sophia
+(32863,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32864,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32865,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32866,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32867,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32868,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32869,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32870,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Vortex
+(32871,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Tightly Shut Door
+(32872,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Cracked Wall
+(32873,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Lyann
+(32874,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Tahoo
+(32875,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Desian
+(32876,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Plani
+(32877,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Sparky
+(32878,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drawin
+(32879,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dolphren
+(32880,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Denver
+(32881,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Prouse
+(32882,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Hedinger
+(32883,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Drake Lord
+(32884,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Behemoth Leader
+(32885,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Beast
+(32886,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Metar
+(32887,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Jude van Etina's Evil Thoughts
+(32888,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Jude van Etina's Evil Thoughts
+(32889,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Ruiman
+(32890,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Separated Soul
+(32891,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (35010,7,15,0,1,0,0,0,0,0,0,0,0,0,'door_clan;mercenary_siege_clan',1200,NULL,0,0,'balanced'),
 (35011,7,15,0,1,0,0,0,0,0,0,0,0,0,'door_clan;mercenary_siege_clan',1200,NULL,0,0,'balanced'),
 (35012,7,15,0,1,0,0,0,0,0,0,0,0,0,'door_clan;mercenary_siege_clan',1200,NULL,0,0,'fighter'),
