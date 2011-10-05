@@ -298,7 +298,12 @@
 		<!-- Description: A severaly damaged staff piece. A mysterious light shines faintly. -->
 		<set name="icon" val="icon.etc_i.etc_vesper_caster_piece_i00" />
 		<set name="material" val="wood" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21726" type="EtcItem" name="Angel Cat's Blessing - Event">
 		<!-- Description: When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
