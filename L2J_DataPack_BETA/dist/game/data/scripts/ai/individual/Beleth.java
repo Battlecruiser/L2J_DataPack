@@ -22,6 +22,7 @@ import ai.group_template.L2AttackableAIScript;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -654,16 +655,18 @@ public class Beleth extends L2AttackableAIScript
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final String html;
 		if ((belethKiller != null) && (player.getObjectId() == belethKiller.getObjectId()))
 		{
 			player.addItem("Kill Beleth", 10314, 1, null, true);// giveItems(10314, 1, 0)
 			belethKiller = null;
-			return "<html><body>Stone Coffin:<br> You open the lid and are immediately flooded by a dark and gloomy aura. It appears that something is happening...</body></html>";
+			html = "32470a.htm";
 		}
 		else
 		{
-			return "<html><body>Stone Coffin:<br> The lid doesn't budge - it seems to be held firmly in place by some unknown force. This coffin must be the object that Beleth bequeaths to the leader of the attacking forces.";
+			html = "32470b.htm";
 		}
+		return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/default/" + html);
 	}
 	
 	@Override

@@ -94,7 +94,7 @@ public class Kief extends Quest
 					qs.takeItems(LIFE_FORCE, -1);
 					return "32354-11c.htm";
 				}
-				return "32354-nolifeforce.htm";
+				return "32354-11d.htm";
 			}
 		}
 		else if ("clf".equalsIgnoreCase(event))

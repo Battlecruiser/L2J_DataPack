@@ -812,19 +812,16 @@
 		</cond>
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="500" />
-		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<cond msgId="113" addName="1">
-			<target npcId="22349,22350,22351,22352,22353" />
-		</cond>
+		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="2360" levels="1" name="Water Dragon Claw">
 		<set name="itemConsumeCount" val="1" />
