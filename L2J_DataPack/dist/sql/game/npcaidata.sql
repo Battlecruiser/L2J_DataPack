@@ -58,8 +58,11 @@ INSERT INTO `npcaidata` VALUES
 (131,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (132,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 (133,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Master Lee
 (134,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Dragon Master Karin
 (135,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Shiny Platform
 (136,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Big Wedding Cake
 (137,7,15,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -5056,7 +5059,7 @@ INSERT INTO `npcaidata` VALUES
 (22841,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Maluk Banshee
 (22842,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
--- Maluk Sniper 
+-- Maluk Sniper
 (22843,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Dragon Knight
 (22844,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -5064,7 +5067,7 @@ INSERT INTO `npcaidata` VALUES
 (22845,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Elite Dragon Knight
 (22846,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
--- Dragon Knight Warrior 
+-- Dragon Knight Warrior
 (22847,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Drake Leader
 (22848,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
@@ -5090,6 +5093,8 @@ INSERT INTO `npcaidata` VALUES
 (22858,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Howl
 (22859,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
+-- Hungry Parasitic Leech
+(22860,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Hard Scorpion Bones
 (22861,7,15,0,1,0,0,0,0,0,0,0,0,0,NULL,0,NULL,0,0,'fighter'),
 -- Drakos Hunter
