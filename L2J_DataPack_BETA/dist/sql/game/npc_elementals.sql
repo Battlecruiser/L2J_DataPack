@@ -2497,7 +2497,7 @@ INSERT INTO `npc_elementals` VALUES
 (22841,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Maluk Banshee
 (22842,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Maluk Sniper 
+-- Maluk Sniper
 (22843,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Dragon Knight
 (22844,0,0,20,20,20,20,20,20), -- TODO: Stats require check
@@ -2505,7 +2505,7 @@ INSERT INTO `npc_elementals` VALUES
 (22845,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Elite Dragon Knight
 (22846,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Dragon Knight Warrior 
+-- Dragon Knight Warrior
 (22847,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Drake Leader
 (22848,0,0,20,20,20,20,20,20), -- TODO: Stats require check
@@ -2531,6 +2531,8 @@ INSERT INTO `npc_elementals` VALUES
 (22858,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Howl
 (22859,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Hungry Parasitic Leech
+(22860,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Hard Scorpion Bones
 (22861,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Drakos Hunter
@@ -7701,7 +7703,7 @@ INSERT INTO `npc_elementals` VALUES
 -- Ruiman
 (32890,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Separated Soul
-(32891,0,0,20,20,20,20,20,20),
+(32891,0,0,20,20,20,20,20,20), -- TODO: Stats require check;
 (35010,0,0,20,20,20,20,20,20),
 (35011,0,0,20,20,20,20,20,20),
 (35012,0,0,20,20,20,20,20,20),
@@ -10586,6 +10588,52 @@ INSERT INTO `npc_elementals` VALUES
 (4304,0,0,150,150,150,150,150,150),
 (4305,0,0,20,20,20,20,20,20),
 (4306,0,0,150,150,150,150,150,150),
+-- Santa Claus
+(4307,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Angel Cat
+(4308,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4309,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4310,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4311,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Prophet
+(4312,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Angel Cat
+(4313,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Teleport Device
+(4314,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Warehouse Keeper
+(4315,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4316,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4317,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4318,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4319,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4320,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4321,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4322,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Photo Snow
+(4323,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Worshipper
+(4324,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar Guard
+(4325,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Nevit's Herald
+(4326,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Worshipper
+(4327,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Altar Guard
+(4328,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+-- Miss Queen
+(4329,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (1501,0,0,20,20,20,20,20,20),
 (1502,0,0,20,20,20,20,20,20),
 (1503,0,0,20,20,20,20,20,20),
@@ -10715,52 +10763,6 @@ INSERT INTO `npc_elementals` VALUES
 (2502,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Wingless Lucky Pig
 (2503,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Santa Claus
-(4307,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Angel Cat
-(4308,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Prophet
-(4309,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Prophet
-(4310,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Prophet
-(4311,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Prophet
-(4312,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Angel Cat
-(4313,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Teleport Device
-(4314,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Warehouse Keeper
-(4315,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4316,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4317,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4318,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4319,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4320,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4321,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4322,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Photo Snow
-(4323,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Worshipper
-(4324,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Altar Guard
-(4325,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Nevit's Herald
-(4326,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Worshipper
-(4327,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Altar Guard
-(4328,0,0,20,20,20,20,20,20), -- TODO: Stats require check
--- Miss Queen
-(4329,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 (100,0,0,20,20,20,20,20,20),
 (101,0,0,150,150,150,150,150,150),
 (102,0,0,150,150,150,150,150,150),
@@ -10812,15 +10814,15 @@ INSERT INTO `npc_elementals` VALUES
 -- Dimensional Door
 (141,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Dimensional Door
-(142,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+(142,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Totem of Body
-(143,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+(143,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Totem of Spirit
-(144,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+(144,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Totem of Bravery
-(145,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+(145,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Totem of Fortitude
-(146,0,0,20,20,20,20,20,20),  -- TODO: Stats require check
+(146,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Party Cake
 (147,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Campfire
