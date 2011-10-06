@@ -30,10 +30,12 @@ import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.Manager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -86,6 +88,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_gmon"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -246,6 +249,19 @@ public class AdminAdmin implements IAdminCommandHandler
 					SkillTable.getInstance().reload();
 					activeChar.sendMessage("All Skills have been reloaded");
 				}
+				else if (type.startsWith("npcId"))
+				{
+					Integer npcId = Integer.parseInt(st.nextToken());
+					if (npcId != null)
+					{
+						NpcTable.getInstance().reloadNpc(npcId);
+						for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+							if (spawn != null && spawn.getNpcid() == npcId)
+									spawn.respawnNpc(spawn.getLastSpawn());
+						
+						activeChar.sendMessage("NPC " + npcId + " have been reloaded");
+					}
+				}
 				else if (type.equals("npc"))
 				{
 					NpcTable.getInstance().reloadAllNpc();
@@ -359,6 +375,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
