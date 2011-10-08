@@ -36,12 +36,17 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- ADMIN ANNOUNCEMENTS
 ('admin_list_announcements',1,'false'),
+('admin_list_critannouncements',1,'false'),
 ('admin_reload_announcements',1,'false'),
 ('admin_announce_announcements',1,'false'),
 ('admin_add_announcement',1,'false'),
 ('admin_del_announcement',1,'false'),
+('admin_add_critannouncement',1,'false'),
+('admin_del_critannouncement',1,'false'),
 ('admin_announce',1,'false'),
+('admin_critannounce',1,'false'),
 ('admin_announce_menu',1,'false'),
+('admin_critannounce_menu',1,'false'),
 ('admin_list_autoann',1,'false'),
 ('admin_reload_autoann',1,'false'),
 ('admin_add_autoann',1,'false'),
