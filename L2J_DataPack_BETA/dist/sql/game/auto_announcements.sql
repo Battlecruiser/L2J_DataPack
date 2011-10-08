@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS `auto_announcements` (
   `delay` BIGINT(20) NOT NULL,
   `cycle` INT(11) NOT NULL,
   `memo` TEXT DEFAULT NULL,
+  `isCritical` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
