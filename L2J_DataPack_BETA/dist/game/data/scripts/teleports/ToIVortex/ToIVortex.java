@@ -199,9 +199,9 @@ public class ToIVortex extends Quest
 		}
 		else if (event.equalsIgnoreCase("GREEN"))
 		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
+			if (st.getQuestItemsCount(ADENA) >= 100000)
 			{
-				st.takeItems(ADENA, 10000);
+				st.takeItems(ADENA, 100000);
 				st.giveItems(GREEN_DIMENSION_STONE, 1);
 				st.exitQuest(true);
 			}
@@ -213,9 +213,9 @@ public class ToIVortex extends Quest
 		}
 		else if (event.equalsIgnoreCase("BLUE"))
 		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
+			if (st.getQuestItemsCount(ADENA) >= 100000)
 			{
-				st.takeItems(ADENA, 10000);
+				st.takeItems(ADENA, 100000);
 				st.giveItems(BLUE_DIMENSION_STONE, 1);
 				st.exitQuest(true);
 			}
@@ -227,9 +227,9 @@ public class ToIVortex extends Quest
 		}
 		else if (event.equalsIgnoreCase("RED"))
 		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
+			if (st.getQuestItemsCount(ADENA) >= 100000)
 			{
-				st.takeItems(ADENA, 10000);
+				st.takeItems(ADENA, 100000);
 				st.giveItems(RED_DIMENSION_STONE, 1);
 				st.exitQuest(true);
 			}
