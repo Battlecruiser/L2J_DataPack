@@ -19,8 +19,7 @@
 		<set name="skillType" val="STUN" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="ignoreResists" val="true" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="hitTime" val="5800" />
 		<set name="flyRadius" val="300" />
 		<set name="skillRadius" val="300" />
@@ -553,11 +552,10 @@
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
 		<!-- Imbue Dark Seed effect -->
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
@@ -579,11 +577,9 @@
 		</for>
 	</skill>
 	<skill id="5449" levels="1" name="Weak Constitution">
-		<set name="isDebuff" val="true" />
-		<set name="ignoreResists" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -593,11 +589,9 @@
 	<skill id="5450" levels="7" name="Thin Skin">
 		<table name="#dot"> 75 102 132 156 186 201 230 </table>
 		<table name="#abnormalLvl"> 4 5 5 6 7 8 8 </table>
-		<set name="isDebuff" val="true" />
-		<set name="ignoreResists" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
@@ -606,15 +600,12 @@
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
-		<set name="isDebuff" val="true" />
-		<set name="ignoreResists" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="skillType" val="DEBUFF" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="all_speed_down">
+			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="all_speed_down">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 				<mul order="0x30" stat="runSpd" val="0.77" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -623,15 +614,12 @@
 	</skill>
 	<skill id="5452" levels="3" name="Spite">
 		<!-- TODO: Missing levels 1-2 -->
-		<set name="isDebuff" val="true" />
-		<set name="ignoreResists" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="skillType" val="DEBUFF" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="t_crt_dmg_up">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="t_crt_dmg_up">
 				<mul order="0x30" stat="critVuln" val="1.6" />
 			</effect>
 		</for>

@@ -599,9 +599,8 @@
 	</skill>
 	<skill id="5145" levels="1" name="Day of Doom">
 		<set name="magicLvl" val="80" />
-		<set name="power" val="100" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="ignoreResists" val="true" />
 		<set name="canBeReflected" val="false" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />

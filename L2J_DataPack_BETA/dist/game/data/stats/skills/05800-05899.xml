@@ -766,11 +766,10 @@
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -863,11 +862,10 @@
 	<skill id="5884" levels="2" name="Weakened Sweep">
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -896,8 +894,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="1000" />
@@ -927,8 +924,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -974,8 +970,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -1001,8 +996,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
 		<set name="skillType" val="DEBUFF" />
@@ -1033,8 +1027,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
 		<set name="skillType" val="DEBUFF" />
@@ -1063,10 +1056,9 @@
 	<skill id="5897" levels="1" name="Spike of Anger">
 		<set name="mpConsume" val="70" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="lvlDepend" val="1" />
@@ -1089,11 +1081,10 @@
 		<table name="#mpConsume"> 140 150 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="lvlDepend" val="1" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="skillType" val="DEBUFF" />

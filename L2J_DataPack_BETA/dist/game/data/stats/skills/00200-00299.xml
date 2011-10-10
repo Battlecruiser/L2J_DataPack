@@ -1081,7 +1081,6 @@
 		<enchant1 name="element" val="3" /> <!-- Earth -->
 		<enchant1 name="power" val="100" />
 		<enchant1 name="skillType" val="DEBUFF" />
-		<enchant1 name="ignoreResists" val="true" />
 		<enchant1 name="saveVs" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="lvlDepend" val="1" />
@@ -1090,7 +1089,6 @@
 		<enchant2 name="element" val="3" /> <!-- Earth -->
 		<enchant2 name="power" val="100" />
 		<enchant2 name="skillType" val="DOT" />
-		<enchant2 name="ignoreResists" val="true" />
 		<enchant2 name="saveVs" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="lvlDepend" val="1" />
@@ -1098,7 +1096,6 @@
 		<enchant3 name="element" val="3" /> <!-- Earth -->
 		<enchant3 name="power" val="100" />
 		<enchant3 name="skillType" val="DEBUFF" />
-		<enchant3 name="ignoreResists" val="true" />
 		<enchant3 name="saveVs" val="MEN" />
 		<for>
 			<effect name="Spoil" noicon="1" val="0" />
@@ -2233,16 +2230,15 @@
 		<table name="#skillRadius"> 500 700 900 </table>
 		<table name="#vuln"> 1.1 1.15 1.2 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="500" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="ignoreResists" val="true" />
 		<set name="skillRadius" val="#skillRadius" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="AGGDAMAGE" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" effectPower="100" effectType="DEBUFF" abnormalLvl="1" abnormalType="real_target">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="real_target">
 				<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
 			</effect>
 		</for>

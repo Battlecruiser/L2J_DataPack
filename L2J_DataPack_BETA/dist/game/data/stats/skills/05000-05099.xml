@@ -65,7 +65,6 @@
 		<set name="flyRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="5800" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -85,11 +84,10 @@
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="ignoreResists" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>

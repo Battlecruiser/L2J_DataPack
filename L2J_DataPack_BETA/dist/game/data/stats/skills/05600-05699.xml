@@ -38,13 +38,12 @@
 	<skill id="5602" levels="1" name="Transform Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<set name="canBeDispeled" val="false" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<!-- set name="power" val="-99" / -->
 		<!-- set name="skillType" val="HEAL_PERCENT" / -->
-		<set name="power" val="100" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -835,11 +834,9 @@
 		<table name="#val1"> 0.9 0.81 0.73 0.66 0.6 </table>
 		<table name="#val2"> 5 9 13 17 21 </table>
 		<set name="canBeDispeled" val="false" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1152,12 +1149,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1221,12 +1217,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1244,12 +1239,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1336,12 +1330,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1407,11 +1400,10 @@
 	</skill>
 	<skill id="5697" levels="4" name="Seal">
 		<!-- Imbue Seed of Destruction effect -->
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="lvlDepend" val="1" />

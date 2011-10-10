@@ -303,16 +303,13 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="500" />
-		<set name="ignoreResists" val="true" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="mpInitialConsume" val="4" />
 		<set name="mpConsume" val="23" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="DEBUFF" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="AbortCast" noicon="1" val="0" effectPower="50" />
