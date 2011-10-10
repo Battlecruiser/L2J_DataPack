@@ -35,10 +35,9 @@
 		<set name="mpConsume" val="74" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -177,13 +176,12 @@
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="12610" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
@@ -880,8 +878,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="ignoreResists" val="true" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="ETC" />

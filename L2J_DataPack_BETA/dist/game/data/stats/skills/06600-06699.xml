@@ -511,13 +511,11 @@
 		<!-- Freya Skills (Triggered from 6274, 6275, 6299, 6300) -->
 		<table name="#count"> 7 3 </table>
 		<table name="#dot"> 115 575 </table>
-		<table name="#ignoreResists"> false true </table>
-		<table name="#power"> 70 100 </table>
+		<table name="#power"> 70 -1 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
 		<set name="aggroPoints" val="100" />
-		<set name="ignoreResists" val="#ignoreResists" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -852,11 +850,10 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="350" />
 		<set name="skillType" val="DOT" />
@@ -942,13 +939,12 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
 		<set name="aggroPoints" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_AURA" />

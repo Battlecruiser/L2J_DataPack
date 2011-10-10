@@ -642,13 +642,12 @@
 		<set name="castRange" val="1500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="1100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />

@@ -1188,11 +1188,10 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>

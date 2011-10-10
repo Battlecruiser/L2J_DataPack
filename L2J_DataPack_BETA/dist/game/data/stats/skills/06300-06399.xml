@@ -591,13 +591,12 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="hitTime" val="1000" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
@@ -612,13 +611,12 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="hitTime" val="1000" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />

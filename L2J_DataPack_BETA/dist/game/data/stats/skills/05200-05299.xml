@@ -995,10 +995,8 @@
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="BLEED" />
-		<set name="power" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />

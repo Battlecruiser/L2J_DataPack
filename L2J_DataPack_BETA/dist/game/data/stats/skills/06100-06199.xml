@@ -169,12 +169,11 @@
 	<skill id="6125" levels="1" name="Paralysis">
 		<!-- Summon Binding Cubic Skill Effect -->
 		<!-- Confirmed CT2.5 -->
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
@@ -186,11 +185,10 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="40" />
 		<set name="isMagic" val="true" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
@@ -379,8 +377,7 @@
 		<set name="skillType" val="MUTE" />
 		<set name="mpConsume" val="59" />
 		<set name="isMagic" val="true" />
-		<set name="ignoreResists" val="true" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="4000" />
@@ -403,7 +400,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -518,11 +515,10 @@
 	<skill id="6169" levels="1" name="Shyeed's Fury">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
