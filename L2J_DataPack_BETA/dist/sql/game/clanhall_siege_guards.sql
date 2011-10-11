@@ -398,59 +398,20 @@ INSERT INTO `clanhall_siege_guards` VALUES
 (21,35375,44525,108867,-2020,0,10800,'true'); 
 
 INSERT INTO `clanhall_siege_guards` VALUES
+-- Bandit Stronghold
+(35,35561,83341,-18309,-1247,16102,1200,'false'),
+(35,35562,85190,-15583,-1247,11451,1200,'false'),
+(35,35563,83654,-14663,-1247,12309,1200,'false'),
+(35,35564,81809,-14375,-1247,14954,1200,'false'),
+(35,35565,81299,-17283,-1247,46120,1200,'false');
+
+INSERT INTO `clanhall_siege_guards` VALUES
 -- Beast Farm
-(63,35618,57058,-92275,-1360,57344,1200,'false'),
-(63,35619,57058,-92275,-1360,57344,1200,'false'),
-(63,35620,57058,-92275,-1360,57344,1200,'false'),
-(63,35621,57058,-92275,-1360,57344,1200,'false'),
-(63,35622,57058,-92275,-1360,57344,1200,'false'),
-(63,35618,58071,-91756,-1360,47274,1200,'false'),
-(63,35619,58071,-91756,-1360,47274,1200,'false'),
-(63,35620,58071,-91756,-1360,47274,1200,'false'),
-(63,35621,58071,-91756,-1360,47274,1200,'false'),
-(63,35622,58071,-91756,-1360,47274,1200,'false'),
-(63,35618,58800,-92560,-1360,34450,1200,'false'),
-(63,35619,58800,-92560,-1360,34450,1200,'false'),
-(63,35620,58800,-92560,-1360,34450,1200,'false'),
-(63,35621,58800,-92560,-1360,34450,1200,'false'),
-(63,35622,58800,-92560,-1360,34450,1200,'false'),
-(63,35618,58297,-93503,-1361,21100,1200,'false'),
-(63,35619,58297,-93503,-1361,21100,1200,'false'),
-(63,35620,58297,-93503,-1361,21100,1200,'false'),
-(63,35621,58297,-93503,-1361,21100,1200,'false'),
-(63,35622,58297,-93503,-1361,21100,1200,'false'),
-(63,35618,57215,-93306,-1359,8400,1200,'false'),
-(63,35619,57215,-93306,-1359,8400,1200,'false'),
-(63,35620,57215,-93306,-1359,8400,1200,'false'),
-(63,35621,57215,-93306,-1359,8400,1200,'false'),
-(63,35622,57215,-93306,-1359,8400,1200,'false'),
--- Beast Farm Final
-(63,35618,56560,-92880,-1360,64000,1200,'false'),
-(63,35619,56560,-92880,-1360,64000,1200,'false'),
-(63,35620,56560,-92880,-1360,64000,1200,'false'),
-(63,35621,56560,-92880,-1360,64000,1200,'false'),
-(63,35622,56560,-92880,-1360,64000,1200,'false'),
-(63,35618,58989,-93234,-1303,31000,1200,'false'),
-(63,35619,58989,-93234,-1303,31000,1200,'false'),
-(63,35620,58989,-93234,-1303,31000,1200,'false'),
-(63,35621,58989,-93234,-1303,31000,1200,'false'),
-(63,35622,58989,-93234,-1303,31000,1200,'false');
--- Beast Farm Pet
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'); TODO: needs support for random spawn by zone.
+(63,35613,59785,-92481,-1360,1093,1200,'false'),
+(63,35614,58270,-90756,-1360,14325,1200,'false'),
+(63,35615,56203,-91740,-1360,25072,1200,'false'),
+(63,35616,56450,-94020,-1360,39350,1200,'false'),
+(63,35617,58706,-94427,-1360,53417,1200,'false');
 
 INSERT INTO `clanhall_siege_guards` VALUES
 -- Fortress of the Dead
