@@ -262,7 +262,7 @@ public class SummonItems implements IItemHandler
 				
 				petSummon.setFollowStatus(true);
 				
-				petSummon.getOwner().sendPacket(new PetItemList(petSummon));
+				petSummon.sendPacket(new PetItemList(petSummon));
 				petSummon.broadcastStatusUpdate();
 			}
 			catch (Exception e)
