@@ -262,13 +262,14 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			else
 			{
 				html = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/flagwar/"+qn+"/messenger_registeredclans.htm");
+				final ClanData[] clanData = _data.values(new ClanData[0]);
 				for(int i = 0; i < _data.size(); i++)
 				{
 					L2Clan attacker = ClanTable.getInstance().getClan(_data.keys()[i]);
 					if(attacker == null)
 						continue;
 					html.replaceAll("%clan"+i+"%", clan.getName());
-					html.replaceAll("%clanMem"+i+"%", String.valueOf(((ClanData)_data.values()[i]).players.size()));
+					html.replaceAll("%clanMem"+i+"%", String.valueOf((clanData[i]).players.size()));
 				}
 				html.replaceAll("%clan", "Empty pos. ");
 				html.replaceAll("%clanMem", "Empty pos. ");
@@ -337,7 +338,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	@Override
 	public void onSiegeStarts()
 	{
-		for(ClanData data : _data.values())
+		for(ClanData data : _data.values(new ClanData[0]))
 		{
 			try
 			{
