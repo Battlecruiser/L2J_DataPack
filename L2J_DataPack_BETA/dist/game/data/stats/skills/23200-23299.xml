@@ -133,14 +133,26 @@
 		<set name="reuseDelay" val="6000" />
 	</skill>
 	<skill id="23214" levels="1" name="Good/Bad of Life">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Triggered from 22175 -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="500" />
+		<set name="skillType" val="HEAL_STATIC" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Triggered from 22176 -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="500" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
