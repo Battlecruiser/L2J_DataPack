@@ -1,0 +1,2 @@
+RENAME TABLE bandit_stronghold_attackers TO siegable_hall_flagwar_attackers;
+RENAME TABLE bandit_stronghold_attackers_members TO bandit_stronghold_attackers_members;
