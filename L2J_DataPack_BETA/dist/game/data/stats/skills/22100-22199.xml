@@ -951,10 +951,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<cond>
-			<and>
-				<player hp="30" />
-				<player olympiad="false" /> <!-- TEMP FIX -->
-			</and>
+			<player hp="30" />
 		</cond>
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23214" triggeredLevel="1" />
@@ -967,10 +964,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<cond>
-			<and>
-				<player mp="10" />
-				<player olympiad="false" /> <!-- TEMP FIX -->
-			</and>
+			<player mp="10" />
 		</cond>
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23215" triggeredLevel="1" />
