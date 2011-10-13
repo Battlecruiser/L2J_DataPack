@@ -2320,7 +2320,7 @@
 		<set name="change_weaponId" val="12005" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -2348,7 +2348,7 @@
 		<set name="price" val="3477000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="342" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2375,7 +2375,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="581" />
@@ -2401,7 +2401,7 @@
 		<set name="price" val="3477000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="342" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2427,7 +2427,7 @@
 		<set name="change_weaponId" val="12004" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant4_skill" val="3426-1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
@@ -2456,7 +2456,7 @@
 		<set name="price" val="3477000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="281" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -2482,7 +2482,7 @@
 		<set name="change_weaponId" val="11994" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<cond msgId="1518">
 			<player races="Kamael" />
@@ -2511,7 +2511,7 @@
 		<set name="price" val="3477000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="item_skill" val="3599-1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="281" />

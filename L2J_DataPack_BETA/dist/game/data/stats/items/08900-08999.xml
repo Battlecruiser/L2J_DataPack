@@ -490,7 +490,7 @@
 		<set name="price" val="6130000" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="156" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -548,7 +548,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3045-17" />
 		<set name="item_skill" val="3552-1" />
 		<for>
@@ -678,7 +678,7 @@
 	</item>
 	<item id="8952" type="EtcItem" name="Greater Herb of Life">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -688,7 +688,7 @@
 	</item>
 	<item id="8953" type="EtcItem" name="Greater Herb of Mana">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
