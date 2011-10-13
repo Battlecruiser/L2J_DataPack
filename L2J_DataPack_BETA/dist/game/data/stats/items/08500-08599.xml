@@ -328,7 +328,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="82" />
@@ -353,7 +353,7 @@
 		<set name="weight" val="1200" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="41" />
@@ -422,7 +422,7 @@
 		<set name="weight" val="1060" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="39" />
@@ -447,7 +447,7 @@
 		<set name="weight" val="1510" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="51" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -470,7 +470,7 @@
 		<set name="weight" val="1490" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="64" />
 			<set order="0x08" stat="mAtk" val="39" />
@@ -702,7 +702,7 @@
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
 		<set name="weight" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

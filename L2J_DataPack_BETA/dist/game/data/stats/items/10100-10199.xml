@@ -191,7 +191,7 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="8311-1" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
@@ -213,7 +213,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -234,7 +234,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -334,8 +334,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -359,8 +359,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
@@ -958,8 +958,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<player class_id_restriction="98, 115, 116, 136" />
@@ -991,7 +991,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="12185000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="71" />
 			<add order="0x40" stat="maxMp" val="31" />

@@ -223,8 +223,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -244,8 +244,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@shield_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -269,8 +269,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -294,8 +294,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -319,8 +319,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@bard}}}" />
 		<cond msgId="1518">
 			<and>
@@ -344,8 +344,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -364,8 +364,8 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -384,8 +384,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -404,8 +404,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -425,8 +425,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="pDef" val="170" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -443,8 +443,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player class_id_restriction="93, 101, 108, 117" /> <!-- Dagger Masters -->
 		</cond>
@@ -464,8 +464,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@bow_master}}}" />
 		<cond msgId="1518">
 			<player class_id_restriction="92, 102, 109, 134" />
@@ -486,8 +486,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="pDef" val="106" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -503,8 +503,8 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="pDef" val="92" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -520,8 +520,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -537,8 +537,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="pDef" val="61" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -555,8 +555,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -577,8 +577,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@heal_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -603,8 +603,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -629,8 +629,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@summon_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -655,8 +655,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="equip_condition" val="{{ec_category;{@wizard_master}}}" />
 		<cond msgId="1518">
 			<and>
@@ -681,8 +681,8 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -702,8 +702,8 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -722,8 +722,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -742,8 +742,8 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -762,8 +762,8 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="1150" />
 		<set name="price" val="6404000" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
@@ -791,8 +791,8 @@
 		<set name="change_weaponId" val="9376" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="333" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -819,8 +819,8 @@
 		<set name="change_weaponId" val="9380" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="405" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -846,8 +846,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="267" />
@@ -876,8 +876,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set order="0x08" stat="pAtk" val="654" />
@@ -905,8 +905,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="291" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -933,8 +933,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3599-1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="333" />
@@ -962,8 +962,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="333" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -990,8 +990,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="267" />
@@ -1019,8 +1019,8 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="405" />
 			<set order="0x08" stat="mAtk" val="151" />
@@ -1049,7 +1049,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="71" />
 			<enchant order="0x0C" stat="mDef" val="0" />
@@ -1065,7 +1065,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="95" />
 			<enchant order="0x0C" stat="mDef" val="0" />
@@ -1081,7 +1081,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="53" />
 			<enchant order="0x0C" stat="mDef" val="0" />
@@ -1097,7 +1097,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="79" />
 			<add order="0x40" stat="maxMp" val="35" />
@@ -1114,7 +1114,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="106" />
 			<add order="0x40" stat="maxMp" val="46" />
@@ -1131,7 +1131,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="60" />
 			<add order="0x40" stat="maxMp" val="23" />
@@ -1148,7 +1148,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3367-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1166,7 +1166,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3365-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1184,7 +1184,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3366-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1202,7 +1202,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3379-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1220,7 +1220,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3377-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1238,7 +1238,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3378-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1256,7 +1256,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3373-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1274,7 +1274,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3371-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1292,7 +1292,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3372-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1310,7 +1310,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3397-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1328,7 +1328,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3395-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1346,7 +1346,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3396-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1364,7 +1364,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3385-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1382,7 +1382,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3383-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1400,7 +1400,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3384-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1418,7 +1418,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3391-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1436,7 +1436,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3389-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1454,7 +1454,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3390-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1472,7 +1472,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3403-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
@@ -1490,7 +1490,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3401-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
@@ -1508,7 +1508,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3402-1" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
@@ -1526,7 +1526,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="27" />
 			<add order="0x40" stat="maxMp" val="35" />
@@ -1543,7 +1543,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="36" />
 			<add order="0x40" stat="maxMp" val="46" />
@@ -1560,7 +1560,7 @@
 		<set name="material" val="gold" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="18" />
 			<add order="0x40" stat="maxMp" val="23" />
