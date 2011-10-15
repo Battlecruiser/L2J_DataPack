@@ -376,7 +376,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					spawn.setRespawnMinDelay(43200);
 					spawn.setRespawnMaxDelay(129600);
-					RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.baseHpMax, template1.baseMpMax, permanent);
+					RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.getBaseHpMax(), template1.getBaseMpMax(), permanent);
 				}
 				else
 				{
