@@ -47,14 +47,27 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		final String[] split = command.split(" ");
 		SiegableHall hall = null;
 		if(Config.ALT_DEV_NO_QUESTS)
+		{
 			activeChar.sendMessage("AltDevNoQuests = true; Clan Hall Sieges are disabled!");
-		else if(split.length < 2)
+			return false;
+		}
+		if(split.length < 2)
+		{
 			activeChar.sendMessage("You have to specify the hall id at least");
-		else if((hall = getHall(split[1], activeChar)) == null)
+			return false;
+		}
+		if((hall = getHall(split[1], activeChar)) == null)
+		{
 			activeChar.sendMessage("Couldnt find he desired siegable hall ("+split[1]+")");
-		else if(hall.getSiege() == null)
+			return false;
+		}
+		if(hall.getSiege() == null)
+		{
 			activeChar.sendMessage("The given hall dont have any attached siege!");
-		else if(split[0].equals(COMMANDS[1]))
+			return false;
+		}
+
+		if(split[0].equals(COMMANDS[1]))
 		{
 			if(hall.isInSiege())
 				activeChar.sendMessage("The requested clan hall is alredy in siege!");

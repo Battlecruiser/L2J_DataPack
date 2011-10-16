@@ -1,5 +1,16 @@
-/**
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package conquerablehalls.flagwar.BanditStronghold;
 
@@ -18,6 +29,7 @@ public final class BanditStronghold extends FlagWar
 	{
 		qn = "BanditStronghold";
 		
+		ROYAL_FLAG			= 35422;
 		FLAG_RED			= 35423;
 		FLAG_YELLOW			= 35424;
 		FLAG_GREEN			= 35425;
@@ -30,22 +42,24 @@ public final class BanditStronghold extends FlagWar
 		ALLY_4				= 35431;
 		ALLY_5				= 35432;
 		
-		TELEPORT_1			= 35561;
+		TELEPORT_1			= 35560;
 				
 		MESSENGER 			= 35437;
+		
+		OUTTER_DOORS_TO_OPEN[0] = 22170001;
+		OUTTER_DOORS_TO_OPEN[1] = 22170002;
 
-		FLAG_COORDS[0] = new int[]{83607,-17541,-1829};
-		FLAG_COORDS[1] = new int[]{84965,-16140,-1829};
-		FLAG_COORDS[2] = new int[]{83280,-15171,-1832};
-		FLAG_COORDS[3] = new int[]{81629,-15004,-1831};
-		FLAG_COORDS[4] = new int[]{81596,-16562,-1848};
-		
-		ALLY_COORDS[0] = new int[] {83409,-17362,-1829};
-		ALLY_COORDS[1] = new int[] {85074,-16408,-1829};
-		ALLY_COORDS[2] = new int[] {83366,-15371,-1835};
-		ALLY_COORDS[3] = new int[] {81889,-14986,-1833};
-		ALLY_COORDS[4] = new int[] {81431,-16272,-1856};
-		
+		INNER_DOORS_TO_OPEN[0] = 22170003;
+		INNER_DOORS_TO_OPEN[1] = 22170004;
+
+		FLAG_COORDS[0] = new int[]{83699,-17468,-1774,19048};
+		FLAG_COORDS[1] = new int[]{82053,-17060,-1784,5432};
+		FLAG_COORDS[2] = new int[]{82142,-15528,-1799,58792};
+		FLAG_COORDS[3] = new int[]{83544,-15266,-1770,44976};
+		FLAG_COORDS[4] = new int[]{84609,-16041,-1769,35816};
+		FLAG_COORDS[5] = new int[]{81981,-15708,-1858,60392};
+		FLAG_COORDS[6] = new int[]{84375,-17060,-1860,27712};
+
 		java.util.Collection<L2ResidenceHallTeleportZone> zoneList 
 		= ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		

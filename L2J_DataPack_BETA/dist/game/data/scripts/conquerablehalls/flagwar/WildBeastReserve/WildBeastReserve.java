@@ -1,5 +1,16 @@
-/**
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package conquerablehalls.flagwar.WildBeastReserve;
 
@@ -18,6 +29,7 @@ public final class WildBeastReserve extends FlagWar
 	{
 		qn = "WildBeastReserve";
 		
+		ROYAL_FLAG					= 35606;
 		FLAG_RED					= 35607;	// White flag
 		FLAG_YELLOW					= 35608;	// Red flag
 		FLAG_GREEN					= 35609;	// Blue flag
@@ -30,22 +42,24 @@ public final class WildBeastReserve extends FlagWar
 		ALLY_4						= 35621;
 		ALLY_5						= 35622;
 		
-		TELEPORT_1 					= 35613;
+		TELEPORT_1 					= 35612;
 		
 		MESSENGER 					= 35627;
 		
-		FLAG_COORDS[0] = new int[]{59489,-91704,-1359};
-		FLAG_COORDS[1] = new int[]{57448,-90896,-1359};
-		FLAG_COORDS[2] = new int[]{56013,-92601,-1358};
-		FLAG_COORDS[3] = new int[]{57270,-94211,-1360};
-		FLAG_COORDS[4] = new int[]{59478,-94270,-1355};
+		FLAG_COORDS[0] = new int[]{56963,-92211,-1303,60611};
+		FLAG_COORDS[1] = new int[]{58090,-91641,-1303,47274};
+		FLAG_COORDS[2] = new int[]{58908,-92556,-1303,34450};
+		FLAG_COORDS[3] = new int[]{58336,-93600,-1303,21100};
+		FLAG_COORDS[4] = new int[]{57152,-93360,-1303,8400};
+		FLAG_COORDS[5] = new int[]{59116,-93251,-1302,31000};
+		FLAG_COORDS[6] = new int[]{56432,-92864,-1303,64000};
 		
-		ALLY_COORDS[0] = new int[]{59342,-91632,-1360};
-		ALLY_COORDS[1] = new int[]{57325,-91094,-1354};
-		ALLY_COORDS[2] = new int[]{56184,-92742,-1358};
-		ALLY_COORDS[3] = new int[]{57511,-94009,-1368};
-		ALLY_COORDS[4] = new int[]{57537,-93921,-1360};
+		OUTTER_DOORS_TO_OPEN[0] = 21150003;
+		OUTTER_DOORS_TO_OPEN[1] = 21150004;
 		
+		INNER_DOORS_TO_OPEN[0] = 21150001;
+		INNER_DOORS_TO_OPEN[1] = 21150002;
+		 
 		java.util.Collection<L2ResidenceHallTeleportZone> zoneList 
 		= ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		
