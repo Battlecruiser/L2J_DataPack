@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
@@ -41,24 +42,25 @@ public class L2DoorInstanceAction implements IActionHandler
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
 			
 			StaticObject su;
+			L2DoorInstance door = (L2DoorInstance)target;
 			// send HP amount if doors are inside castle/fortress zone
 			// TODO: needed to be added here doors from conquerable clanhalls
-			if ((((L2DoorInstance)target).getCastle() != null
-					&& ((L2DoorInstance)target).getCastle().getCastleId() > 0)
-					|| (((L2DoorInstance)target).getFort() != null
-							&& ((L2DoorInstance)target).getFort().getFortId() > 0
-							&& !((L2DoorInstance)target).getIsCommanderDoor()))
-				su = new StaticObject((L2DoorInstance)target, true);
+			if ((door.getCastle() != null && door.getCastle().getCastleId() > 0)
+				|| (door.getFort() != null && door.getFort().getFortId() > 0)
+				|| (door.getClanHall() != null && door.getClanHall().isSiegableHall())
+				&& !door.getIsCommanderDoor())
+				su = new StaticObject(door, true);
 			else
-				su = new StaticObject((L2DoorInstance)target, false);
+				su = new StaticObject(door, false);
 			
 			activeChar.sendPacket(su);
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character)target));
+			activeChar.sendPacket(new ValidateLocation(door));
 		}
 		else if (interact)
 		{
+			L2DoorInstance door = (L2DoorInstance)target;
 			//            MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
 			//            activeChar.sendPacket(my);
 			if (target.isAutoAttackable(activeChar))
@@ -67,17 +69,18 @@ public class L2DoorInstanceAction implements IActionHandler
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 			}
 			else if (activeChar.getClan() != null
-					&& ((L2DoorInstance)target).getClanHall() != null
-					&& activeChar.getClanId() == ((L2DoorInstance)target).getClanHall().getOwnerId())
+					&& door.getClanHall() != null
+					&& activeChar.getClanId() == door.getClanHall().getOwnerId())
 			{
-				if (!((L2Character)target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
+				if (!door.isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
-				else
+				else if(!door.getClanHall().isSiegableHall() ||
+					!((SiegableHall)door.getClanHall()).isInSiege())
 				{
-					activeChar.gatesRequest((L2DoorInstance)target);
-					if (!((L2DoorInstance)target).getOpen())
+					activeChar.gatesRequest(door);
+					if (!door.getOpen())
 						activeChar.sendPacket(new ConfirmDlg(1140));
 					else
 						activeChar.sendPacket(new ConfirmDlg(1141));
