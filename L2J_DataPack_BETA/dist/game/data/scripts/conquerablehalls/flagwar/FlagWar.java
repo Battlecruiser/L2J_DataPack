@@ -558,6 +558,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			data.flagInstance.setLocx(coords[0]);
 			data.flagInstance.setLocy(coords[1]);
 			data.flagInstance.setLocz(coords[2]);
+			data.flagInstance.setHeading(coords[3]);
 			data.flagInstance.setRespawnDelay(10000);
 			data.flagInstance.setAmount(1);
 			data.flagInstance.init();
@@ -566,6 +567,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			data.warrior.setLocx(coords[0] + 25);
 			data.warrior.setLocy(coords[1] + 25);
 			data.warrior.setLocz(coords[2]);
+			data.warrior.setHeading(coords[3]);
 			data.warrior.setRespawnDelay(10000);
 			data.warrior.setAmount(1);
 			data.warrior.init();

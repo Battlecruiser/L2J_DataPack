@@ -70,7 +70,7 @@ public final class BanditStronghold extends FlagWar
 			
 			int id = teleZone.getResidenceZoneId();
 			
-			if(id < 0 || id >= 5)						// Shouldnt happen
+			if(id < 0 || id >= 6)						// Shouldnt happen
 				continue;
 			
 			TELE_ZONES[id] = teleZone;
