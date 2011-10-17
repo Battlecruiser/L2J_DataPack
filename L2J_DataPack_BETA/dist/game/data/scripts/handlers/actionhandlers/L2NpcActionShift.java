@@ -81,10 +81,10 @@ public class L2NpcActionShift implements IActionHandler
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%class%", target.getClass().getSimpleName());
-			html.replace("%id%",    String.valueOf(((L2Npc)target).getTemplate().npcId));
-			html.replace("%lvl%",   String.valueOf(((L2Npc)target).getTemplate().level));
-			html.replace("%name%",  String.valueOf(((L2Npc)target).getTemplate().name));
-			html.replace("%tmplid%",String.valueOf(((L2Npc)target).getTemplate().npcId));
+			html.replace("%id%",    String.valueOf(((L2Npc)target).getTemplate().getNpcId()));
+			html.replace("%lvl%",   String.valueOf(((L2Npc)target).getTemplate().getLevel()));
+			html.replace("%name%",  String.valueOf(((L2Npc)target).getTemplate().getName()));
+			html.replace("%tmplid%",String.valueOf(((L2Npc)target).getTemplate().getNpcId()));
 			html.replace("%aggro%", String.valueOf((target instanceof L2Attackable) ? ((L2Attackable) target).getAggroRange() : 0));
 			html.replace("%hp%",    String.valueOf((int)((L2Character)target).getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(((L2Character)target).getMaxHp()));
@@ -154,7 +154,7 @@ public class L2NpcActionShift implements IActionHandler
 			
 			if (target instanceof L2MerchantInstance)
 			{
-				html.replace("%butt%","<button value=\"Shop\" action=\"bypass -h admin_showShop "+String.valueOf(((L2Npc)target).getTemplate().npcId)+"\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+				html.replace("%butt%","<button value=\"Shop\" action=\"bypass -h admin_showShop "+String.valueOf(((L2Npc)target).getTemplate().getNpcId())+"\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			}
 			else
 			{
@@ -247,7 +247,7 @@ public class L2NpcActionShift implements IActionHandler
 					"</table>"
 			);
 			
-			if (((L2Npc)target).getTemplate().getDropData() != null)
+			if (!((L2Npc) target).getTemplate().getDropData().isEmpty())
 			{
 				StringUtil.append(html1,
 						"<br><center><font color=\"LEVEL\">[Drop Info]</font></center>" +

@@ -14,6 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.List;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -50,7 +52,7 @@ public class SkillList implements IBypassHandler
 				{
 					boolean own_class = false;
 					
-					ClassId[] classesToTeach = ((L2NpcInstance)target).getClassesToTeach();
+					List<ClassId> classesToTeach = ((L2NpcInstance) target).getClassesToTeach();
 					if (classesToTeach != null)
 					{
 						for (ClassId cid : classesToTeach)

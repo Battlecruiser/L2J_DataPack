@@ -457,12 +457,13 @@ public class HallOfSuffering extends Quest
 	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof HSWorld)
 		{
-			if (!((HSWorld)tmpworld).isBossesAttacked)
+			final HSWorld world = (HSWorld) tmpworld;
+			if (!world.isBossesAttacked)
 			{
-				((HSWorld) tmpworld).isBossesAttacked = true;
+				world.isBossesAttacked = true;
 				Calendar reenter = Calendar.getInstance();
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
@@ -484,17 +485,17 @@ public class HallOfSuffering extends Quest
 			}
 			else if (damage >= npc.getCurrentHp())
 			{
-				if (((HSWorld)tmpworld).klanikus.isDead())
+				if (world.klanikus.isDead())
 				{
-					((HSWorld)tmpworld).klanikus.setIsDead(false);
-					((HSWorld)tmpworld).klanikus.doDie(attacker);
-					((HSWorld)tmpworld).klodekus.doDie(attacker);
+					world.klanikus.setIsDead(false);
+					world.klanikus.doDie(attacker);
+					world.klodekus.doDie(attacker);
 				}
 				else if (((HSWorld)tmpworld).klodekus.isDead())
 				{
-					((HSWorld)tmpworld).klodekus.setIsDead(false);
-					((HSWorld)tmpworld).klodekus.doDie(attacker);
-					((HSWorld)tmpworld).klanikus.doDie(attacker);
+					world.klodekus.setIsDead(false);
+					world.klodekus.doDie(attacker);
+					world.klanikus.doDie(attacker);
 				}
 				else
 				{

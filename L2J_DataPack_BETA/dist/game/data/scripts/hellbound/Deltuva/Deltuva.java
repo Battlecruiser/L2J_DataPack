@@ -32,7 +32,7 @@ public class Deltuva extends Quest
 		String htmltext = null;
 		if (event.equalsIgnoreCase("teleport"))
 		{
-			final QuestState hostQuest = player.getQuestState("132_MatrasCuriosity");
+			final QuestState hostQuest = player.getQuestState("Q132_MatrasCuriosity");
 			if ((hostQuest == null) || !hostQuest.isCompleted())
 			{
 				htmltext = "32313-02.htm";

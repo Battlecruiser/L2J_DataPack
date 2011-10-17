@@ -100,7 +100,7 @@ public class RaidbossInfo extends Quest
 			
 			for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 			{
-				if (spawn.getNpcid() == raid.npcId)
+				if (spawn.getNpcid() == raid.getNpcId())
 				{
 					x = spawn.getLocx();
 					y = spawn.getLocy();
@@ -108,7 +108,7 @@ public class RaidbossInfo extends Quest
 					break;
 				}
 			}
-			RADAR.put(raid.npcId, new Location(x, y, z));
+			RADAR.put(raid.getNpcId(), new Location(x, y, z));
 		}
 	}
 

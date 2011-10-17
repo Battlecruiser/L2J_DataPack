@@ -86,7 +86,7 @@ public class Loto implements IBypassHandler
 	// >24 - check lottery ticket by item object id
 	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
 	{
-		int npcId = npc.getTemplate().npcId;
+		int npcId = npc.getTemplate().getNpcId();
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());

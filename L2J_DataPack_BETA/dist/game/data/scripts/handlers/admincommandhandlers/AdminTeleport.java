@@ -471,7 +471,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			L2Npc target = (L2Npc) obj;
 			
-			int monsterTemplate = target.getTemplate().npcId;
+			int monsterTemplate = target.getTemplate().getNpcId();
 			L2NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 			if (template1 == null)
 			{
@@ -513,7 +513,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
 				
-				activeChar.sendMessage("Created " + template1.name + " on " + target.getObjectId() + ".");
+				activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId() + ".");
 				
 				if (Config.DEBUG)
 				{

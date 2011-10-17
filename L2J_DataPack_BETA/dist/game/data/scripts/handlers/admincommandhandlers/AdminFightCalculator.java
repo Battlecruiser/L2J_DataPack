@@ -14,6 +14,7 @@
  */
 package handlers.admincommandhandlers;
 
+import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -123,29 +124,29 @@ public class AdminFightCalculator implements IAdminCommandHandler
 					String.valueOf(lvl2),
 					"</td></tr>" +
 					"<tr><td>id ",
-					String.valueOf(npc1.npcId),
+					String.valueOf(npc1.getNpcId()),
 					"</td><td>id ",
-					String.valueOf(npc2.npcId),
+					String.valueOf(npc2.getNpcId()),
 					"</td></tr>" +
 					"<tr><td>",
-					String.valueOf(npc1.name),
+					npc1.getName(),
 					"</td><td>",
-					npc2.name,
+					npc2.getName(),
 					"</td></tr>" +
 					"</table>" +
 					"<center><br><br><br>" +
 					"<button value=\"OK\" action=\"bypass -h admin_fight_calculator_show ",
-					String.valueOf(npc1.npcId),
+					String.valueOf(npc1.getNpcId()),
 					" ",
-					String.valueOf(npc2.npcId),
+					String.valueOf(npc2.getNpcId()),
 					"\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
 					"</center>" +
 					"</body></html>"
 			);
 		} else if (lvl1 != 0 && npc1 == null) {
-			L2NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
+			final List<L2NpcTemplate> npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
 			final StringBuilder sb = StringUtil.startAppend(
-					50 + npcs.length * 200,
+					50 + npcs.size() * 200,
 					"<html><title>Select first mob to fight</title>" +
 					"<body><table>"
 			);
@@ -157,11 +158,11 @@ public class AdminFightCalculator implements IAdminCommandHandler
 						" lvl2 ",
 						String.valueOf(lvl2),
 						" mid1 ",
-						String.valueOf(n.npcId),
+						String.valueOf(n.getNpcId()),
 						" mid2 ",
 						String.valueOf(mid2),
 						"\">",
-						n.name,
+						n.getName(),
 						"</a></td></tr>"
 				);
 			}
@@ -169,9 +170,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			sb.append("</table></body></html>");
 			replyMSG = sb.toString();
 		} else if (lvl2 != 0 && npc2 == null) {
-			L2NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
+			final List<L2NpcTemplate> npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
 			final StringBuilder sb = StringUtil.startAppend(
-					50 + npcs.length * 200,
+					50 + npcs.size() * 200,
 					"<html><title>Select second mob to fight</title>" +
 					"<body><table>"
 			);
@@ -185,9 +186,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 						" mid1 ",
 						String.valueOf(mid1),
 						" mid2 ",
-						String.valueOf(n.npcId),
+						String.valueOf(n.getNpcId()),
 						"\">",
-						String.valueOf(n.name),
+						n.getName(),
 						"</a></td></tr>"
 				);
 			}
@@ -352,9 +353,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		} else {
 			StringUtil.append(replyMSG,
 					"<tr><td width=140>Parameter</td><td width=70>",
-					((L2NpcTemplate) npc1.getTemplate()).name,
+					((L2NpcTemplate) npc1.getTemplate()).getName(),
 					"</td><td width=70>",
-					((L2NpcTemplate) npc2.getTemplate()).name,
+					((L2NpcTemplate) npc2.getTemplate()).getName(),
 			"</td></tr>");
 		}
 		
@@ -438,9 +439,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		} else {
 			StringUtil.append(replyMSG,
 					"<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show ",
-					String.valueOf(((L2NpcTemplate) npc1.getTemplate()).npcId),
+					String.valueOf(((L2NpcTemplate) npc1.getTemplate()).getNpcId()),
 					" ",
-					String.valueOf(((L2NpcTemplate) npc2.getTemplate()).npcId),
+					String.valueOf(((L2NpcTemplate) npc2.getTemplate()).getNpcId()),
 			"\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		}
 		
