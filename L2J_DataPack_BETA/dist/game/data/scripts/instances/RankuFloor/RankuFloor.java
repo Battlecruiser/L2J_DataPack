@@ -278,7 +278,7 @@ public class RankuFloor extends Quest
 			}
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
+			sm.addInstanceName(world.templateId);
 			// set instance reenter time for all allowed players
 			for (int objectId : world.allowed)
 			{

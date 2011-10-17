@@ -487,6 +487,7 @@ public class Kamaloka extends Quest
 				for (int id : instanceTimes.keySet())
 				{
 					// find instance with same name (kamaloka or labyrinth)
+					// TODO: Zoey76: Don't use instance name, use other system.
 					if (!instanceName.equals(InstanceManager.getInstance().getInstanceIdName(id)))
 						continue;
 					// if found instance still can't be reentered - exit
@@ -660,7 +661,7 @@ public class Kamaloka extends Quest
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
+			sm.addInstanceName(world.templateId);
 			
 			// set instance reenter time for all allowed players
 			for (int objectId : world.allowed)

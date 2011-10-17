@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-
 /**
- * 
  * @author nille02
  */
 public class InstanceZone implements IUserCommandHandler
@@ -55,7 +53,7 @@ public class InstanceZone implements IUserCommandHandler
 		if (world != null && world.templateId >= 0)
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_INUSE_S1);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
+			sm.addInstanceName(world.templateId);
 			activeChar.sendPacket(sm);
 		}
 		
@@ -75,7 +73,7 @@ public class InstanceZone implements IUserCommandHandler
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime%3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
-					sm.addString(InstanceManager.getInstance().getInstanceIdName(instanceId));
+					sm.addInstanceName(instanceId);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					activeChar.sendPacket(sm);
