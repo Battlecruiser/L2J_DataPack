@@ -622,7 +622,7 @@ public class Stage1 extends Quest
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
 
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-		sm.addString(InstanceManager.getInstance().getInstanceIdName(INSTANCEID));
+		sm.addInstanceName(INSTANCEID);
 
 		// set instance reenter time for all allowed players
 		for (int objectId : world.allowed)
