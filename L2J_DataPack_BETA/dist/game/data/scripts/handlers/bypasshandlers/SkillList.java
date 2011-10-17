@@ -52,16 +52,13 @@ public class SkillList implements IBypassHandler
 				{
 					boolean own_class = false;
 					
-					List<ClassId> classesToTeach = ((L2NpcInstance) target).getClassesToTeach();
-					if (classesToTeach != null)
+					final List<ClassId> classesToTeach = ((L2NpcInstance) target).getClassesToTeach();
+					for (ClassId cid : classesToTeach)
 					{
-						for (ClassId cid : classesToTeach)
+						if (cid.equalsOrChildOf(activeChar.getClassId()))
 						{
-							if (cid.equalsOrChildOf(activeChar.getClassId()))
-							{
-								own_class = true;
-								break;
-							}
+							own_class = true;
+							break;
 						}
 					}
 					
@@ -78,7 +75,7 @@ public class SkillList implements IBypassHandler
 					}
 					
 					// make a list of classes
-					if (classesToTeach != null)
+					if (classesToTeach.isEmpty())
 					{
 						int count = 0;
 						ClassId classCheck = activeChar.getClassId();
@@ -101,8 +98,9 @@ public class SkillList implements IBypassHandler
 						classCheck = null;
 					}
 					else
+					{
 						text += "No Skills.<br>";
-					
+					}
 					text += "</body></html>";
 					
 					NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc)target).getObjectId());
