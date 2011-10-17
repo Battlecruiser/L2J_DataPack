@@ -219,7 +219,7 @@ public class QuestLink implements IBypassHandler
 		// collect awaiting quests and start points
 		List<Quest> options = new FastList<Quest>();
 		
-		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().npcId);
+		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getNpcId());
 		Quest[] starts = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
