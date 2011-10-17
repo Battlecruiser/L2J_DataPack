@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
 	<!-- Clan Hall Teleport Zones -->
-		<zone name="bandit_stronghold_restart_territory_1" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1814" maxZ="-1814">
+	<zone name="bandit_stronghold_restart_territory_1" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1814" maxZ="-1814">
 		<stat name="residenceId" val="35" />
 		<stat name="residenceZoneId" val="0" />  <!-- Identifier inside hall's teleport zones -->
 		<node X="80773" Y="-15854" />
@@ -17,7 +17,7 @@
 	</zone>
 	<zone name="bandit_stronghold_restart_territory_2" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1245" maxZ="-1250">
 		<stat name="residenceId" val="35" />
-		<stat name="residenceZoneId" val="1" /> 
+		<stat name="residenceZoneId" val="1" />
 		<node X="83536" Y="-18012" />
 		<node X="83499" Y="-18378" />
 		<node X="83326" Y="-18455" />
@@ -36,7 +36,7 @@
 		<node X="81206" Y="-17110" />
 		<spawn X="81807" Y="-17161" Z="-1816" />
 		<spawn X="82142" Y="-17288" Z="-1824" />
-	</zone>		
+	</zone>
 	<zone name="bandit_stronghold_restart_territory_4" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1245" maxZ="-1250">
 		<stat name="residenceId" val="35" />
 		<stat name="residenceZoneId" val="3" />
@@ -70,7 +70,6 @@
 		<spawn X="84568" Y="-15789" Z="-1824" />
 		<spawn X="84812" Y="-15839" Z="-1816" />
 	</zone>
-	
 	<zone name="wild_beast_reserve_restart_territory_1" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1840" maxZ="-1540">
 		<stat name="residenceId" val="63" />
 		<stat name="residenceZoneId" val="0" />
@@ -97,7 +96,7 @@
 		<node X="55785" Y="-91191" />
 		<spawn X="56954" Y="-92338" Z="-1360" />
 	</zone>
-		<zone name="wild_beast_reserve_restart_territory_3" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1360" maxZ="-1281">
+	<zone name="wild_beast_reserve_restart_territory_3" type="ResidenceHallTeleportZone" shape="NPoly" minZ="-1360" maxZ="-1281">
 		<stat name="residenceId" val="63" />
 		<stat name="residenceZoneId" val="2" />
 		<node X="58821" Y="-90419" />
