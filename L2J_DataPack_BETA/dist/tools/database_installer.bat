@@ -404,7 +404,7 @@ echo Upgrading structure of Login Server tables.
 echo.
 echo @echo off> temp.bat
 if exist ls_errors.txt del ls_errors.txt
-for %%i in (..\sql\login\updates\*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -f %lsdb% ^< %%i 2^>^> ls_errors.txt >> temp.bat
+for %%i in (..\sql\login\updates\*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% --force ^< %%i 2^>^> ls_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move ls_errors.txt %workdir%
@@ -567,7 +567,7 @@ echo Upgrading structure of Community Server tables.
 echo.
 echo @echo off> temp.bat
 if exist cs_errors.txt del cs_errors.txt
-for %%i in (..\sql\community\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -f %cbdb% ^< %%i 2^>^> cs_errors.txt >> temp.bat
+for %%i in (..\sql\community\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% --force ^< %%i 2^>^> cs_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move cs_errors.txt %workdir%
@@ -724,7 +724,7 @@ echo Upgrading structure of Game Server tables.
 echo.
 echo @echo off> temp.bat
 if exist gs_errors.txt del gs_errors.txt
-for %%i in (..\sql\game\updates\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -f %gsdb% ^< %%i 2^>^> gs_errors.txt >> temp.bat
+for %%i in (..\sql\game\updates\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% --force ^< %%i 2^>^> gs_errors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
 move gs_errors.txt %workdir%

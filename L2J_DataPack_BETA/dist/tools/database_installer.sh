@@ -447,11 +447,11 @@ while :
      echo "There we go, it may take some time..."
 	 echo "Installing Gameserver Updates"
      for file in $(ls ../sql/game/updates/*.sql);do
-        $MYG < $file 2>> gserror.log
+        $MYG --force < $file 2>> gserror.log
 	 done
 	 echo "Installing Loginserver Updates"
 	 for file in $(ls ../sql/login/updates/*.sql);do
-		$MYL < $file 2>> lserror.log
+		$MYL --force < $file 2>> lserror.log
 	 done
      break
    elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
@@ -473,7 +473,7 @@ while :
      echo "updates parser results. Last run: "`date` >cb_database_installer.log
      for file in $(ls ../sql/community/updates/*sql);do
         echo $file|cut -d/ -f4 >> cb_database_installer.log
-        $MYC < $file 2>> cb_database_installer.log
+        $MYC --force < $file 2>> cb_database_installer.log
         if [ $? -eq 0 ];then
             echo "no errors">> cb_database_installer.log
         fi
