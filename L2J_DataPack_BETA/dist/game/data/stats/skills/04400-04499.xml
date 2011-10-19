@@ -1195,7 +1195,8 @@
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="120" val="0" abnormalLvl="99" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="99" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="120" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4483" levels="12" name="Hold">

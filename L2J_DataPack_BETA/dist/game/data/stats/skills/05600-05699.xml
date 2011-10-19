@@ -1410,7 +1410,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5698" levels="37" name="Bless the Blood">
