@@ -800,10 +800,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="60" noicon="1" val="0" />
 		</for>
 		<enchant2for>
-			<effect name="SilenceMagicPhysical" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="#ench2Time" noicon="1" val="0" />
 		</enchant2for>
 	</skill>
 	<skill id="1337" levels="1" name="Curse of Abyss" enchantGroup1="6" enchantGroup2="6">
@@ -2188,13 +2190,14 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="hero_debuff">
+			<effect name="Mute" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="hero_debuff">
 				<add order="0x40" stat="cancel" val="100" />
 				<mul order="0x30" stat="mDef" val="0.5" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<sub order="0x40" stat="rEvas" val="16" />
 				<mul order="0x30" stat="rShld" val="0.5" />
 			</effect>
+			<effect name="PhysicalMute" abnormalTime="60" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1376" levels="1" name="Heroic Dread">

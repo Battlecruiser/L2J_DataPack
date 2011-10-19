@@ -68,7 +68,6 @@ import handlers.effecthandlers.EffectSignet;
 import handlers.effecthandlers.EffectSignetAntiSummon;
 import handlers.effecthandlers.EffectSignetMDam;
 import handlers.effecthandlers.EffectSignetNoise;
-import handlers.effecthandlers.EffectSilenceMagicPhysical;
 import handlers.effecthandlers.EffectSilentMove;
 import handlers.effecthandlers.EffectSleep;
 import handlers.effecthandlers.EffectSpoil;
@@ -143,7 +142,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("SignetAntiSummon", EffectSignetAntiSummon.class);
 		EffectHandler.getInstance().registerHandler("SignetMDam", EffectSignetMDam.class);
 		EffectHandler.getInstance().registerHandler("SignetNoise", EffectSignetNoise.class);
-		EffectHandler.getInstance().registerHandler("SilenceMagicPhysical", EffectSilenceMagicPhysical.class);
 		EffectHandler.getInstance().registerHandler("SilentMove", EffectSilentMove.class);
 		EffectHandler.getInstance().registerHandler("Sleep", EffectSleep.class);
 		EffectHandler.getInstance().registerHandler("Spoil", EffectSpoil.class);

@@ -1921,7 +1921,8 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="30" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3199" levels="3" name="Item Skill: Skill Refresh">
