@@ -78,7 +78,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("SignetAntiSummon", EffectSignetAntiSummon.class);
 		EffectHandler.getInstance().registerHandler("SignetMDam", EffectSignetMDam.class);
 		EffectHandler.getInstance().registerHandler("SignetNoise", EffectSignetNoise.class);
-		EffectHandler.getInstance().registerHandler("SilenceMagicPhysical", EffectSilenceMagicPhysical.class);
 		EffectHandler.getInstance().registerHandler("SilentMove", EffectSilentMove.class);
 		EffectHandler.getInstance().registerHandler("Sleep", EffectSleep.class);
 		EffectHandler.getInstance().registerHandler("Spoil", EffectSpoil.class);

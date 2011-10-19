@@ -306,7 +306,8 @@
 		<set name="effectRange" val="2000" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="3600" val="0" abnormalLvl="99" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="3600" val="0" abnormalLvl="99" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="3600" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4216" levels="1" name="Scatter Enemy">
