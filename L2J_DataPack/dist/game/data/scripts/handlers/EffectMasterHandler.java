@@ -82,7 +82,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Sleep", EffectSleep.class);
 		EffectHandler.getInstance().registerHandler("Spoil", EffectSpoil.class);
 		EffectHandler.getInstance().registerHandler("Stun", EffectStun.class);
-		EffectHandler.getInstance().registerHandler("StunSelf", EffectStunSelf.class);
 		EffectHandler.getInstance().registerHandler("TargetMe", EffectTargetMe.class);
 		EffectHandler.getInstance().registerHandler("ThrowUp", EffectThrowUp.class);
 		EffectHandler.getInstance().registerHandler("TransferDamage", EffectTransferDamage.class);
