@@ -981,7 +981,8 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
@@ -1002,7 +1003,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="#abnormalLvl" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="#abnormalLvl" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
@@ -1043,7 +1045,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="SilenceMagicPhysical" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
+			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6384" levels="2" name="Bistakon Deadly Blow">

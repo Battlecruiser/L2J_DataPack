@@ -872,7 +872,8 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormal="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" triggeredLevel="1" abnormalLvl="8" abnormalType="oblivion" />
-			<effect name="SilenceMagicPhysical" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
+			<effect name="Mute" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
+			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
