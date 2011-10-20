@@ -235,7 +235,6 @@ import handlers.targethandlers.TargetAlly;
 import handlers.targethandlers.TargetArea;
 import handlers.targethandlers.TargetAreaCorpseMob;
 import handlers.targethandlers.TargetAreaSummon;
-import handlers.targethandlers.TargetAreaUndead;
 import handlers.targethandlers.TargetAura;
 import handlers.targethandlers.TargetAuraCorpseMob;
 import handlers.targethandlers.TargetBehindArea;
@@ -263,7 +262,6 @@ import handlers.targethandlers.TargetPartyOther;
 import handlers.targethandlers.TargetPet;
 import handlers.targethandlers.TargetSelf;
 import handlers.targethandlers.TargetSummon;
-import handlers.targethandlers.TargetUndead;
 import handlers.targethandlers.TargetUnlockable;
 import handlers.usercommandhandlers.Birthday;
 import handlers.usercommandhandlers.ChannelDelete;
@@ -619,7 +617,6 @@ public class MasterHandler
 		TARGET.registerTargetType(new TargetArea());
 		TARGET.registerTargetType(new TargetAreaCorpseMob());
 		TARGET.registerTargetType(new TargetAreaSummon());
-		TARGET.registerTargetType(new TargetAreaUndead());
 		TARGET.registerTargetType(new TargetAura());
 		TARGET.registerTargetType(new TargetAuraCorpseMob());
 		TARGET.registerTargetType(new TargetBehindArea());
@@ -647,7 +644,6 @@ public class MasterHandler
 		TARGET.registerTargetType(new TargetPet());
 		TARGET.registerTargetType(new TargetSelf());
 		TARGET.registerTargetType(new TargetSummon());
-		TARGET.registerTargetType(new TargetUndead());
 		TARGET.registerTargetType(new TargetUnlockable());
 		_log.log(Level.INFO, "Loaded " + TARGET.size() + " Target Handlers");
 	}

@@ -528,7 +528,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="1000" />
@@ -547,6 +547,9 @@
 		<enchant2 name="elementPower" val="#ench2ElementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 	</skill>
 	<skill id="1031" levels="8" name="Disrupt Undead">
 		<table name="#mpInitialConsume"> 4 4 5 5 5 6 6 6 </table>
@@ -557,7 +560,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="1000" />
@@ -567,6 +570,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 	</skill>
 	<skill id="1032" levels="3" name="Invigor" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -664,7 +670,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
@@ -677,6 +683,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 	</skill>
 	<skill id="1035" levels="4" name="Mental Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -803,7 +812,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="6000" />
 		<set name="saveVs" val="MEN" />
@@ -823,6 +832,9 @@
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="elementPower" val="20" />
 		<enchant3 name="element" val="4" /> <!-- Holy -->
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
@@ -1015,7 +1027,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="35" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AREA_UNDEAD" />
+		<set name="target" val="TARGET_AREA" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="5000" />
@@ -1026,6 +1038,9 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="DERANGEMENT" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="turn_passive">
 				<sub order="0x40" stat="aggression" val="100000" />
