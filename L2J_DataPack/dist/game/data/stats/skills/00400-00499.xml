@@ -301,7 +301,7 @@
 		<set name="power" val="30" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="FEAR" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1Cost" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -313,6 +313,9 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 		<for>
 			<effect count="10" name="Fear" abnormalTime="2" val="0" />
 		</for>
@@ -1586,7 +1589,7 @@
 		<enchant4 name="element" val="5" /> <!-- Dark -->
 		<enchant4 name="elementPower" val="#ench4DarkAttack" />
 		<cond msgId="113" addName="1">
-			<target race_id="8" />
+			<target race_id="8" /> <!-- Angel -->
 		</cond>
 		<for>
 			<effect count="10" name="Fear" abnormalTime="2" val="0" />
