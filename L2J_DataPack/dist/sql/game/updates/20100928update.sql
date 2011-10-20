@@ -36,7 +36,7 @@ ALTER TABLE `custom_merchant_shopids` MODIFY `npc_id` varchar(5) DEFAULT NULL;
 ALTER TABLE `custom_npc` MODIFY `id` mediumint(7) unsigned NOT NULL DEFAULT '0';
 ALTER TABLE `custom_npc` MODIFY `idTemplate` smallint(5) unsigned NOT NULL DEFAULT '0';
 ALTER TABLE `custom_npc` MODIFY `name` varchar(200) NOT NULL DEFAULT '';
-ALTER TABLE `custom_npc` MODIFY `serverSideName` tinyint(1) NOT NULL DEFAULT '1',
+ALTER TABLE `custom_npc` MODIFY `serverSideName` tinyint(1) NOT NULL DEFAULT '1';
 ALTER TABLE `custom_npc` MODIFY `title` varchar(45) NOT NULL DEFAULT '';
 ALTER TABLE `custom_npc` MODIFY `serverSideTitle` tinyint(1) NOT NULL DEFAULT '1';
 ALTER TABLE `custom_npc` MODIFY `class` varchar(200) DEFAULT NULL;
