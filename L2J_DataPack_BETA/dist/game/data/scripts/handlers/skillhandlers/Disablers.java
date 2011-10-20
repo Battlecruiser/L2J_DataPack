@@ -355,19 +355,31 @@ public class Disablers implements ISkillHandler
 				}
 				case ERASE:
 				{
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss)
-							// doesn't affect siege golem or wild hog cannon
-							&& !(target instanceof L2SiegeSummonInstance))
+					// Doesn't affect siege golem or wild hog cannon
+					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss) && !(target instanceof L2SiegeSummonInstance))
 					{
-						L2PcInstance summonOwner = null;
-						L2Summon summonPet = null;
-						summonOwner = ((L2Summon) target).getOwner();
-						summonPet = summonOwner.getPet();
-						if (summonPet != null)
+						final L2PcInstance summonOwner = ((L2Summon) target).getOwner();
+						final L2Summon summon = summonOwner.getPet();
+						if (summon != null)
 						{
-							summonPet.unSummon(summonOwner);
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
-							summonOwner.sendPacket(sm);
+							// TODO: Retail confirmation for Soul of the Phoenix required.
+							if (summon.isPhoenixBlessed())
+							{
+								if (summon.isNoblesseBlessed())
+								{
+									summon.stopNoblesseBlessing(null);
+								}
+							}
+							else if (summon.isNoblesseBlessed())
+							{
+								summon.stopNoblesseBlessing(null);
+							}
+							else
+							{
+								summon.stopAllEffectsExceptThoseThatLastThroughDeath();
+							}
+							summon.unSummon(summonOwner);
+							summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 						}
 					}
 					else
