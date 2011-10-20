@@ -245,7 +245,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="107" levels="9" name="Holy Aura" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="107" levels="9" name="Divine Aura" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench2mpConsume"> 50 50 49 48 47 46 45 44 44 43 42 41 40 39 38 38 37 36 35 34 33 32 32 31 30 29 28 27 26 26 </table>
@@ -256,7 +256,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_AREA_UNDEAD" />
+		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2000" />
@@ -270,6 +270,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 		<for>
 			<effect name="Root" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>

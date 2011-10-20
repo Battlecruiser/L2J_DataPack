@@ -1134,7 +1134,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="1000" />
@@ -1151,6 +1151,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 	</skill>
 	<skill id="50" levels="8" name="Focused Force">
 		<!-- Confirmed CT2.5 -->
@@ -2070,7 +2073,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_AREA_UNDEAD" />
+		<set name="target" val="TARGET_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Chance" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2079,6 +2082,9 @@
 		<enchant3 name="skillType" val="PDAM" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<target race_id="1" /> <!-- Undead -->
+		</cond>
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="0.77" />
