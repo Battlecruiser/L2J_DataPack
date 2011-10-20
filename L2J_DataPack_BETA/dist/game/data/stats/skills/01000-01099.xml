@@ -547,7 +547,7 @@
 		<enchant2 name="elementPower" val="#ench2ElementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
-		<cond msgId="113" addName="1">
+		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 	</skill>
@@ -570,7 +570,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<cond msgId="113" addName="1">
+		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 	</skill>
@@ -683,7 +683,7 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<cond msgId="113" addName="1">
+		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 	</skill>
@@ -832,7 +832,7 @@
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="elementPower" val="20" />
 		<enchant3 name="element" val="4" /> <!-- Holy -->
-		<cond msgId="113" addName="1">
+		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>
@@ -1038,7 +1038,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="DERANGEMENT" />
-		<cond msgId="113" addName="1">
+		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>

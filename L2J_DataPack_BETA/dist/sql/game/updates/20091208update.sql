@@ -1,3 +1,3 @@
-ALTER TABLE `character_friends` 
-DROP PRIMARY KEY, ADD PRIMARY KEY (`charId`, `friendId`),
-DROP column `friend_name`;
+ALTER TABLE `character_friends` DROP PRIMARY KEY;
+ALTER TABLE `character_friends` ADD PRIMARY KEY (`charId`, `friendId`);
+ALTER TABLE `character_friends` DROP column `friend_name`;
