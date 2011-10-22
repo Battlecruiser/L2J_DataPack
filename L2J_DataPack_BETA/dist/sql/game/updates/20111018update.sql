@@ -1,1 +1,0 @@
-ALTER TABLE `itemsonground` CHANGE COLUMN `drop_time` `drop_time` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0';
