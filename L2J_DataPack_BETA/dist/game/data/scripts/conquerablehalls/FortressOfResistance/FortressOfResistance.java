@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author BiggBoss
@@ -96,7 +97,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		{
 			_messengerMsg = new NpcHtmlMessage(5);
 			_messengerMsg.setHtml(html);
-			_messengerMsg.replace("%nextSiege%", _hall.getSiegeDate().getTime().toString());
+			_messengerMsg.replace("%nextSiege%", Util.formatDate(_hall.getSiegeDate().getTime(),"yyyy-MM-dd HH:mm:ss"));
 		}
 	}
 	
