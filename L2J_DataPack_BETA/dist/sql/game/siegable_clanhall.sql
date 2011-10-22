@@ -19,9 +19,9 @@ CREATE TABLE IF NOT EXISTS `siegable_clanhall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `siegable_clanhall` (`clanHallId`, `name`, `ownerId`, `desc`, `location`, `nextSiege`, `siegeLenght`, `schedule_config`) VALUES
-(21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '7;0;0;12;00'),
-(34, 'Devastated Castle', 0, 'Contestable Clan Hall', 'Aden', 0, 3600000, '7;0;0;12;00'),
-(35, 'Bandit StrongHold', 0, 'Contestable Clan Hall', 'Oren', 0, 3600000, '7;0;0;12;00'),
-(62, 'Rainbow Springs', 0, 'Contestable Clan Hall', 'Goddard', 0, 3600000, '7;0;0;12;00'),
-(63, 'Beast Farm', 0, 'Contestable Clan Hall', 'Rune', 0, 3600000, '7;0;0;12;00'),
-(64, 'Fortresss of the Dead', 0, 'Contestable Clan Hall', 'Rune', 0, 3600000, '7;0;0;12;00');
+(21, 'Fortress of Resistance', 0, 'Contestable Clan Hall', 'Dion', 0, 3600000, '14;0;0;12;00'),
+(34, 'Devastated Castle', 0, 'Contestable Clan Hall', 'Aden', 0, 3600000, '14;0;0;12;00'),
+(35, 'Bandit StrongHold', 0, 'Contestable Clan Hall', 'Oren', 0, 3600000, '14;0;0;12;00'),
+(62, 'Rainbow Springs', 0, 'Contestable Clan Hall', 'Goddard', 0, 3600000, '14;0;0;12;00'),
+(63, 'Beast Farm', 0, 'Contestable Clan Hall', 'Rune', 0, 3600000, '14;0;0;12;00'),
+(64, 'Fortresss of the Dead', 0, 'Contestable Clan Hall', 'Rune', 0, 3600000, '14;0;0;12;00');
