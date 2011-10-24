@@ -17,7 +17,6 @@ package ai.individual;
 import java.util.List;
 
 import javolution.util.FastList;
-
 import ai.group_template.L2AttackableAIScript;
 
 import com.l2jserver.Config;

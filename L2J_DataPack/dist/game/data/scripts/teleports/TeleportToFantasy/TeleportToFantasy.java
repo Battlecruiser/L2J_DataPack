@@ -15,6 +15,7 @@
 package teleports.TeleportToFantasy;
 
 import java.util.Map;
+
 import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
