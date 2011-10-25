@@ -208,7 +208,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3318-1;3358-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
