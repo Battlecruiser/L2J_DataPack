@@ -168,12 +168,6 @@ public class Disablers implements ISkillHandler
 				}
 				case ROOT:
 				case DISARM:
-				{
-					if (target.getActiveWeaponItem() != null && target.getActiveWeaponItem().isForceEquip())
-					{
-						return;
-					}
-				}
 				case STUN:
 				{
 					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
