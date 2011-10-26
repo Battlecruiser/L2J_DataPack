@@ -723,7 +723,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 351HP * 3 during 15 seconds -->
-			<effect count="5" name="DamOverTime" abnormalTime="3" val="1053" abnormal="bleed" abnormalLvl="9" abnormalType="dark_seed" />
+			<effect count="5" name="DamOverTime" abnormalTime="3" val="1053" abnormalVisualEffect="bleed" abnormalLvl="9" abnormalType="dark_seed" />
 			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="5248" triggeredLevel="9" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -821,7 +821,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="156" abnormalLvl="8" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="156" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="742" levels="3" name="Vale Master Bursting Flame">
@@ -1050,7 +1050,7 @@
 		<set name="coolTime" val="720" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="402" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="402" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="753" levels="3" name="Doll Blader Throwing Knife">
@@ -1189,7 +1189,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
 				<add order="0x40" stat="mDef" val="5000" />
 			</effect>
 		</for>
@@ -1361,7 +1361,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="900000" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
 				<add order="0x40" stat="runSpd" val="20" />
 				<add order="0x40" stat="rEvas" val="15" />
 				<mul order="0x30" stat="blowRate" val="1.3" />
@@ -1379,7 +1379,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="900000" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
 				<add order="0x40" stat="runSpd" val="50" />
 				<add order="0x40" stat="rEvas" val="20" />
 				<mul order="0x30" stat="blowRate" val="1.2" />
@@ -1397,7 +1397,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="900000" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="avoid_up_special">
 				<add order="0x40" stat="runSpd" val="33" />
 				<add order="0x40" stat="rEvas" val="15" />
 				<mul order="0x30" stat="blowRate" val="1.4" />
@@ -1914,7 +1914,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormal="poison" triggeredId="5600" activationChance="10" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="betrayal_mark" />
+			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="poison" triggeredId="5600" activationChance="10" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="betrayal_mark" />
 		</for>
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
@@ -2061,7 +2061,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="144" abnormalLvl="3" abnormalType="poison" abnormal="poison" effectPower="50" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="144" abnormalLvl="3" abnormalType="poison" abnormalVisualEffect="poison" effectPower="50" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="799" levels="3" name="Master Ability - Defense">

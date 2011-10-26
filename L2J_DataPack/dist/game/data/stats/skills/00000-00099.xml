@@ -1726,10 +1726,10 @@
 		</cond>
 		<for>
 			<!-- Retail Values CT2.3: 38 44 48HP * 3 sec -->
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" effectPower="35" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" effectPower="35" effectType="POISON" />
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="144" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectPower="#ench1effectPower" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="144" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" effectPower="#ench1effectPower" effectType="POISON" />
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">
@@ -2039,17 +2039,17 @@
 		</cond>
 		<for>
 			<!-- Retail Values CT2.3: 25 34 44 52 62 67HP * 3 Sec -->
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="100" effectType="BLEED">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="100" effectType="BLEED">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#ench3dot" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#ench3dot" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>

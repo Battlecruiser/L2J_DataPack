@@ -308,13 +308,13 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- 9MP * 5 during active time -->
-			<effect count="0x7fffffff" name="SilentMove" abnormal="stealth" abnormalTime="5" val="45">
+			<effect count="0x7fffffff" name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="5" val="45">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
 		<enchant1for>
 			<!-- 9MP * 5 during active time -->
-			<effect count="0x7fffffff" name="SilentMove" abnormal="stealth" abnormalTime="5" val="45">
+			<effect count="0x7fffffff" name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="5" val="45">
 				<mul order="0x30" stat="runSpd" val="#ench1Penalty" />
 			</effect>
 		</enchant1for>
@@ -371,10 +371,10 @@
 		</cond>
 		<for>
 			<!-- Retail Values CT2.3: 25 25 25 25 25 25 34 34 34 34 34 34 34 34 44 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67HP * 3 Sec -->
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant1for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="#ench1effectPower" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="#ench1effectPower" effectType="BLEED" />
 		</enchant1for>
 	</skill>
 	<skill id="225" levels="3" name="Acrobatic Move">
@@ -2480,7 +2480,7 @@
 		<for>
 			<!-- retail value: 2MP/sec; stat update every 3 sec -->
 			<!-- Verified by slyce - Interlude - 12th Aug 2007 -->
-			<effect count="0x7fffffff" name="ChameleonRest" abnormal="stealth" abnormalTime="3" val="6" />
+			<effect count="0x7fffffff" name="ChameleonRest" abnormalVisualEffect="stealth" abnormalTime="3" val="6" />
 		</for>
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit" enchantGroup1="1" enchantGroup2="1">

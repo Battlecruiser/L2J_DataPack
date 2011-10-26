@@ -103,7 +103,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87HP * 3 during 20 seconds -->
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="80" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="80" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
@@ -653,7 +653,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormal="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" abnormalLvl="1" abnormalType="death_clack" />
+			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" abnormalLvl="1" abnormalType="death_clack" />
 		</for>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">

@@ -609,7 +609,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="bleed" effectType="BLEED" />
+			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormalVisualEffect="bleed" effectType="BLEED" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1275,7 +1275,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="438" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />

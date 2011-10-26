@@ -224,7 +224,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormal="dancestun" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalVisualEffect="dancestun" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
@@ -301,7 +301,7 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Paralyze" abnormalTime="20" val="0" abnormal="floatroot" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="20" val="0" abnormalVisualEffect="floatroot" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
@@ -578,7 +578,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="#time" val="0" abnormal="invulnerable" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="#time" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
