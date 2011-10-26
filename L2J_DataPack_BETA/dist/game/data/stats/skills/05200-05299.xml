@@ -720,7 +720,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormal="earthquake" />
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="earthquake" />
 		</for>
 	</skill>
 	<skill id="5243" levels="1" name="Blind">
@@ -807,7 +807,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dot" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dot" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" abnormalTime="30" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -891,7 +891,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="5" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="5" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -941,7 +941,7 @@
 		<for>
 
 			<!-- 35 50 68 87 107 123 134 134 139 139 142 142 HP * 3 during 10 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -967,7 +967,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_mp" abnormal="bleed" />
+			<effect count="3" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_mp" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1001,7 +1001,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="death_clack" triggeredId="5257" triggeredLevel="1" chanceType="ON_EXIT" abnormal="bleed" />
+			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="death_clack" triggeredId="5257" triggeredLevel="1" chanceType="ON_EXIT" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5257" levels="2" name="Death">
@@ -1077,7 +1077,7 @@
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormal="bleed" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5261" levels="1" name="Zombie">
@@ -1160,7 +1160,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="0" abnormal="deathmark" abnormalLvl="3" abnormalType="death_mark" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="0" abnormalVisualEffect="deathmark" abnormalLvl="3" abnormalType="death_mark" />
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
@@ -1243,7 +1243,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormal="poison" effectPower="80" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" effectPower="80" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">

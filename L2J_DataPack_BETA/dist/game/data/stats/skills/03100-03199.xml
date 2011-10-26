@@ -1843,7 +1843,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3196" levels="10" name="Item Skill: Bleed">
@@ -1871,7 +1871,7 @@
 		<set name="effectRange" val="400" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dmg" abnormal="bleed" abnormalType="bleeding" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvl" val="#dmg" abnormalVisualEffect="bleed" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="3197" levels="10" name="Item Skill: Silence">

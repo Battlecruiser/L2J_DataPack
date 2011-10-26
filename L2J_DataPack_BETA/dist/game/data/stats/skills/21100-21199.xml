@@ -491,7 +491,7 @@
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
 		<for>
-			<effect name="SilentMove" abnormal="stealth" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1065,7 +1065,7 @@
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="SilentMove" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth" abnormal="stealth">
+			<effect name="SilentMove" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth" abnormalVisualEffect="stealth">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
