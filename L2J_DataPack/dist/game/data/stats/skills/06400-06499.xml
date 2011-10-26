@@ -51,7 +51,7 @@
 		<set name="effectRange" val="2200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6403" levels="1" name="Torumba Numbing Poison">
@@ -70,7 +70,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="2" name="DamOverTime" effectPower="80" abnormalTime="5" val="290" abnormalLvl="3" abnormalType="speed_down" abnormal="poison">
+			<effect count="2" name="DamOverTime" effectPower="80" abnormalTime="5" val="290" abnormalLvl="3" abnormalType="speed_down" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -108,7 +108,7 @@
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="1" abnormal="mute" abnormalType="casting_time_down">
+			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="1" abnormalVisualEffect="mute" abnormalType="casting_time_down">
 				<add order="0x40" stat="runSpd" val="20" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -278,7 +278,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormal="poison" />
+			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
@@ -300,7 +300,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormal="poison" />
+			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
@@ -322,7 +322,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="345" abnormalLvl="8" abnormalType="dot_mp" abnormal="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="345" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 			<effect count="4" name="ManaDamOverTime" noicon="1" abnormalTime="5" val="20" />
 		</for>
 	</skill>
@@ -610,7 +610,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormal="poison" />
+			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">

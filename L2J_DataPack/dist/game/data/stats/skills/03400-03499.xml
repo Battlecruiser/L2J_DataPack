@@ -48,7 +48,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalTime="1200" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="1200" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
@@ -76,7 +76,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="SilentMove" abnormal="stealth" abnormalTime="120" val="0" abnormalLvl="0" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="0" abnormalType="stealth">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>

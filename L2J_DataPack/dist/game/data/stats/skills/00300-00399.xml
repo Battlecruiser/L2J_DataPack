@@ -2130,12 +2130,12 @@
 			<using kind="Dual Sword" />
 		</cond>
 		<for>
-			<effect name="SilentMove" abnormalTime="120" abnormal="stealth" val="0" abnormalLvl="1" abnormalType="dance_of_shadow">
+			<effect name="SilentMove" abnormalTime="120" abnormalVisualEffect="stealth" val="0" abnormalLvl="1" abnormalType="dance_of_shadow">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="SilentMove" abnormalTime="#ench1Time" abnormal="stealth" val="0" abnormalLvl="1" abnormalType="dance_of_shadow">
+			<effect name="SilentMove" abnormalTime="#ench1Time" abnormalVisualEffect="stealth" val="0" abnormalLvl="1" abnormalType="dance_of_shadow">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</enchant1for>

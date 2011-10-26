@@ -95,7 +95,7 @@
 		<set name="effectRange" val="900" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -193,7 +193,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectType="POISON">
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" effectType="POISON">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -565,7 +565,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormal="flame" effectPower="50" effectType="DOT" />
+			<effect count="10" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" abnormalVisualEffect="flame" effectPower="50" effectType="DOT" />
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
@@ -942,7 +942,7 @@
 			<using kind="Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<effect count="15" name="DamOverTime" val="92" abnormalLvl="9" abnormalType="dot_attr" abnormal="flame" />
+			<effect count="15" name="DamOverTime" val="92" abnormalLvl="9" abnormalType="dot_attr" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
@@ -1046,7 +1046,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="156" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="100" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="156" abnormalLvl="6" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="100" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">
@@ -1219,7 +1219,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="679" />
 		<for>
-			<effect name="SilentMove" abnormalTime="20" abnormal="stealth" val="0" abnormalLvl="1" abnormalType="stealth">
+			<effect name="SilentMove" abnormalTime="20" abnormalVisualEffect="stealth" val="0" abnormalLvl="1" abnormalType="stealth">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1887,7 +1887,7 @@
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormal="bleed" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>

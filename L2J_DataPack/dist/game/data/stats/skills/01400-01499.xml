@@ -944,13 +944,13 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="death_mark" abnormal="deathmark">
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="death_mark" abnormalVisualEffect="deathmark">
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#ench1dmg" abnormalLvl="3" abnormalType="death_mark" abnormal="deathmark">
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#ench1dmg" abnormalLvl="3" abnormalType="death_mark" abnormalVisualEffect="deathmark">
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -1372,10 +1372,10 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" abnormal="root" />
+			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" abnormalVisualEffect="root" />
 		</for>
 		<enchant2for>
-			<effect name="Root" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="root_magically" abnormal="root" />
+			<effect name="Root" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="root_magically" abnormalVisualEffect="root" />
 		</enchant2for>
 	</skill>
 	<skill id="1447" levels="9" name="Voice Bind" enchantGroup1="1" enchantGroup2="1">
@@ -1403,10 +1403,10 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence" abnormal="mute" />
+			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence" abnormalVisualEffect="mute" />
 		</for>
 		<enchant2for>
-			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence" abnormal="mute" />
+			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence" abnormalVisualEffect="mute" />
 		</enchant2for>
 	</skill>
 	<skill id="1448" levels="1" name="Blink" enchantGroup1="2" enchantGroup2="2">
@@ -2357,10 +2357,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" abnormal="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" abnormalVisualEffect="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormal="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormalVisualEffect="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
 		</enchant1for>
 	</skill>
 	<skill id="1482" levels="4" name="Weak Constitution" enchantGroup1="1" enchantGroup2="1">

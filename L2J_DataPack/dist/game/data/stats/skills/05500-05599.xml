@@ -19,7 +19,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 52HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="260" abnormal="bleed" effectPower="90" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="260" abnormalVisualEffect="bleed" effectPower="90" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
@@ -73,7 +73,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="1" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="1" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="1800" />
 				<add order="0x40" stat="mDef" val="1350" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -536,7 +536,7 @@
 			<player agathionId="16031" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
@@ -583,7 +583,7 @@
 			<player agathionId="16032" />
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalTime="120" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
@@ -1389,7 +1389,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 200HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="200" abnormal="bleed" abnormalLvl="10" abnormalType="dot_attr" />
+			<effect count="5" name="DamOverTime" val="200" abnormalVisualEffect="bleed" abnormalLvl="10" abnormalType="dot_attr" />
 		</for>
 	</skill>
 	<skill id="5597" levels="1" name="Invalid Skill cancel">

@@ -616,7 +616,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="-100" />
 		<for>
-			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_a" abnormal="poison">
+			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_a" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="rCrit" val="#rCrit" />
 			</effect>
@@ -640,7 +640,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="-100" />
 		<for>
-			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_b" abnormal="poison">
+			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_b" abnormalVisualEffect="poison">
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
@@ -664,7 +664,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="-100" />
 		<for>
-			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_c" abnormal="poison">
+			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_c" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
@@ -688,7 +688,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="-100" />
 		<for>
-			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_d" abnormal="poison">
+			<effect name="Debuff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="spa_disease_d" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
@@ -768,7 +768,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="BigHead" abnormalTime="600" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="600" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="4560" levels="12" name="NPC Fire Burn">
@@ -1159,7 +1159,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectType="BLEED" effectPower="100" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectType="BLEED" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1231,7 +1231,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1599,7 +1599,7 @@
 		<set name="effectRange" val="900" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1622,7 +1622,7 @@
 		<set name="effectRange" val="900" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1645,7 +1645,7 @@
 		<set name="effectRange" val="1300" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

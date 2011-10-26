@@ -182,7 +182,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="10" val="0" abnormal="poison" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="10" val="0" abnormalVisualEffect="poison" abnormalLvl="1" abnormalType="root_magically" />
 			<effect count="2" name="DamOverTime" abnormalTime="5" val="180" noicon="1" />
 			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="60" noicon="1" />
 		</for>
@@ -255,10 +255,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormal="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="#triggeredLevel" abnormalLvl="#triggeredLevel" abnormalType="curse_life_flow" />
+			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="#triggeredLevel" abnormalLvl="#triggeredLevel" abnormalType="curse_life_flow" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormal="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="8" abnormalLvl="8" abnormalType="curse_life_flow" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="8" abnormalLvl="8" abnormalType="curse_life_flow" />
 		</enchant1for>
 	</skill>
 	<skill id="1512" levels="1" name="Soul Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -1300,7 +1300,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormal="arcane_shield" abnormalLvl="1" abnormalType="mana_shield">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalVisualEffect="arcane_shield" abnormalLvl="1" abnormalType="mana_shield">
 				<add order="0x40" stat="manaShield" val="70" />
 			</effect>
 		</for>
