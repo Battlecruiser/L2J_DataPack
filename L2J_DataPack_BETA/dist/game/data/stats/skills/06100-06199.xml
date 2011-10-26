@@ -474,7 +474,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="Debuff" abnormalTime="11" val="0" abnormal="bleed" abnormalLvl="4" abnormalType="max_hp_down">
+			<effect name="Debuff" abnormalTime="11" val="0" abnormalVisualEffect="bleed" abnormalLvl="4" abnormalType="max_hp_down">
 				<add order="0x40" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>

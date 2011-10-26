@@ -596,7 +596,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect name="SilentMove" abnormal="stealth" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="stealth">
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -605,7 +605,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="SilentMove" abnormal="stealth" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="stealth">
 				<sub order="0x40" stat="rEvas" val="4" />
 				<mul order="0x30" stat="pDef" val="0.85 " />
 				<mul order="0x30" stat="mDef" val="0.85 " />
@@ -2377,12 +2377,12 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormal="bleed" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Disarm" abnormalTime="#ench2Time" val="0" abnormal="bleed" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm" abnormalTime="#ench2Time" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</enchant2for>
@@ -2677,13 +2677,13 @@
 			</and>
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</enchant1for>
 		<enchant2for>
-			<effect count="20" name="DamOverTime" val="134" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed" effectPower="#ench2Chance" effectType="BLEED" />
+			<effect count="20" name="DamOverTime" val="134" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="#ench2Chance" effectType="BLEED" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -2816,7 +2816,7 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="Ancient" />
-				<target abnormal="1" /> <!-- bleed -->
+				<target abnormalVisualEffect="1" /> <!-- bleed -->
 			</and>
 		</cond>
 	</skill>

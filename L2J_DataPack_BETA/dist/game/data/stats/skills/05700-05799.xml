@@ -162,7 +162,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<!-- 55HP * 5 During 30 seconds -->
-			<effect count="6" name="DamOverTime" abnormalTime="5" val="275" abnormal="bleed" effectPower="80" effectType="BLEED" abnormalLvl="1" abnormalType="fire_dot">
+			<effect count="6" name="DamOverTime" abnormalTime="5" val="275" abnormalVisualEffect="bleed" effectPower="80" effectType="BLEED" abnormalLvl="1" abnormalType="fire_dot">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>

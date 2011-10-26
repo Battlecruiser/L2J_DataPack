@@ -527,7 +527,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="327" abnormal="poison" abnormalLvl="3" abnormalType="attack_time_up">
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="327" abnormalVisualEffect="poison" abnormalLvl="3" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1106,7 +1106,7 @@
 		<set name="effectRange" val="400" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
@@ -1128,7 +1128,7 @@
 		<set name="effectRange" val="400" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">

@@ -851,7 +851,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- 16 24 32 41 50 58 63 63 66 66 68 68HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="4149" levels="12" name="Bleed">
@@ -871,7 +871,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 18 25 34 44 54 62 67 67 70 70 71 71HP * 1 during 5 seconds -->
-			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="4150" levels="12" name="Flame">
@@ -892,7 +892,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 14 21 30 40 51 61 68 68 72 72 74 74HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" />
+			<effect count="5" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" />
 		</for>
 	</skill>
 	<skill id="4151" levels="12" name="NPC Windstrike - Magic">
@@ -1485,7 +1485,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1610,7 +1610,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1800,7 +1800,7 @@
 		<set name="effectRange" val="1250" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />

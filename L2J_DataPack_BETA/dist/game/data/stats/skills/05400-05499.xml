@@ -227,7 +227,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="speed_down" abnormal="poison">
+			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="speed_down" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -247,7 +247,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormal="bleed">
+			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -520,7 +520,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -596,7 +596,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
@@ -958,7 +958,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 71HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="355" abnormal="bleed" effectPower="100" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="355" abnormalVisualEffect="bleed" effectPower="100" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">

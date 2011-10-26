@@ -177,7 +177,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" effectPower="35" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" effectPower="35" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="4607" levels="1" name="Magma Attack">
@@ -359,7 +359,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4616" levels="1" name="Fake Petrification">
@@ -1047,7 +1047,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
@@ -1666,7 +1666,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
 			<!-- 216HP * 5 during 10 seconds -->
-			<effect count="2" name="DamOverTime" abnormalTime="5" val="1080" abnormal="flame" effectPower="80" effectType="DOT" abnormalLvl="1" abnormalType="dragon_breath" />
+			<effect count="2" name="DamOverTime" abnormalTime="5" val="1080" abnormalVisualEffect="flame" effectPower="80" effectType="DOT" abnormalLvl="1" abnormalType="dragon_breath" />
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
@@ -1690,7 +1690,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
 			<!-- 216HP * 5 during 10 seconds -->
-			<effect count="2" name="DamOverTime" abnormalTime="5" val="1080" abnormal="flame" effectPower="80" effectType="DOT" abnormalLvl="1" abnormalType="dragon_breath" />
+			<effect count="2" name="DamOverTime" abnormalTime="5" val="1080" abnormalVisualEffect="flame" effectPower="80" effectType="DOT" abnormalLvl="1" abnormalType="dragon_breath" />
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">

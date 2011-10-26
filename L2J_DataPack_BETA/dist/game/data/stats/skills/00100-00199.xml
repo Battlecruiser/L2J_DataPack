@@ -158,7 +158,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 41 50 58 63HP * 3 Sec -->
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="104" levels="1" name="Detect Plant Weakness">
@@ -336,28 +336,28 @@
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ImmobileBuff" abnormalTime="#ench1time" val="0" abnormal="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="#ench1time" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#enchabnormalLvl" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -753,7 +753,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 24 41 50 58 63HP * 3 Sec -->
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">

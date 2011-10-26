@@ -103,7 +103,7 @@
 		<set name="effectRange" val="1250" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -710,7 +710,7 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2500" />
 		<for>
-			<effect count="1200" name="DamOverTime" abnormalTime="3" val="294" abnormal="poison" abnormalLvl="9" abnormalType="poison" />
+			<effect count="1200" name="DamOverTime" abnormalTime="3" val="294" abnormalVisualEffect="poison" abnormalLvl="9" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="4244" levels="12" name="NPC Wild Sweep">
@@ -993,7 +993,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume" />
