@@ -351,6 +351,7 @@ INSERT INTO `merchant_shopids` VALUES
 (3169600,'31696'),
 (3169700,'31697'),
 (3198900,'31989'),
+(3200700,'32007'),
 (3234800,'32348'),
 
 -- Old GM Shops (some still used temp)
