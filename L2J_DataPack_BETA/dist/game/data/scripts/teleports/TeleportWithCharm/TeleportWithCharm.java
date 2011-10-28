@@ -54,7 +54,7 @@ public class TeleportWithCharm extends Quest
 				else
 				{
 					st.exitQuest(true);
-					htmltext = "30576-01.htm";
+					htmltext = "30540-01.htm";
 				}
 				break;
 			case TAMIL:
@@ -67,7 +67,7 @@ public class TeleportWithCharm extends Quest
 				else
 				{
 					st.exitQuest(true);
-					htmltext = "30540-01.htm";
+					htmltext = "30576-01.htm";
 				}
 				break;
 		}
