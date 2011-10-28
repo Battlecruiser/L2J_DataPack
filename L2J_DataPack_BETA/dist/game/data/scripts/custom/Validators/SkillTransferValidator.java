@@ -16,6 +16,7 @@ package custom.Validators;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.model.ItemHolder;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -36,11 +37,14 @@ public final class SkillTransferValidator extends Quest
 	
 	private static final String qn = "SkillTransfer";
 	
-	private static final int[][] PORMANDERS =
+	private static final ItemHolder[] PORMANDERS =
 	{
-		{ 15307, 1 }, // Cardinal (97)
-		{ 15308, 1 }, // Eva's Saint (105)
-		{ 15309, 4 } // Shillen Saint (112)
+		// Cardinal (97)
+		new ItemHolder(15307, 1),
+		// Eva's Saint (105)
+		new ItemHolder(15308, 1),
+		// Shillen Saint (112)
+		new ItemHolder(15309, 4)
 	};
 	
 	@Override
@@ -58,7 +62,9 @@ public final class SkillTransferValidator extends Quest
 		{
 			QuestState st = player.getQuestState(qn);
 			if (st == null)
+			{
 				st = newQuestState(player);
+			}
 			
 			final String name = qn + String.valueOf(player.getClassId().getId());
 			if (st.getInt(name) == 0)
@@ -67,13 +73,13 @@ public final class SkillTransferValidator extends Quest
 				if (st.getGlobalQuestVar(name).isEmpty())
 				{
 					st.saveGlobalQuestVar(name, "1");
-					player.addItem(qn, PORMANDERS[index][0], PORMANDERS[index][1], null, true);
+					player.addItem(qn, PORMANDERS[index].getId(), PORMANDERS[index].getCount(), null, true);
 				}
 			}
 			
 			if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
 			{
-				int count = PORMANDERS[index][1] - (int)player.getInventory().getInventoryItemCount(PORMANDERS[index][0], -1, false);
+				long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
 				for (L2Skill sk : player.getAllSkills())
 				{
 					for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
@@ -81,15 +87,19 @@ public final class SkillTransferValidator extends Quest
 						if (s.getSkillId() == sk.getId())
 						{
 							// Holy Weapon allowed for Shilien Saint/Inquisitor stance
-							if (sk.getId() == 1043 && index == 2 && player.isInStance())
+							if ((sk.getId() == 1043) && (index == 2) && player.isInStance())
+							{
 								continue;
+							}
 							
 							count--;
 							if (count < 0)
 							{
-								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " ("+sk.getId() + "/" + sk.getLevel() + "), class:" + player.getTemplate().className, 1);
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + player.getTemplate().className, 1);
 								if (Config.SKILL_CHECK_REMOVE)
+								{
 									player.removeSkill(sk);
+								}
 							}
 						}
 					}
