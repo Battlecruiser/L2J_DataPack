@@ -207,6 +207,8 @@ of this directory a little bit.
 
 326580001.xml -> S80 Armors / Jewels - Delusion Chamber
 
+326600001.xml -> Wood - Forgotten Scrolls
+
 3122800.xml -> Heavy Medal Event - No collector level
 3122801.xml -> Heavy Medal Event - Rabbit
 3122802.xml -> Heavy Medal Event - Hyena
