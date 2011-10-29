@@ -15,6 +15,7 @@
 package handlers.bypasshandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -29,20 +30,23 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class BloodAlliance implements IBypassHandler
 {
-
-	private static final String[] COMMANDS = {
+	
+	private static final String[] COMMANDS =
+	{
 		"HonoraryItem",
-		"Receive",
+		"Receive", 
 		"Exchange"
 	};
-
+	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
-		L2CastleWarehouseInstance npc = ((L2CastleWarehouseInstance)target);
+		L2CastleWarehouseInstance npc = ((L2CastleWarehouseInstance) target);
 		
 		try
 		{
@@ -86,7 +90,7 @@ public class BloodAlliance implements IBypassHandler
 				}
 				else
 				{
-					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-8.htm");	
+					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-8.htm");
 				}
 				
 			}
@@ -96,14 +100,14 @@ public class BloodAlliance implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
-
+	
 	@Override
 	public String[] getBypassList()
 	{
-		return COMMANDS ;
+		return COMMANDS;
 	}
 }
