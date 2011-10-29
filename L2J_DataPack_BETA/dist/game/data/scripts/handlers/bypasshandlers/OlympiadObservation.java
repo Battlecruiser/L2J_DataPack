@@ -31,9 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
- * 
  * @author DS
- *
  */
 public class OlympiadObservation implements IBypassHandler
 {
@@ -42,7 +40,8 @@ public class OlympiadObservation implements IBypassHandler
 		"arenalist",
 		"arenachange"
 	};
-
+	
+	@Override
 	public final boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		try
@@ -51,13 +50,13 @@ public class OlympiadObservation implements IBypassHandler
 			if (!isManager)
 			{
 				// without npc command can be used only in observer mode on arena
-				if (!activeChar.inObserverMode()
-						|| activeChar.isInOlympiadMode()
-						|| activeChar.getOlympiadGameId() < 0)
+				if (!activeChar.inObserverMode() || activeChar.isInOlympiadMode() || (activeChar.getOlympiadGameId() < 0))
+				{
 					return false;
+				}
 			}
-
-			if (command.startsWith(COMMANDS[0])) //list
+			
+			if (command.startsWith(COMMANDS[0])) // list
 			{
 				NpcHtmlMessage message = new NpcHtmlMessage(0);
 				if (command.length() < 10)
@@ -68,12 +67,14 @@ public class OlympiadObservation implements IBypassHandler
 						message.replace("%objectId%", String.valueOf(target.getObjectId()));
 					}
 					else
+					{
 						message.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_arena_observe.htm");
-
+					}
+					
 					activeChar.sendPacket(message);
 					return true;
 				}
-
+				
 				final int firstArena, lastArena;
 				switch (Integer.parseInt(command.substring(10).trim()))
 				{
@@ -96,10 +97,10 @@ public class OlympiadObservation implements IBypassHandler
 					default:
 						return false;
 				}
-
+				
 				StringBuilder list = new StringBuilder(3500);
 				OlympiadGameTask task;
-
+				
 				if (isManager)
 				{
 					message.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe_list.htm");
@@ -108,32 +109,27 @@ public class OlympiadObservation implements IBypassHandler
 						task = OlympiadGameManager.getInstance().getOlympiadTask(i);
 						if (task != null)
 						{
-							StringUtil.append(list,
-									"<a action=\"bypass -h npc_%objectId%_arenachange ",
-									String.valueOf(i),
-									"\">Arena ",
-									String.valueOf(i + 1),
-									"&nbsp;&nbsp;&nbsp;");
-
+							StringUtil.append(list, "<a action=\"bypass -h npc_%objectId%_arenachange ", String.valueOf(i), "\">Arena ", String.valueOf(i + 1), "&nbsp;&nbsp;&nbsp;");
+							
 							if (task.isGameStarted())
 							{
 								if (task.isBattleStarted())
+								{
 									StringUtil.append(list, "&$1719;"); // Playing
+								}
 								else
+								{
 									StringUtil.append(list, "&$1718;"); // Standby
-
-								StringUtil.append(list,
-										"&nbsp;&nbsp;&nbsp;",
-										task.getGame().getPlayerNames()[0],
-										"&nbsp; : &nbsp;",
-										task.getGame().getPlayerNames()[1]);
+								}
+								
+								StringUtil.append(list, "&nbsp;&nbsp;&nbsp;", task.getGame().getPlayerNames()[0], "&nbsp; : &nbsp;", task.getGame().getPlayerNames()[1]);
 							}
 							else
 							{
 								StringUtil.append(list, "&$906;", // Initial State
-										"</td><td>&nbsp;");
+									"</td><td>&nbsp;");
 							}
-
+							
 							StringUtil.append(list, "</a><br>");
 						}
 					}
@@ -142,84 +138,74 @@ public class OlympiadObservation implements IBypassHandler
 				}
 				else
 				{
-					message.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_arena_observe_list.htm");					
+					message.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_arena_observe_list.htm");
 					for (int i = firstArena; i <= lastArena; i++)
 					{
 						task = OlympiadGameManager.getInstance().getOlympiadTask(i);
 						if (task != null)
 						{
-							StringUtil.append(list,
-									"<tr><td fixwidth=30><a action=\"bypass arenachange ",
-									String.valueOf(i),
-									"\">",
-									String.valueOf(i + 1),
-									"</a></td><td fixwidth=60>");
-
+							StringUtil.append(list, "<tr><td fixwidth=30><a action=\"bypass arenachange ", String.valueOf(i), "\">", String.valueOf(i + 1), "</a></td><td fixwidth=60>");
+							
 							if (task.isGameStarted())
 							{
 								if (task.isBattleStarted())
+								{
 									StringUtil.append(list, "&$1719;"); // Playing
+								}
 								else
+								{
 									StringUtil.append(list, "&$1718;"); // Standby
-
-								StringUtil.append(list,
-										"</td><td>",
-										task.getGame().getPlayerNames()[0],
-										"&nbsp;",
-										task.getGame().getPlayerNames()[1]);
+								}
+								
+								StringUtil.append(list, "</td><td>", task.getGame().getPlayerNames()[0], "&nbsp;", task.getGame().getPlayerNames()[1]);
 							}
 							else
 							{
 								StringUtil.append(list, "&$906;", // Initial State
-										"</td><td>&nbsp;");
+									"</td><td>&nbsp;");
 							}
-
+							
 							StringUtil.append(list, "</td><td><font color=\"aaccff\"></font></td></tr>");
 						}
 					}
 				}
-
+				
 				for (int i = firstArena; i <= lastArena; i++)
 				{
 					task = OlympiadGameManager.getInstance().getOlympiadTask(i);
 					if (task != null)
 					{
-						StringUtil.append(list,
-								"<tr><td fixwidth=30><a action=\"bypass arenachange ",
-								String.valueOf(i),
-								"\">",
-								String.valueOf(i + 1),
-								"</a></td><td fixwidth=60>");
-
+						StringUtil.append(list, "<tr><td fixwidth=30><a action=\"bypass arenachange ", String.valueOf(i), "\">", String.valueOf(i + 1), "</a></td><td fixwidth=60>");
+						
 						if (task.isGameStarted())
 						{
 							if (task.isBattleStarted())
+							{
 								StringUtil.append(list, "&$1719;"); // Playing
+							}
 							else
+							{
 								StringUtil.append(list, "&$1718;"); // Standby
-
-							StringUtil.append(list,
-									"</td><td>",
-									task.getGame().getPlayerNames()[0],
-									"&nbsp;",
-									task.getGame().getPlayerNames()[1]);
+							}
+							
+							StringUtil.append(list, "</td><td>", task.getGame().getPlayerNames()[0], "&nbsp;", task.getGame().getPlayerNames()[1]);
 						}
 						else
 						{
 							StringUtil.append(list, "&$906;", // Initial State
-									"</td><td>&nbsp;");
+								"</td><td>&nbsp;");
 						}
-
-						StringUtil.append(list,
-								"</td><td><font color=\"aaccff\"></font></td></tr>");
+						
+						StringUtil.append(list, "</td><td><font color=\"aaccff\"></font></td></tr>");
 					}
 					message.replace("%list%", list.toString());
 				}
-
+				
 				activeChar.sendPacket(message);
 				return true;
 			}
-			else //change
+			else
+			// change
 			{
 				if (isManager)
 				{
@@ -234,7 +220,7 @@ public class OlympiadObservation implements IBypassHandler
 						return false;
 					}
 				}
-
+				
 				final int arenaId = Integer.parseInt(command.substring(12).trim());
 				final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
 				if (nextArena != null)
@@ -247,11 +233,12 @@ public class OlympiadObservation implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.INFO, "Exception in " + e.getMessage(), e);
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
-
+	
+	@Override
 	public final String[] getBypassList()
 	{
 		return COMMANDS;

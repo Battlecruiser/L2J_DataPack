@@ -29,12 +29,15 @@ public class TerritoryStatus implements IBypassHandler
 		"TerritoryStatus"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
-		final L2Npc npc = (L2Npc)target;
+		final L2Npc npc = (L2Npc) target;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		{
 			if (npc.getCastle().getOwnerId() > 0)
@@ -66,6 +69,7 @@ public class TerritoryStatus implements IBypassHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

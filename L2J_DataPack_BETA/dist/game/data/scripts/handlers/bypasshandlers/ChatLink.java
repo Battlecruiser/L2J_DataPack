@@ -26,27 +26,29 @@ public class ChatLink implements IBypassHandler
 		"Chat"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		int val = 0;
 		try
 		{
 			val = Integer.parseInt(command.substring(5));
 		}
-		catch (IndexOutOfBoundsException ioobe)
+		catch (Exception ioobe)
 		{
+			
 		}
-		catch (NumberFormatException nfe)
-		{
-		}
-		((L2Npc)target).showChatWindow(activeChar, val);
+		((L2Npc) target).showChatWindow(activeChar, val);
 		
 		return false;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

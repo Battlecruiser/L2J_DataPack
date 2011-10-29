@@ -14,6 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,30 +29,36 @@ public class Link implements IBypassHandler
 		"Link"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		try
 		{
 			String path = command.substring(5).trim();
 			if (path.indexOf("..") != -1)
+			{
 				return false;
+			}
 			String filename = "data/html/" + path;
-			NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc)target).getObjectId());
+			NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 			html.setFile(activeChar.getHtmlPrefix(), filename);
-			html.replace("%objectId%", String.valueOf(((L2Npc)target).getObjectId()));
+			html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 			activeChar.sendPacket(html);
 			return true;
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;
