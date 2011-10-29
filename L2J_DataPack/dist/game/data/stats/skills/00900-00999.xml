@@ -1764,7 +1764,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="Dagger" />
+			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="4" abnormalType="speed_down">
