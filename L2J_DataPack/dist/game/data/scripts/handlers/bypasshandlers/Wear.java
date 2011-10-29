@@ -15,6 +15,7 @@
 package handlers.bypasshandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.TradeController;
@@ -33,13 +34,18 @@ public class Wear implements IBypassHandler
 		"Wear"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		if (!Config.ALLOW_WEAR)
+		{
 			return false;
+		}
 		
 		try
 		{
@@ -47,14 +53,16 @@ public class Wear implements IBypassHandler
 			st.nextToken();
 			
 			if (st.countTokens() < 1)
+			{
 				return false;
+			}
 			
 			showWearWindow(activeChar, Integer.parseInt(st.nextToken()));
 			return true;
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
@@ -64,7 +72,9 @@ public class Wear implements IBypassHandler
 		player.tempInventoryDisable();
 		
 		if (Config.DEBUG)
+		{
 			_log.fine("Showing wearlist");
+		}
 		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
 		
@@ -80,6 +90,7 @@ public class Wear implements IBypassHandler
 		}
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

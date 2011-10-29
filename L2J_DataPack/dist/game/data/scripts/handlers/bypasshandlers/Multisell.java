@@ -14,6 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -28,10 +30,13 @@ public class Multisell implements IBypassHandler
 		"exc_multisell"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		try
 		{
@@ -39,24 +44,25 @@ public class Multisell implements IBypassHandler
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // multisell
 			{
 				listId = Integer.parseInt(command.substring(9).trim());
-				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc)target, false);
+				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, false);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // exc_multisell
 			{
 				listId = Integer.parseInt(command.substring(13).trim());
-				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc)target, true);
+				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, true);
 				return true;
 			}
 			return false;
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

@@ -29,10 +29,13 @@ public class ReceivePremium implements IBypassHandler
 		"ReceivePremium"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target.isInstanceType(InstanceType.L2Npc)))
+		{
 			return false;
+		}
 		
 		if (activeChar.getPremiumItemList().isEmpty())
 		{
@@ -45,6 +48,7 @@ public class ReceivePremium implements IBypassHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

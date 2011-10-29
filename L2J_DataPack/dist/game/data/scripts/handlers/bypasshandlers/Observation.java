@@ -15,6 +15,7 @@
 package handlers.bypasshandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
@@ -35,10 +36,13 @@ public class Observation implements IBypassHandler
 		"observe"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		try
 		{
@@ -49,9 +53,13 @@ public class Observation implements IBypassHandler
 				st.nextToken(); // Bypass cost
 				
 				if (SiegeManager.getInstance().getSiege(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())) != null)
-					doObserve(activeChar, (L2Npc)target, val);
+				{
+					doObserve(activeChar, (L2Npc) target, val);
+				}
 				else
+				{
 					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
+				}
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // oracle
@@ -59,12 +67,12 @@ public class Observation implements IBypassHandler
 				String val = command.substring(13);
 				StringTokenizer st = new StringTokenizer(val);
 				st.nextToken(); // Bypass cost
-				doObserve(activeChar, (L2Npc)target, val);
+				doObserve(activeChar, (L2Npc) target, val);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[2])) // observe
 			{
-				doObserve(activeChar, (L2Npc)target, command.substring(8));
+				doObserve(activeChar, (L2Npc) target, command.substring(8));
 				return true;
 			}
 			
@@ -72,7 +80,7 @@ public class Observation implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
@@ -94,6 +102,7 @@ public class Observation implements IBypassHandler
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

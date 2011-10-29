@@ -46,12 +46,19 @@ import com.l2jserver.util.L2FastList;
  */
 public class OlympiadManagerLink implements IBypassHandler
 {
-	private static final String[] COMMANDS = { "olympiaddesc", "olympiadnoble", "olybuff", "olympiad" };
+	private static final String[] COMMANDS =
+	{
+		"olympiaddesc", 
+		"olympiadnoble", 
+		"olybuff",
+		"olympiad"
+	};
 	
 	private static final String FEWER_THAN = "Fewer than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final String MORE_THAN = "More than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
 	
+	@Override
 	public final boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2OlympiadManagerInstance))
@@ -285,7 +292,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				switch (val)
 				{
-					case 2: // show rank for a specific class 
+					case 2: // show rank for a specific class
 						// for example >> Olympiad 1_88
 						int classId = Integer.parseInt(command.substring(11));
 						if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
@@ -325,12 +332,13 @@ public class OlympiadManagerLink implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.INFO, "Exception in " + e.getMessage(), e);
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		
 		return true;
 	}
 	
+	@Override
 	public final String[] getBypassList()
 	{
 		return COMMANDS;

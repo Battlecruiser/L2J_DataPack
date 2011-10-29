@@ -14,6 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -32,6 +34,7 @@ public class SkillList implements IBypassHandler
 		"SkillList"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2NpcInstance))
@@ -113,7 +116,7 @@ public class SkillList implements IBypassHandler
 			}
 			catch (Exception e)
 			{
-				_log.info("Exception in " + getClass().getSimpleName());
+				_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 			}
 		}
 		else
@@ -123,6 +126,7 @@ public class SkillList implements IBypassHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

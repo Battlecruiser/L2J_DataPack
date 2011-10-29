@@ -28,10 +28,13 @@ public class RemoveHennaList implements IBypassHandler
 		"RemoveList"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2SymbolMakerInstance))
+		{
 			return false;
+		}
 		
 		boolean hasHennas = false;
 		for (int i = 1; i <= 3; i++)
@@ -39,14 +42,19 @@ public class RemoveHennaList implements IBypassHandler
 			L2HennaInstance henna = activeChar.getHenna(i);
 			
 			if (henna != null)
+			{
 				hasHennas = true;
+			}
 		}
 		if (hasHennas)
+		{
 			activeChar.sendPacket(new HennaRemoveList(activeChar));
+		}
 		
 		return true;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;
