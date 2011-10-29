@@ -67,8 +67,7 @@ public class ArenaBuff implements IBypassHandler
 			String cmd = st.nextToken();
 			
 			if (cmd.equalsIgnoreCase(COMMANDS[0]))
-			{
-				
+			{	
 				if (!activeChar.reduceAdena("ArenaBuffs", 2000, activeChar.getLastFolkNPC(), true))
 				{
 					return false;
@@ -88,7 +87,11 @@ public class ArenaBuff implements IBypassHandler
 			}
 			else if (cmd.equalsIgnoreCase(COMMANDS[1]))
 			{
-				if (!activeChar.reduceAdena("RestoreHP", 1000, activeChar.getLastFolkNPC(), true))
+				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
+				{
+					return false;
+				}
+				else if (!activeChar.reduceAdena("RestoreHP", 1000, activeChar.getLastFolkNPC(), true))
 				{
 					return false;
 				}
@@ -103,7 +106,11 @@ public class ArenaBuff implements IBypassHandler
 			}
 			else if (cmd.equalsIgnoreCase(COMMANDS[2]))
 			{
-				if (!activeChar.reduceAdena("RestoreCP", 1000, activeChar.getLastFolkNPC(), true))
+				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
+				{
+					return false;
+				}
+				else if (!activeChar.reduceAdena("RestoreCP", 1000, activeChar.getLastFolkNPC(), true))
 				{
 					return false;
 				}
