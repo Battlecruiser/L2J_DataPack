@@ -15,6 +15,7 @@
 package handlers.bypasshandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -34,19 +35,22 @@ public class TerritoryWar implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"Territory",
-		"TW_Multisell",
+		"Territory", 
+		"TW_Multisell", 
 		"TW_Buy_List",
-		"TW_Buy",
-		"TW_Buy_Elite",
-		"CalcRewards",
+		"TW_Buy", 
+		"TW_Buy_Elite", 
+		"CalcRewards", 
 		"ReceiveRewards"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
+		{
 			return false;
+		}
 		
 		try
 		{
@@ -56,19 +60,25 @@ public class TerritoryWar implements IBypassHandler
 			if (actualCommand.equalsIgnoreCase("Territory"))
 			{
 				if (st.countTokens() < 1)
+				{
 					return false;
+				}
 				
 				int castleId = Integer.parseInt(st.nextToken());
 				activeChar.sendPacket(new ExShowDominionRegistry(castleId, activeChar));
 			}
 			else if (!(target instanceof L2MercenaryManagerInstance))
+			{
 				return false;
+			}
 			
-			L2MercenaryManagerInstance mercman = ((L2MercenaryManagerInstance)target);
+			L2MercenaryManagerInstance mercman = ((L2MercenaryManagerInstance) target);
 			if (actualCommand.equalsIgnoreCase("TW_Multisell"))
 			{
 				if (st.countTokens() < 1)
+				{
 					return false;
+				}
 				int territoryItemId = Integer.parseInt(st.nextToken());
 				if (activeChar.getInventory().getItemByItemId(territoryItemId) == null)
 				{
@@ -82,7 +92,9 @@ public class TerritoryWar implements IBypassHandler
 			else if (actualCommand.equalsIgnoreCase("TW_Buy_List"))
 			{
 				if (st.countTokens() < 1)
+				{
 					return false;
+				}
 				
 				String itemId = st.nextToken();
 				NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
@@ -106,11 +118,13 @@ public class TerritoryWar implements IBypassHandler
 					if (count <= playerItemCount)
 					{
 						int boughtId = 0;
-						switch(type)
+						switch (type)
 						{
 							case 0:
 								if (activeChar.isNoble())
+								{
 									return false;
+								}
 								boughtId = 7694;
 								activeChar.setNoble(true);
 								activeChar.sendPacket(new UserInfo(activeChar));
@@ -142,11 +156,13 @@ public class TerritoryWar implements IBypassHandler
 			}
 			else if (actualCommand.equalsIgnoreCase("TW_Buy_Elite"))
 			{
-				if(activeChar.getInventory().getItemByItemId(13767) != null)
+				if (activeChar.getInventory().getItemByItemId(13767) != null)
 				{
 					int _castleid = mercman.getCastle().getCastleId();
 					if (_castleid > 0)
-						MultiSell.getInstance().separateAndSend(_castleid+676, activeChar, mercman, false);
+					{
+						MultiSell.getInstance().separateAndSend(_castleid + 676, activeChar, mercman, false);
+					}
 				}
 				else
 				{
@@ -161,15 +177,19 @@ public class TerritoryWar implements IBypassHandler
 				int territoryId = Integer.parseInt(st.nextToken());
 				int[] reward = TerritoryWarManager.getInstance().calcReward(activeChar);
 				NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
-				if (TerritoryWarManager.getInstance().isTWInProgress() || reward[0] == 0)
+				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
+				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0a.htm");
+				}
 				else if (reward[0] != territoryId)
 				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0b.htm");
 					html.replace("%castle%", CastleManager.getInstance().getCastleById(reward[0] - 80).getName());
 				}
 				else if (reward[1] == 0)
+				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0a.htm");
+				}
 				else
 				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-1.htm");
@@ -187,18 +207,24 @@ public class TerritoryWar implements IBypassHandler
 				int territoryId = Integer.parseInt(st.nextToken());
 				int badgeId = 57;
 				if (TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.containsKey(territoryId))
+				{
 					badgeId = TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.get(territoryId);
+				}
 				int[] reward = TerritoryWarManager.getInstance().calcReward(activeChar);
 				NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
-				if (TerritoryWarManager.getInstance().isTWInProgress() || reward[0] == 0)
+				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
+				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0a.htm");
+				}
 				else if (reward[0] != territoryId)
 				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0b.htm");
 					html.replace("%castle%", CastleManager.getInstance().getCastleById(reward[0] - 80).getName());
 				}
 				else if (reward[1] == 0)
+				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-0a.htm");
+				}
 				else
 				{
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/reward-2.htm");
@@ -215,11 +241,12 @@ public class TerritoryWar implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.info("Exception in " + getClass().getSimpleName());
+			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
+	@Override
 	public String[] getBypassList()
 	{
 		return COMMANDS;

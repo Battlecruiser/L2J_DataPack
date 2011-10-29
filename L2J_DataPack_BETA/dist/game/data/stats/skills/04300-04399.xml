@@ -1205,14 +1205,16 @@
 		</for>
 	</skill>
 	<skill id="4380" levels="1" name="Arena CP Recovery">
-		<!-- Freya retail confirmed -->
-		<set name="power" val="5000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Arena Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="5000" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4381" levels="1" name="Magic Skill Block">
 		<!-- Freya retail confirmed -->

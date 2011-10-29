@@ -101,11 +101,11 @@ import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
+import handlers.bypasshandlers.ArenaBuff;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.BloodAlliance;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
-import handlers.bypasshandlers.CPRecovery;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.DrawHenna;
@@ -423,12 +423,12 @@ public class MasterHandler
 	private static void loadBypassHandlers()
 	{
 		BYPASS.registerBypassHandler(new Augment());
+		BYPASS.registerBypassHandler(new ArenaBuff());
 		BYPASS.registerBypassHandler(new BloodAlliance());
 		BYPASS.registerBypassHandler(new Buy());
 		BYPASS.registerBypassHandler(new BuyShadowItem());
 		BYPASS.registerBypassHandler(new ChatLink());
 		BYPASS.registerBypassHandler(new ClanWarehouse());
-		BYPASS.registerBypassHandler(new CPRecovery());
 		BYPASS.registerBypassHandler(new DrawHenna());
 		BYPASS.registerBypassHandler(new EventEngine());
 		BYPASS.registerBypassHandler(new Festival());
