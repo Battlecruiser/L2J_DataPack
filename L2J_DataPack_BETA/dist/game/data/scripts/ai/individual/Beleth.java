@@ -101,7 +101,7 @@ public class Beleth extends L2AttackableAIScript
 				GrandBossManager.getInstance().setBossStatus(29118, 0);
 			}
 		}
-		else
+		else if (status != 0)
 		{
 			GrandBossManager.getInstance().setBossStatus(29118, 0);
 		}
