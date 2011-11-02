@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 
 
 /**
@@ -375,7 +374,7 @@ public class MC_Show extends L2AttackableAIScript
 				startQuestTimer("timer_check",60000, null, null, true);
 			}
 			else if (event.equalsIgnoreCase("social1"))
-				npc.broadcastPacket(new SocialAction(npc,1));
+				npc.broadcastSocialAction(1);
 			else if (event.equalsIgnoreCase("clean_npc"))
 			{
 				isStarted = false;

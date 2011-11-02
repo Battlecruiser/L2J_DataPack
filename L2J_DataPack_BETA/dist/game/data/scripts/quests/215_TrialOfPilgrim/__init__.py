@@ -116,7 +116,7 @@ class Quest (JQuest) :
       st.addExpAndSp(629125,40803)
       st.giveItems(7562,49)
       st.giveItems(ADENA,114649)
-      player.sendPacket(SocialAction(player,3))
+      player.sendPacket(SocialAction(player.getObjectId(),3))
       htmltext = "30648-10.htm"
       st.giveItems(MARK_OF_PILGRIM,1)
       st.takeItems(BOOK_OF_SAGE,1)

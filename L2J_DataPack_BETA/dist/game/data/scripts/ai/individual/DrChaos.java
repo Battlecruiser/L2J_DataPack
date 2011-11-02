@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
 
@@ -76,7 +75,7 @@ public class DrChaos extends Quest
 			startQuestTimer("3",10000,npc,player);
 		}
 		else if (event.equalsIgnoreCase("2"))
-			npc.broadcastPacket(new SocialAction(npc,3));
+			npc.broadcastSocialAction(3);
 		else if (event.equalsIgnoreCase("3"))
 		{
 			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1,-150,10,3000,20000,0,0,1,0));

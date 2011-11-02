@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -39,7 +38,7 @@ public class GeneralDilios extends L2AttackableAIScript
 	private static final int guardId = 32619;
 	
 	private L2Npc _general;
-	private List<L2Npc> _guards = new ArrayList<L2Npc>();
+	private final List<L2Npc> _guards = new ArrayList<L2Npc>();
 	
 	private static final NpcStringId[] diliosText =
 	{
@@ -95,7 +94,7 @@ public class GeneralDilios extends L2AttackableAIScript
 			int value = Integer.parseInt(event.substring(16));
 			for (L2Npc guard : _guards)
 			{
-				guard.broadcastPacket(new SocialAction(guard, 4));
+				guard.broadcastSocialAction(4);
 			}
 			if (value < 2)
 				startQuestTimer("guard_animation_"+(value+1), 1500, null, null);

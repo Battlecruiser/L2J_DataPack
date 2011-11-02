@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.util.Rnd;
@@ -70,7 +69,7 @@ public class QueenAnt extends L2AttackableAIScript
 
 	private L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
-	private List<L2MonsterInstance> _nurses = new FastList<L2MonsterInstance>(5);
+	private final List<L2MonsterInstance> _nurses = new FastList<L2MonsterInstance>(5);
 
 	public QueenAnt(int questId, String name, String descr)
 	{
@@ -182,11 +181,11 @@ public class QueenAnt extends L2AttackableAIScript
 			{
 				if (Rnd.get(2) == 0)
 				{
-					npc.broadcastPacket(new SocialAction(npc, 3));
+					npc.broadcastSocialAction(3);
 				}
 				else
 				{
-					npc.broadcastPacket(new SocialAction(npc, 4));
+					npc.broadcastSocialAction(4);
 				}
 			}
 		}

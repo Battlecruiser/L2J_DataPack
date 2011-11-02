@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
@@ -73,10 +72,10 @@ public class BeastFarm extends L2AttackableAIScript
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
 	{
-		private int _chance;
-		private int _growthLevel;
-		private int _tameNpcId;
-		private Map<Integer,Integer> _skillSuccessNpcIdList = new FastMap<Integer,Integer>();
+		private final int _chance;
+		private final int _growthLevel;
+		private final int _tameNpcId;
+		private final Map<Integer,Integer> _skillSuccessNpcIdList = new FastMap<Integer,Integer>();
 		
 		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
 		{
@@ -385,7 +384,7 @@ public class BeastFarm extends L2AttackableAIScript
 		}
 		
 		// display the social action of the beast eating the food.
-		npc.broadcastPacket(new SocialAction(npc,2));
+		npc.broadcastSocialAction(2);
 		
 		int food = 0;
 		if (skillId == SKILL_GOLDEN_SPICE || skillId == SKILL_BLESSED_GOLDEN_SPICE)

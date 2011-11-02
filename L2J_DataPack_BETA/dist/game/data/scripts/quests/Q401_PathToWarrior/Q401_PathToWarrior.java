@@ -164,7 +164,7 @@ public class Q401_PathToWarrior extends Quest
 					st.addExpAndSp(160267, 34408);
 				st.giveItems(57, 163800);
 				st.playSound("ItemSound.quest_finish");
-				player.sendPacket(new SocialAction(player, 3));
+				player.sendPacket(new SocialAction(player.getObjectId(), 3));
 				st.exitQuest(false);
 				st.saveGlobalQuestVar("1ClassQuestFinished", "1");
 				htmltext = "30010-13.html";
