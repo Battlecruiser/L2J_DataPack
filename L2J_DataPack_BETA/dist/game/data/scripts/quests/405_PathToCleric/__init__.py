@@ -87,7 +87,7 @@ class Quest (JQuest) :
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")
         st.playSound("ItemSound.quest_finish")
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
    elif npcId == 30022 and st.getInt("cond") and st.getQuestItemsCount(LETTER_OF_ORDER1)==1 :
         if st.getQuestItemsCount(BOOK_OF_VIVI) == 1 and st.getQuestItemsCount(BOOK_OF_SIMLON)>0 and st.getQuestItemsCount(BOOK_OF_PRAGA) == 1 :
             htmltext = "30022-08.htm"

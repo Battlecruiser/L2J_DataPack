@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -109,10 +108,10 @@ public class FeedableBeasts extends L2AttackableAIScript
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
 	{
-		private int _growthLevel;
-		private int _chance;
+		private final int _growthLevel;
+		private final int _chance;
 		
-		private Map<Integer, int[][]> _spiceToMob = new FastMap<Integer,int[][]>();
+		private final Map<Integer, int[][]> _spiceToMob = new FastMap<Integer,int[][]>();
 		
 		public GrowthCapableMob(int growthLevel, int chance)
 		{
@@ -525,7 +524,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		}
 		
 		// display the social action of the beast eating the food.
-		npc.broadcastPacket(new SocialAction(npc,2));
+		npc.broadcastSocialAction(2);
 		
 		// if this pet can't grow, it's all done.
 		if (_GrowthCapableMobs.containsKey(npcId))

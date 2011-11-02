@@ -109,7 +109,7 @@ class Quest (JQuest) :
             else:
               st.addExpAndSp(591724, 36388)
             st.giveItems(57, 163800)
-          player.sendPacket(SocialAction(player,3))
+          player.sendPacket(SocialAction(player.getObjectId(),3))
           st.set("cond","0")
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")

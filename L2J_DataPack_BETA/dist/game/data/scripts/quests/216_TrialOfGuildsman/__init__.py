@@ -74,7 +74,7 @@ class Quest (JQuest) :
         st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
         st.takeItems(RP_JOURNEYMAN_RING_ID,1)
         st.giveItems(MARK_OF_GUILDSMAN_ID,1)
-        st.getPlayer().sendPacket(SocialAction(st.getPlayer(),3))
+        st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
     elif event == "30103_4" :
         st.addExpAndSp(514739,33384)
         st.giveItems(57,93803)
@@ -88,7 +88,7 @@ class Quest (JQuest) :
         st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
         st.takeItems(RP_JOURNEYMAN_RING_ID,1)
         st.giveItems(MARK_OF_GUILDSMAN_ID,1)
-        st.getPlayer().sendPacket(SocialAction(st.getPlayer(),3))
+        st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
     elif event == "30283_1" :
         htmltext = "30283-03.htm"
         st.giveItems(ALLTRANS_INSTRUCTIONS_ID,1)

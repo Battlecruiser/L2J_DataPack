@@ -1304,18 +1304,15 @@ public class Valakas extends L2AttackableAIScript
 	
 	public void broadcastSpawn(L2Npc npc)
 	{
-		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		Collection<L2PcInstance> players = npc.getKnownList().getKnownPlayers().values();
 		{
-			for (L2Object obj : objs)
+			for (L2PcInstance player : players)
 			{
-				if (obj instanceof L2PcInstance)
+				if (Util.checkIfInRange(10000, npc, player, true))
 				{
-					if (Util.checkIfInRange(10000, npc, obj, true))
-					{
-						((L2Character) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
-						((L2Character) obj).sendPacket(new SocialAction(npc, 3));
-					}
-				}
+					player.sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
+					player.sendPacket(new SocialAction(npc.getObjectId(), 3));
+				}	
 			}
 		}
 		return;
@@ -1324,14 +1321,14 @@ public class Valakas extends L2AttackableAIScript
 	public L2Character getRandomTarget(L2Npc npc)
 	{
 		FastList<L2Character> result = new FastList<L2Character>();
-		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		Collection<L2Character> objs = npc.getKnownList().getKnownCharacters();
 		{
-			for (L2Object obj : objs)
+			for (L2Character cha : objs)
 			{
-				if (obj instanceof L2PcInstance || obj instanceof L2Summon || obj instanceof L2DecoyInstance)
+				if (cha instanceof L2PcInstance || cha instanceof L2Summon || cha instanceof L2DecoyInstance)
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isGM())
-						result.add((L2Character) obj);
+					if (Util.checkIfInRange(5000, npc, cha, true) && !cha.isDead() && !cha.isGM())
+						result.add(cha);
 				}
 			}
 		}

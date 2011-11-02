@@ -95,7 +95,7 @@ class Quest (JQuest) :
           else:
             st.addExpAndSp(295862, 19344)
           st.giveItems(57, 81900)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
@@ -187,7 +187,7 @@ class Quest (JQuest) :
         else:
              st.addExpAndSp(591724, 38688)
         st.giveItems(57, 163800)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)

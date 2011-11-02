@@ -171,7 +171,7 @@ class Quest (JQuest) :
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")
         st.playSound("ItemSound.quest_finish")
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)
         htmltext = "30414-24.htm"

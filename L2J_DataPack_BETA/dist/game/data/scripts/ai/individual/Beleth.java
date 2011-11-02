@@ -262,7 +262,7 @@ public class Beleth extends L2AttackableAIScript
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(11), 200);
 						break;
 					case 11:
-						_zone.broadcastPacket(new SocialAction(beleth, 1));
+						_zone.broadcastPacket(new SocialAction(beleth.getObjectId(), 1));
 						for (int i = 0; i < 6; i++)
 						{
 							int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
@@ -323,7 +323,7 @@ public class Beleth extends L2AttackableAIScript
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(22), 1000);
 						break;
 					case 22:
-						_zone.broadcastPacket(new SocialAction(beleth, 3));
+						_zone.broadcastPacket(new SocialAction(beleth.getObjectId(), 3));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(23), 4000);
 						break;
 					case 23:
@@ -364,7 +364,7 @@ public class Beleth extends L2AttackableAIScript
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 110, 25, 4000, 10000, 0, 0, 1, 0));
-						_zone.broadcastPacket(new SocialAction(beleth, 5));
+						_zone.broadcastPacket(new SocialAction(beleth.getObjectId(), 5));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(28), 4000);
 						break;
 					case 28:
