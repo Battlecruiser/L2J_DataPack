@@ -1386,14 +1386,16 @@
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="673" />
 		<set name="hitTime" val="2000" />
-		<set name="numCharges" val="3" /> <!-- 3 Charges are consumed -->
 		<set name="magicLvl" val="78" />
+		<set name="numCharges" val="3" /> <!-- 3 Charges are consumed -->
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="removedOnDamage" val="true" />
 		<cond msgId="113" addName="1">
 			<player Charges="3" /> <!-- Must recharge 3rd energy stage. -->
 		</cond>
@@ -1401,8 +1403,10 @@
 			<effect name="Paralyze" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="force_meditation">
 				<mul order="0x30" stat="pDef" val="0.2" />
 			</effect>
-			<effect count="60" name="HealOverTime" noicon="1" val="60" />
-			<effect count="60" name="ManaHealOverTime" noicon="1" val="10" />
+			<!-- 60HP * 3 during 60 seconds -->
+			<effect count="20" name="HealOverTime" abnormalTime="3" noicon="1" val="18" />
+			<!-- 10MP * 3 during 60 seconds -->
+			<effect count="20" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="30" />
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
