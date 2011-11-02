@@ -809,22 +809,29 @@
 		<set name="target" val="TARGET_PARTY" />
 	</skill>
 	<skill id="1430" levels="5" name="Invocation">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mhot"> 81 90 102 111 126 </table>
-		<table name="#mpConsume"> 27 28 30 33 34 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="staticReuse" val="true" />
+		<table name="#magicLvl"> 56 60 64 68 72 </table>
+		<table name="#mpConsume"> 21 22 24 26 27 </table>
+		<table name="#mpInitialConsume"> 6 6 6 7 7 </table>
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="removedOnDamage" val="true" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect count="10" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="#mhot" abnormalLvl="1" abnormalType="force_meditation" />
-			<effect name="Paralyze" abnormalTime="30" val="0">
+			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="force_meditation">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
+			<!-- 27 30 34 37 42MP * 3 during 30 seconds -->
+			<effect count="10" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="#mhot" />
 		</for>
 	</skill>
 	<skill id="1431" levels="6" name="Fallen Arrow">
