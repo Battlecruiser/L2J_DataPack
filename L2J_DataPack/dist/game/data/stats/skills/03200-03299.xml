@@ -1088,10 +1088,11 @@
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect count="6" name="ManaHealOverTime" abnormalTime="5" noicon="1" val="27" abnormalLvl="1" abnormalType="talisman" />
-			<effect name="Paralyze" abnormalTime="30" val="0">
+			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
+			<!-- 27MP * 3 during 30 seconds -->
+			<effect count="10" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="81" />
 		</for>
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
