@@ -14,8 +14,11 @@
  */
 package conquerablehalls.flagwar.WildBeastReserve;
 
+import java.util.Collection;
+
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 
 import conquerablehalls.flagwar.FlagWar;
@@ -46,22 +49,21 @@ public final class WildBeastReserve extends FlagWar
 		
 		MESSENGER 					= 35627;
 		
-		FLAG_COORDS[0] = new int[]{56963,-92211,-1303,60611};
-		FLAG_COORDS[1] = new int[]{58090,-91641,-1303,47274};
-		FLAG_COORDS[2] = new int[]{58908,-92556,-1303,34450};
-		FLAG_COORDS[3] = new int[]{58336,-93600,-1303,21100};
-		FLAG_COORDS[4] = new int[]{57152,-93360,-1303,8400};
-		FLAG_COORDS[5] = new int[]{59116,-93251,-1302,31000};
-		FLAG_COORDS[6] = new int[]{56432,-92864,-1303,64000};
+		FLAG_COORDS[0] 				= new Location(56963,-92211,-1303,60611);
+		FLAG_COORDS[1] 				= new Location(58090,-91641,-1303,47274);
+		FLAG_COORDS[2] 				= new Location(58908,-92556,-1303,34450);
+		FLAG_COORDS[3] 				= new Location(58336,-93600,-1303,21100);
+		FLAG_COORDS[4] 				= new Location(57152,-93360,-1303,8400);
+		FLAG_COORDS[5] 				= new Location(59116,-93251,-1302,31000);
+		FLAG_COORDS[6] 				= new Location(56432,-92864,-1303,64000);
 		
-		OUTTER_DOORS_TO_OPEN[0] = 21150003;
-		OUTTER_DOORS_TO_OPEN[1] = 21150004;
+		OUTTER_DOORS_TO_OPEN[0] 	= 21150003;
+		OUTTER_DOORS_TO_OPEN[1] 	= 21150004;
 		
-		INNER_DOORS_TO_OPEN[0] = 21150001;
-		INNER_DOORS_TO_OPEN[1] = 21150002;
+		INNER_DOORS_TO_OPEN[0]		= 21150001;
+		INNER_DOORS_TO_OPEN[1]		= 21150002;
 		 
-		java.util.Collection<L2ResidenceHallTeleportZone> zoneList 
-		= ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		
 		for(L2ResidenceHallTeleportZone teleZone : zoneList)
 		{
@@ -70,7 +72,7 @@ public final class WildBeastReserve extends FlagWar
 			
 			int id = teleZone.getResidenceZoneId();
 			
-			if(id < 0 || id >= 6)						// Shouldnt happen
+			if(id < 0 || id >= 6) // Shouldn't happen
 				continue;
 			
 			TELE_ZONES[id] = teleZone;

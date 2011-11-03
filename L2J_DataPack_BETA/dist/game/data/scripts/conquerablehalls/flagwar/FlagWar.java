@@ -82,7 +82,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	protected static int[] OUTTER_DOORS_TO_OPEN = new int[2];
 	protected static int[] INNER_DOORS_TO_OPEN = new int[2];
-	protected static int[][] FLAG_COORDS = new int[7][4];
+	protected static Location[] FLAG_COORDS = new Location[7];
 	
 	protected static L2ResidenceHallTeleportZone[] TELE_ZONES = new L2ResidenceHallTeleportZone[6];
 	
@@ -289,7 +289,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 					if(attacker == null)
 						continue;
 					html.replaceAll("%clan"+i+"%", clan.getName());
-					html.replaceAll("%clanMem"+i+"%", String.valueOf(((ClanData)_data.values()[i]).players.size()));
+					html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
 				}
 				if(_data.size() < 5)
 				{
@@ -552,22 +552,16 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				index = data.flag - FLAG_RED;
 			else
 				index = clanId == _hall.getOwnerId()? 5 : 6;
-			int[] coords = FLAG_COORDS[index];		
+			Location loc = FLAG_COORDS[index];		
 			
 			data.flagInstance = new L2Spawn(flagTemplate);			
-			data.flagInstance.setLocx(coords[0]);
-			data.flagInstance.setLocy(coords[1]);
-			data.flagInstance.setLocz(coords[2]);
-			data.flagInstance.setHeading(coords[3]);
+			data.flagInstance.setLocation(loc);
 			data.flagInstance.setRespawnDelay(10000);
 			data.flagInstance.setAmount(1);
 			data.flagInstance.init();
 			
 			data.warrior = new L2Spawn(mahumTemplate);
-			data.warrior.setLocx(coords[0] + 25);
-			data.warrior.setLocy(coords[1] + 25);
-			data.warrior.setLocz(coords[2]);
-			data.warrior.setHeading(coords[3]);
+			data.warrior.setLocation(loc);
 			data.warrior.setRespawnDelay(10000);
 			data.warrior.setAmount(1);
 			data.warrior.init();

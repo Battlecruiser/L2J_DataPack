@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -34,22 +35,16 @@ public class Chimeras extends L2AttackableAIScript
 		22349, 22350, 22351, 22352
 	};
 	private static final int CELTUS = 22353;
+	
 	// Locations
-	private static final int[][] LOCATIONS =
+	private static final Location[] LOCATIONS =
 	{
-		{
-			3678, 233418, -3319
-		},
-		{
-			2038, 237125, -3363
-		},
-		{
-			7222, 240617, -2033
-		},
-		{
-			9969, 235570, -1993
-		}
+		new Location(3678, 233418, -3319),
+		new Location(2038, 237125, -3363),
+		new Location(7222, 240617, -2033),
+		new Location(9969, 235570, -1993)
 	};
+	
 	// Items
 	private static final int BOTTLE = 2359;
 	private static final int DIM_LIFE_FORCE = 9680;
@@ -61,13 +56,11 @@ public class Chimeras extends L2AttackableAIScript
 	{
 		if ((HellboundManager.getInstance().getLevel() == 7) && !npc.isTeleporting()) // Have random spawn points only in 7 lvl
 		{
-			final int[] spawn = LOCATIONS[Rnd.get(LOCATIONS.length)];
-			if (!npc.isInsideRadius(spawn[0], spawn[1], spawn[2], 200, false, false))
+			final Location loc = LOCATIONS[Rnd.get(LOCATIONS.length)];
+			if (!npc.isInsideRadius(loc, 200, false, false))
 			{
-				npc.getSpawn().setLocx(spawn[0]);
-				npc.getSpawn().setLocy(spawn[1]);
-				npc.getSpawn().setLocz(spawn[2]);
-				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(npc, spawn), 100);
+				npc.getSpawn().setLocation(loc);
+				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(npc, loc), 100);
 			}
 		}
 		return super.onSpawn(npc);
@@ -113,18 +106,18 @@ public class Chimeras extends L2AttackableAIScript
 	private static class Teleport implements Runnable
 	{
 		private final L2Npc _npc;
-		private final int[] _coords;
+		private final Location _loc;
 		
-		public Teleport(L2Npc npc, int[] coords)
+		public Teleport(L2Npc npc, Location loc)
 		{
 			_npc = npc;
-			_coords = coords;
+			_loc = loc;
 		}
 		
 		@Override
 		public void run()
 		{
-			_npc.teleToLocation(_coords[0], _coords[1], _coords[2]);
+			_npc.teleToLocation(_loc, false);
 		}
 	}
 	

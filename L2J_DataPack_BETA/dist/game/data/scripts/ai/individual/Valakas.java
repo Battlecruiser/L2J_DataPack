@@ -46,7 +46,6 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Valakas AI
- * 
  * @author Kerberos
  */
 public class Valakas extends L2AttackableAIScript
@@ -67,12 +66,12 @@ public class Valakas extends L2AttackableAIScript
 	
 	private static final int VALAKAS = 29028;
 	
-	//Valakas Status Tracking :
-	private static final byte DORMANT = 0; //Valakas is spawned and no one has entered yet. Entry is unlocked
-	private static final byte WAITING = 1; //Valakas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
-	//before he unleashes his attack. Entry is unlocked
-	private static final byte FIGHTING = 2; //Valakas is engaged in battle, annihilating his foes. Entry is locked
-	private static final byte DEAD = 3; //Valakas has been killed. Entry is locked
+	// Valakas Status Tracking :
+	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked
+	private static final byte WAITING = 1; // Valakas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
+	// before he unleashes his attack. Entry is unlocked
+	private static final byte FIGHTING = 2; // Valakas is engaged in battle, annihilating his foes. Entry is locked
+	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked
 	
 	private static L2BossZone _Zone;
 	
@@ -82,7 +81,7 @@ public class Valakas extends L2AttackableAIScript
 		super(id, name, descr);
 		int[] mob =
 		{
-				VALAKAS
+			VALAKAS
 		};
 		registerMobs(mob);
 		i_ai0 = 0;
@@ -100,7 +99,7 @@ public class Valakas extends L2AttackableAIScript
 			// load the unlock date and time for valakas from DB
 			long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			// if valakas is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired.  Mark valakas as currently locked.  Setup a timer
+			// the unlock time has not yet expired. Mark valakas as currently locked. Setup a timer
 			// to fire at the correct time (calculate the time between now and the unlock time,
 			// setup a timer to fire after that many msec)
 			if (temp > 0)
@@ -126,7 +125,8 @@ public class Valakas extends L2AttackableAIScript
 							_valakas.setRunning();
 						}
 						catch (Throwable e)
-						{}
+						{
+						}
 					}
 				}, 100L);
 				startQuestTimer("1003", 60000, valakas, null, true);
@@ -157,7 +157,8 @@ public class Valakas extends L2AttackableAIScript
 						_valakas.setRunning();
 					}
 					catch (Throwable e)
-					{}
+					{
+					}
 				}
 			}, 100L);
 			
@@ -197,7 +198,8 @@ public class Valakas extends L2AttackableAIScript
 							broadcastSpawn(_valakas);
 						}
 						catch (Throwable e)
-						{}
+						{
+						}
 					}
 				}, 1L);
 				startQuestTimer("1004", 2000, npc, null);
@@ -275,51 +277,51 @@ public class Valakas extends L2AttackableAIScript
 			else if (event.equalsIgnoreCase("1004"))
 			{
 				startQuestTimer("1102", 1500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1300,180,-5,3000,15000,0,-5,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 180, -5, 3000, 15000, 0, -5, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1102"))
 			{
 				startQuestTimer("1103", 3300, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),500,180,-8,600,15000,0,60,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 500, 180, -8, 600, 15000, 0, 60, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1103"))
 			{
 				startQuestTimer("1104", 2900, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),800,180,-8,2700,15000,0,30,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 800, 180, -8, 2700, 15000, 0, 30, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1104"))
 			{
 				startQuestTimer("1105", 2700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),200,250,70,0,15000,30,80,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 200, 250, 70, 0, 15000, 30, 80, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1105"))
 			{
 				startQuestTimer("1106", 1, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1100,250,70,2500,15000,30,80,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 250, 70, 2500, 15000, 30, 80, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1106"))
 			{
 				startQuestTimer("1107", 3200, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),700,150,30,0,15000,-10,60,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 700, 150, 30, 0, 15000, -10, 60, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1107"))
 			{
 				startQuestTimer("1108", 1400, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1200,150,20,2900,15000,-10,30,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 150, 20, 2900, 15000, -10, 30, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1108"))
 			{
 				startQuestTimer("1109", 6700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),750,170,15,3400,15000,10,-15,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, 15, 3400, 15000, 10, -15, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1109"))
 			{
 				startQuestTimer("1110", 5700, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),750,170,-10,3400,15000,4000,-15,1,0));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 750, 170, -10, 3400, 15000, 4000, -15, 1, 0));
 			}
 			else if (event.equalsIgnoreCase("1110"))
 			{
-				GrandBossManager.getInstance().setBossStatus(VALAKAS,FIGHTING);
+				GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
 				startQuestTimer("1002", 60000, npc, null, true);
 				npc.setIsInvul(false);
 				getRandomSkill(npc);
@@ -327,41 +329,41 @@ public class Valakas extends L2AttackableAIScript
 			else if (event.equalsIgnoreCase("1111"))
 			{
 				startQuestTimer("1112", 3500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1100,210,-5,3000,10000,-13,0,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1100, 210, -5, 3000, 10000, -13, 0, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1112"))
 			{
 				startQuestTimer("1113", 4500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1300,200,-8,3000,10000,0,15,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1300, 200, -8, 3000, 10000, 0, 15, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1113"))
 			{
 				startQuestTimer("1114", 500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1000,190,0,3000,10000,0,10,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1000, 190, 0, 3000, 10000, 0, 10, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1114"))
 			{
 				startQuestTimer("1115", 4600, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1700,120,0,2500,10000,12,40,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 120, 0, 2500, 10000, 12, 40, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1115"))
 			{
 				startQuestTimer("1116", 750, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1700,20,0,3000,10000,10,10,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 20, 0, 3000, 10000, 10, 10, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1116"))
 			{
 				startQuestTimer("1117", 2500, npc, null);
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1700,10,0,3000,10000,20,70,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 10000, 20, 70, 1, 1));
 			}
 			else if (event.equalsIgnoreCase("1117"))
 			{
-				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1700,10,0,3000,250,20,-20,1,1));
+				npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 3000, 250, 20, -20, 1, 1));
 				addSpawn(31759, 212852, -114842, -1632, 0, false, 900000);
 				int radius = 1500;
 				for (int i = 0; i < 20; i++)
 				{
-					int x = (int) (radius * Math.cos(i * .331)); //.331~2pi/19
+					int x = (int) (radius * Math.cos(i * .331)); // .331~2pi/19
 					int y = (int) (radius * Math.sin(i * .331));
 					addSpawn(31759, 212852 + x, -114842 + y, -1632, 0, false, 900000);
 				}
@@ -384,14 +386,14 @@ public class Valakas extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-
+	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		npc.disableCoreAI(true);
 		return super.onSpawn(npc);
 	}
-
+	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
@@ -974,9 +976,9 @@ public class Valakas extends L2AttackableAIScript
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		startQuestTimer("1111", 500, npc, null);
-		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1700,2000,130,-1,0,10000,-20,1,1));
+		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0, 10000, -20, 1, 1));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		GrandBossManager.getInstance().setBossStatus(VALAKAS,DEAD);
+		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 		long respawnTime = (long) Config.Interval_Of_Valakas_Spawn + Rnd.get(Config.Random_Of_Valakas_Spawn);
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
@@ -1312,7 +1314,7 @@ public class Valakas extends L2AttackableAIScript
 				{
 					player.sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
 					player.sendPacket(new SocialAction(npc.getObjectId(), 3));
-				}	
+				}
 			}
 		}
 		return;

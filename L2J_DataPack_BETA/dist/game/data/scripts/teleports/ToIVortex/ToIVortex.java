@@ -20,12 +20,11 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim
- * update to H5 by pmq
+ * @author Plim update to H5 by pmq
  */
 public class ToIVortex extends Quest
 {
-	//NPCs
+	// NPCs
 	private static final int KEPLON = 30949;
 	private static final int EUCLIE = 30950;
 	private static final int PITHGON = 30951;
@@ -34,7 +33,7 @@ public class ToIVortex extends Quest
 	private static final int DIMENSION_VORTEX_3 = 30954;
 	private static final int TELEPORT_CUBIC = 29055;
 	
-	//ITEMS
+	// ITEMS
 	private static final int ADENA = 57;
 	private static final int BLUE_DIMENSION_STONE = 4402;
 	private static final int GREEN_DIMENSION_STONE = 4401;
@@ -47,7 +46,7 @@ public class ToIVortex extends Quest
 		QuestState st = player.getQuestState(getName());
 		
 		int npcId = npc.getNpcId();
-		//1st Floor
+		// 1st Floor
 		if (event.equalsIgnoreCase("1"))
 		{
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
@@ -62,7 +61,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//2nd Floor
+		// 2nd Floor
 		else if (event.equalsIgnoreCase("2"))
 		{
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
@@ -77,7 +76,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//3rd Floor
+		// 3rd Floor
 		else if (event.equalsIgnoreCase("3"))
 		{
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
@@ -92,7 +91,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//4th Floor
+		// 4th Floor
 		else if (event.equalsIgnoreCase("4"))
 		{
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
@@ -107,7 +106,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//5th Floor
+		// 5th Floor
 		else if (event.equalsIgnoreCase("5"))
 		{
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
@@ -122,7 +121,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//6th Floor
+		// 6th Floor
 		else if (event.equalsIgnoreCase("6"))
 		{
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
@@ -137,7 +136,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//7th Floor
+		// 7th Floor
 		else if (event.equalsIgnoreCase("7"))
 		{
 			if (st.hasQuestItems(RED_DIMENSION_STONE))
@@ -152,7 +151,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//8th Floor
+		// 8th Floor
 		else if (event.equalsIgnoreCase("8"))
 		{
 			if (st.hasQuestItems(RED_DIMENSION_STONE))
@@ -167,7 +166,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//9th Floor
+		// 9th Floor
 		else if (event.equalsIgnoreCase("9"))
 		{
 			if (st.hasQuestItems(RED_DIMENSION_STONE))
@@ -182,7 +181,7 @@ public class ToIVortex extends Quest
 				htmltext = "no-stones.htm";
 			}
 		}
-		//10 Floor
+		// 10 Floor
 		else if (event.equalsIgnoreCase("10"))
 		{
 			if (st.hasQuestItems(RED_DIMENSION_STONE))
@@ -251,7 +250,7 @@ public class ToIVortex extends Quest
 		if (st == null)
 			return null;
 		
-		//ToI Vortex exit
+		// ToI Vortex exit
 		if (npc.getNpcId() == TELEPORT_CUBIC)
 		{
 			int chance = st.getRandom(3);

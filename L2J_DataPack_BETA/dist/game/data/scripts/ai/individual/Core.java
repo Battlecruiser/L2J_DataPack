@@ -33,7 +33,6 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Core AI
- * 
  * @author DrLecter Revised By Emperorc
  */
 public class Core extends L2AttackableAIScript
@@ -41,15 +40,15 @@ public class Core extends L2AttackableAIScript
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;
 	private static final int DOOM_WRAITH = 29008;
-	//private static final int DICOR = 29009;
-	//private static final int VALIDUS = 29010;
+	// private static final int DICOR = 29009;
+	// private static final int VALIDUS = 29010;
 	private static final int SUSCEPTOR = 29011;
-	//private static final int PERUM = 29012;
-	//private static final int PREMO = 29013;
+	// private static final int PERUM = 29012;
+	// private static final int PREMO = 29013;
 	
-	//CORE Status Tracking :
-	private static final byte ALIVE = 0; //Core is spawned.
-	private static final byte DEAD = 1; //Core has been killed.
+	// CORE Status Tracking :
+	private static final byte ALIVE = 0; // Core is spawned.
+	private static final byte DEAD = 1; // Core has been killed.
 	
 	private static boolean _FirstAttacked;
 	
@@ -61,7 +60,7 @@ public class Core extends L2AttackableAIScript
 		
 		int[] mobs =
 		{
-				CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR
+			CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR
 		};
 		registerMobs(mobs);
 		
@@ -112,26 +111,26 @@ public class Core extends L2AttackableAIScript
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		//Spawn minions
+		// Spawn minions
 		L2Attackable mob;
 		for (int i = 0; i < 5; i++)
 		{
 			int x = 16800 + i * 360;
-			mob = (L2Attackable)addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable) addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
-			mob = (L2Attackable)addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable) addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 			int x2 = 16800 + i * 600;
-			mob = (L2Attackable)addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable) addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 		}
 		for (int i = 0; i < 4; i++)
 		{
 			int x = 16800 + i * 450;
-			mob = (L2Attackable)addSpawn(SUSCEPTOR, x, 110300, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable) addSpawn(SUSCEPTOR, x, 110300, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 		}
@@ -148,7 +147,7 @@ public class Core extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			L2Attackable mob = (L2Attackable)addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
+			L2Attackable mob = (L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 			mob.setIsRaidMinion(true);
 			Minions.add(mob);
 		}
@@ -200,7 +199,7 @@ public class Core extends L2AttackableAIScript
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
-			//time is 60hour	+/- 23hour
+			// time is 60hour +/- 23hour
 			long respawnTime = (long) Config.Interval_Of_Core_Spawn + Rnd.get(Config.Random_Of_Core_Spawn);
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots

@@ -30,13 +30,15 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
-
 public class PrisonGuards extends L2AttackableAIScript
 {
 	final private static int GUARD1 = 18367;
 	final private static int GUARD2 = 18368;
 	final private static int STAMP = 10013;
-	final private static String[] GUARDVARS = {"1st","2nd","3rd","4th"};
+	final private static String[] GUARDVARS =
+	{
+		"1st", "2nd", "3rd", "4th"
+	};
 	final private static String qn = "IOPRace";
 	
 	private final static int silence = 4098;
@@ -45,30 +47,33 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	private boolean _firstAttacked = false;
 	
-	private Map<L2Npc,Integer> _guards = new FastMap<L2Npc, Integer>();
+	private final Map<L2Npc, Integer> _guards = new FastMap<L2Npc, Integer>();
 	
 	public PrisonGuards(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		int[] mob = {GUARD1, GUARD2};
+		int[] mob =
+		{
+			GUARD1, GUARD2
+		};
 		registerMobs(mob);
 		
 		// place 1
-		_guards.put(addSpawn(GUARD2,160704,184704,-3704,49152,false,0),0);
-		_guards.put(addSpawn(GUARD2,160384,184704,-3704,49152,false,0),0);
-		_guards.put(addSpawn(GUARD1,160528,185216,-3704,49152,false,0),0);
+		_guards.put(addSpawn(GUARD2, 160704, 184704, -3704, 49152, false, 0), 0);
+		_guards.put(addSpawn(GUARD2, 160384, 184704, -3704, 49152, false, 0), 0);
+		_guards.put(addSpawn(GUARD1, 160528, 185216, -3704, 49152, false, 0), 0);
 		// place 2
-		_guards.put(addSpawn(GUARD2,135120,171856,-3704,49152,false,0),1);
-		_guards.put(addSpawn(GUARD2,134768,171856,-3704,49152,false,0),1);
-		_guards.put(addSpawn(GUARD1,134928,172432,-3704,49152,false,0),1);
+		_guards.put(addSpawn(GUARD2, 135120, 171856, -3704, 49152, false, 0), 1);
+		_guards.put(addSpawn(GUARD2, 134768, 171856, -3704, 49152, false, 0), 1);
+		_guards.put(addSpawn(GUARD1, 134928, 172432, -3704, 49152, false, 0), 1);
 		// place 3
-		_guards.put(addSpawn(GUARD2,146880,151504,-2872,49152,false,0),2);
-		_guards.put(addSpawn(GUARD2,146366,151506,-2872,49152,false,0),2);
-		_guards.put(addSpawn(GUARD1,146592,151888,-2872,49152,false,0),2);
+		_guards.put(addSpawn(GUARD2, 146880, 151504, -2872, 49152, false, 0), 2);
+		_guards.put(addSpawn(GUARD2, 146366, 151506, -2872, 49152, false, 0), 2);
+		_guards.put(addSpawn(GUARD1, 146592, 151888, -2872, 49152, false, 0), 2);
 		// place 4
-		_guards.put(addSpawn(GUARD2,155840,160448,-3352,0,false,0),3);
-		_guards.put(addSpawn(GUARD2,155840,159936,-3352,0,false,0),3);
-		_guards.put(addSpawn(GUARD1,155578,160177,-3352,0,false,0),3);
+		_guards.put(addSpawn(GUARD2, 155840, 160448, -3352, 0, false, 0), 3);
+		_guards.put(addSpawn(GUARD2, 155840, 159936, -3352, 0, false, 0), 3);
+		_guards.put(addSpawn(GUARD1, 155578, 160177, -3352, 0, false, 0), 3);
 		
 		for (L2Npc npc : _guards.keySet())
 		{
@@ -225,8 +230,7 @@ public class PrisonGuards extends L2AttackableAIScript
 		if (fromAttack)
 		{
 			/*
-			 * 1800107 It's not easy to obtain.
-			 * 1800108 You're out of your mind coming here...
+			 * 1800107 It's not easy to obtain. 1800108 You're out of your mind coming here...
 			 */
 			NpcStringId npcString = (npc.getNpcId() == GUARD1 ? NpcStringId.ITS_NOT_EASY_TO_OBTAIN : NpcStringId.YOURE_OUT_OF_YOUR_MIND_COMING_HERE);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), npcString));

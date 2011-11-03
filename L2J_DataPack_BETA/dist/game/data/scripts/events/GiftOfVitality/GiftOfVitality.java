@@ -16,6 +16,7 @@ package events.GiftOfVitality;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
@@ -37,24 +38,24 @@ public class GiftOfVitality extends Quest
 	
 	private static final int _jack = 4306;
 	
-	private static final int[][] _spawns =
+	private static final Location[] _spawns =
 	{
-		{  82766,  149438, -3464, 33865 },
-		{  82286,   53291, -1488, 15250 },
-		{ 147060,   25943, -2008, 18774 },
-		{ 148096,  -55466, -2728, 40541 },
-		{  87116, -141332, -1336, 52193 },
-		{  43521,  -47542,  -792, 31655 },
-		{  17203,  144949, -3024, 18166 },
-		{ 111164,  221062, -3544,  2714 },
-		{ -13869,  122063, -2984, 18270 },
-		{ -83161,  150915, -3120, 17311 },
-		{  45402,   48355, -3056, 49153 },
-		{ 115616, -177941,  -896, 30708 },
-		{ -44928, -113608,  -192, 30212 },
-		{ -84037,  243194, -3728,  8992 },
-		{-119690,   44583,   360, 29289 },
-		{  12084,   16576, -4584, 57345 }
+		new Location(82766, 149438, -3464, 33865),
+		new Location(82286, 53291, -1488, 15250),
+		new Location(147060, 25943, -2008, 18774),
+		new Location(148096, -55466, -2728, 40541),
+		new Location(87116, -141332, -1336, 52193),
+		new Location(43521, -47542, -792, 31655),
+		new Location(17203, 144949, -3024, 18166),
+		new Location(111164, 221062, -3544, 2714),
+		new Location(-13869, 122063, -2984, 18270),
+		new Location(-83161, 150915, -3120, 17311),
+		new Location(45402, 48355, -3056, 49153),
+		new Location(115616, -177941, -896, 30708),
+		new Location(-44928, -113608, -192, 30212),
+		new Location(-84037, 243194, -3728, 8992),
+		new Location(-119690, 44583, 360, 29289),
+		new Location(12084, 16576, -4584, 57345)
 	};
 	
 	public GiftOfVitality(int questId, String name, String descr)
@@ -63,8 +64,8 @@ public class GiftOfVitality extends Quest
 		addStartNpc(_jack);
 		addFirstTalkId(_jack);
 		addTalkId(_jack);
-		for(int[] _spawn : _spawns)
-			addSpawn(_jack, _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
+		for(Location loc : _spawns)
+			addSpawn(_jack, loc, false, 0);
 	}
 	
 	@Override

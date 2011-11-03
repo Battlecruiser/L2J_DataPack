@@ -14,6 +14,7 @@
  */
 package teleports.MithrilMines;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -21,14 +22,14 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class MithrilMines extends Quest
 {
-	private static final int[][] data =
+	private static final Location[] _locs =
 	{
-		{171946, -173352, 3440},
-		{175499, -181586, -904},
-		{173462, -174011, 3480},
-		{179299, -182831, -224},
-		{178591, -184615, 360},
-		{175499, -181586, -904}
+		new Location(171946, -173352, 3440),
+		new Location(175499, -181586, -904),
+		new Location(173462, -174011, 3480),
+		new Location(179299, -182831, -224),
+		new Location(178591, -184615, 360),
+		new Location(175499, -181586, -904)
 	};
 	
 	private final static int npcId = 32652;
@@ -47,14 +48,12 @@ public class MithrilMines extends Quest
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		int loc = Integer.parseInt(event) - 1;
-		if (data.length > loc)
+		int index = Integer.parseInt(event) - 1;
+		if (_locs.length > index)
 		{
-			int x = data[loc][0];
-			int y = data[loc][1];
-			int z = data[loc][2];
+			Location loc = _locs[index];
 			
-			player.teleToLocation(x, y, z);
+			player.teleToLocation(loc, false);
 			st.exitQuest(true);
 		}
 		
