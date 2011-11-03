@@ -14,8 +14,11 @@
  */
 package conquerablehalls.flagwar.BanditStronghold;
 
+import java.util.Collection;
+
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 
 import conquerablehalls.flagwar.FlagWar;
@@ -52,16 +55,15 @@ public final class BanditStronghold extends FlagWar
 		INNER_DOORS_TO_OPEN[0] = 22170003;
 		INNER_DOORS_TO_OPEN[1] = 22170004;
 
-		FLAG_COORDS[0] = new int[]{83699,-17468,-1774,19048};
-		FLAG_COORDS[1] = new int[]{82053,-17060,-1784,5432};
-		FLAG_COORDS[2] = new int[]{82142,-15528,-1799,58792};
-		FLAG_COORDS[3] = new int[]{83544,-15266,-1770,44976};
-		FLAG_COORDS[4] = new int[]{84609,-16041,-1769,35816};
-		FLAG_COORDS[5] = new int[]{81981,-15708,-1858,60392};
-		FLAG_COORDS[6] = new int[]{84375,-17060,-1860,27712};
+		FLAG_COORDS[0] = new Location(83699,-17468,-1774,19048);
+		FLAG_COORDS[1] = new Location(82053,-17060,-1784,5432);
+		FLAG_COORDS[2] = new Location(82142,-15528,-1799,58792);
+		FLAG_COORDS[3] = new Location(83544,-15266,-1770,44976);
+		FLAG_COORDS[4] = new Location(84609,-16041,-1769,35816);
+		FLAG_COORDS[5] = new Location(81981,-15708,-1858,60392);
+		FLAG_COORDS[6] = new Location(84375,-17060,-1860,27712);
 
-		java.util.Collection<L2ResidenceHallTeleportZone> zoneList 
-		= ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		
 		for(L2ResidenceHallTeleportZone teleZone : zoneList)
 		{

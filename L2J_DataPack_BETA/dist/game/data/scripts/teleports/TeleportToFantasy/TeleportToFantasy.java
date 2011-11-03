@@ -18,6 +18,7 @@ import java.util.Map;
 
 import javolution.util.FastMap;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -27,36 +28,35 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Plim
- * Original python script by Kerberos
+ * @author Plim Original python script by Kerberos
  */
 public class TeleportToFantasy extends Quest
 {
 	private static final int PADDIES = 32378;
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<Integer, Integer>();
 	
-	private static final int[][] RETURN_LOCS = 
+	private static final Location[] RETURN_LOCS =
 	{
-		{-80826,149775,-3043},
-		{-12672,122776,-3116},
-		{15670,142983,-2705},
-		{83400,147943,-3404},
-		{111409,219364,-3545},
-		{82956,53162,-1495},
-		{146331,25762,-2018},
-		{116819,76994,-2714},
-		{43835,-47749,-792},
-		{147930,-55281,-2728},
-		{87386,-143246,-1293},
-		{12882,181053,-3560}
+		new Location(-80826, 149775, -3043),
+		new Location(-12672, 122776, -3116),
+		new Location(15670, 142983, -2705),
+		new Location(83400, 147943, -3404),
+		new Location(111409, 219364, -3545),
+		new Location(82956, 53162, -1495),
+		new Location(146331, 25762, -2018),
+		new Location(116819, 76994, -2714),
+		new Location(43835, -47749, -792),
+		new Location(147930, -55281, -2728),
+		new Location(87386, -143246, -1293),
+		new Location(12882, 181053, -3560)
 	};
 	
-	private static final int[][] ISLE_LOCS = 
+	private static final Location[] ISLE_LOCS =
 	{
-		{-58752,-56898,-2032},
-		{-59716,-57868,-2032},
-		{-60691,-56893,-2032},
-		{-59720,-55921,-2032}
+		new Location(-58752, -56898, -2032),
+		new Location(-59716, -57868, -2032),
+		new Location(-60691, -56893, -2032),
+		new Location(-59720, -55921, -2032)
 	};
 	
 	@Override
@@ -72,7 +72,7 @@ public class TeleportToFantasy extends Quest
 		{
 			int random_id = st.getRandom(ISLE_LOCS.length);
 			
-			st.getPlayer().teleToLocation(ISLE_LOCS[random_id][0], ISLE_LOCS[random_id][1], ISLE_LOCS[random_id][2]);
+			player.teleToLocation(ISLE_LOCS[random_id], false);
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
 		}
@@ -82,14 +82,14 @@ public class TeleportToFantasy extends Quest
 			if (st.getState() == State.STARTED && st.getInt("id") > 0)
 			{
 				int return_id = st.getInt("id") - 1;
-		        st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2]);
-		        st.unset("id");
+				player.teleToLocation(RETURN_LOCS[return_id], false);
+				st.unset("id");
 			}
 			
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
-		        st.getPlayer().teleToLocation(43835,-47749,-792);
+				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
+				player.teleToLocation(43835, -47749, -792);
 			}
 			
 			st.exitQuest(true);
@@ -101,18 +101,18 @@ public class TeleportToFantasy extends Quest
 	public TeleportToFantasy(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-
-		TELEPORTERS.put(30059, 3); //TRISHA
-		TELEPORTERS.put(30080, 4); //CLARISSA
-		TELEPORTERS.put(30177, 6); //VALENTIA
-		TELEPORTERS.put(30233, 8); //ESMERALDA
-		TELEPORTERS.put(30256, 2); //BELLA
-		TELEPORTERS.put(30320, 1); //RICHLIN
-		TELEPORTERS.put(30848, 7); //ELISA
-		TELEPORTERS.put(30899, 5); //FLAUEN
-		TELEPORTERS.put(31320, 9); //ILYANA
-		TELEPORTERS.put(31275, 10); //TATIANA
-		TELEPORTERS.put(31964, 11); //BILIA
+		
+		TELEPORTERS.put(30059, 3); // TRISHA
+		TELEPORTERS.put(30080, 4); // CLARISSA
+		TELEPORTERS.put(30177, 6); // VALENTIA
+		TELEPORTERS.put(30233, 8); // ESMERALDA
+		TELEPORTERS.put(30256, 2); // BELLA
+		TELEPORTERS.put(30320, 1); // RICHLIN
+		TELEPORTERS.put(30848, 7); // ELISA
+		TELEPORTERS.put(30899, 5); // FLAUEN
+		TELEPORTERS.put(31320, 9); // ILYANA
+		TELEPORTERS.put(31275, 10); // TATIANA
+		TELEPORTERS.put(31964, 11); // BILIA
 		
 		for (int npcId : TELEPORTERS.keySet())
 		{

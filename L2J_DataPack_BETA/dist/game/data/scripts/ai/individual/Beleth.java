@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -108,7 +109,7 @@ public class Beleth extends L2AttackableAIScript
 		DoorTable.getInstance().getDoor(20240001).openMe();
 	}
 	
-	private static L2Npc spawn(int npcId, int[] loc, int instanceId)
+	private static L2Npc spawn(int npcId, Location loc)
 	{
 		try
 		{
@@ -116,11 +117,8 @@ public class Beleth extends L2AttackableAIScript
 			if (template != null)
 			{
 				L2Spawn spawn = new L2Spawn(template);
-				spawn.setInstanceId(instanceId);
-				spawn.setHeading(loc[3]);
-				spawn.setLocx(loc[0]);
-				spawn.setLocy(loc[1]);
-				spawn.setLocz(loc[2] + 20);
+				spawn.setInstanceId(loc.getInstanceId());
+				spawn.setLocation(loc);
 				spawn.setAmount(spawn.getAmount() + 1);
 				return spawn.doSpawn();
 			}
@@ -194,22 +192,10 @@ public class Beleth extends L2AttackableAIScript
 								npc.deleteMe();
 							}
 						}
-						camera = spawn(29120, new int[]
-						{
-							16323, 213142, -9357, 0
-						}, instanceId);
-						camera2 = spawn(29121, new int[]
-						{
-							16323, 210741, -9357, 0
-						}, instanceId);
-						camera3 = spawn(29122, new int[]
-						{
-							16323, 213170, -9357, 0
-						}, instanceId);
-						camera4 = spawn(29123, new int[]
-						{
-							16323, 214917, -9356, 0
-						}, instanceId);
+						camera = spawn(29120, new Location(16323, 213142, -9357, 0, instanceId));
+						camera2 = spawn(29121, new Location(16323, 210741, -9357, 0, instanceId));
+						camera3 = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
+						camera4 = spawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(2), 300);
@@ -243,10 +229,7 @@ public class Beleth extends L2AttackableAIScript
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(8), 6000);
 						break;
 					case 8:
-						spawn(29125, new int[]
-						{
-							16323, 214917, -9356, 0
-						}, instanceId);
+						spawn(29125, new Location(16323, 214917, -9356, 0, instanceId));
 						_zone.broadcastPacket(new SpecialCamera(camera4.getObjectId(), 900, 255, 0, 0, 1500, 0, 10, 1, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(9), 1000);
 						break;
@@ -255,10 +238,7 @@ public class Beleth extends L2AttackableAIScript
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(10), 3000);
 						break;
 					case 10:
-						beleth = spawn(29118, new int[]
-						{
-							16321, 214211, -9352, 49369
-						}, instanceId);
+						beleth = spawn(29118, new Location(16321, 214211, -9352, 49369, instanceId));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(11), 200);
 						break;
 					case 11:
@@ -267,10 +247,7 @@ public class Beleth extends L2AttackableAIScript
 						{
 							int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
 							int y = (int) ((150 * Math.sin(i * 1.046666667)) + 213059);
-							L2Npc minion = spawn(29119, new int[]
-							{
-								x, y, -9357, 49152
-							}, beleth.getInstanceId());
+							L2Npc minion = spawn(29119, new Location(x, y, -9357, 49152, beleth.getInstanceId()));
 							minion.setShowSummonAnimation(true);
 							minion.decayMe();
 							minions.add(minion);
@@ -357,10 +334,7 @@ public class Beleth extends L2AttackableAIScript
 						break;
 					case 27:
 						beleth.doDie(null);
-						camera = spawn(29122, new int[]
-						{
-							16323, 213170, -9357, 0
-						}, instanceId);
+						camera = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						_zone.broadcastPacket(new SpecialCamera(camera.getObjectId(), 400, 110, 25, 4000, 10000, 0, 0, 1, 0));
@@ -383,10 +357,7 @@ public class Beleth extends L2AttackableAIScript
 					case 31:
 						priest.spawnMe();
 						beleth.deleteMe();
-						camera2 = spawn(29121, new int[]
-						{
-							14056, 213170, -9357, 0
-						}, instanceId);
+						camera2 = spawn(29121, new Location(14056, 213170, -9357, 0, instanceId));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(32), 3500);
 						break;
 					case 32:
@@ -405,10 +376,7 @@ public class Beleth extends L2AttackableAIScript
 						movie = false;
 						break;
 					case 333:
-						beleth = spawn(29118, new int[]
-						{
-							16323, 213170, -9357, 49152
-						}, 0);
+						beleth = spawn(29118, new Location(16323, 213170, -9357, 49152));
 						break;
 				
 				}
@@ -463,23 +431,14 @@ public class Beleth extends L2AttackableAIScript
 				npc.deleteMe();
 			}
 			movie = true;
-			beleth = spawn(29118, new int[]
-			{
-				16323, 213170, -9357, 49152
-			}, 0);
+			beleth = spawn(29118, new Location(16323, 213170, -9357, 49152));
 			beleth.setIsInvul(true);
 			beleth.setIsImmobilized(true);
 			beleth.disableAllSkills();
-			priest = spawn(29128, new int[]
-			{
-				beleth.getX(), beleth.getY(), beleth.getZ(), beleth.getHeading()
-			}, 0);
+			priest = spawn(29128, new Location(beleth));
 			priest.setShowSummonAnimation(true);
 			priest.decayMe();
-			spawn(32470, new int[]
-			{
-				12470, 215607, -9381, 49152
-			}, 0);
+			spawn(32470, new Location(12470, 215607, -9381, 49152));
 			ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(27), 1000);
 		}
 		else if (npc.getNpcId() == 29119)
@@ -705,10 +664,7 @@ public class Beleth extends L2AttackableAIScript
 			a++;
 			int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
 			int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
-			npc = spawn(29119, new int[]
-			{
-				x, y, -9357, 49152
-			}, 0);
+			npc = spawn(29119, new Location(x, y, -9357, 49152));
 			minions.add(npc);
 			if (a >= 2)
 			{
@@ -722,93 +678,54 @@ public class Beleth extends L2AttackableAIScript
 		{
 			xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
 			ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
-			npc = spawn(29119, new int[]
-			{
-				xm[i], ym[i], -9357, 49152
-			}, 0);
+			npc = spawn(29119, new Location(xm[i], ym[i], -9357, 49152));
 			npc.setIsOverloaded(true);
 			minions.add(npc);
 		}
 		xm[4] = (xm[0] + xm[1]) / 2;
 		ym[4] = (ym[0] + ym[1]) / 2;
-		npc = spawn(29119, new int[]
-		{
-			xm[4], ym[4], -9357, 49152
-		}, 0);
+		npc = spawn(29119, new Location(xm[4], ym[4], -9357, 49152));
 		npc.setIsOverloaded(true);
 		minions.add(npc);
 		xm[5] = (xm[1] + xm[2]) / 2;
 		ym[5] = (ym[1] + ym[2]) / 2;
-		npc = spawn(29119, new int[]
-		{
-			xm[5], ym[5], -9357, 49152
-		}, 0);
+		npc = spawn(29119, new Location(xm[5], ym[5], -9357, 49152));
 		npc.setIsOverloaded(true);
 		minions.add(npc);
 		xm[6] = (xm[2] + xm[3]) / 2;
 		ym[6] = (ym[2] + ym[3]) / 2;
-		npc = spawn(29119, new int[]
-		{
-			xm[6], ym[6], -9357, 49152
-		}, 0);
+		npc = spawn(29119, new Location(xm[6], ym[6], -9357, 49152));
 		npc.setIsOverloaded(true);
 		minions.add(npc);
 		xm[7] = (xm[3] + xm[0]) / 2;
 		ym[7] = (ym[3] + ym[0]) / 2;
-		npc = spawn(29119, new int[]
-		{
-			xm[7], ym[7], -9357, 49152
-		}, 0);
+		npc = spawn(29119, new Location(xm[7], ym[7], -9357, 49152));
 		npc.setIsOverloaded(true);
 		minions.add(npc);
 		xm[8] = (xm[0] + xm[4]) / 2;
 		ym[8] = (ym[0] + ym[4]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[8], ym[8], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[8], ym[8], -9357, 49152)));
 		xm[9] = (xm[4] + xm[1]) / 2;
 		ym[9] = (ym[4] + ym[1]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[9], ym[9], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[9], ym[9], -9357, 49152)));
 		xm[10] = (xm[1] + xm[5]) / 2;
 		ym[10] = (ym[1] + ym[5]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[10], ym[10], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[10], ym[10], -9357, 49152)));
 		xm[11] = (xm[5] + xm[2]) / 2;
 		ym[11] = (ym[5] + ym[2]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[11], ym[11], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[11], ym[11], -9357, 49152)));
 		xm[12] = (xm[2] + xm[6]) / 2;
 		ym[12] = (ym[2] + ym[6]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[12], ym[12], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[12], ym[12], -9357, 49152)));
 		xm[13] = (xm[6] + xm[3]) / 2;
 		ym[13] = (ym[6] + ym[3]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[13], ym[13], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[13], ym[13], -9357, 49152)));
 		xm[14] = (xm[3] + xm[7]) / 2;
 		ym[14] = (ym[3] + ym[7]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[14], ym[14], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[14], ym[14], -9357, 49152)));
 		xm[15] = (xm[7] + xm[0]) / 2;
 		ym[15] = (ym[7] + ym[0]) / 2;
-		minions.add(spawn(29119, new int[]
-		{
-			xm[15], ym[15], -9357, 49152
-		}, 0));
+		minions.add(spawn(29119, new Location(xm[15], ym[15], -9357, 49152)));
 		allowObjectId = minions.get(Rnd.get(minions.size())).getObjectId();
 		attacked = false;
 	}

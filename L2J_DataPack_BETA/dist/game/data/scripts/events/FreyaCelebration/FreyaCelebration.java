@@ -17,6 +17,7 @@ package events.FreyaCelebration;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -53,37 +54,38 @@ public class FreyaCelebration extends Quest
 		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
 	
-	private static final int[][] _spawns = {
-		{ -119494, 44882, 360, 24576 },
-		{ -117239, 46842, 360, 49151 },
-		{ -84023, 243051, -3728, 4096 },
-		{ -84411, 244813, -3728, 57343 },
-		{ 46908, 50856, -2992, 8192 },
-		{ 45538, 48357, -3056, 18000 },
-		{ -45372, -114104, -240, 16384 },
-		{ -45278, -112766, -240, 0 },
-		{ 9929, 16324, -4568, 62999 },
-		{ 11546, 17599, -4584, 46900 },
-		{ 115096, -178370, -880, 0 },
-		{ -13727, 122117, -2984, 16384 },
-		{ -14129, 123869, -3112, 40959 },
-		{ -83156, 150994, -3120, 0 },
-		{ -81031, 150038, -3040, 0 },
-		{ 16111, 142850, -2696, 16000 },
-		{ 17275, 145000, -3032, 25000 },
-		{ 111004, 218928, -3536, 16384 },
-		{ 81755, 146487, -3528, 32768 },
-		{ 82145, 148609, -3464, 0 },
-		{ 83037, 149324, -3464, 44000 },
-		{ 81987, 53723, -1488, 0 },
-		{ 147200, 25614, -2008, 16384 },
-		{ 148557, 26806, -2200, 32768 },
-		{ 147421, -55435, -2728, 49151 },
-		{ 148206, -55786, -2776, 61439 },
-		{ 85584, -142490, -1336, 0 },
-		{ 86865, -142915, -1336, 26000 },
-		{ 43966, -47709, -792, 49999 },
-		{ 43165, -48461, -792, 17000 }
+	private static final Location[] _spawns = 
+	{
+		new Location(-119494, 44882, 360, 24576),
+		new Location(-117239, 46842, 360, 49151),
+		new Location(-84023, 243051, -3728, 4096),
+		new Location(-84411, 244813, -3728, 57343),
+		new Location(46908, 50856, -2992, 8192),
+		new Location(45538, 48357, -3056, 18000),
+		new Location(-45372, -114104, -240, 16384),
+		new Location(-45278, -112766, -240, 0),
+		new Location(9929, 16324, -4568, 62999),
+		new Location(11546, 17599, -4584, 46900),
+		new Location(115096, -178370, -880, 0),
+		new Location(-13727, 122117, -2984, 16384),
+		new Location(-14129, 123869, -3112, 40959),
+		new Location(-83156, 150994, -3120, 0),
+		new Location(-81031, 150038, -3040, 0),
+		new Location(16111, 142850, -2696, 16000),
+		new Location(17275, 145000, -3032, 25000),
+		new Location(111004, 218928, -3536, 16384),
+		new Location(81755, 146487, -3528, 32768),
+		new Location(82145, 148609, -3464, 0),
+		new Location(83037, 149324, -3464, 44000),
+		new Location(81987, 53723, -1488, 0),
+		new Location(147200, 25614, -2008, 16384),
+		new Location(148557, 26806, -2200, 32768),
+		new Location(147421, -55435, -2728, 49151),
+		new Location(148206, -55786, -2776, 61439),
+		new Location(85584, -142490, -1336, 0),
+		new Location(86865, -142915, -1336, 26000),
+		new Location(43966, -47709, -792, 49999),
+		new Location(43165, -48461, -792, 17000)
 	};
 	
 	@Override
@@ -180,9 +182,9 @@ public class FreyaCelebration extends Quest
 		addFirstTalkId(_freya);
 		addTalkId(_freya);
 		addSkillSeeId(_freya);
-		for (int[] _spawn : _spawns)
+		for (Location loc : _spawns)
 		{
-			addSpawn(_freya, _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
+			addSpawn(_freya, loc, false, 0);
 		}
 	}
 	

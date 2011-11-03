@@ -49,7 +49,7 @@ public class OutpostCaptain extends Quest
 	{
 		if (HellboundManager.getInstance().getLevel() == 8)
 		{
-			addSpawn(DOORKEEPER, npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), 0, false, 0, false);
+			addSpawn(DOORKEEPER, npc.getSpawn().getSpawnLocation(), false, 0, false);
 		}
 		
 		return super.onKill(npc, killer, isPet);

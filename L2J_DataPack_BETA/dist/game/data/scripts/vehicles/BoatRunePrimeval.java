@@ -27,9 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * 
  * @author DS
- *
  */
 public class BoatRunePrimeval implements Runnable
 {
@@ -103,6 +101,7 @@ public class BoatRunePrimeval implements Runnable
 		PRIMEVAL_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), PRIMEVAL_DOCK.x, PRIMEVAL_DOCK.y, PRIMEVAL_DOCK.z);
 	}
 	
+	@Override
 	public void run()
 	{
 		try
@@ -112,7 +111,7 @@ public class BoatRunePrimeval implements Runnable
 				case 0:
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, false);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, LEAVING_RUNE, RUNE_SOUND);
-					_boat.payForRide(8925, 1,  34513, -38009, -3640);
+					_boat.payForRide(8925, 1, 34513, -38009, -3640);
 					_boat.executePath(RUNE_TO_PRIMEVAL);
 					break;
 				case 1:

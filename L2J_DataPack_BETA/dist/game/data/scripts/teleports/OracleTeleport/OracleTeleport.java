@@ -14,65 +14,172 @@
  */
 package teleports.OracleTeleport;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 public class OracleTeleport extends Quest
 {
 	private final static int[] TOWN_DAWN =
 	{
-		31078,31079,31080,31081,31083,31084,31082,31692,31694,31997,31168
+		31078, 31079, 31080, 31081, 31083, 31084, 31082, 31692, 31694, 31997, 31168
 	};
 	
 	private final static int[] TOWN_DUSK =
 	{
-		31085,31086,31087,31088,31090,31091,31089,31693,31695,31998,31169
+		31085, 31086, 31087, 31088, 31090, 31091, 31089, 31693, 31695, 31998, 31169
 	};
 	
 	private final static int[] TEMPLE_PRIEST =
 	{
-		31127,31128,31129,31130,31131,31137,31138,31139,31140,31141
+		31127, 31128, 31129, 31130, 31131, 31137, 31138, 31139, 31140, 31141
 	};
 	
 	private final static int[] RIFT_POSTERS =
 	{
-		31488,31489,31490,31491,31492,31493
+		31488, 31489, 31490, 31491, 31492, 31493
 	};
 	
 	private final static int[] TELEPORTERS =
 	{
-		31078,31079,31080,31081,31082,31083,31084,31692,31694,31997,31168,
-		31085,31086,31087,31088,31089,31090,31091,31693,31695,31998,31169,
-		31494,31495,31496,31497,31498,31499,31500,31501,31502,31503,31504,
-		31505,31506,31507,31095,31096,31097,31098,31099,31100,31101,31102,
-		31103,31104,31105,31106,31107,31108,31109,31110,31114,31115,31116,
-		31117,31118,31119,31120,31121,31122,31123,31124,31125
+		31078,
+		31079,
+		31080,
+		31081,
+		31082,
+		31083,
+		31084,
+		31692,
+		31694,
+		31997,
+		31168,
+		31085,
+		31086,
+		31087,
+		31088,
+		31089,
+		31090,
+		31091,
+		31693,
+		31695,
+		31998,
+		31169,
+		31494,
+		31495,
+		31496,
+		31497,
+		31498,
+		31499,
+		31500,
+		31501,
+		31502,
+		31503,
+		31504,
+		31505,
+		31506,
+		31507,
+		31095,
+		31096,
+		31097,
+		31098,
+		31099,
+		31100,
+		31101,
+		31102,
+		31103,
+		31104,
+		31105,
+		31106,
+		31107,
+		31108,
+		31109,
+		31110,
+		31114,
+		31115,
+		31116,
+		31117,
+		31118,
+		31119,
+		31120,
+		31121,
+		31122,
+		31123,
+		31124,
+		31125
 	};
 	
-	private final static int[][] RETURN_LOCS =
+	private final static Location[] RETURN_LOCS =
 	{
-		{-80555,150337,-3040},{-13953,121404,-2984},{16354,142820,-2696},{83369,149253,-3400},
-		{111386,220858,-3544},{83106,53965,-1488},{146983,26595,-2200},{148256,-55454,-2779},
-		{45664,-50318,-800},{86795,-143078,-1341},{115136,74717,-2608},{-82368,151568,-3120},
-		{-14748,123995,-3112},{18482,144576,-3056},{81623,148556,-3464},{112486,220123,-3592},
-		{82819,54607,-1520},{147570,28877,-2264},{149888,-56574,-2979},{44528,-48370,-800},
-		{85129,-142103,-1542},{116642,77510,-2688},{-41572,209731,-5087},{-52872,-250283,-7908},
-		{45256,123906,-5411},{46192,170290,-4981},{111273,174015,-5437},{-20604,-250789,-8165},
-		{-21726, 77385,-5171},{140405, 79679,-5427},{-52366, 79097,-4741},{118311,132797,-4829},
-		{172185,-17602,-4901},{ 83000,209213,-5439},{-19500, 13508,-4901},{12525, -248496,-9580},
-		{-41561,209225,-5087},{45242,124466,-5413},{110711,174010,-5439},{-22341,77375,-5173},
-		{-52889,79098,-4741},{117760,132794,-4831},{171792,-17609,-4901},{82564,209207,-5439},
-		{-41565,210048,-5085},{45278,123608,-5411},{111510,174013,-5437},{-21489,77372,-5171},
-		{-52016,79103,-4739},{118557,132804,-4829},{172570,-17605,-4899},{83347,209215,-5437},
-		{42495,143944,-5381},{45666,170300,-4981},{77138,78389,-5125},{139903,79674,-5429},
-		{-20021,13499,-4901},{113418,84535,-6541},{-52940,-250272,-7907},{46499,170301,-4979},
-		{-20280,-250785,-8163},{140673,79680,-5437},{-19182,13503,-4899},{12837,-248483,-9579}
+		new Location(-80555, 150337, -3040),
+		new Location(-13953, 121404, -2984),
+		new Location(16354, 142820, -2696),
+		new Location(83369, 149253, -3400),
+		new Location(111386, 220858, -3544),
+		new Location(83106, 53965, -1488),
+		new Location(146983, 26595, -2200),
+		new Location(148256, -55454, -2779),
+		new Location(45664, -50318, -800),
+		new Location(86795, -143078, -1341),
+		new Location(115136, 74717, -2608),
+		new Location(-82368, 151568, -3120),
+		new Location(-14748, 123995, -3112),
+		new Location(18482, 144576, -3056),
+		new Location(81623, 148556, -3464),
+		new Location(112486, 220123, -3592),
+		new Location(82819, 54607, -1520),
+		new Location(147570, 28877, -2264),
+		new Location(149888, -56574, -2979),
+		new Location(44528, -48370, -800),
+		new Location(85129, -142103, -1542),
+		new Location(116642, 77510, -2688),
+		new Location(-41572, 209731, -5087),
+		new Location(-52872, -250283, -7908),
+		new Location(45256, 123906, -5411),
+		new Location(46192, 170290, -4981),
+		new Location(111273, 174015, -5437),
+		new Location(-20604, -250789, -8165),
+		new Location(-21726, 77385, -5171),
+		new Location(140405, 79679, -5427),
+		new Location(-52366, 79097, -4741),
+		new Location(118311, 132797, -4829),
+		new Location(172185, -17602, -4901),
+		new Location(83000, 209213, -5439),
+		new Location(-19500, 13508, -4901),
+		new Location(12525, -248496, -9580),
+		new Location(-41561, 209225, -5087),
+		new Location(45242, 124466, -5413),
+		new Location(110711, 174010, -5439),
+		new Location(-22341, 77375, -5173),
+		new Location(-52889, 79098, -4741),
+		new Location(117760, 132794, -4831),
+		new Location(171792, -17609, -4901),
+		new Location(82564, 209207, -5439),
+		new Location(-41565, 210048, -5085),
+		new Location(45278, 123608, -5411),
+		new Location(111510, 174013, -5437),
+		new Location(-21489, 77372, -5171),
+		new Location(-52016, 79103, -4739),
+		new Location(118557, 132804, -4829),
+		new Location(172570, -17605, -4899),
+		new Location(83347, 209215, -5437),
+		new Location(42495, 143944, -5381),
+		new Location(45666, 170300, -4981),
+		new Location(77138, 78389, -5125),
+		new Location(139903, 79674, -5429),
+		new Location(-20021, 13499, -4901),
+		new Location(113418, 84535, -6541),
+		new Location(-52940, -250272, -7907),
+		new Location(46499, 170301, -4979),
+		new Location(-20280, -250785, -8163),
+		new Location(140673, 79680, -5437),
+		new Location(-19182, 13503, -4899),
+		new Location(12837, -248483, -9579)
 	};
 	
 	public OracleTeleport(int questId, String name, String descr)
@@ -116,19 +223,15 @@ public class OracleTeleport extends Quest
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && st.getState() == State.STARTED)
 			{
-				int x = RETURN_LOCS[st.getInt("id")][0];
-				int y = RETURN_LOCS[st.getInt("id")][1];
-				int z = RETURN_LOCS[st.getInt("id")][2];
-				player.teleToLocation(x, y, z);
+				Location loc = RETURN_LOCS[st.getInt("id")];
+				player.teleToLocation(loc, false);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && st.getState() == State.STARTED)
 			{
-				int x = RETURN_LOCS[st.getInt("id")][0];
-				int y = RETURN_LOCS[st.getInt("id")][1];
-				int z = RETURN_LOCS[st.getInt("id")][2];
-				player.teleToLocation(x, y, z);
+				Location loc = RETURN_LOCS[st.getInt("id")];
+				player.teleToLocation(loc, false);
 				htmltext = "rift_back.htm";
 				st.exitQuest(true);
 			}
@@ -274,7 +377,7 @@ public class OracleTeleport extends Quest
 			}
 			else if (player.getAllActiveQuests().length > 40)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TOO_MANY_QUESTS));
+				player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
 				st.exitQuest(true);
 			}
 			else if (!st.hasQuestItems(7079))
@@ -282,32 +385,32 @@ public class OracleTeleport extends Quest
 				htmltext = "ziggurat_nofrag.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 20 && playerLevel < 30 && st.getQuestItemsCount(57) < 2000)
+			else if (playerLevel >= 20 && playerLevel < 30 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 2000)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 30 && playerLevel < 40 && st.getQuestItemsCount(57) < 4500)
+			else if (playerLevel >= 30 && playerLevel < 40 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 4500)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 40 && playerLevel < 50 && st.getQuestItemsCount(57) < 8000)
+			else if (playerLevel >= 40 && playerLevel < 50 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 8000)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 50 && playerLevel < 60 && st.getQuestItemsCount(57) < 12500)
+			else if (playerLevel >= 50 && playerLevel < 60 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 12500)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 60 && playerLevel < 70 && st.getQuestItemsCount(57) < 18000)
+			else if (playerLevel >= 60 && playerLevel < 70 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 18000)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if (playerLevel >= 70 && st.getQuestItemsCount(57) < 24500)
+			else if (playerLevel >= 70 && st.getQuestItemsCount(PcInventory.ADENA_ID) < 24500)
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);

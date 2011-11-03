@@ -32,9 +32,15 @@ import com.l2jserver.util.Rnd;
 public class StakatoNest extends L2AttackableAIScript
 {
 	// List of all mobs just for register
-	private static final int[] _stakato_mobs = { 18793, 18794, 18795, 18796, 18797, 18798, 22617, 22618, 22619, 22620, 22621, 22622, 22623, 22624, 22625, 22626, 22627, 22628, 22629, 22630, 22631, 22632, 22633, 25667 };
+	private static final int[] _stakato_mobs =
+	{
+		18793, 18794, 18795, 18796, 18797, 18798, 22617, 22618, 22619, 22620, 22621, 22622, 22623, 22624, 22625, 22626, 22627, 22628, 22629, 22630, 22631, 22632, 22633, 25667
+	};
 	// Coocons
-	private static final int[] _cocoons = { 18793, 18794, 18795, 18796, 18797, 18798 };
+	private static final int[] _cocoons =
+	{
+		18793, 18794, 18795, 18796, 18797, 18798
+	};
 	
 	// Cannibalistic Stakato Leader
 	private static final int _stakato_leader = 22625;
@@ -111,7 +117,7 @@ public class StakatoNest extends L2AttackableAIScript
 		else if (npc.getNpcId() == _stakato_baby)
 		{
 			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
-			if(_leader != null && !_leader.isDead())
+			if (_leader != null && !_leader.isDead())
 			{
 				startQuestTimer("nurse_change", 5000, _leader, killer);
 			}
@@ -128,7 +134,7 @@ public class StakatoNest extends L2AttackableAIScript
 		else if (npc.getNpcId() == _stakato_female)
 		{
 			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
-			if(_leader != null && !_leader.isDead())
+			if (_leader != null && !_leader.isDead())
 			{
 				startQuestTimer("male_change", 5000, _leader, killer);
 			}
@@ -164,7 +170,7 @@ public class StakatoNest extends L2AttackableAIScript
 	{
 		if ((npc == null) || (player == null))
 			return null;
-		if(npc.isDead())
+		if (npc.isDead())
 			return null;
 		
 		if (event.equalsIgnoreCase("nurse_change"))
