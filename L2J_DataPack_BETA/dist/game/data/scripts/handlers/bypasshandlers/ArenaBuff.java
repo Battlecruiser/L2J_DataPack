@@ -53,15 +53,9 @@ public class ArenaBuff implements IBypassHandler
 		{
 			return false;
 		}
-		else if (activeChar.isCursedWeaponEquipped())
-		{
-			activeChar.sendMessage("Go away, you're not welcome here."); // / TODO: Replace with proper system message
-			return true;
-		}
 		
-		L2Npc npc = (L2Npc) target;
-		
-		StringTokenizer st = new StringTokenizer(command);
+		final L2Npc npc = (L2Npc) target;
+		final StringTokenizer st = new StringTokenizer(command);
 		try
 		{
 			String cmd = st.nextToken();
