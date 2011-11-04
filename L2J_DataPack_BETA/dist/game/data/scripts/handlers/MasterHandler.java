@@ -263,6 +263,14 @@ import handlers.targethandlers.TargetPet;
 import handlers.targethandlers.TargetSelf;
 import handlers.targethandlers.TargetSummon;
 import handlers.targethandlers.TargetUnlockable;
+import handlers.telnethandlers.ChatsHandler;
+import handlers.telnethandlers.DebugHandler;
+import handlers.telnethandlers.HelpHandler;
+import handlers.telnethandlers.PlayerHandler;
+import handlers.telnethandlers.ReloadHandler;
+import handlers.telnethandlers.ServerHandler;
+import handlers.telnethandlers.StatusHandler;
+import handlers.telnethandlers.ThreadHandler;
 import handlers.usercommandhandlers.Birthday;
 import handlers.usercommandhandlers.ChannelDelete;
 import handlers.usercommandhandlers.ChannelLeave;
@@ -298,6 +306,7 @@ import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.handler.TelnetHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
@@ -317,6 +326,7 @@ public class MasterHandler
 	private static final UserCommandHandler USER = UserCommandHandler.getInstance();
 	private static final VoicedCommandHandler VOICE = VoicedCommandHandler.getInstance();
 	private static final TargetHandler TARGET = TargetHandler.getInstance();
+	private static final TelnetHandler TELNET = TelnetHandler.getInstance();
 	
 	private static void loadActionHandlers()
 	{
@@ -648,6 +658,19 @@ public class MasterHandler
 		_log.log(Level.INFO, "Loaded " + TARGET.size() + " Target Handlers");
 	}
 	
+	public static void loadTelnetHandlers()
+	{
+		TELNET.registerCommandHandler(new ChatsHandler());
+		TELNET.registerCommandHandler(new DebugHandler());
+		TELNET.registerCommandHandler(new HelpHandler());
+		TELNET.registerCommandHandler(new PlayerHandler());
+		TELNET.registerCommandHandler(new ReloadHandler());
+		TELNET.registerCommandHandler(new ServerHandler());
+		TELNET.registerCommandHandler(new StatusHandler());
+		TELNET.registerCommandHandler(new ThreadHandler());
+		_log.log(Level.INFO, "Loaded " + TARGET.size() + " Telnet Handlers");
+	}
+	
 	/**
 	 * @param args
 	 */
@@ -664,6 +687,7 @@ public class MasterHandler
 		loadUserHandlers();
 		loadVoicedHandlers();
 		loadTargetHandlers();
+		loadTelnetHandlers();
 		_log.log(Level.INFO, "Handlers Loaded...");
 	}
 }
