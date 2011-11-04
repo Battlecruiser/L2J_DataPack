@@ -668,7 +668,7 @@ public class MasterHandler
 		TELNET.registerCommandHandler(new ServerHandler());
 		TELNET.registerCommandHandler(new StatusHandler());
 		TELNET.registerCommandHandler(new ThreadHandler());
-		_log.log(Level.INFO, "Loaded " + TARGET.size() + " Telnet Handlers");
+		_log.log(Level.INFO, "Loaded " + TELNET.size() + " Telnet Handlers");
 	}
 	
 	/**
