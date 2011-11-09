@@ -1366,16 +1366,10 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="#rCrit">
-				<and>
-					<using kind="Dagger,Dual Dagger,Light" />
-					<using kind="Light" />
-				</and>
+				<using kind="Dagger,Dual Dagger,Light" />
 			</basemul>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd">
-				<and>
-					<using kind="Dagger,Dual Dagger,Light" />
-					<using kind="Light" />
-				</and>
+				<using kind="Dagger,Dual Dagger,Light" />
 			</add>
 		</for>
 	</skill>
