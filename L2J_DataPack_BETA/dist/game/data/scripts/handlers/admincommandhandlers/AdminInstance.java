@@ -49,7 +49,7 @@ public class AdminInstance implements IAdminCommandHandler
 		if (command.startsWith("admin_createinstance"))
 		{
 			String[] parts = command.split(" ");
-			if (parts.length < 2)
+			if (parts.length != 3)
 			{
 				activeChar.sendMessage("Example: //createinstance <id> <templatefile> - ids => 300000 are reserved for dynamic instances");
 			}
@@ -57,21 +57,20 @@ public class AdminInstance implements IAdminCommandHandler
 			{
 				try
 				{
-					int id = Integer.parseInt(parts[1]);
-					if (InstanceManager.getInstance().createInstanceFromTemplate(id, parts[2]) && id < 300000)
+					final int id = Integer.parseInt(parts[1]);
+					if ((id < 300000) && InstanceManager.getInstance().createInstanceFromTemplate(id, parts[2]))
 					{
-						activeChar.sendMessage("Instance created");
-						return true;
+						activeChar.sendMessage("Instance created.");
 					}
 					else
 					{
-						activeChar.sendMessage("Failed to create instance");
-						return true;
+						activeChar.sendMessage("Failed to create instance.");
 					}
+					return true;
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Failed loading: " + parts[2]);
+					activeChar.sendMessage("Failed loading: " + parts[1] + " " + parts[2]);
 					return false;
 				}
 			}
