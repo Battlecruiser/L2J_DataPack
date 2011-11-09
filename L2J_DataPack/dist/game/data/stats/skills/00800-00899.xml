@@ -548,15 +548,20 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="13128" />
 	</skill>
-	<skill id="832" levels="1" name="Fast Recovery">
-		<set name="magicLvl" val="43" />
+	<skill id="832" levels="2" name="Fast Recovery">
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<!-- FIXME: Level 2 regen values unconfirmed -->
+		<table name="#magicLvl"> 43 49 </table>
+		<table name="#regHpCp"> 4 6 </table>
+		<table name="#regMp"> 2 4 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="4" />
-			<add order="0x40" stat="regMp" val="2" />
-			<add order="0x40" stat="regCp" val="4" />
+			<add order="0x40" stat="regHp" val="#regHpCp" />
+			<add order="0x40" stat="regMp" val="#regMp" />
+			<add order="0x40" stat="regCp" val="#regHpCp" />
 		</for>
 	</skill>
 	<skill id="833" levels="1" name="Body Reconstruction">
