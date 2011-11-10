@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `custom_npcaidata` (
   `minSkillChance` tinyint(3) unsigned NOT NULL DEFAULT '7',
   `maxSkillChance` tinyint(3) unsigned NOT NULL DEFAULT '15',
   `primarySkillId` smallint(5) unsigned DEFAULT '0',
-  `agroRange` smallint(4) NOT NULL DEFAULT '0',
+  `agroRange` smallint(4) unsigned NOT NULL DEFAULT '0',
   `canMove` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `minRangeSkill` smallint(5) unsigned DEFAULT '0',
   `minRangeChance` tinyint(3) unsigned DEFAULT '0',
