@@ -444,12 +444,16 @@
 		</cond>
 	</skill>
 	<skill id="2136" levels="1" name="Rice Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="3" />
-		<set name="skillType" val="HEAL_PERCENT" /> <!-- TODO: Needs Core support: Heal HP 3% & heal MP 1% at the same time -->
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="3" />
+			<effect name="ManaHealPercent" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="2137" levels="1" name="Summon Regular Tree">
 		<!-- Confirmed CT2.5 -->
