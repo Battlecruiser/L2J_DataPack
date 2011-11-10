@@ -662,12 +662,18 @@
 		<set name="reuseDelay" val="15000" />
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
-		<!-- Energy is maintained for 30 minutes when acquiring Exp. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="vp_keep" abnormalVisualEffect="vitality">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
