@@ -326,10 +326,12 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="15" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="15" />
+		</for>
 	</skill>
 	<skill id="6317" levels="1" name="Sacred Tacit">
 		<!-- Confirmed CT2.5 -->
@@ -581,11 +583,14 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="83" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="5" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="5" />
+		</for>
 	</skill>
 	<skill id="6331" levels="1" name="Camp Fire Tired">
 		<!-- Confirmed CT2.5 -->

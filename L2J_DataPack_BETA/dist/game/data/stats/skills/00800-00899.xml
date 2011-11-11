@@ -345,18 +345,21 @@
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">
 		<table name="#mpConsume"> 61 78 88 </table>
-		<table name="#power"> 8 12 15 </table>
+		<table name="#amount"> 8 12 15 </table>
 		<set name="aggroPoints" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SUMMON" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="500" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="80" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="823" levels="3" name="Strengthen Golem">
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
@@ -570,10 +573,12 @@
 		<set name="hitTime" val="1500" />
 		<set name="mpConsume" val="94" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="834" levels="1" name="Blood Pact">
 		<set name="magicLvl" val="55" />

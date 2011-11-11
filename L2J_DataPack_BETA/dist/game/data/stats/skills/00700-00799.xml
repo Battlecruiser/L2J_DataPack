@@ -46,10 +46,9 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="300" />
-		<set name="skillType" val="HPMPHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
@@ -57,6 +56,8 @@
 		</cond>
 		<for>
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
@@ -268,10 +269,10 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="57" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PET" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
@@ -288,6 +289,7 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<sub order="0x40" stat="debuffVuln" val="20" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="713" levels="1" name="Divine Summoner Servitor Hill">
@@ -1784,10 +1786,9 @@
 		<set name="hpConsume" val="1253" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="50" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player active_effect_id_lvl="5563,3" />
@@ -1800,6 +1801,7 @@
 			</effect>
 			<!-- 50HP * 5 during 60 seconds -->
 			<effect count="12" name="HealOverTime" abnormalTime="5" noicon="1" val="250" />
+			<effect name="HealPercent" noicon="1" val="50" />
 		</for>
 	</skill>
 	<skill id="788" levels="1" name="Pain of Shilen">

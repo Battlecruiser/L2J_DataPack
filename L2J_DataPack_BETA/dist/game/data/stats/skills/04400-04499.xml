@@ -1040,13 +1040,16 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 </table>
-		<table name="#power"> 20 40 60 80 100 </table>
+		<table name="#amount"> 20 40 60 80 100 </table>
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
 		<!-- Confirmed CT2.5 -->
@@ -1230,10 +1233,13 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="75" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="50" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="50" />
+		</for>
 	</skill>
 	<skill id="4485" levels="1" name="Eating Follower">
 		<!-- Confirmed CT2.5 -->

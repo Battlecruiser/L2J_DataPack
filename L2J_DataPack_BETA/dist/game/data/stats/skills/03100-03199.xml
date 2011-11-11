@@ -389,18 +389,18 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="3" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x40" stat="maxHp" val="1.03" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="3" />
 		</for>
 	</skill>
 	<skill id="3126" levels="10" name="Item Skill: Prayer">

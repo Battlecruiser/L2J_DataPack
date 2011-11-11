@@ -340,34 +340,37 @@
 	</skill>
 	<skill id="5835" levels="1" name="Major Heal">
 		<set name="magicLvl" val="85" />
-		<set name="power" val="10" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="104" />
 		<set name="mpInitialConsume" val="26" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="2000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="867" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="10" />
+		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="207" />
 		<set name="mpInitialConsume" val="52" />
-		<set name="power" val="20" />
 		<set name="reuseDelay" val="8000" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="6000" />
 		<set name="skillRadius" val="600" />
 		<set name="aggroPoints" val="694" />
 		<for>
 			<effect count="15" name="HealOverTime" val="270" abnormalLvl="5" abnormalType="life_force_others" />
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin">

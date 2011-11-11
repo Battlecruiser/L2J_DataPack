@@ -1928,10 +1928,13 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#hpHeal" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HPMPHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="#hpHeal" />
+			<effect name="ManaHealPercent" noicon="1" val="#mpHeal" />
+		</for>
 	</skill>
 	<skill id="2795" levels="1" name="Stone of Destruction">
 		<set name="itemConsumeCount" val="1" />

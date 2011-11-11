@@ -385,12 +385,11 @@
 		<set name="itemConsumeCount" val="40" />
 		<set name="mpInitialConsume" val="57" />
 		<set name="mpConsume" val="227" />
-		<set name="power" val="20" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="CPHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="669" />
@@ -412,6 +411,7 @@
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
+			<effect name="CpHealPercent" noicon="1" val="20" />
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="multi_buff">
@@ -429,6 +429,7 @@
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
+			<effect name="CpHealPercent" noicon="1" val="20" />
 		</enchant1for>
 		<enchant3for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
@@ -446,6 +447,7 @@
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="#ench3decreasePenalty" />
 			</effect>
+			<effect name="CpHealPercent" noicon="1" val="20" />
 		</enchant3for>
 	</skill>
 	<skill id="1415" levels="1" name="Pa'agrio's Emblem" enchantGroup1="5" enchantGroup2="5">
@@ -743,10 +745,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpConsume" val="72" />
 		<set name="magicLvl" val="80" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
@@ -755,6 +756,9 @@
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="1427" levels="1" name="Flames of Invincibility">
 		<set name="itemConsumeId" val="8876" />
@@ -2563,17 +2567,17 @@
 	<skill id="1488" levels="3" name="Restoration Impact" enchantGroup1="1">
 		<table name="#mpConsume_Init"> 7 8 10 </table>
 		<table name="#mpConsume"> 16 20 23 </table>
-		<table name="#power"> 10 15 20 </table>
+		<table name="#amount"> 10 15 20 </table>
 		<table name="#ench1Power"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<set name="aggroPoints" val="#power" />
 		<set name="mpInitialConsume" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="hitTime" val="1000" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="15000" />
@@ -2584,6 +2588,7 @@
 		</cond>
 		<for>
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
