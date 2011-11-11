@@ -976,10 +976,17 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
+		<for>
+			<effect name="Heal" noicon="1" val="500" />
+			<effect name="ManaHeal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">
 		<!-- Confirmed CT2.5 -->
