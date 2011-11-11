@@ -504,7 +504,7 @@
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="cp_up">
-				<add order="0x40" stat="maxCp" val="#enchPower" />
+				<add order="0x40" stat="maxCp" val="#ench1amount" />
 			</effect>
 			<effect name="CpHeal" noicon="1" val="#ench1amount" />
 		</enchant1for>
