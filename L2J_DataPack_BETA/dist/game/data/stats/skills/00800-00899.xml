@@ -346,7 +346,7 @@
 	<skill id="822" levels="3" name="Repair Golem">
 		<table name="#mpConsume"> 61 78 88 </table>
 		<table name="#amount"> 8 12 15 </table>
-		<set name="aggroPoints" val="#power" />
+		<set name="aggroPoints" val="#amount" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SUMMON" />
 		<set name="reuseDelay" val="2000" />
