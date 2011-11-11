@@ -480,33 +480,33 @@
 		</enchant1for>
 	</skill>
 	<skill id="1416" levels="1" name="Pa'agrio's Fist" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchPower"> 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
+		<table name="#ench1amount"> 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 219 212 205 196 189 181 174 166 159 151 143 136 128 121 113 </table>
 		<set name="mpInitialConsume" val="56" />
 		<set name="mpConsume" val="228" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="20" />
-		<set name="power" val="800" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<enchant1 name="power" val="#enchPower" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="cp_up">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
+			<effect name="CpHeal" noicon="1" val="800" />
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="cp_up">
 				<add order="0x40" stat="maxCp" val="#enchPower" />
 			</effect>
+			<effect name="CpHeal" noicon="1" val="#ench1amount" />
 		</enchant1for>
 	</skill>
 	<skill id="1417" levels="5" name="Aura Flash" enchantGroup1="2" enchantGroup2="2">

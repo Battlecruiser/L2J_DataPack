@@ -109,29 +109,33 @@
 	</skill>
 	<skill id="1305" levels="5" name="The Honor of Pa'agrio" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#rateCp"> 616 636 654 671 687 </table>
+		<table name="#amount"> 616 636 654 671 687 </table>
 		<table name="#mpInitialConsume"> 43 45 46 47 48 </table>
 		<table name="#mpConsume"> 171 177 182 186 191 </table>
 		<table name="#ench2MpConsume"> 189 187 185 183 182 180 178 176 174 173 171 169 167 165 163 162 160 158 156 154 153 151 149 147 145 144 142 140 138 136 </table>
 		<table name="#ench2mpInitialConsume"> 47 46 46 45 45 45 44 44 43 43 42 42 41 41 40 40 40 39 39 38 38 37 37 36 36 36 35 35 34 34 </table>
-		<table name="#ench1Power"> 690 694 697 700 704 707 711 713 717 721 724 727 731 734 738 741 744 748 751 755 758 761 765 768 772 775 778 782 785 789 </table>
+		<table name="#ench1amount"> 690 694 697 700 704 707 711 713 717 721 724 727 731 734 738 741 744 748 751 755 758 761 765 768 772 775 778 782 785 789 </table>
 		<table name="#aggro"> 689 722 743 763 780 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#rateCp" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="CpHeal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1306" levels="6" name="Ritual of Life" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -139,26 +143,31 @@
 		<table name="#ench2mpInitialConsume"> 23 23 23 23 22 22 22 22 21 21 21 21 21 20 20 20 20 19 19 19 19 19 18 18 18 18 17 17 17 17 </table>
 		<table name="#mpInitialConsume"> 21 22 23 23 24 24 </table>
 		<table name="#mpConsume"> 83 86 89 91 93 96 </table>
-		<table name="#rateCp"> 745 767 789 811 834 858 </table>
-		<table name="#ench1Power"> 863 867 871 875 880 884 888 892 897 901 905 909 913 918 922 926 930 935 939 943 947 952 956 960 964 969 973 977 981 986 </table>
+		<table name="#amount"> 745 767 789 811 834 858 </table>
+		<table name="#ench1amount"> 863 867 871 875 880 884 888 892 897 901 905 909 913 918 922 926 930 935 939 943 947 952 956 960 964 969 973 977 981 986 </table>
 		<table name="#aggro"> 677 700 722 743 763 780 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#rateCp" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="CpHeal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1307" levels="3" name="Prayer" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

@@ -488,19 +488,21 @@
 	<skill id="3130" levels="10" name="Item Skill: Ritual">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
-		<table name="#power"> 264 289 313 337 361 384 406 427 446 473 </table>
+		<table name="#amount"> 264 289 313 337 361 384 406 427 446 473 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="3131" levels="10" name="Item Skill: Cheer">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
