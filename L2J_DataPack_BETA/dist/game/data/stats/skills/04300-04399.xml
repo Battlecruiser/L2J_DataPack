@@ -1211,10 +1211,13 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="1" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="5000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="5000" />
+		</for>
 	</skill>
 	<skill id="4381" levels="1" name="Magic Skill Block">
 		<!-- Freya retail confirmed -->

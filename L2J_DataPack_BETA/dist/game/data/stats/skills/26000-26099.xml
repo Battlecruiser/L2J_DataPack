@@ -242,19 +242,21 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 0 350 600 800 1000 1200 </table>
+		<table name="#amount"> 0 350 600 800 1000 1200 </table>
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="600000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
 		<!-- Confirmed CT2.5 -->
@@ -276,20 +278,24 @@
 	</skill>
 	<skill id="26029" levels="1" name="Potion of Will">
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="50" />
+		</for>
 	</skill>
 	<skill id="26030" levels="1" name="Healing medicine for Mana">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="60" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="60" />
+		</for>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll">
 		<set name="itemConsumeCount" val="1" />

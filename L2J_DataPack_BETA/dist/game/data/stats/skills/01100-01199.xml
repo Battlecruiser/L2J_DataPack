@@ -652,7 +652,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2for>
-			<effect self="1" name="CombatPointHealOverTime" noicon="1" val="#ench2Bravery" />
+			<effect self="1" name="CpHeal" noicon="1" val="#ench2Bravery" />
 		</enchant2for>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
@@ -736,24 +736,26 @@
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#hpConsume"> 131 209 280 318 366 </table>
-		<table name="#power"> 22 35 47 53 61 </table>
-		<table name="#ench1power"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
+		<table name="#amount"> 22 35 47 53 61 </table>
+		<table name="#ench1amount"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
 		<table name="#ench2hpConsume"> 359 353 347 341 335 328 322 316 310 304 297 291 285 279 273 266 260 254 248 242 235 229 223 217 211 204 198 192 186 180 </table>
 		<table name="#ench3Bravery"> 29 38 48 57 66 76 85 94 104 113 122 132 141 150 160 169 178 188 197 206 216 225 234 244 253 262 272 281 290 300 </table>
 		<table name="#aggroPoints"> 243 379 495 549 611 </table>
 		<set name="hpConsume" val="#hpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggroPoints" />
-		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
+		<enchant1for>
+			<effect name="ManaHeal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 		<enchant3for>
-			<effect name="CombatPointHealOverTime" noicon="1" val="#ench3Bravery" />
+			<effect name="CpHeal" noicon="1" val="#ench3Bravery" />
+			<effect name="ManaHeal" noicon="1" val="#amount" />
 		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">

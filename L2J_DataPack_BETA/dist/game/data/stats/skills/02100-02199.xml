@@ -647,14 +647,16 @@
 		</for>
 	</skill>
 	<skill id="2166" levels="2" name="CP Gauge Potion">
-		<table name="#power"> 50 200 </table>
+		<table name="#amount"> 50 200 </table>
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="600" /> <!-- Guess - Retail 0 but them have kind protection for flood -->
+		<set name="reuseDelay" val="600" /> <!-- FIXME: Retail 0 but them have kind protection for flood -->
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2167" levels="4" name="Scroll of SP">
 		<table name="#power"> 500 5000 100000 500000 </table>

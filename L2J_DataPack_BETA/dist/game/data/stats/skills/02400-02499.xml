@@ -22,13 +22,15 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="360" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
 		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="360" />
+		</for>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
 		<!-- Confirmed CT2.5 -->
@@ -36,13 +38,15 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
 		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
 		<!-- Confirmed CT2.5 -->
@@ -50,10 +54,12 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
 	</skill>
 	<skill id="2404" levels="1" name="Might">
 		<!-- Confirmed CT2.5 -->

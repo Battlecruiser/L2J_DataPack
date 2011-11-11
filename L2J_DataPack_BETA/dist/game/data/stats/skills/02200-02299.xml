@@ -1519,35 +1519,39 @@
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 60 140 220 290 360 420 </table>
+		<table name="#amount"> 60 140 220 290 360 420 </table>
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 150 350 600 800 1000 1200 </table>
+		<table name="#amount"> 150 350 600 800 1000 1200 </table>
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2290" levels="1" name="Coffer of Shadows">
 		<!-- Confirmed CT2.5 -->
