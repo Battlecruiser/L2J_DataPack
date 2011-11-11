@@ -1069,11 +1069,13 @@
 	</skill>
 	<skill id="2864" levels="1" name="Highest Power Quick Healing Potion">
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="30" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="30" />
+		</for>
 	</skill>
 	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1">
 		<!-- Confirmed CT2.5 -->

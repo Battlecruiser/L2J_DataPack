@@ -767,9 +767,9 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="2" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">
@@ -786,6 +786,7 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">

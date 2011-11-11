@@ -75,15 +75,16 @@
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="15" />
 		<set name="reuseDelay" val="240000" />
-		<set name="skillType" val="HPCPHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0">
 				<mul order="0x30" stat="maxHp" val="1.15" />
 				<mul order="0x30" stat="maxCp" val="1.15" />
 			</effect>
+			<effect name="CpHealPercent" noicon="1" val="15" />
+			<effect name="HealPercent" noicon="1" val="15" />
 		</for>
 	</skill>
 </list>

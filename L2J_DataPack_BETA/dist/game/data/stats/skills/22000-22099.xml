@@ -598,14 +598,16 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="50" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="50" />
+		</for>
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
 		<set name="itemConsumeCount" val="1" />

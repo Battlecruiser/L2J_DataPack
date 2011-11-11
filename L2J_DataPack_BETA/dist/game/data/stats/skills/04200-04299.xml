@@ -211,14 +211,15 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="power" val="3" />
+		<set name="skillType" val="DUMMY" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
+			<effect name="HealPercent" noicon="1" val="3" />
 		</for>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="mpConsume" val="#mpConsume" />

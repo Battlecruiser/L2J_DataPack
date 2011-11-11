@@ -727,9 +727,8 @@
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="17" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -738,6 +737,7 @@
 		</cond>
 		<for>
 			<effect name="HealOverTime" val="60" />
+			<effect name="HealPercent" noicon="1" val="17" />
 		</for>
 	</skill>
 	<skill id="2245" levels="1" name="Herb of Mana">
@@ -746,9 +746,8 @@
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="4" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -757,6 +756,7 @@
 		</cond>
 		<for>
 			<effect name="ManaHealOverTime" val="20" />
+			<effect name="ManaHealPercent" noicon="1" val="4" />
 		</for>
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
@@ -1318,37 +1318,41 @@
 	</skill>
 	<skill id="2278" levels="3" name="Herb of Life">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 15 25 100 </table>
+		<table name="#amount"> 15 25 100 </table>
 		<set name="hitTime" val="100" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2279" levels="3" name="Herb of Mana">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 11 18 100 </table>
+		<table name="#amount"> 11 18 100 </table>
 		<set name="hitTime" val="100" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
 		<!-- Confirmed CT2.5 -->

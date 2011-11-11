@@ -310,13 +310,13 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Grow" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="big_body">
 				<mul order="0x30" stat="runSpd" val="1.22" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">

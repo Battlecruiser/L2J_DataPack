@@ -586,16 +586,15 @@
 		<table name="#mpConsume"> 13 18 22 27 30 33 </table>
 		<table name="#magicLvl"> 28 40 49 58 64 70 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#power"> 10 15 20 25 30 35 </table>
+		<table name="#amount"> 10 15 20 25 30 35 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 268 379 467 549 597 635 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -605,12 +604,14 @@
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 		<enchant2for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="6" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 				<add order="0x40" stat="pAtk" val="#ench2pAtk" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="#amount" />
 		</enchant2for>
 	</skill>
 	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1170,16 +1171,18 @@
 	<skill id="181" levels="1" name="Revival">
 		<set name="mpConsume" val="25" />
 		<set name="magicLvl" val="55" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="181" />
 		<cond msgId="113" addName="1">
 			<player hp="10" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="190" levels="37" name="Fatal Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

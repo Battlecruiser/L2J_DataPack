@@ -101,10 +101,13 @@
 	<skill id="5205" levels="1" name="Boss Regeneration">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="5206" levels="1" name="Decrease Speed">
 		<!-- CT2.5 retail confirmed -->

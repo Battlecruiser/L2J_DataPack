@@ -1659,17 +1659,17 @@
 		<table name="#ench2mpConsume"> 126 123 122 118 116 114 112 110 108 106 104 102 100 98 95 94 91 90 87 86 83 82 78 76 74 72 70 68 66 64 </table>
 		<table name="#mpInitialConsume"> 16 22 27 32 </table>
 		<table name="#mpConsume"> 64 85 106 127 </table>
-		<table name="#power"> 15 20 25 30 </table>
+		<table name="#amount"> 15 20 25 30 </table>
 		<table name="#ench1power"> 31 31 31 32 32 32 33 33 33 34 34 34 34 35 35 35 36 36 36 37 37 37 37 38 38 38 39 39 39 40 </table>
 		<table name="#aggroPoints"> 500 666 833 1000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="8000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1682,6 +1682,9 @@
 				<target npcType="L2Attackable" />
 			</not>
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -2095,12 +2098,11 @@
 		<table name="#ench2Bravery"> 23 36 49 62 75 88 101 114 127 140 153 166 179 192 205 218 231 244 257 270 283 296 309 322 335 348 361 374 387 400 </table>
 		<set name="mpInitialConsume" val="43" />
 		<set name="mpConsume" val="171" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="7000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="560" />
@@ -2109,8 +2111,12 @@
 		<cond msgId="113" addName="1">
 			<player mp="25" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 		<enchant2for>
 			<effect name="CombatPointHealOverTime" noicon="1" val="#ench2Bravery" />
+			<effect name="HealPercent" noicon="1" val="100" />
 		</enchant2for>
 	</skill>
 	<skill id="1272" levels="13" name="Word of Fear">

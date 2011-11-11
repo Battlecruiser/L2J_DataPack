@@ -1419,28 +1419,32 @@
 		</cond>
 	</skill>
 	<skill id="2485" levels="1" name="Herb of Life">
-		<set name="power" val="15" />
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="15" />
+		</for>
 	</skill>
 	<skill id="2486" levels="1" name="Herb of Mana">
-		<set name="power" val="12" />
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="12" />
+		</for>
 	</skill>
 	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
 		<!-- Confirmed CT2.5 -->
