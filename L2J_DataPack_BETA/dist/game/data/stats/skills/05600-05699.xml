@@ -1064,30 +1064,36 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="41" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="41" />
+		</for>
 	</skill>
 	<skill id="5677" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="51" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="51" />
+		</for>
 	</skill>
 	<skill id="5678" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="59" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="59" />
+		</for>
 	</skill>
 	<skill id="5679" levels="3" name="Oblivion Trap">
 		<set name="hitTime" val="500" />
