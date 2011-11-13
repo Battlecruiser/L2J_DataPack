@@ -750,6 +750,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="#amount" />
+		</for>
 		<enchant1for>
 			<effect name="ManaHeal" noicon="1" val="#ench1amount" />
 		</enchant1for>
