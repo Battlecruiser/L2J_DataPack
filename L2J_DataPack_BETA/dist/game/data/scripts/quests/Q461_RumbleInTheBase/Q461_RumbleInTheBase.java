@@ -53,7 +53,7 @@ public class Q461_RumbleInTheBase extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
-		QuestState prev = player.getQuestState("Q252_ItSmellsDelicious");
+		QuestState prev = player.getQuestState("252_ItSmellsDelicious");
 		if (st == null)
 			return htmltext;
 		
