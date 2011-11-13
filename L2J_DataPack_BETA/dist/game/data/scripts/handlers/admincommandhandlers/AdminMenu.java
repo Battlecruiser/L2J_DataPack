@@ -55,6 +55,7 @@ public class AdminMenu implements IAdminCommandHandler
 		"admin_unban_menu"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_char_manage"))
@@ -186,7 +187,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 				ach.useAdminCommand(subCommand+command.substring(14), activeChar);
 			}
 			showMainPage(activeChar);
@@ -203,7 +204,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 				ach.useAdminCommand(subCommand+command.substring(16), activeChar);
 			}
 			showMainPage(activeChar);
@@ -211,6 +212,7 @@ public class AdminMenu implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

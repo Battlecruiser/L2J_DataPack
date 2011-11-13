@@ -569,7 +569,7 @@ public class Disablers implements ISkillHandler
 										removedBuffs += negateEffect(target, L2SkillType.BUFF, -1, skill.getMaxNegatedEffects());
 									break;
 								case HEAL:
-									ISkillHandler Healhandler = SkillHandler.getInstance().getSkillHandler(L2SkillType.HEAL);
+									ISkillHandler Healhandler = SkillHandler.getInstance().getHandler(L2SkillType.HEAL);
 									if (Healhandler == null)
 									{
 										_log.severe("Couldn't find skill handler for HEAL.");

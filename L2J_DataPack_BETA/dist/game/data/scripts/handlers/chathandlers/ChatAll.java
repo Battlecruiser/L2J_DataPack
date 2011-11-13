@@ -62,14 +62,14 @@ public class ChatAll implements IChatHandler
 			{
 				command = st.nextToken().substring(1);
 				params = text.substring(command.length() + 2);
-				vch = VoicedCommandHandler.getInstance().getVoicedCommandHandler(command);
+				vch = VoicedCommandHandler.getInstance().getHandler(command);
 			}
 			else
 			{
 				command = text.substring(1);
 				if (Config.DEBUG)
 					_log.info("Command: " + command);
-				vch = VoicedCommandHandler.getInstance().getVoicedCommandHandler(command);
+				vch = VoicedCommandHandler.getInstance().getHandler(command);
 			}
 			if (vch != null)
 			{
