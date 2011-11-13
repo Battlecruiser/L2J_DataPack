@@ -1268,7 +1268,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect self="1" name="ManaHealOverTime" noicon="1" val="10" /> <!-- Guess -->
+			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- Guess -->
 		</for>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
@@ -1287,7 +1287,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect self="1" name="ManaHealOverTime" noicon="1" val="10" /> <!-- Guess -->
+			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- Guess -->
 		</for>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
