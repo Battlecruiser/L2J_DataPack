@@ -951,13 +951,10 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="False" />
-				<target npcId="18482" />
-			</and>
+			<target npcId="18482" />
 		</cond>
 		<for>
-			<effect name="HealOverTime" val="3000" /> <!-- TODO: this is wrong -->
+			<effect name="HealPercent" noicon="1" val="30" />
 		</for>
 	</skill>
 	<skill id="2369" levels="1" name="Water Dragon Scale">

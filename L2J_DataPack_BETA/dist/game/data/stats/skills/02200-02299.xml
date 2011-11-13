@@ -736,7 +736,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="HealOverTime" val="60" />
+			<effect name="Heal" noicon="1" val="60" />
 			<effect name="HealPercent" noicon="1" val="17" />
 		</for>
 	</skill>
@@ -755,7 +755,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="ManaHealOverTime" val="20" />
+			<effect name="ManaHeal" noicon="1" val="20" />
 			<effect name="ManaHealPercent" noicon="1" val="4" />
 		</for>
 	</skill>
