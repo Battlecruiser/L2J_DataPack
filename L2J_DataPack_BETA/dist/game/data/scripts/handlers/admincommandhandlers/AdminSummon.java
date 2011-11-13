@@ -37,6 +37,7 @@ public class AdminSummon implements IAdminCommandHandler
 	/**
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
+	@Override
 	public String[] getAdminCommandList()
 	{
 		
@@ -46,6 +47,7 @@ public class AdminSummon implements IAdminCommandHandler
 	/**
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		int id;
@@ -75,7 +77,7 @@ public class AdminSummon implements IAdminCommandHandler
 				_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 				return false;
 			}
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
 		else
@@ -87,7 +89,7 @@ public class AdminSummon implements IAdminCommandHandler
 				_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 				return false;
 			}
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 			
 			activeChar.sendMessage("This is only a temporary spawn.  The mob(s) will NOT respawn.");
 			id -= 1000000;
