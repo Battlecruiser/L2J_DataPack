@@ -35,7 +35,7 @@ public class Q252_ItSmellsDelicious extends Quest
 	public static final int MAHUM_DIARY = 15500;
 	public static final int MAHUM_COOKBOOK = 15501;
 	
-	public static final String qn = "Q252_ItSmellsDelicious";
+	public static final String qn = "252_ItSmellsDelicious";
 	
 	private static final int[] MOBS =
 	{
