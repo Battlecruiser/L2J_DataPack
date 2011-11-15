@@ -30,7 +30,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20502" type="Armor" name="Gold Maned Lion Mount Bracelet">
+	<item id="20502" type="Armor" name="Gold Maned Lion Mount Bracelet ">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -81,7 +81,7 @@
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20505" type="EtcItem" name="Pomona Agathion Pack">
+	<item id="20505" type="EtcItem" name="Pomona Agathion Pack ">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1343,7 +1343,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</item>
-	<item id="20583" type="EtcItem" name="Blessed Scroll of Escape (Event)">
+	<item id="20583" type="EtcItem" name="Blessed Scroll of Escape (event)">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1355,7 +1355,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22103-1" />
 	</item>
-	<item id="20584" type="EtcItem" name="Blessed Scroll of Resurrection (Event)">
+	<item id="20584" type="EtcItem" name="Blessed Scroll of Resurrection (event)">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
