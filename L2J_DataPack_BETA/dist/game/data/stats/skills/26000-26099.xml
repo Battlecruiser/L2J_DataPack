@@ -209,12 +209,15 @@
 		</for>
 	</skill>
 	<skill id="26024" levels="1" name="Temporary Healing Potion">
+		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="435" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="Heal" noicon="1" val="435" />
+		</for>
 	</skill>
 	<skill id="26025" levels="1" name="Powerful Healing Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -262,19 +265,22 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 0 650 1100 1500 1900 2300 </table>
+		<table name="#amount"> 0 650 1100 1500 1900 2300 </table>
 		<set name="isPotion" val="true" />
+		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="600000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="26029" levels="1" name="Potion of Will">
 		<set name="itemConsumeCount" val="1" />

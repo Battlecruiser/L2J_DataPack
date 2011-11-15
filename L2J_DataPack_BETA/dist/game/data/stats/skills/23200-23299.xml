@@ -135,13 +135,16 @@
 	<skill id="23214" levels="1" name="Good/Bad of Life">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered from 22175 -->
+		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="500" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="500" />
+		</for>
 	</skill>
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
 		<!-- Confirmed CT2.5 -->
