@@ -15,14 +15,14 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.L2Item;
+import com.l2jserver.gameserver.model.item.L2Weapon;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.skills.Stats;
-import com.l2jserver.gameserver.templates.item.L2Item;
-import com.l2jserver.gameserver.templates.item.L2Weapon;
 import com.l2jserver.gameserver.util.Broadcast;
 
 public class SoulShots implements IItemHandler

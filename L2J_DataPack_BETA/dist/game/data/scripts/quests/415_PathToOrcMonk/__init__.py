@@ -6,7 +6,7 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets import SocialAction
-from com.l2jserver.gameserver.templates.item import L2WeaponType 
+from com.l2jserver.gameserver.model.item.type import L2WeaponType 
 
 qn = "415_PathToOrcMonk"
 

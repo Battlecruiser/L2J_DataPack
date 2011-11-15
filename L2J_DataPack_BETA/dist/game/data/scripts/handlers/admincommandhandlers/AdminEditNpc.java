@@ -40,13 +40,13 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.L2TradeList.L2TradeItem;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.L2Item;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
-import com.l2jserver.gameserver.templates.item.L2Item;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.StringUtil;
 
@@ -825,7 +825,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		
 		StatsSet newNpcData = new StatsSet();
-		
 		try
 		{
 			newNpcData.set("npcId", commandSplit[1]);

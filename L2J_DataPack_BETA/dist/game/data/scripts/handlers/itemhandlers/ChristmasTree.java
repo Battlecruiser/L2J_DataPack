@@ -16,11 +16,11 @@ package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 
 public class ChristmasTree implements IItemHandler
