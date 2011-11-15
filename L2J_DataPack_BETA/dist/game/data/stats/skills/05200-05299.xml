@@ -6,7 +6,7 @@
 		<table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table>
 		<table name="#mpInitialConsume"> 24 25 26 28 29 30 31 31 </table>
 		<table name="#mpConsume"> 96 99 102 110 116 120 122 124 </table>
-		<table name="#power"> 120 124 128 138 144 149 153 155 </table>
+		<table name="#amount"> 120 124 128 138 144 149 153 155 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -15,11 +15,14 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_OWNER_PET" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
 		<!-- CT2.5 retail confirmed -->

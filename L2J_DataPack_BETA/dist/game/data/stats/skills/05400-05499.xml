@@ -318,10 +318,12 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="49" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="49" />
+		</for>
 	</skill>
 	<skill id="5430" levels="1" name="Spoil Bomb">
 		<!-- Confirmed CT2.5 -->
