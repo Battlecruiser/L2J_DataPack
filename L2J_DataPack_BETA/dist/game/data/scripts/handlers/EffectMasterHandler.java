@@ -54,6 +54,7 @@ import handlers.effecthandlers.IncreaseCharges;
 import handlers.effecthandlers.Invincible;
 import handlers.effecthandlers.ManaDamOverTime;
 import handlers.effecthandlers.ManaHeal;
+import handlers.effecthandlers.ManaHealByLevel;
 import handlers.effecthandlers.ManaHealOverTime;
 import handlers.effecthandlers.ManaHealPercent;
 import handlers.effecthandlers.MpConsumePerLevel;
@@ -142,6 +143,7 @@ public final class EffectMasterHandler
 		Invincible.class,
 		ManaDamOverTime.class,
 		ManaHeal.class,
+		ManaHealByLevel.class,
 		ManaHealOverTime.class,
 		ManaHealPercent.class,
 		MpConsumePerLevel.class,
