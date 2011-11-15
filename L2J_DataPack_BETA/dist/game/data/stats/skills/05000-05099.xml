@@ -119,11 +119,12 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<table name="#aggroPoints"> 100 100 100 0 0 </table>
+		<table name="#healPercent"> 3 0 0 0 0 </table>
 		<table name="#isDebuff"> false false false true true </table>
 		<table name="#isMagic"> true false false true true </table>
-		<table name="#power"> 3 0 0 10 10 </table>
+		<table name="#power"> 0 0 0 10 10 </table>
 		<table name="#saveVs"> NULL NULL NULL MEN MEN </table>
-		<table name="#skillType"> HEAL_PERCENT DUMMY BUFF DEBUFF STUN </table>
+		<table name="#skillType"> DUMMY DUMMY BUFF DEBUFF STUN </table>
 		<table name="#abnormalLvl"> 0 0 1 1 1 </table>
 		<table name="#abnormalType"> none none ultimate_buff heal_effect_down stun </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
@@ -158,6 +159,7 @@
 				<mul order="0x30" stat="gainHp" val="#gainHp" />
 			</effect>
 			<effect name="#effectname2" noicon="1" val="0" effectPower="#effectPower" effectType="#effectType" />
+			<effect name="HealPercent" noicon="1" val="#healPercent" />
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">

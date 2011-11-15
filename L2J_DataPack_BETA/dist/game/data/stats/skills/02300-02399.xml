@@ -1291,12 +1291,12 @@
 	<skill id="2395" levels="1" name="Lesser Battlefield Healing Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1900" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
@@ -1305,6 +1305,9 @@
 				<player level="52" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Heal" noicon="1" val="1900" />
+		</for>
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">
 		<!-- Confirmed CT2.5 -->
