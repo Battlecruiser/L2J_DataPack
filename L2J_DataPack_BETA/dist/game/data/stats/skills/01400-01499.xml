@@ -788,9 +788,8 @@
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="staticReuse" val="true" />
-		<set name="power" val="1500" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
@@ -798,6 +797,9 @@
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="1500" />
+		</for>
 	</skill>
 	<skill id="1429" levels="1" name="Gate Chant">
 		<set name="hitTime" val="15000" />

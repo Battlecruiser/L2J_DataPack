@@ -275,22 +275,25 @@
 	</skill>
 	<skill id="4025" levels="12" name="Master Recharge">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
+		<table name="#amount"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
 		<table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
 		<table name="#magicLvl"> 17 27 37 47 57 67 77 82 87 92 97 102 </table>
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4026" levels="1" name="Gludio Flame">
 		<!-- Freya retail confirmed -->
