@@ -48,6 +48,7 @@ public class TargetOne implements ITargetTypeHandler
 			case HPMPCPHEAL_PERCENT:
 			case HPMPHEAL_PERCENT:
 			case HPCPHEAL_PERCENT:
+			case DUMMY:
 				canTargetSelf = true;
 				break;
 		}
