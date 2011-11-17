@@ -129,11 +129,14 @@
 		<set name="magicLvl" val="99" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="64" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="5600" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="5600" />
+		</for>
 	</skill>
 	<skill id="4517" levels="1" name="Quest - BOSS Defend">
 		<set name="magicLvl" val="76" />

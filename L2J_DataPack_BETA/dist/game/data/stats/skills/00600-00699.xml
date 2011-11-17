@@ -1749,11 +1749,14 @@
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="84" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="946" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="946" />
+		</for>
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
 		<set name="aggroPoints" val="274" />
@@ -1762,10 +1765,13 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="189" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="826" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="826" />
+		</for>
 	</skill>
 </list>

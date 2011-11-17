@@ -696,7 +696,7 @@
 	<skill id="8237" levels="1" name="Shalin Heal">
 		<set name="magicLvl" val="73" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="mpInitialConsume" val="16" />
@@ -704,8 +704,10 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
-		<set name="power" val="540" />
 		<set name="aggroPoints" val="743" />
+		<for>
+			<effect name="Heal" noicon="1" val="540" />
+		</for>
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">
 		<set name="magicLvl" val="73" />

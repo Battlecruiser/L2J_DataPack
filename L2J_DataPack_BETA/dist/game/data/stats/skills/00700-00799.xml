@@ -6,12 +6,12 @@
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="252" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="400" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
+			<effect name="Heal" noicon="1" val="400" />
 			<effect count="15" name="HealOverTime" val="27" abnormalLvl="5" abnormalType="life_force_others" />
 		</for>
 	</skill>
@@ -299,11 +299,14 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="127" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="991" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PET" />
+		<for>
+			<effect name="Heal" noicon="1" val="991" />
+		</for>
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
 		<!-- Confirmed CT2.5 -->
@@ -491,15 +494,17 @@
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="20" />
 		<set name="magicLvl" val="75" />
-		<set name="power" val="1340" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="624" />
+		<for>
+			<effect name="Heal" noicon="1" val="1340" />
+		</for>
 	</skill>
 	<skill id="724" levels="1" name="Anakim Clans">
 		<!-- Confirmed CT2.5 -->
@@ -749,38 +754,44 @@
 	<skill id="738" levels="3" name="Heretic Heal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#power"> 892 926 956 </table>
+		<table name="#amount"> 892 926 956 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="12" />
 		<set name="mpConsume" val="48" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="739" levels="3" name="Heretic Battle Heal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#power"> 743 772 796 </table>
+		<table name="#amount"> 743 772 796 </table>
 		<table name="#mpInitialConsume"> 34 36 37 </table>
 		<table name="#mpConsume"> 136 142 146 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="1000" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="740" levels="3" name="Heretic Resurrection">
 		<!-- Confirmed CT2.5 -->

@@ -126,11 +126,14 @@
 		<set name="hitTime" val="2000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="HEAL" />
-		<set name="power" val="200" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="1300" />
+		<for>
+			<effect name="Heal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="5713" levels="5" name="Energy Ditch">
 		<set name="target" val="TARGET_NONE" />

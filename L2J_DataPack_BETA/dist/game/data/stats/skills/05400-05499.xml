@@ -415,37 +415,41 @@
 	</skill>
 	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
+		<table name="#amount"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
 		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="aggroPoints" val="100" />
-		<set name="power" val="#power" />
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5439" levels="9" name="NPC party 60 Clan Heal">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
+		<table name="#amount"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
 		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="aggroPoints" val="100" />
-		<set name="power" val="#power" />
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5440" levels="1" name="Presentation - Trap Activate">
 		<set name="target" val="TARGET_SELF" />
