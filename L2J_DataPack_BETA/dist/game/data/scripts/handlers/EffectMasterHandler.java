@@ -28,12 +28,11 @@ import handlers.effecthandlers.ChanceSkillTrigger;
 import handlers.effecthandlers.CharmOfCourage;
 import handlers.effecthandlers.CharmOfLuck;
 import handlers.effecthandlers.ClanGate;
-import handlers.effecthandlers.CombatPointHeal;
-import handlers.effecthandlers.CombatPointHealOverTime;
 import handlers.effecthandlers.ConfuseMob;
 import handlers.effecthandlers.Confusion;
 import handlers.effecthandlers.CpDamPercent;
 import handlers.effecthandlers.CpHeal;
+import handlers.effecthandlers.CpHealOverTime;
 import handlers.effecthandlers.CpHealPercent;
 import handlers.effecthandlers.DamOverTime;
 import handlers.effecthandlers.Debuff;
@@ -117,11 +116,10 @@ public final class EffectMasterHandler
 		CharmOfCourage.class,
 		CharmOfLuck.class,
 		ClanGate.class,
-		CombatPointHeal.class,
-		CombatPointHealOverTime.class,
 		ConfuseMob.class,
 		Confusion.class,
 		CpHeal.class,
+		CpHealOverTime.class,
 		CpHealPercent.class,
 		CpDamPercent.class,
 		DamOverTime.class,

@@ -15,20 +15,34 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
-public class CombatPointHeal extends L2Effect
+public class CpHealOverTime extends L2Effect
 {
-	public CombatPointHeal(Env env, EffectTemplate template)
+	public CpHealOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	// Special constructor to steal this effect
+	public CpHealOverTime(Env env, L2Effect effect)
+	{
+		super(env, effect);
+	}
+
+	/**
+	 * 
+	 * @see com.l2jserver.gameserver.model.L2Effect#effectCanBeStolen()
+	 */
+	@Override
+	protected boolean effectCanBeStolen()
+	{
+		return true;
+	}
+
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
@@ -36,7 +50,7 @@ public class CombatPointHeal extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.COMBAT_POINT_HEAL;
+		return L2EffectType.CPHEAL_OVER_TIME;
 	}
 	
 	/**
@@ -46,25 +60,24 @@ public class CombatPointHeal extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		return false;
-	}
-
-	@Override
-	public boolean onStart()
-	{
-		L2Character target = getEffected();
-		if (target.isInvul())
+		if (getEffected().isDead())
 			return false;
 		
-		double cp = calc();
+		double cp = getEffected().getCurrentCp();
+		double maxcp = getEffected().getMaxRecoverableCp();
 		
-		if ((target.getCurrentCp() + cp) > target.getMaxRecoverableCp())
-			cp = target.getMaxRecoverableCp() - target.getCurrentCp();
-		target.setCurrentCp(cp + target.getCurrentCp());
+		// Not needed to set the CP and send update packet if player is already at max CP
+		if (cp >= maxcp)
+			return true;
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
-		sm.addNumber((int) cp);
-		target.sendPacket(sm);
-		return false;
+		cp += calc();
+		if (cp > maxcp)
+			cp = maxcp;
+		
+		getEffected().setCurrentCp(cp);
+		StatusUpdate sump = new StatusUpdate(getEffected());
+		sump.addAttribute(StatusUpdate.CUR_CP, (int) cp);
+		getEffected().sendPacket(sump);
+		return true;
 	}
 }
