@@ -1390,25 +1390,24 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 115 119 122 122 127 130 134 139 143 148 152 157 159 159 164 168 173 177 180 185 189 193 195 195 199 203 207 210 214 218 222 224 228 230 233 237 239 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
-		<table name="#power"> 236 245 254 262 271 281 290 299 308 318 327 337 346 356 365 375 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546 </table>
+		<table name="#amount"> 236 245 254 262 271 281 290 299 308 318 327 337 346 356 365 375 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546 </table>
 		<table name="#aggro"> 337 349 362 375 388 401 414 427 440 454 467 481 494 508 521 535 548 562 575 588 602 615 627 640 653 665 677 689 700 711 722 733 743 753 763 772 780 </table>
-		<table name="#ench1Power"> 583 619 656 692 729 765 802 838 875 911 947 984 1020 1057 1093 1130 1166 1203 1239 1276 1312 1348 1385 1421 1458 1494 1531 1567 1604 1640 </table>
+		<table name="#ench1amount"> 583 619 656 692 729 765 802 838 875 911 947 984 1020 1057 1093 1130 1166 1203 1239 1276 1312 1348 1385 1421 1458 1494 1531 1567 1604 1640 </table>
 		<table name="#ench2MpConsume"> 233 230 226 222 218 215 211 206 202 198 195 191 187 183 178 175 171 167 163 160 156 151 147 143 140 136 132 127 123 120 </table>
 		<table name="#ench34MpConsume"> 236 233 231 228 226 223 221 218 216 215 212 210 207 205 202 200 197 195 192 190 188 186 183 181 178 176 173 171 168 166 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="5000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
@@ -1417,10 +1416,18 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="mpConsume" val="#ench34MpConsume" />
 		<enchant4 name="negateAbnormals" val="bleeding,9" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="ench1amount" />
+		</enchant1for>
 		<enchant3for>
+			<effect name="Heal" noicon="1" val="546" />
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>
 		<enchant4for>
+			<effect name="Heal" noicon="1" val="546" />
 			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant4for>
 	</skill>

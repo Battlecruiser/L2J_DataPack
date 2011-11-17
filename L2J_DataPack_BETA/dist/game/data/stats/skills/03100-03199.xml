@@ -347,19 +347,21 @@
 	<skill id="3123" levels="10" name="Item Skill: Heal">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
-		<table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
+		<table name="#amount"> 308 337 365 393 421 448 474 498 520 552 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="5000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="3124" levels="10" name="Item Skill: Blessed Body">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>

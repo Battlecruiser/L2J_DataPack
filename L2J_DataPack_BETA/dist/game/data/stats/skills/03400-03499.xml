@@ -1006,16 +1006,16 @@
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
-		<set name="power" val="100" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="100" />
+			<effect name="Heal" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">

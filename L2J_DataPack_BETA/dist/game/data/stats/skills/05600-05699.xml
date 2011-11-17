@@ -1327,12 +1327,15 @@
 		<set name="aggroPoints" val="1" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="200" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="5693" levels="1" name="PvP Armor - Speed Down">
 		<!-- Confirmed CT2.5 -->

@@ -267,9 +267,9 @@
 		<table name="#magicLvl"> 16 18 20 23 24 25 28 29 30 33 34 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpInitialConsume"> 5 6 6 7 7 8 9 9 9 10 10 11 12 12 13 13 13 14 15 15 16 16 16 17 18 18 18 19 19 20 20 20 20 21 21 21 22 22 23 23 23 23 24 24 24 </table>
 		<table name="#mpConsume"> 19 21 24 26 28 29 33 35 35 38 40 41 46 48 49 51 52 54 57 59 61 64 64 66 69 71 72 74 76 77 78 78 80 81 83 84 86 87 89 90 91 92 93 95 96 </table>
-		<table name="#power"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
+		<table name="#amount"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 1096 1110 1104 1108 1112 1116 1120 1124 1128 1132 1136 1140 1144 1148 1153 1157 1161 1165 1169 1173 1177 1181 1185 1189 1193 1197 1201 1205 1209 1214 </table>
+		<table name="#ench1amount"> 1096 1110 1104 1108 1112 1116 1120 1124 1128 1132 1136 1140 1144 1148 1153 1157 1161 1165 1169 1173 1177 1181 1185 1189 1193 1197 1201 1205 1209 1214 </table>
 		<table name="#ench2mpConsume"> 94 92 90 89 87 86 84 82 81 79 77 76 74 72 71 69 67 66 64 62 61 59 57 56 54 53 51 49 48 46 </table>
 		<table name="#ench2mpInitialConsume"> 23 23 22 22 21 21 21 20 20 19 19 19 18 18 17 17 16 16 16 15 15 14 14 14 13 13 12 12 12 11 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
@@ -280,16 +280,21 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PET" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1128" levels="18" name="Summon Shadow" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14497 14498 14499 14500 14501 14502 14503 14504 14505 14506 14507 14508 14509 14510 14511 14512 14513 14514 14515 14516 14517 14518 14519 14520 14521 14522 14523 14524 14525 14526 </table>
