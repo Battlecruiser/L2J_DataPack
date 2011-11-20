@@ -127,7 +127,7 @@ public final class Q132_MatrasCuriosity extends Quest
 			{
 				case 1:
 				case 2:
-					if ((st.getQuestItemsCount(BLUEPRINT_RANKU) > 0) && (st.getQuestItemsCount(BLUEPRINT_RANKU) > 0))
+					if ((st.getQuestItemsCount(BLUEPRINT_RANKU) > 0) && (st.getQuestItemsCount(BLUEPRINT_PRINCE) > 0))
 					{
 						st.takeItems(BLUEPRINT_RANKU, -1);
 						st.takeItems(BLUEPRINT_PRINCE, -1);
