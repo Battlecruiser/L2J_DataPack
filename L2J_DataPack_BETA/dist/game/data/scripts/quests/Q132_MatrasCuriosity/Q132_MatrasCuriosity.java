@@ -117,7 +117,7 @@ public final class Q132_MatrasCuriosity extends Quest
 				htmltext = "32245-02.htm";
 			}
 		}
-		else if (st.getState() == State.COMPLETED)
+		else if (st.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}
@@ -127,7 +127,7 @@ public final class Q132_MatrasCuriosity extends Quest
 			{
 				case 1:
 				case 2:
-					if ((st.getQuestItemsCount(BLUEPRINT_RANKU) > 0) && (st.getQuestItemsCount(BLUEPRINT_PRINCE) > 0))
+					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE))
 					{
 						st.takeItems(BLUEPRINT_RANKU, -1);
 						st.takeItems(BLUEPRINT_PRINCE, -1);
@@ -162,7 +162,7 @@ public final class Q132_MatrasCuriosity extends Quest
 					st.giveItems(BLUEPRINT_PRINCE, 1);
 					st.set("rewarded_prince", "2");
 					
-					if (st.getQuestItemsCount(BLUEPRINT_RANKU) > 0)
+					if (st.hasQuestItems(BLUEPRINT_RANKU))
 					{
 						st.playSound("ItemSound.quest_middle");
 						st.set("cond", "2");

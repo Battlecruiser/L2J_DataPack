@@ -84,7 +84,7 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 					}
 					else
 					{
-						if (_prev != null && _prev.getState() == State.COMPLETED)
+						if ((_prev != null) && _prev.isCompleted())
 							htmltext = "exalted-00a.htm";
 						else
 							htmltext = "exalted-00.htm";

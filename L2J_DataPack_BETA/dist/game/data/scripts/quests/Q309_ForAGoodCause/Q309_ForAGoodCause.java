@@ -216,7 +216,7 @@ public class Q309_ForAGoodCause extends Quest
 			if ((_prev!=null) && _prev.isStarted()){
 				htmltext = "32647-17.htm";
 			}else if (st.isStarted()){
-				if(st.getQuestItemsCount(MUCROKIAN_HIDE) >= 1 || st.getQuestItemsCount(FALLEN_MUCROKIAN_HIDE) >= 1)
+				if(st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE))
 					htmltext = "32647-08.htm";
 				else
 					htmltext = "32647-06.htm";
@@ -264,8 +264,7 @@ public class Q309_ForAGoodCause extends Quest
 	
 	private String onPiecesExchangeRequest(QuestState st, int pieces,int event)
 	{
-		long h1 = st.getQuestItemsCount(MUCROKIAN_HIDE);
-		if (h1 >= event)
+		if (st.getQuestItemsCount(MUCROKIAN_HIDE) >= event)
 		{
 			st.giveItems(pieces,Rnd.get(1,4));
 			st.takeItems(MUCROKIAN_HIDE,event);
@@ -280,8 +279,7 @@ public class Q309_ForAGoodCause extends Quest
 	
 	private String onRecipeExchangeRequest(QuestState st, int recipe, int takeid, int quanty)
 	{
-		long h1 = st.getQuestItemsCount(takeid);
-		if (h1 >= quanty)
+		if (st.getQuestItemsCount(takeid) >= quanty)
 		{
 			st.giveItems(recipe, 1);
 			st.takeItems(takeid, quanty);
@@ -301,9 +299,7 @@ public class Q309_ForAGoodCause extends Quest
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
 		
-		for(int _mob : MUCROKIANS)
-			addKillId(_mob);
-		
+		addKillId(MUCROKIANS);
 	}
 	
 	public static void main(String[] args)

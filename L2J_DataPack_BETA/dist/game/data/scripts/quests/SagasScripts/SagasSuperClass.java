@@ -508,7 +508,7 @@ public class SagasSuperClass extends QuestJython
 		{
 			int npcId = npc.getNpcId();
 			int cond = st.getInt("cond");
-			if (st.getState() == State.COMPLETED && npcId == NPC[0])
+			if (st.isCompleted() && (npcId == NPC[0]))
 				htmltext = "<html><body>You have already completed this quest!</body></html>";
 			else if (player.getClassId().getId() == getPrevClass(player))
 			{
@@ -533,10 +533,10 @@ public class SagasSuperClass extends QuestJython
 				}
 				else if (cond == 3)
 				{
-					if (npcId == NPC[1] && st.getQuestItemsCount(Items[0]) != 0)
+					if (npcId == NPC[1] && st.hasQuestItems(Items[0]))
 					{
 						htmltext = "1-02.htm";
-						if (Items[11] == 0 || st.getQuestItemsCount(Items[11]) != 0)
+						if (Items[11] == 0 || st.hasQuestItems(Items[11]))
 							htmltext = "1-03.htm";
 					}
 				}
@@ -589,7 +589,7 @@ public class SagasSuperClass extends QuestJython
 				{
 					if (npcId == NPC[3])
 					{
-						if (st.getQuestItemsCount(Items[2]) > 0)
+						if (st.hasQuestItems(Items[2]))
 							htmltext = "3-05.htm";
 						else
 							htmltext = "3-04.htm";

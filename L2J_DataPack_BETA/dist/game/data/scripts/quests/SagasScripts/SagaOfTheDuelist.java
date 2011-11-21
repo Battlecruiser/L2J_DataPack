@@ -83,7 +83,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 				int cond = st.getInt("cond");
 				if (cond == 3)
 				{
-					if (st.getQuestItemsCount(TOPQUALITYMEAT) == 0)
+					if (!st.hasQuestItems(TOPQUALITYMEAT))
 					{
 						st.giveItems(TOPQUALITYMEAT, 1);
 						return "tunatun_01.htm";

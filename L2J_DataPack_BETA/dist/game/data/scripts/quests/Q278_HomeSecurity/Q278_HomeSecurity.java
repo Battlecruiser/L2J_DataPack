@@ -73,7 +73,7 @@ public class Q278_HomeSecurity extends Quest
 			else
 				st.giveItems(959, 1);
 			
-			st.takeItems(SelMahumMane, st.getQuestItemsCount(SelMahumMane));
+			st.takeItems(SelMahumMane, -1);
 			st.unset("cond");
 			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(true);

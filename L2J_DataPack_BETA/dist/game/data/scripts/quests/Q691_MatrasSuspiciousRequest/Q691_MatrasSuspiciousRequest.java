@@ -146,11 +146,11 @@ public final class Q691_MatrasSuspiciousRequest extends Quest
 		}
 		else if (st.getState() == State.STARTED)
 		{
-			if (st.getQuestItemsCount(RED_GEM) > 0)
+			if (st.hasQuestItems(RED_GEM))
 			{
 				htmltext = "32245-05.htm";
 			}
-			else if (st.getQuestItemsCount(RED_GEM) == 0)
+			else if (!st.hasQuestItems(RED_GEM))
 			{
 				htmltext = "32245-06.htm";
 			}

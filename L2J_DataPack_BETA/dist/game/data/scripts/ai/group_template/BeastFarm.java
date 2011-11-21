@@ -314,7 +314,7 @@ public class BeastFarm extends L2AttackableAIScript
 			nextNpc.setRunning();
 			
 			QuestState st = player.getQuestState("20_BringUpWithLove");
-			if (st != null && st.getInt("cond") == 1 && st.getQuestItemsCount(7185) == 0 && Rnd.get(10) == 1)
+			if (st != null && st.getInt("cond") == 1 && !st.hasQuestItems(7185) && Rnd.get(10) == 1)
 			{
 				// if player has quest 20 going, give quest item
 				// it's easier to hardcode it in here than to try and repeat this stuff in the quest

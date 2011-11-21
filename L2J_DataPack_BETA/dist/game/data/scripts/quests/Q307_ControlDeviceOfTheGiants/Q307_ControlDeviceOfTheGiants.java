@@ -58,9 +58,9 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-				if (st.getQuestItemsCount(CET_1_SHEET) < 1 || st.getQuestItemsCount(CET_2_SHEET) < 1 || st.getQuestItemsCount(CET_3_SHEET) < 1)
+				if (!st.hasQuestItems(CET_1_SHEET) || !st.hasQuestItems(CET_2_SHEET) || !st.hasQuestItems(CET_3_SHEET))
 					htmltext = "32711-04.htm";
-				else if (st.getQuestItemsCount(CET_1_SHEET) >= 1 && st.getQuestItemsCount(CET_2_SHEET) >= 1 && st.getQuestItemsCount(CET_3_SHEET) >= 1)
+				else if (st.hasQuestItems(CET_1_SHEET) && st.hasQuestItems(CET_2_SHEET) && st.hasQuestItems(CET_3_SHEET))
 					htmltext = "32711-04a.htm";
 			}
 		}
@@ -134,7 +134,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 					htmltext = "32711-09.htm";
 				else if (st.getInt("cond") == 1)
 				{
-					if (st.getQuestItemsCount(CET_1_SHEET) < 1 || st.getQuestItemsCount(CET_2_SHEET) < 1 || st.getQuestItemsCount(CET_3_SHEET) < 1)
+					if (!st.hasQuestItems(CET_1_SHEET) || st.hasQuestItems(CET_2_SHEET) || st.hasQuestItems(CET_3_SHEET))
 						htmltext = "32711-07.htm";
 					else
 						htmltext = "32711-08.htm";

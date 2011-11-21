@@ -331,7 +331,7 @@ public class PailakaDevilsLegacy extends Quest
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if (st != null && npc.getNpcId() == ADVENTURER2 && st.getState() == State.COMPLETED)
+		if (st != null && npc.getNpcId() == ADVENTURER2 && st.isCompleted())
 			return "32511-03.htm";
 		else
 			return npc.getNpcId() + ".htm";
@@ -374,7 +374,7 @@ public class PailakaDevilsLegacy extends Quest
 			case ADVENTURER1:
 				if(player.getPet() == null)
 				{
-					if (st.getQuestItemsCount(SWORD) > 0)
+					if (st.hasQuestItems(SWORD))
 					{
 						if(st.getQuestItemsCount(SCROLL_1) > 0)
 						{
@@ -487,17 +487,17 @@ public class PailakaDevilsLegacy extends Quest
 		switch (npc.getNpcId())
 		{
 			case KAMS:
-				if (st.getQuestItemsCount(SWORD) > 0)
+				if (st.hasQuestItems(SWORD))
 				{
 					st.playSound("ItemSound.quest_itemget");
 					st.giveItems(SCROLL_1, 1);
 				}
 				break;
 			case ALKASO:
-				if (st.getQuestItemsCount(ENH_SWORD1) > 0)
+				if (st.hasQuestItems(ENH_SWORD1))
 				{
 					st.playSound("ItemSound.quest_itemget");
-					st.giveItems(SCROLL_2, 1);					
+					st.giveItems(SCROLL_2, 1);
 				}
 				break;
 			case LEMATAN:

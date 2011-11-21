@@ -101,7 +101,7 @@ public class PinsAndPouchUnseal extends Quest
 			else
 				// this should not happen!
 				return "";
-			if (st.getQuestItemsCount(itemIds[0]) > 0)
+			if (st.hasQuestItems(itemIds[0]))
 			{
 				if (st.getQuestItemsCount(57) > price)
 				{

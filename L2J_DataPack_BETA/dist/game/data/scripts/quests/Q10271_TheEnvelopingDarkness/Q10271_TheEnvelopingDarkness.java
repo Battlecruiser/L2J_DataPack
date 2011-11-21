@@ -33,7 +33,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 			{
 				case State.CREATED:
 					QuestState _prev = player.getQuestState("10269_ToTheSeedOfDestruction");
-					if ((_prev != null) && (_prev.getState() == State.COMPLETED) && (player.getLevel() >= 75))
+					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 75))
 						htmltext = "32560-01.htm";
 					else
 						htmltext = "32560-02.htm";
@@ -68,11 +68,9 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 		
 		else if (npc.getNpcId() == EL)
 		{
-			switch (st.getState())
+			if (st.isCompleted())
 			{
-				case State.COMPLETED:
-					htmltext = "32556-02.htm";
-					break;
+				htmltext = "32556-02.htm";
 			}
 			if (st.getInt("cond") == 1)
 			{

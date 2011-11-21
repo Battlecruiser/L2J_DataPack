@@ -119,7 +119,7 @@ public class Q287_FiguringItOut extends Quest
 		}
 		else if (event.equalsIgnoreCase("32742-11.html"))
 		{
-			if (st.getQuestItemsCount(VialOfTantaBlood) >= 1)
+			if (st.hasQuestItems(VialOfTantaBlood))
 				htmltext = "32742-11.html";
 			else
 			{
@@ -151,7 +151,7 @@ public class Q287_FiguringItOut extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getLevel() >= 82 && prev != null && prev.getState() == State.COMPLETED)
+				if (player.getLevel() >= 82 && prev != null && prev.isCompleted())
 					htmltext = "32742-01.htm";
 				else
 					htmltext = "32742-14.htm";

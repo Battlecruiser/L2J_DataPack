@@ -64,17 +64,15 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-09.html"))
 		{
-			long count = st.getQuestItemsCount(DrakeFlesh);
-			st.giveItems(57, count * 100);
-			st.takeItems(DrakeFlesh, count);
+			st.giveItems(57, st.getQuestItemsCount(DrakeFlesh) * 100);
+			st.takeItems(DrakeFlesh, -1);
 		}
 		else if (event.equalsIgnoreCase("32563-11.html"))
 		{
 			if (st.hasQuestItems(VariantDrakeWingHorns))
 			{
-				long count = st.getQuestItemsCount(VariantDrakeWingHorns);
-				st.giveItems(57, count * 200000);
-				st.takeItems(VariantDrakeWingHorns, count);
+				st.giveItems(57, st.getQuestItemsCount(VariantDrakeWingHorns) * 200000);
+				st.takeItems(VariantDrakeWingHorns, -1);
 				htmltext = "32563-12.html";
 			}
 			else
@@ -237,7 +235,7 @@ public class Q702_ATrapForRevenge extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (prev != null && prev.getState() == State.COMPLETED && player.getLevel() >= 78)
+					if ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78))
 						htmltext = "32563-01.htm";
 					else
 						htmltext = "32563-02.htm";

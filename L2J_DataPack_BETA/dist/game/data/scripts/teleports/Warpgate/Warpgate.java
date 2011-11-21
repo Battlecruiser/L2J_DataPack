@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 public class Warpgate extends Quest
@@ -48,14 +47,14 @@ public class Warpgate extends Quest
 		if (!HellboundManager.getInstance().isLocked())
 		{
 			st = player.getQuestState(PATH_TO_HELLBOUND);
-			if ((st != null) && (st.getState() == State.COMPLETED))
+			if ((st != null) && st.isCompleted())
 			{
 				return true;
 			}
 		}
 		
 		st = player.getQuestState(THATS_BLOODY_HOT);
-		if ((st != null) && (st.getState() == State.COMPLETED))
+		if ((st != null) && st.isCompleted())
 		{
 			return true;
 		}

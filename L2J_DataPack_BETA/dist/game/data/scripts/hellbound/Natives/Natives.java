@@ -107,7 +107,7 @@ public class Natives extends Quest
 					cancelQuestTimers("close_doors");
 					startQuestTimer("close_doors", 1800000, npc, player); // 30 min
 				}
-				else if (qs.getQuestItemsCount(MARK_OF_BETRAYAL) > 0)
+				else if (qs.hasQuestItems(MARK_OF_BETRAYAL))
 				{
 					htmltext = "32364-01.htm";
 				}

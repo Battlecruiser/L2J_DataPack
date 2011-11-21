@@ -82,14 +82,14 @@ public final class Q637_ThroughOnceMore extends Quest
 		{
 			if (player.getLevel() > 72)
 			{
-				if (st.getQuestItemsCount(FADED_MARK) > 0)
+				if (st.hasQuestItems(FADED_MARK))
 					return "32010-02.htm";
-				if (st.getQuestItemsCount(VISITOR_MARK) > 0)
+				if (st.hasQuestItems(VISITOR_MARK))
 				{
 					st.exitQuest(true);
 					return "32010-01a.htm";
 				}
-				if (st.getQuestItemsCount(MARK) > 0)
+				if (st.hasQuestItems(MARK))
 				{
 					st.exitQuest(true);
 					return "32010-0.htm";
@@ -100,8 +100,7 @@ public final class Q637_ThroughOnceMore extends Quest
 		}
 		else if (id == State.STARTED)
 		{
-			if (Integer.parseInt(st.get("cond")) == 2
-					&& st.getQuestItemsCount(NECRO_HEART) == 10)
+			if ((st.getInt("cond") == 2) && st.getQuestItemsCount(NECRO_HEART) == 10)
 			{
 				st.takeItems(NECRO_HEART, 10);
 				st.takeItems(FADED_MARK, 1);
@@ -114,7 +113,6 @@ public final class Q637_ThroughOnceMore extends Quest
 			else
 				return "32010-04.htm";
 		}
-		
 		return getNoQuestMsg(player);
 	}
 	

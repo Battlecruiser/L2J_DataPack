@@ -106,7 +106,7 @@ public class Q453_NotStrongEnoughAlone extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getLevel() >= 84 && prev != null && prev.getState() == State.COMPLETED)
+				if ((player.getLevel() >= 84) && (prev != null) && prev.isCompleted())
 					htmltext = "32734-01.htm";
 				else
 					htmltext = "32734-03.html";

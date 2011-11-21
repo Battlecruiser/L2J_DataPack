@@ -125,7 +125,6 @@ public class VarkaSilenosSupport extends Quest
 			st = this.newQuestState(player);
 		int npcId = npc.getNpcId();
 		int Alevel = player.getAllianceWithVarkaKetra();
-		long seeds = st.getQuestItemsCount(SEED);
 		if (npcId == ASHAS)
 		{
 			if (Alevel < 0)
@@ -148,7 +147,7 @@ public class VarkaSilenosSupport extends Quest
 			else if (Alevel > -3 && Alevel > 0)
 				htmltext = "31379-1.htm";
 			else if (Alevel < -2)
-				if (seeds != 0)
+				if (st.hasQuestItems(SEED))
 					htmltext = "31379-4.htm";
 				else
 					htmltext = "31379-2.htm";

@@ -120,7 +120,7 @@ public class MasterOfEnchanting extends Quest
 		htmltext = event;
 		if (event.equalsIgnoreCase("buy_staff"))
 		{
-			if (st.getQuestItemsCount(_master_yogi_staff) == 0 && st.getQuestItemsCount(_adena) > _staff_price)
+			if (!st.hasQuestItems(_master_yogi_staff) && st.getQuestItemsCount(_adena) > _staff_price)
 			{
 				st.takeItems(_adena, _staff_price);
 				st.giveItems(_master_yogi_staff, 1);

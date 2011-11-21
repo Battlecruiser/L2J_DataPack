@@ -314,7 +314,7 @@ public class Baium extends L2AttackableAIScript
 				return "<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>";
 			}
 			
-			if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP && player.getQuestState("baium").getQuestItemsCount(4295) > 0) // bloody fabric
+			if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP && player.getQuestState("baium").hasQuestItems(4295)) // bloody fabric
 			{
 				player.getQuestState("baium").takeItems(4295, 1);
 				// allow entry for the player for the next 30 secs (more than enough time for the TP to happen)

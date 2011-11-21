@@ -97,7 +97,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			{
 				case State.CREATED:
 					QuestState _prev = player.getQuestState("115_TheOtherSideOfTruth");
-					if ((_prev != null) && (_prev.getState() == State.COMPLETED) && (player.getLevel() >= 82))
+					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
 						htmltext = "32020-01.htm";
 					else
 						htmltext = "32020-00.htm";

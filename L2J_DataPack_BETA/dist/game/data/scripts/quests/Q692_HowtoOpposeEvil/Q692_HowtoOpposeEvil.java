@@ -175,7 +175,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		{
 			if (npc.getNpcId() == DILIOS)
 			{
-				if (cond == 1 && st.getQuestItemsCount(LEKONS_CERTIFICATE) >= 1)
+				if (cond == 1 && st.hasQuestItems(LEKONS_CERTIFICATE))
 				{
 					st.takeItems(LEKONS_CERTIFICATE, 1);
 					htmltext = "32549-04.htm";

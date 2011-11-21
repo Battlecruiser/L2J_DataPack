@@ -58,7 +58,11 @@ public class eventmodRabbits extends Event
 	public static final int _skill_tornado = 630;
 	public static final int _skill_magic_eye = 629;
 	
-	// Drop data
+	/**
+	 * Drop data:<br />
+	 * Higher the chance harder the item.<br />
+	 * ItemId, chance in percent, min amount, max amount
+	 */
 	private static final int[][] DROPLIST =
 	{
 		{  1540,  80, 10, 15 },	// Quick Healing Potion
@@ -256,9 +260,8 @@ public class eventmodRabbits extends Event
 	{
 		final int chance = Rnd.get(100);
 		
-		for (int i = 0; i < droplist.length; i++)
+		for (int[] drop : droplist)
 		{
-			int[] drop = droplist[i];
 			if (chance > drop[1])
 			{
 				((L2MonsterInstance)mob).dropItem(player, drop[0], Rnd.get(drop[2], drop[3]));

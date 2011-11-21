@@ -1035,7 +1035,7 @@ public class DarkCloudMansion extends Quest
 				if (st == null)
 					st = newQuestState(player);
 				
-				if (st.getQuestItemsCount(CC) < 1)
+				if (!st.hasQuestItems(CC))
 					st.giveItems(CC,1);
 			}
 		}

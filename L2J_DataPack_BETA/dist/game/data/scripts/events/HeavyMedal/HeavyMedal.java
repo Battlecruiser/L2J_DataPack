@@ -204,13 +204,13 @@ public class HeavyMedal extends Quest
 		int _lev = 0;
 		if (st == null)
 			return 0;
-		else if (st.getQuestItemsCount(6402) > 0)
+		else if (st.hasQuestItems(6402))
 			_lev = 4;
-		else if (st.getQuestItemsCount(6401) > 0)
+		else if (st.hasQuestItems(6401))
 			_lev = 3;
-		else if (st.getQuestItemsCount(6400) > 0)
+		else if (st.hasQuestItems(6400))
 			_lev = 2;
-		else if (st.getQuestItemsCount(6399) > 0)
+		else if (st.hasQuestItems(6399))
 			_lev = 1;
 		
 		return _lev;

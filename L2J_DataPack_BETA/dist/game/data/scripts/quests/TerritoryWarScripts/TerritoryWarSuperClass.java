@@ -209,9 +209,9 @@ public class TerritoryWarSuperClass extends Quest
 		int max = 10;
 		if (st == null)
 			st = newQuestState(player);
-		if (st.getState() != State.COMPLETED)
+		if (!st.isCompleted())
 		{
-			if (st.getState() != State.STARTED)
+			if (!st.isStarted())
 			{
 				st.setState(State.STARTED);
 				st.set("cond","1");
