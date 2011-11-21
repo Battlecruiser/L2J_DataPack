@@ -22,8 +22,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik 2011-02-04 Based on official H5 PTS server improved by
- *         jurchiks on Nov. 5, 2011
+ * @author Gnacik 2011-02-04 Based on official H5 PTS server
+ *         improved by jurchiks on Nov. 5, 2011
  */
 public class Q551_OlympiadStarter extends Quest
 {
@@ -50,7 +50,7 @@ public class Q551_OlympiadStarter extends Quest
 	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if (st == null || !st.isStarted())
+		if (st == null)
 			return super.getNoQuestMsg(player);
 		String htmltext = event;
 		

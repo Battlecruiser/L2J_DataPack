@@ -49,7 +49,7 @@ public class Q552_OlympiadVeteran extends Quest
 	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if (st == null || !st.isStarted())
+		if (st == null)
 			return super.getNoQuestMsg(player);
 		String htmltext = event;
 		
