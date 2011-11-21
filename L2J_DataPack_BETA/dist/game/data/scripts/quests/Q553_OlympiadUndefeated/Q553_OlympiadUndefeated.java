@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author lion 2011-02-05 Based on official H5 PTS server and 551 quest ;)
+ * @author lion 2011-02-05 Based on official H5 PTS server and 551 quest ;)
  *         improved by jurchiks on Nov. 5, 2011
  */
 public class Q553_OlympiadUndefeated extends Quest
@@ -50,7 +50,7 @@ public class Q553_OlympiadUndefeated extends Quest
 	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if (st == null || !st.isStarted())
+		if (st == null)
 			return super.getNoQuestMsg(player);
 		String htmltext = event;
 		
