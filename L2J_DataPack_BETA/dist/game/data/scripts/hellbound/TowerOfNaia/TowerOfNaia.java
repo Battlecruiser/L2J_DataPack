@@ -1000,7 +1000,7 @@ public class TowerOfNaia extends Quest
 		
 		if (respawnTime <= System.currentTimeMillis())
 		{
-			addSpawn(MUTATED_ELPY, 45474, 247450, -13994, 49152, false, 0, false);
+			addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
 		}
 		else
 		{
@@ -1009,7 +1009,7 @@ public class TowerOfNaia extends Quest
 				@Override
 				public void run()
 				{
-					addSpawn(MUTATED_ELPY, 45474, 247450, -13994, 49152, false, 0, false);
+					addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
 				}
 			}, respawnTime - System.currentTimeMillis());
 		}
