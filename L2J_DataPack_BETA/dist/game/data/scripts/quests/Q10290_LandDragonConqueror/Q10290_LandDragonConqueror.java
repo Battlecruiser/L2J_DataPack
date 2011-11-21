@@ -54,7 +54,7 @@ public class Q10290_LandDragonConqueror extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() >= 83 && st.getQuestItemsCount(PortalStone) >= 1)
+				if (player.getLevel() >= 83 && st.hasQuestItems(PortalStone))
 					htmltext = "30755-01.htm";
 				else if (player.getLevel() < 83)
 					htmltext = "30755-02.htm";

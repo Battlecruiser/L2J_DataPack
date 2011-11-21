@@ -75,7 +75,7 @@ public class Q10288_SecretMission extends Quest
 					st.playSound("ItemSound.quest_middle");
 				}
 			}
-			else if (st.getState() == State.COMPLETED && event.equalsIgnoreCase("teleport"))
+			else if (st.isCompleted() && event.equalsIgnoreCase("teleport"))
 			{
 				player.teleToLocation(118833, -80589, -2688);
 				return null;
@@ -142,7 +142,7 @@ public class Q10288_SecretMission extends Quest
 		}
 		if (npc.getNpcId() == _aquilani)
 		{
-			if (st.getState() == State.COMPLETED)
+			if (st.isCompleted())
 				return "32780-01.html";
 			else
 				return "32780-00.html";

@@ -299,7 +299,7 @@ public final class Q511_AwlUnderFoot extends Quest
 				if (cond == 1 && count > 0)
 				{
 					htmltext = "FortressWarden-14.htm";
-					st.takeItems(DL_MARK,count);
+					st.takeItems(DL_MARK, -1);
 					st.rewardItems(KNIGHT_EPALUETTE, count);
 				}
 				else if (cond == 1 && count == 0)

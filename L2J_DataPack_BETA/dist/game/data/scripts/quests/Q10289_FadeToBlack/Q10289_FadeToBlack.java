@@ -42,7 +42,7 @@ public class Q10289_FadeToBlack extends Quest
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
 			}
-			else if(Util.isDigit(event) && st.getQuestItemsCount(MARK_OF_SPLENDOR) > 0)
+			else if(Util.isDigit(event) && st.hasQuestItems(MARK_OF_SPLENDOR))
 			{
 				int itemId = Integer.parseInt(event);
 				st.takeItems(MARK_OF_SPLENDOR, 1);
@@ -69,7 +69,7 @@ public class Q10289_FadeToBlack extends Quest
 			switch(st.getState())
 			{
 				case State.CREATED :
-					if (player.getLevel() >= 82 && secretMission != null && secretMission.getState() == State.COMPLETED)
+					if (player.getLevel() >= 82 && secretMission != null && secretMission.isCompleted())
 						htmltext = "32757-02.htm";
 					else if (player.getLevel() < 82)
 						htmltext = "32757-00.htm";
@@ -79,7 +79,7 @@ public class Q10289_FadeToBlack extends Quest
 				case State.STARTED :
 					if (st.getInt("cond") == 1)
 						htmltext = "32757-04b.htm";
-					if (st.getInt("cond") == 2 && st.getQuestItemsCount(MARK_OF_DARKNESS) > 0)
+					if (st.getInt("cond") == 2 && st.hasQuestItems(MARK_OF_DARKNESS))
 					{
 						htmltext = "32757-05.htm";
 						st.takeItems(MARK_OF_DARKNESS, 1);

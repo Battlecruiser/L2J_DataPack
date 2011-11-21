@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 /**
@@ -43,7 +42,7 @@ public class Nottingale extends Quest
 	{
 		String htmltext = event;
 		QuestState qs = player.getQuestState("10273_GoodDayToFly");
-		if (qs == null || qs.getState() != State.COMPLETED)
+		if (qs == null || !qs.isCompleted())
 		{
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -184545, 243120, 1581));

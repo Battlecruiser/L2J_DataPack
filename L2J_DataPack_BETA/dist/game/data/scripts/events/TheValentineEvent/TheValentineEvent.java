@@ -95,7 +95,7 @@ public class TheValentineEvent extends Quest
 		htmltext = event;
 		if (event.equalsIgnoreCase("4301-3.htm"))
 		{
-			if (st.getState() == State.COMPLETED)
+			if (st.isCompleted())
 			{
 				htmltext = "4301-4.htm";
 			}

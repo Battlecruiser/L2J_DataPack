@@ -60,7 +60,7 @@ public class Q461_RumbleInTheBase extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getLevel() >= 82 && prev != null && prev.getState() == State.COMPLETED)
+				if ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted())
 					htmltext = "30200-01.htm";
 				else
 					htmltext = "30200-02.htm";

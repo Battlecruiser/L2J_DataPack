@@ -142,7 +142,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 		final QuestState st = pl.getQuestState(qn);
 		if (Rnd.get(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
-			if (st.getQuestItemsCount(SEAL_COMPONENTS[idx]) < 1)
+			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
 			{
 				st.giveItems(SEAL_COMPONENTS[idx], 1);
 				if (haveAllExceptThis(st, idx))
@@ -168,7 +168,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 				continue;
 			}
 			
-			if (st.getQuestItemsCount(SEAL_COMPONENTS[i]) < 1)
+			if (!st.hasQuestItems(SEAL_COMPONENTS[i]))
 			{
 				return false;
 			}

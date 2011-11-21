@@ -124,7 +124,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	private boolean check(QuestState st)
 	{
 		for (int i = 4629; i < 4665; i++)
-			if (st.getQuestItemsCount(i) > 0)
+			if (st.hasQuestItems(i))
 				return true;
 		return false;
 	}
@@ -362,9 +362,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			htmltext = npc.getNpcId() + "-01.htm";
 		else if (check(st))
 			htmltext = npc.getNpcId() + "-03.htm";
-		else if (st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0
-				&& st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0
-				&& st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0)
+		else if (!st.hasQuestItems(RED_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(GREEN_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(BLUE_SOUL_CRYSTAL0_ID))
 			htmltext = npc.getNpcId() + "-21.htm";
 		return htmltext;
 	}

@@ -54,7 +54,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() >= 83 && st.getQuestItemsCount(FloatingStone) >= 1)
+				if (player.getLevel() >= 83 && st.hasQuestItems(FloatingStone))
 					htmltext = "31540-01.htm";
 				else if (player.getLevel() < 83)
 					htmltext = "31540-02.htm";

@@ -43,7 +43,7 @@ public class Q10272_LightFragment extends Quest
 			{
 				case State.CREATED:
 					QuestState _prev = player.getQuestState("10271_TheEnvelopingDarkness");
-					if ((_prev != null) && (_prev.getState() == State.COMPLETED) && (player.getLevel() >= 75))
+					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 75))
 						htmltext = "32560-01.htm";
 					else
 						htmltext = "32560-02.htm";
@@ -65,11 +65,9 @@ public class Q10272_LightFragment extends Quest
 		}
 		else if (npc.getNpcId() == ARTIUS)
 		{
-			switch (st.getState())
+			if (st.isCompleted())
 			{
-				case State.COMPLETED:
-					htmltext = "32559-19.htm";
-					break;
+				htmltext = "32559-19.htm";
 			}
 			if (st.getInt("cond") == 1)
 			{
@@ -94,11 +92,11 @@ public class Q10272_LightFragment extends Quest
 					htmltext = "32559-15.htm";
 					st.set("cond", "6");
 				}
-				else if (st.getQuestItemsCount(FRAGMENT_POWDER) >= 1)
+				else if (st.hasQuestItems(FRAGMENT_POWDER))
 				{
 					htmltext = "32559-14.htm";
 				}
-				else if (st.getQuestItemsCount(FRAGMENT_POWDER) < 1)
+				else if (!st.hasQuestItems(FRAGMENT_POWDER))
 				{
 					htmltext = "32559-13.htm";
 				}

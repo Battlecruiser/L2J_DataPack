@@ -44,7 +44,6 @@ import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -776,7 +775,7 @@ public class CrystalCaverns extends Quest
 		{
 			QuestState st = player.getQuestState("131_BirdInACage");
 			String htmltext = "32279.htm";
-			if (st != null && st.getState() != State.COMPLETED)
+			if (st != null && !st.isCompleted())
 				htmltext = "32279-01.htm";
 			return htmltext;
 		}
@@ -1306,7 +1305,7 @@ public class CrystalCaverns extends Quest
 					QuestState st = partyMember.getQuestState(qn);
 					if (st == null)
 						st = newQuestState(partyMember);
-					if (!isBaylor && st.getQuestItemsCount(CONT_CRYSTAL) > 0)
+					if (!isBaylor && st.hasQuestItems(CONT_CRYSTAL))
 					{
 						st.takeItems(CONT_CRYSTAL, 1);
 						st.giveItems(bossCry, 1);
@@ -1322,7 +1321,7 @@ public class CrystalCaverns extends Quest
 			QuestState st = player.getQuestState(qn);
 			if (st == null)
 				st = newQuestState(player);
-			if (!isBaylor && st.getQuestItemsCount(CONT_CRYSTAL) > 0)
+			if (!isBaylor && st.hasQuestItems(CONT_CRYSTAL))
 			{
 				st.takeItems(CONT_CRYSTAL, 1);
 				st.giveItems(bossCry, 1);
@@ -1790,7 +1789,7 @@ public class CrystalCaverns extends Quest
 								QuestState st = ((L2PcInstance) character).getQuestState(qn);
 								if (st == null)
 									st = newQuestState((L2PcInstance) character);
-								if (st.getQuestItemsCount(RACE_KEY) == 0)
+								if (!st.hasQuestItems(RACE_KEY))
 									return "";
 								if (world.roomsStatus[zone.getId() - 20104] == 0)
 									runEmeraldRooms(world, spawns, room);

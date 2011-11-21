@@ -105,7 +105,7 @@ public class Q290_ThreatRemoval extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getLevel() >= 82 && (_prev != null && _prev.getState() == State.COMPLETED))
+					if (player.getLevel() >= 82 && (_prev != null) && _prev.isCompleted())
 						htmltext = "30201-01.htm";
 					else
 						htmltext = "30201-00.htm";

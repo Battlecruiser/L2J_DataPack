@@ -54,7 +54,7 @@ public class Q146_TheZeroHour extends Quest
 					htmltext = "31554-02.htm";
 				else
 				{
-					if (prev != null && prev.getState() == State.COMPLETED)
+					if ((prev != null) && prev.isCompleted())
 						htmltext = "31554-01a.htm";
 					else
 						htmltext = "31554-04.html";
@@ -88,7 +88,7 @@ public class Q146_TheZeroHour extends Quest
 			return null;
 		QuestState st = partyMember.getQuestState(qn);
 		
-		if (st.getQuestItemsCount(Fang) < 1)
+		if (!st.hasQuestItems(Fang))
 		{
 			st.giveItems(Fang, 1);
 			st.set("cond", "2");
