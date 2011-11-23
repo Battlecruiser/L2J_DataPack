@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.util.Util;
 
@@ -41,7 +40,7 @@ public class TargetArea implements ITargetTypeHandler
 		List<L2Character> targetList = new FastList<L2Character>();
 		if (((target == null || target == activeChar || target.isAlikeDead()) && skill.getCastRange() >= 0) || (!(target instanceof L2Attackable || target instanceof L2Playable)))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
 		

@@ -63,7 +63,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		// pets can use items only when they are tradeable
 		if (isPet && !item.isTradeable())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
+			activeChar.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return;
 		}
 		
@@ -102,7 +102,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							return;
 						}
 					}
@@ -161,7 +161,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						{
 							if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 							{
-								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+								activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 								return;
 							}
 						}

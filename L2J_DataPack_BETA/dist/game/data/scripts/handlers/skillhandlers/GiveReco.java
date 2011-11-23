@@ -59,13 +59,12 @@ public class GiveReco implements ISkillHandler
 
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATIONS);
 					sm.addNumber(power);
-					
 					target.sendPacket(sm);
 					target.sendPacket(new UserInfo(target));
 					target.sendPacket(new ExVoteSystemInfo(target));
 				}
 				else
-					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
+					target.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 			}
 		}
 	}

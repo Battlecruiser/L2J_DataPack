@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 
 /**
@@ -52,13 +51,13 @@ public class Seed implements IItemHandler
 		final L2Object tgt = playable.getTarget();
 		if (!(tgt instanceof L2Npc))
 		{
-			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character)tgt).isRaid())
 		{
-			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING));
+			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -66,7 +65,7 @@ public class Seed implements IItemHandler
 		final L2MonsterInstance target = (L2MonsterInstance)tgt;
 		if (target.isDead())
 		{
-			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -93,7 +92,7 @@ public class Seed implements IItemHandler
 			
 		}
 		else
-			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE));
+			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 	}
 	
 	/**

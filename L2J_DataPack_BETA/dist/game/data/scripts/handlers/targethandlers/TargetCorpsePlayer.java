@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
@@ -70,7 +69,7 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 						if (targetPlayer.isInsideZone(L2Character.ZONE_SIEGE) && !targetPlayer.isInSiege())
 						{
 							condGood = false;
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE));
+							activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
 						}
 						
 						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
@@ -81,9 +80,9 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 						if (targetPlayer.isReviveRequested())
 						{
 							if (targetPlayer.isRevivingPet())
-								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MASTER_CANNOT_RES)); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+								player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 							else
-								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED)); // Resurrection is already been proposed.
+								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 							condGood = false;
 						}
 					}
@@ -94,9 +93,9 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 							if (targetPet.getOwner().isReviveRequested())
 							{
 								if (targetPet.getOwner().isRevivingPet())
-									player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED)); // Resurrection is already been proposed.
+									player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 								else
-									player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_RES_PET2)); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+									player.sendPacket(SystemMessageId.CANNOT_RES_PET2); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 								condGood = false;
 							}
 						}
@@ -115,7 +114,7 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 				}
 			}
 		}
-		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 		return _emptyTargetList;
 	}
 	

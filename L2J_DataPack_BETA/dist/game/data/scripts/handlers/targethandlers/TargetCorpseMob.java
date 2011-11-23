@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 /**
@@ -41,7 +40,7 @@ public class TargetCorpseMob implements ITargetTypeHandler
 		final boolean isSummon = target instanceof L2SummonInstance;
 		if (!(isSummon || target instanceof L2Attackable) || !target.isDead())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
 		

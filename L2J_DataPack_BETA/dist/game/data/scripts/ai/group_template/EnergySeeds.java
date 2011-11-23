@@ -38,7 +38,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -184,12 +183,12 @@ public class EnergySeeds extends L2AttackableAIScript
 				}
 				if (Rnd.get(100) < 33)
 				{
-					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
+					caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
 					caster.addItem("EnergySeed", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
 				}
 				else
 				{
-					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
+					caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
 					caster.addItem("EnergySeed", itemId, Rnd.get(1, RATE), null, true);
 				}
 				seedCollectEvent(caster, npc, spawn._seedId);

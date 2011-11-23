@@ -104,13 +104,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
 			}
 			
@@ -177,13 +177,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
 			}
 			

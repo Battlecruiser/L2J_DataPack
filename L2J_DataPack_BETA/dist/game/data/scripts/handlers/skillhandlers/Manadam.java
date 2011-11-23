@@ -91,7 +91,7 @@ public class Manadam implements ISkillHandler
 			boolean acted = Formulas.calcMagicAffected(activeChar, target, skill);
 			if (target.isInvul() || !acted)
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MISSED_TARGET));
+				activeChar.sendPacket(SystemMessageId.MISSED_TARGET);
 			}
 			else
 			{
@@ -115,7 +115,7 @@ public class Manadam implements ISkillHandler
 				if (!skill.isStaticDamage() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				{
 					damage *= 3.;
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));
+					activeChar.sendPacket(SystemMessageId.CRITICAL_HIT_MAGIC);
 				}
 				
 				double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);

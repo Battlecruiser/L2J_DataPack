@@ -43,7 +43,6 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -528,7 +527,7 @@ public class TowerOfNaia extends Quest
 			{
 				if (player.getParty() == null)
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY));
+					player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
 					return null;
 				}
 				return "manager.htm";
@@ -709,7 +708,7 @@ public class TowerOfNaia extends Quest
 			}
 			else
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY));
+				player.sendPacket(SystemMessageId.CAN_OPERATE_MACHINE_WHEN_IN_PARTY);
 			}
 		}
 		

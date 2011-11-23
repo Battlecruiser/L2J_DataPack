@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcFreight;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PackageToList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
 /**
@@ -55,7 +54,7 @@ public class Freight implements IBypassHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
+					activeChar.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
 				}
 			}
 		}
@@ -63,7 +62,7 @@ public class Freight implements IBypassHandler
 		{
 			if (activeChar.getAccountChars().size() < 1)
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHARACTER_DOES_NOT_EXIST));
+				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
 			}
 			else
 			{

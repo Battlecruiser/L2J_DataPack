@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class Observation implements IBypassHandler
 {
@@ -58,7 +57,7 @@ public class Observation implements IBypassHandler
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
+					activeChar.sendPacket(SystemMessageId.ONLY_VIEW_SIEGE);
 				}
 				return true;
 			}

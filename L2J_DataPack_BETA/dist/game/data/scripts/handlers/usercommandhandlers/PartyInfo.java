@@ -42,8 +42,8 @@ public class PartyInfo implements IUserCommandHandler
 		
 		if (!activeChar.isInParty())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_INFORMATION));
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FRIEND_LIST_FOOTER));
+			activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
+			activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 			return false;
 		}
 		
@@ -52,24 +52,24 @@ public class PartyInfo implements IUserCommandHandler
 		int lootDistribution = playerParty.getLootDistribution();
 		String partyLeader = playerParty.getPartyMembers().get(0).getName();
 		
-		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_INFORMATION));
+		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		
 		switch (lootDistribution)
 		{
 			case L2Party.ITEM_LOOTER:
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_FINDERS_KEEPERS));
+				activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
 				break;
 			case L2Party.ITEM_ORDER:
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_BY_TURN));
+				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
 				break;
 			case L2Party.ITEM_ORDER_SPOIL:
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL));
+				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
 				break;
 			case L2Party.ITEM_RANDOM:
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_RANDOM));
+				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
 				break;
 			case L2Party.ITEM_RANDOM_SPOIL:
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL));
+				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
 				break;
 		}
 		
@@ -79,7 +79,7 @@ public class PartyInfo implements IUserCommandHandler
 		
 		activeChar.sendMessage("Members: " + memberCount + "/9");
 		
-		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FRIEND_LIST_FOOTER));
+		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 		return true;
 	}
 	

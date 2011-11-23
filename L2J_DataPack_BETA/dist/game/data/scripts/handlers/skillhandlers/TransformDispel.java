@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
@@ -53,7 +52,7 @@ public class TransformDispel implements ISkillHandler
 		if (pc.isTransformed() || pc.isInStance())
 		{
 			if (pc.isFlyingMounted() && !pc.isInsideZone(L2Character.ZONE_LANDING))
-				pc.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE));
+				pc.sendPacket(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE);
 			else
 				pc.stopTransformation(true);
 		}

@@ -152,7 +152,7 @@ public class DemonPrinceFloor extends Quest
 		
 		if (player.getObjectId() != party.getPartyLeaderOID())
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		
