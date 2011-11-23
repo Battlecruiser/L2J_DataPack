@@ -134,7 +134,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 					htmltext = "32711-09.htm";
 				else if (st.getInt("cond") == 1)
 				{
-					if (!st.hasQuestItems(CET_1_SHEET) || st.hasQuestItems(CET_2_SHEET) || st.hasQuestItems(CET_3_SHEET))
+					if (!st.hasQuestItems(CET_1_SHEET) || !st.hasQuestItems(CET_2_SHEET) || !st.hasQuestItems(CET_3_SHEET))
 						htmltext = "32711-07.htm";
 					else
 						htmltext = "32711-08.htm";
