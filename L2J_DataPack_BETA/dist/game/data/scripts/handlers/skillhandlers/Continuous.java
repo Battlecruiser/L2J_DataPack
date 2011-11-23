@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
@@ -243,7 +242,7 @@ public class Continuous implements ISkillHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ATTACK_FAILED));
+				activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 			}
 			
 			// Possibility of a lethal strike

@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class L2TrapAction implements IActionHandler
 {
@@ -30,7 +29,7 @@ public class L2TrapAction implements IActionHandler
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
+			activeChar.sendPacket(SystemMessageId.FAILED_CHANGE_TARGET);
 			return false;
 		}
 		

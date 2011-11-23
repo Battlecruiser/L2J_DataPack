@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2FeedableBeastInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class BeastSpice implements IItemHandler
 {
@@ -39,7 +38,7 @@ public class BeastSpice implements IItemHandler
 		
 		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		

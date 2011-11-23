@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class EnchantAttribute implements IItemHandler
 {
@@ -35,7 +34,7 @@ public class EnchantAttribute implements IItemHandler
 		
 		if (activeChar.isEnchanting())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS));
+			activeChar.sendPacket(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS);
 			return;
 		}
 		

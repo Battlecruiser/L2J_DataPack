@@ -199,7 +199,7 @@ public class Pdam implements ISkillHandler
 					}
 				}
 				else // No damage
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ATTACK_FAILED));
+					activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 			}
 			else
 			{

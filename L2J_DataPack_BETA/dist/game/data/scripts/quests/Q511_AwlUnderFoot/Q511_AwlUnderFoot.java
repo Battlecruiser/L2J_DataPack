@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -127,7 +126,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return "";
 			}
 			teleportPlayer(player, coords, world.instanceId);

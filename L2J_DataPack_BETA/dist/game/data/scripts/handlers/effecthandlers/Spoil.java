@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
@@ -71,7 +70,7 @@ public class Spoil extends L2Effect
 		
 		if (target.isSpoil())
 		{
-			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_SPOILED));
+			getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return false;
 		}
 		
@@ -85,7 +84,7 @@ public class Spoil extends L2Effect
 			{
 				target.setSpoil(true);
 				target.setIsSpoiledBy(getEffector().getObjectId());
-				getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SPOIL_SUCCESS));
+				getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 			}
 			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		}

@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -109,7 +108,7 @@ public class AdminElement implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		

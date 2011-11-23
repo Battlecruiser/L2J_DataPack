@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExGetPremiumItemList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class ReceivePremium implements IBypassHandler
 {
@@ -39,7 +38,7 @@ public class ReceivePremium implements IBypassHandler
 		
 		if (activeChar.getPremiumItemList().isEmpty())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
+			activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND);
 			return false;
 		}
 		

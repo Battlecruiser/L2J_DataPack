@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.item.type.L2WeaponType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
@@ -66,7 +65,7 @@ public class FishShots implements IItemHandler
 				|| (grade == L2Item.CRYSTAL_A && FishshotId != 6539) || (FishshotId != 6540 && grade == L2Item.CRYSTAL_S ))
 		{
 			//1479 - This fishing shot is not fit for the fishing pole crystal.
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WRONG_FISHINGSHOT_GRADE));
+			activeChar.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
 			return;
 		}
 		

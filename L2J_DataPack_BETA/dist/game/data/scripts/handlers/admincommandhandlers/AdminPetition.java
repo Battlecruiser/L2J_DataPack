@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.instancemanager.PetitionManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class handles commands for GMs to respond to petitions.
@@ -59,30 +58,30 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME));
+				activeChar.sendPacket(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME);
 				return true;
 			}
 			
 			if (PetitionManager.getInstance().isPetitionInProcess(petitionId))
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
+				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
 				return true;
 			}
 			
 			if (!PetitionManager.getInstance().acceptPetition(activeChar, petitionId))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION));
+				activeChar.sendPacket(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION);
 		}
 		else if (command.startsWith("admin_reject_petition"))
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER));
+				activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.equals("admin_reset_petitions"))
 		{
 			if (PetitionManager.getInstance().isPetitionInProcess())
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
+				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
 				return false;
 			}
 			PetitionManager.getInstance().clearPendingPetitions();
@@ -95,7 +94,7 @@ public class AdminPetition implements IAdminCommandHandler
 				L2Object targetChar = activeChar.getTarget();
 				if (targetChar == null || !(targetChar instanceof L2PcInstance))
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;

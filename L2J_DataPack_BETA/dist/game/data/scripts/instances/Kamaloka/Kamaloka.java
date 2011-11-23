@@ -439,19 +439,19 @@ public class Kamaloka extends Quest
 		// player must be in party
 		if (party == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			return false;
 		}
 		// ...and be party leader
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		// party must not exceed max size for selected instance
 		if (party.getMemberCount() > MAX_PARTY_SIZE[index])
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
+			player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
 			return false;
 		}
 		
@@ -579,7 +579,7 @@ public class Kamaloka extends Quest
 			if (!(world instanceof KamaWorld)
 					|| world.templateId != templateId)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return;
 			}
 			// check for level difference again on reenter

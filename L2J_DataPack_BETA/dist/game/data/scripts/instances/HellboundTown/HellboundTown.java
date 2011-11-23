@@ -392,7 +392,7 @@ public class HellboundTown extends Quest
 		
 		if (player.getObjectId() != party.getPartyLeaderOID())
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		
@@ -441,7 +441,7 @@ public class HellboundTown extends Quest
 		{
 			if (!(world instanceof TownWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
 			else

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
@@ -85,7 +84,7 @@ public class Unlock implements ISkillHandler
 				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -97,7 +96,7 @@ public class Unlock implements ISkillHandler
 						door.onOpen();
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
 			}
 			else if (target instanceof L2ChestInstance)
 			{

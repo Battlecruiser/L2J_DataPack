@@ -391,7 +391,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 		}
 	}
 	

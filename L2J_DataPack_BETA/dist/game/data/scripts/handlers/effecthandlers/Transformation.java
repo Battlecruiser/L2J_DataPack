@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
@@ -70,7 +69,7 @@ public class Transformation extends L2Effect
 		
 		if (trg.getTransformation() != null)
 		{
-			trg.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+			trg.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 			return false;
 		}
 		

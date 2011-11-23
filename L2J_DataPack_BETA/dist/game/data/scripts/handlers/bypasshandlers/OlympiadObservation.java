@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -211,7 +210,7 @@ public class OlympiadObservation implements IBypassHandler
 				{
 					if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_YOU_ARE_ON_THE_WAITING_LIST_YOU_ARE_NOT_ALLOWED_TO_WATCH_THE_GAME));
+						activeChar.sendPacket(SystemMessageId.WHILE_YOU_ARE_ON_THE_WAITING_LIST_YOU_ARE_NOT_ALLOWED_TO_WATCH_THE_GAME);
 						return false;
 					}
 					if (!TvTEvent.isInactive() && TvTEvent.isPlayerParticipant(activeChar.getObjectId()))

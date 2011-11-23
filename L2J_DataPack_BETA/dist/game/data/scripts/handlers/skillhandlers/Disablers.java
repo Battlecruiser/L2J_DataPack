@@ -263,7 +263,7 @@ public class Disablers implements ISkillHandler
 						}
 					}
 					else
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+						activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 					break;
 				}
 				case AGGDAMAGE:

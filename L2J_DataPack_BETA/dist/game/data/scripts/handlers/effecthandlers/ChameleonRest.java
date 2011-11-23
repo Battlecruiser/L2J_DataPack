@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
@@ -92,7 +91,7 @@ public class ChameleonRest extends L2Effect
 		
 		if (manaDam > getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		

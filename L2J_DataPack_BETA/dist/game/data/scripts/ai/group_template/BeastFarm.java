@@ -29,11 +29,9 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
@@ -419,7 +417,7 @@ public class BeastFarm extends L2AttackableAIScript
 		}
 		else
 		{
-			caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1).addString("The beast spit out the feed instead of eating it."));
+			caster.sendMessage("The beast spit out the feed instead of eating it.");
 			((L2Attackable) npc).dropItem(caster, food, 1);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);

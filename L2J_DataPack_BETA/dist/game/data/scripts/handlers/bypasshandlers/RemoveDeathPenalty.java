@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 public class RemoveDeathPenalty implements IBypassHandler
@@ -71,7 +70,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 								return false;
 							}
 							activeChar.setDeathPenaltyBuffLevel(activeChar.getDeathPenaltyBuffLevel() - 1);
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DEATH_PENALTY_LIFTED));
+							activeChar.sendPacket(SystemMessageId.DEATH_PENALTY_LIFTED);
 							activeChar.sendPacket(new EtcStatusUpdate(activeChar));
 							return true;
 						}

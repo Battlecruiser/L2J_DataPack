@@ -82,7 +82,7 @@ public class ManorManager implements IBypassHandler
 			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
+				activeChar.sendPacket(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
 				return true;
 			}
 			
@@ -163,7 +163,7 @@ public class ManorManager implements IBypassHandler
 					}
 					if (castle.isNextPeriodApproved())
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
+						activeChar.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
 					}
 					else
 					{
@@ -177,7 +177,7 @@ public class ManorManager implements IBypassHandler
 					}
 					if (castle.isNextPeriodApproved())
 					{
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
+						activeChar.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM);
 					}
 					else
 					{

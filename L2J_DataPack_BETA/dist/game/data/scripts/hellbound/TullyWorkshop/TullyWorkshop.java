@@ -46,7 +46,6 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
@@ -1000,7 +999,7 @@ public class TullyWorkshop extends Quest
 				{
 					if (party.getPartyLeaderOID() != player.getObjectId())
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+						player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					}
 					else
 					{
@@ -1104,7 +1103,7 @@ public class TullyWorkshop extends Quest
 			{
 				if (party.getPartyLeaderOID() != player.getObjectId())
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					return null;
 				}
 				
@@ -1135,7 +1134,7 @@ public class TullyWorkshop extends Quest
 			{
 				if (party.getPartyLeaderOID() != player.getObjectId())
 				{
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 				}
 				else if (!Util.checkIfInRange(3000, player, npc, true))
 				{

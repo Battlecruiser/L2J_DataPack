@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.item.L2Weapon;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class FishingSkill implements ISkillHandler
@@ -52,12 +51,12 @@ public class FishingSkill implements ISkillHandler
 			if (skill.getSkillType() == L2SkillType.PUMPING)
 			{
 				//Pumping skill is available only while fishing
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING));
+				player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
 			}
 			else if (skill.getSkillType() == L2SkillType.REELING)
 			{
 				//Reeling skill is available only while fishing
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING));
+				player.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING);
 			}
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -74,7 +73,7 @@ public class FishingSkill implements ISkillHandler
 		int dmg = (int) (skill.getPower() * gradebonus * SS);
 		if (player.getSkillLevel(1315) <= skill.getLevel() - 2) //1315 - Fish Expertise
 		{//Penalty
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY));
+			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
 			pen = 50;
 			int penatlydmg = dmg - pen;
 			if (player.isGM())

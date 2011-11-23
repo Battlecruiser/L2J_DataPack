@@ -64,7 +64,7 @@ public class NornilsPower implements ISkillHandler
 			}			
 		}
 		else
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
+			activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 	}
 
 	public L2SkillType[] getSkillIds()

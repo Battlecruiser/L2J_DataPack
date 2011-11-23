@@ -106,14 +106,16 @@ public class Extractable implements ISkillHandler
 		//FIXME: Remove this once skill reuse will be global for main/subclass.
 		if (player.isSubClassActive() && (skill.getReuseDelay() > 0) && !Util.contains(protectedSkillIds, skill.getId()))
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIN_CLASS_SKILL_ONLY));
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
+			player.sendPacket(SystemMessageId.MAIN_CLASS_SKILL_ONLY);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			sm.addSkillName(skill);
+			player.sendPacket(sm);
 			return;
 		}
 		
 		if (createItemID[0] <= 0)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 			return;
 		}
 		else
@@ -128,7 +130,7 @@ public class Extractable implements ISkillHandler
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
 				{
 					_log.warning("Extractable Item Skill Id:" + skill.getId() + " createItemID " + createItemID[i] + " doesn't have a template!");
-					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+					player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 					return;
 				}
 				

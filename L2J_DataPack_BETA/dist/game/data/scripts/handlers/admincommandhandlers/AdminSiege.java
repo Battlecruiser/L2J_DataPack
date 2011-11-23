@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 
@@ -104,14 +103,14 @@ public class AdminSiege implements IAdminCommandHandler
 			if (command.equalsIgnoreCase("admin_add_attacker"))
 			{
 				if (player == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else
 					castle.getSiege().registerAttacker(player, true);
 			}
 			else if (command.equalsIgnoreCase("admin_add_defender"))
 			{
 				if (player == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else
 					castle.getSiege().registerDefender(player, true);
 			}
@@ -147,7 +146,7 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_setcastle"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else
 					castle.setOwner(player.getClan());
 			}
@@ -187,7 +186,7 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_clanhallset"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else if (clanhall.getOwnerId() > 0)
 					activeChar.sendMessage("This ClanHall isn't free!");
 				else if (player.getClan().getHasHideout() == 0)

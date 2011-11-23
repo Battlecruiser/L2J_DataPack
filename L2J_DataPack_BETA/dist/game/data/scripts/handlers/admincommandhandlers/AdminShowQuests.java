@@ -34,7 +34,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.QuestList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Korvin
@@ -85,7 +84,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		

@@ -68,7 +68,7 @@ public class InstanceZone implements IUserCommandHandler
 					if (firstMessage)
 					{
 						firstMessage = false;
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT));
+						activeChar.sendPacket(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT);
 					}
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime%3600) / 60);
@@ -82,7 +82,7 @@ public class InstanceZone implements IUserCommandHandler
 					InstanceManager.getInstance().deleteInstanceTime(activeChar.getObjectId(), instanceId);
 			}
 		if (firstMessage)
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
+			activeChar.sendPacket(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT);
 		return true;
 	}
 }

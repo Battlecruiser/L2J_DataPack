@@ -40,7 +40,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 
 /**
@@ -117,12 +116,12 @@ public class AdminAdmin implements IAdminCommandHandler
 			if (activeChar.isSilenceMode()) // already in message refusal mode
 			{
 				activeChar.setSilenceMode(false);
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_ACCEPTANCE_MODE));
+				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);
 			}
 			else
 			{
 				activeChar.setSilenceMode(true);
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_REFUSAL_MODE));
+				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 			}
 			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}

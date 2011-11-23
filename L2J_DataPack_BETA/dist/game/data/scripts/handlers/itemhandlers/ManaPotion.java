@@ -18,7 +18,6 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class ManaPotion extends ItemSkills
 {
@@ -31,7 +30,7 @@ public class ManaPotion extends ItemSkills
 	{
 		if (!Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
 		{
-			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
+			playable.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 			return;
 		}
 		super.useItem(playable, item, forceUse);

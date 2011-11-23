@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 
@@ -87,7 +86,7 @@ public class ChatAll implements IChatHandler
 		{
 			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 				return;
 			}
 			
@@ -96,7 +95,7 @@ public class ChatAll implements IChatHandler
 			 * Match any character that is NOT a . character. Between one and unlimited times as possible, giving back as needed (greedy)
 			 */
 			if (text.matches("\\.{1}[^\\.]+"))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_SYNTAX));
+				activeChar.sendPacket(SystemMessageId.INCORRECT_SYNTAX);
 			else
 			{			
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);

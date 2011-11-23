@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -44,13 +43,13 @@ public class ChatTell implements IChatHandler
 	{
 		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
 		
 		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.isGM())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_PROHIBITED));
+			activeChar.sendPacket(SystemMessageId.CHATTING_PROHIBITED);
 			return;
 		}
 		
@@ -72,7 +71,7 @@ public class ChatTell implements IChatHandler
 			}
 			if (receiver.isChatBanned())
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
+				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
 			if (receiver.getClient() == null || receiver.getClient().isDetached())
@@ -90,10 +89,10 @@ public class ChatTell implements IChatHandler
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
 			}
 			else
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
+				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 		}
 		else
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME));
+			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 	}
 	
 	/**

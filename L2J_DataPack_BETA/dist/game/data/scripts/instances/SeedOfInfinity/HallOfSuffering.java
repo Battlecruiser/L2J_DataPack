@@ -139,12 +139,12 @@ public class HallOfSuffering extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			return false;
 		}
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getPartyMembers())
@@ -191,7 +191,7 @@ public class HallOfSuffering extends Quest
 		{
 			if (!(world instanceof HSWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
 			teleportPlayer(player, coords, world.instanceId);

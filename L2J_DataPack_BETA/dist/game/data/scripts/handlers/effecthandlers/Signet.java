@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.l2skills.L2SkillSignet;
 import com.l2jserver.gameserver.skills.l2skills.L2SkillSignetCasttime;
@@ -83,7 +82,7 @@ public class Signet extends L2Effect
 		
 		if (mpConsume > getEffector().getCurrentMp())
 		{
-			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+			getEffector().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		

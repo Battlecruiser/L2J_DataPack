@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.templates.effects.EffectTemplate;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
@@ -92,7 +91,7 @@ public class SignetAntiSummon extends L2Effect
 					{
 						if (mpConsume > getEffector().getCurrentMp())
 						{
-							getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP));
+							getEffector().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 							return false;
 						}
 						
