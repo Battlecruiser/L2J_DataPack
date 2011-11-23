@@ -27,7 +27,7 @@
 	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 
-	<target name="init" depends="clean, getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
+	<target name="init" depends="clean,checkRequirements,getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
 	</target>
 
@@ -48,6 +48,16 @@
 
 	<target name="clean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
 		<delete file="${build}/L2J_DataPack_BETA.zip" />
+	</target>
+
+	<target name="checkRequirements" description="Check Requirements">
+		<fail message="Ant 1.8.2 is required. But your version is ${ant.version}">
+			<condition>
+				<not>
+					<antversion atleast="1.8.2" />
+				</not>
+			</condition>
+		</fail>
 	</target>
 
 	<target name="getChangelogDateVersion" description="Get Changelog, Date, Version">
