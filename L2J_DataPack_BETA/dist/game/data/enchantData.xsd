@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="enchant" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="isBlessed" type="xs:boolean" />
+						<xs:attribute name="isCrystal" type="xs:boolean" />
+						<xs:attribute name="isSafe" type="xs:boolean" />
+						<xs:attribute name="isWeapon" type="xs:boolean" />
+						<xs:attribute name="maxEnchant">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="65535" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="successRate" type="xs:decimal" />
+						<xs:attribute name="targetGrade">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="a" />
+									<xs:enumeration value="b" />
+									<xs:enumeration value="c" />
+									<xs:enumeration value="d" />
+									<xs:enumeration value="s" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="support" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="isWeapon" type="xs:boolean" />
+						<xs:attribute name="maxEnchant" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="65535" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="successBonus" type="xs:decimal" use="required" />
+						<xs:attribute name="targetGrade" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="a" />
+									<xs:enumeration value="b" />
+									<xs:enumeration value="c" />
+									<xs:enumeration value="d" />
+									<xs:enumeration value="s" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
