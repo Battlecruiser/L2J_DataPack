@@ -176,8 +176,10 @@ public class RainbowSpringsChateau extends Quest
 			for(int arenaId : ARENA_ZONES)
 			{
 				final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside();
-				for(L2Character chr : chars.valueCollection())
+				for(L2Character chr : chars.values(new L2Character[0]))
+				{
 					chr.teleToLocation(TeleportWhereType.Town);
+				}
 			}
 		}
 	}
@@ -639,7 +641,7 @@ public class RainbowSpringsChateau extends Quest
 				continue;
 			
 			final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(id).getCharactersInside();
-			for(L2Character chr : chars.valueCollection())
+			for(L2Character chr : chars.values(new L2Character[0]))
 			{
 				for(L2Skill sk : DEBUFFS)
 					sk.getEffects(chr, chr);
