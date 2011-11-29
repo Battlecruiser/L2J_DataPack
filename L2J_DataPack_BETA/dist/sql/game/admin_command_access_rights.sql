@@ -586,6 +586,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_territory_war_time',1,'false'),
 ('admin_territory_war_start',1,'false'),
 ('admin_territory_war_end',1,'false'),
+('admin_territory_wards_list',1,'false'),
 
 -- ADMIN TEST
 ('admin_test',1,'false'),
