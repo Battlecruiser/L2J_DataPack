@@ -25,7 +25,14 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="successRate" type="xs:decimal" />
+						<xs:attribute name="successRate">
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="1.0" />
+									<xs:maxInclusive value="100.0" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="targetGrade">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
@@ -51,7 +58,14 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="successBonus" type="xs:decimal" use="required" />
+						<xs:attribute name="successBonus" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="1.0" />
+									<xs:maxInclusive value="100.0" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="targetGrade" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
