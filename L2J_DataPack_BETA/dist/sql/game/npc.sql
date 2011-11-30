@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `npc`;
 CREATE TABLE `npc`(
-  `id` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `idTemplate` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `id` smallint(5) unsigned NOT NULL,
+  `idTemplate` smallint(5) unsigned NOT NULL,
   `name` varchar(200) NOT NULL DEFAULT '',
   `serverSideName` tinyint(1) NOT NULL DEFAULT '0',
   `title` varchar(45) NOT NULL DEFAULT '',

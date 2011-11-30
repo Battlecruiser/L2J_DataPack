@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `custom_npc`(
-  `id` mediumint(7) unsigned NOT NULL DEFAULT '0',
-  `idTemplate` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `id` mediumint(7) unsigned NOT NULL,
+  `idTemplate` smallint(5) unsigned NOT NULL,
   `name` varchar(200) NOT NULL DEFAULT '',
   `serverSideName` tinyint(1) NOT NULL DEFAULT '1',
   `title` varchar(45) NOT NULL DEFAULT '',
