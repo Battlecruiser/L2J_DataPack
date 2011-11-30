@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `custom_npcaidata` (
   PRIMARY KEY (`npcId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `custom_npcaidata` VALUES
+INSERT IGNORE INTO `custom_npcaidata` VALUES
 (50007,7,15,0,1000,0,1,1,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (70010,7,15,0,1000,0,1,1,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
 (1000003,7,15,0,1000,0,1,1,0,0,0,0,0,0,0,0,0,0,NULL,300,NULL,0,0,'fighter'),
