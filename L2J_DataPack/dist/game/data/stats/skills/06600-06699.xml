@@ -125,7 +125,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2000" />
-		<set name="Debuff" val="true" />
+		<set name="isDebuff" val="true" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" effectPower="30" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -149,7 +149,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2000" />
-		<set name="Debuff" val="true" />
+		<set name="isDebuff" val="true" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" effectPower="30" abnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.1" />
