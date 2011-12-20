@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<element name="list">
+		<complexType>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="npc" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<attribute name="id" use="required">
+							<simpleType>
+								<restriction base="positiveInteger">
+									<minInclusive value="1" />
+									<maxInclusive value="65535" />
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="lowestTrustLimit" type="positiveInteger" use="optional" />
+						<attribute name="maxHellboundLvl" use="required">
+							<simpleType>
+								<restriction base="positiveInteger">
+									<minInclusive value="1" />
+									<maxInclusive value="100" />
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="minHellboundLvl" use="required">
+							<simpleType>
+								<restriction base="positiveInteger">
+									<minInclusive value="1" />
+									<maxInclusive value="11" />
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="points" type="integer" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
