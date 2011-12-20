@@ -163,7 +163,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				
 				try
 				{
-					FileOutputStream file = new FileOutputStream(Config.DATAPACK_ROOT+"/data/events/" + tempName);
+					FileOutputStream file = new FileOutputStream(Config.DATAPACK_ROOT+"data/events/" + tempName);
 					PrintStream p = new PrintStream(file);
 					p.println(activeChar.getName());
 					p.println(tempBuffer);
