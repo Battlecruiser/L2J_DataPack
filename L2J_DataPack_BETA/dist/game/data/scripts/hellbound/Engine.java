@@ -135,7 +135,7 @@ public class Engine extends Quest implements Runnable
 	
 	private void loadPointsInfoData()
 	{
-		String pointsInfoFile = "data/scripts/hellbound/trust_points.xml";
+		String pointsInfoFile = "data/hellboundTrustPoints.xml";
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
