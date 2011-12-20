@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<element name="list">
+		<complexType>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="spawnZones" minOccurs="1" maxOccurs="1">
+					<complexType>
+						<sequence minOccurs="1" maxOccurs="1">
+							<element name="zone" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+									<sequence minOccurs="1" maxOccurs="1">
+										<element name="point" maxOccurs="unbounded" minOccurs="1">
+											<complexType>
+												<attribute name="x" type="integer" use="required" />
+												<attribute name="y" type="integer" use="required" />
+											</complexType>
+										</element>
+									</sequence>
+									<attribute name="id" type="nonNegativeInteger" use="required" />
+									<attribute name="maxZ" type="integer" use="required" />
+									<attribute name="minZ" type="integer" use="required" />
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="npc" minOccurs="1" maxOccurs="1">					<complexType>						<sequence minOccurs="1" maxOccurs="1">							<element name="spawn" minOccurs="1" maxOccurs="unbounded">								<complexType>									<choice minOccurs="1" maxOccurs="1">										<element name="loc" minOccurs="1" maxOccurs="1">											<complexType>												<attribute name="heading" type="nonNegativeInteger" use="required" />												<attribute name="mustKill" type="boolean" use="optional" />												<attribute name="x" type="integer" use="required" />												<attribute name="y" type="integer" use="required" />												<attribute name="z" type="integer" use="required" />											</complexType>										</element>
+										<element name="zone" minOccurs="1" maxOccurs="1">
+											<complexType>
+												<attribute name="count" type="positiveInteger" use="required" />
+												<attribute name="id" type="positiveInteger" use="required" />
+												<attribute name="mustKill" type="boolean" use="optional" />
+											</complexType>
+										</element>
+									</choice>
+									<attribute name="flag" type="nonNegativeInteger" use="required" />
+									<attribute name="npcId">
+										<simpleType>
+											<restriction base="positiveInteger">
+												<minInclusive value="1" />
+												<maxInclusive value="65535" />
+											</restriction>
+										</simpleType>
+									</attribute>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
