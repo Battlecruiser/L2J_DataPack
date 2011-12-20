@@ -226,10 +226,10 @@ public class FinalEmperialTomb extends Quest
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/data/scripts/instances/FinalEmperialTomb/data.xml");
+			File file = new File(Config.DATAPACK_ROOT + "/data/spawnZones/final_emperial_tomb.xml");
 			if (!file.exists())
 			{
-				_log.severe("[Final Emperial Tomb] Missing data.xml. The quest wont work without it!");
+				_log.severe("[Final Emperial Tomb] Missing final_emperial_tomb.xml. The quest wont work without it!");
 				return;
 			}
 			
@@ -389,7 +389,7 @@ public class FinalEmperialTomb extends Quest
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "[Final Emperial Tomb] Could not parse data.xml file: " + e.getMessage(), e);
+			_log.log(Level.WARNING, "[Final Emperial Tomb] Could not parse final_emperial_tomb.xml file: " + e.getMessage(), e);
 		}
 		if (debug)
 		{
