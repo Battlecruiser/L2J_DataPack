@@ -19,19 +19,18 @@
 		</for>
 	</skill>
 	<skill id="3601" levels="10" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.09 </table>
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.11 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			<add order="0x40" stat="atkCountMax" val="4" />
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
