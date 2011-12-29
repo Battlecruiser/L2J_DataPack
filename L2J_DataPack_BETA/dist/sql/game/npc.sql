@@ -43,7 +43,7 @@ CREATE TABLE `npc`(
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `npc` VALUES
-(100,100,'Thomas D. Turkey',0,'',0,'LineageMonster4.br_crazy_turkey','25','35',80,'male','L2Npc',40,'680','2000','0','0.9',40,43,30,21,20,20,0,0,'8.47458','60000','5.78704','200000',253,1,333,0,0,0,19.5,160,0,1),
+(100,100,'Thomas D. Turkey',0,'',0,'LineageMonster4.br_crazy_turkey',25,34,80,'male','L2Npc',40,'680','2000','0','0.9',40,43,30,21,20,20,0,0,'8.47458','60000','5.78704','200000',253,1,333,0,0,0,19.5,160,0,1),
 (101,101,'',0,'',0,'LineageNPC.clear_npc','0.1','0.1',80,'male','L2Npc',40,'2880.37628','1674.8','8.5','3',40,43,30,21,20,20,0,0,'894.75854','341.375','611.00409','249.80341',253,4,333,0,0,0,1,1,0,1),
 (102,102,'Santa Trainee',0,'',0,'LineageNPC.e_smith_master_MDwarf','8','16.5',70,'male','L2Npc',40,'2444.46819','1345.8','7.5','2.7',40,43,30,21,20,20,490,10,'688.86373','295.91597','470.40463','216.53847',253,4,333,0,0,0,50,120,0,1),
 (103,103,'Christmas Santa',0,'Merry Christmas!',0,'LineageNPC2.br_xmas08_santa','8','24',70,'male','L2Npc',40,'2444.46819','1345.8','7.5','2.7',40,43,30,21,20,20,490,10,'688.86373','295.91597','470.40463','216.53847',253,4,333,0,0,0,50,120,0,1),
@@ -79,29 +79,29 @@ INSERT INTO `npc` VALUES
 (133,133,'Sujin',0,'Blessed Child',0,'LineageNPC2.br_blessed_taiboy','10','13',80,'female','L2Npc',40,'2880.37628','1674.8','8.5','3',40,43,30,21,20,20,0,0,'894.75854','341.375','611.00409','249.80341',253,4,333,0,0,0,1,1,0,1),
 (134,134,'Dragon Master Lee',0,'',0,'LineageNPC2.br_dragonmaster_lee','8','19.3',55,'male','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,42,180,0,1), -- TODO: Stats require check
 (135,135,'Dragon Master Karin',0,'',0,'LineageNPC2.br_dragonmaster_karin','8','18.6',55,'female','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,42,180,0,1), -- TODO: Stats require check
-(136,136,'Shiny Platform',0,'',0,'LineageNPC2.br_shiny_platform',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(137,137,'Big Wedding Cake',0,'',0,'LineageNPC2.br_big_wedding_cake',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(138,138,'Jetbike',0,'',0,'LineageNPC2.br_z_bike',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(136,136,'Shiny Platform',0,'',0,'LineageNPC2.br_shiny_platform',21.5,12.5,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(137,137,'Big Wedding Cake',0,'',0,'LineageNPC2.br_big_wedding_cake',25.5,27,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(138,138,'Jetbike',0,'',0,'LineageNPC2.br_z_bike',21.5,24,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
 (139,139,'Birthday Cake',0,'',0,'LineageNPC2.br_birthday_cake','0.01','0.01',70,'male','L2BirthdayCake',40,'2444.46819','1345.8','7.5','2.7',40,43,30,21,20,10,490,10,'688.86373','295.91597','470.40463','216.53847',253,4,333,0,0,0,30,120,0,1),
-(140,140,'Block Checker Blue',0,'',0,'LineageNPC2.br_block_checker',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(141,141,'Dimensional Door',0,'Customer Joining',0,'LineageNPC2.br_dimension_door',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(142,142,'Dimensional Door',0,'Customer Joining',0,'LineageNPC2.br_dimension_door',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(143,143,'Totem of Body',0,'',0,'LineageNPC2.br_totem_of_body',25,35,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(144,144,'Totem of Spirit',0,'',0,'LineageNPC2.br_totem_of_mind',25,35,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(145,145,'Totem of Bravery',0,'',0,'LineageNPC2.br_totem_of_bravery',25,35,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(146,146,'Totem of Fortitude',0,'',0,'LineageNPC2.br_totem_of_fortitude',25,35,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(147,147,'Party Cake',0,'',0,'LineageNPC2.br_birthday_cake',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(148,148,'Campfire',0,'',0,'LineageNpc2.br_campfire',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(149,149,'Angry Bunny',0,'',0,'LineageNpc2.br_Event_Baby_Rabbit',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(150,150,'Large Angry Bunny',0,'',0,'LineageNpc2.br_Event_Baby_Rabbit_Boss',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(151,151,'Fearless Angry Bunny',0,'',0,'LineageNpc2.br_Event_Sad_Baby_Rabbit',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(152,152,'Large Fearless Angry Bunny',0,'',0,'LineageNpc2.br_Event_Sad_Baby_Rabbit_Boss',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(153,153,'Magic Research Institute Employee',0,'Event Manager',0,'LineageNPC.e_smith_Fdwarf',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(140,140,'Block Checker Blue',0,'',0,'LineageNPC2.br_block_checker',8,21,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(141,141,'Dimensional Door',0,'Customer Joining',0,'LineageNPC2.br_dimension_door',24,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(142,142,'Dimensional Door',0,'Customer Joining',0,'LineageNPC2.br_dimension_door',24,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(143,143,'Totem of Body',0,'',0,'LineageNPC2.br_totem_of_body',9,16,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(144,144,'Totem of Spirit',0,'',0,'LineageNPC2.br_totem_of_mind',9,16,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(145,145,'Totem of Bravery',0,'',0,'LineageNPC2.br_totem_of_bravery',9,16,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(146,146,'Totem of Fortitude',0,'',0,'LineageNPC2.br_totem_of_fortitude',9,16,80,'etc','L2Totem',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(147,147,'Party Cake',0,'',0,'LineageNPC2.br_birthday_cake',0.01,5.5,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(148,148,'Campfire',0,'',0,'LineageNpc2.br_campfire',29,31,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(149,149,'Angry Bunny',0,'',0,'LineageNpc2.br_Event_Baby_Rabbit',8,5.5,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(150,150,'Large Angry Bunny',0,'',0,'LineageNpc2.br_Event_Baby_Rabbit_Boss',16,8.5,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(151,151,'Fearless Angry Bunny',0,'',0,'LineageNpc2.br_Event_Sad_Baby_Rabbit',8,5.5,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(152,152,'Large Fearless Angry Bunny',0,'',0,'LineageNpc2.br_Event_Sad_Baby_Rabbit_Boss',16,8.5,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(153,153,'Magic Research Institute Employee',0,'Event Manager',0,'LineageNPC.e_smith_Fdwarf',8,17.5,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
 (154,154,'',0,'',0,'LineageNPC.clear_npc',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
 (155,155,'',0,'',0,'LineageNPC.clear_npc',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(156,156,'Raging Bunny',0,'',0,'LineageNpc2.br_Event_Rabbit',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(157,157,'Large Raging Bunny',0,'',0,'LineageNpc2.br_Event_Rabbit_Boss',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
-(158,158,'Wood Horse',0,'',0,'LineageNpc2.br_wood_horse',25,35,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(156,156,'Raging Bunny',0,'',0,'LineageNpc2.br_Event_Rabbit',16,8.5,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(157,157,'Large Raging Bunny',0,'',0,'LineageNpc2.br_Event_Rabbit_Boss',23,15.7,80,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
+(158,158,'Wood Horse',0,'',0,'LineageNpc2.br_wood_horse',32,19.5,80,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,1,333,0,0,0,60,160,0,1), -- TODO: Stats require check
 (1501,1501,'Majo Agathion',0,'',0,'LineageNPC2.br_agathion_mazu','5','3.75',55,'female','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,60,180,0,1),
 (1502,1502,'Gold Agathion',0,'',0,'LineageNPC2.br_agathion_mazu','5','3.75',55,'female','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,60,180,0,1),
 (1503,1503,'Black Agathion',0,'',0,'LineageNPC2.br_agathion_mazu','5','3.75',55,'female','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,60,180,0,1),
@@ -449,7 +449,7 @@ INSERT INTO `npc` VALUES
 (13193,13193,'',0,'',0,'LineageNpcEV.obelisk_of_middle_square','229','177.5',55,'female','L2Npc',40,'1673.05473','889.8','0','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,1,180,0,1),
 (13194,13194,'',0,'',0,'LineageNPC.clear_npc','0.1','0.1',85,'male','L2Npc',40,'4234.06312688557','1846.8','0','3',40,43,30,21,20,20,0,0,'1188.87259499001','60000','5.78704','200000',253,1,333,0,0,0,1,120,0,1),
 (13195,13195,'',0,'',0,'LineageNPC.clear_npc','0.1','0.1',85,'male','L2Npc',40,'4234.06312688557','1846.8','0','3',40,43,30,21,20,20,0,0,'1188.87259499001','60000','5.78704','200000',253,1,333,0,0,0,1,120,0,1),
-(13196,13196,'Great Pig',0,'Mis-summoned',0,'LineageNPC2.E_pig_ball','15','18.3',85,'male','L2Npc',40,'7563.29113924051','1846.8','0','3',40,43,30,21,20,20,0,0,'1188.87259499001','60000','5.78704','200000',253,1,333,0,0,0,60,120,0,1),
+(13196,13196,'Great Pig',0,'Mis-summoned',0,'LineageNPC2.E_pig_ball','15','18.3',85,'male','L2Monster',40,'7563.29113924051','1846.8','0','3',40,43,30,21,20,20,0,0,'1188.87259499001','60000','5.78704','200000',253,1,333,0,0,0,60,120,0,1),
 (13197,13197,'Guardian\'s Strider',0,'',0,'LineageNPC.training_doll_150p','13','40',55,'etc','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,50,180,0,1),
 (13198,13198,'Native',0,'',0,'LineageNPC.a_common_peopleC_Mhuman','10','24',55,'male','L2Npc',40,'1673.05473','889.8','6.5','2.4',40,43,30,21,20,25,0,0,'388.11142','223.6362','265.02979','163.64727',253,4,333,0,0,0,50,180,0,1),
 (13199,13199,'Native',0,'',0,'LineageNPC.a_common_peopleB_FHuman','8','20.5',79,'female','L2Npc',40,'3127.82459333517','1641','8.5','3',40,43,30,21,20,25,0,0,'929.930814318487','337.07008','635.022195830619','246.65326',253,4,333,0,0,0,50,180,0,1),
