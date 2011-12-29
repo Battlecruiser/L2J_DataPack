@@ -29,7 +29,7 @@ import com.l2jserver.util.Rnd;
  */
 public class Q461_RumbleInTheBase extends Quest
 {
-	public static final String qn = "Q461_RumbleInTheBase";
+	public static final String qn = "461_RumbleInTheBase";
 	
 	// NPC
 	public static final int Stan = 30200;

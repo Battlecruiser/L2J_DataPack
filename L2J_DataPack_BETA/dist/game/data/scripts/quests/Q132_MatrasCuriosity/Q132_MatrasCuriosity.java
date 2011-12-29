@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q132_MatrasCuriosity extends Quest
 {
-	private static final String qn = "Q132_MatrasCuriosity";
+	private static final String qn = "132_MatrasCuriosity";
 	
 	// NPCs
 	private static final int MATRAS = 32245;
