@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q692_HowtoOpposeEvil extends Quest
 {
-	private static final String QN = "Q692_HowtoOpposeEvil";
+	private static final String QN = "692_HowtoOpposeEvil";
 	private static final int DILIOS = 32549;
 	private static final int LEKONS_CERTIFICATE = 13857;
 	private static final int[] QUEST_ITEMS = { 13863, 13864, 13865, 13866, 13867, 15535, 15536 };
