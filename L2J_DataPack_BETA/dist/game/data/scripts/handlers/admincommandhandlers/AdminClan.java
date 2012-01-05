@@ -14,9 +14,11 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.NoSuchElementException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.StringTokenizer;
 
+import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
@@ -25,6 +27,7 @@ import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -32,160 +35,202 @@ import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
 import com.l2jserver.gameserver.network.communityserver.writepackets.WorldInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author ThE_PuNiSHeR a.k.a UnAfraid
+ * @author UnAfraid, Zoey76
  */
 public class AdminClan implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_clan_info",
-		"admin_clan_changeleader"
+		"admin_clan_info", "admin_clan_changeleader"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String cmd = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String cmd = st.nextToken();
 		if (cmd.startsWith("admin_clan_info"))
 		{
-			try
+			String val;
+			L2PcInstance player = null;
+			if (st.hasMoreTokens())
 			{
-               int objectId = 0;
-               try
-               {
-                   objectId = Integer.parseInt(st.nextToken());
-               }
-               catch (NoSuchElementException NSEE)
-               {
-                   objectId = activeChar.getTargetId();
-               }
-				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-				if (player != null)
+				val = st.nextToken();
+				// From the HTML we receive player's object Id.
+				if (Util.isDigit(val))
 				{
-					L2Clan clan = player.getClan();
-					if (clan != null)
+					player = L2World.getInstance().getPlayer(Integer.parseInt(val));
+					if (player == null)
 					{
-						try
-						{
-							NpcHtmlMessage msg = new NpcHtmlMessage(0);
-							String htm = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/claninfo.htm");
-							msg.setHtml(htm.toString());
-							msg.replace("%clan_name%", clan.getName());
-							msg.replace("%clan_leader%", clan.getLeaderName());
-							msg.replace("%clan_level%", String.valueOf(clan.getLevel()));
-							msg.replace("%clan_has_castle%", clan.getHasCastle() > 0 ? CastleManager.getInstance().getCastleById(clan.getHasCastle()).getName() : "No");
-							msg.replace("%clan_has_clanhall%", clan.getHasHideout() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHasHideout()).getName() : "No");
-							msg.replace("%clan_has_fortress%", clan.getHasFort() > 0 ? FortManager.getInstance().getFortById(clan.getHasFort()).getName() : "No");
-							msg.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
-							msg.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
-							msg.replace("%clan_ally%", clan.getAllyId() > 0 ? clan.getAllyName() : "Not in ally");
-							msg.replace("%current_player_objectId%", String.valueOf(objectId));
-							msg.replace("%current_player_name%", player.getName());
-							activeChar.sendPacket(msg);
-							
-						}
-						catch (NullPointerException npe)
-						{
-							npe.printStackTrace();
-						}
-						
-					}
-					else
-					{
-						activeChar.sendMessage("Clan not found.");
+						activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Player is offline!");
+					player = L2World.getInstance().getPlayer(val);
+					if (player == null)
+					{
+						activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_TRY_AGAIN);
+						return false;
+					}
+				}
+			}
+			else
+			{
+				L2Object targetObj = activeChar.getTarget();
+				if (targetObj instanceof L2PcInstance)
+				{
+					player = targetObj.getActingPlayer();
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return false;
 				}
 			}
-			catch (NumberFormatException nfe)
+			
+			final L2Clan clan = player.getClan();
+			if (clan == null)
 			{
-				activeChar.sendMessage("This shouldn't happening");
+				activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
 				return false;
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			
+			final NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final String htm = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/claninfo.htm");
+			html.setHtml(htm.toString());
+			html.replace("%clan_name%", clan.getName());
+			html.replace("%clan_leader%", clan.getLeaderName());
+			html.replace("%clan_level%", String.valueOf(clan.getLevel()));
+			html.replace("%clan_has_castle%", clan.getHasCastle() > 0 ? CastleManager.getInstance().getCastleById(clan.getHasCastle()).getName() : "No");
+			html.replace("%clan_has_clanhall%", clan.getHasHideout() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHasHideout()).getName() : "No");
+			html.replace("%clan_has_fortress%", clan.getHasFort() > 0 ? FortManager.getInstance().getFortById(clan.getHasFort()).getName() : "No");
+			html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
+			html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
+			html.replace("%clan_ally%", clan.getAllyId() > 0 ? clan.getAllyName() : "Not in ally");
+			html.replace("%current_player_objectId%", String.valueOf(player.getObjectId()));
+			html.replace("%current_player_name%", player.getName());
+			activeChar.sendPacket(html);
 		}
 		else if (cmd.startsWith("admin_clan_changeleader"))
 		{
-			try
+			String val;
+			L2PcInstance player = null;
+			if (st.hasMoreTokens())
 			{
-				int objectId = Integer.parseInt(st.nextToken());
-				
-				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-				if (player != null)
+				val = st.nextToken();
+				// From the HTML we receive player's object Id.
+				if (Util.isDigit(val))
 				{
-					L2Clan clan = player.getClan();
-					if (clan == null)
+					player = L2World.getInstance().getPlayer(Integer.parseInt(val));
+					if (player == null)
 					{
-						activeChar.sendMessage("Player don't have clan");
+						activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 						return false;
-					}
-					for (L2ClanMember member : clan.getMembers())
-					{
-						if (member.getObjectId() == player.getObjectId())
-						{
-							L2PcInstance exLeader = clan.getLeader().getPlayerInstance();
-							if (exLeader != null)
-							{
-								SiegeManager.getInstance().removeSiegeSkills(exLeader);
-								exLeader.setClan(clan);
-								exLeader.setClanPrivileges(L2Clan.CP_NOTHING);
-								exLeader.broadcastUserInfo();
-								exLeader.setPledgeClass(exLeader.getClan().getClanMember(exLeader.getObjectId()).calculatePledgeClass(exLeader));
-								exLeader.broadcastUserInfo();
-								exLeader.checkItemRestriction();
-							}
-							else
-							{
-								// TODO: with query?
-							}
-							
-							clan.setLeader(member);
-							clan.updateClanInDB();
-							
-							L2PcInstance newLeader = member.getPlayerInstance();
-							newLeader.setClan(clan);
-							newLeader.setPledgeClass(member.calculatePledgeClass(newLeader));
-							newLeader.setClanPrivileges(L2Clan.CP_ALL);
-							
-							if (clan.getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel())
-								SiegeManager.getInstance().addSiegeSkills(newLeader);
-							
-							newLeader.broadcastUserInfo();
-							
-							clan.broadcastClanStatus();
-							
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_C1);
-							sm.addString(newLeader.getName());
-							clan.broadcastToOnlineMembers(sm);
-							activeChar.sendMessage("Clan leader has been changed!");
-							CommunityServerThread.getInstance().sendPacket(new WorldInfo(null, clan, WorldInfo.TYPE_UPDATE_CLAN_DATA));
-						}
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Player is offline");
+					player = L2World.getInstance().getPlayer(val);
+					if (player == null)
+					{
+						activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_TRY_AGAIN);
+						return false;
+					}
 				}
 			}
-			catch (Exception e)
+			else
 			{
-				e.printStackTrace();
+				L2Object targetObj = activeChar.getTarget();
+				if (targetObj instanceof L2PcInstance)
+				{
+					player = targetObj.getActingPlayer();
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					return false;
+				}
+			}
+			
+			final L2Clan clan = player.getClan();
+			if (clan == null)
+			{
+				activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
+				return false;
+			}
+			
+			final L2ClanMember member = clan.getClanMember(player.getObjectId());
+			if (member != null)
+			{
+				if ((clan.getLeader() != null) && (clan.getLeader().getPlayerInstance() != null))
+				{
+					final L2PcInstance exLeader = clan.getLeader().getPlayerInstance();
+					SiegeManager.getInstance().removeSiegeSkills(exLeader);
+					exLeader.setClan(clan);
+					exLeader.setClanPrivileges(L2Clan.CP_NOTHING);
+					exLeader.broadcastUserInfo();
+					exLeader.setPledgeClass(exLeader.getClan().getClanMember(exLeader.getObjectId()).calculatePledgeClass(exLeader));
+					exLeader.broadcastUserInfo();
+					exLeader.checkItemRestriction();
+				}
+				else if (clan.getLeaderId() > 0)
+				{
+					Connection con = null;
+					try
+					{
+						con = L2DatabaseFactory.getInstance().getConnection();
+						PreparedStatement statement = con.prepareStatement("UPDATE characters SET clan_privs = ? WHERE charId = ?");
+						statement.setInt(1, L2Clan.CP_NOTHING);
+						statement.setInt(2, clan.getLeaderId());
+						statement.execute();
+						
+						if (statement.getUpdateCount() == 0)
+						{
+							activeChar.sendPacket(SystemMessageId.ID_NOT_EXIST);
+						}
+						statement.close();
+					}
+					catch (Exception e)
+					{
+						activeChar.sendPacket(SystemMessageId.NOT_WORKING_PLEASE_TRY_AGAIN_LATER);
+					}
+					finally
+					{
+						L2DatabaseFactory.close(con);
+					}
+				}
+				
+				clan.setLeader(member);
+				clan.updateClanInDB();
+				
+				player.setClan(clan);
+				player.setPledgeClass(member.calculatePledgeClass(player));
+				player.setClanPrivileges(L2Clan.CP_ALL);
+				
+				if (clan.getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel())
+				{
+					SiegeManager.getInstance().addSiegeSkills(player);
+				}
+				
+				player.broadcastUserInfo();
+				clan.broadcastClanStatus();
+				
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_C1);
+				sm.addString(player.getName());
+				clan.broadcastToOnlineMembers(sm);
+				activeChar.sendPacket(sm);
+				CommunityServerThread.getInstance().sendPacket(new WorldInfo(null, clan, WorldInfo.TYPE_UPDATE_CLAN_DATA));
 			}
 		}
-		
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
