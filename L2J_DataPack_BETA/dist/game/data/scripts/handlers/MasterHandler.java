@@ -93,6 +93,7 @@ import handlers.admincommandhandlers.AdminSkill;
 import handlers.admincommandhandlers.AdminSpawn;
 import handlers.admincommandhandlers.AdminSummon;
 import handlers.admincommandhandlers.AdminTarget;
+import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
@@ -420,6 +421,7 @@ public class MasterHandler
 			AdminSpawn.class,
 			AdminSummon.class,
 			AdminTarget.class,
+			AdminTargetSay.class,
 			AdminTeleport.class,
 			AdminTerritoryWar.class,
 			AdminTest.class,
