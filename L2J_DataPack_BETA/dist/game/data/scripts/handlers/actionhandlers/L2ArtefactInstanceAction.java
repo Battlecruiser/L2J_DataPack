@@ -44,6 +44,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
 	 */
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (!((L2Npc)target).canTarget(activeChar))
@@ -73,6 +74,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ArtefactInstance;

@@ -400,24 +400,29 @@ public class Beleth extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if ((npc.getNpcId() == 29118) && (player != null))
+		if (npc == null)
 		{
-			if (player.getParty() != null)
+			return super.onKill(npc, killer, isPet);
+		}
+		
+		if ((npc.getNpcId() == 29118) && (killer != null))
+		{
+			if (killer.getParty() != null)
 			{
-				if (player.getParty().getCommandChannel() != null)
+				if (killer.getParty().getCommandChannel() != null)
 				{
-					belethKiller = player.getParty().getCommandChannel().getChannelLeader();
+					belethKiller = killer.getParty().getCommandChannel().getChannelLeader();
 				}
 				else
 				{
-					belethKiller = player.getParty().getLeader();
+					belethKiller = killer.getParty().getLeader();
 				}
 			}
 			else
 			{
-				belethKiller = player;
+				belethKiller = killer;
 			}
 			GrandBossManager.getInstance().setBossStatus(29118, 3);
 			long respawnTime = (long) Config.INTERVAL_OF_BELETH_SPAWN + Rnd.get(Config.RANDOM_OF_BELETH_SPAWN);
@@ -426,10 +431,7 @@ public class Beleth extends L2AttackableAIScript
 			GrandBossManager.getInstance().setStatsSet(29118, info);
 			ThreadPoolManager.getInstance().scheduleGeneral(new unlock(), respawnTime);
 			deleteAll();
-			if (npc != null)
-			{
-				npc.deleteMe();
-			}
+			npc.deleteMe();
 			movie = true;
 			beleth = spawn(29118, new Location(16323, 213170, -9357, 49152));
 			beleth.setIsInvul(true);
@@ -483,8 +485,13 @@ public class Beleth extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
+		if (npc == null)
+		{
+			return super.onAttack(npc, attacker, damage, isPet);
+		}
+		
 		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
 		{
 			if ((npc.getObjectId() == allowObjectId) && !attacked)
@@ -501,24 +508,24 @@ public class Beleth extends L2AttackableAIScript
 			{
 				return null;
 			}
-			final double distance = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+			final double distance = Math.sqrt(npc.getPlanDistanceSq(attacker.getX(), attacker.getY()));
 			if ((distance > 500) || (Rnd.get(100) < 80))
 			{
 				for (L2Npc beleth : minions)
 				{
-					if ((beleth != null) && !beleth.isDead() && Util.checkIfInRange(900, beleth, player, false) && !beleth.isCastingNow())
+					if ((beleth != null) && !beleth.isDead() && Util.checkIfInRange(900, beleth, attacker, false) && !beleth.isCastingNow())
 					{
-						beleth.setTarget(player);
+						beleth.setTarget(attacker);
 						beleth.doCast(Fireball);
 					}
 				}
-				if ((beleth != null) && !beleth.isDead() && Util.checkIfInRange(900, beleth, player, false) && !beleth.isCastingNow())
+				if ((beleth != null) && !beleth.isDead() && Util.checkIfInRange(900, beleth, attacker, false) && !beleth.isCastingNow())
 				{
-					beleth.setTarget(player);
+					beleth.setTarget(attacker);
 					beleth.doCast(Fireball);
 				}
 			}
-			else if ((npc != null) && !npc.isDead() && !npc.isCastingNow())
+			else if (!npc.isDead() && !npc.isCastingNow())
 			{
 				if (!npc.getKnownList().getKnownPlayersInRadius(200).isEmpty())
 				{

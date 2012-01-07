@@ -40,6 +40,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		"admin_gmchat_menu"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.startsWith("admin_gmchat"))
@@ -80,6 +81,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		activeChar.addSnooped(player);
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

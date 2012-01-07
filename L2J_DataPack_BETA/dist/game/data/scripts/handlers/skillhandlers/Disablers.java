@@ -614,7 +614,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @param target
 	 * @param type
-	 * @param power
+	 * @param negateLvl 
 	 * @param maxRemoved
 	 * @return
 	 */
@@ -627,7 +627,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @param target
 	 * @param type
-	 * @param power
+	 * @param negateLvl 
 	 * @param skillId
 	 * @param maxRemoved
 	 * @return

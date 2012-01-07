@@ -1177,9 +1177,9 @@ public class TullyWorkshop extends Quest
 			L2MonsterInstance victim2 = spawnedFollowers.get(0); // KIRETCENAH
 			L2MonsterInstance actor = spawnedFollowers.get(2); // DRAXIUS
 			
-			double transferringHp = actor.getMaxHp() * 0.0001;
 			if ((actor != null) && !actor.isDead())
 			{
+				double transferringHp = actor.getMaxHp() * 0.0001;
 				if ((Rnd.get(10000) > 1500) && (victim1 != null) && !victim1.isDead())
 				{
 					if ((actor.getCurrentHp() - transferringHp) > 1)

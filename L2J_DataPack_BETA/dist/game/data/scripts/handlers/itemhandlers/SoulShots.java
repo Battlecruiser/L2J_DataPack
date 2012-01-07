@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.util.Broadcast;
 
 public class SoulShots implements IItemHandler
 {
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))

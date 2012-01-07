@@ -219,29 +219,27 @@ public class DemonPrinceFloor extends Quest
 			teleportPlayer(player, ENTRY_POINT, world.instanceId);
 			return world.instanceId;
 		}
-		else
+		
+		if (!checkTeleport(player))
 		{
-			if (!checkTeleport(player))
-			{
-				return 0;
-			}
-			
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new DPWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
-			{
-				teleportPlayer(partyMember, ENTRY_POINT, instanceId);
-				partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-				world.allowed.add(partyMember.getObjectId());
-			}
-			return instanceId;
+			return 0;
 		}
+		
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new DPWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		
+		for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+		{
+			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
+			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
+			world.allowed.add(partyMember.getObjectId());
+		}
+		return instanceId;
 	}
 	
 	public void setReenterTime(InstanceWorld world)

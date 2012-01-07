@@ -144,6 +144,7 @@ public class eventmodRabbits extends Event
 		// Schedule Event end
 		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
 		{
+			@Override
 			public void run()
 			{
 				timeUp();

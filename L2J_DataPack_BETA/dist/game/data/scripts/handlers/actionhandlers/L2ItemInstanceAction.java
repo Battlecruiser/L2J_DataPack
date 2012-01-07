@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 
 public class L2ItemInstanceAction implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// this causes the validate position handler to do the pickup if the location is reached.
@@ -46,6 +47,7 @@ public class L2ItemInstanceAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ItemInstance;

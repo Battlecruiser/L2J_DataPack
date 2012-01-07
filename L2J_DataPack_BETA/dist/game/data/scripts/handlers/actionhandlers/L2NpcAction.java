@@ -55,6 +55,7 @@ public class L2NpcAction implements IActionHandler
 	 * @param activeChar The L2PcInstance that start an action on the L2Npc
 	 *
 	 */
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (!((L2Npc)target).canTarget(activeChar))
@@ -151,6 +152,7 @@ public class L2NpcAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Npc;

@@ -218,36 +218,31 @@ public class RankuFloor extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			else
-			{
-				teleportPlayer(player, ENTRY_POINT, world.instanceId);
-				return world.instanceId;
-			}
+			teleportPlayer(player, ENTRY_POINT, world.instanceId);
+			return world.instanceId;
 		}
-		else
+		
+		if (!checkTeleport(player))
 		{
-			if (!checkTeleport(player))
-			{
-				return 0;
-			}
-			
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new RWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Tower of Infinitum - Ranku floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
-			{
-				teleportPlayer(partyMember, ENTRY_POINT, instanceId);
-				partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_10, 1, null, true);
-				world.allowed.add(partyMember.getObjectId());
-			}
-			
-			return instanceId;
+			return 0;
 		}
+		
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new RWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Tower of Infinitum - Ranku floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		
+		for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+		{
+			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
+			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_10, 1, null, true);
+			world.allowed.add(partyMember.getObjectId());
+		}
+		
+		return instanceId;
 	}
 	
 	public void setReenterTime(InstanceWorld world)

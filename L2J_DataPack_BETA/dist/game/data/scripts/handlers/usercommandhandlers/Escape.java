@@ -48,6 +48,7 @@ public class Escape implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		// Thanks nbd
@@ -138,6 +139,7 @@ public class Escape implements IUserCommandHandler
 			_activeChar = activeChar;
 		}
 		
+		@Override
 		public void run()
 		{
 			if (_activeChar.isDead())
@@ -163,6 +165,7 @@ public class Escape implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
 	 */
+	@Override
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;

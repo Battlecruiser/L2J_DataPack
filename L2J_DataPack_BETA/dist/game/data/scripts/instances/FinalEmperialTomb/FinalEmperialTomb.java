@@ -496,38 +496,36 @@ public class FinalEmperialTomb extends Quest
 			teleportPlayer(player, coords, world.instanceId);
 			return world.instanceId;
 		}
+		
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		if (!player.isGM() && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
+			return 0;
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		//Instance ins = InstanceManager.getInstance().getInstance(instanceId);
+		//ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
+		world = new FETWorld();
+		world.instanceId = instanceId;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		controlStatus((FETWorld) world);
+		_log.info("Final Emperial Tomb started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		// teleport players
+		if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+		{
+			world.allowed.add(player.getObjectId());
+			teleportPlayer(player, coords, instanceId);
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			if (!player.isGM() && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
-				return 0;
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			//Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-			//ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
-			world = new FETWorld();
-			world.instanceId = instanceId;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			controlStatus((FETWorld) world);
-			_log.info("Final Emperial Tomb started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			// teleport players
-			if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
-				world.allowed.add(player.getObjectId());
-				teleportPlayer(player, coords, instanceId);
+				world.allowed.add(channelMember.getObjectId());
+				teleportPlayer(channelMember, coords, instanceId);
 			}
-			else
-			{
-				for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
-				{
-					world.allowed.add(channelMember.getObjectId());
-					teleportPlayer(channelMember, coords, instanceId);
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 	
 	protected synchronized boolean checkKillProgress(L2Npc mob, FETWorld world)

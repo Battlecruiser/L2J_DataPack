@@ -38,9 +38,8 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- **
- ** 2010-10-15 Based on official server Naia
+ * 2010-10-15 Based on official server Naia
+ * @author Gnacik
  */
 public class NornilsGarden extends Quest
 {
@@ -254,41 +253,38 @@ public class NornilsGarden extends Quest
 			return null;
 		}
 		// Creating new instance
-		else
+		String result = checkConditions(npc, player);
+		if (!(result.equalsIgnoreCase("ok")))
+			return result;
+
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance("NornilsGarden.xml");
+		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
+		
+		inst.setName(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
+		final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
+		inst.setSpawnLoc(returnLoc);
+		inst.setAllowSummon(false);
+		inst.setDuration(DURATION_TIME * 60000);
+		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		world = new NornilsWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCE_ID;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
+
+		prepareInstance((NornilsWorld) world);
+		
+		// and finally teleport party into instance
+		final L2Party party = player.getParty();
+		if(party != null)
 		{
-			String result = checkConditions(npc, player);
-			if (!(result.equalsIgnoreCase("ok")))
-				return result;
-
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance("NornilsGarden.xml");
-			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			
-			inst.setName(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
-			final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
-			inst.setSpawnLoc(returnLoc);
-			inst.setAllowSummon(false);
-			inst.setDuration(DURATION_TIME * 60000);
-			inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);			
-			world = new NornilsWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCE_ID;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
-
-			prepareInstance((NornilsWorld) world);
-			
-			// and finally teleport party into instance
-			final L2Party party = player.getParty();
-			if(party != null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					world.allowed.add(partyMember.getObjectId());
-					teleportPlayer(partyMember, SPAWN_PPL, instanceId);
-				}
+				world.allowed.add(partyMember.getObjectId());
+				teleportPlayer(partyMember, SPAWN_PPL, instanceId);
 			}
-			return null;
 		}
+		return null;
 	}
 	
 	private void prepareInstance(NornilsWorld world)
@@ -558,8 +554,7 @@ public class NornilsGarden extends Quest
 			{
 				return npc.getNpcId()+"-01.html";
 			}
-			else
-				return getNoQuestMsg(player);
+			return getNoQuestMsg(player);
 		}
 
 		return null;

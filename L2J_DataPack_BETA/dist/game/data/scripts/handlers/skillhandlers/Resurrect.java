@@ -36,6 +36,7 @@ public class Resurrect implements ISkillHandler
 		L2SkillType.RESURRECT
 	};
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2PcInstance player = null;
@@ -83,6 +84,7 @@ public class Resurrect implements ISkillHandler
 			}
 	}
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

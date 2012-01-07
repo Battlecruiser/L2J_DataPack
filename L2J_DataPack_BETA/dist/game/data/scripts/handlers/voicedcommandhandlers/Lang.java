@@ -33,6 +33,7 @@ public class Lang implements IVoicedCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
 		if (!Config.L2JMOD_MULTILANG_ENABLE
@@ -71,11 +72,8 @@ public class Lang implements IVoicedCommandHandler
 				activeChar.sendPacket(msg);
 				return true;
 			}
-			else
-			{
-				msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Error.htm");
-				activeChar.sendPacket(msg);
-			}
+			msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Error.htm");
+			activeChar.sendPacket(msg);
 		}
 		
 		return false;
@@ -85,6 +83,7 @@ public class Lang implements IVoicedCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
 	 */
+	@Override
 	public String[] getVoicedCommandList()
 	{
 		return VOICED_COMMANDS;

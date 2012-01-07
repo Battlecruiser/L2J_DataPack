@@ -125,7 +125,7 @@ public class Engine extends Quest implements Runnable
 			}
 		}
 		
-		if (_cachedLevel >= 0)
+		if (_cachedLevel > 0)
 		{
 			Announcements.getInstance().announceToAll(ANNOUNCE.replace("%lvl%", String.valueOf(newLevel)));
 			_log.info("HellboundEngine: New Level: " + newLevel);
@@ -222,7 +222,7 @@ public class Engine extends Quest implements Runnable
 	public void run()
 	{
 		int level = HellboundManager.getInstance().getLevel();
-		if (level == _cachedLevel)
+		if ((level > 0) && (level == _cachedLevel))
 		{
 			if ((HellboundManager.getInstance().getTrust() == HellboundManager.getInstance().getMaxTrust()) && (level != 4)) // only exclusion is kill of Derek
 			{

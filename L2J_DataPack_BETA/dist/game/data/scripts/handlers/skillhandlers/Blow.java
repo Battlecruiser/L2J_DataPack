@@ -48,6 +48,7 @@ public class Blow implements ISkillHandler
 	};
 
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar.isAlikeDead())
@@ -212,6 +213,7 @@ public class Blow implements ISkillHandler
 
 	
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

@@ -135,8 +135,7 @@ public class Q423_TakeYourBestShot extends Quest
 		
 		if (npc.isInsideRadius(96782, 85918, 100, true))
 			return "32740-ugoros.htm";
-		else
-			return "32740.htm";
+		return "32740.htm";
 	}
 	
 	@Override

@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if(((L2StaticObjectInstance)target).getType() < 0)
@@ -71,6 +72,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2StaticObjectInstance;

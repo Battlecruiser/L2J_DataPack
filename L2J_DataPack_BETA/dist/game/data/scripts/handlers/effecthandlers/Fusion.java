@@ -55,6 +55,7 @@ public class Fusion extends L2Effect
 		return L2EffectType.FUSION;
 	}
 	
+	@Override
 	public void increaseEffect()
 	{
 		if (_effect < _maxEffect)
@@ -64,6 +65,7 @@ public class Fusion extends L2Effect
 		}
 	}
 	
+	@Override
 	public void decreaseForce()
 	{
 		_effect--;

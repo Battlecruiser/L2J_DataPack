@@ -45,6 +45,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		"admin_untransform_menu",
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar.isMounted())
@@ -133,6 +134,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -140,7 +142,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
-	 * @param target
+	 * @param obj 
 	 * @param id
 	 * @param type
 	 */

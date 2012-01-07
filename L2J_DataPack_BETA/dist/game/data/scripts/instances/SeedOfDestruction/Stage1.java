@@ -431,36 +431,33 @@ public class Stage1 extends Quest
 			return world.instanceId;
 		}
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new SOD1World();
+		world.instanceId = instanceId;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		spawnState((SOD1World)world);
+		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
+			if (Util.contains(ATTACKABLE_DOORS, door.getDoorId()))
+				door.setIsAttackableDoor(true);
+		_log.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		// teleport players
+		if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+		{
+			teleportPlayer(player, coords, instanceId);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new SOD1World();
-			world.instanceId = instanceId;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			spawnState((SOD1World)world);
-			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-				if (Util.contains(ATTACKABLE_DOORS, door.getDoorId()))
-					door.setIsAttackableDoor(true);
-			_log.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			// teleport players
-			if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
-				teleportPlayer(player, coords, instanceId);
-				world.allowed.add(player.getObjectId());
+				teleportPlayer(channelMember, coords, instanceId);
+				world.allowed.add(channelMember.getObjectId());
 			}
-			else
-			{
-				for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
-				{
-					teleportPlayer(channelMember, coords, instanceId);
-					world.allowed.add(channelMember.getObjectId());
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 
 	protected boolean checkKillProgress(L2Npc mob, SOD1World world)

@@ -187,8 +187,7 @@ public class SagasSuperClass extends QuestJython
 		{
 			if (prevclass.length == 1)
 				return -1;
-			else
-				return prevclass[1];
+			return prevclass[1];
 		}
 		return prevclass[0];
 	}
@@ -779,21 +778,21 @@ public class SagasSuperClass extends QuestJython
 		{
 			L2PcInstance quest_player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
 			if (quest_player == null)
-				return null;
-			else
 			{
-				for (L2Object obj : targets)
+				return null;
+			}
+			
+			for (L2Object obj : targets)
+			{
+				if (obj == quest_player || obj == npc)
 				{
-					if (obj == quest_player || obj == npc)
-					{
-						QuestState st2 = findRightState(npc);
-						if (st2 == null)
-							return null;
-						AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
-						cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
-						st2.set("spawned", "0");
-						DeleteSpawn(st2, npc);
-					}
+					QuestState st2 = findRightState(npc);
+					if (st2 == null)
+						return null;
+					AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+					cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+					st2.set("spawned", "0");
+					DeleteSpawn(st2, npc);
 				}
 			}
 		}

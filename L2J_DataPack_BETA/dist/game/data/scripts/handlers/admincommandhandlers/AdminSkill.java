@@ -74,6 +74,7 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	private static L2Skill[] adminSkills;
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_show_skills"))
@@ -185,7 +186,8 @@ public class AdminSkill implements IAdminCommandHandler
 	
 	/**
 	 * This function will give all the skills that the target can learn at his/her level
-	 * @param activeChar: the gm char
+	 * @param activeChar the active char
+	 * @param includedByFs if {@code true} Forgotten Scroll skills will be delivered.
 	 */
 	private void adminGiveAllSkills(L2PcInstance activeChar, boolean includedByFs)
 	{
@@ -203,6 +205,7 @@ public class AdminSkill implements IAdminCommandHandler
 		player.sendSkillList();
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -490,36 +493,29 @@ public class AdminSkill implements IAdminCommandHandler
 			showMainPage(activeChar);
 			return;
 		}
-		else
+		
+		final L2Skill skill = SkillTable.getInstance().getInfo(id, level);
+		if (skill == null)
 		{
-			L2Skill skill = SkillTable.getInstance().getInfo(id, level);
-			if (skill != null)
-			{
-				String skillname = skill.getName();
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
-				sm.addSkillName(skill);
-				player.sendPacket(sm);
-				final L2Clan clan = player.getClan();
-				clan.broadcastToOnlineMembers(sm);
-				clan.addNewSkill(skill);
-				activeChar.sendMessage("You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
-				
-				clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-				for (L2PcInstance member : clan.getOnlineMembers(0))
-				{
-					member.sendSkillList();
-				}
-				
-				showMainPage(activeChar);
-				return;
-			}
-			else
-			{
-				activeChar.sendMessage("Error: there is no such skill.");
-				return;
-			}
-			
+			activeChar.sendMessage("Error: there is no such skill.");
 		}
+		
+		String skillname = skill.getName();
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
+		sm.addSkillName(skill);
+		player.sendPacket(sm);
+		final L2Clan clan = player.getClan();
+		clan.broadcastToOnlineMembers(sm);
+		clan.addNewSkill(skill);
+		activeChar.sendMessage("You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
+		
+		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
+		for (L2PcInstance member : clan.getOnlineMembers(0))
+		{
+			member.sendSkillList();
+		}
+		
+		showMainPage(activeChar);
 	}
 	
 }

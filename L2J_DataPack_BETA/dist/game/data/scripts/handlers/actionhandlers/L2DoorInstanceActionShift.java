@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 
 public class L2DoorInstanceActionShift implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.getAccessLevel().isGm())
@@ -72,6 +73,7 @@ public class L2DoorInstanceActionShift implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2DoorInstance;

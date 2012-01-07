@@ -232,6 +232,7 @@ public class Q309_ForAGoodCause extends Quest
 		return htmltext;
 	}
 	
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		QuestState st = player.getQuestState(qn);
@@ -271,10 +272,7 @@ public class Q309_ForAGoodCause extends Quest
 			st.playSound("ItemSound.quest_finish");
 			return "32647-16.htm";
 		}
-		else
-		{
-			return "32647-15.htm";
-		}
+		return "32647-15.htm";
 	}
 	
 	private String onRecipeExchangeRequest(QuestState st, int recipe, int takeid, int quanty)
@@ -286,10 +284,7 @@ public class Q309_ForAGoodCause extends Quest
 			st.playSound("ItemSound.quest_finish");
 			return "32647-16.htm";
 		}
-		else
-		{
-			return "32647-15.htm";
-		}
+		return "32647-15.htm";
 	}
 	
 	public Q309_ForAGoodCause(int id, String name, String descr)

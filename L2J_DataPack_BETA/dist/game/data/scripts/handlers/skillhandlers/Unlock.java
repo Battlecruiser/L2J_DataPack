@@ -101,31 +101,27 @@ public class Unlock implements ISkillHandler
 			else if (target instanceof L2ChestInstance)
 			{
 				L2ChestInstance chest = (L2ChestInstance) target;
-				if (chest.getCurrentHp() <= 0
-						|| chest.isInteracted()
-						|| activeChar.getInstanceId() != chest.getInstanceId())
+				if ((chest.getCurrentHp() <= 0) || chest.isInteracted() || activeChar.getInstanceId() != chest.getInstanceId())
 				{
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
+				
+				chest.setInteracted();
+				if (chestUnlock(skill, chest))
+				{
+					activeChar.broadcastSocialAction(3);
+					chest.setSpecialDrop();
+					chest.setMustRewardExpSp(false);
+					chest.reduceCurrentHp(99999999, activeChar, skill);
+				}
 				else
 				{
-					chest.setInteracted();
-					if (chestUnlock(skill, chest))
-					{
-						activeChar.broadcastSocialAction(3);
-						chest.setSpecialDrop();
-						chest.setMustRewardExpSp(false);
-						chest.reduceCurrentHp(99999999, activeChar, skill);
-					}
-					else
-					{
-						activeChar.broadcastSocialAction(13);
-						chest.addDamageHate(activeChar, 0, 1);
-						chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
-						if (chestTrap(chest))
-							chest.chestTrap(activeChar);
-					}
+					activeChar.broadcastSocialAction(13);
+					chest.addDamageHate(activeChar, 0, 1);
+					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+					if (chestTrap(chest))
+						chest.chestTrap(activeChar);
 				}
 			}
 		}

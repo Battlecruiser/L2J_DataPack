@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * This class handles commands for GMs to respond to petitions.
  *
  * @author Tempy
- *
  */
 public class AdminPetition implements IAdminCommandHandler
 {
@@ -38,6 +37,7 @@ public class AdminPetition implements IAdminCommandHandler
 		"admin_force_peti"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		int petitionId = -1;
@@ -113,6 +113,7 @@ public class AdminPetition implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

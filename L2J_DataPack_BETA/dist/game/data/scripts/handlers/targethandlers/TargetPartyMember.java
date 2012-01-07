@@ -51,14 +51,10 @@ public class TargetPartyMember implements ITargetTypeHandler
 				// If a target is found, return it in a table else send a system message TARGET_IS_INCORRECT
 				return new L2Character[] { target };
 			}
-			else
-				return _emptyTargetList;
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
+		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		return _emptyTargetList;
 	}
 	
 	@Override

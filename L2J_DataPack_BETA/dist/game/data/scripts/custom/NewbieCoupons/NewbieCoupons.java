@@ -116,8 +116,7 @@ public class NewbieCoupons extends Quest
 				MultiSell.getInstance().separateAndSend(WEAPON_MULTISELL, player, npc, false);
 				return null;
 			}
-			else
-				htmltext = "30598-7.htm"; // you're not eligible to use warehouse
+			htmltext = "30598-7.htm"; // you're not eligible to use warehouse
 		}
 		else if (event.equals("newbie_show_armor"))
 		{
@@ -126,8 +125,7 @@ public class NewbieCoupons extends Quest
 				MultiSell.getInstance().separateAndSend(ACCESORIES_MULTISELL, player, npc, false);
 				return null;
 			}
-			else
-				htmltext = "30598-8.htm"; // you're not eligible to use warehouse
+			htmltext = "30598-8.htm"; // you're not eligible to use warehouse
 		}
 
 		return htmltext;

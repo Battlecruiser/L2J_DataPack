@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.util.StringUtil;
 
-
 /**
  * This class handles following admin commands:
  * - show_moves
@@ -82,6 +81,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_instant_move"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_teleto"))
@@ -246,6 +246,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -364,6 +365,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * @param x
 	 * @param y
 	 * @param z
+	 * @param activeChar 
 	 */
 	private void teleportCharacter(L2PcInstance player, int x, int y, int z, L2PcInstance activeChar)
 	{

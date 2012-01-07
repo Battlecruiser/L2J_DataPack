@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2DoorInstanceAction implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Check if the L2PcInstance already target the L2NpcInstance
@@ -109,6 +110,7 @@ public class L2DoorInstanceAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2DoorInstance;

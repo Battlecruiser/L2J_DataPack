@@ -53,6 +53,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	 * @param questId
 	 * @param name
 	 * @param descr
+	 * @param hallId 
 	 */
 	public FortressOfResistance(int questId, String name, String descr, final int hallId)
 	{

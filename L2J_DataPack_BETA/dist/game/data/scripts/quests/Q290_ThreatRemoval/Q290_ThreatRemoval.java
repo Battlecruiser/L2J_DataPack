@@ -72,7 +72,7 @@ public class Q290_ThreatRemoval extends Quest
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 			return htmltext;
-		int[][] i = REWARD[(int) Rnd.get(REWARD.length)];
+		int[][] i = REWARD[Rnd.get(REWARD.length)];
 		int b = Rnd.get(i.length);
 
 		if (npc.getNpcId() == PINAPS)
@@ -148,7 +148,7 @@ public class Q290_ThreatRemoval extends Quest
 		if (Util.contains(MOBS1, npcId))
 		{
 			int chance = (int) (25 * Config.RATE_QUEST_DROP);
-			int numItems = (int) (chance / 100);
+			int numItems = (chance / 100);
 			chance = chance % 100;
 			if (st.getRandom(100) < chance)
 				numItems++;
@@ -161,7 +161,7 @@ public class Q290_ThreatRemoval extends Quest
 		else if (Util.contains(MOBS2, npcId))
 		{
 			int chance = (int) (30 * Config.RATE_QUEST_DROP);
-			int numItems = (int) (chance / 100);
+			int numItems = (chance / 100);
 			chance = chance % 100;
 			if (st.getRandom(100) < chance)
 				numItems++;
@@ -174,7 +174,7 @@ public class Q290_ThreatRemoval extends Quest
 		else if (Util.contains(MOBS3, npcId))
 		{
 			int chance = (int) (50 * Config.RATE_QUEST_DROP);
-			int numItems = (int) (chance / 100);
+			int numItems = (chance / 100);
 			chance = chance % 100;
 			if (st.getRandom(100) < chance)
 				numItems++;

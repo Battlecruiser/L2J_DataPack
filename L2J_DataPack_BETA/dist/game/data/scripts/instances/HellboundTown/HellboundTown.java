@@ -141,10 +141,7 @@ public class HellboundTown extends Quest
 		{
 			return "32358-02.htm";
 		}
-		else
-		{
-			return "32358-01.htm";
-		}
+		return "32358-01.htm";
 	}
 	
 	@Override
@@ -444,36 +441,31 @@ public class HellboundTown extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			else
-			{
-				teleportPlayer(player, ENTRY_POINT, world.instanceId);
-				return world.instanceId;
-			}
+			teleportPlayer(player, ENTRY_POINT, world.instanceId);
+			return world.instanceId;
 		}
-		else
+		
+		if (!checkTeleport(player))
 		{
-			if (!checkTeleport(player))
-			{
-				return 0;
-			}
-			
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new TownWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
-			{
-				teleportPlayer(partyMember, ENTRY_POINT, instanceId);
-				world.allowed.add(partyMember.getObjectId());
-			}
-			
-			((TownWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT[0], AMASKARI_SPAWN_POINT[1], AMASKARI_SPAWN_POINT[2], AMASKARI_SPAWN_POINT[3], false, 0, false, instanceId);
-			return instanceId;
+			return 0;
 		}
+		
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new TownWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		
+		for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+		{
+			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
+			world.allowed.add(partyMember.getObjectId());
+		}
+		
+		((TownWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT[0], AMASKARI_SPAWN_POINT[1], AMASKARI_SPAWN_POINT[2], AMASKARI_SPAWN_POINT[3], false, 0, false, instanceId);
+		return instanceId;
 	}
 	
 	private static class CallAmaskari implements Runnable

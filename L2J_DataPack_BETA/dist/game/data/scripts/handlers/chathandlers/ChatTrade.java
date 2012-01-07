@@ -39,7 +39,7 @@ public class ChatTrade implements IChatHandler
 	
 	/**
 	 * Handle chat type 'trade'
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)

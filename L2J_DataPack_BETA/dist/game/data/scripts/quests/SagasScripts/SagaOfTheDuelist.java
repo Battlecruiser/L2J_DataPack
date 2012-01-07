@@ -88,13 +88,11 @@ public class SagaOfTheDuelist extends SagasSuperClass
 						st.giveItems(TOPQUALITYMEAT, 1);
 						return "tunatun_01.htm";
 					}
-					else
-						return "tunatun_02.htm";
+					return "tunatun_02.htm";
 				}
 			}
 			return htmltext;
 		}
-		else
-			return super.onTalk(npc, player);
+		return super.onTalk(npc, player);
 	}
 }

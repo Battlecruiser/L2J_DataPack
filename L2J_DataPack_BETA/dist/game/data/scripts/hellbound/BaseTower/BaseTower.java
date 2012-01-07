@@ -57,10 +57,7 @@ public class BaseTower extends Quest
 		{
 			return "32301-02.htm";
 		}
-		else
-		{
-			return "32301-01.htm";
-		}
+		return "32301-01.htm";
 	}
 	
 	@Override

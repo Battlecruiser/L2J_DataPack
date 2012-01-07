@@ -35,8 +35,9 @@ public class ChatPartyRoomCommander implements IChatHandler
 	
 	/**
 	 * Handle chat type 'party room commander'
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String, java.lang.String)
 	 */
+	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
 		if (activeChar.isInParty())
@@ -59,6 +60,7 @@ public class ChatPartyRoomCommander implements IChatHandler
 	 * Returns the chat types registered to this handler
 	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
+	@Override
 	public int[] getChatTypeList()
 	{
 		return COMMAND_IDS;

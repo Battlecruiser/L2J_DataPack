@@ -120,14 +120,12 @@ public class Quarry extends Quest
 		{
 			return "32299.htm";
 		}
-		else
+		
+		if (player.getQuestState(getName()) == null)
 		{
-			if (player.getQuestState(getName()) == null)
-			{
-				newQuestState(player);
-			}
-			return "32299-01.htm";
+			newQuestState(player);
 		}
+		return "32299-01.htm";
 	}
 	
 	// Let's manage kill points in Engine
@@ -141,9 +139,9 @@ public class Quarry extends Quest
 	@Override
 	public final String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (character instanceof L2Npc)
+		if (character instanceof L2Attackable)
 		{
-			final L2Npc npc = (L2Npc) character;
+			final L2Attackable npc = (L2Attackable) character;
 			if (npc.getNpcId() == SLAVE)
 			{
 				if (!npc.isDead() && !npc.isDecayed() && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))
@@ -186,7 +184,7 @@ public class Quarry extends Quest
 					{
 						if (Rnd.get(10000) < i[1])
 						{
-							((L2Attackable) _npc).dropItem((L2PcInstance) (_npc.getTarget()), i[0], (int) Config.RATE_DROP_ITEMS);
+							((L2Attackable) _npc).dropItem((L2PcInstance) _npc.getTarget(), i[0], (int) Config.RATE_DROP_ITEMS);
 							break;
 						}
 					}
