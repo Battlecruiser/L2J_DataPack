@@ -111,8 +111,7 @@ public class BeastFarm extends L2AttackableAIScript
 					else
 						return _skillSuccessNpcIdList.get(SKILL_CRYSTAL_SPICE);
 				}
-				else
-					return -1;
+				return -1;
 			}
 			else if (_growthLevel == 2 && Rnd.get(100) < TAME_CHANCE)
 				return _tameNpcId;
@@ -373,10 +372,8 @@ public class BeastFarm extends L2AttackableAIScript
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isPet);
 		}
-		else
-		{
-			_FeedInfo.put(objectId, caster.getObjectId());
-		}
+		
+		_FeedInfo.put(objectId, caster.getObjectId());
 		
 		// display the social action of the beast eating the food.
 		npc.broadcastSocialAction(2);

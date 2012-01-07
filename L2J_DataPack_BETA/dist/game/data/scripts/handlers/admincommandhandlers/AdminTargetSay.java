@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
  */
 public class AdminTargetSay implements IAdminCommandHandler
 {
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_targetsay"
@@ -42,19 +41,17 @@ public class AdminTargetSay implements IAdminCommandHandler
 		{
 			try
 			{
-				String message = command.substring(16);
-				
-				L2Object obj = activeChar.getTarget();
-				
+				final L2Object obj = activeChar.getTarget();
 				if ((obj instanceof L2ControllableMobInstance) || !(obj instanceof L2Character))
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return false;
 				}
-				else
-				{
-					talk(activeChar, (L2Character) obj, message);
-				}
+				
+				final String message = command.substring(16);
+				final L2Character target = (L2Character) obj;
+				
+				target.broadcastPacket(new CreatureSay(target.getObjectId(), Say2.ALL, target.getName(), message));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -63,11 +60,6 @@ public class AdminTargetSay implements IAdminCommandHandler
 			}
 		}
 		return true;
-	}
-	
-	private void talk(L2PcInstance activeChar, L2Character target, String message)
-	{
-		target.broadcastPacket(new CreatureSay(target.getObjectId(), Say2.ALL, target.getName(), message));
 	}
 	
 	@Override

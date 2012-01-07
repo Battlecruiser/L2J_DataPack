@@ -37,6 +37,7 @@ public class Trap implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar == null || skill == null)
@@ -99,6 +100,7 @@ public class Trap implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

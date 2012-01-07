@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.datatables.AccessLevels;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-
 /**
  * This class handles following admin commands:
  * - gm = turns gm mode off
@@ -37,6 +36,7 @@ public class AdminGm implements IAdminCommandHandler
 		"admin_gm"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -46,6 +46,7 @@ public class AdminGm implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

@@ -97,13 +97,12 @@ public final class Q636_TruthBeyond extends Quest
 		}
 		else if (st.getState() == State.STARTED) // Flauron only
 		{
-			if (Integer.parseInt(st.get("cond")) == 1)
-				return "32010-01.htm";
-			else
+			if (st.getInt("cond") == 1)
 			{
-				st.exitQuest(true);
-				return "32010-03.htm";
+				return "32010-01.htm";
 			}
+			st.exitQuest(true);
+			return "32010-03.htm";
 		}
 		return getNoQuestMsg(player);
 	}

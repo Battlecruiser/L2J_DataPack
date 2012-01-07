@@ -41,6 +41,7 @@ public class AdminRide implements IAdminCommandHandler
 	
 	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		L2PcInstance player = getRideTarget(activeChar);
@@ -123,6 +124,7 @@ public class AdminRide implements IAdminCommandHandler
 		return player;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

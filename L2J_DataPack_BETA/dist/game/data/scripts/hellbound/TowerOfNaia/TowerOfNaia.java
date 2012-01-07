@@ -515,10 +515,7 @@ public class TowerOfNaia extends Quest
 			{
 				return "18492-02.htm";
 			}
-			else
-			{
-				return "18492-01.htm";
-			}
+			return "18492-01.htm";
 		}
 		
 		else if ((npcId >= ROOM_MANAGER_FIRST) && (npcId <= ROOM_MANAGER_LAST))

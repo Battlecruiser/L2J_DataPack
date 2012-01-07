@@ -161,10 +161,7 @@ public class PriestOfBlessing extends Quest
 				}
 				return null;
 			}
-			else
-			{
-				htmltext = "32783-adena.htm";
-			}
+			htmltext = "32783-adena.htm";
 		}
 		else if (event.equalsIgnoreCase("buy_hourglass"))
 		{
@@ -199,10 +196,7 @@ public class PriestOfBlessing extends Quest
 				}
 				return null;
 			}
-			else
-			{
-				htmltext = "32783-adena.htm";
-			}
+			htmltext = "32783-adena.htm";
 		}
 		return htmltext;
 	}

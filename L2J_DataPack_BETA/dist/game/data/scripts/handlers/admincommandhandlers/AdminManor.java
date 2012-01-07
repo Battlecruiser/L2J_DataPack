@@ -51,6 +51,7 @@ public class AdminManor implements IAdminCommandHandler
 		"admin_manor_disable"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
@@ -133,6 +134,7 @@ public class AdminManor implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return _adminCommands;

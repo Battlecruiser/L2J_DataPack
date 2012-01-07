@@ -45,6 +45,7 @@ public class ManaHeal implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
 	{
 		for (L2Character target: (L2Character[]) targets)
@@ -146,6 +147,7 @@ public class ManaHeal implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

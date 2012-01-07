@@ -45,6 +45,7 @@ public class InstantJump implements ISkillHandler
 		L2SkillType.INSTANT_JUMP
 	};
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2Character target = (L2Character) targets[0];
@@ -121,6 +122,7 @@ public class InstantJump implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

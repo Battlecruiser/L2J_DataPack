@@ -303,10 +303,7 @@ public class DebugHandler implements ITelnetHandler
 		{
 			return mbean.findDeadlockedThreads();
 		}
-		else
-		{
-			return mbean.findMonitorDeadlockedThreads();
-		}
+		return mbean.findMonitorDeadlockedThreads();
 	}
 	
 	private Thread findMatchingThread(ThreadInfo inf)

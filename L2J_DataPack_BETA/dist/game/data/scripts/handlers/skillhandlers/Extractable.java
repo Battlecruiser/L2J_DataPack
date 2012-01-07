@@ -24,25 +24,21 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
-import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author Zoey76, based on previous version.
+ * @author Zoey76
  */
 public class Extractable implements ISkillHandler
 {
-	//FIXME: Remove this once skill reuse will be global for main/subclass.
-	private static final int[] protectedSkillIds = { 323, 324, 419, 519, 520, 620, 1324, 1387 };
-	
 	private static final L2SkillType[] SKILL_TYPES =
 	{
 		L2SkillType.EXTRACTABLE,
 		L2SkillType.EXTRACTABLE_FISH
 	};
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
@@ -50,8 +46,7 @@ public class Extractable implements ISkillHandler
 			return;
 		}
 		
-		L2ExtractableSkill exItem = skill.getExtractableSkill();
-		
+		final L2ExtractableSkill exItem = skill.getExtractableSkill();
 		if (exItem == null)
 		{
 			return;
@@ -101,71 +96,42 @@ public class Extractable implements ISkillHandler
 			chanceFrom += chance;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
-		
-		//FIXME: Remove this once skill reuse will be global for main/subclass.
-		if (player.isSubClassActive() && (skill.getReuseDelay() > 0) && !Util.contains(protectedSkillIds, skill.getId()))
-		{
-			player.sendPacket(SystemMessageId.MAIN_CLASS_SKILL_ONLY);
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-			sm.addSkillName(skill);
-			player.sendPacket(sm);
-			return;
-		}
-		
+		final L2PcInstance player = activeChar.getActingPlayer();
 		if (createItemID[0] <= 0)
 		{
 			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 			return;
 		}
-		else
+		
+		for (int i = 0; i < createItemID.length; i++)
 		{
-			for (int i = 0; i < createItemID.length; i++)
+			if (createItemID[i] <= 0)
 			{
-				if (createItemID[i] <= 0)
+				continue;
+			}
+			
+			if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
+			{
+				_log.warning("Extractable Item Skill Id:" + skill.getId() + " createItemID " + createItemID[i] + " doesn't have a template!");
+				player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
+				return;
+			}
+			
+			if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
+			{
+				player.addItem("Extract", createItemID[i], createAmount[i], targets[0], true);
+			}
+			else
+			{
+				for (int j = 0; j < createAmount[i]; j++)
 				{
-					continue;
-				}
-				
-				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
-				{
-					_log.warning("Extractable Item Skill Id:" + skill.getId() + " createItemID " + createItemID[i] + " doesn't have a template!");
-					player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
-					return;
-				}
-				
-				if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
-				{
-					player.addItem("Extract", createItemID[i], createAmount[i], targets[0], false);
-				}
-				else
-				{
-					for (int j = 0; j < createAmount[i]; j++)
-					{
-						player.addItem("Extract", createItemID[i], 1, targets[0], false);
-					}
-				}
-				
-				if (createItemID[i] == 57)
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S1_ADENA);;
-					sm.addNumber(createAmount[i]);
-					player.sendPacket(sm);
-				}
-				else
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);;
-					sm.addItemName(createItemID[i]);
-					if (createAmount[i] > 1)
-					{
-						sm.addNumber(createAmount[i]);
-					}
-					player.sendPacket(sm);
+					player.addItem("Extract", createItemID[i], 1, targets[0], true);
 				}
 			}
 		}
 	}
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_TYPES;

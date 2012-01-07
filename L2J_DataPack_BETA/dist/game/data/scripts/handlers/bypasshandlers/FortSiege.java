@@ -71,10 +71,8 @@ public class FortSiege implements IBypassHandler
 			}
 			return false;
 		}
-		else
-		{
-			((L2Npc) target).showChatWindow(activeChar, 10);
-		}
+		
+		((L2Npc) target).showChatWindow(activeChar, 10);
 		
 		return true;
 	}

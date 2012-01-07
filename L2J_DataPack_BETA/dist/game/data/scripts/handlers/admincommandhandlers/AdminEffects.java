@@ -708,8 +708,7 @@ public class AdminEffects implements IAdminCommandHandler
 				character.startAbnormalEffect(action);
 			return true;
 		}
-		else
-			return false;
+		return false;
 	}
 	
 	private boolean performSpecial(int action, L2Object target)
@@ -723,8 +722,7 @@ public class AdminEffects implements IAdminCommandHandler
 				character.startSpecialEffect(action);
 			return true;
 		}
-		else
-			return false;
+		return false;
 	}
 	
 	private boolean performSocial(int action, L2Object target, L2PcInstance activeChar)
@@ -765,6 +763,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 * @param type - atmosphere type (signssky,sky)
 	 * @param state - atmosphere state(night,day)
 	 * @param duration
+	 * @param activeChar 
 	 */
 	private void adminAtmosphere(String type, String state, int duration, L2PcInstance activeChar)
 	{

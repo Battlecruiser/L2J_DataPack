@@ -507,10 +507,8 @@ public class FeedableBeasts extends L2AttackableAIScript
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isPet);
 		}
-		else
-		{
-			_FeedInfo.put(objectId, caster.getObjectId());
-		}
+		
+		_FeedInfo.put(objectId, caster.getObjectId());
 		
 		int food = 0;
 		if (skillId == SKILL_GOLDEN_SPICE)

@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2SummonAction implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
@@ -100,6 +101,7 @@ public class L2SummonAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Summon;

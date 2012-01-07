@@ -543,41 +543,39 @@ public class CrystalCaverns extends Quest
 			teleportplayer(player, teleto);
 			return world.instanceId;
 		}
+		
 		// New instance
+		if (!checkConditions(player))
+			return 0;
+		L2Party party = player.getParty();
+		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new CCWorld(System.currentTimeMillis() + 5400000);
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		runOracle((CCWorld) world);
+		// teleport players
+		teleto.instanceId = instanceId;
+		if (player.getParty() == null)
+		{
+			// this can happen only if debug is true
+			player.sendMessage("Welcome to Crystal Caverns.");
+			InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
+			teleportplayer(player, teleto);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			L2Party party = player.getParty();
-			int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new CCWorld(System.currentTimeMillis() + 5400000);
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			runOracle((CCWorld) world);
-			// teleport players
-			teleto.instanceId = instanceId;
-			if (player.getParty() == null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				// this can happen only if debug is true
-				player.sendMessage("Welcome to Crystal Caverns.");
-				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-				teleportplayer(player, teleto);
-				world.allowed.add(player.getObjectId());
+				partyMember.sendMessage("Welcome to Crystal Caverns.");
+				InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
+				teleportplayer(partyMember, teleto);
+				world.allowed.add(partyMember.getObjectId());
 			}
-			else
-			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					partyMember.sendMessage("Welcome to Crystal Caverns.");
-					InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-					teleportplayer(partyMember, teleto);
-					world.allowed.add(partyMember.getObjectId());
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 	
 	protected void exitInstance(L2PcInstance player, teleCoord tele)
@@ -1783,20 +1781,19 @@ public class CrystalCaverns extends Quest
 						if (door.getDoorId() == (room + 24220000))
 						{
 							if (door.getOpen())
-								return "";
-							else
 							{
-								QuestState st = ((L2PcInstance) character).getQuestState(qn);
-								if (st == null)
-									st = newQuestState((L2PcInstance) character);
-								if (!st.hasQuestItems(RACE_KEY))
-									return "";
-								if (world.roomsStatus[zone.getId() - 20104] == 0)
-									runEmeraldRooms(world, spawns, room);
-								door.openMe();
-								st.takeItems(RACE_KEY, 1);
-								world.openedDoors.put(door, (L2PcInstance) character);
+								return "";
 							}
+							QuestState st = ((L2PcInstance) character).getQuestState(qn);
+							if (st == null)
+								st = newQuestState((L2PcInstance) character);
+							if (!st.hasQuestItems(RACE_KEY))
+								return "";
+							if (world.roomsStatus[zone.getId() - 20104] == 0)
+								runEmeraldRooms(world, spawns, room);
+							door.openMe();
+							st.takeItems(RACE_KEY, 1);
+							world.openedDoors.put(door, (L2PcInstance) character);
 							break;
 						}
 				}

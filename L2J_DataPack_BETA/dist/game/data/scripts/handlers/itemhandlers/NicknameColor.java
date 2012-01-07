@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExRequestChangeNicknameCol
 
 public class NicknameColor implements IItemHandler
 {
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))

@@ -327,33 +327,33 @@ public class IceFairySirra extends L2AttackableAIScript
 		if (event.equalsIgnoreCase("check_condition"))
 		{
 			if (npc.isBusy())//should never happen
-				return super.onAdvEvent(event, npc, player);
-			else
 			{
-				String filename = "";
-				if (player.isInParty() && player.getParty().getPartyLeaderOID() == player.getObjectId())
+				return super.onAdvEvent(event, npc, player);
+			}
+			
+			String filename = "";
+			if (player.isInParty() && player.getParty().getPartyLeaderOID() == player.getObjectId())
+			{
+				if (checkItems(player))
 				{
-					if (checkItems(player) == true)
-					{
-						startQuestTimer("start",100000,null,player);
-						_player = player;
-						destroyItems(player);
-						player.getInventory().addItem("Scroll",8379,3,player,null);
-						npc.setBusy(true);
-						screenMessage(player,NpcStringId.STEWARD_PLEASE_WAIT_A_MOMENT,100000);
-						filename = getHtmlPath(3);
-					}
-					else
-					{
-						filename = getHtmlPath(2);
-					}
+					startQuestTimer("start",100000,null,player);
+					_player = player;
+					destroyItems(player);
+					player.getInventory().addItem("Scroll",8379,3,player,null);
+					npc.setBusy(true);
+					screenMessage(player,NpcStringId.STEWARD_PLEASE_WAIT_A_MOMENT,100000);
+					filename = getHtmlPath(3);
 				}
 				else
 				{
-					filename = getHtmlPath(1);
+					filename = getHtmlPath(2);
 				}
-				sendHtml(npc, player, filename);
 			}
+			else
+			{
+				filename = getHtmlPath(1);
+			}
+			sendHtml(npc, player, filename);
 		}
 		else if (event.equalsIgnoreCase("start"))
 		{

@@ -34,6 +34,7 @@ public class AdminPathNode implements IAdminCommandHandler
 		"admin_find_path",
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_pn_info"))
@@ -83,6 +84,7 @@ public class AdminPathNode implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

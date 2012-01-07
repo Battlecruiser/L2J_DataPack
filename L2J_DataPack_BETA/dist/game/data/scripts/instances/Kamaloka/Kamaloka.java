@@ -600,49 +600,46 @@ public class Kamaloka extends Quest
 			return;
 		}
 		// Creating new kamaloka instance
-		else
-		{
-			if (!checkConditions(player, index))
-				return;
-			
-			// Creating dynamic instance without template
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance(null);
-			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			// set name for the kamaloka
-			inst.setName(InstanceManager.getInstance().getInstanceIdName(templateId));
-			// set return location
-			final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
-			inst.setSpawnLoc(returnLoc);
-			// disable summon friend into instance
-			inst.setAllowSummon(false);
-			// set duration and empty destroy time
-			inst.setDuration(DURATION[index] * 60000);
-			inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
-			
-			// Creating new instanceWorld, using our instanceId and templateId
-			world = new KamaWorld();
-			world.instanceId = instanceId;
-			world.templateId = templateId;
-			// set index for easy access to the arrays
-			((KamaWorld)world).index = index;
-			InstanceManager.getInstance().addWorld(world);
-			world.status = 0;
-			// spawn npcs
-			spawnKama((KamaWorld)world);
-			
-			// and finally teleport party into instance
-			final L2Party party = player.getParty();
-			for (L2PcInstance partyMember : party.getPartyMembers())
-			{
-				if (partyMember.getQuestState(qn) == null)
-					newQuestState(partyMember);
-				world.allowed.add(partyMember.getObjectId());
-				
-				removeBuffs(partyMember);
-				teleportPlayer(partyMember, TELEPORTS[index], instanceId);
-			}
+		if (!checkConditions(player, index))
 			return;
+		
+		// Creating dynamic instance without template
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(null);
+		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
+		// set name for the kamaloka
+		inst.setName(InstanceManager.getInstance().getInstanceIdName(templateId));
+		// set return location
+		final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
+		inst.setSpawnLoc(returnLoc);
+		// disable summon friend into instance
+		inst.setAllowSummon(false);
+		// set duration and empty destroy time
+		inst.setDuration(DURATION[index] * 60000);
+		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		
+		// Creating new instanceWorld, using our instanceId and templateId
+		world = new KamaWorld();
+		world.instanceId = instanceId;
+		world.templateId = templateId;
+		// set index for easy access to the arrays
+		((KamaWorld)world).index = index;
+		InstanceManager.getInstance().addWorld(world);
+		world.status = 0;
+		// spawn npcs
+		spawnKama((KamaWorld)world);
+		
+		// and finally teleport party into instance
+		final L2Party party = player.getParty();
+		for (L2PcInstance partyMember : party.getPartyMembers())
+		{
+			if (partyMember.getQuestState(qn) == null)
+				newQuestState(partyMember);
+			world.allowed.add(partyMember.getObjectId());
+			
+			removeBuffs(partyMember);
+			teleportPlayer(partyMember, TELEPORTS[index], instanceId);
 		}
+		return;
 	}
 	
 	/**
@@ -824,10 +821,8 @@ public class Kamaloka extends Quest
 		{
 			if (player.isInParty() && player.getParty().isLeader(player))
 				return "32496.htm";
-			else
-				return "32496-no.htm";
+			return "32496-no.htm";
 		}
-		
 		return "";
 	}
 	

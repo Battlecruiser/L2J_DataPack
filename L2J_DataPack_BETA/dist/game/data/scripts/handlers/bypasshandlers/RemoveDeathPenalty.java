@@ -74,10 +74,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 							activeChar.sendPacket(new EtcStatusUpdate(activeChar));
 							return true;
 						}
-						else
-						{
-							replyMSG.append("The wound you have received from death's touch is too deep to be healed for the money you have to give me. Find more money if you wish death's mark to be fully removed from you.");
-						}
+						replyMSG.append("The wound you have received from death's touch is too deep to be healed for the money you have to give me. Find more money if you wish death's mark to be fully removed from you.");
 					}
 					else
 					{

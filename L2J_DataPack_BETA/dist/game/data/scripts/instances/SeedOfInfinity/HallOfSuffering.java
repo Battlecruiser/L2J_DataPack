@@ -198,40 +198,37 @@ public class HallOfSuffering extends Quest
 			return world.instanceId;
 		}
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		L2Party party = player.getParty();
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new HSWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		world.status = 0;
+		((HSWorld)world).startTime = System.currentTimeMillis();
+		((HSWorld)world).ptLeaderName = player.getName();
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Hall Of Suffering started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		runTumors((HSWorld)world);
+		
+		// teleport players
+		if (player.getParty() == null)
+		{
+			teleportPlayer(player, coords, instanceId);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			L2Party party = player.getParty();
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new HSWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			world.status = 0;
-			((HSWorld)world).startTime = System.currentTimeMillis();
-			((HSWorld)world).ptLeaderName = player.getName();
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hall Of Suffering started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			runTumors((HSWorld)world);
-			
-			// teleport players
-			if (player.getParty() == null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				teleportPlayer(player, coords, instanceId);
-				world.allowed.add(player.getObjectId());
+				teleportPlayer(partyMember, coords, instanceId);
+				world.allowed.add(partyMember.getObjectId());
+				if (partyMember.getQuestState(qn) == null)
+					newQuestState(partyMember);
 			}
-			else
-			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					teleportPlayer(partyMember, coords, instanceId);
-					world.allowed.add(partyMember.getObjectId());
-					if (partyMember.getQuestState(qn) == null)
-						newQuestState(partyMember);
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 	
 	protected boolean checkKillProgress(L2Npc mob, HSWorld world)

@@ -59,6 +59,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		"admin_enchant"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_enchant"))
@@ -189,6 +190,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		AdminHelpPage.showHelpPage(activeChar, "enchant.htm");
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

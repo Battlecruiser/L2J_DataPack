@@ -24,6 +24,7 @@ import com.l2jserver.util.StringUtil;
 
 public class L2ItemInstanceActionShift implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.getAccessLevel().isGm())
@@ -49,6 +50,7 @@ public class L2ItemInstanceActionShift implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ItemInstance;

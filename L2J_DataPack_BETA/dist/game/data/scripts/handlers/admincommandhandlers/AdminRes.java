@@ -42,6 +42,7 @@ public class AdminRes implements IAdminCommandHandler
 		"admin_res_monster"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.startsWith("admin_res "))
@@ -56,6 +57,7 @@ public class AdminRes implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

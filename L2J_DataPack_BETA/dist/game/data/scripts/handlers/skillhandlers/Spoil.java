@@ -36,6 +36,7 @@ public class Spoil implements ISkillHandler
 		L2SkillType.SPOIL
 	};
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
@@ -81,6 +82,7 @@ public class Spoil implements ISkillHandler
 		}
 	}
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

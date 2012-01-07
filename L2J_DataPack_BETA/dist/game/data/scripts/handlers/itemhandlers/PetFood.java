@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class PetFood implements IItemHandler
 {
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		int itemId = item.getItemId();
@@ -106,20 +107,14 @@ public class PetFood implements IItemHandler
 						}
 						return true;
 					}
-					else
-					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-						sm.addItemName(item);
-						activeChar.sendPacket(sm);
-						return false;
-					}
-				}
-				else
-				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 					sm.addItemName(item);
 					activeChar.sendPacket(sm);
+					return false;
 				}
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				sm.addItemName(item);
+				activeChar.sendPacket(sm);
 				return false;
 			}
 		}

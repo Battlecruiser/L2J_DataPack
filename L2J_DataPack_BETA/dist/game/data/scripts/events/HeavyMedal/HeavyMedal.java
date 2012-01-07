@@ -156,8 +156,7 @@ public class HeavyMedal extends Quest
 		{
 			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level])
 				return "31229-no.htm";
-			else
-				return "31229-game.htm";
+			return "31229-game.htm";
 		}
 		else if (event.equalsIgnoreCase("heads") || event.equalsIgnoreCase("tails"))
 		{

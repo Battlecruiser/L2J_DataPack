@@ -45,8 +45,7 @@ public class TargetUnlockable implements ITargetTypeHandler
 			targetList.add(target);
 			return targetList.toArray(new L2Object[targetList.size()]);
 		}
-		else
-			return new L2Character[] { target };
+		return new L2Character[] { target };
 	}
 	
 	@Override

@@ -163,18 +163,15 @@ public class PailakaSongOfIceAndFire extends Quest
 			return;
 		}
 		//New instance
-		else
-		{
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaSongOfIceAndFire.xml");
-			
-			world = new InstanceWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCE_ID;
-			InstanceManager.getInstance().addWorld(world);
-			
-			world.allowed.add(player.getObjectId());
-			teleportPlayer(player, TELEPORT, instanceId);
-		}
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaSongOfIceAndFire.xml");
+		
+		world = new InstanceWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCE_ID;
+		InstanceManager.getInstance().addWorld(world);
+		
+		world.allowed.add(player.getObjectId());
+		teleportPlayer(player, TELEPORT, instanceId);
 		
 	}
 	
@@ -285,8 +282,7 @@ public class PailakaSongOfIceAndFire extends Quest
 					case State.STARTED:
 						if (cond > 1)
 							return "32497-00.htm";
-						else
-							return "32497-03.htm";
+						return "32497-03.htm";
 					case State.COMPLETED:
 						return "32497-07.htm";
 					default:
@@ -295,8 +291,7 @@ public class PailakaSongOfIceAndFire extends Quest
 			case SINAI:
 				if (cond > 1)
 					return "32500-00.htm";
-				else
-					return "32500-01.htm";
+				return "32500-01.htm";
 			case INSPECTOR:
 				switch (st.getInt("cond"))
 				{
@@ -433,6 +428,7 @@ public class PailakaSongOfIceAndFire extends Quest
 			_instanceId = id;
 		}
 		
+		@Override
 		public void run()
 		{
 			try

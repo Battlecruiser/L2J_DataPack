@@ -34,6 +34,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		"admin_tvt_advance"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_tvt_add"))
@@ -68,6 +69,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

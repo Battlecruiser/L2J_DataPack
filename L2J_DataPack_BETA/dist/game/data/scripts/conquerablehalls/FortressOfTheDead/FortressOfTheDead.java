@@ -43,6 +43,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	 * @param questId
 	 * @param name
 	 * @param descr
+	 * @param hallId 
 	 */
 	public FortressOfTheDead(int questId, String name, String descr, final int hallId)
 	{

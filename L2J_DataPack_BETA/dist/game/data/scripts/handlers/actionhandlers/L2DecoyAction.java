@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 
 public class L2DecoyAction implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
@@ -38,6 +39,7 @@ public class L2DecoyAction implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Decoy;

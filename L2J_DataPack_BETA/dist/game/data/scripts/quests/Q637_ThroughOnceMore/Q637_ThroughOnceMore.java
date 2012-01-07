@@ -110,8 +110,7 @@ public final class Q637_ThroughOnceMore extends Quest
 				st.playSound("ItemSound.quest_finish");
 				return "32010-05.htm";
 			}
-			else
-				return "32010-04.htm";
+			return "32010-04.htm";
 		}
 		return getNoQuestMsg(player);
 	}

@@ -1165,12 +1165,10 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					continue;
 				}
-				else
-				{
-					ip = client.getConnection().getInetAddress().getHostAddress();
-					if (!ip.equals(IpAdress))
-						continue;
-				}
+				
+				ip = client.getConnection().getInetAddress().getHostAddress();
+				if (!ip.equals(IpAdress))
+					continue;
 			}
 			
 			name = player.getName();
@@ -1246,6 +1244,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
+	 * @param multibox 
 	 */
 	private void findDualbox(L2PcInstance activeChar, int multibox)
 	{
@@ -1262,22 +1261,22 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			client = player.getClient();
 			if (client == null || client.isDetached())
-				continue;
-			else
 			{
-				ip = client.getConnection().getInetAddress().getHostAddress();
-				if (ipMap.get(ip) == null)
-					ipMap.put(ip, new ArrayList<L2PcInstance>());
-				ipMap.get(ip).add(player);
-				
-				if (ipMap.get(ip).size() >= multibox)
-				{
-					Integer count = dualboxIPs.get(ip);
-					if (count == null)
-						dualboxIPs.put(ip, multibox);
-					else
-						dualboxIPs.put(ip, count + 1);
-				}
+				continue;
+			}
+			
+			ip = client.getConnection().getInetAddress().getHostAddress();
+			if (ipMap.get(ip) == null)
+				ipMap.put(ip, new ArrayList<L2PcInstance>());
+			ipMap.get(ip).add(player);
+			
+			if (ipMap.get(ip).size() >= multibox)
+			{
+				Integer count = dualboxIPs.get(ip);
+				if (count == null)
+					dualboxIPs.put(ip, multibox);
+				else
+					dualboxIPs.put(ip, count + 1);
 			}
 		}
 		
@@ -1319,22 +1318,22 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			client = player.getClient();
 			if (client == null || client.isDetached())
-				continue;
-			else
 			{
-				IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
-				if (ipMap.get(pack) == null)
-					ipMap.put(pack, new ArrayList<L2PcInstance>());
-				ipMap.get(pack).add(player);
-				
-				if (ipMap.get(pack).size() >= multibox)
-				{
-					Integer count = dualboxIPs.get(pack);
-					if (count == null)
-						dualboxIPs.put(pack, multibox);
-					else
-						dualboxIPs.put(pack, count + 1);
-				}
+				continue;
+			}
+			
+			IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
+			if (ipMap.get(pack) == null)
+				ipMap.put(pack, new ArrayList<L2PcInstance>());
+			ipMap.get(pack).add(player);
+			
+			if (ipMap.get(pack).size() >= multibox)
+			{
+				Integer count = dualboxIPs.get(pack);
+				if (count == null)
+					dualboxIPs.put(pack, multibox);
+				else
+					dualboxIPs.put(pack, count + 1);
 			}
 		}
 		
@@ -1482,6 +1481,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			_player = player;
 		}
 
+		@Override
 		public void run()
 		{
 			_player.untransform();

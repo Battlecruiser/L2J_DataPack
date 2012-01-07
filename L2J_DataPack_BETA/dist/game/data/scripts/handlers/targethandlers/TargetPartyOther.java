@@ -43,26 +43,24 @@ public class TargetPartyOther implements ITargetTypeHandler
 						// FORCE BUFFS may cancel here but there should be a proper condition
 						case 426:
 							if (!((L2PcInstance) target).isMageClass())
+							{
 								return new L2Character[] { target };
-							else
-								return _emptyTargetList;
+							}
+							return _emptyTargetList;
 						case 427:
 							if (((L2PcInstance) target).isMageClass())
+							{
 								return new L2Character[] { target };
-							else
-								return _emptyTargetList;
+							}
+							return _emptyTargetList;
 					}
 				}
 				return new L2Character[] { target };
 			}
-			else
-				return _emptyTargetList;
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
+		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		return _emptyTargetList;
 	}
 	
 	@Override
