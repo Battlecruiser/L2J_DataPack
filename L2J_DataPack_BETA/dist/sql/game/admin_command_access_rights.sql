@@ -557,6 +557,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN TARGET
 ('admin_target',1,'false'),
 
+-- ADMIN TARGETSAY
+('admin_targetsay',1,'false'),
+
 -- ADMIN TELEPORT
 ('admin_show_moves',1,'false'),
 ('admin_show_moves_other',1,'false'),
