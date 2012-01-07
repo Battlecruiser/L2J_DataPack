@@ -30,8 +30,10 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		if(((L2StaticObjectInstance)target).getType() < 0)
-			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: "+((L2StaticObjectInstance)target).getStaticObjectId());
+		if (((L2StaticObjectInstance) target).getType() < 0)
+		{
+			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + ((L2StaticObjectInstance) target).getStaticObjectId());
+		}
 		
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (activeChar.getTarget() != target)
@@ -52,21 +54,44 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 			}
 			else
 			{
-				if(((L2StaticObjectInstance)target).getType() == 2)
+				if ((((L2StaticObjectInstance) target).getType() == 2) && (((L2StaticObjectInstance) target).getStaticObjectId() == 24230101))
 				{
-					String filename = "data/html/signboard.htm";
+					String filename = "data/html/signboards/tomb_of_crystalgolem.htm";
 					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 					NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 					
 					if (content == null)
-						html.setHtml("<html><body>Signboard is missing:<br>"+filename+"</body></html>");
+					{
+						html.setHtml("<html><body>Signboard is missing:<br>" + filename + "</body></html>");
+					}
 					else
+					{
 						html.setHtml(content);
+					}
 					
 					activeChar.sendPacket(html);
 				}
-				else if(((L2StaticObjectInstance)target).getType() == 0)
-					activeChar.sendPacket(((L2StaticObjectInstance)target).getMap());
+				else if ((((L2StaticObjectInstance) target).getType() == 2) && (((L2StaticObjectInstance) target).getStaticObjectId() != 24230101))
+				{
+					String filename = "data/html/signboards/pvp_signboard.htm";
+					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
+					NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
+					
+					if (content == null)
+					{
+						html.setHtml("<html><body>Signboard is missing:<br>" + filename + "</body></html>");
+					}
+					else
+					{
+						html.setHtml(content);
+					}
+					
+					activeChar.sendPacket(html);
+				}
+				else if (((L2StaticObjectInstance) target).getType() == 0)
+				{
+					activeChar.sendPacket(((L2StaticObjectInstance) target).getMap());
+				}
 			}
 		}
 		return true;
