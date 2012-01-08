@@ -12,6 +12,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2863-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -28,6 +29,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2864-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -425,6 +427,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2873-1;2874-1;2875-1;2876-1;2877-1;2878-1;2879-1;2885-1;2886-1;2887-1;2888-1;2889-1;2890-1;2891-6" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14740" type="EtcItem" name="Event - Save the Cow Event Pack">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -1320,6 +1323,7 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14799" type="Armor" name="Afro Perm Wig - Gold">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
@@ -1327,5 +1331,6 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 </list>

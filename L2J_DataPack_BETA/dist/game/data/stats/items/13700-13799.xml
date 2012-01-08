@@ -695,6 +695,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2592-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -991,6 +992,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2623-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="119,120" />
 		</cond>
@@ -1006,6 +1008,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2624-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
 		</cond>

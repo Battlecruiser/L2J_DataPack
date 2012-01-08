@@ -632,6 +632,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2031-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -649,6 +650,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2032-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -664,6 +666,7 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="1063" type="EtcItem" name="Tutorial Parchment">
 		<set name="icon" val="icon.item_canuse15" />
@@ -787,6 +790,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2031-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="1074" type="EtcItem" name="Boat Ticket: Talking Island to Gludin">
 		<set name="icon" val="icon.etc_ticket_red_i00" />

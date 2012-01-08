@@ -329,6 +329,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2361-1" />
 		<set name="use_condition" val="{{uc_category;{@upgrade_baby_pet_group}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10426" type="EtcItem" name="Fenrir Necklace">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
@@ -405,6 +406,7 @@
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2485-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10433" type="EtcItem" name="Kertin's Herb of Mana">
 		<set name="immediate_effect" val="1" />
@@ -412,6 +414,7 @@
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2486-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10434" type="Weapon" name="Icarus Sawsword - Focus">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
