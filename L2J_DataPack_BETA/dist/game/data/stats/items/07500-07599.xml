@@ -693,6 +693,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="1" />
 			<set order="0x08" stat="mAtk" val="1" />
@@ -1029,6 +1030,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2048-1" />
 		<set name="use_condition" val="{{uc_category;{@baby_pet_group}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="7583" type="EtcItem" name="Pet Exchange Ticket: Buffalo">
 		<set name="icon" val="icon.etc_ticket_red_i00" />

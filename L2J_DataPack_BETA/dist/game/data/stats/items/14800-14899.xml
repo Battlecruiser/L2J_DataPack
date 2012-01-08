@@ -6,6 +6,7 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14801" type="Armor" name="Gludio Guard Earring">
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
@@ -332,6 +333,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2916-1" />
 		<set name="use_condition" val="{{uc_category;{@grown_up_wolf_group}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14819" type="EtcItem" name="Guardian's Dragon Bugle">
 		<set name="icon" val="icon.etc_bugle_i00" />
@@ -360,6 +362,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2910-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14821" type="EtcItem" name="Skull Key of Erosion">
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
@@ -372,6 +375,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2911-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14822" type="EtcItem" name="Skull Key of the Heart">
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
@@ -384,6 +388,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2912-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14823" type="EtcItem" name="Soul Extraction Device">
 		<set name="icon" val="icon.etc_lantern_i00" />
@@ -395,6 +400,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2913-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
 		</cond>
@@ -408,6 +414,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2900-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14825" type="EtcItem" name="Ancient Herb - Immortal">
 		<set name="icon" val="icon.freed_soul_core_i00" />
@@ -418,6 +425,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2901-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14826" type="EtcItem" name="Ancient Herb - Terminator">
 		<set name="icon" val="icon.freed_soul_core_i00" />
@@ -428,6 +436,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2902-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14827" type="EtcItem" name="Ancient Herb - Guide">
 		<set name="icon" val="icon.freed_soul_core_i00" />
@@ -438,6 +447,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2903-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14828" type="EtcItem" name="Deinonychus Mesozoic Stone">
 		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />

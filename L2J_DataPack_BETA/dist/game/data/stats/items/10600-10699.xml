@@ -579,6 +579,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2512-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10656" type="EtcItem" name="Herb of Critical Attack - Power">
 		<set name="immediate_effect" val="1" />
@@ -587,6 +588,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2514-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10657" type="EtcItem" name="Herb of Doubt">
 		<set name="immediate_effect" val="1" />
@@ -595,6 +597,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2513-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10658" type="Armor" name="Pet Accessory (Not In Use)">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
@@ -605,6 +608,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="33" />
 		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="7" />
 		</for>

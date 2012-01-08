@@ -424,6 +424,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2577-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -443,6 +444,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2592-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -795,6 +797,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="for_npc" val="true" />
 		<cond msgId="1518">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -975,6 +978,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2593-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>

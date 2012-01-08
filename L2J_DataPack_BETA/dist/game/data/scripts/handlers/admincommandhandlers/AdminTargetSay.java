@@ -17,8 +17,8 @@ package handlers.admincommandhandlers;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -42,7 +42,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 			try
 			{
 				final L2Object obj = activeChar.getTarget();
-				if ((obj instanceof L2ControllableMobInstance) || !(obj instanceof L2Character))
+				if ((obj instanceof L2StaticObjectInstance) || !(obj instanceof L2Character))
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return false;
