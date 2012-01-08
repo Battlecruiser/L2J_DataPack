@@ -24,7 +24,21 @@
 						</sequence>
 					</complexType>
 				</element>
-				<element name="npc" minOccurs="1" maxOccurs="1">					<complexType>						<sequence minOccurs="1" maxOccurs="1">							<element name="spawn" minOccurs="1" maxOccurs="unbounded">								<complexType>									<choice minOccurs="1" maxOccurs="1">										<element name="loc" minOccurs="1" maxOccurs="1">											<complexType>												<attribute name="heading" type="nonNegativeInteger" use="required" />												<attribute name="mustKill" type="boolean" use="optional" />												<attribute name="x" type="integer" use="required" />												<attribute name="y" type="integer" use="required" />												<attribute name="z" type="integer" use="required" />											</complexType>										</element>
+				<element name="npc" minOccurs="1" maxOccurs="1">
+					<complexType>
+						<sequence minOccurs="1" maxOccurs="1">
+							<element name="spawn" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+									<choice minOccurs="1" maxOccurs="1">
+										<element name="loc" minOccurs="1" maxOccurs="1">
+											<complexType>
+												<attribute name="heading" type="nonNegativeInteger" use="required" />
+												<attribute name="mustKill" type="boolean" use="optional" />
+												<attribute name="x" type="integer" use="required" />
+												<attribute name="y" type="integer" use="required" />
+												<attribute name="z" type="integer" use="required" />
+											</complexType>
+										</element>
 										<element name="zone" minOccurs="1" maxOccurs="1">
 											<complexType>
 												<attribute name="count" type="positiveInteger" use="required" />
