@@ -14,7 +14,6 @@
  */
 package events.TheValentineEvent;
 
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -23,7 +22,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Event Code for "The Valentine Event" http://www.lineage2.com/archive/2009/01/the_valentine_e.html
+ * Event Code for "The Valentine Event"<br>
+ * http://www.lineage2.com/archive/2009/01/the_valentine_e.html
  * @author Gnacik
  */
 public class TheValentineEvent extends Quest
@@ -83,16 +83,16 @@ public class TheValentineEvent extends Quest
 		addFirstTalkId(_npc);
 		addTalkId(_npc);
 		for (Location loc : _spawns)
+		{
 			addSpawn(_npc, loc, false, 0);
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		
-		htmltext = event;
 		if (event.equalsIgnoreCase("4301-3.htm"))
 		{
 			if (st.isCompleted())
@@ -112,15 +112,12 @@ public class TheValentineEvent extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
-		htmltext = npc.getNpcId() + ".htm";
-		return htmltext;
+		return npc.getNpcId() + ".htm";
 	}
 	
 	public static void main(String[] args)
