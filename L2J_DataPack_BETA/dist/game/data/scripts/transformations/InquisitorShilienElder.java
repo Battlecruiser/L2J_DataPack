@@ -1,3 +1,17 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package transformations;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -15,8 +29,10 @@ public class InquisitorShilienElder extends L2Transformation
 	@Override
 	public void onTransform()
 	{
-		if (getPlayer().getTransformationId() != 318 || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 318) || getPlayer().isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		transformedSkills();
 	}
@@ -25,7 +41,9 @@ public class InquisitorShilienElder extends L2Transformation
 	{
 		int lvl = 1;
 		if (getPlayer().getLevel() > 43)
+		{
 			lvl = (getPlayer().getLevel() - 43);
+		}
 		
 		// Divine Punishment
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, lvl), false);
@@ -38,7 +56,10 @@ public class InquisitorShilienElder extends L2Transformation
 		// Divine Curse
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, lvl), false);
 		// Set allowed skills
-		getPlayer().setTransformAllowedSkills(new int[]{838,1523,1528,1524,1525,1430,1303,1059,1043});
+		getPlayer().setTransformAllowedSkills(new int[]
+		{
+			838, 1523, 1528, 1524, 1525, 1430, 1303, 1059, 1043
+		});
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
@@ -53,7 +74,9 @@ public class InquisitorShilienElder extends L2Transformation
 	{
 		int lvl = 1;
 		if (getPlayer().getLevel() > 43)
+		{
 			lvl = (getPlayer().getLevel() - 43);
+		}
 		
 		// Divine Punishment
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, lvl), false);

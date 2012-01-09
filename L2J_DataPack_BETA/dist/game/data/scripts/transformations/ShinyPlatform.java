@@ -25,8 +25,7 @@ public class ShinyPlatform extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5491,
-		619
+		5491, 619
 	};
 	
 	public ShinyPlatform()
@@ -38,8 +37,10 @@ public class ShinyPlatform extends L2Transformation
 	@Override
 	public void onTransform()
 	{
-		if (getPlayer().getTransformationId() != 20004 || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 20004) || getPlayer().isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		transformedSkills();
 	}

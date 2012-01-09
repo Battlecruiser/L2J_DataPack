@@ -49,10 +49,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6908" levels="1" name="Transform Master">
+		<!-- High Five Skill -->
 		<!-- Transforms into a game Master. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="22" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="6909" levels="1" name="Charming">
 		<!-- Shows the game master's charming actions. -->

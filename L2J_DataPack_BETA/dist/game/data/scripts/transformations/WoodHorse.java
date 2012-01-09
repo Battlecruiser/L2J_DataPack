@@ -18,23 +18,26 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class TinGolem extends L2Transformation
+/**
+ * @author Nyaran
+ */
+public class WoodHorse extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		940, 941, 5437, 619
+		5491, 839
 	};
 	
-	public TinGolem()
+	public WoodHorse()
 	{
 		// id, colRadius, colHeight
-		super(116, 13, 18.5);
+		super(20007, 21.5, 28.2);
 	}
 	
 	@Override
 	public void onTransform()
 	{
-		if ((getPlayer().getTransformationId() != 116) || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 20007) || getPlayer().isCursedWeaponEquipped())
 		{
 			return;
 		}
@@ -44,14 +47,10 @@ public class TinGolem extends L2Transformation
 	
 	public void transformedSkills()
 	{
-		// Fake Attack
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(940, 1), false);
-		// Special Motion
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(941, 1), false);
-		// Dissonance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 2), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Dismount
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(839, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
@@ -64,20 +63,16 @@ public class TinGolem extends L2Transformation
 	
 	public void removeSkills()
 	{
-		// Fake Attack
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(940, 1), false);
-		// Special Motion
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(941, 1), false);
-		// Dissonance
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 2), false);
-		// Transform Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Dismount
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(839, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
 	public static void main(String[] args)
 	{
-		TransformationManager.getInstance().registerTransformation(new TinGolem());
+		TransformationManager.getInstance().registerTransformation(new WoodHorse());
 	}
 }
