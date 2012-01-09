@@ -23,7 +23,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik Retail Event : 'Heavy Medals'
+ * Retail Event : 'Heavy Medals'
+ * @author Gnacik
  */
 public class HeavyMedal extends Quest
 {
@@ -138,50 +139,61 @@ public class HeavyMedal extends Quest
 		addFirstTalkId(CAT_ROY);
 		addFirstTalkId(CAT_WINNIE);
 		for (Location loc : _spawns_roy)
+		{
 			addSpawn(CAT_ROY, loc, false, 0);
+		}
 		for (Location loc : _spawns_winnie)
+		{
 			addSpawn(CAT_WINNIE, loc, false, 0);
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		htmltext = event;
 		
 		int level = checkLevel(st);
 		
 		if (event.equalsIgnoreCase("game"))
 		{
 			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level])
-				return "31229-no.htm";
-			return "31229-game.htm";
+			{
+				htmltext = "31229-no.htm";
+			}
+			htmltext = "31229-game.htm";
 		}
 		else if (event.equalsIgnoreCase("heads") || event.equalsIgnoreCase("tails"))
 		{
 			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level])
-				return "31229-" + event.toLowerCase() + "-10.htm";
-			
-			st.takeItems(GLITTERING_MEDAL, MEDALS[level]);
-			
-			if (Rnd.get(100) > WIN_CHANCE)
 			{
-				level = 0;
+				htmltext = "31229-" + event.toLowerCase() + "-10.htm";
 			}
 			else
 			{
-				if (level > 0)
-					st.takeItems(BADGES[level - 1], -1);
-				st.giveItems(BADGES[level], 1);
-				st.playSound("Itemsound.quest_itemget");
-				level++;
+				st.takeItems(GLITTERING_MEDAL, MEDALS[level]);
+				
+				if (Rnd.get(100) > WIN_CHANCE)
+				{
+					level = 0;
+				}
+				else
+				{
+					if (level > 0)
+					{
+						st.takeItems(BADGES[level - 1], -1);
+					}
+					st.giveItems(BADGES[level], 1);
+					st.playSound("Itemsound.quest_itemget");
+					level++;
+				}
+				htmltext = "31229-" + event.toLowerCase() + "-" + String.valueOf(level) + ".htm";
 			}
-			return "31229-" + event.toLowerCase() + "-" + String.valueOf(level) + ".htm";
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			return String.valueOf(npc.getNpcId()) + "-lvl-" + String.valueOf(level) + ".htm";
+			htmltext = String.valueOf(npc.getNpcId()) + "-lvl-" + String.valueOf(level) + ".htm";
 		}
 		return htmltext;
 	}
@@ -202,16 +214,25 @@ public class HeavyMedal extends Quest
 	{
 		int _lev = 0;
 		if (st == null)
+		{
 			return 0;
-		else if (st.hasQuestItems(6402))
+		}
+		if (st.hasQuestItems(6402))
+		{
 			_lev = 4;
+		}
 		else if (st.hasQuestItems(6401))
+		{
 			_lev = 3;
+		}
 		else if (st.hasQuestItems(6400))
+		{
 			_lev = 2;
+		}
 		else if (st.hasQuestItems(6399))
+		{
 			_lev = 1;
-		
+		}
 		return _lev;
 	}
 	
