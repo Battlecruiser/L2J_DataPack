@@ -14,7 +14,6 @@
  */
 package events.HeavyMedal;
 
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -152,17 +151,12 @@ public class HeavyMedal extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
-		
+		final QuestState st = player.getQuestState(getName());
 		int level = checkLevel(st);
 		
 		if (event.equalsIgnoreCase("game"))
 		{
-			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level])
-			{
-				htmltext = "31229-no.htm";
-			}
-			htmltext = "31229-game.htm";
+			htmltext = st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level] ? "31229-no.htm" : "31229-game.htm";
 		}
 		else if (event.equalsIgnoreCase("heads") || event.equalsIgnoreCase("tails"))
 		{
@@ -201,11 +195,9 @@ public class HeavyMedal extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (player.getQuestState(getName()) == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			newQuestState(player);
 		}
 		return npc.getNpcId() + ".htm";
 	}

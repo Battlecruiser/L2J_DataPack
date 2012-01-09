@@ -14,12 +14,12 @@
  */
 package events.FreyaCelebration;
 
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -32,9 +32,8 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- **
- ** Retail Event : 'Freya Celebration'
+ * Retail Event : 'Freya Celebration'
+ * @author Gnacik
  */
 public class FreyaCelebration extends Quest
 {
@@ -43,7 +42,10 @@ public class FreyaCelebration extends Quest
 	private static final int _freya_gift = 17138;
 	private static final int _hours = 20;
 	
-	private static final int[] _skills = { 9150, 9151, 9152, 9153, 9154, 9155, 9156 };
+	private static final int[] _skills =
+	{
+		9150, 9151, 9152, 9153, 9154, 9155, 9156
+	};
 	
 	private static final NpcStringId[] _freya_texts =
 	{
@@ -54,7 +56,7 @@ public class FreyaCelebration extends Quest
 		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
 	
-	private static final Location[] _spawns = 
+	private static final Location[] _spawns =
 	{
 		new Location(-119494, 44882, 360, 24576),
 		new Location(-117239, 46842, 360, 49151),
@@ -92,24 +94,25 @@ public class FreyaCelebration extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
-		Quest q = QuestManager.getInstance().getQuest(getName());
-		if (st == null || q == null)
+		if (st == null)
+		{
 			return null;
+		}
 		
 		if (event.equalsIgnoreCase("give_potion"))
 		{
-			if (st.getQuestItemsCount(57) > 1)
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > 1)
 			{
 				long _curr_time = System.currentTimeMillis();
-				String value = q.loadGlobalQuestVar(player.getAccountName());
+				String value = loadGlobalQuestVar(player.getAccountName());
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (_curr_time > _reuse_time)
 				{
 					st.setState(State.STARTED);
-					st.takeItems(57, 1);
+					st.takeItems(PcInventory.ADENA_ID, 1);
 					st.giveItems(_freya_potion, 1);
-					q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_hours * 3600000)));
+					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_hours * 3600000)));
 				}
 				else
 				{
@@ -126,7 +129,7 @@ public class FreyaCelebration extends Quest
 			else
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
-				sm.addItemName(57);
+				sm.addItemName(PcInventory.ADENA_ID);
 				sm.addNumber(1);
 				player.sendPacket(sm);
 			}
@@ -138,7 +141,9 @@ public class FreyaCelebration extends Quest
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if ((caster == null) || (npc == null))
+		{
 			return null;
+		}
 		
 		if ((npc.getNpcId() == _freya) && Util.contains(targets, npc) && Util.contains(_skills, skill.getId()))
 		{
@@ -146,9 +151,9 @@ public class FreyaCelebration extends Quest
 			{
 				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
-
+				
 				npc.broadcastPacket(cs);
-
+				
 				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
 			}
 			else
@@ -165,11 +170,9 @@ public class FreyaCelebration extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (player.getQuestState(getName()) == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			newQuestState(player);
 		}
 		return "13296.htm";
 	}
