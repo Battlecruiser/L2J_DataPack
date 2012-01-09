@@ -16,11 +16,11 @@ package events.MasterOfEnchanting;
 
 import java.util.Date;
 
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -28,7 +28,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 /**
- * Event Code for "Master of Enchanting" http://www.lineage2.com/archive/2009/06/master_of_encha.html
+ * Event Code for "Master of Enchanting"<br>
+ * http://www.lineage2.com/archive/2009/06/master_of_encha.html
  * @author Gnacik
  */
 public class MasterOfEnchanting extends Quest
@@ -37,7 +38,6 @@ public class MasterOfEnchanting extends Quest
 	private static final int _master_yogi_staff = 13539;
 	private static final int _master_yogi_scroll = 13540;
 	
-	private static final int _adena = 57;
 	private static final int _staff_price = 1000000;
 	private static final int _scroll_24_price = 5000000;
 	private static final int _scroll_24_time = 6;
@@ -107,47 +107,52 @@ public class MasterOfEnchanting extends Quest
 		addFirstTalkId(_master_yogi);
 		addTalkId(_master_yogi);
 		for (Location loc : _spawns)
+		{
 			addSpawn(_master_yogi, loc, false, 0);
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		Quest q = QuestManager.getInstance().getQuest(getName());
-		
-		htmltext = event;
 		if (event.equalsIgnoreCase("buy_staff"))
 		{
-			if (!st.hasQuestItems(_master_yogi_staff) && st.getQuestItemsCount(_adena) > _staff_price)
+			if (!st.hasQuestItems(_master_yogi_staff) && (st.getQuestItemsCount(PcInventory.ADENA_ID) > _staff_price))
 			{
-				st.takeItems(_adena, _staff_price);
+				st.takeItems(PcInventory.ADENA_ID, _staff_price);
 				st.giveItems(_master_yogi_staff, 1);
 				htmltext = "32599-staffbuyed.htm";
 			}
 			else
+			{
 				htmltext = "32599-staffcant.htm";
+			}
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
 			long _curr_time = System.currentTimeMillis();
-			String value = q.loadGlobalQuestVar(player.getAccountName());
+			String value = loadGlobalQuestVar(player.getAccountName());
 			long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(_eventStart))
+			{
 				return "32599-bidth.htm";
+			}
 			
 			if (_curr_time > _reuse_time)
 			{
-				if (st.getQuestItemsCount(_adena) > _scroll_24_price)
+				if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_24_price)
 				{
-					st.takeItems(_adena, _scroll_24_price);
+					st.takeItems(PcInventory.ADENA_ID, _scroll_24_price);
 					st.giveItems(_master_yogi_scroll, 24);
-					q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
+					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else
+				{
 					htmltext = "32599-s24-no.htm";
+				}
 			}
 			else
 			{
@@ -173,43 +178,49 @@ public class MasterOfEnchanting extends Quest
 				{
 					// Little glitch. There is no SystemMessage with seconds only.
 					// If time is less than 1 minute player can buy scrolls
-					if (st.getQuestItemsCount(_adena) > _scroll_24_price)
+					if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_24_price)
 					{
-						st.takeItems(_adena, _scroll_24_price);
+						st.takeItems(PcInventory.ADENA_ID, _scroll_24_price);
 						st.giveItems(_master_yogi_scroll, 24);
-						q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
+						saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
 						htmltext = "32599-scroll24.htm";
 					}
 					else
+					{
 						htmltext = "32599-s24-no.htm";
+					}
 				}
 			}
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_1"))
 		{
-			if (st.getQuestItemsCount(_adena) > _scroll_1_price)
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_1_price)
 			{
-				st.takeItems(_adena, _scroll_1_price);
+				st.takeItems(PcInventory.ADENA_ID, _scroll_1_price);
 				st.giveItems(_master_yogi_scroll, 1);
 				htmltext = "32599-scroll-ok.htm";
 			}
 			else
+			{
 				htmltext = "32599-s1-no.htm";
+			}
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_10"))
 		{
-			if (st.getQuestItemsCount(_adena) > _scroll_10_price)
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_10_price)
 			{
-				st.takeItems(_adena, _scroll_10_price);
+				st.takeItems(PcInventory.ADENA_ID, _scroll_10_price);
 				st.giveItems(_master_yogi_scroll, 10);
 				htmltext = "32599-scroll-ok.htm";
 			}
 			else
+			{
 				htmltext = "32599-s10-no.htm";
+			}
 		}
 		else if (event.equalsIgnoreCase("receive_reward"))
 		{
-			if (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == _master_yogi_staff && st.getEnchantLevel(_master_yogi_staff) > 3)
+			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == _master_yogi_staff) && (st.getEnchantLevel(_master_yogi_staff) > 3))
 			{
 				switch (st.getEnchantLevel(_master_yogi_staff))
 				{
@@ -280,31 +291,30 @@ public class MasterOfEnchanting extends Quest
 						st.giveItems(13988, 1); // S80 Grade Weapon Chest (Event)
 					default:
 						if (st.getEnchantLevel(_master_yogi_staff) > 23)
+						{
 							st.giveItems(13988, 1); // S80 Grade Weapon Chest (Event)
+						}
 						break;
 				}
 				st.takeItems(_master_yogi_staff, 1);
 				htmltext = "32599-rewardok.htm";
 			}
 			else
+			{
 				htmltext = "32599-rewardnostaff.htm";
+			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (player.getQuestState(getName()) == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			newQuestState(player);
 		}
-		htmltext = npc.getNpcId() + ".htm";
-		return htmltext;
+		return npc.getNpcId() + ".htm";
 	}
 	
 	public static void main(String[] args)
