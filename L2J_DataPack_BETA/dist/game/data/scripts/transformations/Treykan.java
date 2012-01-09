@@ -6,7 +6,10 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Treykan extends L2Transformation
 {
-	private static final int[] SKILLS = new int[]{619};
+	private static final int[] SKILLS = new int[]
+	{
+		619, 967, 968, 969, 5437
+	};
 	
 	public Treykan()
 	{
@@ -17,8 +20,10 @@ public class Treykan extends L2Transformation
 	@Override
 	public void onTransform()
 	{
-		if (getPlayer().getTransformationId() != 126 || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 126) || getPlayer().isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		transformedSkills();
 	}
@@ -27,6 +32,14 @@ public class Treykan extends L2Transformation
 	{
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Cursed Body
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(967, 1), false);
+		// Treykan Claw
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(968, 1), false);
+		// Treykan Dash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(969, 1), false);
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
@@ -41,6 +54,14 @@ public class Treykan extends L2Transformation
 	{
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Cursed Body
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(967, 1), false);
+		// Treykan Claw
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(968, 1), false);
+		// Treykan Dash
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(969, 1), false);
+		// Dissonance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}

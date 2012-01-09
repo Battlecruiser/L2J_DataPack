@@ -403,14 +403,20 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5437" levels="2" name="Dissonance">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#def"> 0.6 1 </table>
+		<table name="#avoid"> 50 0 </table>
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="0.95" />
 			<mul order="0x30" stat="mAtk" val="0.95" />
 			<sub order="0x40" stat="accCombat" val="50" />
 			<add order="0x40" stat="runSpd" val="5" />
+			<mul order="0x30" stat="pDef" val="#def" />
+			<mul order="0x30" stat="mDef" val="#def" />
+			<sub order="0x40" stat="rEvas" val="#avoid" />
 		</for>
 	</skill>
 	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
