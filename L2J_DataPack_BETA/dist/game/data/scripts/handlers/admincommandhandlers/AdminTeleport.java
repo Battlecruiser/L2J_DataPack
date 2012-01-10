@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Object;
@@ -78,7 +79,8 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_godown",
 		"admin_tele",
 		"admin_teleto",
-		"admin_instant_move"
+		"admin_instant_move",
+		"admin_sendhome"
 	};
 	
 	@Override
@@ -242,7 +244,38 @@ public class AdminTeleport implements IAdminCommandHandler
 				activeChar.sendMessage("Usage: //go<north|south|east|west|up|down> [offset] (default 150)");
 			}
 		}
-		
+		else if (command.startsWith("admin_sendhome"))
+		{
+			StringTokenizer st = new StringTokenizer(command, " ");
+			st.nextToken(); // Skip command.
+			if (st.countTokens() > 1)
+			{
+				activeChar.sendMessage("Usage: //sendhome <playername>");
+			}
+			else if (st.countTokens() == 1)
+			{
+				final String name = st.nextToken();
+				final L2PcInstance player = L2World.getInstance().getPlayer(name);
+				if (player == null)
+				{
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					return false;
+				}
+				teleportHome(player);
+			}
+			else
+			{
+				final L2Object target = activeChar.getTarget();
+				if (target instanceof L2PcInstance)
+				{
+					teleportHome(target.getActingPlayer());
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				}
+			}
+		}
 		return true;
 	}
 	
@@ -250,6 +283,40 @@ public class AdminTeleport implements IAdminCommandHandler
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
+	}
+	
+	/**
+	 * This method sends a player to it's home town.
+	 * @param player the player to teleport.
+	 */
+	private void teleportHome(L2PcInstance player)
+	{
+		String regionName;
+		switch(player.getRace())
+		{
+			case Elf:
+				regionName = "elf_town";
+				break;
+			case DarkElf:
+				regionName = "darkelf_town";
+				break;
+			case Orc:
+				regionName = "orc_town";
+				break;
+			case Dwarf:
+				regionName = "dwarf_town";
+				break;
+			case Kamael:
+				regionName = "kamael_town";
+				break;
+			case Human:
+			default:
+				regionName = "talking_island_town";
+		}
+		
+		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true);
+		player.setInstanceId(0);
+		player.setIsIn7sDungeon(false);
 	}
 	
 	private void teleportTo(L2PcInstance activeChar, String Coords)
