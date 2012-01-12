@@ -448,7 +448,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="3" />
@@ -650,7 +650,7 @@
 		<table name="#amount"> 50 200 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600" /> <!-- FIXME: Retail 0 but them have kind protection for flood -->
 		<set name="isPotion" val="true" />

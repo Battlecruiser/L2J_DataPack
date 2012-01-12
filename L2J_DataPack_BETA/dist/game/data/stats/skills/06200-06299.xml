@@ -759,10 +759,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="1100" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="CpHealPercent" noicon="1" val="100" />

@@ -212,7 +212,7 @@
 		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<for>
@@ -252,7 +252,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -273,7 +273,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -285,7 +285,7 @@
 	<skill id="26029" levels="1" name="Potion of Will">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<for>
@@ -297,7 +297,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="60" />

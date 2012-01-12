@@ -728,7 +728,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -747,7 +747,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1324,7 +1324,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1343,7 +1343,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1510,7 +1510,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1529,7 +1529,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1547,7 +1547,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2289-1" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />

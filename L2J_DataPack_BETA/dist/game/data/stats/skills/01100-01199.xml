@@ -243,9 +243,8 @@
 		<set name="target" val="TARGET_PET" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -280,10 +279,9 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PET" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -755,7 +753,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggroPoints" />

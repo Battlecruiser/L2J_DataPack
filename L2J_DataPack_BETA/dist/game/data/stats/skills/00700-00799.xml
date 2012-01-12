@@ -8,7 +8,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Heal" noicon="1" val="400" />
@@ -48,7 +48,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="300" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
@@ -269,10 +269,9 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="57" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_PET" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
@@ -299,10 +298,9 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="127" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PET" />
 		<for>
 			<effect name="Heal" noicon="1" val="991" />
@@ -498,7 +496,7 @@
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="624" />
@@ -759,11 +757,10 @@
 		<set name="mpInitialConsume" val="12" />
 		<set name="mpConsume" val="48" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -782,10 +779,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="1000" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1799,7 +1795,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player active_effect_id_lvl="5563,3" />

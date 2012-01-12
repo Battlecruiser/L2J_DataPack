@@ -78,10 +78,9 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -117,7 +116,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -398,7 +397,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="669" />
@@ -500,7 +499,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
@@ -756,7 +755,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
@@ -798,7 +797,7 @@
 		<set name="target" val="TARGET_PARTY" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
@@ -2584,11 +2583,10 @@
 		<set name="mpInitialConsume" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="15000" />

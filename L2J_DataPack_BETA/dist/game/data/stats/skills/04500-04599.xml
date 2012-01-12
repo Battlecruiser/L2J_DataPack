@@ -129,10 +129,9 @@
 		<set name="magicLvl" val="99" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="64" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="5600" />
@@ -264,7 +263,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="10" />
@@ -276,9 +275,8 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="public_slot">
@@ -315,11 +313,10 @@
 	<skill id="4530" levels="1" name="Quest - Summoned HP Heal">
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="5" />
@@ -328,11 +325,10 @@
 	<skill id="4531" levels="1" name="Quest - Summoned MP Heal">
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="ManaHealPercent" noicon="1" val="5" />

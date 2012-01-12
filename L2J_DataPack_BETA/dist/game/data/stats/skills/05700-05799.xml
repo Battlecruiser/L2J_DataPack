@@ -126,9 +126,8 @@
 		<set name="hitTime" val="2000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="1300" />
 		<for>
@@ -581,7 +580,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="5000" />
@@ -596,9 +595,8 @@
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="99" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="ManaHealPercent" noicon="1" val="100" />

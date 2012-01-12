@@ -627,7 +627,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
@@ -676,7 +676,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="6000" />
 		<set name="staticHitTime" val="true" />
@@ -724,7 +724,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
@@ -1493,15 +1493,12 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
-		</for>
 	</skill>
 	<skill id="5196" levels="3" name="Pet Wind Shackle">
 		<table name="#mpConsume"> 48 49 51 </table>
