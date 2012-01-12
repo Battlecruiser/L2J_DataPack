@@ -975,9 +975,8 @@
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SUMMON" />
 		<for>
 			<effect name="Heal" noicon="1" val="418" />
@@ -1043,7 +1042,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="10" />
@@ -1071,7 +1070,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="150" />
@@ -1302,15 +1301,12 @@
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
-		</for>
 	</skill>
 	<skill id="5591" levels="8" name="Light Flow">
 		<!-- Confirmed CT2.5 -->
@@ -1320,10 +1316,9 @@
 		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

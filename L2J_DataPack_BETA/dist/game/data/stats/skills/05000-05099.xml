@@ -124,7 +124,7 @@
 		<table name="#isMagic"> true false false true true </table>
 		<table name="#power"> 0 0 0 10 10 </table>
 		<table name="#saveVs"> NULL NULL NULL MEN MEN </table>
-		<table name="#skillType"> DUMMY DUMMY BUFF DEBUFF STUN </table>
+		<table name="#skillType"> HEAL_PERCENT DUMMY BUFF DEBUFF STUN </table>
 		<table name="#abnormalLvl"> 0 0 1 1 1 </table>
 		<table name="#abnormalType"> none none ultimate_buff heal_effect_down stun </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
@@ -312,7 +312,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Grow" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="big_body">

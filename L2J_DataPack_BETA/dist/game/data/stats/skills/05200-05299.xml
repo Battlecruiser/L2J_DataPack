@@ -15,14 +15,11 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="target" val="TARGET_OWNER_PET" />
-		<for>
-			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
-		</for>
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
 		<!-- CT2.5 retail confirmed -->
@@ -105,8 +102,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
-		<set name="neutral" val="true" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="100" />

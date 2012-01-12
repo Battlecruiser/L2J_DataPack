@@ -174,7 +174,7 @@
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -295,7 +295,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="1000" />
 		<set name="reuseDelay" val="12000" />
@@ -334,18 +334,15 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_OWNER_PET" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="8000" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#amount" />
-		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
-		</for>
 	</skill>
 	<skill id="4718" levels="12" name="Greater Heal Trick">
 		<table name="#mpConsume"> 33 59 88 122 162 195 228 242 252 259 262 262 </table>
@@ -354,18 +351,15 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_OWNER_PET" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="8000" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#amount" />
-		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
-		</for>
 	</skill>
 	<skill id="4719" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -1428,10 +1422,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1448,10 +1441,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1468,10 +1460,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1488,10 +1479,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1508,10 +1498,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

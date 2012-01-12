@@ -1137,10 +1137,9 @@
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1215" />
 		<set name="magicLvl" val="78" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="hpConsume" val="#ench1Cost" />
@@ -1188,7 +1187,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="150000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="CPDAMPERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />

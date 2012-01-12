@@ -1043,9 +1043,8 @@
 		<table name="#amount"> 20 40 60 80 100 </table>
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="#amount" />
@@ -1233,9 +1232,8 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="75" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="50" />

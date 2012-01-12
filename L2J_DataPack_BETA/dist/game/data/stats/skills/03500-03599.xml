@@ -1268,8 +1268,7 @@
 	<skill id="3596" levels="1" name="Full Recover">
 		<!-- Infinity Scepter Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
-		<set name="neutral" val="true" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
 		<set name="aggroPoints" val="100" />
@@ -1305,8 +1304,7 @@
 	<skill id="3598" levels="1" name="Full Recover">
 		<!-- Infinity Rod Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
-		<set name="neutral" val="true" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
 		<set name="aggroPoints" val="100" />

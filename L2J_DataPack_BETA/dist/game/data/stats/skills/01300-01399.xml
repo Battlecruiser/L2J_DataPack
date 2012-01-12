@@ -122,7 +122,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
@@ -151,9 +151,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1332,9 +1331,8 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="60000" />
 		<set name="target" val="TARGET_PET" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />

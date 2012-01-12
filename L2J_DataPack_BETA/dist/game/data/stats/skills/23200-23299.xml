@@ -140,7 +140,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="500" />
@@ -153,7 +153,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="500" />
@@ -954,10 +954,9 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">

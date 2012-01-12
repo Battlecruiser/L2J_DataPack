@@ -109,12 +109,11 @@
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="174" />
 		<set name="mpInitialConsume" val="44" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_PARTY_NOTME" />
 		<for>
 			<effect name="Invincible" abnormalTime="15" val="0" special="invincible" abnormalLvl="2" abnormalType="invincibility" />
@@ -134,10 +133,9 @@
 		<set name="maxNegated" val="10" />
 		<set name="mpConsume" val="58" />
 		<set name="mpInitialConsume" val="15" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -1226,7 +1224,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Heal" noicon="1" val="796" />
@@ -1416,7 +1414,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#stackOrder" abnormalType="max_hp_up">

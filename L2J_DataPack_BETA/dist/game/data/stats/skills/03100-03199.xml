@@ -356,7 +356,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="5000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -395,7 +395,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
 		<for>
@@ -438,8 +438,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="DUMMY" />
-		<set name="neutral" val="true" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -502,7 +501,7 @@
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
 		<for>

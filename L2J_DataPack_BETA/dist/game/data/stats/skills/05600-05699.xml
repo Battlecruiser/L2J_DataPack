@@ -224,9 +224,8 @@
 		<set name="aggroPoints" val="100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="#amount" />
@@ -1063,7 +1062,7 @@
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="41" />
@@ -1075,7 +1074,7 @@
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="51" />
@@ -1087,7 +1086,7 @@
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="59" />
@@ -1130,7 +1129,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1327,10 +1326,9 @@
 		<set name="aggroPoints" val="1" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1436,7 +1434,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="4000" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

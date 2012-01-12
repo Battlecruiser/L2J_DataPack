@@ -1257,7 +1257,7 @@
 	<skill id="2592" levels="1" name="Quick Healing Potion">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<for>

@@ -228,9 +228,8 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="35" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="10846" />
@@ -271,9 +270,8 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="35" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="10846" />
@@ -287,10 +285,9 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -325,10 +322,9 @@
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="60" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="98" />
 		<for>
@@ -674,10 +670,9 @@
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="45" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="70" />
 		<for>
@@ -799,9 +794,8 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -999,9 +993,8 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1285,9 +1278,8 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="5000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
