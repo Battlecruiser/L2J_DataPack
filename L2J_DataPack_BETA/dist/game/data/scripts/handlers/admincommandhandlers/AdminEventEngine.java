@@ -145,26 +145,22 @@ public class AdminEventEngine implements IAdminCommandHandler
 				file.delete();
 				showMainPage(activeChar);
 			}
-			
 			else if (actualCommand.startsWith("admin_event_name"))
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				tempName += command.substring(17);
 				showNewEventPage(activeChar);
 			}
-			
 			else if (actualCommand.equalsIgnoreCase("admin_delete_buffer"))
 			{
 				tempBuffer = "";
 				showNewEventPage(activeChar);
 			}
-			
 			else if (actualCommand.startsWith("admin_event_store"))
 			{
-				
 				try
 				{
-					FileOutputStream file = new FileOutputStream(Config.DATAPACK_ROOT+"data/events/" + tempName);
+					FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "data/events/" + tempName));
 					PrintStream p = new PrintStream(file);
 					p.println(activeChar.getName());
 					p.println(tempBuffer);
@@ -263,7 +259,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				showEventControl(activeChar);
 			}
-			
 			else if (actualCommand.startsWith("admin_event_control_sit"))
 			{
 				while (st.hasMoreElements()) // Every next ST should be a team number
@@ -328,7 +323,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 					player.sendPacket(info2);
 					player.broadcastPacket(new ExBrExtraUserInfo(player));
 				}
-				
 				showEventControl(activeChar);
 			}
 			else if (actualCommand.startsWith("admin_event_control_unpoly"))
@@ -365,7 +359,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 					if (!TransformationManager.getInstance().transformPlayer(transId, player))
 						GmListTable.broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
 				}
-				
 				showEventControl(activeChar);
 			}
 			else if (actualCommand.startsWith("admin_event_control_untransform"))
@@ -419,7 +412,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 			e.printStackTrace(); 
 			GmListTable.broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?"); 
 		}
-		
 		return true;
 	}
 	
@@ -429,19 +421,32 @@ public class AdminEventEngine implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	String showStoredEvents()
+	private String showStoredEvents()
 	{
-		File dir = new File(Config.DATAPACK_ROOT+"/data/events");
-		String[] files = dir.list();
-		
-		if (files == null) {
-			return "<font color=\"FF0000\"> No 'data/events' directory! <font> <BR>" + 
-					"<font color=\"FF0000\"> UNABLE TO CREATE AN EVENT! Please create this folder. <font>";
+		final File dir = new File(Config.DATAPACK_ROOT, "/data/events");
+		if (dir.isFile())
+		{
+			return "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' is a file or is corrupted!<font><br>";
 		}
 		
+		String note = "";
+		if (!dir.exists())
+		{
+			note = "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' does not exist!<font><br><font color=\"0099FF\">Trying to create it now...<br><font><br>";
+			if (dir.mkdirs())
+			{
+				note += "<font color=\"006600\">The directory '"+ dir.getAbsolutePath() + "' has been created!<font><br>";
+			}
+			else
+			{
+				note += "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' hasn't been created!<font><br>";
+				return note;
+			}
+		}
+		
+		final String[] files = dir.list();
 		final StringBuilder result = new StringBuilder(files.length * 500);
 		result.append("<table>");
-		
 		for (String fileName : files) 
 		{
 			StringUtil.append(result,
@@ -460,7 +465,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		
 		result.append("</table>");
 		
-		return result.toString();
+		return note + result.toString();
 	}
 	
 	public void showMainPage(L2PcInstance activeChar)
