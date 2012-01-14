@@ -42,7 +42,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	
 	private static final int MOBS[] =
 	{
-		18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692, 18693
+		18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692
 	};
 	
 	@Override
@@ -146,15 +146,18 @@ public class Q10274_CollectingInTheAir extends Quest
 		{
 			st.playSound("ItemSound.quest_itemget");
 			
-			if ((npcId > 18684) && (npcId < 18687))
+			// Red Star Stones
+			if ((npcId >= 18684) && (npcId <= 18686))
 			{
 				st.giveItems(RED, 1);
 			}
-			else if ((npcId > 18687) && (npcId < 18690))
+			// Blue Star Stones
+			else if ((npcId >= 18687) && (npcId <= 18689))
 			{
 				st.giveItems(BLUE, 1);
 			}
-			else if ((npcId > 18690) && (npcId < 18693))
+			// Green Star Stones
+			else if ((npcId >= 18690) && (npcId <= 18692))
 			{
 				st.giveItems(GREEN, 1);
 			}
@@ -182,10 +185,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		
 		questItemIds = new int[]
 		{
-			SCROLL, 
-			RED, 
-			BLUE, 
-			GREEN
+			SCROLL, RED, BLUE, GREEN
 		};
 	}
 	
