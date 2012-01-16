@@ -90,9 +90,9 @@ public class Q10267_JourneyToGracia extends Quest
 						htmltext = "32564-03.htm";
 					}
 				}
-				else if (npcId == KEUCEREUS && st.getInt("cond") == 2)
+				else if ((npcId == KEUCEREUS) && (st.getInt("cond") == 2))
 				{
-						htmltext = "32548-01.htm";
+					htmltext = "32548-01.htm";
 				}
 				break;
 		}
