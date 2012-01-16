@@ -37,7 +37,7 @@ public class MissQueen extends Quest
 	};
 
 	// enable/disable coupon give
-	private static final boolean QUEEN_ENABLED = false;
+	private static boolean QUEEN_ENABLED = false;
 	// Newbie/one time rewards section
 	// Any quest should rely on a unique bit, but
 	// it could be shared among quest that were mutually
@@ -65,52 +65,52 @@ public class MissQueen extends Quest
 		String htmltext = event;
 		
 		if (!QUEEN_ENABLED)
-			return htmltext;
-		else
 		{
-			QuestState st = player.getQuestState(qn);
-			int newbie = player.getNewbie();
-			int level = player.getLevel();
-			int occupation_level = player.getClassId().level();
-			int pkkills = player.getPkKills();
-			if (event.equals("newbie_give_coupon"))
-			{
-				/*
-				 * TODO: check if this is the very first charactr for this account would need a bit of SQL, or a core method to determine it. This condition should be stored by the core in the account_data table upon character creation.
-				 */
-				if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 0)
-				{
-					if ((newbie | NEWBIE_REWARD) != newbie)
-					{
-						player.setNewbie(newbie | NEWBIE_REWARD);
-						st.giveItems(COUPNE_ONE, 1);
-						htmltext = "31760-2.htm"; // here's the coupon you requested
-					}
-					else
-						htmltext = "31760-1.htm"; // you got a coupon already!
-				}
-				else
-					htmltext = "31760-3.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
-			}
-			else if (event.equals("traveller_give_coupon"))
-			{
-				if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 1)
-				{ // check the player state against this quest newbie rewarding mark.
-					if ((newbie | TRAVELER_REWARD) != newbie)
-					{
-						player.setNewbie(newbie | TRAVELER_REWARD);
-						st.giveItems(COUPNE_TWO, 1);
-						htmltext = "31760-5.htm"; // here's the coupon you requested
-					}
-					else
-						htmltext = "31760-4.htm"; // you got a coupon already!
-				}
-				else
-					htmltext = "31760-6.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
-			}
-			
 			return htmltext;
 		}
+		
+		QuestState st = player.getQuestState(qn);
+		int newbie = player.getNewbie();
+		int level = player.getLevel();
+		int occupation_level = player.getClassId().level();
+		int pkkills = player.getPkKills();
+		if (event.equals("newbie_give_coupon"))
+		{
+			/*
+			 * TODO: check if this is the very first character for this account would need a bit of SQL, or a core method to determine it. This condition should be stored by the core in the account_data table upon character creation.
+			 */
+			if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 0)
+			{
+				if ((newbie | NEWBIE_REWARD) != newbie)
+				{
+					player.setNewbie(newbie | NEWBIE_REWARD);
+					st.giveItems(COUPNE_ONE, 1);
+					htmltext = "31760-2.htm"; // here's the coupon you requested
+				}
+				else
+					htmltext = "31760-1.htm"; // you got a coupon already!
+			}
+			else
+				htmltext = "31760-3.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
+		}
+		else if (event.equals("traveller_give_coupon"))
+		{
+			if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 1)
+			{ // check the player state against this quest newbie rewarding mark.
+				if ((newbie | TRAVELER_REWARD) != newbie)
+				{
+					player.setNewbie(newbie | TRAVELER_REWARD);
+					st.giveItems(COUPNE_TWO, 1);
+					htmltext = "31760-5.htm"; // here's the coupon you requested
+				}
+				else
+					htmltext = "31760-4.htm"; // you got a coupon already!
+			}
+			else
+				htmltext = "31760-6.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
+		}
+		
+		return htmltext;
 	}
 
 	@Override
@@ -118,7 +118,7 @@ public class MissQueen extends Quest
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			st = this.newQuestState(player);
+			st = newQuestState(player);
 		return "31760.htm";
 	}
 

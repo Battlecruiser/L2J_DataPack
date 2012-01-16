@@ -21,12 +21,14 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim
- * Original python script by BiTi
+ * @author Plim Original python script by BiTi
  */
 public class PaganTeleporters extends Quest
 {
-	private static final int[] NPCS = { 32034, 32035, 32036, 32037, 32039, 32040 };
+	private static final int[] NPCS =
+	{
+		32034, 32035, 32036, 32037, 32039, 32040
+	};
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

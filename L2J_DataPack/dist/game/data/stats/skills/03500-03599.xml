@@ -1271,13 +1271,15 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="power" val="100" />
 		<set name="aggroPoints" val="100" />
 		<cond msgId="113" addName="1">
 			<not>
 				<target npcType="L2Attackable" />
 			</not>
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
 		<set name="target" val="TARGET_SELF" />
@@ -1305,13 +1307,15 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
-		<set name="power" val="100" />
 		<set name="aggroPoints" val="100" />
 		<cond msgId="113" addName="1">
 			<not>
 				<target npcType="L2Attackable" />
 			</not>
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
 		<set name="target" val="TARGET_SELF" />

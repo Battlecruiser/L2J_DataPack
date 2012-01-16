@@ -20,10 +20,10 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.games.Lottery;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -89,7 +89,7 @@ public class Loto implements IBypassHandler
 	// >24 - check lottery ticket by item object id
 	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
 	{
-		int npcId = npc.getTemplate().npcId;
+		int npcId = npc.getTemplate().getNpcId();
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -104,13 +104,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
 			}
 			
@@ -177,13 +177,13 @@ public class Loto implements IBypassHandler
 			if (!Lottery.getInstance().isStarted())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
 			if (!Lottery.getInstance().isSellableTickets())
 			{
 				// tickets can't be sold
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
+				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
 			}
 			

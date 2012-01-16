@@ -424,7 +424,7 @@ class Quest (JQuest) :
        if npcId == 30571 and st.getQuestItemsCount(RITUAL_BOX) :
          htmltext = "30571-06.htm"
        elif npcId == 30565 and st.getQuestItemsCount(RITUAL_BOX) :
-         player.sendPacket(SocialAction(player,3))
+         player.sendPacket(SocialAction(player.getObjectId(),3))
          st.addExpAndSp(724113,48324)
          st.giveItems(57,131360)
          st.giveItems(7562,109)

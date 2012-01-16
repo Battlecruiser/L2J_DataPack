@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-
 /**
- * 
  * @author nille02
  */
 public class InstanceZone implements IUserCommandHandler
@@ -38,6 +36,7 @@ public class InstanceZone implements IUserCommandHandler
 	/**
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
 	 */
+	@Override
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;
@@ -46,6 +45,7 @@ public class InstanceZone implements IUserCommandHandler
 	/**
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
@@ -55,7 +55,7 @@ public class InstanceZone implements IUserCommandHandler
 		if (world != null && world.templateId >= 0)
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_INUSE_S1);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
+			sm.addInstanceName(world.templateId);
 			activeChar.sendPacket(sm);
 		}
 		
@@ -70,12 +70,12 @@ public class InstanceZone implements IUserCommandHandler
 					if (firstMessage)
 					{
 						firstMessage = false;
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT));
+						activeChar.sendPacket(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT);
 					}
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime%3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
-					sm.addString(InstanceManager.getInstance().getInstanceIdName(instanceId));
+					sm.addInstanceName(instanceId);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					activeChar.sendPacket(sm);
@@ -84,7 +84,7 @@ public class InstanceZone implements IUserCommandHandler
 					InstanceManager.getInstance().deleteInstanceTime(activeChar.getObjectId(), instanceId);
 			}
 		if (firstMessage)
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
+			activeChar.sendPacket(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT);
 		return true;
 	}
 }

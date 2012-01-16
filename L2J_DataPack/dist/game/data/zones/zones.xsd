@@ -14,14 +14,13 @@
 												<xs:enumeration value="affectedLvlMin" />
 												<xs:enumeration value="affectedRace" />
 												<xs:enumeration value="castleId" />
-												<xs:enumeration value="residenceId" />
 												<xs:enumeration value="chance" />
 												<xs:enumeration value="clanHallId" />
-												<xs:enumeration value="EnabledByDefault" />
+												<xs:enumeration value="dmgHPSec" />
+												<xs:enumeration value="default_enabled" />
+												<xs:enumeration value="domainId" />
 												<xs:enumeration value="enterMsgId" />
 												<xs:enumeration value="fortId" />
-												<xs:enumeration value="defaultStatus" />
-												<xs:enumeration value="domainId" />
 												<xs:enumeration value="HpRegenBonus" />
 												<xs:enumeration value="initialDelay" />
 												<xs:enumeration value="instanceId" />
@@ -36,6 +35,8 @@
 												<xs:enumeration value="oustX" />
 												<xs:enumeration value="oustY" />
 												<xs:enumeration value="oustZ" />
+												<xs:enumeration value="residenceId" />
+												<xs:enumeration value="residenceZoneId" />
 												<xs:enumeration value="restartAllowedTime" />
 												<xs:enumeration value="restartTime" />
 												<xs:enumeration value="reuse" />
@@ -72,13 +73,21 @@
 							</xs:element>
 							<xs:element name="spawn" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:attribute name="isBanish" type="xs:boolean" use="optional" />
-									<xs:attribute name="isBlueBanishPoint" type="xs:boolean" use="optional" />
-									<xs:attribute name="isBlueStartPoint" type="xs:boolean" use="optional" />
-									<xs:attribute name="isChaotic" type="xs:boolean" use="optional" />
-									<xs:attribute name="isOther" type="xs:boolean" use="optional" />
-									<xs:attribute name="isRedBanishPoint" type="xs:boolean" use="optional" />
-									<xs:attribute name="isRedStartPoint" type="xs:boolean" use="optional" />
+									<xs:attribute name="type" use="optional">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="banish" />
+												<xs:enumeration value="blueBanishPoint" />
+												<xs:enumeration value="blueStartPoint" />
+												<xs:enumeration value="challenger" />
+												<xs:enumeration value="chaotic" />
+												<xs:enumeration value="entrance" />
+												<xs:enumeration value="other" />
+												<xs:enumeration value="redBanishPoint" />
+												<xs:enumeration value="redStartPoint" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
 									<xs:attribute name="X" type="xs:integer" use="required" />
 									<xs:attribute name="Y" type="xs:integer" use="required" />
 									<xs:attribute name="Z" type="xs:integer" use="required" />
@@ -124,9 +133,11 @@
 									<xs:enumeration value="NoSummonFriendZone" />
 									<xs:enumeration value="OlympiadStadiumZone" />
 									<xs:enumeration value="PeaceZone" />
+									<xs:enumeration value="ResidenceHallTeleportZone" />
 									<xs:enumeration value="ResidenceTeleportZone" />
 									<xs:enumeration value="RespawnZone" />
 									<xs:enumeration value="ScriptZone" />
+									<xs:enumeration value="SiegableHallZone" />
 									<xs:enumeration value="SiegeZone" />
 									<xs:enumeration value="SwampZone" />
 									<xs:enumeration value="TaxZone" />

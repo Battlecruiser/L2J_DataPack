@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10291_FireDragonDestroyer extends Quest
 {
-	private static final String qn = "Q10291_FireDragonDestroyer";
+	private static final String qn = "10291_FireDragonDestroyer";
 	// NPC
 	private static final int Klein = 31540;
 	private static final int Valakas = 29028;
@@ -68,7 +68,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() >= 83 && st.getQuestItemsCount(FloatingStone) >= 1)
+				if (player.getLevel() >= 83 && st.hasQuestItems(FloatingStone))
 					htmltext = "31540-01.htm";
 				else if (player.getLevel() < 83)
 					htmltext = "31540-02.htm";

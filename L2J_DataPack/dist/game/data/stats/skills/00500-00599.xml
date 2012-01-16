@@ -723,8 +723,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="ignoreResists" val="true" />
-		<set name="power" val="100" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="DEBUFF" />
@@ -1751,7 +1750,7 @@
 	<skill id="567" levels="4" name="Light of Heal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 63 66 69 </table>
-		<table name="#power"> 690 731 770 806 </table>
+		<table name="#amount"> 690 731 770 806 </table>
 		<table name="#mpInitialConsume"> 16 18 20 23 </table>
 		<table name="#mpConsume"> 64 72 80 90 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1760,12 +1759,14 @@
 		<set name="skillType" val="HEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="power" val="#power" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="3000" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="568" levels="4" name="Attack Buster">
 		<!-- Confirmed CT2.5 -->

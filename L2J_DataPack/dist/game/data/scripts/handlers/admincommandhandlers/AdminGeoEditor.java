@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.geoeditorcon.GeoEditorListener;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-
 /**
  * @author  Luno, Dezmond
  */
@@ -35,6 +34,7 @@ public class AdminGeoEditor implements IAdminCommandHandler
 		"admin_ge_leave"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (!Config.ACCEPT_GEOEDITOR_CONN)
@@ -104,6 +104,7 @@ public class AdminGeoEditor implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

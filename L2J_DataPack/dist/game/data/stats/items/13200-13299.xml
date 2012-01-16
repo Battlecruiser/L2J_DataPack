@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
-	<item id="13200" type="Weapon" name="For PC Cafe - Bellion Cestus - Weapons For PC Cafe">
+	<item id="13200" type="Weapon" name="Player Commendation - Bellion Cestus - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -21,6 +21,7 @@
 		<set name="item_skill" val="3034-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -31,7 +32,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13201" type="Weapon" name="For PC Cafe - Hazard Bow - Weapons For PC Cafe ">
+	<item id="13201" type="Weapon" name="Player Commendation - Bow of Peril - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -53,6 +54,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="400" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -63,7 +65,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13202" type="Weapon" name="For PC Cafe - Samurai*Samurai - Weapons For PC Cafe ">
+	<item id="13202" type="Weapon" name="Player Commendation - Samurai*Samurai - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -84,6 +86,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -93,7 +96,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13203" type="Weapon" name="For PC Cafe - Guardian's Sword - Weapons For PC Cafe ">
+	<item id="13203" type="Weapon" name="Player Commendation - Guardian's Sword - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -114,6 +117,7 @@
 		<set name="item_skill" val="3013-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -123,7 +127,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13204" type="Weapon" name="For PC Cafe - Wizard's Tear - Weapons For PC Cafe ">
+	<item id="13204" type="Weapon" name="Player Commendation - Wizard's Tear - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -145,6 +149,7 @@
 		<set name="item_skill" val="3047-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -154,7 +159,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13205" type="Weapon" name="For PC Cafe - Kaim Vanul's Bones - Weapons For PC Cafe ">
+	<item id="13205" type="Weapon" name="Player Commendation - Kaim Vanul's Bones - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -176,6 +181,7 @@
 		<set name="item_skill" val="3014-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -186,7 +192,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13206" type="Weapon" name="For PC Cafe - Star Buster - Weapons For PC Cafe ">
+	<item id="13206" type="Weapon" name="Player Commendation - Star Buster - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -207,6 +213,7 @@
 		<set name="item_skill" val="3036-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="236" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -217,7 +224,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13207" type="Weapon" name="For PC Cafe - Colichemarde - Weapons For PC Cafe ">
+	<item id="13207" type="Weapon" name="Player Commendation - Colichemarde - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -239,6 +246,7 @@
 		<set name="item_skill" val="3010-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -252,7 +260,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13208" type="Weapon" name="For PC Cafe - Dismantler - Weapons For PC Cafe ">
+	<item id="13208" type="Weapon" name="Player Commendation - Dismantler - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -273,6 +281,7 @@
 		<set name="oncrit_skill" val="3022-6" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -286,7 +295,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13209" type="Weapon" name="For PC Cafe - Hell Hound - Weapons For PC Cafe ">
+	<item id="13209" type="Weapon" name="Player Commendation - Hell Hound - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -308,6 +317,7 @@
 		<set name="item_skill" val="3360-1" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -321,7 +331,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13210" type="Weapon" name="For PC Cafe - Sirra's Blade - Weapons For PC Cafe ">
+	<item id="13210" type="Weapon" name="Player Commendation - Sirra's Blade - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -342,6 +352,7 @@
 		<set name="item_skill" val="3013-5" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -351,7 +362,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13211" type="Weapon" name="For PC Cafe - Sword of Ipos - Weapons For PC Cafe ">
+	<item id="13211" type="Weapon" name="Player Commendation - Sword of Ipos - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -372,6 +383,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -381,7 +393,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13212" type="Weapon" name="For PC Cafe - Barakiel's Axe - Weapons For PC Cafe ">
+	<item id="13212" type="Weapon" name="Player Commendation - Barakiel's Axe - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -402,6 +414,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -412,7 +425,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13213" type="Weapon" name="For PC Cafe - Behemoth Tuning Fork - Weapons For PC Cafe ">
+	<item id="13213" type="Weapon" name="Player Commendation - Behemoth Tuning Fork - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -433,6 +446,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -443,7 +457,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13214" type="Weapon" name="For PC Cafe - Naga Storm - Weapons For PC Cafe ">
+	<item id="13214" type="Weapon" name="Player Commendation - Naga Storm - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -464,6 +478,7 @@
 		<set name="item_skill" val="3051-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="220" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -474,7 +489,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13215" type="Weapon" name="For PC Cafe - Tiphon's Spear - Weapons For PC Cafe ">
+	<item id="13215" type="Weapon" name="Player Commendation - Tiphon's Spear - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -495,6 +510,7 @@
 		<set name="item_skill" val="3552-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="251" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -505,7 +521,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13216" type="Weapon" name="For PC Cafe - Shyeed's Bow - Weapons For PC Cafe ">
+	<item id="13216" type="Weapon" name="Player Commendation - Shyeed's Bow - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -528,6 +544,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="570" />
 			<set order="0x08" stat="mAtk" val="133" />
@@ -538,7 +555,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13217" type="Weapon" name="For PC Cafe - Sobekk's Hurricane - Weapons For PC Cafe ">
+	<item id="13217" type="Weapon" name="Player Commendation - Sobekk's Hurricane - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -559,6 +576,7 @@
 		<set name="item_skill" val="3068-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -569,7 +587,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13218" type="Weapon" name="For PC Cafe - Themis' Tongue - Weapons For PC Cafe ">
+	<item id="13218" type="Weapon" name="Player Commendation - Themis' Tongue - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -591,6 +609,7 @@
 		<set name="item_skill" val="3014-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="202" />
 			<set order="0x08" stat="mAtk" val="161" />
@@ -600,7 +619,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13219" type="Weapon" name="For PC Cafe - Cabrio's Hand - Weapons For PC Cafe ">
+	<item id="13219" type="Weapon" name="Player Commendation - Cabrio's Hand - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -622,6 +641,7 @@
 		<set name="item_skill" val="3048-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="202" />
 			<set order="0x08" stat="mAtk" val="161" />
@@ -632,7 +652,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13220" type="Weapon" name="For PC Cafe - Daimon Crystal - Weapons For PC Cafe ">
+	<item id="13220" type="Weapon" name="Player Commendation - Daimon Crystal - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -654,6 +674,7 @@
 		<set name="item_skill" val="3047-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="245" />
 			<set order="0x08" stat="mAtk" val="177" />
@@ -664,7 +685,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13221" type="Weapon" name="For PC Cafe - Tallum Blade*Damascus - Weapons For PC Cafe ">
+	<item id="13221" type="Weapon" name="Player Commendation - Tallum Blade*Damascus - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -685,6 +706,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="305" />
 			<set order="0x08" stat="mAtk" val="121" />
@@ -694,7 +716,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13222" type="Weapon" name="For PC Cafe - Éclair Bijou - Weapons For PC Cafe ">
+	<item id="13222" type="Weapon" name="Player Commendation - Eclair Bijou - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -716,6 +738,7 @@
 		<set name="item_skill" val="3068-3" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -729,7 +752,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13223" type="Weapon" name="For PC Cafe - Durendal - Weapons For PC Cafe ">
+	<item id="13223" type="Weapon" name="Player Commendation - Durendal - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -750,6 +773,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -763,7 +787,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13224" type="Weapon" name="For PC Cafe - Screaming Vengeance - Weapons For PC Cafe ">
+	<item id="13224" type="Weapon" name="Player Commendation - Screaming Vengeance - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -785,6 +809,7 @@
 		<set name="item_skill" val="3050-2" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<cond msgId="1518">
 			<player races="Kamael" />
 		</cond>
@@ -809,6 +834,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13010,15,15,100" />
 	</item>
 	<item id="13226" type="EtcItem" name="Near Kamaloka 15-Sheet Box">
@@ -822,6 +848,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13011,15,15,100" />
 	</item>
 	<item id="13227" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 15-Sheet Box">
@@ -835,6 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13012,15,15,100" />
 	</item>
 	<item id="13228" type="EtcItem" name="Kamaloka (Hall of the Abyss) 15-Sheet Pack">
@@ -848,6 +876,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13010,15,15,100" />
 	</item>
 	<item id="13229" type="EtcItem" name="Near Kamaloka 15-Sheet Pack">
@@ -861,6 +890,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13011,15,15,100" />
 	</item>
 	<item id="13230" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 15-Sheet Pack">
@@ -874,6 +904,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13012,15,15,100" />
 	</item>
 	<item id="13231" type="EtcItem" name="Kamaloka (Hall of the Abyss) 5-Sheet Pack">
@@ -887,6 +918,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13010,5,5,100" />
 	</item>
 	<item id="13232" type="EtcItem" name="Near Kamaloka 5-Sheet Pack">
@@ -900,6 +932,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13011,5,5,100" />
 	</item>
 	<item id="13233" type="EtcItem" name="Kamaloka (Labyrinth of the Abyss) 5-Sheet Pack">
@@ -913,6 +946,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13012,5,5,100" />
 	</item>
 	<item id="13234" type="Armor" name="Varka Karm (used by Varka Silenos)">
@@ -937,7 +971,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13236" type="Armor" name="AU Karm">
+	<item id="13236" type="Armor" name="Bronze Kamaloka Circlet">
 		<set name="icon" val="icon.accessory_au_karm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -948,7 +982,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13237" type="Armor" name="AR Karm">
+	<item id="13237" type="Armor" name="Silver Kamaloka Circlet">
 		<set name="icon" val="icon.accessory_ar_karm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -959,7 +993,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13238" type="Armor" name="AE Karm">
+	<item id="13238" type="Armor" name="Gold Kamaloka Circlet">
 		<set name="icon" val="icon.accessory_ae_karm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1261,6 +1295,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13027,1,1,100" />
 	</item>
 	<item id="13257" type="EtcItem" name="Gran Kain's Gift Box Pack (Event)">
@@ -1275,6 +1310,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13382,1,1,100" />
 	</item>
 	<item id="13258" type="EtcItem" name="Gran Kain's Blessed Scroll of Escape">
@@ -1448,7 +1484,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2605-1" />
 	</item>
-	<item id="13270" type="EtcItem" name="Pathfinder's Reward - AU Karm">
+	<item id="13270" type="EtcItem" name="Pathfinder's Reward - Bronze Kamaloka Circlet">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1461,7 +1497,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13236,1,1,30" />
 	</item>
-	<item id="13271" type="EtcItem" name="Pathfinder's Reward - AR Karm">
+	<item id="13271" type="EtcItem" name="Pathfinder's Reward - Silver Kamaloka Circlet">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1474,7 +1510,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13237,1,1,30" />
 	</item>
-	<item id="13272" type="EtcItem" name="Pathfinder's Reward - AE Karm">
+	<item id="13272" type="EtcItem" name="Pathfinder's Reward - Gold Kamaloka Circlet">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1521,6 +1557,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13273,3,3,100" />
 	</item>
 	<item id="13276" type="EtcItem" name="Hunting Helper Exchange Coupon 1-Sheet Pack">
@@ -1534,6 +1571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13273,1,1,100" />
 	</item>
 	<item id="13277" type="EtcItem" name="Energy Star Stone">
@@ -1733,6 +1771,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13248,1,1,100;13249,1,1,100" />
 	</item>
 	<item id="13292" type="EtcItem" name="Rock-Paper-Scissors Stick 7-Day Pack">
@@ -1746,6 +1785,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13250,1,1,100;13251,1,1,100;13252,1,1,100" />
 	</item>
 	<item id="13293" type="Armor" name="Pailaka Earring">

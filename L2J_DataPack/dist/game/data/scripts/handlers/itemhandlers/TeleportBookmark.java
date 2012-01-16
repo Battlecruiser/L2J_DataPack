@@ -15,9 +15,9 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class TeleportBookmark implements IItemHandler
 {
-	
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null || item == null || !(playable instanceof L2PcInstance))
@@ -38,14 +38,14 @@ public class TeleportBookmark implements IItemHandler
 		
 		if(player.getBookMarkSlot() >= 9)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT));
+			player.sendPacket(SystemMessageId.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT);
 			return;
 		}
 		
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
 		player.setBookMarkSlot(player.getBookMarkSlot()+3);
-		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED));
+		player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(item.getItemId());

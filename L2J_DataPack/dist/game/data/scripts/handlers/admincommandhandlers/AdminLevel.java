@@ -22,8 +22,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-
 
 public class AdminLevel implements IAdminCommandHandler
 {
@@ -34,9 +32,9 @@ public class AdminLevel implements IAdminCommandHandler
 	};
 	
 	/**
-	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		L2Object targetChar = activeChar.getTarget();
@@ -67,7 +65,7 @@ public class AdminLevel implements IAdminCommandHandler
 			{
 				if (!(targetChar instanceof L2PcInstance))
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT)); // incorrect target!
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT); // incorrect target!
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
@@ -106,6 +104,7 @@ public class AdminLevel implements IAdminCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

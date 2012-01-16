@@ -14,7 +14,7 @@
  */
 package quests.Q692_HowtoOpposeEvil;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q692_HowtoOpposeEvil extends Quest
 {
-	private static final String QN = "Q692_HowtoOpposeEvil";
+	private static final String QN = "692_HowtoOpposeEvil";
 	private static final int DILIOS = 32549;
 	private static final int LEKONS_CERTIFICATE = 13857;
 	private static final int[] QUEST_ITEMS = { 13863, 13864, 13865, 13866, 13867, 15535, 15536 };
@@ -175,7 +175,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		{
 			if (npc.getNpcId() == DILIOS)
 			{
-				if (cond == 1 && st.getQuestItemsCount(LEKONS_CERTIFICATE) >= 1)
+				if (cond == 1 && st.hasQuestItems(LEKONS_CERTIFICATE))
 				{
 					st.takeItems(LEKONS_CERTIFICATE, 1);
 					htmltext = "32549-04.htm";

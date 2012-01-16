@@ -14,7 +14,7 @@
  */
 package conquerablehalls.FortressOfTheDead;
 
-import gnu.trove.TIntIntHashMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -43,6 +43,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	 * @param questId
 	 * @param name
 	 * @param descr
+	 * @param hallId 
 	 */
 	public FortressOfTheDead(int questId, String name, String descr, final int hallId)
 	{

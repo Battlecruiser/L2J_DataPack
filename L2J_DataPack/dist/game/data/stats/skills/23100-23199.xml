@@ -592,22 +592,24 @@
 		<!-- All HP, MP, CP are recovered, and becomes invincible for 5 seconds with the power of Phoenix. Possible to use under HP 30% only. Cooldown of 12 hours. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
-		<set name="power" val="100" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="hitTime" val="2000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
-		<for>
-			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="26" abnormalType="invincibility" />
-		</for>
 		<cond msgId="113" addName="1">
 			<and>
 				<player agathionId="1574" />
 				<player hp="30" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="26" abnormalType="invincibility" />
+			<effect name="CpHealPercent" noicon="1" val="100" />
+			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="ManaHealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->

@@ -131,7 +131,7 @@ public class Q153_DeliverGoods extends Quest
 			{
 				if (npc.getNpcId() == JacksonId)
 				{
-					if (st.getQuestItemsCount(HeavyWoodBoxId) > 0)
+					if (st.hasQuestItems(HeavyWoodBoxId))
 					{
 						htmltext = "30002-01.html";
 						st.takeItems(HeavyWoodBoxId, -1);
@@ -144,7 +144,7 @@ public class Q153_DeliverGoods extends Quest
 				}
 				else if (npc.getNpcId() == SilviaId)
 				{
-					if (st.getQuestItemsCount(ClothBundleId) > 0)
+					if (st.hasQuestItems(ClothBundleId))
 					{
 						htmltext = "30003-01.html";
 						st.takeItems(ClothBundleId, -1);
@@ -158,7 +158,7 @@ public class Q153_DeliverGoods extends Quest
 				}
 				else if (npc.getNpcId() == RantId)
 				{
-					if (st.getQuestItemsCount(ClayPotId) > 0)
+					if (st.hasQuestItems(ClayPotId))
 					{
 						htmltext = "30054-01.html";
 						st.takeItems(ClayPotId, -1);
@@ -170,7 +170,7 @@ public class Q153_DeliverGoods extends Quest
 					}
 				}
 				
-				if ((st.getInt("cond") == 1) && (st.getQuestItemsCount(JacksonsReceipt) > 0) && (st.getQuestItemsCount(SilviasReceipt) > 0) && (st.getQuestItemsCount(RantsReceipt) > 0))
+				if ((st.getInt("cond") == 1) && st.hasQuestItems(JacksonsReceipt) && st.hasQuestItems(SilviasReceipt) && st.hasQuestItems(RantsReceipt))
 				{
 					st.set("cond", "2");
 					st.playSound("ItemSound.quest_middle");

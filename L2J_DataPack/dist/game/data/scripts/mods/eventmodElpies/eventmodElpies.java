@@ -66,7 +66,12 @@ public class eventmodElpies extends Event
 		{  18564,  19200, 144377, 145782, -3081 },
 		{  82048,  82940,  53240,  54126, -1490 }
 	};
-	// Drop data
+	
+	/**
+	 * Drop data:<br />
+	 * Higher the chance harder the item.<br />
+	 * ItemId, chance in percent, min amount, max amount
+	 */
 	private static final int[][] DROPLIST =
 	{
 		{  1540,  80, 10, 15 },	// Quick Healing Potion
@@ -170,6 +175,7 @@ public class eventmodElpies extends Event
 		// Schedule Event end
 		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
 		{
+			@Override
 			public void run()
 			{
 				timeUp();
@@ -221,9 +227,8 @@ public class eventmodElpies extends Event
 	{
 		final int chance = Rnd.get(100);
 		
-		for (int i = 0; i < droplist.length; i++)
+		for (int[] drop : droplist)
 		{
-			int[] drop = droplist[i];
 			if (chance > drop[1])
 			{
 				((L2MonsterInstance)mob).dropItem(player, drop[0], Rnd.get(drop[2], drop[3]));

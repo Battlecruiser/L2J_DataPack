@@ -91,7 +91,7 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 		{
 			if (st.getInt("cond") == 1)
 				htmltext = "32744-01.htm";
-			else if (st.getState() == State.COMPLETED)
+			else if (st.isCompleted())
 				htmltext = "32744-04.htm";
 		}
 		return htmltext;

@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class Trap implements ISkillHandler
@@ -38,6 +37,7 @@ public class Trap implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar == null || skill == null)
@@ -77,7 +77,7 @@ public class Trap implements ISkillHandler
 					if (!trap.canSee(activeChar))
 					{
 						if (activeChar instanceof L2PcInstance)
-							((L2PcInstance) activeChar).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 						continue;
 					}
 					
@@ -90,7 +90,7 @@ public class Trap implements ISkillHandler
 					
 					trap.unSummon();
 					if (activeChar instanceof L2PcInstance)
-						((L2PcInstance) activeChar).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED));
+						activeChar.sendPacket(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED);
 				}
 			}
 		}
@@ -100,6 +100,7 @@ public class Trap implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

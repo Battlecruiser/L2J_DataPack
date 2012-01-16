@@ -14,7 +14,7 @@
  */
 package quests.Q511_AwlUnderFoot;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -30,15 +30,12 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- * 
  * @author Gigiikun
- *
  */
 public final class Q511_AwlUnderFoot extends Quest
 {
@@ -72,7 +69,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		}
 	}
 	
-	private static final String qn = "Q511_AwlUnderFoot";
+	private static final String qn = "511_AwlUnderFoot";
 	private static final boolean debug = false;
 	private static final long REENTERTIME = 14400000;
 	private static final long RAID_SPAWN_DELAY = 120000;
@@ -127,51 +124,50 @@ public final class Q511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return "";
 			}
 			teleportPlayer(player, coords, world.instanceId);
 			return "";
 		}
 		//New instance
+		if (ret != null)
+		{
+			return ret;
+		}
+		ret = checkConditions(player);
+		if (ret != null)
+			return ret;
+		L2Party party = player.getParty();
+		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		Instance ins = InstanceManager.getInstance().getInstance(instanceId);
+		ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
+		world = new FAUWorld();
+		world.instanceId = instanceId;
+		world.templateId = dungeon.getInstanceId();
+		world.status = 0;
+		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
+
+		// teleport players
+		if (player.getParty() == null)
+		{
+			teleportPlayer(player, coords, instanceId);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (ret != null)
-				return ret;
-			ret = checkConditions(player);
-			if (ret != null)
-				return ret;
-			L2Party party = player.getParty();
-			int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-			ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
-			world = new FAUWorld();
-			world.instanceId = instanceId;
-			world.templateId = dungeon.getInstanceId();
-			world.status = 0;
-			dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
-
-			// teleport players
-			if (player.getParty() == null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				teleportPlayer(player, coords, instanceId);
-				world.allowed.add(player.getObjectId());
+				teleportPlayer(partyMember, coords, instanceId);
+				world.allowed.add(partyMember.getObjectId());
+				if (partyMember.getQuestState(qn) == null)
+					newQuestState(partyMember);
 			}
-			else
-			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					teleportPlayer(partyMember, coords, instanceId);
-					world.allowed.add(partyMember.getObjectId());
-					if (partyMember.getQuestState(qn) == null)
-						newQuestState(partyMember);
-				}
-			}
-			return getHtm(player.getHtmlPrefix(), "FortressWarden-08.htm").replace("%clan%", player.getClan().getName());
 		}
+		return getHtm(player.getHtmlPrefix(), "FortressWarden-08.htm").replace("%clan%", player.getClan().getName());
 	}
 	
 	private class spawnRaid  implements Runnable
@@ -183,6 +179,7 @@ public final class Q511_AwlUnderFoot extends Quest
 			_world = world;
 		}
 		
+		@Override
 		public void run()
 		{
 			try
@@ -299,7 +296,7 @@ public final class Q511_AwlUnderFoot extends Quest
 				if (cond == 1 && count > 0)
 				{
 					htmltext = "FortressWarden-14.htm";
-					st.takeItems(DL_MARK,count);
+					st.takeItems(DL_MARK, -1);
 					st.rewardItems(KNIGHT_EPALUETTE, count);
 				}
 				else if (cond == 1 && count == 0)

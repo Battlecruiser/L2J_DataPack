@@ -25,8 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
@@ -42,6 +40,7 @@ public class Unlock implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2Object[] targetList = skill.getTargetList(activeChar);
@@ -85,7 +84,7 @@ public class Unlock implements ISkillHandler
 				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -97,36 +96,32 @@ public class Unlock implements ISkillHandler
 						door.onOpen();
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
 			}
 			else if (target instanceof L2ChestInstance)
 			{
 				L2ChestInstance chest = (L2ChestInstance) target;
-				if (chest.getCurrentHp() <= 0
-						|| chest.isInteracted()
-						|| activeChar.getInstanceId() != chest.getInstanceId())
+				if ((chest.getCurrentHp() <= 0) || chest.isInteracted() || activeChar.getInstanceId() != chest.getInstanceId())
 				{
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
+				
+				chest.setInteracted();
+				if (chestUnlock(skill, chest))
+				{
+					activeChar.broadcastSocialAction(3);
+					chest.setSpecialDrop();
+					chest.setMustRewardExpSp(false);
+					chest.reduceCurrentHp(99999999, activeChar, skill);
+				}
 				else
 				{
-					chest.setInteracted();
-					if (chestUnlock(skill, chest))
-					{
-						activeChar.broadcastPacket(new SocialAction(activeChar, 3));
-						chest.setSpecialDrop();
-						chest.setMustRewardExpSp(false);
-						chest.reduceCurrentHp(99999999, activeChar, skill);
-					}
-					else
-					{
-						activeChar.broadcastPacket(new SocialAction(activeChar, 13));
-						chest.addDamageHate(activeChar, 0, 1);
-						chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
-						if (chestTrap(chest))
-							chest.chestTrap(activeChar);
-					}
+					activeChar.broadcastSocialAction(13);
+					chest.addDamageHate(activeChar, 0, 1);
+					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+					if (chestTrap(chest))
+						chest.chestTrap(activeChar);
 				}
 			}
 		}
@@ -205,6 +200,7 @@ public class Unlock implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

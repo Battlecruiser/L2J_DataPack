@@ -36,12 +36,17 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- ADMIN ANNOUNCEMENTS
 ('admin_list_announcements',1,'false'),
+('admin_list_critannouncements',1,'false'),
 ('admin_reload_announcements',1,'false'),
 ('admin_announce_announcements',1,'false'),
 ('admin_add_announcement',1,'false'),
 ('admin_del_announcement',1,'false'),
+('admin_add_critannouncement',1,'false'),
+('admin_del_critannouncement',1,'false'),
 ('admin_announce',1,'false'),
+('admin_critannounce',1,'false'),
 ('admin_announce_menu',1,'false'),
+('admin_critannounce_menu',1,'false'),
 ('admin_list_autoann',1,'false'),
 ('admin_reload_autoann',1,'false'),
 ('admin_add_autoann',1,'false'),
@@ -327,6 +332,10 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN HEAL
 ('admin_heal',1,'false'),
 
+-- HELLBOUND
+('admin_hellbound_setlevel',1,'false'),
+('admin_hellbound',1,'false'),
+
 -- ADMIN HELP PAGE
 ('admin_help',1,'false'),
 
@@ -548,6 +557,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN TARGET
 ('admin_target',1,'false'),
 
+-- ADMIN TARGETSAY
+('admin_targetsay',1,'false'),
+
 -- ADMIN TELEPORT
 ('admin_show_moves',1,'false'),
 ('admin_show_moves_other',1,'false'),
@@ -571,12 +583,14 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_tele',1,'false'),
 ('admin_teleto',1,'false'),
 ('admin_instant_move',1,'false'),
+('admin_sendhome',1,'true'),
 
 -- ADMIN TERRITORY WAR
 ('admin_territory_war',1,'false'),
 ('admin_territory_war_time',1,'false'),
 ('admin_territory_war_start',1,'false'),
 ('admin_territory_war_end',1,'false'),
+('admin_territory_wards_list',1,'false'),
 
 -- ADMIN TEST
 ('admin_test',1,'false'),

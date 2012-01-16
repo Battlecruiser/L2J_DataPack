@@ -147,6 +147,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3046-11" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="213" />
 			<set order="0x08" stat="mAtk" val="91" />
@@ -208,7 +209,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3318-1;3358-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -917,6 +920,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2357-1" />
+		<set name="auto_destroy_time" val="10" />
 	</item>
 	<item id="9850" type="EtcItem" name="Basic Caravan Certificate">
 		<set name="icon" val="icon.etc_letter_white_i00" />
@@ -963,7 +967,7 @@
 		<set name="change_weaponId" val="9377" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-2" />
 		<for>
@@ -992,7 +996,7 @@
 		<set name="change_weaponId" val="9378" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
@@ -1021,7 +1025,7 @@
 		<set name="change_weaponId" val="9379" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-1;3498-1" />
 		<for>
@@ -1050,7 +1054,7 @@
 		<set name="change_weaponId" val="9381" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3566-2" />
 		<for>
@@ -1079,7 +1083,7 @@
 		<set name="change_weaponId" val="9382" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
@@ -1108,7 +1112,7 @@
 		<set name="change_weaponId" val="9383" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-1;3498-1" />
 		<for>
@@ -1136,7 +1140,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
@@ -1165,7 +1169,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
@@ -1194,7 +1198,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3048-2" />
@@ -1225,7 +1229,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3552-1;8312-1" />
@@ -1262,7 +1266,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3573-2" />
@@ -1294,7 +1298,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3567-2" />
@@ -1324,7 +1328,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3567-2" />
 		<for>
@@ -1353,7 +1357,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3009-8;3552-1" />
 		<for>
@@ -1382,7 +1386,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3066-4" />
 		<for>
@@ -1411,7 +1415,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3600-10" />
 		<for>
@@ -1440,7 +1444,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="48" />
 		<set name="oncrit_skill" val="3070-4" />
@@ -1471,7 +1475,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3552-2;3498-1" />
 		<for>
@@ -1500,7 +1504,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3057-4" />
 		<for>
@@ -1529,7 +1533,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3013-3" />
 		<for>
@@ -1558,7 +1562,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3027-7" />
 		<for>
@@ -1587,7 +1591,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3014-2" />
@@ -1617,7 +1621,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3048-2" />
@@ -1647,7 +1651,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3047-2" />
@@ -1677,7 +1681,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3069-1;3552-1" />
 		<for>
@@ -1706,7 +1710,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3565-2" />
 		<for>
@@ -1735,7 +1739,7 @@
 		<set name="price" val="74946000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3564-2" />
 		<for>

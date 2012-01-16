@@ -95,12 +95,14 @@ public class EchoCrystals extends Quest
 				String noadena = SCORES.get(score).getNoAdenaMsg();
 				String noscore = SCORES.get(score).getNoScoreMsg();
 
-				if (st.getQuestItemsCount(score) == 0)
+				if (!st.hasQuestItems(score))
+				{
 					htmltext = npc.getNpcId() + "-" + noscore + ".htm";
-
+				}
 				else if (st.getQuestItemsCount(ADENA) < COST)
+				{
 					htmltext = npc.getNpcId() + "-" + noadena + ".htm";
-
+				}
 				else
 				{
 					st.takeItems(ADENA, COST);

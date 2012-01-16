@@ -22,11 +22,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-09-29 Based on official server Franz
+ * 2010-09-29 Based on official server Franz
+ * @author Gnacik
  */
-
 public class Q20_BringUpWithLove extends Quest
 {
 	private static final String qn = "20_BringUpWithLove";
@@ -57,9 +55,10 @@ public class Q20_BringUpWithLove extends Quest
 			else if (event.equalsIgnoreCase("31537-03.htm"))
 			{
 				if (st.hasQuestItems(_beast_whip))
+				{
 					return "31537-03a.htm";
-				else
-					st.giveItems(_beast_whip, 1);
+				}
+				st.giveItems(_beast_whip, 1);
 			}
 			else if (event.equalsIgnoreCase("31537-15.htm"))
 			{

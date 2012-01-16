@@ -1,3 +1,17 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package transformations;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -6,7 +20,10 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Treykan extends L2Transformation
 {
-	private static final int[] SKILLS = new int[]{619};
+	private static final int[] SKILLS = new int[]
+	{
+		619, 967, 968, 969, 5437
+	};
 	
 	public Treykan()
 	{
@@ -17,8 +34,10 @@ public class Treykan extends L2Transformation
 	@Override
 	public void onTransform()
 	{
-		if (getPlayer().getTransformationId() != 126 || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 126) || getPlayer().isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		transformedSkills();
 	}
@@ -27,6 +46,14 @@ public class Treykan extends L2Transformation
 	{
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Cursed Body
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(967, 1), false);
+		// Treykan Claw
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(968, 1), false);
+		// Treykan Dash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(969, 1), false);
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
@@ -41,6 +68,14 @@ public class Treykan extends L2Transformation
 	{
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Cursed Body
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(967, 1), false);
+		// Treykan Claw
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(968, 1), false);
+		// Treykan Dash
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(969, 1), false);
+		// Dissonance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}

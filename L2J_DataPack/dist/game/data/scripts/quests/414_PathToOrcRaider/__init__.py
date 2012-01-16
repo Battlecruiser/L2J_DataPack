@@ -120,7 +120,7 @@ class Quest (JQuest) :
        else:
           st.addExpAndSp(591724, 34708)
        st.giveItems(57, 163800)
-     player.sendPacket(SocialAction(player,3))
+     player.sendPacket(SocialAction(player.getObjectId(),3))
      st.unset("cond")
      st.exitQuest(False)
      st.saveGlobalQuestVar("1ClassQuestFinished","1")
@@ -141,7 +141,7 @@ class Quest (JQuest) :
         else:
           st.addExpAndSp(295862, 17354)
         st.giveItems(57, 81900)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.unset("cond") 
         st.exitQuest(False) 
         st.playSound("ItemSound.quest_finish")

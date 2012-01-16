@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SummonItemsData;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2SummonItem;
@@ -38,6 +37,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2XmassTreeInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -51,8 +51,9 @@ public class SummonItems implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
 	 */
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
@@ -68,7 +69,7 @@ public class SummonItems implements IItemHandler
 		
 		if (activeChar.isSitting())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_MOVE_SITTING));
+			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
 			return;
 		}
 		
@@ -80,7 +81,7 @@ public class SummonItems implements IItemHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		if (activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
@@ -90,19 +91,13 @@ public class SummonItems implements IItemHandler
 		
 		if ((activeChar.getPet() != null || activeChar.isMounted()) && sitem.isPetSummon())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_HAVE_A_PET));
+			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return;
 		}
 		
 		if (activeChar.isAttackingNow())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
-			return;
-		}
-		
-		if (activeChar.isCursedWeaponEquipped() && sitem.isPetSummon())
-		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
 			return;
 		}
 		
@@ -150,7 +145,7 @@ public class SummonItems implements IItemHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+					activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 				}
 				break;
 			case 1: // pet summons
@@ -159,7 +154,7 @@ public class SummonItems implements IItemHandler
 				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 2046, 1, 5000, 0));
 				activeChar.setTarget(oldTarget);
 				activeChar.sendPacket(new SetupGauge(0, 5000));
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMON_A_PET));
+				activeChar.sendPacket(SystemMessageId.SUMMON_A_PET);
 				activeChar.setIsCastingNow(true);
 				
 				ThreadPoolManager.getInstance().scheduleGeneral(new PetSummonFinalizer(activeChar, npcTemplate, item), 5000);
@@ -184,6 +179,7 @@ public class SummonItems implements IItemHandler
 			_petSummon = petSummon;
 		}
 		
+		@Override
 		public void run()
 		{
 			try
@@ -214,6 +210,7 @@ public class SummonItems implements IItemHandler
 			_item = item;
 		}
 		
+		@Override
 		public void run()
 		{
 			try
@@ -262,7 +259,7 @@ public class SummonItems implements IItemHandler
 				
 				petSummon.setFollowStatus(true);
 				
-				petSummon.getOwner().sendPacket(new PetItemList(petSummon));
+				petSummon.sendPacket(new PetItemList(petSummon));
 				petSummon.broadcastStatusUpdate();
 			}
 			catch (Exception e)

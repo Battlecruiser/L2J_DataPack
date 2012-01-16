@@ -34,6 +34,7 @@ public class set implements IVoicedCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
+	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
 		if (command.startsWith("set privileges"))
@@ -59,6 +60,7 @@ public class set implements IVoicedCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
 	 */
+	@Override
 	public String[] getVoicedCommandList()
 	{
 		return VOICED_COMMANDS;

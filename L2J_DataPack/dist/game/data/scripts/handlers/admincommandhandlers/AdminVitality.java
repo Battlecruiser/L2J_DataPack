@@ -36,6 +36,7 @@ public class AdminVitality implements IAdminCommandHandler
 		"admin_get_vitality"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
@@ -115,13 +116,11 @@ public class AdminVitality implements IAdminCommandHandler
 			}
 			return true;
 		}
-		else
-		{
-			activeChar.sendMessage("Target not found or not a player");
-			return false;
-		}
+		activeChar.sendMessage("Target not found or not a player");
+		return false;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

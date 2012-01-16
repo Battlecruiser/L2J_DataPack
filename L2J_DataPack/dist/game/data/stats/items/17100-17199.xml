@@ -816,27 +816,30 @@
 	</item>
 	<item id="17158" type="EtcItem" name="Vesper's Mighty Power">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9161-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="17159" type="EtcItem" name="Vesper's Critical Damage">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9162-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="17160" type="EtcItem" name="Invincible Vesper">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9163-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="17161" type="EtcItem" name="Special Gift of April Fool's Day (Event)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
@@ -861,7 +864,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="17163" type="EtcItem" name="Event - Energy of Sprout">
+	<item id="17163" type="EtcItem" name="Event - Leaf of Appreciation">
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -877,6 +880,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9165-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="17164" type="EtcItem" name="Event - Pack of Energy of Sprout">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
@@ -889,6 +893,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17163,3,3,100" />
 	</item>
 	<item id="17165" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 30 minutes">
@@ -902,6 +907,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14744,5,5,100" />
 	</item>
 	<item id="17166" type="EtcItem" name="Pack of 10 Noble Enhancement Stones">
@@ -911,6 +917,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14052,10,10,100" />
 	</item>
 	<item id="17167" type="EtcItem" name="Scroll: Enchant Weapon (S-Grade) Pack">
@@ -920,6 +927,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="959,1,1,100" />
 	</item>
 	<item id="17168" type="EtcItem" name="Lesser Giant's Codex - Mastery Pack">
@@ -929,6 +937,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9627,1,1,100" />
 	</item>
 	<item id="17169" type="EtcItem" name="Olympiad Treasure Chest">
@@ -942,6 +951,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="6622,1,1,100" />
 	</item>
 	<item id="17170" type="Armor" name="Soccer Ball Afro Hair - White">

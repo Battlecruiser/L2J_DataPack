@@ -28,13 +28,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Attackable.AbsorberInfo;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -124,7 +124,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	private boolean check(QuestState st)
 	{
 		for (int i = 4629; i < 4665; i++)
-			if (st.getQuestItemsCount(i) > 0)
+			if (st.hasQuestItems(i))
 				return true;
 		return false;
 	}
@@ -362,9 +362,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			htmltext = npc.getNpcId() + "-01.htm";
 		else if (check(st))
 			htmltext = npc.getNpcId() + "-03.htm";
-		else if (st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0
-				&& st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0
-				&& st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0)
+		else if (!st.hasQuestItems(RED_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(GREEN_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(BLUE_SOUL_CRYSTAL0_ID))
 			htmltext = npc.getNpcId() + "-21.htm";
 		return htmltext;
 	}
@@ -376,8 +374,8 @@ public class Q350_EnhanceYourWeapon extends Quest
 	
 	/**
 	 * Calculate the leveling chance of Soul Crystals based on the attacker that killed this L2Attackable
-	 *
-	 * @param attacker The player that last killed this L2Attackable
+	 * @param mob 
+	 * @param killer The player that last killed this L2Attackable
 	 * $ Rewrite 06.12.06 - Yesod
 	 * $ Rewrite 08.01.10 - Gigiikun
 	 */
@@ -526,8 +524,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			
 			if (ret != null)
 				return null;
-			else
-				ret = _soulCrystals.get(itemId);
+			ret = _soulCrystals.get(itemId);
 		}
 		return ret;
 	}
@@ -540,14 +537,14 @@ public class Q350_EnhanceYourWeapon extends Quest
 		// If the crystal level is way too high for this mob, say that we can't increase it
 		if (!_npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED));
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED);
 			return;
 		}
 		
 		if (Rnd.get(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
 			exchangeCrystal(player, mob, sc.getItemId(), sc.getLeveledItemId(), false);
 		else
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED));
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);
 	}
 	
 	private void exchangeCrystal(L2PcInstance player, L2Attackable mob, int takeid, int giveid, boolean broke)
@@ -566,10 +563,10 @@ public class Q350_EnhanceYourWeapon extends Quest
 			
 			// Send a sound event and text message to the player
 			if (broke)
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_BROKE));
+				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_BROKE);
 			
 			else
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED));
+				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED);
 			
 			// Send system message
 			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);

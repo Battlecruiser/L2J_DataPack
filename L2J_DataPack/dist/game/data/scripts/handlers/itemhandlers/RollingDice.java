@@ -15,10 +15,10 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.Dice;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -35,8 +35,9 @@ public class RollingDice implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
 	 */
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
@@ -47,7 +48,7 @@ public class RollingDice implements IItemHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
@@ -56,7 +57,7 @@ public class RollingDice implements IItemHandler
 			int number = rollDice(activeChar);
 			if (number == 0)
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
+				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
 				return;
 			}
 			

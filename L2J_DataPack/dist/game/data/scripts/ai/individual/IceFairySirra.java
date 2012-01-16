@@ -26,11 +26,11 @@ import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -43,7 +43,6 @@ import com.l2jserver.util.Rnd;
  * Ice Fairy Sirra AI
  * @author Kerberos
  */
-
 public class IceFairySirra extends L2AttackableAIScript
 {
 	private static final int STEWARD = 32029;
@@ -328,33 +327,33 @@ public class IceFairySirra extends L2AttackableAIScript
 		if (event.equalsIgnoreCase("check_condition"))
 		{
 			if (npc.isBusy())//should never happen
-				return super.onAdvEvent(event, npc, player);
-			else
 			{
-				String filename = "";
-				if (player.isInParty() && player.getParty().getPartyLeaderOID() == player.getObjectId())
+				return super.onAdvEvent(event, npc, player);
+			}
+			
+			String filename = "";
+			if (player.isInParty() && player.getParty().getPartyLeaderOID() == player.getObjectId())
+			{
+				if (checkItems(player))
 				{
-					if (checkItems(player) == true)
-					{
-						startQuestTimer("start",100000,null,player);
-						_player = player;
-						destroyItems(player);
-						player.getInventory().addItem("Scroll",8379,3,player,null);
-						npc.setBusy(true);
-						screenMessage(player,NpcStringId.STEWARD_PLEASE_WAIT_A_MOMENT,100000);
-						filename = getHtmlPath(3);
-					}
-					else
-					{
-						filename = getHtmlPath(2);
-					}
+					startQuestTimer("start",100000,null,player);
+					_player = player;
+					destroyItems(player);
+					player.getInventory().addItem("Scroll",8379,3,player,null);
+					npc.setBusy(true);
+					screenMessage(player,NpcStringId.STEWARD_PLEASE_WAIT_A_MOMENT,100000);
+					filename = getHtmlPath(3);
 				}
 				else
 				{
-					filename = getHtmlPath(1);
+					filename = getHtmlPath(2);
 				}
-				sendHtml(npc, player, filename);
 			}
+			else
+			{
+				filename = getHtmlPath(1);
+			}
+			sendHtml(npc, player, filename);
 		}
 		else if (event.equalsIgnoreCase("start"))
 		{

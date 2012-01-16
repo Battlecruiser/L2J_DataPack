@@ -17,12 +17,12 @@ package handlers.bypasshandlers;
 import com.l2jserver.gameserver.datatables.HelperBuffTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
+import com.l2jserver.gameserver.model.L2HelperBuff;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
-import com.l2jserver.gameserver.templates.L2HelperBuff;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class SupportMagic implements IBypassHandler
@@ -64,6 +64,9 @@ public class SupportMagic implements IBypassHandler
 	 * <FONT COLOR=#FF0000><B> Newbie Helper Buff list is define in sql table helper_buff_list</B></FONT><BR>
 	 * <BR>
 	 * @param player The L2PcInstance that talk with the L2NpcInstance
+	 * @param npc 
+	 * @param isSummon 
+	 * @return 
 	 */
 	public static boolean makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{

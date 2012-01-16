@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
-	<item id="10300" type="EtcItem" name="Transformation Sealbook  - Kechi">
+	<item id="10300" type="EtcItem" name="Transformation Sealbook - Kechi">
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -69,9 +69,6 @@
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
 		</cond>
-		<cond msgId="1508">
-			<player olympiad="false" />
-		</cond>
 	</item>
 	<item id="10308" type="EtcItem" name="Red Dragon Bugle of Wind">
 		<set name="icon" val="icon.etc_flute_i00" />
@@ -92,9 +89,6 @@
 		</cond>
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
-		</cond>
-		<cond msgId="1508">
-			<player olympiad="false" />
 		</cond>
 	</item>
 	<item id="10309" type="EtcItem" name="Red Dragon Bugle of Star">
@@ -117,9 +111,6 @@
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
 		</cond>
-		<cond msgId="1508">
-			<player olympiad="false" />
-		</cond>
 	</item>
 	<item id="10310" type="EtcItem" name="Red Dragon Bugle of Twilight">
 		<set name="icon" val="icon.etc_flute_i00" />
@@ -140,9 +131,6 @@
 		</cond>
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
-		</cond>
-		<cond msgId="1508">
-			<player olympiad="false" />
 		</cond>
 	</item>
 	<item id="10311" type="EtcItem" name="Improved Buffalo Panpipe">
@@ -246,7 +234,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;3423-1;5535-1;5539-1" />
 	</item>
-	<item id="10318" type="Armor" name="Agathion Seal Bracelet - Little Angel - Escape">
+	<item id="10318" type="Armor" name="Agathion Seal Bracelet - Little Angel - Blessed Escape">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -323,7 +311,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;3424-1;5536-1;5543-1" />
 	</item>
-	<item id="10324" type="Armor" name="Agathion Seal Bracelet - Little Devil - Escape">
+	<item id="10324" type="Armor" name="Agathion Seal Bracelet - Little Devil - Blessed Escape">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />

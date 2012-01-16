@@ -17,7 +17,6 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -25,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -39,8 +39,9 @@ public class ScrollOfResurrection implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
 	 */
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
@@ -56,7 +57,7 @@ public class ScrollOfResurrection implements IItemHandler
 		
 		if (activeChar.isSitting())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_MOVE_SITTING));
+			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
 			return;
 		}
 		if (activeChar.isMovementDisabled())
@@ -96,7 +97,7 @@ public class ScrollOfResurrection implements IItemHandler
 				if (castle != null && castle.getSiege().getIsInProgress())
 				{
 					condGood = false;
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE));
+					activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
 				}
 				
 				if (targetPet != null)
@@ -106,9 +107,9 @@ public class ScrollOfResurrection implements IItemHandler
 						if (targetPet.getOwner().isReviveRequested())
 						{
 							if (targetPet.getOwner().isRevivingPet())
-								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED)); // Resurrection is already been proposed.
+								activeChar.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 							else
-								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_RES_PET2)); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+								activeChar.sendPacket(SystemMessageId.CANNOT_RES_PET2); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 							condGood = false;
 						}
 					}
@@ -123,9 +124,9 @@ public class ScrollOfResurrection implements IItemHandler
 					if (targetPlayer.isReviveRequested())
 					{
 						if (targetPlayer.isRevivingPet())
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MASTER_CANNOT_RES)); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+							activeChar.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 						else
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED)); // Resurrection is already been proposed.
+							activeChar.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 						condGood = false;
 					}
 					else if (petScroll)
@@ -182,7 +183,7 @@ public class ScrollOfResurrection implements IItemHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 	}
 }

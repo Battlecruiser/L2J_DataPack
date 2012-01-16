@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
@@ -156,7 +155,7 @@ public class QuestLink implements IBypassHandler
 		{
 			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder80(true)))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT));
+				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
 				return;
 			}
 			
@@ -166,7 +165,7 @@ public class QuestLink implements IBypassHandler
 				{
 					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TOO_MANY_QUESTS));
+						player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
 						return;
 					}
 				}
@@ -237,7 +236,7 @@ public class QuestLink implements IBypassHandler
 		// collect awaiting quests and start points
 		List<Quest> options = new FastList<Quest>();
 		
-		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().npcId);
+		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getNpcId());
 		Quest[] starts = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.

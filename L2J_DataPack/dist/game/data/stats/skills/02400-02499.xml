@@ -22,13 +22,15 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="360" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
 		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="360" />
+		</for>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
 		<!-- Confirmed CT2.5 -->
@@ -36,13 +38,15 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
 		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
 		<!-- Confirmed CT2.5 -->
@@ -50,10 +54,12 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
 	</skill>
 	<skill id="2404" levels="1" name="Might">
 		<!-- Confirmed CT2.5 -->
@@ -1419,7 +1425,6 @@
 		</cond>
 	</skill>
 	<skill id="2485" levels="1" name="Herb of Life">
-		<set name="power" val="15" />
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
@@ -1429,18 +1434,23 @@
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="15" />
+		</for>
 	</skill>
 	<skill id="2486" levels="1" name="Herb of Mana">
-		<set name="power" val="12" />
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="12" />
+		</for>
 	</skill>
 	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
 		<!-- Confirmed CT2.5 -->

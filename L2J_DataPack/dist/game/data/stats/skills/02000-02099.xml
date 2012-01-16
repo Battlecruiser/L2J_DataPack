@@ -308,12 +308,15 @@
 		</for>
 	</skill>
 	<skill id="2038" levels="1" name="Quick Healing Potion">
+		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="435" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="Heal" noicon="1" val="435" />
+		</for>
 	</skill>
 	<skill id="2039" levels="1" name="Soulshot: No Grade">
 		<set name="target" val="TARGET_SELF" />

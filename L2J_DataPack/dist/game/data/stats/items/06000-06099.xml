@@ -271,6 +271,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2169-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="6036" type="EtcItem" name="Greater Magic Haste Potion">
 		<set name="icon" val="icon.etc_potion_of_acumen3_i00" />
@@ -285,6 +286,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2169-2" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>

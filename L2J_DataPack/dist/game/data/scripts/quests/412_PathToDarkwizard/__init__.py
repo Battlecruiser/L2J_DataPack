@@ -110,7 +110,7 @@ class Quest (JQuest) :
             st.exitQuest(False)
             st.saveGlobalQuestVar("1ClassQuestFinished","1")
             st.playSound("ItemSound.quest_finish")
-            player.sendPacket(SocialAction(player,3))
+            player.sendPacket(SocialAction(player.getObjectId(),3))
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getQuestItemsCount(FAMILYS_ASHES) == 0 and st.getQuestItemsCount(LUCKY_KEY) == 0 and st.getQuestItemsCount(CANDLE) == 0 and st.getQuestItemsCount(HUB_SCENT) == 0 and st.getQuestItemsCount(KNEE_BONE) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY) == 0 :
           htmltext = "30421-17.htm"
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getInt("id") == 1 and st.getQuestItemsCount(SEEDS_OF_ANGER) == 0 :

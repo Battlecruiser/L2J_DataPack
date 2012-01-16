@@ -15,15 +15,16 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.handler.IActionHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 public class L2ItemInstanceActionShift implements IActionHandler
 {
+	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.getAccessLevel().isGm())
@@ -49,6 +50,7 @@ public class L2ItemInstanceActionShift implements IActionHandler
 		return true;
 	}
 	
+	@Override
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ItemInstance;

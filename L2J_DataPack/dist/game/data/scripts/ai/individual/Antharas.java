@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
@@ -44,7 +45,6 @@ import com.l2jserver.gameserver.network.serverpackets.Earthquake;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.util.Rnd;
 

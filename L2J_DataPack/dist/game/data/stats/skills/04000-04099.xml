@@ -229,9 +229,11 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="10846" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="10846" />
+		</for>
 	</skill>
 	<skill id="4021" levels="1" name="Queen Ant">
 		<!-- Confirmed CT2.5 -->
@@ -269,16 +271,17 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="10846" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="10846" />
+		</for>
 	</skill>
 	<skill id="4025" levels="12" name="Master Recharge">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
+		<table name="#amount"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
 		<table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
 		<table name="#magicLvl"> 17 27 37 47 57 67 77 82 87 92 97 102 </table>
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
@@ -291,6 +294,9 @@
 		<set name="aggroPoints" val="#aggro" />
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4026" levels="1" name="Gludio Flame">
 		<!-- Freya retail confirmed -->
@@ -317,11 +323,13 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="628" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="98" />
+		<for>
+			<effect name="Heal" noicon="1" val="628" />
+		</for>
 	</skill>
 	<skill id="4028" levels="3" name="NPC Might">
 		<!-- Freya retail confirmed -->
@@ -663,11 +671,13 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="45" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="427" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="70" />
+		<for>
+			<effect name="Heal" noicon="1" val="427" />
+		</for>
 	</skill>
 	<skill id="4045" levels="1" name="Resist Full Magic Attack">
 		<!-- Freya retail confirmed -->
@@ -778,16 +788,18 @@
 		<!-- Levels 17, 18 and 19 doesn't exist in client. -->
 		<table name="#aggroPoints"> 408 467 523 566 597 624 646 653 660 667 674 677 679 682 685 687 0 0 0 1 </table>
 		<table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 0 0 0 18 </table>
-		<table name="#power"> 201 241 281 314 339 361 382 390 398 405 413 418 422 426 430 434 0 0 0 68 </table>
+		<table name="#amount"> 201 241 281 314 339 361 382 390 398 405 413 418 422 426 430 434 0 0 0 68 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
 		<!-- Cubic Skill -->
@@ -975,11 +987,10 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 24 35 49 64 78 91 97 101 104 105 105 </table>
 		<table name="#mpInitialConsume"> 4 6 9 13 16 20 23 25 26 26 27 27 </table>
-		<table name="#power"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
+		<table name="#amount"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="HEAL" />
@@ -989,6 +1000,9 @@
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4066" levels="12" name="NPC Twister">
 		<!-- Freya retail confirmed -->
@@ -1262,7 +1276,6 @@
 	<skill id="4080" levels="1" name="Dark Heal">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="60" />
-		<set name="power" val="628" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="HEAL" />
@@ -1272,6 +1285,9 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="100" />
 		<set name="mpConsume" val="98" />
+		<for>
+			<effect name="Heal" noicon="1" val="628" />
+		</for>
 	</skill>
 	<skill id="4081" levels="1" name="Pretending to steal">
 		<!-- Freya retail confirmed -->

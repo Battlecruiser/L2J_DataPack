@@ -317,7 +317,6 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
-		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
@@ -345,6 +344,7 @@
 		<set name="unequip_skill" val="839-1" />
 		<set name="item_skill" val="8244-1" />
 		<set name="duration" val="60" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="1" />
 			<set order="0x08" stat="mAtk" val="1" />
@@ -365,6 +365,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3664-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="12816" type="Armor" name="Red Talisman - CP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i00" />
@@ -379,6 +380,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3665-2" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="12817" type="Armor" name="Yellow Talisman - Increase Force">
 		<set name="icon" val="icon.etc_talisman_i02" />
@@ -393,6 +395,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3666-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="12818" type="Armor" name="Yellow Talisman - Damage Transition">
 		<set name="icon" val="icon.etc_talisman_i02" />
@@ -407,6 +410,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3667-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="12819" type="EtcItem" name="Recovery Spellbook for Combat Use">
 		<set name="icon" val="icon.etc_penalty_recovery_i00" />
@@ -430,7 +434,7 @@
 		<set name="price" val="1550" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="12821" type="EtcItem" name="Accessory Life Stone -  Level 80">
+	<item id="12821" type="EtcItem" name="Accessory Life Stone - Level 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -441,7 +445,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12822" type="EtcItem" name="Accessory Life Stone -  Level 82">
+	<item id="12822" type="EtcItem" name="Accessory Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -674,7 +678,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="12840" type="EtcItem" name="Accessory Life Stone -  Level 46">
+	<item id="12840" type="EtcItem" name="Accessory Life Stone - Level 46">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -685,7 +689,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="12841" type="EtcItem" name="Accessory Life Stone -  Level 49">
+	<item id="12841" type="EtcItem" name="Accessory Life Stone - Level 49">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -696,7 +700,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="12842" type="EtcItem" name="Accessory Life Stone -  Level 52">
+	<item id="12842" type="EtcItem" name="Accessory Life Stone - Level 52">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -707,7 +711,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="12843" type="EtcItem" name="Accessory Life Stone -  Level 55">
+	<item id="12843" type="EtcItem" name="Accessory Life Stone - Level 55">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -718,7 +722,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="12844" type="EtcItem" name="Accessory Life Stone -  Level 58">
+	<item id="12844" type="EtcItem" name="Accessory Life Stone - Level 58">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -729,7 +733,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="12845" type="EtcItem" name="Accessory Life Stone -  Level 61">
+	<item id="12845" type="EtcItem" name="Accessory Life Stone - Level 61">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -740,7 +744,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="12846" type="EtcItem" name="Accessory Life Stone -  Level 64">
+	<item id="12846" type="EtcItem" name="Accessory Life Stone - Level 64">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -751,7 +755,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="12847" type="EtcItem" name="Accessory Life Stone -  Level 67">
+	<item id="12847" type="EtcItem" name="Accessory Life Stone - Level 67">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -762,7 +766,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="12848" type="EtcItem" name="Accessory Life Stone -  Level 70">
+	<item id="12848" type="EtcItem" name="Accessory Life Stone - Level 70">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -773,7 +777,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="12849" type="EtcItem" name="Accessory Life Stone -  Level 76">
+	<item id="12849" type="EtcItem" name="Accessory Life Stone - Level 76">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -784,7 +788,7 @@
 			<player level="75" />
 		</cond>
 	</item>
-	<item id="12850" type="EtcItem" name="Accessory Life Stone -  Level 80">
+	<item id="12850" type="EtcItem" name="Accessory Life Stone - Level 80">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -795,7 +799,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12851" type="EtcItem" name="Accessory Life Stone -  Level 82">
+	<item id="12851" type="EtcItem" name="Accessory Life Stone - Level 82">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1771,7 +1775,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12882" type="Weapon" name="Éclair Bijou - Landslide {PvP} - Haste">
+	<item id="12882" type="Weapon" name="Eclair Bijou - Landslide {PvP} - Haste">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1806,7 +1810,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12883" type="Weapon" name="Éclair Bijou - Landslide {PvP} - Health">
+	<item id="12883" type="Weapon" name="Eclair Bijou - Landslide {PvP} - Health">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1841,7 +1845,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="12884" type="Weapon" name="Éclair Bijou - Landslide {PvP} - Critical Poison">
+	<item id="12884" type="Weapon" name="Eclair Bijou - Landslide {PvP} - Critical Poison">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />

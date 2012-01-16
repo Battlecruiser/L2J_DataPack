@@ -30,13 +30,14 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * 
  * @author DS
- *
  */
 public class AirShipGludioGracia extends Quest implements Runnable
 {
-	private static final int[] CONTROLLERS = {32607, 32609};
+	private static final int[] CONTROLLERS =
+	{
+		32607, 32609
+	};
 	
 	private static final int GLUDIO_DOCK_ID = 10;
 	private static final int GRACIA_DOCK_ID = 11;
@@ -48,7 +49,8 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	{
 		new VehiclePathPoint(-151202, 252556, 231),
 		new VehiclePathPoint(-160403, 256144, 222),
-		new VehiclePathPoint(-167874, 256731, -509, 0, 41035) // teleport: x,y,z,speed=0,heading
+		new VehiclePathPoint(-167874, 256731, -509, 0, 41035)
+	// teleport: x,y,z,speed=0,heading
 	};
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GRACIA =
@@ -80,17 +82,13 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		new VehiclePathPoint(-171822, 250061, 425),
 		new VehiclePathPoint(-169763, 254815, 282),
 		new VehiclePathPoint(-168067, 256626, 343),
-		new VehiclePathPoint(-157261, 255664, 221, 0, 64781) // teleport: x,y,z,speed=0,heading
+		new VehiclePathPoint(-157261, 255664, 221, 0, 64781)
+	// teleport: x,y,z,speed=0,heading
 	};
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GLUDIO =
 	{
-		new VehiclePathPoint(-153414, 255385, 221),
-		new VehiclePathPoint(-149548, 258172, 221),
-		new VehiclePathPoint(-146884, 257097, 221),
-		new VehiclePathPoint(-146672, 254239, 221),
-		new VehiclePathPoint(-147855, 252712, 206),
-		new VehiclePathPoint(-149378, 252552, 198)
+		new VehiclePathPoint(-153414, 255385, 221), new VehiclePathPoint(-149548, 258172, 221), new VehiclePathPoint(-146884, 257097, 221), new VehiclePathPoint(-146672, 254239, 221), new VehiclePathPoint(-147855, 252712, 206), new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
 	private final L2AirShipInstance _ship;
@@ -109,58 +107,57 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
 			return null;
 		}
-		if (player.isParalyzed())
+		else if (player.isParalyzed())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
 			return null;
 		}
-		if (player.isDead() || player.isFakeDeath())
+		else if (player.isDead() || player.isFakeDeath())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);	
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);
 			return null;
 		}
-		if (player.isFishing())
+		else if (player.isFishing())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
 			return null;
 		}
-		if (player.isInCombat())
+		else if (player.isInCombat())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
 			return null;
 		}
-		if (player.isInDuel())
+		else if (player.isInDuel())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_A_DUEL);
 			return null;
 		}
-		if (player.isSitting())
+		else if (player.isSitting())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_SITTING);
 			return null;
 		}
-		if (player.isCastingNow())
+		else if (player.isCastingNow())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_CASTING);
 			return null;
 		}
-		if (player.isCursedWeaponEquipped())
+		else if (player.isCursedWeaponEquipped())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
 			return null;
 		}
-		if (player.isCombatFlagEquipped())
+		else if (player.isCombatFlagEquipped())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
 			return null;
 		}
-		if (player.getPet() != null || player.isMounted())
+		else if (player.getPet() != null || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
 		}
-		
-		if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
+		else if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
 			_ship.addPassenger(player);
 		
 		return null;
@@ -190,6 +187,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		_ship.runEngine(60000);
 	}
 	
+	@Override
 	public void run()
 	{
 		try
@@ -202,7 +200,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
 				case 1:
-					//_ship.teleToLocation(-167874, 256731, -509, 41035, false);
+					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;
@@ -221,7 +219,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
 				case 5:
-					//					_ship.teleToLocation(-157261, 255664, 221, 64781, false);
+					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;
@@ -276,8 +274,8 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			{
 				for (int id : CONTROLLERS)
 				{
-					if (((L2Npc)obj).getNpcId() == id)
-						return (L2Npc)obj;
+					if (((L2Npc) obj).getNpcId() == id)
+						return (L2Npc) obj;
 				}
 			}
 		}

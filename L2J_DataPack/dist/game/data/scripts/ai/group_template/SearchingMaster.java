@@ -23,7 +23,7 @@ public class SearchingMaster extends L2AttackableAIScript
 {
 	private static final int[] mobs =
 	{
-		20965,20966,20967,20968,20969,20970,20971,20972,20973
+		20965, 20966, 20967, 20968, 20969, 20970, 20971, 20972, 20973
 	};
 	
 	public SearchingMaster(int questId, String name, String descr)

@@ -14,7 +14,7 @@
  */
 package instances.SeedOfDestruction;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.io.File;
 import java.util.Calendar;
@@ -361,23 +361,23 @@ public class Stage1 extends Quest
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			return false;
 		}
 		final L2CommandChannel channel = player.getParty().getCommandChannel();
 		if (channel == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER));
+			player.sendPacket(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER);
 			return false;
 		}
 		else if (channel.getChannelLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		else if (channel.getMemberCount() < MIN_PLAYERS || channel.getMemberCount() > MAX_PLAYERS)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
+			player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : channel.getMembers())
@@ -424,43 +424,40 @@ public class Stage1 extends Quest
 		{
 			if (!(world instanceof SOD1World))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
 			teleportPlayer(player, coords, world.instanceId);
 			return world.instanceId;
 		}
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new SOD1World();
+		world.instanceId = instanceId;
+		world.status = 0;
+		InstanceManager.getInstance().addWorld(world);
+		spawnState((SOD1World)world);
+		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
+			if (Util.contains(ATTACKABLE_DOORS, door.getDoorId()))
+				door.setIsAttackableDoor(true);
+		_log.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		// teleport players
+		if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+		{
+			teleportPlayer(player, coords, instanceId);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new SOD1World();
-			world.instanceId = instanceId;
-			world.status = 0;
-			InstanceManager.getInstance().addWorld(world);
-			spawnState((SOD1World)world);
-			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-				if (Util.contains(ATTACKABLE_DOORS, door.getDoorId()))
-					door.setIsAttackableDoor(true);
-			_log.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			// teleport players
-			if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
-				teleportPlayer(player, coords, instanceId);
-				world.allowed.add(player.getObjectId());
+				teleportPlayer(channelMember, coords, instanceId);
+				world.allowed.add(channelMember.getObjectId());
 			}
-			else
-			{
-				for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
-				{
-					teleportPlayer(channelMember, coords, instanceId);
-					world.allowed.add(channelMember.getObjectId());
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 
 	protected boolean checkKillProgress(L2Npc mob, SOD1World world)
@@ -622,7 +619,7 @@ public class Stage1 extends Quest
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
 
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-		sm.addString(InstanceManager.getInstance().getInstanceIdName(INSTANCEID));
+		sm.addInstanceName(INSTANCEID);
 
 		// set instance reenter time for all allowed players
 		for (int objectId : world.allowed)

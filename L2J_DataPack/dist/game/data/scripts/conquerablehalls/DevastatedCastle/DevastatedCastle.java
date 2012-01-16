@@ -14,7 +14,7 @@
  */
 package conquerablehalls.DevastatedCastle;
 
-import gnu.trove.TIntIntHashMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.ClanTable;
@@ -37,7 +37,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	private static final int GUSTAV = 35410;
 	private static final int MIKHAIL = 35409;
 	private static final int DIETRICH = 35408;
-	private static final double GUSTAV_TRIGGER_HP = NpcTable.getInstance().getTemplate(GUSTAV).baseHpMax / 12;
+	private static final double GUSTAV_TRIGGER_HP = NpcTable.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
 	
 	private static TIntIntHashMap _damageToGustav = new TIntIntHashMap();
 

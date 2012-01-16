@@ -768,7 +768,6 @@
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -786,6 +785,7 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">

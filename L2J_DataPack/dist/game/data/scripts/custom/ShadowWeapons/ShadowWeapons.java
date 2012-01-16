@@ -64,19 +64,19 @@ public class ShadowWeapons extends Quest
 		if (st == null)
 			return htmltext;
 
-		long has_d = st.getQuestItemsCount(D_COUPON);
-		long has_c = st.getQuestItemsCount(C_COUPON);
+		boolean has_d = st.hasQuestItems(D_COUPON);
+		boolean has_c = st.hasQuestItems(C_COUPON);
 
-		if (has_d > 0 || has_c > 0)
+		if (has_d  || has_c)
 		{
 			// let's assume character had both c & d-grade coupons, we'll confirm later
 			String multisell = "306893003";
-			if (has_d < 1)
+			if (!has_d)
 			{
 				// if s/he had c-grade only...
 				multisell = "306893002";
 			}
-			else if (has_c < 1)
+			else if (!has_c)
 			{
 				// or d-grade only.
 				multisell = "306893001";

@@ -36,6 +36,7 @@ public class Spoil implements ISkillHandler
 		L2SkillType.SPOIL
 	};
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
@@ -53,7 +54,7 @@ public class Spoil implements ISkillHandler
 			
 			if (target.isSpoil())
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_SPOILED));
+				activeChar.sendPacket(SystemMessageId.ALREADY_SPOILED);
 				continue;
 			}
 			
@@ -67,7 +68,7 @@ public class Spoil implements ISkillHandler
 				{
 					target.setSpoil(true);
 					target.setIsSpoiledBy(activeChar.getObjectId());
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SPOIL_SUCCESS));
+					activeChar.sendPacket(SystemMessageId.SPOIL_SUCCESS);
 				}
 				else
 				{
@@ -81,6 +82,7 @@ public class Spoil implements ISkillHandler
 		}
 	}
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

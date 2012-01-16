@@ -18,18 +18,18 @@ import java.util.List;
 
 import javolution.util.FastList;
 
-import com.l2jserver.gameserver.handler.ISkillTargetTypeHandler;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 /**
  * @author UnAfraid
  */
-public class TargetParty implements ISkillTargetTypeHandler
+public class TargetParty implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
@@ -76,8 +76,8 @@ public class TargetParty implements ISkillTargetTypeHandler
 	}
 	
 	@Override
-	public Enum<SkillTargetType> getTargetType()
+	public Enum<L2TargetType> getTargetType()
 	{
-		return SkillTargetType.TARGET_PARTY;
+		return L2TargetType.TARGET_PARTY;
 	}
 }

@@ -1014,29 +1014,31 @@
 	<skill id="2860" levels="6" name="Highest Power Secret Medicine of Life">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 500 1300 2200 3000 3800 4600 </table>
+		<table name="#amount"> 500 1300 2200 3000 3800 4600 </table>
 		<set name="isPotion" val="true" />
+		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 120 280 440 580 720 840 </table>
+		<table name="#amount"> 120 280 440 580 720 840 </table>
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2287-1" />
 		<set name="skillType" val="MANAHEAL" />
@@ -1044,16 +1046,18 @@
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
-		<table name="#power"> 300 700 1200 1600 2000 2400 </table>
+		<table name="#amount"> 300 700 1200 1600 2000 2400 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
 		<set name="sharedReuse" val="2289-1" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
@@ -1061,6 +1065,9 @@
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
 		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
 		<set name="target" val="TARGET_NONE" />
@@ -1069,11 +1076,13 @@
 	</skill>
 	<skill id="2864" levels="1" name="Highest Power Quick Healing Potion">
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="30" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="30" />
+		</for>
 	</skill>
 	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1">
 		<!-- Confirmed CT2.5 -->

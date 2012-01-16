@@ -213,7 +213,7 @@ class Quest (JQuest) :
         st.set("cond","0")
         st.exitQuest(False)
         st.saveGlobalQuestVar("1ClassQuestFinished","1")
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(BEAD_OF_SEASON) == 0 :
           st.giveItems(BEAD_OF_SEASON,1)

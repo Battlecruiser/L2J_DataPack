@@ -17,7 +17,6 @@ package handlers.admincommandhandlers;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javolution.text.TextBuilder;
 
@@ -34,7 +33,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.QuestList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Korvin
@@ -48,6 +46,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		"admin_setcharquest"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		String[] cmdParams = command.split(" ");
@@ -85,7 +84,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		
@@ -145,7 +144,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		actor.sendPacket(adminReply);
 	}
 	
-	private void showquestmenu(L2PcInstance target, L2PcInstance actor, String[] val) throws SQLException
+	private void showquestmenu(L2PcInstance target, L2PcInstance actor, String[] val)
 	{
 		Connection con = null;
 		try
@@ -180,9 +179,10 @@ public class AdminShowQuests implements IAdminCommandHandler
 				while(rs.next()){
 					String var_name = rs.getString(1);
 					if (var_name.equals("<state>"))
+					{
 						continue;
-					else
-						replyMSG.append("<tr><td>"+var_name+"</td><td>"+rs.getString(2)+"</td><td><edit var=\"var"+var_name+"\" width=80 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" "+var_name+" $var"+var_name+"\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Del\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" "+var_name+" delete\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+					}
+					replyMSG.append("<tr><td>"+var_name+"</td><td>"+rs.getString(2)+"</td><td><edit var=\"var"+var_name+"\" width=80 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" "+var_name+" $var"+var_name+"\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Del\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" "+var_name+" delete\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 				}
 				replyMSG.append("</table><br><br><table width=250><tr><td>Repeatable quest:</td><td>Unrepeatable quest:</td></tr>");
 				replyMSG.append("<tr><td><button value=\"Quest Complete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" state COMLETED 1\" width=120 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
@@ -242,9 +242,10 @@ public class AdminShowQuests implements IAdminCommandHandler
 						{
 							String var_name = rs.getString(1);
 							if (var_name.equals("<state>"))
+							{
 								continue;
-							else
-								replyMSG.append("<tr><td>"+var_name+"</td><td>"+rs.getString(2)+"</td><td><edit var=\"var"+var_name+"\" width=80 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" "+var_name+" $var"+var_name+"\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Del\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" "+var_name+" delete\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+							}
+							replyMSG.append("<tr><td>"+var_name+"</td><td>"+rs.getString(2)+"</td><td><edit var=\"var"+var_name+"\" width=80 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" "+var_name+" $var"+var_name+"\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Del\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" "+var_name+" delete\" width=30 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 						}
 						replyMSG.append("</table><br><br><table width=250><tr><td>Repeatable quest:</td><td>Unrepeatable quest:</td></tr>");
 						replyMSG.append("<tr><td><button value=\"Quest Complete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" state COMLETED 1\" width=100 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
@@ -338,6 +339,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		{};
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

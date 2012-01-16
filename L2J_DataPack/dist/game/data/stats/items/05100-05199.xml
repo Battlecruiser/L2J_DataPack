@@ -225,6 +225,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -252,6 +253,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -279,6 +281,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="200" />
 			<set order="0x08" stat="mAtk" val="6" />
@@ -305,6 +308,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -332,6 +336,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -359,6 +364,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -767,6 +773,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2101-1" />
 		<set name="use_condition" val="{{uc_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="5169" type="EtcItem" name="Deluxe Food for Strider">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
@@ -780,6 +787,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2102-1" />
 		<set name="use_condition" val="{{uc_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="5170" type="Armor" name="Mithril Panzer Coat">
 		<set name="icon" val="icon.etc_pet_armor_i08" />
@@ -791,6 +799,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="825000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="41" />
 			<add order="0x10" stat="pDef" val="41" />
@@ -806,6 +815,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="1197000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="44" />
 			<add order="0x10" stat="pDef" val="44" />
@@ -821,6 +831,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="1857000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="46" />
 			<add order="0x10" stat="pDef" val="46" />
@@ -836,6 +847,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="2671000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="49" />
 			<add order="0x10" stat="pDef" val="49" />
@@ -851,6 +863,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="4064000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="52" />
 			<add order="0x10" stat="pDef" val="52" />
@@ -866,6 +879,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="5568000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="54" />
 			<add order="0x10" stat="pDef" val="54" />
@@ -884,6 +898,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="1600000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="17" />
 			<add order="0x10" stat="mAtk" val="21" />
@@ -904,6 +919,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="2300000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="19" />
 			<add order="0x10" stat="mAtk" val="24" />
@@ -924,6 +940,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="3400000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="21" />
 			<add order="0x10" stat="mAtk" val="27" />
@@ -944,6 +961,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="4900000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="23" />
 			<add order="0x10" stat="mAtk" val="30" />
@@ -964,6 +982,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="7300000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="25" />
 			<add order="0x10" stat="mAtk" val="34" />
@@ -984,6 +1003,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="10000000" />
 		<set name="equip_condition" val="{{ec_category;{@strider}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="27" />
 			<add order="0x10" stat="mAtk" val="37" />
@@ -1001,6 +1021,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="1197000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="44" />
 			<add order="0x10" stat="pDef" val="44" />
@@ -1016,6 +1037,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="1857000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="46" />
 			<add order="0x10" stat="pDef" val="46" />
@@ -1031,6 +1053,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="2671000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="49" />
 			<add order="0x10" stat="pDef" val="49" />
@@ -1046,6 +1069,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="4064000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="52" />
 			<add order="0x10" stat="pDef" val="52" />
@@ -1061,6 +1085,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="5568000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="54" />
 			<add order="0x10" stat="pDef" val="54" />
@@ -1079,6 +1104,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="2300000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="19" />
 			<add order="0x10" stat="mAtk" val="24" />
@@ -1099,6 +1125,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="3400000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="21" />
 			<add order="0x10" stat="mAtk" val="27" />
@@ -1119,6 +1146,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="4900000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="23" />
 			<add order="0x10" stat="mAtk" val="30" />
@@ -1139,6 +1167,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="7300000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="25" />
 			<add order="0x10" stat="mAtk" val="34" />
@@ -1159,6 +1188,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="10000000" />
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="27" />
 			<add order="0x10" stat="mAtk" val="37" />

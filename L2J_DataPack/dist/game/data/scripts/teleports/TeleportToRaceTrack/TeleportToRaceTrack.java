@@ -18,6 +18,7 @@ import java.util.Map;
 
 import javolution.util.FastMap;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -26,8 +27,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Plim
- * Original python script by DraX & updated by DrLecter
+ * @author Plim Original python script by DraX & updated by DrLecter
  */
 public class TeleportToRaceTrack extends Quest
 {
@@ -35,20 +35,20 @@ public class TeleportToRaceTrack extends Quest
 	
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<Integer, Integer>();
 	
-	private static final int[][] RETURN_LOCS = 
+	private static final Location[] RETURN_LOCS =
 	{
-		{-80826, 149775, -3043}, 
-		{-12672, 122776, -3116},
-		{15670, 142983, -2705}, 
-		{83400, 147943, -3404}, 
-		{111409, 219364, -3545}, 
-		{82956, 53162, -1495}, 
-		{146331, 25762, -2018}, 
-		{116819, 76994, -2714}, 
-		{43835, -47749, -792}, 
-		{147930, -55281, -2728}, 
-		{87386, -143246, -1293}, 
-		{12882, 181053, -3560}
+		new Location(-80826, 149775, -3043),
+		new Location(-12672, 122776, -3116),
+		new Location(15670, 142983, -2705),
+		new Location(83400, 147943, -3404),
+		new Location(111409, 219364, -3545),
+		new Location(82956, 53162, -1495),
+		new Location(146331, 25762, -2018),
+		new Location(116819, 76994, -2714),
+		new Location(43835, -47749, -792),
+		new Location(147930, -55281, -2728),
+		new Location(87386, -143246, -1293),
+		new Location(12882, 181053, -3560)
 	};
 	
 	@Override
@@ -74,7 +74,7 @@ public class TeleportToRaceTrack extends Quest
 				int return_id = st.getInt("id") - 1;
 				if (return_id < 13)
 				{
-					st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0], RETURN_LOCS[return_id][1], RETURN_LOCS[return_id][2]);
+					st.getPlayer().teleToLocation(RETURN_LOCS[return_id], false);
 					st.unset("id");
 				}
 			}
@@ -95,18 +95,18 @@ public class TeleportToRaceTrack extends Quest
 	{
 		super(questId, name, descr);
 		
-		TELEPORTERS.put(30059, 3); //TRISHA
-		TELEPORTERS.put(30080, 4); //CLARISSA
-		TELEPORTERS.put(30177, 6); //VALENTIA
-		TELEPORTERS.put(30233, 8); //ESMERALDA
-		TELEPORTERS.put(30256, 2); //BELLA
-		TELEPORTERS.put(30320, 1); //RICHLIN
-		TELEPORTERS.put(30848, 7); //ELISA
-		TELEPORTERS.put(30899, 5); //FLAUEN
-		TELEPORTERS.put(31320, 9); //ILYANA
-		TELEPORTERS.put(31275, 10); //TATIANA
-		TELEPORTERS.put(31964, 11); //BILIA
-		TELEPORTERS.put(31210, 12); //RACE TRACK GK
+		TELEPORTERS.put(30059, 3); // TRISHA
+		TELEPORTERS.put(30080, 4); // CLARISSA
+		TELEPORTERS.put(30177, 6); // VALENTIA
+		TELEPORTERS.put(30233, 8); // ESMERALDA
+		TELEPORTERS.put(30256, 2); // BELLA
+		TELEPORTERS.put(30320, 1); // RICHLIN
+		TELEPORTERS.put(30848, 7); // ELISA
+		TELEPORTERS.put(30899, 5); // FLAUEN
+		TELEPORTERS.put(31320, 9); // ILYANA
+		TELEPORTERS.put(31275, 10); // TATIANA
+		TELEPORTERS.put(31964, 11); // BILIA
+		TELEPORTERS.put(31210, 12); // RACE TRACK GK
 		
 		for (int npcId : TELEPORTERS.keySet())
 		{
@@ -115,7 +115,7 @@ public class TeleportToRaceTrack extends Quest
 		}
 		
 		addStartNpc(RACE_MANAGER);
-        addTalkId(RACE_MANAGER);
+		addTalkId(RACE_MANAGER);
 	}
 	
 	public static void main(String[] args)

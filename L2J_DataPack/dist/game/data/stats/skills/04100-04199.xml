@@ -134,7 +134,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="6000" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -157,7 +156,6 @@
 		<set name="flyRadius" val="600" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="3000" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -323,11 +321,13 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="65" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="689" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="105" />
+		<for>
+			<effect name="Heal" noicon="1" val="689" />
+		</for>
 	</skill>
 	<skill id="4116" levels="10" name="Resist M.Atk">
 		<!-- Freya retail confirmed -->
@@ -617,9 +617,11 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="1000" />
+		</for>
 	</skill>
 	<skill id="4134" levels="1" name="Seal Skill">
 		<!-- Confirmed CT2.5 -->
@@ -638,9 +640,11 @@
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="1000000" />
+		</for>
 	</skill>
 	<skill id="4136" levels="1" name="Baium's Gift">
 		<!-- Confirmed CT2.5 -->

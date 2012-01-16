@@ -14,18 +14,17 @@
  */
 package handlers.targethandlers;
 
-import com.l2jserver.gameserver.handler.ISkillTargetTypeHandler;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 /**
  * @author UnAfraid
  */
-public class TargetOne implements ISkillTargetTypeHandler
+public class TargetOne implements ITargetTypeHandler
 {
 	
 	@Override
@@ -48,6 +47,7 @@ public class TargetOne implements ISkillTargetTypeHandler
 			case HPMPCPHEAL_PERCENT:
 			case HPMPHEAL_PERCENT:
 			case HPCPHEAL_PERCENT:
+			case DUMMY:
 				canTargetSelf = true;
 				break;
 		}
@@ -55,7 +55,7 @@ public class TargetOne implements ISkillTargetTypeHandler
 		// Check for null target or any other invalid target
 		if (target == null || target.isDead() || (target == activeChar && !canTargetSelf))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
 		
@@ -64,8 +64,8 @@ public class TargetOne implements ISkillTargetTypeHandler
 	}
 	
 	@Override
-	public Enum<SkillTargetType> getTargetType()
+	public Enum<L2TargetType> getTargetType()
 	{
-		return SkillTargetType.TARGET_ONE;
+		return L2TargetType.TARGET_ONE;
 	}
 }

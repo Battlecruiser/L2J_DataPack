@@ -310,9 +310,8 @@
 	<skill id="4613" levels="12" name="NPC Clan Heal">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 44 67 92 120 147 170 182 189 194 197 197 </table>
-		<table name="#power"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
+		<table name="#amount"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
 		<set name="skillType" val="HEAL" />
@@ -322,6 +321,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4614" levels="12" name="NPC Death Bomb">
 		<!-- Confirmed CT2.5 -->

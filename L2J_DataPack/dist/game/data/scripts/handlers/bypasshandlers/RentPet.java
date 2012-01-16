@@ -32,16 +32,23 @@ public class RentPet implements IBypassHandler
 		"RentPet"
 	};
 	
+	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2MerchantInstance))
+		{
 			return false;
+		}
 		
 		if (!Config.ALLOW_RENTPET)
+		{
 			return false;
+		}
 		
-		if (!Config.LIST_PET_RENT_NPC.contains(((L2Npc)target).getTemplate().npcId))
+		if (!Config.LIST_PET_RENT_NPC.contains(((L2Npc) target).getTemplate().getNpcId()))
+		{
 			return false;
+		}
 		
 		try
 		{

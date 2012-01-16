@@ -6,7 +6,7 @@
 		<table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table>
 		<table name="#mpInitialConsume"> 24 25 26 28 29 30 31 31 </table>
 		<table name="#mpConsume"> 96 99 102 110 116 120 122 124 </table>
-		<table name="#power"> 120 124 128 138 144 149 153 155 </table>
+		<table name="#amount"> 120 124 128 138 144 149 153 155 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -16,7 +16,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
+		<set name="power" val="#amount" />
 		<set name="reuseDelay" val="12000" />
 		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="target" val="TARGET_OWNER_PET" />
@@ -101,10 +101,12 @@
 	<skill id="5205" levels="1" name="Boss Regeneration">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="5206" levels="1" name="Decrease Speed">
 		<!-- CT2.5 retail confirmed -->
@@ -995,10 +997,8 @@
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="BLEED" />
-		<set name="power" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />

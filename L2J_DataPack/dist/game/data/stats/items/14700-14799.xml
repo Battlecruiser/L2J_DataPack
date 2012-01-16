@@ -12,6 +12,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2863-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -28,6 +29,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2864-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -163,6 +165,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14682,3,3,100;14688,3,3,100;14694,3,3,100" />
 	</item>
 	<item id="14714" type="EtcItem" name="Greater Elixir Gift Box (D-Grade)">
@@ -175,6 +178,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14683,3,3,100;14689,3,3,100;14695,3,3,100" />
 	</item>
 	<item id="14715" type="EtcItem" name="Greater Elixir Gift Box (C-Grade)">
@@ -187,6 +191,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14684,3,3,100;14690,3,3,100;14696,3,3,100" />
 	</item>
 	<item id="14716" type="EtcItem" name="Greater Elixir Gift Box (B-Grade)">
@@ -199,6 +204,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14685,2,2,100;14691,2,2,100;14697,2,2,100" />
 	</item>
 	<item id="14717" type="EtcItem" name="Greater Elixir Gift Box (A-Grade)">
@@ -211,6 +217,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14686,2,2,100;14692,2,2,100;14698,2,2,100" />
 	</item>
 	<item id="14718" type="EtcItem" name="Greater Elixir Gift Box (S-Grade)">
@@ -223,6 +230,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14687,2,2,100;14693,2,2,100;14699,2,2,100" />
 	</item>
 	<item id="14719" type="EtcItem" name="Full Vitality Event Pack">
@@ -419,6 +427,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2873-1;2874-1;2875-1;2876-1;2877-1;2878-1;2879-1;2885-1;2886-1;2887-1;2888-1;2889-1;2890-1;2891-6" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14740" type="EtcItem" name="Event - Save the Cow Event Pack">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -430,6 +439,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14722,60,60,100;14723,15,15,100;14724,1,1,100;14725,1,1,100" />
 	</item>
 	<item id="14741" type="EtcItem" name="Event - Vitality Replenishing Herb Tea 5 minutes">
@@ -568,7 +578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="14753" type="Armor" name="Shadow Item - Refined Chick Hat - Escape">
+	<item id="14753" type="Armor" name="Shadow Item - Refined Chick Hat - Blessed Escape">
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -582,6 +592,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="30" />
 	</item>
 	<item id="14754" type="Armor" name="Shadow Item - Refined Chick Hat - Big Head">
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
@@ -597,6 +608,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="14755" type="Armor" name="Shadow Item - Refined Chick Hat - Firework">
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
@@ -612,8 +624,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="14756" type="Armor" name="Shadow Item - Refined Black Feather Mask - Escape">
+	<item id="14756" type="Armor" name="Shadow Item - Refined Black Feather Mask - Blessed Escape">
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -627,6 +640,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="30" />
 	</item>
 	<item id="14757" type="Armor" name="Shadow Item - Refined Black Feather Mask - Big Head">
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
@@ -642,6 +656,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="14758" type="Armor" name="Shadow Item - Refined Black Feather Mask - Firework">
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
@@ -657,8 +672,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="14759" type="Armor" name="Shadow Item - Refined Carnival Circlet - Escape">
+	<item id="14759" type="Armor" name="Shadow Item - Refined Carnival Circlet - Blessed Escape">
 		<set name="icon" val="icon.accessory_carnival_circlet2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -672,6 +688,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="30" />
 	</item>
 	<item id="14760" type="Armor" name="Shadow Item - Refined Carnival Circlet - Big Head">
 		<set name="icon" val="icon.accessory_carnival_circlet2_i00" />
@@ -687,6 +704,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="14761" type="Armor" name="Shadow Item - Refined Carnival Circlet - Firework">
 		<set name="icon" val="icon.accessory_carnival_circlet2_i00" />
@@ -702,8 +720,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="14762" type="Armor" name="Shadow Item - Refined Medieval Style Party Mask - Escape">
+	<item id="14762" type="Armor" name="Shadow Item - Refined Medieval Style Party Mask - Blessed Escape">
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -717,6 +736,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="30" />
 	</item>
 	<item id="14763" type="Armor" name="Shadow Item - Refined Medieval Style Party Mask - Big Head">
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
@@ -732,6 +752,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="14764" type="Armor" name="Shadow Item - Refined Medieval Style Party Mask - Firework">
 		<set name="icon" val="icon.accessory_middle_age_party_mask2_i00" />
@@ -747,6 +768,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="360" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="14765" type="EtcItem" name="For Events - Extra Entrance Pass - Rim Kamaloka">
 		<set name="icon" val="icon.ticket_i00" />
@@ -802,6 +824,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14770,1,1,100;14774,1,1,80" />
 	</item>
 	<item id="14769" type="EtcItem" name="White Day Candy">
@@ -925,7 +948,7 @@
 	</item>
 	<item id="14777" type="EtcItem" name="Baguette's Herb">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -933,7 +956,7 @@
 	</item>
 	<item id="14778" type="EtcItem" name="Fresh Cream Herb">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -941,7 +964,7 @@
 	</item>
 	<item id="14779" type="EtcItem" name="Cheesecake Herb">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -1199,7 +1222,7 @@
 		<set name="weight" val="1800" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -1221,7 +1244,7 @@
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -1243,7 +1266,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
@@ -1279,7 +1302,7 @@
 		<set name="weight" val="2150" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -1297,15 +1320,17 @@
 	<item id="14798" type="Armor" name="Afro Perm Wig - Black">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14799" type="Armor" name="Afro Perm Wig - Gold">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 </list>

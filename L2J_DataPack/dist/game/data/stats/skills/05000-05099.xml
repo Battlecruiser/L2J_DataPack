@@ -65,7 +65,6 @@
 		<set name="flyRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="5800" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -85,11 +84,10 @@
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="ignoreResists" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -121,9 +119,10 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<table name="#aggroPoints"> 100 100 100 0 0 </table>
+		<table name="#healPercent"> 3 0 0 0 0 </table>
 		<table name="#isDebuff"> false false false true true </table>
 		<table name="#isMagic"> true false false true true </table>
-		<table name="#power"> 3 0 0 10 10 </table>
+		<table name="#power"> 0 0 0 10 10 </table>
 		<table name="#saveVs"> NULL NULL NULL MEN MEN </table>
 		<table name="#skillType"> HEAL_PERCENT DUMMY BUFF DEBUFF STUN </table>
 		<table name="#abnormalLvl"> 0 0 1 1 1 </table>
@@ -160,6 +159,7 @@
 				<mul order="0x30" stat="gainHp" val="#gainHp" />
 			</effect>
 			<effect name="#effectname2" noicon="1" val="0" effectPower="#effectPower" effectType="#effectType" />
+			<effect name="HealPercent" noicon="1" val="#healPercent" />
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
@@ -312,13 +312,13 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Grow" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="big_body">
 				<mul order="0x30" stat="runSpd" val="1.22" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">

@@ -181,6 +181,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="6" />
 		<set name="price" val="2" />
+		<set name="for_npc" val="true" />
 		<for>
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
@@ -194,6 +195,7 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="1380" />
 		<set name="price" val="12900" />
+		<set name="for_npc" val="true" />
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -210,6 +212,7 @@
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="1320" />
 		<set name="price" val="78400" />
+		<set name="for_npc" val="true" />
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />

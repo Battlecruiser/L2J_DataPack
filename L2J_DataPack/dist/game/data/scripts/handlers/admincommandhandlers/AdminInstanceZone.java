@@ -20,6 +20,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		"admin_instancezone_clear"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
@@ -86,6 +87,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

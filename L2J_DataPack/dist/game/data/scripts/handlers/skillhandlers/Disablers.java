@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -32,12 +31,14 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -74,6 +75,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2SkillType type = skill.getSkillType();
@@ -261,7 +263,7 @@ public class Disablers implements ISkillHandler
 						}
 					}
 					else
-						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+						activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 					break;
 				}
 				case AGGDAMAGE:
@@ -328,7 +330,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							if (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_UNDEAD)
+							if (skill.getTargetType() == L2TargetType.TARGET_UNDEAD)
 							{
 								if (target.isUndead())
 									((L2Attackable) target).reduceHate(null, ((L2Attackable) target).getHating(((L2Attackable) target).getMostHated()));
@@ -567,7 +569,7 @@ public class Disablers implements ISkillHandler
 										removedBuffs += negateEffect(target, L2SkillType.BUFF, -1, skill.getMaxNegatedEffects());
 									break;
 								case HEAL:
-									ISkillHandler Healhandler = SkillHandler.getInstance().getSkillHandler(L2SkillType.HEAL);
+									ISkillHandler Healhandler = SkillHandler.getInstance().getHandler(L2SkillType.HEAL);
 									if (Healhandler == null)
 									{
 										_log.severe("Couldn't find skill handler for HEAL.");
@@ -612,7 +614,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @param target
 	 * @param type
-	 * @param power
+	 * @param negateLvl 
 	 * @param maxRemoved
 	 * @return
 	 */
@@ -625,7 +627,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @param target
 	 * @param type
-	 * @param power
+	 * @param negateLvl 
 	 * @param skillId
 	 * @param maxRemoved
 	 * @return
@@ -722,6 +724,7 @@ public class Disablers implements ISkillHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

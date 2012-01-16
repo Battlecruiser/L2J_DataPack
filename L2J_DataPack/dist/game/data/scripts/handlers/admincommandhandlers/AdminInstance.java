@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.entity.Instance;
 
 /**
  * @author evill33t, GodKratos
- * 
  */
 public class AdminInstance implements IAdminCommandHandler
 {
@@ -40,6 +39,7 @@ public class AdminInstance implements IAdminCommandHandler
 		"admin_listinstances"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
@@ -49,7 +49,7 @@ public class AdminInstance implements IAdminCommandHandler
 		if (command.startsWith("admin_createinstance"))
 		{
 			String[] parts = command.split(" ");
-			if (parts.length < 2)
+			if (parts.length != 3)
 			{
 				activeChar.sendMessage("Example: //createinstance <id> <templatefile> - ids => 300000 are reserved for dynamic instances");
 			}
@@ -57,21 +57,20 @@ public class AdminInstance implements IAdminCommandHandler
 			{
 				try
 				{
-					int id = Integer.parseInt(parts[1]);
-					if (InstanceManager.getInstance().createInstanceFromTemplate(id, parts[2]) && id < 300000)
+					final int id = Integer.parseInt(parts[1]);
+					if ((id < 300000) && InstanceManager.getInstance().createInstanceFromTemplate(id, parts[2]))
 					{
-						activeChar.sendMessage("Instance created");
-						return true;
+						activeChar.sendMessage("Instance created.");
 					}
 					else
 					{
-						activeChar.sendMessage("Failed to create instance");
-						return true;
+						activeChar.sendMessage("Failed to create instance.");
 					}
+					return true;
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Failed loading: " + parts[2]);
+					activeChar.sendMessage("Failed loading: " + parts[1] + " " + parts[2]);
 					return false;
 				}
 			}
@@ -93,31 +92,29 @@ public class AdminInstance implements IAdminCommandHandler
 					activeChar.sendMessage("Instance " + val + " doesnt exist.");
 					return false;
 				}
-				else
+				
+				L2Object target = activeChar.getTarget();
+				if (target == null || target instanceof L2Summon) // Don't separate summons from masters
 				{
-					L2Object target = activeChar.getTarget();
-					if (target == null || target instanceof L2Summon) // Don't separate summons from masters
-					{
-						activeChar.sendMessage("Incorrect target.");
-						return false;
-					}
-					target.setInstanceId(val);
-					if (target instanceof L2PcInstance)
-					{
-						L2PcInstance player = (L2PcInstance) target;
-						player.sendMessage("Admin set your instance to:" + val);
-						player.teleToLocation(player.getX(), player.getY(), player.getZ());
-						L2Summon pet = player.getPet();
-						if (pet != null)
-						{
-							pet.setInstanceId(val);
-							pet.teleToLocation(pet.getX(), pet.getY(), pet.getZ());
-							player.sendMessage("Admin set " + pet.getName() + "'s instance to:" + val);
-						}
-					}
-					activeChar.sendMessage("Moved " + target.getName() + " to instance " + target.getInstanceId() + ".");
-					return true;
+					activeChar.sendMessage("Incorrect target.");
+					return false;
 				}
+				target.setInstanceId(val);
+				if (target instanceof L2PcInstance)
+				{
+					L2PcInstance player = (L2PcInstance) target;
+					player.sendMessage("Admin set your instance to:" + val);
+					player.teleToLocation(player.getX(), player.getY(), player.getZ());
+					L2Summon pet = player.getPet();
+					if (pet != null)
+					{
+						pet.setInstanceId(val);
+						pet.teleToLocation(pet.getX(), pet.getY(), pet.getZ());
+						player.sendMessage("Admin set " + pet.getName() + "'s instance to:" + val);
+					}
+				}
+				activeChar.sendMessage("Moved " + target.getName() + " to instance " + target.getInstanceId() + ".");
+				return true;
 			}
 			catch (Exception e)
 			{
@@ -163,6 +160,7 @@ public class AdminInstance implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

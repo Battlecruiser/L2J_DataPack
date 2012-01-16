@@ -16,6 +16,7 @@ package quests.Q401_PathToWarrior;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -78,7 +79,7 @@ public class Q401_PathToWarrior extends Quest
 					htmltext = "30010-02.htm";
 				}
 			}
-			else if (player.getClassId().getId() == 0x01)
+			else if (player.getClassId() == ClassId.warrior)
 			{
 				htmltext = "30010-03.htm";
 			}
@@ -164,7 +165,7 @@ public class Q401_PathToWarrior extends Quest
 					st.addExpAndSp(160267, 34408);
 				st.giveItems(57, 163800);
 				st.playSound("ItemSound.quest_finish");
-				player.sendPacket(new SocialAction(player, 3));
+				player.sendPacket(new SocialAction(player.getObjectId(), 3));
 				st.exitQuest(false);
 				st.saveGlobalQuestVar("1ClassQuestFinished", "1");
 				htmltext = "30010-13.html";

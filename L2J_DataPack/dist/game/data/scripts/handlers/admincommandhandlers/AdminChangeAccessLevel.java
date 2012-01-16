@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 
 /**
@@ -42,12 +41,14 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		"admin_changelvl"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		handleChangeLevel(command, activeChar);
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -72,7 +73,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				if (activeChar.getTarget() instanceof L2PcInstance)
 					onLineChange(activeChar, (L2PcInstance) activeChar.getTarget(), lvl);
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			catch (Exception e)
 			{

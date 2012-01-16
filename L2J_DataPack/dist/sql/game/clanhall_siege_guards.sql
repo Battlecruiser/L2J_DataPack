@@ -398,59 +398,22 @@ INSERT INTO `clanhall_siege_guards` VALUES
 (21,35375,44525,108867,-2020,0,10800,'true'); 
 
 INSERT INTO `clanhall_siege_guards` VALUES
+-- Bandit Stronghold
+(35,35560,79745,-15472,-1792,0,1200,'false'),
+(35,35561,83348,-18267,-1248,14536,1200,'false'),
+(35,35562,81258,-17387,-1248,11144,1200,'false'),
+(35,35563,81832,-14223,-1248,-17664,1200,'false'),
+(35,35564,83687,-14532,-1248,-19008,1200,'false'),
+(35,35565,85263,-15447,-1248,-21328,1200,'false');
+
+INSERT INTO `clanhall_siege_guards` VALUES
 -- Beast Farm
-(63,35618,57058,-92275,-1360,57344,1200,'false'),
-(63,35619,57058,-92275,-1360,57344,1200,'false'),
-(63,35620,57058,-92275,-1360,57344,1200,'false'),
-(63,35621,57058,-92275,-1360,57344,1200,'false'),
-(63,35622,57058,-92275,-1360,57344,1200,'false'),
-(63,35618,58071,-91756,-1360,47274,1200,'false'),
-(63,35619,58071,-91756,-1360,47274,1200,'false'),
-(63,35620,58071,-91756,-1360,47274,1200,'false'),
-(63,35621,58071,-91756,-1360,47274,1200,'false'),
-(63,35622,58071,-91756,-1360,47274,1200,'false'),
-(63,35618,58800,-92560,-1360,34450,1200,'false'),
-(63,35619,58800,-92560,-1360,34450,1200,'false'),
-(63,35620,58800,-92560,-1360,34450,1200,'false'),
-(63,35621,58800,-92560,-1360,34450,1200,'false'),
-(63,35622,58800,-92560,-1360,34450,1200,'false'),
-(63,35618,58297,-93503,-1361,21100,1200,'false'),
-(63,35619,58297,-93503,-1361,21100,1200,'false'),
-(63,35620,58297,-93503,-1361,21100,1200,'false'),
-(63,35621,58297,-93503,-1361,21100,1200,'false'),
-(63,35622,58297,-93503,-1361,21100,1200,'false'),
-(63,35618,57215,-93306,-1359,8400,1200,'false'),
-(63,35619,57215,-93306,-1359,8400,1200,'false'),
-(63,35620,57215,-93306,-1359,8400,1200,'false'),
-(63,35621,57215,-93306,-1359,8400,1200,'false'),
-(63,35622,57215,-93306,-1359,8400,1200,'false'),
--- Beast Farm Final
-(63,35618,56560,-92880,-1360,64000,1200,'false'),
-(63,35619,56560,-92880,-1360,64000,1200,'false'),
-(63,35620,56560,-92880,-1360,64000,1200,'false'),
-(63,35621,56560,-92880,-1360,64000,1200,'false'),
-(63,35622,56560,-92880,-1360,64000,1200,'false'),
-(63,35618,58989,-93234,-1303,31000,1200,'false'),
-(63,35619,58989,-93234,-1303,31000,1200,'false'),
-(63,35620,58989,-93234,-1303,31000,1200,'false'),
-(63,35621,58989,-93234,-1303,31000,1200,'false'),
-(63,35622,58989,-93234,-1303,31000,1200,'false');
--- Beast Farm Pet
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16019,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16023,anywhere - total 2,0,1800,'false'), TODO: needs support for random spawn by zone.
--- (63,16021,anywhere,0,1800,'false'); TODO: needs support for random spawn by zone.
+(63,35612,60606,-93984,-1344,0,1200,'false'),
+(63,35613,56098,-91770,-1360,0,1200,'false'),
+(63,35614,58276,-90672,-1360,0,1200,'false'),
+(63,35615,59970,-92422,-1360,0,1200,'false'),
+(63,35616,58783,-94540,-1360,0,1200,'false'),
+(63,35617,56415,-94126,-1360,0,1200,'false');
 
 INSERT INTO `clanhall_siege_guards` VALUES
 -- Fortress of the Dead

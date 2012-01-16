@@ -951,19 +951,20 @@
 		<set name="aggroPoints" val="532" />
 		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="1200" />
+		<set name="isStaticHeal" val="true" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="200" />
 		<set name="referenceId" val="9925" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="CombatPointHealOverTime" noicon="1" val="200" />
+			<effect name="CpHeal" noicon="1" val="200" />
+			<effect name="Heal" noicon="1" val="200" />
 		</for>
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">

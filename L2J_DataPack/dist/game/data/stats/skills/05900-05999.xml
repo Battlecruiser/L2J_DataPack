@@ -35,10 +35,9 @@
 		<set name="mpConsume" val="74" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="33" /> <!-- Base Land Rate -->
-		<set name="ignoreResists" val="true" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -177,13 +176,12 @@
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="12610" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
@@ -665,18 +663,33 @@
 		<set name="hitTime" val="7900" />
 	</skill>
 	<skill id="5975" levels="3" name="Dark Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="1000" />
+		<table name="#magicLvl"> 51 61 79 </table>
+		<table name="#mpConsume"> 50 61 75 </table>
+		<table name="#power"> 1515 2365 6059 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5976" levels="3" name="Dark Storm">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="1000" />
+		<table name="#magicLvl"> 51 61 79 </table>
+		<table name="#mpConsume"> 50 61 75 </table>
+		<table name="#power"> 757 1182 4039 </table>
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="skillRadius" val="100" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5977" levels="3" name="Dark Strike">
 		<set name="target" val="TARGET_NONE" />
@@ -881,8 +894,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="ignoreResists" val="true" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="ETC" />

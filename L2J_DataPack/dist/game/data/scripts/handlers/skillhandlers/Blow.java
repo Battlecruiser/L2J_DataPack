@@ -21,23 +21,21 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.item.type.L2WeaponType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.BaseStats;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.templates.item.L2WeaponType;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
-
 /**
- *
  * @author  Steuf
  */
 public class Blow implements ISkillHandler
@@ -50,6 +48,7 @@ public class Blow implements ISkillHandler
 	};
 
 	
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar.isAlikeDead())
@@ -214,6 +213,7 @@ public class Blow implements ISkillHandler
 
 	
 	
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

@@ -26,6 +26,8 @@ import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -35,46 +37,37 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.util.Rnd;
 
 /**
  * Orfen AI
- * 
  * @author Emperorc
- * 
  */
 public class Orfen extends L2AttackableAIScript
 {
 	
-	private static final int[][] Pos =
+	//@formatter:off
+	private static final Location[] Pos =
 	{
-		{
-			43728, 17220, -4342
-		},
-		{
-			55024, 17368, -5412
-		},
-		{
-			53504, 21248, -5486
-		},
-		{
-			53248, 24576, -5262
-		}
+		new Location(43728, 17220, -4342), 
+		new Location(55024, 17368, -5412),
+		new Location(53504, 21248, -5486), 
+		new Location(53248, 24576, -5262)
 	};
 	
 	private static final NpcStringId[] Text =
 	{
 		NpcStringId.S1_STOP_KIDDING_YOURSELF_ABOUT_YOUR_OWN_POWERLESSNESS,
-		NpcStringId.S1_ILL_MAKE_YOU_FEEL_WHAT_TRUE_FEAR_IS,
-		NpcStringId.YOURE_REALLY_STUPID_TO_HAVE_CHALLENGED_ME_S1_GET_READY,
+		NpcStringId.S1_ILL_MAKE_YOU_FEEL_WHAT_TRUE_FEAR_IS, 
+		NpcStringId.YOURE_REALLY_STUPID_TO_HAVE_CHALLENGED_ME_S1_GET_READY, 
 		NpcStringId.S1_DO_YOU_THINK_THATS_GOING_TO_WORK
 	};
+	//@formatter:on
 	
 	private static final int ORFEN = 29014;
-	//private static final int RAIKEL = 29015;
+	// private static final int RAIKEL = 29015;
 	private static final int RAIKEL_LEOS = 29016;
-	//private static final int RIBA = 29017;
+	// private static final int RIBA = 29017;
 	private static final int RIBA_IREN = 29018;
 	
 	private static boolean _IsTeleported;
@@ -89,11 +82,11 @@ public class Orfen extends L2AttackableAIScript
 		super(id, name, descr);
 		int[] mobs =
 		{
-				ORFEN, RAIKEL_LEOS, RIBA_IREN
+			ORFEN, RAIKEL_LEOS, RIBA_IREN
 		};
 		registerMobs(mobs);
 		_IsTeleported = false;
-		_Zone = GrandBossManager.getInstance().getZone(Pos[0][0], Pos[0][1], Pos[0][2]);
+		_Zone = GrandBossManager.getInstance().getZone(Pos[0]);
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
 		int status = GrandBossManager.getInstance().getBossStatus(ORFEN);
 		if (status == DEAD)
@@ -108,28 +101,20 @@ public class Orfen extends L2AttackableAIScript
 			{
 				// the time has already expired while the server was offline. Immediately spawn Orfen.
 				int i = Rnd.get(10);
-				int x = 0;
-				int y = 0;
-				int z = 0;
+				Location loc;
 				if (i < 4)
 				{
-					x = Pos[1][0];
-					y = Pos[1][1];
-					z = Pos[1][2];
+					loc = Pos[1];
 				}
 				else if (i < 7)
 				{
-					x = Pos[2][0];
-					y = Pos[2][1];
-					z = Pos[2][2];
+					loc = Pos[2];
 				}
 				else
 				{
-					x = Pos[3][0];
-					y = Pos[3][1];
-					z = Pos[3][2];
+					loc = Pos[3];
 				}
-				L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, x, y, z, 0, false, 0);
+				L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
 				spawnBoss(orfen);
 			}
@@ -153,10 +138,8 @@ public class Orfen extends L2AttackableAIScript
 		((L2Attackable) npc).clearAggroList();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 		L2Spawn spawn = npc.getSpawn();
-		spawn.setLocx(Pos[index][0]);
-		spawn.setLocy(Pos[index][1]);
-		spawn.setLocz(Pos[index][2]);
-		npc.teleToLocation(Pos[index][0], Pos[index][1], Pos[index][2]);
+		spawn.setLocation(Pos[index]);;
+		npc.teleToLocation(Pos[index], false);
 	}
 	
 	public void spawnBoss(L2GrandBossInstance npc)
@@ -164,20 +147,20 @@ public class Orfen extends L2AttackableAIScript
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		startQuestTimer("check_orfen_pos", 10000, npc, null, true);
-		//Spawn minions
+		// Spawn minions
 		int x = npc.getX();
 		int y = npc.getY();
 		L2Attackable mob;
-		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x + 100, y + 100, npc.getZ(), 0, false, 0);
+		mob = (L2Attackable) addSpawn(RAIKEL_LEOS, x + 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_Minions.add(mob);
-		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x + 100, y - 100, npc.getZ(), 0, false, 0);
+		mob = (L2Attackable) addSpawn(RAIKEL_LEOS, x + 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_Minions.add(mob);
-		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x - 100, y + 100, npc.getZ(), 0, false, 0);
+		mob = (L2Attackable) addSpawn(RAIKEL_LEOS, x - 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_Minions.add(mob);
-		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
+		mob = (L2Attackable) addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
 		_Minions.add(mob);
 		startQuestTimer("check_minion_loc", 10000, npc, null, true);
@@ -189,28 +172,20 @@ public class Orfen extends L2AttackableAIScript
 		if (event.equalsIgnoreCase("orfen_unlock"))
 		{
 			int i = Rnd.get(10);
-			int x = 0;
-			int y = 0;
-			int z = 0;
+			Location loc;
 			if (i < 4)
 			{
-				x = Pos[1][0];
-				y = Pos[1][1];
-				z = Pos[1][2];
+				loc = Pos[1];
 			}
 			else if (i < 7)
 			{
-				x = Pos[2][0];
-				y = Pos[2][1];
-				z = Pos[2][2];
+				loc = Pos[2];
 			}
 			else
 			{
-				x = Pos[3][0];
-				y = Pos[3][1];
-				z = Pos[3][2];
+				loc = Pos[3];
 			}
-			L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, x, y, z, 0, false, 0);
+			L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc, false, 0);
 			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
 			spawnBoss(orfen);
 		}
@@ -249,7 +224,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			L2Attackable mob = (L2Attackable)addSpawn(RAIKEL_LEOS, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
+			L2Attackable mob = (L2Attackable) addSpawn(RAIKEL_LEOS, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
 			mob.setIsRaidMinion(true);
 			_Minions.add(mob);
 		}
@@ -341,7 +316,7 @@ public class Orfen extends L2AttackableAIScript
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
-			//time is 48hour	+/- 20hour
+			// time is 48hour +/- 20hour
 			long respawnTime = (long) Config.Interval_Of_Orfen_Spawn + Rnd.get(Config.Random_Of_Orfen_Spawn);
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots

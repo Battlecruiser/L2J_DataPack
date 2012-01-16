@@ -16,10 +16,10 @@ package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.RecipeController;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Recipes implements IItemHandler
 {
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))

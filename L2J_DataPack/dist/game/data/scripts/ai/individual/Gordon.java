@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * Gordon AI
  * @author TOFIZ
- * @version $Revision: 1.1 $ $Date: 2008/08/21 $
  */
 public class Gordon extends L2AttackableAIScript
 {
@@ -38,37 +37,75 @@ public class Gordon extends L2AttackableAIScript
 	private static int _npcMoveY = 0;
 	private static int _isWalkTo = 0;
 	private static int _npcBlock = 0;
-	private static int X = 0;
-	private static int Y = 0;
-	private static int Z = 0;
-	private static final int[][] WALKS = {
-		{141569, -45908, -2387},{142494, -45456, -2397},{142922, -44561, -2395},
-		{143672, -44130, -2398},{144557, -43378, -2325},{145839, -43267, -2301},
-		{147044, -43601, -2307},{148140, -43206, -2303},{148815, -43434, -2328},
-		{149862, -44151, -2558},{151037, -44197, -2708},{152555, -42756, -2836},
-		{154808, -39546, -3236},{155333, -39962, -3272},{156531, -41240, -3470},
-		{156863, -43232, -3707},{156783, -44198, -3764},{158169, -45163, -3541},
-		{158952, -45479, -3473},{160039, -46514, -3634},{160244, -47429, -3656},
-		{159155, -48109, -3665},{159558, -51027, -3523},{159396, -53362, -3244},
-		{160872, -56556, -2789},{160857, -59072, -2613},{160410, -59888, -2647},
-		{158770, -60173, -2673},{156368, -59557, -2638},{155188, -59868, -2642},
-		{154118, -60591, -2731},{153571, -61567, -2821},{153457, -62819, -2886},
-		{152939, -63778, -3003},{151816, -64209, -3120},{147655, -64826, -3433},
-		{145422, -64576, -3369},{144097, -64320, -3404},{140780, -61618, -3096},
-		{139688, -61450, -3062},{138267, -61743, -3056},{138613, -58491, -3465},
-		{138139, -57252, -3517},{139555, -56044, -3310},{139107, -54537, -3240},
-		{139279, -53781, -3091},{139810, -52687, -2866},{139657, -52041, -2793},
-		{139215, -51355, -2698},{139334, -50514, -2594},{139817, -49715, -2449},
-		{139824, -48976, -2263},{140130, -47578, -2213},{140483, -46339, -2382},
-		{141569, -45908, -2387}};
+	private static final L2CharPosition[] WALKS = 
+	{
+		new L2CharPosition(141569, -45908, -2387, 0),
+		new L2CharPosition(142494, -45456, -2397, 0),
+		new L2CharPosition(142922, -44561, -2395, 0),
+		new L2CharPosition(143672, -44130, -2398, 0),
+		new L2CharPosition(144557, -43378, -2325, 0),
+		new L2CharPosition(145839, -43267, -2301, 0),
+		new L2CharPosition(147044, -43601, -2307, 0),
+		new L2CharPosition(148140, -43206, -2303, 0),
+		new L2CharPosition(148815, -43434, -2328, 0),
+		new L2CharPosition(149862, -44151, -2558, 0),
+		new L2CharPosition(151037, -44197, -2708, 0),
+		new L2CharPosition(152555, -42756, -2836, 0),
+		new L2CharPosition(154808, -39546, -3236, 0),
+		new L2CharPosition(155333, -39962, -3272, 0),
+		new L2CharPosition(156531, -41240, -3470, 0),
+		new L2CharPosition(156863, -43232, -3707, 0),
+		new L2CharPosition(156783, -44198, -3764, 0),
+		new L2CharPosition(158169, -45163, -3541, 0),
+		new L2CharPosition(158952, -45479, -3473, 0),
+		new L2CharPosition(160039, -46514, -3634, 0),
+		new L2CharPosition(160244, -47429, -3656, 0),
+		new L2CharPosition(159155, -48109, -3665, 0),
+		new L2CharPosition(159558, -51027, -3523, 0),
+		new L2CharPosition(159396, -53362, -3244, 0),
+		new L2CharPosition(160872, -56556, -2789, 0),
+		new L2CharPosition(160857, -59072, -2613, 0),
+		new L2CharPosition(160410, -59888, -2647, 0),
+		new L2CharPosition(158770, -60173, -2673, 0),
+		new L2CharPosition(156368, -59557, -2638, 0),
+		new L2CharPosition(155188, -59868, -2642, 0),
+		new L2CharPosition(154118, -60591, -2731, 0),
+		new L2CharPosition(153571, -61567, -2821, 0),
+		new L2CharPosition(153457, -62819, -2886, 0),
+		new L2CharPosition(152939, -63778, -3003, 0),
+		new L2CharPosition(151816, -64209, -3120, 0),
+		new L2CharPosition(147655, -64826, -3433, 0),
+		new L2CharPosition(145422, -64576, -3369, 0),
+		new L2CharPosition(144097, -64320, -3404, 0),
+		new L2CharPosition(140780, -61618, -3096, 0),
+		new L2CharPosition(139688, -61450, -3062, 0),
+		new L2CharPosition(138267, -61743, -3056, 0),
+		new L2CharPosition(138613, -58491, -3465, 0),
+		new L2CharPosition(138139, -57252, -3517, 0),
+		new L2CharPosition(139555, -56044, -3310, 0),
+		new L2CharPosition(139107, -54537, -3240, 0),
+		new L2CharPosition(139279, -53781, -3091, 0),
+		new L2CharPosition(139810, -52687, -2866, 0),
+		new L2CharPosition(139657, -52041, -2793, 0),
+		new L2CharPosition(139215, -51355, -2698, 0),
+		new L2CharPosition(139334, -50514, -2594, 0),
+		new L2CharPosition(139817, -49715, -2449, 0),
+		new L2CharPosition(139824, -48976, -2263, 0),
+		new L2CharPosition(140130, -47578, -2213, 0),
+		new L2CharPosition(140483, -46339, -2382, 0),
+		new L2CharPosition(141569, -45908, -2387, 0)
+	};
 	
 	private static boolean _isAttacked = false;
 	private static boolean _isSpawned = false;
 	
-	public Gordon (int id, String name, String descr)
+	public Gordon(int id, String name, String descr)
 	{
-		super(id,name,descr);
-		int[] mobs = {GORDON};
+		super(id, name, descr);
+		int[] mobs =
+		{
+			GORDON
+		};
 		registerMobs(mobs, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN);
 		// wait 2 minutes after Start AI
 		startQuestTimer("check_ai", 120000, null, null, true);
@@ -96,18 +133,16 @@ public class Gordon extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		X = WALKS[_isWalkTo-1][0];
-		Y = WALKS[_isWalkTo-1][1];
-		Z = WALKS[_isWalkTo-1][2];
+		L2CharPosition loc = WALKS[_isWalkTo - 1];
 		if (event.equalsIgnoreCase("time_isAttacked"))
 		{
 			_isAttacked = false;
 			if (npc.getNpcId() == GORDON)
 			{
 				npc.setWalking();
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(X, Y, Z, 0));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc);
 			}
 		}
 		else if (event.equalsIgnoreCase("check_ai"))
@@ -136,14 +171,14 @@ public class Gordon extends L2AttackableAIScript
 					{
 						for (L2PcInstance pc : chars)
 						{
-							if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc,5000,false,false))
+							if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc, 5000, false, false))
 							{
 								npc.setRunning();
-								((L2Attackable)npc).addDamageHate(pc,0,9999);
+								((L2Attackable) npc).addDamageHate(pc, 0, 9999);
 								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pc);
 								_isAttacked = true;
-								cancelQuestTimer("time_isAttacked",null, null);
-								startQuestTimer("time_isAttacked",180000, npc, null);
+								cancelQuestTimer("time_isAttacked", null, null);
+								startQuestTimer("time_isAttacked", 180000, npc, null);
 								return super.onAdvEvent(event, npc, player);
 							}
 						}
@@ -152,16 +187,14 @@ public class Gordon extends L2AttackableAIScript
 				// end check
 				if (_isAttacked == true)
 					return super.onAdvEvent(event, npc, player);
-				if (npc.getNpcId() == GORDON && (npc.getX()-50) <= X && (npc.getX()+50) >= X && (npc.getY()-50) <= Y && (npc.getY()+50) >= Y)
+				if (npc.getNpcId() == GORDON && (npc.getX() - 50) <= loc.x && (npc.getX() + 50) >= loc.y && (npc.getY() - 50) <= loc.y && (npc.getY() + 50) >= loc.y)
 				{
 					_isWalkTo++;
 					if (_isWalkTo > 55)
 						_isWalkTo = 1;
-					X = WALKS[_isWalkTo-1][0];
-					Y = WALKS[_isWalkTo-1][1];
-					Z = WALKS[_isWalkTo-1][2];
+					loc = WALKS[_isWalkTo - 1];
 					npc.setWalking();
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new L2CharPosition(X, Y, Z, 0));
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc);
 				}
 				
 				// Test for unblock Npc
@@ -176,11 +209,11 @@ public class Gordon extends L2AttackableAIScript
 					_npcBlock++;
 					if (_npcBlock > 2)
 					{
-						npc.teleToLocation(X, Y, Z);
+						npc.teleToLocation(loc.x, loc.y, loc.z);
 						return super.onAdvEvent(event, npc, player);
 					}
 					if (_npcBlock > 0)
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new L2CharPosition(X, Y, Z, 0));
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc);
 				}
 				// End Test unblock Npc
 			}
@@ -189,7 +222,7 @@ public class Gordon extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onSpawn (L2Npc npc)
+	public String onSpawn(L2Npc npc)
 	{
 		if (npc.getNpcId() == GORDON && _npcBlock == 0)
 		{
@@ -201,7 +234,7 @@ public class Gordon extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack (L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -211,7 +244,7 @@ public class Gordon extends L2AttackableAIScript
 			if (player != null)
 			{
 				npc.setRunning();
-				((L2Attackable)npc).addDamageHate(player, 0, 100);
+				((L2Attackable) npc).addDamageHate(player, 0, 100);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			}
 		}
@@ -219,7 +252,7 @@ public class Gordon extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -227,11 +260,11 @@ public class Gordon extends L2AttackableAIScript
 			cancelQuestTimer("time_isAttacked", null, null);
 			_isSpawned = false;
 		}
-		return super.onKill(npc,killer,isPet);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Gordon(-1,"gordon","ai");
+		new Gordon(-1, Gordon.class.getSimpleName(), "ai");
 	}
 }

@@ -211,11 +211,14 @@
 		<!-- Arena Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="isStaticHeal" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="5000" /> <!-- Guess -->
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="5000" /> <!-- Amount Guess -->
+		</for>
 	</skill>
 	<skill id="6818" levels="1" name="Powerful Rage">
 		<!-- none -->
@@ -621,9 +624,32 @@
 	</skill>
 	<skill id="6885" levels="3" name="Morale Boost">
 		<!-- "The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +90, Critical Rate +50%, Critical Damage +15%, P. Atk. +15%, M. Atk. +15%, Atk. Spd. +15%, Casting Spd. +15%, and EXP bonus +20%." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- H5 Skill -->
+		<table name="#Vuln"> 50 80 90 </table>
+		<table name="#rCrit"> 0.1 0.3 0.5 </table>
+		<table name="#cAtk"> 1.1 1.15 1.15 </table>
+		<table name="#pmAtk"> 1 1.15 1.15 </table>
+		<table name="#pmAtkSpd"> 1 1 1.15 </table>
+		<table name="#bonusExp"> 1 1 1.2 </table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="99" abnormalType="dragon_valley_effect">
+				<sub order="0x40" stat="stunVuln" val="#Vuln" />
+				<sub order="0x40" stat="bleedVuln" val="#Vuln" />
+				<sub order="0x40" stat="poisonVuln" val="#Vuln" />
+				<sub order="0x40" stat="paralyzeVuln" val="#Vuln" />
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<mul order="0x30" stat="cAtk" val="#cAtk" />
+				<mul order="0x30" stat="pAtk" val="#pmAtk" />
+				<mul order="0x30" stat="mAtk" val="#pmAtk" />
+				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
+				<mul order="0x30" stat="pAtkSpd" val="#pmAtkSpd" />
+				<mul order="0x30" stat="bonusExp" val="#bonusExp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6886" levels="1" name="Complete Recovery">
 		<!-- none -->

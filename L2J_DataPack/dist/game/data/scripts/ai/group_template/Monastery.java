@@ -37,14 +37,22 @@ import com.l2jserver.util.Rnd;
 
 public class Monastery extends L2AttackableAIScript
 {
-	static final int[] mobs1 = {22124, 22125, 22126, 22127, 22129};
-	static final int[] mobs2 = {22134, 22135};
+	private static final int[] mobs1 =
+	{
+		22124, 22125, 22126, 22127, 22129
+	};
+	private static final int[] mobs2 =
+	{
+		22134, 22135
+	};
 	
-	static final NpcStringId[] messages = {
+	private static final NpcStringId[] messages =
+	{
 		NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION,
 		NpcStringId.S1_WHY_WOULD_YOU_CHOOSE_THE_PATH_OF_DARKNESS,
 		NpcStringId.S1_HOW_DARE_YOU_DEFY_THE_WILL_OF_EINHASAD
 	};
+	
 	public Monastery(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -55,7 +63,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if (Util.contains(mobs1,npc.getNpcId()) && !npc.isInCombat() && npc.getTarget() == null)
+		if (Util.contains(mobs1, npc.getNpcId()) && !npc.isInCombat() && npc.getTarget() == null)
 		{
 			if (player.getActiveWeaponInstance() != null)
 			{
@@ -66,7 +74,7 @@ public class Monastery extends L2AttackableAIScript
 					case 22124:
 					case 22126:
 					{
-						L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
+						L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
 						npc.doCast(skill);
 						break;
 					}
@@ -79,7 +87,7 @@ public class Monastery extends L2AttackableAIScript
 					}
 				}
 			}
-			else if (((L2Attackable)npc).getMostHated() == null)
+			else if (((L2Attackable) npc).getMostHated() == null)
 				return null;
 		}
 		return super.onAggroRangeEnter(npc, player, isPet);
@@ -88,7 +96,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (Util.contains(mobs2,npc.getNpcId()))
+		if (Util.contains(mobs2, npc.getNpcId()))
 		{
 			if (skill.getSkillType() == L2SkillType.AGGDAMAGE && targets.length != 0)
 			{
@@ -96,7 +104,7 @@ public class Monastery extends L2AttackableAIScript
 				{
 					if (obj.equals(npc))
 					{
-						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[Rnd.get(2)+1]);
+						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[Rnd.get(2) + 1]);
 						packet.addStringParameter(caster.getName());
 						npc.broadcastPacket(packet);
 						((L2Attackable) npc).addDamageHate(caster, 0, 999);
@@ -112,7 +120,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(mobs1,npc.getNpcId()))
+		if (Util.contains(mobs1, npc.getNpcId()))
 		{
 			FastList<L2Playable> result = new FastList<L2Playable>();
 			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
@@ -140,7 +148,7 @@ public class Monastery extends L2AttackableAIScript
 							case 22126:
 							case 22127:
 							{
-								L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
+								L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
 								npc.doCast(skill);
 								break;
 							}
@@ -162,7 +170,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if (Util.contains(mobs1,npc.getNpcId()) && skill.getId() == 4589)
+		if (Util.contains(mobs1, npc.getNpcId()) && skill.getId() == 4589)
 		{
 			npc.setIsRunning(true);
 			((L2Attackable) npc).addDamageHate(player, 0, 999);

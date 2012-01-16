@@ -14,21 +14,21 @@
  */
 package teleports.StakatoNest;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 public class StakatoNest extends Quest
 {
-	private final static int[][] data =
+	private final static Location[] _locs =
 	{
-		{80456, -52322, -5640},
-		{88718, -46214, -4640},
-		{87464, -54221, -5120},
-		{80848, -49426, -5128},
-		{87682, -43291, -4128}
+		new Location(80456, -52322, -5640),
+		new Location(88718, -46214, -4640),
+		new Location(87464, -54221, -5120),
+		new Location(80848, -49426, -5128),
+		new Location(87682, -43291, -4128)
 	};
 	
 	private final static int npcId = 32640;
@@ -48,23 +48,21 @@ public class StakatoNest extends Quest
 		if (st == null)
 			st = newQuestState(player);
 		
-		int loc = Integer.parseInt(event) - 1;
+		int index = Integer.parseInt(event) - 1;
 		
-		if (data.length > loc)
+		if (_locs.length > index)
 		{
-			int x = data[loc][0];
-			int y = data[loc][1];
-			int z = data[loc][2];
+			Location loc = _locs[index];
 			
 			if (player.getParty() != null)
 			{
 				for (L2PcInstance partyMember : player.getParty().getPartyMembers())
 				{
 					if (partyMember.isInsideRadius(player, 1000, true, true))
-						partyMember.teleToLocation(x, y, z);
+						partyMember.teleToLocation(loc, true);
 				}
 			}
-			player.teleToLocation(x, y, z);
+			player.teleToLocation(loc, false);
 			st.exitQuest(true);
 		}
 		
@@ -76,7 +74,7 @@ public class StakatoNest extends Quest
 	{
 		String htmltext = "";
 		QuestState accessQuest = player.getQuestState("240_ImTheOnlyOneYouCanTrust");
-		if (accessQuest != null && accessQuest.getState() == State.COMPLETED)
+		if ((accessQuest != null) && accessQuest.isCompleted())
 			htmltext = "32640.htm";
 		else
 			htmltext = "32640-no.htm";

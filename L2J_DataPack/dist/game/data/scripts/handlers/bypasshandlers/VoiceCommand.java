@@ -51,7 +51,7 @@ public class VoiceCommand implements IBypassHandler
 			
 			if (vc.length() > 0)
 			{
-				IVoicedCommandHandler vch = VoicedCommandHandler.getInstance().getVoicedCommandHandler(vc);
+				IVoicedCommandHandler vch = VoicedCommandHandler.getInstance().getHandler(vc);
 				if (vch != null)
 				{
 					return vch.useVoicedCommand(vc, activeChar, vparams);

@@ -23,45 +23,46 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * 
  * Angel spawns...when one of the angels in the keys dies, the other angel will spawn.
- * 
  */
 public class PolymorphingAngel extends L2AttackableAIScript
 {
 	
-	private static final Map<Integer,Integer> ANGELSPAWNS = new FastMap<Integer,Integer>();
+	private static final Map<Integer, Integer> ANGELSPAWNS = new FastMap<Integer, Integer>();
 	static
 	{
-		ANGELSPAWNS.put(20830,20859);
-		ANGELSPAWNS.put(21067,21068);
-		ANGELSPAWNS.put(21062,21063);
-		ANGELSPAWNS.put(20831,20860);
-		ANGELSPAWNS.put(21070,21071);
+		ANGELSPAWNS.put(20830, 20859);
+		ANGELSPAWNS.put(21067, 21068);
+		ANGELSPAWNS.put(21062, 21063);
+		ANGELSPAWNS.put(20831, 20860);
+		ANGELSPAWNS.put(21070, 21071);
 	}
 	
 	public PolymorphingAngel(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		int[] temp = {20830,21067,21062,20831,21070};
+		int[] temp =
+		{
+			20830, 21067, 21062, 20831, 21070
+		};
 		registerMobs(temp, QuestEventType.ON_KILL);
 	}
 	
 	@Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
 		if (ANGELSPAWNS.containsKey(npcId))
 		{
-			L2Attackable newNpc = (L2Attackable) this.addSpawn(ANGELSPAWNS.get(npcId),npc);
+			L2Attackable newNpc = (L2Attackable) addSpawn(ANGELSPAWNS.get(npcId), npc);
 			newNpc.setRunning();
 		}
-		return super.onKill(npc,killer,isPet);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the ai)
-		new PolymorphingAngel(-1,"polymorphing_angel","ai");
+		new PolymorphingAngel(-1, "polymorphing_angel", "ai");
 	}
 }

@@ -945,16 +945,30 @@
 		<set name="reuseDelay" val="1800000" />
 	</skill>
 	<skill id="22175" levels="1" name="Rune of Life">
-		<!-- When HP falls below 30%, it is restored by 500. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond>
+			<player hp="30" />
+		</cond>
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23214" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="22176" levels="1" name="Rune of Spirit">
-		<!-- When MP falls below 10%, it is restored by 500. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond>
+			<player mp="10" />
+		</cond>
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23215" triggeredLevel="1" />
+		</for>
 	</skill>
 	<skill id="22177" levels="1" name="Warrior's Breath">
 		<set name="target" val="TARGET_NONE" />
@@ -962,10 +976,17 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
+		<for>
+			<effect name="Heal" noicon="1" val="500" />
+			<effect name="ManaHeal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">
 		<!-- Confirmed CT2.5 -->
@@ -1015,20 +1036,22 @@
 		</for>
 	</skill>
 	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Lee. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20005" />
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Karin. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20006" />
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" />
@@ -1065,10 +1088,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
+		<!-- High Five Skill -->
 		<!-- Transformed into a cute block checker. Look for a treasure chest on Fantasy Isle. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="127" />
+		<for>
+			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+		</for>
 	</skill>
 	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">
 		<!-- Transformed into an Onyx Beast. -->

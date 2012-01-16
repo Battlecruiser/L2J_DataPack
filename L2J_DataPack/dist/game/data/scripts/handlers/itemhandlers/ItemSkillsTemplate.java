@@ -16,7 +16,6 @@ package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -24,12 +23,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.item.type.L2EtcItemType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
-import com.l2jserver.gameserver.templates.item.L2EtcItemType;
+import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 
 /**
@@ -40,7 +41,7 @@ public class ItemSkillsTemplate implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
 	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
@@ -63,7 +64,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		// pets can use items only when they are tradeable
 		if (isPet && !item.isTradeable())
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
+			activeChar.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return;
 		}
 		
@@ -102,7 +103,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
-							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							return;
 						}
 					}
@@ -153,15 +154,23 @@ public class ItemSkillsTemplate implements IItemHandler
 					else
 					{
 						playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						
+						// TODO: Remove when reuse time for sub-class is implemented.
+						if (activeChar.isSubClassActive() && (itemSkill.getSkillType() == L2SkillType.EXTRACTABLE) && (itemSkill.getReuseDelay() > 5000) && (itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0))
+						{
+							activeChar.sendPacket(SystemMessageId.MAIN_CLASS_SKILL_ONLY);
+							return;
+						}
+						
 						if (!playable.useMagic(itemSkill, forceUse, false))
 							return;
 						
-						//consume
+						// Consume.
 						if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
 						{
-							if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
+							if (!activeChar.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 							{
-								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+								activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 								return;
 							}
 						}

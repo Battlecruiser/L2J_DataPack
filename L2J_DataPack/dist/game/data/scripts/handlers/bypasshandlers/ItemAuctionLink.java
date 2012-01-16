@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.itemauction.ItemAuction;
 import com.l2jserver.gameserver.model.itemauction.ItemAuctionInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExItemAuctionInfoPacket;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class ItemAuctionLink implements IBypassHandler
 {
@@ -50,7 +49,7 @@ public class ItemAuctionLink implements IBypassHandler
 		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_AUCTION_PERIOD));
+			activeChar.sendPacket(SystemMessageId.NO_AUCTION_PERIOD);
 			return true;
 		}
 		
@@ -87,7 +86,7 @@ public class ItemAuctionLink implements IBypassHandler
 				
 				if (currentAuction == null)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_AUCTION_PERIOD));
+					activeChar.sendPacket(SystemMessageId.NO_AUCTION_PERIOD);
 					
 					if (nextAuction != null)
 					{
@@ -111,7 +110,7 @@ public class ItemAuctionLink implements IBypassHandler
 				}
 				if (!returned)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_OFFERINGS_OWN_OR_MADE_BID_FOR));
+					activeChar.sendPacket(SystemMessageId.NO_OFFERINGS_OWN_OR_MADE_BID_FOR);
 				}
 			}
 			else

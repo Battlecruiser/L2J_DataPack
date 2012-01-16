@@ -1685,11 +1685,16 @@
 		<set name="icon" val="BranchSys2.Icon.br_shiny_platform_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="silver" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="unequip_skill" val="619-1" />
+		<set name="item_skill" val="21232-1" />
 	</item>
 	<item id="21989" type="Armor" name="Warm Bear Hat">
 		<!-- Description: Polar bear hat that makes you feel cozy just by looking at it. Uses 2 hair accessory slot(s). Cannot be exchanged, dropped, or sold. -->

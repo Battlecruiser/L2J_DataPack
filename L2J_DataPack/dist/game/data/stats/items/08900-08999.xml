@@ -80,7 +80,7 @@
 		<set name="price" val="9600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8910" type="Armor" name="Black Feather Mask (Event)">
+	<item id="8910" type="Armor" name="Black Feather Mask">
 		<set name="icon" val="icon.accessary_black_feather_mask_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -678,23 +678,25 @@
 	</item>
 	<item id="8952" type="EtcItem" name="Greater Herb of Life">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2278-2" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8953" type="EtcItem" name="Greater Herb of Mana">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2279-2" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8954" type="EtcItem" name="Blue Primeval Crystal">
 		<set name="icon" val="icon.etc_sp_crystal_i00" />

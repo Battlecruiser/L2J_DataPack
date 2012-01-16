@@ -33,6 +33,7 @@ public class NornilsPower implements ISkillHandler
 		L2SkillType.NORNILS_POWER
 	};
 
+	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
@@ -64,9 +65,10 @@ public class NornilsPower implements ISkillHandler
 			}			
 		}
 		else
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
+			activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 	}
 
+	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

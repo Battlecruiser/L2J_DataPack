@@ -30,15 +30,16 @@ import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.Manager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 
 /**
@@ -86,6 +87,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_gmon"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -114,12 +116,12 @@ public class AdminAdmin implements IAdminCommandHandler
 			if (activeChar.isSilenceMode()) // already in message refusal mode
 			{
 				activeChar.setSilenceMode(false);
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_ACCEPTANCE_MODE));
+				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);
 			}
 			else
 			{
 				activeChar.setSilenceMode(true);
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_REFUSAL_MODE));
+				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 			}
 			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
@@ -246,6 +248,19 @@ public class AdminAdmin implements IAdminCommandHandler
 					SkillTable.getInstance().reload();
 					activeChar.sendMessage("All Skills have been reloaded");
 				}
+				else if (type.startsWith("npcId"))
+				{
+					Integer npcId = Integer.parseInt(st.nextToken());
+					if (npcId != null)
+					{
+						NpcTable.getInstance().reloadNpc(npcId);
+						for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+							if (spawn != null && spawn.getNpcid() == npcId)
+									spawn.respawnNpc(spawn.getLastSpawn());
+						
+						activeChar.sendMessage("NPC " + npcId + " have been reloaded");
+					}
+				}
 				else if (type.equals("npc"))
 				{
 					NpcTable.getInstance().reloadAllNpc();
@@ -359,6 +374,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -429,15 +445,6 @@ public class AdminAdmin implements IAdminCommandHandler
 				+ "</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		replyMSG.append("<tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Enchant:</font></td><td></td><td></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Weapon</font> = "
-				+ Config.ENCHANT_CHANCE_WEAPON
-				+ "</td><td><edit var=\"param5\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceWeapon $param5\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Armor</font> = "
-				+ Config.ENCHANT_CHANCE_ARMOR
-				+ "</td><td><edit var=\"param6\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceArmor $param6\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Jewelry</font> = "
-				+ Config.ENCHANT_CHANCE_JEWELRY
-				+ "</td><td><edit var=\"param7\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceJewelry $param7\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Stone</font> = "
 				+ Config.ENCHANT_CHANCE_ELEMENT_STONE
 				+ "</td><td><edit var=\"param8\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementStone $param8\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");

@@ -20,8 +20,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim
- * Original python script by Kerberos
+ * @author Plim Original python script by Kerberos
  */
 public class Survivor extends Quest
 {
@@ -40,14 +39,14 @@ public class Survivor extends Quest
 				event = "32632-3.htm";
 			else if (st.getQuestItemsCount(57) >= 150000)
 			{
-				st.takeItems(57,150000);
-		        player.teleToLocation(-149406, 255247, -80);
+				st.takeItems(57, 150000);
+				player.teleToLocation(-149406, 255247, -80);
 			}
 		}
 		
 		return event;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -58,7 +57,7 @@ public class Survivor extends Quest
 		
 		return "32632-1.htm";
 	}
-
+	
 	public Survivor(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
