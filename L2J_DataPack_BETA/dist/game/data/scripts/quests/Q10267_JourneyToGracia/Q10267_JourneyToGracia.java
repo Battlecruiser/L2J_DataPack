@@ -81,7 +81,7 @@ public class Q10267_JourneyToGracia extends Quest
 				}
 				else if (npcId == PAPIKU)
 				{
-					if (Integer.valueOf(st.get("cond")) == 1)
+					if (st.getInt("cond") == 1)
 					{
 						htmltext = "32564-01.htm";
 					}
@@ -90,12 +90,9 @@ public class Q10267_JourneyToGracia extends Quest
 						htmltext = "32564-03.htm";
 					}
 				}
-				else if (npcId == KEUCEREUS)
+				else if (npcId == KEUCEREUS && st.getInt("cond") == 2)
 				{
-					if (Integer.valueOf(st.get("cond")) == 2)
-					{
 						htmltext = "32548-01.htm";
-					}
 				}
 				break;
 		}
