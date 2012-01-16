@@ -240,22 +240,24 @@
 		<set name="mpConsume" val="7" />
 		<set name="mpInitialConsume" val="2" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="42" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="42" />
+		</for>
 	</skill>
 	<skill id="1217" levels="33" name="Greater Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1amount"> 477 482 487 493 498 503 509 514 519 525 530 535 540 546 551 556 562 567 572 578 583 588 509 599 604 609 615 620 625 631 </table>
 		<table name="#ench2mpConsume"> 94 92 91 89 87 86 84 83 81 79 78 76 75 73 71 70 68 67 65 63 62 60 59 57 55 54 52 51 49 48 </table>
 		<table name="#ench2mpInitialConsume"> 23 23 22 22 21 21 21 20 20 19 19 19 18 18 17 17 17 16 16 15 15 15 14 14 13 13 13 12 12 12 </table>
 		<table name="#magicLvl"> 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpInitialConsume"> 12 12 13 13 13 14 15 15 16 16 16 17 18 18 18 19 19 20 20 20 20 21 21 21 22 22 23 23 23 23 24 24 24 </table>
 		<table name="#mpConsume"> 46 48 49 51 52 54 57 59 61 64 64 66 69 71 72 74 76 77 78 78 80 81 83 84 86 87 89 90 91 92 93 95 96 </table>
-		<table name="#power"> 204 212 219 235 243 251 267 275 283 299 307 316 332 340 348 356 364 372 380 388 395 402 410 417 424 431 437 444 450 456 462 467 472 </table>
+		<table name="#amount"> 204 212 219 235 243 251 267 275 283 299 307 316 332 340 348 356 364 372 380 388 395 402 410 417 424 431 437 444 450 456 462 467 472 </table>
 		<table name="#hotValue"> 14 15 15 16 17 17 18 19 19 20 21 22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 30 31 31 32 32 </table>
-		<table name="#ench1Power"> 477 482 487 493 498 503 509 514 519 525 530 535 540 546 551 556 562 567 572 578 583 588 509 599 604 609 615 620 625 631 </table>
 		<table name="#aggroPoints"> 236 245 254 271 281 290 308 318 327 346 356 365 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546 </table>
 		<table name="#abnormalLvl"> 2 2 2 3 3 3 3 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 7 7 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
@@ -267,18 +269,21 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
 			<effect count="15" name="HealOverTime" val="#hotValue" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
 		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="#ench1amount" />
+			<effect count="15" name="HealOverTime" val="32" abnormalLvl="7" abnormalType="life_force_others" />
+		</enchant1for>
 	</skill>
 	<skill id="1218" levels="33" name="Greater Battle Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
@@ -288,8 +293,8 @@
 		<table name="#magicLvl"> 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpInitialConsume"> 18 18 19 19 20 21 22 22 23 24 25 25 26 27 27 28 29 29 30 30 30 31 31 32 32 33 34 34 34 35 35 36 36 </table>
 		<table name="#mpConsume"> 69 72 73 76 78 81 86 88 91 96 96 98 103 106 108 111 113 116 117 117 120 122 124 126 128 131 133 134 136 138 140 142 143 </table>
-		<table name="#power"> 371 384 398 426 441 455 484 499 514 544 559 573 603 618 633 647 662 676 690 704 718 731 745 758 770 783 795 806 817 828 839 849 858 </table>
-		<table name="#ench1Power"> 863 868 873 878 883 887 892 897 902 907 912 917 921 926 931 936 941 946 950 955 960 965 970 975 980 984 989 994 999 1004 </table>
+		<table name="#amount"> 371 384 398 426 441 455 484 499 514 544 559 573 603 618 633 647 662 676 690 704 718 731 745 758 770 783 795 806 817 828 839 849 858 </table>
+		<table name="#ench1amount"> 863 868 873 878 883 887 892 897 902 907 912 917 921 926 931 936 941 946 950 955 960 965 970 975 980 984 989 994 999 1004 </table>
 		<table name="#aggroPoints"> 202 210 217 233 241 248 264 272 281 297 305 313 329 337 345 353 361 369 377 384 392 399 406 413 420 427 434 440 446 452 458 463 468 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="600" />
@@ -300,27 +305,31 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1219" levels="33" name="Greater Group Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1amount"> 382 386 391 395 400 404 408 413 417 422 426 430 435 439 444 448 452 457 461 466 470 474 479 483 488 492 496 501 505 510 </table>
 		<table name="#ench2mpConsume"> 187 184 181 178 174 171 168 165 162 158 155 152 149 145 142 139 136 133 129 126 123 120 116 113 110 107 104 100 97 94 </table>
 		<table name="#ench2mpInitialConsume"> 46 46 45 44 43 42 42 41 40 39 38 38 37 36 35 34 34 33 32 31 30 30 29 28 27 26 26 25 24 23 </table>
 		<table name="#magicLvl"> 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpInitialConsume"> 23 24 25 26 26 27 29 30 31 32 32 33 35 36 36 37 38 39 39 39 40 41 42 42 43 44 45 45 46 46 47 48 48 </table>
 		<table name="#mpConsume"> 92 95 97 101 104 107 114 118 121 127 127 131 138 141 144 148 151 154 156 156 159 162 165 168 171 174 177 179 182 184 186 189 191 </table>
-		<table name="#power"> 163 169 175 188 194 201 213 220 226 239 246 253 266 272 279 285 291 298 304 310 316 322 328 334 339 345 350 355 360 365 369 374 378 </table>
+		<table name="#amount"> 163 169 175 188 194 201 213 220 226 239 246 253 266 272 279 285 291 298 304 310 316 322 328 334 339 345 350 355 360 365 369 374 378 </table>
 		<table name="#hotValue"> 11 12 12 13 13 14 15 15 16 16 17 17 18 19 19 19 20 20 21 21 21 22 22 23 23 23 24 24 24 25 25 25 26 </table>
-		<table name="#ench1Power"> 382 386 391 395 400 404 408 413 417 422 426 430 435 439 444 448 452 457 461 466 470 474 479 483 488 492 496 501 505 510 </table>
 		<table name="#aggroPoints"> 202 210 217 233 241 248 264 272 281 297 305 313 329 337 345 353 361 369 377 384 392 399 406 413 420 427 434 440 446 452 458 463 468 </table>
 		<table name="#abnormalLvl"> 1 1 1 2 2 2 2 2 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
@@ -330,19 +339,22 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
 			<effect count="15" name="HealOverTime" val="#hotValue" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
 		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="#ench1amount" />
+			<effect count="15" name="HealOverTime" val="26" abnormalLvl="5" abnormalType="life_force_others" />
+		</enchant1for>
 	</skill>
 	<skill id="1220" levels="8" name="Blaze">
 		<table name="#mpInitialConsume"> 4 4 5 5 5 6 6 6 </table>
@@ -544,6 +556,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.9" /> <!-- Consumes 90 percent of acquired Exp -->
@@ -575,6 +589,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -600,6 +616,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.9" /> <!-- Consumes 90 percent of acquired Exp. -->
@@ -626,6 +644,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.9" /> <!-- 90 percent of acquired Exp is consumed. -->
@@ -1585,13 +1605,12 @@
 		<table name="#mpConsume"> 107 121 131 144 151 156 159 165 171 177 182 186 191 </table>
 		<table name="#ench2mpConsume"> 189 187 185 183 182 180 178 176 174 173 171 169 167 165 163 162 160 158 156 154 153 151 149 147 145 144 142 140 138 136 </table>
 		<table name="#ench2mpInitialConsume"> 47 46 46 45 45 45 44 44 43 43 42 42 41 41 40 40 40 39 39 38 38 37 37 36 36 36 35 35 34 34 </table>
-		<table name="#power"> 91 103 115 127 133 138 144 149 154 158 164 168 172 </table>
+		<table name="#amount"> 91 103 115 127 133 138 144 149 154 158 164 168 172 </table>
 		<table name="#abnormalLvl"> 6 7 8 9 10 11 12 13 14 15 16 17 18 </table>
 		<table name="#ench1abnormalLvl"> 18 18 19 19 19 19 20 20 20 21 21 21 21 22 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 </table>
 		<table name="#aggroPoints"> 418 457 495 532 549 566 582 597 611 624 635 646 655 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="5000" />
@@ -1605,11 +1624,13 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
 			<!-- retail value: "#hot"/sec; stat update every time unit (2/3 sec) -->
 			<!-- Verified by slyce - Interlude - Aug 2007 -->
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_orc" />
 		</for>
 		<enchant1for>
+			<effect name="Heal" noicon="1" val="172" />
 			<effect count="15" name="HealOverTime" val="#ench1hot" abnormalLvl="#ench1abnormalLvl" abnormalType="life_force_orc" />
 		</enchant1for>
 	</skill>
@@ -1651,12 +1672,11 @@
 		<table name="#ench2mpConsume"> 126 123 122 118 116 114 112 110 108 106 104 102 100 98 95 94 91 90 87 86 83 82 78 76 74 72 70 68 66 64 </table>
 		<table name="#mpInitialConsume"> 16 22 27 32 </table>
 		<table name="#mpConsume"> 64 85 106 127 </table>
-		<table name="#power"> 15 20 25 30 </table>
+		<table name="#amount"> 15 20 25 30 </table>
 		<table name="#ench1power"> 31 31 31 32 32 32 33 33 33 34 34 34 34 35 35 35 36 36 36 37 37 37 37 38 38 38 39 39 39 40 </table>
 		<table name="#aggroPoints"> 500 666 833 1000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="8000" />
@@ -1674,6 +1694,9 @@
 				<target npcType="L2Attackable" />
 			</not>
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -2087,7 +2110,6 @@
 		<table name="#ench2Bravery"> 23 36 49 62 75 88 101 114 127 140 153 166 179 192 205 218 231 244 257 270 283 296 309 322 335 348 361 374 387 400 </table>
 		<set name="mpInitialConsume" val="43" />
 		<set name="mpConsume" val="171" />
-		<set name="power" val="100" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="900000" />
@@ -2101,8 +2123,12 @@
 		<cond msgId="113" addName="1">
 			<player mp="25" />
 		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 		<enchant2for>
-			<effect name="CombatPointHealOverTime" noicon="1" val="#ench2Bravery" />
+			<effect name="CpHeal" noicon="1" val="#ench2Bravery" />
+			<effect name="HealPercent" noicon="1" val="100" />
 		</enchant2for>
 	</skill>
 	<skill id="1272" levels="13" name="Word of Fear">
@@ -2218,6 +2244,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -2245,6 +2273,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -2272,6 +2302,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />

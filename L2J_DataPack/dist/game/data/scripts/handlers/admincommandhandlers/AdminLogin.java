@@ -45,6 +45,7 @@ public class AdminLogin implements IAdminCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_server_gm_only"))
@@ -164,7 +165,7 @@ public class AdminLogin implements IAdminCommandHandler
 	}
 	
 	/**
-	 *
+	 * @param activeChar 
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
@@ -241,6 +242,7 @@ public class AdminLogin implements IAdminCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

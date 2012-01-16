@@ -39,6 +39,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 	private static final boolean USE_STATIC_HTML = true;
 	private static final String HTML = HtmCache.getInstance().getHtm(null, "data/html/mods/TvTEvent/Status.htm");
 	
+	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
 		if (command.equalsIgnoreCase("tvt"))
@@ -77,6 +78,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _voicedCommands;

@@ -277,6 +277,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="5" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -366,6 +367,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2063-1" />
 		<set name="use_condition" val="{{uc_category;{@hatchling_group}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="4039" type="EtcItem" name="Mold Glue">
 		<set name="icon" val="icon.etc_reagent_red_i00" />

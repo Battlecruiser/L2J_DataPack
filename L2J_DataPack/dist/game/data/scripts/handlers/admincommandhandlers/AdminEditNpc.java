@@ -14,8 +14,8 @@
  */
 package handlers.admincommandhandlers;
 
-import gnu.trove.TIntObjectHashMap;
-import gnu.trove.TIntObjectIterator;
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,13 +40,13 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.L2TradeList.L2TradeItem;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.L2Item;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
-import com.l2jserver.gameserver.templates.item.L2Item;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.StringUtil;
 
@@ -773,42 +773,42 @@ public class AdminEditNpc implements IAdminCommandHandler
 		if (content != null)
 		{
 			adminReply.setHtml(content);
-			adminReply.replace("%npcId%", String.valueOf(npc.npcId));
-			adminReply.replace("%templateId%", String.valueOf(npc.idTemplate));
-			adminReply.replace("%name%", npc.name);
-			adminReply.replace("%serverSideName%", npc.serverSideName == true ? "1" : "0");
-			adminReply.replace("%title%", npc.title);
-			adminReply.replace("%serverSideTitle%", npc.serverSideTitle == true ? "1" : "0");
-			adminReply.replace("%collisionRadius%", String.valueOf(npc.fCollisionRadius));
-			adminReply.replace("%collisionHeight%", String.valueOf(npc.fCollisionHeight));
-			adminReply.replace("%level%", String.valueOf(npc.level));
-			adminReply.replace("%sex%", String.valueOf(npc.sex));
-			adminReply.replace("%type%", String.valueOf(npc.type));
-			adminReply.replace("%attackRange%", String.valueOf(npc.baseAtkRange));
-			adminReply.replace("%hp%", String.valueOf(npc.baseHpMax));
-			adminReply.replace("%mp%", String.valueOf(npc.baseMpMax));
-			adminReply.replace("%hpRegen%", String.valueOf(npc.baseHpReg));
-			adminReply.replace("%mpRegen%", String.valueOf(npc.baseMpReg));
-			adminReply.replace("%str%", String.valueOf(npc.baseSTR));
-			adminReply.replace("%con%", String.valueOf(npc.baseCON));
-			adminReply.replace("%dex%", String.valueOf(npc.baseDEX));
-			adminReply.replace("%int%", String.valueOf(npc.baseINT));
-			adminReply.replace("%wit%", String.valueOf(npc.baseWIT));
-			adminReply.replace("%men%", String.valueOf(npc.baseMEN));
-			adminReply.replace("%exp%", String.valueOf(npc.rewardExp));
-			adminReply.replace("%sp%", String.valueOf(npc.rewardSp));
-			adminReply.replace("%pAtk%", String.valueOf(npc.basePAtk));
-			adminReply.replace("%pDef%", String.valueOf(npc.basePDef));
-			adminReply.replace("%mAtk%", String.valueOf(npc.baseMAtk));
-			adminReply.replace("%mDef%", String.valueOf(npc.baseMDef));
-			adminReply.replace("%pAtkSpd%", String.valueOf(npc.basePAtkSpd));
-			adminReply.replace("%aggro%", String.valueOf(npc.aggroRange));
-			adminReply.replace("%mAtkSpd%", String.valueOf(npc.baseMAtkSpd));
-			adminReply.replace("%rHand%", String.valueOf(npc.rhand));
-			adminReply.replace("%lHand%", String.valueOf(npc.lhand));
-			adminReply.replace("%enchant%", String.valueOf(npc.enchantEffect));
-			adminReply.replace("%walkSpd%", String.valueOf(npc.baseWalkSpd));
-			adminReply.replace("%runSpd%", String.valueOf(npc.baseRunSpd));
+			adminReply.replace("%npcId%", String.valueOf(npc.getNpcId()));
+			adminReply.replace("%templateId%", String.valueOf(npc.getIdTemplate()));
+			adminReply.replace("%name%", npc.getName());
+			adminReply.replace("%serverSideName%", npc.isServerSideName() == true ? "1" : "0");
+			adminReply.replace("%title%", npc.getTitle());
+			adminReply.replace("%serverSideTitle%", npc.isServerSideTitle() == true ? "1" : "0");
+			adminReply.replace("%collisionRadius%", String.valueOf(npc.getfCollisionRadius()));
+			adminReply.replace("%collisionHeight%", String.valueOf(npc.getfCollisionHeight()));
+			adminReply.replace("%level%", String.valueOf(npc.getLevel()));
+			adminReply.replace("%sex%", String.valueOf(npc.getSex()));
+			adminReply.replace("%type%", String.valueOf(npc.getType()));
+			adminReply.replace("%attackRange%", String.valueOf(npc.getBaseAtkRange()));
+			adminReply.replace("%hp%", String.valueOf(npc.getBaseHpMax()));
+			adminReply.replace("%mp%", String.valueOf(npc.getBaseMpMax()));
+			adminReply.replace("%hpRegen%", String.valueOf(npc.getBaseHpReg()));
+			adminReply.replace("%mpRegen%", String.valueOf(npc.getBaseMpReg()));
+			adminReply.replace("%str%", String.valueOf(npc.getBaseSTR()));
+			adminReply.replace("%con%", String.valueOf(npc.getBaseCON()));
+			adminReply.replace("%dex%", String.valueOf(npc.getBaseDEX()));
+			adminReply.replace("%int%", String.valueOf(npc.getBaseINT()));
+			adminReply.replace("%wit%", String.valueOf(npc.getBaseWIT()));
+			adminReply.replace("%men%", String.valueOf(npc.getBaseMEN()));
+			adminReply.replace("%exp%", String.valueOf(npc.getRewardExp()));
+			adminReply.replace("%sp%", String.valueOf(npc.getRewardSp()));
+			adminReply.replace("%pAtk%", String.valueOf(npc.getBasePAtk()));
+			adminReply.replace("%pDef%", String.valueOf(npc.getBasePDef()));
+			adminReply.replace("%mAtk%", String.valueOf(npc.getBaseMAtk()));
+			adminReply.replace("%mDef%", String.valueOf(npc.getBaseMDef()));
+			adminReply.replace("%pAtkSpd%", String.valueOf(npc.getBasePAtkSpd()));
+			adminReply.replace("%aggro%", String.valueOf(npc.getAIDataStatic().getAggroRange()));
+			adminReply.replace("%mAtkSpd%", String.valueOf(npc.getBaseMAtkSpd()));
+			adminReply.replace("%rHand%", String.valueOf(npc.getRightHand()));
+			adminReply.replace("%lHand%", String.valueOf(npc.getLeftHand()));
+			adminReply.replace("%enchant%", String.valueOf(npc.getEnchantEffect()));
+			adminReply.replace("%walkSpd%", String.valueOf(npc.getBaseWalkSpd()));
+			adminReply.replace("%runSpd%", String.valueOf(npc.getBaseRunSpd()));
 			adminReply.replace("%factionId%", npc.getAIDataStatic().getClan() == null ? "" : npc.getAIDataStatic().getClan());
 			adminReply.replace("%factionRange%", String.valueOf(npc.getAIDataStatic().getClanRange()));
 		}
@@ -825,7 +825,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		
 		StatsSet newNpcData = new StatsSet();
-		
 		try
 		{
 			newNpcData.set("npcId", commandSplit[1]);
@@ -950,7 +949,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		replyMSG.append("<html><title>Show droplist page ");
 		replyMSG.append(page);
 		replyMSG.append("</title><body><br1><center><font color=\"LEVEL\">");
-		replyMSG.append(npcData.name);
+		replyMSG.append(npcData.getName());
 		replyMSG.append(" (");
 		replyMSG.append(npcId);
 		replyMSG.append(")</font></center><br1><table width=\"100%\" border=0><tr><td width=35>cat.</td><td width=210>item</td><td width=30>type</td><td width=25>del</td></tr>");
@@ -1098,7 +1097,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		if (dropData != null)
 		{
 			replyMSG.append("<table width=\"100%\"><tr><td>Npc</td><td>");
-			replyMSG.append(npcData.name);
+			replyMSG.append(npcData.getName());
 			replyMSG.append(" (");
 			replyMSG.append(npcId);
 			replyMSG.append(")</td></tr><tr><td>Item</td><td>");
@@ -1141,14 +1140,14 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private void showAddDropData(L2PcInstance activeChar, L2NpcTemplate npcData)
 	{
 		final String replyMSG = StringUtil.concat("<html><title>Add drop data</title><body><table width=\"100%\"><tr><td>Npc</td><td>",
-				npcData.name,
+				npcData.getName(),
 				" (",
-				Integer.toString(npcData.npcId),
+				Integer.toString(npcData.getNpcId()),
 				")",
 				"</td></tr><tr><td>Item Id</td><td><edit var=\"itemId\" width=80></td></tr><tr><td>Min count</td><td><edit var=\"min\" width=80></td></tr><tr><td>Max count</td><td><edit var=\"max\" width=80></td></tr><tr><td>Category (sweep=-1)</td><td><edit var=\"category\" width=80></td></tr><tr><td>Chance (0-1000000)</td><td><edit var=\"chance\" width=80></td></tr></table><center><br><button value=\"Add\" action=\"bypass -h admin_add_drop ",
-				Integer.toString(npcData.npcId),
+				Integer.toString(npcData.getNpcId()),
 				" $itemId $category $min $max $chance\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back to Droplist\" action=\"bypass -h admin_show_droplist ",
-				Integer.toString(npcData.npcId),
+				Integer.toString(npcData.getNpcId()),
 		"\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -1252,7 +1251,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			final String replyMSG = StringUtil.concat("<html><title>Drop Data Delete</title><body><br>Delete drop data.",
 					"<table width=\"100%\"><tr><td>NPC</td><td>",
-					NpcTable.getInstance().getTemplate(npcId).name,
+					NpcTable.getInstance().getTemplate(npcId).getName(),
 					" (",
 					Integer.toString(npcId),
 					")</td></tr><tr><td>Item ID</td><td>",
@@ -1415,7 +1414,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		StringBuffer replyMSG = new StringBuffer("<html><title>Show NPC Skill List</title><body><center><font color=\"LEVEL\">");
 		replyMSG.append(npcData.getName());
 		replyMSG.append(" (");
-		replyMSG.append(npcData.npcId);
+		replyMSG.append(npcData.getNpcId());
 		replyMSG.append("): ");
 		replyMSG.append(_skillsize);
 		replyMSG.append(" skills</font></center><table width=300 bgcolor=666666><tr>");
@@ -1432,7 +1431,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			else
 			{
 				replyMSG.append("<td><a action=\"bypass -h admin_show_skilllist_npc ");
-				replyMSG.append(npcData.npcId);
+				replyMSG.append(npcData.getNpcId());
 				replyMSG.append(" ");
 				replyMSG.append(x);
 				replyMSG.append("\"> Page ");
@@ -1458,7 +1457,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			skillite.advance();
 			replyMSG.append("<tr><td width=240><a action=\"bypass -h admin_edit_skill_npc ");
-			replyMSG.append(npcData.npcId);
+			replyMSG.append(npcData.getNpcId());
 			replyMSG.append(" ");
 			replyMSG.append(skillite.value().getId());
 			replyMSG.append("\">");
@@ -1471,7 +1470,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			replyMSG.append("-");
 			replyMSG.append(skillite.value().getLevel());
 			replyMSG.append("]</a></td><td width=60><a action=\"bypass -h admin_del_skill_npc ");
-			replyMSG.append(npcData.npcId);
+			replyMSG.append(npcData.getNpcId());
 			replyMSG.append(" ");
 			replyMSG.append(skillite.key());
 			replyMSG.append("\">Delete</a></td></tr>");
@@ -1601,11 +1600,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 		StringBuffer replyMSG = new StringBuffer("<html><title>NPC Skill Add</title><body><table width=\"100%\"><tr><td>NPC: </td><td>");
 		replyMSG.append(npcData.getName());
 		replyMSG.append(" (");
-		replyMSG.append(npcData.npcId);
+		replyMSG.append(npcData.getNpcId());
 		replyMSG.append(")</td></tr><tr><td>SkillId: </td><td><edit var=\"skillId\" width=80></td></tr><tr><td>Level: </td><td><edit var=\"level\" width=80></td></tr></table><br><center><button value=\"Add Skill\" action=\"bypass -h admin_add_skill_npc ");
-		replyMSG.append(npcData.npcId);
+		replyMSG.append(npcData.getNpcId());
 		replyMSG.append(" $skillId $level\"  width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br1><button value=\"Back to SkillList\" action=\"bypass -h admin_show_skilllist_npc ");
-		replyMSG.append(npcData.npcId);
+		replyMSG.append(npcData.getNpcId());
 		replyMSG.append("\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

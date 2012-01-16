@@ -22,9 +22,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author JIV
  * Support for /mybirthday command
- * 
+ * @author JIV
  */
 public class Birthday implements IUserCommandHandler
 {
@@ -33,6 +32,7 @@ public class Birthday implements IUserCommandHandler
 		126
 	};
 	
+	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
@@ -50,6 +50,7 @@ public class Birthday implements IUserCommandHandler
 		return true;
 	}
 	
+	@Override
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;

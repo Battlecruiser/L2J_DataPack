@@ -47,7 +47,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15403" type="Weapon" name="For PC Cafe - Berserker Blade - Weapon For PC Cafe">
+	<item id="15403" type="Weapon" name="Player Commendation - Berserker Blade - Player Commendation Weapon">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -69,6 +69,7 @@
 		<set name="item_skill" val="3010-4" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
+		<set name="useSkillDisTime" val="1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="190" />
 			<set order="0x08" stat="mAtk" val="83" />
@@ -88,6 +89,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15418,1,1,100" />
 	</item>
 	<item id="15405" type="EtcItem" name="6th Anniversary Party Gift Box (2004) - Event">
@@ -102,6 +104,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15419,1,1,100" />
 	</item>
 	<item id="15406" type="EtcItem" name="6th Anniversary Party Gift Box (2005) - Event">
@@ -116,6 +119,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15420,1,1,100" />
 	</item>
 	<item id="15407" type="EtcItem" name="6th Anniversary Party Gift Box (2006) - Event">
@@ -130,6 +134,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15421,1,1,100" />
 	</item>
 	<item id="15408" type="EtcItem" name="6th Anniversary Party Gift Box (2007) - Event">
@@ -144,6 +149,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15422,1,1,100" />
 	</item>
 	<item id="15409" type="EtcItem" name="6th Anniversary Party Gift Box (2008) - Event">
@@ -158,6 +164,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15423,1,1,100" />
 	</item>
 	<item id="15410" type="EtcItem" name="6th Anniversary Party Gift Box (2009) - Event">
@@ -172,6 +179,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15424,1,1,100" />
 	</item>
 	<item id="15411" type="EtcItem" name="6th Anniversary Party Gift Set (2003) - Event">
@@ -186,6 +194,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15418,1,1,100" />
 	</item>
 	<item id="15412" type="EtcItem" name="6th Anniversary Party Gift Set (2004) - Event">
@@ -200,6 +209,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15419,1,1,100" />
 	</item>
 	<item id="15413" type="EtcItem" name="6th Anniversary Party Gift Set (2005) - Event">
@@ -214,6 +224,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15420,1,1,100" />
 	</item>
 	<item id="15414" type="EtcItem" name="6th Anniversary Party Gift Set (2006) - Event">
@@ -228,6 +239,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15421,1,1,100" />
 	</item>
 	<item id="15415" type="EtcItem" name="6th Anniversary Party Gift Set (2007) - Event">
@@ -242,6 +254,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15422,1,1,100" />
 	</item>
 	<item id="15416" type="EtcItem" name="6th Anniversary Party Gift Set (2008) - Event">
@@ -256,6 +269,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15423,1,1,100" />
 	</item>
 	<item id="15417" type="EtcItem" name="6th Anniversary Party Gift Set (2009) - Event">
@@ -270,6 +284,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15425,1,1,100;15424,1,1,100" />
 	</item>
 	<item id="15418" type="EtcItem" name="6th Anniversary Party Cube Manage (Event) - 30-day limited period">
@@ -373,6 +388,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15211,1,1,100;13273,1,1,100;15426,1,1,100" />
 	</item>
 	<item id="15426" type="EtcItem" name="Hero's Summon Point - Event">
@@ -799,6 +815,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15449,1,1,100" />
 	</item>
 	<item id="15455" type="EtcItem" name="Shiny Super Strong Giant's Mask Pack - Event">
@@ -812,6 +829,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15450,1,1,100" />
 	</item>
 	<item id="15456" type="EtcItem" name="Shiny Silent Scream's Mask Pack - Event">
@@ -825,6 +843,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15451,1,1,100" />
 	</item>
 	<item id="15457" type="EtcItem" name="Shiny Wrathful Spirit's Mask Pack - Event">
@@ -838,6 +857,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15452,1,1,100" />
 	</item>
 	<item id="15458" type="EtcItem" name="Shiny Unrotten Corpse's Mask Pack - Event">
@@ -851,6 +871,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15453,1,1,100" />
 	</item>
 	<item id="15459" type="EtcItem" name="Halloween Nectar Pumpkin Pack - Event">
@@ -864,6 +885,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15461,1,1,100" />
 	</item>
 	<item id="15460" type="EtcItem" name="Halloween King Pumpkin Pack - Event">
@@ -877,6 +899,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15462,1,1,100" />
 	</item>
 	<item id="15461" type="EtcItem" name="Halloween Nectar Pumpkin - Event">
@@ -902,6 +925,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" />
 	</item>
 	<item id="15463" type="EtcItem" name="Small Halloween Pumpkin - Event">
@@ -944,6 +968,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15461,1,1,100" />
 	</item>
 	<item id="15466" type="EtcItem" name="Halloween King Pumpkin Pack (Event) - Event">
@@ -957,6 +982,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15462,1,1,100" />
 	</item>
 	<item id="15467" type="EtcItem" name="Halloween Nectar Pumpkin (Event) - Event">
@@ -982,6 +1008,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" />
 	</item>
 	<item id="15469" type="EtcItem" name="Frozen Core">

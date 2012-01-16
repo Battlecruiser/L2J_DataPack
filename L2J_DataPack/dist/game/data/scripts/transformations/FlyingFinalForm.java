@@ -1,3 +1,17 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package transformations;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -6,7 +20,11 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class FlyingFinalForm extends L2Transformation
 {
-	private static final int[] SKILLS = {932,950,951,953,1544,1545,619};
+	private static final int[] SKILLS =
+	{
+		932, 950, 951, 953, 1544, 1545, 619
+	};
+	
 	public FlyingFinalForm()
 	{
 		// id, colRadius, colHeight
@@ -16,8 +34,10 @@ public class FlyingFinalForm extends L2Transformation
 	@Override
 	public void onTransform()
 	{
-		if (getPlayer().getTransformationId() != 260 || getPlayer().isCursedWeaponEquipped())
+		if ((getPlayer().getTransformationId() != 260) || getPlayer().isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		getPlayer().setIsFlyingMounted(true);
 		
@@ -31,7 +51,7 @@ public class FlyingFinalForm extends L2Transformation
 		// Soul Sucking
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(1545, 1), false);
 		
-		int lvl = getPlayer().getLevel() -78;
+		int lvl = getPlayer().getLevel() - 78;
 		
 		if (lvl > 0)
 		{
@@ -63,7 +83,7 @@ public class FlyingFinalForm extends L2Transformation
 		// Soul Sucking
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1545, 1), false);
 		
-		int lvl = getPlayer().getLevel() -78;
+		int lvl = getPlayer().getLevel() - 78;
 		
 		if (lvl > 0)
 		{

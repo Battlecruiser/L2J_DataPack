@@ -11,6 +11,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="16858,1,1,100;16857,2,2,100;16859,2,2,100" />
 	</item>
 	<item id="17001" type="EtcItem" name="Sealed Set of Fortune - 90-day limited period">
@@ -24,6 +25,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="16861,1,1,100;16860,2,2,100;16862,2,2,100" />
 	</item>
 	<item id="17002" type="EtcItem" name="Elven Set of Fortune - 90-day limited period">
@@ -37,6 +39,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="16864,1,1,100;16863,2,2,100;16865,2,2,100" />
 	</item>
 	<item id="17003" type="EtcItem" name="Santa Claus's Gift - Event">
@@ -89,7 +92,7 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -110,7 +113,7 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="4140" />
 		<set name="price" val="35000000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
@@ -128,7 +131,7 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -150,7 +153,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -170,7 +173,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -190,7 +193,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -211,7 +214,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="1320" />
 		<set name="price" val="21876000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
@@ -228,7 +231,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
@@ -245,7 +248,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<for>
@@ -263,7 +266,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -284,7 +287,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -304,7 +307,7 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
@@ -342,6 +345,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13121,1,1,100;14231,1,1,100;14232,1,1,100" />
 	</item>
 	<item id="17020" type="EtcItem" name="Fresh Milk Pack - For Events">
@@ -357,6 +361,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14739,1,1,100" />
 	</item>
 	<item id="17021" type="EtcItem" name="Dimensional Experience Pack 30 - For Events">
@@ -372,6 +377,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14239,1,1,100;13082,1,1,100;13085,1,1,100" />
 	</item>
 	<item id="17022" type="EtcItem" name="Varka Karm Pack - For Events">
@@ -387,6 +393,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13234,1,1,100" />
 	</item>
 	<item id="17023" type="EtcItem" name="Ketra Karm Pack - For Events">
@@ -402,6 +409,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13235,1,1,100" />
 	</item>
 	<item id="17024" type="EtcItem" name="Vitality Maintaining Potion Pack - For Events">
@@ -417,9 +425,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="15440,5,5,100" />
 	</item>
-	<item id="17025" type="EtcItem" name="PC Cafe Point (7000 Points) Pack - For Events">
+	<item id="17025" type="EtcItem" name="PC Points (7000 Points) Pack - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -432,6 +441,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14559,1,1,100" />
 	</item>
 	<item id="17026" type="EtcItem" name="Admiral's Cap Pack - For Events">
@@ -447,6 +457,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="8919,1,1,100" />
 	</item>
 	<item id="17027" type="EtcItem" name="Straw Hat - For Events">
@@ -462,6 +473,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="10616,1,1,100" />
 	</item>
 	<item id="17028" type="EtcItem" name="Phantom Mask Pack - For Events">
@@ -477,6 +489,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9208,1,1,100" />
 	</item>
 	<item id="17029" type="EtcItem" name="Black Phantom Mask Pack - For Events">
@@ -492,6 +505,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9409,1,1,100" />
 	</item>
 	<item id="17030" type="EtcItem" name="Forgotten Scroll - Create Item Lv 10">
@@ -518,6 +532,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17033,1,1,100;9552,1,1,100;9553,1,1,100;9554,1,1,100;9555,1,1,100;9556,1,1,100;9557,1,1,100;14055,3,3,100" />
 	</item>
 	<item id="17032" type="EtcItem" name="Hero's Treasure Pack">
@@ -533,6 +548,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="16852,1,1,100" />
 	</item>
 	<item id="17033" type="Armor" name="Circlet of Freeze - For Events - 30-day limited period">
@@ -653,6 +669,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17044,1,1,100" />
 	</item>
 	<item id="17041" type="EtcItem" name="Sentiment Box Pack">
@@ -666,6 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17045,1,1,100" />
 	</item>
 	<item id="17042" type="EtcItem" name="Confession Box Pack">
@@ -679,6 +697,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17046,1,1,100" />
 	</item>
 	<item id="17043" type="EtcItem" name="Joy Box Pack">
@@ -692,6 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17047,1,1,100" />
 	</item>
 	<item id="17044" type="EtcItem" name="Love Box">
@@ -704,6 +724,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17051,1,1,100;17052,1,1,100;17053,1,1,100" />
 	</item>
 	<item id="17045" type="EtcItem" name="Sentiment Box">
@@ -716,6 +737,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17054,1,1,100;17055,1,1,100;17056,1,1,100" />
 	</item>
 	<item id="17046" type="EtcItem" name="Confession Box">
@@ -728,6 +750,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17057,1,1,100;17058,1,1,100;17059,1,1,100;17060,1,1,100" />
 	</item>
 	<item id="17047" type="EtcItem" name="Joy Box">
@@ -740,6 +763,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17044,1,1,100;17045,1,1,100;17046,1,1,100;17050,1,1,100;17061,1,1,100" />
 	</item>
 	<item id="17048" type="EtcItem" name="Shiny Bracelet Pack">
@@ -752,6 +776,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17049,1,1,100" />
 	</item>
 	<item id="17049" type="Armor" name="Shiny Bracelet">
@@ -792,6 +817,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8498-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17052" type="Armor" name="Talisman - DEX">
 		<set name="icon" val="icon.etc_talisman_event_i00" />
@@ -807,6 +833,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8499-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17053" type="Armor" name="Talisman - CON">
 		<set name="icon" val="icon.etc_talisman_event_i00" />
@@ -822,6 +849,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8500-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17054" type="Armor" name="Talisman - WIT">
 		<set name="icon" val="icon.etc_talisman_event_i00" />
@@ -837,6 +865,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8502-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17055" type="Armor" name="Talisman - INT">
 		<set name="icon" val="icon.etc_talisman_event_i00" />
@@ -852,6 +881,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8501-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17056" type="Armor" name="Talisman - MEN">
 		<set name="icon" val="icon.etc_talisman_event_i00" />
@@ -867,6 +897,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8503-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17057" type="Armor" name="Talisman - Resistance to Stun">
 		<set name="icon" val="icon.etc_talisman_event_i01" />
@@ -882,6 +913,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8504-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17058" type="Armor" name="Talisman - Resistance to Sleep">
 		<set name="icon" val="icon.etc_talisman_event_i01" />
@@ -897,6 +929,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8505-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17059" type="Armor" name="Talisman - Resistance to Hold">
 		<set name="icon" val="icon.etc_talisman_event_i01" />
@@ -912,6 +945,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8506-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17060" type="Armor" name="Talisman - Paralyze Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01" />
@@ -927,6 +961,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8507-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17061" type="Armor" name="Talisman - ALL STAT">
 		<set name="icon" val="icon.etc_talisman_event_i02" />
@@ -942,6 +977,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="8508-1" />
 		<set name="time" val="10080" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17062" type="EtcItem" name="Event - Scroll of Summon Baby White Tiger">
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
@@ -1003,6 +1039,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="17067,60,60,100;17068,15,15,100;17062,1,1,100;17064,1,1,100" />
 	</item>
 	<item id="17067" type="EtcItem" name="Event - Cupid's Fatigue Relief Potion">
@@ -1037,7 +1074,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</item>
-	<item id="17069" type="EtcItem" name="Vesper Weapon Box">
+	<item id="17069" type="EtcItem" name="Vesper Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1049,7 +1086,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9100-1" />
 	</item>
-	<item id="17070" type="EtcItem" name="Icarus Weapon Box">
+	<item id="17070" type="EtcItem" name="Icarus Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1061,7 +1098,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9101-1" />
 	</item>
-	<item id="17071" type="EtcItem" name="Dynasty Weapon Box">
+	<item id="17071" type="EtcItem" name="Dynasty Weapon Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1073,7 +1110,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9102-1" />
 	</item>
-	<item id="17072" type="EtcItem" name="Vesper Armor Box">
+	<item id="17072" type="EtcItem" name="Vesper Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1085,7 +1122,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9103-1" />
 	</item>
-	<item id="17073" type="EtcItem" name="Moirai Armor Box">
+	<item id="17073" type="EtcItem" name="Moirai Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1097,7 +1134,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9104-1" />
 	</item>
-	<item id="17074" type="EtcItem" name="Dynasty Armor Box">
+	<item id="17074" type="EtcItem" name="Dynasty Armor Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1109,7 +1146,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9105-1" />
 	</item>
-	<item id="17075" type="EtcItem" name="Soul Crystal - Step 14 Box">
+	<item id="17075" type="EtcItem" name="Soul Crystal - Stage 14 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1121,7 +1158,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9106-1" />
 	</item>
-	<item id="17076" type="EtcItem" name="Soul Crystal - Step 15 Box">
+	<item id="17076" type="EtcItem" name="Soul Crystal - Stage 15 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1133,7 +1170,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9107-1" />
 	</item>
-	<item id="17077" type="EtcItem" name="Soul Crystal - Step 16 Box">
+	<item id="17077" type="EtcItem" name="Soul Crystal - Stage 16 Box - Event">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1206,6 +1243,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="10296,1,1,100" />
 	</item>
 	<item id="17083" type="EtcItem" name="Bird Nest - For Events">
@@ -1221,9 +1259,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="10613,1,1,100" />
 	</item>
-	<item id="17084" type="EtcItem" name="Shadow Item - Magician Cap Pack - Escape">
+	<item id="17084" type="EtcItem" name="Shadow Item - Magician Cap Pack - Blessed Escape">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1236,6 +1275,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9187,1,1,100" />
 	</item>
 	<item id="17085" type="EtcItem" name="Shadow Item - Magician Cap Pack - Big Head">
@@ -1251,6 +1291,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9194,1,1,100" />
 	</item>
 	<item id="17086" type="EtcItem" name="Shadow Item - Magician Cap Pack - Firework">
@@ -1266,6 +1307,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9201,1,1,100" />
 	</item>
 	<item id="17087" type="EtcItem" name="Twin Coba Seed">

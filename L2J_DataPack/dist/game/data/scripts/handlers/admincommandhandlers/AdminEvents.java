@@ -36,11 +36,13 @@ public class AdminEvents implements IAdminCommandHandler
 		"admin_event_bypass"
 	};
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
@@ -72,11 +74,9 @@ public class AdminEvents implements IAdminCommandHandler
 							activeChar.sendMessage("Event '"+_event_name+"' started.");
 							return true;
 						}
-						else
-						{
-							activeChar.sendMessage("There is problem with starting '"+_event_name+"' event.");
-							return true;
-						}
+						
+						activeChar.sendMessage("There is problem with starting '"+_event_name+"' event.");
+						return true;
 					}
 				}
 			}
@@ -101,11 +101,9 @@ public class AdminEvents implements IAdminCommandHandler
 							activeChar.sendMessage("Event '"+_event_name+"' stopped.");
 							return true;
 						}
-						else
-						{
-							activeChar.sendMessage("There is problem with stoping '"+_event_name+"' event.");
-							return true;
-						}
+						
+						activeChar.sendMessage("There is problem with stoping '"+_event_name+"' event.");
+						return true;
 					}
 				}
 			}

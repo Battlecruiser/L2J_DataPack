@@ -120,9 +120,6 @@
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
 		</cond>
-		<cond msgId="1508">
-			<player olympiad="false" />
-		</cond>
 	</item>
 	<item id="10612" type="EtcItem" name="Certificate - Master Ability">
 		<set name="icon" val="icon.etc_all_subjob_skillbook_i00" />
@@ -226,6 +223,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10621" type="Armor" name="Shadow Item - Ant Hat - Blessed Scroll of Resurrection">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
@@ -240,6 +238,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3263-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10622" type="Armor" name="Shadow Item - Ant Hat - Firework">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
@@ -254,6 +253,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="10623" type="Armor" name="Shadow Item - Ant Hat - Big Head">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
@@ -268,6 +268,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="10624" type="Armor" name="Shadow Item - Ol Mahum Hat - Blessed Scroll of Escape">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
@@ -282,6 +283,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10625" type="Armor" name="Shadow Item - Ol Mahum Hat - Blessed Scroll of Resurrection">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
@@ -296,6 +298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3263-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10626" type="Armor" name="Shadow Item - Ol Mahum Hat - Firework">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
@@ -310,6 +313,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="10627" type="Armor" name="Shadow Item - Ol Mahum Hat - Big Head">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
@@ -324,6 +328,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="10628" type="Armor" name="Shadow Item - Wolf Hat - Blessed Scroll of Escape">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
@@ -338,6 +343,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3264-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10629" type="Armor" name="Shadow Item - Wolf Hat - Blessed Scroll of Resurrection">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
@@ -352,6 +358,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3263-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="120" />
 	</item>
 	<item id="10630" type="Armor" name="Shadow Item - Wolf Hat - Firework">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
@@ -366,6 +373,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3266-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="10631" type="Armor" name="Shadow Item - Wolf Hat - Big Head">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
@@ -380,6 +388,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3265-1" />
 		<set name="duration" val="1440" />
+		<set name="useSkillDisTime" val="10" />
 	</item>
 	<item id="10632" type="EtcItem" name="Wondrous Cubic">
 		<set name="icon" val="icon.cube_event_i00" />
@@ -500,7 +509,7 @@
 	<item id="10648" type="EtcItem" name="inven_tol_i_ll">
 		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -565,27 +574,30 @@
 	</item>
 	<item id="10655" type="EtcItem" name="Herb of Vampiric Rage">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2512-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10656" type="EtcItem" name="Herb of Critical Attack - Power">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2514-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10657" type="EtcItem" name="Herb of Doubt">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2513-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10658" type="Armor" name="Pet Accessory (Not In Use)">
 		<set name="icon" val="icon.etc_prefect_belt_i00" />
@@ -596,6 +608,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="33" />
 		<set name="equip_condition" val="{{ec_category;{@item_equip_pet_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="7" />
 		</for>

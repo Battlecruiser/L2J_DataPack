@@ -139,12 +139,12 @@ public class HallOfSuffering extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			return false;
 		}
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getPartyMembers())
@@ -191,47 +191,44 @@ public class HallOfSuffering extends Quest
 		{
 			if (!(world instanceof HSWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
 			teleportPlayer(player, coords, world.instanceId);
 			return world.instanceId;
 		}
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		L2Party party = player.getParty();
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new HSWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		world.status = 0;
+		((HSWorld)world).startTime = System.currentTimeMillis();
+		((HSWorld)world).ptLeaderName = player.getName();
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("Hall Of Suffering started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		runTumors((HSWorld)world);
+		
+		// teleport players
+		if (player.getParty() == null)
+		{
+			teleportPlayer(player, coords, instanceId);
+			world.allowed.add(player.getObjectId());
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			L2Party party = player.getParty();
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new HSWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			world.status = 0;
-			((HSWorld)world).startTime = System.currentTimeMillis();
-			((HSWorld)world).ptLeaderName = player.getName();
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hall Of Suffering started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			runTumors((HSWorld)world);
-			
-			// teleport players
-			if (player.getParty() == null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				teleportPlayer(player, coords, instanceId);
-				world.allowed.add(player.getObjectId());
+				teleportPlayer(partyMember, coords, instanceId);
+				world.allowed.add(partyMember.getObjectId());
+				if (partyMember.getQuestState(qn) == null)
+					newQuestState(partyMember);
 			}
-			else
-			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					teleportPlayer(partyMember, coords, instanceId);
-					world.allowed.add(partyMember.getObjectId());
-					if (partyMember.getQuestState(qn) == null)
-						newQuestState(partyMember);
-				}
-			}
-			return instanceId;
 		}
+		return instanceId;
 	}
 	
 	protected boolean checkKillProgress(L2Npc mob, HSWorld world)
@@ -457,17 +454,18 @@ public class HallOfSuffering extends Quest
 	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof HSWorld)
 		{
-			if (!((HSWorld)tmpworld).isBossesAttacked)
+			final HSWorld world = (HSWorld) tmpworld;
+			if (!world.isBossesAttacked)
 			{
-				((HSWorld) tmpworld).isBossesAttacked = true;
+				world.isBossesAttacked = true;
 				Calendar reenter = Calendar.getInstance();
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-				sm.addString(InstanceManager.getInstance().getInstanceIdName(tmpworld.templateId));
+				sm.addInstanceName(tmpworld.templateId);
 				
 				// set instance reenter time for all allowed players
 				for (int objectId : tmpworld.allowed)
@@ -484,17 +482,17 @@ public class HallOfSuffering extends Quest
 			}
 			else if (damage >= npc.getCurrentHp())
 			{
-				if (((HSWorld)tmpworld).klanikus.isDead())
+				if (world.klanikus.isDead())
 				{
-					((HSWorld)tmpworld).klanikus.setIsDead(false);
-					((HSWorld)tmpworld).klanikus.doDie(attacker);
-					((HSWorld)tmpworld).klodekus.doDie(attacker);
+					world.klanikus.setIsDead(false);
+					world.klanikus.doDie(attacker);
+					world.klodekus.doDie(attacker);
 				}
 				else if (((HSWorld)tmpworld).klodekus.isDead())
 				{
-					((HSWorld)tmpworld).klodekus.setIsDead(false);
-					((HSWorld)tmpworld).klodekus.doDie(attacker);
-					((HSWorld)tmpworld).klanikus.doDie(attacker);
+					world.klodekus.setIsDead(false);
+					world.klodekus.doDie(attacker);
+					world.klanikus.doDie(attacker);
 				}
 				else
 				{

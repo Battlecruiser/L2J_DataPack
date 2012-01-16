@@ -122,7 +122,7 @@ class Quest (JQuest) :
                   st.playTutorialVoice("tutorial_voice_026")
             st.unset("cond") 
             st.addExpAndSp(34565,2962)
-            player.sendPacket(SocialAction(player,3))
+            player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
    elif npcId == 30580 and st.getInt("cond")==1 and id == State.STARTED and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) : 

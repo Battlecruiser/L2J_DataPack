@@ -15,11 +15,13 @@
 package handlers.admincommandhandlers;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
+import com.l2jserver.gameserver.model.TerritoryWard;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -37,9 +39,11 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		"admin_territory_war",
 		"admin_territory_war_time",
 		"admin_territory_war_start",
-		"admin_territory_war_end"
+		"admin_territory_war_end",
+		"admin_territory_wards_list"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
@@ -95,9 +99,50 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 			else
 				activeChar.sendMessage("Missing Territory War Quest!");
 		}
+		else if (command.equalsIgnoreCase("admin_territory_wards_list"))
+		{
+			//build beginning of html page
+			NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(1, 1);
+			StringBuilder sb = new StringBuilder();
+			sb.append("<html><title>Territory War</title><body><br><center><font color=\"LEVEL\">Active Wards List:</font></center>");
+
+			//get,build & send current Wards list
+			if (TerritoryWarManager.getInstance().isTWInProgress())
+			{
+				List<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
+				for(TerritoryWard ward : territoryWardList)
+				{
+					if (ward.getNpc() != null)
+					{
+						sb.append("<table width=270><tr>");
+						sb.append("<td width=135 ALIGN=\"LEFT\">" + ward.getNpc().getName() + "</td>");
+						sb.append("<td width=135 ALIGN=\"RIGHT\"><button value=\"TeleTo\" action=\"bypass -h admin_move_to " + ward.getNpc().getX() + " " + ward.getNpc().getY() +  " " + ward.getNpc().getZ() + "\" width=50 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\"></td>");
+						sb.append("</tr></table>");
+					}
+					else if (ward.getPlayer() != null)
+					{
+						sb.append("<table width=270><tr>");
+						sb.append("<td width=135 ALIGN=\"LEFT\">" + ward.getPlayer().getActiveWeaponInstance().getItemName() + " - " + ward.getPlayer().getName() + "</td>");
+						sb.append("<td width=135 ALIGN=\"RIGHT\"><button value=\"TeleTo\" action=\"bypass -h admin_move_to " + ward.getPlayer().getX() + " " + ward.getPlayer().getY() +  " " + ward.getPlayer().getZ() + "\" width=50 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\"></td>");
+						sb.append("</tr></table>");
+					}
+				}
+		    	sb.append("<br><center><button value=\"Back\" action=\"bypass -h admin_territory_war\" width=50 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
+				npcHtmlMessage.setHtml(sb.toString());
+		    	activeChar.sendPacket(npcHtmlMessage);
+			}
+			else
+			{
+				sb.append("<br><br><center>The Ward List is empty!<br>TW has probably NOT started!");
+				sb.append("<br><button value=\"Back\" action=\"bypass -h admin_territory_war\" width=50 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
+		    	npcHtmlMessage.setHtml(sb.toString());
+		    	activeChar.sendPacket(npcHtmlMessage);
+			}
+		}
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return _adminCommands;

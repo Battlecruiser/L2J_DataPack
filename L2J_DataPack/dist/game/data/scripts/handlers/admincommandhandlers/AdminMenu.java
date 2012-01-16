@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 
 /**
@@ -55,6 +54,7 @@ public class AdminMenu implements IAdminCommandHandler
 		"admin_unban_menu"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_char_manage"))
@@ -92,7 +92,7 @@ public class AdminMenu implements IAdminCommandHandler
 				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return true;
 				}
 				if (!player.isInParty())
@@ -118,7 +118,7 @@ public class AdminMenu implements IAdminCommandHandler
 				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return true;
 				}
 				L2Clan clan = player.getClan();
@@ -186,7 +186,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 				ach.useAdminCommand(subCommand+command.substring(14), activeChar);
 			}
 			showMainPage(activeChar);
@@ -203,7 +203,7 @@ public class AdminMenu implements IAdminCommandHandler
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
+				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 				ach.useAdminCommand(subCommand+command.substring(16), activeChar);
 			}
 			showMainPage(activeChar);
@@ -211,6 +211,7 @@ public class AdminMenu implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
@@ -247,7 +248,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 		AdminHelpPage.showHelpPage(activeChar, filename);
 	}
@@ -269,11 +270,11 @@ public class AdminMenu implements IAdminCommandHandler
 			player = (L2PcInstance) target;
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		if (player.getObjectId() == activeChar.getObjectId())
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
 		else
 		{
 			activeChar.setInstanceId(player.getInstanceId());

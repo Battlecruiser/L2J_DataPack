@@ -48,12 +48,17 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_list_announcements",
+		"admin_list_critannouncements",
 		"admin_reload_announcements",
 		"admin_announce_announcements",
 		"admin_add_announcement",
 		"admin_del_announcement",
+		"admin_add_critannouncement",
+		"admin_del_critannouncement",
 		"admin_announce",
+		"admin_critannounce",
 		"admin_announce_menu",
+		"admin_critannounce_menu",
 		"admin_list_autoann",
 		"admin_reload_autoann",
 		"admin_add_autoann",
@@ -67,6 +72,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		{
 			Announcements.getInstance().listAnnouncements(activeChar);
 		}
+		else if (command.equals("admin_list_critannouncements"))
+		{
+			Announcements.getInstance().listCritAnnouncements(activeChar);
+		}
 		else if (command.equals("admin_reload_announcements"))
 		{
 			Announcements.getInstance().loadAnnouncements();
@@ -76,7 +85,23 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		{
 			if (Config.GM_ANNOUNCER_NAME && command.length() > 20)
 				command += " ("+activeChar.getName()+")";
-			Announcements.getInstance().handleAnnounce(command, 20);
+			Announcements.getInstance().handleAnnounce(command, 20, false);
+			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+		}
+		else if (command.startsWith("admin_critannounce_menu"))
+		{
+			try
+			{
+				command = command.substring(24);
+				
+				if (Config.GM_CRITANNOUNCER_NAME && command.length() > 0)
+					command = activeChar.getName() + ": " + command;
+				Announcements.getInstance().handleAnnounce(command, 0, true);
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+			}
+			
 			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
 		}
 		else if (command.equals("admin_announce_announcements"))
@@ -102,6 +127,23 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				}// ignore errors
 			}
 		}
+		else if (command.startsWith("admin_add_critannouncement"))
+		{
+			// FIXME the player can send only 16 chars (if you try to send more
+			// it sends null), remove this function or not?
+			if (!command.equals("admin_add_critannouncement"))
+			{
+				try
+				{
+					String val = command.substring(27);
+					Announcements.getInstance().addCritAnnouncement(val);
+					Announcements.getInstance().listCritAnnouncements(activeChar);
+				}
+				catch (StringIndexOutOfBoundsException e)
+				{
+				}// ignore errors
+			}
+		}
 		else if (command.startsWith("admin_del_announcement"))
 		{
 			try
@@ -114,6 +156,18 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			{
 			}
 		}
+		else if (command.startsWith("admin_del_critannouncement"))
+		{
+			try
+			{
+				int val = Integer.parseInt(command.substring(27));
+				Announcements.getInstance().delCritAnnouncement(val);
+				Announcements.getInstance().listCritAnnouncements(activeChar);
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+			}
+		}
 		
 		// Command is admin announce
 		else if (command.startsWith("admin_announce"))
@@ -121,7 +175,21 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			if (Config.GM_ANNOUNCER_NAME && command.length() > 15)
 				command += " ("+activeChar.getName()+")";
 			// Call method from another class
-			Announcements.getInstance().handleAnnounce(command, 15);
+			Announcements.getInstance().handleAnnounce(command, 15, false);
+		}
+		else if (command.startsWith("admin_critannounce"))
+		{
+			try
+			{
+				command = command.substring(19);
+				
+				if (Config.GM_CRITANNOUNCER_NAME && command.length() > 0)
+					command = activeChar.getName() + ": " + command;
+				Announcements.getInstance().handleAnnounce(command, 0, true);
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+			}
 		}
 		else if (command.startsWith("admin_list_autoann"))
 		{
@@ -161,6 +229,12 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
 				return false;
 			}
+			boolean isCritical = Boolean.valueOf(st.nextToken());
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
+				return false;
+			}
 			TextBuilder memo = new TextBuilder();
 			while (st.hasMoreTokens())
 			{
@@ -168,7 +242,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				memo.append(" ");
 			}
 			
-			AutoAnnounceTaskManager.getInstance().addAutoAnnounce(initial*1000, delay*1000, repeat, memo.toString().trim());
+			AutoAnnounceTaskManager.getInstance().addAutoAnnounce(initial*1000, delay*1000, repeat, memo.toString().trim(), isCritical);
 			listAutoAnnouncements(activeChar);
 		}
 		
@@ -206,9 +280,9 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				memo2.append(memo0);
 				memo2.append("/n");
 			}
-			replyMSG.append("<table width=260><tr><td width=220>");
+			replyMSG.append("<table width=260><tr><td width=220><font color=\"" + (autoann.isCritical() ? "00FCFC" : "7FFCFC") + "\">");
 			replyMSG.append(memo2.toString().trim());
-			replyMSG.append("</td><td width=40><button value=\"Delete\" action=\"bypass -h admin_del_autoann ");
+			replyMSG.append("</font></td><td width=40><button value=\"Delete\" action=\"bypass -h admin_del_autoann ");
 			replyMSG.append(i);
 			replyMSG.append("\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		}

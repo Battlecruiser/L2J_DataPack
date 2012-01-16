@@ -50,6 +50,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 		"admin_closeall"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		try
@@ -131,6 +132,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

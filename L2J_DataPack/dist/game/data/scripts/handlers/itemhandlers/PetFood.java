@@ -18,11 +18,11 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class PetFood implements IItemHandler
 {
+	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		int itemId = item.getItemId();
@@ -85,7 +86,7 @@ public class PetFood implements IItemHandler
 					((L2PetInstance) activeChar).broadcastStatusUpdate();
 					if (((L2PetInstance) activeChar).getCurrentFed() < (((L2PetInstance) activeChar).getPetData().getHungry_limit() / 100f * ((L2PetInstance) activeChar).getPetLevelData().getPetMaxFeed()))
 					{
-						((L2PetInstance) activeChar).getOwner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
+						activeChar.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
 					}
 					return true;
 				}
@@ -106,20 +107,14 @@ public class PetFood implements IItemHandler
 						}
 						return true;
 					}
-					else
-					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-						sm.addItemName(item);
-						activeChar.sendPacket(sm);
-						return false;
-					}
-				}
-				else
-				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 					sm.addItemName(item);
 					activeChar.sendPacket(sm);
+					return false;
 				}
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				sm.addItemName(item);
+				activeChar.sendPacket(sm);
 				return false;
 			}
 		}

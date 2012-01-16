@@ -1491,31 +1491,35 @@
 	</item>
 	<item id="8154" type="EtcItem" name="Herb of Life">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2244-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8155" type="EtcItem" name="Herb of Mana">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2245-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8156" type="EtcItem" name="Herb of Power">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2246-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8157" type="EtcItem" name="Herb of Magic">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2247-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="8158" type="EtcItem" name="Memento Mori (C-Grade)">
 		<set name="icon" val="icon.etc_raid_a_i02" />

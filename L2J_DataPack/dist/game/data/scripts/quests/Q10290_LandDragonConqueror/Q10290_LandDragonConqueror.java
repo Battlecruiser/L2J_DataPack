@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10290_LandDragonConqueror extends Quest
 {
-	private static final String qn = "Q10290_LandDragonConqueror";
+	private static final String qn = "10290_LandDragonConqueror";
 	// NPC
 	private static final int Theodoric = 30755;
 	private static final int[] Antharas = { 29019, 29066, 29067, 29068 }; //Old, Weak, Normal, Strong
@@ -68,7 +68,7 @@ public class Q10290_LandDragonConqueror extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() >= 83 && st.getQuestItemsCount(PortalStone) >= 1)
+				if (player.getLevel() >= 83 && st.hasQuestItems(PortalStone))
 					htmltext = "30755-01.htm";
 				else if (player.getLevel() < 83)
 					htmltext = "30755-02.htm";

@@ -531,6 +531,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2630-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="13845" type="Weapon" name="Attribute Master Yin's Sword">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
@@ -960,7 +961,7 @@
 		<set name="price" val="87901000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8295-1" />
 		<set name="item_skill" val="3552-1" />
@@ -997,7 +998,7 @@
 		<set name="price" val="121780000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3552-1" />
@@ -1034,7 +1035,7 @@
 		<set name="price" val="171530000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8298-1" />
 		<set name="item_skill" val="3552-1" />
@@ -1108,7 +1109,6 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
-		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<cond msgId="1518">
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />

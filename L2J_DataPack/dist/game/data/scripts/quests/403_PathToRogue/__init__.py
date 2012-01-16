@@ -114,7 +114,7 @@ class Quest (JQuest) :
           st.exitQuest(False)
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
-          player.sendPacket(SocialAction(player,3))
+          player.sendPacket(SocialAction(player.getObjectId(),3))
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
           htmltext = "30379-07.htm"
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT)>0 :

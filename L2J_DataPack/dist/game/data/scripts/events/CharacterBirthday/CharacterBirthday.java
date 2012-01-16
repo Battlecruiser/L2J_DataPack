@@ -31,8 +31,7 @@ public class CharacterBirthday extends Quest
 	
 	private final static int[] _gk =
 	{
-		30006,30059,30080,30134,30146,30177,30233,30256,30320,30540,
-		30576,30836,30848,30878,30899,31275,31320,31964,32163
+		30006, 30059, 30080, 30134, 30146, 30177, 30233, 30256, 30320, 30540, 30576, 30836, 30848, 30878, 30899, 31275, 31320, 31964, 32163
 	};
 	
 	public CharacterBirthday(int questId, String name, String descr)
@@ -73,7 +72,9 @@ public class CharacterBirthday extends Quest
 				_spawns--;
 			}
 			else
+			{
 				htmltext = "32600-nohat.htm";
+			}
 		}
 		return htmltext;
 	}
@@ -81,23 +82,28 @@ public class CharacterBirthday extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if(_spawns >= 3)
+		if (_spawns >= 3)
+		{
 			return "busy.htm";
+		}
 		
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			return null;
+		}
 		
 		if (!Util.checkIfInRange(10, npc, player, true))
 		{
-			L2Npc spawned = st.addSpawn(32600, player.getX()+10, player.getY()+10, player.getZ()+10, 0, false, 0, true);
+			L2Npc spawned = st.addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			st.setState(State.STARTED);
 			st.startQuestTimer("despawn_npc", 180000, spawned);
 			_spawns++;
 		}
 		else
+		{
 			return "tooclose.htm";
-		
+		}
 		return null;
 	}
 	

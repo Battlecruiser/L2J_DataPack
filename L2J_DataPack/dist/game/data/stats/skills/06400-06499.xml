@@ -118,9 +118,8 @@
 	<skill id="6406" levels="1" name="Torumba's Plague">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="MUTE" />
-		<set name="ignoreResists" val="true" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -132,13 +131,12 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
@@ -427,22 +425,16 @@
 		<!-- Fantasy Mushroom Skill -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillType" val="STUN" />
-		<set name="power" val="100" />
-		<set name="skillRadius" val="150" />
+		<set name="skillType" val="DUMMY" />
+		<set name="skillRadius" val="300" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<for>
-			<effect name="Stun" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="stun" />
-		</for>
 	</skill>
 	<skill id="6428" levels="1" name="Hold">
 		<!-- Sticky Mushroom Skill -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="power" val="90" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="saveVs" val="MEN" />
@@ -450,6 +442,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="5" val="0" effectPower="50" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="HealPercent" noicon="1" val="90" />
 		</for>
 	</skill>
 	<skill id="6429" levels="1" name="Cozy Mucus">
@@ -473,10 +466,12 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="power" val="30" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="30" />
+		</for>
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->

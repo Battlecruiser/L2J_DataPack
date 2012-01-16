@@ -16,6 +16,9 @@ package ai.group_template;
 
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
+import java.util.List;
+
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -206,7 +209,10 @@ public class L2AttackableAIScript extends QuestJython
 		{
 			final L2MonsterInstance mob = (L2MonsterInstance)npc;
 			if (mob.getLeader() != null)
-				mob.getLeader().getMinionList().onMinionDie(mob, -1);
+			{
+				final int respawnTime = Config.MINIONS_RESPAWN_TIME.get(mob.getNpcId()) > 0 ? Config.MINIONS_RESPAWN_TIME.get(mob.getNpcId()) * 1000 : -1;
+				mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
+			}
 
 			if (mob.hasMinions())
 				mob.getMinionList().onMasterDie(false);
@@ -220,27 +226,24 @@ public class L2AttackableAIScript extends QuestJython
 		// register all mobs here...
 		for (int level =1; level<100; level++)
 		{
-			L2NpcTemplate[] templates = NpcTable.getInstance().getAllOfLevel(level);
-			if ((templates != null) && (templates.length > 0))
+			final List<L2NpcTemplate> templates = NpcTable.getInstance().getAllOfLevel(level);
+			for (L2NpcTemplate t : templates)
 			{
-				for (L2NpcTemplate t: templates)
+				try
 				{
-					try
+					if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance."+t.getType()+"Instance")))
 					{
-						if ( L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance."+t.type+"Instance")))
-						{
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_ATTACK);
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_KILL);
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_SPAWN);
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_SKILL_SEE);
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_FACTION_CALL);
-							ai.addEventId(t.npcId, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
-						}
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_ATTACK);
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_KILL);
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_SPAWN);
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_SKILL_SEE);
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_FACTION_CALL);
+						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
 					}
-					catch(ClassNotFoundException ex)
-					{
-						_log.info("Class not found "+t.type+"Instance");
-					}
+				}
+				catch(ClassNotFoundException ex)
+				{
+					_log.info("Class not found "+t.getType()+"Instance");
 				}
 			}
 		}

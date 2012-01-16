@@ -857,7 +857,7 @@
 		<set name="price" val="143356000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
 		<set name="item_skill" val="3552-1" />
@@ -881,6 +881,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13024,1,1,100" />
 	</item>
 	<item id="54" type="EtcItem" name="(Not In Use)">
@@ -894,6 +895,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13025,1,1,100" />
 	</item>
 	<item id="55" type="EtcItem" name="Shiny Agathion 7-Day Pack (Event)">

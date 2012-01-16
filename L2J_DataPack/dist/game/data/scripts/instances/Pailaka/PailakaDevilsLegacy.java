@@ -38,7 +38,6 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 public class PailakaDevilsLegacy extends Quest
@@ -184,7 +183,7 @@ public class PailakaDevilsLegacy extends Quest
 		{
 			if (world.templateId != INSTANCE_ID)
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return;
 			}
 			Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
@@ -193,20 +192,17 @@ public class PailakaDevilsLegacy extends Quest
 			return;
 		}
 		//New instance
-		else
-		{
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaDevilsLegacy.xml");
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaDevilsLegacy.xml");
 
-			world = new InstanceWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCE_ID;
-			InstanceManager.getInstance().addWorld(world);
+		world = new InstanceWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCE_ID;
+		InstanceManager.getInstance().addWorld(world);
 
-			world.allowed.add(player.getObjectId());
-			teleportPlayer(player, TELEPORT, instanceId);
-			
-			_lematanNpc = addSpawn(LEMATAN, 88108, -209252, -3744, 64255, false, 0, false, instanceId);
-		}
+		world.allowed.add(player.getObjectId());
+		teleportPlayer(player, TELEPORT, instanceId);
+		
+		_lematanNpc = addSpawn(LEMATAN, 88108, -209252, -3744, 64255, false, 0, false, instanceId);
 		
 	}
 
@@ -243,10 +239,7 @@ public class PailakaDevilsLegacy extends Quest
 				st.set("cond","2");
 				return "32498-07.htm";
 			}
-			else
-			{
-				return "32498-09.htm";
-			}
+			return "32498-09.htm";
 		}
 		else if (event.equalsIgnoreCase("32498-05.htm"))
 		{
@@ -331,10 +324,9 @@ public class PailakaDevilsLegacy extends Quest
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if (st != null && npc.getNpcId() == ADVENTURER2 && st.getState() == State.COMPLETED)
+		if (st != null && npc.getNpcId() == ADVENTURER2 && st.isCompleted())
 			return "32511-03.htm";
-		else
-			return npc.getNpcId() + ".htm";
+		return npc.getNpcId() + ".htm";
 	}
 
 	@Override
@@ -359,8 +351,7 @@ public class PailakaDevilsLegacy extends Quest
 					case State.STARTED:
 						if (cond > 1)
 							return "32498-08.htm";
-						else
-							return "32498-06.htm";
+						return "32498-06.htm";
 					case State.COMPLETED:
 						return "32498-10.htm";
 					default:
@@ -369,12 +360,11 @@ public class PailakaDevilsLegacy extends Quest
 			case SUPPORTER:
 				if(st.getInt("cond") > 2)
 					return "32501-04.htm";
-				else
-					return "32501-01.htm";
+				return "32501-01.htm";
 			case ADVENTURER1:
 				if(player.getPet() == null)
 				{
-					if (st.getQuestItemsCount(SWORD) > 0)
+					if (st.hasQuestItems(SWORD))
 					{
 						if(st.getQuestItemsCount(SCROLL_1) > 0)
 						{
@@ -383,8 +373,7 @@ public class PailakaDevilsLegacy extends Quest
 							st.giveItems(ENH_SWORD1, 1);
 							return "32508-03.htm";
 						}
-						else
-							return "32508-02.htm";
+						return "32508-02.htm";
 					}
 					else if (st.getQuestItemsCount(ENH_SWORD1) > 0)
 					{
@@ -395,16 +384,14 @@ public class PailakaDevilsLegacy extends Quest
 							st.giveItems(ENH_SWORD2, 1);
 							return "32508-05.htm";
 						}
-						else
-							return "32508-04.htm";
+						return "32508-04.htm";
 					}
 					else if (st.getQuestItemsCount(ENH_SWORD2) > 0)
 						return "32508-06.htm";
 					else
 						return "32508-00.htm";
 				}
-				else
-					return "32508-07.htm";
+				return "32508-07.htm";
 			case ADVENTURER2:
 				if (player.getPet() == null)
 				{
@@ -425,8 +412,7 @@ public class PailakaDevilsLegacy extends Quest
 					}
 					return "32511-01.htm";
 				}
-				else
-					return "32511-02.htm";
+				return "32511-02.htm";
 		}
 		return getNoQuestMsg(player);
 	}
@@ -487,17 +473,17 @@ public class PailakaDevilsLegacy extends Quest
 		switch (npc.getNpcId())
 		{
 			case KAMS:
-				if (st.getQuestItemsCount(SWORD) > 0)
+				if (st.hasQuestItems(SWORD))
 				{
 					st.playSound("ItemSound.quest_itemget");
 					st.giveItems(SCROLL_1, 1);
 				}
 				break;
 			case ALKASO:
-				if (st.getQuestItemsCount(ENH_SWORD1) > 0)
+				if (st.hasQuestItems(ENH_SWORD1))
 				{
 					st.playSound("ItemSound.quest_itemget");
-					st.giveItems(SCROLL_2, 1);					
+					st.giveItems(SCROLL_2, 1);
 				}
 				break;
 			case LEMATAN:
@@ -559,6 +545,7 @@ public class PailakaDevilsLegacy extends Quest
 			_instanceId = id;
 		}
 
+		@Override
 		public void run()
 		{
 			try

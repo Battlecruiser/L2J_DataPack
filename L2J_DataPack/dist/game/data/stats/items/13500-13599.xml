@@ -370,7 +370,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -391,7 +393,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -412,7 +416,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -433,7 +439,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -454,7 +462,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -475,7 +485,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -496,7 +508,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -517,7 +531,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -538,7 +554,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -676,7 +694,7 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="8262-1" />
 	</item>
-	<item id="13548" type="EtcItem" name="Toy Knight Hunting Helper Necklace">
+	<item id="13548" type="EtcItem" name="Toy Knight Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -693,7 +711,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</item>
-	<item id="13549" type="EtcItem" name="Soul Monk Hunting Helper Necklace">
+	<item id="13549" type="EtcItem" name="Soul Monk Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -710,7 +728,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</item>
-	<item id="13550" type="EtcItem" name="Owl Monk Hunting Helper Necklace">
+	<item id="13550" type="EtcItem" name="Owl Monk Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -727,7 +745,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</item>
-	<item id="13551" type="EtcItem" name="Turtle Ascetic Hunting Helper Necklace">
+	<item id="13551" type="EtcItem" name="Turtle Ascetic Summon Whistle">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -874,7 +892,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -897,7 +917,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -920,7 +942,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -943,7 +967,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -966,7 +992,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -989,7 +1017,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -1012,7 +1042,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -1035,7 +1067,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
@@ -1058,7 +1092,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="item_skill" val="847-1;846-1" />
-		<set name="item_equip_option" val="{no_attack;only_use_weapon_skill;force_equip}" />
+		<set name="isForceEquip" val="true" />
+		<set name="isAttackWeapon" val="false" />
+		<set name="useWeaponSkillsOnly" val="true" />
 		<for>
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>

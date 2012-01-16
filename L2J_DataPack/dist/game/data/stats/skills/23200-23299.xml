@@ -133,14 +133,31 @@
 		<set name="reuseDelay" val="6000" />
 	</skill>
 	<skill id="23214" levels="1" name="Good/Bad of Life">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Triggered from 22175 -->
+		<set name="isStaticHeal" val="true" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="500" />
+		</for>
 	</skill>
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Triggered from 22176 -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="500" />
+		</for>
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
@@ -938,7 +955,6 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="20" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
@@ -957,6 +973,7 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="23277" levels="1" name="Master's Blessing - Improve Combat">

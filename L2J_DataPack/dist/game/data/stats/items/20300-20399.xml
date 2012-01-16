@@ -236,6 +236,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20320,1,1,100" />
 	</item>
 	<item id="20315" type="EtcItem" name="Goggle Pack">
@@ -408,6 +409,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20332,5000,5000,100" />
 	</item>
 	<item id="20327" type="EtcItem" name="Beast Spiritshot Pack">
@@ -419,6 +421,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20333,5000,5000,100" />
 	</item>
 	<item id="20328" type="EtcItem" name="Blessed Beast Spiritshot Pack">
@@ -430,6 +433,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20334,5000,5000,100" />
 	</item>
 	<item id="20329" type="EtcItem" name="Beast Soulshot Large Pack">
@@ -441,6 +445,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20332,10000,10000,100" />
 	</item>
 	<item id="20330" type="EtcItem" name="Beast Spiritshot Large Pack">
@@ -452,6 +457,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20333,10000,10000,100" />
 	</item>
 	<item id="20331" type="EtcItem" name="Blessed Beast Spiritshot Large Pack">
@@ -463,6 +469,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20334,10000,10000,100" />
 	</item>
 	<item id="20332" type="EtcItem" name="Beast Soulshot">
@@ -479,6 +486,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSoulShot" />
 		<set name="item_skill" val="22036-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="20333" type="EtcItem" name="Beast Spiritshot">
 		<set name="icon" val="BranchSys.icon.br_beast_spirit_shot_i00" />
@@ -494,6 +502,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
 		<set name="item_skill" val="22037-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="20334" type="EtcItem" name="Blessed Beast Spiritshot">
 		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00" />
@@ -509,6 +518,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
 		<set name="item_skill" val="22038-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="20335" type="EtcItem" name="Rune of Experience Points 30% - 5-hour limited period">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
@@ -1563,6 +1573,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="6354,1,1,100;6355,1,1,100;13121,1,1,100;1060,20,20,100;5789,1000,1000,100;5790,1000,1000,100;9191,1,1,100;5593,1,1,100" />
 	</item>
 	<item id="20398" type="EtcItem" name="Fast Growth Pack">
@@ -1575,6 +1586,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13421,10,10,100;22000,1,1,100;22003,1,1,100;10649,3,3,100" />
 	</item>
 	<item id="20399" type="Armor" name="Laborer Hat - Blessed Body - 7-day limited period">

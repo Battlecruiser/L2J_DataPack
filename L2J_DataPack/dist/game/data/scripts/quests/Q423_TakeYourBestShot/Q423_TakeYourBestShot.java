@@ -86,7 +86,7 @@ public class Q423_TakeYourBestShot extends Quest
 			{
 				case State.CREATED :
 					QuestState _prev = player.getQuestState("249_PoisonedPlainsOfTheLizardmen");
-					if ((_prev != null) && (_prev.getState() == State.COMPLETED) && (player.getLevel() >= 82))
+					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
 						if (st.hasQuestItems(_seer_ugoros_pass))
 							htmltext = "32744-07.htm";
 						else
@@ -135,8 +135,7 @@ public class Q423_TakeYourBestShot extends Quest
 		
 		if (npc.isInsideRadius(96782, 85918, 100, true))
 			return "32740-ugoros.htm";
-		else
-			return "32740.htm";
+		return "32740.htm";
 	}
 	
 	@Override

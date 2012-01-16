@@ -791,6 +791,7 @@
 		<set name="price" val="13100000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="194" />
 			<set order="0x08" stat="mAtk" val="99" />
@@ -847,7 +848,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7840" type="Armor" name="Rabbit Ears (Event)">
+	<item id="7840" type="Armor" name="Rabbit Ears - Event">
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -858,7 +859,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7841" type="Armor" name="Racoon Ears (Event)">
+	<item id="7841" type="Armor" name="Racoon Ears">
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -869,7 +870,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7842" type="Armor" name="Cat Ears (Event)">
+	<item id="7842" type="Armor" name="Cat Ears">
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -880,7 +881,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7843" type="Armor" name="Pirate's Eyepatch (Event)">
+	<item id="7843" type="Armor" name="Pirate's Eyepatch">
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -891,7 +892,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7844" type="Armor" name="Monocle (Event)">
+	<item id="7844" type="Armor" name="Monocle">
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -902,7 +903,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7845" type="Armor" name="Outlaw's Eyepatch (Event)">
+	<item id="7845" type="Armor" name="Outlaw's Eyepatch">
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -913,7 +914,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7846" type="Armor" name="Lady's Hairpin (Event)">
+	<item id="7846" type="Armor" name="Maiden's Hairpin">
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -927,7 +928,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="7847" type="Armor" name="Lady's Hair Pin (Event)">
+	<item id="7847" type="Armor" name="Lady's Hairpin">
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -941,7 +942,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="7848" type="Armor" name="Forget-me-not Hairpin (Event)">
+	<item id="7848" type="Armor" name="Forget-me-not Hairpin">
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -955,7 +956,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="7849" type="Armor" name="Daisy Hairpin (Event)">
+	<item id="7849" type="Armor" name="Daisy Hairpin">
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />

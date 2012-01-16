@@ -13,7 +13,6 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers;
-
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
 import handlers.actionhandlers.L2DoorInstanceAction;
@@ -62,6 +61,7 @@ import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminHeal;
+import handlers.admincommandhandlers.AdminHellbound;
 import handlers.admincommandhandlers.AdminHelpPage;
 import handlers.admincommandhandlers.AdminInstance;
 import handlers.admincommandhandlers.AdminInstanceZone;
@@ -93,6 +93,7 @@ import handlers.admincommandhandlers.AdminSkill;
 import handlers.admincommandhandlers.AdminSpawn;
 import handlers.admincommandhandlers.AdminSummon;
 import handlers.admincommandhandlers.AdminTarget;
+import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
@@ -262,6 +263,14 @@ import handlers.targethandlers.TargetPet;
 import handlers.targethandlers.TargetSelf;
 import handlers.targethandlers.TargetSummon;
 import handlers.targethandlers.TargetUnlockable;
+import handlers.telnethandlers.ChatsHandler;
+import handlers.telnethandlers.DebugHandler;
+import handlers.telnethandlers.HelpHandler;
+import handlers.telnethandlers.PlayerHandler;
+import handlers.telnethandlers.ReloadHandler;
+import handlers.telnethandlers.ServerHandler;
+import handlers.telnethandlers.StatusHandler;
+import handlers.telnethandlers.ThreadHandler;
 import handlers.usercommandhandlers.Birthday;
 import handlers.usercommandhandlers.ChannelDelete;
 import handlers.usercommandhandlers.ChannelLeave;
@@ -280,368 +289,357 @@ import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
+import handlers.voicedcommandhandlers.Hellbound;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
 import handlers.voicedcommandhandlers.stats;
 
+import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ActionHandler;
+import com.l2jserver.gameserver.handler.ActionShiftHandler;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.handler.TelnetHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
 /**
- * @author  nBd
+ * @author UnAfraid
  */
 public class MasterHandler
 {
 	private static Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
-	private static final ActionHandler ACTION = ActionHandler.getInstance();
-	private static final AdminCommandHandler ADMIN = AdminCommandHandler.getInstance();
-	private static final BypassHandler BYPASS = BypassHandler.getInstance();
-	private static final ChatHandler CHAT = ChatHandler.getInstance();
-	private static final ItemHandler ITEM = ItemHandler.getInstance();
-	private static final SkillHandler SKILL = SkillHandler.getInstance();
-	private static final UserCommandHandler USER = UserCommandHandler.getInstance();
-	private static final VoicedCommandHandler VOICE = VoicedCommandHandler.getInstance();
-	private static final TargetHandler TARGET = TargetHandler.getInstance();
-	
-	private static void loadActionHandlers()
+	private static final Class<?>[] _loadInstances =
 	{
-		ACTION.registerActionHandler(new L2ArtefactInstanceAction());
-		ACTION.registerActionHandler(new L2DecoyAction());
-		ACTION.registerActionHandler(new L2DoorInstanceAction());
-		ACTION.registerActionHandler(new L2ItemInstanceAction());
-		ACTION.registerActionHandler(new L2NpcAction());
-		ACTION.registerActionHandler(new L2PcInstanceAction());
-		ACTION.registerActionHandler(new L2PetInstanceAction());
-		ACTION.registerActionHandler(new L2StaticObjectInstanceAction());
-		ACTION.registerActionHandler(new L2SummonAction());
-		ACTION.registerActionHandler(new L2TrapAction());
-		_log.log(Level.INFO, "Loaded " + ACTION.size() + " ActionHandlers");
-	}
+		ActionHandler.class,
+		ActionShiftHandler.class,
+		AdminCommandHandler.class,
+		BypassHandler.class,
+		ChatHandler.class,
+		ItemHandler.class,
+		SkillHandler.class,
+		UserCommandHandler.class,
+		VoicedCommandHandler.class,
+		TargetHandler.class,
+		TelnetHandler.class,
+	};
 	
-	private static void loadActionShiftHandlers()
+	private static final Class<?>[][] _handlers = 
 	{
-		ACTION.registerActionShiftHandler(new L2DoorInstanceActionShift());
-		ACTION.registerActionShiftHandler(new L2ItemInstanceActionShift());
-		ACTION.registerActionShiftHandler(new L2NpcActionShift());
-		ACTION.registerActionShiftHandler(new L2PcInstanceActionShift());
-		ACTION.registerActionShiftHandler(new L2StaticObjectInstanceActionShift());
-		ACTION.registerActionShiftHandler(new L2SummonActionShift());
-		_log.log(Level.INFO, "Loaded " + ACTION.sizeShift() + " ActionShiftHandlers");
-	}
-	
-	private static void loadAdminHandlers()
-	{
-		ADMIN.registerAdminCommandHandler(new AdminAdmin());
-		ADMIN.registerAdminCommandHandler(new AdminAnnouncements());
-		ADMIN.registerAdminCommandHandler(new AdminBan());
-		ADMIN.registerAdminCommandHandler(new AdminBBS());
-		ADMIN.registerAdminCommandHandler(new AdminBuffs());
-		ADMIN.registerAdminCommandHandler(new AdminCache());
-		ADMIN.registerAdminCommandHandler(new AdminCamera());
-		ADMIN.registerAdminCommandHandler(new AdminChangeAccessLevel());
-		ADMIN.registerAdminCommandHandler(new AdminCHSiege());
-		ADMIN.registerAdminCommandHandler(new AdminClan());
-		ADMIN.registerAdminCommandHandler(new AdminCreateItem());
-		ADMIN.registerAdminCommandHandler(new AdminCursedWeapons());
-		ADMIN.registerAdminCommandHandler(new AdminDebug());
-		ADMIN.registerAdminCommandHandler(new AdminDelete());
-		ADMIN.registerAdminCommandHandler(new AdminDisconnect());
-		ADMIN.registerAdminCommandHandler(new AdminDoorControl());
-		ADMIN.registerAdminCommandHandler(new AdminEditChar());
-		ADMIN.registerAdminCommandHandler(new AdminEditNpc());
-		ADMIN.registerAdminCommandHandler(new AdminEffects());
-		ADMIN.registerAdminCommandHandler(new AdminElement());
-		ADMIN.registerAdminCommandHandler(new AdminEnchant());
-		ADMIN.registerAdminCommandHandler(new AdminEventEngine());
-		ADMIN.registerAdminCommandHandler(new AdminEvents());
-		ADMIN.registerAdminCommandHandler(new AdminExpSp());
-		ADMIN.registerAdminCommandHandler(new AdminFightCalculator());
-		ADMIN.registerAdminCommandHandler(new AdminFortSiege());
-		ADMIN.registerAdminCommandHandler(new AdminGeodata());
-		ADMIN.registerAdminCommandHandler(new AdminGeoEditor());
-		ADMIN.registerAdminCommandHandler(new AdminGm());
-		ADMIN.registerAdminCommandHandler(new AdminGmChat());
-		ADMIN.registerAdminCommandHandler(new AdminGraciaSeeds());
-		ADMIN.registerAdminCommandHandler(new AdminHeal());
-		ADMIN.registerAdminCommandHandler(new AdminHelpPage());
-		ADMIN.registerAdminCommandHandler(new AdminInstance());
-		ADMIN.registerAdminCommandHandler(new AdminInstanceZone());
-		ADMIN.registerAdminCommandHandler(new AdminInvul());
-		ADMIN.registerAdminCommandHandler(new AdminKick());
-		ADMIN.registerAdminCommandHandler(new AdminKill());
-		ADMIN.registerAdminCommandHandler(new AdminLevel());
-		ADMIN.registerAdminCommandHandler(new AdminLogin());
-		ADMIN.registerAdminCommandHandler(new AdminMammon());
-		ADMIN.registerAdminCommandHandler(new AdminManor());
-		ADMIN.registerAdminCommandHandler(new AdminMenu());
-		ADMIN.registerAdminCommandHandler(new AdminMessages());
-		ADMIN.registerAdminCommandHandler(new AdminMobGroup());
-		ADMIN.registerAdminCommandHandler(new AdminMonsterRace());
-		ADMIN.registerAdminCommandHandler(new AdminPathNode());
-		ADMIN.registerAdminCommandHandler(new AdminPetition());
-		ADMIN.registerAdminCommandHandler(new AdminPForge());
-		ADMIN.registerAdminCommandHandler(new AdminPledge());
-		ADMIN.registerAdminCommandHandler(new AdminPolymorph());
-		ADMIN.registerAdminCommandHandler(new AdminQuest());
-		ADMIN.registerAdminCommandHandler(new AdminRepairChar());
-		ADMIN.registerAdminCommandHandler(new AdminRes());
-		ADMIN.registerAdminCommandHandler(new AdminRide());
-		ADMIN.registerAdminCommandHandler(new AdminShop());
-		ADMIN.registerAdminCommandHandler(new AdminShowQuests());
-		ADMIN.registerAdminCommandHandler(new AdminShutdown());
-		ADMIN.registerAdminCommandHandler(new AdminSiege());
-		ADMIN.registerAdminCommandHandler(new AdminSkill());
-		ADMIN.registerAdminCommandHandler(new AdminSpawn());
-		ADMIN.registerAdminCommandHandler(new AdminSummon());
-		ADMIN.registerAdminCommandHandler(new AdminTarget());
-		ADMIN.registerAdminCommandHandler(new AdminTeleport());
-		ADMIN.registerAdminCommandHandler(new AdminTerritoryWar());
-		ADMIN.registerAdminCommandHandler(new AdminTest());
-		ADMIN.registerAdminCommandHandler(new AdminTvTEvent());
-		ADMIN.registerAdminCommandHandler(new AdminUnblockIp());
-		ADMIN.registerAdminCommandHandler(new AdminVitality());
-		ADMIN.registerAdminCommandHandler(new AdminZone());
-		_log.log(Level.INFO, "Loaded " + ADMIN.size() + " AdminCommandHandlers");
-	}
-	
-	private static void loadBypassHandlers()
-	{
-		BYPASS.registerBypassHandler(new Augment());
-		BYPASS.registerBypassHandler(new ArenaBuff());
-		BYPASS.registerBypassHandler(new BloodAlliance());
-		BYPASS.registerBypassHandler(new Buy());
-		BYPASS.registerBypassHandler(new BuyShadowItem());
-		BYPASS.registerBypassHandler(new ChatLink());
-		BYPASS.registerBypassHandler(new ClanWarehouse());
-		BYPASS.registerBypassHandler(new DrawHenna());
-		BYPASS.registerBypassHandler(new EventEngine());
-		BYPASS.registerBypassHandler(new Festival());
-		BYPASS.registerBypassHandler(new FortSiege());
-		BYPASS.registerBypassHandler(new Freight());
-		BYPASS.registerBypassHandler(new ItemAuctionLink());
-		BYPASS.registerBypassHandler(new Link());
-		BYPASS.registerBypassHandler(new Loto());
-		BYPASS.registerBypassHandler(new ManorManager());
-		BYPASS.registerBypassHandler(new Multisell());
-		BYPASS.registerBypassHandler(new Observation());
-		BYPASS.registerBypassHandler(new OlympiadObservation());
-		BYPASS.registerBypassHandler(new OlympiadManagerLink());
-		BYPASS.registerBypassHandler(new QuestLink());
-		BYPASS.registerBypassHandler(new PlayerHelp());
-		BYPASS.registerBypassHandler(new PrivateWarehouse());
-		BYPASS.registerBypassHandler(new QuestList());
-		BYPASS.registerBypassHandler(new ReceivePremium());
-		BYPASS.registerBypassHandler(new ReleaseAttribute());
-		BYPASS.registerBypassHandler(new RemoveDeathPenalty());
-		BYPASS.registerBypassHandler(new RemoveHennaList());
-		BYPASS.registerBypassHandler(new RentPet());
-		BYPASS.registerBypassHandler(new RideWyvern());
-		BYPASS.registerBypassHandler(new Rift());
-		BYPASS.registerBypassHandler(new SkillList());
-		BYPASS.registerBypassHandler(new SupportBlessing());
-		BYPASS.registerBypassHandler(new SupportMagic());
-		BYPASS.registerBypassHandler(new TerritoryStatus());
-		BYPASS.registerBypassHandler(new TerritoryWar());
-		BYPASS.registerBypassHandler(new VoiceCommand());
-		BYPASS.registerBypassHandler(new Wear());
-		_log.log(Level.INFO, "Loaded " + BYPASS.size() + " BypassHandlers");
-	}
-	
-	private static void loadChatHandlers()
-	{
-		CHAT.registerChatHandler(new ChatAll());
-		CHAT.registerChatHandler(new ChatAlliance());
-		CHAT.registerChatHandler(new ChatBattlefield());
-		CHAT.registerChatHandler(new ChatClan());
-		CHAT.registerChatHandler(new ChatHeroVoice());
-		CHAT.registerChatHandler(new ChatParty());
-		CHAT.registerChatHandler(new ChatPartyMatchRoom());
-		CHAT.registerChatHandler(new ChatPartyRoomAll());
-		CHAT.registerChatHandler(new ChatPartyRoomCommander());
-		CHAT.registerChatHandler(new ChatPetition());
-		CHAT.registerChatHandler(new ChatShout());
-		CHAT.registerChatHandler(new ChatTell());
-		CHAT.registerChatHandler(new ChatTrade());
-		_log.log(Level.INFO, "Loaded " + CHAT.size() + " ChatHandlers");
-	}
-	
-	private static void loadItemHandlers()
-	{
-		ITEM.registerItemHandler(new ScrollOfResurrection());
-		ITEM.registerItemHandler(new SoulShots());
-		ITEM.registerItemHandler(new SpiritShot());
-		ITEM.registerItemHandler(new BlessedSpiritShot());
-		ITEM.registerItemHandler(new BeastSoulShot());
-		ITEM.registerItemHandler(new BeastSpiritShot());
-		ITEM.registerItemHandler(new PaganKeys());
-		ITEM.registerItemHandler(new Maps());
-		ITEM.registerItemHandler(new NicknameColor());
-		ITEM.registerItemHandler(new Recipes());
-		ITEM.registerItemHandler(new RollingDice());
-		ITEM.registerItemHandler(new EnchantAttribute());
-		ITEM.registerItemHandler(new EnchantScrolls());
-		ITEM.registerItemHandler(new ExtractableItems());
-		ITEM.registerItemHandler(new Book());
-		ITEM.registerItemHandler(new SevenSignsRecord());
-		ITEM.registerItemHandler(new ItemSkills());
-		ITEM.registerItemHandler(new ItemSkillsTemplate());
-		ITEM.registerItemHandler(new Seed());
-		ITEM.registerItemHandler(new Harvester());
-		ITEM.registerItemHandler(new MercTicket());
-		ITEM.registerItemHandler(new FishShots());
-		ITEM.registerItemHandler(new PetFood());
-		ITEM.registerItemHandler(new SpecialXMas());
-		ITEM.registerItemHandler(new SummonItems());
-		ITEM.registerItemHandler(new BeastSpice());
-		ITEM.registerItemHandler(new TeleportBookmark());
-		ITEM.registerItemHandler(new Elixir());
-		ITEM.registerItemHandler(new Disguise());
-		ITEM.registerItemHandler(new ManaPotion());
-		ITEM.registerItemHandler(new EnergyStarStone());
-		ITEM.registerItemHandler(new EventItem());
-		_log.log(Level.INFO, "Loaded " + ITEM.size() + " ItemHandlers");
-	}
-	
-	private static void loadSkillHandlers()
-	{
-		SKILL.registerSkillHandler(new Blow());
-		SKILL.registerSkillHandler(new Pdam());
-		SKILL.registerSkillHandler(new Mdam());
-		SKILL.registerSkillHandler(new CpDam());
-		SKILL.registerSkillHandler(new CpDamPercent());
-		SKILL.registerSkillHandler(new Manadam());
-		SKILL.registerSkillHandler(new Heal());
-		SKILL.registerSkillHandler(new HealPercent());
-		SKILL.registerSkillHandler(new CombatPointHeal());
-		SKILL.registerSkillHandler(new ManaHeal());
-		SKILL.registerSkillHandler(new BalanceLife());
-		SKILL.registerSkillHandler(new Charge());
-		SKILL.registerSkillHandler(new Continuous());
-		SKILL.registerSkillHandler(new Detection());
-		SKILL.registerSkillHandler(new Resurrect());
-		SKILL.registerSkillHandler(new ShiftTarget());
-		SKILL.registerSkillHandler(new Spoil());
-		SKILL.registerSkillHandler(new Sweep());
-		SKILL.registerSkillHandler(new StrSiegeAssault());
-		SKILL.registerSkillHandler(new SummonFriend());
-		SKILL.registerSkillHandler(new Disablers());
-		SKILL.registerSkillHandler(new Cancel());
-		SKILL.registerSkillHandler(new ChainHeal());
-		SKILL.registerSkillHandler(new StealBuffs());
-		SKILL.registerSkillHandler(new BallistaBomb());
-		SKILL.registerSkillHandler(new TakeCastle());
-		SKILL.registerSkillHandler(new TakeFort());
-		SKILL.registerSkillHandler(new Unlock());
-		SKILL.registerSkillHandler(new Craft());
-		SKILL.registerSkillHandler(new Fishing());
-		SKILL.registerSkillHandler(new FishingSkill());
-		SKILL.registerSkillHandler(new BeastSkills());
-		SKILL.registerSkillHandler(new DeluxeKey());
-		SKILL.registerSkillHandler(new Sow());
-		SKILL.registerSkillHandler(new Soul());
-		SKILL.registerSkillHandler(new Harvest());
-		SKILL.registerSkillHandler(new GetPlayer());
-		SKILL.registerSkillHandler(new TransformDispel());
-		SKILL.registerSkillHandler(new Trap());
-		SKILL.registerSkillHandler(new GiveSp());
-		SKILL.registerSkillHandler(new GiveReco());
-		SKILL.registerSkillHandler(new GiveVitality());
-		SKILL.registerSkillHandler(new InstantJump());
-		SKILL.registerSkillHandler(new Dummy());
-		SKILL.registerSkillHandler(new Extractable());
-		SKILL.registerSkillHandler(new RefuelAirShip());
-		SKILL.registerSkillHandler(new NornilsPower());
-		_log.log(Level.INFO, "Loaded " + SKILL.size() + " SkillHandlers");
-	}
-	
-	private static void loadUserHandlers()
-	{
-		USER.registerUserCommandHandler(new ClanPenalty());
-		USER.registerUserCommandHandler(new ClanWarsList());
-		USER.registerUserCommandHandler(new DisMount());
-		USER.registerUserCommandHandler(new Escape());
-		USER.registerUserCommandHandler(new InstanceZone());
-		USER.registerUserCommandHandler(new Loc());
-		USER.registerUserCommandHandler(new Mount());
-		USER.registerUserCommandHandler(new PartyInfo());
-		USER.registerUserCommandHandler(new Time());
-		USER.registerUserCommandHandler(new OlympiadStat());
-		USER.registerUserCommandHandler(new ChannelLeave());
-		USER.registerUserCommandHandler(new ChannelDelete());
-		USER.registerUserCommandHandler(new ChannelListUpdate());
-		USER.registerUserCommandHandler(new Birthday());
-		_log.log(Level.INFO, "Loaded " + USER.size() + " UserHandlers");
-	}
-	
-	private static void loadVoicedHandlers()
-	{
-		VOICE.registerVoicedCommandHandler(new stats());
-		if (Config.L2JMOD_ALLOW_WEDDING)
-			VOICE.registerVoicedCommandHandler(new Wedding());
-		if (Config.BANKING_SYSTEM_ENABLED)
-			VOICE.registerVoicedCommandHandler(new Banking());
-		if (Config.TVT_ALLOW_VOICED_COMMAND)
-			VOICE.registerVoicedCommandHandler(new TvTVoicedInfo());
-		if (Config.L2JMOD_CHAT_ADMIN)
-			VOICE.registerVoicedCommandHandler(new ChatAdmin());
-		if (Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW)
-			VOICE.registerVoicedCommandHandler(new Lang());
-		if (Config.L2JMOD_DEBUG_VOICE_COMMAND)
-			VOICE.registerVoicedCommandHandler(new Debug());
-		if (Config.L2JMOD_ALLOW_CHANGE_PASSWORD)
-			VOICE.registerVoicedCommandHandler(new ChangePassword());
-		_log.log(Level.INFO, "Loaded " + VOICE.size() + " VoicedHandlers");
-	}
-	
-	private static void loadTargetHandlers()
-	{
-		TARGET.registerSkillTargetType(new TargetAlly());
-		TARGET.registerSkillTargetType(new TargetArea());
-		TARGET.registerSkillTargetType(new TargetAreaCorpseMob());
-		TARGET.registerSkillTargetType(new TargetAreaSummon());
-		TARGET.registerSkillTargetType(new TargetAura());
-		TARGET.registerSkillTargetType(new TargetAuraCorpseMob());
-		TARGET.registerSkillTargetType(new TargetBehindArea());
-		TARGET.registerSkillTargetType(new TargetBehindAura());
-		TARGET.registerSkillTargetType(new TargetClan());
-		TARGET.registerSkillTargetType(new TargetClanMember());
-		TARGET.registerSkillTargetType(new TargetCorpseAlly());
-		TARGET.registerSkillTargetType(new TargetCorpseClan());
-		TARGET.registerSkillTargetType(new TargetCorpseMob());
-		TARGET.registerSkillTargetType(new TargetCorpsePet());
-		TARGET.registerSkillTargetType(new TargetCorpsePlayer());
-		TARGET.registerSkillTargetType(new TargetEnemySummon());
-		TARGET.registerSkillTargetType(new TargetFlagPole());
-		TARGET.registerSkillTargetType(new TargetFrontArea());
-		TARGET.registerSkillTargetType(new TargetFrontAura());
-		TARGET.registerSkillTargetType(new TargetGround());
-		TARGET.registerSkillTargetType(new TargetHoly());
-		TARGET.registerSkillTargetType(new TargetOne());
-		TARGET.registerSkillTargetType(new TargetOwnerPet());
-		TARGET.registerSkillTargetType(new TargetParty());
-		TARGET.registerSkillTargetType(new TargetPartyClan());
-		TARGET.registerSkillTargetType(new TargetPartyMember());
-		TARGET.registerSkillTargetType(new TargetPartyNotMe());
-		TARGET.registerSkillTargetType(new TargetPartyOther());
-		TARGET.registerSkillTargetType(new TargetPet());
-		TARGET.registerSkillTargetType(new TargetSelf());
-		TARGET.registerSkillTargetType(new TargetSummon());
-		TARGET.registerSkillTargetType(new TargetUnlockable());
-		_log.log(Level.INFO, "Loaded " + TARGET.size() + " Target Handlers");
-	}
+		{ // Action Handlers
+			L2ArtefactInstanceAction.class,
+			L2DecoyAction.class,
+			L2DoorInstanceAction.class,
+			L2ItemInstanceAction.class,
+			L2NpcAction.class,
+			L2PcInstanceAction.class,
+			L2PetInstanceAction.class,
+			L2StaticObjectInstanceAction.class,
+			L2SummonAction.class,
+			L2TrapAction.class,
+		},
+		{ // Action Shift Handlers
+			L2DoorInstanceActionShift.class,
+			L2ItemInstanceActionShift.class,
+			L2NpcActionShift.class,
+			L2PcInstanceActionShift.class,
+			L2StaticObjectInstanceActionShift.class,
+			L2SummonActionShift.class,
+		},
+		{ // Admin Command Handlers
+			AdminAdmin.class,
+			AdminAnnouncements.class,
+			AdminBan.class,
+			AdminBBS.class,
+			AdminBuffs.class,
+			AdminCache.class,
+			AdminCamera.class,
+			AdminChangeAccessLevel.class,
+			AdminCHSiege.class,
+			AdminClan.class,
+			AdminCreateItem.class,
+			AdminCursedWeapons.class,
+			AdminDebug.class,
+			AdminDelete.class,
+			AdminDisconnect.class,
+			AdminDoorControl.class,
+			AdminEditChar.class,
+			AdminEditNpc.class,
+			AdminEffects.class,
+			AdminElement.class,
+			AdminEnchant.class,
+			AdminEventEngine.class,
+			AdminEvents.class,
+			AdminExpSp.class,
+			AdminFightCalculator.class,
+			AdminFortSiege.class,
+			AdminGeodata.class,
+			AdminGeoEditor.class,
+			AdminGm.class,
+			AdminGmChat.class,
+			AdminGraciaSeeds.class,
+			AdminHeal.class,
+			AdminHellbound.class,
+			AdminHelpPage.class,
+			AdminInstance.class,
+			AdminInstanceZone.class,
+			AdminInvul.class,
+			AdminKick.class,
+			AdminKill.class,
+			AdminLevel.class,
+			AdminLogin.class,
+			AdminMammon.class,
+			AdminManor.class,
+			AdminMenu.class,
+			AdminMessages.class,
+			AdminMobGroup.class,
+			AdminMonsterRace.class,
+			AdminPathNode.class,
+			AdminPetition.class,
+			AdminPForge.class,
+			AdminPledge.class,
+			AdminPolymorph.class,
+			AdminQuest.class,
+			AdminRepairChar.class,
+			AdminRes.class,
+			AdminRide.class,
+			AdminShop.class,
+			AdminShowQuests.class,
+			AdminShutdown.class,
+			AdminSiege.class,
+			AdminSkill.class,
+			AdminSpawn.class,
+			AdminSummon.class,
+			AdminTarget.class,
+			AdminTargetSay.class,
+			AdminTeleport.class,
+			AdminTerritoryWar.class,
+			AdminTest.class,
+			AdminTvTEvent.class,
+			AdminUnblockIp.class,
+			AdminVitality.class,
+			AdminZone.class,
+		},
+		{ // Bypass Handlers
+			Augment.class,
+			ArenaBuff.class,
+			BloodAlliance.class,
+			Buy.class,
+			BuyShadowItem.class,
+			ChatLink.class,
+			ClanWarehouse.class,
+			DrawHenna.class,
+			EventEngine.class,
+			Festival.class,
+			FortSiege.class,
+			Freight.class,
+			ItemAuctionLink.class,
+			Link.class,
+			Loto.class,
+			ManorManager.class,
+			Multisell.class,
+			Observation.class,
+			OlympiadObservation.class,
+			OlympiadManagerLink.class,
+			QuestLink.class,
+			PlayerHelp.class,
+			PrivateWarehouse.class,
+			QuestList.class,
+			ReceivePremium.class,
+			ReleaseAttribute.class,
+			RemoveDeathPenalty.class,
+			RemoveHennaList.class,
+			RentPet.class,
+			RideWyvern.class,
+			Rift.class,
+			SkillList.class,
+			SupportBlessing.class,
+			SupportMagic.class,
+			TerritoryStatus.class,
+			TerritoryWar.class,
+			VoiceCommand.class,
+			Wear.class,
+		},
+		{ // Chat Handlers
+			ChatAll.class,
+			ChatAlliance.class,
+			ChatBattlefield.class,
+			ChatClan.class,
+			ChatHeroVoice.class,
+			ChatParty.class,
+			ChatPartyMatchRoom.class,
+			ChatPartyRoomAll.class,
+			ChatPartyRoomCommander.class,
+			ChatPetition.class,
+			ChatShout.class,
+			ChatTell.class,
+			ChatTrade.class,
+		},
+		{ // Item Handlers
+			ScrollOfResurrection.class,
+			SoulShots.class,
+			SpiritShot.class,
+			BlessedSpiritShot.class,
+			BeastSoulShot.class,
+			BeastSpiritShot.class,
+			PaganKeys.class,
+			Maps.class,
+			NicknameColor.class,
+			Recipes.class,
+			RollingDice.class,
+			EnchantAttribute.class,
+			EnchantScrolls.class,
+			ExtractableItems.class,
+			Book.class,
+			SevenSignsRecord.class,
+			ItemSkills.class,
+			ItemSkillsTemplate.class,
+			Seed.class,
+			Harvester.class,
+			MercTicket.class,
+			FishShots.class,
+			PetFood.class,
+			SpecialXMas.class,
+			SummonItems.class,
+			BeastSpice.class,
+			TeleportBookmark.class,
+			Elixir.class,
+			Disguise.class,
+			ManaPotion.class,
+			EnergyStarStone.class,
+			EventItem.class,
+		},
+		{ // Skill Handlers
+			Blow.class,
+			Pdam.class,
+			Mdam.class,
+			CpDam.class,
+			CpDamPercent.class,
+			Manadam.class,
+			Heal.class,
+			HealPercent.class,
+			CombatPointHeal.class,
+			ManaHeal.class,
+			BalanceLife.class,
+			Charge.class,
+			Continuous.class,
+			Detection.class,
+			Resurrect.class,
+			ShiftTarget.class,
+			Spoil.class,
+			Sweep.class,
+			StrSiegeAssault.class,
+			SummonFriend.class,
+			Disablers.class,
+			Cancel.class,
+			ChainHeal.class,
+			StealBuffs.class,
+			BallistaBomb.class,
+			TakeCastle.class,
+			TakeFort.class,
+			Unlock.class,
+			Craft.class,
+			Fishing.class,
+			FishingSkill.class,
+			BeastSkills.class,
+			DeluxeKey.class,
+			Sow.class,
+			Soul.class,
+			Harvest.class,
+			GetPlayer.class,
+			TransformDispel.class,
+			Trap.class,
+			GiveSp.class,
+			GiveReco.class,
+			GiveVitality.class,
+			InstantJump.class,
+			Dummy.class,
+			Extractable.class,
+			RefuelAirShip.class,
+			NornilsPower.class,
+		},
+		{ // User Command Handlers
+			ClanPenalty.class,
+			ClanWarsList.class,
+			DisMount.class,
+			Escape.class,
+			InstanceZone.class,
+			Loc.class,
+			Mount.class,
+			PartyInfo.class,
+			Time.class,
+			OlympiadStat.class,
+			ChannelLeave.class,
+			ChannelDelete.class,
+			ChannelListUpdate.class,
+			Birthday.class,
+		},
+		{ // Voiced Command Handlers
+			stats.class,
+			(Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
+			(Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
+			(Config.TVT_ALLOW_VOICED_COMMAND ? TvTVoicedInfo.class : null),
+			(Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null),
+			(Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null),
+			(Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null),
+			(Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null),
+			(Config.L2JMOD_HELLBOUND_STATUS ? Hellbound.class : null),
+		},
+		{ // Target Handlers
+			TargetAlly.class,
+			TargetArea.class,
+			TargetAreaCorpseMob.class,
+			TargetAreaSummon.class,
+			TargetAura.class,
+			TargetAuraCorpseMob.class,
+			TargetBehindArea.class,
+			TargetBehindAura.class,
+			TargetClan.class,
+			TargetClanMember.class,
+			TargetCorpseAlly.class,
+			TargetCorpseClan.class,
+			TargetCorpseMob.class,
+			TargetCorpsePet.class,
+			TargetCorpsePlayer.class,
+			TargetEnemySummon.class,
+			TargetFlagPole.class,
+			TargetFrontArea.class,
+			TargetFrontAura.class,
+			TargetGround.class,
+			TargetHoly.class,
+			TargetOne.class,
+			TargetOwnerPet.class,
+			TargetParty.class,
+			TargetPartyClan.class,
+			TargetPartyMember.class,
+			TargetPartyNotMe.class,
+			TargetPartyOther.class,
+			TargetPet.class,
+			TargetSelf.class,
+			TargetSummon.class,
+			TargetUnlockable.class,
+		},
+		{ // Telnet Handlers
+			ChatsHandler.class,
+			DebugHandler.class,
+			HelpHandler.class,
+			PlayerHandler.class,
+			ReloadHandler.class,
+			ServerHandler.class,
+			StatusHandler.class,
+			ThreadHandler.class,
+		},
+	};
 	
 	/**
 	 * @param args
@@ -649,16 +647,65 @@ public class MasterHandler
 	public static void main(String[] args)
 	{
 		_log.log(Level.INFO, "Loading Handlers...");
-		loadActionHandlers();
-		loadActionShiftHandlers();
-		loadAdminHandlers();
-		loadBypassHandlers();
-		loadChatHandlers();
-		loadItemHandlers();
-		loadSkillHandlers();
-		loadUserHandlers();
-		loadVoicedHandlers();
-		loadTargetHandlers();
+		
+		Object loadInstance = null;
+		Method method = null;
+		Class<?>[]  interfaces = null;
+		Object handler = null;
+		
+		for (int i = 0; i < _loadInstances.length; i++)
+		{
+			try
+			{
+				method = _loadInstances[i].getMethod("getInstance");
+				loadInstance = method.invoke(_loadInstances[i]);
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances[i].getSimpleName(), e);
+				continue;
+			}
+			
+			method = null;
+			
+			for (Class<?> c : _handlers[i])
+			{
+				try
+				{
+					if (c == null)
+						continue; // Disabled handler
+					// Don't wtf some classes extending anothers like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
+					interfaces = c.getInterfaces().length > 0 ? // Standartly handler has implementation
+						c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
+							c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
+					if (method == null)
+						method = loadInstance.getClass().getMethod("registerHandler", interfaces);
+					handler = c.newInstance();
+					if (method.getParameterTypes()[0].isInstance(handler))
+					{
+						method.invoke(loadInstance, handler);
+					}
+				}
+				catch (Exception e)
+				{
+					_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
+					continue;
+				}
+			}
+			// And lets try get size
+			try
+			{
+				method = loadInstance.getClass().getMethod("size");
+				Object returnVal = method.invoke(loadInstance);
+				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");	
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
+				continue;
+			}
+		}
+		
 		_log.log(Level.INFO, "Handlers Loaded...");
 	}
 }

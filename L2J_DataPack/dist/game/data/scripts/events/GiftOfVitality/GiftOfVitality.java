@@ -15,7 +15,7 @@
 package events.GiftOfVitality;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
@@ -26,9 +26,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- ** @author Gnacik
- **
- ** Retail Event : 'Gift of Vitality'
+ * Retail Event : 'Gift of Vitality'
+ * @author Gnacik
  */
 public class GiftOfVitality extends Quest
 {
@@ -37,24 +36,24 @@ public class GiftOfVitality extends Quest
 	
 	private static final int _jack = 4306;
 	
-	private static final int[][] _spawns =
+	private static final Location[] _spawns =
 	{
-		{  82766,  149438, -3464, 33865 },
-		{  82286,   53291, -1488, 15250 },
-		{ 147060,   25943, -2008, 18774 },
-		{ 148096,  -55466, -2728, 40541 },
-		{  87116, -141332, -1336, 52193 },
-		{  43521,  -47542,  -792, 31655 },
-		{  17203,  144949, -3024, 18166 },
-		{ 111164,  221062, -3544,  2714 },
-		{ -13869,  122063, -2984, 18270 },
-		{ -83161,  150915, -3120, 17311 },
-		{  45402,   48355, -3056, 49153 },
-		{ 115616, -177941,  -896, 30708 },
-		{ -44928, -113608,  -192, 30212 },
-		{ -84037,  243194, -3728,  8992 },
-		{-119690,   44583,   360, 29289 },
-		{  12084,   16576, -4584, 57345 }
+		new Location(82766, 149438, -3464, 33865),
+		new Location(82286, 53291, -1488, 15250),
+		new Location(147060, 25943, -2008, 18774),
+		new Location(148096, -55466, -2728, 40541),
+		new Location(87116, -141332, -1336, 52193),
+		new Location(43521, -47542, -792, 31655),
+		new Location(17203, 144949, -3024, 18166),
+		new Location(111164, 221062, -3544, 2714),
+		new Location(-13869, 122063, -2984, 18270),
+		new Location(-83161, 150915, -3120, 17311),
+		new Location(45402, 48355, -3056, 49153),
+		new Location(115616, -177941, -896, 30708),
+		new Location(-44928, -113608, -192, 30212),
+		new Location(-84037, 243194, -3728, 8992),
+		new Location(-119690, 44583, 360, 29289),
+		new Location(12084, 16576, -4584, 57345)
 	};
 	
 	public GiftOfVitality(int questId, String name, String descr)
@@ -63,28 +62,31 @@ public class GiftOfVitality extends Quest
 		addStartNpc(_jack);
 		addFirstTalkId(_jack);
 		addTalkId(_jack);
-		for(int[] _spawn : _spawns)
-			addSpawn(_jack, _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
+		for (Location loc : _spawns)
+		{
+			addSpawn(_jack, loc, false, 0);
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
+		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		htmltext = event;
 		
 		if (event.equalsIgnoreCase("vitality"))
 		{
 			long _reuse = 0;
 			String _streuse = st.get("reuse");
-			if(_streuse != null)
+			if (_streuse != null)
+			{
 				_reuse = Long.parseLong(_streuse);
-			if(_reuse > System.currentTimeMillis())
+			}
+			if (_reuse > System.currentTimeMillis())
 			{
 				long remainingTime = (_reuse - System.currentTimeMillis()) / 1000;
 				int hours = (int) (remainingTime / 3600);
-				int minutes = (int) ((remainingTime%3600) / 60);
+				int minutes = (int) ((remainingTime % 3600) / 60);
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 				sm.addSkillName(23179);
 				sm.addNumber(hours);
@@ -95,9 +97,10 @@ public class GiftOfVitality extends Quest
 			else
 			{
 				npc.setTarget(player);
-				npc.doCast(SkillTable.getInstance().getInfo(23179,1));	// Gift of Vitality
+				// Gift of Vitality
+				npc.doCast(SkillTable.getInstance().getInfo(23179, 1));
 				st.setState(State.STARTED);
-				st.set("reuse", String.valueOf(System.currentTimeMillis() + _hours*60*60*1000));
+				st.set("reuse", String.valueOf(System.currentTimeMillis() + (_hours * 3600000)));
 				htmltext = "4306-okvitality.htm";
 			}
 		}
@@ -109,27 +112,23 @@ public class GiftOfVitality extends Quest
 			}
 			else
 			{
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
+				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
+				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier
 				if (player.isMageClass())
 				{
-					npc.setTarget(player);
-					npc.doCast(SkillTable.getInstance().getInfo(5627,1));	// Wind Walk
-					npc.doCast(SkillTable.getInstance().getInfo(5628,1));	// Shield
-					npc.doCast(SkillTable.getInstance().getInfo(5637,1));	// Magic Barrier
-					npc.doCast(SkillTable.getInstance().getInfo(5633,1));	// Bless the Soul
-					npc.doCast(SkillTable.getInstance().getInfo(5634,1));	// Acumen
-					npc.doCast(SkillTable.getInstance().getInfo(5635,1));	// Concentration
-					npc.doCast(SkillTable.getInstance().getInfo(5636,1));	// Empower
+					npc.doCast(SkillTable.getInstance().getInfo(5633, 1)); // Bless the Soul
+					npc.doCast(SkillTable.getInstance().getInfo(5634, 1)); // Acumen
+					npc.doCast(SkillTable.getInstance().getInfo(5635, 1)); // Concentration
+					npc.doCast(SkillTable.getInstance().getInfo(5636, 1)); // Empower
 				}
 				else
 				{
-					npc.setTarget(player);
-					npc.doCast(SkillTable.getInstance().getInfo(5627,1));	// Wind Walk
-					npc.doCast(SkillTable.getInstance().getInfo(5628,1));	// Shield
-					npc.doCast(SkillTable.getInstance().getInfo(5637,1));	// Magic Barrier
-					npc.doCast(SkillTable.getInstance().getInfo(5629,1));	// Bless the Body
-					npc.doCast(SkillTable.getInstance().getInfo(5630,1));	// Vampiric Rage
-					npc.doCast(SkillTable.getInstance().getInfo(5631,1));	// Regeneration
-					npc.doCast(SkillTable.getInstance().getInfo(5632,1));	// Haste
+					npc.doCast(SkillTable.getInstance().getInfo(5629, 1)); // Bless the Body
+					npc.doCast(SkillTable.getInstance().getInfo(5630, 1)); // Vampiric Rage
+					npc.doCast(SkillTable.getInstance().getInfo(5631, 1)); // Regeneration
+					npc.doCast(SkillTable.getInstance().getInfo(5632, 1)); // Haste
 				}
 				htmltext = "4306-okbuff.htm";
 			}
@@ -140,39 +139,36 @@ public class GiftOfVitality extends Quest
 			{
 				htmltext = "4306-nolevel.htm";
 			}
-			else if (player.getPet() == null || !(player.getPet() instanceof L2SummonInstance))
+			else if ((player.getPet() == null) || !(player.getPet() instanceof L2SummonInstance))
 			{
 				htmltext = "4306-nosummon.htm";
 			}
 			else
 			{
 				npc.setTarget(player.getPet());
-				npc.doCast(SkillTable.getInstance().getInfo(5627,1));	// Wind Walk
-				npc.doCast(SkillTable.getInstance().getInfo(5628,1));	// Shield
-				npc.doCast(SkillTable.getInstance().getInfo(5637,1));	// Magic Barrier
-				npc.doCast(SkillTable.getInstance().getInfo(5629,1));	// Bless the Body
-				npc.doCast(SkillTable.getInstance().getInfo(5633,1));	// Bless the Soul
-				npc.doCast(SkillTable.getInstance().getInfo(5630,1));	// Vampiric Rage
-				npc.doCast(SkillTable.getInstance().getInfo(5634,1));	// Acumen
-				npc.doCast(SkillTable.getInstance().getInfo(5631,1));	// Regeneration
-				npc.doCast(SkillTable.getInstance().getInfo(5635,1));	// Concentration
-				npc.doCast(SkillTable.getInstance().getInfo(5632,1));	// Haste
-				npc.doCast(SkillTable.getInstance().getInfo(5636,1));	// Empower
+				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
+				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
+				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier
+				npc.doCast(SkillTable.getInstance().getInfo(5629, 1)); // Bless the Body
+				npc.doCast(SkillTable.getInstance().getInfo(5633, 1)); // Bless the Soul
+				npc.doCast(SkillTable.getInstance().getInfo(5630, 1)); // Vampiric Rage
+				npc.doCast(SkillTable.getInstance().getInfo(5634, 1)); // Acumen
+				npc.doCast(SkillTable.getInstance().getInfo(5631, 1)); // Regeneration
+				npc.doCast(SkillTable.getInstance().getInfo(5635, 1)); // Concentration
+				npc.doCast(SkillTable.getInstance().getInfo(5632, 1)); // Haste
+				npc.doCast(SkillTable.getInstance().getInfo(5636, 1)); // Empower
 				htmltext = "4306-okbuff.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (player.getQuestState(getName()) == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			newQuestState(player);
 		}
 		return "4306.htm";
 	}

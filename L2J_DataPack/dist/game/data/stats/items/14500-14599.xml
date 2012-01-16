@@ -825,7 +825,7 @@
 		<set name="price" val="87901000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8295-1" />
 		<set name="item_skill" val="3859-2;3552-1" />
@@ -862,7 +862,7 @@
 		<set name="price" val="121780000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="8296-1" />
 		<set name="item_skill" val="3858-3;3552-1" />
@@ -972,6 +972,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13300,3,3,100;13383,3,3,100;13308,1,1,100;13316,1,1,100" />
 	</item>
 	<item id="14531" type="EtcItem" name="Gludio Supply Box - Magic Pin - Grade S, A">
@@ -1364,7 +1365,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14559" type="EtcItem" name="PC cafe points">
+	<item id="14559" type="EtcItem" name="PC Points">
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="fish" />
@@ -1390,7 +1391,7 @@
 		<set name="weight" val="713" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1420,7 +1421,7 @@
 		<set name="change_weaponId" val="14578" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1449,7 +1450,7 @@
 		<set name="change_weaponId" val="14579" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1477,7 +1478,7 @@
 		<set name="weight" val="1013" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1507,7 +1508,7 @@
 		<set name="change_weaponId" val="14580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1535,7 +1536,7 @@
 		<set name="weight" val="1365" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1564,7 +1565,7 @@
 		<set name="weight" val="683" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1594,7 +1595,7 @@
 		<set name="weight" val="975" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1626,7 +1627,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1656,7 +1657,7 @@
 		<set name="weight" val="1178" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1685,7 +1686,7 @@
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1713,7 +1714,7 @@
 		<set name="weight" val="1350" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1743,7 +1744,7 @@
 		<set name="weight" val="683" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1773,7 +1774,7 @@
 		<set name="weight" val="1365" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1802,7 +1803,7 @@
 		<set name="weight" val="1350" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1832,7 +1833,7 @@
 		<set name="weight" val="713" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1861,7 +1862,7 @@
 		<set name="weight" val="1178" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1890,7 +1891,7 @@
 		<set name="weight" val="1013" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1920,7 +1921,7 @@
 		<set name="change_weaponId" val="14561" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1938,7 +1939,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14579" type="Weapon" name="Épée of Ashton Family">
+	<item id="14579" type="Weapon" name="Epee of Ashton Family">
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1953,7 +1954,7 @@
 		<set name="change_weaponId" val="14562" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1986,7 +1987,7 @@
 		<set name="change_weaponId" val="14564" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -2019,7 +2020,7 @@
 		<set name="change_weaponId" val="14568" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
 		<set name="is_tradable" val="false" />

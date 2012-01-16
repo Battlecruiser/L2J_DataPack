@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
 	<!-- No Restart Zones -->
 	<zone name="zaken_no_restart" type="NoRestartZone" shape="NPoly" minZ="-4815" maxZ="-315"> <!-- 21_24 -->
 		<stat name="restartTime" val="1800" />
@@ -58,7 +58,7 @@
 	</zone>
 
 	<zone name="royal_rush_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-7263" maxZ="-7063"> <!-- 25_15 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="181198" Y="-86516" />
 		<node X="192394" Y="-86521" />
@@ -66,7 +66,7 @@
 		<node X="181193" Y="-84622" />
 	</zone>
 	<zone name="royal_rush_no_restart2" type="NoRestartZone" shape="NPoly" minZ="-7263" maxZ="-7063"> <!-- 25_15 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="179511" Y="-89903" />
 		<node X="190707" Y="-89908" />
@@ -74,7 +74,7 @@
 		<node X="179506" Y="-88009" />
 	</zone>
 	<zone name="royal_rush_no_restart3" type="NoRestartZone" shape="NPoly" minZ="-7263" maxZ="-7063"> <!-- 25_15 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="174498" Y="-82751" />
 		<node X="176622" Y="-82751" />
@@ -82,7 +82,7 @@
 		<node X="174489" Y="-71303" />
 	</zone>
 	<zone name="royal_rush_no_restart4" type="NoRestartZone" shape="NPoly" minZ="-7263" maxZ="-7063"> <!-- 25_15 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="172183" Y="-86660" />
 		<node X="174307" Y="-86661" />
@@ -91,7 +91,7 @@
 	</zone>
 
 	<zone name="space_of_dimension_no_restart1" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-120682" Y="-182923" />
 		<node X="-115515" Y="-182923" />
@@ -99,7 +99,7 @@
 		<node X="-120682" Y="-180121" />
 	</zone>
 	<zone name="space_of_dimension_no_restart2" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-120677" Y="-180093" />
 		<node X="-115510" Y="-180093" />
@@ -107,7 +107,7 @@
 		<node X="-120677" Y="-177291" />
 	</zone>
 	<zone name="space_of_dimension_no_restart3" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-114045" Y="-182907" />
 		<node X="-108878" Y="-182907" />
@@ -115,7 +115,7 @@
 		<node X="-114045" Y="-180105" />
 	</zone>
 	<zone name="space_of_dimension_no_restart4" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-114040" Y="-180077" />
 		<node X="-108873" Y="-180077" />
@@ -123,7 +123,7 @@
 		<node X="-114040" Y="-177275" />
 	</zone>
 	<zone name="space_of_dimension_no_restart5" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-116267" Y="-177955" />
 		<node X="-113344" Y="-177955" />
@@ -131,7 +131,7 @@
 		<node X="-116267" Y="-172773" />
 	</zone>
 	<zone name="space_of_dimension_no_restart6" type="NoRestartZone" shape="NPoly" minZ="-6964" maxZ="-6064"> <!-- 16_12 -->
-		<stat name="defaultStatus" val="on" />
+		<stat name="default_enabled" val="true" />
 		<stat name="restartTime" val="0" />
 		<node X="-116217" Y="-187430" />
 		<node X="-113293" Y="-187430" />

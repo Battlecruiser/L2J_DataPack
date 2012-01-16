@@ -19,26 +19,28 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
- * @author Plim
- * Original python script by Kerberos
+ * @author Plim Original python script by Kerberos
  */
 public class StrongholdsTeleports extends Quest
 {
-	private final static int[] NPCs = {32163,32181,32184,32186};
+	private final static int[] NPCs =
+	{
+		32163, 32181, 32184, 32186
+	};
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-
-	    if (player.getLevel() < 20)
-	       htmltext = String.valueOf(npc.getNpcId()) + ".htm";
-	    else
-	       htmltext = String.valueOf(npc.getNpcId()) + "-no.htm";
-	    
-	    return htmltext;
+		
+		if (player.getLevel() < 20)
+			htmltext = String.valueOf(npc.getNpcId()) + ".htm";
+		else
+			htmltext = String.valueOf(npc.getNpcId()) + "-no.htm";
+		
+		return htmltext;
 	}
-
+	
 	public StrongholdsTeleports(int questId, String name, String descr)
 	{
 		super(questId, name, descr);

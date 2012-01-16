@@ -1257,9 +1257,10 @@
 	<skill id="967" levels="1" name="Cursed Body">
 		<!-- Cursed body. Recovery is not possible. -->
 		<set name="magicLvl" val="85" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<!-- TODO: Implement and use proper effects. -->
 	</skill>
 	<skill id="968" levels="1" name="Treykan Claw">
 		<!-- Confirmed CT2.5 -->

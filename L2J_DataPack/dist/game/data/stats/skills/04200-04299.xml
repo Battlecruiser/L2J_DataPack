@@ -187,10 +187,9 @@
 	</skill>
 	<skill id="4209" levels="12" name="BOSS Heal">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 2516 3150 4708 7611 11465 14839 17138 18081 19008 19977 13303 13157 </table>
+		<table name="#amount"> 2516 3150 4708 7611 11465 14839 17138 18081 19008 19977 13303 13157 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
@@ -201,6 +200,9 @@
 		<set name="aggroPoints" val="100" />
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4210" levels="12" name="Life Chant">
 		<!-- Freya retail confirmed -->
@@ -212,13 +214,13 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="power" val="3" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
+			<effect name="HealPercent" noicon="1" val="3" />
 		</for>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="mpConsume" val="#mpConsume" />

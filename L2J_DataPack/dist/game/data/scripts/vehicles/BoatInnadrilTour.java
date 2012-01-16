@@ -27,9 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * 
  * @author DS
- *
  */
 public class BoatInnadrilTour implements Runnable
 {
@@ -110,6 +108,7 @@ public class BoatInnadrilTour implements Runnable
 		INNADRIL_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), DOCK.x, DOCK.y, DOCK.z);
 	}
 	
+	@Override
 	public void run()
 	{
 		try

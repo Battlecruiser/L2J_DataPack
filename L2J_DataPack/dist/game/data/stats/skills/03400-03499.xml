@@ -345,14 +345,17 @@
 	</skill>
 	<skill id="3429" levels="1" name="Red Talisman - Life Force">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HPMPHEAL_PERCENT" />
+		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
 		<set name="hitTime" val="3000" />
 		<set name="equipDelay" val="30000" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="ManaHealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="3430" levels="1" name="White Talisman - Darkness">
 		<set name="hitTime" val="4000" />
@@ -1010,9 +1013,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
-		<set name="power" val="100" />
 		<for>
-			<effect name="CombatPointHealOverTime" val="100" />
+			<effect name="CpHeal" noicon="1" val="100" />
+			<effect name="Heal" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">

@@ -221,6 +221,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -232,13 +234,12 @@
 		<table name="#ench2mpInitialConsume"> 27 26 26 26 26 25 25 25 24 24 24 24 23 23 23 23 22 22 22 22 21 21 21 21 20 20 20 20 19 19 </table>
 		<table name="#mpInitialConsume"> 9 9 10 11 12 12 14 14 15 16 17 18 18 19 20 21 21 22 22 22 23 23 24 24 24 25 25 26 26 26 27 27 27 28 </table>
 		<table name="#mpConsume"> 33 35 39 42 45 48 53 56 59 62 65 69 72 75 78 82 83 85 87 88 90 92 93 95 96 98 99 101 102 104 105 106 108 109 </table>
-		<table name="#power"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>
-		<table name="#ench1Power"> 137 137 138 139 139 140 141 141 142 143 143 144 145 146 146 147 148 148 149 150 150 151 152 152 153 154 154 155 156 156 </table>
+		<table name="#amount"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>
+		<table name="#ench1amount"> 137 137 138 139 139 140 141 141 142 143 143 144 145 146 146 147 148 148 149 150 150 151 152 152 153 154 154 155 156 156 </table>
 		<table name="#aggroPoints"> 227 243 268 285 313 331 360 379 399 418 438 457 477 495 514 532 541 549 558 566 574 582 590 597 604 611 617 624 630 635 641 646 650 655 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_PET" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
@@ -249,10 +250,15 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="ManaHealByLevel" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1127" levels="45" name="Servitor Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
@@ -260,9 +266,9 @@
 		<table name="#magicLvl"> 16 18 20 23 24 25 28 29 30 33 34 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpInitialConsume"> 5 6 6 7 7 8 9 9 9 10 10 11 12 12 13 13 13 14 15 15 16 16 16 17 18 18 18 19 19 20 20 20 20 21 21 21 22 22 23 23 23 23 24 24 24 </table>
 		<table name="#mpConsume"> 19 21 24 26 28 29 33 35 35 38 40 41 46 48 49 51 52 54 57 59 61 64 64 66 69 71 72 74 76 77 78 78 80 81 83 84 86 87 89 90 91 92 93 95 96 </table>
-		<table name="#power"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
+		<table name="#amount"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 1096 1110 1104 1108 1112 1116 1120 1124 1128 1132 1136 1140 1144 1148 1153 1157 1161 1165 1169 1173 1177 1181 1185 1189 1193 1197 1201 1205 1209 1214 </table>
+		<table name="#ench1amount"> 1096 1110 1104 1108 1112 1116 1120 1124 1128 1132 1136 1140 1144 1148 1153 1157 1161 1165 1169 1173 1177 1181 1185 1189 1193 1197 1201 1205 1209 1214 </table>
 		<table name="#ench2mpConsume"> 94 92 90 89 87 86 84 82 81 79 77 76 74 72 71 69 67 66 64 62 61 59 57 56 54 53 51 49 48 46 </table>
 		<table name="#ench2mpInitialConsume"> 23 23 22 22 21 21 21 20 20 19 19 19 18 18 17 17 16 16 16 15 15 14 14 14 13 13 12 12 12 11 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
@@ -274,15 +280,19 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PET" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="Heal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 	</skill>
 	<skill id="1128" levels="18" name="Summon Shadow" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14497 14498 14499 14500 14501 14502 14503 14504 14505 14506 14507 14508 14509 14510 14511 14512 14513 14514 14515 14516 14517 14518 14519 14520 14521 14522 14523 14524 14525 14526 </table>
@@ -310,6 +320,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchantNpcId" />
@@ -338,6 +350,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
 		<!-- Summon-specific -->
@@ -646,7 +660,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2for>
-			<effect self="1" name="CombatPointHealOverTime" noicon="1" val="#ench2Bravery" />
+			<effect self="1" name="CpHeal" noicon="1" val="#ench2Bravery" />
 		</enchant2for>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
@@ -669,6 +683,8 @@
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="inheritElementals" val="true" />
+		<set name="inheritPercent" val="1.00" />
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
 		<!-- Summon-specific -->
@@ -728,13 +744,12 @@
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#hpConsume"> 131 209 280 318 366 </table>
-		<table name="#power"> 22 35 47 53 61 </table>
-		<table name="#ench1power"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
+		<table name="#amount"> 22 35 47 53 61 </table>
+		<table name="#ench1amount"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
 		<table name="#ench2hpConsume"> 359 353 347 341 335 328 322 316 310 304 297 291 285 279 273 266 260 254 248 242 235 229 223 217 211 204 198 192 186 180 </table>
 		<table name="#ench3Bravery"> 29 38 48 57 66 76 85 94 104 113 122 132 141 150 160 169 178 188 197 206 216 225 234 244 253 262 272 281 290 300 </table>
 		<table name="#aggroPoints"> 243 379 495 549 611 </table>
 		<set name="hpConsume" val="#hpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4000" />
@@ -742,10 +757,16 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggroPoints" />
-		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="#amount" />
+		</for>
+		<enchant1for>
+			<effect name="ManaHeal" noicon="1" val="#ench1amount" />
+		</enchant1for>
 		<enchant3for>
-			<effect name="CombatPointHealOverTime" noicon="1" val="#ench3Bravery" />
+			<effect name="CpHeal" noicon="1" val="#ench3Bravery" />
+			<effect name="ManaHeal" noicon="1" val="61" />
 		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">

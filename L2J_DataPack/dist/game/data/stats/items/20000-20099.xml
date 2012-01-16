@@ -3,7 +3,7 @@
 	<item id="20000" type="EtcItem" name="Spicy Kimchee">
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -12,7 +12,7 @@
 	<item id="20001" type="EtcItem" name="Spicy Kimchee">
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -21,7 +21,7 @@
 	<item id="20002" type="EtcItem" name="Spicy Kimchee">
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -30,7 +30,7 @@
 	<item id="20003" type="EtcItem" name="Sweet-and-Sour White Kimchee">
 		<set name="icon" val="BranchSys.icon.etc_kimchi_time_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -39,7 +39,7 @@
 	<item id="20004" type="EtcItem" name="Vitality Ginseng">
 		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -47,7 +47,7 @@
 	</item>
 	<item id="20005" type="EtcItem" name="Vitality Red Ginseng">
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -682,6 +682,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20025,1,1,100" />
 	</item>
 	<item id="20055" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) 1-Sheet Pack">
@@ -692,6 +693,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20026,1,1,100" />
 	</item>
 	<item id="20056" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka 1-Sheet Pack">
@@ -702,6 +704,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20027,1,1,100" />
 	</item>
 	<item id="20057" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) 1-Sheet Pack">
@@ -712,6 +715,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20028,1,1,100" />
 	</item>
 	<item id="20058" type="EtcItem" name="Light Purple-Maned Horse Bracelet Pack">
@@ -774,6 +778,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20033,1,1,100" />
 	</item>
 	<item id="20063" type="Armor" name="Agathion Seal Bracelet - Baby Panda">
@@ -943,7 +948,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20067,1,1,100" />
 	</item>
-	<item id="20074" type="EtcItem" name="Agathion of Sexy Panda 15-Day Pack - Escape">
+	<item id="20074" type="EtcItem" name="Agathion of Sexy Panda 15-Day Pack - Blessed Escape">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1026,6 +1031,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20081,1,1,100" />
 	</item>
 	<item id="20080" type="EtcItem" name="Lucky Four-leaf Clover Pack">
@@ -1040,6 +1046,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20082,1,1,100" />
 	</item>
 	<item id="20081" type="EtcItem" name="Good Luck Lucky Bag">
@@ -1073,6 +1080,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22008-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="20083" type="Armor" name="Afro Hair - Vitality - 3-Hour Limited Period">
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
@@ -1221,6 +1229,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20093,1,1,100" />
 	</item>
 	<item id="20093" type="EtcItem" name="Spirit of the Holiday">

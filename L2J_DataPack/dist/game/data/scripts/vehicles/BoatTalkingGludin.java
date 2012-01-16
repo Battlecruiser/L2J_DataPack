@@ -27,9 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * 
  * @author DS
- *
  */
 public class BoatTalkingGludin implements Runnable
 {
@@ -136,6 +134,7 @@ public class BoatTalkingGludin implements Runnable
 		GLUDIN_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), GLUDIN_DOCK[0].x, GLUDIN_DOCK[0].y, GLUDIN_DOCK[0].z);
 	}
 	
+	@Override
 	public void run()
 	{
 		try

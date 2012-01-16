@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Object;
@@ -38,10 +39,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.util.StringUtil;
-
 
 /**
  * This class handles following admin commands:
@@ -80,9 +79,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_godown",
 		"admin_tele",
 		"admin_teleto",
-		"admin_instant_move"
+		"admin_instant_move",
+		"admin_sendhome"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_teleto"))
@@ -243,13 +244,79 @@ public class AdminTeleport implements IAdminCommandHandler
 				activeChar.sendMessage("Usage: //go<north|south|east|west|up|down> [offset] (default 150)");
 			}
 		}
-		
+		else if (command.startsWith("admin_sendhome"))
+		{
+			StringTokenizer st = new StringTokenizer(command, " ");
+			st.nextToken(); // Skip command.
+			if (st.countTokens() > 1)
+			{
+				activeChar.sendMessage("Usage: //sendhome <playername>");
+			}
+			else if (st.countTokens() == 1)
+			{
+				final String name = st.nextToken();
+				final L2PcInstance player = L2World.getInstance().getPlayer(name);
+				if (player == null)
+				{
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					return false;
+				}
+				teleportHome(player);
+			}
+			else
+			{
+				final L2Object target = activeChar.getTarget();
+				if (target instanceof L2PcInstance)
+				{
+					teleportHome(target.getActingPlayer());
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				}
+			}
+		}
 		return true;
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
+	}
+	
+	/**
+	 * This method sends a player to it's home town.
+	 * @param player the player to teleport.
+	 */
+	private void teleportHome(L2PcInstance player)
+	{
+		String regionName;
+		switch(player.getRace())
+		{
+			case Elf:
+				regionName = "elf_town";
+				break;
+			case DarkElf:
+				regionName = "darkelf_town";
+				break;
+			case Orc:
+				regionName = "orc_town";
+				break;
+			case Dwarf:
+				regionName = "dwarf_town";
+				break;
+			case Kamael:
+				regionName = "kamael_town";
+				break;
+			case Human:
+			default:
+				regionName = "talking_island_town";
+		}
+		
+		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true);
+		player.setInstanceId(0);
+		player.setIsIn7sDungeon(false);
 	}
 	
 	private void teleportTo(L2PcInstance activeChar, String Coords)
@@ -290,7 +357,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -333,13 +400,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
 		}
 		else
 		{
@@ -365,6 +432,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * @param x
 	 * @param y
 	 * @param z
+	 * @param activeChar 
 	 */
 	private void teleportCharacter(L2PcInstance player, int x, int y, int z, L2PcInstance activeChar)
 	{
@@ -397,7 +465,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		
@@ -408,13 +476,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
 		}
 		else
 		{
@@ -471,7 +539,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			L2Npc target = (L2Npc) obj;
 			
-			int monsterTemplate = target.getTemplate().npcId;
+			int monsterTemplate = target.getTemplate().getNpcId();
 			L2NpcTemplate template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 			if (template1 == null)
 			{
@@ -513,7 +581,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
 				
-				activeChar.sendMessage("Created " + template1.name + " on " + target.getObjectId() + ".");
+				activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId() + ".");
 				
 				if (Config.DEBUG)
 				{
@@ -558,12 +626,12 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+				activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 	}
 	

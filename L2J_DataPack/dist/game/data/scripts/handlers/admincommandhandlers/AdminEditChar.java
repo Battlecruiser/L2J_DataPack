@@ -145,7 +145,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			else if (activeChar.getTarget() instanceof L2PcInstance)
 				showCharacterInfo(activeChar, activeChar.getTarget().getActingPlayer());
 			else
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 		else if (command.startsWith("admin_character_list"))
 		{
@@ -212,7 +212,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			else if (activeChar.getTarget() instanceof L2PcInstance)
 				editCharacter(activeChar, null);
 			else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 		// Karma control commands
 		else if (command.equals("admin_nokarma"))
@@ -250,7 +250,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName()+"'s PK count changed to "+pk);
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			catch (Exception e)
 			{
@@ -277,7 +277,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName()+"'s PVP count changed to "+pvp);
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			catch (Exception e)
 			{
@@ -304,7 +304,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName()+"'s Fame changed to "+fame);
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			catch (Exception e)
 			{
@@ -345,7 +345,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName()+"'s Recommend changed to "+recVal);
 				}
 				else
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			catch (Exception e)
 			{
@@ -540,10 +540,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				L2PetInstance targetPet = (L2PetInstance) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
-				targetPet.getOwner().sendPacket(new SetSummonRemainTime(targetPet.getMaxFed(), targetPet.getCurrentFed()));
+				targetPet.sendPacket(new SetSummonRemainTime(targetPet.getMaxFed(), targetPet.getCurrentFed()));
 			}
 			else
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 		else if(command.startsWith("admin_remove_clan_penalty"))
 		{
@@ -644,7 +644,7 @@ public class AdminEditChar implements IAdminCommandHandler
 
 			if (pl == null)
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				return false;
 			}
 
@@ -968,7 +968,9 @@ public class AdminEditChar implements IAdminCommandHandler
 			// update karma
 			player.setKarma(newKarma);
 			//Common character information
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1).addString(String.valueOf(newKarma)));
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
+			sm.addNumber(newKarma);
+			player.sendPacket(sm);
 			//Admin information
 			activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
 			if (Config.DEBUG)
@@ -1163,12 +1165,10 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					continue;
 				}
-				else
-				{
-					ip = client.getConnection().getInetAddress().getHostAddress();
-					if (!ip.equals(IpAdress))
-						continue;
-				}
+				
+				ip = client.getConnection().getInetAddress().getHostAddress();
+				if (!ip.equals(IpAdress))
+					continue;
 			}
 			
 			name = player.getName();
@@ -1244,6 +1244,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
+	 * @param multibox 
 	 */
 	private void findDualbox(L2PcInstance activeChar, int multibox)
 	{
@@ -1260,22 +1261,22 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			client = player.getClient();
 			if (client == null || client.isDetached())
-				continue;
-			else
 			{
-				ip = client.getConnection().getInetAddress().getHostAddress();
-				if (ipMap.get(ip) == null)
-					ipMap.put(ip, new ArrayList<L2PcInstance>());
-				ipMap.get(ip).add(player);
-				
-				if (ipMap.get(ip).size() >= multibox)
-				{
-					Integer count = dualboxIPs.get(ip);
-					if (count == null)
-						dualboxIPs.put(ip, multibox);
-					else
-						dualboxIPs.put(ip, count + 1);
-				}
+				continue;
+			}
+			
+			ip = client.getConnection().getInetAddress().getHostAddress();
+			if (ipMap.get(ip) == null)
+				ipMap.put(ip, new ArrayList<L2PcInstance>());
+			ipMap.get(ip).add(player);
+			
+			if (ipMap.get(ip).size() >= multibox)
+			{
+				Integer count = dualboxIPs.get(ip);
+				if (count == null)
+					dualboxIPs.put(ip, multibox);
+				else
+					dualboxIPs.put(ip, count + 1);
 			}
 		}
 		
@@ -1317,22 +1318,22 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			client = player.getClient();
 			if (client == null || client.isDetached())
-				continue;
-			else
 			{
-				IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
-				if (ipMap.get(pack) == null)
-					ipMap.put(pack, new ArrayList<L2PcInstance>());
-				ipMap.get(pack).add(player);
-				
-				if (ipMap.get(pack).size() >= multibox)
-				{
-					Integer count = dualboxIPs.get(pack);
-					if (count == null)
-						dualboxIPs.put(pack, multibox);
-					else
-						dualboxIPs.put(pack, count + 1);
-				}
+				continue;
+			}
+			
+			IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
+			if (ipMap.get(pack) == null)
+				ipMap.put(pack, new ArrayList<L2PcInstance>());
+			ipMap.get(pack).add(player);
+			
+			if (ipMap.get(pack).size() >= multibox)
+			{
+				Integer count = dualboxIPs.get(pack);
+				if (count == null)
+					dualboxIPs.put(pack, multibox);
+				else
+					dualboxIPs.put(pack, count + 1);
 			}
 		}
 		
@@ -1480,6 +1481,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			_player = player;
 		}
 
+		@Override
 		public void run()
 		{
 			_player.untransform();

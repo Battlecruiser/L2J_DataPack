@@ -15,14 +15,13 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.item.L2Item;
+import com.l2jserver.gameserver.model.item.L2Weapon;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.item.L2Item;
-import com.l2jserver.gameserver.templates.item.L2Weapon;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
@@ -35,8 +34,9 @@ public class SpiritShot implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
 	 */
+	@Override
 	public synchronized void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
@@ -51,7 +51,7 @@ public class SpiritShot implements IItemHandler
 		if (weaponInst == null || weaponItem.getSpiritShotCount() == 0)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
+				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
 			return;
 		}
 		
@@ -96,7 +96,7 @@ public class SpiritShot implements IItemHandler
 		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH));
+				activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
 			
 			return;
 		}
@@ -105,7 +105,7 @@ public class SpiritShot implements IItemHandler
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!activeChar.disableAutoShot(itemId))
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS));
+				activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
 			return;
 		}
 		
@@ -151,7 +151,7 @@ public class SpiritShot implements IItemHandler
 				
 		}
 		// Send message to client
-		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
+		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
 	}
 }

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
 
@@ -52,6 +51,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		"admin_removefort"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command, " ");
@@ -79,7 +79,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			if (command.equalsIgnoreCase("admin_add_fortattacker"))
 			{
 				if (player == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 				else
 				{
 					if (fort.getSiege().checkIfCanRegister(player))
@@ -101,7 +101,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_setfort"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 				else
 					fort.setOwner(player.getClan(), false);
 			}
@@ -168,6 +168,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

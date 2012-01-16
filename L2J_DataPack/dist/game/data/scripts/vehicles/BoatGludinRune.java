@@ -27,9 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * 
  * @author DS
- *
  */
 public class BoatGludinRune implements Runnable
 {
@@ -167,6 +165,7 @@ public class BoatGludinRune implements Runnable
 		RUNE_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), RUNE_DOCK[0].x, RUNE_DOCK[0].y, RUNE_DOCK[0].z);
 	}
 	
+	@Override
 	public void run()
 	{
 		try

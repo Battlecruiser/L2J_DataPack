@@ -64,8 +64,7 @@ public class EngineerLekon extends Quest
 			player.addItem("AirShipLicense", LICENSE, 1, npc, true);
 			return null;
 		}
-		else
-			return event;
+		return event;
 	}
 	
 	@Override

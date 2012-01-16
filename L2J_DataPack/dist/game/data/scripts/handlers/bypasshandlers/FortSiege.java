@@ -46,12 +46,12 @@ public class FortSiege implements IBypassHandler
 			{
 				if ((System.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().getIsRegistrationOver())
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
+					activeChar.sendPacket(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2);
 					return false;
 				}
 				else if ((System.currentTimeMillis() > TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isTWChannelOpen())
 				{
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
+					activeChar.sendPacket(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2);
 					return false;
 				}
 				else if (((L2Npc) target).getFort().getSiege().registerAttacker(activeChar, false))
@@ -71,10 +71,8 @@ public class FortSiege implements IBypassHandler
 			}
 			return false;
 		}
-		else
-		{
-			((L2Npc) target).showChatWindow(activeChar, 10);
-		}
+		
+		((L2Npc) target).showChatWindow(activeChar, 10);
 		
 		return true;
 	}

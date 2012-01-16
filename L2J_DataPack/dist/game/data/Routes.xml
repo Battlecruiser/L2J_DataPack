@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Routes.xsd">
+	<!-- Just test route - Giran town square -->
+	<route id="1" repeat="true" repeatStyle="cycle">
+		<stat name="debug" val="false" />
+		<point string="" X="80863" Y="148339" Z="-3469" delay="0" run="true" />
+		<point string="" X="80904" Y="147653" Z="-3469" delay="0" run="true" />
+		<point string="" X="83205" Y="147646" Z="-3469" delay="0" run="true" />
+		<point string="" X="82189" Y="148347" Z="-3467" delay="0" run="true" />
+		<point string="" X="81862" Y="148266" Z="-3467" delay="0" run="true" />
+		<point string="" X="81918" Y="148352" Z="-3467" delay="0" run="true" />
+		<point string="" X="81937" Y="149173" Z="-3469" delay="0" run="true" />
+	</route>
+	<!-- Hellbound Town routes for Patrols -->
+	<!-- castletownguard01 -->
+	<route id="2" repeat="true" repeatStyle="random">
+		<point string="" X="14840" Y="251949" Z="-1992" delay="0" run="false" />
+		<point string="" X="14679" Y="253399" Z="-2016" delay="0" run="false" />
+	</route>
+	<!-- castletownguard02 -->
+	<route id="3" repeat="true" repeatStyle="random">
+		<point string="" X="16082" Y="251790" Z="-1992" delay="0" run="false" />
+		<point string="" X="16388" Y="252456" Z="-2000" delay="0" run="false" />
+		<point string="" X="16093" Y="254443" Z="-2064" delay="0" run="false" />
+	</route>
+	<!-- castletownguard03 -->
+	<route id="4" repeat="true" repeatStyle="random">
+		<point string="" X="16524" Y="255244" Z="-2072" delay="0" run="false" />
+		<point string="" X="17211" Y="256290" Z="-2064" delay="0" run="false" />
+		<point string="" X="18805" Y="256302" Z="-2088" delay="0" run="false" />
+	</route>
+	<!-- castletownguard04 -->
+	<route id="5" repeat="true" repeatStyle="random">
+		<point string="" X="17344" Y="251070" Z="-1952" delay="0" run="false" />
+		<point string="" X="18708" Y="250659" Z="-1992" delay="0" run="false" />
+		<point string="" X="19533" Y="250667" Z="-2016" delay="0" run="false" />
+	</route>
+	<!-- Anomic Foundry routes for Lesser and Greater Evil -->
+	<!-- malign_conveyor_1_1 -->
+	<route id="6" repeat="true" repeatStyle="conveyor">
+		<point string="" X="27886" Y="248609" Z="-3208" delay="0" run="true" />
+		<point string="" X="28150" Y="247726" Z="-3272" delay="0" run="true" />
+		<point string="" X="27340" Y="246649" Z="-3680" delay="0" run="true" />
+		<point string="" X="27646" Y="245922" Z="-3672" delay="0" run="true" />
+		<!-- <point string="" X="28247" Y="245907" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point string="" X="28070" Y="245920" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<point string="" X="28491" Y="245926" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<point string="" X="29074" Y="245889" Z="-3672" delay="0" run="true" />
+		<point string="" X="29182" Y="244811" Z="-3688" delay="0" run="true" />
+		<point string="" X="28925" Y="244462" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<!-- <point string="" X="28770" Y="244248" Z="-2496" delay="0" run="true" /> --> <!-- retail -->
+	</route>
+	<!-- malign_conveyor_1_2 -->
+	<route id="7" repeat="true" repeatStyle="conveyor">
+		<point string="" X="26144" Y="246444" Z="-3208" delay="0" run="true" />
+		<point string="" X="28063" Y="247940" Z="-3248" delay="0" run="true" />
+		<point string="" X="28276" Y="247756" Z="-3272" delay="0" run="true" />
+		<point string="" X="27344" Y="246649" Z="-3680" delay="0" run="true" />
+		<point string="" X="27652" Y="245914" Z="-3688" delay="0" run="true" />
+		<!-- <point string="" X="28255" Y="245912" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point string="" X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
+	</route>
+	<!-- malign_conveyor_1_3 -->
+	<route id="8" repeat="true" repeatStyle="conveyor">
+		<point string="" X="27336" Y="246216" Z="-3656" delay="0" run="true" />
+		<point string="" X="27645" Y="245921" Z="-3672" delay="0" run="true" />
+		<!-- <point string="" X="28245" Y="245904" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point string="" X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
+	</route>
+	<!-- malign_conveyor_1_4 -->
+	<route id="9" repeat="true" repeatStyle="conveyor">
+		<point string="" X="28476" Y="245914" Z="-3696" delay="0" run="true" />
+		<point string="" X="29058" Y="245894" Z="-3672" delay="0" run="true" />
+		<point string="" X="29433" Y="245216" Z="-3688" delay="0" run="true" />
+		<point string="" X="28942" Y="244492" Z="-3696" delay="0" run="true" />
+	</route>
+	<!-- malign_conveyor_2_1 -->
+	<route id="10" repeat="true" repeatStyle="conveyor">
+		<point string="" X="28771" Y="244251" Z="-2496" delay="0" run="true" />
+		<point string="" X="28495" Y="243839" Z="-3696" delay="0" run="true" />
+		<point string="" X="28727" Y="242939" Z="-3592" delay="0" run="true" />
+		<point string="" X="28188" Y="242512" Z="-3464" delay="0" run="true" />
+		<point string="" X="27248" Y="242797" Z="-3168" delay="0" run="true" />
+		<point string="" X="26850" Y="243834" Z="-2896" delay="0" run="true" />
+		<point string="" X="24636" Y="246593" Z="-1968" delay="0" run="true" />
+		<point string="" X="24519" Y="248586" Z="-1936" delay="0" run="true" />
+		<point string="" X="23094" Y="250031" Z="-1976" delay="0" run="true" />
+		<point string="" X="22673" Y="251605" Z="-1992" delay="0" run="true" />
+		<point string="" X="24560" Y="254414" Z="-1984" delay="0" run="true" />
+		<point string="" X="25392" Y="255459" Z="-1992" delay="0" run="true" />
+	</route>
+</routes>

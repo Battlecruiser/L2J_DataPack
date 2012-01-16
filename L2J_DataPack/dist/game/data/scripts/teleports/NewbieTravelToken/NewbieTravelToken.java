@@ -52,7 +52,7 @@ public class NewbieTravelToken extends Quest
 				if (st.hasQuestItems(TOKEN))
 				{
 					st.takeItems(TOKEN, 1);
-					st.getPlayer().teleToLocation(DATA.get(npcId), false);
+					player.teleToLocation(DATA.get(npcId), false);
 				}
 				else
 				{

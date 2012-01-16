@@ -187,8 +187,7 @@ public class SagasSuperClass extends QuestJython
 		{
 			if (prevclass.length == 1)
 				return -1;
-			else
-				return prevclass[1];
+			return prevclass[1];
 		}
 		return prevclass[0];
 	}
@@ -508,7 +507,7 @@ public class SagasSuperClass extends QuestJython
 		{
 			int npcId = npc.getNpcId();
 			int cond = st.getInt("cond");
-			if (st.getState() == State.COMPLETED && npcId == NPC[0])
+			if (st.isCompleted() && (npcId == NPC[0]))
 				htmltext = "<html><body>You have already completed this quest!</body></html>";
 			else if (player.getClassId().getId() == getPrevClass(player))
 			{
@@ -533,10 +532,10 @@ public class SagasSuperClass extends QuestJython
 				}
 				else if (cond == 3)
 				{
-					if (npcId == NPC[1] && st.getQuestItemsCount(Items[0]) != 0)
+					if (npcId == NPC[1] && st.hasQuestItems(Items[0]))
 					{
 						htmltext = "1-02.htm";
-						if (Items[11] == 0 || st.getQuestItemsCount(Items[11]) != 0)
+						if (Items[11] == 0 || st.hasQuestItems(Items[11]))
 							htmltext = "1-03.htm";
 					}
 				}
@@ -589,7 +588,7 @@ public class SagasSuperClass extends QuestJython
 				{
 					if (npcId == NPC[3])
 					{
-						if (st.getQuestItemsCount(Items[2]) > 0)
+						if (st.hasQuestItems(Items[2]))
 							htmltext = "3-05.htm";
 						else
 							htmltext = "3-04.htm";
@@ -779,21 +778,21 @@ public class SagasSuperClass extends QuestJython
 		{
 			L2PcInstance quest_player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
 			if (quest_player == null)
-				return null;
-			else
 			{
-				for (L2Object obj : targets)
+				return null;
+			}
+			
+			for (L2Object obj : targets)
+			{
+				if (obj == quest_player || obj == npc)
 				{
-					if (obj == quest_player || obj == npc)
-					{
-						QuestState st2 = findRightState(npc);
-						if (st2 == null)
-							return null;
-						AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
-						cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
-						st2.set("spawned", "0");
-						DeleteSpawn(st2, npc);
-					}
+					QuestState st2 = findRightState(npc);
+					if (st2 == null)
+						return null;
+					AutoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+					cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+					st2.set("spawned", "0");
+					DeleteSpawn(st2, npc);
 				}
 			}
 		}

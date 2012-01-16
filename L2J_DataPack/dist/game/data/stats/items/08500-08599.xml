@@ -330,6 +330,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="82" />
 			<set order="0x08" stat="mAtk" val="26" />
@@ -355,6 +356,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="41" />
 			<set order="0x08" stat="mAtk" val="43" />
@@ -376,6 +378,7 @@
 		<set name="weight" val="1140" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="10" />
 			<set order="0x08" stat="mAtk" val="9" />
@@ -400,6 +403,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="6" />
 			<set order="0x08" stat="mAtk" val="5" />
@@ -424,6 +428,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="39" />
 			<set order="0x08" stat="mAtk" val="35" />
@@ -448,6 +453,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="51" />
 			<set order="0x08" stat="mAtk" val="32" />
@@ -471,6 +477,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="64" />
 			<set order="0x08" stat="mAtk" val="39" />
@@ -558,6 +565,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="200000" />
 		<set name="equip_condition" val="{{ec_category;{@baby_pet_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="25" />
 			<add order="0x10" stat="pDef" val="10" />

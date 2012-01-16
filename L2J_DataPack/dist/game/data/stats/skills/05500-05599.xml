@@ -976,11 +976,11 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SUMMON" />
 		<for>
-			<effect name="HealOverTime" noicon="1" val="418" />
-			<effect name="ManaHealOverTime" noicon="1" val="73" />
+			<effect name="Heal" noicon="1" val="418" />
+			<effect name="ManaHealByLevel" noicon="1" val="73" />
 		</for>
 	</skill>
 	<skill id="5572" levels="1" name="Warrior Ability - Haste">
@@ -1041,10 +1041,12 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="10" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="10" />
+		</for>
 	</skill>
 	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
 		<!-- CT2.5 retail confirmed -->
@@ -1063,13 +1065,16 @@
 	</skill>
 	<skill id="5577" levels="1" name="Healer Ability - Heal">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="150" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="150" />
+		</for>
 	</skill>
 	<skill id="5578" levels="1" name="Summoner Ability - Spirit">
 		<!-- CT2.5 retail confirmed -->
@@ -1121,7 +1126,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="13000" />
-		<set name="ignoreResists" val="true" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
@@ -1290,10 +1294,9 @@
 		<table name="#mpConsume"> 10 18 27 37 48 59 68 73 76 78 79 79 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpInitialConsume"> 3 5 7 10 12 15 17 19 19 20 20 20 </table>
-		<table name="#power"> 91 166 269 398 544 690 817 867 909 954 985 1005 </table>
+		<table name="#amount"> 91 166 269 398 544 690 817 867 909 954 985 1005 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="3000" />
@@ -1301,6 +1304,7 @@
 		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#amount" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
@@ -1308,14 +1312,17 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Curse of Life Flow effect -->
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
-		<table name="#power"> 189 196 203 210 217 223 229 234 </table>
+		<table name="#amount"> 189 196 203 210 217 223 229 234 </table>
+		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5592" levels="16" name="Lightning Barrier">
 		<!-- CT2.5 retail confirmed -->

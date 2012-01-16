@@ -3,9 +3,10 @@
 	<item id="14800" type="Armor" name="Afro Perm Wig - Pink">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14801" type="Armor" name="Gludio Guard Earring">
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
@@ -200,6 +201,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8331-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14811" type="Armor" name="Blue Talisman - Buff Steal">
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -214,6 +216,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8332-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14812" type="Armor" name="Red Talisman - Territory Guard">
 		<set name="icon" val="icon.etc_talisman_i00" />
@@ -228,6 +231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8333-1" />
 		<set name="duration" val="66" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14813" type="Armor" name="Blue Talisman - Lord's Divine Protection">
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -242,8 +246,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8334-1" />
 		<set name="duration" val="74" />
+		<set name="useSkillDisTime" val="15" />
 	</item>
-	<item id="14814" type="Armor" name="White Talisman -  All Resistance">
+	<item id="14814" type="Armor" name="White Talisman - All Resistance">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -256,6 +261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8335-1" />
 		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14815" type="EtcItem" name="Territory Health Recovery Potion">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
@@ -327,6 +333,7 @@
 		<set name="handler" val="PetFood" />
 		<set name="item_skill" val="2916-1" />
 		<set name="use_condition" val="{{uc_category;{@grown_up_wolf_group}}}" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14819" type="EtcItem" name="Guardian's Dragon Bugle">
 		<set name="icon" val="icon.etc_bugle_i00" />
@@ -355,6 +362,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2910-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14821" type="EtcItem" name="Skull Key of Erosion">
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
@@ -367,6 +375,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2911-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14822" type="EtcItem" name="Skull Key of the Heart">
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
@@ -379,6 +388,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2912-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14823" type="EtcItem" name="Soul Extraction Device">
 		<set name="icon" val="icon.etc_lantern_i00" />
@@ -390,6 +400,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2913-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
 		</cond>
@@ -398,41 +409,45 @@
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2900-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14825" type="EtcItem" name="Ancient Herb - Immortal">
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2901-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14826" type="EtcItem" name="Ancient Herb - Terminator">
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2902-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14827" type="EtcItem" name="Ancient Herb - Guide">
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
-		<set name="ex_immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2903-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="14828" type="EtcItem" name="Deinonychus Mesozoic Stone">
 		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
@@ -634,6 +649,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9625,1,1,100;9626,1,1,80" />
 	</item>
 	<item id="14850" type="EtcItem" name="Droph's Support Items">
@@ -647,6 +663,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="5575,140000,240000,100" />
 	</item>
 	<item id="14851" type="EtcItem" name="Cave Exploration Text 1 Sheet">

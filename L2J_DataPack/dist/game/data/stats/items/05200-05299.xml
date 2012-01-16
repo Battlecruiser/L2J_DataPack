@@ -164,6 +164,7 @@
 		<set name="weight" val="160" />
 		<set name="price" val="9586000" />
 		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="mDef" val="58" />
 			<add order="0x10" stat="pDef" val="71" />
@@ -182,6 +183,7 @@
 		<set name="weight" val="100" />
 		<set name="price" val="61084" />
 		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
+		<set name="for_npc" val="true" />
 		<for>
 			<add order="0x10" stat="pAtk" val="194" />
 			<add order="0x10" stat="mAtk" val="136" />

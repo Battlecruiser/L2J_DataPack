@@ -18,14 +18,17 @@ WATERBINDER = 7591
 EVERGREEN = 7592
 RAIN_SONG = 7593
 RELIC_BOX = 7594
+FRAGMENTS = 21725
 
 #MOBS
 PILGRIM_OF_SPLENDOR = 21541
 JUDGE_OF_SPLENDOR = 21544
 BARAKIEL = 25325
+MOBS = [21535,21536,21537,21538,21539,21540]
 
 #CHANCE FOR DROP
 CHANCE_FOR_DROP = 5
+CHANCE_FOR_DROP_FRAGMENTS = 30 # Not verifed!
 
 class Quest (JQuest) :
 
@@ -52,14 +55,17 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
    elif event == "31741-5.htm" :
      if cond == 3 :
-       st.set("cond","4")
-       st.takeItems(WATERBINDER,1)
-       st.takeItems(EVERGREEN,1)
-       st.playSound("ItemSound.quest_middle")
+        st.set("cond","4")
+        st.takeItems(WATERBINDER,1)
+        st.takeItems(EVERGREEN,1)
+        st.playSound("ItemSound.quest_middle")
    elif event == "31741-9.htm" :
      if cond == 5 :
        st.set("cond","6")
-       st.takeItems(RAIN_SONG,1)
+       if st.getQuestItemsCount(RAIN_SONG) == 1:
+          st.takeItems(RAIN_SONG,1)
+       if st.getQuestItemsCount(FRAGMENTS) >= 100:
+          st.takeItems(FRAGMENTS,-1)
        st.giveItems(RELIC_BOX,1)
        st.playSound("ItemSound.quest_middle")
    elif event == "30721-2.htm" :
@@ -101,7 +107,7 @@ class Quest (JQuest) :
            htmltext = "31741-3.htm"
          elif cond == 4 :
            htmltext = "31741-8.htm"
-         elif cond == 5 and st.getQuestItemsCount(RAIN_SONG) == 1 :
+         elif cond == 5 and st.getQuestItemsCount(RAIN_SONG) == 1 or st.getQuestItemsCount(FRAGMENTS) >= 100:
            htmltext = "31741-7.htm"
          elif cond == 6 and st.getQuestItemsCount(RELIC_BOX) == 1 :
            htmltext = "31741-11.htm"
@@ -165,6 +171,16 @@ class Quest (JQuest) :
                 pst.giveItems(RAIN_SONG,1)
                 pst.playSound("ItemSound.quest_middle")
                 pst.set("cond","5")
+   else :
+        st = player.getQuestState(qn)
+        if not st or st.getQuestItemsCount(FRAGMENTS) >= 100 or st.getInt("cond") != 4:
+            return
+        for id in MOBS:
+            if npcId == id and st.getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS:
+                st.giveItems(FRAGMENTS,1)
+                if st.getQuestItemsCount(FRAGMENTS) >= 100:
+                    st.set("cond","5")
+                
    return 
 
 QUEST       = Quest(246,qn,"Possessor Of A Precious Soul - 3")
@@ -178,3 +194,7 @@ QUEST.addTalkId(LADD)
 QUEST.addKillId(PILGRIM_OF_SPLENDOR)
 QUEST.addKillId(JUDGE_OF_SPLENDOR)
 QUEST.addKillId(BARAKIEL)
+
+
+for id in MOBS:
+    QUEST.addKillId(id)

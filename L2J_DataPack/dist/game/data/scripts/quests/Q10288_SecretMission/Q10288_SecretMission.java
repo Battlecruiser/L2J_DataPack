@@ -22,11 +22,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-08-07 Based on Freya PTS
+ * 2010-08-07 Based on Freya PTS
+ * @author Gnacik
  */
-
 public class Q10288_SecretMission extends Quest
 {
 	private static final String qn = "10288_SecretMission";
@@ -75,7 +73,7 @@ public class Q10288_SecretMission extends Quest
 					st.playSound("ItemSound.quest_middle");
 				}
 			}
-			else if (st.getState() == State.COMPLETED && event.equalsIgnoreCase("teleport"))
+			else if (st.isCompleted() && event.equalsIgnoreCase("teleport"))
 			{
 				player.teleToLocation(118833, -80589, -2688);
 				return null;
@@ -142,10 +140,11 @@ public class Q10288_SecretMission extends Quest
 		}
 		if (npc.getNpcId() == _aquilani)
 		{
-			if (st.getState() == State.COMPLETED)
+			if (st.isCompleted())
+			{
 				return "32780-01.html";
-			else
-				return "32780-00.html";
+			}
+			return "32780-00.html";
 		}
 		return null;
 	}

@@ -36,8 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- **
+ * @author Gnacik
  */
 public class eventmodRace extends Event
 {
@@ -137,6 +136,7 @@ public class eventmodRace extends Event
 		// Schedule Event end
 		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
 		{
+			@Override
 			public void run()
 			{
 				StartRace();
@@ -186,6 +186,7 @@ public class eventmodRace extends Event
 		// Schedule timeup for Race
 		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
 		{
+			@Override
 			public void run()
 			{
 				timeUp();
@@ -319,8 +320,7 @@ public class eventmodRace extends Event
 				winRace(player);
 				return "900104-winner.htm";
 			}
-			else
-				return "900104-notrans.htm";
+			return "900104-notrans.htm";
 		}
 		return htmltext;
 	}
@@ -337,9 +337,10 @@ public class eventmodRace extends Event
 		if (npc.getNpcId() == _start_npc)
 		{
 			if (_isRaceStarted)
+			{
 				return _start_npc+"-started-"+isRacing(player)+".htm";
-			else
-				return _start_npc+"-"+isRacing(player)+".htm";
+			}
+			return _start_npc+"-"+isRacing(player)+".htm";
 		}
 		else if (npc.getNpcId() == _stop_npc && _isRaceStarted)
 		{

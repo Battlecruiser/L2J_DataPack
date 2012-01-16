@@ -695,6 +695,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2592-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -969,6 +970,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8276-1" />
 		<set name="duration" val="60" />
+		<set name="useSkillDisTime" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@shield_master]}" />
 		<cond msgId="1518">
 			<player instanceId="115,116,119,120,121,122" />
@@ -990,6 +992,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2623-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="119,120" />
 		</cond>
@@ -1005,6 +1008,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2624-1" />
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
 		</cond>
@@ -1404,6 +1408,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="9628,1,2,60;9629,1,2,30;9630,1,2,35" />
 	</item>
 </list>

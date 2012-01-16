@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -36,14 +37,39 @@ import com.l2jserver.util.Rnd;
 public class SeedOfAnnihilation extends Quest
 {
 	final private static String qn = "SeedOfAnnihilation";
-	private static final Map<Integer, int[]> _teleportZones = new FastMap<Integer, int[]>();
+	private static final Map<Integer, Location> _teleportZones = new FastMap<>();
 	private static final int ANNIHILATION_FURNACE = 18928;
+
 	// Strength, Agility, Wisdom
-	private static final int[] ZONE_BUFFS = { 0, 6443, 6444, 6442 };
-	private static final int[][] ZONE_BUFFS_LIST = { {1,2,3},{1,3,2},{2,1,3},{2,3,1},{3,2,1},{3,1,2} };
+	private static final int[] ZONE_BUFFS =
+	{
+		0, 6443, 6444, 6442
+	};
+	
+	private static final int[][] ZONE_BUFFS_LIST =
+	{
+		{
+			1, 2, 3
+		},
+		{
+			1, 3, 2
+		},
+		{
+			2, 1, 3
+		},
+		{
+			2, 3, 1
+		},
+		{
+			3, 2, 1
+		},
+		{
+			3, 1, 2
+		}
+	};
 	
 	// 0: Bistakon, 1: Reptilikon, 2: Cokrakon
-	private SeedRegion[] _regionsData = new SeedRegion[3];
+	private final SeedRegion[] _regionsData = new SeedRegion[3];
 	private Long _seedsNextStatusChange;
 	
 	private static class SeedRegion
@@ -66,31 +92,95 @@ public class SeedOfAnnihilation extends Quest
 	
 	static
 	{
-		_teleportZones.put(60002, new int[]{ -213175, 182648, -10992 });
-		_teleportZones.put(60003, new int[]{ -181217, 186711, -10528 });
-		_teleportZones.put(60004, new int[]{ -180211, 182984, -15152 });
-		_teleportZones.put(60005, new int[]{ -179275, 186802, -10720 });
+		_teleportZones.put(60002, new Location(-213175, 182648, -10992));
+		_teleportZones.put(60003, new Location(-181217, 186711, -10528));
+		_teleportZones.put(60004, new Location(-180211, 182984, -15152));
+		_teleportZones.put(60005, new Location(-179275, 186802, -10720));
 	}
 	
 	public void loadSeedRegionData()
 	{
 		// Bistakon data
-		_regionsData[0] = new SeedRegion(new int[]{ 22750, 22751, 22752, 22753 },
-				new int[][]{ { 22746, 22746, 22746 }, { 22747, 22747, 22747 },
-				{ 22748, 22748, 22748 }, { 22749, 22749, 22749 } }, 60006,
-				new int[][]{ {-180450,185507,-10544,11632},{-180005,185489,-10544,11632} });
+		_regionsData[0] = new SeedRegion(new int[]
+		{
+			22750, 22751, 22752, 22753
+		}, new int[][]
+		{
+			{
+				22746, 22746, 22746
+			},
+			{
+				22747, 22747, 22747
+			},
+			{
+				22748, 22748, 22748
+			},
+			{
+				22749, 22749, 22749
+			}
+		}, 60006, new int[][]
+		{
+			{
+				-180450, 185507, -10544, 11632
+			},
+			{
+				-180005, 185489, -10544, 11632
+			}
+		});
 		
 		// Reptilikon data
-		_regionsData[1] = new SeedRegion(new int[]{ 22757, 22758, 22759 },
-				new int[][]{ { 22754, 22755, 22756 } }, 60007,
-				new int[][]{ {-179600,186998,-10704,11632},{-179295,186444,-10704,11632} });
+		_regionsData[1] = new SeedRegion(new int[]
+		{
+			22757, 22758, 22759
+		}, new int[][]
+		{
+			{
+				22754, 22755, 22756
+			}
+		}, 60007, new int[][]
+		{
+			{
+				-179600, 186998, -10704, 11632
+			},
+			{
+				-179295, 186444, -10704, 11632
+			}
+		});
 		
 		// Cokrakon data
-		_regionsData[2] = new SeedRegion(new int[]{ 22763, 22764, 22765 },
-				new int[][]{ { 22760, 22760, 22761 }, { 22760, 22760, 22762 },
-				{ 22761, 22761, 22760 }, { 22761, 22761, 22762 }, { 22762, 22762, 22760 },
-				{ 22762, 22762, 22761 } }, 60008,
-				new int[][]{ {-180971,186361,-10528,11632},{-180758,186739,-10528,11632} });
+		_regionsData[2] = new SeedRegion(new int[]
+		{
+			22763, 22764, 22765
+		}, new int[][]
+		{
+			{
+				22760, 22760, 22761
+			},
+			{
+				22760, 22760, 22762
+			},
+			{
+				22761, 22761, 22760
+			},
+			{
+				22761, 22761, 22762
+			},
+			{
+				22762, 22762, 22760
+			},
+			{
+				22762, 22762, 22761
+			}
+		}, 60008, new int[][]
+		{
+			{
+				-180971, 186361, -10528, 11632
+			},
+			{
+				-180758, 186739, -10528, 11632
+			}
+		});
+		
 		int buffsNow = 0;
 		String var = loadGlobalQuestVar("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || Long.parseLong(var) < System.currentTimeMillis())
@@ -125,10 +215,10 @@ public class SeedOfAnnihilation extends Quest
 	{
 		super(questId, name, descr);
 		loadSeedRegionData();
-		for(int i : _teleportZones.keySet())
+		for (int i : _teleportZones.keySet())
 			addEnterZoneId(i);
-		for(int i = 0; i < _regionsData.length; i++)
-			for(int j = 0; j < _regionsData[i].elite_mob_ids.length; j++)
+		for (int i = 0; i < _regionsData.length; i++)
+			for (int j = 0; j < _regionsData[i].elite_mob_ids.length; j++)
 				addSpawnId(_regionsData[i].elite_mob_ids[j]);
 		addStartNpc(32739);
 		addTalkId(32739);
@@ -138,9 +228,9 @@ public class SeedOfAnnihilation extends Quest
 	
 	private void startEffectZonesControl()
 	{
-		for(int i = 0; i < _regionsData.length; i++)
+		for (int i = 0; i < _regionsData.length; i++)
 		{
-			for(int j = 0; j < _regionsData[i].af_spawns.length; j++)
+			for (int j = 0; j < _regionsData[i].af_spawns.length; j++)
 			{
 				_regionsData[i].af_npcs[j] = addSpawn(ANNIHILATION_FURNACE, _regionsData[i].af_spawns[j][0], _regionsData[i].af_spawns[j][1], _regionsData[i].af_spawns[j][2], _regionsData[i].af_spawns[j][3], false, 0);
 				_regionsData[i].af_npcs[j].setDisplayEffect(_regionsData[i].activeBuff);
@@ -156,7 +246,7 @@ public class SeedOfAnnihilation extends Quest
 		{
 			if (spawn == null)
 				continue;
-			for(int i = 0; i < _regionsData.length; i++)
+			for (int i = 0; i < _regionsData.length; i++)
 			{
 				if (Util.contains(_regionsData[i].elite_mob_ids, spawn.getNpcid()))
 				{
@@ -177,16 +267,16 @@ public class SeedOfAnnihilation extends Quest
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		for(int i = 0; i < _regionsData.length; i++)
+		for (int i = 0; i < _regionsData.length; i++)
 		{
 			if (Util.contains(_regionsData[i].elite_mob_ids, npc.getNpcId()))
-				spawnGroupOfMinion((L2MonsterInstance)npc, _regionsData[i].minion_lists[Rnd.get(_regionsData[i].minion_lists.length)]);
+				spawnGroupOfMinion((L2MonsterInstance) npc, _regionsData[i].minion_lists[Rnd.get(_regionsData[i].minion_lists.length)]);
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
@@ -194,11 +284,11 @@ public class SeedOfAnnihilation extends Quest
 			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
 			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
-			for(int i = 0; i < _regionsData.length; i++)
+			for (int i = 0; i < _regionsData.length; i++)
 			{
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];
 				
-				for(L2Npc af : _regionsData[i].af_npcs)
+				for (L2Npc af : _regionsData[i].af_npcs)
 					af.setDisplayEffect(_regionsData[i].activeBuff);
 				
 				L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);
@@ -223,9 +313,9 @@ public class SeedOfAnnihilation extends Quest
 	}
 	
 	@Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		return super.onKill(npc,killer,isPet);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -233,14 +323,14 @@ public class SeedOfAnnihilation extends Quest
 	{
 		if (_teleportZones.containsKey(zone.getId()))
 		{
-			int[] teleLoc = _teleportZones.get(zone.getId());
-			character.teleToLocation(teleLoc[0],teleLoc[1],teleLoc[2]);
+			Location teleLoc = _teleportZones.get(zone.getId());
+			character.teleToLocation(teleLoc, false);
 		}
 		return super.onEnterZone(character, zone);
 	}
 	
 	public static void main(String[] args)
 	{
-		new SeedOfAnnihilation(-1,qn,"ai");
+		new SeedOfAnnihilation(-1, qn, "ai");
 	}
 }

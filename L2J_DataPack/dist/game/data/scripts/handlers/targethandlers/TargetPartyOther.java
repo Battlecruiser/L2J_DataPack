@@ -14,19 +14,18 @@
  */
 package handlers.targethandlers;
 
-import com.l2jserver.gameserver.handler.ISkillTargetTypeHandler;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 /**
  * @author UnAfraid
  */
-public class TargetPartyOther implements ISkillTargetTypeHandler
+public class TargetPartyOther implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
@@ -44,31 +43,29 @@ public class TargetPartyOther implements ISkillTargetTypeHandler
 						// FORCE BUFFS may cancel here but there should be a proper condition
 						case 426:
 							if (!((L2PcInstance) target).isMageClass())
+							{
 								return new L2Character[] { target };
-							else
-								return _emptyTargetList;
+							}
+							return _emptyTargetList;
 						case 427:
 							if (((L2PcInstance) target).isMageClass())
+							{
 								return new L2Character[] { target };
-							else
-								return _emptyTargetList;
+							}
+							return _emptyTargetList;
 					}
 				}
 				return new L2Character[] { target };
 			}
-			else
-				return _emptyTargetList;
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 			return _emptyTargetList;
 		}
+		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		return _emptyTargetList;
 	}
 	
 	@Override
-	public Enum<SkillTargetType> getTargetType()
+	public Enum<L2TargetType> getTargetType()
 	{
-		return SkillTargetType.TARGET_PARTY_OTHER;
+		return L2TargetType.TARGET_PARTY_OTHER;
 	}
 }

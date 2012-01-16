@@ -36,6 +36,7 @@ public class ChannelLeave implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
@@ -49,7 +50,7 @@ public class ChannelLeave implements IUserCommandHandler
 				L2Party party = activeChar.getParty();
 				channel.removeParty(party);
 				
-				party.getLeader().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LEFT_COMMAND_CHANNEL));
+				party.getLeader().sendPacket(SystemMessageId.LEFT_COMMAND_CHANNEL);
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_PARTY_LEFT_COMMAND_CHANNEL);
 				sm.addString(party.getLeader().getName());
@@ -66,6 +67,7 @@ public class ChannelLeave implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
 	 */
+	@Override
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;

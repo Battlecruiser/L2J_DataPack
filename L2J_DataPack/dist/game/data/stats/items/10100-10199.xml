@@ -334,7 +334,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@force_master}}}" />
 		<cond msgId="1518">
@@ -359,7 +359,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@weapon_master}}}" />
 		<cond msgId="1518">
@@ -383,6 +383,7 @@
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
+		<set name="for_npc" val="true" />
 		<for>
 			<set order="0x08" stat="pAtk" val="31" />
 			<set order="0x08" stat="mAtk" val="21" />
@@ -522,6 +523,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5414-1;3269-1;3267-1" />
 		<set name="duration" val="700" />
+		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10140" type="Armor" name="Blessed Ring of Escape">
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
@@ -537,6 +539,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="3408-1" />
 		<set name="duration" val="250" />
+		<set name="useSkillDisTime" val="2" />
 		<for>
 			<add order="0x10" stat="mDef" val="24" />
 			<enchant order="0x0C" stat="mDef" val="0" />
@@ -557,6 +560,7 @@
 		<set name="unequip_skill" val="3499-1" />
 		<set name="item_skill" val="3335-1" />
 		<set name="duration" val="70" />
+		<set name="useSkillDisTime" val="3" />
 	</item>
 	<item id="10142" type="Armor" name="Grey Talisman - Buffalo Transform">
 		<set name="icon" val="icon.etc_talisman_i07" />
@@ -573,6 +577,7 @@
 		<set name="unequip_skill" val="3499-1" />
 		<set name="item_skill" val="3336-1" />
 		<set name="duration" val="70" />
+		<set name="useSkillDisTime" val="3" />
 	</item>
 	<item id="10143" type="EtcItem" name="Battleground Spell - Shield Master">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
@@ -827,6 +832,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="3315-1" />
 		<set name="duration" val="60" />
+		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10159" type="EtcItem" name="Capture Rope">
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
@@ -953,7 +959,7 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
-		<set name="element_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="equip_condition" val="{{ec_category;{@buff_master}}}" />
 		<cond msgId="1518">
@@ -1086,6 +1092,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2404-1;2405-1;2406-1;2407-1;2408-1;2409-1;2410-1;2411-1;2412-1;2413-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10179" type="EtcItem" name="Fresh Fruit Cocktail">
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
@@ -1102,6 +1109,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2414-1;2415-1;2416-1;2417-1;2418-1;2419-1;2406-1;2411-1;2405-1" />
+		<set name="for_npc" val="true" />
 	</item>
 	<item id="10180" type="EtcItem" name="Battle Manual - Penetrate Shot">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />

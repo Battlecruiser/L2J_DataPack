@@ -27,9 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * 
  * @author DS
- *
  */
 public class BoatGiranTalking implements Runnable
 {
@@ -56,7 +54,7 @@ public class BoatGiranTalking implements Runnable
 		new VehiclePathPoint(-83344, 261610, -3610, 200, 800),
 		new VehiclePathPoint(-88344, 261660, -3610, 180, 800),
 		new VehiclePathPoint(-92344, 261660, -3610, 180, 800),
-		new VehiclePathPoint(-94242, 261659, -3610 ,150, 800)
+		new VehiclePathPoint(-94242, 261659, -3610, 150, 800)
 	};
 	
 	private static final VehiclePathPoint[] TALKING_DOCK =
@@ -124,7 +122,7 @@ public class BoatGiranTalking implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_GIRAN = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.FERRY_ARRIVED_AT_GIRAN );
+		ARRIVED_AT_GIRAN = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.FERRY_ARRIVED_AT_GIRAN);
 		ARRIVED_AT_GIRAN_2 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.FERRY_LEAVE_FOR_TALKING_AFTER_10_MINUTES);
 		LEAVE_GIRAN5 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.FERRY_LEAVE_FOR_TALKING_IN_5_MINUTES);
 		LEAVE_GIRAN1 = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.FERRY_LEAVE_FOR_TALKING_IN_1_MINUTE);
@@ -152,6 +150,7 @@ public class BoatGiranTalking implements Runnable
 		TALKING_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), TALKING_DOCK[0].x, TALKING_DOCK[0].y, TALKING_DOCK[0].z);
 	}
 	
+	@Override
 	public void run()
 	{
 		try

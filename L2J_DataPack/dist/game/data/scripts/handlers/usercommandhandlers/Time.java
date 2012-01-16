@@ -36,6 +36,7 @@ public class Time implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
+	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (COMMAND_IDS[0] != id)
@@ -72,6 +73,7 @@ public class Time implements IUserCommandHandler
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
 	 */
+	@Override
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;

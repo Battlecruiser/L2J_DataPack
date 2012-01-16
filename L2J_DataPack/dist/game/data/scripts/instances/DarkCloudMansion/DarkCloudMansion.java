@@ -225,45 +225,45 @@ public class DarkCloudMansion extends Quest
 	private boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
-			return true;
-		else
 		{
-			L2Party party = player.getParty();
-			if (party == null)
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
-				return false;
-			}
-			if (party.getLeader() != player)
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
-				return false;
-			}
-			if (party.getMemberCount() > 2)
-			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
-				return false;
-			}
-			for (L2PcInstance partyMember : party.getPartyMembers())
-			{
-				if (partyMember.getLevel() < 78)
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
-					sm.addPcName(partyMember);
-					player.sendPacket(sm);
-					return false;
-				}
-				if (!partyMember.isInsideRadius(player, 1000, true, true))
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
-					sm.addPcName(partyMember);
-					player.sendPacket(sm);
-					return false;
-				}
-			}
-			
 			return true;
 		}
+		
+		L2Party party = player.getParty();
+		if (party == null)
+		{
+			player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
+			return false;
+		}
+		if (party.getLeader() != player)
+		{
+			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
+			return false;
+		}
+		if (party.getMemberCount() > 2)
+		{
+			player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
+			return false;
+		}
+		for (L2PcInstance partyMember : party.getPartyMembers())
+		{
+			if (partyMember.getLevel() < 78)
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				sm.addPcName(partyMember);
+				player.sendPacket(sm);
+				return false;
+			}
+			if (!partyMember.isInsideRadius(player, 1000, true, true))
+			{
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				sm.addPcName(partyMember);
+				player.sendPacket(sm);
+				return false;
+			}
+		}
+		
+		return true;
 	}
 	
 	private void teleportplayer(L2PcInstance player, teleCoord teleto)
@@ -284,7 +284,7 @@ public class DarkCloudMansion extends Quest
 		{
 			if (!(world instanceof DMCWorld))
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
 			teleto.instanceId = world.instanceId;
@@ -292,38 +292,35 @@ public class DarkCloudMansion extends Quest
 			return instanceId;
 		}
 		//New instance
+		if (!checkConditions(player))
+			return 0;
+		L2Party party = player.getParty();
+		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		world = new DMCWorld();
+		world.instanceId = instanceId;
+		world.templateId = INSTANCEID;
+		InstanceManager.getInstance().addWorld(world);
+		_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		runStartRoom((DMCWorld)world);
+		// teleport players
+		teleto.instanceId = instanceId;
+		if (debug && party == null)
+		{
+			world.allowed.add(player.getObjectId());
+			teleportplayer(player,teleto);
+		}
 		else
 		{
-			if (!checkConditions(player))
-				return 0;
-			L2Party party = player.getParty();
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-			world = new DMCWorld();
-			world.instanceId = instanceId;
-			world.templateId = INSTANCEID;
-			InstanceManager.getInstance().addWorld(world);
-			_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-			runStartRoom((DMCWorld)world);
-			// teleport players
-			teleto.instanceId = instanceId;
-			if (debug && party == null)
+			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
-				world.allowed.add(player.getObjectId());
-				teleportplayer(player,teleto);
+				if (partyMember.getQuestState(qn) == null)
+					newQuestState(partyMember);
+				world.allowed.add(partyMember.getObjectId());
+				teleportplayer(partyMember,teleto);
 			}
-			else
-			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
-				{
-					if (partyMember.getQuestState(qn) == null)
-						newQuestState(partyMember);
-					world.allowed.add(partyMember.getObjectId());
-					teleportplayer(partyMember,teleto);
-				}
-			}
-			
-			return instanceId;
 		}
+		
+		return instanceId;
 	}
 	
 	protected void exitInstance(L2PcInstance player, teleCoord tele)
@@ -817,9 +814,10 @@ public class DarkCloudMansion extends Quest
 		for (DMCNpc mob : SecondRoom.npcList)
 		{
 			if (mob.isDead)
+			{
 				continue;
-			else
-				return false;
+			}
+			return false;
 		}
 		
 		return true;
@@ -1035,7 +1033,7 @@ public class DarkCloudMansion extends Quest
 				if (st == null)
 					st = newQuestState(player);
 				
-				if (st.getQuestItemsCount(CC) < 1)
+				if (!st.hasQuestItems(CC))
 					st.giveItems(CC,1);
 			}
 		}

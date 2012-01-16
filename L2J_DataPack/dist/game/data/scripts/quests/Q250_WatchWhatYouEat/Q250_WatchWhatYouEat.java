@@ -64,7 +64,7 @@ public class Q250_WatchWhatYouEat extends Quest
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
-			else if (event.equalsIgnoreCase("32743-22.html") && st.getState() == State.COMPLETED)
+			else if (event.equalsIgnoreCase("32743-22.html") && st.isCompleted())
 			{
 				htmltext = "32743-23.html";
 			}

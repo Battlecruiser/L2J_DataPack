@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -40,52 +41,52 @@ public class DenOfEvil extends L2AttackableAIScript
 	private static final int[] _eye_ids = { 18812, 18813, 18814 };
 	private static final int _skill_id = 6150; // others +2
 	
-	private static final int[][] _eye_spawn =
+	private static final Location[] _eye_spawn =
 	{
-		{ 71544, -129400, -3360, 16472 },
-		{ 70954, -128854, -3360,    16 },
-		{ 72145, -128847, -3368, 32832 },
-		{ 76147, -128372, -3144, 16152 },
-		{ 71573, -128309, -3360, 49152 },
-		{ 75211, -127441, -3152,     0 },
-		{ 77005, -127406, -3144, 32784 },
-		{ 75965, -126486, -3144, 49120 },
-		{ 70972, -126429, -3016, 19208 },
-		{ 69916, -125838, -3024,  2840 },
-		{ 71658, -125459, -3016, 35136 },
-		{ 70605, -124646, -3040, 52104 },
-		{ 67283, -123237, -2912, 12376 },
-		{ 68383, -122754, -2912, 27904 },
-		{ 74137, -122733, -3024, 13272 },
-		{ 66736, -122007, -2896, 60576 },
-		{ 73289, -121769, -3024,  1024 },
-		{ 67894, -121491, -2912, 43872 },
-		{ 75530, -121477, -3008, 34424 },
-		{ 74117, -120459, -3024, 52344 },
-		{ 69608, -119855, -2534, 17251 },
-		{ 71014, -119027, -2520, 31904 },
-		{ 68944, -118964, -2527, 59874 },
-		{ 62261, -118263, -3072, 12888 },
-		{ 70300, -117942, -2528, 46208 },
-		{ 74312, -117583, -2272, 15280 },
-		{ 63276, -117409, -3064, 24760 },
-		{ 68104, -117192, -2168, 15888 },
-		{ 73758, -116945, -2216,     0 },
-		{ 74944, -116858, -2220, 30892 },
-		{ 61715, -116623, -3064, 59888 },
-		{ 69140, -116464, -2168, 28952 },
-		{ 67311, -116374, -2152,  1280 },
-		{ 62459, -116370, -3064, 48624 },
-		{ 74475, -116260, -2216, 47456 },
-		{ 68333, -115015, -2168, 45136 },
-		{ 68280, -108129, -1160, 17992 },
-		{ 62983, -107259, -2384, 12552 },
-		{ 67062, -107125, -1144, 64008 },
-		{ 68893, -106954, -1160, 36704 },
-		{ 63848, -106771, -2384, 32784 },
-		{ 62372, -106514, -2384,     0 },
-		{ 67838, -106143, -1160, 51232 },
-		{ 62905, -106109, -2384, 51288 }
+		new Location(71544, -129400, -3360, 16472),
+		new Location(70954, -128854, -3360,    16),
+		new Location(72145, -128847, -3368, 32832),
+		new Location(76147, -128372, -3144, 16152),
+		new Location(71573, -128309, -3360, 49152),
+		new Location(75211, -127441, -3152,     0),
+		new Location(77005, -127406, -3144, 32784),
+		new Location(75965, -126486, -3144, 49120),
+		new Location(70972, -126429, -3016, 19208),
+		new Location(69916, -125838, -3024,  2840),
+		new Location(71658, -125459, -3016, 35136),
+		new Location(70605, -124646, -3040, 52104),
+		new Location(67283, -123237, -2912, 12376),
+		new Location(68383, -122754, -2912, 27904),
+		new Location(74137, -122733, -3024, 13272),
+		new Location(66736, -122007, -2896, 60576),
+		new Location(73289, -121769, -3024,  1024),
+		new Location(67894, -121491, -2912, 43872),
+		new Location(75530, -121477, -3008, 34424),
+		new Location(74117, -120459, -3024, 52344),
+		new Location(69608, -119855, -2534, 17251),
+		new Location(71014, -119027, -2520, 31904),
+		new Location(68944, -118964, -2527, 59874),
+		new Location(62261, -118263, -3072, 12888),
+		new Location(70300, -117942, -2528, 46208),
+		new Location(74312, -117583, -2272, 15280),
+		new Location(63276, -117409, -3064, 24760),
+		new Location(68104, -117192, -2168, 15888),
+		new Location(73758, -116945, -2216,     0),
+		new Location(74944, -116858, -2220, 30892),
+		new Location(61715, -116623, -3064, 59888),
+		new Location(69140, -116464, -2168, 28952),
+		new Location(67311, -116374, -2152,  1280),
+		new Location(62459, -116370, -3064, 48624),
+		new Location(74475, -116260, -2216, 47456),
+		new Location(68333, -115015, -2168, 45136),
+		new Location(68280, -108129, -1160, 17992),
+		new Location(62983, -107259, -2384, 12552),
+		new Location(67062, -107125, -1144, 64008),
+		new Location(68893, -106954, -1160, 36704),
+		new Location(63848, -106771, -2384, 32784),
+		new Location(62372, -106514, -2384,     0),
+		new Location(67838, -106143, -1160, 51232),
+		new Location(62905, -106109, -2384, 51288)
 	};
 	
 	private int getSkillIdByNpcId(int npcId)
@@ -141,7 +142,7 @@ public class DenOfEvil extends L2AttackableAIScript
 	{
 		if (Util.contains(_eye_ids, npc.getNpcId()))
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()), 15000);
+			ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
 			L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 			if (zone == null)
 			{
@@ -157,25 +158,23 @@ public class DenOfEvil extends L2AttackableAIScript
 	
 	private void spawnEyes()
 	{
-		for(int[] _spawn : _eye_spawn)
-			addSpawn(_eye_ids[Rnd.get(0, _eye_ids.length-1)], _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
+		for(Location loc : _eye_spawn)
+			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], loc, false, 0);
 	}
 	
 	private class RespawnNewEye implements Runnable
 	{
-		private final int _x, _y, _z, _h;
+		private final Location _loc;
 		
-		public RespawnNewEye(int x, int y, int z, int h) {
-			_x = x;
-			_y = y;
-			_z = z;
-			_h = h;
+		public RespawnNewEye(Location loc) 
+		{
+			_loc = loc;
 		}
 		
 		@Override
 		public void run()
 		{
-			addSpawn(_eye_ids[Rnd.get(0, _eye_ids.length-1)], _x, _y, _z, _h, false, 0);
+			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], _loc, false, 0);
 		}
 	}
 	
@@ -188,9 +187,6 @@ public class DenOfEvil extends L2AttackableAIScript
 			_zone = zone;
 		}
 		
-		/* (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -225,7 +221,7 @@ public class DenOfEvil extends L2AttackableAIScript
 							// respawn eye
 							L2Npc npc = (L2Npc) character;
 							if (Util.contains(_eye_ids, npc.getNpcId()))
-								ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()), 15000);
+								ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
 						}
 					}
 				}

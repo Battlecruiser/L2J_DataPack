@@ -20,16 +20,15 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim
- * Original python script by DraX
+ * @author Plim Original python script by DraX
  */
 public class TeleportWithCharm extends Quest
 {
-	//NPCs
+	// NPCs
 	private final static int WHIRPY = 30540;
 	private final static int TAMIL = 30576;
 	
-	//ITEMS
+	// ITEMS
 	private final static int ORC_GATEKEEPER_CHARM = 1658;
 	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
 	
@@ -45,23 +44,11 @@ public class TeleportWithCharm extends Quest
 		switch (npc.getNpcId())
 		{
 			case WHIRPY:
+			{
 				if (st.hasQuestItems(DWARF_GATEKEEPER_TOKEN))
 				{
-					st.takeItems(DWARF_GATEKEEPER_TOKEN,1);
-					st.getPlayer().teleToLocation(-80826,149775,-3043);
-					st.exitQuest(true);
-				}
-				else
-				{
-					st.exitQuest(true);
-					htmltext = "30576-01.htm";
-				}
-				break;
-			case TAMIL:
-				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM))
-				{
-					st.takeItems(ORC_GATEKEEPER_CHARM,1);
-					st.getPlayer().teleToLocation(-80826,149775,-3043);
+					st.takeItems(DWARF_GATEKEEPER_TOKEN, 1);
+					st.getPlayer().teleToLocation(-80826, 149775, -3043);
 					st.exitQuest(true);
 				}
 				else
@@ -70,11 +57,27 @@ public class TeleportWithCharm extends Quest
 					htmltext = "30540-01.htm";
 				}
 				break;
+			}
+			case TAMIL:
+			{
+				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM))
+				{
+					st.takeItems(ORC_GATEKEEPER_CHARM, 1);
+					st.getPlayer().teleToLocation(-80826, 149775, -3043);
+					st.exitQuest(true);
+				}
+				else
+				{
+					st.exitQuest(true);
+					htmltext = "30576-01.htm";
+				}
+				break;
+			}
 		}
 		
 		return htmltext;
 	}
-
+	
 	public TeleportWithCharm(int questId, String name, String descr)
 	{
 		super(questId, name, descr);

@@ -14,68 +14,80 @@
  */
 package handlers;
 
-import handlers.effecthandlers.EffectAbortCast;
-import handlers.effecthandlers.EffectBetray;
-import handlers.effecthandlers.EffectBigHead;
-import handlers.effecthandlers.EffectBlockResurrection;
-import handlers.effecthandlers.EffectBluff;
-import handlers.effecthandlers.EffectBuff;
-import handlers.effecthandlers.EffectCancel;
-import handlers.effecthandlers.EffectCancelAll;
-import handlers.effecthandlers.EffectCancelDebuff;
-import handlers.effecthandlers.EffectChameleonRest;
-import handlers.effecthandlers.EffectChanceSkillTrigger;
-import handlers.effecthandlers.EffectCharmOfCourage;
-import handlers.effecthandlers.EffectCharmOfLuck;
-import handlers.effecthandlers.EffectClanGate;
-import handlers.effecthandlers.EffectCombatPointHealOverTime;
-import handlers.effecthandlers.EffectConfuseMob;
-import handlers.effecthandlers.EffectConfusion;
-import handlers.effecthandlers.EffectCpDamPercent;
-import handlers.effecthandlers.EffectDamOverTime;
-import handlers.effecthandlers.EffectDebuff;
-import handlers.effecthandlers.EffectDisarm;
-import handlers.effecthandlers.EffectEnemyCharge;
-import handlers.effecthandlers.EffectFakeDeath;
-import handlers.effecthandlers.EffectFear;
-import handlers.effecthandlers.EffectFusion;
-import handlers.effecthandlers.EffectGrow;
-import handlers.effecthandlers.EffectHealOverTime;
-import handlers.effecthandlers.EffectHide;
-import handlers.effecthandlers.EffectImmobileBuff;
-import handlers.effecthandlers.EffectImmobilePetBuff;
-import handlers.effecthandlers.EffectIncreaseCharges;
-import handlers.effecthandlers.EffectInvincible;
-import handlers.effecthandlers.EffectManaDamOverTime;
-import handlers.effecthandlers.EffectManaHealOverTime;
-import handlers.effecthandlers.EffectMpConsumePerLevel;
-import handlers.effecthandlers.EffectMute;
-import handlers.effecthandlers.EffectNegate;
-import handlers.effecthandlers.EffectNoblesseBless;
-import handlers.effecthandlers.EffectParalyze;
-import handlers.effecthandlers.EffectPetrification;
-import handlers.effecthandlers.EffectPhoenixBless;
-import handlers.effecthandlers.EffectPhysicalAttackMute;
-import handlers.effecthandlers.EffectPhysicalMute;
-import handlers.effecthandlers.EffectProtectionBlessing;
-import handlers.effecthandlers.EffectRandomizeHate;
-import handlers.effecthandlers.EffectRecovery;
-import handlers.effecthandlers.EffectRelax;
-import handlers.effecthandlers.EffectRemoveTarget;
-import handlers.effecthandlers.EffectRoot;
-import handlers.effecthandlers.EffectSignet;
-import handlers.effecthandlers.EffectSignetAntiSummon;
-import handlers.effecthandlers.EffectSignetMDam;
-import handlers.effecthandlers.EffectSignetNoise;
-import handlers.effecthandlers.EffectSilentMove;
-import handlers.effecthandlers.EffectSleep;
-import handlers.effecthandlers.EffectSpoil;
-import handlers.effecthandlers.EffectStun;
-import handlers.effecthandlers.EffectTargetMe;
-import handlers.effecthandlers.EffectThrowUp;
-import handlers.effecthandlers.EffectTransferDamage;
-import handlers.effecthandlers.EffectTransformation;
-import handlers.effecthandlers.EffectWarp;
+import handlers.effecthandlers.AbortCast;
+import handlers.effecthandlers.Betray;
+import handlers.effecthandlers.BigHead;
+import handlers.effecthandlers.BlockResurrection;
+import handlers.effecthandlers.Bluff;
+import handlers.effecthandlers.Buff;
+import handlers.effecthandlers.Cancel;
+import handlers.effecthandlers.CancelAll;
+import handlers.effecthandlers.CancelDebuff;
+import handlers.effecthandlers.ChameleonRest;
+import handlers.effecthandlers.ChanceSkillTrigger;
+import handlers.effecthandlers.CharmOfCourage;
+import handlers.effecthandlers.CharmOfLuck;
+import handlers.effecthandlers.ClanGate;
+import handlers.effecthandlers.ConfuseMob;
+import handlers.effecthandlers.Confusion;
+import handlers.effecthandlers.CpDamPercent;
+import handlers.effecthandlers.CpHeal;
+import handlers.effecthandlers.CpHealOverTime;
+import handlers.effecthandlers.CpHealPercent;
+import handlers.effecthandlers.DamOverTime;
+import handlers.effecthandlers.Debuff;
+import handlers.effecthandlers.Disarm;
+import handlers.effecthandlers.DispelBySlot;
+import handlers.effecthandlers.EnemyCharge;
+import handlers.effecthandlers.FakeDeath;
+import handlers.effecthandlers.Fear;
+import handlers.effecthandlers.Fusion;
+import handlers.effecthandlers.Grow;
+import handlers.effecthandlers.Heal;
+import handlers.effecthandlers.HealOverTime;
+import handlers.effecthandlers.HealPercent;
+import handlers.effecthandlers.Hide;
+import handlers.effecthandlers.ImmobileBuff;
+import handlers.effecthandlers.ImmobilePetBuff;
+import handlers.effecthandlers.IncreaseCharges;
+import handlers.effecthandlers.Invincible;
+import handlers.effecthandlers.ManaDamOverTime;
+import handlers.effecthandlers.ManaHeal;
+import handlers.effecthandlers.ManaHealByLevel;
+import handlers.effecthandlers.ManaHealOverTime;
+import handlers.effecthandlers.ManaHealPercent;
+import handlers.effecthandlers.MpConsumePerLevel;
+import handlers.effecthandlers.Mute;
+import handlers.effecthandlers.Negate;
+import handlers.effecthandlers.NoblesseBless;
+import handlers.effecthandlers.Paralyze;
+import handlers.effecthandlers.Petrification;
+import handlers.effecthandlers.PhoenixBless;
+import handlers.effecthandlers.PhysicalAttackMute;
+import handlers.effecthandlers.PhysicalMute;
+import handlers.effecthandlers.ProtectionBlessing;
+import handlers.effecthandlers.RandomizeHate;
+import handlers.effecthandlers.Recovery;
+import handlers.effecthandlers.Relax;
+import handlers.effecthandlers.RemoveTarget;
+import handlers.effecthandlers.Root;
+import handlers.effecthandlers.Signet;
+import handlers.effecthandlers.SignetAntiSummon;
+import handlers.effecthandlers.SignetMDam;
+import handlers.effecthandlers.SignetNoise;
+import handlers.effecthandlers.SilentMove;
+import handlers.effecthandlers.Sleep;
+import handlers.effecthandlers.Spoil;
+import handlers.effecthandlers.Stun;
+import handlers.effecthandlers.TargetMe;
+import handlers.effecthandlers.ThrowUp;
+import handlers.effecthandlers.TransferDamage;
+import handlers.effecthandlers.Transformation;
+import handlers.effecthandlers.Warp;
+
+import java.lang.reflect.Method;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.handler.EffectHandler;
 
@@ -84,74 +96,132 @@ import com.l2jserver.gameserver.handler.EffectHandler;
  */
 public final class EffectMasterHandler
 {
-	private static void loadEffectHandlers()
+	private static final Logger _log = Logger.getLogger(EffectMasterHandler.class.getName());
+	
+	private static final Class<?> _loadInstances = EffectHandler.class;
+	
+	private static final Class<?>[] _effects =
 	{
-		EffectHandler.getInstance().registerHandler("AbortCast", EffectAbortCast.class);
-		EffectHandler.getInstance().registerHandler("Betray", EffectBetray.class);
-		EffectHandler.getInstance().registerHandler("BigHead", EffectBigHead.class);
-		EffectHandler.getInstance().registerHandler("BlockResurrection", EffectBlockResurrection.class);
-		EffectHandler.getInstance().registerHandler("Bluff", EffectBluff.class);
-		EffectHandler.getInstance().registerHandler("Buff", EffectBuff.class);
-		EffectHandler.getInstance().registerHandler("Cancel", EffectCancel.class);
-		EffectHandler.getInstance().registerHandler("CancelAll", EffectCancelAll.class);
-		EffectHandler.getInstance().registerHandler("CancelDebuff", EffectCancelDebuff.class);
-		EffectHandler.getInstance().registerHandler("ChameleonRest", EffectChameleonRest.class);
-		EffectHandler.getInstance().registerHandler("ChanceSkillTrigger", EffectChanceSkillTrigger.class);
-		EffectHandler.getInstance().registerHandler("CharmOfCourage", EffectCharmOfCourage.class);
-		EffectHandler.getInstance().registerHandler("CharmOfLuck", EffectCharmOfLuck.class);
-		EffectHandler.getInstance().registerHandler("ClanGate", EffectClanGate.class);
-		EffectHandler.getInstance().registerHandler("CombatPointHealOverTime", EffectCombatPointHealOverTime.class);
-		EffectHandler.getInstance().registerHandler("ConfuseMob", EffectConfuseMob.class);
-		EffectHandler.getInstance().registerHandler("Confusion", EffectConfusion.class);
-		EffectHandler.getInstance().registerHandler("CpDamPercent", EffectCpDamPercent.class);
-		EffectHandler.getInstance().registerHandler("DamOverTime", EffectDamOverTime.class);
-		EffectHandler.getInstance().registerHandler("Debuff", EffectDebuff.class);
-		EffectHandler.getInstance().registerHandler("Disarm", EffectDisarm.class);
-		EffectHandler.getInstance().registerHandler("EnemyCharge", EffectEnemyCharge.class);
-		EffectHandler.getInstance().registerHandler("FakeDeath", EffectFakeDeath.class);
-		EffectHandler.getInstance().registerHandler("Fear", EffectFear.class);
-		EffectHandler.getInstance().registerHandler("Fusion", EffectFusion.class);
-		EffectHandler.getInstance().registerHandler("Grow", EffectGrow.class);
-		EffectHandler.getInstance().registerHandler("HealOverTime", EffectHealOverTime.class);
-		EffectHandler.getInstance().registerHandler("Hide", EffectHide.class);
-		EffectHandler.getInstance().registerHandler("ImmobileBuff", EffectImmobileBuff.class);
-		EffectHandler.getInstance().registerHandler("IncreaseCharges", EffectIncreaseCharges.class);
-		EffectHandler.getInstance().registerHandler("ImmobilePetBuff", EffectImmobilePetBuff.class);
-		EffectHandler.getInstance().registerHandler("Invincible", EffectInvincible.class);
-		EffectHandler.getInstance().registerHandler("ManaDamOverTime", EffectManaDamOverTime.class);
-		EffectHandler.getInstance().registerHandler("ManaHealOverTime", EffectManaHealOverTime.class);
-		EffectHandler.getInstance().registerHandler("MpConsumePerLevel", EffectMpConsumePerLevel.class);
-		EffectHandler.getInstance().registerHandler("Mute", EffectMute.class);
-		EffectHandler.getInstance().registerHandler("Negate", EffectNegate.class);
-		EffectHandler.getInstance().registerHandler("NoblesseBless", EffectNoblesseBless.class);
-		EffectHandler.getInstance().registerHandler("Paralyze", EffectParalyze.class);
-		EffectHandler.getInstance().registerHandler("Petrification", EffectPetrification.class);
-		EffectHandler.getInstance().registerHandler("PhoenixBless", EffectPhoenixBless.class);
-		EffectHandler.getInstance().registerHandler("PhysicalAttackMute", EffectPhysicalAttackMute.class);
-		EffectHandler.getInstance().registerHandler("PhysicalMute", EffectPhysicalMute.class);
-		EffectHandler.getInstance().registerHandler("ProtectionBlessing", EffectProtectionBlessing.class);
-		EffectHandler.getInstance().registerHandler("RandomizeHate", EffectRandomizeHate.class);
-		EffectHandler.getInstance().registerHandler("Recovery", EffectRecovery.class);
-		EffectHandler.getInstance().registerHandler("Relax", EffectRelax.class);
-		EffectHandler.getInstance().registerHandler("RemoveTarget", EffectRemoveTarget.class);
-		EffectHandler.getInstance().registerHandler("Root", EffectRoot.class);
-		EffectHandler.getInstance().registerHandler("Signet", EffectSignet.class);
-		EffectHandler.getInstance().registerHandler("SignetAntiSummon", EffectSignetAntiSummon.class);
-		EffectHandler.getInstance().registerHandler("SignetMDam", EffectSignetMDam.class);
-		EffectHandler.getInstance().registerHandler("SignetNoise", EffectSignetNoise.class);
-		EffectHandler.getInstance().registerHandler("SilentMove", EffectSilentMove.class);
-		EffectHandler.getInstance().registerHandler("Sleep", EffectSleep.class);
-		EffectHandler.getInstance().registerHandler("Spoil", EffectSpoil.class);
-		EffectHandler.getInstance().registerHandler("Stun", EffectStun.class);
-		EffectHandler.getInstance().registerHandler("TargetMe", EffectTargetMe.class);
-		EffectHandler.getInstance().registerHandler("ThrowUp", EffectThrowUp.class);
-		EffectHandler.getInstance().registerHandler("TransferDamage", EffectTransferDamage.class);
-		EffectHandler.getInstance().registerHandler("Transformation", EffectTransformation.class);
-		EffectHandler.getInstance().registerHandler("Warp", EffectWarp.class);
-	}
+		AbortCast.class,
+		Betray.class,
+		BigHead.class,
+		BlockResurrection.class,
+		Bluff.class,
+		Buff.class,
+		Cancel.class,
+		CancelAll.class,
+		CancelDebuff.class,
+		ChameleonRest.class,
+		ChanceSkillTrigger.class,
+		CharmOfCourage.class,
+		CharmOfLuck.class,
+		ClanGate.class,
+		ConfuseMob.class,
+		Confusion.class,
+		CpHeal.class,
+		CpHealOverTime.class,
+		CpHealPercent.class,
+		CpDamPercent.class,
+		DamOverTime.class,
+		Debuff.class,
+		DispelBySlot.class,
+		Disarm.class,
+		EnemyCharge.class,
+		FakeDeath.class,
+		Fear.class,
+		Fusion.class,
+		Grow.class,
+		HealOverTime.class,
+		HealPercent.class,
+		Heal.class,
+		Hide.class,
+		ImmobileBuff.class,
+		IncreaseCharges.class,
+		ImmobilePetBuff.class,
+		Invincible.class,
+		ManaDamOverTime.class,
+		ManaHeal.class,
+		ManaHealByLevel.class,
+		ManaHealOverTime.class,
+		ManaHealPercent.class,
+		MpConsumePerLevel.class,
+		Mute.class,
+		Negate.class,
+		NoblesseBless.class,
+		Paralyze.class,
+		Petrification.class,
+		PhoenixBless.class,
+		PhysicalAttackMute.class,
+		PhysicalMute.class,
+		ProtectionBlessing.class,
+		RandomizeHate.class,
+		Recovery.class,
+		Relax.class,
+		RemoveTarget.class,
+		Root.class,
+		Signet.class,
+		SignetAntiSummon.class,
+		SignetMDam.class,
+		SignetNoise.class,
+		SilentMove.class,
+		Sleep.class,
+		Spoil.class,
+		Stun.class,
+		TargetMe.class,
+		ThrowUp.class,
+		TransferDamage.class,
+		Transformation.class,
+		Warp.class,
+	};
 	
 	public static void main(String[] args)
 	{
-		loadEffectHandlers();
+		Object loadInstance = null;
+		Method method = null;
+		
+		try
+		{
+			method = _loadInstances.getMethod("getInstance");
+			loadInstance = method.invoke(_loadInstances);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances.getSimpleName(), e);
+			return;
+		}
+		
+		method = null; // Releasing variable for next method
+		
+		for (Class<?> c : _effects)
+		{
+			try
+			{
+				if (c == null)
+					continue; // Disabled handler
+					
+				if (method == null)
+					method = loadInstance.getClass().getMethod("registerHandler", String.class, Class.class);
+				
+				method.invoke(loadInstance, c.getSimpleName(), c);
+				
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
+				continue;
+			}
+		}
+		
+		// And lets try get size
+		try
+		{
+			method = loadInstance.getClass().getMethod("size");
+			Object returnVal = method.invoke(loadInstance);
+			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
+		}
 	}
 }

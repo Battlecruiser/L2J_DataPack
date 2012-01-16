@@ -14,7 +14,7 @@
  */
 package conquerablehalls.RainbowSpringsChateau;
 
-import gnu.trove.TIntLongHashMap;
+import gnu.trove.map.hash.TIntLongHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager.TeleportWhereType;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -48,19 +47,20 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
+import com.l2jserver.gameserver.model.item.L2Item;
+import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.templates.item.L2Item;
+import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 import com.l2jserver.util.Rnd;
 
 /**
  * @author BiggBoss
- * Rainbow Springs Cheateau clan hall siege script
+ * Rainbow Springs Chateau clan hall siege script
  */
 public class RainbowSpringsChateau extends Quest
 {
@@ -175,9 +175,11 @@ public class RainbowSpringsChateau extends Quest
 		{
 			for(int arenaId : ARENA_ZONES)
 			{
-				L2ZoneType zone = ZoneManager.getInstance().getZoneById(arenaId);
-				for(L2Character cha : (L2Character[])zone.getCharactersInside().getValues())
-					cha.teleToLocation(TeleportWhereType.Town);
+				final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside();
+				for(L2Character chr : chars.values(new L2Character[0]))
+				{
+					chr.teleToLocation(TeleportWhereType.Town);
+				}
 			}
 		}
 	}
@@ -638,10 +640,11 @@ public class RainbowSpringsChateau extends Quest
 			if(id == myArena)
 				continue;
 			
-			for(L2Character plr : (L2Character[])ZoneManager.getInstance().getZoneById(id).getCharactersInside().getValues())
+			final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(id).getCharactersInside();
+			for(L2Character chr : chars.values(new L2Character[0]))
 			{
 				for(L2Skill sk : DEBUFFS)
-					sk.getEffects(plr, plr);
+					sk.getEffects(chr, chr);
 			}
 		}
 	}

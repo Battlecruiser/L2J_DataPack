@@ -14,7 +14,7 @@
  */
 package custom.KetraOrcSupport;
 
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.L2Skill;
@@ -125,7 +125,6 @@ public class KetraOrcSupport extends Quest
 			st = this.newQuestState(player);
 		int npcId = npc.getNpcId();
 		int Alevel = player.getAllianceWithVarkaKetra();
-		long horns = st.getQuestItemsCount(HORN);
 		if (npcId == KADUN)
 		{
 			if (Alevel > 0)
@@ -148,7 +147,7 @@ public class KetraOrcSupport extends Quest
 			else if (Alevel < 3 && Alevel > 0)
 				htmltext = "31372-1.htm";
 			else if (Alevel > 2)
-				if (horns != 0)
+				if (st.hasQuestItems(HORN))
 					htmltext = "31372-4.htm";
 				else
 					htmltext = "31372-2.htm";

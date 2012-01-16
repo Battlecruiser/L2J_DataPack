@@ -159,7 +159,7 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 		{
 			playable.broadcastPacket(new MagicSkillUse(playable, playable, skill_id, skill_level, 0, 0));
 			
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(trigger.getSkillType());
+			ISkillHandler handler = SkillHandler.getInstance().getHandler(trigger.getSkillType());
 			if (handler != null)
 				handler.useSkill(playable, trigger, targets);
 			else

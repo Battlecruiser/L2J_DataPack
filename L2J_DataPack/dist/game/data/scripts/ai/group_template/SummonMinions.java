@@ -14,8 +14,8 @@
  */
 package ai.group_template;
 
-import gnu.trove.TIntHashSet;
-import gnu.trove.TIntObjectHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
@@ -30,12 +30,13 @@ import com.l2jserver.util.Rnd;
 public class SummonMinions extends L2AttackableAIScript
 {
 	private static int HasSpawned;
-	private static TIntHashSet myTrackingSet = new TIntHashSet(); //Used to track instances of npcs
-	private FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
+	private static TIntHashSet myTrackingSet = new TIntHashSet(); // Used to track instances of npcs
+	private final FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
 	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<int[]>();
 	
 	static
 	{
+		//@formatter:off
 		MINIONS.put(20767,new int[]{20768,20769,20770}); //Timak Orc Troop
 		//MINIONS.put(22030,new Integer[]{22045,22047,22048}); //Ragna Orc Shaman
 		//MINIONS.put(22032,new Integer[]{22036}); //Ragna Orc Warrior - summons shaman but not 22030 ><
@@ -54,16 +55,13 @@ public class SummonMinions extends L2AttackableAIScript
 		MINIONS.put(22265,new int[]{18366,18366}); //Chrysocolla
 		MINIONS.put(22266,new int[]{18366,18366}); //Pythia
 		MINIONS.put(22774,new int[]{22768,22768}); // Tanta Lizardman Summoner
+		//@formatter:on
 	}
 	
 	public SummonMinions(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		int[] temp =
-		{
-				20767,  21524, 21531, 21539, 22257, 22258, 22259, 22260, 22261, 22262, 22263, 22264, 22265, 22266, 22774
-		};
-		this.registerMobs(temp, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
+		registerMobs(MINIONS.keys(), QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 	}
 	
 	@Override
@@ -73,7 +71,7 @@ public class SummonMinions extends L2AttackableAIScript
 		int npcObjId = npc.getObjectId();
 		if (MINIONS.containsKey(npcId))
 		{
-			if (!myTrackingSet.contains(npcObjId)) //this allows to handle multiple instances of npc
+			if (!myTrackingSet.contains(npcObjId)) // this allows to handle multiple instances of npc
 			{
 				synchronized (myTrackingSet)
 				{
@@ -86,14 +84,14 @@ public class SummonMinions extends L2AttackableAIScript
 			{
 				switch (npcId)
 				{
-					case 22030: //mobs that summon minions only on certain hp
+					case 22030: // mobs that summon minions only on certain hp
 					case 22032:
 					case 22038:
 					{
 						if (npc.getCurrentHp() < (npc.getMaxHp() / 2.0))
 						{
 							HasSpawned = 0;
-							if (Rnd.get(100) < 33) //mobs that summon minions only on certain chance
+							if (Rnd.get(100) < 33) // mobs that summon minions only on certain chance
 							{
 								int[] minions = MINIONS.get(npcId);
 								for (int val : minions)
@@ -129,7 +127,7 @@ public class SummonMinions extends L2AttackableAIScript
 								{
 									FastList<L2PcInstance> player = new FastList<L2PcInstance>();
 									player.add(member);
-									_attackersList.put(npcObjId,player);
+									_attackersList.put(npcObjId, player);
 								}
 								else if (!_attackersList.get(npcObjId).contains(member))
 									_attackersList.get(npcObjId).add(member);
@@ -141,12 +139,12 @@ public class SummonMinions extends L2AttackableAIScript
 							{
 								FastList<L2PcInstance> player = new FastList<L2PcInstance>();
 								player.add(attacker);
-								_attackersList.put(npcObjId,player);
+								_attackersList.put(npcObjId, player);
 							}
 							else if (!_attackersList.get(npcObjId).contains(attacker))
 								_attackersList.get(npcObjId).add(attacker);
 						}
-						if ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2)||_attackersList.get(npcObjId).size() > 2) //Just to make sure..
+						if ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2) || _attackersList.get(npcObjId).size() > 2) // Just to make sure..
 						{
 							HasSpawned = 0;
 							for (int val : MINIONS.get(npcId))
@@ -159,7 +157,7 @@ public class SummonMinions extends L2AttackableAIScript
 						}
 						break;
 					}
-					default: //mobs without special conditions
+					default: // mobs without special conditions
 					{
 						HasSpawned = 0;
 						if (npcId != 20767)

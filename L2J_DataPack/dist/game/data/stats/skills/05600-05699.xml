@@ -38,20 +38,17 @@
 	<skill id="5602" levels="1" name="Transform Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<set name="canBeDispeled" val="false" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- set name="power" val="-99" / -->
-		<!-- set name="skillType" val="HEAL_PERCENT" / -->
-		<set name="power" val="100" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="10" abnormalType="transform_scrifice_p">
-				<mul order="0x50" stat="limitHp" val="0.1" /> <!-- TEMP FIX: Until support for HEAL_PERCENT with negative numbers is done -->
 				<mul order="0x30" stat="maxRecoverableHp" val="0.1" />
 			</effect>
+			<effect name="HealPercent" noicon="1" val="-99" />
 		</for>
 	</skill>
 	<skill id="5603" levels="1" name="Dagger Mastery">
@@ -223,14 +220,16 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#power"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<table name="#amount"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<set name="aggroPoints" val="100" />
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5622" levels="7" name="Double Skill Attack">
 		<set name="target" val="TARGET_NONE" />
@@ -835,11 +834,9 @@
 		<table name="#val1"> 0.9 0.81 0.73 0.66 0.6 </table>
 		<table name="#val2"> 5 9 13 17 21 </table>
 		<set name="canBeDispeled" val="false" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1064,30 +1061,36 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="41" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="41" />
+		</for>
 	</skill>
 	<skill id="5677" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="51" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="51" />
+		</for>
 	</skill>
 	<skill id="5678" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="59" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANARECHARGE" />
+		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ManaHeal" noicon="1" val="59" />
+		</for>
 	</skill>
 	<skill id="5679" levels="3" name="Oblivion Trap">
 		<set name="hitTime" val="500" />
@@ -1125,11 +1128,13 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="200" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="5682" levels="1" name="PvP Weapon - Cancel">
 		<!-- Confirmed CT2.5 -->
@@ -1152,12 +1157,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1221,12 +1225,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1244,12 +1247,11 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1325,23 +1327,24 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="200" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="HEAL" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Heal" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="5693" levels="1" name="PvP Armor - Speed Down">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="staticReuse" val="true" />
@@ -1407,11 +1410,10 @@
 	</skill>
 	<skill id="5697" levels="4" name="Seal">
 		<!-- Imbue Seed of Destruction effect -->
-		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="lvlDepend" val="1" />
@@ -1425,15 +1427,18 @@
 	<skill id="5698" levels="37" name="Bless the Blood">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 48 56 60 64 68 72 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#power"> 217 281 346 377 406 434 458 470 477 485 492 500 507 515 522 530 537 545 552 560 567 575 582 590 597 605 612 620 627 635 642 650 657 665 672 680 687 </table>
+		<table name="#amount"> 217 281 346 377 406 434 458 470 477 485 492 500 507 515 522 530 537 545 552 560 567 575 582 590 597 605 612 620 627 635 642 650 657 665 672 680 687 </table>
+		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="HEAL_STATIC" />
+		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5699" levels="7" name="Decrease P. Def">
 		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class handles following admin commands:
@@ -46,6 +45,7 @@ public class AdminKill implements IAdminCommandHandler
 		"admin_kill_monster"
 	};
 	
+	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.startsWith("admin_kill"))
@@ -81,10 +81,7 @@ public class AdminKill implements IAdminCommandHandler
 							return false;
 						}
 					}
-					else
-					{
-						kill(activeChar, plyr);
-					}
+					kill(activeChar, plyr);
 				}
 				else
 				{
@@ -113,7 +110,7 @@ public class AdminKill implements IAdminCommandHandler
 			{
 				L2Object obj = activeChar.getTarget();
 				if (obj instanceof L2ControllableMobInstance || !(obj instanceof L2Character))
-					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else
 					kill(activeChar, (L2Character) obj);
 			}
@@ -151,6 +148,7 @@ public class AdminKill implements IAdminCommandHandler
 			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" + " killed character " + target.getObjectId());
 	}
 	
+	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

@@ -6,7 +6,7 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets import SocialAction
-from com.l2jserver.gameserver.templates.item import L2WeaponType 
+from com.l2jserver.gameserver.model.item.type import L2WeaponType 
 
 qn = "415_PathToOrcMonk"
 
@@ -95,7 +95,7 @@ class Quest (JQuest) :
           else:
             st.addExpAndSp(295862, 19344)
           st.giveItems(57, 81900)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
@@ -187,7 +187,7 @@ class Quest (JQuest) :
         else:
              st.addExpAndSp(591724, 38688)
         st.giveItems(57, 163800)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
