@@ -20,24 +20,19 @@ import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Item skills not allowed on olympiad
+ * Item skills not allowed on Olympiad.
  */
 public class ItemSkills extends ItemSkillsTemplate
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar != null && activeChar.isInOlympiadMode())
+		if ((activeChar != null) && activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
-		
 		super.useItem(playable, item, forceUse);
 	}
 }
