@@ -34,26 +34,28 @@ import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 
 /**
- * Template for item skills handler
- * Only minimum of checks
+ * Template for item skills handler.<br>
+ * Only minimum of checks.
  */
 public class ItemSkillsTemplate implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		L2PcInstance activeChar;
 		boolean isPet = playable instanceof L2PetInstance;
 		if (isPet)
+		{
 			activeChar = ((L2PetInstance) playable).getOwner();
+		}
 		else if (playable instanceof L2PcInstance)
+		{
 			activeChar = (L2PcInstance) playable;
+		}
 		else
+		{
 			return;
+		}
 		
 		if (!TvTEvent.onScrollUse(playable.getObjectId()))
 		{
@@ -76,8 +78,10 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			for (SkillHolder skillInfo : skills)
 			{
-				if(skillInfo == null)
+				if (skillInfo == null)
+				{
 					continue;
+				}
 				
 				skillId = skillInfo.getSkillId();
 				skillLvl = skillInfo.getSkillLvl();
@@ -86,12 +90,14 @@ public class ItemSkillsTemplate implements IItemHandler
 				if (itemSkill != null)
 				{
 					if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
+					{
 						return;
+					}
 					
 					if (playable.isSkillDisabled(itemSkill))
 					{
-						reuse(activeChar,itemSkill, item);
-						return ;
+						reuse(activeChar, itemSkill, item);
+						return;
 					}
 					
 					if (!itemSkill.isPotion() && playable.isCastingNow())
@@ -99,7 +105,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						return;
 					}
 					
-					if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0 && (itemSkill.isPotion() || itemSkill.isSimultaneousCast()))
+					if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0) && (itemSkill.isPotion() || itemSkill.isSimultaneousCast()))
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
@@ -119,7 +125,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						switch (skillId)
 						{
-							// short buff icon for healing potions
+						// short buff icon for healing potions
 							case 2031:
 							case 2032:
 							case 2037:
@@ -127,16 +133,21 @@ public class ItemSkillsTemplate implements IItemHandler
 							case 26026:
 								int buffId = activeChar._shortBuffTaskSkillId;
 								// greater healing potions
-								if (skillId == 2037 || skillId == 26025)
-									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-								// healing potions
-								else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
-									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-								// lesser healing potions
+								if ((skillId == 2037) || (skillId == 26025))
+								{
+									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+								}
+								else if (((skillId == 2032) || (skillId == 26026)) && (buffId != 2037) && (buffId != 26025))
+								{
+									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+									// lesser healing potions
+								}
 								else
 								{
-									if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
-										activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+									if ((buffId != 2037) && (buffId != 26025) && (buffId != 2032) && (buffId != 26026))
+									{
+										activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+									}
 								}
 								break;
 						}
@@ -146,27 +157,29 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						playable.doSimultaneousCast(itemSkill);
 						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-						if (!isPet && item.getItemType() == L2EtcItemType.HERB
-								&& activeChar.getPet() != null
-								&& activeChar.getPet() instanceof L2SummonInstance)
+						if (!isPet && (item.getItemType() == L2EtcItemType.HERB) && (activeChar.getPet() != null) && (activeChar.getPet() instanceof L2SummonInstance))
+						{
 							activeChar.getPet().doSimultaneousCast(itemSkill);
+						}
 					}
 					else
 					{
 						playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						
 						// TODO: Remove when reuse time for sub-class is implemented.
-						if (activeChar.isSubClassActive() && (itemSkill.getSkillType() == L2SkillType.EXTRACTABLE) && (itemSkill.getReuseDelay() > 5000) && (itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0))
+						if (activeChar.isSubClassActive() && (itemSkill.getSkillType() == L2SkillType.EXTRACTABLE) && (itemSkill.getReuseDelay() > 5000))
 						{
 							activeChar.sendPacket(SystemMessageId.MAIN_CLASS_SKILL_ONLY);
 							return;
 						}
 						
 						if (!playable.useMagic(itemSkill, forceUse, false))
+						{
 							return;
+						}
 						
 						// Consume.
-						if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
+						if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0))
 						{
 							if (!activeChar.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 							{
@@ -179,39 +192,47 @@ public class ItemSkillsTemplate implements IItemHandler
 					if (itemSkill.getReuseDelay() > 0)
 					{
 						activeChar.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
-						//activeChar.disableSkill(itemSkill, itemSkill.getReuseDelay());
+						// activeChar.disableSkill(itemSkill, itemSkill.getReuseDelay());
 						if (item.isEtcItem())
 						{
 							final int group = item.getEtcItem().getSharedReuseGroup();
 							if (group >= 0)
+							{
 								activeChar.sendPacket(new ExUseSharedGroupItem(item.getItemId(), group, itemSkill.getReuseDelay(), itemSkill.getReuseDelay()));
+							}
 						}
 					}
 				}
 			}
 		}
 		else
-			_log.info("Item "+ item + " does not have registered any skill for handler.");
+		{
+			_log.info("Item " + item + " does not have registered any skill for handler.");
+		}
 	}
 	
-	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
+	private void reuse(L2PcInstance player, L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
 		final L2TIntObjectHashMap<TimeStamp> timeStamp = player.getReuseTimeStamp();
 		
-		if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
+		if ((timeStamp != null) && timeStamp.containsKey(skill.getReuseHashCode()))
 		{
 			final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
-			final int hours = (int)(remainingTime / 3600000L);
-			final int minutes = (int)(remainingTime % 3600000L) / 60000;
-			final int seconds = (int)(remainingTime / 1000 % 60);
+			final int hours = (int) (remainingTime / 3600000L);
+			final int minutes = (int) (remainingTime % 3600000L) / 60000;
+			final int seconds = (int) ((remainingTime / 1000) % 60);
 			if (hours > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
+				{
 					sm.addItemName(item);
+				}
 				else
+				{
 					sm.addSkillName(skill);
+				}
 				sm.addNumber(hours);
 				sm.addNumber(minutes);
 			}
@@ -219,18 +240,26 @@ public class ItemSkillsTemplate implements IItemHandler
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
+				{
 					sm.addItemName(item);
+				}
 				else
+				{
 					sm.addSkillName(skill);
+				}
 				sm.addNumber(minutes);
 			}
 			else
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
+				{
 					sm.addItemName(item);
+				}
 				else
+				{
 					sm.addSkillName(skill);
+				}
 			}
 			sm.addNumber(seconds);
 			
@@ -238,7 +267,9 @@ public class ItemSkillsTemplate implements IItemHandler
 			{
 				final int group = item.getEtcItem().getSharedReuseGroup();
 				if (group >= 0)
-					player.sendPacket(new ExUseSharedGroupItem(item.getItemId(), group, (int)remainingTime, skill.getReuseDelay()));
+				{
+					player.sendPacket(new ExUseSharedGroupItem(item.getItemId(), group, (int) remainingTime, skill.getReuseDelay()));
+				}
 			}
 		}
 		else
