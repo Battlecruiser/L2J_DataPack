@@ -1134,7 +1134,7 @@
 		</for>
 	</skill>
 	<skill id="1548" levels="3" name="Resist Earth">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#aggroPoints"> 243 379 418 </table> <!-- Guess -->
 		<table name="#magicLvl"> 60 64 68 </table>
 		<table name="#mpInitialConsume"> 5 7 8 </table>
@@ -1160,7 +1160,7 @@
 		</for>
 	</skill>
 	<skill id="1549" levels="1" name="Chant of Elements">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<!-- NOTE: skill desc says "increases the elemental attribute" but is client typo, it increase defense (see skill icon) -->
 		<set name="aggroPoints" val="624" /> <!-- Guess -->
 		<set name="hitTime" val="2500" />
@@ -1183,7 +1183,7 @@
 		</for>
 	</skill>
 	<skill id="1550" levels="1" name="Mass Cure Poison">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="aggroPoints" val="566" /> <!-- Guess -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
@@ -1198,7 +1198,7 @@
 		<set name="target" val="TARGET_PARTY" />
 	</skill>
 	<skill id="1551" levels="1" name="Mass Purify">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="aggroPoints" val="566" /> <!-- Guess -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
@@ -1213,7 +1213,7 @@
 		<set name="target" val="TARGET_PARTY" />
 	</skill>
 	<skill id="1552" levels="1" name="Mass Vitalize">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="aggroPoints" val="936" /> <!-- Guess -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
@@ -1232,7 +1232,7 @@
 		</for>
 	</skill>
 	<skill id="1553" levels="1" name="Chain Heal">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="aggroPoints" val="398" /> <!-- Guess -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
@@ -1250,7 +1250,7 @@
 		<set name="target" val="TARGET_ALLY" /> <!-- FIXME: Appears to be only for TARGET_ALLY_MEMBER_AREA + (10 targets around him), not ALL ALLY MEMBERS -->
 	</skill>
 	<skill id="1554" levels="1" name="Aura Blast">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
@@ -1270,7 +1270,7 @@
 		</for>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="2000" />
@@ -1289,7 +1289,7 @@
 		</for>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="aggroPoints" val="204" /> <!-- Guess -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="true" />
@@ -1307,7 +1307,7 @@
 		</for>
 	</skill>
 	<skill id="1557" levels="1" name="Servitor Share">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<!-- Totally Unconfirmed -->
 		<set name="aggroPoints" val="669" /> <!-- Guess -->
 		<set name="castRange" val="400" />
@@ -1335,7 +1335,7 @@
 		</for>
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 38 43 47 50 53 55 57 59 60 63 64 67 74 83 92 99 100 106 109 115 118 119 125 134 </table>
 		<table name="#power"> 57 58 60 61 63 66 68 71 74 77 79 82 89 94 100 104 110 115 139 152 166 179 193 207 </table>
@@ -1358,7 +1358,7 @@
 		</for>
 	</skill>
 	<skill id="1559" levels="3" name="Potential Ability">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#magicLvl"> 28 40 49 </table>
 		<table name="#rCrit"> 0.2 0.3 0.4 </table>
 		<table name="#cAtkAdd"> 177 295 384 </table>
@@ -1376,7 +1376,7 @@
 		</for>
 	</skill>
 	<skill id="1560" levels="1" name="Lucky Blow">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="baseCritRate" val="15" /> <!-- Guess -->
 		<set name="blowChance" val="20" /> <!-- Guess -->
 		<set name="castRange" val="40" />
@@ -1401,7 +1401,7 @@
 		</for>
 	</skill>
 	<skill id="1561" levels="5" name="Battle Cry">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#aggroPoints"> 379 467 549 597 635 </table>
 		<table name="#maxHp"> 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 40 49 58 64 70 </table>
@@ -1424,7 +1424,7 @@
 		</for>
 	</skill>
 	<skill id="1562" levels="2" name="Chant of Berserker">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
 		<table name="#rEvas"> 2 4 </table>
@@ -1463,7 +1463,7 @@
 		</for>
 	</skill>
 	<skill id="1563" levels="2" name="Fury of Pa'agrio">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#aggroPoints"> 457 532 </table>
 		<table name="#magicLvl"> 48 56 </table>
 		<table name="#mpConsume"> 138 164 </table>
@@ -1488,7 +1488,7 @@
 		</for>
 	</skill>
 	<skill id="1564" levels="1" name="Piercing Attack">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<set name="activationChance" val="3" /> <!-- Guess -->
 		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
@@ -1499,7 +1499,7 @@
 		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="1565" levels="6" name="Mana Pump">
-		<!-- H5 Skill -->
+		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 49 58 64 68 72 </table>
 		<table name="#maxMp"> 70 100 140 150 180 200 </table>
 		<set name="magicLvl" val="#magicLvl" />
