@@ -18,129 +18,89 @@ import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 public class HuntingGroundsTeleport extends Quest
 {
-	private final static int[] PRIESTs =
+	private final static int[] PRIESTS =
 	{
-		31078,31079,31080,31081,31082,31083,31084,31085,31086,31087,31088,
-		31089,31090,31091,31168,31169,31692,31693,31694,31695,31997,31998
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31085, 31086, 31087, 31088, 31089, 31090, 31091, 31168, 31169, 31692, 31693, 31694, 31695, 31997, 31998
 	};
 	
-	private static final int[] DAWN_NPCs =
+	private static final int[] DAWN_NPCS =
 	{
-		31078,31079,31080,31081,31082,31083,31084,31168,31692,31694,31997
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31168, 31692, 31694, 31997
 	};
 	
 	public HuntingGroundsTeleport(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : PRIESTs)
-		{
-			addStartNpc(id);
-			addTalkId(id);
-		}
+		addStartNpc(PRIESTS);
+		addTalkId(PRIESTS);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
-		int playerSeal = SevenSigns.getInstance().getPlayerSeal(player.getObjectId());
-		int sealOwnerGnosis = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_GNOSIS);
-		boolean periodValidate = SevenSigns.getInstance().isSealValidationPeriod();
+		final SevenSigns ss = SevenSigns.getInstance();
+		final int playerCabal = ss.getPlayerCabal(player.getObjectId());
 		
 		if (playerCabal == SevenSigns.CABAL_NULL)
 		{
-			if (Util.contains(DAWN_NPCs, npcId))
-				htmltext = "dawn_tele-no.htm";
-			else
-				htmltext = "dusk_tele-no.htm";
-		}
-		else if (npcId == 31078 || npcId == 31085)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_gludin.htm";
-			else
-				htmltext = "hg_gludin.htm";
-		}
-		else if (npcId == 31079 || npcId == 31086)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_gludio.htm";
-			else
-				htmltext = "hg_gludio.htm";
-		}
-		else if (npcId == 31080 || npcId == 31087)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_dion.htm";
-			else
-				htmltext = "hg_dion.htm";
-		}
-		else if (npcId == 31081 || npcId == 31088)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_giran.htm";
-			else
-				htmltext = "hg_giran.htm";
-		}
-		else if (npcId == 31082 || npcId == 31089)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_heine.htm";
-			else
-				htmltext = "hg_heine.htm";
-		}
-		else if (npcId == 31083 || npcId == 31090)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_oren.htm";
-			else
-				htmltext = "hg_oren.htm";
-		}
-		else if (npcId == 31084 || npcId == 31091)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_aden.htm";
-			else
-				htmltext = "hg_aden.htm";
-		}
-		else if (npcId == 31168 || npcId == 31169)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_hw.htm";
-			else
-				htmltext = "hg_hw.htm";
-		}
-		else if (npcId == 31692 || npcId == 31693)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_goddard.htm";
-			else
-				htmltext = "hg_goddard.htm";
-		}
-		else if (npcId == 31694 || npcId == 31695)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_rune.htm";
-			else
-				htmltext = "hg_rune.htm";
-		}
-		else if (npcId == 31997 || npcId == 31998)
-		{
-			if (periodValidate && playerCabal == sealOwnerGnosis && playerSeal == SevenSigns.SEAL_GNOSIS)
-				htmltext = "low_schuttgart.htm";
-			else
-				htmltext = "hg_schuttgart.htm";
+			return Util.contains(DAWN_NPCS, npc.getNpcId()) ? "dawn_tele-no.htm" : "dusk_tele-no.htm";
 		}
 		
-		st.exitQuest(true);
+		String htmltext = "";
+		final boolean check = ss.isSealValidationPeriod() && (playerCabal == ss.getSealOwner(SevenSigns.SEAL_GNOSIS)) && (ss.getPlayerSeal(player.getObjectId()) == SevenSigns.SEAL_GNOSIS);
+		switch (npc.getNpcId())
+		{
+			case 31078:
+			case 31085:
+				htmltext = check ? "low_gludin.htm" : "hg_gludin.htm";
+				break;
+			case 31079:
+			case 31086:
+				htmltext = check ? "low_gludio.htm" : "hg_gludio.htm";
+				break;
+			case 31080:
+			case 31087:
+				htmltext = check ? "low_dion.htm" : "hg_dion.htm";
+				break;
+			case 31081:
+			case 31088:
+				htmltext = check ? "low_giran.htm" : "hg_giran.htm";
+				break;
+			case 31082:
+			case 31089:
+				htmltext = check ? "low_heine.htm" : "hg_heine.htm";
+				break;
+			case 31083:
+			case 31090:
+				htmltext = check ? "low_oren.htm" : "hg_oren.htm";
+				break;
+			case 31084:
+			case 31091:
+				htmltext = check ? "low_aden.htm" : "hg_aden.htm";
+				break;
+			case 31168:
+			case 31169:
+				htmltext = check ? "low_hw.htm" : "hg_hw.htm";
+				break;
+			case 31692:
+			case 31693:
+				htmltext = check ? "low_goddard.htm" : "hg_goddard.htm";
+				break;
+			case 31694:
+			case 31695:
+				htmltext = check ? "low_rune.htm" : "hg_rune.htm";
+				break;
+			case 31997:
+			case 31998:
+				htmltext = check ? "low_schuttgart.htm" : "hg_schuttgart.htm";
+				break;
+			default:
+				break;
+		}
 		return htmltext;
 	}
 	
