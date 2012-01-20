@@ -39,10 +39,15 @@
 	<item id="21106" type="EtcItem" name="Wondrous Cubic - 1 time use">
 		<!-- Description: Double click to create a cube fragment that can be exchanged for a weapon/armor enchant scroll. Cannot be exchanged or dropped. (Disappears after 1 time use.) -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="elixir" />
 		<set name="material" val="steel" />
 		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22180-1" />
 	</item>
 	<item id="21107" type="EtcItem" name="Refined Cube - 1 time use">
 		<!-- Description: Double click to create augmenting stones according to type. Cannot be exchanged or dropped. (Disappears after 1 time use.) -->
