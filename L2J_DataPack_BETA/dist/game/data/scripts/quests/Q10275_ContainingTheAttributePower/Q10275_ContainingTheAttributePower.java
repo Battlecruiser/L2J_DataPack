@@ -16,6 +16,7 @@ package quests.Q10275_ContainingTheAttributePower;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.Elementals;
+import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
@@ -25,7 +26,8 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Containing the Attribute Power (10275). Original jython script by Kerberos v1.0 on 2009/05/03
+ * Containing the Attribute Power (10275).<br>
+ * Original jython script by Kerberos v1.0 on 2009/05/03
  * @author nonom
  */
 public class Q10275_ContainingTheAttributePower extends Quest
@@ -47,20 +49,22 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	private static final int SOULPIECEWATER = 13861;
 	private static final int SOULPIECEAIR = 13862;
 	
+	// Skills
+	private static final L2Skill BlessingOfFire = SkillTable.getInstance().getInfo(2635, 1);
+	private static final L2Skill BlessingOfEarth = SkillTable.getInstance().getInfo(2636, 1);
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		int npcId = npc.getNpcId();
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		int cond = st.getInt("cond");
-		
+		final int npcId = npc.getNpcId();
+		final int cond = st.getInt("cond");
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -168,8 +172,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -202,7 +205,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				st.playSound("ItemSound.quest_middle");
 				break;
 			case "32325-06.htm":
-				if (st.getQuestItemsCount(YINSWORD) > 0)
+				if (st.hasQuestItems(YINSWORD))
 				{
 					st.takeItems(YINSWORD, 1);
 					htmltext = "32325-07.htm";
@@ -210,7 +213,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-06.htm":
-				if (st.getQuestItemsCount(YANGSWORD) > 0)
+				if (st.hasQuestItems(YANGSWORD))
 				{
 					st.takeItems(YANGSWORD, 1);
 					htmltext = "32326-07.htm";
@@ -219,13 +222,13 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				break;
 			case "32325-09.htm":
 				st.set("cond", "5");
-				SkillTable.getInstance().getInfo(2635, 1).getEffects(player, player);
+				BlessingOfFire.getEffects(player, player);
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
 				st.playSound("ItemSound.quest_middle");
 				break;
 			case "32326-09.htm":
 				st.set("cond", "10");
-				SkillTable.getInstance().getInfo(2636, 1).getEffects(player, player);
+				BlessingOfEarth.getEffects(player, player);
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
 				st.playSound("ItemSound.quest_middle");
 				break;
@@ -235,8 +238,8 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		{
 			st.giveItems(10520 + Integer.valueOf(event), 2);
 			st.addExpAndSp(202160, 20375);
-			st.exitQuest(false);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(false);
 			htmltext = Integer.toString(npc.getNpcId()) + "-1" + event + ".htm";
 		}
 		
@@ -247,16 +250,21 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
+		final int cond = st.getInt("cond");
 		switch (npc.getNpcId())
 		{
 			case AIR:
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && ((st.getInt("cond") == 8) || (st.getInt("cond") == 10)) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (st.getRandom(100) < 30))
+				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (st.getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEAIR, 1);
 					if (st.getQuestItemsCount(SOULPIECEAIR) >= 6)
 					{
-						st.set("cond", Integer.toString(st.getInt("cond") + 1));
+						st.set("cond", Integer.toString(cond + 1));
 						st.playSound("ItemSound.quest_middle");
 					}
 					else
@@ -266,13 +274,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				break;
 			case WATER:
-				int cond = st.getInt("cond");
 				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && ((cond >= 3) || (cond <= 5)) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (st.getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEWATER, 1);
 					if (st.getQuestItemsCount(SOULPIECEWATER) >= 6)
 					{
-						st.set("cond", Integer.toString(st.getInt("cond") + 1));
+						st.set("cond", Integer.toString(cond + 1));
 						st.playSound("ItemSound.quest_middle");
 					}
 					else
@@ -290,16 +297,11 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	{
 		super(questId, name, descr);
 		
-		addStartNpc(HOLLY);
-		addStartNpc(WEBER);
+		addStartNpc(HOLLY, WEBER);
 		
-		addTalkId(HOLLY);
-		addTalkId(WEBER);
-		addTalkId(YIN);
-		addTalkId(YANG);
+		addTalkId(HOLLY, WEBER, YIN, YANG);
 		
-		addKillId(AIR);
-		addKillId(WATER);
+		addKillId(AIR, WATER);
 		
 		questItemIds = new int[]
 		{

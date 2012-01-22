@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269). Original jython script by Kerberos v1.0 on 2009/05/1
+ * To the Seed of Destruction (10269).<br>
+ * Original jython script by Kerberos v1.0 on 2009/05/1
  * @author nonom
  */
 public class Q10269_ToTheSeedOfDestruction extends Quest
@@ -39,37 +40,22 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		int npcId = npc.getNpcId();
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
+		final int npcId = npc.getNpcId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
-				if (npcId == ALLENOS)
-				{
-					htmltext = "32526-02.htm";
-				}
-				else
-				{
-					htmltext = "32548-0a.htm";
-				}
+				htmltext = (npcId == ALLENOS) ? "32526-02.htm" : "32548-0a.htm";
 				break;
 			case State.CREATED:
 				if (npcId == KEUCEREUS)
 				{
-					if (player.getLevel() < 75)
-					{
-						htmltext = "32548-00.htm";
-					}
-					else
-					{
-						htmltext = "32548-01.htm";
-					}
+					htmltext = (player.getLevel() < 75) ? "32548-00.htm" : "32548-01.htm";
 				}
 				break;
 			case State.STARTED:
@@ -80,7 +66,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 				else if (npcId == ALLENOS)
 				{
 					htmltext = "32526-01.htm";
-					st.giveItems(57, 29174);
+					st.giveAdena(29174, false);
 					st.addExpAndSp(176121, 7671);
 					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
@@ -94,8 +80,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -116,8 +101,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(KEUCEREUS);
-		addTalkId(KEUCEREUS);
-		addTalkId(ALLENOS);
+		addTalkId(KEUCEREUS, ALLENOS);
 		
 		questItemIds = new int[]
 		{

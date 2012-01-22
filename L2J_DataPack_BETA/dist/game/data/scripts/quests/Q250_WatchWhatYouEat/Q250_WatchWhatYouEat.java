@@ -14,7 +14,6 @@
  */
 package quests.Q250_WatchWhatYouEat;
 
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -22,31 +21,39 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-08-05 Based on Freya PTS
+ * 2010-08-05 Based on Freya PTS
+ * @author Gnacik
  */
-
 public class Q250_WatchWhatYouEat extends Quest
 {
 	private static final String qn = "250_WatchWhatYouEat";
+	
 	// NPCs
 	private static final int _sally = 32743;
 	// Mobs - Items
-	private static final int[][] _mobs = {
-		{ 18864, 15493 },
-		{ 18865, 15494 },
-		{ 18868, 15495 }
+	private static final int[][] _mobs =
+	{
+		{
+			18864, 15493
+		},
+		{
+			18865, 15494
+		},
+		{
+			18868, 15495
+		}
 	};
 	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _sally)
 		{
@@ -58,9 +65,8 @@ public class Q250_WatchWhatYouEat extends Quest
 			}
 			else if (event.equalsIgnoreCase("32743-end.htm"))
 			{
-				st.unset("cond");
-				st.rewardItems(57,135661);
-				st.addExpAndSp(698334,76369);
+				st.giveAdena(135661, false);
+				st.addExpAndSp(698334, 76369);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
@@ -76,38 +82,48 @@ public class Q250_WatchWhatYouEat extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _sally)
 		{
-			switch(st.getState())
+			switch (st.getState())
 			{
-				case State.CREATED :
+				case State.CREATED:
 					if (player.getLevel() >= 82)
+					{
 						htmltext = "32743-01.htm";
+					}
 					else
+					{
 						htmltext = "32743-00.htm";
+					}
 					break;
-				case State.STARTED :
+				case State.STARTED:
 					if (st.getInt("cond") == 1)
 					{
 						htmltext = "32743-04.htm";
 					}
 					else if (st.getInt("cond") == 2)
 					{
-						if(st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
+						if (st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
 						{
 							htmltext = "32743-05.htm";
-							for(int items[] : _mobs)
+							for (int items[] : _mobs)
+							{
 								st.takeItems(items[1], -1);
+							}
 						}
 						else
+						{
 							htmltext = "32743-06.htm";
+						}
 					}
 					break;
-				case State.COMPLETED :
+				case State.COMPLETED:
 					htmltext = "32743-done.htm";
 					break;
 			}
@@ -118,12 +134,14 @@ public class Q250_WatchWhatYouEat extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
-			return null;
-		if (st.getState() == State.STARTED && st.getInt("cond") == 1)
 		{
-			for(int mob[] : _mobs)
+			return null;
+		}
+		if (st.isStarted() && (st.getInt("cond") == 1))
+		{
+			for (int mob[] : _mobs)
 			{
 				if (npc.getNpcId() == mob[0])
 				{
@@ -134,7 +152,7 @@ public class Q250_WatchWhatYouEat extends Quest
 					}
 				}
 			}
-			if(st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
+			if (st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
 			{
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
@@ -146,15 +164,16 @@ public class Q250_WatchWhatYouEat extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(qn);
-			st = q.newQuestState(player);
+			newQuestState(player);
 		}
 		
 		if (npc.getNpcId() == _sally)
+		{
 			return "32743-20.html";
+		}
 		
 		return null;
 	}
@@ -163,14 +182,19 @@ public class Q250_WatchWhatYouEat extends Quest
 	{
 		super(questId, name, descr);
 		
-		questItemIds = new int[]{15493,15494,15495};
-
+		questItemIds = new int[]
+		{
+			15493, 15494, 15495
+		};
+		
 		addStartNpc(_sally);
 		addFirstTalkId(_sally);
 		addTalkId(_sally);
 		
-		for(int i[] : _mobs)
+		for (int i[] : _mobs)
+		{
 			addKillId(i[0]);
+		}
 	}
 	
 	public static void main(String[] args)

@@ -16,19 +16,19 @@ package quests.Q182_NewRecruits;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-10-15 Based on official server Naia
+ * 2010-10-15 Based on official server Naia
+ * @author Gnacik
  */
-
 public class Q182_NewRecruits extends Quest
 {
 	private static final String qn = "182_NewRecruits";
+	
 	// NPC's
 	private static final int _kekropus = 32138;
 	private static final int _nornil = 32258;
@@ -37,10 +37,11 @@ public class Q182_NewRecruits extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _kekropus)
 		{
@@ -73,11 +74,13 @@ public class Q182_NewRecruits extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
-		if(player.getRace().ordinal() == 5)
+		if (player.getRace() == Race.Kamael)
 		{
 			htmltext = "32138-00.htm";
 		}
@@ -85,26 +88,27 @@ public class Q182_NewRecruits extends Quest
 		{
 			if (npc.getNpcId() == _kekropus)
 			{
-				switch(st.getState())
+				switch (st.getState())
 				{
-					case State.CREATED :
-							htmltext = "32138-01.htm";
+					case State.CREATED:
+						htmltext = "32138-01.htm";
 						break;
-					case State.STARTED :
+					case State.STARTED:
 						if (st.getInt("cond") == 1)
+						{
 							htmltext = "32138-03.htm";
+						}
 						break;
-					case State.COMPLETED :
+					case State.COMPLETED:
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
 				}
 			}
-			else if (npc.getNpcId() == _nornil && st.getState() == State.STARTED)
+			else if ((npc.getNpcId() == _nornil) && st.isStarted())
 			{
 				htmltext = "32258-01.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -113,8 +117,7 @@ public class Q182_NewRecruits extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(_kekropus);
-		addTalkId(_kekropus);
-		addTalkId(_nornil);
+		addTalkId(_kekropus, _nornil);
 	}
 	
 	public static void main(String[] args)

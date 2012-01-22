@@ -24,7 +24,8 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.util.Rnd;
 
 /**
- * Mutated Kaneus - Oren (10279). Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Oren (10279).<br>
+ * Original Jython script by Gnacik on 2010-06-29
  * @author nonom
  */
 public class Q10279_MutatedKaneusOren extends Quest
@@ -45,8 +46,7 @@ public class Q10279_MutatedKaneusOren extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -59,15 +59,11 @@ public class Q10279_MutatedKaneusOren extends Quest
 				{
 					htmltext = "30196-06.htm";
 				}
-				else if (st.isCreated() && (player.getLevel() >= 48))
+				else if (st.isCreated())
 				{
-					htmltext = "30196-01.htm";
+					htmltext = (player.getLevel() >= 48) ? "30196-01.htm" : "30196-00.htm";
 				}
-				else if (st.isCreated() && (player.getLevel() < 48))
-				{
-					htmltext = "30196-00.htm";
-				}
-				else if ((st.getQuestItemsCount(TISSUE_KA) > 0) && (st.getQuestItemsCount(TISSUE_KM) > 0))
+				else if (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM))
 				{
 					htmltext = "30196-05.htm";
 				}
@@ -79,9 +75,9 @@ public class Q10279_MutatedKaneusOren extends Quest
 			case ROVIA:
 				if (st.isCompleted())
 				{
-					htmltext = Quest.getAlreadyCompletedMsg(player);
+					htmltext = getAlreadyCompletedMsg(player);
 				}
-				else if ((st.getQuestItemsCount(TISSUE_KA) > 0) && (st.getQuestItemsCount(TISSUE_KM) > 0))
+				else if (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM))
 				{
 					htmltext = "30189-02.htm";
 				}
@@ -98,8 +94,7 @@ public class Q10279_MutatedKaneusOren extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -114,8 +109,8 @@ public class Q10279_MutatedKaneusOren extends Quest
 				break;
 			case "30189-03.htm":
 				st.rewardItems(57, 100000);
-				st.exitQuest(false);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(false);
 				break;
 		}
 		return htmltext;
@@ -125,64 +120,59 @@ public class Q10279_MutatedKaneusOren extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		QuestState st = killer.getQuestState(qn);
-		
 		if (st == null)
 		{
 			return null;
 		}
 		
+		final int npcId = npc.getNpcId();
 		if (killer.getParty() != null)
 		{
-			FastList<QuestState> PartyMembers = new FastList<QuestState>();
-			
+			final FastList<QuestState> PartyMembers = new FastList<QuestState>();
 			for (L2PcInstance member : killer.getParty().getPartyMembers())
 			{
 				st = member.getQuestState(qn);
 				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 				{
-					if ((npc.getNpcId() == KAIM_ABIGORE) && (st.getQuestItemsCount(TISSUE_KA) == 0))
+					if ((npcId == KAIM_ABIGORE) && !st.hasQuestItems(TISSUE_KA))
 					{
 						PartyMembers.add(st);
 					}
-					else if ((npc.getNpcId() == KNIGHT_MONTAGNAR) && (st.getQuestItemsCount(TISSUE_KM) == 0))
+					else if ((npcId == KNIGHT_MONTAGNAR) && !st.hasQuestItems(TISSUE_KM))
 					{
 						PartyMembers.add(st);
 					}
 				}
 			}
 			
-			if (PartyMembers.isEmpty())
+			if (!PartyMembers.isEmpty())
 			{
-				return null;
-			}
-			
-			QuestState winnerst = PartyMembers.get(Rnd.get(PartyMembers.size()));
-			
-			if ((npc.getNpcId() == KAIM_ABIGORE) && (winnerst.getQuestItemsCount(TISSUE_KA) == 0))
-			{
-				winnerst.giveItems(TISSUE_KA, 1);
-				winnerst.playSound("ItemSound.quest_itemget");
-			}
-			else if ((npc.getNpcId() == KNIGHT_MONTAGNAR) && (winnerst.getQuestItemsCount(TISSUE_KM) == 0))
-			{
-				winnerst.giveItems(TISSUE_KM, 1);
-				winnerst.playSound("ItemSound.quest_itemget");
+				rewardItem(npcId, PartyMembers.get(Rnd.get(PartyMembers.size())));
 			}
 		}
 		else
 		{
-			if ((npc.getNpcId() == KAIM_ABIGORE) && (st.getQuestItemsCount(TISSUE_KA) == 0))
-			{
-				st.giveItems(TISSUE_KA, 1);
-				st.playSound("ItemSound.quest_itemget");
-			}
-			else if ((npc.getNpcId() == KNIGHT_MONTAGNAR) && (st.getQuestItemsCount(TISSUE_KM) == 0))
-			{
-				st.giveItems(TISSUE_KM, 1);
-				st.playSound("ItemSound.quest_itemget");
-			}
+			rewardItem(npcId, st);
 		}
 		return null;
+	}
+	
+	/**
+	 * @param npcId the killed monster Id.
+	 * @param st the quest state of the killer or party member.
+	 */
+	private final void rewardItem(int npcId, QuestState st)
+	{
+		if ((npcId == KAIM_ABIGORE) && !st.hasQuestItems(TISSUE_KA))
+		{
+			st.giveItems(TISSUE_KA, 1);
+			st.playSound("ItemSound.quest_itemget");
+		}
+		else if ((npcId == KNIGHT_MONTAGNAR) && !st.hasQuestItems(TISSUE_KM))
+		{
+			st.giveItems(TISSUE_KM, 1);
+			st.playSound("ItemSound.quest_itemget");
+		}
 	}
 	
 	public Q10279_MutatedKaneusOren(int questId, String name, String descr)
@@ -190,11 +180,9 @@ public class Q10279_MutatedKaneusOren extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(MOUEN);
-		addTalkId(MOUEN);
-		addTalkId(ROVIA);
+		addTalkId(MOUEN, ROVIA);
 		
-		addKillId(KAIM_ABIGORE);
-		addKillId(KNIGHT_MONTAGNAR);
+		addKillId(KAIM_ABIGORE, KNIGHT_MONTAGNAR);
 		
 		questItemIds = new int[]
 		{

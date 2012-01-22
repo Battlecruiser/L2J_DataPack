@@ -54,11 +54,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 		
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
-		
-		for (int monster : MONSTERS)
-		{
-			addKillId(monster);
-		}
+		addKillId(MONSTERS);
 	}
 	
 	@Override
@@ -66,7 +62,6 @@ public final class Q279_TargetOfOpportunity extends Quest
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		
 		if ((st == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
@@ -96,35 +91,20 @@ public final class Q279_TargetOfOpportunity extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = Quest.getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st != null)
+		if (st == null)
 		{
-			if (st.getState() == State.CREATED)
-			{
-				if (player.getLevel() >= 82)
-				{
-					htmltext = "32302-01.htm";
-				}
-				else
-				{
-					htmltext = "32302-02.htm";
-				}
-			}
-			else if (st.getState() == State.STARTED)
-			{
-				if (st.getInt("progress") == 1)
-				{
-					if (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
-					{
-						htmltext = "32302-07.htm";
-					}
-					else
-					{
-						htmltext = "32302-06.htm";
-					}
-				}
-			}
+			return htmltext;
+		}
+		
+		if (st.getState() == State.CREATED)
+		{
+			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.htm";
+		}
+		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
+		{
+			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.htm" : "32302-06.htm";
 		}
 		return htmltext;
 	}

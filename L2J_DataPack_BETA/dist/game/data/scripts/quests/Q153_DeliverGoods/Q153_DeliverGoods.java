@@ -34,7 +34,7 @@ public class Q153_DeliverGoods extends Quest
 	private static final int SilviaId = 30003;
 	private static final int ArnoldId = 30041;
 	private static final int RantId = 30054;
-	//ITEMs
+	// ITEMs
 	private static final int DeliveryListId = 1012;
 	private static final int HeavyWoodBoxId = 1013;
 	private static final int ClothBundleId = 1014;
@@ -43,8 +43,8 @@ public class Q153_DeliverGoods extends Quest
 	private static final int SilviasReceipt = 1017;
 	private static final int RantsReceipt = 1018;
 	
-	//REWARDs
-	private static final int SoulshotNoGradeId = 1835; //You get 3 Soulshots no grade.
+	// REWARDs
+	private static final int SoulshotNoGradeId = 1835; // You get 3 Soulshots no grade.
 	private static final int RingofKnowledgeId = 875;
 	private static final int XpRewardAmount = 600;
 	
@@ -52,7 +52,10 @@ public class Q153_DeliverGoods extends Quest
 	{
 		super(questId, name, descr);
 		
-		questItemIds = new int[] { DeliveryListId, HeavyWoodBoxId, ClothBundleId, ClayPotId, JacksonsReceipt, SilviasReceipt, RantsReceipt };
+		questItemIds = new int[]
+		{
+			DeliveryListId, HeavyWoodBoxId, ClothBundleId, ClayPotId, JacksonsReceipt, SilviasReceipt, RantsReceipt
+		};
 		addStartNpc(ArnoldId);
 		addTalkId(JacksonId);
 		addTalkId(SilviaId);
@@ -64,8 +67,7 @@ public class Q153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if ((st != null) && (npc.getNpcId() == ArnoldId))
 		{
 			if (event.equalsIgnoreCase("30041-02.html"))
@@ -86,7 +88,7 @@ public class Q153_DeliverGoods extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st != null)
 		{
 			if (npc.getNpcId() == ArnoldId)
@@ -94,28 +96,22 @@ public class Q153_DeliverGoods extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						if (player.getLevel() >= 2)
-						{
-							htmltext = "30041-01.htm";
-						}
-						else
-						{
-							htmltext = "30041-00.htm";
-						}
+						htmltext = (player.getLevel() >= 2) ? "30041-01.htm" : "30041-00.htm";
 						break;
 					case State.STARTED:
-						if (st.getInt("cond") == 1)
+						final int cond = st.getInt("cond");
+						if (cond == 1)
 						{
 							htmltext = "30041-03.html";
 						}
-						else if (st.getInt("cond") == 2)
+						else if (cond == 2)
 						{
 							htmltext = "30041-04.html";
 							st.takeItems(DeliveryListId, -1);
 							st.takeItems(JacksonsReceipt, -1);
 							st.takeItems(SilviasReceipt, -1);
 							st.takeItems(RantsReceipt, -1);
-							//On retail it gives 2 rings but one at the time.
+							// On retail it gives 2 rings but one at the time.
 							st.giveItems(RingofKnowledgeId, 1);
 							st.giveItems(RingofKnowledgeId, 1);
 							st.addExpAndSp(XpRewardAmount, 0);

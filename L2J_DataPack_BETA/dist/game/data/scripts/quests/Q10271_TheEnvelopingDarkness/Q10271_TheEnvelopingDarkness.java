@@ -37,20 +37,28 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
-		if (npc.getNpcId() == ORBYU)
+		final int npcId = npc.getNpcId();
+		final int cond = st.getInt("cond");
+		if (npcId == ORBYU)
 		{
 			switch (st.getState())
 			{
 				case State.CREATED:
-					QuestState _prev = player.getQuestState("10269_ToTheSeedOfDestruction");
+					final QuestState _prev = player.getQuestState("10269_ToTheSeedOfDestruction");
 					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 75))
+					{
 						htmltext = "32560-01.htm";
+					}
 					else
+					{
 						htmltext = "32560-02.htm";
+					}
 					break;
 				case State.STARTED:
 					htmltext = "32560-05.htm";
@@ -59,73 +67,70 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 					htmltext = "32560-03.htm";
 					break;
 			}
-			if (st.getInt("cond") == 2)
-			{
-				htmltext = "32560-06.htm";
-			}
-			else if (st.getInt("cond") == 3)
-			{
-				htmltext = "32560-07.htm";
-			}
-			else if (st.getInt("cond") == 4)
-			{
-				htmltext = "32560-08.htm";
-				st.unset("cond");
-				st.setState(State.COMPLETED);
-				st.giveItems(57, 62516);
-				st.addExpAndSp(377403, 37867);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
-			}
 			
+			switch (cond)
+			{
+				case 2:
+					htmltext = "32560-06.htm";
+					break;
+				case 3:
+					htmltext = "32560-07.htm";
+					break;
+				case 4:
+					htmltext = "32560-08.htm";
+					st.giveAdena(62516, false);
+					st.addExpAndSp(377403, 37867);
+					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
+					break;
+			}
 		}
-		
-		else if (npc.getNpcId() == EL)
+		else if (npcId == EL)
 		{
 			if (st.isCompleted())
 			{
 				htmltext = "32556-02.htm";
 			}
-			if (st.getInt("cond") == 1)
+			else
 			{
-				htmltext = "32556-01.htm";
-			}
-			else if (st.getInt("cond") == 2)
-			{
-				htmltext = "32556-07.htm";
-			}
-			else if (st.getInt("cond") == 3)
-			{
-				htmltext = "32556-08.htm";
-			}
-			else if (st.getInt("cond") == 4)
-			{
-				htmltext = "32556-09.htm";
+				switch (cond)
+				{
+					case 1:
+						htmltext = "32556-01.htm";
+						break;
+					case 2:
+						htmltext = "32556-07.htm";
+						break;
+					case 3:
+						htmltext = "32556-08.htm";
+						break;
+					case 4:
+						htmltext = "32556-09.htm";
+						break;
+				}
 			}
 		}
-		
-		else if (npc.getNpcId() == MEDIBAL_CORPSE)
+		else if (npcId == MEDIBAL_CORPSE)
 		{
-			switch (st.getState())
+			if (st.isCompleted())
 			{
-				case State.COMPLETED:
-					htmltext = "32528-02.htm";
-					break;
+				htmltext = "32528-02.htm";
 			}
-			if (st.getInt("cond") == 2)
+			else
 			{
-				htmltext = "32528-01.htm";
-				st.playSound("ItemSound.quest_middle");
-				st.set("cond", "3");
-				st.giveItems(MEDIBAL_DOCUMENT, 1);
-			}
-			else if (st.getInt("cond") == 3)
-			{
-				htmltext = "32528-03.htm";
-			}
-			else if (st.getInt("cond") == 4)
-			{
-				htmltext = "32528-03.htm";
+				switch (cond)
+				{
+					case 2:
+						htmltext = "32528-01.htm";
+						st.playSound("ItemSound.quest_middle");
+						st.set("cond", "3");
+						st.giveItems(MEDIBAL_DOCUMENT, 1);
+						break;
+					case 3:
+					case 4:
+						htmltext = "32528-03.htm";
+						break;
+				}
 			}
 		}
 		return htmltext;
@@ -135,10 +140,11 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (event.equalsIgnoreCase("32560-05.htm"))
 		{
@@ -165,9 +171,8 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	{
 		super(questId, name, descr);
 		addStartNpc(ORBYU);
-		addTalkId(ORBYU);
-		addTalkId(EL);
-		addTalkId(MEDIBAL_CORPSE);
+		addTalkId(ORBYU, EL, MEDIBAL_CORPSE);
+		
 		questItemIds = new int[]
 		{
 			MEDIBAL_DOCUMENT
