@@ -37,6 +37,8 @@ import com.l2jserver.gameserver.model.quest.Quest;
 
 public class Engine extends Quest implements Runnable
 {
+	private static final String pointsInfoFile = "data/hellboundTrustPoints.xml";
+	
 	private static final int UPDATE_INTERVAL = 10000;
 	
 	private static final int[][] DOOR_LIST =
@@ -121,7 +123,7 @@ public class Engine extends Quest implements Runnable
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				_log.log(Level.WARNING, "Hellbound doors problem!", e);
 			}
 		}
 		
@@ -135,86 +137,83 @@ public class Engine extends Quest implements Runnable
 	
 	private void loadPointsInfoData()
 	{
-		String pointsInfoFile = "data/hellboundTrustPoints.xml";
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setValidating(false);
-		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, pointsInfoFile);
-		Document doc = null;
-		
+		final File file = new File(Config.DATAPACK_ROOT, pointsInfoFile);
 		if (file.exists())
 		{
-			try
+			_log.warning("Can't locate points info file: " + pointsInfoFile);
+			return;
+		}
+		
+		Document doc = null;
+		try
+		{
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			factory.setValidating(false);
+			factory.setIgnoringComments(true);
+			doc = factory.newDocumentBuilder().parse(file);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Could not parse " + pointsInfoFile + " file: " + e.getMessage(), e);
+			return;
+		}
+		
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
+		{
+			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				doc = factory.newDocumentBuilder().parse(file);
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Could not parse " + pointsInfoFile + " file: " + e.getMessage(), e);
-			}
-			
-			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-			{
-				if ("list".equalsIgnoreCase(n.getNodeName()))
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					if ("npc".equalsIgnoreCase(d.getNodeName()))
 					{
-						if ("npc".equalsIgnoreCase(d.getNodeName()))
+						NamedNodeMap attrs = d.getAttributes();
+						Node att;
+						
+						att = attrs.getNamedItem("id");
+						if (att == null)
 						{
-							NamedNodeMap attrs = d.getAttributes();
-							Node att;
-							
-							att = attrs.getNamedItem("id");
-							if (att == null)
-							{
-								_log.severe("[Hellbound Trust Points Info] Missing NPC ID, skipping record");
-								continue;
-							}
-							
-							int npcId = Integer.parseInt(att.getNodeValue());
-							
-							att = attrs.getNamedItem("points");
-							if (att == null)
-							{
-								_log.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
-								continue;
-							}
-							int points = Integer.parseInt(att.getNodeValue());
-							
-							att = attrs.getNamedItem("minHellboundLvl");
-							if (att == null)
-							{
-								_log.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
-								continue;
-							}
-							int minHbLvl = Integer.parseInt(att.getNodeValue());
-							
-							att = attrs.getNamedItem("maxHellboundLvl");
-							if (att == null)
-							{
-								_log.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
-								continue;
-							}
-							int maxHbLvl = Integer.parseInt(att.getNodeValue());
-							
-							att = attrs.getNamedItem("lowestTrustLimit");
-							int lowestTrustLimit = 0;
-							if (att != null)
-							{
-								lowestTrustLimit = Integer.parseInt(att.getNodeValue());
-							}
-							
-							pointsInfo.put(npcId, new PointsInfoHolder(points, minHbLvl, maxHbLvl, lowestTrustLimit));
+							_log.severe("[Hellbound Trust Points Info] Missing NPC ID, skipping record");
+							continue;
 						}
+						
+						int npcId = Integer.parseInt(att.getNodeValue());
+						
+						att = attrs.getNamedItem("points");
+						if (att == null)
+						{
+							_log.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
+							continue;
+						}
+						int points = Integer.parseInt(att.getNodeValue());
+						
+						att = attrs.getNamedItem("minHellboundLvl");
+						if (att == null)
+						{
+							_log.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
+							continue;
+						}
+						int minHbLvl = Integer.parseInt(att.getNodeValue());
+						
+						att = attrs.getNamedItem("maxHellboundLvl");
+						if (att == null)
+						{
+							_log.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
+							continue;
+						}
+						int maxHbLvl = Integer.parseInt(att.getNodeValue());
+						
+						att = attrs.getNamedItem("lowestTrustLimit");
+						int lowestTrustLimit = 0;
+						if (att != null)
+						{
+							lowestTrustLimit = Integer.parseInt(att.getNodeValue());
+						}
+						
+						pointsInfo.put(npcId, new PointsInfoHolder(points, minHbLvl, maxHbLvl, lowestTrustLimit));
 					}
 				}
 			}
 		}
-		else
-		{
-			_log.warning("Can't locate points info file: " + pointsInfoFile);
-		}
-		
 		_log.info("HellboundEngine: Loaded: " + pointsInfo.size() + " trust point reward data");
 	}
 	
@@ -266,7 +265,7 @@ public class Engine extends Quest implements Runnable
 		HellboundManager.getInstance().registerEngine(this, UPDATE_INTERVAL);
 		loadPointsInfoData();
 		
-		// register onKill for all rewardable monsters
+		// Register onKill for all rewardable monsters
 		for (int npcId : pointsInfo.keySet())
 		{
 			addKillId(npcId);

@@ -32,17 +32,6 @@ public final class Q132_MatrasCuriosity extends Quest
 	private static final int DEMON_PRINCE = 25540;
 	private static final int RANKU = 25542;
 	
-	public Q132_MatrasCuriosity(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(MATRAS);
-		addTalkId(MATRAS);
-		
-		addKillId(RANKU);
-		addKillId(DEMON_PRINCE);
-	}
-	
 	// Items
 	private static final int FIRE = 10521;
 	private static final int WATER = 10522;
@@ -57,8 +46,7 @@ public final class Q132_MatrasCuriosity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -66,7 +54,7 @@ public final class Q132_MatrasCuriosity extends Quest
 		
 		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !st.isCompleted())
 		{
-			if (st.getState() == State.CREATED)
+			if (st.isCreated())
 			{
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -99,29 +87,21 @@ public final class Q132_MatrasCuriosity extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.getState() == State.CREATED)
+		if (st.isCreated())
 		{
-			if (player.getLevel() >= 76)
-			{
-				htmltext = "32245-01.htm";
-			}
-			else
-			{
-				htmltext = "32245-02.htm";
-			}
+			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";
 		}
 		else if (st.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}
-		else if (st.getState() == State.STARTED)
+		else if (st.isStarted())
 		{
 			switch (st.getInt("cond"))
 			{
@@ -196,9 +176,18 @@ public final class Q132_MatrasCuriosity extends Quest
 		return null;
 	}
 	
+	public Q132_MatrasCuriosity(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		
+		addStartNpc(MATRAS);
+		addTalkId(MATRAS);
+		
+		addKillId(RANKU, DEMON_PRINCE);
+	}
+	
 	public static void main(String[] args)
 	{
 		new Q132_MatrasCuriosity(132, qn, "Matras' Curiosity");
 	}
-	
 }

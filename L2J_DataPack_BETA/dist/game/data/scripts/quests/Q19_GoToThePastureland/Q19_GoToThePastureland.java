@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.quest.State;
 public class Q19_GoToThePastureland extends Quest
 {
 	private static final String qn = "19_GoToThePastureland";
+	
 	// NPC
 	private static final int Vladimir = 31302;
 	private static final int Tunatun = 31537;
@@ -38,10 +39,12 @@ public class Q19_GoToThePastureland extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return getNoQuestMsg(player);
+		}
 		
 		if (event.equalsIgnoreCase("31302-02.htm"))
 		{
@@ -55,7 +58,7 @@ public class Q19_GoToThePastureland extends Quest
 			if (st.hasQuestItems(YoungWildBeastMeat))
 			{
 				st.takeItems(YoungWildBeastMeat, -1);
-				st.giveItems(57, 50000);
+				st.giveAdena(50000, false);
 				st.addExpAndSp(136766, 12688);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
@@ -64,7 +67,7 @@ public class Q19_GoToThePastureland extends Quest
 			else if (st.hasQuestItems(Veal))
 			{
 				st.takeItems(Veal, -1);
-				st.giveItems(57, 147200);
+				st.giveAdena(147200, false);
 				st.addExpAndSp(385040, 75250);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
@@ -82,10 +85,11 @@ public class Q19_GoToThePastureland extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == Vladimir)
 		{
@@ -93,9 +97,13 @@ public class Q19_GoToThePastureland extends Quest
 			{
 				case State.CREATED:
 					if (player.getLevel() >= 82)
+					{
 						htmltext = "31302-01.htm";
+					}
 					else
+					{
 						htmltext = "31302-03.html";
+					}
 					break;
 				case State.STARTED:
 					htmltext = "31302-04.html";
@@ -105,7 +113,7 @@ public class Q19_GoToThePastureland extends Quest
 					break;
 			}
 		}
-		else if (npc.getNpcId() == Tunatun && st.getInt("cond") == 1)
+		else if ((npc.getNpcId() == Tunatun) && (st.getInt("cond") == 1))
 		{
 			htmltext = "31537-01.html";
 		}
@@ -115,11 +123,14 @@ public class Q19_GoToThePastureland extends Quest
 	public Q19_GoToThePastureland(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(Vladimir);
-		addTalkId(Vladimir);
-		addTalkId(Tunatun);
 		
-		questItemIds = new int[] { Veal, YoungWildBeastMeat };
+		addStartNpc(Vladimir);
+		addTalkId(Vladimir, Tunatun);
+		
+		questItemIds = new int[]
+		{
+			Veal, YoungWildBeastMeat
+		};
 	}
 	
 	public static void main(String[] args)

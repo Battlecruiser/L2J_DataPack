@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Infinity (10268). Original jython script by Kerberos v1.0 on 2009/05/1
+ * To the Seed of Infinity (10268).<br>
+ * Original jython script by Kerberos v1.0 on 2009/05/1
  * @author nonom
  */
 public class Q10268_ToTheSeedOfInfinity extends Quest
@@ -39,38 +40,22 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
-		int npcId = npc.getNpcId();
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
+		final int npcId = npc.getNpcId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
-				if (npcId == TEPIOS)
-				{
-					htmltext = "32530-02.htm";
-				}
-				else
-				{
-					htmltext = "32548-0a.htm";
-				}
+				htmltext = (npcId == TEPIOS) ? "32530-02.htm" : "32548-0a.htm";
 				break;
 			case State.CREATED:
 				if (npcId == KEUCEREUS)
 				{
-					if (player.getLevel() < 75)
-					{
-						htmltext = "32548-00.htm";
-					}
-					else
-					{
-						htmltext = "32548-01.htm";
-					}
+					htmltext = (player.getLevel() < 75) ? "32548-00.htm" : "32548-01.htm";
 				}
 				break;
 			case State.STARTED:
@@ -81,7 +66,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 				else if (npcId == TEPIOS)
 				{
 					htmltext = "32530-01.htm";
-					st.giveItems(57, 16671);
+					st.giveAdena(16671, false);
 					st.addExpAndSp(100640, 10098);
 					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
@@ -95,8 +80,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -117,8 +101,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(KEUCEREUS);
-		addTalkId(KEUCEREUS);
-		addTalkId(TEPIOS);
+		addTalkId(KEUCEREUS, TEPIOS);
 		
 		questItemIds = new int[]
 		{
