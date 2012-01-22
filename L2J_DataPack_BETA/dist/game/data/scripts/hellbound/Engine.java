@@ -138,9 +138,9 @@ public class Engine extends Quest implements Runnable
 	private void loadPointsInfoData()
 	{
 		final File file = new File(Config.DATAPACK_ROOT, pointsInfoFile);
-		if (file.exists())
+		if (!file.exists())
 		{
-			_log.warning("Can't locate points info file: " + pointsInfoFile);
+			_log.warning("Cannot locate points info file: " + pointsInfoFile);
 			return;
 		}
 		
