@@ -18,10 +18,10 @@ import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.L2Item;
-import com.l2jserver.gameserver.model.item.L2Weapon;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.item.type.L2WeaponType;
+import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -39,7 +39,7 @@ public class FishShots implements IItemHandler
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
 	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)

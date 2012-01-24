@@ -15,14 +15,14 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.AbnormalEffect;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
  * @author ZaKaX (Ghost @ L2D)
@@ -36,7 +36,7 @@ public class ClanGate extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
 	 */
 	@Override
 	public boolean onStart()
@@ -57,7 +57,7 @@ public class ClanGate extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
 	 */
 	@Override
 	public boolean onActionTime()
@@ -67,7 +67,7 @@ public class ClanGate extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
 	 */
 	@Override
 	public void onExit()
@@ -77,7 +77,7 @@ public class ClanGate extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
 	 */
 	@Override
 	public L2EffectType getEffectType()

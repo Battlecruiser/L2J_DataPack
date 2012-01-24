@@ -16,12 +16,12 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 public class Relax extends L2Effect
 {
@@ -32,7 +32,7 @@ public class Relax extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
 	 */
 	@Override
 	public L2EffectType getEffectType()
@@ -42,7 +42,7 @@ public class Relax extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
 	 */
 	@Override
 	public boolean onStart()
@@ -58,7 +58,7 @@ public class Relax extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
 	 */
 	@Override
 	public void onExit()
@@ -68,7 +68,7 @@ public class Relax extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
 	 */
 	@Override
 	public boolean onActionTime()

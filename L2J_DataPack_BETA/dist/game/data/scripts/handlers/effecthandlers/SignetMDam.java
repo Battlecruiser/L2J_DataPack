@@ -23,23 +23,23 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.skills.l2skills.L2SkillSignetCasttime;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.skills.l2skills.L2SkillSignetCasttime;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.util.Point3D;
 
 public class SignetMDam extends L2Effect
@@ -53,7 +53,7 @@ public class SignetMDam extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
 	 */
 	@Override
 	public L2EffectType getEffectType()
@@ -63,7 +63,7 @@ public class SignetMDam extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
 	 */
 	@Override
 	public boolean onStart()
@@ -105,7 +105,7 @@ public class SignetMDam extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
 	 */
 	@Override
 	public boolean onActionTime()
@@ -198,7 +198,7 @@ public class SignetMDam extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
 	 */
 	@Override
 	public void onExit()

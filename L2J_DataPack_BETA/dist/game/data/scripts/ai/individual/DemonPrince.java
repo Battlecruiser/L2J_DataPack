@@ -19,10 +19,10 @@ import java.util.Map;
 import javolution.util.FastMap;
 import ai.group_template.L2AttackableAIScript;
 
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.SkillHolder;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.util.Rnd;
 
 /**
