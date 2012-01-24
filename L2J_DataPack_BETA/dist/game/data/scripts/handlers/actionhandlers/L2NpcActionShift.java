@@ -27,12 +27,12 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.L2Item;
+import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.stats.BaseStats;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.skills.BaseStats;
-import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.util.StringUtil;
 
 public class L2NpcActionShift implements IActionHandler

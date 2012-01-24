@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2CharPosition;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
@@ -28,9 +27,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * @author littlecrow
@@ -51,7 +51,7 @@ public class Fear extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
 	 */
 	@Override
 	public L2EffectType getEffectType()
@@ -61,7 +61,7 @@ public class Fear extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
 	 */
 	@Override
 	public boolean onStart()
@@ -114,7 +114,7 @@ public class Fear extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
 	 */
 	@Override
 	public void onExit()
@@ -124,7 +124,7 @@ public class Fear extends L2Effect
 	
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
+	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
 	 */
 	@Override
 	public boolean onActionTime()

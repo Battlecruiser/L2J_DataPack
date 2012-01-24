@@ -14,13 +14,13 @@
  */
 package handlers.effecthandlers;
  
-import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
  
 /**
@@ -37,7 +37,7 @@ public class CancelDebuff extends L2Effect
    
     /**
      *
-     * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
+     * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
      */
     @Override
     public L2EffectType getEffectType()
@@ -47,7 +47,7 @@ public class CancelDebuff extends L2Effect
    
     /**
      *
-     * @see com.l2jserver.gameserver.model.L2Effect#onStart()
+     * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
      */
     @Override
     public boolean onStart()
@@ -57,7 +57,7 @@ public class CancelDebuff extends L2Effect
    
     /**
      *
-     * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
+     * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
      */
     @Override
     public boolean onActionTime()

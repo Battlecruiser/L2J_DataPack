@@ -19,12 +19,12 @@ import java.util.Map;
 import javolution.util.FastMap;
 
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.skills.SkillHolder;
 
 /**
  * @author GKR
