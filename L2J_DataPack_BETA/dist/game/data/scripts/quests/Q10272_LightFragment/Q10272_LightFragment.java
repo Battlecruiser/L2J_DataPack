@@ -56,7 +56,7 @@ public class Q10272_LightFragment extends Quest
 		
 		final int npcId = npc.getNpcId();
 		final int cond = st.getInt("cond");
-		if (npc.getNpcId() == ORBYU)
+		if (npcId == ORBYU)
 		{
 			switch (st.getState())
 			{
@@ -237,7 +237,7 @@ public class Q10272_LightFragment extends Quest
 		{
 			if (st.getQuestItemsCount(PcInventory.ADENA_ID) >= 10000)
 			{
-				st.giveAdena(10000, false);
+				st.takeItems(PcInventory.ADENA_ID, 10000);
 				htmltext = "32566-05.htm";
 			}
 			else
