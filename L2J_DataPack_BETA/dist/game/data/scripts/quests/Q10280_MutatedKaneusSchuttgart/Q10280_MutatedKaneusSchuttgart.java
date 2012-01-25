@@ -134,11 +134,11 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 				st = member.getQuestState(qn);
 				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 				{
-					if ((npc.getNpcId() == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS))
+					if ((npcId == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS))
 					{
 						PartyMembers.add(st);
 					}
-					else if ((npc.getNpcId() == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))
+					else if ((npcId == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))
 					{
 						PartyMembers.add(st);
 					}

@@ -76,7 +76,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}
-				else if ((st.getQuestItemsCount(TISSUE_CH) > 0) && (st.getQuestItemsCount(TISSUE_SF) > 0))
+				else if ((st.hasQuestItems(TISSUE_CH)) && (st.hasQuestItems(TISSUE_SF)))
 				{
 					htmltext = "30461-02.htm";
 				}
@@ -131,7 +131,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 			for (L2PcInstance member : killer.getParty().getPartyMembers())
 			{
 				st = member.getQuestState(qn);
-				if (((st != null) && st.isStarted() && (st.getInt("cond") == 1) && ((npc.getNpcId() == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH))) || ((npc.getNpcId() == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF)))
+				if (((st != null) && st.isStarted() && (st.getInt("cond") == 1) && ((npcId == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH))) || ((npcId == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF)))
 				{
 					PartyMembers.add(st);
 				}
