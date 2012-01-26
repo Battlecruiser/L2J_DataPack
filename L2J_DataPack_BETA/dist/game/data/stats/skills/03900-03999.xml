@@ -7,7 +7,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bonusHp" val="#bonusHp" />
 		</for>
@@ -17,7 +17,7 @@
 		<table name="#maxMp"> 239 289 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="#maxMp" />
 		</for>
@@ -27,7 +27,7 @@
 		<set name="magicLvl" val="70" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
@@ -39,7 +39,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="8.57" />
 		</for>
@@ -49,7 +49,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="8.57" />
 		</for>
@@ -59,7 +59,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="8.57" />
 		</for>
@@ -69,7 +69,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="8.57" />
 		</for>
@@ -79,7 +79,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="8.57" />
 		</for>
@@ -89,7 +89,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="8.57" />
 		</for>
@@ -99,7 +99,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="8.57" />
 		</for>
@@ -109,7 +109,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="8.57" />
 		</for>
@@ -119,7 +119,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="8.57" />
 		</for>
@@ -129,7 +129,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="8.57" />
 		</for>
@@ -139,7 +139,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="8.57" />
 		</for>
@@ -149,7 +149,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="8.57" />
 		</for>
@@ -159,7 +159,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="8.57" />
 		</for>
@@ -169,7 +169,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="8.57" />
 		</for>
@@ -179,7 +179,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="8.57" />
 		</for>
@@ -189,7 +189,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="8.57" />
 		</for>
@@ -199,7 +199,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="8.57" />
 		</for>
@@ -209,7 +209,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="8.57" />
 		</for>
@@ -219,7 +219,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="8.57" />
 		</for>
@@ -229,7 +229,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="8.57" />
 		</for>
@@ -239,7 +239,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="8.57" />
 		</for>
@@ -249,7 +249,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="8.57" />
 		</for>
@@ -259,7 +259,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="8.57" />
 		</for>
@@ -269,7 +269,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="8.57" />
 		</for>
@@ -279,7 +279,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="8.57" />
 		</for>
@@ -289,7 +289,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="8.57" />
 		</for>
@@ -299,7 +299,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="8.57" />
 		</for>
@@ -309,7 +309,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="8.57" />
 		</for>
@@ -319,7 +319,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="8.57" />
 		</for>
@@ -329,7 +329,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="8.57" />
 		</for>
@@ -339,7 +339,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="8.57" />
 		</for>
@@ -349,7 +349,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="8.57" />
 		</for>
@@ -359,7 +359,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="8.57" />
 		</for>
@@ -369,7 +369,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="8.57" />
 		</for>
@@ -379,7 +379,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="8.57" />
 		</for>
@@ -389,7 +389,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="8.57" />
 		</for>
@@ -399,7 +399,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="8.57" />
 		</for>
@@ -409,7 +409,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="8.57" />
 		</for>
@@ -419,7 +419,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="8.57" />
 		</for>
@@ -429,7 +429,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="8.57" />
 		</for>
@@ -439,7 +439,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="8.57" />
 		</for>
@@ -449,7 +449,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="8.57" />
 		</for>
@@ -459,7 +459,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="8.57" />
 		</for>
@@ -469,7 +469,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="8.57" />
 		</for>
@@ -479,7 +479,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="8.57" />
 		</for>
@@ -489,7 +489,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="8.57" />
 		</for>
@@ -499,7 +499,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="8.57" />
 		</for>
@@ -509,7 +509,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="8.57" />
 		</for>
@@ -520,7 +520,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="1.71" />
 		</for>
@@ -531,7 +531,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="1.71" />
 		</for>
@@ -542,7 +542,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="1.71" />
 		</for>
@@ -553,7 +553,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="1.71" />
 		</for>
@@ -564,7 +564,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="1.71" />
 		</for>
@@ -575,7 +575,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="1.71" />
 		</for>
@@ -585,7 +585,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="1.71" />
 		</for>
@@ -595,7 +595,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="1.71" />
 		</for>
@@ -605,7 +605,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="1.71" />
 		</for>
@@ -615,7 +615,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="1.71" />
 		</for>
@@ -625,7 +625,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="1.71" />
 		</for>
@@ -635,7 +635,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="1.71" />
 		</for>
@@ -646,7 +646,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="2.14" />
 		</for>
@@ -657,7 +657,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="2.14" />
 		</for>
@@ -668,7 +668,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="2.14" />
 		</for>
@@ -679,7 +679,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="2.14" />
 		</for>
@@ -690,7 +690,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="2.14" />
 		</for>
@@ -701,7 +701,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="2.14" />
 		</for>
@@ -711,7 +711,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="2.14" />
 		</for>
@@ -721,7 +721,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="2.14" />
 		</for>
@@ -731,7 +731,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="2.14" />
 		</for>
@@ -741,7 +741,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="2.14" />
 		</for>
@@ -751,7 +751,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="2.14" />
 		</for>
@@ -761,7 +761,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="2.14" />
 		</for>
@@ -772,7 +772,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="3" />
 		</for>
@@ -783,7 +783,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="3" />
 		</for>
@@ -794,7 +794,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="3" />
 		</for>
@@ -805,7 +805,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="3" />
 		</for>
@@ -816,7 +816,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="3" />
 		</for>
@@ -827,7 +827,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="3" />
 		</for>
@@ -837,7 +837,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="3" />
 		</for>
@@ -847,7 +847,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="3" />
 		</for>
@@ -857,7 +857,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="3" />
 		</for>
@@ -867,7 +867,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="3" />
 		</for>
@@ -877,7 +877,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="3" />
 		</for>
@@ -887,7 +887,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="3" />
 		</for>
@@ -898,7 +898,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="3.42" />
 		</for>
@@ -909,7 +909,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="3.42" />
 		</for>
@@ -920,7 +920,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="3.42" />
 		</for>
@@ -931,7 +931,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="3.42" />
 		</for>
@@ -942,7 +942,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="3.42" />
 		</for>
@@ -953,7 +953,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="3.42" />
 		</for>
@@ -963,7 +963,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="3.42" />
 		</for>
@@ -973,7 +973,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="3.42" />
 		</for>
@@ -983,7 +983,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="3.42" />
 		</for>
@@ -993,7 +993,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="3.42" />
 		</for>
@@ -1003,7 +1003,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="3.42" />
 		</for>
@@ -1013,7 +1013,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="3.42" />
 		</for>

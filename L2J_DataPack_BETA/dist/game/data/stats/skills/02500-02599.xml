@@ -5,7 +5,7 @@
 		<set name="create_item_count" val="500" />
 		<set name="create_item_id" val="6645" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -20,7 +20,7 @@
 		<set name="create_item_count" val="500" />
 		<set name="create_item_id" val="6646" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -35,7 +35,7 @@
 		<set name="create_item_count" val="500" />
 		<set name="create_item_id" val="6647" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -52,7 +52,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -67,7 +67,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1517" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -85,7 +85,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1518" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -103,7 +103,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1519" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -124,7 +124,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12774" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
@@ -137,7 +137,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12777" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
@@ -148,7 +148,7 @@
 			10633,1,35;10642,1,25;10634,1,20;10643,1,10;10635,1,4;10644,1,3;10636,1,1.2;10645,1,0.8;10637,1,0.6;10646,1,0.4
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticHitTime" val="true" />
@@ -164,7 +164,7 @@
 	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="107" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -178,7 +178,7 @@
 		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticHitTime" val="true" />
@@ -198,7 +198,7 @@
 		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticHitTime" val="true" />
@@ -225,7 +225,7 @@
 		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticHitTime" val="true" />
@@ -243,52 +243,52 @@
 	<skill id="2515" levels="1" name="Lucky Clover - D-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2516" levels="1" name="Lucky Clover - C-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2517" levels="1" name="Lucky Clover - B-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2518" levels="1" name="Lucky Clover - A-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2519" levels="1" name="Lucky Clover - S-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2520" levels="1" name="Lucky Clover - D-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2521" levels="1" name="Lucky Clover - C-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2522" levels="1" name="Lucky Clover - B-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2523" levels="1" name="Lucky Clover - A-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2524" levels="1" name="Lucky Clover - S-Grade">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2525" levels="1" name="Scroll to move to Kamael Village">
 		<set name="itemConsumeCount" val="1" />
@@ -297,14 +297,14 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="-120050,44500,360" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2526" levels="1" name="Evasion Counter">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="818" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -322,7 +322,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="819" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -340,7 +340,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="820" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -358,7 +358,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="821" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -374,14 +374,14 @@
 	<skill id="2530" levels="1" name="Recovery Item for Battlefield Use">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2531" levels="1" name="Adventurer's Scroll of Escape">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2532" levels="1" name="Pathfinder Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -390,7 +390,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -407,7 +407,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -424,7 +424,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -441,7 +441,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -458,7 +458,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -475,7 +475,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -492,7 +492,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -509,7 +509,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -526,7 +526,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -543,7 +543,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -560,7 +560,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -577,7 +577,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -594,7 +594,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -611,7 +611,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -628,7 +628,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -645,7 +645,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -662,7 +662,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -679,7 +679,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -696,7 +696,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -713,7 +713,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -730,7 +730,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -747,7 +747,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -764,7 +764,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -781,7 +781,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -798,7 +798,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -815,7 +815,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -832,7 +832,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -849,7 +849,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -866,7 +866,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -883,7 +883,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -900,7 +900,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -917,7 +917,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -934,7 +934,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -951,7 +951,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -968,7 +968,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -985,7 +985,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1002,7 +1002,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1019,7 +1019,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1036,7 +1036,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1053,7 +1053,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1070,7 +1070,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1087,7 +1087,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1104,7 +1104,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1121,7 +1121,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1138,7 +1138,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1152,7 +1152,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="true" />
 		<set name="buffDuration" val="5000" />
 		<set name="isPotion" val="true" />
@@ -1165,7 +1165,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="poison,9" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
@@ -1174,7 +1174,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="death_clack,1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
@@ -1183,7 +1183,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="300000" />
 		<cond msgId="113" addName="1">
@@ -1198,27 +1198,27 @@
 	<skill id="2581" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2582" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2583" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2584" levels="1" name="Item - Special Sound Crystal">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2585" levels="1" name="Item - Special Sound Crystal">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2586" levels="2" name="Energy Replenishing Potion">
 		<!-- lvl1 your vitality points x2 -->
@@ -1226,39 +1226,39 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2587" levels="1" name="Increase number of teleport slots.">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2588" levels="1" name="My Teleport">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="20000" />
 	</skill>
 	<skill id="2589" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2590" levels="1" name="Extra Entrance Pass - Near Kamaloka">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2591" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2592" levels="1" name="Quick Healing Potion">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="30" />
@@ -1269,7 +1269,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="60000" />
 		<cond msgId="113" addName="1">
@@ -1287,14 +1287,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2595" levels="1" name="Gran Kain's Blessed Scroll of Escape">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2596" levels="1" name="Gran Kain's Blessed Scroll of Resurrection">
 		<set name="power" val="100" />
@@ -1302,7 +1302,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
@@ -1311,20 +1311,20 @@
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2598" levels="1" name="Gran Kain's Echo Crystal - Theme of Battle">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2599" levels="1" name="Gran Kain's Echo Crystal - Theme of Love">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 </list>

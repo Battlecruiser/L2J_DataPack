@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -12,7 +12,7 @@
 	<skill id="3701" levels="1" name="Leather Armor of Doom">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -26,7 +26,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -38,7 +38,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -50,7 +50,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="breath" val="50" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -62,7 +62,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<add order="0x40" stat="breath" val="33" />
@@ -73,7 +73,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<add order="0x40" stat="breath" val="33" />
@@ -83,7 +83,7 @@
 	<skill id="3707" levels="1" name="Tunic of Doom">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -96,7 +96,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="2.91" />
 			<add order="0x40" stat="breath" val="88" />
@@ -107,7 +107,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<add order="0x40" stat="breath" val="50" />
@@ -117,7 +117,7 @@
 	<skill id="3710" levels="1" name="Blue Wolf Breastplate">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -129,7 +129,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="2.91" />
 			<mul order="0x30" stat="regHp" val="1.0208" />
@@ -139,7 +139,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<mul order="0x30" stat="regHp" val="1.0083" />
@@ -149,7 +149,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<mul order="0x30" stat="regHp" val="1.0083" />
@@ -159,7 +159,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<mul order="0x30" stat="regHp" val="1.0125" />
@@ -168,7 +168,7 @@
 	<skill id="3715" levels="1" name="Blue Wolf Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -180,7 +180,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0088" />
 		</for>
@@ -189,7 +189,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0088" />
 		</for>
@@ -198,7 +198,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0132" />
 		</for>
@@ -207,7 +207,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="34" />
 			<mul order="0x30" stat="regMp" val="1.0083" />
@@ -217,7 +217,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="34" />
 			<mul order="0x30" stat="regMp" val="1.0083" />
@@ -226,7 +226,7 @@
 	<skill id="3721" levels="1" name="Blue Wolf Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -238,7 +238,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="85" />
 			<mul order="0x30" stat="regMp" val="1.0208" />
@@ -248,7 +248,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="51" />
 			<mul order="0x30" stat="regMp" val="1.0125" />
@@ -258,7 +258,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="7.5" />
@@ -267,7 +267,7 @@
 	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -279,7 +279,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.02" />
 			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
@@ -289,7 +289,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
@@ -299,7 +299,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
@@ -309,7 +309,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -317,7 +317,7 @@
 	<skill id="3730" levels="1" name="Dark Crystal Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -330,7 +330,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -341,7 +341,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -352,7 +352,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -363,7 +363,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0103" />
 			<mul order="0x30" stat="pAtk" val="1.0103" />
@@ -374,7 +374,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -385,7 +385,7 @@
 	<skill id="3736" levels="1" name="Dark Crystal Robe">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -400,7 +400,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -412,7 +412,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.02" />
 			<add order="0x40" stat="runSpd" val="1.75" />
@@ -424,7 +424,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="maxLoad" val="960" />
@@ -436,7 +436,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="maxLoad" val="960" />
@@ -447,7 +447,7 @@
 	<skill id="3741" levels="1" name="Tallum Plate Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -461,7 +461,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
 			<add order="0x40" stat="maxLoad" val="1440" />
@@ -472,7 +472,7 @@
 	<skill id="3743" levels="1" name="Tallum Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -486,7 +486,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
@@ -498,7 +498,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
@@ -510,7 +510,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0125" />
 			<add order="0x40" stat="maxMp" val="56" />
@@ -522,7 +522,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
 			<sub order="0x40" stat="poisonVuln" val="13.33" />
@@ -533,7 +533,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
 			<sub order="0x40" stat="poisonVuln" val="13.33" />
@@ -543,7 +543,7 @@
 	<skill id="3749" levels="1" name="Tallum Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="64" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -554,7 +554,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0333" />
 			<sub order="0x40" stat="poisonVuln" val="33.33" />
@@ -565,7 +565,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 			<sub order="0x40" stat="poisonVuln" val="20" />
@@ -576,7 +576,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="accCombat" val="0.31" />
@@ -587,7 +587,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
@@ -597,7 +597,7 @@
 	<skill id="3754" levels="1" name="Majestic Plate Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -610,7 +610,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
@@ -621,7 +621,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083">
 				<using kind="Bow,Crossbow" />
@@ -634,7 +634,7 @@
 	<skill id="3757" levels="1" name="Majestic Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -650,7 +650,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083">
 				<using kind="Bow,Crossbow" />
@@ -664,7 +664,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125">
 				<using kind="Bow,Crossbow" />
@@ -678,7 +678,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
@@ -688,7 +688,7 @@
 	<skill id="3761" levels="1" name="Majestic Robe">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -701,7 +701,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
@@ -712,7 +712,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="60" />
 			<mul order="0x30" stat="regMp" val="1.02" />
@@ -722,7 +722,7 @@
 	<skill id="3764" levels="1" name="Armor of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -735,7 +735,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -746,7 +746,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -757,7 +757,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125" />
 			<sub order="0x40" stat="sleepVuln" val="17.5" />
@@ -767,7 +767,7 @@
 	<skill id="3768" levels="1" name="Nightmarish Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -781,7 +781,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -792,7 +792,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -803,7 +803,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
@@ -814,7 +814,7 @@
 	<skill id="3772" levels="1" name="Nightmare Robe">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="67" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -828,7 +828,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
@@ -840,7 +840,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -849,7 +849,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -861,7 +861,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -872,7 +872,7 @@
 	<skill id="3777" levels="1" name="Draconic Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -886,7 +886,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -898,7 +898,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -910,7 +910,7 @@
 	<skill id="3780" levels="1" name="Major Arcana Robe">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -925,7 +925,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -938,7 +938,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0062" />
 			<add order="0x40" stat="runSpd" val="1.175" />
@@ -950,7 +950,7 @@
 	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -963,7 +963,7 @@
 	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -976,7 +976,7 @@
 	<skill id="3785" levels="1" name="Imperial Crusader Boots">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -990,7 +990,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -999,7 +999,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="111" />
@@ -1010,7 +1010,7 @@
 	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1023,7 +1023,7 @@
 	<skill id="3789" levels="1" name="Dynasty Breastplate">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1036,7 +1036,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
 			<add order="0x40" stat="maxHp" val="205" />
@@ -1047,7 +1047,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="82" />
@@ -1058,7 +1058,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="82" />
@@ -1069,7 +1069,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -1078,7 +1078,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="123" />
@@ -1088,7 +1088,7 @@
 	<skill id="3795" levels="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1103,7 +1103,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.79" />
 			<add order="0x40" stat="rEvas" val="0.79" />
@@ -1116,7 +1116,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.31" />
 			<add order="0x40" stat="rEvas" val="0.31" />
@@ -1129,7 +1129,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.47" />
 			<add order="0x40" stat="rEvas" val="0.47" />
@@ -1141,7 +1141,7 @@
 	<skill id="3799" levels="1" name="Dynasty Tunic">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>

@@ -3,28 +3,28 @@
 	<skill id="3001" levels="1" name="int_1">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="3002" levels="1" name="int_2">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="3003" levels="1" name="str_2">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="3004" levels="1" name="maxmp_5">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="3005" levels="1" name="Bleed">
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="40" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
@@ -37,7 +37,7 @@
 	<skill id="3006" levels="1" name="Equip Set Items">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="3007" levels="6" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
@@ -45,7 +45,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
@@ -57,7 +57,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
@@ -69,7 +69,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 80 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas" />
@@ -81,7 +81,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -93,7 +93,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -105,7 +105,7 @@
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -119,7 +119,7 @@
 		<table name="#magicLvl"> 1 1 64 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="1.25" />
@@ -134,7 +134,7 @@
 		<table name="#magicLvl"> 1 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -150,7 +150,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -166,7 +166,7 @@
 		<table name="#rCrit"> 0.71 0.67 0.63 0.6 0.56 0.53 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="#rCrit">
@@ -180,7 +180,7 @@
 		<table name="#rCrit"> 0.5 0.47 0.45 0.42 0.4 0.37 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="#rCrit">
@@ -196,7 +196,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -213,7 +213,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -230,7 +230,7 @@
 		<table name="#absorbPart"> 21 23 25 28 31 35 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="absorbPart" val="#absorbPart" />
@@ -245,7 +245,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -259,7 +259,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="true" />
@@ -279,7 +279,7 @@
 		<table name="#hpConsume"> 12 13 14 15 16 17 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="hpConsume" val="#hpConsume" />
 	</skill>
@@ -289,7 +289,7 @@
 		<table name="#cAtkAdd"> 248.56 298.04 352.73 411.98 474.82 539.9 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -302,7 +302,7 @@
 		<table name="#rCrit"> 138.7 130.9 123.1 115.4 107.7 99.9 164 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit">
@@ -319,7 +319,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
@@ -333,7 +333,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
@@ -347,7 +347,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
@@ -361,7 +361,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
@@ -375,7 +375,7 @@
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
@@ -389,7 +389,7 @@
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
@@ -404,7 +404,7 @@
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 1.09 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
@@ -421,7 +421,7 @@
 		<table name="#blowRate"> 1.5 1.48 1.46 1.44 1.42 1.4 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="blowRate" val="#blowRate" />
@@ -433,7 +433,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -445,7 +445,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -457,7 +457,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -470,7 +470,7 @@
 		<table name="#absorbPart"> 33 31 30 28 26 24 24 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="absorbPart" val="#absorbPart" />
@@ -486,7 +486,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -506,7 +506,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -525,7 +525,7 @@
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -540,7 +540,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -553,7 +553,7 @@
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -569,7 +569,7 @@
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -585,7 +585,7 @@
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
@@ -600,7 +600,7 @@
 		<table name="#magicLvl"> 64 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
@@ -615,7 +615,7 @@
 		<table name="#magicLvl"> 64 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.6" />
@@ -632,7 +632,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
 		<set name="power" val="8.39" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -642,7 +642,7 @@
 		<table name="#magicLvl"> 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="61.6" />
@@ -656,7 +656,7 @@
 		<table name="#magicLvl"> 67 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="67.3" />
@@ -671,7 +671,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -687,7 +687,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -705,7 +705,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -723,7 +723,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -741,7 +741,7 @@
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.11">
@@ -758,7 +758,7 @@
 		<table name="#pAtk"> 31.3 32.05 32.05 78.33 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -774,7 +774,7 @@
 		<table name="#pAtk"> 38.09 39 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -790,7 +790,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="castRange" val="600" />
@@ -804,7 +804,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="castRange" val="600" />
@@ -819,7 +819,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -837,7 +837,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -854,7 +854,7 @@
 		<table name="#magicLvl"> 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="0.37">
@@ -869,7 +869,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="64" />
 		<for>
 			<add order="0x40" stat="accCombat" val="3.95" />
@@ -882,7 +882,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="67" />
 		<for>
 			<add order="0x40" stat="accCombat" val="5.41" />
@@ -897,7 +897,7 @@
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -912,7 +912,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -928,7 +928,7 @@
 		<table name="#magicLvl"> 64 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -941,7 +941,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
 			<add order="0x40" stat="rEvas" val="6.8">
@@ -955,7 +955,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
@@ -970,7 +970,7 @@
 		<table name="#pvpBonus"> 1 1.05 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="64" />
 		<for>
 			<add order="0x40" stat="rCrit" val="130">
@@ -987,7 +987,7 @@
 		<table name="#mAtk"> 30.76 31.38 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -1002,7 +1002,7 @@
 		<table name="#mAtk"> 153.28 167.02 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -1018,7 +1018,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
@@ -1037,7 +1037,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
@@ -1059,7 +1059,7 @@
 		<table name="#mAtk"> 20.36 22.51 24.59 26.53 28.27 29.7 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -1071,7 +1071,7 @@
 		<table name="#mAtk"> 75.86 87.22 99.39 112.26 125.66 139.41 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -1084,7 +1084,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
@@ -1103,7 +1103,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
@@ -1128,7 +1128,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1142,7 +1142,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1158,7 +1158,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1169,7 +1169,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1183,7 +1183,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -1198,7 +1198,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1213,7 +1213,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1227,7 +1227,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1243,7 +1243,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1257,7 +1257,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1271,7 +1271,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -1286,7 +1286,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1303,7 +1303,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1318,7 +1318,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1332,7 +1332,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -1351,7 +1351,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
 		<set name="isMagic" val="true" />
@@ -1361,7 +1361,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -1375,7 +1375,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -1389,7 +1389,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
@@ -1404,7 +1404,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />

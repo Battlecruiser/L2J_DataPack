@@ -5,93 +5,93 @@
 		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6104" levels="1" name="Event Cancel">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6105" levels="1" name="Turkey's Mistake">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="6106" levels="1" name="Winter Holiday Festival">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6107" levels="1" name="Winter Holiday Blessing - Gludio">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6108" levels="1" name="Winter Holiday Blessing - Dion">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6109" levels="1" name="Winter Holiday Blessing - Giran">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6110" levels="1" name="Winter Holiday Blessing - Oren">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6111" levels="1" name="Winter Holiday Blessing - Aden">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6112" levels="1" name="Winter Holiday Blessing - Innadril">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6113" levels="1" name="Winter Holiday Blessing - Goddard">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6114" levels="1" name="Winter Holiday Blessing - Rune">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6115" levels="1" name="Winter Holiday Blessing - Schuttgart">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6116" levels="1" name="Attack Turkey">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6117" levels="3" name="Choice - Scissors">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6120" levels="1" name="Santa Claus' Reward">
 		<set name="target" val="TARGET_AURA" />
 		<set name="magicLvl" val="1" />
 		<set name="isMagic" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="1" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="event_santa_reward">
@@ -115,7 +115,7 @@
 		<set name="hitTime" val="2700" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="staticReuse" val="true" />
@@ -135,7 +135,7 @@
 		<set name="hitTime" val="2700" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="staticReuse" val="true" />
@@ -150,7 +150,7 @@
 	<skill id="6123" levels="1" name="Agathion's New Year's Wish">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="2000" />
@@ -159,7 +159,7 @@
 	<skill id="6124" levels="1" name="Agathion Cute Trick - Saerom">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -172,7 +172,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
@@ -187,7 +187,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
@@ -199,18 +199,18 @@
 	<skill id="6127" levels="1" name="Anti-limit">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6128" levels="1" name="Presentation - Cow Rage">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6129" levels="1" name="Shock">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1000" />
 		<set name="saveVs" val="CON" />
@@ -221,7 +221,7 @@
 	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
 		<set name="saveVs" val="CON" />
@@ -232,7 +232,7 @@
 	<skill id="6131" levels="1" name="Decrease Spd">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="MEN" />
@@ -241,7 +241,7 @@
 	<skill id="6132" levels="1" name="Decrease Atk. Spd">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="lvlDepend" val="1" />
 		<set name="hitTime" val="1500" />
@@ -250,13 +250,13 @@
 	<skill id="6133" levels="1" name="Effect of Doubt">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6134" levels="1" name="Curse of the Mutant Animal">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
@@ -265,7 +265,7 @@
 	<skill id="6135" levels="1" name="Cow Basic Attack">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
 		<set name="staticDamage" val="true" />
@@ -277,7 +277,7 @@
 	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="10000" />
@@ -288,7 +288,7 @@
 	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1500" />
 		<set name="trait" val="ETC" />
@@ -296,26 +296,26 @@
 	<skill id="6138" levels="1" name="Agathion Juju - Large Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="6139" levels="1" name="Fake Tears">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="6140" levels="3" name="Bog Stride">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6141" levels="1" name="Swamp's Wish">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
 	</skill>
@@ -325,7 +325,7 @@
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
@@ -333,24 +333,24 @@
 	<skill id="6143" levels="1" name="Ancient Beam">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="6144" levels="1" name="Ancient Beam">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="6145" levels="1" name="Earthworm's Evil Aura">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6146" levels="1" name="Forfeiture of Will">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="6147" levels="1" name="Kasha's Divine Protection">
@@ -358,7 +358,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="reuseDelay" val="4000" />
@@ -379,7 +379,7 @@
 		<set name="isMagic" val="true" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="mpInitialConsume" val="15" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -399,7 +399,7 @@
 		<!-- Only when a eye explode -->
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -420,7 +420,7 @@
 		<table name="#pAtkSpd"> 1.02 1.04 1.06 1.08 </table>
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -433,7 +433,7 @@
 	<skill id="6151" levels="4" name="Kasha's Curse">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6152" levels="4" name="Kasha's Yearning">
 		<!-- Zone Skill -->
@@ -444,7 +444,7 @@
 		<table name="#pAtk"> 1.02 1.04 1.06 1.08 </table>
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -457,7 +457,7 @@
 	<skill id="6153" levels="4" name="Kasha's Yearning">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6154" levels="4" name="Kasha's Despair">
 		<!-- Zone Skill -->
@@ -468,7 +468,7 @@
 		<table name="#rCrit"> 150 200 520 750 </table>
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -482,13 +482,13 @@
 	<skill id="6155" levels="4" name="Kasha's Despair">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6166" levels="1" name="Hold">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
@@ -497,7 +497,7 @@
 	<skill id="6167" levels="12" name="Shock">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="lvlDepend" val="1" />
@@ -506,7 +506,7 @@
 	<skill id="6168" levels="12" name="Shock">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="lvlDepend" val="1" />
@@ -517,7 +517,7 @@
 		<!-- Zone Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="83" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -530,7 +530,7 @@
 		<!-- Zone Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="83" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -549,7 +549,7 @@
 		<!-- Zone Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="83" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -566,133 +566,133 @@
 	<skill id="6172" levels="1" name="Presentation - Tyranno">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6174" levels="1" name="Presentation - Incense for Relic">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6175" levels="1" name="Presentation - High Ranking Dawn Priest's Prayer">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6176" levels="1" name="Presentation - Dawn's Seal Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6177" levels="1" name="Presentation - Anakim's Message">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6178" levels="1" name="Presentation - Ultimate Seal Motion1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6179" levels="1" name="Presentation - Ultimate Seal Motion2">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6180" levels="1" name="Presentation - Lilith Presentation1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6181" levels="1" name="Presentation - Lilith Presentation2">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6182" levels="1" name="Presentation - Lilith Presentation3">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6183" levels="1" name="Presentation - Lilith Presentation4">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6184" levels="1" name="Presentation - Anakim's Presentation1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6185" levels="1" name="Presentation - Anakim's Presentation2">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6186" levels="1" name="Presentation - Anakim's Presentation3">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6187" levels="1" name="Presentation - Lilith Battle">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6188" levels="1" name="Presentation - Lilith's Steward Battle1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6189" levels="1" name="Presentation - Lilith's Steward Battle2">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6190" levels="1" name="Presentation - Lilith's Bodyguards Battle1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6191" levels="1" name="Presentation - Anakim Battle">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6192" levels="1" name="Presentation - Anakim's Guardian Battle1">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6193" levels="1" name="Presentation - Anakim's Guardian Battle2">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6194" levels="1" name="Presentation - Anakim's Guard Battle">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6195" levels="1" name="Presentation - Anakim's Executor Battle">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6196" levels="1" name="Agathion Oink Oink's Ability">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="72000000" />
 		<set name="staticReuse" val="true" />
 		<set name="coolTime" val="1000" />
@@ -700,7 +700,7 @@
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -710,7 +710,7 @@
 	<skill id="6198" levels="1" name="Agathion Cute Trick - Light of the Dawn">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6199" levels="7" name="Tail Strike">
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
@@ -720,7 +720,7 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="PDAM" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />

@@ -3,7 +3,7 @@
 	<skill id="3500" levels="1" name="Wooden Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.022" /> <!-- P. Def. +2.2% -->
 			<add order="0x40" stat="maxHp" val="41" /> <!-- HP +41 -->
@@ -12,7 +12,7 @@
 	<skill id="3501" levels="1" name="Devotion Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 		</for>
@@ -20,7 +20,7 @@
 	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poison Resistance +20% -->
 		</for>
@@ -28,7 +28,7 @@
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="80" /> <!-- MP +80 -->
 		</for>
@@ -36,7 +36,7 @@
 	<skill id="3504" levels="1" name="Knowledge Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
 			<mul order="0x30" stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
@@ -45,7 +45,7 @@
 	<skill id="3505" levels="1" name="Manticore Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="91.81" /> <!-- MP +91.81 -->
 		</for>
@@ -53,7 +53,7 @@
 	<skill id="3506" levels="1" name="Brigandine Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.05" /> <!-- P. Def. +5% -->
 			<add order="0x40" stat="maxHp" val="153" /> <!-- HP +153 -->
@@ -62,7 +62,7 @@
 	<skill id="3507" levels="1" name="Mithril Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
@@ -72,7 +72,7 @@
 	<skill id="3508" levels="1" name="Mithril Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" /> <!-- Evasion +4 -->
 		</for>
@@ -80,7 +80,7 @@
 	<skill id="3509" levels="1" name="Chain Mail Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="0.94" /> <!-- P. Def. against daggers +6% -->
 			<mul order="0x30" stat="dualDaggerWpnVuln" val="0.94" /> <!-- P. Def. against dualdaggers +6% -->
@@ -89,7 +89,7 @@
 	<skill id="3510" levels="1" name="Karmian Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
@@ -98,7 +98,7 @@
 	<skill id="3511" levels="1" name="Plated Leather Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x10" stat="STR" val="4" /> <!-- STR +4 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
@@ -107,7 +107,7 @@
 	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxLoad" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
 		</for>
@@ -115,7 +115,7 @@
 	<skill id="3513" levels="1" name="Demon's Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
 			<add order="0x10" stat="INT" val="4" /> <!-- INT +4 -->
@@ -125,7 +125,7 @@
 	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 		</for>
@@ -133,7 +133,7 @@
 	<skill id="3515" levels="1" name="Drake Leather Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0526" /> <!-- M. Def. +5.26% -->
 		</for>
@@ -141,7 +141,7 @@
 	<skill id="3516" levels="1" name="Full Plate Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="269.65" /> <!-- HP +269.65 -->
 		</for>
@@ -149,7 +149,7 @@
 	<skill id="3517" levels="1" name="Divine Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<add order="0x40" stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
@@ -160,7 +160,7 @@
 	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.246 -->
 			<add order="0x40" stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
@@ -169,7 +169,7 @@
 	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="294.49" /> <!-- HP +294.49 -->
 		</for>
@@ -177,7 +177,7 @@
 	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" /> <!-- Evasion +4 -->
 		</for>
@@ -185,7 +185,7 @@
 	<skill id="3521" levels="1" name="Avadon Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0525" /> <!-- M. Def. +5.25% -->
 			<add order="0x40" stat="maxLoad" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
@@ -194,7 +194,7 @@
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.1025" /> <!-- M. Atk. +10.25% -->
 			<mul order="0x30" stat="regMp" val="0.95" /> <!-- MP Regeneration -5% -->
@@ -203,7 +203,7 @@
 	<skill id="3523" levels="1" name="Avadon Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
@@ -212,7 +212,7 @@
 	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<mul order="0x30" stat="regHp" val="1.0526" /> <!-- HP Regeneration +5.26% -->
@@ -224,7 +224,7 @@
 	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="320" /> <!-- HP +320 -->
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
@@ -235,7 +235,7 @@
 	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
@@ -247,7 +247,7 @@
 	<skill id="3527" levels="1" name="Doom Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			<mul order="0x30" stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
@@ -261,7 +261,7 @@
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="206" /> <!-- MP +206 -->
 			<mul order="0x30" stat="regMp" val="1.0524" /> <!-- MP Regeneration +5.24% -->
@@ -273,7 +273,7 @@
 	<skill id="3529" levels="1" name="Doom Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed + 7 -->
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
@@ -286,7 +286,7 @@
 	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal +4% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
@@ -297,7 +297,7 @@
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
@@ -310,7 +310,7 @@
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
@@ -322,7 +322,7 @@
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
@@ -335,7 +335,7 @@
 	<skill id="3534" levels="1" name="Tallum Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
@@ -348,7 +348,7 @@
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P. Def. +8% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
@@ -362,7 +362,7 @@
 	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
@@ -374,7 +374,7 @@
 	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
@@ -386,7 +386,7 @@
 	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
@@ -399,7 +399,7 @@
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
 				<using kind="Bow,Crossbow" />
@@ -414,7 +414,7 @@
 	<skill id="3540" levels="1" name="Nightmare Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
@@ -427,7 +427,7 @@
 	<skill id="3541" levels="1" name="Majestic Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
@@ -443,7 +443,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -453,7 +453,7 @@
 		<!-- Hoplon Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="126.13" />
 		</for>
@@ -462,7 +462,7 @@
 		<!-- Brigandine Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="20" />
 		</for>
@@ -471,7 +471,7 @@
 		<!-- Chain Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="198.21" />
 		</for>
@@ -480,7 +480,7 @@
 		<!-- Composite Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0526" />
 		</for>
@@ -489,7 +489,7 @@
 		<!-- Full Plate Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="rShld" val="1.0526" />
 		</for>
@@ -498,7 +498,7 @@
 		<!-- Avadon Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="rShld" val="1.24" />
 		</for>
@@ -507,7 +507,7 @@
 		<!-- Doom Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="rShld" val="1.24" />
 		</for>
@@ -516,7 +516,7 @@
 		<!-- Dark Crystal Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="rShld" val="1.18" />
 		</for>
@@ -525,7 +525,7 @@
 		<!-- Shield of Nightmare Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="reflectDam" val="5" />
 		</for>
@@ -538,7 +538,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
 			<mul order="0x30" stat="pvpPhysDmg" val="#bonus" />
@@ -549,7 +549,7 @@
 	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
@@ -563,7 +563,7 @@
 		<!-- Imperial Crusader Shield Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="80" />
 			<sub order="0x40" stat="bleedVuln" val="80" />
@@ -572,7 +572,7 @@
 	<skill id="3555" levels="1" name="Draconic Light Armor Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
@@ -586,7 +586,7 @@
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
@@ -602,7 +602,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -622,7 +622,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -647,7 +647,7 @@
 		<table name="#hpGain"> 1.1 1.15 </table>
 		<table name="#magicLvl"> 75 80 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -666,7 +666,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -679,7 +679,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -697,7 +697,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -713,7 +713,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -729,7 +729,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="75" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -744,7 +744,7 @@
 		<table name="#magicLvl"> 75 80 84 85 86 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -759,7 +759,7 @@
 		<table name="#magicLvl"> 75 80 84 85 86 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -774,7 +774,7 @@
 		<table name="#magicLvl"> 75 80 84 85 86 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -789,7 +789,7 @@
 		<table name="#magicLvl"> 75 84 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="absorbDam" val="#absorbDam" />
@@ -804,7 +804,7 @@
 		<table name="#regHp"> 2.04 4.92 5.15 5.18 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="regHp" val="#regHp" />
@@ -817,7 +817,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="75" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="1.15" />
@@ -834,7 +834,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
@@ -850,7 +850,7 @@
 		<table name="#magicLvl"> 75 84 85 86 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
@@ -865,7 +865,7 @@
 		<table name="#magicLvl"> 75 80 84 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
@@ -880,7 +880,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -899,7 +899,7 @@
 		<table name="#mAtk"> 60.09 151.09 166.54 176.53 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -914,7 +914,7 @@
 		<table name="#regMp"> 0.54 1.95 2.04 2.05 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="regMp" val="#regMp" />
@@ -928,7 +928,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="75" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -944,7 +944,7 @@
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="5" />
@@ -967,7 +967,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -981,7 +981,7 @@
 	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="20" />
@@ -1003,7 +1003,7 @@
 		<!-- Infinity Axe Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
@@ -1014,7 +1014,7 @@
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="504" /> <!-- P.Atk. +504 on a critical hit -->
@@ -1032,7 +1032,7 @@
 	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="25" />
@@ -1056,7 +1056,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
@@ -1068,7 +1068,7 @@
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="10" />
@@ -1092,7 +1092,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
@@ -1105,7 +1105,7 @@
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="25" />
@@ -1129,7 +1129,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
@@ -1142,7 +1142,7 @@
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="5" />
@@ -1168,7 +1168,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
@@ -1181,7 +1181,7 @@
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<for>
 			<add order="0x40" stat="atkCountMax" val="5" />
@@ -1202,7 +1202,7 @@
 		<!-- Infinity Spear Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CANCEL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="80" />
 		<!-- NOTE: Number of buffs canceled have been reduced to 2 in H5 -->
 		<set name="maxNegated" val="2" />
@@ -1212,7 +1212,7 @@
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="7" />
@@ -1232,7 +1232,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -1246,7 +1246,7 @@
 	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_MAGIC_GOOD" />
 		<set name="activationChance" val="3" />
@@ -1269,7 +1269,7 @@
 		<!-- Infinity Scepter Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="80" />
 		<set name="aggroPoints" val="100" />
 		<cond msgId="113" addName="1">
@@ -1284,7 +1284,7 @@
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
 		<set name="chanceType" val="ON_MAGIC_GOOD" />
 		<set name="activationChance" val="3" />
@@ -1305,7 +1305,7 @@
 		<!-- Infinity Rod Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="80" />
 		<set name="aggroPoints" val="100" />
 		<cond msgId="113" addName="1">
@@ -1320,7 +1320,7 @@
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="atkCountMax" val="2" />
 		</for>

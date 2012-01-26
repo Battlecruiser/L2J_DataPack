@@ -3,7 +3,7 @@
 	<skill id="8500" levels="1" name="Pink Talisman - CON">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -13,7 +13,7 @@
 	<skill id="8501" levels="1" name="Pink Talisman - INT">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -23,7 +23,7 @@
 	<skill id="8502" levels="1" name="Pink Talisman - WIT">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -33,7 +33,7 @@
 	<skill id="8503" levels="1" name="Pink Talisman - MEN">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -43,7 +43,7 @@
 	<skill id="8504" levels="1" name="Pink Talisman - Stun Resist">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -53,7 +53,7 @@
 	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resist">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -63,7 +63,7 @@
 	<skill id="8506" levels="1" name="Pink Talisman - Hold Resist">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -73,7 +73,7 @@
 	<skill id="8507" levels="1" name="Pink Talisman - Paralyze Resist">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -83,7 +83,7 @@
 	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -98,75 +98,75 @@
 	<skill id="8509" levels="1" name="High Angel Circlet">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8510" levels="1" name="Summon Friend">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="8511" levels="1" name="Blessing of Victory">
 		<!-- Increases Speed by 2%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8512" levels="1" name="National Representative Warrior's Tenacity">
 		<!-- "When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited National Representative Warrior's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8513" levels="1" name="National Representative Spell of Blessing">
 		<!-- "When used, you can obtain at random a Blessed Scroll of Escape or a B~S grade Blessed Weapon/Armor Strengthening Scroll. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8514" levels="1" name="National Representative Energy of Victory">
 		<!-- "When used, you can obtain at random one Nevit's Hourglass 1~4 hours and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8515" levels="1" name="Release Seal on Agathion - Ball Trapping Gnosian">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8516" levels="1" name="Release Seal on Agathion - Ball Trapping Orodriel">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8517" levels="1" name="Release Seal on Agathion - Penalty Kick">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8518" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8519" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8520" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8521" levels="1" name="Release Seal on Agathion - Antharas">
 		<!-- Removes the seal of Agathion. -->
@@ -174,37 +174,37 @@
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="npcId" val="16077" />
 	</skill>
 	<skill id="8522" levels="1" name="Release Seal on Agathion - Nevit's Messenger Kanna">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8523" levels="1" name="Release Seal on Agathion - Guardian of the Dawn Kallesin">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8524" levels="1" name="Hero's Holy Attack">
 		<!-- Divine attck is increased by 250. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8525" levels="1" name="Hero's Holy Attack">
 		<!-- Increases holy attack by 250. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8526" levels="1" name="Shiny Bracelet">
 		<!-- 3 Talisman can be equipped. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 </list>

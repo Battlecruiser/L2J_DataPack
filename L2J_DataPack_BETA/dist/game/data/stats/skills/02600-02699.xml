@@ -5,41 +5,41 @@
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2602" levels="1" name="Gran Kain's Echo Crystal - Theme of Celebration">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2603" levels="1" name="Gran Kain's Echo Crystal - Theme of Comedy">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2604" levels="1" name="Gran Kain's Firework">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="2605" levels="1" name="Gran Kain's Large Firework">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="2606" levels="1" name="Gran Kain's Gift Box">
@@ -49,7 +49,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
@@ -66,7 +66,7 @@
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
 		<set name="power" val="100" />
@@ -83,7 +83,7 @@
 		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="GIVE_SP" />
@@ -99,43 +99,43 @@
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="#teleCoords" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2610" levels="1" name="Register Bookmark (Event)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2611" levels="1" name="Large Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2612" levels="1" name="Large Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2613" levels="1" name="Large Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2614" levels="1" name="Large Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2615" levels="1" name="Destroyed Darkness Fragment Powder">
 		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="13854" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
@@ -153,87 +153,87 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2617" levels="1" name="Stun Planter">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2618" levels="1" name="Stun Land Mine">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2619" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) (Event)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2620" levels="1" name="Extra Entrance Pass - Near Kamaloka (Event)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2621" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) (Event)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2622" levels="1" name="Summon Life-size Decoy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="2623" levels="1" name="Alkaline Therapy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2624" levels="1" name="Life Aid Banding">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2625" levels="1" name="Embalming">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2626" levels="1" name="Lighting Incense">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2627" levels="1" name="Elixir Miracle">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2628" levels="1" name="Structure Scarab">
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2629" levels="1" name="Ancient Treasure Sack">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2630" levels="1" name="Presentation - Collect Items">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="6000" />
@@ -249,7 +249,7 @@
 	<skill id="2631" levels="1" name="Scroll of Transformation - Frog">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="111" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -261,7 +261,7 @@
 	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="112" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -276,7 +276,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -291,7 +291,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -304,7 +304,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="10000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
@@ -316,7 +316,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="10000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
@@ -327,7 +327,7 @@
 	<skill id="2637" levels="1" name="Scroll: Enchant Weapon (Event)">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2638" levels="1" name="Five-year anniversary event box">
 		<!-- Confirmed CT2.5 -->
@@ -336,7 +336,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -353,7 +353,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -370,7 +370,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -387,7 +387,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -404,7 +404,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -421,7 +421,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -438,7 +438,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -451,18 +451,18 @@
 	<skill id="2645" levels="1" name="Multi-Colored Honey Rice Cake">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2646" levels="1" name="Honey Wheat Cake">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="REFUEL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
 		<set name="power" val="25" />
 	</skill>
@@ -470,7 +470,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="REFUEL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
 		<set name="power" val="100" />
 	</skill>
@@ -481,14 +481,14 @@
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="#teleCoords" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2650" levels="1" name="Summon Imperial Phoenix">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="912" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -506,7 +506,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="913" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -524,7 +524,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="914" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -542,7 +542,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="915" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -560,7 +560,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="917" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -578,7 +578,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="918" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -596,7 +596,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="919" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -614,7 +614,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="922" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -633,7 +633,7 @@
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="923" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -651,7 +651,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="924" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -669,7 +669,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1532" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -687,7 +687,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1533" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -705,7 +705,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1535" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -723,7 +723,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1536" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -741,7 +741,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1537" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -759,7 +759,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="1538" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -777,7 +777,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="928" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -795,7 +795,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="929" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -813,7 +813,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="930" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -831,7 +831,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
 		<set name="learnSkillId" val="931" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
@@ -847,7 +847,7 @@
 	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="121" />
@@ -858,7 +858,7 @@
 	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="122" />
@@ -872,7 +872,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="10" />
@@ -893,7 +893,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="11" />
@@ -914,7 +914,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="12" />
@@ -935,7 +935,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="13" />
@@ -954,7 +954,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
@@ -977,7 +977,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="15" />
@@ -998,7 +998,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="16" />
@@ -1019,7 +1019,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="17" />
@@ -1040,7 +1040,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="18" />
@@ -1061,7 +1061,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="19" />
@@ -1082,7 +1082,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="20" />
@@ -1103,7 +1103,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="21" />
@@ -1124,7 +1124,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="10" />
@@ -1145,7 +1145,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="11" />
@@ -1166,7 +1166,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="12" />
@@ -1187,7 +1187,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="13" />
@@ -1208,7 +1208,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="14" />
@@ -1229,7 +1229,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="15" />
@@ -1250,7 +1250,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="16" />
@@ -1271,7 +1271,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="17" />
@@ -1292,7 +1292,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="18" />
@@ -1313,7 +1313,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="19" />
@@ -1334,7 +1334,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="20" />
@@ -1355,7 +1355,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="21" />
@@ -1376,7 +1376,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="10" />
@@ -1397,7 +1397,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="11" />
@@ -1418,7 +1418,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="12" />
@@ -1439,7 +1439,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="13" />

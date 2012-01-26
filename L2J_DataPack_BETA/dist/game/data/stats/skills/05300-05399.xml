@@ -13,7 +13,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -35,7 +35,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="lvlDepend" val="2" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
@@ -60,7 +60,7 @@
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -80,7 +80,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="saveVs" val="CON" />
@@ -105,7 +105,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
 		<set name="coolTime" val="660" />
@@ -131,7 +131,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -151,7 +151,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
@@ -173,7 +173,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -200,7 +200,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -220,7 +220,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -243,7 +243,7 @@
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
@@ -260,7 +260,7 @@
 		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="1000" />
 	</skill>
@@ -278,7 +278,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
@@ -298,7 +298,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="skillRadius" val="200" />
@@ -318,7 +318,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="20" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="4000" />
 	</skill>
@@ -333,7 +333,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
 		<set name="skillRadius" val="200" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5316" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -349,7 +349,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -369,7 +369,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="4000" />
@@ -389,62 +389,62 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
 	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
@@ -461,7 +461,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -481,7 +481,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -501,7 +501,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
@@ -516,7 +516,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 	</skill>
 	<skill id="5332" levels="9" name="NPC MP Burn">
@@ -532,7 +532,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="effectRange" val="1100" />
@@ -548,7 +548,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="lvlDepend" val="2" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="isMagic" val="true" />
@@ -572,7 +572,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="castRange" val="40" />
@@ -587,7 +587,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -600,7 +600,7 @@
 		<set name="power" val="12777" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
@@ -608,7 +608,7 @@
 	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -623,7 +623,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -632,7 +632,7 @@
 	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 	</skill>
 	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
@@ -646,7 +646,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="300" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -654,7 +654,7 @@
 	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -669,7 +669,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -678,20 +678,20 @@
 	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 	</skill>
 	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 	</skill>
 	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -706,7 +706,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -715,20 +715,20 @@
 	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 	</skill>
 	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 	</skill>
 	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -743,7 +743,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -752,7 +752,7 @@
 	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 	</skill>
 	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
@@ -765,7 +765,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
@@ -773,21 +773,21 @@
 	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
 	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 	</skill>
 	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 	</skill>
 	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
@@ -800,7 +800,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
@@ -808,7 +808,7 @@
 	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -823,7 +823,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -840,7 +840,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -855,7 +855,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -863,7 +863,7 @@
 	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
@@ -878,7 +878,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
@@ -908,7 +908,7 @@
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -928,7 +928,7 @@
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="castRange" val="40" />
@@ -951,7 +951,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
@@ -978,7 +978,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillRadius" val="150" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -997,7 +997,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1013,7 +1013,7 @@
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="4500" />
 		<set name="lvlDepend" val="2" />
@@ -1036,7 +1036,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1047,7 +1047,7 @@
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4500" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="2" />
@@ -1065,7 +1065,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
@@ -1082,14 +1082,14 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
@@ -1106,7 +1106,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
@@ -1115,7 +1115,7 @@
 	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
@@ -1127,7 +1127,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
@@ -1136,19 +1136,19 @@
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
@@ -1164,7 +1164,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1173,7 +1173,7 @@
 	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
@@ -1189,7 +1189,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
@@ -1206,7 +1206,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1215,31 +1215,31 @@
 	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
@@ -1255,7 +1255,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1275,7 +1275,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="skillRadius" val="200" />
@@ -1295,7 +1295,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="4000" />
 	</skill>
@@ -1313,7 +1313,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="absorbPart" val="0.9" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="600" />
@@ -1331,7 +1331,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -1346,7 +1346,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="lvlDepend" val="2" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="isMagic" val="true" />
@@ -1377,7 +1377,7 @@
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="8000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
 		<set name="aggroPoints" val="100" />
 		<set name="skillRadius" val="900" />
@@ -1391,17 +1391,17 @@
 	<skill id="5396" levels="1" name="NPC - Spell Stance">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="CA5" />
 		<set name="hitTime" val="15000" />
 	</skill>
 	<skill id="5397" levels="3" name="NPC - Spell Force">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5398" levels="1" name="NPC - Combination Force">
 		<set name="target" val="TARGET_AREA" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="99" />
 		<set name="skillType" val="MDAM" />
 		<set name="power" val="657" />
@@ -1421,7 +1421,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DOT" />

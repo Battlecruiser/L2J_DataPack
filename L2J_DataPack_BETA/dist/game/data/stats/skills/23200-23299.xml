@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
@@ -21,7 +21,7 @@
 	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -31,7 +31,7 @@
 	<skill id="23202" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -41,7 +41,7 @@
 	<skill id="23203" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -51,7 +51,7 @@
 	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -61,7 +61,7 @@
 	<skill id="23205" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -71,7 +71,7 @@
 	<skill id="23206" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -81,7 +81,7 @@
 	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -91,7 +91,7 @@
 	<skill id="23208" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -101,7 +101,7 @@
 	<skill id="23209" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
@@ -111,25 +111,25 @@
 	<skill id="23210" levels="85" name="Aura Flare">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="7000" />
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 	</skill>
 	<skill id="23214" levels="1" name="Good/Bad of Life">
@@ -139,7 +139,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -152,7 +152,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="MANAHEAL" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -162,142 +162,142 @@
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
 		<!-- For 1 minute(s), 50% of the standard short-range physical damage inflicted on the enemy is recovered as HP. Reuse delay is 1 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
 		<!-- For 5 minutes, increases Atk. Spd. by 30% and all attribute defense by 10. Reuse delay is 1 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 	</skill>
 	<skill id="23234" levels="1" name="Singer Dancer Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23235" levels="1" name="Singer Dancer Agathion Special Skill - Song of Hunter">
 		<!-- Increases critical attack rate by 100% for 2 minutes. Reuse delay 20 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23236" levels="1" name="Zaken Spirit Sword Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23237" levels="1" name="Zaken Spirit Sword Special Skill - Song of the Sword">
 		<!-- "For 30 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Reuse delay is 2 hours." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23238" levels="1" name="Master's Blessing - Eye of Pa'agrio">
 		<!-- High Five Skill -->
@@ -307,7 +307,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -327,7 +327,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -346,7 +346,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -379,7 +379,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -398,7 +398,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -421,7 +421,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
@@ -440,7 +440,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -463,7 +463,7 @@
 		<set name="hitTime" val="500" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
@@ -484,7 +484,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -501,7 +501,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -521,7 +521,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -538,33 +538,33 @@
 		<set name="effectRange" val="2500" />
 		<set name="hitTime" val="500" />
 		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="23250" levels="1" name="Kau Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23251" levels="1" name="Tow Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23252" levels="1" name="Griffin Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23253" levels="1" name="Master's Blessing - Focus">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -579,7 +579,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -594,7 +594,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -609,7 +609,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -624,7 +624,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -639,7 +639,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -654,7 +654,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -669,7 +669,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -684,7 +684,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -699,7 +699,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -714,7 +714,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -729,7 +729,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -744,7 +744,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -759,7 +759,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -774,7 +774,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -789,7 +789,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -811,7 +811,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -826,7 +826,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -841,7 +841,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -856,7 +856,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -874,7 +874,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="78" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -901,7 +901,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -928,7 +928,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -954,7 +954,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
@@ -981,7 +981,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -999,7 +999,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1017,7 +1017,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1035,7 +1035,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1053,7 +1053,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1071,7 +1071,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1089,7 +1089,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1109,7 +1109,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1127,7 +1127,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1140,7 +1140,7 @@
 		<!-- GM Skill -->
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1158,7 +1158,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1176,7 +1176,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1207,7 +1207,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1225,7 +1225,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1245,7 +1245,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1265,7 +1265,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1285,7 +1285,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1306,7 +1306,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1321,7 +1321,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1339,7 +1339,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1354,7 +1354,7 @@
 		<!-- "Rudolph's Blessing. For 20 minutes, increases Atk. Spd. by 10%, Casting Spd. by 10%, and Speed by 10. Rudolph consumes 2 fresh herbs." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
 		<!-- FIXME: Chance & Reuse values are guessed -->
@@ -1362,7 +1362,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
@@ -1378,7 +1378,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />

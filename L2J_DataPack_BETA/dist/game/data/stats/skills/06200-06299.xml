@@ -3,13 +3,13 @@
 	<skill id="6200" levels="1" name="NPC Transform Dispel">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="TRANSFORMDISPEL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="6201" levels="1" name="Transformation Condition - Frog">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="111" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
@@ -26,7 +26,7 @@
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="112" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
@@ -43,7 +43,7 @@
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="transformId" val="124" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
@@ -60,7 +60,7 @@
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -92,7 +92,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
@@ -118,7 +118,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
@@ -136,7 +136,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="56" />
 		<set name="mpConsume" val="55" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -150,14 +150,14 @@
 		<!-- Blessed Guidance. For 10 seconds, increases accuracy by 2. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
 		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
 		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
 		<table name="#magicFailureRate"> 2000 4000 6000 8000 </table> <!-- Guess -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -174,7 +174,7 @@
 		<table name="#rEvas"> 2.5 5 7.5 10 </table>
 		<table name="#amount"> 0.8333 0.6944 0.5787 0.4823 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -188,106 +188,106 @@
 	<skill id="6217" levels="1" name="Raid Boss - Level 81">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6218" levels="1" name="Raid Boss - Level 81">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6219" levels="1" name="Raid Boss - Level 81">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6220" levels="1" name="Raid Boss - Level 81">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6221" levels="1" name="Raid Boss - Level 82">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6222" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6223" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6224" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6225" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6226" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6227" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6228" levels="1" name="Raid Boss - Level 83">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6229" levels="1" name="Raid Boss - Level 84">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6230" levels="1" name="Raid Boss - Level 82">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6231" levels="1" name="Raid Boss - Level 82">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6232" levels="1" name="Raid Boss - Level 83">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6233" levels="1" name="Raid Boss - Level 83">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="6234" levels="1" name="Presentation - Adena Firework">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6235" levels="1" name="Blessed Focus">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6236" levels="1" name="Presentation - Party Recall">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
 		<set name="target" val="TARGET_AURA" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="84" />
 		<set name="power" val="100" />
@@ -304,7 +304,7 @@
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
 		<set name="magicLvl" val="84" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="skillRadius" val="200" />
@@ -329,7 +329,7 @@
 		<set name="hitTime" val="2700" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -344,58 +344,58 @@
 	<skill id="6240" levels="5" name="Heatstroke">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6250" levels="1" name="Severe Heatstroke">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
@@ -403,71 +403,71 @@
 	<skill id="6251" levels="1" name="Summon Humidity">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6252" levels="1" name="Humidity Attack">
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6262" levels="1" name="EMP Power">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6263" levels="1" name="EMP Shock">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
@@ -477,21 +477,21 @@
 	<skill id="6264" levels="1" name="Golem Boom">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6265" levels="1" name="Smoke">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="lvlDepend" val="1" />
@@ -500,17 +500,17 @@
 	<skill id="6267" levels="1" name="Power Attack">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6268" levels="1" name="Power Attack">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6269" levels="1" name="Poison Gas">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
@@ -518,24 +518,24 @@
 	<skill id="6270" levels="1" name="Grima Power Up">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6272" levels="1" name="Underbug Defense Up">
 		<!-- Increase each of P. Def. and M. Def. by 30%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6273" levels="1" name="Underbug Self Blasting">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="trait" val="POISON" />
 	</skill>
@@ -548,7 +548,7 @@
 		<set name="hitTime" val="10000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="38976" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillRadius" val="3000" />
@@ -567,7 +567,7 @@
 		<set name="hitTime" val="7000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="166" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="45256" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillRadius" val="3000" />
@@ -585,7 +585,7 @@
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="10000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillRadius" val="3000" />
 		<set name="skillType" val="DUMMY" />
@@ -599,7 +599,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
@@ -615,7 +615,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="168" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
 		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
@@ -630,7 +630,7 @@
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="168" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
 		<set name="skillRadius" val="450" />
 		<set name="skillType" val="PDAM" />
@@ -646,7 +646,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
@@ -661,7 +661,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="PDAM" />
@@ -673,7 +673,7 @@
 		<set name="aggroPoints" val="204" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="45000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -693,7 +693,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
@@ -705,7 +705,7 @@
 		<set name="coolTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -722,7 +722,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -740,7 +740,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -759,7 +759,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="1100" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
@@ -775,7 +775,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -792,7 +792,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -815,7 +815,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
@@ -828,7 +828,7 @@
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillRadius" val="300" />
 		<set name="skillType" val="PDAM" />
@@ -847,7 +847,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="20" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
@@ -868,7 +868,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
@@ -883,7 +883,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillRadius" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_CLAN" />
@@ -900,7 +900,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -917,7 +917,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="20" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
@@ -939,7 +939,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
@@ -953,7 +953,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -965,7 +965,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="1547" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="200" />

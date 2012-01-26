@@ -4,13 +4,13 @@
 		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
 		<!-- Slams down on the treasure chest with a hammer to open it. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="20002" levels="1" name="Dragon Blow">
 		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
@@ -23,7 +23,7 @@
 		<set name="effectRange" val="550" /> <!-- guessed -->
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="5000" /> <!-- guessed -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
@@ -36,14 +36,14 @@
 		<set name="effectRange" val="550" /> <!-- guessed -->
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="5000" /> <!-- guessed -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="30000" /> <!-- guessed -->
 		<set name="isMagic" val="true" />
@@ -57,7 +57,7 @@
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="5000" /> <!-- guessed -->
 		<set name="isMagic" val="true" />
@@ -74,7 +74,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
