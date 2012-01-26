@@ -5,7 +5,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -20,7 +20,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -35,7 +35,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -49,7 +49,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -64,7 +64,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -80,7 +80,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -95,7 +95,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -110,7 +110,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -128,7 +128,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="power" val="#power" />
 		<set name="chanceType" val="ON_CRIT" />
@@ -146,7 +146,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="AGGREDUCE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -161,7 +161,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="isMagic" val="true" />
@@ -173,7 +173,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5166" />
@@ -187,7 +187,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5167" />
@@ -201,7 +201,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5168" />
@@ -216,7 +216,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5169" />
@@ -231,7 +231,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5170" />
@@ -246,7 +246,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5171" />
@@ -261,7 +261,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5172" />
@@ -274,7 +274,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="1" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -290,7 +290,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5174" />
@@ -306,7 +306,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5175" />
@@ -321,7 +321,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5176" />
@@ -336,7 +336,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5177" />
@@ -358,7 +358,7 @@
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -376,7 +376,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -396,7 +396,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -418,7 +418,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -439,7 +439,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="MANA_BY_LEVEL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="staticHitTime" val="true" />
@@ -460,7 +460,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -481,7 +481,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -502,7 +502,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="#amount" />
@@ -521,7 +521,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -542,7 +542,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -563,7 +563,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -583,7 +583,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -605,7 +605,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -626,7 +626,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -649,7 +649,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="staticHitTime" val="true" />
@@ -673,7 +673,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -694,7 +694,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -715,7 +715,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -736,7 +736,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -757,7 +757,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -777,7 +777,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -796,7 +796,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
@@ -819,7 +819,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
@@ -839,7 +839,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="3147" levels="1" name="Item Skill: Recall">
@@ -851,7 +851,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
@@ -867,7 +867,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -890,7 +890,7 @@
 		<set name="coolTime" val="200" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="AGGDAMAGE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
@@ -913,7 +913,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="AGGREDUCE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -932,7 +932,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="AGGREMOVE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -949,7 +949,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="trait" val="DERANGEMENT" />
@@ -974,7 +974,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="DRAIN" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
@@ -993,7 +993,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="true" />
@@ -1013,7 +1013,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="UNLOCK" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
@@ -1024,7 +1024,7 @@
 		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3157" levels="1" name="Item Skill: Large Firework">
 		<set name="magicLvl" val="75" />
@@ -1033,7 +1033,7 @@
 		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3158" levels="1" name="Item Skill: Lesser Celestial Shield">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1046,7 +1046,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
 			<effect name="Invincible" abnormalTime="10" val="0" special="invincible" abnormalLvl="1" abnormalType="abnormal_item" />
@@ -1063,7 +1063,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="SilentMove" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -1089,7 +1089,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="staticHitTime" val="true" />
@@ -1107,7 +1107,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -1128,7 +1128,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -1149,7 +1149,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -1171,7 +1171,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
@@ -1198,7 +1198,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1219,7 +1219,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1240,7 +1240,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1261,7 +1261,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1282,7 +1282,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1303,7 +1303,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1322,7 +1322,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
@@ -1344,7 +1344,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1366,7 +1366,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1388,7 +1388,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1410,7 +1410,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1432,7 +1432,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1454,7 +1454,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1474,7 +1474,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
@@ -1496,7 +1496,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3181" levels="10" name="Item Skill: Hydro Blast">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1516,7 +1516,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3182" levels="10" name="Item Skill: Hurricane">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1536,7 +1536,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3183" levels="10" name="Item Skill: Stone">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1556,7 +1556,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3184" levels="10" name="Item Skill: Solar Flare">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1576,7 +1576,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3185" levels="10" name="Item Skill: Shadow Flare">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1596,7 +1596,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3186" levels="10" name="Item Skill: Aura Flare">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1614,7 +1614,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3187" levels="10" name="Item Skill: Slow">
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1633,7 +1633,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
@@ -1657,7 +1657,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1683,7 +1683,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
@@ -1710,7 +1710,7 @@
 		<set name="skillType" val="ROOT" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="HOLD" />
@@ -1729,7 +1729,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
@@ -1760,7 +1760,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1790,7 +1790,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -1817,7 +1817,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="FEAR" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1844,7 +1844,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="POISON" />
@@ -1872,7 +1872,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="trait" val="BLEED" />
@@ -1897,7 +1897,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1922,7 +1922,7 @@
 		<set name="skillType" val="MUTE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1944,7 +1944,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="pReuse" val="0.85" />

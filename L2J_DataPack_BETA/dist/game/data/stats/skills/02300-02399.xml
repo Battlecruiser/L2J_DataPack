@@ -7,7 +7,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="CHANGE_APPEARANCE" />
 		<set name="hairStyleId" val="2" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2301" levels="1" name="Hair Style Change Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -16,7 +16,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="CHANGE_APPEARANCE" />
 		<set name="hairStyleId" val="3" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2302" levels="1" name="Hair Style Change Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -25,7 +25,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="CHANGE_APPEARANCE" />
 		<set name="hairStyleId" val="4" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2303" levels="1" name="Hair Style Change Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -34,7 +34,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="CHANGE_APPEARANCE" />
 		<set name="hairStyleId" val="5" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
@@ -46,7 +46,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="CHANGE_APPEARANCE" />
 		<set name="hairStyleId" val="6" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
@@ -56,7 +56,7 @@
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -74,7 +74,7 @@
 		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="GIVE_SP" />
@@ -86,7 +86,7 @@
 	<skill id="2307" levels="1" name="Remove Petrification Scroll">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="turn_stone,99" />
 		<set name="target" val="TARGET_SELF" />
@@ -136,7 +136,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -153,7 +153,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -169,7 +169,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -182,7 +182,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -195,7 +195,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
@@ -208,7 +208,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -221,7 +221,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -234,7 +234,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
@@ -247,7 +247,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -260,7 +260,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -273,7 +273,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -286,7 +286,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -299,7 +299,7 @@
 		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
 		<set name="power" val="100" />
@@ -307,7 +307,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
@@ -318,7 +318,7 @@
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="neutral" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="staticHitTime" val="true" />
@@ -334,7 +334,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -351,7 +351,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -368,7 +368,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -385,7 +385,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -402,7 +402,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -419,7 +419,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -432,32 +432,32 @@
 	<skill id="2329" levels="4" name="Fire Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2330" levels="4" name="Water Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2331" levels="4" name="Wind Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2332" levels="4" name="Earth Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2333" levels="4" name="Divine Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2334" levels="4" name="Dark Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2335" levels="1" name="Fire Resist Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -465,7 +465,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -480,7 +480,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -495,7 +495,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -510,7 +510,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -525,7 +525,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -540,7 +540,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="600000" />
 		<for>
@@ -553,7 +553,7 @@
 		<set name="buffDuration" val="3600000" />
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -565,7 +565,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BALLISTA" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="castRange" val="150" />
@@ -577,7 +577,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -592,7 +592,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -607,7 +607,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -622,7 +622,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -637,7 +637,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -652,7 +652,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -667,7 +667,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -682,7 +682,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -697,7 +697,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -712,7 +712,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
@@ -726,7 +726,7 @@
 	<skill id="2353" levels="1" name="Nornil's Power">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NORNILS_POWER" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
 	</skill>
@@ -737,7 +737,7 @@
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -755,7 +755,7 @@
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -773,7 +773,7 @@
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -790,7 +790,7 @@
 		<set name="hitTime" val="100" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -805,7 +805,7 @@
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
 		<set name="neutral" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
@@ -817,7 +817,7 @@
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
 		<set name="neutral" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
@@ -830,7 +830,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="400" />
 		<cond msgId="113" addName="1">
@@ -844,7 +844,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="1100" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
@@ -856,7 +856,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10015" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -874,7 +874,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10016" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -890,7 +890,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Fortress" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<cond msgId="113" addName="1">
 			<player fort="-1" />
 		</cond>
@@ -902,7 +902,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Fortress" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2366" levels="1" name="Blue Coral Key">
 		<!-- Confirmed CT2.5 -->
@@ -912,7 +912,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="9698" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -929,7 +929,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="9699" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -947,7 +947,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="AGGREDUCE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<cond msgId="113" addName="1">
@@ -964,7 +964,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="400" />
 		<cond msgId="113" addName="1">
@@ -979,7 +979,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="9897" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="104" />
@@ -992,7 +992,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10131" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="1" />
@@ -1005,7 +1005,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10132" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="2" />
@@ -1018,7 +1018,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10133" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="202" />
@@ -1031,7 +1031,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10134" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="205" />
@@ -1044,7 +1044,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10135" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="208" />
@@ -1057,7 +1057,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10136" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="211" />
@@ -1070,7 +1070,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10137" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="214" />
@@ -1083,7 +1083,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10138" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="217" />
@@ -1095,7 +1095,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1107,7 +1107,7 @@
 	<skill id="2380" levels="1" name="Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1119,7 +1119,7 @@
 	<skill id="2381" levels="1" name="Magic Barrier">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1131,7 +1131,7 @@
 	<skill id="2382" levels="1" name="Bless Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1143,7 +1143,7 @@
 	<skill id="2383" levels="1" name="Haste">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1155,7 +1155,7 @@
 	<skill id="2384" levels="1" name="Acumen">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1167,7 +1167,7 @@
 	<skill id="2385" levels="1" name="Empower">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1179,7 +1179,7 @@
 	<skill id="2386" levels="1" name="Divine Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1191,7 +1191,7 @@
 	<skill id="2387" levels="1" name="Might">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1203,7 +1203,7 @@
 	<skill id="2388" levels="1" name="Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1215,7 +1215,7 @@
 	<skill id="2389" levels="1" name="Guidance">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1228,7 +1228,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1247,7 +1247,7 @@
 	<skill id="2391" levels="1" name="Clarity">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1262,7 +1262,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="200" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="RECALL" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1274,7 +1274,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="staticHitTime" val="true" />
@@ -1283,7 +1283,7 @@
 	<skill id="2394" levels="1" name="Scroll of Battlefield Transformation">
 		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="304" />
@@ -1294,7 +1294,7 @@
 		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="HEAL" />
 		<set name="staticReuse" val="true" />
@@ -1315,7 +1315,7 @@
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1332,7 +1332,7 @@
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1345,7 +1345,7 @@
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1364,7 +1364,7 @@
 		<set name="itemConsumeId" val="10159" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="75" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
