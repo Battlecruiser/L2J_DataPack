@@ -559,7 +559,12 @@
 		<!-- Description: Box that Isabel Silvershadow in Hunters Village asks you to deliver. Bring it to Valley Trader Kitzka in Dragon's Valley. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17282" type="EtcItem" name="2010 Summer Special Pack">
 		<!-- Description: Dimensional Item Pack. Gift box containing Nevit's Hourglass, Freya's Refreshing Breeze, and Ice Watermelon Hat. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
