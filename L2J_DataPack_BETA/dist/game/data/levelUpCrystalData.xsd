@@ -47,7 +47,8 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="levelList" use="optional" type="xs:normalizedString" />												<xs:attribute name="maxLevel" use="optional">
+												<xs:attribute name="levelList" use="optional" type="xs:normalizedString" />
+												<xs:attribute name="maxLevel" use="optional">
 													<xs:simpleType>
 														<xs:restriction base="xs:integer">
 															<xs:minInclusive value="1" />
@@ -62,7 +63,8 @@
 									<xs:attribute name="npcId" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-						</xs:sequence>					</xs:complexType>
+						</xs:sequence>
+					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
