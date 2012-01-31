@@ -99,20 +99,44 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5110" levels="1" name="Cannon Fodder">
-		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 4 Flash Gunpowder. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Swoop Cannon Skill -->
+		<set name="castRange" val="1600" />
+		<set name="effectRange" val="1600" />
 		<set name="hitTime" val="10000" />
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeId" val="8872" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="68" />
+		<set name="reuseDelay" val="10500" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
+		<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+		<cond msgId="113" addName="1">
+			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+		</cond>
 	</skill>
 	<skill id="5111" levels="1" name="Big Bang">
-		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Swoop Cannon Skill -->
+		<set name="castRange" val="2000" />
+		<set name="effectRange" val="2000" />
 		<set name="hitTime" val="10000" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="8872" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="68" />
+		<set name="reuseDelay" val="10500" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
+		<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+		<cond msgId="113" addName="1">
+			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+		</cond>
 	</skill>
 	<skill id="5112" levels="12" name="Stun">
 		<!-- Lvl 1-12 - Temporarily Immobilized and in a state of shock. -->
