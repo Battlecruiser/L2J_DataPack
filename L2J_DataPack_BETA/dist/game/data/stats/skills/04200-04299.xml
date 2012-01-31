@@ -507,15 +507,16 @@
 	</skill>
 	<skill id="4230" levels="1" name="Wild Cannon">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="70" />
-		<set name="power" val="1330120" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="10000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="A1" />
+		<!-- Wild Hog Cannon Skill -->
 		<set name="castRange" val="2500" />
 		<set name="effectRange" val="3000" />
+		<set name="hitTime" val="10000" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="1330120" />
+		<set name="reuseDelay" val="10500" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4231" levels="12" name="NPC Spit Attack">
 		<!-- Freya retail confirmed -->
