@@ -108,8 +108,8 @@ public class Q10281_MutatedKaneusRune extends Quest
 				break;
 			case "31335-03.htm":
 				st.rewardItems(57, 360000);
-				st.exitQuest(false);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(false);
 				break;
 		}
 		return htmltext;

@@ -104,7 +104,6 @@ public class Q452_FindingtheLostSoldiers extends Quest
 						st.giveItems(57, 95200);
 						st.addExpAndSp(435024, 50366);
 						st.playSound("ItemSound.quest_finish");
-						st.exitQuest(false);
 						
 						Calendar reDo = Calendar.getInstance();
 						reDo.set(Calendar.MINUTE, RESET_MIN);
@@ -112,6 +111,7 @@ public class Q452_FindingtheLostSoldiers extends Quest
 							reDo.add(Calendar.DATE, 1);
 						reDo.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 						st.set("reDoTime", String.valueOf(reDo.getTimeInMillis()));
+						st.exitQuest(false);
 					}
 					break;
 				case State.COMPLETED :

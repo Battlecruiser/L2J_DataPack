@@ -60,8 +60,8 @@ public class Q13_ParcelDelivery extends Quest
 					st.takeItems(PACKAGE, -1);
 					st.giveItems(57, 157834);
 					st.addExpAndSp(589092, 58794);
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 				}
 				else
 				{

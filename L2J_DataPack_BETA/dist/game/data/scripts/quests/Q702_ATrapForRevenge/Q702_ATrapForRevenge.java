@@ -106,8 +106,8 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-05.html"))
 		{
-			st.exitQuest(true);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(true);
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{

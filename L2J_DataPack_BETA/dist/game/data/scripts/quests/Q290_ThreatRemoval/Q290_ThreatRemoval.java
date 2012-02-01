@@ -97,9 +97,8 @@ public class Q290_ThreatRemoval extends Quest
 			}
 			else if (event.equalsIgnoreCase("30201-08.htm"))
 			{
-				st.unset("cond");
-				st.exitQuest(true);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(true);
 			}
 		}
 		return htmltext;

@@ -143,8 +143,8 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 				else if (st.getInt("cond") == 2)
 				{
 					st.giveItems(SUPPORT_ITEMS, 1);
-					st.exitQuest(true);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(true);
 					htmltext = "32711-10.htm";
 				}
 				break;

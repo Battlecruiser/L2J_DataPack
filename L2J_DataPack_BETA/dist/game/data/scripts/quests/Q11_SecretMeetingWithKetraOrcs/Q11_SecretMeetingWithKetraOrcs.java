@@ -68,8 +68,8 @@ public class Q11_SecretMeetingWithKetraOrcs extends Quest
 				{
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(233125, 18142);
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 				}
 				else
 				{

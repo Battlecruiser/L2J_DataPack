@@ -80,8 +80,8 @@ public class Q690_JudesRequest extends Quest
 		else if (event.equalsIgnoreCase("32356-08.htm"))
 		{
 			st.takeItems(EVIL_WEAPON, -1);
-			st.exitQuest(true);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(true);
 		}
 		else if (event.equalsIgnoreCase("32356-09.htm"))
 		{
