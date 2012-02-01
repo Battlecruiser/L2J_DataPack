@@ -68,8 +68,8 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 					htmltext = "32530-01.htm";
 					st.giveAdena(16671, false);
 					st.addExpAndSp(100640, 10098);
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 				}
 				break;
 		}

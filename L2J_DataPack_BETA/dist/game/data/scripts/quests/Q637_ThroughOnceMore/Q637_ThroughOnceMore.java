@@ -106,8 +106,8 @@ public final class Q637_ThroughOnceMore extends Quest
 				st.takeItems(FADED_MARK, 1);
 				st.giveItems(MARK, 1);
 				st.giveItems(8273,10);
-				st.exitQuest(true);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(true);
 				return "32010-05.htm";
 			}
 			return "32010-04.htm";

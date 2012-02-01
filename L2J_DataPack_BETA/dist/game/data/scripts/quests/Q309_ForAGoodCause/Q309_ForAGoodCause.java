@@ -195,8 +195,8 @@ public class Q309_ForAGoodCause extends Quest
 		}
 		else if (event.equalsIgnoreCase("32647-14.htm") || event.equalsIgnoreCase("32647-07.htm"))
 		{
-			st.exitQuest(true);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(true);
 		}
 		return htmltext;
 	}

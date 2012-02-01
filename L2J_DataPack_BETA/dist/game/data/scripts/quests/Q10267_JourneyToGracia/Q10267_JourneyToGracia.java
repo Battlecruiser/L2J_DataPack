@@ -110,8 +110,8 @@ public class Q10267_JourneyToGracia extends Quest
 			case "32548-02.htm":
 				st.giveAdena(92500, false);
 				st.addExpAndSp(75480, 7570);
-				st.exitQuest(false);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(false);
 				break;
 		}
 		return htmltext;

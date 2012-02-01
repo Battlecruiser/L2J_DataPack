@@ -103,7 +103,6 @@ public class Q251_NoSecrets extends Quest
 							st.addExpAndSp(56787, 160578);
 							st.playSound("ItemSound.quest_finish");
 							st.exitQuest(false);
-							st.setState(State.COMPLETED);
 						}
 					}
 				break;
