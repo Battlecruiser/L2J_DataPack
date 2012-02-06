@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.entity.Castle;
 
 /**
  *
- *
  */
 public class castle implements IVoicedCommandHandler
 {
@@ -33,10 +32,6 @@ public class castle implements IVoicedCommandHandler
 		"ride wyvern"
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
@@ -44,8 +39,10 @@ public class castle implements IVoicedCommandHandler
 		{
 			L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
 			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
-			if (door == null || castle == null)
+			if ((door == null) || (castle == null))
+			{
 				return false;
+			}
 			if (castle.checkIfInZone(door.getX(), door.getY(), door.getZ()))
 			{
 				door.openMe();
@@ -54,19 +51,21 @@ public class castle implements IVoicedCommandHandler
 		}
 		else if (command.startsWith("close doors") && params.equals("castle") && (activeChar.isClanLeader()))
 		{
-			L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
-			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
-			if (door == null || castle == null)
+			final L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
+			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
+			if ((door == null) || (castle == null))
+			{
 				return false;
+			}
+			
 			if (castle.checkIfInZone(door.getX(), door.getY(), door.getZ()))
 			{
 				door.closeMe();
 			}
-			
 		}
 		else if (command.startsWith("ride wyvern") && params.equals("castle"))
 		{
-			if (activeChar.getClan().getHasCastle() > 0 && activeChar.isClanLeader())
+			if ((activeChar.getClan().getHasCastle() > 0) && activeChar.isClanLeader())
 			{
 				activeChar.mount(12621, 0, true);
 			}
@@ -74,10 +73,6 @@ public class castle implements IVoicedCommandHandler
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
-	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
