@@ -23,11 +23,8 @@ import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
-
 /**
- *
  * @author Nik
- *
  */
 public class ChangePassword implements IVoicedCommandHandler
 {
@@ -41,15 +38,24 @@ public class ChangePassword implements IVoicedCommandHandler
 	{
 		if (target != null)
 		{
-			StringTokenizer st = new StringTokenizer(target);
+			final StringTokenizer st = new StringTokenizer(target);
 			try
 			{
 				String curpass = null, newpass = null, repeatnewpass = null;
-				if (st.hasMoreTokens()) curpass = st.nextToken();
-				if (st.hasMoreTokens()) newpass = st.nextToken();
-				if (st.hasMoreTokens()) repeatnewpass = st.nextToken();
+				if (st.hasMoreTokens())
+				{
+					curpass = st.nextToken();
+				}
+				if (st.hasMoreTokens())
+				{
+					newpass = st.nextToken();
+				}
+				if (st.hasMoreTokens())
+				{
+					repeatnewpass = st.nextToken();
+				}
 				
-				if (!(curpass == null || newpass == null || repeatnewpass == null))
+				if (!((curpass == null) || (newpass == null) || (repeatnewpass == null)))
 				{
 					if (!newpass.equals(repeatnewpass))
 					{
@@ -83,16 +89,18 @@ public class ChangePassword implements IVoicedCommandHandler
 		}
 		else
 		{
-			//showHTML(activeChar);
+			// showHTML(activeChar);
 			String html = HtmCache.getInstance().getHtm("en", "data/html/mods/ChangePassword.htm");
 			if (html == null)
+			{
 				html = "<html><body><br><br><center><font color=LEVEL>404:</font> File Not Found</center></body></html>";
+			}
 			activeChar.sendPacket(new NpcHtmlMessage(1, html));
 			return true;
 		}
 		return true;
 	}
-
+	
 	@Override
 	public String[] getVoicedCommandList()
 	{
