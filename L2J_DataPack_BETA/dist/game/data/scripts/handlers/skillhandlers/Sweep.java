@@ -38,7 +38,7 @@ public class Sweep implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 		{
 			return;
 		}
@@ -48,22 +48,23 @@ public class Sweep implements ISkillHandler
 		L2Attackable target;
 		L2SkillSweeper sweep;
 		SystemMessage sm;
-		boolean canSweep = true;
+		boolean canSweep;
+		boolean isSweeping;
 		for (L2Object tgt : targets)
 		{
-			if (!(tgt instanceof L2Attackable))
+			if (!tgt.isAttackable())
 			{
 				continue;
 			}
 			target = (L2Attackable) tgt;
 			
-			canSweep &= target.checkSpoilOwner(player, true);
+			canSweep = target.checkSpoilOwner(player, true);
 			canSweep &= target.checkCorpseTime(player, maxSweepTime, true);
 			canSweep &= player.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, false);
 			
 			if (canSweep)
 			{
-				boolean isSweeping = false;
+				isSweeping = false;
 				synchronized (target)
 				{
 					if (target.isSweepActive())
