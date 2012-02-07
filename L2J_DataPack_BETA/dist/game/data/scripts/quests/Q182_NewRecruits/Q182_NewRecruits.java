@@ -45,7 +45,7 @@ public class Q182_NewRecruits extends Quest
 		
 		if (npc.getNpcId() == _kekropus)
 		{
-			if (event.equalsIgnoreCase("32138-03.htm"))
+			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -54,13 +54,13 @@ public class Q182_NewRecruits extends Quest
 		}
 		else if (npc.getNpcId() == _nornil)
 		{
-			if (event.equalsIgnoreCase("32258-04.htm"))
+			if (event.equalsIgnoreCase("32258-04.html"))
 			{
 				st.giveItems(847, 2);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
-			else if (event.equalsIgnoreCase("32258-05.htm"))
+			else if (event.equalsIgnoreCase("32258-05.html"))
 			{
 				st.giveItems(890, 2);
 				st.playSound("ItemSound.quest_finish");
@@ -80,34 +80,40 @@ public class Q182_NewRecruits extends Quest
 			return htmltext;
 		}
 		
-		if (player.getRace() == Race.Kamael)
+		final int npcId = npc.getNpcId();
+		if (npcId == _kekropus)
 		{
-			htmltext = "32138-00.htm";
-		}
-		else
-		{
-			if (npc.getNpcId() == _kekropus)
+			switch (st.getState())
 			{
-				switch (st.getState())
-				{
-					case State.CREATED:
+				case State.CREATED:
+					final int level = player.getLevel();
+					if (player.getRace() == Race.Kamael)
+					{
+						htmltext = "32138-00.html";
+					}
+					else if ((level >= 17) && (level <= 21) && (player.getClassId().ordinal() == 0))
+					{
 						htmltext = "32138-01.htm";
-						break;
-					case State.STARTED:
-						if (st.getInt("cond") == 1)
-						{
-							htmltext = "32138-03.htm";
-						}
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-				}
+					}
+					else
+					{
+						htmltext = "32138-00b.html";
+					}
+					break;
+				case State.STARTED:
+					if (st.getInt("cond") == 1)
+					{
+						htmltext = "32138-04.html";
+					}
+					break;
+				case State.COMPLETED:
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
 			}
-			else if ((npc.getNpcId() == _nornil) && st.isStarted())
-			{
-				htmltext = "32258-01.htm";
-			}
+		}
+		else if ((npcId == _nornil) && st.isStarted())
+		{
+			htmltext = "32258-01.html";
 		}
 		return htmltext;
 	}

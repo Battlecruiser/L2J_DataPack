@@ -38,7 +38,6 @@ public class Q179_IntoTheLargeCavern extends Quest
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -46,7 +45,7 @@ public class Q179_IntoTheLargeCavern extends Quest
 		
 		if (npc.getNpcId() == _kekropus)
 		{
-			if (event.equalsIgnoreCase("32138-03.htm"))
+			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -55,14 +54,14 @@ public class Q179_IntoTheLargeCavern extends Quest
 		}
 		else if (npc.getNpcId() == _nornil)
 		{
-			if (event.equalsIgnoreCase("32258-08.htm"))
+			if (event.equalsIgnoreCase("32258-08.html"))
 			{
 				st.giveItems(391, 1);
 				st.giveItems(413, 1);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
-			else if (event.equalsIgnoreCase("32258-09.htm"))
+			else if (event.equalsIgnoreCase("32258-09.html"))
 			{
 				st.giveItems(847, 2);
 				st.giveItems(890, 2);
@@ -78,43 +77,54 @@ public class Q179_IntoTheLargeCavern extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		QuestState _prev = player.getQuestState("178_IconicTrinity");
-		if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 17) && (player.getRace() == Race.Kamael) && (player.getClassId().level() == 0))
+		if (npc.getNpcId() == _kekropus)
 		{
-			if (npc.getNpcId() == _kekropus)
+			switch (st.getState())
 			{
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = "32138-01.htm";
-						break;
-					case State.STARTED:
-						if (st.getInt("cond") == 1)
+				case State.CREATED:
+					if (player.getRace() != Race.Kamael)
+					{
+						htmltext = "32138-00b.html";
+					}
+					else
+					{
+						final QuestState prev = player.getQuestState("178_IconicTrinity");
+						final int level = player.getLevel();
+						if ((prev != null) && prev.isCompleted() && (level >= 17) && (level <= 21) && (player.getClassId().level() == 0))
 						{
-							htmltext = "32138-03.htm";
+							htmltext = "32138-01.htm";
 						}
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-				}
-			}
-			else if ((npc.getNpcId() == _nornil) && (st.getState() == State.STARTED))
-			{
-				htmltext = "32258-01.htm";
+						else if (level < 17)
+						{
+							htmltext = "32138-00.html";
+						}
+						else
+						{
+							htmltext = "32138-00c.html";
+						}
+					}
+					break;
+				case State.STARTED:
+					if (st.getInt("cond") == 1)
+					{
+						htmltext = "32138-03.htm";
+					}
+					break;
+				case State.COMPLETED:
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
 			}
 		}
-		else
+		else if ((npc.getNpcId() == _nornil) && (st.getState() == State.STARTED))
 		{
-			htmltext = "32138-00.htm";
+			htmltext = "32258-01.html";
 		}
-		
 		return htmltext;
 	}
 	
