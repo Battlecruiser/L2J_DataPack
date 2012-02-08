@@ -52,7 +52,7 @@ public class Sweep implements ISkillHandler
 		boolean isSweeping;
 		for (L2Object tgt : targets)
 		{
-			if (!tgt.isAttackable())
+			if (!tgt.isL2Attackable())
 			{
 				continue;
 			}
