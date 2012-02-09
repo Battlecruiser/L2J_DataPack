@@ -16,8 +16,6 @@ package handlers.telnethandlers;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.lang.management.ManagementFactory;
@@ -29,7 +27,6 @@ import java.util.Calendar;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
-import java.util.TreeMap;
 
 import javolution.util.FastComparator;
 import javolution.util.FastTable;
@@ -39,10 +36,7 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
-import com.l2jserver.gameserver.model.L2ExtractableProductItem;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -52,8 +46,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
 /**
@@ -63,65 +55,14 @@ public class DebugHandler implements ITelnetHandler
 {
 	private final String[] _commands =
 	{
-		"debug",
-		"dumpSkillz"
+		"debug"
 	};
-	Map<Integer, String> _sortedMap = new TreeMap<Integer, String>();
+	
 	private int uptime = 0;
 	
 	@Override
 	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime)
 	{
-		if (command.startsWith("dumpSkillz"))
-		{
-			StringBuilder sb = new StringBuilder();
-			for (L2Skill skill : SkillTable.getInstance().getAllSkills().values(new L2Skill[0]))
-			{
-				sb = new StringBuilder();
-				if (skill.getSkillType() == L2SkillType.EXTRACTABLE || skill.getSkillType() == L2SkillType.EXTRACTABLE_FISH)
-				{
-					sb.append("\t<skill id=\"" + skill.getId() + "\" level=\"" + skill.getLevel() + "\"> <!-- " + skill.getName() + " -->\r\n");
-					for (L2ExtractableProductItem product : skill.getExtractableSkill().getProductItemsArray())
-					{
-						if (product.getId().length > 1)
-						{
-							sb.append("\t\t<group chance=\"" + product.getChance() + "\">\r\n");
-							for (int i = 0; i < product.getId().length; i++)
-							{
-								sb.append("\t\t\t<item id=\"" + product.getId()[i] + "\" count=\"" + product.getAmmount()[i] + "\" /> <!-- " + ItemTable.getInstance().getTemplate(product.getId()[i]).getName() + " -->\r\n");
-							}
-							sb.append("\t\t</group>\r\n");
-						}
-						else
-						{
-							sb.append("\t\t<item id=\"" + product.getId()[0] + "\" count=\"" + product.getAmmount()[0] + "\" chance=\"" + product.getChance() + "\" /> <!-- " + ItemTable.getInstance().getTemplate(product.getId()[0]).getName() + " -->\r\n");
-						}
-					}
-					sb.append("\t</skill>\r\n");
-					_sortedMap.put(SkillTable.getSkillHashCode(skill), sb.toString());
-				}
-			}
-			sb = new StringBuilder();
-			sb.append("<list>\r\n");
-			for (String data : _sortedMap.values())
-			{
-				sb.append(data);
-			}
-			sb.append("</list>\r\n");
-			
-			try
-			{
-				FileWriter fw = new FileWriter(new File(Config.DATAPACK_ROOT, "extractableSkills.xml"));
-				fw.write(sb.toString());
-				fw.flush();
-				fw.close();
-			}
-			catch (IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
 		if (command.startsWith("debug") && command.length() > 6)
 		{
 			StringTokenizer st = new StringTokenizer(command.substring(6));
