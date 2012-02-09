@@ -17,3 +17,6 @@ ALTER TABLE `items` ADD KEY `owner_id` (`owner_id`);
 ALTER TABLE `items` ADD KEY `item_id` (`item_id`);
 ALTER TABLE `items` ADD KEY `loc` (`loc`);
 ALTER TABLE `items` ADD KEY `time_of_use` (`time_of_use`);
+
+ALTER TABLE `mods_wedding` ADD KEY `player1Id` (`player1Id`);
+ALTER TABLE `mods_wedding` ADD KEY `player2Id` (`player2Id`);
