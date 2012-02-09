@@ -1,4 +1,4 @@
-CREATE TABLE `mods_wedding` (
+CREATE TABLE IF NOT EXISTS `mods_wedding` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `player1Id` int(11) NOT NULL DEFAULT '0',
   `player2Id` int(11) NOT NULL DEFAULT '0',

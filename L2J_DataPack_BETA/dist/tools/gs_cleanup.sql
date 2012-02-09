@@ -100,6 +100,7 @@ DROP TABLE IF EXISTS merchant_lease;
 DROP TABLE IF EXISTS merchant_shopids;
 DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS minions;
+DROP TABLE IF EXISTS mods_wedding;
 DROP TABLE IF EXISTS npc;
 DROP TABLE IF EXISTS npc_buffer;
 DROP TABLE IF EXISTS npcaidata;
