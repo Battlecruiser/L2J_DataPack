@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
   `char_penalty_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `dissolving_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`clan_id`),
+  KEY `ally_id` (`ally_id`),
   KEY `leader_id` (`leader_id`),
-  KEY `ally_id` (`ally_id`)
+  KEY `auction_bid_at` (`auction_bid_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
