@@ -407,20 +407,15 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				String val = st.nextToken();
+				int radius = 400;
+				if (st.hasMoreTokens())
+					radius = Integer.parseInt(st.nextToken());
 				int teamVal = Integer.parseInt(val);
-				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
+				Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
 				
-				for (L2PcInstance player : plrs)
+				for (L2Character player : plrs)
 				{
-					if (activeChar.isInsideRadius(player, 400, false, true))
-					{
-						player.setTeam(teamVal);
-						if (teamVal != 0)
-						{
-							player.sendMessage("You have joined team " + teamVal);
-						}
-						player.broadcastUserInfo();
-					}
+					player.setTeam(teamVal);
 				}
 			}
 			catch (Exception e)
@@ -434,18 +429,12 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String val = st.nextToken();
 				int teamVal = Integer.parseInt(val);
-				L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
-					player = (L2PcInstance) target;
+				L2Character target = null;
+				if (activeChar.getTarget() instanceof L2Character)
+					target = (L2Character) activeChar.getTarget();
 				else
 					return false;
-				player.setTeam(teamVal);
-				if (teamVal != 0)
-				{
-					player.sendMessage("You have joined team " + teamVal);
-				}
-				player.broadcastUserInfo();
+				target.setTeam(teamVal);
 			}
 			catch (Exception e)
 			{
