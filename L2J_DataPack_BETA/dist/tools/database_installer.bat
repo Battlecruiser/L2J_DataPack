@@ -37,14 +37,14 @@ set cmode=c
 set fresh_setup=0
 
 :loadconfig
-title L2JDP Installer - Reading Configuration from File...
 cls
+title L2JDP Installer - Reading Configuration from File...
 if not exist %config_file% goto configure
 ren %config_file% vars.bat
 call vars.bat
 ren vars.bat %config_file%
 call :colors 17
-if /i %config_version% == 2 goto ls_section
+if /i %config_version% == 2 goto ls_backup
 set upgrade_mode=2
 echo It seems to be the first time you run this version of
 echo database_installer but I found a settings file already.
@@ -69,7 +69,7 @@ echo.
 echo (5) Quit: Did you came here by mistake?
 echo.
 set /P upgrade_mode="Type a number, press Enter (default is '%upgrade_mode%'): "
-if %upgrade_mode%==1 goto ls_section
+if %upgrade_mode%==1 goto ls_backup
 if %upgrade_mode%==2 goto configure
 if %upgrade_mode%==3 goto configure
 if %upgrade_mode%==4 (cls&type %config_file%&pause&goto loadconfig)
@@ -83,9 +83,9 @@ if not "%1"=="17" (	color F	) else ( color )
 goto :eof
 
 :configure
+cls
 call :colors 17
 title L2JDP Installer - Setup
-cls
 set config_version=2
 if NOT %upgrade_mode% == 2 (
 set fresh_setup=1
@@ -148,11 +148,10 @@ echo Write the path to your MySQL binaries (no trailing slash needed):
 set /P mysqlBinPath="(default %mysqlBinPath%): "
 cls
 echo.
-echo 2-LoginServer settings
-echo --------------------
-echo I will connect to the MySQL server you specify, and setup a
-echo Loginserver database there, most people use a single MySQL
-echo server and database for both Login and Gameserver tables.
+echo 2-Login Server settings
+echo -----------------------
+echo I order to connect to the MySQL Server, you should
+echo specify the Login Server DataBase parameters here.
 echo.
 set /P lsuser="MySQL Username (default is '%lsuser%'): "
 set /P lspass="Password (default is '%lspass%'): "
@@ -161,12 +160,10 @@ set /P lshost="Host (default is '%lshost%'): "
 echo.
 cls
 echo.
-echo 3-Community Board Server settings
-echo --------------------
-echo I will connect to the MySQL server you specify, and setup a
-echo Community Board server database there, most people use a single MySQL
-echo server for both Login and Gameserver which CBserver can use too,
-echo but CBserver requires a different database!
+echo 3-Community Server settings
+echo ---------------------------
+echo I order to connect to the MySQL Server, you should
+echo specify the Community Server DataBase parameters here.
 echo.
 set /P cbuser="MySQL Username (default is '%cbuser%'): "
 set /P cbpass="Password (default is '%cbpass%'): "
@@ -175,8 +172,11 @@ set /P cbhost="Host (default is '%cbhost%'): "
 echo.
 cls
 echo.
-echo 4-GameServer settings
-echo --------------------
+echo 4-Game Server settings
+echo ----------------------
+echo I order to connect to the MySQL Server, you should
+echo specify the Game Server DataBase parameters here.
+echo.
 set /P gsuser="User (default is '%gsuser%'): "
 set /P gspass="Pass (default is '%gspass%'): "
 set /P gsdb="Database (default is '%gsdb%'): "
@@ -189,13 +189,16 @@ echo --------------------
 set /P cmode="Color mode (c)olor or (n)on-color, default %cmode% : "
 set /P backup="Path for your backups (default '%backup%'): "
 set /P logdir="Path for your logs (default '%logdir%'): "
+
 :safe1
 set safemode=y
 set /P safemode="Debugging messages and increase verbosity a lil bit (y/n, default '%safemode%'): "
 if /i %safemode%==y (set safe_mode=1&goto safe2)
 if /i %safemode%==n (set safe_mode=0&goto safe2)
 goto safe1
+
 :safe2
+cls
 echo.
 if "%mysqlBinPath%" == "use path" (
 set mysqlBinPath=
@@ -234,29 +237,29 @@ echo.
 pause
 goto loadconfig
 
-:ls_section
+:ls_backup
 cls
 call :colors 17
 set cmdline=
 set stage=1
-title L2JDP Installer - Login Server DataBase Setup
+title L2JDP Installer - Login Server DataBase Backup
 echo.
-echo Trying to make a backup of your Login Server database.
+echo Trying to make a backup of your Login Server DataBase.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> "%backup%\ls_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_db_ok
+
 :ls_err1
-call :colors 47
-title L2JDP Installer - Login Server DataBase Setup ERROR!
 cls
+set lsdbprompt=y
+call :colors 47
+title L2JDP Installer - Login Server DataBase Backup ERROR!
 echo.
 echo Backup attempt failed! A possible reason for this to 
 echo happen, is that your DB doesn't exist yet. I could 
 echo try to create %lsdb% for you, or maybe you prefer to
-echo proceed with the CommunityServer part of this tool.
+echo contunue with the Community Server part of this tool.
 echo.
-:ls_ask1
-set lsdbprompt=y
 echo ATTEMPT TO CREATE LOGINSERVER DATABASE:
 echo.
 echo (y) Yes
@@ -267,65 +270,32 @@ echo (r) Reconfigure
 echo.
 echo (q) Quit
 echo.
-set /p lsdbprompt= Choose (default yes):
-if /i %lsdbprompt%==y goto lsdbcreate
-if /i %lsdbprompt%==n goto cb_backup
+set /p lsdbprompt=Choose (default yes):
+if /i %lsdbprompt%==y goto ls_db_create
+if /i %lsdbprompt%==n goto cs_backup
 if /i %lsdbprompt%==r goto configure
 if /i %lsdbprompt%==q goto end
-goto ls_ask1
+goto ls_err1
 
-:omfg
-cls
-call :colors 57
-title L2JDP Installer - Potential PICNIC detected at stage %stage%
-echo.
-echo There was some problem while executing:
-echo.
-echo "%cmdline%"
-echo.
-echo I'd suggest you to look for correct values and try this
-echo script again later. But maybe you'd prefer to go on now.
-echo.
-if %stage% == 1 set label=ls_err1
-if %stage% == 2 set label=ls_err2
-if %stage% == 3 set label=cb_backup
-if %stage% == 4 set label=cb_err1
-if %stage% == 5 set label=cb_err2
-if %stage% == 6 set label=gs_backup
-if %stage% == 7 set label=gs_err1
-if %stage% == 8 set label=gs_err2
-if %stage% == 9 set label=horrible_end
-if %stage% == 10 set label=horrible_end
-:omfgask1
-set omfgprompt=q
-echo (c) Continue running the script
-echo.
-echo (r) Reconfigure
-echo.
-echo (q) Quit now
-echo.
-set /p omfgprompt= Choose (default quit):
-if  /i %omfgprompt%==c goto %label%
-if  /i %omfgprompt%==r goto configure
-if  /i %omfgprompt%==q goto horrible_end
-goto omfgask1
-
-:lsdbcreate
+:ls_db_create
 cls
 call :colors 17
 set cmdline=
 set stage=2
-title L2JDP Installer - Login Server DataBase Setup - DB Creation
+title L2JDP Installer - Login Server DataBase Creation
 echo.
-echo Trying to create a Login Server database...
+echo Trying to create a Login Server DataBase...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_install
 if %safe_mode% == 1 goto omfg
+
 :ls_err2
-call :colors 47
-title L2JDP Installer - Login Server DataBase Setup - DB Creation ERROR!
 cls
+set omfgprompt=q
+call :colors 47
+title L2JDP Installer - Login Server DataBase Creation ERROR!
+echo.
 echo An error occured while trying to create a database for 
 echo your login server.
 echo.
@@ -339,26 +309,23 @@ echo Unless you're sure that the pending actions of this tool
 echo could work, i'd suggest you to look for correct values
 echo and try this script again later.
 echo.
-:ls_ask2
-set omfgprompt=q
 echo (c) Continue running
 echo.
 echo (r) Reconfigure
 echo.
 echo (q) Quit now
 echo.
-set /p omfgprompt= Choose (default quit):
-if /i %omfgprompt%==c goto cb_backup
-if /i %omfgprompt%==q goto horrible_end
+set /p omfgprompt=Choose (default quit):
+if /i %omfgprompt%==c goto cs_backup
 if /i %omfgprompt%==r goto configure
-goto ls_ask2
+if /i %omfgprompt%==q goto end
+goto ls_err2
 
 :ls_db_ok
-call :colors 17
-title L2JDP Installer - Login Server DataBase Setup - WARNING!
-:ls_ask
 cls
 set loginprompt=u
+call :colors 17
+title L2JDP Installer - Login Server DataBase WARNING!
 echo.
 echo LOGINSERVER DATABASE install type:
 echo.
@@ -375,19 +342,18 @@ echo     those fresh values.
 echo.
 echo (q) Quit
 echo.
-set /p loginprompt= Choose (default upgrade):
+set /p loginprompt=Choose (default upgrade):
 if /i %loginprompt%==f goto ls_cleanup
 if /i %loginprompt%==u goto ls_upgrade
-if /i %loginprompt%==s goto cb_backup
+if /i %loginprompt%==s goto cs_backup
 if /i %loginprompt%==r goto configure
 if /i %loginprompt%==q goto end
-goto ls_ask
+goto ls_db_ok
 
 :ls_cleanup
-set stage=3
 call :colors 17
 set cmdline=
-title L2JDP Installer - Login Server DataBase Setup - Full Install
+title L2JDP Installer - Login Server DataBase Full Install
 echo.
 echo Deleting Login Server tables for new content.
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ls_cleanup.sql 2^> NUL
@@ -411,15 +377,14 @@ move ls_errors.txt %workdir%
 goto ls_install
 
 :ls_install
-set stage=3
 set cmdline=
 if %full% == 1 (
-title L2JDP Installer - Login Server DataBase Setup - Installing...
+title L2JDP Installer - Login Server DataBase Installing...
 echo.
 echo Installing new Login Server content.
 echo.
 ) else (
-title L2JDP Installer - Login Server DataBase Setup - Upgrading...
+title L2JDP Installer - Login Server DataBase Upgrading...
 echo.
 echo Upgrading Login Server content.
 echo.
@@ -430,31 +395,31 @@ for %%i in (..\sql\login\*.sql) do call :dump %%i
 
 echo done...
 echo.
-goto cb_backup
+goto cs_backup
 
-:cb_backup
+:cs_backup
 cls
 call :colors 17
 set cmdline=
-set stage=4
-title L2JDP Installer - Community Server DataBase Setup
+set stage=3
+title L2JDP Installer - Community Server DataBase Backup
 echo.
-echo Trying to make a backup of your Comunity Server database.
+echo Trying to make a backup of your Comunity Server DataBase.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %cbhost% -u %cbuser% --password=%cbpass% %cbdb% ^> "%backup%\cs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_db_ok
-:cb_err1
-call :colors 47
-title L2JDP Installer - Community Server DataBase Setup ERROR!
+
+:cs_err1
 cls
+set cbdbprompt=y
+call :colors 47
+title L2JDP Installer - Community Server DataBase Backup ERROR!
 echo.
 echo Backup attempt failed! A possible reason for this to 
 echo happen, is that your DB doesn't exist yet. I could 
 echo try to create %cbdb% for you, or maybe you prefer to
-echo proceed with the GameServer part of this tool.
+echo continue with the GameServer part of this tool.
 echo.
-:cb_ask1
-set cbdbprompt=y
 echo ATTEMPT TO CREATE COMMUNITY SERVER DATABASE:
 echo.
 echo (y) Yes
@@ -465,30 +430,34 @@ echo (r) Reconfigure
 echo.
 echo (q) Quit
 echo.
-set /p cbdbprompt= Choose (default yes):
-if /i %cbdbprompt%==y goto cbdbcreate
+set /p cbdbprompt=Choose (default yes):
+if /i %cbdbprompt%==y goto cs_db_create
 if /i %cbdbprompt%==n goto gs_backup
 if /i %cbdbprompt%==r goto configure
 if /i %cbdbprompt%==q goto end
-goto cb_ask1
+goto cs_err1
 
-:cbdbcreate
+:cs_db_create
+cls
 call :colors 17
 set cmdline=
-set stage=5
-title L2JDP Installer - Communty Server DataBase Setup - DB Creation
+set stage=4
+title L2JDP Installer - Community Server DataBase Creation
 echo.
-echo Trying to create a Community Server database...
+echo Trying to create a Community Server DataBase...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_install
 if %safe_mode% == 1 goto omfg
-:cb_err2
-call :colors 47
-title L2JDP Installer - Community Board Server DataBase Setup - DB Creation ERROR!
+
+:cs_err2
 cls
+set omfgprompt=q
+call :colors 47
+title L2JDP Installer - Community Server DataBase Creation ERROR!
+echo.
 echo An error occured while trying to create a database for 
-echo your Community Board server.
+echo your Community Server.
 echo.
 echo Possible reasons:
 echo 1-You provided innacurate info , check user, password, etc.
@@ -500,26 +469,23 @@ echo Unless you're sure that the pending actions of this tool
 echo could work, i'd suggest you to look for correct values
 echo and try this script again later.
 echo.
-:cb_ask2
-set omfgprompt=q
 echo (c) Continue running
 echo.
 echo (r) Reconfigure
 echo.
 echo (q) Quit now
 echo.
-set /p omfgprompt= Choose (default quit):
+set /p omfgprompt=Choose (default quit):
 if /i %omfgprompt%==c goto gs_backup
-if /i %omfgprompt%==q goto horrible_end
 if /i %omfgprompt%==r goto configure
-goto cb_ask2
+if /i %omfgprompt%==q goto end
+goto cs_err2
 
 :cs_db_ok
-call :colors 17
-title L2JDP Installer - Community Server DataBase Setup - WARNING!
-:cs_ask
 cls
 set communityprompt=u
+call :colors 17
+title L2JDP Installer - Community Server DataBase WARNING!
 echo.
 echo COMMUNITY SERVER DATABASE install type:
 echo.
@@ -538,19 +504,18 @@ echo     those fresh values.
 echo.
 echo (q) Quit
 echo.
-set /p communityprompt= Choose (default upgrade):
+set /p communityprompt=Choose (default upgrade):
 if /i %communityprompt%==f goto cs_cleanup
 if /i %communityprompt%==u goto cs_upgrade
 if /i %communityprompt%==s goto gs_backup
 if /i %communityprompt%==r goto configure
 if /i %communityprompt%==q goto end
-goto cs_ask
+goto cs_db_ok
 
 :cs_cleanup
-set stage=6
 call :colors 17
 set cmdline=
-title L2JDP Installer - Community Server DataBase Setup - Full Install
+title L2JDP Installer - Community Server DataBase Full Install
 echo.
 echo Deleting Community Server tables for new content.
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< cs_cleanup.sql 2^> NUL
@@ -574,15 +539,14 @@ move cs_errors.txt %workdir%
 goto cs_install
 
 :cs_install
-set stage=6
 set cmdline=
 if %full% == 1 (
-title L2JDP Installer - Community Server DataBase Setup - Installing...
+title L2JDP Installer - Community Server DataBase Installing...
 echo.
 echo Installing new Community Server content.
 echo.
 ) else (
-title L2JDP Installer - Community Server DataBase Setup - Upgrading...
+title L2JDP Installer - Community Server DataBase Upgrading...
 echo.
 echo Upgrading Community Server content.
 echo.
@@ -599,26 +563,25 @@ goto gs_backup
 cls
 call :colors 17
 set cmdline=
-set stage=7
-title L2JDP Installer - Game Server DataBase Setup
-cls
+set stage=5
+title L2JDP Installer - Game Server DataBase Backup
 echo.
-echo Trying to make a backup of your Game Server database.
+echo Trying to make a backup of your Game Server DataBase.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> "%backup%\gs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_db_ok
+
 :gs_err1
-call :colors 47
-title L2JDP Installer - Game Server DataBase Setup - Backup ERROR!
 cls
-echo.
-echo Backup attempt failed! A possible reason for this to happen,
-echo is that your DB doesn't exist yet. I could try to create 
-echo %gsdb% for you, but maybe you prefer me to continue with 
-echo last part of the script.
-echo.
-:askgsdb
 set gsdbprompt=y
+call :colors 47
+title L2JDP Installer - Game Server DataBase Backup ERROR!
+echo.
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
+echo try to create %gsdb% for you, but maybe you prefer to
+echo continue with last part of the script.
+echo.
 echo ATTEMPT TO CREATE GAME SERVER DATABASE?
 echo.
 echo (y) Yes
@@ -629,31 +592,34 @@ echo (r) Reconfigure
 echo.
 echo (q) Quit
 echo.
-set /p gsdbprompt= Choose (default yes):
-if /i %gsdbprompt%==y goto gsdbcreate
-if /i %gsdbprompt%==n goto horrible_end
+set /p gsdbprompt=Choose (default yes):
+if /i %gsdbprompt%==y goto gs_db_create
+if /i %gsdbprompt%==n goto eof
 if /i %gsdbprompt%==r goto configure
 if /i %gsdbprompt%==q goto end
-goto askgsdb
+goto gs_err1
 
-:gsdbcreate
-call :colors 17
-set stage=8
-set cmdline=
-title L2JDP Installer - Game Server DataBase Setup - DB Creation
+:gs_db_create
 cls
-echo Trying to create a Game Server database...
+call :colors 17
+set stage=6
+set cmdline=
+title L2JDP Installer - Game Server DataBase Creation
+echo.
+echo Trying to create a Game Server DataBase...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_install
 if %safe_mode% == 1 goto omfg
+
 :gs_err2
-call :colors 47
-title L2JDP Installer - Game Server DataBase Setup - DB Creation ERROR!
 cls
+set omfgprompt=q
+call :colors 47
+title L2JDP Installer - Game Server DataBase Creation ERROR!
 echo.
 echo An error occured while trying to create a database for 
-echo your game server.
+echo your Game Server.
 echo.
 echo Possible reasons:
 echo 1-You provided innacurate info, check username, pass, etc.
@@ -664,24 +630,20 @@ echo.
 echo I'd suggest you to look for correct values and try this
 echo script again later. But you can try to reconfigure it now.
 echo.
-:askgsdbcreate
-set omfgprompt=q
-echo (r) Restart script with fresh configuration values
+echo (r) Reconfigure
 echo.
 echo (q) Quit now
 echo.
-set /p omfgprompt=  Choose (default quit):
+set /p omfgprompt=Choose (default quit):
 if /i %omfgprompt%==r goto configure
-if /i %omfgprompt%==q goto horrible_end
-goto askgsdbcreate
+if /i %omfgprompt%==q goto end
+goto gs_err2
 
 :gs_db_ok
-call :colors 17
-title L2JDP Installer - Game Server DataBase Setup - WARNING!
-cls
-:gs_ask
 cls
 set installtype=u
+call :colors 17
+title L2JDP Installer - Game Server DataBase WARNING!
 echo.
 echo GAME SERVER DATABASE install:
 echo.
@@ -696,18 +658,17 @@ echo     updates, custom stuff...)
 echo.
 echo (q) Quit
 echo.
-set /p installtype= Choose (default upgrade):
+set /p installtype=Choose (default upgrade):
 if /i %installtype%==f goto gs_cleanup
 if /i %installtype%==u goto gs_upgrade
 if /i %installtype%==s goto custom_ask
 if /i %installtype%==q goto end
-goto gs_ask
+goto gs_db_ok
 
 :gs_cleanup
 call :colors 17
-set stage=9
 set cmdline=
-title L2JDP Installer - Game Server DataBase Setup - Full Install
+title L2JDP Installer - Game Server DataBase Full Install
 echo.
 echo Deleting all Game Server tables for new content...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< gs_cleanup.sql 2^> NUL
@@ -731,15 +692,14 @@ move gs_errors.txt %workdir%
 goto gs_install
 
 :gs_install
-set stage=9
 set cmdline=
 if %full% == 1 (
-title L2JDP Installer - Game Server DataBase Setup - Installing...
+title L2JDP Installer - Game Server DataBase Installing...
 echo.
 echo Installing new Game Server content.
 echo.
 ) else (
-title L2JDP Installer - Game Server DataBase Setup - Upgrading...
+title L2JDP Installer - Game Server DataBase Upgrading...
 echo.
 echo Upgrading Game Server content.
 echo.
@@ -766,6 +726,7 @@ goto :eof
 
 :omfg2
 cls
+set ntpebcak=c
 call :colors 47
 title L2JDP Installer - Potential DataBase Issue at stage %stage%
 echo.
@@ -776,8 +737,6 @@ echo with file %~nx1
 echo.
 echo What we should do now?
 echo.
-:askomfg2
-set ntpebcak=c
 echo (l) Log it: I will create a log for this file, then continue
 echo     with the rest of the list in non-logging mode.
 echo.
@@ -790,17 +749,17 @@ echo     and user info again.
 echo.
 echo (q) Quit now
 echo.
-set /p ntpebcak= Choose (default continue):
-if  /i %ntpebcak%==c (call :colors 17 & goto :eof)
-if  /i %ntpebcak%==l (call :logginon %1 & goto :eof)
-if  /i %ntpebcak%==r (call :configure & exit)
-if  /i %ntpebcak%==q (call :horrible_end & exit)
-goto askomfg2
+set /p ntpebcak=Choose (default continue):
+if /i %ntpebcak%==c (call :colors 17 & goto :eof)
+if /i %ntpebcak%==l (call :logginon %1 & goto :eof)
+if /i %ntpebcak%==r (call :configure & exit)
+if /i %ntpebcak%==q (call :end)
+goto omfg2
 
 :logginon
 cls
 call :colors 17
-title L2JDP Installer - Game Server DataBase Setup - Logging Options turned on
+title L2JDP Installer - Game Server Logging Options turned on
 set logging=1
 if %full% == 1 (
   set output=%logdir%\install-%~nx1.log
@@ -894,68 +853,50 @@ echo.
 pause
 goto end
 
+:omfg
+set omfgprompt=q
+call :colors 57
+cls
+title L2JDP Installer - Potential PICNIC detected at stage %stage%
+echo.
+echo There was some problem while executing:
+echo.
+echo "%cmdline%"
+echo.
+echo I'd suggest you to look for correct values and try this
+echo script again later. But maybe you'd prefer to go on now.
+if %stage% == 1 set label=ls_err1
+if %stage% == 2 set label=ls_err2
+if %stage% == 3 set label=cs_err1
+if %stage% == 4 set label=cs_err2
+if %stage% == 5 set label=gs_err1
+if %stage% == 6 set label=gs_err2
+echo.
+echo (c) Continue running the script
+echo.
+echo (r) Reconfigure
+echo.
+echo (q) Quit now
+echo.
+set /p omfgprompt=Choose (default quit):
+if /i %omfgprompt%==c goto %label%
+if /i %omfgprompt%==r goto configure
+if /i %omfgprompt%==q goto end
+goto omfg
+
 :binaryfind
 if EXIST "%mysqlBinPath%" (echo Found) else (echo Not Found)
 goto :eof
-
-:horrible_end
-call :colors 47
-title L2JDP Installer - Oops!
-cls
-echo This wasn't a clean run, but don't worry.
-echo You can get help and support:
-echo.
-echo 1-Read the L2J Datapack project wiki :
-echo       (http://www.l2jdp.com/trac/wiki)
-echo 2-Search for a similar problem in our forums
-echo       (http://www.l2jdp.com/forum)
-echo.
-echo You can ask for support in our forums or irc channel:
-echo irc://irc.freenode.net channel: #l2j
-echo.
-echo I'll try to gather some versioning information that you
-echo may find useful when asking for support :
-echo.
-echo Datapack revision reported by 'SVN version':
-svnversion -n 2>NUL
-echo.
-if %ERRORLEVEL% == 9009 (
-echo   SVN commandline tools not found!
-echo   Please download and install "Windows installer with 
-echo   the basic win32 binaries" (or something that fits our
-echo   binaries needs) from :
-echo   http://goo.gl/c0uyh
-echo.
-)
-set dpvf="..\config\l2jdp-version.properties" 
-echo Datapack revision reported by properties file :
-if NOT EXIST %dpvf% (
-echo   Your %dpvf% file is missing!
-echo   Use eclipse/ant to build one from your DP SVN copy.
-echo   With it we'll be able to help you better.
-) else (
-type %dpvf% | find "version" 2> NUL
-if not %ERRORLEVEL% == 0 (
-echo   An error occured while trying to read
-echo   your %dpvf% file!
-echo   Make sure you keep it up to date
-echo   and in the correct place.
-echo %ERRORLEVEL%
-))
-echo.
-rem del %config_file%
-pause
-goto end
 
 :end
 call :colors 17
 title L2JDP Installer - Script Execution Finished
 cls
 echo.
-echo L2JDP Database Installer 2011
+echo L2JDP Database Installer 2012
 echo.
-echo (C) 2007-2011 L2J DataPack Team
-echo Database Installer comes with ABSOLUTELY NO WARRANTY;
+echo (C) 2007-2012 L2J DataPack Team
+echo L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
 echo details.
@@ -965,4 +906,3 @@ echo visit http://www.l2jdp.com for more info about
 echo the L2J DataPack Project.
 echo.
 pause
-color
