@@ -426,20 +426,20 @@ public class AdminEventEngine implements IAdminCommandHandler
 		final File dir = new File(Config.DATAPACK_ROOT, "/data/events");
 		if (dir.isFile())
 		{
-			return "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' is a file or is corrupted!<font><br>";
+			return "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' is a file or is corrupted!</font><br>";
 		}
 		
 		String note = "";
 		if (!dir.exists())
 		{
-			note = "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' does not exist!<font><br><font color=\"0099FF\">Trying to create it now...<br><font><br>";
+			note = "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' does not exist!</font><br><font color=\"0099FF\">Trying to create it now...<br></font><br>";
 			if (dir.mkdirs())
 			{
-				note += "<font color=\"006600\">The directory '"+ dir.getAbsolutePath() + "' has been created!<font><br>";
+				note += "<font color=\"006600\">The directory '"+ dir.getAbsolutePath() + "' has been created!</font><br>";
 			}
 			else
 			{
-				note += "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' hasn't been created!<font><br>";
+				note += "<font color=\"FF0000\">The directory '"+ dir.getAbsolutePath() + "' hasn't been created!</font><br>";
 				return note;
 			}
 		}

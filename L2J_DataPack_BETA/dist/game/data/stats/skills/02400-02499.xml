@@ -332,7 +332,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -340,6 +340,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2423" levels="1" name="2nd Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
@@ -350,7 +353,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -358,6 +361,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2424" levels="1" name="3rd Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
@@ -368,7 +374,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -376,6 +382,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2425" levels="1" name="4th Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
@@ -386,7 +395,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -394,6 +403,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2426" levels="1" name="5th Place Treasure sack">
 		<!-- Confirmed CT2.5 -->
@@ -404,7 +416,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -412,6 +424,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2427" levels="1" name="6th Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
@@ -422,7 +437,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -430,6 +445,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
 		<set name="itemConsumeCount" val="1" />
@@ -616,7 +634,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -624,6 +642,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2441" levels="1" name="Protection of Rune">
 		<set name="itemConsumeCount" val="1" />
@@ -1504,7 +1525,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1512,6 +1533,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2491" levels="1" name="Transform Zaken">
 		<!-- Confirmed CT2.5 -->

@@ -563,7 +563,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -571,6 +571,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2833" levels="1" name="S80 Armor Chest">
 		<!-- Confirmed CT2.5 -->
@@ -580,7 +583,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -588,6 +591,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2834" levels="1" name="S Weapon Chest">
 		<!-- Confirmed CT2.5 -->
@@ -597,7 +603,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -605,6 +611,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2835" levels="1" name="S Armor Chest">
 		<!-- Confirmed CT2.5 -->
@@ -614,7 +623,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -622,6 +631,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2836" levels="1" name="S Accessory Chest">
 		<!-- Confirmed CT2.5 -->
@@ -631,7 +643,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -639,6 +651,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2837" levels="1" name="Gracia Key">
 		<set name="target" val="TARGET_NONE" />
@@ -655,7 +670,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -663,6 +678,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2839" levels="1" name="Sacred Light Fragment">
 		<set name="target" val="TARGET_NONE" />
@@ -703,7 +721,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -711,6 +729,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2843" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -720,7 +741,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -728,6 +749,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2844" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -737,7 +761,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -745,6 +769,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2845" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -754,7 +781,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -762,6 +789,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2846" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -771,7 +801,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -779,6 +809,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2847" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -788,7 +821,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -796,6 +829,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2848" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -805,7 +841,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -813,6 +849,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2849" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -822,7 +861,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -830,6 +869,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2850" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -839,7 +881,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -847,6 +889,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2851" levels="1" name="Duel Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -856,7 +901,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -864,6 +909,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2852" levels="1" name="Duel Reward Box">
 		<!-- Confirmed CT2.5 -->
@@ -873,7 +921,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -881,6 +929,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2853" levels="1" name="Duel Reward Box">
 		<!-- Confirmed CT2.5 -->
@@ -890,7 +941,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -898,6 +949,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2854" levels="1" name="Duel Reward Box">
 		<!-- Confirmed CT2.5 -->
@@ -907,7 +961,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -915,6 +969,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2855" levels="1" name="Duel Reward Box">
 		<!-- Confirmed CT2.5 -->
@@ -924,7 +981,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -932,6 +989,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2856" levels="1" name="Santa's Buff Gift Set">
 		<!-- Confirmed CT2.5 -->
@@ -996,7 +1056,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1004,6 +1064,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2859" levels="1" name="Christmas Gift">
 		<set name="target" val="TARGET_NONE" />
@@ -1086,7 +1149,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1094,6 +1157,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2866" levels="1" name="Agathion's New Year's Gift 2">
 		<!-- Confirmed CT2.5 -->
@@ -1103,7 +1169,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1111,6 +1177,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2867" levels="1" name="Cupid's Cure">
 		<set name="staticDamage" val="true" />
@@ -1210,7 +1279,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1219,6 +1288,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2883" levels="1" name="Energy Replenishing Herb Tea">
 		<set name="target" val="TARGET_NONE" />
@@ -1298,7 +1370,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1306,6 +1378,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2896" levels="1" name="White Day Candy Basket">
 		<!-- Confirmed CT2.5 -->
@@ -1315,7 +1390,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1323,6 +1398,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2897" levels="1" name="Baguette's Herb">
 		<set name="target" val="TARGET_SELF" />

@@ -845,7 +845,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -853,6 +853,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
 		<table name="#hpConsume"> 159 183 204 </table>

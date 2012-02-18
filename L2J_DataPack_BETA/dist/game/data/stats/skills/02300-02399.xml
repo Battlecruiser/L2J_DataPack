@@ -137,7 +137,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -145,6 +145,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2309" levels="1" name="Pig Chest">
 		<!-- Confirmed CT2.5 -->
@@ -154,7 +157,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -162,6 +165,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
 		<set name="itemConsumeCount" val="1" />
@@ -335,7 +341,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -343,6 +349,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2324" levels="1" name="Blue Sage's Stone">
 		<!-- Confirmed CT2.5 -->
@@ -352,7 +361,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -360,6 +369,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2325" levels="1" name="Orange Sage's Stone">
 		<!-- Confirmed CT2.5 -->
@@ -369,7 +381,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -377,6 +389,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2326" levels="1" name="Black Sage's Stone">
 		<!-- Confirmed CT2.5 -->
@@ -386,7 +401,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -394,6 +409,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2327" levels="1" name="White Sage's Stone">
 		<!-- Confirmed CT2.5 -->
@@ -403,7 +421,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -411,6 +429,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2328" levels="1" name="Green Sage's Stone">
 		<!-- Confirmed CT2.5 -->
@@ -420,7 +441,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -428,6 +449,9 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2329" levels="4" name="Fire Stone">
 		<set name="target" val="TARGET_NONE" />
