@@ -16,31 +16,24 @@ package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
+import com.l2jserver.gameserver.network.serverpackets.ShowCalculator;
 
-public class EnchantAttribute implements IItemHandler
+/**
+ * @author Zoey76
+ */
+public class Calculator implements IItemHandler
 {
+	private static final int CalculatorId = 4393;
+	
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
-			return false;
-		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		if (activeChar.isCastingNow())
-			return false;
-		
-		if (activeChar.isEnchanting())
+		if (!playable.isPlayer())
 		{
-			activeChar.sendPacket(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS);
 			return false;
 		}
-		
-		activeChar.setActiveEnchantAttrItem(item);
-		activeChar.sendPacket(new ExChooseInventoryAttributeItem(item));
+		playable.broadcastPacket(new ShowCalculator(CalculatorId));
 		return true;
 	}
 }

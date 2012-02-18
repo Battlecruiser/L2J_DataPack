@@ -32,16 +32,12 @@ public class PaganKeys implements IItemHandler
 {
 	public static final int INTERACTION_DISTANCE = 100;
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		int itemId = item.getItemId();
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		L2Object target = activeChar.getTarget();
 		
@@ -49,7 +45,7 @@ public class PaganKeys implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		L2DoorInstance door = (L2DoorInstance) target;
 		
@@ -57,17 +53,17 @@ public class PaganKeys implements IItemHandler
 		{
 			activeChar.sendMessage("Too far.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		if (activeChar.getAbnormalEffect() > 0 || activeChar.isInCombat())
 		{
 			activeChar.sendMessage("You cannot use the key now.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
-			return;
+			return false;
 		
 		switch (itemId)
 		{
@@ -127,5 +123,6 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 		}
+		return true;
 	}
 }

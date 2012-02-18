@@ -26,45 +26,40 @@ import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Beast SoulShot Handler
- *
  * @author Tempy
  */
 public class BeastSoulShot implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null)
-			return;
+			return false;
 		
 		L2PcInstance activeOwner = null;
 		if (playable instanceof L2Summon)
 		{
 			activeOwner = ((L2Summon) playable).getOwner();
 			activeOwner.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
-			return;
+			return false;
 		}
 		else if (playable instanceof L2PcInstance)
 			activeOwner = (L2PcInstance) playable;
 		
 		if (activeOwner == null)
-			return;
+			return false;
 		L2Summon activePet = activeOwner.getPet();
 		
 		if (activePet == null)
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
-			return;
+			return false;
 		}
 		
 		if (activePet.isDead())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET);
-			return;
+			return false;
 		}
 		
 		int itemId = item.getItemId();
@@ -76,7 +71,7 @@ public class BeastSoulShot implements IItemHandler
 			// Not enough Soulshots to use.
 			if (!activeOwner.disableAutoShot(itemId))
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET);
-			return;
+			return false;
 		}
 		
 		L2ItemInstance weaponInst = null;
@@ -87,7 +82,7 @@ public class BeastSoulShot implements IItemHandler
 		if (weaponInst == null)
 		{
 			if (activePet.getChargedSoulShot() != L2ItemInstance.CHARGED_NONE)
-				return;
+				return false;
 			
 			activePet.setChargedSoulShot(L2ItemInstance.CHARGED_SOULSHOT);
 		}
@@ -96,7 +91,7 @@ public class BeastSoulShot implements IItemHandler
 			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
 			{
 				// SoulShots are already active.
-				return;
+				return false;
 			}
 			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
 		}
@@ -106,12 +101,13 @@ public class BeastSoulShot implements IItemHandler
 		{
 			if (!activeOwner.disableAutoShot(itemId))
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET);
-			return;
+			return false;
 		}
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.PET_USE_SPIRITSHOT);
 		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, itemId == 6645 ? 2033 : 22036, 1, 0, 0), 360000/*600*/);
+		return true;
 	}
 }

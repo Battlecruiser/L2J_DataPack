@@ -23,23 +23,22 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Teleport Bookmark Slot Handler
- *
  * @author ShanSoft
  */
 public class TeleportBookmark implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null || item == null || !(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		L2PcInstance player = (L2PcInstance) playable;
 		
 		if(player.getBookMarkSlot() >= 9)
 		{
 			player.sendPacket(SystemMessageId.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT);
-			return;
+			return false;
 		}
 		
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
@@ -50,5 +49,6 @@ public class TeleportBookmark implements IItemHandler
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(item.getItemId());
 		player.sendPacket(sm);
+		return true;
 	}
 }

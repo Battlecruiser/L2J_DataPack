@@ -29,11 +29,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class Recipes implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 		{
-			return;
+			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
@@ -41,19 +41,19 @@ public class Recipes implements IItemHandler
 		if (activeChar.isInCraftMode())
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
-			return;
+			return false;
 		}
 		
 		final L2RecipeList rp = RecipeController.getInstance().getRecipeByItemId(item.getItemId());
 		if (rp == null)
 		{
-			return;
+			return false;
 		}
 		
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.RECIPE_ALREADY_REGISTERED);
-			return;
+			return false;
 		}
 		
 		boolean canCraft = false;
@@ -77,13 +77,13 @@ public class Recipes implements IItemHandler
 		if (!canCraft)
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-			return;
+			return false;
 		}
 		
 		if (recipeLevel)
 		{
 			activeChar.sendPacket(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-			return;
+			return false;
 		}
 		
 		if (recipeLimit)
@@ -91,7 +91,7 @@ public class Recipes implements IItemHandler
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 			sm.addNumber(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
 			activeChar.sendPacket(sm);
-			return;
+			return false;
 		}
 		
 		if (rp.isDwarvenRecipe())
@@ -107,5 +107,6 @@ public class Recipes implements IItemHandler
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED);
 		sm.addItemName(item);
 		activeChar.sendPacket(sm);
+		return true;
 	}
 }

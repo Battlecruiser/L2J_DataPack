@@ -21,24 +21,17 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.serverpackets.ShowMiniMap;
 
 /**
- * This class provides handling for items that should display a map
- * when double clicked.
- * 
- * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:07 $
+ * This class provides handling for items that should display a map when double clicked.
  */
-
 public class Maps implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		playable.sendPacket(new ShowMiniMap(item.getItemId()));
+		return true;
 	}
 }

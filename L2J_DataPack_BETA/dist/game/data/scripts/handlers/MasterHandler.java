@@ -157,6 +157,7 @@ import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
+import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
@@ -492,6 +493,7 @@ public class MasterHandler
 			BlessedSpiritShot.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
+			Calculator.class,
 			PaganKeys.class,
 			Maps.class,
 			NicknameColor.class,

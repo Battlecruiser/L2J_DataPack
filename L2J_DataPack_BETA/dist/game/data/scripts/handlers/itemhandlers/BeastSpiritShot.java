@@ -26,27 +26,22 @@ import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Beast SpiritShot Handler
- *
  * @author Tempy
  */
 public class BeastSpiritShot implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null)
-			return;
+			return false;
 		
 		L2PcInstance activeOwner = playable.getActingPlayer();
 		
 		if (playable instanceof L2Summon)
 		{
 			activeOwner.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
-			return;
+			return false;
 		}
 		
 		L2Summon activePet = activeOwner.getPet();
@@ -54,13 +49,13 @@ public class BeastSpiritShot implements IItemHandler
 		if (activePet == null)
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
-			return;
+			return false;
 		}
 		
 		if (activePet.isDead())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET);
-			return;
+			return false;
 		}
 		
 		int itemId = item.getItemId();
@@ -73,7 +68,7 @@ public class BeastSpiritShot implements IItemHandler
 			// Not enough SpiritShots to use.
 			if (!activeOwner.disableAutoShot(itemId))
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET);
-			return;
+			return false;
 		}
 		
 		L2ItemInstance weaponInst = null;
@@ -84,7 +79,7 @@ public class BeastSpiritShot implements IItemHandler
 		if (weaponInst == null)
 		{
 			if (activePet.getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
-				return;
+				return false;
 			
 			if (isBlessed)
 				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
@@ -96,7 +91,7 @@ public class BeastSpiritShot implements IItemHandler
 			if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
 			{
 				// SpiritShots are already active.
-				return;
+				return false;
 			}
 			
 			if (isBlessed)
@@ -109,7 +104,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			if (!activeOwner.disableAutoShot(itemId))
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET);
-			return;
+			return false;
 		}
 		
 		// Pet uses the power of spirit.
@@ -131,5 +126,6 @@ public class BeastSpiritShot implements IItemHandler
 				break;
 		}
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skillId, 1, 0, 0), 360000/*600*/);
+		return true;
 	}
 }

@@ -25,14 +25,14 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public class ItemSkills extends ItemSkillsTemplate
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		if ((activeChar != null) && activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return;
+			return false;
 		}
-		super.useItem(playable, item, forceUse);
+		return super.useItem(playable, item, forceUse);
 	}
 }

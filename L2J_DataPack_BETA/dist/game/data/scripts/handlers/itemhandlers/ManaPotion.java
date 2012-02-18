@@ -21,18 +21,14 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 
 public class ManaPotion extends ItemSkills
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
 		{
 			playable.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-			return;
+			return false;
 		}
-		super.useItem(playable, item, forceUse);
+		return super.useItem(playable, item, forceUse);
 	}
 }
