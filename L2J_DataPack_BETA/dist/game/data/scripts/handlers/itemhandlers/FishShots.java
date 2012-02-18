@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author -Nemesiss-
- *
  */
 public class FishShots implements IItemHandler
 {
@@ -37,26 +36,22 @@ public class FishShots implements IItemHandler
 		2181, 2182, 2183, 2184, 2185, 2186
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
 		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.FISHINGROD)
-			return;
+			return false;
 		
 		if (weaponInst.getChargedFishshot())
 			// spirit shot is already active
-			return;
+			return false;
 		
 		int FishshotId = item.getItemId();
 		int grade = weaponItem.getCrystalType();
@@ -67,11 +62,11 @@ public class FishShots implements IItemHandler
 		{
 			//1479 - This fishing shot is not fit for the fishing pole crystal.
 			activeChar.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
-			return;
+			return false;
 		}
 		
 		if (count < 1)
-			return;
+			return false;
 		
 		weaponInst.setChargedFishshot(true);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
@@ -80,5 +75,6 @@ public class FishShots implements IItemHandler
 		
 		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0));
 		activeChar.setTarget(oldTarget);
+		return true;
 	}
 }

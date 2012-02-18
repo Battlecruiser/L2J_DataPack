@@ -25,23 +25,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class RollingDice implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		int itemId = item.getItemId();
@@ -49,7 +39,7 @@ public class RollingDice implements IItemHandler
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return;
+			return false;
 		}
 		
 		if (itemId == 4625 || itemId == 4626 || itemId == 4627 || itemId == 4628)
@@ -58,7 +48,7 @@ public class RollingDice implements IItemHandler
 			if (number == 0)
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
-				return;
+				return false;
 			}
 			
 			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
@@ -72,11 +62,12 @@ public class RollingDice implements IItemHandler
 				Broadcast.toKnownPlayers(activeChar, sm);
 			else if (activeChar.isInParty())
 				activeChar.getParty().broadcastToPartyMembers(activeChar, sm);
+			return true;
 		}
+		return false;
 	}
 	
 	/**
-	 * 
 	 * @param player
 	 * @return
 	 */

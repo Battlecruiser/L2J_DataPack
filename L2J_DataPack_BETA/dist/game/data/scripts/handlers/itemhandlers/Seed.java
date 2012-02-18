@@ -36,31 +36,27 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
  */
 public class Seed implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		if (CastleManorManager.getInstance().isDisabled())
-			return;
+			return false;
 		
 		final L2Object tgt = playable.getTarget();
 		if (!(tgt instanceof L2Npc))
 		{
 			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character)tgt).isRaid())
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		final L2MonsterInstance target = (L2MonsterInstance)tgt;
@@ -68,32 +64,33 @@ public class Seed implements IItemHandler
 		{
 			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		if (target.isSeeded())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		final int seedId = item.getItemId();
-		if (areaValid(seedId, MapRegionManager.getInstance().getAreaCastle(playable)))
+		if (!areaValid(seedId, MapRegionManager.getInstance().getAreaCastle(playable)))
 		{
-			target.setSeeded(seedId, (L2PcInstance)playable);
-			final SkillHolder[] skills = item.getEtcItem().getSkills();
-			if (skills != null)
-			{
-				if(skills[0] == null)
-					return;
-				
-				L2Skill itemskill = skills[0].getSkill();
-				((L2PcInstance)playable).useMagic(itemskill, false, false);
-			}
-			
-		}
-		else
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
+			return false;
+		}
+		
+		target.setSeeded(seedId, (L2PcInstance)playable);
+		final SkillHolder[] skills = item.getEtcItem().getSkills();
+		if (skills != null)
+		{
+			if(skills[0] == null)
+				return false;
+			
+			L2Skill itemskill = skills[0].getSkill();
+			((L2PcInstance)playable).useMagic(itemskill, false, false);
+		}
+		return true;
 	}
 	
 	/**

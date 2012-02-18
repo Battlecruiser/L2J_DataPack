@@ -28,11 +28,11 @@ import com.l2jserver.gameserver.util.Broadcast;
 public class SoulShots implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 		{
-			return;
+			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
@@ -47,7 +47,7 @@ public class SoulShots implements IItemHandler
 			{
 				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
 			}
-			return;
+			return false;
 		}
 		
 		boolean gradeCheck = true;
@@ -100,7 +100,7 @@ public class SoulShots implements IItemHandler
 			{
 				activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
 			}
-			return;
+			return false;
 		}
 		
 		activeChar.soulShotLock.lock();
@@ -109,7 +109,7 @@ public class SoulShots implements IItemHandler
 			// Check if Soul shot is already active
 			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
 			{
-				return;
+				return false;
 			}
 			
 			// Consume Soul shots if player has enough of them
@@ -122,7 +122,7 @@ public class SoulShots implements IItemHandler
 				{
 					activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
 				}
-				return;
+				return false;
 			}
 			// Charge soul shot
 			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
@@ -172,5 +172,6 @@ public class SoulShots implements IItemHandler
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
+		return true;
 	}
 }

@@ -33,18 +33,14 @@ public class Harvester implements IItemHandler
 	L2PcInstance _activeChar;
 	L2MonsterInstance _target;
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance _item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance _item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		if (CastleManorManager.getInstance().isDisabled())
-			return;
+			return false;
 		
 		_activeChar = (L2PcInstance) playable;
 		
@@ -52,7 +48,7 @@ public class Harvester implements IItemHandler
 		{
 			_activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		_target = (L2MonsterInstance) _activeChar.getTarget();
@@ -60,11 +56,12 @@ public class Harvester implements IItemHandler
 		if (_target == null || !_target.isDead())
 		{
 			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(2098, 1); //harvesting skill
 		if (skill != null)
 			_activeChar.useMagic(skill, false, false);
+		return true;
 	}
 }

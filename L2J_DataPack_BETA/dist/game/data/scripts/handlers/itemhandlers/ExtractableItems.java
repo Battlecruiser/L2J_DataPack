@@ -12,7 +12,6 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package handlers.itemhandlers;
 
 import java.util.List;
@@ -37,11 +36,11 @@ public class ExtractableItems implements IItemHandler
 	private static Logger _log = Logger.getLogger(ItemTable.class.getName());
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 		{
-			return;
+			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
@@ -52,13 +51,13 @@ public class ExtractableItems implements IItemHandler
 		if (exitem == null)
 		{
 			_log.info("No extractable data defined for " + etcitem);
-			return;
+			return false;
 		}
 		
 		//destroy item
 		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
 		{
-			return;
+			return false;
 		}
 		
 		boolean created = false;
@@ -86,5 +85,6 @@ public class ExtractableItems implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 		}
+		return true;
 	}
 }

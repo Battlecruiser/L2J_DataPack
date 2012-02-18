@@ -39,7 +39,7 @@ public class MercTicket implements IItemHandler
 	 * 3) Remove the item from the person's inventory
 	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		int itemId = item.getItemId();
 		L2PcInstance activeChar = (L2PcInstance) playable;
@@ -52,17 +52,17 @@ public class MercTicket implements IItemHandler
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
 			activeChar.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
-			return;
+			return false;
 		}
 		else if (!activeChar.isCastleLord(castleId))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES);
-			return;
+			return false;
 		}
 		else if (castle.getSiege().getIsInProgress())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return;
+			return false;
 		}
 		
 		//Checking Seven Signs Quest Period
@@ -70,7 +70,7 @@ public class MercTicket implements IItemHandler
 		{
 			//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return;
+			return false;
 		}
 		//Checking the Seal of Strife status
 		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
@@ -81,7 +81,7 @@ public class MercTicket implements IItemHandler
 				{
 					//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
 					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return;
+					return false;
 				}
 				break;
 			}
@@ -91,7 +91,7 @@ public class MercTicket implements IItemHandler
 				{
 					//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
 					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-					return;
+					return false;
 				}
 				break;
 			}
@@ -104,21 +104,22 @@ public class MercTicket implements IItemHandler
 		if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return;
+			return false;
 		}
 		else if (MercTicketManager.getInstance().isAtTypeLimit(item.getItemId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
-			return;
+			return false;
 		}
 		else if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
 		{
 			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_BECAUSE_DISTANCE_BETWEEN_MERCENARIES_TOO_SHORT);
-			return;
+			return false;
 		}
 		
 		MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar, null);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
 		activeChar.sendPacket(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION);
+		return true;
 	}
 }

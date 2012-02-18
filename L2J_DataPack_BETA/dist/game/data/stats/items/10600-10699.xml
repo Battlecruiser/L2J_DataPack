@@ -400,6 +400,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="86400000" /><!-- TODO: Manage global (main class <-> subclasses) reuse for skills. -->
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2510-1" />
 	</item>

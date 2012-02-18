@@ -23,27 +23,24 @@ import com.l2jserver.gameserver.network.serverpackets.ChooseInventoryItem;
 
 public class EnchantScrolls implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		if (activeChar.isCastingNow())
-			return;
+			return false;
 		
 		if (activeChar.isEnchanting())
 		{
 			activeChar.sendPacket(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS);
-			return;
+			return false;
 		}
 		
 		activeChar.setActiveEnchantItem(item);
 		activeChar.sendPacket(new ChooseInventoryItem(item.getItemId()));
+		return true;
 	}
 }

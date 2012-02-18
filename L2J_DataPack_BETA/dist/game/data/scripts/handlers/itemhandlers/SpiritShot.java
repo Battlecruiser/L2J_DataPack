@@ -24,23 +24,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.1.2.1.2.5 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class SpiritShot implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.items.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public synchronized void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public synchronized boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return;
+			return false;
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
@@ -52,12 +42,12 @@ public class SpiritShot implements IItemHandler
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
-			return;
+			return false;
 		}
 		
 		// Check if Spirit shot is already active
 		if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
-			return;
+			return false;
 		
 		final int weaponGrade = weaponItem.getCrystalType();
 		
@@ -98,7 +88,7 @@ public class SpiritShot implements IItemHandler
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 				activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
 			
-			return;
+			return false;
 		}
 		
 		// Consume Spirit shot if player has enough of them
@@ -106,7 +96,7 @@ public class SpiritShot implements IItemHandler
 		{
 			if (!activeChar.disableAutoShot(itemId))
 				activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
-			return;
+			return false;
 		}
 		
 		// Charge Spirit shot
@@ -153,5 +143,6 @@ public class SpiritShot implements IItemHandler
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
+		return true;
 	}
 }
