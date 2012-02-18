@@ -828,7 +828,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -839,6 +839,9 @@
 		<cond msgId="2292">
 			<player agathionId="1526" />
 		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />

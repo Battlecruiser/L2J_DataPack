@@ -70,6 +70,7 @@ import handlers.effecthandlers.RandomizeHate;
 import handlers.effecthandlers.Recovery;
 import handlers.effecthandlers.Relax;
 import handlers.effecthandlers.RemoveTarget;
+import handlers.effecthandlers.RestorationRandom;
 import handlers.effecthandlers.Root;
 import handlers.effecthandlers.Signet;
 import handlers.effecthandlers.SignetAntiSummon;
@@ -158,6 +159,7 @@ public final class EffectMasterHandler
 		Recovery.class,
 		Relax.class,
 		RemoveTarget.class,
+		RestorationRandom.class,
 		Root.class,
 		Signet.class,
 		SignetAntiSummon.class,

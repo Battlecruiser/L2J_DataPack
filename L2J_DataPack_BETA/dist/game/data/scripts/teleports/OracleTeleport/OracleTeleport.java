@@ -224,14 +224,14 @@ public class OracleTeleport extends Quest
 			if (Util.contains(TEMPLE_PRIEST, npcId) && st.getState() == State.STARTED)
 			{
 				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc, false);
+				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && st.getState() == State.STARTED)
 			{
 				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc, false);
+				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 				htmltext = "rift_back.htm";
 				st.exitQuest(true);
 			}

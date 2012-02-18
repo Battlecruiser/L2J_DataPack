@@ -56,10 +56,8 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		System.out.println("Trying to use item Id: " + item.getItemId() + "!!!!!!");
 		if (!checkReuse(activeChar, null, item))
 		{
-			System.out.println("Avoiding item usage due reuse time!");
 			return false;
 		}
 		
