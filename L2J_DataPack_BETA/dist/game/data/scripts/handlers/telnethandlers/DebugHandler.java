@@ -46,6 +46,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
 /**
@@ -75,6 +76,33 @@ public class DebugHandler implements ITelnetHandler
 				if (dbg.equals("decay"))
 				{
 					_print.print(DecayTaskManager.getInstance().toString());
+				}
+				else if (dbg.equals("packetsend"))
+				{
+					if (st.countTokens() < 2)
+					{
+						_print.println("Usage: debug packetsend <charName> <packetData>");
+						return false;
+					}
+					String charName = st.nextToken();
+					L2PcInstance targetPlayer = L2World.getInstance().getPlayer(charName);
+					
+					if (targetPlayer == null)
+					{
+						_print.println("Player " + charName + " cannot be found online");
+						return false;
+					}
+					
+					AdminForgePacket sp = new AdminForgePacket();
+					while (st.hasMoreTokens())
+					{
+						String b = st.nextToken();
+						if (!b.isEmpty())
+							sp.addPart("C".getBytes()[0], "0x" + b);
+					}
+					
+					targetPlayer.sendPacket(sp);
+					_print.println("Packet sent to player " + charName);
 				}
 				else if (dbg.equals("PacketTP"))
 				{
