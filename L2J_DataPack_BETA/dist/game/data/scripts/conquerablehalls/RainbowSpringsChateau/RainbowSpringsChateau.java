@@ -55,7 +55,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -175,10 +174,13 @@ public class RainbowSpringsChateau extends Quest
 		{
 			for(int arenaId : ARENA_ZONES)
 			{
-				final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside();
-				for(L2Character chr : chars.values(new L2Character[0]))
+				final L2Character[] chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInsideArray();
+				for(L2Character chr : chars)
 				{
-					chr.teleToLocation(TeleportWhereType.Town);
+					if (chr != null)
+					{
+						chr.teleToLocation(TeleportWhereType.Town);
+					}
 				}
 			}
 		}
@@ -640,11 +642,16 @@ public class RainbowSpringsChateau extends Quest
 			if(id == myArena)
 				continue;
 			
-			final L2TIntObjectHashMap<L2Character> chars = ZoneManager.getInstance().getZoneById(id).getCharactersInside();
-			for(L2Character chr : chars.values(new L2Character[0]))
+			final L2Character[] chars = ZoneManager.getInstance().getZoneById(id).getCharactersInsideArray();
+			for(L2Character chr : chars)
 			{
-				for(L2Skill sk : DEBUFFS)
-					sk.getEffects(chr, chr);
+				if (chr != null)
+				{
+					for(L2Skill sk : DEBUFFS)
+					{
+						sk.getEffects(chr, chr);
+					}
+				}
 			}
 		}
 	}
