@@ -23,10 +23,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.gameserverpackets.ServerStatus;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
-
 /**
  * This class handles the admin commands that acts on the login
- *
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2007/07/31 10:05:56 $
  */
 public class AdminLogin implements IAdminCommandHandler
@@ -41,10 +39,6 @@ public class AdminLogin implements IAdminCommandHandler
 		"admin_server_login"
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -238,14 +232,9 @@ public class AdminLogin implements IAdminCommandHandler
 		Config.SERVER_GMONLY = true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

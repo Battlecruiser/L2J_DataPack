@@ -22,10 +22,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
-
 /**
  * @author _drunk_
- *
  */
 public class BeastSkills implements ISkillHandler
 {

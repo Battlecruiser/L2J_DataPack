@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Fortress of Resistance clan hall siege Script.
  * @author BiggBoss
- * Fortress of Resistance clan hall siege Script
  */
 public final class FortressOfResistance extends ClanHallSiegeEngine
 {

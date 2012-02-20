@@ -36,9 +36,6 @@ public class AdminUnblockIp implements IAdminCommandHandler
 		"admin_unblockip"
 	};
 	
-	/**
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -75,5 +72,4 @@ public class AdminUnblockIp implements IAdminCommandHandler
 		_log.warning("IP removed by GM " + activeChar.getName());
 		return true;
 	}
-	
 }

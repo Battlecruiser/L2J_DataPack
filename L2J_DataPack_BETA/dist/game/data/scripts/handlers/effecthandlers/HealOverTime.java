@@ -34,31 +34,19 @@ public class HealOverTime extends L2Effect
 	{
 		super(env, effect);
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#effectCanBeStolen()
-	 */
+	
 	@Override
 	protected boolean effectCanBeStolen()
 	{
 		return true;
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.HEAL_OVER_TIME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -66,10 +54,6 @@ public class HealOverTime extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

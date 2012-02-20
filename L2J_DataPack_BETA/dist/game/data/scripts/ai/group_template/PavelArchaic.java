@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
+ * @author Gnacik
  */
 public class PavelArchaic extends L2AttackableAIScript
 {

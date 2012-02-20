@@ -25,11 +25,8 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
- *
  * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/02 15:38:36 $
  */
-
 public class CombatPointHeal implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -37,10 +34,6 @@ public class CombatPointHeal implements ISkillHandler
 		L2SkillType.COMBATPOINTHEAL
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.skills.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
 	{

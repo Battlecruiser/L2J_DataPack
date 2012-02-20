@@ -32,31 +32,19 @@ public class ManaHealOverTime extends L2Effect
 	{
 		super(env, effect);
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#effectCanBeStolen()
-	 */
+	
 	@Override
 	protected boolean effectCanBeStolen()
 	{
 		return true;
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.MANA_HEAL_OVER_TIME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

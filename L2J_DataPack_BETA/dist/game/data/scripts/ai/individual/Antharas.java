@@ -49,10 +49,7 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.util.Rnd;
 
 /**
- * 
  * This class ... control for sequence of fight against Antharas.
- * 
- * @version $Revision: $ $Date: $
  * @author L2J_JP SANDMAN
  */
 public class Antharas extends L2AttackableAIScript

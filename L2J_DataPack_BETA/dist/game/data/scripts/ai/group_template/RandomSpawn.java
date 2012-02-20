@@ -24,9 +24,8 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.util.Rnd;
 
 /**
- * @Manages spawn of NPC's, having several random spawn points 
+ * Manages spawn of NPC's, having several random spawn points 
  */
-
 public class RandomSpawn extends L2AttackableAIScript
 {
 	private static Map<Integer, Location[]> SPAWN_POINTS = new FastMap<>();

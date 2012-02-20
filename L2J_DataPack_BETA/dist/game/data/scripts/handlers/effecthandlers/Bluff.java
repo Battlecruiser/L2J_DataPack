@@ -25,9 +25,8 @@ import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
 
 /**
+ * Implementation of the Bluff Effect
  * @author decad
- * 
- *         Implementation of the Bluff Effect
  */
 public class Bluff extends L2Effect
 {
@@ -36,20 +35,12 @@ public class Bluff extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BLUFF; // test for bluff effect
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -68,10 +59,6 @@ public class Bluff extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

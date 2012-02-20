@@ -30,9 +30,8 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- **
- ** Dummy AI for spawns/respawns only for testing.
+ * Dummy AI for spawns/respawns only for testing.
+ * @author Gnacik
  */
 public class DenOfEvil extends L2AttackableAIScript
 {

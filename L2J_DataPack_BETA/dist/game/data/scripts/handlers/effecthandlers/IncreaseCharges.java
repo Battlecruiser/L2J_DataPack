@@ -21,12 +21,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * 
+ * Effect will generate charges for L2PcInstance targets.<br>
+ * Number of charges in "value", maximum number in "count" effect variables.
  * @author DS
- * 
- * Effect will generate charges for L2PcInstance targets
- * Number of charges in "value", maximum number in "count" effect variables
- *
  */
 public class IncreaseCharges extends L2Effect
 {
@@ -35,20 +32,12 @@ public class IncreaseCharges extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.INCREASE_CHARGES;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -62,10 +51,6 @@ public class IncreaseCharges extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

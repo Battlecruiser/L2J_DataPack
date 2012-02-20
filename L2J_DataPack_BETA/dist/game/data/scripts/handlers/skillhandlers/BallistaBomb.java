@@ -53,9 +53,6 @@ public class BallistaBomb implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{
