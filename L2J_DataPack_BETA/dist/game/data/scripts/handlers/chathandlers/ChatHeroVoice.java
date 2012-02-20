@@ -23,10 +23,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.util.Util;
 
-
 /**
  * Hero chat handler.
- *
  * @author  durgus
  */
 public class ChatHeroVoice implements IChatHandler
@@ -38,7 +36,6 @@ public class ChatHeroVoice implements IChatHandler
 	
 	/**
 	 * Handle chat type 'hero voice'
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
@@ -67,8 +64,7 @@ public class ChatHeroVoice implements IChatHandler
 	}
 	
 	/**
-	 * Returns the chat types registered to this handler
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
+	 * Returns the chat types registered to this handler.
 	 */
 	@Override
 	public int[] getChatTypeList()

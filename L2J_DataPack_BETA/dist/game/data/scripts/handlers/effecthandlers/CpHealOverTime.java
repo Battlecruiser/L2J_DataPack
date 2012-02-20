@@ -32,31 +32,19 @@ public class CpHealOverTime extends L2Effect
 	{
 		super(env, effect);
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#effectCanBeStolen()
-	 */
+	
 	@Override
 	protected boolean effectCanBeStolen()
 	{
 		return true;
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CPHEAL_OVER_TIME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

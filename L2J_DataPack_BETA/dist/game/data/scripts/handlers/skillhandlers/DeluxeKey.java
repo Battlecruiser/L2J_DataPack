@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
-
 /**
- *
  * @author  Julian
  */
 public class DeluxeKey implements ISkillHandler
@@ -37,10 +35,6 @@ public class DeluxeKey implements ISkillHandler
 		L2SkillType.DELUXE_KEY_UNLOCK
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.skills.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -61,10 +55,6 @@ public class DeluxeKey implements ISkillHandler
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

@@ -21,22 +21,18 @@ import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-
 /**
- *
- * @author  poltomb
+ * @author poltomb
  */
 public class AdminSummon implements IAdminCommandHandler
 {
-	Logger _log = Logger.getLogger(AdminSummon.class.getName());
+	private static final Logger _log = Logger.getLogger(AdminSummon.class.getName());
 	
 	public static final String[] ADMIN_COMMANDS =
 	{
 		"admin_summon"
 	};
-	/**
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
+	
 	@Override
 	public String[] getAdminCommandList()
 	{
@@ -44,9 +40,6 @@ public class AdminSummon implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	/**
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -97,5 +90,4 @@ public class AdminSummon implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
 }

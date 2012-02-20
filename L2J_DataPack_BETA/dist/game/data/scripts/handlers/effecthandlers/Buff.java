@@ -35,10 +35,6 @@ public class Buff extends L2Effect
 		super(env, effect);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#effectCanBeStolen()
-	 */
 	@Override
 	protected boolean effectCanBeStolen()
 	{

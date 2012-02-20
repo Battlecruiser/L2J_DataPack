@@ -59,8 +59,8 @@ import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 import com.l2jserver.util.Rnd;
 
 /**
+ * Rainbow Springs Chateau clan hall siege script.
  * @author BiggBoss
- * Rainbow Springs Chateau clan hall siege script
  */
 public class RainbowSpringsChateau extends Quest
 {

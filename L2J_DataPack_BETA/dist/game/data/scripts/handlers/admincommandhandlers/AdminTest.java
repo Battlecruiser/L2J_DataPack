@@ -27,13 +27,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
-
 /**
- * This class ...
- *
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-
 public class AdminTest implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
@@ -110,13 +106,9 @@ public class AdminTest implements IAdminCommandHandler
 		}
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

@@ -30,20 +30,12 @@ public class Relax extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.RELAXING;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -56,20 +48,12 @@ public class Relax extends L2Effect
 		return super.onStart();
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		super.onExit();
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -105,10 +89,7 @@ public class Relax extends L2Effect
 		getEffected().reduceCurrentMp(manaDam);
 		return true;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

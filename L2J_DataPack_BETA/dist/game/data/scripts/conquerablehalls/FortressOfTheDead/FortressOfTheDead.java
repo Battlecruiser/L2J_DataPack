@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
+ * Fortress of the Dead clan hall siege script.
  * @author BiggBoss
- * Fortress of the Dead clan hall siege script
  */
 public final class FortressOfTheDead extends ClanHallSiegeEngine
 {		

@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * 
  * @author nBd
  */
 public class Disarm extends L2Effect
@@ -32,20 +31,12 @@ public class Disarm extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.DISARM;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -57,28 +48,17 @@ public class Disarm extends L2Effect
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
 		return false;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

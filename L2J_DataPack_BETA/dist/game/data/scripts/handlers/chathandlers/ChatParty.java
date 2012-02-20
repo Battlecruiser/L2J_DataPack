@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- *
  * @author  durgus
  */
 public class ChatParty implements IChatHandler
@@ -35,7 +34,6 @@ public class ChatParty implements IChatHandler
 	
 	/**
 	 * Handle chat type 'party'
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
@@ -54,8 +52,7 @@ public class ChatParty implements IChatHandler
 	}
 	
 	/**
-	 * Returns the chat types registered to this handler
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
+	 * Returns the chat types registered to this handler.
 	 */
 	@Override
 	public int[] getChatTypeList()

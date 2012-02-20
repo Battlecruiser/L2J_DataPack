@@ -34,12 +34,10 @@ public class ScrollOfResurrection implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
 		{
 			return false;
 		}
-		
-		L2PcInstance activeChar = (L2PcInstance) playable;
 		
 		if (!TvTEvent.onScrollUse(playable.getObjectId()))
 		{
@@ -47,38 +45,37 @@ public class ScrollOfResurrection implements IItemHandler
 			return false;
 		}
 		
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		if (activeChar.isSitting())
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
 			return false;
 		}
+		
 		if (activeChar.isMovementDisabled())
 		{
 			return false;
 		}
 		
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		// boolean blessedScroll = (itemId != 737);
 		boolean petScroll = (itemId == 6387);
 		
 		// SoR Animation section
-		L2Character target = (L2Character) activeChar.getTarget();
-		
-		if ((target == null) || target.isDead())
+		final L2Character target = (L2Character) activeChar.getTarget();
+		if ((target == null) || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		
 		L2PcInstance targetPlayer = null;
-		
 		if (target instanceof L2PcInstance)
 		{
 			targetPlayer = (L2PcInstance) target;
 		}
 		
 		L2PetInstance targetPet = null;
-		
 		if (target instanceof L2PetInstance)
 		{
 			targetPet = (L2PetInstance) target;

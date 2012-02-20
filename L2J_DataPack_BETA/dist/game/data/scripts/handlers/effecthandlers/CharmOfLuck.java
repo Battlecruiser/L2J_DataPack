@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * @author kerberos_20
- * 
  */
 public class CharmOfLuck extends L2Effect
 {
@@ -32,40 +31,24 @@ public class CharmOfLuck extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CHARM_OF_LUCK;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		((L2Playable) getEffected()).stopCharmOfLuck(this);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -73,10 +56,6 @@ public class CharmOfLuck extends L2Effect
 		return false;
 	}
 	
-	
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
 	@Override
 	public int getEffectFlags()
 	{

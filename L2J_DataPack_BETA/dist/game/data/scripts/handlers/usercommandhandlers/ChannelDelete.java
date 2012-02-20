@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- *
  * @author  Chris
  */
 public class ChannelDelete implements IUserCommandHandler
@@ -31,10 +30,6 @@ public class ChannelDelete implements IUserCommandHandler
 		93
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -58,10 +53,6 @@ public class ChannelDelete implements IUserCommandHandler
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

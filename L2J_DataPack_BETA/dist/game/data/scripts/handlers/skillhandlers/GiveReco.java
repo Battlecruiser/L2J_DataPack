@@ -12,7 +12,6 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
@@ -35,11 +34,7 @@ public class GiveReco implements ISkillHandler
 	{
 		L2SkillType.GIVE_RECO
 	};
-
-	/**
-	 *
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.skills.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
+	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -69,11 +64,7 @@ public class GiveReco implements ISkillHandler
 			}
 		}
 	}
-
-	/**
-	 *
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
+	
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

@@ -1,4 +1,5 @@
-/** This program is free software: you can redistribute it and/or modify it under
+/*
+ * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
  * version.
@@ -32,10 +33,6 @@ public class Time implements IUserCommandHandler
 	
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -69,10 +66,6 @@ public class Time implements IUserCommandHandler
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

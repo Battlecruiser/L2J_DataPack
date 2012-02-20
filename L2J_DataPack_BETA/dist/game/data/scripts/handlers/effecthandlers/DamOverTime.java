@@ -27,20 +27,12 @@ public class DamOverTime extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.DMG_OVER_TIME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

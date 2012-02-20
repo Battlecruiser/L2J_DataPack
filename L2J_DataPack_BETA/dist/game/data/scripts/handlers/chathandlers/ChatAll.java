@@ -36,16 +36,15 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class ChatAll implements IChatHandler
 {
+	private static Logger _log = Logger.getLogger(ChatAll.class.getName());
+	
 	private static final int[] COMMAND_IDS =
 	{
 		0
 	};
 	
-	private static Logger _log = Logger.getLogger(ChatAll.class.getName());
-	
 	/**
 	 * Handle chat type 'all'
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String params, String text)
@@ -112,8 +111,7 @@ public class ChatAll implements IChatHandler
 	}
 	
 	/**
-	 * Returns the chat types registered to this handler
-	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
+	 * Returns the chat types registered to this handler.
 	 */
 	@Override
 	public int[] getChatTypeList()

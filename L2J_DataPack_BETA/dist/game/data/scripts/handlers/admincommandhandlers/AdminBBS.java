@@ -14,8 +14,6 @@
  */
 package handlers.admincommandhandlers;
 
-// import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.communitybbs.Manager.AdminBBSManager;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,10 +25,6 @@ public class AdminBBS implements IAdminCommandHandler
 		"admin_bbs"
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -38,10 +32,6 @@ public class AdminBBS implements IAdminCommandHandler
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{

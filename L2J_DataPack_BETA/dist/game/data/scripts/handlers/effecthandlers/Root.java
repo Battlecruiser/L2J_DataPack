@@ -55,10 +55,7 @@ public class Root extends L2Effect
 		// just stop this effect
 		return false;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

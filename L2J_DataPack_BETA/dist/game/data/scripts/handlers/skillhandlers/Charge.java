@@ -24,20 +24,13 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
-
 /**
- * This class ...
- *
  * @version $Revision: 1.1.2.2.2.9 $ $Date: 2005/04/04 19:08:01 $
  */
-
 public class Charge implements ISkillHandler
 {
 	static Logger _log = Logger.getLogger(Charge.class.getName());
 	
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.L2PcInstance, com.l2jserver.gameserver.model.L2ItemInstance)
-	 */
 	private static final L2SkillType[] SKILL_IDS =
 	{/*L2SkillType.CHARGE*/};
 	

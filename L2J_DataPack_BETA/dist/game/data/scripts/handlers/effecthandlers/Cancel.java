@@ -28,9 +28,7 @@ import com.l2jserver.util.Rnd;
 import com.l2jserver.util.StringUtil;
 
 /**
- * 
  * @author DS
- *
  */
 public class Cancel extends L2Effect
 {
@@ -41,30 +39,18 @@ public class Cancel extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CANCEL;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
 		return cancel(getEffector(), getEffected(), this);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

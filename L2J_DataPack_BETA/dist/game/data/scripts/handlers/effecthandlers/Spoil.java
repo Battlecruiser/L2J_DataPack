@@ -25,12 +25,9 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * 
+ * This is the Effect support for spoil.<br>
+ * This was originally done by _drunk_
  * @author Ahmed
- * 
- *         This is the Effect support for spoil.
- * 
- *         This was originally done by _drunk_
  */
 public class Spoil extends L2Effect
 {
@@ -39,20 +36,12 @@ public class Spoil extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SPOIL;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -92,10 +81,6 @@ public class Spoil extends L2Effect
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

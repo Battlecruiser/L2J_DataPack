@@ -210,8 +210,6 @@ public class Blow implements ISkillHandler
 			}
 		}
 	}
-
-	
 	
 	@Override
 	public L2SkillType[] getSkillIds()

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 
 /**
- * 
  * @author -Nemesiss-
  */
 public class TargetMe extends L2Effect
@@ -35,20 +34,12 @@ public class TargetMe extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.TARGET_ME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -73,10 +64,6 @@ public class TargetMe extends L2Effect
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
@@ -84,10 +71,6 @@ public class TargetMe extends L2Effect
 			((L2Playable)getEffected()).setLockedTarget(null);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.effects.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

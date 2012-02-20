@@ -25,11 +25,8 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
- * This class ...
- *
  * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
  */
-
 public class Dummy implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -37,10 +34,6 @@ public class Dummy implements ISkillHandler
 		L2SkillType.DUMMY
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.skills.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -71,10 +64,6 @@ public class Dummy implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

@@ -33,9 +33,8 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- *
- * @author  Didldak
  * Some parts taken from EffectWarp, which cannot be used for this case.
+ * @author  Didldak
  */
 public class InstantJump implements ISkillHandler
 {
@@ -118,10 +117,6 @@ public class InstantJump implements ISkillHandler
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{
