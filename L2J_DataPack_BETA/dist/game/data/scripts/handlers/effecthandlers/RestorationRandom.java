@@ -66,7 +66,6 @@ public class RestorationRandom extends L2Effect
 		double chance = 0;
 		double chanceFrom = 0;
 		final List<ItemHolder> creationList = new ArrayList<>();
-		final boolean isFish = getSkill().getName().contains("Fish");
 		
 		// Explanation for future changes:
 		// You get one chance for the current skill, then you can fall into
@@ -95,15 +94,13 @@ public class RestorationRandom extends L2Effect
 			return false;
 		}
 		
-		long count;
 		for (ItemHolder item : creationList)
 		{
 			if ((item.getId() <= 0) || (item.getCount() <= 0))
 			{
 				continue;
 			}
-			count = (long) (isFish ? item.getCount() * Config.RATE_EXTR_FISH : item.getCount());
-			player.addItem("Extract", item.getId(), count, getEffector(), true);
+			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), getEffector(), true);
 		}
 		return true;
 	}

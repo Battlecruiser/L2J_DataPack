@@ -44,8 +44,6 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		
-		final int itemID = item.getItemId();
 		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
 		final List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
 		if (exitem == null)
@@ -62,20 +60,17 @@ public class ExtractableItems implements IItemHandler
 		
 		boolean created = false;
 		// calculate extraction
+		int min;
+		int max;
+		int createitemAmount;
 		for (L2ExtractableProduct expi : exitem)
 		{
 			if (Rnd.get(100000) <= expi.getChance())
 			{
-				int min = expi.getMin();
-				int max = expi.getMax();
+				min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
+				max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
 				
-				if (((itemID >= 6411) && (itemID <= 6518)) || ((itemID >= 7726) && (itemID <= 7860)) || ((itemID >= 8403) && (itemID <= 8483)))
-				{
-					min *= Config.RATE_EXTR_FISH;
-					max *= Config.RATE_EXTR_FISH;
-				}
-				
-				final int createitemAmount = (max == min) ? min : (Rnd.get(max - min + 1) + min);
+				createitemAmount = (max == min) ? min : (Rnd.get(max - min + 1) + min);
 				activeChar.addItem("Extract", expi.getId(), createitemAmount, activeChar, true);
 				created = true;
 			}
