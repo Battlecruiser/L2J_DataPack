@@ -135,8 +135,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(_hall.getOwnerId());
 				String content = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/flagwar/"+qn+"/messenger_initial.htm");
-				content.replaceAll("%clanName%", clan == null? "no owner" : clan.getName());
-				content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+				content = content.replaceAll("%clanName%", clan == null? "no owner" : clan.getName());
+				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 				html = content;
 			}
 			else
@@ -288,15 +288,15 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 					L2Clan attacker = ClanTable.getInstance().getClan(_data.keys()[i]);
 					if(attacker == null)
 						continue;
-					html.replaceAll("%clan"+i+"%", clan.getName());
-					html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
+					html = html.replaceAll("%clan"+i+"%", clan.getName());
+					html = html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
 				}
 				if(_data.size() < 5)
 				{
 					for(int i = _data.size(); i < 5; i++)
 					{
-						html.replaceAll("%clan"+i+"%", "Empty pos. ");
-						html.replaceAll("%clanMem"+i+"%", "Empty pos. ");
+						html = html.replaceAll("%clan"+i+"%", "Empty pos. ");
+						html = html.replaceAll("%clanMem"+i+"%", "Empty pos. ");
 					}
 				}
 			}
