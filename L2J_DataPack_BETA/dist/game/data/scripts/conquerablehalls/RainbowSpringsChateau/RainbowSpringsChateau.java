@@ -453,7 +453,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 		else if(event.startsWith("getItem"))
 		{
-			if(!_pendingItemToGet.containsKey(clanId))
+			if(!_pendingItemToGet.containsKey(clan))
 				html = "yeti_cannot_exchange.htm";
 				
 			int left = _pendingItemToGet.get(clan);
