@@ -77,7 +77,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 				if(owner != null)
 				{
 					hall.free();
-					owner.setHasHideout(0);
+					owner.setHideoutId(0);
 					hall.addAttacker(owner);
 				}
 				hall.getSiege().startSiege();

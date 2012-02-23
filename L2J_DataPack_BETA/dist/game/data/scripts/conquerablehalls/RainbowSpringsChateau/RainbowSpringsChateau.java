@@ -28,9 +28,11 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
+import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -40,6 +42,7 @@ import com.l2jserver.gameserver.instancemanager.MapRegionManager.TeleportWhereTy
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -49,12 +52,10 @@ import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -80,7 +81,7 @@ public class RainbowSpringsChateau extends Quest
 				if(owner != null)
 				{
 					_rainbow.free();
-					owner.setHasHideout(0);
+					owner.setHideoutId(0);
 					_acceptedClans.add(owner);
 					--spotLeft;
 				}
@@ -252,15 +253,13 @@ public class RainbowSpringsChateau extends Quest
 	public RainbowSpringsChateau(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
+		
 		addFirstTalkId(MESSENGER);
 		addTalkId(MESSENGER);
 		addFirstTalkId(CARETAKER);
 		addTalkId(CARETAKER);
-		for(int npc : YETIS)
-		{
-			addFirstTalkId(npc);
-			addTalkId(npc);
-		}
+		addFirstTalkId(YETIS);
+		addTalkId(YETIS);
 		
 		loadAttackers();
 		
@@ -281,35 +280,47 @@ public class RainbowSpringsChateau extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if(player.getQuestState(qn) == null)
-		{
-			QuestState state = newQuestState(player);
-			state.setState(State.STARTED);
-		}
-
-		int npcId = npc.getNpcId();
 		String html = "";
-		
+		final int npcId = npc.getNpcId();
 		if(npcId == MESSENGER)
 		{
-			sendMessengerMain(player);
+			final String main = (_rainbow.getOwnerId() > 0) ? "messenger_yetti001.htm" : "messenger_yetti001a.htm";
+			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/conquerablehalls/RainbowSpringsChateau/" + main);
+			html = html.replace("%time%", _registrationEnds);
+			if (_rainbow.getOwnerId() > 0)
+			{
+				html = html.replace("%owner%", ClanTable.getInstance().getClan(_rainbow.getOwnerId()).getName());
+			}
 		}
 		else if(npcId == CARETAKER)
 		{
-			html = "caretaker_main.htm";
-		}
-		else if(_rainbow.isInSiege())
-		{
-			if(!player.isClanLeader())
-				html = "no_clan_leader.htm";	
+			if(_rainbow.isInSiege())
+			{
+				html = "game_manager003.htm";
+			}
 			else
 			{
-				L2Clan clan = player.getClan();
-				if(clan != null && _acceptedClans.contains(clan))
+				html = "game_manager001.htm";
+			}
+		}
+		else if (Util.contains(YETIS, npcId))
+		{
+			// TODO: Review.
+			if (_rainbow.isInSiege())
+			{
+				if (!player.isClanLeader())
 				{
-					int index = _acceptedClans.indexOf(clan);
-					if(npcId == YETIS[index])
-						html = "yeti_main.htm";
+					html = "no_clan_leader.htm";
+				}
+				else
+				{
+					L2Clan clan = player.getClan();
+					if (_acceptedClans.contains(clan))
+					{
+						int index = _acceptedClans.indexOf(clan);
+						if (npcId == YETIS[index])
+							html = "yeti_main.htm";
+					}
 				}
 			}
 		}
@@ -320,105 +331,173 @@ public class RainbowSpringsChateau extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if(!player.isClanLeader())
-			return "no_clan_leader.htm";
-
 		String html = event;
-		final L2Clan clan = player.getClan();		
-		final int clanId = clan.getClanId();
+		final L2Clan clan = player.getClan();
+		switch (npc.getNpcId())
+		{
+			case MESSENGER:
+				switch (event)
+				{
+					case "register":
+						if (!player.isClanLeader())
+						{
+							html = "messenger_yetti010.htm";
+						}
+						else if ((clan.getCastleId() > 0) || (clan.getFortId() > 0) || (clan.getHideoutId() > 0))
+						{
+							html = "messenger_yetti012.htm";
+						}
+						else if(!_rainbow.isRegistering())
+						{
+							html = "messenger_yetti014.htm";
+						}
+						else if(_warDecreesCount.containsKey(clan.getClanId()))
+						{
+							html = "messenger_yetti013.htm";
+						}
+						else if(clan.getLevel() < 3 || clan.getMembersCount() < 5)
+						{
+							html = "messenger_yetti011.htm";
+						}
+						else
+						{
+							final L2ItemInstance warDecrees = player.getInventory().getItemByItemId(WAR_DECREES);
+							if(warDecrees == null)
+							{
+								html = "messenger_yetti008.htm";
+							}
+							else
+							{
+								long count = warDecrees.getCount();
+								_warDecreesCount.put(clan.getClanId(), count);
+								player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
+								updateAttacker(clan.getClanId(), count, false);
+								html = "messenger_yetti009.htm";
+							}
+						}
+						break;
+					case "cancel":
+						if (!player.isClanLeader())
+						{
+							html = "messenger_yetti010.htm";
+						}
+						else if(!_warDecreesCount.containsKey(clan.getClanId()))
+						{
+							html = "messenger_yetti016.htm";
+						}
+						else if(!_rainbow.isRegistering())
+						{
+							html = "messenger_yetti017.htm";
+						}
+						else
+						{
+							updateAttacker(clan.getClanId(), 0, true);
+							html = "messenger_yetti018.htm";
+						}
+						break;
+					case "unregister":
+						if(_rainbow.isRegistering())
+						{
+							if (_warDecreesCount.contains(clan.getClanId()))
+							{
+								player.addItem("Rainbow Spring unregister", WAR_DECREES, _warDecreesCount.get(clan.getClanId()) / 2, npc, true);
+								_warDecreesCount.remove(clan.getClanId());
+								html = "messenger_yetti019.htm";
+							}
+							else
+							{
+								html = "messenger_yetti020.htm";
+							}
+						}
+						else if(_rainbow.isWaitingBattle())
+						{
+							_acceptedClans.remove(clan);
+							html = "messenger_yetti020.htm";
+						}
+						break;
+				}
+				break;
+			case CARETAKER:
+				if(event.equals("portToArena"))
+				{
+					final L2Party party = player.getParty();
+					if (clan == null)
+					{
+						html = "game_manager009.htm";
+					}
+					else if(!player.isClanLeader())
+					{
+						html = "game_manager004.htm";
+					}
+					else if(!player.isInParty())
+					{
+						html = "game_manager005.htm";
+					}
+					else if(party.getPartyLeaderOID() != player.getObjectId())
+					{
+						html = "game_manager006.htm";
+					}
+					else
+					{
+						final int clanId = player.getClanId();
+						boolean nonClanMemberInParty = false;
+						for (L2PcInstance member : party.getPartyMembers())
+						{
+							if (member.getClanId() != clanId)
+							{
+								nonClanMemberInParty = true;
+								break;
+							}
+						}
+						
+						if (nonClanMemberInParty)
+						{
+							html = "game_manager007.htm";
+						}
+						else if(party.getMemberCount() < 5)
+						{
+							html = "game_manager008.htm";
+						}
+						else if ((clan.getCastleId() > 0) || (clan.getFortId() > 0) || (clan.getHideoutId() > 0))
+						{
+							html = "game_manager010.htm";
+						}
+						else if (clan.getLevel() < Config.CHS_CLAN_MINLEVEL)
+						{
+							html = "game_manager011.htm";
+						}
+						// else if () // Something about the rules.
+						// {
+						// 	html = "game_manager012.htm";
+						// }
+						// else if () // Already registered.
+						// {
+						// 	html = "game_manager013.htm";
+						// }
+						else if(!_acceptedClans.contains(clan))
+						{
+							html = "game_manager014.htm";
+						}
+						// else if () // Not have enough cards to register.
+						// {
+						// 	html = "game_manager015.htm";
+						// }
+						else
+						{
+							portToArena(player, _acceptedClans.indexOf(clan));
+						}
+					}
+				}
+				break;
+		}
 		
-		if(event.equals("register"))
+		if(event.startsWith("enterText"))
 		{
-			if(!_rainbow.isRegistering())
-				html = "messenger_not_registering.htm";
-			else if(_warDecreesCount.containsKey(clanId))
-				html = "messenger_alredy_registered.htm";
-			else if(clan.getLevel() < 3 || clan.getMembersCount() < 5)
-				html = "messenger_no_level.htm";
-			else
-			{
-				L2ItemInstance warDecrees = player.getInventory().getItemByItemId(WAR_DECREES);
-				if(warDecrees == null)
-					html = "messenger_nowardecrees.htm";
-				else
-				{
-					long count = warDecrees.getCount();
-					_warDecreesCount.put(clanId, count);
-					player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
-					updateAttacker(clanId, count, false);
-					html = "messenger_registered.htm";
-				}
-			}
-		}
-		else if(event.equals("unregister"))
-		{
-			if(!_warDecreesCount.containsKey(clanId))
-				html = "messenger_notinlist.htm";
-			else if(_rainbow.isRegistering())
-			{
-				String[] split = event.split("_");
-				int step = Integer.parseInt(split[1]);
-				
-				switch(step)
-				{
-					case 0:
-						html = "messenger_unregister_confirmation.htm";
-						break;
-					case 1:
-						html = "messenger_retrive_wardecrees.htm";
-						updateAttacker(clanId, 0, true);
-						break;
-					case 2:
-						html = "messenger_unregistered.htm";
-						long toRetrive = _warDecreesCount.get(clanId) / 2;
-						player.addItem("Rainbow Spring unregister", WAR_DECREES, toRetrive, npc, true);
-						_warDecreesCount.remove(clanId);
-						break;
-						default:
-							html = "messenger_main.htm";
-				}
-			}
-			else if(_rainbow.isWaitingBattle())
-			{
-				if(!_acceptedClans.contains(clan))
-					return "messenger_notinlist.htm";
-				
-				String[] split = event.split("_");
-				int step = Integer.parseInt(split[1]);
-				
-				switch(step)
-				{
-					case 0:
-						html = "messenger_unregister_confirmation_no_retrive.htm";
-						break;
-					case 1:
-						html = "messenger_unregistered.htm";
-						_acceptedClans.remove(clan);
-						break;
-						default:
-							html = "messenger_main.htm";
-				}
-			}
-		}
-		else if(event.equals("portToArena"))
-		{
-			if(!_acceptedClans.contains(clan))
-				html = "caretaker_not_allowed.htm";
-			else if(player.getParty() == null)
-				html = "caretaker_no_party.htm";
-			else
-			{
-				int index = _acceptedClans.indexOf(clan);
-				portToArena(player, index);
-			}
-		}
-		else if(event.startsWith("enterText"))
-		{
-			// Shouldnt happen
+			// Shouldn't happen
 			if(!_acceptedClans.contains(clan))
 				return null;
 			
-			String[] split = event.split("_");
+			String[] split = event.split("_ ");
 			if(split.length < 2)
 				return null;
 			
@@ -763,14 +842,6 @@ public class RainbowSpringsChateau extends Quest
 		int mins = c.get(Calendar.MINUTE);
 		
 		_registrationEnds = year+"-"+month+"-"+day+" "+hour+":"+mins;
-	}
-	
-	private static void sendMessengerMain(L2PcInstance player)
-	{
-		NpcHtmlMessage message = new NpcHtmlMessage(5);
-		message.setFile(null, "data/scripts/conquerablehalls/RainbowSpringsChateau/messenger_main.htm");
-		message.replace("%time%", _registrationEnds);
-		player.sendPacket(message);
 	}
 	
 	public static void launchSiege()

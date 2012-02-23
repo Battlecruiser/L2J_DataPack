@@ -474,7 +474,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		if(_hall.getOwnerId() > 0)
 		{
 			L2Clan clan = ClanTable.getInstance().getClan(_hall.getOwnerId());
-			clan.setHasHideout(0);
+			clan.setHideoutId(0);
 			_hall.free();
 		}
 		super.endSiege();
