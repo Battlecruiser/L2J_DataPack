@@ -208,7 +208,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		FortDungeon dungeon = _fortDungeons.get(npc.getNpcId());
 		if (player == null || fortress == null || dungeon == null)
 			return "FortressWarden-01.htm";
-		if (player.getClan() == null || player.getClan().getHasFort() != fortress.getFortId())
+		if (player.getClan() == null || player.getClan().getFortId() != fortress.getFortId())
 			return "FortressWarden-01.htm";
 		else if (fortress.getFortState() == 0)
 			return "FortressWarden-02a.htm";

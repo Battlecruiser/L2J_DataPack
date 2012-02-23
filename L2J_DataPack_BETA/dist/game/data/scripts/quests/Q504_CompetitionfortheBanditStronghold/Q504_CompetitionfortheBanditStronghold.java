@@ -73,7 +73,7 @@ public final class Q504_CompetitionfortheBanditStronghold extends Quest
 			 result = "azit_messenger_q0504_04.htm";
 		else if(!player.isClanLeader())
 			 result = "azit_messenger_q0504_05.htm";
-		else if(clan.getHasHideout() > 0 || clan.getHasFort() > 0 || clan.getHasCastle() > 0)
+		else if(clan.getHideoutId() > 0 || clan.getFortId() > 0 || clan.getCastleId() > 0)
 			result = "azit_messenger_q0504_10.htm";
 		else
 		{

@@ -196,7 +196,7 @@ public class AdminSiege implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				else if (clanhall.getOwnerId() > 0)
 					activeChar.sendMessage("This ClanHall isn't free!");
-				else if (player.getClan().getHasHideout() == 0)
+				else if (player.getClan().getHideoutId() == 0)
 				{
 					if (!clanhall.isSiegableHall())
 					{
@@ -207,7 +207,7 @@ public class AdminSiege implements IAdminCommandHandler
 					else if (player.getClan() != null)
 					{
 						clanhall.setOwner(player.getClan());
-						player.getClan().setHasHideout(clanhall.getId());
+						player.getClan().setHideoutId(clanhall.getId());
 					}
 				}
 				else
@@ -232,7 +232,7 @@ public class AdminSiege implements IAdminCommandHandler
 					L2Clan clan = ClanTable.getInstance().getClan(oldOwner);
 					if (clan != null)
 					{
-						clan.setHasHideout(0);
+						clan.setHideoutId(0);
 						clan.broadcastClanStatus();
 					}
 				}
