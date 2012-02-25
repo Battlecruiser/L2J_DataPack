@@ -152,7 +152,7 @@ class Quest (JQuest) :
         else:
              st.addExpAndSp(295862, 18194)
         st.giveItems(57, 81900)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
