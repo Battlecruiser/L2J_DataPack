@@ -159,7 +159,7 @@ public class AdminSkill implements IAdminCommandHandler
 		else if (command.equals("admin_remove_all_skills"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if ((target == null) || target.isPlayer())
+			if ((target == null) || !target.isPlayer())
 			{
 				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				return false;
@@ -207,7 +207,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminGiveAllSkills(L2PcInstance activeChar, boolean includedByFs)
 	{
 		final L2Object target = activeChar.getTarget();
-		if ((target == null) || target.isPlayer())
+		if ((target == null) || !target.isPlayer())
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
