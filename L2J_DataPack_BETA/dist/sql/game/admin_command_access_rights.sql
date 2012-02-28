@@ -526,6 +526,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_reset_skills',1,'false'),
 ('admin_give_all_skills',1,'false'),
 ('admin_give_all_skills_fs',1,'false'),
+('admin_give_all_clan_skills,1,'false'),
 ('admin_remove_all_skills',1,'false'),
 ('admin_add_clan_skill',1,'false'),
 ('admin_setskill',1,'false'),
