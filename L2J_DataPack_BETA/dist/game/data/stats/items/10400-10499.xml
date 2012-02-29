@@ -342,7 +342,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10427" type="EtcItem" name="Tully's Platinum Medal">
@@ -707,11 +707,13 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
 				<and>
 					<game skill="false" chance="26" />
 				</and>
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="10444" type="Weapon" name="Icarus Spitter - Guidance">
@@ -1451,7 +1453,9 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<mul order="0x08" stat="MpConsume" val="0.88" />
+			-->
 		</for>
 	</item>
 	<item id="10468" type="Weapon" name="Icarus Shooter - Guidance">
@@ -1603,7 +1607,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="23" />
@@ -1631,7 +1635,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />
@@ -1659,7 +1663,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="21" />
@@ -1687,7 +1691,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="29" />
@@ -1717,7 +1721,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="49" />
@@ -1745,7 +1749,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<cond msgId="1518">
-			<player chaotic="False" />
+			<player chaotic="false" />
 		</cond>
 		<for>
 			<set order="0x08" stat="pAtk" val="24" />

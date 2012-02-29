@@ -40,7 +40,7 @@
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="minute_of_hour" use="optional">
+						<xs:attribute name="minute_of_hour">
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
 									<xs:minInclusive value="0" />

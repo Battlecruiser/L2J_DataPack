@@ -31,7 +31,7 @@
 									<xs:sequence minOccurs="1" maxOccurs="1">
 										<xs:element name="detail" minOccurs="1" maxOccurs="unbounded">
 											<xs:complexType>
-												<xs:attribute name="absorbType" use="optional">
+												<xs:attribute name="absorbType">
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
 															<xs:enumeration value="FULL_PARTY" />
@@ -47,8 +47,8 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="levelList" use="optional" type="xs:normalizedString" />
-												<xs:attribute name="maxLevel" use="optional">
+												<xs:attribute name="levelList" type="xs:normalizedString" />
+												<xs:attribute name="maxLevel">
 													<xs:simpleType>
 														<xs:restriction base="xs:integer">
 															<xs:minInclusive value="1" />
@@ -56,7 +56,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="skill" type="xs:boolean" use="optional" />
+												<xs:attribute name="skill" type="xs:boolean" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

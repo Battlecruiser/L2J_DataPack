@@ -13,7 +13,7 @@
 								</restriction>
 							</simpleType>
 						</attribute>
-						<attribute name="lowestTrustLimit" type="positiveInteger" use="optional" />
+						<attribute name="lowestTrustLimit" type="positiveInteger" />
 						<attribute name="maxHellboundLvl" use="required">
 							<simpleType>
 								<restriction base="positiveInteger">

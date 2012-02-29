@@ -1320,11 +1320,13 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
 				<and>
 					<game skill="false" chance="47" />
 				</and>
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="15862" type="Weapon" name="Gemtail Rapier - Health">
@@ -1633,11 +1635,13 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
 				<and>
 					<game skill="false" chance="47" />
 				</and>
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="15871" type="Weapon" name="Eternal Core Sword - Focus">

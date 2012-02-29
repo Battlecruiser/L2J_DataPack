@@ -403,7 +403,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2365-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10130" type="EtcItem" name="Blessed Scroll of Escape: Fortress">
@@ -418,7 +418,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2364-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10131" type="EtcItem" name="Transformation Scroll: Onyx Beast">
@@ -889,7 +889,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10164" type="EtcItem" name="Animal Slayer's List">
