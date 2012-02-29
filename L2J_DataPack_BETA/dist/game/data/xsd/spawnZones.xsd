@@ -33,7 +33,7 @@
 										<element name="loc" minOccurs="1" maxOccurs="1">
 											<complexType>
 												<attribute name="heading" type="nonNegativeInteger" use="required" />
-												<attribute name="mustKill" type="boolean" use="optional" />
+												<attribute name="mustKill" type="boolean" />
 												<attribute name="x" type="integer" use="required" />
 												<attribute name="y" type="integer" use="required" />
 												<attribute name="z" type="integer" use="required" />
@@ -43,7 +43,7 @@
 											<complexType>
 												<attribute name="count" type="positiveInteger" use="required" />
 												<attribute name="id" type="positiveInteger" use="required" />
-												<attribute name="mustKill" type="boolean" use="optional" />
+												<attribute name="mustKill" type="boolean" />
 											</complexType>
 										</element>
 									</choice>

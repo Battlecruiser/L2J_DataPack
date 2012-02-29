@@ -628,11 +628,13 @@
 			<set order="0x08" stat="rCrit" val="12" />
 			<add order="0x10" stat="accCombat" val="-3.75" />
 			<set order="0x08" stat="pAtkSpd" val="293" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set val="1" order="0x08" stat="MpConsume">
 				<and>
 					<game skill="false" chance="26" />
 				</and>
 			</set>
+			-->
 			<add order="0x40" stat="holyPower" val="250" />
 		</for>
 	</item>
@@ -952,7 +954,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="6649" type="EtcItem" name="Baby Cougar Chime">
@@ -967,7 +969,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="6650" type="EtcItem" name="Baby Kookaburra Ocarina">
@@ -982,7 +984,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="6651" type="EtcItem" name="Noblesse Gate Pass">

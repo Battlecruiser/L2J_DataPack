@@ -478,11 +478,11 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
+				<game skill="false" chance="47" />
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="16015" type="Weapon" name="Recurve Thorne Bow {PvP} - Focus">
@@ -794,11 +794,11 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
+				<game skill="false" chance="47" />
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="16024" type="Weapon" name="Thorne Crossbow {PvP} - Focus">
@@ -2527,11 +2527,11 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
+				<game skill="false" chance="47" />
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="16087" type="Weapon" name="Vesper Thrower - Clairvoyance - Focus">
@@ -2734,11 +2734,11 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
+				<game skill="false" chance="47" />
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="16093" type="Weapon" name="Vesper Shooter - Clairvoyance - Focus">

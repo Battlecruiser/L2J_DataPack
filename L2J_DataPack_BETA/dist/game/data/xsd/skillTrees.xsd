@@ -8,8 +8,8 @@
 						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="skill" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:attribute name="autoGet" type="xs:boolean" use="optional" />
-									<xs:attribute name="getLevel" use="optional">
+									<xs:attribute name="autoGet" type="xs:boolean" />
+									<xs:attribute name="getLevel">
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
@@ -17,17 +17,17 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="itemsIdCount" type="xs:token" use="optional" />
-									<xs:attribute name="learnedByFS" type="xs:boolean" use="optional" />
-									<xs:attribute name="learnedByNpc" type="xs:boolean" use="optional" />
-									<xs:attribute name="levelUpSp" type="xs:nonNegativeInteger" use="optional" />
-									<xs:attribute name="preRequisiteSkillIdLvl" type="xs:token" use="optional" />
-									<xs:attribute name="race" type="xs:token" use="optional" />
-									<xs:attribute name="residenceIds" type="xs:token" use="optional" />
-									<xs:attribute name="residenceSkill" type="xs:boolean" use="optional" />
+									<xs:attribute name="itemsIdCount" type="xs:token" />
+									<xs:attribute name="learnedByFS" type="xs:boolean" />
+									<xs:attribute name="learnedByNpc" type="xs:boolean" />
+									<xs:attribute name="levelUpSp" type="xs:nonNegativeInteger" />
+									<xs:attribute name="preRequisiteSkillIdLvl" type="xs:token" />
+									<xs:attribute name="race" type="xs:token" />
+									<xs:attribute name="residenceIds" type="xs:token" />
+									<xs:attribute name="residenceSkill" type="xs:boolean" />
 									<xs:attribute name="skillIdLvl" type="xs:token" use="required" />
 									<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
-									<xs:attribute name="socialClass" use="optional">
+									<xs:attribute name="socialClass">
 										<xs:simpleType>
 											<xs:restriction base="xs:nonNegativeInteger">
 												<xs:minInclusive value="0" />
@@ -35,11 +35,11 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="subClassLvlNumber" type="xs:token" use="optional" />
+									<xs:attribute name="subClassLvlNumber" type="xs:token" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="classId" use="optional">
+						<xs:attribute name="classId">
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="0" />
@@ -47,7 +47,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="parentClassId" use="optional">
+						<xs:attribute name="parentClassId">
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="0" />

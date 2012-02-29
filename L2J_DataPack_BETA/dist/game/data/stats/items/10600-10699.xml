@@ -115,7 +115,7 @@
 		<set name="item_skill" val="2046-2" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 		<cond>
 			<player clanHall="36, 37, 38, 39, 40, 41, 51, 52, 53, 54, 55, 56, 57" />
@@ -652,7 +652,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10662" type="EtcItem" name="Pet Summon Item - Wizard Use">
@@ -665,7 +665,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10663" type="EtcItem" name="Pet Summon Item - Mixing Use">
@@ -678,7 +678,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10664" type="EtcItem" name="Pet Summon Item - Warrior Pet">
@@ -691,7 +691,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10665" type="EtcItem" name="Pet Summon Item - Warrior Pet">
@@ -704,7 +704,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10666" type="EtcItem" name="Potion of Replenish Vitality">
@@ -1305,11 +1305,11 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<sub order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="30" />
-				</and>
+				<game skill="false" chance="30" />
 			</sub>
+			-->
 		</for>
 	</item>
 	<item id="10686" type="Weapon" name="Shyeed's Bow {PvP} - Focus">

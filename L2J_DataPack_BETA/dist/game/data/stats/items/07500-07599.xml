@@ -605,7 +605,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7555" type="EtcItem" name="Scroll of Escape: Elven Village">
@@ -619,7 +619,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-2" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7556" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
@@ -633,7 +633,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-3" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7557" type="EtcItem" name="Scroll of Escape: Orc Village">
@@ -647,7 +647,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-4" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7558" type="EtcItem" name="Scroll of Escape: Dwarven Village">
@@ -661,7 +661,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-5" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7559" type="EtcItem" name="Scroll of Escape: Town of Giran">
@@ -675,7 +675,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-10" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="7560" type="Weapon" name="Monster Only (Fishing Rod)">
@@ -912,11 +912,13 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
 				<and>
 					<game skill="false" chance="26" />
 				</and>
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="7577" type="Weapon" name="Draconic Bow - Focus">

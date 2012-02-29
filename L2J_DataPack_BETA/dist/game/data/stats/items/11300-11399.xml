@@ -327,7 +327,9 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<mul order="0x08" stat="MpConsume" val="0.88" />
+			-->
 		</for>
 	</item>
 	<item id="11311" type="Weapon" name="Icarus Shooter - Concentration - Guidance">
@@ -712,11 +714,13 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<set order="0x08" stat="MpConsume" val="1">
 				<and>
 					<game skill="false" chance="26" />
 				</and>
 			</set>
+			-->
 		</for>
 	</item>
 	<item id="11323" type="Weapon" name="Icarus Spitter - Concentration - Guidance">

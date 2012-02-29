@@ -396,11 +396,11 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<sub order="0x08" stat="MpConsume" val="2">
-				<and>
-					<game skill="false" chance="42" />
-				</and>
+				<game skill="false" chance="42" />
 			</sub>
+			-->
 		</for>
 	</item>
 	<item id="11013" type="Weapon" name="Hell Hound - Earth">
@@ -533,7 +533,9 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
+			<!-- FIXME: Duplicated with "reduced_mp_consume"
 			<mul order="0x08" stat="MpConsume" val="0.88" />
+			-->
 		</for>
 	</item>
 	<item id="11017" type="Weapon" name="Dasparion's Staff - Hail">
