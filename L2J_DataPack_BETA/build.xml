@@ -47,9 +47,6 @@
 	</target>
 
 	<target name="clean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
-		<exec dir="." executable="svn">
-			<arg value="upgrade" />
-		</exec>
 		<delete file="${build}/L2J_DataPack_BETA.zip" />
 	</target>
 
