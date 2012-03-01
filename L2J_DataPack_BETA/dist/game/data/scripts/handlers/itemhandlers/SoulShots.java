@@ -20,10 +20,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.util.Rnd;
 
 public class SoulShots implements IItemHandler
 {
@@ -113,8 +113,11 @@ public class SoulShots implements IItemHandler
 			}
 			
 			// Consume Soul shots if player has enough of them
-			final int saSSCount = (int) activeChar.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
-			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
+			int SSCount = weaponItem.getSoulShotCount();
+			if (weaponItem.getReducedSoulShot() > 0 && Rnd.get(100) < weaponItem.getReducedSoulShotChance())
+			{
+				SSCount = weaponItem.getReducedSoulShot();
+			}
 			
 			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
