@@ -1245,9 +1245,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<mul order="0x08" stat="MpConsume" val="0.92" />
-			-->
 		</for>
 	</item>
 	<item id="14149" type="Weapon" name="Vesper Thrower - Focus">
@@ -1450,13 +1447,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="true" chance="12" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="14155" type="Weapon" name="Vesper Shooter - Focus">

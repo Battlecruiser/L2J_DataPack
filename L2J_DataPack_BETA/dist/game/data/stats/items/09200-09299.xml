@@ -1743,13 +1743,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="4">
-				<and>
-					<game chance="40" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="9259" type="Weapon" name="Ballista - Quick Recovery">
@@ -1880,13 +1873,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="4">
-				<and>
-					<game chance="40" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="9263" type="Weapon" name="Ballista - Cheap Shot">
@@ -1920,9 +1906,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<mul order="0x08" stat="MpConsume" val="0.88" />
-			-->
 		</for>
 	</item>
 	<item id="9264" type="Weapon" name="Blinzlasher">
@@ -2838,13 +2821,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="4">
-				<and>
-					<game chance="32" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="9292" type="Weapon" name="Admiral's Estoc">
