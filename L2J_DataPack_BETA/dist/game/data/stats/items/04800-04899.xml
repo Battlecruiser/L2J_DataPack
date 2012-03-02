@@ -432,11 +432,6 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="7">
-				<game chance="59" />
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4815" type="Weapon" name="Elemental Bow - Quick Recovery">
@@ -529,13 +524,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="7">
-				<and>
-					<game chance="59" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4818" type="Weapon" name="Noble Elven Bow - Cheap Shot">
@@ -567,13 +555,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4819" type="Weapon" name="Akat Long Bow - Guidance">
@@ -667,13 +648,6 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="8">
-				<and>
-					<game chance="60" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4822" type="Weapon" name="Eminence Bow - Guidance">
@@ -736,13 +710,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="9">
-				<and>
-					<game chance="61" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4824" type="Weapon" name="Eminence Bow - Cheap Shot">
@@ -774,13 +741,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="42" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4825" type="Weapon" name="Dark Elven Long Bow - Evasion">
@@ -875,13 +835,6 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_soulshot"
-			<set order="0x08" stat="soulShotCount" val="2">
-				<and>
-					<game chance="19" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4828" type="Weapon" name="Bow of Peril - Guidance">
@@ -974,13 +927,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<!-- FIXME: Duplicated with "reduced_mp_consume"
-			<set order="0x08" stat="MpConsume" val="2">
-				<and>
-					<game skill="false" chance="42" />
-				</and>
-			</set>
-			-->
 		</for>
 	</item>
 	<item id="4831" type="Weapon" name="Carnage Bow - Critical Bleed">
