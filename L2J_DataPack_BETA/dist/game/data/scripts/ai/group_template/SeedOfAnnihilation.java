@@ -33,6 +33,9 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * @author Gigiikun
+ */
 public class SeedOfAnnihilation extends Quest
 {
 	final private static String qn = "SeedOfAnnihilation";

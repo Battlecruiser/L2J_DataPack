@@ -41,10 +41,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * @author Gigiikun
+ */
 public class EnergySeeds extends L2AttackableAIScript
 {
 	private static final String qn = "EnergySeeds";
-	private static final String HOWTOOPPOSEEVIL = "Q692_HowtoOpposeEvil";
+	private static final String HOWTOOPPOSEEVIL = "692_HowtoOpposeEvil";
 	private static final int HOWTOOPPOSEEVIL_CHANCE = 60;
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;

@@ -28,6 +28,9 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 
+/**
+ * @author Gnacik
+ */
 public class GiantScouts extends L2AttackableAIScript
 {
 	final private static int _scouts[] = { 22668, 22669 };
