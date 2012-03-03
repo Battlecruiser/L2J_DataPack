@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Dumpster Updated by corbin12 Thanks VLight for help.
@@ -137,7 +136,7 @@ public class Q252_ItSmellsDelicious extends Quest
 	{
 		final int npcId = npc.getNpcId();
 		QuestState st;
-		if (Util.contains(MOBS, npcId) && (Rnd.get(1000) < 599))
+		if (Util.contains(MOBS, npcId) && (getRandom(1000) < 599))
 		{
 			st = getRandomPartyMemberQuestState(player);
 			if (st != null)
@@ -155,7 +154,7 @@ public class Q252_ItSmellsDelicious extends Quest
 		else if (npcId == CHEF)
 		{
 			st = player.getQuestState(qn);
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (Rnd.get(1000) < 360))
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (getRandom(1000) < 360))
 			{
 				st.giveItems(MAHUM_COOKBOOK, 1);
 				st.playSound("ItemSound.quest_itemget");
@@ -213,7 +212,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			}
 			candidates.add(st);
 		}
-		return candidates.isEmpty() ? null : candidates.get(Rnd.get(candidates.size()));
+		return candidates.isEmpty() ? null : candidates.get(getRandom(candidates.size()));
 	}
 	
 	public static void main(String[] args)

@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author DS, GKR
@@ -182,7 +181,7 @@ public class Quarry extends Quest
 				{
 					for (int[] i : DROPLIST)
 					{
-						if (Rnd.get(10000) < i[1])
+						if (getRandom(10000) < i[1])
 						{
 							((L2Attackable) _npc).dropItem((L2PcInstance) _npc.getTarget(), i[0], (int) Config.RATE_DROP_ITEMS);
 							break;

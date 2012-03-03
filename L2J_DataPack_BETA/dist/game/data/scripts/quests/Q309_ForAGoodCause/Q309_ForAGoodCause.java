@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * For A Good Cause (309)
@@ -99,7 +98,7 @@ public class Q309_ForAGoodCause extends Quest
 		}
 		else if (event.equalsIgnoreCase("receivepieces"))
 		{
-			htmltext = onPiecesExchangeRequest(st, MOIRAI_PIECES[Rnd.get(MOIRAI_PIECES.length-1)], 100);
+			htmltext = onPiecesExchangeRequest(st, MOIRAI_PIECES[getRandom(MOIRAI_PIECES.length-1)], 100);
 		}
 		else if(Util.isDigit(event))
 		{
@@ -242,19 +241,19 @@ public class Q309_ForAGoodCause extends Quest
 		if(st.getInt("cond") == 1)
 		{
 			if (Util.contains(MUCROKIANS,npc.getNpcId()))
-				if (st.getRandom(100) < MUCROKIAN_HIDE_CHANCE)
+				if (getRandom(100) < MUCROKIAN_HIDE_CHANCE)
 				{
 					st.giveItems(MUCROKIAN_HIDE,1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			else if (npc.getNpcId()==CHANGED_MUCROKIAN)
-				if (st.getRandom(100) < FALLEN_HIDE_CHANCE)
+				if (getRandom(100) < FALLEN_HIDE_CHANCE)
 				{
 					st.giveItems(FALLEN_MUCROKIAN_HIDE,1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			else if (npc.getNpcId()==CONTAMINATED_MUCROKIAN)
-				if (st.getRandom(100) < 10)
+				if (getRandom(100) < 10)
 				{
 					st.giveItems(MUCROKIAN_HIDE,1);
 					st.playSound("ItemSound.quest_itemget");
@@ -267,7 +266,7 @@ public class Q309_ForAGoodCause extends Quest
 	{
 		if (st.getQuestItemsCount(MUCROKIAN_HIDE) >= event)
 		{
-			st.giveItems(pieces,Rnd.get(1,4));
+			st.giveItems(pieces, getRandom(1, 4));
 			st.takeItems(MUCROKIAN_HIDE,event);
 			st.playSound("ItemSound.quest_finish");
 			return "32647-16.htm";

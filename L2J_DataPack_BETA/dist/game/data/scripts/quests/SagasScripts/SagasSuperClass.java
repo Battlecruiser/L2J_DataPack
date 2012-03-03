@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.L2FastList;
 import com.l2jserver.util.L2FastMap;
-import com.l2jserver.util.Rnd;
 
 public class SagasSuperClass extends QuestJython
 {
@@ -146,7 +145,7 @@ public class SagasSuperClass extends QuestJython
 				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
 			}
 			else
-				st2.giveItems(Items[3], Rnd.get(1, 4));
+				st2.giveItems(Items[3], getRandom(1, 4));
 		}
 	}
 	
@@ -469,7 +468,7 @@ public class SagasSuperClass extends QuestJython
 				if (st.getInt("Quest0") == 0)
 				{
 					st.startQuestTimer("Mob_2 Timer 3", 13000, npc);
-					if (st.getRandom(2) == 0)
+					if (getRandom(2) == 0)
 						AutoChat(npc, Text[9].replace("PLAYERNAME", player.getName()));
 					else
 						AutoChat(npc, Text[10].replace("PLAYERNAME", player.getName()));
@@ -823,7 +822,7 @@ public class SagasSuperClass extends QuestJython
 					}
 					if (PartyQuestMembers.size() > 0)
 					{
-						QuestState st2 = PartyQuestMembers.get(Rnd.get(PartyQuestMembers.size()));
+						QuestState st2 = PartyQuestMembers.get(getRandom(PartyQuestMembers.size()));
 						giveHallishaMark(st2);
 					}
 				}

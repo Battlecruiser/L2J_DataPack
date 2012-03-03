@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 public class Q251_NoSecrets extends Quest
 {
@@ -122,7 +121,7 @@ public class Q251_NoSecrets extends Quest
 			return null;
 		if (st.getInt("cond") == 1)
 		{
-			if ((Util.contains(MOBS, npcId)) && (Rnd.get(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
+			if ((Util.contains(MOBS, npcId)) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
 			{
 				st.giveItems(DIARY, 1);
 				st.playSound("ItemSound.quest_itemget");
@@ -132,7 +131,7 @@ public class Q251_NoSecrets extends Quest
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
-			else if ((Util.contains(MOBS2, npcId)) && (Rnd.get(100) < 5) &&(st.getQuestItemsCount(TABLE) < 5))
+			else if ((Util.contains(MOBS2, npcId)) && (getRandom(100) < 5) &&(st.getQuestItemsCount(TABLE) < 5))
 			{
 				st.giveItems(TABLE, 1);
 				st.playSound("ItemSound.quest_itemget");

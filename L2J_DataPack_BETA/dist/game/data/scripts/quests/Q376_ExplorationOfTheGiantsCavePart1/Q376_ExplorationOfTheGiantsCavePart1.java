@@ -175,7 +175,7 @@ public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && (st.getRandom(100) < DROP_CHANCE))
+		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE))
 		{
 			st.giveItems(ANCIENT_PARCHMENT, 1);
 			st.playSound("ItemSound.quest_itemget");

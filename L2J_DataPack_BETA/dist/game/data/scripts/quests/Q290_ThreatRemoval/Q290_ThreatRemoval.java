@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 public class Q290_ThreatRemoval extends Quest
 {
@@ -72,8 +71,8 @@ public class Q290_ThreatRemoval extends Quest
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 			return htmltext;
-		int[][] i = REWARD[Rnd.get(REWARD.length)];
-		int b = Rnd.get(i.length);
+		int[][] i = REWARD[getRandom(REWARD.length)];
+		int b = getRandom(i.length);
 
 		if (npc.getNpcId() == PINAPS)
 		{
@@ -149,7 +148,7 @@ public class Q290_ThreatRemoval extends Quest
 			int chance = (int) (25 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (st.getRandom(100) < chance)
+			if (getRandom(100) < chance)
 				numItems++;
 			if (numItems > 0)
 			{
@@ -162,7 +161,7 @@ public class Q290_ThreatRemoval extends Quest
 			int chance = (int) (30 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (st.getRandom(100) < chance)
+			if (getRandom(100) < chance)
 				numItems++;
 			if (numItems > 0)
 			{
@@ -175,7 +174,7 @@ public class Q290_ThreatRemoval extends Quest
 			int chance = (int) (50 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (st.getRandom(100) < chance)
+			if (getRandom(100) < chance)
 				numItems++;
 			if (numItems > 0)
 			{

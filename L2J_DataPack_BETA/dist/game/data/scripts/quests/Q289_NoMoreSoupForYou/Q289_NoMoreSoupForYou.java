@@ -144,8 +144,8 @@ public class Q289_NoMoreSoupForYou extends Quest
 		{
 			return htmltext;
 		}
-		int b = st.getRandom(18);
-		int c = st.getRandom(7);
+		int b = getRandom(18);
+		int c = getRandom(7);
 		
 		if (npc.getNpcId() == STAN)
 		{

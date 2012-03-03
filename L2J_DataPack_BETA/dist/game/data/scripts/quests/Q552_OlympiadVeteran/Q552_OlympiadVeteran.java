@@ -22,11 +22,15 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author lion 2011-02-05 Based on official H5 PTS server and 551 quest ;)
- *         improved by jurchiks on Nov. 5, 2011
+ * Based on official H5 PTS server and 551 quest ;)
+ * @since Nov. 5, 2011, improved by jurchiks.
+ * @version 2011-02-05
+ * @author lion
  */
 public class Q552_OlympiadVeteran extends Quest
 {
+	private static final String qn = "552_OlympiadVeteran";
+	
 	private static final int MANAGER = 31688;
 	
 	private static final int Team_Event_Certificate = 17241;
@@ -35,22 +39,29 @@ public class Q552_OlympiadVeteran extends Quest
 	
 	private static final int OLY_CHEST = 17169;
 	
-	public Q552_OlympiadVeteran(final int questId, final String name, final String descr)
+	public Q552_OlympiadVeteran(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
-		questItemIds = new int[] { Team_Event_Certificate, Class_Free_Battle_Certificate, Class_Battle_Certificate };
+		questItemIds = new int[]
+		{
+			Team_Event_Certificate,
+			Class_Free_Battle_Certificate,
+			Class_Battle_Certificate
+		};
 		setOlympiadUse(true);
 	}
 	
 	@Override
-	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
-			return super.getNoQuestMsg(player);
+		{
+			return getNoQuestMsg(player);
+		}
 		String htmltext = event;
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
@@ -70,25 +81,35 @@ public class Q552_OlympiadVeteran extends Quest
 				st.exitQuest(false);
 			}
 			else
-				htmltext = super.getNoQuestMsg(player); // missing items
+			{
+				htmltext = getNoQuestMsg(player); // missing items
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(final L2Npc npc, final L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = super.getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
-		if (player.getLevel() < 75 || !player.isNoble())
+		if ((player.getLevel() < 75) || !player.isNoble())
+		{
 			htmltext = "31688-00.htm";
+		}
 		else if (st.isCreated())
+		{
 			htmltext = "31688-01.htm";
+		}
 		else if (st.isCompleted())
+		{
 			htmltext = "31688-05.html";
+		}
 		else if (st.isStarted())
 		{
 			final long count = st.getQuestItemsCount(Team_Event_Certificate) + st.getQuestItemsCount(Class_Free_Battle_Certificate) + st.getQuestItemsCount(Class_Battle_Certificate);
@@ -101,18 +122,20 @@ public class Q552_OlympiadVeteran extends Quest
 				st.exitQuest(false);
 			}
 			else
+			{
 				htmltext = "31688-s" + count + ".html";
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public void onOlympiadWin(final L2PcInstance winner, final CompetitionType type)
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
 	{
 		if (winner != null)
 		{
 			final QuestState st = winner.getQuestState(getName());
-			if (st != null && st.isStarted())
+			if ((st != null) && st.isStarted())
 			{
 				int matches;
 				switch (type)
@@ -121,24 +144,30 @@ public class Q552_OlympiadVeteran extends Quest
 					{
 						matches = st.getInt("classed") + 1;
 						st.set("classed", String.valueOf(matches));
-						if (matches == 5 && !st.hasQuestItems(Class_Battle_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(Class_Battle_Certificate))
+						{
 							st.giveItems(Class_Battle_Certificate, 1);
+						}
 						break;
 					}
 					case NON_CLASSED:
 					{
 						matches = st.getInt("nonclassed") + 1;
 						st.set("nonclassed", String.valueOf(matches));
-						if (matches == 5 && !st.hasQuestItems(Class_Free_Battle_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(Class_Free_Battle_Certificate))
+						{
 							st.giveItems(Class_Free_Battle_Certificate, 1);
+						}
 						break;
 					}
 					case TEAMS:
 					{
 						matches = st.getInt("teams") + 1;
 						st.set("teams", String.valueOf(matches));
-						if (matches == 5 && !st.hasQuestItems(Team_Event_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(Team_Event_Certificate))
+						{
 							st.giveItems(Team_Event_Certificate, 1);
+						}
 						break;
 					}
 				}
@@ -147,12 +176,12 @@ public class Q552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLoose(final L2PcInstance looser, final CompetitionType type)
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		if (looser != null)
+		if (loser != null)
 		{
-			final QuestState st = looser.getQuestState(getName());
-			if (st != null && st.isStarted())
+			final QuestState st = loser.getQuestState(getName());
+			if ((st != null) && st.isStarted())
 			{
 				int matches;
 				switch (type)
@@ -162,7 +191,9 @@ public class Q552_OlympiadVeteran extends Quest
 						matches = st.getInt("classed") + 1;
 						st.set("classed", String.valueOf(matches));
 						if (matches == 5)
+						{
 							st.giveItems(Class_Battle_Certificate, 1);
+						}
 						break;
 					}
 					case NON_CLASSED:
@@ -170,7 +201,9 @@ public class Q552_OlympiadVeteran extends Quest
 						matches = st.getInt("nonclassed") + 1;
 						st.set("nonclassed", String.valueOf(matches));
 						if (matches == 5)
+						{
 							st.giveItems(Class_Free_Battle_Certificate, 1);
+						}
 						break;
 					}
 					case TEAMS:
@@ -178,7 +211,9 @@ public class Q552_OlympiadVeteran extends Quest
 						matches = st.getInt("teams") + 1;
 						st.set("teams", String.valueOf(matches));
 						if (matches == 5)
+						{
 							st.giveItems(Team_Event_Certificate, 1);
+						}
 						break;
 					}
 				}
@@ -186,8 +221,8 @@ public class Q552_OlympiadVeteran extends Quest
 		}
 	}
 	
-	public static void main(final String[] args)
+	public static void main(String[] args)
 	{
-		new Q552_OlympiadVeteran(552, "552_OlympiadVeteran", "Olympiad Veteran");
+		new Q552_OlympiadVeteran(552, qn, "Olympiad Veteran");
 	}
 }

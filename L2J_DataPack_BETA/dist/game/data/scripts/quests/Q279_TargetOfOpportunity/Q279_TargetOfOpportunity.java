@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -120,7 +119,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 		}
 		
 		final QuestState st = pl.getQuestState(qn);
-		if (Rnd.get(1000) < (int) (311 * Config.RATE_QUEST_DROP))
+		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
 			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
 			{

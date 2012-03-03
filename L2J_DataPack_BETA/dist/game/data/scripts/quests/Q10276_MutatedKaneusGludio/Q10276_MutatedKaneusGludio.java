@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Mutated Kaneus - Gludio (10276).<br>
@@ -140,7 +139,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			
 			if (!PartyMembers.isEmpty())
 			{
-				rewardItem(npcId, PartyMembers.get(Rnd.get(PartyMembers.size())));
+				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
 		}
 		else

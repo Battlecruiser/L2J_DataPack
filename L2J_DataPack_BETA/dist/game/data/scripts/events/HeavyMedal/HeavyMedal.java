@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.util.Rnd;
 
 /**
  * Retail Event : 'Heavy Medals'
@@ -168,7 +167,7 @@ public class HeavyMedal extends Quest
 			{
 				st.takeItems(GLITTERING_MEDAL, MEDALS[level]);
 				
-				if (Rnd.get(100) > WIN_CHANCE)
+				if (getRandom(100) > WIN_CHANCE)
 				{
 					level = 0;
 				}

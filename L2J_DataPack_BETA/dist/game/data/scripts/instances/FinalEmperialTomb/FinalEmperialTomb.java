@@ -70,7 +70,6 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /*
 TODO:
@@ -550,7 +549,7 @@ public class FinalEmperialTomb extends Quest
 							if (_spawnZoneList.contains(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
-								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3], null), Rnd.get(65535), spw.isNeededNextFlag);
+								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3], null), getRandom(65535), spw.isNeededNextFlag);
 							}
 							else
 								_log.info("[Final Emperial Tomb] Missing zone: " + spw.zone);
@@ -712,7 +711,7 @@ public class FinalEmperialTomb extends Quest
 						_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), 1000);
 					else if (_world.frintezza != null && !_world.frintezza.isDead())
 					{
-						int rnd = Rnd.get(100);
+						int rnd = getRandom(100);
 						for (int i = 0; i < FRINTEZZASONGLIST.length; i++)
 						{
 							if (rnd < FRINTEZZASONGLIST[i].chance)
@@ -1152,7 +1151,7 @@ public class FinalEmperialTomb extends Quest
 		
 		private void addAggroToMobs()
 		{
-			L2PcInstance target = L2World.getInstance().getPlayer(_world.allowed.get(Rnd.get(_world.allowed.size())));
+			L2PcInstance target = L2World.getInstance().getPlayer(_world.allowed.get(getRandom(_world.allowed.size())));
 			if (target == null || target.getInstanceId() != _world.instanceId || target.isDead() || target.isFakeDeath())
 				for (int objId : _world.allowed)
 				{
@@ -1300,8 +1299,8 @@ public class FinalEmperialTomb extends Quest
 		}
 		else if (npc.getNpcId() == CUBE)
 		{
-			int x = -87534 + Rnd.get(500);
-			int y = -153048 + Rnd.get(500);
+			int x = -87534 + getRandom(500);
+			int y = -153048 + getRandom(500);
 			player.teleToLocation(x, y, -9165);
 			return null;
 		}

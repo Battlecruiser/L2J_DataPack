@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Gnacik
@@ -36,7 +35,7 @@ public class PavelArchaic extends L2AttackableAIScript
 		{
 			npc.doDie(attacker);
 			
-			if (Rnd.get(100) < 40)
+			if (getRandom(100) < 40)
 			{
 				L2Attackable _golem1 = (L2Attackable) addSpawn(22801, npc.getLocation(), false, 0);
 				attackPlayer(_golem1, attacker);

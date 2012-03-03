@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Home Security (278)
@@ -59,7 +58,7 @@ public class Q278_HomeSecurity extends Quest
 		}
 		else if (event.equalsIgnoreCase("31537-07.html"))
 		{
-			int i0 = Rnd.get(100);
+			int i0 = getRandom(100);
 			
 			if (i0 < 10)
 			{
@@ -169,7 +168,7 @@ public class Q278_HomeSecurity extends Quest
 			{
 				case 18907: // Beast Devourer
 				case 18906: // Farm Bandit
-					chance = Rnd.get(1000);
+					chance = getRandom(1000);
 					if (chance < 85)
 					{
 						st.giveItems(SelMahumMane, 1);
@@ -185,10 +184,10 @@ public class Q278_HomeSecurity extends Quest
 					}
 					break;
 				case 18905: // Farm Ravager (Crazy)
-					chance = Rnd.get(1000);
+					chance = getRandom(1000);
 					if (chance < 486)
 					{
-						i1 = Rnd.get(6) + 1;
+						i1 = getRandom(6) + 1;
 						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
 						{
 							st.set("cond", "2");
@@ -203,7 +202,7 @@ public class Q278_HomeSecurity extends Quest
 					}
 					else
 					{
-						i1 = (Rnd.get(5) + 1);
+						i1 = (getRandom(5) + 1);
 						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
 						{
 							st.set("cond", "2");

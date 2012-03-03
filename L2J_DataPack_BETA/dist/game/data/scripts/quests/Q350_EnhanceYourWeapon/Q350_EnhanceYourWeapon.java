@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 public class Q350_EnhanceYourWeapon extends Quest
 {
@@ -462,7 +461,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 				// among those who have crystals, only.	However, this might actually be correct (same as retail).
 				if (killer.getParty() != null)
 				{
-					L2PcInstance lucky = killer.getParty().getPartyMembers().get(Rnd.get(killer.getParty().getMemberCount()));
+					L2PcInstance lucky = killer.getParty().getPartyMembers().get(getRandom(killer.getParty().getMemberCount()));
 					tryToLevelCrystal(lucky, players.get(lucky), mob);
 				}
 				else
@@ -473,15 +472,15 @@ public class Q350_EnhanceYourWeapon extends Quest
 				{
 					FastList<L2PcInstance> luckyParty = FastList.newInstance();
 					luckyParty.addAll(killer.getParty().getPartyMembers());
-					while (Rnd.get(100) < 33 && !luckyParty.isEmpty())
+					while (getRandom(100) < 33 && !luckyParty.isEmpty())
 					{
-						L2PcInstance lucky = luckyParty.remove(Rnd.get(luckyParty.size()));
+						L2PcInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
 						if (players.containsKey(lucky))
 							tryToLevelCrystal(lucky, players.get(lucky), mob);
 					}
 					FastList.recycle(luckyParty);
 				}
-				else if (Rnd.get(100) < 33)
+				else if (getRandom(100) < 33)
 					tryToLevelCrystal(killer, players.get(killer), mob);
 				break;
 			case FULL_PARTY:
@@ -541,7 +540,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			return;
 		}
 		
-		if (Rnd.get(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
+		if (getRandom(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
 			exchangeCrystal(player, mob, sc.getItemId(), sc.getLeveledItemId(), false);
 		else
 			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);

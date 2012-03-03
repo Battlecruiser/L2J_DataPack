@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 public class Kamaloka extends Quest
 {
@@ -696,7 +695,7 @@ public class Kamaloka extends Quest
 		if (npcs != null)
 		{
 			world.firstRoom = new ArrayList<L2Spawn>(spawns.length - 1);
-			int shaman = Rnd.get(spawns.length); // random position for shaman
+			int shaman = getRandom(spawns.length); // random position for shaman
 			
 			for (int i = 0; i < spawns.length; i++)
 			{

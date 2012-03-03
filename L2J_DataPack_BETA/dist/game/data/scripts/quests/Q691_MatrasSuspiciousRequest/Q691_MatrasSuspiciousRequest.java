@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -175,7 +174,7 @@ public final class Q691_MatrasSuspiciousRequest extends Quest
 		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
 		int numItems = Math.max((chance / 1000), 1);
 		chance = chance % 1000;
-		if (Rnd.get(1000) <= chance)
+		if (getRandom(1000) <= chance)
 		{
 			st.giveItems(RED_GEM, numItems);
 			st.playSound("ItemSound.quest_itemget");

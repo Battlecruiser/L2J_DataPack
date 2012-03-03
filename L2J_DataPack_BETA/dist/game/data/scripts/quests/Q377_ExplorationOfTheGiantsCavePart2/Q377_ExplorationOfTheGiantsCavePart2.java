@@ -148,7 +148,7 @@ public class Q377_ExplorationOfTheGiantsCavePart2 extends Quest
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && (st.getRandom(100) < DROP_CHANCE))
+		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE))
 		{
 			st.giveItems(TITAN_ANCIENT_BOOK, 1);
 			st.playSound("ItemSound.quest_itemget");

@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 public class PrisonGuards extends L2AttackableAIScript
 {
@@ -204,7 +203,7 @@ public class PrisonGuards extends L2AttackableAIScript
 			((L2Attackable) npc).addDamageHate(attacker, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 		}
-		else if (npc.getNpcId() == GUARD1 && Rnd.get(100) < 5)
+		else if (npc.getNpcId() == GUARD1 && getRandom(100) < 5)
 		{
 			if (player.getQuestState(qn) != null && player.getQuestState(qn).getInt(GUARDVARS[_guards.get(npc)]) != 1)
 			{
