@@ -28,6 +28,9 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * @author Gnacik
+ */
 public class StakatoNest extends L2AttackableAIScript
 {
 	// List of all mobs just for register

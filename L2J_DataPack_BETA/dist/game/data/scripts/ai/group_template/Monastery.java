@@ -35,6 +35,9 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * @author Kerberos
+ */
 public class Monastery extends L2AttackableAIScript
 {
 	private static final int[] mobs1 =

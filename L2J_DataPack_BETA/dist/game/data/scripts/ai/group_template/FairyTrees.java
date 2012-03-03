@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * @author Charus
+ */
 public class FairyTrees extends L2AttackableAIScript
 {
 	private static final int[] mobs =

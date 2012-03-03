@@ -23,7 +23,8 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 
 /**
- * Manages spawn of NPC's, having several random spawn points 
+ * Manages spawn of NPC's, having several random spawn points.
+ * @author GKR
  */
 public class RandomSpawn extends L2AttackableAIScript
 {

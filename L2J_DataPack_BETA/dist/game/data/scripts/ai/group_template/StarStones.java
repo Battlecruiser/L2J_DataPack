@@ -22,22 +22,23 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * @author Gigiikun
+ */
 public class StarStones extends L2AttackableAIScript
 {
-	//@formatter:off
 	private static final int[] mobs =
 	{
-		18684, 
-		18685, 
-		18686, 
-		18687, 
-		18688, 
-		18689, 
-		18690, 
-		18691, 
+		18684,
+		18685,
+		18686,
+		18687,
+		18688,
+		18689,
+		18690,
+		18691,
 		18692
 	};
-	//@formatter:on
 	
 	private static final int RATE = 1;
 	
@@ -50,7 +51,7 @@ public class StarStones extends L2AttackableAIScript
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (Util.contains(targets, npc) && skill.getId() == 932)
+		if (Util.contains(targets, npc) && (skill.getId() == 932))
 		{
 			int itemId = 0;
 			
@@ -83,13 +84,15 @@ public class StarStones extends L2AttackableAIScript
 				caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
 				caster.addItem("StarStone", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
 			}
-			else if ((skill.getLevel() == 1 && Rnd.get(100) < 15) || (skill.getLevel() == 2 && Rnd.get(100) < 50) || (skill.getLevel() == 3 && Rnd.get(100) < 75))
+			else if (((skill.getLevel() == 1) && (Rnd.get(100) < 15)) || ((skill.getLevel() == 2) && (Rnd.get(100) < 50)) || ((skill.getLevel() == 3) && (Rnd.get(100) < 75)))
 			{
 				caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
 				caster.addItem("StarStone", itemId, Rnd.get(1, RATE), null, true);
 			}
 			else
+			{
 				caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_FAILED);
+			}
 			npc.deleteMe();
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);

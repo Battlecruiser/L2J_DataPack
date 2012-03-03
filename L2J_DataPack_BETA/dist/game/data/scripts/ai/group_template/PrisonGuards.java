@@ -29,6 +29,9 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
+/**
+ * @author Gigiikun
+ */
 public class PrisonGuards extends L2AttackableAIScript
 {
 	final private static int GUARD1 = 18367;

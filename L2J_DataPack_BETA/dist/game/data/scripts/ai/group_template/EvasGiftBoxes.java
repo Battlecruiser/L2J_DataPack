@@ -19,6 +19,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
+/**
+ * @author Gigiikun
+ */
 public class EvasGiftBoxes extends Quest
 {
 	final private static int GIFTBOX = 32342;

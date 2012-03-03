@@ -26,6 +26,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
+/**
+ * Based on work of Slyce.
+ * @author Sandro
+ */
 public class SummonMinions extends L2AttackableAIScript
 {
 	private static int HasSpawned;
@@ -35,26 +39,100 @@ public class SummonMinions extends L2AttackableAIScript
 	
 	static
 	{
-		//@formatter:off
-		MINIONS.put(20767,new int[]{20768,20769,20770}); //Timak Orc Troop
-		//MINIONS.put(22030,new Integer[]{22045,22047,22048}); //Ragna Orc Shaman
-		//MINIONS.put(22032,new Integer[]{22036}); //Ragna Orc Warrior - summons shaman but not 22030 ><
-		//MINIONS.put(22038,new Integer[]{22037}); //Ragna Orc Hero
-		MINIONS.put(21524,new int[]{21525}); //Blade of Splendor
-		MINIONS.put(21531,new int[]{21658}); //Punishment of Splendor
-		MINIONS.put(21539,new int[]{21540}); //Wailing of Splendor
-		MINIONS.put(22257,new int[]{18364,18364}); //Island Guardian
-		MINIONS.put(22258,new int[]{18364,18364}); //White Sand Mirage
-		MINIONS.put(22259,new int[]{18364,18364}); //Muddy Coral
-		MINIONS.put(22260,new int[]{18364,18364}); //Kleopora
-		MINIONS.put(22261,new int[]{18365,18365}); //Seychelles
-		MINIONS.put(22262,new int[]{18365,18365}); //Naiad
-		MINIONS.put(22263,new int[]{18365,18365}); //Sonneratia
-		MINIONS.put(22264,new int[]{18366,18366}); //Castalia
-		MINIONS.put(22265,new int[]{18366,18366}); //Chrysocolla
-		MINIONS.put(22266,new int[]{18366,18366}); //Pythia
-		MINIONS.put(22774,new int[]{22768,22768}); // Tanta Lizardman Summoner
-		//@formatter:on
+		// Timak Orc Troop
+		MINIONS.put(20767, new int[]
+		{
+			20768,
+			20769,
+			20770
+		});
+		// Ragna Orc Shaman
+		// MINIONS.put(22030,new Integer[]{22045,22047,22048});
+		// Ragna Orc Warrior - summons shaman but not 22030 ><
+		// MINIONS.put(22032,new Integer[]{22036});
+		// Ragna Orc Hero
+		// MINIONS.put(22038,new Integer[]{22037});
+		// Blade of Splendor
+		MINIONS.put(21524, new int[]
+		{
+			21525
+		});
+		// Punishment of Splendor
+		MINIONS.put(21531, new int[]
+		{
+			21658
+		});
+		// Wailing of Splendor
+		MINIONS.put(21539, new int[]
+		{
+			21540
+		});
+		// Island Guardian
+		MINIONS.put(22257, new int[]
+		{
+			18364,
+			18364
+		});
+		// White Sand Mirage
+		MINIONS.put(22258, new int[]
+		{
+			18364,
+			18364
+		});
+		// Muddy Coral
+		MINIONS.put(22259, new int[]
+		{
+			18364,
+			18364
+		});
+		// Kleopora
+		MINIONS.put(22260, new int[]
+		{
+			18364,
+			18364
+		});
+		// Seychelles
+		MINIONS.put(22261, new int[]
+		{
+			18365,
+			18365
+		});
+		// Naiad
+		MINIONS.put(22262, new int[]
+		{
+			18365,
+			18365
+		});
+		// Sonneratia
+		MINIONS.put(22263, new int[]
+		{
+			18365,
+			18365
+		});
+		// Castalia
+		MINIONS.put(22264, new int[]
+		{
+			18366,
+			18366
+		});
+		// Chrysocolla
+		MINIONS.put(22265, new int[]
+		{
+			18366,
+			18366
+		});
+		// Pythia
+		MINIONS.put(22266, new int[]
+		{
+			18366,
+			18366
+		});
+		// Tanta Lizardman Summoner
+		MINIONS.put(22774, new int[]
+		{
+			22768,
+			22768
+		});
 	}
 	
 	public SummonMinions(int questId, String name, String descr)
@@ -117,7 +195,9 @@ public class SummonMinions extends L2AttackableAIScript
 					case 22266:
 					{
 						if (isPet)
+						{
 							attacker = (attacker).getPet().getOwner();
+						}
 						if (attacker.getParty() != null)
 						{
 							for (L2PcInstance member : attacker.getParty().getPartyMembers())
@@ -129,7 +209,9 @@ public class SummonMinions extends L2AttackableAIScript
 									_attackersList.put(npcObjId, player);
 								}
 								else if (!_attackersList.get(npcObjId).contains(member))
+								{
 									_attackersList.get(npcObjId).add(member);
+								}
 							}
 						}
 						else
@@ -141,9 +223,11 @@ public class SummonMinions extends L2AttackableAIScript
 								_attackersList.put(npcObjId, player);
 							}
 							else if (!_attackersList.get(npcObjId).contains(attacker))
+							{
 								_attackersList.get(npcObjId).add(attacker);
+							}
 						}
-						if ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2) || _attackersList.get(npcObjId).size() > 2) // Just to make sure..
+						if (((attacker.getParty() != null) && (attacker.getParty().getMemberCount() > 2)) || (_attackersList.get(npcObjId).size() > 2)) // Just to make sure..
 						{
 							HasSpawned = 0;
 							for (int val : MINIONS.get(npcId))
