@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Growth-capable mobs: Polymorphing upon successful feeding.
@@ -139,7 +138,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		{
 			int[][] temp;
 			temp = _spiceToMob.get(spice);
-			int rand = Rnd.get(temp[0].length);
+			int rand = getRandom(temp[0].length);
 			return temp[0][rand];
 		}
 		
@@ -336,7 +335,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		if (growthLevel == 2)
 		{
 			// if tamed, the mob that will spawn depends on the class type (fighter/mage) of the player!
-			if (Rnd.get(2) == 0)
+			if (getRandom(2) == 0)
 			{
 				if (player.getClassId().isMage())
 				{
@@ -351,7 +350,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			{
 				// if not tamed, there is a small chance that have "mad cow" disease.
 				// that is a stronger-than-normal animal that attacks its feeder
-				if (Rnd.get(5) == 0)
+				if (getRandom(5) == 0)
 				{
 					nextNpcId = _GrowthCapableMobs.get(npcId).getMob(food, 0, 1);
 				}
@@ -398,7 +397,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			QuestState st = player.getQuestState("20_BringUpWithLove");
 			if (st != null)
 			{
-				if (Rnd.get(100) <= 5 && !st.hasQuestItems(7185))
+				if (getRandom(100) <= 5 && !st.hasQuestItems(7185))
 				{
 					// if player has quest 20 going, give quest item
 					// it's easier to hardcode it in here than to try and repeat this stuff in the quest
@@ -407,7 +406,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 				}
 			}
 			// also, perform a rare random chat
-			int rand = Rnd.get(20);
+			int rand = getRandom(20);
 			if (rand == 0)
 			{
 				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), player.getName() + ", will you show me your hideaway?"));
@@ -533,9 +532,9 @@ public class FeedableBeasts extends L2AttackableAIScript
 			}
 			
 			// rare random talk...
-			if (Rnd.get(20) == 0)
+			if (getRandom(20) == 0)
 			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, npc.getNpcId(), TEXT[growthLevel][Rnd.get(TEXT[growthLevel].length)]));
+				npc.broadcastPacket(new NpcSay(objectId, 0, npc.getNpcId(), TEXT[growthLevel][getRandom(TEXT[growthLevel].length)]));
 			}
 			
 			if (growthLevel > 0 && _FeedInfo.get(objectId) != caster.getObjectId())
@@ -546,7 +545,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			}
 			
 			// Polymorph the mob, with a certain chance, given its current growth level
-			if (Rnd.get(100) < _GrowthCapableMobs.get(npcId).getChance())
+			if (getRandom(100) < _GrowthCapableMobs.get(npcId).getChance())
 			{
 				this.spawnNext(npc, growthLevel, caster, food);
 			}
@@ -557,7 +556,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
-				beast.broadcastPacket(new NpcSay(objectId, 0, npcId, TAMED_TEXT[Rnd.get(TAMED_TEXT.length)]));
+				beast.broadcastPacket(new NpcSay(objectId, 0, npcId, TAMED_TEXT[getRandom(TAMED_TEXT.length)]));
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);

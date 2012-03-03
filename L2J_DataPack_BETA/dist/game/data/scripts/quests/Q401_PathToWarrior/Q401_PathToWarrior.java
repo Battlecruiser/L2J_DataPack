@@ -214,7 +214,7 @@ public class Q401_PathToWarrior extends Quest
 			{
 				if (st.getQuestItemsCount(RustedBronzeSword1) < 10)
 				{
-					if (st.getRandom(10) < 4)
+					if (getRandom(10) < 4)
 					{
 						st.giveItems(RustedBronzeSword1, 1);
 						st.playSound("ItemSound.quest_itemget");

@@ -54,7 +54,7 @@ public class Q287_FiguringItOut extends Quest
 			if (st.getQuestItemsCount(VialOfTantaBlood) >= 500)
 			{
 				st.takeItems(VialOfTantaBlood, 500);
-				int i0 = Rnd.get(5);
+				int i0 = getRandom(5);
 				if (i0 == 0)
 					st.giveItems(10381, 1);
 				else if (i0 == 1)
@@ -76,7 +76,7 @@ public class Q287_FiguringItOut extends Quest
 			if (st.getQuestItemsCount(VialOfTantaBlood) >= 100)
 			{
 				st.takeItems(VialOfTantaBlood, 100);
-				int i0 = Rnd.get(10);
+				int i0 = getRandom(10);
 				if (i0 == 0)
 					st.giveItems(15776, 1);
 				else if (i0 == 1)
@@ -93,7 +93,7 @@ public class Q287_FiguringItOut extends Quest
 				}
 				else if (i0 == 4)
 				{
-					int i1 = Rnd.get(10);
+					int i1 = getRandom(10);
 					if (i1 < 4)
 						st.giveItems(15812, 1);
 					else if (i1 < 8)
@@ -117,7 +117,7 @@ public class Q287_FiguringItOut extends Quest
 				}
 				else
 				{
-					int i1 = Rnd.get(10);
+					int i1 = getRandom(10);
 					if (i1 < 4)
 						st.giveItems(15772, 1);
 					else if (i1 < 7)
@@ -187,7 +187,7 @@ public class Q287_FiguringItOut extends Quest
 		if (partyMember == null)
 			return null;
 		final QuestState st = partyMember.getQuestState(qn);
-		int chance = Rnd.get(1000);
+		int chance = getRandom(1000);
 		boolean giveItem = false;
 		
 		switch (npc.getNpcId())

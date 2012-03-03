@@ -45,7 +45,6 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -830,14 +829,14 @@ public class TowerOfNaia extends Quest
 						_indexCount[Math.abs(sporeGroup - 1)]++;
 					}
 					
-					if ((Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT) && (Math.abs(_indexCount[sporeGroup]) > 0) && ((_indexCount[sporeGroup] % 20) == 0) && (Rnd.get(100) < 50))
+					if ((Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT) && (Math.abs(_indexCount[sporeGroup]) > 0) && ((_indexCount[sporeGroup] % 20) == 0) && (getRandom(100) < 50))
 					{
 						String el = ELEMENTS_NAME[Arrays.binarySearch(ELEMENTS, npcId)];
 						for (L2Npc spore : _sporeSpawn)
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getNpcId() == npcId))
 							{
-								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[Rnd.get(4)]);
+								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[getRandom(4)]);
 								ns.addStringParameter(el);
 								spore.broadcastPacket(ns);
 							}
@@ -845,7 +844,7 @@ public class TowerOfNaia extends Quest
 					}
 					if (Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT)
 					{
-						if ((((_indexCount[sporeGroup] > 0) && ((npcId == SPORE_FIRE) || (npcId == SPORE_WIND))) || ((_indexCount[sporeGroup] <= 0) && ((npcId == SPORE_WATER) || (npcId == SPORE_EARTH)))) && (Rnd.get(1000) > 200))
+						if ((((_indexCount[sporeGroup] > 0) && ((npcId == SPORE_FIRE) || (npcId == SPORE_WIND))) || ((_indexCount[sporeGroup] <= 0) && ((npcId == SPORE_WATER) || (npcId == SPORE_EARTH)))) && (getRandom(1000) > 200))
 						{
 							spawnOppositeSpore(npcId);
 						}
@@ -895,7 +894,7 @@ public class TowerOfNaia extends Quest
 		{
 			_sporeSpawn.add(npc);
 			npc.setIsRunning(false);
-			int[] coord = SPORES_MOVE_POINTS[Rnd.get(SPORES_MOVE_POINTS.length)];
+			int[] coord = SPORES_MOVE_POINTS[getRandom(SPORES_MOVE_POINTS.length)];
 			npc.getSpawn().setLocx(coord[0]);
 			npc.getSpawn().setLocy(coord[1]);
 			npc.getSpawn().setLocz(coord[2]);
@@ -966,7 +965,7 @@ public class TowerOfNaia extends Quest
 	
 	private void markElpyRespawn()
 	{
-		long respawnTime = (Rnd.get(43200, 216000) * 1000);
+		long respawnTime = (getRandom(43200, 216000) * 1000);
 		GlobalVariablesManager.getInstance().storeVariable("elpy_respawn_time", Long.toString(respawnTime + System.currentTimeMillis()));
 	}
 	
@@ -1013,7 +1012,7 @@ public class TowerOfNaia extends Quest
 	
 	private L2Npc spawnRandomSpore()
 	{
-		return addSpawn(Rnd.get(SPORE_FIRE, SPORE_EARTH), -45474, 247450, -13994, 49152, false, 0, false);
+		return addSpawn(getRandom(SPORE_FIRE, SPORE_EARTH), -45474, 247450, -13994, 49152, false, 0, false);
 	}
 	
 	private L2Npc spawnOppositeSpore(int srcSporeId)

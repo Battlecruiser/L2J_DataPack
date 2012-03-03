@@ -104,7 +104,7 @@ public class FortuneTelling extends Quest
 		{
 			st.takeItems(ADENA, COST);
 			html.setFile(player.getHtmlPrefix(), PARENT_DIR + "fortune.htm");
-			html.replace("%fortune%", FORTUNE[st.getRandom(FORTUNE.length)]);
+			html.replace("%fortune%", FORTUNE[getRandom(FORTUNE.length)]);
 		}
 		st.exitQuest(true);
 		player.sendPacket(html);

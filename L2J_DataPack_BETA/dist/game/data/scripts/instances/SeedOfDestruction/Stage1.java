@@ -61,7 +61,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * TODO:
@@ -485,7 +484,7 @@ public class Stage1 extends Quest
 							if (_spawnZoneList.contains(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
-								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],null), Rnd.get(65535), spw.isNeededNextFlag);
+								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],null), getRandom(65535), spw.isNeededNextFlag);
 							}
 							else
 								_log.info("[Seed of Destruction] Missing zone: " + spw.zone);
@@ -645,7 +644,7 @@ public class Stage1 extends Quest
 	public String onSpawn (L2Npc npc) 
 	{
 		if (npc.getNpcId() == TIAT_GUARD)
-			startQuestTimer("GuardThink", 2500 + Rnd.get(-200, 200), npc, null, true);
+			startQuestTimer("GuardThink", 2500 + getRandom(-200, 200), npc, null, true);
 		else
 			npc.disableCoreAI(true);
 		return super.onSpawn(npc); 
@@ -719,12 +718,12 @@ public class Stage1 extends Quest
 			SOD1World world = (SOD1World) tmpworld;
 			if (event.equalsIgnoreCase("Spawn"))
 			{
-				L2PcInstance target = L2World.getInstance().getPlayer(world.allowed.get(Rnd.get(world.allowed.size())));
+				L2PcInstance target = L2World.getInstance().getPlayer(world.allowed.get(getRandom(world.allowed.size())));
 				if (world.deviceSpawnedMobCount < MAX_DEVICESPAWNEDMOBCOUNT
 						&& target != null && target.getInstanceId() == npc.getInstanceId()
 						&& !target.isDead())
 				{
-					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.instanceId);
+					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.instanceId);
 					world.deviceSpawnedMobCount++;
 					mob.setSeeThroughSilentMove(true);
 					mob.setRunning();

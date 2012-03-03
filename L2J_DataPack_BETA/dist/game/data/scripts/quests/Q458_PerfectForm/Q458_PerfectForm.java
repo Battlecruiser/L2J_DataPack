@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author centrio, Zoey76
@@ -159,17 +158,17 @@ public class Q458_PerfectForm extends Quest
 			{
 				if ((overHits >= 0) && (overHits <= 6))
 				{
-					final int rnd = Rnd.get(_rewards1.length);
+					final int rnd = getRandom(_rewards1.length);
 					st.giveItems(_rewards1[rnd].getId(), _rewards1[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
 				}
 				else if ((overHits >= 7) && (overHits <= 19))
 				{
-					final int rnd = Rnd.get(_rewards2.length);
+					final int rnd = getRandom(_rewards2.length);
 					st.giveItems(_rewards2[rnd].getId(), _rewards2[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
 				}
 				else if (overHits >= 20)
 				{
-					final int rnd = Rnd.get(_rewards3.length);
+					final int rnd = getRandom(_rewards3.length);
 					st.giveItems(_rewards3[rnd].getId(), _rewards3[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
 				}
 				

@@ -70,7 +70,7 @@ public class TeleportToFantasy extends Quest
 		
 		if (TELEPORTERS.containsKey(npc.getNpcId()))
 		{
-			int random_id = st.getRandom(ISLE_LOCS.length);
+			int random_id = getRandom(ISLE_LOCS.length);
 			
 			player.teleToLocation(ISLE_LOCS[random_id], false);
 			st.setState(State.STARTED);

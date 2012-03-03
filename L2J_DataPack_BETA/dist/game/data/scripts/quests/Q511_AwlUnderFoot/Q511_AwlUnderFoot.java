@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Gigiikun
@@ -186,11 +185,11 @@ public final class Q511_AwlUnderFoot extends Quest
 			{
 				int spawnId;
 				if (_world.status == 0)
-					spawnId = RAIDS1[Rnd.get(RAIDS1.length)];
+					spawnId = RAIDS1[getRandom(RAIDS1.length)];
 				else if (_world.status == 1)
-					spawnId = RAIDS2[Rnd.get(RAIDS2.length)];
+					spawnId = RAIDS2[getRandom(RAIDS2.length)];
 				else
-					spawnId = RAIDS3[Rnd.get(RAIDS3.length)];
+					spawnId = RAIDS3[getRandom(RAIDS3.length)];
 				L2Npc raid = addSpawn(spawnId,53319,245814,-6576,0,false,0,false, _world.instanceId);
 				if (raid instanceof L2RaidBossInstance)
 					((L2RaidBossInstance)raid).setUseRaidCurse(false);

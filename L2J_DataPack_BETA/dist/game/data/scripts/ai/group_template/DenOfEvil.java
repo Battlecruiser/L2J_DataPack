@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Dummy AI for spawns/respawns only for testing.
@@ -158,7 +157,7 @@ public class DenOfEvil extends L2AttackableAIScript
 	private void spawnEyes()
 	{
 		for(Location loc : _eye_spawn)
-			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], loc, false, 0);
+			addSpawn(_eye_ids[getRandom(_eye_ids.length)], loc, false, 0);
 	}
 	
 	private class RespawnNewEye implements Runnable
@@ -173,7 +172,7 @@ public class DenOfEvil extends L2AttackableAIScript
 		@Override
 		public void run()
 		{
-			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], _loc, false, 0);
+			addSpawn(_eye_ids[getRandom(_eye_ids.length)], _loc, false, 0);
 		}
 	}
 	

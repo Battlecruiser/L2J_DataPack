@@ -21,10 +21,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
- * Mutated Kaneus - Dion (10277). Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Dion (10277).<br>
+ * Original Jython script by Gnacik on 2010-06-29
  * @author nonom
  */
 public class Q10277_MutatedKaneusDion extends Quest
@@ -139,7 +139,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 			
 			if (!PartyMembers.isEmpty())
 			{
-				rewardItem(npcId, PartyMembers.get(Rnd.get(PartyMembers.size())));
+				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
 		}
 		else

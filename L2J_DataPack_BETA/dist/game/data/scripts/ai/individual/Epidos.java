@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.MinionList;
-import com.l2jserver.util.Rnd;
 
 /**
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
@@ -53,7 +52,7 @@ public class Epidos extends L2AttackableAIScript
 	{
 		if (event.equalsIgnoreCase("check_minions"))
 		{
-			if ((Rnd.get(1000) > 250) && _lastHp.containsKey(npc.getObjectId()))
+			if ((getRandom(1000) > 250) && _lastHp.containsKey(npc.getObjectId()))
 			{
 				int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
 				int minionsCount = 0;

@@ -259,7 +259,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		switch (npc.getNpcId())
 		{
 			case AIR:
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (st.getRandom(100) < 30))
+				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEAIR, 1);
 					if (st.getQuestItemsCount(SOULPIECEAIR) >= 6)
@@ -274,7 +274,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				break;
 			case WATER:
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && ((cond >= 3) || (cond <= 5)) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (st.getRandom(100) < 30))
+				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && ((cond >= 3) || (cond <= 5)) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEWATER, 1);
 					if (st.getQuestItemsCount(SOULPIECEWATER) >= 6)

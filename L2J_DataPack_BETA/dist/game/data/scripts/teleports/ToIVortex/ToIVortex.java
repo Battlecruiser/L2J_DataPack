@@ -253,26 +253,26 @@ public class ToIVortex extends Quest
 		// ToI Vortex exit
 		if (npc.getNpcId() == TELEPORT_CUBIC)
 		{
-			int chance = st.getRandom(3);
+			int chance = getRandom(3);
 			int x, y, z;
 			
 			switch (chance)
 			{
 				case 0:
-					x = 108784 + st.getRandom(100);
-					y = 16000 + st.getRandom(100);
+					x = 108784 + getRandom(100);
+					y = 16000 + getRandom(100);
 					z = -4928;
 					break;
 				
 				case 1:
-					x = 113824 + st.getRandom(100);
-					y = 10448 + st.getRandom(100);
+					x = 113824 + getRandom(100);
+					y = 10448 + getRandom(100);
 					z = -5164;
 					break;
 				
 				default:
-					x = 115488 + st.getRandom(100);
-					y = 22096 + st.getRandom(100);
+					x = 115488 + getRandom(100);
+					y = 22096 + getRandom(100);
 					z = -5168;
 					break;
 			}

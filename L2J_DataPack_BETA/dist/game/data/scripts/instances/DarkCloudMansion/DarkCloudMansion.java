@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 
 public class DarkCloudMansion extends Quest
@@ -472,7 +471,7 @@ public class DarkCloudMansion extends Quest
 		for (int i=1;i<7;i++)
 			SecondRoom.Order[i] = 0;
 		
-		int i = Rnd.get(MonolithOrder.length);
+		int i = getRandom(MonolithOrder.length);
 		
 		thisnpc = new DMCNpc();
 		thisnpc.npc = addSpawn(BSM,147800,181150,-6117,0,false,0,false, world.instanceId);
@@ -600,7 +599,7 @@ public class DarkCloudMansion extends Quest
 		int xx = 0;
 		
 		for (int i = 0; i < 7; i++)
-			temp[i] = Rnd.get(ColumnRows.length );
+			temp[i] = getRandom(ColumnRows.length );
 		
 		for (int i=0; i < 7; i++)
 			templist[i] = ColumnRows[temp[i]];
@@ -649,7 +648,7 @@ public class DarkCloudMansion extends Quest
 		DMCRoom FifthRoom = new DMCRoom();
 		DMCNpc thisnpc;
 		
-		temp = Beleths[Rnd.get(Beleths.length)];
+		temp = Beleths[getRandom(Beleths.length)];
 		
 		FifthRoom.reset = 0;
 		FifthRoom.founded = 0;
@@ -663,10 +662,10 @@ public class DarkCloudMansion extends Quest
 			thisnpc.status = temp[idx];
 			thisnpc.count = 0;
 			FifthRoom.npcList.add(thisnpc);
-			if (temp[idx] == 1 && Rnd.get(100) < 95)
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[Rnd.get(_spawnChat.length)]));
-			else if (temp[idx] != 1 && Rnd.get(100) < 67)
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[Rnd.get(_spawnChat.length)]));
+			if (temp[idx] == 1 && getRandom(100) < 95)
+				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[getRandom(_spawnChat.length)]));
+			else if (temp[idx] != 1 && getRandom(100) < 67)
+				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), 0, thisnpc.npc.getNpcId(), _spawnChat[getRandom(_spawnChat.length)]));
 			idx++ ;
 		}
 		
@@ -692,7 +691,7 @@ public class DarkCloudMansion extends Quest
 		if (npc.golem != null)
 			return;
 		
-		int i = Rnd.get(GolemSpawn.length);
+		int i = getRandom(GolemSpawn.length);
 		int mobId = GolemSpawn[i][0];
 		int x = GolemSpawn[i][1];
 		int y = GolemSpawn[i][2];
@@ -745,14 +744,14 @@ public class DarkCloudMansion extends Quest
 					mob.count = 1;
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _successChat[Rnd.get(_successChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _successChat[getRandom(_successChat.length)]));
 						FifthRoom.founded += 1;
 						startQuestTimer("decayMe",1500, npc, player);
 					}
 					else
 					{
 						FifthRoom.reset = 1;
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _faildChat[Rnd.get(_faildChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _faildChat[getRandom(_faildChat.length)]));
 						startQuestTimer("decayChatBelethSamples",4000, npc, player);
 						startQuestTimer("decayBelethSamples",4500, npc, player);
 					}
@@ -898,7 +897,7 @@ public class DarkCloudMansion extends Quest
 				for (DMCNpc mob : FifthRoom.npcList)
 				{
 					if (mob.status == 1)
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _decayChat[Rnd.get(_decayChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _decayChat[getRandom(_decayChat.length)]));
 				}
 			}
 			else if (event.equalsIgnoreCase("respawnFifth"))
@@ -986,11 +985,11 @@ public class DarkCloudMansion extends Quest
 				{
 					if (mob.npc == npc)
 					{
-						if (mob.npc.isInvul() && Rnd.get(100) < 12)
+						if (mob.npc.isInvul() && getRandom(100) < 12)
 						{
 							if (debug)
 								_log.info("DarkCloudMansion: spawn room 4 guard");
-							addSpawn(BM[Rnd.get(BM.length)],player.getX(),player.getY(),player.getZ(),0,false,0,false,world.instanceId);
+							addSpawn(BM[getRandom(BM.length)],player.getX(),player.getY(),player.getZ(),0,false,0,false,world.instanceId);
 						}
 					}
 				}

@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * Manages Amaskari's and minions' chat and some skill usage.
@@ -78,15 +77,15 @@ public class Amaskari extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("onspawn_msg") && (npc != null) && !npc.isDead())
 		{
-			if (Rnd.get(100) > 20)
+			if (getRandom(100) > 20)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[2]));
 			}
-			else if (Rnd.get(100) > 40)
+			else if (getRandom(100) > 40)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[3]));
 			}
-			startQuestTimer("onspawn_msg", (Rnd.get(8) + 1) * 30000, npc, null);
+			startQuestTimer("onspawn_msg", (getRandom(8) + 1) * 30000, npc, null);
 		}
 		return null;
 	}
@@ -94,12 +93,12 @@ public class Amaskari extends L2AttackableAIScript
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
-		if ((npc.getNpcId() == AMASKARI) && (Rnd.get(1000) < 25))
+		if ((npc.getNpcId() == AMASKARI) && (getRandom(1000) < 25))
 		{
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[0]));
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
-				if ((minion != null) && !minion.isDead() && (Rnd.get(10) == 0))
+				if ((minion != null) && !minion.isDead() && (getRandom(10) == 0))
 				{
 					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[0]));
 					minion.setCurrentHp(minion.getCurrentHp() - (minion.getCurrentHp() / 5));
@@ -151,7 +150,7 @@ public class Amaskari extends L2AttackableAIScript
 			{
 				if ((minion != null) && !minion.isDead())
 				{
-					if (Rnd.get(1000) > 300)
+					if (getRandom(1000) > 300)
 					{
 						minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[1]));
 					}
@@ -169,7 +168,7 @@ public class Amaskari extends L2AttackableAIScript
 	{
 		if (!npc.isTeleporting())
 		{
-			startQuestTimer("onspawn_msg", (Rnd.get(3) + 1) * 30000, npc, null);
+			startQuestTimer("onspawn_msg", (getRandom(3) + 1) * 30000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

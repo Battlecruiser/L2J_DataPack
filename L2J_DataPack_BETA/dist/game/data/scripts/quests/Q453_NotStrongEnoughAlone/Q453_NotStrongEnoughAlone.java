@@ -123,9 +123,9 @@ public class Q453_NotStrongEnoughAlone extends Quest
 				else if (st.getInt("cond") == 5)
 				{
 					if (Rnd.nextBoolean())
-						st.giveItems(Reward[0][Rnd.get(Reward[0].length)], 1);
+						st.giveItems(Reward[0][getRandom(Reward[0].length)], 1);
 					else
-						st.giveItems(Reward[1][Rnd.get(Reward[1].length)], 1);
+						st.giveItems(Reward[1][getRandom(Reward[1].length)], 1);
 					st.playSound("ItemSound.quest_finish");
 					htmltext = "32734-14.html";
 					

@@ -213,7 +213,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 			int chance = (int) (_questMobs.get(npcId)[1] * Config.RATE_QUEST_DROP);
 			int numItems = chance / 1000;
 			chance = chance % 1000;
-			if (st.getRandom(1000) < chance)
+			if (getRandom(1000) < chance)
 				numItems++;
 			if (numItems > 0)
 			{

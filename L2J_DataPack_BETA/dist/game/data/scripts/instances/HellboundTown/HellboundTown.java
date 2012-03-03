@@ -37,7 +37,6 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -240,7 +239,7 @@ public class HellboundTown extends Quest
 						HellboundManager.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
-						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false))
+						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false))
 						{
 							if (world.activeAmaskariCall != null)
 							{
@@ -291,7 +290,7 @@ public class HellboundTown extends Quest
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NPCSTRING_ID[0]));
 				npc.setBusy(true);
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
 				{
 					if (world.activeAmaskariCall != null)
 					{
@@ -338,7 +337,7 @@ public class HellboundTown extends Quest
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false))
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false))
 				{
 					if (world.activeAmaskariCall != null)
 					{
@@ -425,7 +424,7 @@ public class HellboundTown extends Quest
 	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
 	{
 		player.setInstanceId(instanceId);
-		player.teleToLocation((tele[0] - 50) + Rnd.get(100), (tele[1] - 50) + Rnd.get(100), tele[2]);
+		player.teleToLocation((tele[0] - 50) + getRandom(100), (tele[1] - 50) + getRandom(100), tele[2]);
 	}
 	
 	private int enterInstance(L2PcInstance player, String template)
@@ -538,7 +537,7 @@ public class HellboundTown extends Quest
 					{
 						_world.allowed.remove(_world.allowed.indexOf(partyMember.getObjectId()));
 						partyMember.setInstanceId(0);
-						partyMember.teleToLocation((EXIT_POINT[0] - 100) + Rnd.get(50), (EXIT_POINT[1] - 100) + Rnd.get(50), EXIT_POINT[2]);
+						partyMember.teleToLocation((EXIT_POINT[0] - 100) + getRandom(50), (EXIT_POINT[1] - 100) + getRandom(50), EXIT_POINT[2]);
 					}
 				}
 			}

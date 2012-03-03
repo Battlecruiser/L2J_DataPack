@@ -127,7 +127,7 @@ public final class Q637_ThroughOnceMore extends Quest
 				int chance = (int)(Config.RATE_QUEST_DROP * DROP_CHANCE);
 				int numItems = chance / 100;
 				chance = chance % 100;
-				if (st.getRandom(100) < chance)
+				if (getRandom(100) < chance)
 					numItems++;
 				if (numItems > 0)
 				{
