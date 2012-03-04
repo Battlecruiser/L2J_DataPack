@@ -718,7 +718,6 @@
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_s">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -737,7 +736,6 @@
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_c">
 				<add order="0x40" stat="rCrit" val="15" />
@@ -757,7 +755,6 @@
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="wp_event_buf1" special="vesper_d">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />

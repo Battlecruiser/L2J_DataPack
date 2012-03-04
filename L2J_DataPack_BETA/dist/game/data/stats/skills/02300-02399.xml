@@ -491,7 +491,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="fireRes" val="30" />
@@ -506,7 +505,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="waterRes" val="30" />
@@ -521,7 +519,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="windRes" val="30" />
@@ -536,7 +533,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="earthRes" val="30" />
@@ -551,7 +547,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="holyRes" val="30" />
@@ -566,7 +561,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="attribute_potion">
 				<add order="0x40" stat="darkRes" val="30" />
@@ -574,7 +568,6 @@
 		</for>
 	</skill>
 	<skill id="2341" levels="1" name="Caravan's Secret Medicine">
-		<set name="buffDuration" val="3600000" />
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
@@ -1335,7 +1328,6 @@
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="1200000" />
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1352,7 +1344,6 @@
 	</skill>
 	<skill id="2397" levels="1" name="Medusa Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="6000" />
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1365,7 +1356,6 @@
 	</skill>
 	<skill id="2398" levels="1" name="Instant Haste Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="15000" />
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />

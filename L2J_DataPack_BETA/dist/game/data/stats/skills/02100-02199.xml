@@ -652,7 +652,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="600" /> <!-- FIXME: Retail 0 but them have kind protection for flood -->
 		<set name="isPotion" val="true" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="#amount" />
@@ -693,7 +692,6 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />

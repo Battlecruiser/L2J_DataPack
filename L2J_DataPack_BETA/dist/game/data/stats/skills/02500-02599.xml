@@ -181,7 +181,6 @@
 	</skill>
 	<skill id="2512" levels="1" name="Herb of Vampiric Rage">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
@@ -201,7 +200,6 @@
 	</skill>
 	<skill id="2513" levels="1" name="Herb of Doubt">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -228,7 +226,6 @@
 	</skill>
 	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
 		<!-- Confirmed CT2.5 -->
-		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
@@ -1295,7 +1292,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="true" />
-		<set name="buffDuration" val="5000" />
 		<set name="isPotion" val="true" />
 		<for>
 			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
@@ -1326,7 +1322,6 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -1412,7 +1407,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="60000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
