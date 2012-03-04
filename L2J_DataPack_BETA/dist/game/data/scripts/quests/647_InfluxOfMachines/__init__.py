@@ -32,9 +32,9 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= 500:
           st.takeItems(BROKEN_GOLEM_FRAGMENT,500)
           if ALT_RP_100 == 0 :
-            item = RECIPES[st.getRandom(len(RECIPES))]
+            item = RECIPES[getRandom(len(RECIPES))]
           else :
-            item = RECIPES[st.getRandom(len(RECIPES))]+1
+            item = RECIPES[getRandom(len(RECIPES))]+1
           st.giveItems(item,1)
           st.playSound("ItemSound.quest_finish")
           st.exitQuest(1)
@@ -74,7 +74,7 @@ class Quest (JQuest) :
             if cond == 1 and count < 500:
                 chance = DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
-                if st.getRandom(100) < chance : 
+                if getRandom(100) < chance : 
                     numItems += 1
                 if numItems :
                     if count + numItems >= 500 :

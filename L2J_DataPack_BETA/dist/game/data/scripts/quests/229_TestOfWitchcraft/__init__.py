@@ -381,7 +381,7 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     var,value,maxcount,chance,giveList,takeList=DROPLIST[npcId]
-    random=st.getRandom(100)
+    random=getRandom(100)
     isValue = int(st.get(var))
     if int(st.get(var)) in value and random<chance:
       if takeList:

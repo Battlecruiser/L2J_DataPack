@@ -50,8 +50,8 @@ class Quest (JQuest) :
        while not count :
           for item in REWARDS.keys() :
               qty,chance=REWARDS[item]
-              if st.getRandom(100) < chance and count == 0 :
-                 st.giveItems(item,st.getRandom(qty)+1)
+              if getRandom(100) < chance and count == 0 :
+                 st.giveItems(item,getRandom(qty)+1)
                  count+=1
        if chance < 7 :
          st.playSound("ItemSound.quest_jackpot")
@@ -67,7 +67,7 @@ class Quest (JQuest) :
    
    count = st.getQuestItemsCount(WOLF_PELT)
    numItems, chance = divmod(100*Config.RATE_QUEST_DROP,100)
-   if st.getRandom(100) <chance :
+   if getRandom(100) <chance :
      numItems = numItems + 1
    if count+numItems>=40 :
      numItems = 40 - count

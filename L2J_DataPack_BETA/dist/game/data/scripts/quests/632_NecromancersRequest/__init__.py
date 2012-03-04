@@ -64,7 +64,7 @@ class Quest (JQuest):
            if not st: return
            chance = Z_BRAIN_CHANCE * Config.RATE_QUEST_DROP
            numItems, chance = divmod(chance,100)
-           if st.getRandom(100) < chance:
+           if getRandom(100) < chance:
               numItems += 1
            if numItems :
               st.giveItems(Z_BRAIN,int(numItems))
@@ -77,7 +77,7 @@ class Quest (JQuest):
            chance = V_HEART_CHANCE * Config.RATE_QUEST_DROP
            numItems, chance = divmod(chance,100)
            count = st.getQuestItemsCount(V_HEART)
-           if st.getRandom(100) < chance:
+           if getRandom(100) < chance:
               numItems += 1
            if numItems :
               if count + numItems >= 200 :

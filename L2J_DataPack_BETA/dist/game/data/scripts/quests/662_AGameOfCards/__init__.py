@@ -120,7 +120,7 @@ class Quest (JQuest) :
                  st.rewardItems(item,amt)
      elif event.startswith("Klump_openCard") : # 'Open' card
          num = int(event[14])
-         self.games[name][num-1] = st.getRandom(14) + 1 # generate index of random card, except index 0, which means 'card is closed'
+         self.games[name][num-1] = getRandom(14) + 1 # generate index of random card, except index 0, which means 'card is closed'
          htmltext = self.onEvent("Klump_PlayField.htm",st)
      return htmltext
 
@@ -151,7 +151,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      if npcId in MOBS:
          numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
-         if st.getRandom(100) < chance :
+         if getRandom(100) < chance :
              numItems += 1
          if numItems :
              st.giveItems(RED_GEM,int(numItems))

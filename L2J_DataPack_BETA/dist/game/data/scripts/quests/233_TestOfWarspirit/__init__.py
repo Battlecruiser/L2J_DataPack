@@ -327,7 +327,7 @@ class Quest (JQuest) :
 
 #    [accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)=DROPLIST[npcId]
     value,var,maxcount,chance,itemList=DROPLIST[npcId]
-    random=st.getRandom(100)
+    random=getRandom(100)
 #    return the current value of the var
     isValue = st.getInt(var)
     if isValue in value and random < chance:

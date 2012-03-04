@@ -82,7 +82,7 @@ class Quest (JQuest) :
          st.takeItems(ARM_BONE1_ID,1)
          st.takeItems(RIB_BONE1_ID,1)
          st.takeItems(THIGH_BONE1_ID,1) 
-         if st.getRandom(5)<4 :
+         if getRandom(5)<4 :
             st.giveItems(COMPLETE_SKELETON_ID,1)
          else:
             htmltext = "30342-04.htm"
@@ -130,7 +130,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
-    n = st.getRandom(100)
+    n = getRandom(100)
     if npcId == 20026 :
      if n<90 :
       st.playSound("ItemSound.quest_itemget")   

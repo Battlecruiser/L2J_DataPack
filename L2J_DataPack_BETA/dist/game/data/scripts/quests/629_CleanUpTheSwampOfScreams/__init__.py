@@ -85,7 +85,7 @@ class Quest (JQuest) :
     if st :
         if st.getState() == State.STARTED :
             prevItems = st.getQuestItemsCount(CLAWS)
-            random = st.getRandom(MAX)
+            random = getRandom(MAX)
             chance = CHANCE[npc.getNpcId()]*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,MAX)
             if random<chance :

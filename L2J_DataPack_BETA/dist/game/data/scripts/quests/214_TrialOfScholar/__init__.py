@@ -482,7 +482,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20580 :
     if st.getInt("cond") == 11 and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
-      if st.getRandom(100) < 50 :
+      if getRandom(100) < 50 :
         st.giveItems(BROWN_SCROLL_SCRAP_ID,1)
         if st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID) < 5 :
           st.playSound("ItemSound.quest_itemget")
@@ -492,7 +492,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 16 :
       if npcId == 20068 :
          if st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID)<5 :
-            if st.getRandom(100) < 50 :
+            if getRandom(100) < 50 :
                st.giveItems(MEYEDESTROYERS_SKIN_ID,1)
                if st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID) < 5 :
                   st.playSound("ItemSound.quest_itemget")
@@ -502,7 +502,7 @@ class Quest (JQuest) :
                      st.set("cond","17")
       elif npcId == 20269 :
          if st.getQuestItemsCount(SHAMANS_NECKLACE_ID)<5 :
-            if st.getRandom(100) < 50 :
+            if getRandom(100) < 50 :
                st.giveItems(SHAMANS_NECKLACE_ID,1)
                if st.getQuestItemsCount(SHAMANS_NECKLACE_ID) < 5 :
                   st.playSound("ItemSound.quest_itemget")
@@ -520,7 +520,7 @@ class Quest (JQuest) :
                if st.getQuestItemsCount(SHACKLES_SCALP_ID)==2 and st.getQuestItemsCount(SHAMANS_NECKLACE_ID) == 5 and st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID) == 5:
                   st.set("cond","17")
    elif npcId == 20554 and st.getInt("cond") in [26,27] and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) == 0 :
-      if st.getRandom(100) < 30 :
+      if getRandom(100) < 30 :
         st.giveItems(SCRIPTURE_CHAPTER_3_ID,1)
         st.playSound("ItemSound.quest_middle")
    elif npcId == 20201 :

@@ -101,7 +101,7 @@ class Quest (JQuest) :
 		if cond == 1 and npcId in MINE_MOBS :
 			chance = DROP_CHANCE*Config.RATE_QUEST_DROP
 			numItems, chance = divmod(chance,100)
-			if st.getRandom(100) < chance : 
+			if getRandom(100) < chance : 
 				numItems += 1
 			if numItems :
 				st.giveItems(MINERAL_FRAGMENT,int(numItems))

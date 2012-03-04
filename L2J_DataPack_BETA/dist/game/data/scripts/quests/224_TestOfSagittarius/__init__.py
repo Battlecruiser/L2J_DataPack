@@ -229,7 +229,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    step, dropcondition, maxcount, chance, itemid = DROPLIST[npcId]
-   random = st.getRandom(100)
+   random = getRandom(100)
    
    if st.getInt("step") == step and st.getQuestItemsCount(itemid)<maxcount and random < chance:
     if dropcondition == 1:
@@ -241,7 +241,7 @@ class Quest (JQuest) :
      else:
       giveNormal(st,itemid)
     elif dropcondition == 2 :
-     if ((st.getQuestItemsCount(itemid)-120)*5)> st.getRandom(100) :
+     if ((st.getQuestItemsCount(itemid)-120)*5)> getRandom(100) :
       st.addSpawn(27090,npc,True,0)
       st.takeItems(itemid, st.getQuestItemsCount(itemid))
       st.playSound("Itemsound.quest_before_battle")

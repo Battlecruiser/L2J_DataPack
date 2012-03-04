@@ -97,7 +97,7 @@ class Quest (JQuest) :
    if npcId in [20324, 20327]: item = GOBLIN_PENDANT
    if npcId == 20528 : item = GOBLIN_LORD_PENDANT
    if st.getInt("cond") :
-     n = st.getRandom(10)
+     n = getRandom(10)
      if n > 5 :
        st.giveItems(item,1)
        st.playSound("ItemSound.quest_itemget")

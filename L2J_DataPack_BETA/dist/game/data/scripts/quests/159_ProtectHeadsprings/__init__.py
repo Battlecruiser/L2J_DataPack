@@ -83,11 +83,11 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(PLAGUE_DUST)
-   if cond == 1 and st.getRandom(100) < 40 and not count :
+   if cond == 1 and getRandom(100) < 40 and not count :
       st.giveItems(PLAGUE_DUST,1)
       st.playSound("ItemSound.quest_middle")
       st.set("cond","2")
-   elif cond == 3 and st.getRandom(100) < 40 and count < 5 :
+   elif cond == 3 and getRandom(100) < 40 and count < 5 :
       if count == 4 :
          st.playSound("ItemSound.quest_middle")
          st.set("cond","4")

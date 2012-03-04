@@ -218,7 +218,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    if npcId == 27340 and cond == 1:
      string = "You are strong. This was a mistake."
-     if st.getRandom(1):
+     if getRandom(1):
        string = "You have good luck. I shall return."
      npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),string))
      st.giveItems(10867,1)

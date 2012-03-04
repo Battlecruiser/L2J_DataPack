@@ -185,7 +185,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20466 :
         st.set("id","0")
-        if st.getInt("cond") != 0 and st.getQuestItemsCount(CHARM_OF_GRAIN) != 0 and st.getQuestItemsCount(RED_DOWN)<5 and st.getRandom(100)<70 :
+        if st.getInt("cond") != 0 and st.getQuestItemsCount(CHARM_OF_GRAIN) != 0 and st.getQuestItemsCount(RED_DOWN)<5 and getRandom(100)<70 :
             st.giveItems(RED_DOWN,1)
             if st.getQuestItemsCount(RED_DOWN) == 5 :
               st.playSound("ItemSound.quest_middle")
@@ -193,7 +193,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20019 :
         st.set("id","0")
-        if st.getInt("cond") != 0 and st.getQuestItemsCount(SAP_OF_WORLD_TREE) != 0 and st.getQuestItemsCount(GOLD_LEAVES)<5 and st.getRandom(100)<40 :
+        if st.getInt("cond") != 0 and st.getQuestItemsCount(SAP_OF_WORLD_TREE) != 0 and st.getQuestItemsCount(GOLD_LEAVES)<5 and getRandom(100)<40 :
             st.giveItems(GOLD_LEAVES,1)
             if st.getQuestItemsCount(GOLD_LEAVES) == 5 :
               st.playSound("ItemSound.quest_middle")
@@ -201,7 +201,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20047 :
         st.set("id","0")
-        if st.getInt("cond") != 0 and st.getQuestItemsCount(LUCKY_POTPOURI) != 0 and st.getQuestItemsCount(AMETHYST)<2 and st.getRandom(100)<40 :
+        if st.getInt("cond") != 0 and st.getQuestItemsCount(LUCKY_POTPOURI) != 0 and st.getQuestItemsCount(AMETHYST)<2 and getRandom(100)<40 :
             st.giveItems(AMETHYST,1)
             if st.getQuestItemsCount(AMETHYST) == 2 :
               st.playSound("ItemSound.quest_middle")

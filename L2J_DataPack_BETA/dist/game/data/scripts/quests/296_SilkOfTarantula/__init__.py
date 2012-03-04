@@ -33,7 +33,7 @@ class Quest (JQuest) :
     elif event == "30548-02.htm" :
       if st.getQuestItemsCount(TARANTULA_SPINNERETTE) :
         htmltext = "30548-03.htm"
-        st.giveItems(TARANTULA_SPIDER_SILK,15+st.getRandom(9))
+        st.giveItems(TARANTULA_SPIDER_SILK,15+getRandom(9))
         st.takeItems(TARANTULA_SPINNERETTE,1)
     elif event == "30519-09.htm" :
       st.exitQuest(1)
@@ -77,7 +77,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   n = st.getRandom(100)
+   n = getRandom(100)
    if n > 95 :
      st.giveItems(TARANTULA_SPINNERETTE,1)
      st.playSound("ItemSound.quest_itemget")

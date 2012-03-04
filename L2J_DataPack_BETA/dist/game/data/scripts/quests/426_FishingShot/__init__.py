@@ -117,7 +117,7 @@ class Quest (JQuest) :
        drop = 4
    elif npcId in MOBSspecial.keys() :
        chance,drop = MOBSspecial[npcId]
-   if st.getRandom(1000) <= chance :
+   if getRandom(1000) <= chance :
        drop += 1
    if drop != 0 : 
        st.giveItems(SWEET_FLUID,drop*int(Config.RATE_QUEST_DROP))

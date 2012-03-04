@@ -60,7 +60,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20333 : 
       if st.getInt("cond") == 1 and st.getQuestItemsCount(STARSTONE1_ID) < 20 :
-         if st.getRandom(2) == 0 :
+         if getRandom(2) == 0 :
             st.giveItems(STARSTONE1_ID,1)
             if st.getQuestItemsCount(STARSTONE1_ID) == 20 :
                st.playSound("ItemSound.quest_middle")

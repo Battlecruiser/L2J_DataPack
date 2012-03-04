@@ -45,8 +45,8 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
      htmltext = event
-     marsha = st.getRandom(3)
-     random2 = st.getRandom(2)
+     marsha = getRandom(3)
+     random2 = getRandom(2)
      orbs = st.getQuestItemsCount(ORB)
      if event == "30834-02.htm" :
         st.setState(State.STARTED)
@@ -61,7 +61,7 @@ class Quest (JQuest) :
      elif event == "30835-02.htm":
         if st.getQuestItemsCount(ECTOPLASM) :
            st.takeItems(ECTOPLASM,1)
-           item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
+           item=RANDOM_REWARDS[getRandom(len(RANDOM_REWARDS))]
            st.rewardItems(item[0],int(item[1]))
            htmltext="30835-02a.htm"
      elif event == "30934-02.htm" :
@@ -73,7 +73,7 @@ class Quest (JQuest) :
         if orbs>=10 :
              st.takeItems(ORB,10)
              st.set("playing","1")
-             htmltext = st.showHtmlFile("30934-03.htm").replace("<msg>", start_msg[st.getRandom(len(start_msg))])
+             htmltext = st.showHtmlFile("30934-03.htm").replace("<msg>", start_msg[getRandom(len(start_msg))])
         else :
              htmltext = "30934-03a.htm"
      elif event in [ "1","2","3" ]:
@@ -89,8 +89,8 @@ class Quest (JQuest) :
               msg=tie_msg
            st.unset("playing")
            htmltext = st.showHtmlFile("30934-04.htm").replace("%player%", OPTIONS[player]).\
-                      replace("%marsha%", OPTIONS[marsha]).replace("%msg%", msg[st.getRandom(len(msg))]).\
-                      replace("%again%", again_msg[st.getRandom(len(again_msg))])
+                      replace("%marsha%", OPTIONS[marsha]).replace("%msg%", msg[getRandom(len(msg))]).\
+                      replace("%again%", again_msg[getRandom(len(again_msg))])
         else:
            htmltext="Player is cheating"
            st.takeItems(ORB,-1)
@@ -193,7 +193,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
-     if st.getRandom(100) < CHANCE :
+     if getRandom(100) < CHANCE :
          st.giveItems(ORB,1)
          st.playSound("ItemSound.quest_itemget")
      return

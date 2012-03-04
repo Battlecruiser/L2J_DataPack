@@ -69,7 +69,7 @@ class Quest (JQuest) :
        count = st.getQuestItemsCount(THIEF_GUILD_MARK)
        numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
        if st.getInt("cond") == 1 and count < 200 :
-         if st.getRandom(100) < chance :
+         if getRandom(100) < chance :
            numItems += 1
          if numItems :
            st.giveItems(THIEF_GUILD_MARK,int(numItems))

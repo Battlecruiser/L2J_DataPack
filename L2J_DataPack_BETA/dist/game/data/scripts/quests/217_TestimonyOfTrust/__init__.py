@@ -276,18 +276,18 @@ class Quest (JQuest) :
    if cond == 2 and npcId in [ 20013, 20019, 20036, 20044 ] :          # Condition 2 kill the Luel of Zephy and Aktea of the Woods
      if npcId in [ 20036,20044 ] and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
-       if st.getRandom(100)<(st.getInt("id")*33) :
+       if getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
          st.addSpawn(27120,npc.getX(),npc.getY(),npc.getZ(),600000)
      elif npcId in [ 20013,20019 ] and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
-       if st.getRandom(100)<(st.getInt("id")*33) :
+       if getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
          st.addSpawn(27121,npc.getX(),npc.getY(),npc.getZ(),600000)
    elif cond == 14 :                                       # Condition 14 get 10 Parasite of lota
      parasite = st.getQuestItemsCount(PARASITE_OF_LOTA_ID)
      if npcId == 20553 and parasite < 10 :
-       if st.getRandom(2) == 1 :
+       if getRandom(2) == 1 :
          st.giveItems(PARASITE_OF_LOTA_ID,1)
          if parasite+1 == 10 :
            st.set("cond","15")

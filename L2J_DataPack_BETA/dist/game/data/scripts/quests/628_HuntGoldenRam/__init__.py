@@ -145,7 +145,7 @@ class Quest (JQuest) :
             cond = st.getInt("cond")
             chance = CHANCE[npcId]*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,MAX)
-            if st.getRandom(100) <chance :
+            if getRandom(100) <chance :
                numItems = numItems + 1
             item = 0
             if cond in [1,2] and npcId in range(21508,21513): #Splinter Stakatos

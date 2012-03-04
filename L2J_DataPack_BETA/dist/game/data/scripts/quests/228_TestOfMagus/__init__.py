@@ -248,7 +248,7 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    condition,maxcount,chance,item,part = DROPLIST[npcId]
-   random = st.getRandom(100)
+   random = getRandom(100)
    itemcount = st.getQuestItemsCount(item)
    if st.getInt("cond") == condition and itemcount < maxcount and random < chance :
     if itemcount == maxcount-1:

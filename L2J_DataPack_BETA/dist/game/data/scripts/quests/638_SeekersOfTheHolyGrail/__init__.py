@@ -49,10 +49,10 @@ class Quest (JQuest) :
       if id == State.CREATED :
         htmltext = "31328-01.htm"
       elif id == State.STARTED and st.getQuestItemsCount(TOTEM) >= 2000 :
-        rr = st.getRandom(3)
+        rr = getRandom(3)
         if rr == 0 :
           st.takeItems(TOTEM,2000)
-          st.rewardItems(959,st.getRandom(4)+3)
+          st.rewardItems(959,getRandom(4)+3)
           st.playSound("ItemSound.quest_middle")
         if rr == 1 :
           st.takeItems(TOTEM,2000)
@@ -60,7 +60,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
         if rr == 2 :
           st.takeItems(TOTEM,2000)
-          st.rewardItems(960,st.getRandom(4)+3)
+          st.rewardItems(960,getRandom(4)+3)
           st.playSound("ItemSound.quest_middle")
         htmltext = "31328-03.htm"
       else :
@@ -77,7 +77,7 @@ class Quest (JQuest) :
       count = st.getQuestItemsCount(TOTEM)
       if st.getInt("cond") == 1 :
         numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
-        if st.getRandom(100) < chance :
+        if getRandom(100) < chance :
            numItems += 1
         if numItems :
            st.playSound("ItemSound.quest_itemget")

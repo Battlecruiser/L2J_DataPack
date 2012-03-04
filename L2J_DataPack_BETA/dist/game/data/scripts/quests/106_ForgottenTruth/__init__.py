@@ -119,7 +119,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return
    
    if st.getInt("cond") == 2 :
-     if st.getRandom(100) < 20 :
+     if getRandom(100) < 20 :
        if st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
          st.giveItems(ANCIENT_SCROLL,1)
          st.playSound("Itemsound.quest_itemget")

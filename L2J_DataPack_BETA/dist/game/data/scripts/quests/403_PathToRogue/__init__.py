@@ -151,7 +151,7 @@ class Quest (JQuest) :
    if st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == NETIS_BOW or st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == NETIS_DAGGER :
      if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
         st.set("id","0")
-        if st.getInt("cond") and st.getQuestItemsCount(SPATOIS_BONES)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :
+        if st.getInt("cond") and st.getQuestItemsCount(SPATOIS_BONES)<10 and getRandom(10)<DROP_CHANCE[npcId] :
             st.giveItems(SPATOIS_BONES,1)
             if st.getQuestItemsCount(SPATOIS_BONES) == 10 :
               st.playSound("ItemSound.quest_middle")
@@ -161,7 +161,7 @@ class Quest (JQuest) :
      elif npcId == 27038 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(WANTED_BILL)>0 :
-            n = st.getRandom(4)
+            n = getRandom(4)
             if st.getQuestItemsCount(STOLEN_ITEM[n]) == 0 :
                 st.giveItems(STOLEN_ITEM[n],1)
                 if not HaveAllStolenItems(st) :

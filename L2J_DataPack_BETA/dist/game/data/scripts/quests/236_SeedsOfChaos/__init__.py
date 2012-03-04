@@ -236,7 +236,7 @@ class Quest (JQuest) :
     #The following algorithm should work for both quest mobs and drops for this quest.... hopefully.
     npcId = npc.getNpcId()
     dropcond, item = DROPLIST[npcId]
-    drop = st.getRandom(100)
+    drop = getRandom(100)
     cond = st.getInt("cond")
     if drop < DROP_RATE and cond == dropcond :
         if st.getQuestItemsCount(item) < NEEDED[item] :
