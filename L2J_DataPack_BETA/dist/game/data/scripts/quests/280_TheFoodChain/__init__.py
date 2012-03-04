@@ -48,10 +48,10 @@ class Quest (JQuest) :
        else:
          htmltext = "32175-06.htm"
          if keltir_tooth > 25 :
-           st.giveItems(REWARD[st.getRandom(len(REWARD))],1)
+           st.giveItems(REWARD[getRandom(len(REWARD))],1)
            st.takeItems(KELTIR_TOOTH,25)
          else :
-           st.giveItems(REWARD[st.getRandom(len(REWARD))],1)
+           st.giveItems(REWARD[getRandom(len(REWARD))],1)
            st.takeItems(KELTIR_TOOTH,keltir_tooth)
            st.takeItems(WOLF_TOOTH,25 - keltir_tooth)
      elif event == "32175-08.htm" :
@@ -88,7 +88,7 @@ class Quest (JQuest) :
      if not st: return
      if st.getState() == State.STARTED :
        npcId = npc.getNpcId()
-       chance = st.getRandom(100)
+       chance = getRandom(100)
        if (npcId in MOBS_KELTIR) and (chance < 95) : #Retail statistic info. 36 mob's - 34 tooth
          st.giveItems(KELTIR_TOOTH,1)
          st.playSound("ItemSound.quest_itemget")

@@ -124,15 +124,15 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MUCROKIANS :
-			if st.getRandom(100) < MUCROKIAN_HIDE_CHANCE :
+			if getRandom(100) < MUCROKIAN_HIDE_CHANCE :
 				st.giveItems(MUCROKIAN_HIDE,1)
 				st.playSound("ItemSound.quest_itemget")
 		elif cond == 1 and npcId == CHANGED_MUCROKIAN :
-			if st.getRandom(100) < AWAKENED_HIDE_CHANCE :
+			if getRandom(100) < AWAKENED_HIDE_CHANCE :
 				st.giveItems(AWAKENED_MUCROKIAN_HIDE,1)
 				st.playSound("ItemSound.quest_itemget")
 		elif cond == 1 and npcId == CONTAMINATED_MUCROKIAN :
-			if st.getRandom(100) < 10 :
+			if getRandom(100) < 10 :
 				st.giveItems(MUCROKIAN_HIDE,1)
 				st.playSound("ItemSound.quest_itemget")
 		return

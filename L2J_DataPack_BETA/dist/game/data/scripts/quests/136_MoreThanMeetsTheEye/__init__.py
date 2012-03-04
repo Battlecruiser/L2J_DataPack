@@ -125,8 +125,8 @@ class Quest (JQuest) :
       itemId,chance1,chance2=DROPLIST[npc.getNpcId()]
       count = st.getQuestItemsCount(itemId)
       max,cond = DROPCONFIG[itemId]
-      drop1 = st.getRandom(100)
-      drop2 = st.getRandom(100)
+      drop1 = getRandom(100)
+      drop2 = getRandom(100)
       qty1,chance1 = divmod(chance1*Config.RATE_QUEST_DROP,100)
       if drop1 < chance1 : qty1 += 1
       qty1 = int(qty1)

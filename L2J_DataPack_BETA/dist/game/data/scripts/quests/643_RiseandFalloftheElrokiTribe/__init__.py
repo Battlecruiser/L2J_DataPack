@@ -42,7 +42,7 @@ class Quest (JQuest) :
     elif event == "32117-03.htm" :
        if count >= 300 :
           st.takeItems(BONES_OF_A_PLAINS_DINOSAUR,300)
-          st.rewardItems(REWARDS[st.getRandom(len(REWARDS))],5)
+          st.rewardItems(REWARDS[getRandom(len(REWARDS))],5)
        else :
           htmltext = "32117-04.htm"
     elif event in REWARDS_DYNA.keys() :
@@ -95,7 +95,7 @@ class Quest (JQuest) :
           if cond == 1 :
              chance = DROP_CHANCE*Config.RATE_QUEST_DROP
              numItems, chance = divmod(chance,100)
-             if st.getRandom(100) < chance : 
+             if getRandom(100) < chance : 
                 numItems += 1
              if numItems :
                 if int(count + numItems)/300 > int(count)/300 :

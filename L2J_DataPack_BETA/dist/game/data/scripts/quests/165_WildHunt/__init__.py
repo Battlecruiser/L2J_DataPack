@@ -73,7 +73,7 @@ class Quest (JQuest) :
    if npcId in [20529,20532,20536,20456] :
         st.set("id","0")
         if st.getInt("cond") == 1 :
-          if st.getRandom(10)<7 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
+          if getRandom(10)<7 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
               st.playSound("ItemSound.quest_middle")

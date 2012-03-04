@@ -81,7 +81,7 @@ class Quest (JQuest) :
              htmltext = "30970-07.htm"
              st.set("cond","1")
              st.giveItems(ADENA,amount*238)
-             st.giveItems(BILL_OF_IASON_HEINE,st.getRandom(7)+1)
+             st.giveItems(BILL_OF_IASON_HEINE,getRandom(7)+1)
              st.takeItems(USELESS_BONE_PIECES,-1)
      if npcId==30912 :
          if cond == 2 :
@@ -103,7 +103,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
-     random = st.getRandom(100)
+     random = getRandom(100)
      if random<=CHANCE :
          if not st.getQuestItemsCount(VICTIMS_ARM_BONE) :
             st.giveItems(VICTIMS_ARM_BONE,1)
@@ -116,7 +116,7 @@ class Quest (JQuest) :
          elif not st.getQuestItemsCount(VICTIMS_SPINE) :
             st.giveItems(VICTIMS_SPINE,1)
      if random<=CHANCE2 :
-         st.giveItems(USELESS_BONE_PIECES,st.getRandom(8)+1)
+         st.giveItems(USELESS_BONE_PIECES,getRandom(8)+1)
      return
 
 QUEST       = Quest(345,qn,"Method To Raise The Dead")

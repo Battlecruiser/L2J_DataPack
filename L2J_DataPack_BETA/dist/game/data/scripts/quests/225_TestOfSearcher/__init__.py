@@ -252,7 +252,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    npcId = npc.getNpcId()
    status,maxcount,chance,itemid=DROPLIST[npcId]
-   random = st.getRandom(100)
+   random = getRandom(100)
    count=st.getQuestItemsCount(itemid)
    if cond==status and count<maxcount and random<chance :
     if cond == 14:

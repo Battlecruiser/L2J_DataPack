@@ -128,13 +128,13 @@ class Quest (JQuest) :
       elif event == "30634-07.htm" :
          st.giveItems(GALATEAS_LETTER,1)
       elif event == "30063-02.htm" :                  # Lara first time to give a list out
-         random = st.getRandom(5)+1
+         random = getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.takeItems(GALATEAS_LETTER,1)
          st.set("Lara_Part",str(random))
          st.set("step","2")
       elif event == "30063-04.htm" :                  # Lara later to give a list out
-         random = st.getRandom(5)+1
+         random = getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.set("Lara_Part",str(random))
       elif event == "30635-02.htm" :                  # Almors' Part, this is the same just other items below.. so just one time comments
@@ -335,7 +335,7 @@ class Quest (JQuest) :
       if npcId in DROPLIST_LARA.keys() :
          if not st : return
          if st.getState() == State.COMPLETED : return
-         random = st.getRandom(100)
+         random = getRandom(100)
          var, value, chance, item = DROPLIST_LARA[npcId]
          count = st.getQuestItemsCount(item)
          if st.getInt(var) == value and count < 30 and random < chance:

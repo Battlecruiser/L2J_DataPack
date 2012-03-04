@@ -99,7 +99,7 @@ class Quest (JQuest) :
    if npcId == 20311 : chance = 90
    if npcId == 20312 : chance = 87
    if npcId == 20313 : chance = 77
-   if st.getRandom(100) <= chance :
+   if getRandom(100) <= chance :
       st.giveItems(BLACK_SOULSTONE,1)
    else:
       st.giveItems(RED_SOULSTONE,1)

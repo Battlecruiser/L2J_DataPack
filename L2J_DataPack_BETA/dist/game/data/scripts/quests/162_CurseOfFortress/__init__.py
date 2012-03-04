@@ -67,7 +67,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState() != State.STARTED : return
    
-   if st.getRandom(4) == 1 :
+   if getRandom(4) == 1 :
      npcId = npc.getNpcId()
      bones = st.getQuestItemsCount(BONE_FRAGMENT3)
      skulls = st.getQuestItemsCount(ELF_SKULL)

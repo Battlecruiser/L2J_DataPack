@@ -61,7 +61,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   if st.getRandom(100) < CHANCE :
+   if getRandom(100) < CHANCE :
      st.giveItems(STONE,1)
      st.playSound("ItemSound.quest_itemget")
    return

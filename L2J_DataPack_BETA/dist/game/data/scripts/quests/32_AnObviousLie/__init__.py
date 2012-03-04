@@ -142,7 +142,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState()!=State.STARTED : return
    
-   chance = st.getRandom(100)
+   chance = getRandom(100)
    count = st.getQuestItemsCount(MEDICINAL_HERB)
    if chance < CHANCE_FOR_DROP and st.getInt("cond")== 3 :
      if count < 20 :

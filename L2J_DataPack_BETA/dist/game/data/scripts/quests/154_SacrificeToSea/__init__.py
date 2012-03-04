@@ -98,7 +98,7 @@ class Quest (JQuest) :
    if npcId == 20481 :
         st.set("id","0")
         if st.getInt("cond") >= 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
-          if st.getRandom(10)<4 :
+          if getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :
               st.playSound("ItemSound.quest_middle")
@@ -108,7 +108,7 @@ class Quest (JQuest) :
    elif npcId == 20545 :
         st.set("id","0")
         if st.getInt("cond") >= 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
-          if st.getRandom(10)<4 :
+          if getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :
               st.playSound("ItemSound.quest_middle")

@@ -180,7 +180,7 @@ class Quest (JQuest) :
      elif st.getInt("cond")==4 :
       htmltext = "30428-04.htm"
    elif npcId == ORPHAN and st.getInt("cond")==4 :
-        n = st.getRandom(5)
+        n = getRandom(5)
         if n == 0:
           htmltext = "30659-01.htm"
           htmltext = "30659-02.htm"

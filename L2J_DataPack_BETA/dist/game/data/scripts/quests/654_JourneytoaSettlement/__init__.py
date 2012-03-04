@@ -74,7 +74,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st: return
     npcId = npc.getNpcId()
-    if st.getInt("cond") == 2 and  st.getRandom(100) < 5 :
+    if st.getInt("cond") == 2 and  getRandom(100) < 5 :
        st.set("cond","3")
        st.giveItems(ITEM,1)
        st.playSound("ItemSound.quest_middle")

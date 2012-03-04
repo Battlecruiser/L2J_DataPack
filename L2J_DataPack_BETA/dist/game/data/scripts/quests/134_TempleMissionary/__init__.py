@@ -128,9 +128,9 @@ class Quest (JQuest) :
        else:
           if st.getQuestItemsCount(TOOL) >= 1:
              st.takeItems(TOOL, 1)
-             if st.getRandom(100) <= 45 :
+             if getRandom(100) <= 45 :
                 st.addSpawn(27339,npc,True,900000)
-          elif st.getRandom(100) <= 70 :
+          elif getRandom(100) <= 70 :
              st.playSound("ItemSound.quest_itemget")
              st.giveItems(FRAGMENT,1)
     return

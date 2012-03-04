@@ -53,7 +53,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   if st.getQuestItemsCount(FUNGUS_SAC)<10 and st.getRandom(100) < 50 :
+   if st.getQuestItemsCount(FUNGUS_SAC)<10 and getRandom(100) < 50 :
      st.giveItems(FUNGUS_SAC,1)
      if st.getQuestItemsCount(FUNGUS_SAC) == 10 :
        st.playSound("ItemSound.quest_middle")

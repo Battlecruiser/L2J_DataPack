@@ -60,7 +60,7 @@ class Quest (JQuest) :
    count = st.getQuestItemsCount(FUNGUS_SAC)
    chance = 3
    if npc.getNpcId() == 20400 : chance += 1
-   if count < 10 and st.getRandom(10) < chance :
+   if count < 10 and getRandom(10) < chance :
      st.giveItems(FUNGUS_SAC,1)
      if count == 9 :
        st.playSound("ItemSound.quest_middle")

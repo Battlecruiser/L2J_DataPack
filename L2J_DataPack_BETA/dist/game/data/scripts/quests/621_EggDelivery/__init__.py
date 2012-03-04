@@ -105,8 +105,8 @@ class Quest (JQuest) :
    elif event == "31584-2.htm" :
      if st.getQuestItemsCount(FEE_OF_EGGS) == 5:
         st.takeItems(FEE_OF_EGGS,5)
-        if st.getRandom(100) < RPCHANCE :
-          st.giveItems(range(6847+ALT_RP100,6853,2)[st.getRandom(3)],1)
+        if getRandom(100) < RPCHANCE :
+          st.giveItems(range(6847+ALT_RP100,6853,2)[getRandom(3)],1)
         else:
           st.giveItems(ADENA,18800)
           st.giveItems(HASTE_POTION,1)

@@ -486,7 +486,7 @@ class Quest (JQuest) :
      required,item,maxquanty,chance=DROPLIST_COND_6[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
-       if st.getRandom(100) < chance :
+       if getRandom(100) < chance :
          st.giveItems(item,1)
          if count+1 == maxquanty :                          # Check if got enough number of items
            if st.getQuestItemsCount(TIMAK_ORC_HEAD) == maxquanty and st.getQuestItemsCount(TAMLIN_ORC_SKULL) == maxquanty :

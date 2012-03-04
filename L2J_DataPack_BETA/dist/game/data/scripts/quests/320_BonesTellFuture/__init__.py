@@ -56,7 +56,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    count=st.getQuestItemsCount(BONE_FRAGMENT)
-   if count<10 and st.getRandom(10)>7 :
+   if count<10 and getRandom(10)>7 :
       st.giveItems(BONE_FRAGMENT,1)
       if count == 9 :
         st.playSound("ItemSound.quest_middle")

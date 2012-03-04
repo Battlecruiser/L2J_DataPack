@@ -45,7 +45,7 @@ class Quest (JQuest) :
      if cond == 2 and leaf == meat == horn == 100 :
         htmltext = "31521-06.htm"
         st.playSound("ItemSound.quest_finish")
-        random = st.getRandom(100)
+        random = getRandom(100)
         i = 0
         while i < len(REWARDS) :
             item,adena,chance,chance2=REWARDS[i]

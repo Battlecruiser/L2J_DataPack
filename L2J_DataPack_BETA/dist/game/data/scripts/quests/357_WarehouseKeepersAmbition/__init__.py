@@ -70,7 +70,7 @@ class Quest (JQuest) :
    if not partyMember: return
    st = partyMember.getQuestState(qn)
    
-   chance = st.getRandom(100) 
+   chance = getRandom(100) 
    if chance < DROPRATE :
      st.giveItems(JADE_CRYSTAL,1)
      st.playSound("ItemSound.quest_itemget")

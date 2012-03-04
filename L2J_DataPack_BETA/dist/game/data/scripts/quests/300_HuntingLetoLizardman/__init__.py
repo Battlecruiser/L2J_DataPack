@@ -35,7 +35,7 @@ class Quest (JQuest) :
      if count == 60 and cond == 2 :
        htmltext = "30126-06.htm"
        st.takeItems(BRACELET,-1)
-       item,qty = REWARDS[st.getRandom(len(REWARDS))]
+       item,qty = REWARDS[getRandom(len(REWARDS))]
        st.giveItems(item,qty)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
@@ -66,7 +66,7 @@ class Quest (JQuest) :
    
    count = st.getQuestItemsCount(BRACELET)
    cond = st.getInt("cond")
-   if st.getRandom(100) < CHANCE + ((npc.getNpcId() - 20579)*5) and count < 60 and cond == 1:
+   if getRandom(100) < CHANCE + ((npc.getNpcId() - 20579)*5) and count < 60 and cond == 1:
      st.giveItems(BRACELET,1)
      if count == 59 :
         st.playSound("ItemSound.quest_middle")

@@ -160,7 +160,7 @@ class Quest (JQuest) :
    if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
      if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
        if st.getQuestItemsCount(GREEN_BLOOD) > 1 : 
-         if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*10) : 
+         if getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*10) : 
            st.takeItems(GREEN_BLOOD,-1) 
            st.addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
          else: 

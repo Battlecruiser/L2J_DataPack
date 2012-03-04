@@ -84,7 +84,7 @@ class Quest (JQuest) :
         if not st : return 
         if st.getState() != State.STARTED : return
         if not st.getQuestItemsCount(Accessory) and st.getInt("cond") == 2:
-            if st.getRandom(5) == 0 :
+            if getRandom(5) == 0 :
                 st.playSound("ItemSound.quest_middle")
                 st.giveItems(Accessory,1)
         return
