@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q553_OlympiadUndefeated extends Quest
 {
-	private static final String qn = "552_OlympiadVeteran";
+	private static final String qn = "553_OlympiadUndefeated";
 	
 	private static final int MANAGER = 31688;
 	
