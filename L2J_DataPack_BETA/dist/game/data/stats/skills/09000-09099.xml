@@ -709,7 +709,6 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="600000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="2" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -725,7 +724,6 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1800000" />
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
