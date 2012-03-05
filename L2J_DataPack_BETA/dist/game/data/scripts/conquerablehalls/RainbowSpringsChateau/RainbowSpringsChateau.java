@@ -56,7 +56,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Rainbow Springs Chateau clan hall siege script.
@@ -67,81 +66,90 @@ public class RainbowSpringsChateau extends Quest
 	private static final Logger _log = Logger.getLogger(RainbowSpringsChateau.class.getName());
 	
 	private static class SetFinalAttackers implements Runnable
-	{ 
+	{
 		@Override
 		public void run()
 		{
-			if(_rainbow == null)
+			if (_rainbow == null)
+			{
 				_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
+			}
 			
 			int spotLeft = 4;
-			if(_rainbow.getOwnerId() > 0)
+			if (_rainbow.getOwnerId() > 0)
 			{
 				L2Clan owner = ClanTable.getInstance().getClan(_rainbow.getOwnerId());
-				if(owner != null)
+				if (owner != null)
 				{
 					_rainbow.free();
 					owner.setHideoutId(0);
 					_acceptedClans.add(owner);
 					--spotLeft;
 				}
-					
-				for(int i = 0; i < spotLeft; i++)
+				
+				for (int i = 0; i < spotLeft; i++)
 				{
 					long counter = 0;
 					L2Clan clan = null;
-					for(int clanId : _warDecreesCount.keys())
+					for (int clanId : _warDecreesCount.keys())
 					{
 						L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
-						if(actingClan == null || actingClan.getDissolvingExpiryTime() > 0)
+						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
 						{
 							_warDecreesCount.remove(clanId);
 							continue;
 						}
 						
 						final long count = _warDecreesCount.get(clanId);
-						if(count > counter)
-						{								counter = count;
+						if (count > counter)
+						{
+							counter = count;
 							clan = actingClan;
 						}
 					}
-					if(_acceptedClans.size() < 4)
+					if (_acceptedClans.size() < 4)
 					{
 						_acceptedClans.add(clan);
 						L2PcInstance leader = clan.getLeader().getPlayerInstance();
-						if(leader != null)
+						if (leader != null)
+						{
 							leader.sendMessage("Your clan has been accepted to join the RainBow Srpings Chateau siege!");
+						}
 					}
 				}
-				if(_acceptedClans.size() >= 2)
+				if (_acceptedClans.size() >= 2)
 				{
 					_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStart(), 3600000);
 					_rainbow.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 				}
 				else
+				{
 					Announcements.getInstance().announceToAll("Rainbow Springs Chateau siege aborted due lack of population");
+				}
 			}
-		}		
+		}
 	}
 	
 	private static class SiegeStart implements Runnable
-	{		
+	{
 		@Override
 		public void run()
 		{
-			if(_rainbow == null)
+			if (_rainbow == null)
+			{
 				_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
-
-			//XXX _rainbow.siegeStarts();
+			}
+			
+			// XXX _rainbow.siegeStarts();
 			
 			spawnGourds();
 			_siegeEnd = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeEnd(null), _rainbow.getSiegeLenght() - 120000);
 		}
 	}
-		
+	
 	private static class SiegeEnd implements Runnable
 	{
-		private L2Clan _winner;
+		private final L2Clan _winner;
 		
 		private SiegeEnd(L2Clan winner)
 		{
@@ -151,32 +159,36 @@ public class RainbowSpringsChateau extends Quest
 		@Override
 		public void run()
 		{
-			if(_rainbow == null)
+			if (_rainbow == null)
+			{
 				_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
-
+			}
+			
 			unSpawnGourds();
 			
-			if(_winner != null)
+			if (_winner != null)
+			{
 				_rainbow.setOwner(_winner);
+			}
 			
-			//XXX _rainbow.siegeEnds();
+			// XXX _rainbow.siegeEnds();
 			
 			ThreadPoolManager.getInstance().scheduleGeneral(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
-			setRegistrationEndString(_rainbow.getNextSiegeTime() + System.currentTimeMillis() - 3600000);
+			setRegistrationEndString((_rainbow.getNextSiegeTime() + System.currentTimeMillis()) - 3600000);
 			// Teleport out of the arenas is made 2 mins after game ends
 			ThreadPoolManager.getInstance().scheduleGeneral(new TeleportBack(), 120000);
 		}
 	}
 	
 	private static class TeleportBack implements Runnable
-	{		
+	{
 		@Override
 		public void run()
 		{
-			for(int arenaId : ARENA_ZONES)
+			for (int arenaId : ARENA_ZONES)
 			{
 				final L2Character[] chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInsideArray();
-				for(L2Character chr : chars)
+				for (L2Character chr : chars)
 				{
 					if (chr != null)
 					{
@@ -192,7 +204,7 @@ public class RainbowSpringsChateau extends Quest
 	private static final int RAINBOW_SPRINGS = 62;
 	
 	private static final int WAR_DECREES = 8034;
-	private static final int RAINBOW_NECTAR= 8030;
+	private static final int RAINBOW_NECTAR = 8030;
 	private static final int RAINBOW_MWATER = 8031;
 	private static final int RAINBOW_WATER = 8032;
 	private static final int RAINBOW_SULFUR = 8033;
@@ -201,20 +213,54 @@ public class RainbowSpringsChateau extends Quest
 	private static final int CARETAKER = 35603;
 	private static final int CHEST = 35593;
 	
-	private static final int[] GOURDS = { 35588, 35589, 35590, 35591 };
+	private static final int[] GOURDS =
+	{
+		35588,
+		35589,
+		35590,
+		35591
+	};
 	private static L2Spawn[] _gourds = new L2Spawn[4];
 	
-	private static final int[] YETIS = { 35596, 35597, 35598, 35599 };
+	private static final int[] YETIS =
+	{
+		35596,
+		35597,
+		35598,
+		35599
+	};
 	
 	private static final int[][] ARENAS =
 	{
-		{ 151562, -127080, -2214 }, // Arena 1
-		{ 153141, -125335, -2214 }, // Arena 2
-		{ 153892, -127530, -2214 }, // Arena 3
-		{ 155657, -125752, -2214 }, // Arena 4
+		{
+			151562,
+			-127080,
+			-2214
+		}, // Arena 1
+		{
+			153141,
+			-125335,
+			-2214
+		}, // Arena 2
+		{
+			153892,
+			-127530,
+			-2214
+		}, // Arena 3
+		{
+			155657,
+			-125752,
+			-2214
+		}, // Arena 4
 	};
 	
-	private static final int[] ARENA_ZONES = { 112081, 112082, 112083, 112084 };
+	private static final int[] ARENA_ZONES =
+	{
+		112081,
+		112082,
+		112083,
+		112084
+	};
 	
 	private static final String[] _textPassages =
 	{
@@ -234,7 +280,7 @@ public class RainbowSpringsChateau extends Quest
 	{
 		SkillTable.getInstance().getInfo(0, 1)
 	};
-		
+	
 	private static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
 	private static List<L2Clan> _acceptedClans = new ArrayList<L2Clan>(4);
 	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<String, ArrayList<L2Clan>>();
@@ -243,7 +289,6 @@ public class RainbowSpringsChateau extends Quest
 	private static SiegableHall _rainbow;
 	private static ScheduledFuture<?> _nextSiege, _siegeEnd;
 	private static String _registrationEnds;
-	
 	
 	/**
 	 * @param questId
@@ -264,16 +309,18 @@ public class RainbowSpringsChateau extends Quest
 		loadAttackers();
 		
 		_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
-		if(_rainbow != null)
+		if (_rainbow != null)
 		{
 			long delay = _rainbow.getNextSiegeTime();
-			if(delay > -1)
+			if (delay > -1)
 			{
 				setRegistrationEndString(delay - 3600000);
 				_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SetFinalAttackers(), delay);
 			}
 			else
+			{
 				_log.warning("CHSiegeManager: No Date setted for RainBow Springs Chateau Clan hall siege!. SIEGE CANCELED!");
+			}
 		}
 	}
 	
@@ -282,7 +329,7 @@ public class RainbowSpringsChateau extends Quest
 	{
 		String html = "";
 		final int npcId = npc.getNpcId();
-		if(npcId == MESSENGER)
+		if (npcId == MESSENGER)
 		{
 			final String main = (_rainbow.getOwnerId() > 0) ? "messenger_yetti001.htm" : "messenger_yetti001a.htm";
 			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/conquerablehalls/RainbowSpringsChateau/" + main);
@@ -292,9 +339,9 @@ public class RainbowSpringsChateau extends Quest
 				html = html.replace("%owner%", ClanTable.getInstance().getClan(_rainbow.getOwnerId()).getName());
 			}
 		}
-		else if(npcId == CARETAKER)
+		else if (npcId == CARETAKER)
 		{
-			if(_rainbow.isInSiege())
+			if (_rainbow.isInSiege())
 			{
 				html = "game_manager003.htm";
 			}
@@ -319,7 +366,9 @@ public class RainbowSpringsChateau extends Quest
 					{
 						int index = _acceptedClans.indexOf(clan);
 						if (npcId == YETIS[index])
+						{
 							html = "yeti_main.htm";
+						}
 					}
 				}
 			}
@@ -347,22 +396,22 @@ public class RainbowSpringsChateau extends Quest
 						{
 							html = "messenger_yetti012.htm";
 						}
-						else if(!_rainbow.isRegistering())
+						else if (!_rainbow.isRegistering())
 						{
 							html = "messenger_yetti014.htm";
 						}
-						else if(_warDecreesCount.containsKey(clan.getClanId()))
+						else if (_warDecreesCount.containsKey(clan.getClanId()))
 						{
 							html = "messenger_yetti013.htm";
 						}
-						else if(clan.getLevel() < 3 || clan.getMembersCount() < 5)
+						else if ((clan.getLevel() < 3) || (clan.getMembersCount() < 5))
 						{
 							html = "messenger_yetti011.htm";
 						}
 						else
 						{
 							final L2ItemInstance warDecrees = player.getInventory().getItemByItemId(WAR_DECREES);
-							if(warDecrees == null)
+							if (warDecrees == null)
 							{
 								html = "messenger_yetti008.htm";
 							}
@@ -381,11 +430,11 @@ public class RainbowSpringsChateau extends Quest
 						{
 							html = "messenger_yetti010.htm";
 						}
-						else if(!_warDecreesCount.containsKey(clan.getClanId()))
+						else if (!_warDecreesCount.containsKey(clan.getClanId()))
 						{
 							html = "messenger_yetti016.htm";
 						}
-						else if(!_rainbow.isRegistering())
+						else if (!_rainbow.isRegistering())
 						{
 							html = "messenger_yetti017.htm";
 						}
@@ -396,7 +445,7 @@ public class RainbowSpringsChateau extends Quest
 						}
 						break;
 					case "unregister":
-						if(_rainbow.isRegistering())
+						if (_rainbow.isRegistering())
 						{
 							if (_warDecreesCount.contains(clan.getClanId()))
 							{
@@ -409,7 +458,7 @@ public class RainbowSpringsChateau extends Quest
 								html = "messenger_yetti020.htm";
 							}
 						}
-						else if(_rainbow.isWaitingBattle())
+						else if (_rainbow.isWaitingBattle())
 						{
 							_acceptedClans.remove(clan);
 							html = "messenger_yetti020.htm";
@@ -418,22 +467,22 @@ public class RainbowSpringsChateau extends Quest
 				}
 				break;
 			case CARETAKER:
-				if(event.equals("portToArena"))
+				if (event.equals("portToArena"))
 				{
 					final L2Party party = player.getParty();
 					if (clan == null)
 					{
 						html = "game_manager009.htm";
 					}
-					else if(!player.isClanLeader())
+					else if (!player.isClanLeader())
 					{
 						html = "game_manager004.htm";
 					}
-					else if(!player.isInParty())
+					else if (!player.isInParty())
 					{
 						html = "game_manager005.htm";
 					}
-					else if(party.getPartyLeaderOID() != player.getObjectId())
+					else if (party.getPartyLeaderOID() != player.getObjectId())
 					{
 						html = "game_manager006.htm";
 					}
@@ -454,7 +503,7 @@ public class RainbowSpringsChateau extends Quest
 						{
 							html = "game_manager007.htm";
 						}
-						else if(party.getMemberCount() < 5)
+						else if (party.getMemberCount() < 5)
 						{
 							html = "game_manager008.htm";
 						}
@@ -468,19 +517,19 @@ public class RainbowSpringsChateau extends Quest
 						}
 						// else if () // Something about the rules.
 						// {
-						// 	html = "game_manager012.htm";
+						// html = "game_manager012.htm";
 						// }
 						// else if () // Already registered.
 						// {
-						// 	html = "game_manager013.htm";
+						// html = "game_manager013.htm";
 						// }
-						else if(!_acceptedClans.contains(clan))
+						else if (!_acceptedClans.contains(clan))
 						{
 							html = "game_manager014.htm";
 						}
 						// else if () // Not have enough cards to register.
 						// {
-						// 	html = "game_manager015.htm";
+						// html = "game_manager015.htm";
 						// }
 						else
 						{
@@ -491,52 +540,64 @@ public class RainbowSpringsChateau extends Quest
 				break;
 		}
 		
-		if(event.startsWith("enterText"))
+		if (event.startsWith("enterText"))
 		{
 			// Shouldn't happen
-			if(!_acceptedClans.contains(clan))
+			if (!_acceptedClans.contains(clan))
+			{
 				return null;
+			}
 			
 			String[] split = event.split("_ ");
-			if(split.length < 2)
+			if (split.length < 2)
+			{
 				return null;
+			}
 			
 			final String passage = split[1];
 			
-			if(!isValidPassage(passage))
+			if (!isValidPassage(passage))
+			{
 				return null;
+			}
 			
-			if(_usedTextPassages.containsKey(passage))
+			if (_usedTextPassages.containsKey(passage))
 			{
 				ArrayList<L2Clan> list = _usedTextPassages.get(passage);
 				
-				if(list.contains(clan))
+				if (list.contains(clan))
+				{
 					html = "yeti_passage_used.htm";
+				}
 				else
 				{
 					list.add(clan);
-					synchronized(_pendingItemToGet)
+					synchronized (_pendingItemToGet)
 					{
-						if(_pendingItemToGet.containsKey(clan))
+						if (_pendingItemToGet.containsKey(clan))
 						{
 							int left = _pendingItemToGet.get(clan);
 							++left;
 							_pendingItemToGet.put(clan, left);
 						}
 						else
+						{
 							_pendingItemToGet.put(clan, 1);
+						}
 					}
 					html = "yeti_item_exchange.htm";
 				}
 			}
 		}
-		else if(event.startsWith("getItem"))
+		else if (event.startsWith("getItem"))
 		{
-			if(!_pendingItemToGet.containsKey(clan))
+			if (!_pendingItemToGet.containsKey(clan))
+			{
 				html = "yeti_cannot_exchange.htm";
-				
+			}
+			
 			int left = _pendingItemToGet.get(clan);
-			if(left > 0)
+			if (left > 0)
 			{
 				int itemId = Integer.parseInt(event.split("_")[1]);
 				player.addItem("Rainbow Spring Chateau Siege", itemId, 1, npc, true);
@@ -545,7 +606,9 @@ public class RainbowSpringsChateau extends Quest
 				html = "yeti_main.htm";
 			}
 			else
+			{
 				html = "yeti_cannot_exchange.htm";
+			}
 		}
 		
 		return html;
@@ -554,26 +617,32 @@ public class RainbowSpringsChateau extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if(!_rainbow.isInSiege())
+		if (!_rainbow.isInSiege())
+		{
 			return null;
+		}
 		
 		final L2Clan clan = killer.getClan();
-		if(clan == null || !_acceptedClans.contains(clan))
+		if ((clan == null) || !_acceptedClans.contains(clan))
+		{
 			return null;
+		}
 		
 		final int npcId = npc.getNpcId();
 		final int index = _acceptedClans.indexOf(clan);
 		
-		if(npcId == CHEST)
+		if (npcId == CHEST)
 		{
 			shoutRandomText(npc);
 		}
-		else if(npcId == GOURDS[index])
+		else if (npcId == GOURDS[index])
 		{
-			synchronized(this)
+			synchronized (this)
 			{
-				if(_siegeEnd != null)
+				if (_siegeEnd != null)
+				{
 					_siegeEnd.cancel(false);
+				}
 				ThreadPoolManager.getInstance().executeTask(new SiegeEnd(clan));
 			}
 		}
@@ -584,23 +653,31 @@ public class RainbowSpringsChateau extends Quest
 	@Override
 	public String onItemUse(L2Item item, L2PcInstance player)
 	{
-		if(!_rainbow.isInSiege())
+		if (!_rainbow.isInSiege())
+		{
 			return null;
+		}
 		
 		L2Object target = player.getTarget();
 		
-		if(target == null || !(target instanceof L2Npc))
+		if ((target == null) || !(target instanceof L2Npc))
+		{
 			return null;
+		}
 		
-		int yeti = ((L2Npc)target).getNpcId();
+		int yeti = ((L2Npc) target).getNpcId();
 		
-		if(!isYetiTarget(yeti))
+		if (!isYetiTarget(yeti))
+		{
 			return null;
+		}
 		
 		final L2Clan clan = player.getClan();
 		
-		if(clan == null || !_acceptedClans.contains(clan))
+		if ((clan == null) || !_acceptedClans.contains(clan))
+		{
 			return null;
+		}
 		
 		final int itemId = item.getItemId();
 		
@@ -611,20 +688,20 @@ public class RainbowSpringsChateau extends Quest
 		// - Change arena gourds ( moveGourds() )
 		// - Increase gourd hp ( increaseGourdHp(int) )
 		
-		if(itemId == RAINBOW_NECTAR)
+		if (itemId == RAINBOW_NECTAR)
 		{
 			// Spawn enraged (where?)
 			reduceGourdHp(_acceptedClans.indexOf(clan), player);
 		}
-		else if(itemId == RAINBOW_MWATER)
+		else if (itemId == RAINBOW_MWATER)
 		{
 			increaseGourdHp(_acceptedClans.indexOf(clan));
 		}
-		else if(itemId == RAINBOW_WATER)
+		else if (itemId == RAINBOW_WATER)
 		{
 			moveGourds();
 		}
-		else if(itemId == RAINBOW_SULFUR)
+		else if (itemId == RAINBOW_SULFUR)
 		{
 			castDebuffsOnEnemies(_acceptedClans.indexOf(clan));
 		}
@@ -633,26 +710,30 @@ public class RainbowSpringsChateau extends Quest
 	
 	private static void portToArena(L2PcInstance leader, int arena)
 	{
-		if(arena < 0 || arena > 3)
+		if ((arena < 0) || (arena > 3))
 		{
-			_log.warning("RainbowSptringChateau siege: Wrong arena id passed: "+arena);
+			_log.warning("RainbowSptringChateau siege: Wrong arena id passed: " + arena);
 			return;
 		}
-		for(L2PcInstance pc : leader.getParty().getPartyMembers())
-			if(pc != null)
+		for (L2PcInstance pc : leader.getParty().getPartyMembers())
+		{
+			if (pc != null)
 			{
 				pc.stopAllEffects();
-				if(pc.getPet() != null)
+				if (pc.getPet() != null)
+				{
 					pc.getPet().unSummon(pc);
+				}
 				pc.teleToLocation(ARENAS[arena][0], ARENAS[arena][1], ARENAS[arena][2]);
-			}	
+			}
+		}
 	}
 	
 	private static void spawnGourds()
 	{
-		for(int i = 0; i < _acceptedClans.size(); i++)
+		for (int i = 0; i < _acceptedClans.size(); i++)
 		{
-			if(_gourds[i] == null)
+			if (_gourds[i] == null)
 			{
 				try
 				{
@@ -663,7 +744,7 @@ public class RainbowSpringsChateau extends Quest
 					_gourds[i].setHeading(1);
 					_gourds[i].setAmount(1);
 				}
-				catch(Exception e)
+				catch (Exception e)
 				{
 					e.printStackTrace();
 				}
@@ -675,7 +756,7 @@ public class RainbowSpringsChateau extends Quest
 	
 	private static void unSpawnGourds()
 	{
-		for(int i = 0; i < _acceptedClans.size(); i++)
+		for (int i = 0; i < _acceptedClans.size(); i++)
 		{
 			_gourds[i].getLastSpawn().deleteMe();
 			SpawnTable.getInstance().deleteSpawn(_gourds[i], false);
@@ -686,12 +767,12 @@ public class RainbowSpringsChateau extends Quest
 	{
 		L2Spawn[] tempArray = _gourds;
 		int iterator = _acceptedClans.size();
-		for(int i = 0; i < iterator; i++)
+		for (int i = 0; i < iterator; i++)
 		{
-			L2Spawn oldSpawn = _gourds[(iterator-1)-i];
+			L2Spawn oldSpawn = _gourds[(iterator - 1) - i];
 			L2Spawn curSpawn = tempArray[i];
 			
-			_gourds[(iterator -1) - i] = curSpawn;
+			_gourds[(iterator - 1) - i] = curSpawn;
 			
 			int newX = oldSpawn.getLocx();
 			int newY = oldSpawn.getLocy();
@@ -716,17 +797,19 @@ public class RainbowSpringsChateau extends Quest
 	
 	private static void castDebuffsOnEnemies(int myArena)
 	{
-		for(int id : ARENA_ZONES)
+		for (int id : ARENA_ZONES)
 		{
-			if(id == myArena)
+			if (id == myArena)
+			{
 				continue;
+			}
 			
 			final L2Character[] chars = ZoneManager.getInstance().getZoneById(id).getCharactersInsideArray();
-			for(L2Character chr : chars)
+			for (L2Character chr : chars)
 			{
 				if (chr != null)
 				{
-					for(L2Skill sk : DEBUFFS)
+					for (L2Skill sk : DEBUFFS)
 					{
 						sk.getEffects(chr, chr);
 					}
@@ -739,14 +822,18 @@ public class RainbowSpringsChateau extends Quest
 	{
 		int length = _textPassages.length;
 		
-		if(_usedTextPassages.size() >= length)
+		if (_usedTextPassages.size() >= length)
+		{
 			return;
-
-		int randomPos = Rnd.get(length);
+		}
+		
+		int randomPos = getRandom(length);
 		String message = _textPassages[randomPos];
 		
-		if(_usedTextPassages.containsKey(message))
+		if (_usedTextPassages.containsKey(message))
+		{
 			shoutRandomText(npc);
+		}
 		else
 		{
 			_usedTextPassages.put(message, new ArrayList<L2Clan>());
@@ -759,17 +846,25 @@ public class RainbowSpringsChateau extends Quest
 	
 	private static boolean isValidPassage(String text)
 	{
-		for(String st : _textPassages)
-			if(st.equalsIgnoreCase(text))
+		for (String st : _textPassages)
+		{
+			if (st.equalsIgnoreCase(text))
+			{
 				return true;
+			}
+		}
 		return false;
 	}
 	
 	private static boolean isYetiTarget(int npcId)
 	{
-		for(int yeti : YETIS)
-			if(yeti == npcId)
+		for (int yeti : YETIS)
+		{
+			if (yeti == npcId)
+			{
 				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -780,7 +875,7 @@ public class RainbowSpringsChateau extends Quest
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
-			if(remove)
+			if (remove)
 			{
 				statement = con.prepareStatement("DELETE FROM rainbowsprings_attacker_list WHERE clanId = ?");
 				statement.setInt(1, clanId);
@@ -794,7 +889,7 @@ public class RainbowSpringsChateau extends Quest
 			statement.execute();
 			statement.close();
 		}
-		catch(Exception e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
@@ -812,7 +907,7 @@ public class RainbowSpringsChateau extends Quest
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM rainbowsprings_attacker_list");
 			ResultSet rset = statement.executeQuery();
-			while(rset.next())
+			while (rset.next())
 			{
 				int clanId = rset.getInt("clan_id");
 				long count = rset.getLong("decrees_count");
@@ -821,7 +916,7 @@ public class RainbowSpringsChateau extends Quest
 			rset.close();
 			statement.close();
 		}
-		catch(Exception e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
@@ -841,7 +936,7 @@ public class RainbowSpringsChateau extends Quest
 		int hour = c.get(Calendar.HOUR);
 		int mins = c.get(Calendar.MINUTE);
 		
-		_registrationEnds = year+"-"+month+"-"+day+" "+hour+":"+mins;
+		_registrationEnds = year + "-" + month + "-" + day + " " + hour + ":" + mins;
 	}
 	
 	public static void launchSiege()
@@ -852,19 +947,25 @@ public class RainbowSpringsChateau extends Quest
 	
 	public static void endSiege()
 	{
-		if(_siegeEnd != null)
+		if (_siegeEnd != null)
+		{
 			_siegeEnd.cancel(false);
+		}
 		ThreadPoolManager.getInstance().executeTask(new SiegeEnd(null));
 	}
 	
 	public static void updateAdminDate(long date)
 	{
-		if(_rainbow == null)
+		if (_rainbow == null)
+		{
 			_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
+		}
 		
 		_rainbow.setNextSiegeDate(date);
-		if(_nextSiege != null)
+		if (_nextSiege != null)
+		{
 			_nextSiege.cancel(true);
+		}
 		date -= 3600000;
 		setRegistrationEndString(date);
 		_nextSiege = ThreadPoolManager.getInstance().scheduleGeneral(new SetFinalAttackers(), _rainbow.getNextSiegeTime());

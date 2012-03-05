@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * 2010-08-19 Based on Freya PTS.
@@ -66,12 +65,12 @@ public class Q463_IMustBeaGenius extends Quest
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				// Generate random daily number for player
-				int _number = Rnd.get(500, 600);
+				int _number = getRandom(500, 600);
 				st.set("number", String.valueOf(_number));
 				// Set drop for mobs
 				for (int _mob : _mobs)
 				{
-					int _rand = Rnd.get(-2, 4);
+					int _rand = getRandom(-2, 4);
 					if (_rand == 0)
 					{
 						_rand = 5;
@@ -79,7 +78,7 @@ public class Q463_IMustBeaGenius extends Quest
 					st.set(String.valueOf(_mob), String.valueOf(_rand));
 				}
 				// One with higher chance
-				st.set(String.valueOf(_mobs[Rnd.get(0, _mobs.length - 1)]), String.valueOf(Rnd.get(1, 100)));
+				st.set(String.valueOf(_mobs[getRandom(_mobs.length)]), String.valueOf(getRandom(1, 100)));
 				htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32069-03.htm");
 				htmltext = htmltext.replace("%num%", String.valueOf(_number));
 			}
