@@ -209,7 +209,7 @@
 	<skill id="21232" levels="1" name="Shiny Lit Platform">
 		<!-- High Five Skill -->
 		<!-- Steps onto the shiny lit platform. -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20004" />
@@ -279,7 +279,7 @@
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<!-- Can move to near Zaken's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -290,7 +290,7 @@
 	<skill id="21243" levels="1" name="Freya's Call">
 		<!-- Can move to near Freya's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -301,7 +301,7 @@
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<!-- Can move to near Frintezza's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -390,7 +390,7 @@
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
 		<!-- High Five Skill -->
 		<!-- Mounts a rocking horse. -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20007" />

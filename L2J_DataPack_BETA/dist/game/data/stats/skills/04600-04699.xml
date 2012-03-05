@@ -1472,7 +1472,7 @@
 		</for>
 	</skill>
 	<skill id="4672" levels="1" name="NPC Corpse Remove">
-		<!-- Needs to be done -->
+		<!-- TODO: Needs to be done -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="40" />
@@ -1884,7 +1884,7 @@
 		</for>
 	</skill>
 	<skill id="4697" levels="12" name="NPC Monster Hate">
-		<!-- Needs to be done -->
+		<!-- TODO: Needs to be done -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 100 104 109 113 115 117 </table>
 		<set name="magicLvl" val="#magicLvl" />

@@ -17,35 +17,35 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BLOW" />
 		<set name="condition" val="16" /> <!-- Crit -->
-		<set name="magicLvl" val="85" /> <!-- guessed -->
+		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="3420" />
 		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- guessed -->
+		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="5000" /> <!-- guessed -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
 		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
-		<set name="magicLvl" val="85" /> <!-- guessed -->
+		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="3420" />
 		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- guessed -->
+		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="5000" /> <!-- guessed -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="mpConsume" val="1" />
-		<set name="reuseDelay" val="30000" /> <!-- guessed -->
+		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
 		<set name="isMagic" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_up_special">
@@ -57,9 +57,9 @@
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="mpConsume" val="1" />
-		<set name="reuseDelay" val="5000" /> <!-- guessed -->
+		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
 		<for>
@@ -70,11 +70,11 @@
 	</skill>
 	<skill id="20006" levels="1" name="Soul Roar">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="635" /> <!-- Guess -->
+		<set name="aggroPoints" val="635" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />

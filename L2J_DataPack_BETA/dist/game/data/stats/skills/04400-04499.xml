@@ -983,14 +983,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<!-- Custom Implementation: -->
+			<!-- FIXME Custom Implementation -->
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtkDef" />
 			</effect>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up" noicon="1">
 				<mul order="0x30" stat="pDef" val="#pAtkDef" />
 			</effect>
-			<!-- TODO: Create Core support for abnormalType parents. -->
 			<!-- effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_pd_up" -->
 			<!-- mul order="0x30" stat="pAtk" val="#pAtkDef" / -->
 			<!-- mul order="0x30" stat="pDef" val="#pAtkDef" / -->

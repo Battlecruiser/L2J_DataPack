@@ -57,7 +57,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</for>
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="#ench2Power" effectType="DEBUFF">
@@ -75,7 +75,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="1.2" />
 				<mul order="0x30" stat="ancientWpnVuln" val="1.2" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="80" effectType="DEBUFF">
@@ -94,7 +94,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="1.2" />
 				<mul order="0x30" stat="ancientWpnVuln" val="1.2" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant3for>
 	</skill>
 	<skill id="401" levels="10" name="Judgment" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -156,7 +156,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</for>
 		<enchant2for>
 			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
@@ -174,7 +174,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="1.2" />
 				<mul order="0x30" stat="ancientWpnVuln" val="1.2" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
@@ -193,7 +193,7 @@
 				<mul order="0x30" stat="rapierWpnVuln" val="1.2" />
 				<mul order="0x30" stat="ancientWpnVuln" val="1.2" />
 			</effect>
-			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- Guess -->
+			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant3for>
 	</skill>
 	<skill id="402" levels="10" name="Arrest" enchantGroup1="1" enchantGroup2="1">
@@ -1514,7 +1514,7 @@
 		</for>
 	</skill>
 	<skill id="448" levels="1" name="Summon Swoop Cannon" enchantGroup1="1">
-		<!-- Needs to be verified "Is enchantable but no stats for the +Power versions" -->
+		<!-- TODO: Needs to be verified "Is enchantable but no stats for the +Power versions" -->
 		<table name="#ench1npcId"> 14840 14841 14842 14843 14844 14845 14846 14847 14848 14849 14850 14851 14852 14853 14854 14855 14856 14857 14858 14859 14860 14861 14862 14863 14864 14865 14866 14867 14868 14869 </table>
 		<set name="mpInitialConsume" val="530" />
 		<set name="magicLvl" val="68" />

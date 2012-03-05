@@ -929,7 +929,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="skillMastery" val="2" /> <!-- Guess -->
+			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
 		</for>
 	</skill>
 	<skill id="331" levels="1" name="Skill Mastery">
@@ -939,7 +939,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="skillMastery" val="2" /> <!-- Guess -->
+			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
 		</for>
 	</skill>
 	<skill id="332" levels="1" name="Extra Inventory">

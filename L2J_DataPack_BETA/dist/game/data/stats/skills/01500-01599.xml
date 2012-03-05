@@ -1135,7 +1135,7 @@
 	</skill>
 	<skill id="1548" levels="3" name="Resist Earth">
 		<!-- High Five Skill -->
-		<table name="#aggroPoints"> 243 379 418 </table> <!-- Guess -->
+		<table name="#aggroPoints"> 243 379 418 </table> <!-- FIXME: value unconfirmed -->
 		<table name="#magicLvl"> 60 64 68 </table>
 		<table name="#mpInitialConsume"> 5 7 8 </table>
 		<table name="#mpConsume"> 20 28 31 </table>
@@ -1149,7 +1149,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -1162,13 +1162,13 @@
 	<skill id="1549" levels="1" name="Chant of Elements">
 		<!-- High Five Skill -->
 		<!-- NOTE: skill desc says "increases the elemental attribute" but is client typo, it increase defense (see skill icon) -->
-		<set name="aggroPoints" val="624" /> <!-- Guess -->
+		<set name="aggroPoints" val="624" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="220" />
 		<set name="mpInitialConsume" val="55" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
@@ -1184,14 +1184,14 @@
 	</skill>
 	<skill id="1550" levels="1" name="Mass Cure Poison">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="566" /> <!-- Guess -->
+		<set name="aggroPoints" val="566" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="negateAbnormals" val="poison,9" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="NEGATE" />
@@ -1199,14 +1199,14 @@
 	</skill>
 	<skill id="1551" levels="1" name="Mass Purify">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="566" /> <!-- Guess -->
+		<set name="aggroPoints" val="566" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="negateAbnormals" val="poison,9;bleeding,9;paralyze,1;turn_stone,1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="NEGATE" />
@@ -1214,14 +1214,14 @@
 	</skill>
 	<skill id="1552" levels="1" name="Mass Vitalize">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="936" /> <!-- Guess -->
+		<set name="aggroPoints" val="936" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="155" />
 		<set name="mpInitialConsume" val="38" />
 		<set name="negateAbnormals" val="poison,9;bleeding,9" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="HEAL" />
@@ -1233,7 +1233,7 @@
 	</skill>
 	<skill id="1553" levels="1" name="Chain Heal">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="398" /> <!-- Guess -->
+		<set name="aggroPoints" val="398" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="itemConsumeCount" val="4" />
@@ -1242,12 +1242,12 @@
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="156" />
 		<set name="mpInitialConsume" val="38" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="900" />
 		<set name="skillType" val="CHAIN_HEAL" />
-		<set name="target" val="TARGET_ALLY" /> <!-- FIXME: Appears to be only for TARGET_ALLY_MEMBER_AREA + (10 targets around him), not ALL ALLY MEMBERS -->
+		<set name="target" val="TARGET_ALLY" /> <!-- TODO: Appears to be only for TARGET_ALLY_MEMBER_AREA + (10 targets around him), not ALL ALLY MEMBERS -->
 	</skill>
 	<skill id="1554" levels="1" name="Aura Blast">
 		<!-- High Five Skill -->
@@ -1258,15 +1258,15 @@
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="116" />
 		<set name="mpInitialConsume" val="29" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="199" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="141" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillRadius" val="100" /> <!-- Guess -->
+		<set name="skillRadius" val="100" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- Guess -->
+			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
@@ -1278,25 +1278,25 @@
 		<set name="magicLvl" val="82" />
 		<set name="mpConsume" val="99" />
 		<set name="mpInitialConsume" val="24" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="302" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="178" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- Guess -->
+			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
 		<!-- High Five Skill -->
-		<set name="aggroPoints" val="204" /> <!-- Guess -->
+		<set name="aggroPoints" val="204" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="90" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1309,14 +1309,14 @@
 	<skill id="1557" levels="1" name="Servitor Share">
 		<!-- High Five Skill -->
 		<!-- Totally Unconfirmed -->
-		<set name="aggroPoints" val="669" /> <!-- Guess -->
+		<set name="aggroPoints" val="669" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="35" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PET" />
@@ -1346,7 +1346,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="#pvpPower" />
@@ -1377,17 +1377,17 @@
 	</skill>
 	<skill id="1560" levels="1" name="Lucky Blow">
 		<!-- High Five Skill -->
-		<set name="baseCritRate" val="15" /> <!-- Guess -->
-		<set name="blowChance" val="20" /> <!-- Guess -->
+		<set name="baseCritRate" val="15" /> <!-- FIXME: value unconfirmed -->
+		<set name="blowChance" val="20" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="40" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
-		<set name="lethal1" val="10" /> <!-- Guess -->
-		<set name="lethal2" val="5" /> <!-- Guess -->
+		<set name="lethal1" val="10" /> <!-- FIXME: value unconfirmed -->
+		<set name="lethal2" val="5" /> <!-- FIXME: value unconfirmed -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="82" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="overHit" val="true" />
 		<set name="power" val="11234" />
 		<set name="reuseDelay" val="8000" />
@@ -1412,7 +1412,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
@@ -1444,7 +1444,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
@@ -1476,7 +1476,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
@@ -1489,7 +1489,7 @@
 	</skill>
 	<skill id="1564" levels="1" name="Piercing Attack">
 		<!-- High Five Skill -->
-		<set name="activationChance" val="3" /> <!-- Guess -->
+		<set name="activationChance" val="3" /> <!-- FIXME: value unconfirmed -->
 		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
