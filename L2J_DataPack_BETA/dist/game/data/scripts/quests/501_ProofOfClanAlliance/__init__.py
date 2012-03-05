@@ -305,7 +305,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      if npcId in CHESTS and part == 4 :
          wins = leaderst.getInt("chest_wins")
-         if (self.chests - wins) == 12 or (wins < 4 and not leadergetRandom(4)) :
+         if (self.chests - wins) == 12 or (wins < 4 and not getRandom(4)) :
              wins += 1
              leaderst.set("chest_wins",str(wins))
              npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"###### BINGO! ######"))
