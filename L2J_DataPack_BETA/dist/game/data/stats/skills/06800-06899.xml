@@ -23,7 +23,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -37,7 +37,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -51,7 +51,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -65,7 +65,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -79,7 +79,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -93,7 +93,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -107,7 +107,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -121,7 +121,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -135,7 +135,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -149,7 +149,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -169,11 +169,11 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="aggroPoints" val="200" /> <!-- Guess -->
+		<set name="aggroPoints" val="200" /> <!-- FIXME: value unconfirmed -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="10000" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -184,11 +184,11 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="aggroPoints" val="150" /> <!-- Guess -->
+		<set name="aggroPoints" val="150" /> <!-- FIXME: value unconfirmed  -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="10000" /> <!-- FIXME: value unconfirmed  -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -213,11 +213,11 @@
 		<set name="effectRange" val="900" />
 		<set name="isStaticHeal" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="5000" /> <!-- Amount Guess -->
+			<effect name="Heal" noicon="1" val="5000" /> <!-- FIXME: value unconfirmed  -->
 		</for>
 	</skill>
 	<skill id="6818" levels="1" name="Powerful Rage">
@@ -633,7 +633,7 @@
 		<table name="#bonusExp"> 1 1 1.2 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="magicLvl" val="85" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="99" abnormalType="dragon_valley_effect">

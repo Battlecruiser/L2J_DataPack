@@ -302,14 +302,14 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="139" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22250" levels="1" name="Birthday Cake Effect">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -581,45 +581,45 @@
 	<skill id="22294" levels="1" name="Totem of Body">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="143" />
 		<set name="skillToCast" val="23308" /> <!-- FIXME: Should be controlled by AI -->
-		<set name="despawnDelay" val="1800000" /> <!-- Guess -->
+		<set name="despawnDelay" val="1800000" /> <!-- FIXME: custom ? -->
 		<set name="reuseDelay" val="600" />
 	</skill>
 	<skill id="22295" levels="1" name="Totem of Spirit">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="144" />
 		<set name="skillToCast" val="23309" /> <!-- FIXME: Should be controlled by AI -->
-		<set name="despawnDelay" val="1800000" /> <!-- Guess -->
+		<set name="despawnDelay" val="1800000" /> <!-- FIXME: custom ? -->
 		<set name="reuseDelay" val="600" />
 	</skill>
 	<skill id="22296" levels="1" name="Totem of Bravery">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="145" />
 		<set name="skillToCast" val="23310" /> <!-- FIXME: Should be controlled by AI -->
-		<set name="despawnDelay" val="1800000" /> <!-- Guess -->
+		<set name="despawnDelay" val="1800000" /> <!-- FIXME: custom ? -->
 		<set name="reuseDelay" val="600" />
 	</skill>
 	<skill id="22297" levels="1" name="Totem of Fortitude">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="146" />
 		<set name="skillToCast" val="23311" /> <!-- FIXME: Should be controlled by AI -->
-		<set name="despawnDelay" val="1800000" /> <!-- Guess -->
+		<set name="despawnDelay" val="1800000" /> <!-- FIXME: custom ? -->
 		<set name="reuseDelay" val="600" />
 	</skill>
 	<skill id="22298" levels="1" name="Refined Red Dragon Blood">

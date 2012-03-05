@@ -43,14 +43,14 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="83" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
-		<set name="power" val="80" /> <!-- Base Land Rate --> <!-- Guess -->
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="power" val="80" /> <!-- Base Land Rate --> <!-- FIXME: Base Land Rate unconformed -->
+		<set name="reuseDelay" val="10000" /> <!-- FIXME: reuseDelay unconfirmed -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<!-- FIXME: Time value is guess -->
+			<!-- FIXME: Time value is unconfirmed -->
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>

@@ -51,7 +51,7 @@
 	<skill id="6908" levels="1" name="Transform Master">
 		<!-- High Five Skill -->
 		<!-- Transforms into a game Master. -->
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="22" />
@@ -87,8 +87,8 @@
 		<!-- High Five Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="10000" /> <!-- FIXME: value unconfirmed  -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -139,8 +139,8 @@
 		<!-- Triggered Skill for Collector's Experience -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
-		<set name="reuseDelay" val="15000" /> <!-- Guess -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="15000" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>

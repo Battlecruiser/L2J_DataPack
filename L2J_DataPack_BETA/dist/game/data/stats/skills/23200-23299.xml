@@ -307,7 +307,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -327,7 +327,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -346,7 +346,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -379,7 +379,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -398,7 +398,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -421,7 +421,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
@@ -440,7 +440,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -463,7 +463,7 @@
 		<set name="hitTime" val="500" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
@@ -484,7 +484,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -501,7 +501,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -521,7 +521,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -538,7 +538,7 @@
 		<set name="effectRange" val="2500" />
 		<set name="hitTime" val="500" />
 		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="23250" levels="1" name="Kau Agathion Cute Trick">
@@ -564,7 +564,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -579,7 +579,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -594,7 +594,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -609,7 +609,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -624,7 +624,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -639,7 +639,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -654,7 +654,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -669,7 +669,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -684,7 +684,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -699,7 +699,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -714,7 +714,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -729,7 +729,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -744,7 +744,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -759,7 +759,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -774,7 +774,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -789,7 +789,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -811,7 +811,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -826,7 +826,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -841,7 +841,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -856,7 +856,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -874,7 +874,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="78" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -901,7 +901,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -928,7 +928,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -954,7 +954,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_AURA" />
@@ -981,7 +981,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -999,7 +999,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1017,7 +1017,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1035,7 +1035,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1053,7 +1053,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1071,7 +1071,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1089,7 +1089,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1109,7 +1109,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1127,7 +1127,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1140,7 +1140,7 @@
 		<!-- GM Skill -->
 		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1158,7 +1158,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1176,7 +1176,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1207,7 +1207,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1225,7 +1225,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1245,7 +1245,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1265,7 +1265,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1285,7 +1285,7 @@
 		<!-- GM Skill -->
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1306,7 +1306,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1321,7 +1321,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1339,7 +1339,7 @@
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
@@ -1357,12 +1357,12 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
-		<!-- FIXME: Chance & Reuse values are guessed -->
+		<!-- FIXME: Chance & Reuse values are unconfirmed -->
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
@@ -1373,12 +1373,12 @@
 		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
-		<!-- FIXME: Chance & Reuse values are guessed -->
+		<!-- FIXME: Chance & Reuse values are unconfirmed -->
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /><!-- TODO: Confirm. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
