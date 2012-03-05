@@ -57,7 +57,7 @@ public class FairyTrees extends L2AttackableAIScript
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalKiller, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
-				if (Rnd.get(1, 2) == 1)
+				if (Rnd.nextBoolean())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
 					if ((skill != null) && (originalKiller != null))
