@@ -190,7 +190,7 @@ public class Q10272_LightFragment extends Quest
 				case 7:
 					if (st.getInt("wait") == 1)
 					{
-						st.giveItems(LIGHT_FRAGMENT, 1);;
+						st.giveItems(LIGHT_FRAGMENT, 1);
 						st.set("cond", "8");
 						st.unset("wait");
 						st.playSound("ItemSound.quest_middle");
