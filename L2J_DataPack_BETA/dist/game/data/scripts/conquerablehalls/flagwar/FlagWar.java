@@ -692,7 +692,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				}
 				
 				ClanData data = new ClanData();
-				data.flag = rset.getInt("flag");;
+				data.flag = rset.getInt("flag");
 				data.npc = rset.getInt("npc");
 
 				_data.put(clanId, data);

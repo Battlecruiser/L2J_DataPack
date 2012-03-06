@@ -137,7 +137,7 @@ public class Orfen extends L2AttackableAIScript
 		((L2Attackable) npc).clearAggroList();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 		L2Spawn spawn = npc.getSpawn();
-		spawn.setLocation(Pos[index]);;
+		spawn.setLocation(Pos[index]);
 		npc.teleToLocation(Pos[index], false);
 	}
 	
