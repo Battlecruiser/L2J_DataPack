@@ -155,7 +155,7 @@ public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest
 		{
 			switch (st.getState())
 			{
-				case State.COMPLETED:
+				case State.CREATED:
 					htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
 					break;
 				case State.STARTED:
