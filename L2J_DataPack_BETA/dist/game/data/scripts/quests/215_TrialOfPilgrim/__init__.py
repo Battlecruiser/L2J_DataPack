@@ -229,7 +229,7 @@ class Quest (JQuest) :
    cond=st.getInt("cond")
    if npcId == 27116 :
       if cond == 3 and not st.getQuestItemsCount(ESSENSE_OF_FLAME) :
-        if not getRandom(5) :
+        if not self.getRandom(5) :
           st.giveItems(ESSENSE_OF_FLAME,1)
           st.set("cond","4")
           st.playSound("ItemSound.quest_middle")
@@ -240,7 +240,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_middle")
    elif npcId == 27118 :
       if cond == 13 and not st.getQuestItemsCount(DEBRIS_OF_WILLOW) :
-        if not getRandom(5) :
+        if not self.getRandom(5) :
           st.giveItems(DEBRIS_OF_WILLOW,1)
           st.set("cond","14")
           st.playSound("ItemSound.quest_middle")

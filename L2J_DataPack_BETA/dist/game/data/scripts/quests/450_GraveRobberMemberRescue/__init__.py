@@ -83,7 +83,7 @@ class Quest (JQuest) :
 				reset.set(Calendar.HOUR_OF_DAY, RESET_HOUR)
 				st.set("reset",str(reset.getTimeInMillis()))
 		elif cond == 1 and npcId == WARRIOR_NPC :
-			if getRandom(100) < 50 :
+			if self.getRandom(100) < 50 :
 				htmltext = "32651-01.htm"
 				st.giveItems(EVIDENCE_OF_MIGRATION,1)
 				st.playSound("ItemSound.quest_itemget")
@@ -100,7 +100,7 @@ class Quest (JQuest) :
 				warrior.setRunning()
 				warrior.addDamageHate(player,0,999)
 				warrior.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
-				if getRandom(100) < 50 :
+				if self.getRandom(100) < 50 :
 					npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "...Grunt... oh..."))
 					npc.getSpawn().decreaseCount(npc)
 					npc.deleteMe()

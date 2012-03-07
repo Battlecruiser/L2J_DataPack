@@ -78,7 +78,7 @@ def check_n_take(st,collection) :
     return result
 
 def give_reward(st,reward) :
-    luck = getRandom(REWARD_RATE[-1])
+    luck = self.getRandom(REWARD_RATE[-1])
     prize = REWARD[reward]
     if ALT_RP_100 != 0 :
        for i in range(len(prize)) :
@@ -91,11 +91,11 @@ def give_reward(st,reward) :
        st.giveItems(57,4000)
     elif luck < REWARD_RATE[2] :          # quite nice : 2 recipes
        for k in range(2) :
-          l = getRandom(len(prize))
+          l = self.getRandom(len(prize))
           st.giveItems(prize[l],1)
           del prize[l]
     else :                                # ordinary reward: 1 recipe or mat
-       st.giveItems(prize[getRandom(len(prize))],1)
+       st.giveItems(prize[self.getRandom(len(prize))],1)
 
 
 class Quest (JQuest) :
@@ -160,7 +160,7 @@ class Quest (JQuest) :
      chance*=Config.RATE_QUEST_DROP
      chance = int(chance)
      numItems,chance = divmod(chance,100)
-     if getRandom(100) < chance :
+     if self.getRandom(100) < chance :
          numItems = numItems + 1
      if numItems :
         st.giveItems(item,numItems)

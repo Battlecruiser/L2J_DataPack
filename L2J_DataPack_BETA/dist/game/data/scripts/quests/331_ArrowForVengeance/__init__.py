@@ -61,7 +61,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   n = getRandom(10)
+   n = self.getRandom(10)
    if n<5 :
       if npcId == 20145 :
          st.giveItems(HARPY_FEATHER,1)

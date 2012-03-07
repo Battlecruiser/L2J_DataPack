@@ -97,7 +97,7 @@ class Quest (JQuest) :
      if npcId == 20343 : chance = 4
      elif npcId == 20342 : chance = 2
    if st.getQuestItemsCount(GLUDIO_LORDS_MARK) :
-     if getRandom(10)<chance :
+     if self.getRandom(10)<chance :
        st.giveItems(item,1)
        st.playSound("ItemSound.quest_itemget")
    return

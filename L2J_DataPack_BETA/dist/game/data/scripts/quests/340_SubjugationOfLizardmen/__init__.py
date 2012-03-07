@@ -133,7 +133,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return 
      npcId = npc.getNpcId()
-     chanse = getRandom(100)
+     chanse = self.getRandom(100)
      kargo = st.getQuestItemsCount(CARGO)
      holy = st.getQuestItemsCount(HOLY)
      rosary = st.getQuestItemsCount(ROSARY)

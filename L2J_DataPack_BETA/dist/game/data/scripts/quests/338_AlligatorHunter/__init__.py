@@ -61,7 +61,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
-     if getRandom(100)<CHANCE :
+     if self.getRandom(100)<CHANCE :
          st.giveItems(ALLIGATOR_PELTS,1)
          st.playSound("ItemSound.quest_itemget")
      return

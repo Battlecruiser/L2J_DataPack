@@ -40,7 +40,7 @@ class Quest (JQuest) :
         st.exitQuest(1)
    if event == "31683-4.htm" :
      if st.getQuestItemsCount(EYE_OF_DARKNESS) == 100 :
-        random = getRandom(100)
+        random = self.getRandom(100)
         i = 0
         while i < len(REWARDS) :
             item,adena,exp,sp,chance,chance2=REWARDS[i]
@@ -81,7 +81,7 @@ class Quest (JQuest) :
            chance = CHANCE[npc.getNpcId()]*Config.RATE_QUEST_DROP
            numItems, chance = divmod(chance,100)
            if st.getInt("cond") == 1 :
-             if getRandom(100) < chance :
+             if self.getRandom(100) < chance :
                  numItems = numItems + 1
              if count+numItems>=100 :
                 numItems =100-count

@@ -67,10 +67,10 @@ class Quest (JQuest) :
    
    npcId = npc.getNpcId()
    if npcId == 27020 :
-     if st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG) == 0 and getRandom(10)>7:
+     if st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG) == 0 and self.getRandom(10)>7:
        st.giveItems(VAROOL_FOULCLAWS_FANG,1)
        st.playSound("ItemSound.quest_middle")
-   elif getRandom(10)>5 :
+   elif self.getRandom(10)>5 :
      st.giveItems(WERERAT_FANG,1)
      st.playSound("ItemSound.quest_itemget")
    return

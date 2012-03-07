@@ -50,7 +50,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "30912-09.htm" :
        st.takeItems(CRYSTAL, 5)
-       if getRandom(100) <= 60 :
+       if self.getRandom(100) <= 60 :
           st.giveItems(OXYDE,1)
           if st.getQuestItemsCount(OXYDE) >= 3 :
              htmltext = "30912-09b.htm"
@@ -108,7 +108,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return
     if st.getState() != State.STARTED : return
-    if st.getInt("cond")==3 and getRandom(100) <= 80 :
+    if st.getInt("cond")==3 and self.getRandom(100) <= 80 :
        st.playSound("ItemSound.quest_itemget")
        st.giveItems(CRYSTAL,1)
     return

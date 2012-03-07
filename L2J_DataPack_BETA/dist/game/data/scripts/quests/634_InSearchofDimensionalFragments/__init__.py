@@ -50,7 +50,7 @@ class Quest (JQuest) :
     if st :
         if st.getState() == State.STARTED :
             itemMultiplier,chance = divmod(80*Config.RATE_QUEST_DROP,1000)
-            if getRandom(1000) < chance :
+            if self.getRandom(1000) < chance :
                 itemMultiplier += 1
             numItems = int(itemMultiplier * (npc.getLevel() * 0.15 +1.6))
             if numItems > 0 :    

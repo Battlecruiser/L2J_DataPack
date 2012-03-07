@@ -175,12 +175,12 @@ class Quest (JQuest) :
 		if st.getInt("cond") == 3 :
 			if npc.getNpcId() in ORNITHOMIMUS :
 				if st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2 :
-					if getRandom(100) < DROP_CHANCE :
+					if self.getRandom(100) < DROP_CHANCE :
 						st.giveItems(ORNITHOMIMUS_CLAW,1)
 						st.playSound("ItemSound.quest_itemget")
 			elif npc.getNpcId() in DEINONYCHUS :
 				if st.getQuestItemsCount(DEINONYCHUS_BONE) < 2 :
-					if getRandom(100) < DROP_CHANCE :
+					if self.getRandom(100) < DROP_CHANCE :
 						st.giveItems(DEINONYCHUS_BONE,1)
 						st.playSound("ItemSound.quest_itemget")
 			if st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2 and st.getQuestItemsCount(DEINONYCHUS_BONE) == 2 :

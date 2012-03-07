@@ -55,8 +55,8 @@ class Quest (JQuest) :
              htmltext = "30895-05a.htm"
              if amount > 99 :
                 htmltext = "30895-05b.htm"
-                item=RANDOM_REWARDS[getRandom(len(RANDOM_REWARDS))]
-                st.rewardItems(item[0],getRandom(item[1])+1)
+                item=RANDOM_REWARDS[self.getRandom(len(RANDOM_REWARDS))]
+                st.rewardItems(item[0],self.getRandom(item[1])+1)
      elif event == "30895-08.htm" :
          st.giveItems(PIRATES_TREASURE_MAP,maps[0])
          st.takeItems(TORN_MAP_FRAGMENT,maps[0]*10)
@@ -90,7 +90,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
-     random = getRandom(100)
+     random = self.getRandom(100)
      if random<=CHANCE :
          st.giveItems(ALLIGATOR_TOOTH,1)
          st.playSound("ItemSound.quest_itemget")

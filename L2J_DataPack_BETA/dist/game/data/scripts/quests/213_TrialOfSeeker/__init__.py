@@ -239,7 +239,7 @@ class Quest (JQuest) :
    required,item,chance,maxqty=DROPLIST[npcId]
    count = st.getQuestItemsCount(item)
    if st.getQuestItemsCount(required) and count < maxqty :
-      if getRandom(100) < chance :
+      if self.getRandom(100) < chance :
         st.giveItems(item,1)
         if count+1 == maxqty :
            st.playSound("Itemsound.quest_middle")

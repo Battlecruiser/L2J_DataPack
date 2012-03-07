@@ -106,7 +106,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   n = getRandom(100)
+   n = self.getRandom(100)
    if n > 50 :
      st.giveItems(CHRYSOLITE_ORE,1)
      st.playSound("ItemSound.quest_itemget")

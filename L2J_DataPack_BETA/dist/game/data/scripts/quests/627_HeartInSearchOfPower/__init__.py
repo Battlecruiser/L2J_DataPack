@@ -96,7 +96,7 @@ class Quest (JQuest) :
       count = st.getQuestItemsCount(BEAD_OF_OBEDIENCE)
       if st.getInt("cond") == 1 and count < 300 :
         numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
-        if getRandom(100) < chance : 
+        if self.getRandom(100) < chance : 
            numItems += 1
         if numItems :
            if count + numItems >= 300 :

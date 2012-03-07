@@ -189,7 +189,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId() 
    if npcId == 20323 : 
         if st.getInt("cond") == 1 and st.getQuestItemsCount(BRONPS_CONTRACT) : 
-          if getRandom(10) < 8 : 
+          if self.getRandom(10) < 8 : 
             st.giveItems(AQUAMARINE,1) 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(AQUAMARINE) < 10 : 
@@ -201,7 +201,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget") 
               else :
                 st.playSound("ItemSound.quest_middle") 
-          if getRandom(10) < 8 : 
+          if self.getRandom(10) < 8 : 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(CHRYSOBERYL) < 10 : 
                 st.giveItems(CHRYSOBERYL,1) 
@@ -212,7 +212,7 @@ class Quest (JQuest) :
                   st.playSound("ItemSound.quest_itemget") 
    elif npcId == 20324 : 
         if st.getInt("cond") == 1 and st.getQuestItemsCount(BRONPS_CONTRACT) : 
-          if getRandom(10) < 6 : 
+          if self.getRandom(10) < 6 : 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(AQUAMARINE) < 10 : 
                 st.giveItems(AQUAMARINE,1) 
@@ -221,7 +221,7 @@ class Quest (JQuest) :
               if st.getQuestItemsCount(AQUAMARINE) < 10 : 
                 st.giveItems(AQUAMARINE,1) 
                 st.playSound("ItemSound.quest_itemget") 
-          if getRandom(10) < 6 : 
+          if self.getRandom(10) < 6 : 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(CHRYSOBERYL) < 10 : 
                 st.giveItems(CHRYSOBERYL,1) 
@@ -232,7 +232,7 @@ class Quest (JQuest) :
                   st.playSound("ItemSound.quest_itemget") 
    elif npcId == 20480 : 
         if st.getInt("cond") == 1 and st.getQuestItemsCount(BAT_DIAGRAM) and st.getQuestItemsCount(STAR_DIAMOND) == 0 : 
-          if getRandom(10) < 2 : 
+          if self.getRandom(10) < 2 : 
             st.giveItems(STAR_DIAMOND,1) 
             st.takeItems(BAT_DIAGRAM,1) 
             st.playSound("ItemSound.quest_middle") 

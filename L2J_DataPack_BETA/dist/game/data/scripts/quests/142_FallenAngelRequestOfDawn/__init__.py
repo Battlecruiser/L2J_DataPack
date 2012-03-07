@@ -115,7 +115,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.giveItems(BLOOD, 1)
        self.isAngelSpawned = 0
-    elif st.getInt("cond")==4 and getRandom(100) <= 20 and st.getQuestItemsCount(FRAGMENT)<30:
+    elif st.getInt("cond")==4 and self.getRandom(100) <= 20 and st.getQuestItemsCount(FRAGMENT)<30:
        st.giveItems(FRAGMENT,1)
        if st.getQuestItemsCount(FRAGMENT)>=30:
           st.set("cond","5")

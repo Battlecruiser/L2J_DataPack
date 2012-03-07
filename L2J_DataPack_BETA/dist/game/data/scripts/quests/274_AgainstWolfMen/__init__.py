@@ -80,7 +80,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","2")
      st.giveItems(MARAKU_WEREWOLF_HEAD,1)
-     if getRandom(100) <= 15 :
+     if self.getRandom(100) <= 15 :
        st.giveItems(MARAKU_WOLFMEN_TOTEM,1)
    return
 

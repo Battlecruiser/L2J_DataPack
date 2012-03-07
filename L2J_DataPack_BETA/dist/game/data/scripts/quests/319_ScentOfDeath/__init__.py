@@ -57,7 +57,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    count = st.getQuestItemsCount(ZOMBIE_SKIN)
-   if count < 5 and getRandom(10) > 7 :
+   if count < 5 and self.getRandom(10) > 7 :
      st.giveItems(ZOMBIE_SKIN,1)
      if count == 4 :
        st.playSound("ItemSound.quest_middle")

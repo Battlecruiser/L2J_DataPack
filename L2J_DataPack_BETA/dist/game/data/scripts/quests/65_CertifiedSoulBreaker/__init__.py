@@ -259,7 +259,7 @@ class Quest (JQuest) :
                   katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getNpcId(),"I am late!"))
                   self.isKatenarSpawned == 1
                   self.startQuestTimer("katenar_cleanup",60000,katenar,player)
-        if npcId == Wyrm and st.getQuestItemsCount(Heart) < 10 and cond == 15 and getRandom(100) <= 25:
+        if npcId == Wyrm and st.getQuestItemsCount(Heart) < 10 and cond == 15 and self.getRandom(100) <= 25:
             if st.getQuestItemsCount(Heart) == 9 :
                   st.giveItems(Heart,1)
                   st.set("cond","16")

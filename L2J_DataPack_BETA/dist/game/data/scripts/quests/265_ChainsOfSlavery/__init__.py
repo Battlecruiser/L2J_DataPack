@@ -85,7 +85,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   if getRandom(10) < (5+((npc.getNpcId()-20000)^4)) :
+   if self.getRandom(10) < (5+((npc.getNpcId()-20000)^4)) :
      st.giveItems(IMP_SHACKLES,1)
      st.playSound("ItemSound.quest_itemget")
    return

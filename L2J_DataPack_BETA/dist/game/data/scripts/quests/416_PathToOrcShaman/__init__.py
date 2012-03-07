@@ -304,7 +304,7 @@ class Quest (JQuest) :
    elif npcId == 20038 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPIRIT_NET) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT) == 0 and st.getQuestItemsCount(DURKA_PARASITE)<8 :
-          n = getRandom(10)
+          n = self.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.addSpawn(27056)
@@ -327,7 +327,7 @@ class Quest (JQuest) :
    elif npcId == 20043 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPIRIT_NET) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT) == 0 and st.getQuestItemsCount(DURKA_PARASITE)<8 :
-          n = getRandom(10)
+          n = self.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.addSpawn(27056)

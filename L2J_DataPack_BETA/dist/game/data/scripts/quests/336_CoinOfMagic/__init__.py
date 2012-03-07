@@ -221,7 +221,7 @@ class Quest (JQuest) :
                  st.takeItems(k,required)
               grid=[]
               for i in range(3) :
-                grid.append(getRandom(3))
+                grid.append(self.getRandom(3))
               for i in range(len(grid)): grid[i]=str(grid[i])
               st.set("chosen","? ? ?")
               st.set("grid"," ".join(grid))
@@ -358,7 +358,7 @@ class Quest (JQuest) :
    grade=st.getInt("grade")
    chance=int((npc.getLevel() - grade * 3 - 20)*Config.RATE_QUEST_DROP)
    item=DROP_LIST[npcId][0]
-   random = getRandom(100)
+   random = self.getRandom(100)
    if item == KALDIS_COIN :
      if cond == 2 :
        if not st.getQuestItemsCount(item) and random < (chance - 10) :

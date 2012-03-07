@@ -108,7 +108,7 @@ class Quest (JQuest):
             if not partyMember: return
             st = partyMember.getQuestState(qn)
             if not st : return
-            if getRandom(1000) < UNDEADS[npcId]:  
+            if self.getRandom(1000) < UNDEADS[npcId]:  
                 st.giveItems(Z_LIVER, 1)  
                 st.playSound("ItemSound.quest_itemget")  
         elif npcId in DAMOBS.keys():
@@ -116,7 +116,7 @@ class Quest (JQuest):
             if not partyMember: return                
             st = partyMember.getQuestState(qn)
             if not st : return
-            if getRandom(1000) < DAMOBS[npcId]:                  
+            if self.getRandom(1000) < DAMOBS[npcId]:                  
                 st.giveItems(RIB_BONE, 1)  
                 if st.getQuestItemsCount(RIB_BONE) == 200:  
                     st.set("cond","2")  

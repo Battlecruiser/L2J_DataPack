@@ -280,7 +280,7 @@ class Quest (JQuest) :
         st.playSound("Itemsound.quest_middle")
    elif npcId == 20158 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(MEDUSA_ICHOR_ID) < 10 :
-        if getRandom(2) == 1 :
+        if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(MEDUSA_ICHOR_ID) == 9 :
             st.giveItems(MEDUSA_ICHOR_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -291,7 +291,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20233 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID) < 10 :
-        if getRandom(2) == 1 :
+        if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(M_SPIDER_FLUIDS_ID) == 9 :
             st.giveItems(M_SPIDER_FLUIDS_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -302,7 +302,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20202 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID) < 10 :
-        if getRandom(2) == 1 :
+        if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID) == 9 :
             st.giveItems(DEAD_SEEKER_DUNG_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -313,7 +313,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20192 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(TYRANTS_BLOOD_ID) < 10 :
-        if getRandom(2) == 1 :
+        if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(TYRANTS_BLOOD_ID) == 9 :
             st.giveItems(TYRANTS_BLOOD_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -324,7 +324,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20193 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(TYRANTS_BLOOD_ID) < 10 :
-        if getRandom(10) < 6 :
+        if self.getRandom(10) < 6 :
           if st.getQuestItemsCount(TYRANTS_BLOOD_ID) == 9 :
             st.giveItems(TYRANTS_BLOOD_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -335,7 +335,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20230 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
-        if getRandom(10) < 3 :
+        if self.getRandom(10) < 3 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -346,7 +346,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20157 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
-        if getRandom(10) < 4 :
+        if self.getRandom(10) < 4 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -357,7 +357,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20232 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
-        if getRandom(10) < 5 :
+        if self.getRandom(10) < 5 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
             st.playSound("Itemsound.quest_middle")
@@ -368,7 +368,7 @@ class Quest (JQuest) :
             st.playSound("Itemsound.quest_itemget")
    elif npcId == 20234 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
-        if getRandom(10) < 6 :
+        if self.getRandom(10) < 6 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
             st.playSound("Itemsound.quest_middle")

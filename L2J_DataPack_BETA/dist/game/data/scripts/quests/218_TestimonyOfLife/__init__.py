@@ -310,7 +310,7 @@ class Quest(JQuest):
 		npcId = npc.getNpcId()
 		if npcId == 20550:
 			if st.getQuestItemsCount(PUSHKINS_LIST_ID) and st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)<10:
-				if getRandom(100)<50:
+				if self.getRandom(100)<50:
 					st.giveItems(PURE_MITHRIL_ORE_ID,1)
 					if st.getQuestItemsCount(PURE_MITHRIL_ORE_ID) < 10:
 						st.playSound("ItemSound.quest_itemget")
@@ -320,7 +320,7 @@ class Quest(JQuest):
 							st.set("cond","5")
 		elif npcId == 20176:
 			if st.getQuestItemsCount(PUSHKINS_LIST_ID) and st.getQuestItemsCount(WYRMS_TALON1_ID)<20:
-				if getRandom(100)<50 :
+				if self.getRandom(100)<50 :
 					st.giveItems(WYRMS_TALON1_ID,1)
 					if st.getQuestItemsCount(WYRMS_TALON1_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -333,7 +333,7 @@ class Quest(JQuest):
 				chance=80
 				if npcId in [20087,20088]:
 					chance=50
-				if getRandom(100)<80:
+				if self.getRandom(100)<80:
 					st.giveItems(ANT_SOLDIER_ACID_ID,1)
 					if st.getQuestItemsCount(ANT_SOLDIER_ACID_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -343,7 +343,7 @@ class Quest(JQuest):
 							st.set("cond","5")
 		elif npcId == 20233:
 			if st.getQuestItemsCount(ADONIUS_LIST_ID) and st.getQuestItemsCount(SPIDER_ICHOR_ID)<20:
-				if getRandom(100)<50:
+				if self.getRandom(100)<50:
 					st.giveItems(SPIDER_ICHOR_ID,1)
 					if st.getQuestItemsCount(SPIDER_ICHOR_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -353,7 +353,7 @@ class Quest(JQuest):
 							st.set("cond","10")
 		elif npcId == 20145 :
 			if st.getQuestItemsCount(ADONIUS_LIST_ID) and st.getQuestItemsCount(HARPYS_DOWN_ID)<20:
-				if getRandom(100)<50:
+				if self.getRandom(100)<50:
 					st.giveItems(HARPYS_DOWN_ID,1)
 					if st.getQuestItemsCount(HARPYS_DOWN_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -368,7 +368,7 @@ class Quest(JQuest):
 				st.giveItems(TEARS_OF_UNICORN_ID,1)
 				st.set("cond","19")
 		elif npcId in [20581,20582]:
-			if st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) and getRandom(100) < 50 :
+			if st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) and self.getRandom(100) < 50 :
 				for id in [TALINS_SPEAR_BLADE_ID, TALINS_SPEAR_SHAFT_ID, TALINS_RUBY_ID, TALINS_AQUAMARINE_ID, TALINS_AMETHYST_ID]:
 					if not st.getQuestItemsCount(id):
 						st.giveItems(id,1)

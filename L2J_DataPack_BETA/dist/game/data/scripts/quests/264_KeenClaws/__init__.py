@@ -48,7 +48,7 @@ class Quest (JQuest) :
        htmltext = "30136-04.htm"
      else :
        st.takeItems(WOLF_CLAW,-1)
-       if getRandom(17) < 6 :
+       if self.getRandom(17) < 6 :
           st.giveItems(5140,1)
        else :
           st.giveItems(734,1)
@@ -65,7 +65,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 1:
       npcId = npc.getNpcId()
       count=st.getQuestItemsCount(WOLF_CLAW)
-      chance = getRandom(20)
+      chance = self.getRandom(20)
       qty=0
       for i in DROP[npcId]:
          if i[0]<=chance<i[1]:

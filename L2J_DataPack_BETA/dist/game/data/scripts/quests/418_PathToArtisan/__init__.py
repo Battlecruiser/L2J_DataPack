@@ -181,7 +181,7 @@ class Quest (JQuest) :
    if npcId == 20389 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SILVERYS_RING) == 1 and st.getQuestItemsCount(RATMAN_TOOTH)<10 :
-          if getRandom(10)<7 :
+          if self.getRandom(10)<7 :
             if st.getQuestItemsCount(RATMAN_TOOTH) == 9 and st.getQuestItemsCount(BIG_RATMAN_TOOTH) == 2 :
               st.giveItems(RATMAN_TOOTH,1)
               st.playSound("ItemSound.quest_middle")
@@ -192,7 +192,7 @@ class Quest (JQuest) :
    elif npcId == 20390 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SILVERYS_RING) == 1 and st.getQuestItemsCount(BIG_RATMAN_TOOTH)<2 :
-          if getRandom(10)<5 :
+          if self.getRandom(10)<5 :
             if st.getQuestItemsCount(BIG_RATMAN_TOOTH) == 1 and st.getQuestItemsCount(RATMAN_TOOTH) == 10 :
               st.giveItems(BIG_RATMAN_TOOTH,1)
               st.playSound("ItemSound.quest_middle")
@@ -203,7 +203,7 @@ class Quest (JQuest) :
    elif npcId == 20017 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(FOOTPRINT) == 1 and st.getQuestItemsCount(SECRET_BOX1)<1 :
-          if getRandom(10)<2 :
+          if self.getRandom(10)<2 :
             st.giveItems(SECRET_BOX1,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")

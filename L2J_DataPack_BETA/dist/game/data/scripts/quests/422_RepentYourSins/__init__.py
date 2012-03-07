@@ -96,7 +96,7 @@ class Quest (JQuest) :
                 Pk_remove = plevel - olevel
             if Pk_remove < 0 :
                 Pk_remove = 0
-            Pk_remove = getRandom(10 + Pk_remove) + 1
+            Pk_remove = self.getRandom(10 + Pk_remove) + 1
             if player.getPkKills() <= Pk_remove :
                 st.giveItems(PENITENTS_MANACLES2,1)
                 st.takeItems(PENITENTS_MANACLES,1)

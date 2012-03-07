@@ -67,7 +67,7 @@ def check_questions(st) :
   answers = st.getInt("answers")
   if answers < 10 :
     questions = quiz.split()
-    index = getRandom(len(questions) - 1)
+    index = self.getRandom(len(questions) - 1)
     question = questions[index]
     if len(questions) > 10 - answers :
       questions[index] = questions[-1]
@@ -247,7 +247,7 @@ class Quest (JQuest):
             chance = SPIDER_LEG_DROP * Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
             count = st.getQuestItemsCount(item)
-            if getRandom(100) < chance :
+            if self.getRandom(100) < chance :
                numItems += 1
             if numItems :
                if count + numItems >= REQUIRED_SPIDER_LEGS :

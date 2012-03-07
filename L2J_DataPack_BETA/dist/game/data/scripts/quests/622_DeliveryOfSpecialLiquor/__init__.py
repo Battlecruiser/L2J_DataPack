@@ -106,7 +106,7 @@ class Quest (JQuest) :
    elif event == "31267-2.htm" :
      if st.getQuestItemsCount(FEE_OF_DRINK) == 5:
         st.takeItems(FEE_OF_DRINK,5)
-        random = getRandom(1000)
+        random = self.getRandom(1000)
         if random < 800 :
           st.giveItems(ADENA,18800)
           st.rewardItems(HASTE_POTION,1)

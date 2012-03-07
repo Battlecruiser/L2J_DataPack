@@ -57,11 +57,11 @@ class Quest (JQuest) :
       if st.getState() != State.STARTED : return 
       numItems,chance = divmod(CHANCE*Config.RATE_QUEST_DROP,MAX)
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
-         if getRandom(MAX) < chance :
+         if self.getRandom(MAX) < chance :
             numItems = numItems + 1
          npcId = npc.getNpcId()
          if numItems != 0 :
-            st.giveItems(MOBS[npcId][getRandom(len(MOBS[npcId]))],int(numItems))
+            st.giveItems(MOBS[npcId][self.getRandom(len(MOBS[npcId]))],int(numItems))
             st.playSound("ItemSound.quest_itemget")
       return
 

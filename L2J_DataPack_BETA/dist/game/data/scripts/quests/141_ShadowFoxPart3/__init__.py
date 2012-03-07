@@ -91,7 +91,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return
     if st.getState() != State.STARTED : return
-    if st.getInt("cond")==2 and getRandom(100) <= 80 and st.getQuestItemsCount(REPORT)<30:
+    if st.getInt("cond")==2 and self.getRandom(100) <= 80 and st.getQuestItemsCount(REPORT)<30:
        st.giveItems(REPORT,1)
        if st.getQuestItemsCount(REPORT)>=30:
           st.set("cond","3")

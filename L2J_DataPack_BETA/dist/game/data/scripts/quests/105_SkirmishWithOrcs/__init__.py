@@ -51,7 +51,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_accept") 
       htmltext = "30218-03.htm" 
       if st.getQuestItemsCount(KENDNELLS_ORDER1)+st.getQuestItemsCount(KENDNELLS_ORDER2)+st.getQuestItemsCount(KENDNELLS_ORDER3)+st.getQuestItemsCount(KENDNELLS_ORDER4) == 0 : 
-        n = getRandom(100) 
+        n = self.getRandom(100) 
         if n < 25 : 
           st.giveItems(KENDNELLS_ORDER1,1) 
         elif n < 50 : 
@@ -95,7 +95,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(KENDNELLS_ORDER4) : 
           st.takeItems(KENDNELLS_ORDER4,1) 
         st.takeItems(KABOO_CHIEF_TORC1,1) 
-        n = getRandom(100) 
+        n = self.getRandom(100) 
         if n < 25 : 
           st.giveItems(KENDNELLS_ORDER5,1) 
         elif n < 50 : 

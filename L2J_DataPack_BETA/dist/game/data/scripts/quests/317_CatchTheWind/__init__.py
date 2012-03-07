@@ -58,7 +58,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   if getRandom(100) < 50:
+   if self.getRandom(100) < 50:
       st.giveItems(WIND_SHARD,1)
       st.playSound("ItemSound.quest_itemget")
    return

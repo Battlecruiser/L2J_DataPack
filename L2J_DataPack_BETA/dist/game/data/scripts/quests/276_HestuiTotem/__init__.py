@@ -68,7 +68,7 @@ class Quest (JQuest) :
    if npcId == 20479 :
       if st.getInt("cond")==1 and st.getQuestItemsCount(KASHA_CRYSTAL_ID) == 0 :
         count = st.getQuestItemsCount(KASHA_PARASITE_ID)
-        random = getRandom(100)
+        random = self.getRandom(100)
         if (count >= 70 and random < 90) or \
            (count >= 65 and random < 75) or \
            (count >= 60 and random < 60) or \

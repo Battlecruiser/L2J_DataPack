@@ -126,7 +126,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
-     drop = getRandom(100)
+     drop = self.getRandom(100)
      cond = st.getInt("cond")
      dropcond = DROPLIST[npcId][0]
      if drop < DROP_RATE and cond == dropcond :
