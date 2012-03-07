@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.ClanHall;
@@ -36,7 +35,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
- * This class handles all siege commands: Todo: change the class name, and neaten it up
+ * This class handles all siege commands.
+ * TODO: change the class name, and neaten it up.
  */
 public class AdminSiege implements IAdminCommandHandler
 {
@@ -99,10 +99,9 @@ public class AdminSiege implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 				val = st.nextToken();
 			
-			L2Object target = activeChar.getTarget();
 			L2PcInstance player = null;
-			if (target.isPlayer())
-				player = target.getActingPlayer();
+			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+				player = activeChar.getTarget().getActingPlayer();
 			
 			if (command.equalsIgnoreCase("admin_add_attacker"))
 			{
@@ -424,5 +423,4 @@ public class AdminSiege implements IAdminCommandHandler
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }
