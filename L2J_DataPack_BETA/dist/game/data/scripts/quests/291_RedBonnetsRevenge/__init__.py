@@ -51,7 +51,7 @@ class Quest (JQuest) :
           st.exitQuest(1)
           st.playSound("ItemSound.quest_finish")
           st.takeItems(BLACK_WOLF_PELT,-1)
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n <= 2 :
             st.giveItems(GRANDMAS_PEARL,1)
           elif n <= 20 :

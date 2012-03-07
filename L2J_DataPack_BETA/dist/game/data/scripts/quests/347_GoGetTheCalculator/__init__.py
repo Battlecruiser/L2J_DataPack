@@ -120,7 +120,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   if npcId == GEMSTONE_BEAST and st.getInt("cond")==5 and getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
+   if npcId == GEMSTONE_BEAST and st.getInt("cond")==5 and self.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         st.giveItems(GEMSTONE_BEAST_CRYSTAL,1)
         if st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL) == 10 :
             st.playSound("ItemSound.quest_middle")

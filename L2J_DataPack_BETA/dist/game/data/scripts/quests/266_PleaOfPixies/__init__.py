@@ -56,7 +56,7 @@ class Quest (JQuest) :
        htmltext = "31852-04.htm"
      else :
        st.takeItems(PREDATORS_FANG,-1)
-       n = getRandom(100)
+       n = self.getRandom(100)
        if n<2 :
           st.giveItems(EMERALD,1)
           st.giveItems(REC_SPIRITSHOT,1)
@@ -81,7 +81,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 1:
       npcId = npc.getNpcId()
       count = st.getQuestItemsCount(PREDATORS_FANG)
-      chance = getRandom(10)
+      chance = self.getRandom(10)
       qty = 0
       for i in DROP[npcId] :
          if i[0] <= chance < i[1] :

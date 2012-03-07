@@ -72,7 +72,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
      npcId = npc.getNpcId()
-     random = getRandom(100)
+     random = self.getRandom(100)
      if random<=CHANCE :
          st.giveItems(LIENRIK_EGG1,1)
      if random<=CHANCE2 :

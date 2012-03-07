@@ -60,7 +60,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   n = getRandom(100)
+   n = self.getRandom(100)
    if npcId == 20085 :
       if n<5 :
          st.giveItems(GOLEM_HEARTSTONE,1)

@@ -46,17 +46,17 @@ class Quest (JQuest) :
      elif event == "31148-02.htm":
         if st.getQuestItemsCount(1661):
            st.takeItems(1661,1)
-           st.giveItems(57,500+(getRandom(5)*300))
+           st.giveItems(57,500+(self.getRandom(5)*300))
            count=0
            while count < 1 :
              for item in REWARDS.keys() :
               qty,chance=REWARDS[item]
-              if getRandom(1000) < chance and count < 2 :
-                 st.giveItems(item,getRandom(qty)+1)
+              if self.getRandom(1000) < chance and count < 2 :
+                 st.giveItems(item,self.getRandom(qty)+1)
                  count+=1
               if count < 2 :
                 for i in range(4481,4505) :
-                  if getRandom(500) == 1 and count < 2 :
+                  if self.getRandom(500) == 1 and count < 2 :
                      st.giveItems(i,1)
                      count+=1
            st.playSound("ItemSound.quest_finish")

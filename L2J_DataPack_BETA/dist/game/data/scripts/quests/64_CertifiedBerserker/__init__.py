@@ -154,18 +154,18 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Scavenger :
-            if not st.getQuestItemsCount(Plate) and getRandom(20) == 1 and cond == 5 :
+            if not st.getQuestItemsCount(Plate) and self.getRandom(20) == 1 and cond == 5 :
                 st.giveItems(Plate,1)
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","6")
         elif npcId == Seeker :
-            if not st.getQuestItemsCount(Rep_E) and getRandom(30) == 1 and cond == 9 :
+            if not st.getQuestItemsCount(Rep_E) and self.getRandom(30) == 1 and cond == 9 :
                 st.giveItems(Rep_E,1)
                 st.playSound("ItemSound.quest_middle")
                 if st.getQuestItemsCount(Rep_N) :
                     st.set("cond","10")
         elif npcId == Drone :
-            if not st.getQuestItemsCount(Rep_N) and getRandom(30) == 1 and cond == 9 :
+            if not st.getQuestItemsCount(Rep_N) and self.getRandom(30) == 1 and cond == 9 :
                 st.giveItems(Rep_N,1)
                 st.playSound("ItemSound.quest_middle")
                 if st.getQuestItemsCount(Rep_E) :

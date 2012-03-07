@@ -181,7 +181,7 @@ class Quest (JQuest) :
                     st.playSound("ItemSound.quest_itemget")
    elif npcId == 27031 :
       st.set("id","0")
-      if st.getInt("cond") and st.getQuestItemsCount(MORETTIS_HERB) == 1 and st.getQuestItemsCount(MORETTIS_LETTER) == 1 and st.getQuestItemsCount(RUSTED_KEY) == 0 and getRandom(10)<6 :
+      if st.getInt("cond") and st.getQuestItemsCount(MORETTIS_HERB) == 1 and st.getQuestItemsCount(MORETTIS_LETTER) == 1 and st.getQuestItemsCount(RUSTED_KEY) == 0 and self.getRandom(10)<6 :
         st.giveItems(RUSTED_KEY,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","6")

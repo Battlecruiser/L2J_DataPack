@@ -122,7 +122,7 @@ class Quest (JQuest) :
      if st.getState() == State.STARTED :
        npcId = npc.getNpcId()
        cond = st.getInt("cond")
-       chance = getRandom(100)
+       chance = self.getRandom(100)
        tails = st.getQuestItemsCount(WOLF_TAIL)
        claws = st.getQuestItemsCount(MUERTOS_CLAW)
        if npcId == MOUNTAIN_WEREWOLF and (chance < 50) and (cond == 2) and (tails < 5) : #Retail statistic info. 10 mob's - 5 tails

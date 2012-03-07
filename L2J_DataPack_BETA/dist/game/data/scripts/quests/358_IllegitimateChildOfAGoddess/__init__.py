@@ -46,7 +46,7 @@ class Quest (JQuest) :
     elif event == "30862-7.htm" :
        if st.getQuestItemsCount(SN_SCALE) >= REQUIRED :
           st.takeItems(SN_SCALE,REQUIRED)
-          item=REWARDS[getRandom(len(REWARDS))]
+          item=REWARDS[self.getRandom(len(REWARDS))]
           if ALT_RP_100: item +=1
           st.rewardItems(item ,1)
           st.exitQuest(1)
@@ -83,7 +83,7 @@ class Quest (JQuest) :
    
      count = st.getQuestItemsCount(SN_SCALE)
      numItems, chance = divmod(DROP_RATE,100)
-     if getRandom(100) < chance :
+     if self.getRandom(100) < chance :
         numItems += 1
      if numItems != 0 :
         if count + numItems >= REQUIRED :

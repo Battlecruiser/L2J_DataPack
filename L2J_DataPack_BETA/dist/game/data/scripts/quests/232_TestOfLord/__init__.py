@@ -351,7 +351,7 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     var,value,newValue,chance,maxcount,item=DROPLIST[npcId]
-    random=getRandom(100)
+    random=self.getRandom(100)
     count=st.getQuestItemsCount(item)
     spiderCount=st.getQuestItemsCount(MARSH_SPIDER_FEET)
     if item == MARSH_SPIDER_FEELER and int(st.get(var)) == value:

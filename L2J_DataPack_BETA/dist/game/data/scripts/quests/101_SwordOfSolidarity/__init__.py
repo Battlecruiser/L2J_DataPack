@@ -129,10 +129,10 @@ class Quest (JQuest) :
        if npcId in [20361,20362] :
           if st.getQuestItemsCount(HOWTOGO_RUINS) :
              if st.getQuestItemsCount(BROKEN_BLADE_TOP) == 0 :
-                if getRandom(5) == 0 :
+                if self.getRandom(5) == 0 :
                    st.giveItems(BROKEN_BLADE_TOP,1)
              elif st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) == 0 :
-                if getRandom(5) == 0 :
+                if self.getRandom(5) == 0 :
                    st.giveItems(BROKEN_BLADE_BOTTOM,1)
           if st.getQuestItemsCount(BROKEN_BLADE_TOP) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) :
              st.set("cond","3")

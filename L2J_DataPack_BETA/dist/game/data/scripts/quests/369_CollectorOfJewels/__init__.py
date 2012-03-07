@@ -103,7 +103,7 @@ class Quest (JQuest) :
         max = 50
       elif cond == 3 :
         max = 200
-      if getRandom(100) < chance and st.getQuestItemsCount(item) < max :
+      if self.getRandom(100) < chance and st.getQuestItemsCount(item) < max :
          st.giveItems(item,1)
          # if collection of this item is State.COMPLETED, mark it (so that this person
          # no longer participate in the party-quest pool for this item)

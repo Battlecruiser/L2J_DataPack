@@ -78,7 +78,7 @@ class Quest (JQuest) :
    elif event == "31521-04.htm" :
       if st.getQuestItemsCount(MEAT) >= 1 :
          st.takeItems(MEAT,1)
-         st.giveItems(REWARDS[getRandom(len(REWARDS))],5)
+         st.giveItems(REWARDS[self.getRandom(len(REWARDS))],5)
          st.exitQuest(1)
          htmltext = "31521-04.htm"
       else:

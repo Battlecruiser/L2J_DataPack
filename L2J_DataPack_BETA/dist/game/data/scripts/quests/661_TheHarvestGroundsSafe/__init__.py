@@ -86,7 +86,7 @@ class Quest (JQuest) :
     if not st : return
     if st.getState() != State.STARTED : return
     npcId = npc.getNpcId()
-    rand = getRandom(100)
+    rand = self.getRandom(100)
     if npcId in DROPLIST.keys() :
         item,chance = DROPLIST[npcId]
         if rand < chance :

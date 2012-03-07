@@ -322,7 +322,7 @@ class Quest (JQuest):
              if st.getQuestItemsCount(eggs) and progress in [19,20] :
               st.takeItems(eggs,1)
               if progress == 19 :
-                 st.giveItems(3500+getRandom(3),1)
+                 st.giveItems(3500+self.getRandom(3),1)
                  st.exitQuest(True)
                  st.playSound("ItemSound.quest_finish")
                  return "420_mymyu_15.htm"
@@ -332,7 +332,7 @@ class Quest (JQuest):
          elif event == "give_dust" :
             if st.getQuestItemsCount(FRY_DUST):
               st.takeItems(FRY_DUST,1)
-              luck = getRandom(2)
+              luck = self.getRandom(2)
               if luck == 0 :
                  extra = ARMOR
                  qty = 1
@@ -341,18 +341,18 @@ class Quest (JQuest):
                  extra = FOOD
                  qty = 100
                  htmltext = "420_mymyu_14.htm"
-              st.giveItems(3500+getRandom(3),1)
+              st.giveItems(3500+self.getRandom(3),1)
               st.giveItems(extra,qty)
               st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return htmltext
             else:
-              st.giveItems(3500+getRandom(3),1)
+              st.giveItems(3500+self.getRandom(3),1)
               st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return "420_mymyu_12.htm"
          elif event == "no_dust" :
-              st.giveItems(3500+getRandom(3),1)
+              st.giveItems(3500+self.getRandom(3),1)
               st.exitQuest(True)
               st.playSound("ItemSound.quest_finish")
               return "420_mymyu_12.htm"
@@ -497,7 +497,7 @@ class Quest (JQuest):
         else :
            count = 20
         numItems, chance = divmod(BACK_DROP*Config.RATE_QUEST_DROP,100)
-        if getRandom(100) <= chance :
+        if self.getRandom(100) <= chance :
           numItems += 1
         numItems = int(numItems)
         if numItems != 0 :
@@ -535,7 +535,7 @@ class Quest (JQuest):
          if npcId == eggdropper :
             chance = EGG_DROP*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
-            if getRandom(100) <= chance :
+            if self.getRandom(100) <= chance :
                numItems += 1
             numItems = int(numItems)
             if numItems != 0 :

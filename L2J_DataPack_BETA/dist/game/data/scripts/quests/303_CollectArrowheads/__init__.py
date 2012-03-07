@@ -58,7 +58,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    count=st.getQuestItemsCount(ORCISH_ARROWHEAD)
-   if count<10 and getRandom(100)<40 :
+   if count<10 and self.getRandom(100)<40 :
      st.giveItems(ORCISH_ARROWHEAD,1)
      if count == 9 :
        st.set("cond","2") 

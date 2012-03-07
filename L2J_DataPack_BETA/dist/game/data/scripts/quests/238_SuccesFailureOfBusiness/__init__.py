@@ -94,7 +94,7 @@ class Quest (JQuest) :
 					st.set("cond","2")
 					st.playSound("ItemSound.quest_middle")
 		elif cond == 3 and npcId == EVIL_SPIRITS or cond == 3 and npcId == GUARDIAN_SPIRITS :
-			if getRandom(100) < 80 :
+			if self.getRandom(100) < 80 :
 				if st.getQuestItemsCount(GUARDIAN_SPIRIT_FRAGMENT) <= 19 :
 					st.giveItems(GUARDIAN_SPIRIT_FRAGMENT,1)
 					st.playSound("ItemSound.quest_itemget")

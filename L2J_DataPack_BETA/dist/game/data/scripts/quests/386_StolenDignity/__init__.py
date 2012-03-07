@@ -128,7 +128,7 @@ class Quest (JQuest) :
          htmltext = bingo0
          grid = range(1,10) #random.sample(xrange(1,10),9) ... damn jython that makes me think that inefficient stuff
          for i in range(len(grid)-1, 0, -1) :
-           j = getRandom(8)
+           j = self.getRandom(8)
            grid[i], grid[j] = grid[j], grid[i]
          for i in range(len(grid)): grid[i]=str(grid[i])
          st.set("chosen","? ? ? ? ? ? ? ? ?")
@@ -155,11 +155,11 @@ class Quest (JQuest) :
                       if ''.join(chosen[2:7:2]).isdigit() : diag += 1
                       if (col + row + diag) == 3 :
                           htmltext += winner
-                          st.giveItems(REWARDS[getRandom(len(REWARDS))],4)
+                          st.giveItems(REWARDS[self.getRandom(len(REWARDS))],4)
                           st.playSound("ItemSound.quest_finish")
                       elif (diag + row + col) == 0 :
                           htmltext += loser
-                          st.giveItems(REWARDS[getRandom(len(REWARDS))],10)
+                          st.giveItems(REWARDS[self.getRandom(len(REWARDS))],10)
                           st.playSound("ItemSound.quest_jackpot")
                       else :
                           htmltext += average
@@ -200,7 +200,7 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_QUEST_DROP,MAX)
      prevItems = st.getQuestItemsCount(SI_ORE)
-     if getRandom(MAX) < chance :
+     if self.getRandom(MAX) < chance :
         numItems = numItems + 1
      if numItems != 0 :   
         st.giveItems(SI_ORE,int(numItems))

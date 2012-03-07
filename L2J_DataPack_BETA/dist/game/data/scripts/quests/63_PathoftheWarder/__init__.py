@@ -190,7 +190,7 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Lizard :
-            if not st.getQuestItemsCount(Soul_C) and getRandom(10) < 2 and cond == 11 :
+            if not st.getQuestItemsCount(Soul_C) and self.getRandom(10) < 2 and cond == 11 :
                 npc = st.addSpawn(Tak,180000)
         elif npcId == Tak :
             if not st.getQuestItemsCount(Soul_C) and cond == 11 :

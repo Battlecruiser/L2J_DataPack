@@ -64,7 +64,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   n = getRandom(100)
+   n = self.getRandom(100)
    if npcId == 20055 :
      if n<51 :
       st.playSound("ItemSound.quest_itemget")

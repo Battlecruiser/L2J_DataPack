@@ -228,7 +228,7 @@ class Quest (JQuest) :
                     if count == 0 :
                         st.set("cond","15")
         elif npcId in Timaks :
-            if getRandom(40) < 1 and cond == 19 and not st.getInt("spawned") :
+            if self.getRandom(40) < 1 and cond == 19 and not st.getInt("spawned") :
                 st.addSpawn(Lady,180000)
                 st.set("spawned","1")
                 st.startQuestTimer("Despawn Crimson Lady",180000)

@@ -41,7 +41,7 @@ class Quest (JQuest) :
      if leaf == 80 and stone == 100 :
         st.takeItems(LEAF,leaf)
         st.takeItems(STONE,stone)
-        item = getRandom(3)
+        item = self.getRandom(3)
         st.giveItems(5956+item,1)
         htmltext = "30074-"+str(6+item)+".htm"
         st.playSound("ItemSound.quest_finish")
@@ -86,7 +86,7 @@ class Quest (JQuest) :
    numItems,chance = divmod(100*Config.RATE_QUEST_DROP,100)
    item,count = MOB[npcId]
    if item :
-      if getRandom(100) <chance :
+      if self.getRandom(100) <chance :
          numItems = numItems + 1
       prevItems = st.getQuestItemsCount(item)
       if prevItems < count :

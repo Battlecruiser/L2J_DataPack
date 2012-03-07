@@ -97,7 +97,7 @@ class Quest (JQuest) :
                 itemId = DINOSAUR_TISSUE
                 chance = TISSUE_DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
-             if getRandom(100) < chance : 
+             if self.getRandom(100) < chance : 
                 numItems += 1
              if numItems :
                 if int(count + numItems)/150 > int(count)/150 and itemId == DINOSAUR_TISSUE :

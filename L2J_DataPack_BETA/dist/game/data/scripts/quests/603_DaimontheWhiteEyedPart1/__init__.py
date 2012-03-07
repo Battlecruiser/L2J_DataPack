@@ -139,7 +139,7 @@ class Quest (JQuest) :
          if st.getInt("cond") == 7 and count < 200 :
             chance = DROP_CHANCE * Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
-            if getRandom(100) < chance : 
+            if self.getRandom(100) < chance : 
                numItems += 1
             if numItems :
                if count + numItems >= 200 :

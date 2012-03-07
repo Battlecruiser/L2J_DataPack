@@ -129,28 +129,28 @@ class Quest (JQuest) :
         htmltext = "30469-04.htm"
    elif npcId == 30469 and st.getInt("cond") and has_list(st) and ingredients_count(st) >= 5 :
           if special_ingredients(st) == 0 :
-            if getRandom(10)<1 :
+            if self.getRandom(10)<1 :
               htmltext = "30469-05t2.htm"
               st.giveItems(JONAS_STEAK_DISH2_ID,1)
             else:
               htmltext = "30469-05t1.htm"
               st.giveItems(JONAS_STEAK_DISH1_ID,1)
           elif special_ingredients(st) == 1 :
-            if getRandom(10)<1 :
+            if self.getRandom(10)<1 :
               htmltext = "30469-05t3.htm"
               st.giveItems(JONAS_STEAK_DISH3_ID,1)
             else:
               htmltext = "30469-05t2.htm"
               st.giveItems(JONAS_STEAK_DISH2_ID,1)
           elif special_ingredients(st) == 2 :
-            if getRandom(10)<1 :
+            if self.getRandom(10)<1 :
               htmltext = "30469-05t4.htm"
               st.giveItems(JONAS_STEAK_DISH4_ID,1)
             else:
               htmltext = "30469-05t3.htm"
               st.giveItems(JONAS_STEAK_DISH3_ID,1)
           elif special_ingredients(st) == 3 :
-            if getRandom(10)<1 :
+            if self.getRandom(10)<1 :
               htmltext = "30469-05t5.htm"
               st.giveItems(JONAS_STEAK_DISH5_ID,1)
               st.playSound("ItemSound.quest_jackpot")
@@ -303,7 +303,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20265 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<75 :
             st.giveItems(MONSTER_EYE_BODY_ID,1)
             if st.getQuestItemsCount(MONSTER_EYE_BODY_ID) == 30 :
@@ -319,7 +319,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20266 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(ROLANTS_CREATUREBOOK_ID) and st.getQuestItemsCount(MONSTER_EYE_BODY_ID)<30 :
-          n = getRandom(10)
+          n = self.getRandom(10)
           if n<7 :
             st.giveItems(MONSTER_EYE_BODY_ID,1)
             if st.getQuestItemsCount(MONSTER_EYE_BODY_ID) == 30 :
@@ -335,7 +335,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20226 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
-          n = getRandom(10)
+          n = self.getRandom(10)
           if n<9 :
             if st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)<20 :
               st.giveItems(GREEN_MARSH_MOSS_ID,1)
@@ -352,7 +352,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20228 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(GLYVKAS_BOTANYBOOK_ID) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<88 :
             if st.getQuestItemsCount(GREEN_MARSH_MOSS_ID)<20 :
               st.giveItems(GREEN_MARSH_MOSS_ID,1)
@@ -376,7 +376,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20204 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<80 :
             if st.getQuestItemsCount(NECTAR_ID)<20 :
               st.giveItems(NECTAR_ID,1)
@@ -393,7 +393,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20229 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(JAYCUBS_INSECTBOOK_ID) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<92 :
             if st.getQuestItemsCount(NECTAR_ID)<20 :
               st.giveItems(NECTAR_ID,1)
@@ -410,7 +410,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20223 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<67 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
               st.giveItems(RED_MANDRAGORA_ROOT_ID,1)
@@ -427,7 +427,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20154 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<74 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
               st.giveItems(RED_MANDRAGORA_ROOT_ID,1)
@@ -444,7 +444,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20155 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<80 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
               st.giveItems(RED_MANDRAGORA_ROOT_ID,1)
@@ -461,7 +461,7 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_itemget")
    elif npcId == 20156 :
         if st.getInt("cond") and has_list(st) and ingredients_count(st)<5 and st.getQuestItemsCount(SONIAS_BOTANYBOOK_ID) and (st.getQuestItemsCount(RED_MANDRAGORA_SAP_ID)+st.getQuestItemsCount(WHITE_MANDRAGORA_SAP_ID) == 0) :
-          n = getRandom(100)
+          n = self.getRandom(100)
           if n<90 :
             if st.getQuestItemsCount(RED_MANDRAGORA_ROOT_ID)<40 :
               st.giveItems(RED_MANDRAGORA_ROOT_ID,1)

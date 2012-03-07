@@ -57,7 +57,7 @@ class Quest (JQuest) :
      st.exitQuest(False)
      st.playSound("ItemSound.quest_finish")
      st.takeItems(KASHA_WOLF_FANG,-1)
-     if getRandom(100) <= 13 :
+     if self.getRandom(100) <= 13 :
         st.giveItems(NECKLACE_OF_VALOR,1)
      else :
         st.giveItems(NECKLACE_OF_COURAGE,1)
@@ -72,7 +72,7 @@ class Quest (JQuest) :
    count = st.getQuestItemsCount(KASHA_WOLF_FANG)
    if count < 50 :
       numItems, chance = divmod(125*Config.RATE_QUEST_DROP,100)
-      if getRandom(100) <= chance :
+      if self.getRandom(100) <= chance :
          numItems += 1
       numItems = int(numItems)
       if numItems != 0 :

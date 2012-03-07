@@ -79,7 +79,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    item,chance=DROPLIST[npc.getNpcId()]
-   if getRandom(100)<chance :
+   if self.getRandom(100)<chance :
      st.giveItems(item,1)
      st.playSound("ItemSound.quest_itemget")
    return

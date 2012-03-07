@@ -100,7 +100,7 @@ class Quest (JQuest) :
 					st.set("cond","2")
 					st.playSound("ItemSound.quest_middle")
 		elif cond == 3 and npcId == SUPPRESSOR or cond == 3 and npcId == EXTERMINATOR :
-			if getRandom(100) < 80 :
+			if self.getRandom(100) < 80 :
 				if st.getQuestItemsCount(ENCHANTED_GOLEM_FRAGMENT) <= 19 :
 					st.giveItems(ENCHANTED_GOLEM_FRAGMENT,1)
 					st.playSound("ItemSound.quest_itemget")
