@@ -965,8 +965,8 @@ public class TowerOfNaia extends Quest
 	
 	private void markElpyRespawn()
 	{
-		long respawnTime = (getRandom(43200, 216000) * 1000);
-		GlobalVariablesManager.getInstance().storeVariable("elpy_respawn_time", Long.toString(respawnTime + System.currentTimeMillis()));
+		final long respawnTime = (getRandom(43200, 216000) * 1000) + System.currentTimeMillis();
+		GlobalVariablesManager.getInstance().storeVariable("elpy_respawn_time", Long.toString(respawnTime));
 	}
 	
 	private int moveTo(L2Npc npc, int[] coords)
@@ -990,9 +990,8 @@ public class TowerOfNaia extends Quest
 	
 	private void spawnElpy()
 	{
-		String tmp = GlobalVariablesManager.getInstance().getStoredVariable("elpy_respawn_time");
-		long respawnTime = tmp == null ? 0 : Long.parseLong(tmp) * 1000;
-		
+		final String tmp = GlobalVariablesManager.getInstance().getStoredVariable("elpy_respawn_time");
+		final long respawnTime = tmp == null ? 0 : Long.parseLong(tmp);
 		if (respawnTime <= System.currentTimeMillis())
 		{
 			addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
