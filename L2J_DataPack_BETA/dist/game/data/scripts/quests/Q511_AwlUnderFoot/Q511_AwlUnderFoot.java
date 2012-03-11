@@ -216,6 +216,15 @@ public final class Q511_AwlUnderFoot extends Quest
 		else if (isEnter && dungeon.getReEnterTime() > System.currentTimeMillis())
 			return "FortressWarden-07.htm";
 
+		L2Party party = player.getParty();
+		if (party == null)
+			return "FortressWarden-03.htm";
+		for (L2PcInstance partyMember : party.getPartyMembers())
+		{
+			if (partyMember.getClan() == null || partyMember.getClan().getFortId() == 0 || partyMember.getClan().getFortId() != fortress.getFortId())
+				return getHtm(player.getHtmlPrefix(), "FortressWarden-05.htm").replace("%player%", partyMember.getName());
+		}
+		
 		return null;
 	}
 	
