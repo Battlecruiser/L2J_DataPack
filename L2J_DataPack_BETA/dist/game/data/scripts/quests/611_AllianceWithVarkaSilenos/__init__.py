@@ -145,7 +145,7 @@ def giveReward(st,item,chance,MAX,drop) :
     count = st.getQuestItemsCount(drop)
     if count < MAX or drop == Molar :
       numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,1000)
-      if self.getRandom(1000) < chance :
+      if st.getQuest().getRandom(1000) < chance :
         numItems += 1
       numItems = int(numItems)
       if numItems != 0 :

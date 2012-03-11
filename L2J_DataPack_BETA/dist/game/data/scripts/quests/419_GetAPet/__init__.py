@@ -67,7 +67,7 @@ def check_questions(st) :
   answers = st.getInt("answers")
   if answers < 10 :
     questions = quiz.split()
-    index = self.getRandom(len(questions) - 1)
+    index = st.getQuest().getRandom(len(questions) - 1)
     question = questions[index]
     if len(questions) > 10 - answers :
       questions[index] = questions[-1]

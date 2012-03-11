@@ -23,12 +23,10 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.quest.Event;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -356,8 +354,7 @@ public class eventmodRace extends Event
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		if (npc.getNpcId() == _start_npc)
 		{

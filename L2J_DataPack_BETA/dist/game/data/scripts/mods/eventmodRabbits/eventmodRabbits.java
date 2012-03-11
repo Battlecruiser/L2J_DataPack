@@ -23,7 +23,6 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2EventChestInstance;
@@ -31,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
@@ -227,8 +225,7 @@ public class eventmodRabbits extends Event
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		return npc.getNpcId() + ".htm";
 	}
