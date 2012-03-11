@@ -15,7 +15,6 @@
 package quests.Q423_TakeYourBestShot;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -128,8 +127,7 @@ public class Q423_TakeYourBestShot extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		
 		if (npc.isInsideRadius(96782, 85918, 100, true))

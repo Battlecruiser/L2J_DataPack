@@ -25,7 +25,7 @@ GARVARENTZ = 30704
 
 def rewards(st,npcId):
     state=False
-    chance=self.getRandom(100)
+    chance = st.getQuest().getRandom(100)
     if npcId == ORVEN and st.getQuestItemsCount(CRUCIFIX) :
        st.set("mission","1")
        st.takeItems(CRUCIFIX,-1)

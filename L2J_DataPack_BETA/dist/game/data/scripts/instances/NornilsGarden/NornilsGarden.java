@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -239,13 +238,12 @@ public class NornilsGarden extends Quest
 		}
 	}
 	
-	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(qn);
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		removeBuffs(player);
 		giveBuffs(player);
@@ -634,8 +632,7 @@ public class NornilsGarden extends Quest
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(qn);
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		return npc.getNpcId() + ".html";
 	}
