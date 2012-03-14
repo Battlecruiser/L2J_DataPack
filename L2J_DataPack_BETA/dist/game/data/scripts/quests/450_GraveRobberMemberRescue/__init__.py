@@ -7,6 +7,7 @@ from com.l2jserver.gameserver.model					import L2CharPosition
 from com.l2jserver.gameserver.model.quest			import State
 from com.l2jserver.gameserver.model.quest			import QuestState
 from com.l2jserver.gameserver.model.quest.jython	import QuestJython as JQuest
+from com.l2jserver.gameserver.network				import NpcStringId
 from com.l2jserver.gameserver.network.serverpackets	import NpcSay
 from com.l2jserver.gameserver.network.serverpackets	import ExShowScreenMessage
 
@@ -95,17 +96,17 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_middle")
 			else :
 				htmltext = ""
-				player.sendPacket(ExShowScreenMessage(1,0,5,0,1,0,0,2,4000,1,"The grave robber warrior has been filled with dark energy and is attacking you!"))
+				player.sendPacket(ExShowScreenMessage(2, 0, 5, 0, 1, 0, 0, 2, 4000 , 1, "", NpcStringId.THE_GRAVE_ROBBER_WARRIOR_HAS_BEEN_FILLED_WITH_DARK_ENERGY_AND_IS_ATTACKING_YOU))
 				warrior = st.addSpawn(WARRIOR_MON,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,600000)
 				warrior.setRunning()
 				warrior.addDamageHate(player,0,999)
 				warrior.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
 				if self.getRandom(100) < 50 :
-					npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "...Grunt... oh..."))
+					npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.GRUNT_OH))
 					npc.getSpawn().decreaseCount(npc)
 					npc.deleteMe()
 				else :
-					npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "Grunt... What's... wrong with me..."))
+					npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME))
 					npc.getSpawn().decreaseCount(npc)
 					npc.deleteMe()
 		return htmltext

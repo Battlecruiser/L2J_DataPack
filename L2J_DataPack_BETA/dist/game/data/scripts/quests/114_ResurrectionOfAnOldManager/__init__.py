@@ -7,6 +7,7 @@ from com.l2jserver.gameserver.datatables import SpawnTable
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network import NpcStringId
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 from com.l2jserver.gameserver.network.serverpackets import ExShowScreenMessage
 
@@ -44,7 +45,7 @@ class Quest (JQuest) :
              st.takeItems(Detector,1)
              st.giveItems(Detector2,1)
              st.set("cond","18")
-             player.sendPacket(ExShowScreenMessage("The radio signal detector is responding. # A suspicious pile of stones catches your eye.",4500))
+             player.sendPacket(ExShowScreenMessage(NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500))
              break
     return
 
@@ -150,7 +151,9 @@ class Quest (JQuest) :
     elif event == "32047-15a.htm" :
        if self.isSpawned == 0 :
           golem = st.addSpawn(Guardian,96977,-110625,-3280,0,False,900000)
-          golem.broadcastPacket(NpcSay(golem.getObjectId(),0,golem.getNpcId(),"You, "+st.getPlayer().getName()+", you attacked Wendy. Prepare to die!"))
+          nSay = NpcSay(golem.getObjectId(), 0, golem.getNpcId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE)
+          nSay.addStringParameter(player.getName())
+          golem.broadcastPacket(nSay)
           golem.setRunning()
           golem.addDamageHate(player,0,999)
           golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
@@ -207,7 +210,7 @@ class Quest (JQuest) :
            st.takeItems(Detector,1)
            st.giveItems(Detector2,1)
            st.set("cond","18")
-           player.sendPacket(ExShowScreenMessage("The radio signal detector is responding. # A suspicious pile of stones catches your eye.",4500))
+           player.sendPacket(ExShowScreenMessage(NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500))
     npc.showChatWindow(player)
     return None
 
@@ -356,7 +359,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if st.getState() == State.STARTED and st.getInt("cond") == 10:
       if npcId == Guardian :
-         npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npcId,"This enemy is far too powerful for me to fight. I must withdraw"))
+         npc.broadcastPacket(NpcSay(npc.getObjectId(), 0, npcId, NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW))
          st.set("cond","11")
          st.playSound("ItemSound.quest_middle")
 
