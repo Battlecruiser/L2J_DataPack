@@ -273,7 +273,7 @@ public class Q10272_LightFragment extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if (st.getInt("cond") == 5)
+		if ((st != null) && st.getInt("cond") == 5)
 		{
 			final long count = st.getQuestItemsCount(FRAGMENT_POWDER);
 			if (count < 100)
