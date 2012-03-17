@@ -40,8 +40,8 @@
 						</xs:sequence>
 						<xs:attribute name="castle" use="required">
 							<xs:simpleType>
-								<xs:restriction base="xs:positiveInteger">
-									<xs:minInclusive value="1" />
+								<xs:restriction base="xs:nonNegativeInteger">
+									<xs:minInclusive value="0" />
 									<xs:maxInclusive value="9" />
 								</xs:restriction>
 							</xs:simpleType>
