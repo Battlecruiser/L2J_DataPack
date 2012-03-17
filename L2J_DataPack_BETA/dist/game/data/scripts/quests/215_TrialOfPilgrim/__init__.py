@@ -110,27 +110,26 @@ class Quest (JQuest) :
    elif npcId == 30648 and cond==0 and id == State.COMPLETED :
       htmltext = Quest.getAlreadyCompletedMsg(player)
 
-   elif npcId == 30648 and cond==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL) :
+   elif npcId == 30648 and cond==1 and st.hasQuestItems(VOUCHER_OF_TRIAL) :
       htmltext = "30648-09.htm"
-   elif npcId == 30648 and cond==17 and st.getQuestItemsCount(BOOK_OF_SAGE) :
+   elif npcId == 30648 and cond==17 and st.hasQuestItems(BOOK_OF_SAGE) :
       st.addExpAndSp(629125,40803)
       st.giveItems(7562,49)
-      st.giveItems(ADENA,114649)
+      st.giveAdena(114649,True)
       player.sendPacket(SocialAction(player.getObjectId(),3))
       htmltext = "30648-10.htm"
       st.giveItems(MARK_OF_PILGRIM,1)
       st.takeItems(BOOK_OF_SAGE,1)
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
-      st.unset("cond")
-   elif npcId == 30571 and cond==1 and st.getQuestItemsCount(VOUCHER_OF_TRIAL) :
+   elif npcId == 30571 and cond==1 and st.hasQuestItems(VOUCHER_OF_TRIAL) :
       htmltext = "30571-01.htm"
       st.takeItems(VOUCHER_OF_TRIAL,1)
       st.set("cond","2")
       st.playSound("ItemSound.quest_middle")
    elif npcId == 30571 and cond==2 :
       htmltext = "30571-02.htm"
-   elif npcId == 30571 and cond in [5,6] and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
+   elif npcId == 30571 and cond in [5,6] and st.hasQuestItems(SPIRIT_OF_FLAME) :
       htmltext = "30571-03.htm"
       st.set("cond","6")
       st.playSound("ItemSound.quest_middle")
@@ -140,28 +139,28 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    elif npcId == 30649 and cond==3 :
       htmltext = "30649-02.htm"
-   elif npcId == 30649 and cond==4 and st.getQuestItemsCount(ESSENSE_OF_FLAME) :
+   elif npcId == 30649 and cond==4 and st.hasQuestItems(ESSENSE_OF_FLAME) :
       htmltext = "30649-03.htm"
-   elif npcId == 30550 and cond==6 and st.getQuestItemsCount(SPIRIT_OF_FLAME) :
+   elif npcId == 30550 and cond==6 and st.hasQuestItems(SPIRIT_OF_FLAME) :
       htmltext = "30550-01.htm"
       st.giveItems(TAG_OF_RUMOR,1)
       st.set("cond","7")
       st.playSound("ItemSound.quest_middle")
    elif npcId == 30550 and cond==7 :
       htmltext = "30550-02.htm"
-   elif npcId == 30650 and cond==7 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+   elif npcId == 30650 and cond==7 and st.hasQuestItems(TAG_OF_RUMOR) :
       htmltext = st.showHtmlFile("30650-01.htm").replace("RequiredAdena", str(100000))
-   elif npcId == 30650 and cond>=9 and st.getQuestItemsCount(GREY_BADGE) and st.getQuestItemsCount(BOOK_OF_GERALD) :
+   elif npcId == 30650 and cond>=9 and st.hasQuestItems(GREY_BADGE) and st.hasQuestItems(BOOK_OF_GERALD) :
       htmltext = "30650-04.htm"
-      st.giveAdena(100000,False)
+      st.giveAdena(100000,True)
       st.takeItems(BOOK_OF_GERALD,1)
-   elif npcId == 30651 and cond==7 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+   elif npcId == 30651 and cond==7 and st.hasQuestItems(TAG_OF_RUMOR) :
       htmltext = "30651-01.htm"
       st.giveItems(GREY_BADGE,1)
       st.takeItems(TAG_OF_RUMOR,1)
       st.set("cond","9")
       st.playSound("ItemSound.quest_middle")
-   elif npcId == 30651 and cond==8 and st.getQuestItemsCount(TAG_OF_RUMOR) :
+   elif npcId == 30651 and cond==8 and st.hasQuestItems(TAG_OF_RUMOR) :
       htmltext = "30651-02.htm"
       st.giveItems(GREY_BADGE,1)
       st.takeItems(TAG_OF_RUMOR,1)
@@ -189,7 +188,7 @@ class Quest (JQuest) :
       st.takeItems(HAIR_OF_NAHIR,1)
       st.set("cond","12")
       st.playSound("ItemSound.quest_middle")
-   elif npcId == 30036 and cond==12 and st.getQuestItemsCount(STATUE_OF_EINHASAD) :
+   elif npcId == 30036 and cond==12 and st.hasQuestItems(STATUE_OF_EINHASAD) :
       htmltext = "30036-04.htm"
    elif npcId == 30362 and cond==12 :
       htmltext = "30362-01.htm"
@@ -197,20 +196,20 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_middle")
    elif npcId == 30362 and cond==13 :
       htmltext = "30362-02.htm"
-   elif npcId == 30362 and cond==15 and st.getQuestItemsCount(BOOK_OF_DARKNESS) :
+   elif npcId == 30362 and cond==15 and st.hasQuestItems(BOOK_OF_DARKNESS) :
       htmltext = "30362-03.htm"
    elif npcId == 30362 and cond==16 :
       htmltext = "30362-06.htm"
-   elif npcId == 30362 and cond==15 and st.getQuestItemsCount(BOOK_OF_DARKNESS)==0 :
+   elif npcId == 30362 and cond==15 and not st.hasQuestItems(BOOK_OF_DARKNESS) :
       htmltext = "30362-07.htm"
-   elif npcId == 30652 and cond==14 and st.getQuestItemsCount(DEBRIS_OF_WILLOW) :
+   elif npcId == 30652 and cond==14 and st.hasQuestItems(DEBRIS_OF_WILLOW) :
       htmltext = "30652-01.htm"
-   elif npcId == 30652 and cond==15 and st.getQuestItemsCount(BOOK_OF_DARKNESS) :
+   elif npcId == 30652 and cond==15 and st.hasQuestItems(BOOK_OF_DARKNESS) :
       htmltext = "30652-03.htm"
    elif npcId == 30612 and cond==16 :
       htmltext = "30612-01.htm"
       st.giveItems(BOOK_OF_SAGE,1)
-      if st.getQuestItemsCount(BOOK_OF_DARKNESS) :
+      if st.hasQuestItems(BOOK_OF_DARKNESS) :
         st.takeItems(BOOK_OF_DARKNESS,1)
       st.set("cond","17")
       st.playSound("ItemSound.quest_middle")
@@ -224,26 +223,24 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st : return 
-   if st.getState() != State.STARTED : return 
+   if not st.isStarted() : return 
    npcId = npc.getNpcId()
    cond=st.getInt("cond")
    if npcId == 27116 :
-      if cond == 3 and not st.getQuestItemsCount(ESSENSE_OF_FLAME) :
-        if not self.getRandom(5) :
-          st.giveItems(ESSENSE_OF_FLAME,1)
-          st.set("cond","4")
-          st.playSound("ItemSound.quest_middle")
+     if cond == 3 and not st.hasQuestItems(ESSENSE_OF_FLAME) and not self.getRandom(5) :
+       st.giveItems(ESSENSE_OF_FLAME,1)
+       st.set("cond","4")
+       st.playSound("ItemSound.quest_middle")
    elif npcId == 27117 :
-      if cond == 10 and not st.getQuestItemsCount(HAIR_OF_NAHIR) :
-        st.giveItems(HAIR_OF_NAHIR,1)
-        st.set("cond","11")
-        st.playSound("ItemSound.quest_middle")
+     if cond == 10 and not st.hasQuestItems(HAIR_OF_NAHIR) :
+       st.giveItems(HAIR_OF_NAHIR,1)
+       st.set("cond","11")
+       st.playSound("ItemSound.quest_middle")
    elif npcId == 27118 :
-      if cond == 13 and not st.getQuestItemsCount(DEBRIS_OF_WILLOW) :
-        if not self.getRandom(5) :
-          st.giveItems(DEBRIS_OF_WILLOW,1)
-          st.set("cond","14")
-          st.playSound("ItemSound.quest_middle")
+     if cond == 13 and not st.hasQuestItems(DEBRIS_OF_WILLOW) and not self.getRandom(5) :
+       st.giveItems(DEBRIS_OF_WILLOW,1)
+       st.set("cond","14")
+       st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(215,qn,"Trial Of Pilgrim")

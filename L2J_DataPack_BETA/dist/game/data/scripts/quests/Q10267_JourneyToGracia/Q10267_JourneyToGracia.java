@@ -88,11 +88,10 @@ public class Q10267_JourneyToGracia extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
@@ -108,13 +107,13 @@ public class Q10267_JourneyToGracia extends Quest
 				st.playSound("ItemSound.quest_middle");
 				break;
 			case "32548-02.htm":
-				st.giveAdena(92500, false);
+				st.giveAdena(92500, true);
 				st.addExpAndSp(75480, 7570);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	public Q10267_JourneyToGracia(int questId, String name, String descr)

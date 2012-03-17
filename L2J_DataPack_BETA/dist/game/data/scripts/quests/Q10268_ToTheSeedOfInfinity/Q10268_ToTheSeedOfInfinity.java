@@ -66,7 +66,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 				else if (npcId == TEPIOS)
 				{
 					htmltext = "32530-01.htm";
-					st.giveAdena(16671, false);
+					st.giveAdena(16671, true);
 					st.addExpAndSp(100640, 10098);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);

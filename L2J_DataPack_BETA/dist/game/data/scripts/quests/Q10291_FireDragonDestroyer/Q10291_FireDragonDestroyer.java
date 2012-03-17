@@ -103,7 +103,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 				else if (cond == 2)
 				{
 					st.takeItems(ValorNecklace, 1);
-					st.giveAdena(126549, false);
+					st.giveAdena(126549, true);
 					st.addExpAndSp(717291, 77397);
 					st.giveItems(ValakaSlayerCirclet, 1);
 					st.playSound("ItemSound.quest_finish");

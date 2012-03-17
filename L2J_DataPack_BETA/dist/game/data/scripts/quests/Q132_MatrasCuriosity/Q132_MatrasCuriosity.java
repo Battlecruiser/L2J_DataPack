@@ -45,12 +45,13 @@ public final class Q132_MatrasCuriosity extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
 		
 		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !st.isCompleted())
 		{
@@ -77,7 +78,7 @@ public final class Q132_MatrasCuriosity extends Quest
 			st.giveItems(WIND, 1);
 			st.giveItems(DARKNESS, 1);
 			st.giveItems(DIVINITY, 1);
-			st.playSound("IItemSound.quest_finish");
+			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(false);
 		}
 		return htmltext;
@@ -86,7 +87,7 @@ public final class Q132_MatrasCuriosity extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = Quest.getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -144,8 +145,8 @@ public final class Q132_MatrasCuriosity extends Quest
 					
 					if (st.hasQuestItems(BLUEPRINT_RANKU))
 					{
-						st.playSound("ItemSound.quest_middle");
 						st.set("cond", "2");
+						st.playSound("ItemSound.quest_middle");
 					}
 					else
 					{
@@ -161,10 +162,10 @@ public final class Q132_MatrasCuriosity extends Quest
 					st.giveItems(BLUEPRINT_RANKU, 1);
 					st.set("rewarded_ranku", "2");
 					
-					if (st.getQuestItemsCount(BLUEPRINT_PRINCE) > 0)
+					if (st.hasQuestItems(BLUEPRINT_PRINCE))
 					{
-						st.playSound("ItemSound.quest_middle");
 						st.set("cond", "2");
+						st.playSound("ItemSound.quest_middle");
 					}
 					else
 					{

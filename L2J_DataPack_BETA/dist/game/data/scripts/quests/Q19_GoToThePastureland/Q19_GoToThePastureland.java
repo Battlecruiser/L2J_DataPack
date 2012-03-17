@@ -58,7 +58,7 @@ public class Q19_GoToThePastureland extends Quest
 			if (st.hasQuestItems(YoungWildBeastMeat))
 			{
 				st.takeItems(YoungWildBeastMeat, -1);
-				st.giveAdena(50000, false);
+				st.giveAdena(50000, true);
 				st.addExpAndSp(136766, 12688);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
@@ -67,7 +67,7 @@ public class Q19_GoToThePastureland extends Quest
 			else if (st.hasQuestItems(Veal))
 			{
 				st.takeItems(Veal, -1);
-				st.giveAdena(147200, false);
+				st.giveAdena(147200, true);
 				st.addExpAndSp(385040, 75250);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);

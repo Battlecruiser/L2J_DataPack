@@ -142,6 +142,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 								htmltext = "32325-10.htm";
 								break;
 						}
+						break;
 					case YANG:
 						switch (cond)
 						{
