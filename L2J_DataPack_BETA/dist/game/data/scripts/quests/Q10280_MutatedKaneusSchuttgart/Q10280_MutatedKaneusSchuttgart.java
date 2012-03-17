@@ -185,7 +185,8 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		
 		questItemIds = new int[]
 		{
-			TISSUE_VS, TISSUE_KB
+			TISSUE_VS,
+			TISSUE_KB
 		};
 	}
 	

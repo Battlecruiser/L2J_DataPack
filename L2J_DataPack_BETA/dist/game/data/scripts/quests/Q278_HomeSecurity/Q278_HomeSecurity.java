@@ -31,7 +31,9 @@ public class Q278_HomeSecurity extends Quest
 	private static final int Tunatun = 31537;
 	private static final int[] Monster =
 	{
-		18905, 18906, 18907
+		18905,
+		18906,
+		18907
 	};
 	// Item
 	private static final int SelMahumMane = 15531;

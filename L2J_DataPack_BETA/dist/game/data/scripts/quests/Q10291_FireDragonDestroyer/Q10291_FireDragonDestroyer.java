@@ -164,7 +164,8 @@ public class Q10291_FireDragonDestroyer extends Quest
 		
 		questItemIds = new int[]
 		{
-			PoorNecklace, ValorNecklace
+			PoorNecklace,
+			ValorNecklace
 		};
 	}
 	

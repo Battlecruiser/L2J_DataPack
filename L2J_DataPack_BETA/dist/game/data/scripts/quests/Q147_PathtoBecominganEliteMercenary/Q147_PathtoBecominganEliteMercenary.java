@@ -31,7 +31,15 @@ public class Q147_PathtoBecominganEliteMercenary extends Quest
 	// NPCs
 	private static final int[] _merc =
 	{
-		36481, 36482, 36483, 36484, 36485, 36486, 36487, 36488, 36489
+		36481,
+		36482,
+		36483,
+		36484,
+		36485,
+		36486,
+		36487,
+		36488,
+		36489
 	};
 	// Items
 	private static final int _cert_ordinary = 13766;

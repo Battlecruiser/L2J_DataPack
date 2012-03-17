@@ -305,7 +305,10 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		
 		questItemIds = new int[]
 		{
-			YINSWORD, YANGSWORD, SOULPIECEWATER, SOULPIECEAIR
+			YINSWORD,
+			YANGSWORD,
+			SOULPIECEWATER,
+			SOULPIECEAIR
 		};
 	}
 	

@@ -54,7 +54,13 @@ public class Q153_DeliverGoods extends Quest
 		
 		questItemIds = new int[]
 		{
-			DeliveryListId, HeavyWoodBoxId, ClothBundleId, ClayPotId, JacksonsReceipt, SilviasReceipt, RantsReceipt
+			DeliveryListId,
+			HeavyWoodBoxId,
+			ClothBundleId,
+			ClayPotId,
+			JacksonsReceipt,
+			SilviasReceipt,
+			RantsReceipt
 		};
 		addStartNpc(ArnoldId);
 		addTalkId(JacksonId);

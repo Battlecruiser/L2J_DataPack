@@ -178,7 +178,8 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		
 		questItemIds = new int[]
 		{
-			TISSUE_TK, TISSUE_OA
+			TISSUE_TK,
+			TISSUE_OA
 		};
 	}
 	

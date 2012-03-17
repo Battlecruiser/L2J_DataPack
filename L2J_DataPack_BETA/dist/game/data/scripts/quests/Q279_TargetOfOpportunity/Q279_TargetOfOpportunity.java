@@ -34,17 +34,24 @@ public final class Q279_TargetOfOpportunity extends Quest
 	private static final int JERIAN = 32302;
 	private static final int[] MONSTERS =
 	{
-		22373, 22374, 22375, 22376
+		22373,
+		22374,
+		22375,
+		22376
 	};
 	
 	// Items
 	private static final int[] SEAL_COMPONENTS =
 	{
-		15517, 15518, 15519, 15520
+		15517,
+		15518,
+		15519,
+		15520
 	};
 	private static final int[] SEAL_BREAKERS =
 	{
-		15515, 15516
+		15515,
+		15516
 	};
 	
 	public Q279_TargetOfOpportunity(int questId, String name, String descr)

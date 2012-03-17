@@ -34,13 +34,16 @@ public class Q250_WatchWhatYouEat extends Quest
 	private static final int[][] _mobs =
 	{
 		{
-			18864, 15493
+			18864,
+			15493
 		},
 		{
-			18865, 15494
+			18865,
+			15494
 		},
 		{
-			18868, 15495
+			18868,
+			15495
 		}
 	};
 	
@@ -184,7 +187,9 @@ public class Q250_WatchWhatYouEat extends Quest
 		
 		questItemIds = new int[]
 		{
-			15493, 15494, 15495
+			15493,
+			15494,
+			15495
 		};
 		
 		addStartNpc(_sally);

@@ -32,7 +32,16 @@ public class Q461_RumbleInTheBase extends Quest
 	
 	// NPC
 	public static final int Stan = 30200;
-	public static final int[] Monsters = {22780, 22781, 22782, 2278, 22784, 22785, 18908};
+	public static final int[] Monsters =
+	{
+		22780,
+		22781,
+		22782,
+		2278,
+		22784,
+		22785,
+		18908
+	};
 	
 	// Item
 	public static final int ShinySalmon = 15503;
@@ -42,7 +51,6 @@ public class Q461_RumbleInTheBase extends Quest
 	private static final int ResetHour = 6;
 	private static final int ResetMin = 30;
 	
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -50,7 +58,9 @@ public class Q461_RumbleInTheBase extends Quest
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (event.equalsIgnoreCase("30200-05.htm"))
 		{
@@ -68,20 +78,28 @@ public class Q461_RumbleInTheBase extends Quest
 		QuestState st = player.getQuestState(qn);
 		QuestState prev = player.getQuestState("252_ItSmellsDelicious");
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
 				if ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted())
+				{
 					htmltext = "30200-01.htm";
+				}
 				else
+				{
 					htmltext = "30200-02.htm";
+				}
 				break;
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
+				{
 					htmltext = "30200-06.html";
-				else 
+				}
+				else
 				{
 					st.takeItems(ShinySalmon, -1);
 					st.takeItems(ShoesStringOfSelMahum, -1);
@@ -92,7 +110,9 @@ public class Q461_RumbleInTheBase extends Quest
 					Calendar time = Calendar.getInstance();
 					time.set(Calendar.MINUTE, ResetMin);
 					if (time.get(Calendar.HOUR_OF_DAY) >= ResetHour)
+					{
 						time.add(Calendar.DATE, 1);
+					}
 					time.set(Calendar.HOUR_OF_DAY, ResetHour);
 					st.set("time", String.valueOf(time.getTimeInMillis()));
 					st.exitQuest(false);
@@ -101,14 +121,20 @@ public class Q461_RumbleInTheBase extends Quest
 			case State.COMPLETED:
 				Long time = Long.parseLong(st.get("time"));
 				if (time > System.currentTimeMillis())
+				{
 					htmltext = "30200-03.htm";
+				}
 				else
 				{
 					st.setState(State.CREATED);
-					if (player.getLevel() >= 82 && prev != null && prev.getState() == State.COMPLETED)
+					if ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED))
+					{
 						htmltext = "30200-01.htm";
+					}
 					else
+					{
 						htmltext = "30200-02.htm";
+					}
 				}
 				break;
 		}
@@ -120,7 +146,9 @@ public class Q461_RumbleInTheBase extends Quest
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
+		{
 			return null;
+		}
 		final QuestState st = partyMember.getQuestState(qn);
 		
 		int chance = getRandom(1000);
@@ -130,30 +158,42 @@ public class Q461_RumbleInTheBase extends Quest
 		{
 			case 22780:
 				if (chance < 581)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22781:
 				if (chance < 772)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22782:
 				if (chance < 581)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22783:
 				if (chance < 563)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22784:
 				if (chance < 581)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22785:
 				if (chance < 271)
+				{
 					giveItem = true;
+				}
 				break;
 			case 18908:
-				if (chance < 271 && st.getQuestItemsCount(ShinySalmon) < 5)
+				if ((chance < 271) && (st.getQuestItemsCount(ShinySalmon) < 5))
 				{
 					st.giveItems(ShinySalmon, 1);
 					st.playSound("ItemSound.quest_itemget");
@@ -161,13 +201,13 @@ public class Q461_RumbleInTheBase extends Quest
 				break;
 		}
 		
-		if (giveItem && st.getQuestItemsCount(ShoesStringOfSelMahum) < 10)
+		if (giveItem && (st.getQuestItemsCount(ShoesStringOfSelMahum) < 10))
 		{
 			st.giveItems(ShoesStringOfSelMahum, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
 		
-		if (st.getQuestItemsCount(ShinySalmon) == 5 && st.getQuestItemsCount(ShoesStringOfSelMahum) == 10)
+		if ((st.getQuestItemsCount(ShinySalmon) == 5) && (st.getQuestItemsCount(ShoesStringOfSelMahum) == 10))
 		{
 			st.set("cond", "2");
 			st.playSound("ItemSound.quest_middle");
@@ -182,7 +222,11 @@ public class Q461_RumbleInTheBase extends Quest
 		addTalkId(Stan);
 		addKillId(Monsters);
 		
-		questItemIds = new int[] {ShinySalmon, ShoesStringOfSelMahum};
+		questItemIds = new int[]
+		{
+			ShinySalmon,
+			ShoesStringOfSelMahum
+		};
 	}
 	
 	public static void main(String[] args)

@@ -185,7 +185,8 @@ public class Q10279_MutatedKaneusOren extends Quest
 		
 		questItemIds = new int[]
 		{
-			TISSUE_KA, TISSUE_KM
+			TISSUE_KA,
+			TISSUE_KM
 		};
 	}
 	

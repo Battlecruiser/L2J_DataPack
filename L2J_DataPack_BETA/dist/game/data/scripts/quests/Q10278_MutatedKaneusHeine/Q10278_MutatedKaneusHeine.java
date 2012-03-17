@@ -180,7 +180,8 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		
 		questItemIds = new int[]
 		{
-			TISSUE_BO, TISSUE_WB
+			TISSUE_BO,
+			TISSUE_WB
 		};
 	}
 	

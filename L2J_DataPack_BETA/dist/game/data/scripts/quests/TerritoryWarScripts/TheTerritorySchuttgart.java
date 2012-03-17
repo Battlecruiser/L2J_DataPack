@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,13 +28,27 @@ public class TheTerritorySchuttgart extends TerritoryWarSuperClass
 	
 	public TheTerritorySchuttgart()
 	{
-		super(qnu,qn1,qna);
+		super(qnu, qn1, qna);
 		CATAPULT_ID = 36507;
 		TERRITORY_ID = 89;
-		LEADER_IDS = new int[]{36556, 36558, 36561, 36599};
-		GUARD_IDS = new int[]{36557, 36559, 36560};
+		LEADER_IDS = new int[]
+		{
+			36556,
+			36558,
+			36561,
+			36599
+		};
+		GUARD_IDS = new int[]
+		{
+			36557,
+			36559,
+			36560
+		};
 		qn = qn1;
-		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_SCHUTTGART_HAS_BEEN_DESTROYED};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.THE_CATAPULT_OF_SCHUTTGART_HAS_BEEN_DESTROYED
+		};
 		registerKillIds();
 	}
 }

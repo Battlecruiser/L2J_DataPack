@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,13 +28,27 @@ public class TheTerritoryGludio extends TerritoryWarSuperClass
 	
 	public TheTerritoryGludio()
 	{
-		super(qnu,qn1,qna);
+		super(qnu, qn1, qna);
 		CATAPULT_ID = 36499;
 		TERRITORY_ID = 81;
-		LEADER_IDS = new int[]{36508, 36510, 36513, 36591};
-		GUARD_IDS = new int[]{36509, 36511, 36512};
+		LEADER_IDS = new int[]
+		{
+			36508,
+			36510,
+			36513,
+			36591
+		};
+		GUARD_IDS = new int[]
+		{
+			36509,
+			36511,
+			36512
+		};
 		qn = qn1;
-		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED
+		};
 		registerKillIds();
 	}
 }

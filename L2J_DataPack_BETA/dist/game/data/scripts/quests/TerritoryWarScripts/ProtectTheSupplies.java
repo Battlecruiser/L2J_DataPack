@@ -14,9 +14,7 @@
  */
 package quests.TerritoryWarScripts;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -28,8 +26,19 @@ public class ProtectTheSupplies extends TerritoryWarSuperClass
 	
 	public ProtectTheSupplies()
 	{
-		super(qnu,qn1,qna);
-		NPC_IDS = new int[]{36591,36592,36593,36594,36595,36596,36597,36598,36599};
+		super(qnu, qn1, qna);
+		NPC_IDS = new int[]
+		{
+			36591,
+			36592,
+			36593,
+			36594,
+			36595,
+			36596,
+			36597,
+			36598,
+			36599
+		};
 		qn = qn1;
 		registerAttackIds();
 	}
