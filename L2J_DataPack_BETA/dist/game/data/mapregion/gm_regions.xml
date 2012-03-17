@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
 	<!-- Gm Room -->
-	<region name="gm_room" town="GM Consultation Service" castle="5" locId="1222" bbs="9">
-		<!-- FIXME: Needs confirm castle -->
+	<region name="gm_room" town="GM Consultation Service" castle="0" locId="1222" bbs="9">
 		<respawnPoint X="-114598" Y="-249431" Z="-2984" />
 		<respawnPoint X="-114527" Y="-249452" Z="-2984" />
 		<respawnPoint X="-114567" Y="-249517" Z="-2984" />
@@ -32,8 +32,7 @@
 	</region>
 
 	<!-- Gm Room Solo1 -->
-	<region name="gm_room_solo1" town="GM Consultation Service" castle="5" locId="1222" bbs="9">
-		<!-- FIXME: Needs confirm castle -->
+	<region name="gm_room_solo1" town="GM Consultation Service" castle="0" locId="1222" bbs="9">
 		<respawnPoint X="-116059" Y="-251145" Z="-2992" />
 		<respawnPoint X="-116126" Y="-251135" Z="-2992" />
 		<respawnPoint X="-116050" Y="-251210" Z="-2992" />
@@ -45,8 +44,7 @@
 	</region>
 
 	<!-- Gm Room Solo2 -->
-	<region name="gm_room_solo2" town="GM Consultation Service" castle="5" locId="1222" bbs="9">
-		<!-- FIXME: Needs confirm castle -->
+	<region name="gm_room_solo2" town="GM Consultation Service" castle="0" locId="1222" bbs="9">
 		<respawnPoint X="-112959" Y="-251147" Z="-2992" />
 		<respawnPoint X="-113157" Y="-251149" Z="-2992" />
 		<respawnPoint X="-113099" Y="-251231" Z="-2992" />
