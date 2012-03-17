@@ -23,7 +23,9 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * For A Good Cause (309) 2011/09/30 Based on official server Naia Thanks to Belgarion
+ * For A Good Cause (309).<br>
+ * 2011/09/30 Based on official server Naia.<br>
+ * Thanks to Belgarion.
  * @author nonom, Zoey76
  */
 public class Q309_ForAGoodCause extends Quest
@@ -85,8 +87,6 @@ public class Q309_ForAGoodCause extends Quest
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		QuestState qs = player.getQuestState("239_WontYouJoinUs");
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -101,16 +101,10 @@ public class Q309_ForAGoodCause extends Quest
 		}
 		else if (event.equalsIgnoreCase("claimreward"))
 		{
+			QuestState qs = player.getQuestState("239_WontYouJoinUs");
 			if (qs != null)
 			{
-				if (qs.isCompleted())
-				{
-					htmltext = "32647-11.htm";
-				}
-				else
-				{
-					htmltext = "32647-10.htm";
-				}
+				htmltext = (qs.isCompleted()) ? "32647-11.htm" : "32647-10.htm";
 			}
 			
 			htmltext = "32647-09.htm";
@@ -264,8 +258,6 @@ public class Q309_ForAGoodCause extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
-		QuestState _prev = player.getQuestState("308_ReedFieldMaintenance");
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -273,32 +265,21 @@ public class Q309_ForAGoodCause extends Quest
 		
 		if (npc.getNpcId() == ATRA)
 		{
-			if ((_prev != null) && _prev.isStarted())
+			QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
+			if (qs != null)
 			{
-				htmltext = "32647-17.htm";
+				if (qs.isStarted())
+				{
+					htmltext = "32647-17.htm";
+				}
 			}
 			else if (st.isStarted())
 			{
-				if (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE))
-				{
-					htmltext = "32647-08.htm";
-				}
-				else
-				{
-					htmltext = "32647-06.htm";
-				}
+				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.htm" : "32647-06.htm";
 			}
 			else
 			{
-				if (player.getLevel() >= 82)
-				{
-					htmltext = "32647-01.htm";
-				}
-				else
-				{
-					htmltext = "32647-00.htm";
-					st.exitQuest(true);
-				}
+				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.htm";
 			}
 		}
 		return htmltext;
@@ -322,21 +303,15 @@ public class Q309_ForAGoodCause extends Quest
 					st.giveItems(MUCROKIAN_HIDE, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
-				else if (npc.getNpcId() == CHANGED_MUCROKIAN)
+				else if ((npc.getNpcId() == CHANGED_MUCROKIAN) && (getRandom(100) < FALLEN_HIDE_CHANCE))
 				{
-					if (getRandom(100) < FALLEN_HIDE_CHANCE)
-					{
-						st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
-						st.playSound("ItemSound.quest_itemget");
-					}
-					else if (npc.getNpcId() == CONTAMINATED_MUCROKIAN)
-					{
-						if (getRandom(100) < 10)
-						{
-							st.giveItems(MUCROKIAN_HIDE, 1);
-							st.playSound("ItemSound.quest_itemget");
-						}
-					}
+					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
+					st.playSound("ItemSound.quest_itemget");
+				}
+				else if ((npc.getNpcId() == CONTAMINATED_MUCROKIAN) && (getRandom(100) < 10))
+				{
+					st.giveItems(MUCROKIAN_HIDE, 1);
+					st.playSound("ItemSound.quest_itemget");
 				}
 			}
 		}
