@@ -66,7 +66,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 				else if (npcId == ALLENOS)
 				{
 					htmltext = "32526-01.htm";
-					st.giveAdena(29174, false);
+					st.giveAdena(29174, true);
 					st.addExpAndSp(176121, 7671);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);

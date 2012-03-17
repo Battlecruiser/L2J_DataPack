@@ -109,7 +109,7 @@ public class Q18_MeetingWithTheGoldenRam extends Quest
 			case "31555-02.html":
 				if (st.hasQuestItems(BOX))
 				{
-					st.giveAdena(40000, false);
+					st.giveAdena(40000, true);
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(126668, 11731);
 					st.playSound("ItemSound.quest_finish");

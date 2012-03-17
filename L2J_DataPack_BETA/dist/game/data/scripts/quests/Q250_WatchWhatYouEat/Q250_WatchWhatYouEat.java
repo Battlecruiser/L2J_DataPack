@@ -68,7 +68,7 @@ public class Q250_WatchWhatYouEat extends Quest
 			}
 			else if (event.equalsIgnoreCase("32743-end.htm"))
 			{
-				st.giveAdena(135661, false);
+				st.giveAdena(135661, true);
 				st.addExpAndSp(698334, 76369);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);

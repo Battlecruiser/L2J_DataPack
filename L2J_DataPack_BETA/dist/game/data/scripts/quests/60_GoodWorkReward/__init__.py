@@ -129,7 +129,7 @@ class Quest (JQuest) :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
     elif event == "31092-07.htm" :
-      st.giveAdena(3000000, False)
+      st.giveAdena(3000000,True)
       st.set("onlyone","1")
     elif event in CLASSES.keys():
          newclass,req_item=CLASSES[event]
@@ -142,7 +142,7 @@ class Quest (JQuest) :
          if adena == 3 :
             return "31092-06.htm"
          if adena > 0 :
-            st.giveAdena(adena*1000000,False)
+            st.giveAdena(adena*1000000,True)
          htmltext = "31092-05.htm"
          st.set("onlyone","1")
     return htmltext

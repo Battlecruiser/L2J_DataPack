@@ -109,7 +109,7 @@ public class Q10290_LandDragonConqueror extends Quest
 				else if (cond == 2)
 				{
 					st.takeItems(MiracleNecklace, 1);
-					st.giveAdena(131236, false);
+					st.giveAdena(131236, true);
 					st.addExpAndSp(702557, 76334);
 					st.giveItems(AntharaSlayerCirclet, 1);
 					st.playSound("ItemSound.quest_finish");

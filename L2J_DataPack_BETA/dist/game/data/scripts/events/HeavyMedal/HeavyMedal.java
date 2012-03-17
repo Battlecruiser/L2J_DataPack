@@ -149,8 +149,13 @@ public class HeavyMedal extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		String htmltext = event;
 		int level = checkLevel(st);
 		
 		if (event.equalsIgnoreCase("game"))
@@ -204,10 +209,6 @@ public class HeavyMedal extends Quest
 	public int checkLevel(QuestState st)
 	{
 		int _lev = 0;
-		if (st == null)
-		{
-			return 0;
-		}
 		if (st.hasQuestItems(6402))
 		{
 			_lev = 4;

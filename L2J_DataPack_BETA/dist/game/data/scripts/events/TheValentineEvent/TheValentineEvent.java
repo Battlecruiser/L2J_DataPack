@@ -91,8 +91,13 @@ public class TheValentineEvent extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
 		if (event.equalsIgnoreCase("4301-3.htm"))
 		{
 			if (st.isCompleted())
@@ -112,10 +117,9 @@ public class TheValentineEvent extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (player.getQuestState(getName()) == null)
 		{
-			st = newQuestState(player);
+			newQuestState(player);
 		}
 		return npc.getNpcId() + ".htm";
 	}

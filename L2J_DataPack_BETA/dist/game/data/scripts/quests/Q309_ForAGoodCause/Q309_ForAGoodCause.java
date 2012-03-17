@@ -85,13 +85,13 @@ public class Q309_ForAGoodCause extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
+		String htmltext = event;
 		if (event.equalsIgnoreCase("32647-05.htm"))
 		{
 			st.setState(State.STARTED);
@@ -101,13 +101,15 @@ public class Q309_ForAGoodCause extends Quest
 		}
 		else if (event.equalsIgnoreCase("claimreward"))
 		{
-			QuestState qs = player.getQuestState("239_WontYouJoinUs");
+			final QuestState qs = player.getQuestState("239_WontYouJoinUs");
 			if (qs != null)
 			{
 				htmltext = (qs.isCompleted()) ? "32647-11.htm" : "32647-10.htm";
 			}
-			
-			htmltext = "32647-09.htm";
+			else
+			{
+				htmltext = "32647-09.htm";
+			}
 		}
 		else if (event.equalsIgnoreCase("receivepieces"))
 		{
@@ -257,7 +259,7 @@ public class Q309_ForAGoodCause extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -265,13 +267,10 @@ public class Q309_ForAGoodCause extends Quest
 		
 		if (npc.getNpcId() == ATRA)
 		{
-			QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
-			if (qs != null)
+			final QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
+			if ((qs != null) && qs.isStarted())
 			{
-				if (qs.isStarted())
-				{
-					htmltext = "32647-17.htm";
-				}
+				htmltext = "32647-17.htm";
 			}
 			else if (st.isStarted())
 			{
@@ -288,7 +287,7 @@ public class Q309_ForAGoodCause extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return null;
@@ -348,7 +347,6 @@ public class Q309_ForAGoodCause extends Quest
 		
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
-		
 		addKillId(MUCROKIANS);
 	}
 	
