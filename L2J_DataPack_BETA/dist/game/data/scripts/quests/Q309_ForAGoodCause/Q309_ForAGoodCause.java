@@ -23,10 +23,7 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * For A Good Cause (309)
- * 2011/09/30 Based on official server Naia
- * Thanks to Belgarion
- * 
+ * For A Good Cause (309) 2011/09/30 Based on official server Naia Thanks to Belgarion
  * @author nonom, Zoey76
  */
 public class Q309_ForAGoodCause extends Quest
@@ -34,41 +31,55 @@ public class Q309_ForAGoodCause extends Quest
 	private static final String qn = "309_ForAGoodCause";
 	
 	// NPC's
-	private static final int ATRA	= 32647;
+	private static final int ATRA = 32647;
 	
 	// Mobs
-	private static final int 	CONTAMINATED_MUCROKIAN	= 22654;
-	private static final int 	CHANGED_MUCROKIAN		= 22655;
-	private static final int[] 	MUCROKIANS	= {	22650, 22651, 22652, 22653 };
-	
-	// Quest Items
-	private static final int 	MUCROKIAN_HIDE			= 14873;
-	private static final int 	FALLEN_MUCROKIAN_HIDE	= 14874;
-
-	private static final int 	MUCROKIAN_HIDE_CHANCE	= 50; 
-	private static final int 	FALLEN_HIDE_CHANCE		= 50; 
-	
-	// Rewards	
-	private static final int 	REC_DYNASTY_EARRINGS_70	= 9985;
-	private static final int	REC_DYNASTY_NECKLACE_70	= 9986;
-	private static final int 	REC_DYNASTY_RING_70		= 9987;
-	private static final int 	REC_DYNASTY_SIGIL_60	= 10115;
-	
-	private static final int	REC_MOIRAI_CIRCLET_60	= 15777;
-	private static final int	REC_MOIRAI_TUNIC_60		= 15780;
-	private static final int	REC_MOIRAI_STOCKINGS_60	= 15783;
-	private static final int	REC_MOIRAI_GLOVES_60	= 15786;
-	private static final int	REC_MOIRAI_SHOES_60		= 15789;
-	private static final int	REC_MOIRAI_SIGIL_60		= 15790;
-	private static final int 	REC_MOIRAI_EARRING_70	= 15814;
-	private static final int 	REC_MOIRAI_NECKLACE_70	= 15813;
-	private static final int 	REC_MOIRAI_RING_70		= 15812;
-	
-	private static final int[]	MOIRAI_PIECES = {
-		15647,15650,15653,15656,15659,15692,15772,15773,15774
+	private static final int CONTAMINATED_MUCROKIAN = 22654;
+	private static final int CHANGED_MUCROKIAN = 22655;
+	private static final int[] MUCROKIANS =
+	{
+		22650,
+		22651,
+		22652,
+		22653
 	};
 	
-
+	// Quest Items
+	private static final int MUCROKIAN_HIDE = 14873;
+	private static final int FALLEN_MUCROKIAN_HIDE = 14874;
+	
+	private static final int MUCROKIAN_HIDE_CHANCE = 50;
+	private static final int FALLEN_HIDE_CHANCE = 50;
+	
+	// Rewards
+	private static final int REC_DYNASTY_EARRINGS_70 = 9985;
+	private static final int REC_DYNASTY_NECKLACE_70 = 9986;
+	private static final int REC_DYNASTY_RING_70 = 9987;
+	private static final int REC_DYNASTY_SIGIL_60 = 10115;
+	
+	private static final int REC_MOIRAI_CIRCLET_60 = 15777;
+	private static final int REC_MOIRAI_TUNIC_60 = 15780;
+	private static final int REC_MOIRAI_STOCKINGS_60 = 15783;
+	private static final int REC_MOIRAI_GLOVES_60 = 15786;
+	private static final int REC_MOIRAI_SHOES_60 = 15789;
+	private static final int REC_MOIRAI_SIGIL_60 = 15790;
+	private static final int REC_MOIRAI_EARRING_70 = 15814;
+	private static final int REC_MOIRAI_NECKLACE_70 = 15813;
+	private static final int REC_MOIRAI_RING_70 = 15812;
+	
+	private static final int[] MOIRAI_PIECES =
+	{
+		15647,
+		15650,
+		15653,
+		15656,
+		15659,
+		15692,
+		15772,
+		15773,
+		15774
+	};
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -77,8 +88,10 @@ public class Q309_ForAGoodCause extends Quest
 		QuestState qs = player.getQuestState("239_WontYouJoinUs");
 		
 		if (st == null)
+		{
 			return htmltext;
-	
+		}
+		
 		if (event.equalsIgnoreCase("32647-05.htm"))
 		{
 			st.setState(State.STARTED);
@@ -89,18 +102,24 @@ public class Q309_ForAGoodCause extends Quest
 		else if (event.equalsIgnoreCase("claimreward"))
 		{
 			if (qs != null)
+			{
 				if (qs.isCompleted())
+				{
 					htmltext = "32647-11.htm";
+				}
 				else
+				{
 					htmltext = "32647-10.htm";
+				}
+			}
 			
 			htmltext = "32647-09.htm";
 		}
 		else if (event.equalsIgnoreCase("receivepieces"))
 		{
-			htmltext = onPiecesExchangeRequest(st, MOIRAI_PIECES[getRandom(MOIRAI_PIECES.length-1)], 100);
+			htmltext = onPiecesExchangeRequest(st, MOIRAI_PIECES[getRandom(MOIRAI_PIECES.length - 1)], 100);
 		}
-		else if(Util.isDigit(event))
+		else if (Util.isDigit(event))
 		{
 			int val = Integer.parseInt(event);
 			switch (val)
@@ -116,7 +135,7 @@ public class Q309_ForAGoodCause extends Quest
 					break;
 				case 64:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_RING_70, FALLEN_MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;	
+					break;
 				case 103:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_SIGIL_60, FALLEN_MUCROKIAN_HIDE, Integer.parseInt(event));
 					break;
@@ -125,72 +144,112 @@ public class Q309_ForAGoodCause extends Quest
 					break;
 			}
 		}
-		else if(event.startsWith("circlet"))
+		else if (event.startsWith("circlet"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_CIRCLET_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_CIRCLET_60, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("stockings"))
+		else if (event.startsWith("stockings"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_STOCKINGS_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_STOCKINGS_60, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("tunic"))
+		else if (event.startsWith("tunic"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, FALLEN_MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("gloves"))
+		else if (event.startsWith("gloves"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_GLOVES_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_GLOVES_60, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("shoes"))
+		else if (event.startsWith("shoes"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SHOES_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SHOES_60, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("sigil"))
+		else if (event.startsWith("sigil"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SIGIL_60, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SIGIL_60, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("earring"))
+		else if (event.startsWith("earring"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_EARRING_70, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_EARRING_70, MUCROKIAN_HIDE, 180);
+			}
 		}
-		else if(event.startsWith("necklace"))
+		else if (event.startsWith("necklace"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_NECKLACE_70, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_NECKLACE_70, MUCROKIAN_HIDE, 180);
+			}
 			else if (event.endsWith("128"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_NECKLACE_70, MUCROKIAN_HIDE, 128);
+			}
 		}
-		else if(event.startsWith("ring"))
+		else if (event.startsWith("ring"))
 		{
 			if (event.endsWith("90"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_RING_70, FALLEN_MUCROKIAN_HIDE, 90);
+			}
 			else if (event.endsWith("180"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_RING_70, MUCROKIAN_HIDE, 180);
+			}
 			else if (event.endsWith("128"))
+			{
 				htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_RING_70, MUCROKIAN_HIDE, 128);
+			}
 		}
 		else if (event.equalsIgnoreCase("32647-14.htm") || event.equalsIgnoreCase("32647-07.htm"))
 		{
@@ -208,21 +267,35 @@ public class Q309_ForAGoodCause extends Quest
 		QuestState _prev = player.getQuestState("308_ReedFieldMaintenance");
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == ATRA)
 		{
-			if ((_prev!=null) && _prev.isStarted()){
+			if ((_prev != null) && _prev.isStarted())
+			{
 				htmltext = "32647-17.htm";
-			}else if (st.isStarted()){
-				if(st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE))
+			}
+			else if (st.isStarted())
+			{
+				if (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE))
+				{
 					htmltext = "32647-08.htm";
+				}
 				else
+				{
 					htmltext = "32647-06.htm";
-			}else{
-				if(player.getLevel() >= 82){
+				}
+			}
+			else
+			{
+				if (player.getLevel() >= 82)
+				{
 					htmltext = "32647-01.htm";
-				}else{
+				}
+				else
+				{
 					htmltext = "32647-00.htm";
 					st.exitQuest(true);
 				}
@@ -236,38 +309,46 @@ public class Q309_ForAGoodCause extends Quest
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			return null;
-		
-		if(st.getInt("cond") == 1)
 		{
-			if (Util.contains(MUCROKIANS,npc.getNpcId()))
+			return null;
+		}
+		
+		if (st.getInt("cond") == 1)
+		{
+			if (Util.contains(MUCROKIANS, npc.getNpcId()))
+			{
 				if (getRandom(100) < MUCROKIAN_HIDE_CHANCE)
 				{
-					st.giveItems(MUCROKIAN_HIDE,1);
+					st.giveItems(MUCROKIAN_HIDE, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
-			else if (npc.getNpcId()==CHANGED_MUCROKIAN)
-				if (getRandom(100) < FALLEN_HIDE_CHANCE)
+				else if (npc.getNpcId() == CHANGED_MUCROKIAN)
 				{
-					st.giveItems(FALLEN_MUCROKIAN_HIDE,1);
-					st.playSound("ItemSound.quest_itemget");
+					if (getRandom(100) < FALLEN_HIDE_CHANCE)
+					{
+						st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
+						st.playSound("ItemSound.quest_itemget");
+					}
+					else if (npc.getNpcId() == CONTAMINATED_MUCROKIAN)
+					{
+						if (getRandom(100) < 10)
+						{
+							st.giveItems(MUCROKIAN_HIDE, 1);
+							st.playSound("ItemSound.quest_itemget");
+						}
+					}
 				}
-			else if (npc.getNpcId()==CONTAMINATED_MUCROKIAN)
-				if (getRandom(100) < 10)
-				{
-					st.giveItems(MUCROKIAN_HIDE,1);
-					st.playSound("ItemSound.quest_itemget");
-				}
+			}
 		}
 		return super.onKill(npc, player, isPet);
 	}
 	
-	private String onPiecesExchangeRequest(QuestState st, int pieces,int event)
+	private String onPiecesExchangeRequest(QuestState st, int pieces, int event)
 	{
 		if (st.getQuestItemsCount(MUCROKIAN_HIDE) >= event)
 		{
 			st.giveItems(pieces, getRandom(1, 4));
-			st.takeItems(MUCROKIAN_HIDE,event);
+			st.takeItems(MUCROKIAN_HIDE, event);
 			st.playSound("ItemSound.quest_finish");
 			return "32647-16.htm";
 		}

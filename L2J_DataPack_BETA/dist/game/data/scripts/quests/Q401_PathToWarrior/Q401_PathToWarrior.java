@@ -46,7 +46,13 @@ public class Q401_PathToWarrior extends Quest
 	// Npc
 	private static final int Auron = 30010;
 	private static final int Simplon = 30253;
-	private static final int[] Monsters = { 20035, 20038, 20042, 20043 };
+	private static final int[] Monsters =
+	{
+		20035,
+		20038,
+		20042,
+		20043
+	};
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -158,11 +164,17 @@ public class Q401_PathToWarrior extends Quest
 				st.takeItems(PoisonSpiderLeg, -1);
 				st.giveItems(MedallionOfWarrior, 1);
 				if (player.getLevel() >= 20)
+				{
 					st.addExpAndSp(320534, 21012);
+				}
 				else if (player.getLevel() == 19)
+				{
 					st.addExpAndSp(456128, 27710);
+				}
 				else
+				{
 					st.addExpAndSp(160267, 34408);
+				}
 				st.giveItems(57, 163800);
 				st.playSound("ItemSound.quest_finish");
 				player.sendPacket(new SocialAction(player.getObjectId(), 3));
@@ -256,7 +268,16 @@ public class Q401_PathToWarrior extends Quest
 		{
 			addKillId(i);
 		}
-		questItemIds = new int[] { AuronsLetter, WarriorGuildMark, RustedBronzeSword1, RustedBronzeSword2, RustedBronzeSword3, SimplonsLetter, PoisonSpiderLeg };
+		questItemIds = new int[]
+		{
+			AuronsLetter,
+			WarriorGuildMark,
+			RustedBronzeSword1,
+			RustedBronzeSword2,
+			RustedBronzeSword3,
+			SimplonsLetter,
+			PoisonSpiderLeg
+		};
 	}
 	
 	public static void main(String[] args)

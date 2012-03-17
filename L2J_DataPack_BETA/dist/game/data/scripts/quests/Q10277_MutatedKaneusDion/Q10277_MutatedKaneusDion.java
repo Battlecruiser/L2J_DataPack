@@ -178,7 +178,8 @@ public class Q10277_MutatedKaneusDion extends Quest
 		
 		questItemIds = new int[]
 		{
-			TISSUE_CH, TISSUE_SF
+			TISSUE_CH,
+			TISSUE_SF
 		};
 	}
 	

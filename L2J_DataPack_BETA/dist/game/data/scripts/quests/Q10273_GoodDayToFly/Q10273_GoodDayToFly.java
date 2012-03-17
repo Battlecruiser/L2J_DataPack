@@ -36,7 +36,8 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22614, 22615
+		22614,
+		22615
 	};
 	
 	// Items

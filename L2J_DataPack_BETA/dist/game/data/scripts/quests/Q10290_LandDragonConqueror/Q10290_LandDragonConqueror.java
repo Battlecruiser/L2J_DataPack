@@ -32,7 +32,10 @@ public class Q10290_LandDragonConqueror extends Quest
 	// Old, Weak, Normal, Strong
 	private static final int[] Antharas =
 	{
-		29019, 29066, 29067, 29068
+		29019,
+		29066,
+		29067,
+		29068
 	};
 	// Item
 	private static final int PortalStone = 3865;
@@ -164,7 +167,8 @@ public class Q10290_LandDragonConqueror extends Quest
 		
 		questItemIds = new int[]
 		{
-			MiracleNecklace, ShabbyNecklace
+			MiracleNecklace,
+			ShabbyNecklace
 		};
 	}
 	

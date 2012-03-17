@@ -38,7 +38,9 @@ public class Q252_ItSmellsDelicious extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22786, 22787, 22788
+		22786,
+		22787,
+		22788
 	};
 	
 	private static final int CHEF = 18908;

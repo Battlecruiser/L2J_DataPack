@@ -24,20 +24,23 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- ** @author Gigiikun
- **
- ** 2010-08-17 Based on Freya PTS
+ ** @author Gigiikun 2010-08-17 Based on Freya PTS
  */
 public class Q452_FindingtheLostSoldiers extends Quest
 {
 	private static final String qn = "452_FindingtheLostSoldiers";
 	private static final int JAKAN = 32773;
 	private static final int TAG_ID = 15513;
-	private static final int[] SOLDIER_CORPSES = { 32769, 32770, 32771, 32772 };
+	private static final int[] SOLDIER_CORPSES =
+	{
+		32769,
+		32770,
+		32771,
+		32772
+	};
 	
 	/*
-	 * Reset time for Quest
-	 * Default: 6:30AM on server time
+	 * Reset time for Quest Default: 6:30AM on server time
 	 */
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
@@ -49,7 +52,9 @@ public class Q452_FindingtheLostSoldiers extends Quest
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == JAKAN)
 		{
@@ -70,7 +75,9 @@ public class Q452_FindingtheLostSoldiers extends Quest
 				npc.deleteMe();
 			}
 			else
+			{
 				htmltext = getNoQuestMsg(player);
+			}
 		}
 		return htmltext;
 	}
@@ -81,21 +88,29 @@ public class Q452_FindingtheLostSoldiers extends Quest
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == JAKAN)
 		{
-			switch(st.getState())
+			switch (st.getState())
 			{
-				case State.CREATED :
+				case State.CREATED:
 					if (player.getLevel() >= 84)
+					{
 						htmltext = "32773-1.htm";
+					}
 					else
+					{
 						htmltext = "32773-0.htm";
+					}
 					break;
-				case State.STARTED :
+				case State.STARTED:
 					if (st.getInt("cond") == 1)
+					{
 						htmltext = "32773-4.htm";
+					}
 					else if (st.getInt("cond") == 2)
 					{
 						htmltext = "32773-5.htm";
@@ -108,23 +123,31 @@ public class Q452_FindingtheLostSoldiers extends Quest
 						Calendar reDo = Calendar.getInstance();
 						reDo.set(Calendar.MINUTE, RESET_MIN);
 						if (reDo.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR)
+						{
 							reDo.add(Calendar.DATE, 1);
+						}
 						reDo.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 						st.set("reDoTime", String.valueOf(reDo.getTimeInMillis()));
 						st.exitQuest(false);
 					}
 					break;
-				case State.COMPLETED :
+				case State.COMPLETED:
 					Long reDoTime = Long.parseLong(st.get("reDoTime"));
 					if (reDoTime > System.currentTimeMillis())
+					{
 						htmltext = "32773-6.htm";
+					}
 					else
 					{
 						st.setState(State.CREATED);
 						if (player.getLevel() >= 84)
+						{
 							htmltext = "32773-1.htm";
+						}
 						else
+						{
 							htmltext = "32773-0.htm";
+						}
 					}
 					break;
 			}
@@ -132,7 +155,9 @@ public class Q452_FindingtheLostSoldiers extends Quest
 		else if (Util.contains(SOLDIER_CORPSES, npc.getNpcId()))
 		{
 			if (st.getInt("cond") == 1)
+			{
 				htmltext = "corpse-1.htm";
+			}
 		}
 		return htmltext;
 	}
@@ -141,11 +166,16 @@ public class Q452_FindingtheLostSoldiers extends Quest
 	{
 		super(questId, name, descr);
 		
-		questItemIds = new int[]{ TAG_ID };
+		questItemIds = new int[]
+		{
+			TAG_ID
+		};
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
-		for(int i : SOLDIER_CORPSES)
+		for (int i : SOLDIER_CORPSES)
+		{
 			addTalkId(i);
+		}
 	}
 	
 	public static void main(String[] args)

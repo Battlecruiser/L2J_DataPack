@@ -43,7 +43,15 @@ public class Q10274_CollectingInTheAir extends Quest
 	
 	private static final int MOBS[] =
 	{
-		18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692
+		18684,
+		18685,
+		18686,
+		18687,
+		18688,
+		18689,
+		18690,
+		18691,
+		18692
 	};
 	
 	@Override
@@ -154,7 +162,10 @@ public class Q10274_CollectingInTheAir extends Quest
 		
 		questItemIds = new int[]
 		{
-			SCROLL, RED, BLUE, GREEN
+			SCROLL,
+			RED,
+			BLUE,
+			GREEN
 		};
 	}
 	

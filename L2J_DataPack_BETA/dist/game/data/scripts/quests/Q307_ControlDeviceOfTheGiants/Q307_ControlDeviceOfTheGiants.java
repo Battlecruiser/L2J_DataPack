@@ -50,7 +50,9 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 		String htmltext = event;
 		
 		if (st == null)
+		{
 			return null;
+		}
 		
 		if (event.equalsIgnoreCase("32711-04.htm"))
 		{
@@ -60,9 +62,13 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
 				if (!st.hasQuestItems(CET_1_SHEET) || !st.hasQuestItems(CET_2_SHEET) || !st.hasQuestItems(CET_3_SHEET))
+				{
 					htmltext = "32711-04.htm";
+				}
 				else if (st.hasQuestItems(CET_1_SHEET) && st.hasQuestItems(CET_2_SHEET) && st.hasQuestItems(CET_3_SHEET))
+				{
 					htmltext = "32711-04a.htm";
+				}
 			}
 		}
 		else if (event.equalsIgnoreCase("32711-05a.htm"))
@@ -96,7 +102,9 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 				long remain = Long.parseLong(test) - System.currentTimeMillis();
 				
 				if (remain > 0)
+				{
 					htmltext = "32711-09a.htm";
+				}
 				else
 				{
 					st.takeItems(CET_1_SHEET, 1);
@@ -117,28 +125,40 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
 			{
 				if (player.getLevel() >= 79)
+				{
 					htmltext = "32711-01.htm";
+				}
 				else
+				{
 					htmltext = "32711-02.htm";
+				}
 				break;
 			}
 			case State.STARTED:
 			{
 				if (st.getInt("spawned") == 1)
+				{
 					htmltext = "32711-09.htm";
+				}
 				else if (st.getInt("cond") == 1)
 				{
 					if (!st.hasQuestItems(CET_1_SHEET) || !st.hasQuestItems(CET_2_SHEET) || !st.hasQuestItems(CET_3_SHEET))
+					{
 						htmltext = "32711-07.htm";
+					}
 					else
+					{
 						htmltext = "32711-08.htm";
+					}
 				}
 				else if (st.getInt("cond") == 2)
 				{
@@ -158,7 +178,9 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
+		{
 			return null;
+		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
 		switch (npc.getNpcId())
@@ -186,10 +208,14 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 				if (player.getParty() != null)
 				{
 					for (L2PcInstance party : player.getParty().getPartyMembers())
+					{
 						rewardPlayer(party);
+					}
 				}
 				else
+				{
 					rewardPlayer(player);
+				}
 				break;
 			}
 		}
@@ -200,7 +226,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		
-		if (st != null && st.getInt("spawned") == 1)
+		if ((st != null) && (st.getInt("spawned") == 1))
 		{
 			st.playSound("ItemSound.quest_middle");
 			st.unset("spawned");

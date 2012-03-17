@@ -37,7 +37,20 @@ public class Q10272_LightFragment extends Quest
 	private static final int LEKON = 32557;
 	private static final int[] Monsters =
 	{
-		22536, 22537, 22538, 22539, 22540, 22541, 22542, 22543, 22544, 22547, 22550, 22551, 22552, 22596
+		22536,
+		22537,
+		22538,
+		22539,
+		22540,
+		22541,
+		22542,
+		22543,
+		22544,
+		22547,
+		22550,
+		22551,
+		22552,
+		22596
 	};
 	private static final int FRAGMENT_POWDER = 13853;
 	private static final int LIGHT_FRAGMENT_POWDER = 13854;
@@ -273,7 +286,7 @@ public class Q10272_LightFragment extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && st.getInt("cond") == 5)
+		if ((st != null) && (st.getInt("cond") == 5))
 		{
 			final long count = st.getQuestItemsCount(FRAGMENT_POWDER);
 			if (count < 100)
@@ -312,7 +325,8 @@ public class Q10272_LightFragment extends Quest
 		
 		questItemIds = new int[]
 		{
-			FRAGMENT_POWDER, LIGHT_FRAGMENT_POWDER,
+			FRAGMENT_POWDER,
+			LIGHT_FRAGMENT_POWDER,
 		};
 	}
 	

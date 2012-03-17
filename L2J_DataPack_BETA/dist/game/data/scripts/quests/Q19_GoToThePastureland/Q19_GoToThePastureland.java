@@ -129,7 +129,8 @@ public class Q19_GoToThePastureland extends Quest
 		
 		questItemIds = new int[]
 		{
-			Veal, YoungWildBeastMeat
+			Veal,
+			YoungWildBeastMeat
 		};
 	}
 	

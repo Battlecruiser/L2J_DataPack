@@ -14,9 +14,7 @@
  */
 package quests.TerritoryWarScripts;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -28,8 +26,19 @@ public class ProtectTheMilitary extends TerritoryWarSuperClass
 	
 	public ProtectTheMilitary()
 	{
-		super(qnu,qn1,qna);
-		NPC_IDS = new int[]{36508,36514,36520,36526,36532,36538,36544,36550,36556};
+		super(qnu, qn1, qna);
+		NPC_IDS = new int[]
+		{
+			36508,
+			36514,
+			36520,
+			36526,
+			36532,
+			36538,
+			36544,
+			36550,
+			36556
+		};
 		qn = qn1;
 		registerAttackIds();
 	}
@@ -37,6 +46,6 @@ public class ProtectTheMilitary extends TerritoryWarSuperClass
 	@Override
 	public int getTerritoryIdForThisNPCId(int npcid)
 	{
-		return 81 + (npcid - 36508) / 6;
+		return 81 + ((npcid - 36508) / 6);
 	}
 }

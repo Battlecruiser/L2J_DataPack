@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,13 +28,27 @@ public class TheTerritoryDion extends TerritoryWarSuperClass
 	
 	public TheTerritoryDion()
 	{
-		super(qnu,qn1,qna);
+		super(qnu, qn1, qna);
 		CATAPULT_ID = 36500;
 		TERRITORY_ID = 82;
-		LEADER_IDS = new int[]{36514, 36516, 36519, 36592};
-		GUARD_IDS = new int[]{36515, 36517, 36518};
+		LEADER_IDS = new int[]
+		{
+			36514,
+			36516,
+			36519,
+			36592
+		};
+		GUARD_IDS = new int[]
+		{
+			36515,
+			36517,
+			36518
+		};
 		qn = qn1;
-		npcString = new NpcStringId[]{NpcStringId.THE_CATAPULT_OF_DION_HAS_BEEN_DESTROYED};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.THE_CATAPULT_OF_DION_HAS_BEEN_DESTROYED
+		};
 		registerKillIds();
 	}
 }
