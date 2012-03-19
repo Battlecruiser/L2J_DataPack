@@ -92,7 +92,7 @@ public class Q309_ForAGoodCause extends Quest
 		}
 		
 		String htmltext = event;
-		if (event.equalsIgnoreCase("32647-05.htm"))
+		if (event.equalsIgnoreCase("32647-05.html"))
 		{
 			st.setState(State.STARTED);
 			st.set("cond", "1");
@@ -104,11 +104,11 @@ public class Q309_ForAGoodCause extends Quest
 			final QuestState qs = player.getQuestState("239_WontYouJoinUs");
 			if (qs != null)
 			{
-				htmltext = (qs.isCompleted()) ? "32647-11.htm" : "32647-10.htm";
+				htmltext = (qs.isCompleted()) ? "32647-11.html" : "32647-10.html";
 			}
 			else
 			{
-				htmltext = "32647-09.htm";
+				htmltext = "32647-09.html";
 			}
 		}
 		else if (event.equalsIgnoreCase("receivepieces"))
@@ -247,7 +247,7 @@ public class Q309_ForAGoodCause extends Quest
 				htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_RING_70, MUCROKIAN_HIDE, 128);
 			}
 		}
-		else if (event.equalsIgnoreCase("32647-14.htm") || event.equalsIgnoreCase("32647-07.htm"))
+		else if (event.equalsIgnoreCase("32647-14.html") || event.equalsIgnoreCase("32647-07.html"))
 		{
 			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(true);
@@ -270,7 +270,7 @@ public class Q309_ForAGoodCause extends Quest
 			final QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
 			if ((qs != null) && qs.isStarted())
 			{
-				htmltext = "32647-17.htm";
+				htmltext = "32647-17.html";
 			}
 			else if (st.isStarted())
 			{
@@ -278,7 +278,7 @@ public class Q309_ForAGoodCause extends Quest
 			}
 			else
 			{
-				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.htm";
+				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.html";
 			}
 		}
 		return htmltext;
@@ -288,12 +288,7 @@ public class Q309_ForAGoodCause extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if (st.getInt("cond") == 1)
+		if ((st != null) && (st.getInt("cond") == 1))
 		{
 			if (Util.contains(MUCROKIANS, npc.getNpcId()))
 			{
@@ -324,9 +319,9 @@ public class Q309_ForAGoodCause extends Quest
 			st.giveItems(pieces, getRandom(1, 4));
 			st.takeItems(MUCROKIAN_HIDE, event);
 			st.playSound("ItemSound.quest_finish");
-			return "32647-16.htm";
+			return "32647-16.html";
 		}
-		return "32647-15.htm";
+		return "32647-15.html";
 	}
 	
 	private String onRecipeExchangeRequest(QuestState st, int recipe, int takeid, int quanty)
@@ -336,9 +331,9 @@ public class Q309_ForAGoodCause extends Quest
 			st.giveItems(recipe, 1);
 			st.takeItems(takeid, quanty);
 			st.playSound("ItemSound.quest_finish");
-			return "32647-16.htm";
+			return "32647-16.html";
 		}
-		return "32647-15.htm";
+		return "32647-15.html";
 	}
 	
 	public Q309_ForAGoodCause(int id, String name, String descr)
@@ -352,6 +347,6 @@ public class Q309_ForAGoodCause extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q309_ForAGoodCause(309, "309_ForAGoodCause", "For A Good Cause");
+		new Q309_ForAGoodCause(309, qn, "For A Good Cause");
 	}
 }
