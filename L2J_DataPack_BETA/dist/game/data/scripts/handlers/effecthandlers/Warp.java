@@ -69,8 +69,8 @@ public class Warp extends L2Effect
 	{
 		_actor = isSelfEffect() ? getEffector() : getEffected();
 		
-		if (_actor.isMovementDisabled())
-			return false;
+		/*if (_actor.isMovementDisabled()) This is removed because in retail you can use Warp while movement is disabled.
+			return false;*/
 		
 		int _radius = getSkill().getFlyRadius();
 		
