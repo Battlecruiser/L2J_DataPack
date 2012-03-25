@@ -82,50 +82,69 @@
 		</for>
 	</skill>
 	<skill id="5605" levels="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
 		<!-- Apella Heavy -->
+		<table name="#magicLvl"> 64 67 </table>
 		<table name="#rCrit"> 0 30 </table>
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="apella">
-				<mul order="0x30" stat="mDef" val="1.05" /> <!-- magic defense power is increased by 5% -->
+			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+				<mul order="0x30" stat="mDef" val="1.05"> <!-- magic defense power is increased by 5% -->
+					<using kind="Heavy" />
+				</mul>
+				<sub order="0x40" stat="critAddVuln" val="3"> <!-- critical damage is decreased by 3 -->
+					<using kind="Heavy" />
+				</sub>
 				<add order="0x40" stat="rCrit" val="#rCrit" />
-				<sub order="0x40" stat="cAtkAdd" val="3" /> <!-- critical damage is decreased by 3 -->
 			</effect>
 		</for>
 	</skill>
 	<skill id="5607" levels="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
 		<!-- Apella Light -->
+		<table name="#magicLvl"> 64 67 </table>
 		<table name="#pAtkSpd"> 1 1.025 </table>
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="apella">
-				<add order="0x40" stat="rEvas" val="2" /> <!-- evasion is increased by 2 -->
-				<sub order="0x40" stat="critAddVuln" val="86" /> <!-- critical damage is decreased by 86 -->
+			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+				<add order="0x40" stat="rEvas" val="2"> <!-- evasion is increased by 2 -->
+					<using kind="Light" />
+				</add>
+				<sub order="0x40" stat="critAddVuln" val="86"> <!-- critical damage is decreased by 86 -->
+					<using kind="Light" />
+				</sub>
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5608" levels="2" name="Power of Apella">
+		<!-- Confirmed CT2.5 -->
 		<!-- Apella Robe -->
-		<table name="#mAtk"> 0 6 </table>
+		<table name="#magicLvl"> 64 67 </table>
+		<table name="#mAtk"> 0 1.0625 </table>
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0">
+			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+				<mul order="0x30" stat="pDef" val="1.05"> <!-- defense power is increased by 5% -->
+					<using kind="Magic" />
+				</mul>
 				<add order="0x40" stat="runSpd" val="10" /> <!-- Speed is increased by 10 -->
-				<mul order="0x30" stat="pDef" val="1.05" /> <!-- defense power is increased by 5% -->
-				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>

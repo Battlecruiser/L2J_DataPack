@@ -122,37 +122,47 @@
 		</for>
 	</skill>
 	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.05" />
 			<mul order="0x30" stat="pAtk" val="1.05" />
 		</for>
 	</skill>
 	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.05" />
 			<mul order="0x30" stat="cAtk" val="1.05" />
 		</for>
 	</skill>
 	<skill id="3607" levels="1" name="Clan Oath Robe Set">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.05" />
 			<mul order="0x30" stat="mAtkSpd" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3608" levels="2" name="Apella Heavy Armor Set">
-		<table name="#maxCP"> 1035 1116 </table>
-		<table name="#triggeredLevel"> 1 2 </table>
+	<skill id="3608" levels="3" name="Apella Heavy Armor Set">
+		<!-- Confirmed CT2.5 -->
+		<table name="#maxCP"> 1035 1116 1116 </table>
+		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
+		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="activationChance" val="10" />
+		<set name="activationMinDamage" val="50" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -161,13 +171,21 @@
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO: Missing PK drop penalty decrease -70, -70, -40 -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
 		</for>
 	</skill>
-	<skill id="3609" levels="2" name="Apella Light Armor Set">
-		<table name="#maxCP"> 1035 1116 </table>
-		<table name="#triggeredLevel"> 1 2 </table>
+	<skill id="3609" levels="3" name="Apella Light Armor Set">
+		<!-- Confirmed CT2.5 -->
+		<table name="#maxCP"> 1035 1116 1116 </table>
+		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
+		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="activationChance" val="10" />
+		<set name="activationMinDamage" val="50" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -176,13 +194,21 @@
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO: Missing PK drop penalty decrease -70, -70, -40 -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
 		</for>
 	</skill>
 	<skill id="3610" levels="2" name="Apella Robe Set">
-		<table name="#maxCP"> 1035 1116 </table>
-		<table name="#triggeredLevel"> 1 2 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#maxCP"> 1035 1116 1116 </table>
+		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
+		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="activationChance" val="10" />
+		<set name="activationMinDamage" val="50" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -191,6 +217,10 @@
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO: Missing PK drop penalty decrease -70, -70, -40 -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
