@@ -2,37 +2,168 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="transformSkillTree">
 		<!-- Confirmed CT2.5 -->
-		<skill skillName="Transform Onyx Beast" skillIdLvl="617,1" getLevel="50" itemsIdCount="9648,1" />
-		<skill skillName="Transform Death Blader" skillIdLvl="618,1" getLevel="55" itemsIdCount="9649,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Grail Apostle" skillIdLvl="541,1" getLevel="60" itemsIdCount="9650,1" race="0" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Grail Apostle" skillIdLvl="542,1" getLevel="60" itemsIdCount="9650,1" race="1;2;3;4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Grail Apostle" skillIdLvl="543,1" getLevel="60" itemsIdCount="9650,1" race="5" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Unicorn" skillIdLvl="544,1" getLevel="60" itemsIdCount="9651,1" race="1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Unicorn" skillIdLvl="545,1" getLevel="60" itemsIdCount="9651,1" race="0;5;3;4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Unicorn" skillIdLvl="546,1" getLevel="60" itemsIdCount="9651,1" race="2" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Lilim Knight" skillIdLvl="547,1" getLevel="60" itemsIdCount="9652,1" race="2" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Lilim Knight" skillIdLvl="548,1" getLevel="60" itemsIdCount="9652,1" race="0;5;3;4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Lilim Knight" skillIdLvl="549,1" getLevel="60" itemsIdCount="9652,1" race="1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Golem Guardian" skillIdLvl="550,1" getLevel="60" itemsIdCount="9653,1" race="4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Golem Guardian" skillIdLvl="551,1" getLevel="60" itemsIdCount="9653,1" race="0;1;2;5" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Golem Guardian" skillIdLvl="552,1" getLevel="60" itemsIdCount="9653,1" race="3" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Inferno Drake" skillIdLvl="553,1" getLevel="60" itemsIdCount="9654,1" race="3" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Inferno Drake" skillIdLvl="554,1" getLevel="60" itemsIdCount="9654,1" race="0;1;2;5" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Inferno Drake" skillIdLvl="555,1" getLevel="60" itemsIdCount="9654,1" race="4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Dragon Bomber" skillIdLvl="556,1" getLevel="60" itemsIdCount="9655,1" race="5" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Dragon Bomber" skillIdLvl="557,1" getLevel="60" itemsIdCount="9655,1" race="1;2;3;4" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Dragon Bomber" skillIdLvl="558,1" getLevel="60" itemsIdCount="9655,1" race="0" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Heretic" skillIdLvl="670,1" getLevel="70" itemsIdCount="10302,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Veil Master" skillIdLvl="671,1" getLevel="70" itemsIdCount="10303,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Saber Tooth Tiger" skillIdLvl="672,1" getLevel="70" itemsIdCount="10304,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Oel Mahum" skillIdLvl="673,1" getLevel="70" itemsIdCount="10305,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Doll Blader" skillIdLvl="674,1" getLevel="70" itemsIdCount="10306,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Zaken" skillIdLvl="663,1" getLevel="60" itemsIdCount="10295,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Anakim" skillIdLvl="664,1" getLevel="70" itemsIdCount="10296,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Venom" skillIdLvl="665,1" getLevel="70" itemsIdCount="10297,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Gordon" skillIdLvl="666,1" getLevel="76" itemsIdCount="10298,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Ranku" skillIdLvl="667,1" getLevel="76" itemsIdCount="10299,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Kechi" skillIdLvl="668,1" getLevel="76" itemsIdCount="10300,1" preRequisiteSkillIdLvl="617,1" />
-		<skill skillName="Transform Demon Prince" skillIdLvl="669,1" getLevel="76" itemsIdCount="10301,1" preRequisiteSkillIdLvl="617,1" />
+		<skill skillName="Transform Onyx Beast" skillId="617" skillLvl="1" getLevel="50">
+			<item id="9648" count="1" />
+		</skill>
+		<skill skillName="Transform Death Blader" skillId="618" skillLvl="1" getLevel="55">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9649" count="1" />
+		</skill>
+		<skill skillName="Transform Grail Apostle" skillId="541" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9650" count="1" />
+		</skill>
+		<skill skillName="Transform Grail Apostle" skillId="542" skillLvl="1" getLevel="60">
+			<race>Elf</race>
+			<race>DarkElf</race>
+			<race>Orc</race>
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9650" count="1" />
+		</skill>
+		<skill skillName="Transform Grail Apostle" skillId="543" skillLvl="1" getLevel="60">
+			<race>Kamael</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9650" count="1" />
+		</skill>
+		<skill skillName="Transform Unicorn" skillId="544" skillLvl="1" getLevel="60">
+			<race>Elf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9651" count="1" />
+		</skill>
+		<skill skillName="Transform Unicorn" skillId="545" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<race>Kamael</race>
+			<race>Orc</race>
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9651" count="1" />
+		</skill>
+		<skill skillName="Transform Unicorn" skillId="546" skillLvl="1" getLevel="60">
+			<race>DarkElf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9651" count="1" />
+		</skill>
+		<skill skillName="Transform Lilim Knight" skillId="547" skillLvl="1" getLevel="60">
+			<race>DarkElf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9652" count="1" />
+		</skill>
+		<skill skillName="Transform Lilim Knight" skillId="548" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<race>Kamael</race>
+			<race>Orc</race>
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9652" count="1" />
+		</skill>
+		<skill skillName="Transform Lilim Knight" skillId="549" skillLvl="1" getLevel="60">
+			<race>Elf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9652" count="1" />
+		</skill>
+		<skill skillName="Transform Golem Guardian" skillId="550" skillLvl="1" getLevel="60">
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9653" count="1" />
+		</skill>
+		<skill skillName="Transform Golem Guardian" skillId="551" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<race>Elf</race>
+			<race>DarkElf</race>
+			<race>Kamael</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9653" count="1" />
+		</skill>
+		<skill skillName="Transform Golem Guardian" skillId="552" skillLvl="1" getLevel="60">
+			<race>Orc</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9653" count="1" />
+		</skill>
+		<skill skillName="Transform Inferno Drake" skillId="553" skillLvl="1" getLevel="60">
+			<race>Orc</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9654" count="1" />
+		</skill>
+		<skill skillName="Transform Inferno Drake" skillId="554" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<race>Elf</race>
+			<race>DarkElf</race>
+			<race>Kamael</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9654" count="1" />
+		</skill>
+		<skill skillName="Transform Inferno Drake" skillId="555" skillLvl="1" getLevel="60">
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9654" count="1" />
+		</skill>
+		<skill skillName="Transform Dragon Bomber" skillId="556" skillLvl="1" getLevel="60">
+			<race>Kamael</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9655" count="1" />
+		</skill>
+		<skill skillName="Transform Dragon Bomber" skillId="557" skillLvl="1" getLevel="60">
+			<race>Elf</race>
+			<race>DarkElf</race>
+			<race>Orc</race>
+			<race>Dwarf</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9655" count="1" />
+		</skill>
+		<skill skillName="Transform Dragon Bomber" skillId="558" skillLvl="1" getLevel="60">
+			<race>Human</race>
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="9655" count="1" />
+		</skill>
+		<skill skillName="Transform Heretic" skillId="670" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10302" count="1" />
+		</skill>
+		<skill skillName="Transform Veil Master" skillId="671" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10303" count="1" />
+		</skill>
+		<skill skillName="Transform Saber Tooth Tiger" skillId="672" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10304" count="1" />
+		</skill>
+		<skill skillName="Transform Oel Mahum" skillId="673" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10305" count="1" />
+		</skill>
+		<skill skillName="Transform Doll Blader" skillId="674" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10306" count="1" />
+		</skill>
+		<skill skillName="Transform Zaken" skillId="663" skillLvl="1" getLevel="60">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10295" count="1" />
+		</skill>
+		<skill skillName="Transform Anakim" skillId="664" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10296" count="1" />
+		</skill>
+		<skill skillName="Transform Venom" skillId="665" skillLvl="1" getLevel="70">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10297" count="1" />
+		</skill>
+		<skill skillName="Transform Gordon" skillId="666" skillLvl="1" getLevel="76">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10298" count="1" />
+		</skill>
+		<skill skillName="Transform Ranku" skillId="667" skillLvl="1" getLevel="76">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10299" count="1" />
+		</skill>
+		<skill skillName="Transform Kechi" skillId="668" skillLvl="1" getLevel="76">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10300" count="1" />
+		</skill>
+		<skill skillName="Transform Demon Prince" skillId="669" skillLvl="1" getLevel="76">
+			<preRequisiteSkill id="617" lvl="1" />
+			<item id="10301" count="1" />
+		</skill>
 	</skillTree>
 </list>
