@@ -21,19 +21,29 @@ import java.util.logging.Logger;
 import javolution.util.FastList;
 
 import com.l2jserver.gameserver.datatables.CharNameTable;
-import com.l2jserver.gameserver.model.L2Augmentation;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Transformation;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.FortSiege;
-import com.l2jserver.gameserver.model.entity.Siege;
-import com.l2jserver.gameserver.model.entity.TvTEventTeam;
-import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jserver.gameserver.model.items.instance.L2HennaInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.scripting.scriptengine.events.AttackEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.AugmentEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanCreationEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanJoinEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanLeaderChangeEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanLeaveEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanLevelUpEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseAddItemEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseDeleteItemEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseTransferEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.FortSiegeEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.HennaEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ItemCreateEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ItemDropEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ItemPickupEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.SiegeEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.SkillUseEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.TransformEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.TvtKillEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.impl.L2Event;
 import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 
 /**
@@ -96,159 +106,143 @@ public class Listeners extends L2Script
 	
 	/**
 	 * Fired when a clan is created Register the listener using addClanCreationLevelUpNotify()
-	 * @param clan
+	 * @param event
 	 */
 	@Override
-	public void onClanCreated(L2Clan clan)
+	public void onClanCreated(ClanCreationEvent event)
 	{
-		_log.log(Level.INFO, "Clan " + clan.getName() + " has been created by " + clan.getLeaderName() + "!");
+		_log.log(Level.INFO, "Clan " + event.getClan().getName() + " has been created by " + event.getClan().getLeaderName() + "!");
 	}
 	
 	/**
 	 * Fired when a clan levels up<br>
 	 * Register the listener using addClanCreationLevelUpListener()
-	 * @param clan
+	 * @param event
 	 */
 	@Override
-	public boolean onClanLeveledUp(L2Clan clan, int oldLevel)
+	public boolean onClanLeveledUp(ClanLevelUpEvent event)
 	{
-		_log.log(Level.INFO, "Clan " + clan.getName() + " has leveled up!");
+		_log.log(Level.INFO, "Clan " + event.getClan().getName() + " has leveled up!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a player joins a clan<br>
 	 * Register the listener with addClanJoinLeaveNotify()<br>
-	 * @param player
-	 * @param clan
+	 * @param event
 	 */
 	@Override
-	public boolean onClanJoin(L2PcInstance player, L2Clan clan)
+	public boolean onClanJoin(ClanJoinEvent event)
 	{
-		_log.log(Level.INFO, "Player " + player.getName() + " has joined clan: " + clan.getName() + "!");
+		_log.log(Level.INFO, "Player " + event.getPlayer().getName() + " has joined clan: " + event.getPlayer().getName() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a player leaves a clan<br>
 	 * Register the listener with addClanJoinLeaveNotify()<br>
-	 * @param clan
+	 * @param event
 	 */
 	@Override
-	public boolean onClanLeave(int playerObjId, L2Clan clan)
+	public boolean onClanLeave(ClanLeaveEvent event)
 	{
-		String name = CharNameTable.getInstance().getNameById(playerObjId);
-		_log.log(Level.INFO, "Player " + name + " has leaved clan: " + clan.getName() + "!");
+		String name = CharNameTable.getInstance().getNameById(event.getPlayerId());
+		_log.log(Level.INFO, "Player " + name + " has leaved clan: " + event.getClan().getName() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a clan leader is changed for another<br>
 	 * Register the listener with addClanJoinLeaveNotify()<br>
-	 * @param player
-	 * @param clan
 	 */
 	@Override
-	public boolean onClanLeaderChange(L2PcInstance player, L2Clan clan)
+	public boolean onClanLeaderChange(ClanLeaderChangeEvent event)
 	{
-		_log.log(Level.INFO, "Player " + player.getName() + " become the new leader of clan: " + clan.getName() + "!");
+		_log.log(Level.INFO, "Player " + event.getNewLeader().getName() + " become the new leader of clan: " + event.getClan().getName() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when an item is added to a clan warehouse<br>
 	 * Register the listener with addClanWarehouseNotify(L2Clan)
-	 * @param process
-	 * @param item
-	 * @param actor
+	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseAddItem(String process, L2ItemInstance item, L2PcInstance actor)
+	public boolean onClanWarehouseAddItem(ClanWarehouseAddItemEvent event)
 	{
-		_log.log(Level.INFO, "Player " + actor.getName() + " added an item (" + item + ") to clan warehouse (" + process + ")!");
+		_log.log(Level.INFO, "Player " + event.getActor().getName() + " added an item (" + event.getItem() + ") to clan warehouse (" + event.getProcess() + ")!");
 		return true;
 	}
 	
 	/**
 	 * Fired when an item is deleted from a clan warehouse<br>
 	 * Register the listener with addClanWarehouseNotify(L2Clan)
-	 * @param process
-	 * @param item
-	 * @param count
-	 * @param actor
+	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseDeleteItem(String process, L2ItemInstance item, long count, L2PcInstance actor)
+	public boolean onClanWarehouseDeleteItem(ClanWarehouseDeleteItemEvent event)
 	{
-		_log.log(Level.INFO, "Player " + actor.getName() + " removed an item (" + item + ") from clan warehouse (" + process + ")!");
+		_log.log(Level.INFO, "Player " + event.getActor().getName() + " removed an item (" + event.getItem() + ") from clan warehouse (" + event.getProcess() + ")!");
 		return true;
 	}
 	
 	/**
 	 * Fired when an item is transfered from/to a clan warehouse<br>
 	 * Register the listener with addClanWarehouseNotify(L2Clan)
-	 * @param process
-	 * @param item
-	 * @param count
-	 * @param target
-	 * @param actor
+	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseTransferItem(String process, L2ItemInstance item, long count, ItemContainer target, L2PcInstance actor)
+	public boolean onClanWarehouseTransferItem(ClanWarehouseTransferEvent event)
 	{
-		_log.log(Level.INFO, "Player " + actor.getName() + " transfered an item (" + item + ") from clan warehouse to " + target + " (" + process + ")!");
+		_log.log(Level.INFO, "Player " + event.getActor().getName() + " transfered an item (" + event.getItem() + ") from clan warehouse to " + event.getTarget() + " (" + event.getProcess() + ")!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a clan war starts or ends<br>
 	 * Register the listener witn addClanWarNotify()
-	 * @param clan1
-	 * @param clan2
-	 * @param stage
+	 * @param event
 	 */
 	@Override
-	public boolean onClanWarEvent(L2Clan clan1, L2Clan clan2, EventStage stage)
+	public boolean onClanWarEvent(ClanWarEvent event)
 	{
-		_log.log(Level.INFO, "Clan " + clan1.getName() + " challanges " + clan2.getName() + " stage: " + stage.toString() + "!");
+		_log.log(Level.INFO, "Clan " + event.getClan1().getName() + " challanges " + event.getClan2().getName() + " stage: " + event.getStage().toString() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a fort siege starts or ends<br>
 	 * Register using addFortSiegeNotify()
-	 * @param fortSiege
-	 * @param stage
+	 * @param event
 	 */
 	@Override
-	public boolean onFortSiegeEvent(FortSiege fortSiege, EventStage stage)
+	public boolean onFortSiegeEvent(FortSiegeEvent event)
 	{
-		_log.log(Level.INFO, "FortSiege event: " + fortSiege.getFort().getName() + " " + fortSiege + " " + stage.toString() + "!");
+		_log.log(Level.INFO, "FortSiege event: " + event.getSiege().getFort().getName() + " " + event.getSiege() + " " + event.getStage().toString() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a castle siege starts or ends<br>
 	 * Register using addSiegeNotify()
-	 * @param siege
-	 * @param stage
+	 * @param event
 	 */
 	@Override
-	public boolean onSiegeEvent(Siege siege, EventStage stage)
+	public boolean onSiegeEvent(SiegeEvent event)
 	{
-		_log.log(Level.INFO, "Siege event: " + siege.getCastle().getName() + " " + siege + " " + stage.toString() + "!");
+		_log.log(Level.INFO, "Siege event: " + event.getSiege().getCastle().getName() + " " + event.getSiege() + " " + event.getStage().toString() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when the control of a castle changes during a siege<br>
 	 * Register using addSiegeNotify()
-	 * @param siege
+	 * @param event
 	 */
 	@Override
-	public void onCastleControlChange(Siege siege)
+	public void onCastleControlChange(SiegeEvent event)
 	{
-		_log.log(Level.INFO, "Castle control change: " + siege.getCastle().getName() + " " + siege + "!");
+		_log.log(Level.INFO, "Castle control change: " + event.getSiege().getCastle().getName() + " " + event.getSiege() + "!");
 	}
 	
 	/**
@@ -265,138 +259,118 @@ public class Listeners extends L2Script
 	/**
 	 * Notifies that a player was killed during TvT<br>
 	 * Register using addTvtNotify()
-	 * @param killed
-	 * @param killer
-	 * @param killerTeam
+	 * @param event
 	 */
 	@Override
-	public void onTvtKill(L2PcInstance killed, L2PcInstance killer, TvTEventTeam killerTeam)
+	public void onTvtKill(TvtKillEvent event)
 	{
-		_log.log(Level.INFO, "TvT event killed " + killed.getName() + " killer " + killer.getName() + " killer team: " + killerTeam.getName() + "!");
+		_log.log(Level.INFO, "TvT event killed " + event.getVictim().getName() + " killer " + event.getKiller().getName() + " killer team: " + event.getKillerTeam().getName() + "!");
 	}
 	
 	/**
 	 * triggered when an item is augmented or when the augmentation is removed<br>
 	 * Register using addItemAugmentNotify()
-	 * @param item
-	 * @param augmentation
-	 * @param augment -> false = remove augment
+	 * @param event
 	 */
 	@Override
-	public boolean onItemAugment(L2ItemInstance item, L2Augmentation augmentation, boolean augment)
+	public boolean onItemAugment(AugmentEvent event)
 	{
-		_log.log(Level.INFO, "Item (" + item.getName() + " has been augumented added = " + augment + "!");
+		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been augumented added = " + event.getAugmentation() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when an item is dropped by a player<br>
 	 * Register using addItemDropPickupNotify()
-	 * @param item
-	 * @param dropper
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param event
 	 */
 	@Override
-	public boolean onItemDrop(L2ItemInstance item, L2PcInstance dropper, int x, int y, int z)
+	public boolean onItemDrop(ItemDropEvent event)
 	{
-		_log.log(Level.INFO, "Item (" + item.getName() + " has been dropped by (" + dropper.getName() + " ) at X: " + x + " Y: " + y + " Z: " + z + "!");
+		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been dropped by (" + event.getDropper().getName() + " ) at X: " + event.getX() + " Y: " + event.getY() + " Z: " + event.getZ() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when an item is picked up by a player<br>
 	 * Register using addItemDropPickupNotify()
-	 * @param item
-	 * @param dropper
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param event
 	 */
 	@Override
-	public boolean onItemPickup(L2ItemInstance item, L2PcInstance dropper, int x, int y, int z)
+	public boolean onItemPickup(ItemPickupEvent event)
 	{
-		_log.log(Level.INFO, "Item (" + item.getName() + " has been pickup by (" + dropper.getName() + " ) from X: " + x + " Y: " + y + " Z: " + z + "!");
+		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been pickup by (" + event.getPicker().getName() + " ) from X: " + event.getX() + " Y: " + event.getY() + " Z: " + event.getZ() + "!");
 		return true;
 	}
 	
 	/**
 	 * Fired when a player's henna changes (add/remove)<br>
 	 * Register using addHennaNotify()
-	 * @param player
-	 * @param henna
-	 * @param add -> false = remove
+	 * @param event
 	 */
 	@Override
-	public boolean onHennaModify(L2PcInstance player, L2HennaInstance henna, boolean add)
+	public boolean onHennaModify(HennaEvent event)
 	{
-		_log.log(Level.INFO, "Henna Modify: player: " + player.getName() + " henna: " + henna.getName() + " added: " + add);
+		_log.log(Level.INFO, "Henna Modify: player: " + event.getPlayer().getName() + " henna: " + event.getHenna().getName() + " added: " + event.isAdd());
 		return true;
 	}
 	
 	/**
 	 * Fired when an item on the item tracker list has an event<br>
 	 * Register using addItemTracker(itemIds)
-	 * @param item
-	 * @param player
-	 * @param target
 	 * @param event
 	 */
 	@Override
-	public void onItemTrackerEvent(L2ItemInstance item, L2PcInstance player, ItemContainer target, ItemTrackerEvent event)
+	public void onItemTrackerEvent(L2Event event)
 	{
-		_log.log(Level.INFO, "ItemTrackerEvent: " + item.getName() + " has been " + event + " owner: " + player + " target: " + target);
+		//_log.log(Level.INFO, "ItemTrackerEvent: " + event.getName() + " has been " + event + " owner: " + player + " target: " + target);
+		// TODO: Fix it?
 	}
 	
 	/**
 	 * Fired when an item is created<br>
 	 * Register using addNewItemNotify(itemIds)
+	 * @param event
 	 */
 	@Override
-	public boolean onItemCreate(int itemId, L2PcInstance player)
+	public boolean onItemCreate(ItemCreateEvent event)
 	{
-		_log.log(Level.INFO, "ItemTrackerEvent: " + itemId + " has been created owner: " + player.getName());
+		_log.log(Level.INFO, "ItemTrackerEvent: " + event.getItemId() + " has been created owner: " + event.getPlayer().getName());
 		return true;
 	}
 	
 	/**
 	 * Fired when a player transforms/untransforms<br>
 	 * Register using addTransformNotify(player)
-	 * @param player
-	 * @param transformation
-	 * @param transform -> false = untransform
+	 * @param event
 	 */
 	@Override
-	public boolean onPlayerTransform(L2PcInstance player, L2Transformation transformation, boolean transform)
+	public boolean onPlayerTransform(TransformEvent event)
 	{
-		_log.log(Level.INFO, "Player (" + player + ") has been transformed to " + transformation.toString() + " transform: " + transform);
+		_log.log(Level.INFO, "Player (" + event.getTransformation().getPlayer() + ") has been transformed to " + event.getTransformation().toString() + " transform: " + event.isTransforming());
 		return true;
 	}
 	
 	/**
 	 * Fired when a L2Character registered with addAttackNotify is either attacked or attacks another L2Character
-	 * @param target
-	 * @param attacker
+	 * @param event
 	 */
 	@Override
-	public boolean onAttack(L2Character target, L2Character attacker)
+	public boolean onAttack(AttackEvent event)
 	{
-		_log.log(Level.INFO, target + " has been attacked by " + attacker);
+		_log.log(Level.INFO, event.getTarget() + " has been attacked by " + event.getAttacker());
 		return true;
 	}
 	
 	/**
 	 * Fired when a SKillUseListener gets triggered.<br>
 	 * Register using addSkillUseNotify()
-	 * @param skill
-	 * @param caster
-	 * @param targets
+	 * @param event
 	 */
 	@Override
-	public boolean onUseSkill(L2Skill skill, L2Character caster, L2Object[] targets)
+	public boolean onUseSkill(SkillUseEvent event)
 	{
-		_log.log(Level.INFO, skill + " has been used by " + caster);
+		_log.log(Level.INFO, event.getTargets() + " has been used by " + event.getCaster());
 		return true;
 	}
 	
