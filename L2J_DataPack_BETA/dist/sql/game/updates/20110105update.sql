@@ -1,0 +1,1 @@
+DELETE FROM `admin_command_access_rights` WHERE `adminCommand`='admin_explore';

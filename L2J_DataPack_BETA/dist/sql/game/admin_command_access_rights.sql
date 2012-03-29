@@ -90,6 +90,17 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN CHANGE ACCESS LEVEL
 ('admin_changelvl',1,'false'),
 
+-- ADMIN CH SIEGE
+('admin_chsiege_siegablehall', 1, 'false'),
+('admin_chsiege_startSiege', 1, 'false'),
+('admin_chsiege_endsSiege', 1, 'false'),
+('admin_chsiege_setSiegeDate', 1, 'false'),
+('admin_chsiege_addAttacker', 1, 'false'),
+('admin_chsiege_removeAttacker', 1, 'false'),
+('admin_chsiege_clearAttackers', 1, 'false'),
+('admin_chsiege_listAttackers', 1, 'false'),
+('admin_chsiege_forwardSiege', 1, 'false'),
+
 -- ADMIN CLAN
 ('admin_clan_info',1,'false'),
 ('admin_clan_changeleader',1,'true'),
@@ -267,8 +278,11 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_event_control_res',1,'false'),
 ('admin_event_control_poly',1,'false'),
 ('admin_event_control_unpoly',1,'false'),
+('admin_event_control_transform',1,'false'),
+('admin_event_control_untransform',1,'false'),
 ('admin_event_control_prize',1,'false'),
 ('admin_event_control_chatban',1,'false'),
+('admin_event_control_kick',1,'false'),
 ('admin_event_control_finish',1,'false'),
 
 -- ADMIN EVENTS
@@ -571,7 +585,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_teleport_character',1,'false'),
 ('admin_recall',1,'false'),
 ('admin_walk',1,'false'),
-('admin_explore',1,'false'),
 ('teleportto',1,'false'),
 ('recall',1,'false'),
 ('admin_recall_npc',1,'false'),
@@ -594,11 +607,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_territory_wards_list',1,'false'),
 
 -- ADMIN TEST
-('admin_test',1,'false'),
 ('admin_stats',1,'false'),
 ('admin_skill_test',1,'false'),
-('admin_st',1,'false'),
-('admin_mp',1,'false'),
 ('admin_known',1,'false'),
 
 -- ADMIN TVT EVENT
@@ -625,15 +635,4 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- VOICE COMMANDS
 ('banchat', 7,'false'),
 ('debug',1,'false'),
-('unbanchat', 7,'false'),
-
--- SIEGABLE HALLS
-('admin_chsiege_siegablehall', 1, 'false'),
-('admin_chsiege_startSiege', 1, 'false'),
-('admin_chsiege_endsSiege', 1, 'false'),
-('admin_chsiege_setSiegeDate', 1, 'false'),
-('admin_chsiege_addAttacker', 1, 'false'),
-('admin_chsiege_removeAttacker', 1, 'false'),
-('admin_chsiege_listAttackers', 1, 'false'),
-('admin_chsiege_clearAttackers', 1, 'false'),
-('admin_chsiege_forwardSiege', 1, 'false');
+('unbanchat', 7,'false');
