@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.CharNameTable;
-import com.l2jserver.gameserver.datatables.CharTemplateTable;
+import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -373,11 +373,11 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setClassId(classidval);
 					if (!player.isSubClassActive())
 						player.setBaseClass(classidval);
-					String newclass = player.getTemplate().className;
+					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName(false);
 					player.store();
-					player.sendMessage("A GM changed your class to " + newclass);
+					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
-					activeChar.sendMessage(player.getName() + " is a " + newclass);
+					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 
 					// Transform-untransorm player quickly to force the client to reload the character textures
 					TransformationManager.getInstance().transformPlayer(105, player);
@@ -844,7 +844,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					"\">",
 					players[i].getName(),
 					"</a></td><td width=110>",
-					players[i].getTemplate().className,
+					ClassListData.getInstance().getClass(players[i].getClassId()).getClassName(true),
 					"</td><td width=40>",
 					String.valueOf(players[i].getLevel())
 					,"</td></tr>");
@@ -912,10 +912,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%clan%", String.valueOf(player.getClan() != null ? "<a action=\"bypass -h admin_clan_info " + player.getObjectId() + "\">" + player.getClan().getName() + "</a>" : null));
 		adminReply.replace("%xp%", String.valueOf(player.getExp()));
 		adminReply.replace("%sp%", String.valueOf(player.getSp()));
-		adminReply.replace("%class%", player.getTemplate().className);
+		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClassName(true));
 		adminReply.replace("%ordinal%", String.valueOf(player.getClassId().ordinal()));
 		adminReply.replace("%classid%", String.valueOf(player.getClassId()));
-		adminReply.replace("%baseclass%", CharTemplateTable.getInstance().getClassNameById(player.getBaseClass()));
+		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClass()).getClassName(true));
 		adminReply.replace("%x%", String.valueOf(player.getX()));
 		adminReply.replace("%y%", String.valueOf(player.getY()));
 		adminReply.replace("%z%", String.valueOf(player.getZ()));
@@ -1096,7 +1096,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						"\">",
 						name,
 						"</a></td><td width=110>",
-						player.getTemplate().className,
+						ClassListData.getInstance().getClass(player.getClassId()).getClassName(true),
 						"</td><td width=40>",
 						String.valueOf(player.getLevel()),
 				"</td></tr>");
@@ -1179,7 +1179,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					"\">",
 					name,
 					"</a></td><td width=110>",
-					player.getTemplate().className,
+					ClassListData.getInstance().getClass(player.getClassId()).getClassName(true),
 					"</td><td width=40>",
 					String.valueOf(player.getLevel()),
 			"</td></tr>");

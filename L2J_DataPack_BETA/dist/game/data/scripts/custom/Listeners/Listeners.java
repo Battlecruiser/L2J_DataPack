@@ -311,7 +311,7 @@ public class Listeners extends L2Script
 	@Override
 	public boolean onHennaModify(HennaEvent event)
 	{
-		_log.log(Level.INFO, "Henna Modify: player: " + event.getPlayer().getName() + " henna: " + event.getHenna().getName() + " added: " + event.isAdd());
+		_log.log(Level.INFO, "Henna Modify: player: " + event.getPlayer().getName() + " henna: " + event.getHenna().getDyeName() + " added: " + event.isAdd());
 		return true;
 	}
 	
