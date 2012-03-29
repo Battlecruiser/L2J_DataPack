@@ -49,17 +49,21 @@ public class AdminTest implements IAdminCommandHandler
 				activeChar.sendMessage(line);
 			}
 		}
-		else if (command.startsWith("admin_skill_test") || command.startsWith("admin_st"))
+		else if (command.startsWith("admin_skill_test"))
 		{
 			try
 			{
 				StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				int id = Integer.parseInt(st.nextToken());
-				if(command.startsWith("admin_skill_test"))
+				if (command.startsWith("admin_skill_test"))
+				{
 					adminTestSkill(activeChar, id, true);
+				}
 				else
+				{
 					adminTestSkill(activeChar, id, false);
+				}
 			}
 			catch (NumberFormatException e)
 			{
@@ -84,25 +88,33 @@ public class AdminTest implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 * @param id
-	 * @param msu 
+	 * @param msu
 	 */
 	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
 	{
 		L2Character caster;
 		L2Object target = activeChar.getTarget();
 		if (!(target instanceof L2Character))
+		{
 			caster = activeChar;
+		}
 		else
+		{
 			caster = (L2Character) target;
-
+		}
+		
 		L2Skill _skill = SkillTable.getInstance().getInfo(id, 1);
-		if(_skill != null)
+		if (_skill != null)
 		{
 			caster.setTarget(activeChar);
-			if(msu)
+			if (msu)
+			{
 				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, _skill.getHitTime(), _skill.getReuseDelay()));
+			}
 			else
+			{
 				caster.doCast(_skill);
+			}
 		}
 	}
 	
