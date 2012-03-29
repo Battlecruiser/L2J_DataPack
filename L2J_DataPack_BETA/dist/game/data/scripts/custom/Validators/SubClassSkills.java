@@ -19,6 +19,7 @@ import java.util.Arrays;
 import javolution.util.FastList;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -81,7 +82,7 @@ public final class SubClassSkills extends Quest
 			{
 				for (L2Skill s : certSkills)
 				{
-					Util.handleIllegalPlayerAction(player, "Player "+player.getName() + " has cert skill on subclass :" + s.getName() + "("+s.getId()+"/"+s.getLevel()+"), class:" + player.getTemplate().className, 0);
+					Util.handleIllegalPlayerAction(player, "Player "+player.getName() + " has cert skill on subclass :" + s.getName() + "("+s.getId()+"/"+s.getLevel()+"), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(false), 0);
 					
 					if (Config.SKILL_CHECK_REMOVE)
 						player.removeSkill(s);

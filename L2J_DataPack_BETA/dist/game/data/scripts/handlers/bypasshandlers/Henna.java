@@ -18,13 +18,18 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SymbolMakerInstance;
-import com.l2jserver.gameserver.model.items.instance.L2HennaInstance;
+import com.l2jserver.gameserver.model.items.L2Henna;
+import com.l2jserver.gameserver.network.serverpackets.HennaEquipList;
 import com.l2jserver.gameserver.network.serverpackets.HennaRemoveList;
 
-public class RemoveHennaList implements IBypassHandler
+/**
+ * @author Zoey76
+ */
+public class Henna implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
+		"Draw",
 		"RemoveList"
 	};
 	
@@ -36,21 +41,21 @@ public class RemoveHennaList implements IBypassHandler
 			return false;
 		}
 		
-		boolean hasHennas = false;
-		for (int i = 1; i <= 3; i++)
+		if (command.equals("Draw"))
 		{
-			L2HennaInstance henna = activeChar.getHenna(i);
-			
-			if (henna != null)
+			activeChar.sendPacket(new HennaEquipList(activeChar));
+		}
+		else if (command.equals("RemoveList"))
+		{
+			for (L2Henna henna : activeChar.getHennaList())
 			{
-				hasHennas = true;
+				if (henna != null)
+				{
+					activeChar.sendPacket(new HennaRemoveList(activeChar));
+					break;
+				}
 			}
 		}
-		if (hasHennas)
-		{
-			activeChar.sendPacket(new HennaRemoveList(activeChar));
-		}
-		
 		return true;
 	}
 	

@@ -15,6 +15,7 @@
 package custom.Validators;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -95,7 +96,7 @@ public final class SkillTransferValidator extends Quest
 							count--;
 							if (count < 0)
 							{
-								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + player.getTemplate().className, 1);
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " ("+sk.getId() + "/" + sk.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(false), 1);
 								if (Config.SKILL_CHECK_REMOVE)
 								{
 									player.removeSkill(sk);
