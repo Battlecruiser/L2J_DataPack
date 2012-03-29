@@ -5,127 +5,128 @@
 -- available in the ../sql/ folder. See the documentation.txt file
 -- for more details.
 
-DROP TABLE IF EXISTS access_levels;
-DROP TABLE IF EXISTS account_gsdata;
-DROP TABLE IF EXISTS admin_command_access_rights;
-DROP TABLE IF EXISTS airships;
-DROP TABLE IF EXISTS auction;
-DROP TABLE IF EXISTS auction_bid;
-DROP TABLE IF EXISTS auction_watch;
-DROP TABLE IF EXISTS auto_announcements;
-DROP TABLE IF EXISTS auto_chat_text;
-DROP TABLE IF EXISTS auto_chat;
-DROP TABLE IF EXISTS castle;
-DROP TABLE IF EXISTS castle_door;
-DROP TABLE IF EXISTS castle_doorupgrade;
-DROP TABLE IF EXISTS castle_functions;
-DROP TABLE IF EXISTS castle_manor_procure;
-DROP TABLE IF EXISTS castle_manor_production;
-DROP TABLE IF EXISTS castle_siege_guards;
-DROP TABLE IF EXISTS char_templates;
-DROP TABLE IF EXISTS character_contacts;
-DROP TABLE IF EXISTS character_friends;
-DROP TABLE IF EXISTS character_hennas;
-DROP TABLE IF EXISTS character_instance_time;
-DROP TABLE IF EXISTS character_item_reuse_save;
-DROP TABLE IF EXISTS character_macroses;
-DROP TABLE IF EXISTS character_norestart_zone_time;
-DROP TABLE IF EXISTS character_offline_trade_items;
-DROP TABLE IF EXISTS character_offline_trade;
-DROP TABLE IF EXISTS character_pet_skills_save;
-DROP TABLE IF EXISTS character_quest_global_data;
-DROP TABLE IF EXISTS character_quests;
-DROP TABLE IF EXISTS character_raid_points;
-DROP TABLE IF EXISTS character_recipebook;
-DROP TABLE IF EXISTS character_recipeshoplist;
-DROP TABLE IF EXISTS character_reco_bonus;
-DROP TABLE IF EXISTS character_shortcuts;
-DROP TABLE IF EXISTS character_skills;
-DROP TABLE IF EXISTS character_skills_save;
-DROP TABLE IF EXISTS character_subclasses;
-DROP TABLE IF EXISTS character_summons;
-DROP TABLE IF EXISTS character_summon_skills_save;
-DROP TABLE IF EXISTS character_tpbookmark;
-DROP TABLE IF EXISTS character_ui_actions;
-DROP TABLE IF EXISTS character_ui_categories;
-DROP TABLE IF EXISTS characters;
-DROP TABLE IF EXISTS clan_data;
-DROP TABLE IF EXISTS clan_notices;
-DROP TABLE IF EXISTS clan_privs;
-DROP TABLE IF EXISTS clan_skills;
-DROP TABLE IF EXISTS clan_subpledges;
-DROP TABLE IF EXISTS clan_wars;
-DROP TABLE IF EXISTS clanhall;
-DROP TABLE IF EXISTS clanhall_functions;
-DROP TABLE IF EXISTS clanhall_siege_attackers;
-DROP TABLE IF EXISTS clanhall_siege_guards;
-DROP TABLE IF EXISTS cursed_weapons;
-DROP TABLE IF EXISTS dimensional_rift;
-DROP TABLE IF EXISTS droplist;
-DROP TABLE IF EXISTS enchant_skill_groups;
-DROP TABLE IF EXISTS fish;
-DROP TABLE IF EXISTS fort;
-DROP TABLE IF EXISTS fort_doorupgrade;
-DROP TABLE IF EXISTS fort_functions;
-DROP TABLE IF EXISTS fort_siege_guards;
-DROP TABLE IF EXISTS fort_spawnlist;
-DROP TABLE IF EXISTS fort_staticobjects;
-DROP TABLE IF EXISTS fortsiege_clans;
-DROP TABLE IF EXISTS forums;
-DROP TABLE IF EXISTS four_sepulchers_spawnlist;
-DROP TABLE IF EXISTS games;
-DROP TABLE IF EXISTS global_tasks;
-DROP TABLE IF EXISTS global_variables;
-DROP TABLE IF EXISTS grandboss_data;
-DROP TABLE IF EXISTS grandboss_list;
-DROP TABLE IF EXISTS hellbound_spawnlist;
-DROP TABLE IF EXISTS helper_buff_list;
-DROP TABLE IF EXISTS herb_droplist_groups;
-DROP TABLE IF EXISTS heroes;
-DROP TABLE IF EXISTS heroes_diary;
-DROP TABLE IF EXISTS item_attributes;
-DROP TABLE IF EXISTS item_auction_bid;
-DROP TABLE IF EXISTS item_auction;
-DROP TABLE IF EXISTS item_elementals;
-DROP TABLE IF EXISTS items;
-DROP TABLE IF EXISTS itemsonground;
-DROP TABLE IF EXISTS locations;
-DROP TABLE IF EXISTS lvlupgain;
-DROP TABLE IF EXISTS merchant_buylists;
-DROP TABLE IF EXISTS merchant_lease;
-DROP TABLE IF EXISTS merchant_shopids;
-DROP TABLE IF EXISTS messages;
-DROP TABLE IF EXISTS minions;
-DROP TABLE IF EXISTS mods_wedding;
-DROP TABLE IF EXISTS npc;
-DROP TABLE IF EXISTS npc_buffer;
-DROP TABLE IF EXISTS npcaidata;
-DROP TABLE IF EXISTS npc_elementals;
-DROP TABLE IF EXISTS npcskills;
-DROP TABLE IF EXISTS olympiad_data;
-DROP TABLE IF EXISTS olympiad_fights;
-DROP TABLE IF EXISTS olympiad_nobles;
-DROP TABLE IF EXISTS olympiad_nobles_eom;
-DROP TABLE IF EXISTS petition_feedback;
-DROP TABLE IF EXISTS pets;
-DROP TABLE IF EXISTS pets_skills;
-DROP TABLE IF EXISTS posts;
-DROP TABLE IF EXISTS quest_global_data;
-DROP TABLE IF EXISTS raidboss_spawnlist;
-DROP TABLE IF EXISTS rainbowsprings_attacker_list;
-DROP TABLE IF EXISTS random_spawn;
-DROP TABLE IF EXISTS random_spawn_loc;
-DROP TABLE IF EXISTS seven_signs;
-DROP TABLE IF EXISTS seven_signs_festival;
-DROP TABLE IF EXISTS seven_signs_status;
-DROP TABLE IF EXISTS siegable_clanhall;
-DROP TABLE IF EXISTS siegable_hall_flagwar_attackers;
-DROP TABLE IF EXISTS siegable_hall_flagwar_attackers_members;
-DROP TABLE IF EXISTS siege_clans;
-DROP TABLE IF EXISTS skill_learn;
-DROP TABLE IF EXISTS spawnlist;
-DROP TABLE IF EXISTS teleport;
-DROP TABLE IF EXISTS territories;
-DROP TABLE IF EXISTS territory_registrations;
-DROP TABLE IF EXISTS territory_spawnlist;
-DROP TABLE IF EXISTS topic;
+DROP TABLE IF EXISTS
+access_levels,
+account_gsdata,
+admin_command_access_rights,
+airships,
+auction,
+auction_bid,
+auction_watch,
+auto_announcements,
+auto_chat_text,
+auto_chat,
+castle,
+castle_door,
+castle_doorupgrade,
+castle_functions,
+castle_manor_procure,
+castle_manor_production,
+castle_siege_guards,
+char_templates,
+character_contacts,
+character_friends,
+character_hennas,
+character_instance_time,
+character_item_reuse_save,
+character_macroses,
+character_norestart_zone_time,
+character_offline_trade_items,
+character_offline_trade,
+character_pet_skills_save,
+character_quest_global_data,
+character_quests,
+character_raid_points,
+character_recipebook,
+character_recipeshoplist,
+character_reco_bonus,
+character_shortcuts,
+character_skills,
+character_skills_save,
+character_subclasses,
+character_summons,
+character_summon_skills_save,
+character_tpbookmark,
+character_ui_actions,
+character_ui_categories,
+characters,
+clan_data,
+clan_notices,
+clan_privs,
+clan_skills,
+clan_subpledges,
+clan_wars,
+clanhall,
+clanhall_functions,
+clanhall_siege_attackers,
+clanhall_siege_guards,
+cursed_weapons,
+dimensional_rift,
+droplist,
+enchant_skill_groups,
+fish,
+fort,
+fort_doorupgrade,
+fort_functions,
+fort_siege_guards,
+fort_spawnlist,
+fort_staticobjects,
+fortsiege_clans,
+forums,
+four_sepulchers_spawnlist,
+games,
+global_tasks,
+global_variables,
+grandboss_data,
+grandboss_list,
+hellbound_spawnlist,
+helper_buff_list,
+herb_droplist_groups,
+heroes,
+heroes_diary,
+item_attributes,
+item_auction_bid,
+item_auction,
+item_elementals,
+items,
+itemsonground,
+locations,
+lvlupgain,
+merchant_buylists,
+merchant_lease,
+merchant_shopids,
+messages,
+minions,
+mods_wedding,
+npc,
+npc_buffer,
+npcaidata,
+npc_elementals,
+npcskills,
+olympiad_data,
+olympiad_fights,
+olympiad_nobles,
+olympiad_nobles_eom,
+petition_feedback,
+pets,
+pets_skills,
+posts,
+quest_global_data,
+raidboss_spawnlist,
+rainbowsprings_attacker_list,
+random_spawn,
+random_spawn_loc,
+seven_signs,
+seven_signs_festival,
+seven_signs_status,
+siegable_clanhall,
+siegable_hall_flagwar_attackers,
+siegable_hall_flagwar_attackers_members,
+siege_clans,
+skill_learn,
+spawnlist,
+teleport,
+territories,
+territory_registrations,
+territory_spawnlist,
+topic;
