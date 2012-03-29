@@ -1,2 +1,3 @@
-DROP TABLE IF EXISTS armorsets;
-DROP TABLE IF EXISTS custom_armorsets;
+DROP TABLE IF EXISTS
+armorsets,
+custom_armorsets;
