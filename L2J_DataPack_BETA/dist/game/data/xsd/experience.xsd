@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema">
-	<element name="table">
-		<complexType>
-			<sequence minOccurs="1" maxOccurs="1">
-				<element name="experience" minOccurs="1" maxOccurs="87">
-					<complexType>
-						<attribute name="level" use="required">
-							<simpleType>
-								<restriction base="positiveInteger">
-									<minInclusive value="1" />
-									<maxInclusive value="87" />
-								</restriction>
-							</simpleType>
-						</attribute>
-						<attribute name="tolevel" type="nonNegativeInteger" use="required" />
-					</complexType>
-				</element>
-			</sequence>
-			<attribute name="maxLevel" use="required">
-				<simpleType>
-					<restriction base="positiveInteger">
-						<minInclusive value="1" />
-						<maxInclusive value="85" />
-					</restriction>
-				</simpleType>
-			</attribute>
-			<attribute name="maxPetLevel" use="required">
-				<simpleType>
-					<restriction base="positiveInteger">
-						<minInclusive value="1" />
-						<maxInclusive value="86" />
-					</restriction>
-				</simpleType>
-			</attribute>
-		</complexType>
-	</element>
-</schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="table">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="experience" minOccurs="1" maxOccurs="87">
+					<xs:complexType>
+						<xs:attribute name="level" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="87" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="tolevel" type="xs:nonNegativeInteger" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="maxLevel" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:minInclusive value="1" />
+						<xs:maxInclusive value="85" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="maxPetLevel" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:minInclusive value="1" />
+						<xs:maxInclusive value="86" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
