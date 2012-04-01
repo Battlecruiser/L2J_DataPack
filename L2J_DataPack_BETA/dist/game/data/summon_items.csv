@@ -1,9 +1,14 @@
 #Syntax:
-#  itemID;npcID;summonType;despawnDelay(only for type static)
-#  despawnDelay - in seconds, -1 unlimited
+# itemID;npcID;summonType;despawnDelay
 #
-# summonType: 0 = Static, 1 = Pet, 2 = Wyvern
+# despawnDelay is only for type static, time is in seconds (use -1 for unlimited).
 #
+#summonType:
+# 0 = Static
+# 1 = Pet
+# 2 = Wyvern
+#
+# TODO: This pets should be spawned from Item Skills.
 
 ### Pets ###
 # Wolf
@@ -109,6 +114,3 @@
 15488;16071;1
 # Elite Maguen
 15489;16072;1
-
-### Wyvern ###
-8663;12621;2
