@@ -127,7 +127,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+			for (L2PcInstance partyMember : player.getParty().getMembers())
 			{
 				rewardPlayer(partyMember);
 			}

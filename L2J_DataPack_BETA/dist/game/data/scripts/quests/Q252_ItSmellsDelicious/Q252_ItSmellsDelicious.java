@@ -181,7 +181,7 @@ public class Q252_ItSmellsDelicious extends Quest
 		final L2Party party = player.getParty();
 		QuestState st;
 		
-		if ((party == null) || party.getPartyMembers().isEmpty())
+		if ((party == null) || party.getMembers().isEmpty())
 		{
 			st = player.getQuestState(qn);
 			if ((st == null) || st.isStarted() || (st.getInt("cond") != 1) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
@@ -200,7 +200,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			target = player;
 		}
 		
-		for (final L2PcInstance partyMember : party.getPartyMembers())
+		for (final L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.isDead() || !partyMember.isInsideRadius(target, 1500, true, false))
 			{

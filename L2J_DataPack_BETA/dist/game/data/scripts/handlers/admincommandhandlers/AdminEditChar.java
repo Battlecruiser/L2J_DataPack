@@ -447,7 +447,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					// Delete party window for other party members
 					player.getParty().broadcastToPartyMembers(player, new PartySmallWindowDeleteAll());
-					for (L2PcInstance member : player.getParty().getPartyMembers())
+					for (L2PcInstance member : player.getParty().getMembers())
 					{
 						// And re-add
 						if (member != player)
@@ -1457,7 +1457,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		NpcHtmlMessage html = new NpcHtmlMessage(0);
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/partyinfo.htm");
 		StringBuilder text = new StringBuilder(400);
-		for (L2PcInstance member : target.getParty().getPartyMembers())
+		for (L2PcInstance member : target.getParty().getMembers())
 		{
 			if (color)
 				text.append("<tr><td><table width=270 border=0 bgcolor=131210 cellpadding=2><tr><td width=30 align=right>");

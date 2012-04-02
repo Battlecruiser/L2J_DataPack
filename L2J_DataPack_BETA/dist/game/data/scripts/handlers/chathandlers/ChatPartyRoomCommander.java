@@ -40,7 +40,7 @@ public class ChatPartyRoomCommander implements IChatHandler
 	{
 		if (activeChar.isInParty())
 		{
-			if (activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getChannelLeader().equals(activeChar))
+			if (activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
 			{
 				if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 				{
@@ -49,7 +49,7 @@ public class ChatPartyRoomCommander implements IChatHandler
 				}
 				
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-				activeChar.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, activeChar);
+				activeChar.getParty().getCommandChannel().broadcastCreatureSay(cs, activeChar);
 			}
 		}
 	}

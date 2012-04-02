@@ -377,7 +377,7 @@ class Quest (JQuest) :
               elif npcId in Ketra_Orcs :
                   party = partyMember.getParty()
                   if party :
-                      for member in party.getPartyMembers().toArray() :
+                      for member in party.getMembers().toArray() :
                           if Util.checkIfInRange(5000, player, member, True) :
                               pst = member.getQuestState(qn)
                               if pst :

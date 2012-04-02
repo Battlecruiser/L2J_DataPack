@@ -128,7 +128,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		if (killer.getParty() != null)
 		{
 			final FastList<QuestState> PartyMembers = new FastList<QuestState>();
-			for (L2PcInstance member : killer.getParty().getPartyMembers())
+			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
 				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) || ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))))

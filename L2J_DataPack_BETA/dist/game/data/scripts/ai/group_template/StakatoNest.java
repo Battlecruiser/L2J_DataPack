@@ -145,7 +145,7 @@ public class StakatoNest extends L2AttackableAIScript
 		{
 			if (killer.isInParty())
 			{
-				List<L2PcInstance> party = killer.getParty().getPartyMembers();
+				List<L2PcInstance> party = killer.getParty().getMembers();
 				for (L2PcInstance member : party)
 					giveCocoon(member, npc);
 			}

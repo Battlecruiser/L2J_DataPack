@@ -157,7 +157,7 @@ class Quest (JQuest) :
      #note: the killer WILL participate in the loop as a party member (no need to handle separately)
      party = player.getParty()
      if party :
-        for partyMember in party.getPartyMembers().toArray() :
+        for partyMember in party.getMembers().toArray() :
             pst = partyMember.getQuestState(qn)
             if pst :
                 if pst.getInt("cond") == 4 and pst.getQuestItemsCount(RAIN_SONG) < 1 :

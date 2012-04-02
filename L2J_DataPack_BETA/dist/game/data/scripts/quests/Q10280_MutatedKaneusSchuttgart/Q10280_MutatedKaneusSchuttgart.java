@@ -128,7 +128,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		if (killer.getParty() != null)
 		{
 			final FastList<QuestState> PartyMembers = new FastList<>();
-			for (L2PcInstance member : killer.getParty().getPartyMembers())
+			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
 				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))

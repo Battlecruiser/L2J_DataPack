@@ -329,7 +329,7 @@ public class NornilsGarden extends Quest
 		final L2Party party = player.getParty();
 		if (party != null)
 		{
-			for (L2PcInstance partyMember : party.getPartyMembers())
+			for (L2PcInstance partyMember : party.getMembers())
 			{
 				world.allowed.add(partyMember.getObjectId());
 				teleportPlayer(partyMember, SPAWN_PPL, instanceId);
@@ -453,7 +453,7 @@ public class NornilsGarden extends Quest
 		}
 		boolean _kamael = false;
 		// for each party member
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (partyMember.getLevel() > INSTANCE_LVL_MAX)

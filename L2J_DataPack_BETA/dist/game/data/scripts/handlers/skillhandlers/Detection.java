@@ -58,7 +58,7 @@ public class Detection implements ISkillHandler
 		{
 			if (target != null && target.getAppearance().getInvisible())
 			{
-				if (hasParty && target.getParty() != null && player.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
+				if (hasParty && target.getParty() != null && player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
 					continue;
 				if (hasClan && player.getClanId() == target.getClanId())
 					continue;

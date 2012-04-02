@@ -143,7 +143,7 @@ public class Q10289_FadeToBlack extends Quest
 		if (player.getParty() != null)
 		{
 			QuestState st2;
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+			for (L2PcInstance partyMember : player.getParty().getMembers())
 			{
 				st2 = partyMember.getQuestState(qn);
 				if ((st2 != null) && (st2.getInt("cond") == 1) && (partyMember.getObjectId() != randomPartyMember.getObjectId()))

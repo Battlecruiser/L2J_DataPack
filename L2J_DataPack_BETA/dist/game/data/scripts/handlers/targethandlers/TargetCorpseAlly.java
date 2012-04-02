@@ -71,7 +71,7 @@ public class TargetCorpseAlly implements ITargetTypeHandler
 						{
 							if (player.getDuelId() != obj.getDuelId())
 								continue;
-							if (player.isInParty() && obj.isInParty() && player.getParty().getPartyLeaderOID() != obj.getParty().getPartyLeaderOID())
+							if (player.isInParty() && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
 								continue;
 						}
 						

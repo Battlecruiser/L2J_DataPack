@@ -664,7 +664,7 @@ public class TowerOfNaia extends Quest
 			{
 				if (Util.checkIfInRange(3000, party.getLeader(), npc, true))
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(2000, partyMember, npc, true))
 						{
@@ -1056,7 +1056,7 @@ public class TowerOfNaia extends Quest
 				if (ch instanceof L2PcInstance)
 				{
 					L2Party charParty = ((L2PcInstance) ch).getParty();
-					if ((charParty == null) || (charParty.getPartyLeaderOID() != party.getPartyLeaderOID()))
+					if ((charParty == null) || (charParty.getLeaderObjectId() != party.getLeaderObjectId()))
 					{
 						ch.teleToLocation(16110, 243841, 11616);
 					}

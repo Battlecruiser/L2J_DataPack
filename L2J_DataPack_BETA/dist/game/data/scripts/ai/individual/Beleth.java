@@ -412,7 +412,7 @@ public class Beleth extends L2AttackableAIScript
 			{
 				if (killer.getParty().getCommandChannel() != null)
 				{
-					belethKiller = killer.getParty().getCommandChannel().getChannelLeader();
+					belethKiller = killer.getParty().getCommandChannel().getLeader();
 				}
 				else
 				{

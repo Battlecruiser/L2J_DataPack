@@ -648,7 +648,7 @@ public class TullyWorkshop extends Quest
 		else if (npcId == AGENT)
 		{
 			final L2Party party = player.getParty();
-			if ((party == null) || (party.getPartyLeaderOID() != player.getObjectId()))
+			if ((party == null) || (party.getLeaderObjectId() != player.getObjectId()))
 			{
 				return "32372-01a.htm";
 			}
@@ -702,7 +702,7 @@ public class TullyWorkshop extends Quest
 				false, false, false, false, false
 			};
 			// For teleportation party should have all 5 medals
-			for (L2PcInstance pl : party.getPartyMembers())
+			for (L2PcInstance pl : party.getMembers())
 			{
 				if (pl == null)
 				{
@@ -737,7 +737,7 @@ public class TullyWorkshop extends Quest
 				return "32344-02.htm";
 			}
 			
-			for (L2PcInstance pl : party.getPartyMembers())
+			for (L2PcInstance pl : party.getMembers())
 			{
 				if ((pl != null) && Util.checkIfInRange(6000, pl, npc, false))
 				{
@@ -856,9 +856,9 @@ public class TullyWorkshop extends Quest
 		{
 			L2Party party = player.getParty();
 			
-			if ((party != null) && (party.getPartyLeaderOID() == player.getObjectId()))
+			if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(300, partyMember, npc, true))
 					{
@@ -866,7 +866,7 @@ public class TullyWorkshop extends Quest
 					}
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					partyMember.teleToLocation(-13400, 272827, -15300, true);
 				}
@@ -903,7 +903,7 @@ public class TullyWorkshop extends Quest
 			{
 				player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			}
-			else if (party.getPartyLeaderOID() != player.getObjectId())
+			else if (party.getLeaderObjectId() != player.getObjectId())
 			{
 				player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			}
@@ -914,7 +914,7 @@ public class TullyWorkshop extends Quest
 			else
 			{
 				final int tele[] = TELE_COORDS.get(npcId)[direction];
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(4000, partyMember, npc, true))
 					{
@@ -996,13 +996,13 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					if (party.getPartyLeaderOID() != player.getObjectId())
+					if (party.getLeaderObjectId() != player.getObjectId())
 					{
 						player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					}
 					else
 					{
-						for (L2PcInstance partyMember : party.getPartyMembers())
+						for (L2PcInstance partyMember : party.getMembers())
 						{
 							if (Util.checkIfInRange(6000, partyMember, npc, true))
 							{
@@ -1041,7 +1041,7 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(400, partyMember, npc, true))
 						{
@@ -1049,7 +1049,7 @@ public class TullyWorkshop extends Quest
 						}
 					}
 					
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						npc.setTarget(partyMember);
 						npc.doCast(SkillTable.getInstance().getInfo(5526, 1));
@@ -1073,7 +1073,7 @@ public class TullyWorkshop extends Quest
 							MinionList.spawnMinion(monster, 25596);
 						}
 						
-						L2PcInstance target = player.getParty() == null ? player : player.getParty().getPartyMembers().get(getRandom(player.getParty().getPartyMembers().size()));
+						L2PcInstance target = player.getParty() == null ? player : player.getParty().getMembers().get(getRandom(player.getParty().getMembers().size()));
 						
 						if ((target != null) && !target.isDead())
 						{
@@ -1100,13 +1100,13 @@ public class TullyWorkshop extends Quest
 			}
 			else
 			{
-				if (party.getPartyLeaderOID() != player.getObjectId())
+				if (party.getLeaderObjectId() != player.getObjectId())
 				{
 					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					return null;
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(3000, partyMember, npc, true))
 					{
@@ -1114,7 +1114,7 @@ public class TullyWorkshop extends Quest
 					}
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(6000, partyMember, npc, true))
 					{
@@ -1131,7 +1131,7 @@ public class TullyWorkshop extends Quest
 			
 			if (party != null)
 			{
-				if (party.getPartyLeaderOID() != player.getObjectId())
+				if (party.getLeaderObjectId() != player.getObjectId())
 				{
 					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 				}
@@ -1141,7 +1141,7 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(6000, partyMember, npc, true))
 						{
