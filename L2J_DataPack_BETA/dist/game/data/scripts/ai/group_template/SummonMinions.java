@@ -200,7 +200,7 @@ public class SummonMinions extends L2AttackableAIScript
 						}
 						if (attacker.getParty() != null)
 						{
-							for (L2PcInstance member : attacker.getParty().getPartyMembers())
+							for (L2PcInstance member : attacker.getParty().getMembers())
 							{
 								if (_attackersList.get(npcObjId) == null)
 								{

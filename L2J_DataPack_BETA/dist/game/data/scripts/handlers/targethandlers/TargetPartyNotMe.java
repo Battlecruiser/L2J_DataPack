@@ -55,7 +55,7 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 		
 		if (activeChar.getParty() != null)
 		{
-			List<L2PcInstance> partyList = activeChar.getParty().getPartyMembers();
+			List<L2PcInstance> partyList = activeChar.getParty().getMembers();
 			
 			for (L2PcInstance partyMember : partyList)
 			{

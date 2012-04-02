@@ -47,7 +47,7 @@ public class ChatParty implements IChatHandler
 			}
 			
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			activeChar.getParty().broadcastCSToPartyMembers(cs, activeChar);
+			activeChar.getParty().broadcastCreatureSay(cs, activeChar);
 		}
 	}
 	

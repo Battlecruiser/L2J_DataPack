@@ -65,7 +65,7 @@ public class SummonFriend implements ISkillHandler
 						final L2Party party = target.getParty();
 						if (party != null)
 						{
-							for (L2PcInstance partyMember : party.getPartyMembers())
+							for (L2PcInstance partyMember : party.getMembers())
 							{
 								if (target != partyMember)
 								{

@@ -36,7 +36,7 @@ public class TargetPartyMember implements ITargetTypeHandler
 				|| (target != null
 						&& activeChar.isInParty()
 						&& target.isInParty()
-						&& activeChar.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
+						&& activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
 						|| (target != null
 								&& activeChar instanceof L2PcInstance
 								&& target instanceof L2Summon

@@ -394,7 +394,7 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			if (actingPlayer.getParty() != null)
 			{
-				for (L2PcInstance pl : actingPlayer.getParty().getPartyMembers())
+				for (L2PcInstance pl : actingPlayer.getParty().getMembers())
 				{
 					if ((pl.getSiegeSide() == qs.getPlayer().getSiegeSide()) || (pl.getSiegeSide() == 0) || !Util.checkIfInRange(2000, killer, pl, false))
 					{

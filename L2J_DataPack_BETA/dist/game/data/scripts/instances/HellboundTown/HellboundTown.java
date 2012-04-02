@@ -175,7 +175,7 @@ public class HellboundTown extends Quest
 				}
 				else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1)
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, npc, partyMember, true))
 						{
@@ -386,19 +386,19 @@ public class HellboundTown extends Quest
 			return false;
 		}
 		
-		if (player.getObjectId() != party.getPartyLeaderOID())
+		if (player.getObjectId() != party.getLeaderObjectId())
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			
@@ -406,7 +406,7 @@ public class HellboundTown extends Quest
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			
@@ -414,7 +414,7 @@ public class HellboundTown extends Quest
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 		}
@@ -457,7 +457,7 @@ public class HellboundTown extends Quest
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
-		for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
 			world.allowed.add(partyMember.getObjectId());
@@ -531,7 +531,7 @@ public class HellboundTown extends Quest
 		{
 			if ((_party != null) && (_world != null))
 			{
-				for (L2PcInstance partyMember : _party.getPartyMembers())
+				for (L2PcInstance partyMember : _party.getMembers())
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{

@@ -461,7 +461,7 @@ public class Kamaloka extends Quest
 		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
@@ -629,7 +629,7 @@ public class Kamaloka extends Quest
 		
 		// and finally teleport party into instance
 		final L2Party party = player.getParty();
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getQuestState(qn) == null)
 				newQuestState(partyMember);
@@ -797,7 +797,7 @@ public class Kamaloka extends Quest
 						Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
 						
 						// teleports entire party away
-						for (L2PcInstance partyMember : party.getPartyMembers())
+						for (L2PcInstance partyMember : party.getMembers())
 							if (partyMember != null && partyMember.getInstanceId() == world.instanceId)
 								teleportPlayer(partyMember, inst.getSpawnLoc(), 0);
 					}

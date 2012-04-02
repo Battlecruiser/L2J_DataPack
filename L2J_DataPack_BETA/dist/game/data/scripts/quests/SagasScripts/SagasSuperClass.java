@@ -1075,7 +1075,7 @@ public class SagasSuperClass extends QuestJython
 				if (party != null)
 				{
 					L2FastList<QuestState> PartyQuestMembers = new L2FastList<QuestState>();
-					for (L2PcInstance player1 : party.getPartyMembers())
+					for (L2PcInstance player1 : party.getMembers())
 					{
 						QuestState st1 = findQuest(player1);
 						if ((st1 != null) && player1.isInsideRadius(player, Config.ALT_PARTY_RANGE2, false, false))

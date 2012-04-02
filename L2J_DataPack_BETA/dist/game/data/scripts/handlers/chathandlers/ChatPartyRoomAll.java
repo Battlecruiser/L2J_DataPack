@@ -49,7 +49,7 @@ public class ChatPartyRoomAll implements IChatHandler
 				}
 				
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-				activeChar.getParty().getCommandChannel().broadcastCSToChannelMembers(cs, activeChar);
+				activeChar.getParty().getCommandChannel().broadcastCreatureSay(cs, activeChar);
 			}
 		}
 	}

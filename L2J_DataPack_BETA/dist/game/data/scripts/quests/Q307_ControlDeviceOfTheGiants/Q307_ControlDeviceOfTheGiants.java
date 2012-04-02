@@ -207,7 +207,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 			{
 				if (player.getParty() != null)
 				{
-					for (L2PcInstance party : player.getParty().getPartyMembers())
+					for (L2PcInstance party : player.getParty().getMembers())
 					{
 						rewardPlayer(party);
 					}

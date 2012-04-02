@@ -47,7 +47,7 @@ public class PartyInfo implements IUserCommandHandler
 		L2Party playerParty = activeChar.getParty();
 		int memberCount = playerParty.getMemberCount();
 		int lootDistribution = playerParty.getLootDistribution();
-		String partyLeader = playerParty.getPartyMembers().get(0).getName();
+		String partyLeader = playerParty.getMembers().get(0).getName();
 		
 		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		

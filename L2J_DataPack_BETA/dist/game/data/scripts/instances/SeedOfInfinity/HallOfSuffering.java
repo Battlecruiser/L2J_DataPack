@@ -146,20 +146,20 @@ public class HallOfSuffering extends Quest
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 75)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
@@ -167,7 +167,7 @@ public class HallOfSuffering extends Quest
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 		}
@@ -219,7 +219,7 @@ public class HallOfSuffering extends Quest
 		}
 		else
 		{
-			for (L2PcInstance partyMember : party.getPartyMembers())
+			for (L2PcInstance partyMember : party.getMembers())
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.allowed.add(partyMember.getObjectId());
@@ -555,7 +555,7 @@ public class HallOfSuffering extends Quest
 			}
 			else if (((HSWorld)world).isRewarded)
 				return "32530-11.htm";
-			else if (player.getParty() != null && player.getParty().getPartyLeaderOID() == player.getObjectId())
+			else if (player.getParty() != null && player.getParty().getLeaderObjectId() == player.getObjectId())
 				return ((HSWorld)world).rewardHtm;
 			
 			return getPtLeaderText(player, (HSWorld)world);
@@ -585,10 +585,10 @@ public class HallOfSuffering extends Quest
 			}
 			else if (((HSWorld)world).isRewarded)
 				return "32530-11.htm";
-			else if (player.getParty() != null && player.getParty().getPartyLeaderOID() == player.getObjectId())
+			else if (player.getParty() != null && player.getParty().getLeaderObjectId() == player.getObjectId())
 			{
 				((HSWorld)world).isRewarded = true;
-				for(L2PcInstance pl : player.getParty().getPartyMembers())
+				for(L2PcInstance pl : player.getParty().getMembers())
 				{
 					st = pl.getQuestState(qn);
 					st.giveItems(736, 1);

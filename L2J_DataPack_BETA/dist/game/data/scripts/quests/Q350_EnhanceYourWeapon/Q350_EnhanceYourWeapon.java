@@ -435,7 +435,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 		if (isPartyLevelingMonster(mob.getNpcId()) && (killer.getParty() != null))
 		{
 			// firts get the list of players who has one Soul Cry and the quest
-			for (L2PcInstance pl : killer.getParty().getPartyMembers())
+			for (L2PcInstance pl : killer.getParty().getMembers())
 			{
 				if (pl == null)
 				{
@@ -515,7 +515,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 				// among those who have crystals, only. However, this might actually be correct (same as retail).
 				if (killer.getParty() != null)
 				{
-					L2PcInstance lucky = killer.getParty().getPartyMembers().get(getRandom(killer.getParty().getMemberCount()));
+					L2PcInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
 					tryToLevelCrystal(lucky, players.get(lucky), mob);
 				}
 				else
@@ -527,7 +527,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 				if (killer.getParty() != null)
 				{
 					FastList<L2PcInstance> luckyParty = FastList.newInstance();
-					luckyParty.addAll(killer.getParty().getPartyMembers());
+					luckyParty.addAll(killer.getParty().getMembers());
 					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
 					{
 						L2PcInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
@@ -546,7 +546,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			case FULL_PARTY:
 				if (killer.getParty() != null)
 				{
-					for (L2PcInstance pl : killer.getParty().getPartyMembers())
+					for (L2PcInstance pl : killer.getParty().getMembers())
 					{
 						tryToLevelCrystal(pl, players.get(pl), mob);
 					}

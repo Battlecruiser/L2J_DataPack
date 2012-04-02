@@ -100,7 +100,7 @@ public class Sow implements ISkillHandler
 			if (activeChar.getParty() == null)
 				activeChar.sendPacket(sm);
 			else
-				activeChar.getParty().broadcastToPartyMembers(sm);
+				activeChar.getParty().broadcastPacket(sm);
 			
 			//TODO: Mob should not aggro on player, this way doesn't work really nice
 			target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

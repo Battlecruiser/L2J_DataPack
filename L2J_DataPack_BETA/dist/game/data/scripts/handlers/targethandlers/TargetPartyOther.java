@@ -32,7 +32,7 @@ public class TargetPartyOther implements ITargetTypeHandler
 	{
 		if (target != null && target != activeChar
 				&& activeChar.isInParty() && target.isInParty()
-				&& activeChar.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
+				&& activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
 		{
 			if (!target.isDead())
 			{

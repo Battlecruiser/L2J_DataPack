@@ -80,11 +80,11 @@ public class TargetPartyClan implements ITargetTypeHandler
 				if (player.getDuelId() != obj.getDuelId())
 					continue;
 				
-				if (hasParty && obj.isInParty() && player.getParty().getPartyLeaderOID() != obj.getParty().getPartyLeaderOID())
+				if (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
 					continue;
 			}
 			
-			if (!((hasClan && obj.getClanId() == player.getClanId()) || (hasParty && obj.isInParty() && player.getParty().getPartyLeaderOID() == obj.getParty().getPartyLeaderOID())))
+			if (!((hasClan && obj.getClanId() == player.getClanId()) || (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() == obj.getParty().getLeaderObjectId())))
 				continue;
 			
 			// Don't add this target if this is a Pc->Pc pvp

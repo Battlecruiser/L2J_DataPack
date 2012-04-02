@@ -482,7 +482,7 @@ public class RainbowSpringsChateau extends Quest
 					{
 						html = "game_manager005.htm";
 					}
-					else if (party.getPartyLeaderOID() != player.getObjectId())
+					else if (party.getLeaderObjectId() != player.getObjectId())
 					{
 						html = "game_manager006.htm";
 					}
@@ -490,7 +490,7 @@ public class RainbowSpringsChateau extends Quest
 					{
 						final int clanId = player.getClanId();
 						boolean nonClanMemberInParty = false;
-						for (L2PcInstance member : party.getPartyMembers())
+						for (L2PcInstance member : party.getMembers())
 						{
 							if (member.getClanId() != clanId)
 							{
@@ -715,7 +715,7 @@ public class RainbowSpringsChateau extends Quest
 			_log.warning("RainbowSptringChateau siege: Wrong arena id passed: " + arena);
 			return;
 		}
-		for (L2PcInstance pc : leader.getParty().getPartyMembers())
+		for (L2PcInstance pc : leader.getParty().getMembers())
 		{
 			if (pc != null)
 			{

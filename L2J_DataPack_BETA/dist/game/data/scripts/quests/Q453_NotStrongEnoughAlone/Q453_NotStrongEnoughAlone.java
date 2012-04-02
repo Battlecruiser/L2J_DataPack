@@ -224,7 +224,7 @@ public class Q453_NotStrongEnoughAlone extends Quest
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance member : player.getParty().getPartyMembers())
+			for (L2PcInstance member : player.getParty().getMembers())
 			{
 				increaseKill(member, npc);
 			}

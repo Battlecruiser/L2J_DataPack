@@ -244,7 +244,7 @@ public class DarkCloudMansion extends Quest
 			player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
@@ -310,7 +310,7 @@ public class DarkCloudMansion extends Quest
 		}
 		else
 		{
-			for (L2PcInstance partyMember : party.getPartyMembers())
+			for (L2PcInstance partyMember : party.getMembers())
 			{
 				if (partyMember.getQuestState(qn) == null)
 					newQuestState(partyMember);

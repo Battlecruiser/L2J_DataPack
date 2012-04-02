@@ -133,7 +133,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+			for (L2PcInstance partyMember : player.getParty().getMembers())
 			{
 				rewardPlayer(partyMember);
 			}

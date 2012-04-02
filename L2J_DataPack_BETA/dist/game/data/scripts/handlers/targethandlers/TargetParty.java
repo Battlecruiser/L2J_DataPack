@@ -57,7 +57,7 @@ public class TargetParty implements ITargetTypeHandler
 		if (activeChar.isInParty())
 		{
 			// Get a list of Party Members
-			for (L2PcInstance partyMember : activeChar.getParty().getPartyMembers())
+			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
 			{
 				if (partyMember == null || partyMember == player)
 					continue;

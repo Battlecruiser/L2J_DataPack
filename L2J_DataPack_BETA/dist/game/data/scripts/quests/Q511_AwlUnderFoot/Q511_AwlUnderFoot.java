@@ -119,7 +119,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		{
 			return getHtm(player.getHtmlPrefix(), "FortressWarden-04.htm").replace("%leader%", party.getLeader().getName());
 		}
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			QuestState st = partyMember.getQuestState(qn);
 			if ((st == null) || (st.getInt("cond") < 1))
@@ -191,7 +191,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		}
 		else
 		{
-			for (L2PcInstance partyMember : party.getPartyMembers())
+			for (L2PcInstance partyMember : party.getMembers())
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.allowed.add(partyMember.getObjectId());
@@ -274,7 +274,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		{
 			return "FortressWarden-03.htm";
 		}
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if ((partyMember.getClan() == null) || (partyMember.getClan().getFortId() == 0) || (partyMember.getClan().getFortId() != fortress.getFortId()))
 			{
@@ -396,7 +396,7 @@ public final class Q511_AwlUnderFoot extends Quest
 			}
 			else if (player.getParty() != null)
 			{
-				for (L2PcInstance pmember : player.getParty().getPartyMembers())
+				for (L2PcInstance pmember : player.getParty().getMembers())
 				{
 					if ((pmember.getBuffCount() > 0) || (pmember.getDanceCount() > 0))
 					{
@@ -420,7 +420,7 @@ public final class Q511_AwlUnderFoot extends Quest
 			{
 				if (player.getParty() != null)
 				{
-					for (L2PcInstance pl : player.getParty().getPartyMembers())
+					for (L2PcInstance pl : player.getParty().getMembers())
 					{
 						rewardPlayer(pl);
 					}

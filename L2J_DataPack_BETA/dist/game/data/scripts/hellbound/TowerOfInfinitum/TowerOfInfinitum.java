@@ -95,16 +95,16 @@ public class TowerOfInfinitum extends Quest
 			if (HellboundManager.getInstance().getLevel() >= 11)
 			{
 				L2Party party = player.getParty();
-				if ((party != null) && (party.getPartyLeaderOID() == player.getObjectId()))
+				if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, partyMember, npc, true) || (partyMember.getFirstEffect(PASS_SKILL) == null))
 						{
 							return "32302-02.htm";
 						}
 					}
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(-22204, 277056, -15023, true);
 					}
@@ -128,13 +128,13 @@ public class TowerOfInfinitum extends Quest
 			{
 				htmltext = "gk-noparty.htm";
 			}
-			else if (party.getPartyLeaderOID() != player.getObjectId())
+			else if (party.getLeaderObjectId() != player.getObjectId())
 			{
 				htmltext = "gk-noreq.htm";
 			}
 			else
 			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(1000, partyMember, npc, false) || (Math.abs(partyMember.getZ() - npc.getZ()) > 100))
 					{
@@ -145,7 +145,7 @@ public class TowerOfInfinitum extends Quest
 				final Location tele = TELE_COORDS.get(npcId)[direction];
 				if (tele != null)
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(tele, true);
 					}
