@@ -59,19 +59,17 @@ public class Recipes implements IItemHandler
 		boolean canCraft = false;
 		boolean recipeLevel = false;
 		boolean recipeLimit = false;
-		if (rp.isDwarvenRecipe() && (canCraft = activeChar.hasDwarvenCraft()))
+		if (rp.isDwarvenRecipe())
 		{
-			if (recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft()))
-			{
-				recipeLimit = activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit();
-			}
+			canCraft = activeChar.hasDwarvenCraft();
+			recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft());
+			recipeLimit = (activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit());
 		}
-		else if (canCraft = activeChar.hasCommonCraft())
+		else
 		{
-			if (recipeLevel = (rp.getLevel() > activeChar.getCommonCraft()))
-			{
-				recipeLimit = activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit();
-			}
+			canCraft = activeChar.hasCommonCraft();
+			recipeLevel = (rp.getLevel() > activeChar.getCommonCraft());
+			recipeLimit = (activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit());
 		}
 		
 		if (!canCraft)
