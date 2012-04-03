@@ -115,7 +115,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-				};
+				}
 			}
 			else
 				return false;
@@ -336,7 +336,8 @@ public class AdminShowQuests implements IAdminCommandHandler
 			showquestmenu(target,actor,outval);
 		}
 		catch(Exception e)
-		{};
+		{
+		}
 	}
 	
 	@Override
