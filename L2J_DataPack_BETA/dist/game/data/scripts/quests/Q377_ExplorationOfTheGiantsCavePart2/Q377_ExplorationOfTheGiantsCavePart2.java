@@ -130,6 +130,7 @@ public class Q377_ExplorationOfTheGiantsCavePart2 extends Quest
 			{
 				case State.CREATED:
 					htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
+					break;
 				case State.STARTED:
 					htmltext = (st.hasQuestItems(BOOK1) && st.hasQuestItems(BOOK2) && st.hasQuestItems(BOOK3) && st.hasQuestItems(BOOK4) && st.hasQuestItems(BOOK5)) ? "31147-03.html" : "31147-02a.html";
 					break;
