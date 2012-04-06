@@ -10,7 +10,6 @@
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:integer" use="required" />
-									<xs:attribute name="isTaxIngredient" type="xs:boolean" />
 									<xs:attribute name="maintainIngredient" type="xs:boolean" />
 								</xs:complexType>
 							</xs:element>
