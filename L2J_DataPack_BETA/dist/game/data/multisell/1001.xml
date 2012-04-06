@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<item>
 		<!-- Saber -->
 		<ingredient count="1" id="123" />
@@ -8,7 +8,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="131" id="1458" />
 		<!-- Adena -->
-		<ingredient count="84825" id="57" isTaxIngredient="true" />
+		<ingredient count="84825" id="57" />
 		<!-- Saber*Saber -->
 		<production count="1" id="2516" />
 	</item>
@@ -20,7 +20,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="23" id="1458" />
 		<!-- Adena -->
-		<ingredient count="14625" id="57" isTaxIngredient="true" />
+		<ingredient count="14625" id="57" />
 		<!-- Saber*Bastard Sword -->
 		<production count="1" id="2517" />
 	</item>
@@ -32,7 +32,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="23" id="1458" />
 		<!-- Adena -->
-		<ingredient count="14625" id="57" isTaxIngredient="true" />
+		<ingredient count="14625" id="57" />
 		<!-- Saber*Spinebone Sword -->
 		<production count="1" id="2518" />
 	</item>
@@ -44,7 +44,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="23" id="1458" />
 		<!-- Adena -->
-		<ingredient count="14625" id="57" isTaxIngredient="true" />
+		<ingredient count="14625" id="57" />
 		<!-- Saber*Artisan's Sword -->
 		<production count="1" id="2519" />
 	</item>
@@ -56,7 +56,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="23" id="1458" />
 		<!-- Adena -->
-		<ingredient count="14625" id="57" isTaxIngredient="true" />
+		<ingredient count="14625" id="57" />
 		<!-- Saber*Knight's Sword -->
 		<production count="1" id="2520" />
 	</item>
@@ -68,7 +68,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="46" id="1458" />
 		<!-- Adena -->
-		<ingredient count="29835" id="57" isTaxIngredient="true" />
+		<ingredient count="29835" id="57" />
 		<!-- Saber*Crimson Sword -->
 		<production count="1" id="2521" />
 	</item>
@@ -80,7 +80,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="46" id="1458" />
 		<!-- Adena -->
-		<ingredient count="29835" id="57" isTaxIngredient="true" />
+		<ingredient count="29835" id="57" />
 		<!-- Saber*Elven Sword -->
 		<production count="1" id="2522" />
 	</item>
@@ -92,7 +92,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="326" id="1458" />
 		<!-- Adena -->
-		<ingredient count="211770" id="57" isTaxIngredient="true" />
+		<ingredient count="211770" id="57" />
 		<!-- Saber*Sword of Revolution -->
 		<production count="1" id="2523" />
 	</item>
@@ -104,7 +104,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="185" id="1458" />
 		<!-- Adena -->
-		<ingredient count="119925" id="57" isTaxIngredient="true" />
+		<ingredient count="119925" id="57" />
 		<!-- Saber*Elven Long Sword -->
 		<production count="1" id="2524" />
 	</item>
@@ -116,7 +116,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Bastard Sword*Bastard Sword -->
 		<production count="1" id="2525" />
 	</item>
@@ -128,7 +128,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Bastard Sword*Spinebone Sword -->
 		<production count="1" id="2526" />
 	</item>
@@ -140,7 +140,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Bastard Sword*Artisan's Sword -->
 		<production count="1" id="2527" />
 	</item>
@@ -152,7 +152,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Bastard Sword*Knight's Sword -->
 		<production count="1" id="2528" />
 	</item>
@@ -164,7 +164,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Bastard Sword*Crimson Sword -->
 		<production count="1" id="2529" />
 	</item>
@@ -176,7 +176,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Bastard Sword*Elven Sword -->
 		<production count="1" id="2530" />
 	</item>
@@ -188,7 +188,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="167" id="1458" />
 		<!-- Adena -->
-		<ingredient count="108225" id="57" isTaxIngredient="true" />
+		<ingredient count="108225" id="57" />
 		<!-- Bastard Sword*Sword of Revolution -->
 		<production count="1" id="2531" />
 	</item>
@@ -200,7 +200,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="68" id="1458" />
 		<!-- Adena -->
-		<ingredient count="43875" id="57" isTaxIngredient="true" />
+		<ingredient count="43875" id="57" />
 		<!-- Bastard Sword*Elven Long Sword -->
 		<production count="1" id="2532" />
 	</item>
@@ -212,7 +212,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Spinebone Sword*Spinebone Sword -->
 		<production count="1" id="2533" />
 	</item>
@@ -224,7 +224,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Spinebone Sword*Artisan's Sword -->
 		<production count="1" id="2534" />
 	</item>
@@ -236,7 +236,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Spinebone Sword*Knight's Sword -->
 		<production count="1" id="2535" />
 	</item>
@@ -248,7 +248,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Spinebone Sword*Crimson Sword -->
 		<production count="1" id="2536" />
 	</item>
@@ -260,7 +260,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Spinebone Sword*Elven Sword -->
 		<production count="1" id="2537" />
 	</item>
@@ -272,7 +272,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="167" id="1458" />
 		<!-- Adena -->
-		<ingredient count="108225" id="57" isTaxIngredient="true" />
+		<ingredient count="108225" id="57" />
 		<!-- Spinebone Sword*Sword of Revolution -->
 		<production count="1" id="2538" />
 	</item>
@@ -284,7 +284,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="68" id="1458" />
 		<!-- Adena -->
-		<ingredient count="43875" id="57" isTaxIngredient="true" />
+		<ingredient count="43875" id="57" />
 		<!-- Spinebone Sword*Elven Long Sword -->
 		<production count="1" id="2539" />
 	</item>
@@ -296,7 +296,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Artisan's Sword*Artisan's Sword -->
 		<production count="1" id="2540" />
 	</item>
@@ -308,7 +308,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Artisan's Sword*Knight's Sword -->
 		<production count="1" id="2541" />
 	</item>
@@ -320,7 +320,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Artisan's Sword*Crimson Sword -->
 		<production count="1" id="2542" />
 	</item>
@@ -332,7 +332,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Artisan's Sword*Elven Sword -->
 		<production count="1" id="2543" />
 	</item>
@@ -344,7 +344,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="167" id="1458" />
 		<!-- Adena -->
-		<ingredient count="108225" id="57" isTaxIngredient="true" />
+		<ingredient count="108225" id="57" />
 		<!-- Artisan's Sword*Sword of Revolution -->
 		<production count="1" id="2544" />
 	</item>
@@ -356,7 +356,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="68" id="1458" />
 		<!-- Adena -->
-		<ingredient count="43875" id="57" isTaxIngredient="true" />
+		<ingredient count="43875" id="57" />
 		<!-- Artisan's Sword*Elven Long Sword -->
 		<production count="1" id="2545" />
 	</item>
@@ -368,7 +368,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="241" id="1458" />
 		<!-- Adena -->
-		<ingredient count="156780" id="57" isTaxIngredient="true" />
+		<ingredient count="156780" id="57" />
 		<!-- Knight's Sword*Knight's Sword -->
 		<production count="1" id="2546" />
 	</item>
@@ -380,7 +380,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Knight's Sword*Crimson Sword -->
 		<production count="1" id="2547" />
 	</item>
@@ -392,7 +392,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="105" id="1458" />
 		<!-- Adena -->
-		<ingredient count="68445" id="57" isTaxIngredient="true" />
+		<ingredient count="68445" id="57" />
 		<!-- Knight's Sword*Elven Sword -->
 		<production count="1" id="2548" />
 	</item>
@@ -404,7 +404,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="167" id="1458" />
 		<!-- Adena -->
-		<ingredient count="108225" id="57" isTaxIngredient="true" />
+		<ingredient count="108225" id="57" />
 		<!-- Knight's Sword*Sword of Revolution -->
 		<production count="1" id="2549" />
 	</item>
@@ -416,7 +416,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="68" id="1458" />
 		<!-- Adena -->
-		<ingredient count="43875" id="57" isTaxIngredient="true" />
+		<ingredient count="43875" id="57" />
 		<!-- Knight's Sword*Elven Long Sword -->
 		<production count="1" id="2550" />
 	</item>
@@ -428,7 +428,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="49" id="1458" />
 		<!-- Adena -->
-		<ingredient count="31590" id="57" isTaxIngredient="true" />
+		<ingredient count="31590" id="57" />
 		<!-- Crimson Sword*Crimson Sword -->
 		<production count="1" id="2551" />
 	</item>
@@ -440,7 +440,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="49" id="1458" />
 		<!-- Adena -->
-		<ingredient count="31590" id="57" isTaxIngredient="true" />
+		<ingredient count="31590" id="57" />
 		<!-- Crimson Sword*Elven Sword -->
 		<production count="1" id="2552" />
 	</item>
@@ -452,7 +452,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="239" id="1458" />
 		<!-- Adena -->
-		<ingredient count="155025" id="57" isTaxIngredient="true" />
+		<ingredient count="155025" id="57" />
 		<!-- Crimson Sword*Sword of Revolution -->
 		<production count="1" id="2553" />
 	</item>
@@ -464,7 +464,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="234" id="1458" />
 		<!-- Adena -->
-		<ingredient count="152100" id="57" isTaxIngredient="true" />
+		<ingredient count="152100" id="57" />
 		<!-- Crimson Sword*Elven Long Sword -->
 		<production count="1" id="2554" />
 	</item>
@@ -476,7 +476,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="49" id="1458" />
 		<!-- Adena -->
-		<ingredient count="31590" id="57" isTaxIngredient="true" />
+		<ingredient count="31590" id="57" />
 		<!-- Elven Sword*Elven Sword -->
 		<production count="1" id="2555" />
 	</item>
@@ -488,7 +488,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="239" id="1458" />
 		<!-- Adena -->
-		<ingredient count="155025" id="57" isTaxIngredient="true" />
+		<ingredient count="155025" id="57" />
 		<!-- Elven Sword*Sword of Revolution -->
 		<production count="1" id="2556" />
 	</item>
@@ -500,7 +500,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="234" id="1458" />
 		<!-- Adena -->
-		<ingredient count="152100" id="57" isTaxIngredient="true" />
+		<ingredient count="152100" id="57" />
 		<!-- Elven Sword*Elven Long Sword -->
 		<production count="1" id="2557" />
 	</item>
@@ -512,7 +512,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="160" id="1458" />
 		<!-- Adena -->
-		<ingredient count="104130" id="57" isTaxIngredient="true" />
+		<ingredient count="104130" id="57" />
 		<!-- Sword of Revolution*Sword of Revolution -->
 		<production count="1" id="2558" />
 	</item>
@@ -524,7 +524,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="319" id="1458" />
 		<!-- Adena -->
-		<ingredient count="207090" id="57" isTaxIngredient="true" />
+		<ingredient count="207090" id="57" />
 		<!-- Sword of Revolution*Elven Long Sword -->
 		<production count="1" id="2559" />
 	</item>
@@ -536,7 +536,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="482" id="1458" />
 		<!-- Adena -->
-		<ingredient count="312975" id="57" isTaxIngredient="true" />
+		<ingredient count="312975" id="57" />
 		<!-- Elven Long Sword*Elven Long Sword -->
 		<production count="1" id="2560" />
 	</item>
@@ -548,7 +548,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="446" id="1458" />
 		<!-- Adena -->
-		<ingredient count="289575" id="57" isTaxIngredient="true" />
+		<ingredient count="289575" id="57" />
 		<!-- Stormbringer*Stormbringer -->
 		<production count="1" id="2561" />
 	</item>
@@ -560,7 +560,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="257" id="1458" />
 		<!-- Adena -->
-		<ingredient count="166725" id="57" isTaxIngredient="true" />
+		<ingredient count="166725" id="57" />
 		<!-- Stormbringer*Shamshir -->
 		<production count="1" id="2562" />
 	</item>
@@ -572,7 +572,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="257" id="1458" />
 		<!-- Adena -->
-		<ingredient count="166725" id="57" isTaxIngredient="true" />
+		<ingredient count="166725" id="57" />
 		<!-- Stormbringer*Katana -->
 		<production count="1" id="2563" />
 	</item>
@@ -584,7 +584,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="257" id="1458" />
 		<!-- Adena -->
-		<ingredient count="166725" id="57" isTaxIngredient="true" />
+		<ingredient count="166725" id="57" />
 		<!-- Stormbringer*Spirit Sword -->
 		<production count="1" id="2564" />
 	</item>
@@ -596,7 +596,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="257" id="1458" />
 		<!-- Adena -->
-		<ingredient count="166725" id="57" isTaxIngredient="true" />
+		<ingredient count="166725" id="57" />
 		<!-- Stormbringer*Raid Sword -->
 		<production count="1" id="2565" />
 	</item>
@@ -608,7 +608,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Shamshir*Shamshir -->
 		<production count="1" id="2572" />
 	</item>
@@ -620,7 +620,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Shamshir*Katana -->
 		<production count="1" id="2573" />
 	</item>
@@ -632,7 +632,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Shamshir*Spirit Sword -->
 		<production count="1" id="2574" />
 	</item>
@@ -644,7 +644,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Shamshir*Raid Sword -->
 		<production count="1" id="2575" />
 	</item>
@@ -656,7 +656,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Katana*Katana -->
 		<production count="1" id="2582" />
 	</item>
@@ -668,7 +668,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Katana*Spirit Sword -->
 		<production count="1" id="2583" />
 	</item>
@@ -680,7 +680,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Katana*Raid Sword -->
 		<production count="1" id="2584" />
 	</item>
@@ -692,7 +692,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Spirit Sword*Spirit Sword -->
 		<production count="1" id="2591" />
 	</item>
@@ -704,7 +704,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Spirit Sword*Raid Sword -->
 		<production count="1" id="2592" />
 	</item>
@@ -716,7 +716,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="859" id="1458" />
 		<!-- Adena -->
-		<ingredient count="558090" id="57" isTaxIngredient="true" />
+		<ingredient count="558090" id="57" />
 		<!-- Raid Sword*Raid Sword -->
 		<production count="1" id="2599" />
 	</item>
@@ -728,7 +728,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="15" id="1458" />
 		<!-- Adena -->
-		<ingredient count="9425" id="57" isTaxIngredient="true" />
+		<ingredient count="9425" id="57" />
 		<!-- Common Item - Saber*Saber -->
 		<production count="1" id="11658" />
 	</item>
@@ -740,7 +740,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="3" id="1458" />
 		<!-- Adena -->
-		<ingredient count="1625" id="57" isTaxIngredient="true" />
+		<ingredient count="1625" id="57" />
 		<!-- Common Item - Saber*Bastard Sword -->
 		<production count="1" id="11680" />
 	</item>
@@ -752,7 +752,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="3" id="1458" />
 		<!-- Adena -->
-		<ingredient count="1625" id="57" isTaxIngredient="true" />
+		<ingredient count="1625" id="57" />
 		<!-- Common Item - Saber*Spinebone Sword -->
 		<production count="1" id="11681" />
 	</item>
@@ -764,7 +764,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="3" id="1458" />
 		<!-- Adena -->
-		<ingredient count="1625" id="57" isTaxIngredient="true" />
+		<ingredient count="1625" id="57" />
 		<!-- Common Item - Saber*Artisan's Sword -->
 		<production count="1" id="11682" />
 	</item>
@@ -776,7 +776,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="3" id="1458" />
 		<!-- Adena -->
-		<ingredient count="1625" id="57" isTaxIngredient="true" />
+		<ingredient count="1625" id="57" />
 		<!-- Common Item - Saber*Knight's Sword -->
 		<production count="1" id="11679" />
 	</item>
@@ -788,7 +788,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="5" id="1458" />
 		<!-- Adena -->
-		<ingredient count="3315" id="57" isTaxIngredient="true" />
+		<ingredient count="3315" id="57" />
 		<!-- Common Item - Saber*Crimson Sword -->
 		<production count="1" id="11695" />
 	</item>
@@ -800,7 +800,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="5" id="1458" />
 		<!-- Adena -->
-		<ingredient count="3315" id="57" isTaxIngredient="true" />
+		<ingredient count="3315" id="57" />
 		<!-- Common Item - Saber*Elven Sword -->
 		<production count="1" id="11694" />
 	</item>
@@ -812,7 +812,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="36" id="1458" />
 		<!-- Adena -->
-		<ingredient count="23530" id="57" isTaxIngredient="true" />
+		<ingredient count="23530" id="57" />
 		<!-- Common Item - Saber*Sword of Revolution -->
 		<production count="1" id="11738" />
 	</item>
@@ -824,7 +824,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="21" id="1458" />
 		<!-- Adena -->
-		<ingredient count="13325" id="57" isTaxIngredient="true" />
+		<ingredient count="13325" id="57" />
 		<!-- Common Item - Saber*Elven Long Sword -->
 		<production count="1" id="11752" />
 	</item>
@@ -836,7 +836,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Bastard Sword*Bastard Sword -->
 		<production count="1" id="11688" />
 	</item>
@@ -848,7 +848,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Bastard Sword*Spinebone Sword -->
 		<production count="1" id="11689" />
 	</item>
@@ -860,7 +860,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Bastard Sword*Artisan's Sword -->
 		<production count="1" id="11690" />
 	</item>
@@ -872,7 +872,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Bastard Sword*Knight's Sword -->
 		<production count="1" id="11687" />
 	</item>
@@ -884,7 +884,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Bastard Sword*Crimson Sword -->
 		<production count="1" id="11719" />
 	</item>
@@ -896,7 +896,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Bastard Sword*Elven Sword -->
 		<production count="1" id="11718" />
 	</item>
@@ -908,7 +908,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="19" id="1458" />
 		<!-- Adena -->
-		<ingredient count="12025" id="57" isTaxIngredient="true" />
+		<ingredient count="12025" id="57" />
 		<!-- Common Item - Bastard Sword*Sword of Revolution -->
 		<production count="1" id="11743" />
 	</item>
@@ -920,7 +920,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="8" id="1458" />
 		<!-- Adena -->
-		<ingredient count="4875" id="57" isTaxIngredient="true" />
+		<ingredient count="4875" id="57" />
 		<!-- Common Item - Bastard Sword*Elven Long Sword -->
 		<production count="1" id="11770" />
 	</item>
@@ -932,7 +932,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Spinebone Sword*Spinebone Sword -->
 		<production count="1" id="11699" />
 	</item>
@@ -944,7 +944,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Spinebone Sword*Artisan's Sword -->
 		<production count="1" id="11700" />
 	</item>
@@ -956,7 +956,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Spinebone Sword*Knight's Sword -->
 		<production count="1" id="11698" />
 	</item>
@@ -968,7 +968,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Spinebone Sword*Crimson Sword -->
 		<production count="1" id="11721" />
 	</item>
@@ -980,7 +980,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Spinebone Sword*Elven Sword -->
 		<production count="1" id="11720" />
 	</item>
@@ -992,7 +992,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="19" id="1458" />
 		<!-- Adena -->
-		<ingredient count="12025" id="57" isTaxIngredient="true" />
+		<ingredient count="12025" id="57" />
 		<!-- Common Item - Spinebone Sword*Sword of Revolution -->
 		<production count="1" id="11744" />
 	</item>
@@ -1004,7 +1004,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="8" id="1458" />
 		<!-- Adena -->
-		<ingredient count="4875" id="57" isTaxIngredient="true" />
+		<ingredient count="4875" id="57" />
 		<!-- Common Item - Spinebone Sword*Elven Long Sword -->
 		<production count="1" id="11771" />
 	</item>
@@ -1016,7 +1016,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Artisan's Sword*Artisan's Sword -->
 		<production count="1" id="11705" />
 	</item>
@@ -1028,7 +1028,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Artisan's Sword*Knight's Sword -->
 		<production count="1" id="11704" />
 	</item>
@@ -1040,7 +1040,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Artisan's Sword*Crimson Sword -->
 		<production count="1" id="11723" />
 	</item>
@@ -1052,7 +1052,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Artisan's Sword*Elven Sword -->
 		<production count="1" id="11722" />
 	</item>
@@ -1064,7 +1064,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="19" id="1458" />
 		<!-- Adena -->
-		<ingredient count="12025" id="57" isTaxIngredient="true" />
+		<ingredient count="12025" id="57" />
 		<!-- Common Item - Artisan's Sword*Sword of Revolution -->
 		<production count="1" id="11745" />
 	</item>
@@ -1076,7 +1076,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="8" id="1458" />
 		<!-- Adena -->
-		<ingredient count="4875" id="57" isTaxIngredient="true" />
+		<ingredient count="4875" id="57" />
 		<!-- Common Item - Artisan's Sword*Elven Long Sword -->
 		<production count="1" id="11773" />
 	</item>
@@ -1088,7 +1088,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17420" id="57" isTaxIngredient="true" />
+		<ingredient count="17420" id="57" />
 		<!-- Common Item - Knight's Sword*Knight's Sword -->
 		<production count="1" id="11684" />
 	</item>
@@ -1100,7 +1100,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Knight's Sword*Crimson Sword -->
 		<production count="1" id="11717" />
 	</item>
@@ -1112,7 +1112,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="12" id="1458" />
 		<!-- Adena -->
-		<ingredient count="7605" id="57" isTaxIngredient="true" />
+		<ingredient count="7605" id="57" />
 		<!-- Common Item - Knight's Sword*Elven Sword -->
 		<production count="1" id="11716" />
 	</item>
@@ -1124,7 +1124,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="19" id="1458" />
 		<!-- Adena -->
-		<ingredient count="12025" id="57" isTaxIngredient="true" />
+		<ingredient count="12025" id="57" />
 		<!-- Common Item - Knight's Sword*Sword of Revolution -->
 		<production count="1" id="11742" />
 	</item>
@@ -1136,7 +1136,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="8" id="1458" />
 		<!-- Adena -->
-		<ingredient count="4875" id="57" isTaxIngredient="true" />
+		<ingredient count="4875" id="57" />
 		<!-- Common Item - Knight's Sword*Elven Long Sword -->
 		<production count="1" id="11769" />
 	</item>
@@ -1148,7 +1148,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="5" id="1458" />
 		<!-- Adena -->
-		<ingredient count="3510" id="57" isTaxIngredient="true" />
+		<ingredient count="3510" id="57" />
 		<!-- Common Item - Crimson Sword*Crimson Sword -->
 		<production count="1" id="11741" />
 	</item>
@@ -1160,7 +1160,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="5" id="1458" />
 		<!-- Adena -->
-		<ingredient count="3510" id="57" isTaxIngredient="true" />
+		<ingredient count="3510" id="57" />
 		<!-- Common Item - Crimson Sword*Elven Sword -->
 		<production count="1" id="11740" />
 	</item>
@@ -1172,7 +1172,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17225" id="57" isTaxIngredient="true" />
+		<ingredient count="17225" id="57" />
 		<!-- Common Item - Crimson Sword*Sword of Revolution -->
 		<production count="1" id="11774" />
 	</item>
@@ -1184,7 +1184,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="26" id="1458" />
 		<!-- Adena -->
-		<ingredient count="16900" id="57" isTaxIngredient="true" />
+		<ingredient count="16900" id="57" />
 		<!-- Common Item - Crimson Sword*Elven Long Sword -->
 		<production count="1" id="11795" />
 	</item>
@@ -1196,7 +1196,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="5" id="1458" />
 		<!-- Adena -->
-		<ingredient count="3510" id="57" isTaxIngredient="true" />
+		<ingredient count="3510" id="57" />
 		<!-- Common Item - Elven Sword*Elven Sword -->
 		<production count="1" id="11739" />
 	</item>
@@ -1208,7 +1208,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="27" id="1458" />
 		<!-- Adena -->
-		<ingredient count="17225" id="57" isTaxIngredient="true" />
+		<ingredient count="17225" id="57" />
 		<!-- Common Item - Elven Sword*Sword of Revolution -->
 		<production count="1" id="11772" />
 	</item>
@@ -1220,7 +1220,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="26" id="1458" />
 		<!-- Adena -->
-		<ingredient count="16900" id="57" isTaxIngredient="true" />
+		<ingredient count="16900" id="57" />
 		<!-- Common Item - Elven Sword*Elven Long Sword -->
 		<production count="1" id="11791" />
 	</item>
@@ -1232,7 +1232,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="18" id="1458" />
 		<!-- Adena -->
-		<ingredient count="11570" id="57" isTaxIngredient="true" />
+		<ingredient count="11570" id="57" />
 		<!-- Common Item - Sword of Revolution*Sword of Revolution -->
 		<production count="1" id="11796" />
 	</item>
@@ -1244,7 +1244,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="35" id="1458" />
 		<!-- Adena -->
-		<ingredient count="23010" id="57" isTaxIngredient="true" />
+		<ingredient count="23010" id="57" />
 		<!-- Common Item - Sword of Revolution*Elven Long Sword -->
 		<production count="1" id="11797" />
 	</item>
@@ -1256,7 +1256,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="54" id="1458" />
 		<!-- Adena -->
-		<ingredient count="34775" id="57" isTaxIngredient="true" />
+		<ingredient count="34775" id="57" />
 		<!-- Common Item - Elven Long Sword*Elven Long Sword -->
 		<production count="1" id="11798" />
 	</item>
@@ -1268,7 +1268,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="50" id="1458" />
 		<!-- Adena -->
-		<ingredient count="32175" id="57" isTaxIngredient="true" />
+		<ingredient count="32175" id="57" />
 		<!-- Common Item - Stormbringer*Stormbringer -->
 		<production count="1" id="11831" />
 	</item>
@@ -1280,7 +1280,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="29" id="1458" />
 		<!-- Adena -->
-		<ingredient count="18525" id="57" isTaxIngredient="true" />
+		<ingredient count="18525" id="57" />
 		<!-- Common Item - Stormbringer*Shamshir -->
 		<production count="1" id="11835" />
 	</item>
@@ -1292,7 +1292,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="29" id="1458" />
 		<!-- Adena -->
-		<ingredient count="18525" id="57" isTaxIngredient="true" />
+		<ingredient count="18525" id="57" />
 		<!-- Common Item - Stormbringer*Katana -->
 		<production count="1" id="11837" />
 	</item>
@@ -1304,7 +1304,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="29" id="1458" />
 		<!-- Adena -->
-		<ingredient count="18525" id="57" isTaxIngredient="true" />
+		<ingredient count="18525" id="57" />
 		<!-- Common Item - Stormbringer*Spirit Sword -->
 		<production count="1" id="11836" />
 	</item>
@@ -1316,7 +1316,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="29" id="1458" />
 		<!-- Adena -->
-		<ingredient count="18525" id="57" isTaxIngredient="true" />
+		<ingredient count="18525" id="57" />
 		<!-- Common Item - Stormbringer*Raid Sword -->
 		<production count="1" id="11834" />
 	</item>
@@ -1328,7 +1328,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Shamshir*Shamshir -->
 		<production count="1" id="11846" />
 	</item>
@@ -1340,7 +1340,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Shamshir*Katana -->
 		<production count="1" id="11848" />
 	</item>
@@ -1352,7 +1352,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Shamshir*Spirit Sword -->
 		<production count="1" id="11847" />
 	</item>
@@ -1364,7 +1364,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Shamshir*Raid Sword -->
 		<production count="1" id="11845" />
 	</item>
@@ -1376,7 +1376,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Katana*Katana -->
 		<production count="1" id="11862" />
 	</item>
@@ -1388,7 +1388,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Katana*Spirit Sword -->
 		<production count="1" id="11861" />
 	</item>
@@ -1400,7 +1400,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Katana*Raid Sword -->
 		<production count="1" id="11860" />
 	</item>
@@ -1412,7 +1412,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Spirit Sword*Spirit Sword -->
 		<production count="1" id="11852" />
 	</item>
@@ -1424,7 +1424,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Spirit Sword*Raid Sword -->
 		<production count="1" id="11851" />
 	</item>
@@ -1436,7 +1436,7 @@
 		<!-- Crystal (D-Grade) -->
 		<ingredient count="95" id="1458" />
 		<!-- Adena -->
-		<ingredient count="62010" id="57" isTaxIngredient="true" />
+		<ingredient count="62010" id="57" />
 		<!-- Common Item - Raid Sword*Raid Sword -->
 		<production count="1" id="11841" />
 	</item>
