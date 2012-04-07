@@ -287,7 +287,7 @@ public class Listeners extends L2Script
 	@Override
 	public boolean onItemDrop(ItemDropEvent event)
 	{
-		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been dropped by (" + event.getDropper().getName() + " ) at X: " + event.getX() + " Y: " + event.getY() + " Z: " + event.getZ() + "!");
+		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been dropped by (" + event.getDropper().getName() + " ) at: " + event.getLocation() + "!");
 		return true;
 	}
 	
@@ -299,7 +299,7 @@ public class Listeners extends L2Script
 	@Override
 	public boolean onItemPickup(ItemPickupEvent event)
 	{
-		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been pickup by (" + event.getPicker().getName() + " ) from X: " + event.getX() + " Y: " + event.getY() + " Z: " + event.getZ() + "!");
+		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been pickup by (" + event.getPicker().getName() + " ) from: " + event.getLocation() + "!");
 		return true;
 	}
 	
