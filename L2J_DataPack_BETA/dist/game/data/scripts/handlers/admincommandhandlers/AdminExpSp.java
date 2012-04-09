@@ -93,13 +93,13 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/expsp.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
 		adminReply.replace("%xp%", String.valueOf(player.getExp()));
 		adminReply.replace("%sp%", String.valueOf(player.getSp()));
-		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClassName(true));
+		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
 		activeChar.sendPacket(adminReply);
 	}
 	

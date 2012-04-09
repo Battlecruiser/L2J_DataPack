@@ -96,7 +96,7 @@ public final class SkillTransferValidator extends Quest
 							count--;
 							if (count < 0)
 							{
-								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " ("+sk.getId() + "/" + sk.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(false), 1);
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " ("+sk.getId() + "/" + sk.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), 1);
 								if (Config.SKILL_CHECK_REMOVE)
 								{
 									player.removeSkill(sk);
