@@ -59,7 +59,6 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
-
 /**
  * This class handles following admin commands:
  * - edit_character
@@ -373,7 +372,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setClassId(classidval);
 					if (!player.isSubClassActive())
 						player.setBaseClass(classidval);
-					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName(false);
+					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.store();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
@@ -844,7 +843,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					"\">",
 					players[i].getName(),
 					"</a></td><td width=110>",
-					ClassListData.getInstance().getClass(players[i].getClassId()).getClassName(true),
+					ClassListData.getInstance().getClass(players[i].getClassId()).getClientCode(),
 					"</td><td width=40>",
 					String.valueOf(players[i].getLevel())
 					,"</td></tr>");
@@ -905,17 +904,17 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/" + filename);
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
 		adminReply.replace("%clan%", String.valueOf(player.getClan() != null ? "<a action=\"bypass -h admin_clan_info " + player.getObjectId() + "\">" + player.getClan().getName() + "</a>" : null));
 		adminReply.replace("%xp%", String.valueOf(player.getExp()));
 		adminReply.replace("%sp%", String.valueOf(player.getSp()));
-		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClassName(true));
+		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
 		adminReply.replace("%ordinal%", String.valueOf(player.getClassId().ordinal()));
 		adminReply.replace("%classid%", String.valueOf(player.getClassId()));
-		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClass()).getClassName(true));
+		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode());
 		adminReply.replace("%x%", String.valueOf(player.getX()));
 		adminReply.replace("%y%", String.valueOf(player.getY()));
 		adminReply.replace("%z%", String.valueOf(player.getZ()));
@@ -1096,7 +1095,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						"\">",
 						name,
 						"</a></td><td width=110>",
-						ClassListData.getInstance().getClass(player.getClassId()).getClassName(true),
+						ClassListData.getInstance().getClass(player.getClassId()).getClientCode(),
 						"</td><td width=40>",
 						String.valueOf(player.getLevel()),
 				"</td></tr>");
@@ -1179,7 +1178,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					"\">",
 					name,
 					"</a></td><td width=110>",
-					ClassListData.getInstance().getClass(player.getClassId()).getClassName(true),
+					ClassListData.getInstance().getClass(player.getClassId()).getClientCode(),
 					"</td><td width=40>",
 					String.valueOf(player.getLevel()),
 			"</td></tr>");

@@ -312,7 +312,7 @@ public class AdminSkill implements IAdminCommandHandler
 				"<br><table width=270><tr><td>Lv: ",
 				String.valueOf(player.getLevel()),
 				" ",
-				ClassListData.getInstance().getClass(player.getClassId()).getClassName(true),
+				ClassListData.getInstance().getClass(player.getClassId()).getClientCode(),
 				"</td></tr></table>" +
 				"<br><table width=270><tr><td>Note: Dont forget that modifying players skills can</td></tr>" +
 				"<tr><td>ruin the game...</td></tr></table>" +
@@ -383,7 +383,7 @@ public class AdminSkill implements IAdminCommandHandler
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charskills.htm");
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
-		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClassName(true));
+		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
 		activeChar.sendPacket(adminReply);
 	}
 	

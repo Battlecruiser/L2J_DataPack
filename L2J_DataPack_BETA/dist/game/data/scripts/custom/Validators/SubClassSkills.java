@@ -82,7 +82,7 @@ public final class SubClassSkills extends Quest
 			{
 				for (L2Skill s : certSkills)
 				{
-					Util.handleIllegalPlayerAction(player, "Player "+player.getName() + " has cert skill on subclass :" + s.getName() + "("+s.getId()+"/"+s.getLevel()+"), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(false), 0);
+					Util.handleIllegalPlayerAction(player, "Player "+player.getName() + " has cert skill on subclass :" + s.getName() + "("+s.getId()+"/"+s.getLevel()+"), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), 0);
 					
 					if (Config.SKILL_CHECK_REMOVE)
 						player.removeSkill(s);
