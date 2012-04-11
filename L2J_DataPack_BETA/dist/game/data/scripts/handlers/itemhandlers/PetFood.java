@@ -14,6 +14,8 @@
  */
 package handlers.itemhandlers;
 
+import java.util.List;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -26,7 +28,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author Kerberos, Zoey76
@@ -40,31 +41,31 @@ public class PetFood implements IItemHandler
 		boolean used = false;
 		switch (itemId)
 		{
-			case 2515: //Food For Wolves
+			case 2515: // Food For Wolves
 				used = useFood(playable, 2048, item);
 				break;
-			case 4038: //Food For Hatchling
+			case 4038: // Food For Hatchling
 				used = useFood(playable, 2063, item);
 				break;
-			case 5168: //Food for Strider
+			case 5168: // Food for Strider
 				used = useFood(playable, 2101, item);
 				break;
-			case 5169: //Deluxe Food for Strider
+			case 5169: // Deluxe Food for Strider
 				used = useFood(playable, 2102, item);
 				break;
-			case 6316: //Food for Wyvern
+			case 6316: // Food for Wyvern
 				used = useFood(playable, 2180, item);
 				break;
-			case 7582: //Baby Spice
+			case 7582: // Baby Spice
 				used = useFood(playable, 2048, item);
 				break;
-			case 9668: //Great Wolf Food
+			case 9668: // Great Wolf Food
 				used = useFood(playable, 2361, item);
 				break;
-			case 10425: //Improved Baby Pet Food
+			case 10425: // Improved Baby Pet Food
 				used = useFood(playable, 2361, item);
 				break;
-			case 14818: //Enriched Pet Food for Wolves
+			case 14818: // Enriched Pet Food for Wolves
 				used = useFood(playable, 2916, item);
 				break;
 			default:
@@ -86,7 +87,7 @@ public class PetFood implements IItemHandler
 					activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, magicId, 1, 0, 0));
 					((L2PetInstance) activeChar).setCurrentFed(((L2PetInstance) activeChar).getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					((L2PetInstance) activeChar).broadcastStatusUpdate();
-					if (((L2PetInstance) activeChar).getCurrentFed() < (((L2PetInstance) activeChar).getPetData().getHungry_limit() / 100f * ((L2PetInstance) activeChar).getPetLevelData().getPetMaxFeed()))
+					if (((L2PetInstance) activeChar).getCurrentFed() < ((((L2PetInstance) activeChar).getPetData().getHungryLimit() / 100f) * ((L2PetInstance) activeChar).getPetLevelData().getPetMaxFeed()))
 					{
 						activeChar.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
 					}
@@ -95,12 +96,11 @@ public class PetFood implements IItemHandler
 			}
 			else if (activeChar instanceof L2PcInstance)
 			{
-				L2PcInstance player = ((L2PcInstance) activeChar);
-				int itemId = item.getItemId();
+				final L2PcInstance player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					int food[] = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (Util.contains(food, itemId))
+					List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					if (foodIds.contains(Integer.valueOf(item.getItemId())))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{
