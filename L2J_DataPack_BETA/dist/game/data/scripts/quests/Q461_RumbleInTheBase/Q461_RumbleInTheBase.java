@@ -14,12 +14,11 @@
  */
 package quests.Q461_RumbleInTheBase;
 
-import java.util.Calendar;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
@@ -46,10 +45,6 @@ public class Q461_RumbleInTheBase extends Quest
 	// Item
 	public static final int ShinySalmon = 15503;
 	public static final int ShoesStringOfSelMahum = 16382;
-	
-	// Reset
-	private static final int ResetHour = 6;
-	private static final int ResetMin = 30;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -105,22 +100,12 @@ public class Q461_RumbleInTheBase extends Quest
 					st.takeItems(ShoesStringOfSelMahum, -1);
 					st.addExpAndSp(224784, 342528);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(QuestType.DAILY);
 					htmltext = "30200-07.html";
-					
-					Calendar time = Calendar.getInstance();
-					time.set(Calendar.MINUTE, ResetMin);
-					if (time.get(Calendar.HOUR_OF_DAY) >= ResetHour)
-					{
-						time.add(Calendar.DATE, 1);
-					}
-					time.set(Calendar.HOUR_OF_DAY, ResetHour);
-					st.set("time", String.valueOf(time.getTimeInMillis()));
-					st.exitQuest(false);
 				}
 				break;
 			case State.COMPLETED:
-				Long time = Long.parseLong(st.get("time"));
-				if (time > System.currentTimeMillis())
+				if (!st.isNowAvailable())
 				{
 					htmltext = "30200-03.htm";
 				}
