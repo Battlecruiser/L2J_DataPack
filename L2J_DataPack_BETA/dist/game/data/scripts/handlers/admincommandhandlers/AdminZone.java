@@ -57,7 +57,7 @@ public class AdminZone implements IAdminCommandHandler
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
 			showHtml(activeChar);
-			activeChar.sendMessage("MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(activeChar.getY()) + " ("+MapRegionManager.getInstance().getMapRegion(activeChar).getLocId()+")");
+			activeChar.sendMessage("MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(activeChar.getY()) + " ("+MapRegionManager.getInstance().getMapRegionLocId(activeChar)+")");
 			getGeoRegionXY(activeChar);
 			activeChar.sendMessage("Closest Town: " + MapRegionManager.getInstance().getClosestTownName(activeChar));
 			
