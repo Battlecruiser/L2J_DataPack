@@ -19,9 +19,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
+ * Olympiad Veteran (552).<br>
  * Based on official H5 PTS server and 551 quest ;)
  * @since Nov. 5, 2011, improved by jurchiks.
  * @version 2011-02-05
@@ -78,7 +80,7 @@ public class Q552_OlympiadVeteran extends Quest
 			{
 				st.giveItems(OLY_CHEST, count);
 				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(QuestType.DAILY);
 			}
 			else
 			{
@@ -108,7 +110,18 @@ public class Q552_OlympiadVeteran extends Quest
 		}
 		else if (st.isCompleted())
 		{
-			htmltext = "31688-05.html";
+			if(st.isNowAvailable())
+			{
+				st.setState(State.CREATED); // Not required, but it'll set the proper state.
+				if ((player.getLevel() < 75) || !player.isNoble())
+				{
+					htmltext = "31688-00.htm";
+				}
+			}
+			else
+			{
+				htmltext = "31688-05.html";
+			}
 		}
 		else if (st.isStarted())
 		{
@@ -119,7 +132,7 @@ public class Q552_OlympiadVeteran extends Quest
 				htmltext = "31688-04.html"; // reusing the same html
 				st.giveItems(OLY_CHEST, 4);
 				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(QuestType.DAILY);
 			}
 			else
 			{
