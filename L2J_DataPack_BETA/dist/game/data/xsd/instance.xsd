@@ -18,6 +18,11 @@
 						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="PvPInstance" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="val" type="xs:boolean" use="required" />
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="showTimer" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
 						<xs:attribute name="val" type="xs:boolean" use="required" />
