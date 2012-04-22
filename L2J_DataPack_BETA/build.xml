@@ -37,12 +37,6 @@
 		</sync>
 		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
 		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
-		<copy todir="${build.dist.game}/data">
-			<fileset dir="misc" />
-		</copy>
-		<copy todir="${build.dist.login}/data">
-			<fileset dir="misc" />
-		</copy>
 		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" />
 	</target>
 
