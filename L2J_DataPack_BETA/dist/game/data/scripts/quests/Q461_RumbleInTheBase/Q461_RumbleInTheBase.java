@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Rumble in the Base
+ * Rumble in the Base (461).
  * @author malyelfik
  */
 public class Q461_RumbleInTheBase extends Quest
@@ -50,8 +50,7 @@ public class Q461_RumbleInTheBase extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -70,24 +69,17 @@ public class Q461_RumbleInTheBase extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		QuestState prev = player.getQuestState("252_ItSmellsDelicious");
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
+		final QuestState prev = player.getQuestState("252_ItSmellsDelicious");
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted())
-				{
-					htmltext = "30200-01.htm";
-				}
-				else
-				{
-					htmltext = "30200-02.htm";
-				}
+				htmltext = ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted()) ? "30200-01.htm" : "30200-02.htm";
 				break;
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
@@ -112,14 +104,7 @@ public class Q461_RumbleInTheBase extends Quest
 				else
 				{
 					st.setState(State.CREATED);
-					if ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED))
-					{
-						htmltext = "30200-01.htm";
-					}
-					else
-					{
-						htmltext = "30200-02.htm";
-					}
+					htmltext = ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED)) ? "30200-01.htm" : "30200-02.htm";
 				}
 				break;
 		}
@@ -129,16 +114,15 @@ public class Q461_RumbleInTheBase extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(qn);
 		
+		final QuestState st = partyMember.getQuestState(qn);
 		int chance = getRandom(1000);
 		boolean giveItem = false;
-		
 		switch (npc.getNpcId())
 		{
 			case 22780:

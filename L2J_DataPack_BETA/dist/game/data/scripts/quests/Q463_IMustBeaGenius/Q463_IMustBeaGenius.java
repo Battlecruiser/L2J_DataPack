@@ -18,12 +18,14 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * I Must Be a Genius (463).<br>
  * 2010-08-19 Based on Freya PTS.
  * @author Gnacik
  */
@@ -98,7 +100,7 @@ public class Q463_IMustBeaGenius extends Quest
 				}
 				st.takeItems(_collection, -1);
 				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(QuestType.DAILY);
 			}
 		}
 		return htmltext;
@@ -132,7 +134,15 @@ public class Q463_IMustBeaGenius extends Quest
 					}
 					break;
 				case State.COMPLETED:
-					htmltext = "32069-08.htm";
+					if (st.isNowAvailable())
+					{
+						st.setState(State.CREATED); // Not required, but it'll set the proper state.
+						htmltext = (player.getLevel() >= 70) ? "32069-01.htm" : "32069-00.htm";
+					}
+					else
+					{
+						htmltext = "32069-08.htm";
+					}
 					break;
 			}
 		}
