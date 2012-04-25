@@ -653,8 +653,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="STR" val="2" /> <!-- Str -2 -->
-			<add order="0x10" stat="CON" val="2" /> <!-- Con +2 -->
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
@@ -670,8 +668,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
@@ -687,8 +683,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="DanceMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% Decrease for Song and Dance Skills -->
@@ -703,9 +697,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 Increase -->
@@ -720,8 +711,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- Dex +2 -->
 			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
@@ -737,8 +726,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- Dex +2 -->
 			<add order="0x40" stat="accCombat" val="5.3" /> <!-- Accuracy +5.3 -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
@@ -754,9 +741,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
@@ -771,9 +755,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
 			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
@@ -789,8 +770,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="STR" val="2" /> <!-- Str -2 -->
-			<add order="0x10" stat="CON" val="2" /> <!-- Con +2 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.066" /> <!-- Atk. Spd. +6.6% -->
 			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- P. Atk. +2.66% -->
 			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- P. Def. +2.66% -->
@@ -806,8 +785,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
-			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 			<add order="0x40" stat="bonusHp" val="22" /> <!-- Heal Capacity +22 -->
@@ -823,8 +800,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
-			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
@@ -840,8 +815,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
-			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 			<mul order="0x30" stat="pDef" val="1.033" /> <!-- P. Def. +3.3% -->
@@ -857,9 +830,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- Men -2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mAtk" val="1.066" /> <!-- M. Atk. +6.6% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->

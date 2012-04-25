@@ -7,8 +7,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="STR" val="2" /> <!-- STR -2 -->
-			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 			<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
 			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
@@ -32,9 +30,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="3" /> <!-- CON -3 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
@@ -56,9 +51,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="1" /> <!-- MEN -1 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 			<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
@@ -79,8 +71,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="3" /> <!-- STR +3 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
 			<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
 			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
@@ -103,9 +93,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
 			<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
@@ -125,9 +112,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
-			<add order="0x10" stat="INT" val="1" /> <!-- INT +1 -->
 			<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
@@ -149,8 +133,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
@@ -173,8 +155,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
@@ -197,8 +177,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
 			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
@@ -220,8 +198,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x10" stat="STR" val="2" /> <!-- STR -2 -->
-			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 			<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
 			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
@@ -249,9 +225,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="3" /> <!-- CON -3 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
@@ -277,9 +250,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="1" /> <!-- MEN -1 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 			<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
@@ -304,8 +274,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="3" /> <!-- STR +3 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
 			<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
 			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
@@ -332,9 +300,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
 			<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
@@ -358,9 +323,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
-			<add order="0x10" stat="INT" val="1" /> <!-- INT +1 -->
 			<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
