@@ -65,8 +65,6 @@
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 		</for>
 	</skill>
 	<skill id="3508" levels="1" name="Mithril Light Armor Set">
@@ -99,10 +97,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
-		<for>
-			<add order="0x10" stat="STR" val="4" /> <!-- STR +4 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
-		</for>
 	</skill>
 	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
 		<set name="target" val="TARGET_SELF" />
@@ -118,8 +112,6 @@
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="maxHp" val="269.65" /> <!-- HP -269.65 -->
-			<add order="0x10" stat="INT" val="4" /> <!-- INT +4 -->
-			<sub order="0x10" stat="WIT" val="1" /> <!-- WIT -1 -->
 		</for>
 	</skill>
 	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
@@ -153,8 +145,6 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<add order="0x40" stat="maxMp" val="170.62" /> <!-- MP +170.62 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
 		</for>
 	</skill>
 	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
@@ -216,9 +206,6 @@
 		<for>
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<mul order="0x30" stat="regHp" val="1.0526" /> <!-- HP Regeneration +5.26% -->
-			<add order="0x10" stat="STR" val="3" /> <!-- STR +3 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 		</for>
 	</skill>
 	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
@@ -228,8 +215,6 @@
 		<for>
 			<add order="0x40" stat="maxHp" val="320" /> <!-- HP +320 -->
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
-			<sub order="0x10" stat="STR" val="3" /> <!-- STR -3 -->
-			<add order="0x10" stat="CON" val="3" /> <!-- CON +3 -->
 		</for>
 	</skill>
 	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
@@ -239,9 +224,6 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0526" /> <!-- P. Def. +5.26% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<sub order="0x10" stat="INT" val="2" /> <!-- INT -2 -->
-			<add order="0x10" stat="MEN" val="3" /> <!-- MEN +3 -->
-			<sub order="0x10" stat="WIT" val="1" /> <!-- WIT -1 -->
 		</for>
 	</skill>
 	<skill id="3527" levels="1" name="Doom Light Armor Set">
@@ -252,9 +234,6 @@
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			<mul order="0x30" stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
 			<mul order="0x30" stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
-			<sub order="0x10" stat="STR" val="1" /> <!-- STR -1 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
-			<add order="0x10" stat="DEX" val="3" /> <!-- DEX +3 -->
 			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poision Resistance +20% -->
 		</for>
 	</skill>
@@ -265,9 +244,6 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="206" /> <!-- MP +206 -->
 			<mul order="0x30" stat="regMp" val="1.0524" /> <!-- MP Regeneration +5.24% -->
-			<sub order="0x10" stat="INT" val="2" /> <!-- INT -2 -->
-			<sub order="0x10" stat="MEN" val="1" /> <!-- MEN -1 -->
-			<add order="0x10" stat="WIT" val="3" /> <!-- WIT +3 -->
 		</for>
 	</skill>
 	<skill id="3529" levels="1" name="Doom Robe Set">
@@ -278,9 +254,6 @@
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed + 7 -->
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			<mul order="0x30" stat="regMp" val="1.0526" /> <!-- MP Regeneration +5.26% -->
-			<add order="0x10" stat="INT" val="2" /> <!-- INT +2 -->
-			<add order="0x10" stat="MEN" val="1" /> <!-- MEN +1 -->
-			<sub order="0x10" stat="WIT" val="3" /> <!-- WIT -3 -->
 		</for>
 	</skill>
 	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
@@ -290,8 +263,6 @@
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal +4% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
-			<sub order="0x10" stat="STR" val="2" /> <!-- STR -2 -->
-			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 		</for>
 	</skill>
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
@@ -303,8 +274,6 @@
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
 			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 		</for>
 	</skill>
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
@@ -315,8 +284,6 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 		</for>
 	</skill>
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
@@ -328,8 +295,6 @@
 			<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
 			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
 			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
-			<add order="0x10" stat="MEN" val="2" /> <!-- MEN +2 -->
-			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 		</for>
 	</skill>
 	<skill id="3534" levels="1" name="Tallum Robe Set">
@@ -341,8 +306,6 @@
 			<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
 			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
 			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
-			<sub order="0x10" stat="INT" val="2" /> <!-- INT -2 -->
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
 		</for>
 	</skill>
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
@@ -355,8 +318,6 @@
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
 		</for>
 	</skill>
 	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
@@ -367,8 +328,6 @@
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
-			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 		</for>
 	</skill>
 	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
@@ -379,8 +338,6 @@
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 		</for>
 	</skill>
 	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
@@ -392,8 +349,6 @@
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x40" stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 		</for>
 	</skill>
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
@@ -407,8 +362,6 @@
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 		</for>
 	</skill>
 	<skill id="3540" levels="1" name="Nightmare Robe Set">
@@ -420,8 +373,6 @@
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
-			<add order="0x10" stat="INT" val="2" /> <!-- INT +2 -->
-			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 		</for>
 	</skill>
 	<skill id="3541" levels="1" name="Majestic Robe Set">
@@ -433,8 +384,6 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="MEN" val="1" /> <!-- MEN +1 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 		</for>
 	</skill>
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
@@ -555,8 +504,6 @@
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Probability -70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Probability -70% -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 		</for>
 	</skill>
 	<skill id="3554" levels="1" name="Equipped with Shield">
@@ -578,9 +525,6 @@
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
 			<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
-			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 		</for>
 	</skill>
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
@@ -592,9 +536,6 @@
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
-			<add order="0x10" stat="INT" val="1" /> <!-- INT +1 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
 		</for>
 	</skill>
