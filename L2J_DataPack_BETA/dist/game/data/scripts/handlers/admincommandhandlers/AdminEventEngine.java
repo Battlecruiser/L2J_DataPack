@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
-import com.l2jserver.gameserver.GmListTable;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2World;
@@ -357,7 +357,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					int transId = transIds[Rnd.get(transIds.length)];
 					if (!TransformationManager.getInstance().transformPlayer(transId, player))
-						GmListTable.broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
+					{
+						AdminTable.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
+					}
 				}
 				showEventControl(activeChar);
 			}
@@ -410,7 +412,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			e.printStackTrace(); 
-			GmListTable.broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?"); 
+			AdminTable.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?"); 
 		}
 		return true;
 	}

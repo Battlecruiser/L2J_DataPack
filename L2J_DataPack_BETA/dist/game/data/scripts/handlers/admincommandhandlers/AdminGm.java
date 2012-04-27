@@ -16,9 +16,7 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.GmListTable;
-import com.l2jserver.gameserver.datatables.AccessLevels;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -39,10 +37,13 @@ public class AdminGm implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		
-		if (command.equals("admin_gm"))
-			handleGm(activeChar);
-		
+		if (command.equals("admin_gm") && activeChar.isGM())
+		{
+			AdminTable.getInstance().deleteGm(activeChar);
+			activeChar.setAccessLevel(0);
+			activeChar.sendMessage("You no longer have GM status.");
+			_log.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
+		}
 		return true;
 	}
 	
@@ -50,18 +51,5 @@ public class AdminGm implements IAdminCommandHandler
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
-	}
-	
-	private void handleGm(L2PcInstance activeChar)
-	{
-		if (activeChar.isGM())
-		{
-			GmListTable.getInstance().deleteGm(activeChar);
-			activeChar.setAccessLevel(AccessLevels._userAccessLevelNum);
-			activeChar.sendMessage("You no longer have GM status.");
-			
-			if (Config.DEBUG)
-				_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
-		}
 	}
 }
