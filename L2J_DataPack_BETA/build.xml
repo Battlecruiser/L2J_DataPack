@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<project name="L2J_DataPack_BETA" default="dist" basedir=".">
+<project name="L2J_DataPack_BETA" default="build" basedir=".">
 	<description>
 		This script will build the L2J DataPack.
 
@@ -37,7 +37,10 @@
 		</sync>
 		<concat destfile="${build.dist.doc}/L2J_DataPack_CHANGELOG.txt">${l2j.changelog}</concat>
 		<concat destfile="${build.dist.game}/config/l2jdp-version.properties">version=${l2j.version}${line.separator}builddate=${build.tstamp}</concat>
-		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" />
+	</target>
+	
+	<target name="build" depends="dist">
+		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" level="9" />
 	</target>
 
 	<target name="clean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
