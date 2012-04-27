@@ -14,11 +14,10 @@
  */
 package handlers.admincommandhandlers;
 
+import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
@@ -248,7 +247,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 		}
 		
-		final FastList<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(clan);
+		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(clan);
 		SkillTable st = SkillTable.getInstance();
 		for (L2SkillLearn s : skills)
 		{
