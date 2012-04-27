@@ -20,6 +20,7 @@ import java.sql.SQLException;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -125,14 +126,24 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	 */
 	private void onLineChange(L2PcInstance activeChar, L2PcInstance player, int lvl)
 	{
-		player.setAccessLevel(lvl);
 		if (lvl >= 0)
-			player.sendMessage("Your access level has been changed to " + lvl);
+		{
+			if (AdminTable.getInstance().hasAccessLevel(lvl))
+			{
+				player.setAccessLevel(lvl);
+				player.sendMessage("Your access level has been changed to " + lvl);
+				activeChar.sendMessage("Character's access level is now set to " + lvl + ". Effects won't be noticeable until next session.");
+			}
+			else
+			{
+				activeChar.sendMessage("You are trying to set unexisting access level: " + lvl + " please try again with a valid one!");
+			}
+		}
 		else
 		{
+			player.setAccessLevel(lvl);
 			player.sendMessage("Your character has been banned. Bye.");
 			player.logout();
 		}
-		activeChar.sendMessage("Character's access level is now set to " + lvl + ". Effects won't be noticeable until next session.");
 	}
 }

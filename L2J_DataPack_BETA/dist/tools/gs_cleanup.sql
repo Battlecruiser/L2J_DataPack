@@ -6,9 +6,7 @@
 -- for more details.
 
 DROP TABLE IF EXISTS
-access_levels,
 account_gsdata,
-admin_command_access_rights,
 airships,
 auction,
 auction_bid,
