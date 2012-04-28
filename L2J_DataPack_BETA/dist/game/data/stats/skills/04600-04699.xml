@@ -380,12 +380,13 @@
 		</for>
 	</skill>
 	<skill id="4617" levels="1" name="Dispel Petrification">
+		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="58" />
 		<set name="mpInitialConsume" val="15" />
-		<set name="negateId" val="4616" />
+		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_SELF" />
@@ -1826,10 +1827,11 @@
 		</for>
 	</skill>
 	<skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
+		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
-		<set name="negateId" val="4692" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
+		<set name="negateAbnormals" val="big_body,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_SELF" />

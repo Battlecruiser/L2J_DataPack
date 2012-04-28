@@ -570,12 +570,13 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4547" levels="1" name="Gaze of Watcher">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="power" val="-1" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -584,10 +585,11 @@
 		</for>
 	</skill>
 	<skill id="4548" levels="1" name="Quest - Dispel Watcher Gaze">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
-		<set name="negateId" val="4547" />
+		<set name="negateAbnormals" val="watcher_gaze,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
@@ -724,7 +726,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateId" val="4551,4554" />
+		<set name="negateAbnormals" val="spa_disease_a,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
@@ -741,7 +743,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateId" val="4552,4554" />
+		<set name="negateAbnormals" val="spa_disease_b,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
@@ -758,7 +760,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateId" val="4553,4554" />
+		<set name="negateAbnormals" val="spa_disease_c,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
