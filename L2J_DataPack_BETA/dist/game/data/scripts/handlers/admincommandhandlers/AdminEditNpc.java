@@ -14,13 +14,13 @@
  */
 package handlers.admincommandhandlers;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -1392,10 +1392,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		TIntObjectHashMap<L2Skill> skills = new TIntObjectHashMap<L2Skill>();
-		if (npcData.getSkills() != null)
-			skills = npcData.getSkills();
-		
+		Map<Integer, L2Skill> skills = new HashMap<>(npcData.getSkills());		
 		int _skillsize = skills.size();
 		
 		int MaxSkillsPerPage = PAGE_LIMIT;
@@ -1440,39 +1437,40 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 		}
 		replyMSG.append("</tr></table><table width=\"100%\" border=0><tr><td>Skill name [skill id-skill lvl]</td><td>Delete</td></tr>");
-		TIntObjectIterator<L2Skill> skillite = skills.iterator();
+		Iterator<L2Skill> skillite = skills.values().iterator();
 		
 		for (int i = 0; i < SkillsStart; i++)
 		{
 			if (skillite.hasNext())
-				skillite.advance();
+				skillite.next();
 		}
 		
 		int cnt = SkillsStart;
+		L2Skill sk;
 		while (skillite.hasNext())
 		{
 			cnt++;
 			if (cnt > SkillsEnd)
 				break;
 			
-			skillite.advance();
+			sk = skillite.next();
 			replyMSG.append("<tr><td width=240><a action=\"bypass -h admin_edit_skill_npc ");
 			replyMSG.append(npcData.getNpcId());
 			replyMSG.append(" ");
-			replyMSG.append(skillite.value().getId());
+			replyMSG.append(sk.getId());
 			replyMSG.append("\">");
-			if (skillite.value().getSkillType() == L2SkillType.NOTDONE)
-				replyMSG.append("<font color=\"777777\">" + skillite.value().getName() + "</font>");
+			if (sk.getSkillType() == L2SkillType.NOTDONE)
+				replyMSG.append("<font color=\"777777\">" + sk.getName() + "</font>");
 			else
-				replyMSG.append(skillite.value().getName());
+				replyMSG.append(sk.getName());
 			replyMSG.append(" [");
-			replyMSG.append(skillite.value().getId());
+			replyMSG.append(sk.getId());
 			replyMSG.append("-");
-			replyMSG.append(skillite.value().getLevel());
+			replyMSG.append(sk.getLevel());
 			replyMSG.append("]</a></td><td width=60><a action=\"bypass -h admin_del_skill_npc ");
 			replyMSG.append(npcData.getNpcId());
 			replyMSG.append(" ");
-			replyMSG.append(skillite.key());
+			replyMSG.append(sk.getId());
 			replyMSG.append("\">Delete</a></td></tr>");
 		}
 		replyMSG.append("</table><br><center><button value=\"Add Skill\" action=\"bypass -h admin_add_skill_npc ");
