@@ -354,36 +354,44 @@
 			<using kind="Rod" />
 		</cond>
 	</skill>
-	<skill id="1313" levels="27" name="Pumping">
-		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
+		<skill id="1313" levels="27" name="Pumping">
+		<!-- Confirmed CT2.5 -->
+		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="PUMPING" />
-		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- TODO: Missing condition for "op_fishing_pumping" -->
 		<cond msgId="113" addName="1">
 			<using kind="Rod" />
 		</cond>
 	</skill>
 	<skill id="1314" levels="27" name="Reeling">
-		<table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="REELING" />
-		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- TODO: Missing condition for "op_fishing_reeling" -->
 		<cond msgId="113" addName="1">
 			<using kind="Rod" />
 		</cond>
 	</skill>
 	<skill id="1315" levels="27" name="Fishing Expertise">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- TODO: Require Support -->
+		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
 		<!-- Confirmed CT2.5 -->
