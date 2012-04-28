@@ -1,125 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="Event">
 		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Droplist">
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="Droplist" maxOccurs="1" minOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="AllDrop">
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="AllDrop" maxOccurs="1" minOccurs="1">
 								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="xs:string">
-											<xs:attribute type="xs:string" name="Items" />
-											<xs:attribute type="xs:string" name="Count" />
-											<xs:attribute type="xs:string" name="Chance" />
-										</xs:extension>
-									</xs:simpleContent>
+									<xs:attribute name="Items" type="xs:token" use="required" />
+									<xs:attribute name="Count" type="xs:token" use="required" />
+									<xs:attribute name="Chance" type="xs:token" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="Message">
+				<xs:element name="EventEnd" maxOccurs="1" minOccurs="1">
 					<xs:complexType>
-						<xs:simpleContent>
-							<xs:extension base="xs:string">
-								<xs:attribute type="xs:string" name="Type" />
-								<xs:attribute type="xs:string" name="Msg" />
-							</xs:extension>
-						</xs:simpleContent>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="Npc">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Condition">
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="Take" maxOccurs="1" minOccurs="1">
 								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Inventory">
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="Item" maxOccurs="1" minOccurs="1">
 											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute type="xs:string" name="Items" />
-														<xs:attribute type="xs:byte" name="Count" />
-														<xs:attribute type="xs:string" name="Operation" />
-													</xs:extension>
-												</xs:simpleContent>
+												<xs:attribute name="ItemID" type="xs:token" use="required" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="Take">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Item">
-											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute type="xs:string" name="Items" />
-														<xs:attribute type="xs:byte" name="Count" />
-														<xs:attribute type="xs:string" name="Type" />
-													</xs:extension>
-												</xs:simpleContent>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="Give">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Item" maxOccurs="unbounded" minOccurs="0">
-											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute type="xs:short" name="ItemID" use="optional" />
-														<xs:attribute type="xs:byte" name="Count" use="optional" />
-													</xs:extension>
-												</xs:simpleContent>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="SystemMessage">
-								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="xs:string">
-											<xs:attribute type="xs:string" name="Msg" />
-										</xs:extension>
-									</xs:simpleContent>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-						<xs:attribute type="xs:short" name="ID" />
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="EventEnd">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Take">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Item">
-											<xs:complexType>
-												<xs:simpleContent>
-													<xs:extension base="xs:string">
-														<xs:attribute type="xs:string" name="ItemID" />
-													</xs:extension>
-												</xs:simpleContent>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-									<xs:attribute type="xs:string" name="From" />
+									<xs:attribute name="From" type="xs:token" use="required" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:sequence>
-			<xs:attribute type="xs:string" name="ID" />
-			<xs:attribute type="xs:string" name="Active" />
-		</xs:complexType>
+				<xs:element name="Message" maxOccurs="1" minOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="Msg" type="xs:normalizedString" use="required" />
+						<xs:attribute name="Type" type="xs:token" use="required" />					</xs:complexType>
+				</xs:element>
+				<xs:element name="Npc" maxOccurs="1" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="1" minOccurs="1">
+							<xs:element name="Condition" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="Inventory" maxOccurs="1" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="Items" type="xs:token" use="required" />
+												<xs:attribute name="Count" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="Operation" type="xs:token" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Give" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="Item" maxOccurs="unbounded" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="ItemID" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="Count" type="xs:positiveInteger" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SystemMessage" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:attribute name="Msg" type="xs:normalizedString" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Take" maxOccurs="1" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence maxOccurs="1" minOccurs="1">
+										<xs:element name="Item" maxOccurs="1" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="Items" type="xs:token" use="required" />
+												<xs:attribute name="Count" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="Type" type="xs:token" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>						</xs:sequence>
+						<xs:attribute name="ID" type="xs:positiveInteger" use="required" />
+					</xs:complexType>
+				</xs:element>			</xs:sequence>
+			<xs:attribute name="Active" type="xs:normalizedString" use="required" />
+			<xs:attribute name="ID" type="xs:normalizedString" use="required" />		</xs:complexType>
 	</xs:element>
 </xs:schema>
