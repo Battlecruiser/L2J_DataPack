@@ -1542,7 +1542,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="negateId" val="1339" />
+		<set name="negateAbnormals" val="multi_debuff_fire,9" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1614,7 +1614,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="negateId" val="1340" />
+		<set name="negateAbnormals" val="multi_debuff_water,9" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1715,7 +1715,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="negateId" val="1341" />
+		<set name="negateAbnormals" val="multi_debuff_wind,9" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2590,7 +2590,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="15000" />
-		<set name="negateId" val="1487" />
+		<set name="negateAbnormals" val="life_force_kamael,9" />
 		<cond msgId="109">
 			<target active_effect_id="1487" />
 		</cond>

@@ -10,8 +10,8 @@
 						<xs:attribute name="allowPeaceAttack" type="xs:boolean" use="required" />
 						<xs:attribute name="allowTransaction" type="xs:boolean" use="required" />
 						<xs:attribute name="childAccess" type="xs:nonNegativeInteger" />
-						<xs:attribute name="giveDamage" type="xs:boolean" use="required" />
 						<xs:attribute name="gainExp" type="xs:boolean" use="required" />
+						<xs:attribute name="giveDamage" type="xs:boolean" use="required" />
 						<xs:attribute name="isGM" type="xs:boolean" use="required" />
 						<xs:attribute name="level" type="xs:integer" use="required" />
 						<xs:attribute name="name" type="xs:normalizedString" use="required" />
@@ -19,7 +19,8 @@
 						<xs:attribute name="takeAggro" type="xs:boolean" use="required" />
 						<xs:attribute name="titleColor" type="xs:hexBinary" use="required" />
 					</xs:complexType>
-				</xs:element>			</xs:sequence>
+				</xs:element>
+			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

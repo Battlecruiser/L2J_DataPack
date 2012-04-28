@@ -521,11 +521,13 @@
 		</for>
 	</skill>
 	<skill id="2060" levels="1" name="Healing Medicine">
+		<!-- Confirmed CT2.5 -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateId" val="4082" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
+		<set name="magicLvl" val="1" />
+		<set name="negateAbnormals" val="fatal_poison,1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
 		<set name="target" val="TARGET_SELF" />

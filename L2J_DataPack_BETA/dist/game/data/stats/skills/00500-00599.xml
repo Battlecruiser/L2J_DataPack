@@ -806,13 +806,16 @@
 		</for>
 	</skill>
 	<skill id="524" levels="1" name="Cure Dark Seed">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="204" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="64" />
 		<set name="mpConsume" val="59" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
+		<set name="negateAbnormals" val="dark_seed,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1500" />
-		<set name="negateId" val="5447" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="525" levels="6" name="Decoy" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

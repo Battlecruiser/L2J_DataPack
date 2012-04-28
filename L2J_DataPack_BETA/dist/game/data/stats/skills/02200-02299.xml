@@ -641,13 +641,13 @@
 		</for>
 	</skill>
 	<skill id="2233" levels="1" name="Amulet: Flames of Valakas">
-		<set name="itemConsumeCount" val="1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
-		<set name="negateId" val="4683,4684" />
+		<set name="negateAbnormals" val="dragon_breath,1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
@@ -1372,16 +1372,18 @@
 			<player active_skill_id_lvl="#active_skill_id_lvl" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="20" abnormalType="fishing_mastery_down" />
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="fishing_mastery_down" />
 		</for>
 	</skill>
 	<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
+		<!--  Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="negateAbnormals" val="fishing_mastery_down,1" />
 		<set name="operateType" val="A1" />
-		<set name="negateId" val="2274" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">
 		<set name="target" val="TARGET_NONE" />
