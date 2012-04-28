@@ -21,14 +21,17 @@ import javax.script.ScriptException;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jserver.gameserver.util.Util;
 
 public class AdminQuest implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_quest_reload",
-		"admin_script_load"
+		"admin_script_load",
+		"admin_script_unload",
 	};
 	
 	@Override
@@ -123,6 +126,34 @@ public class AdminQuest implements IAdminCommandHandler
 				}
 			}
 			
+		}
+		else if (command.startsWith("admin_script_unload"))
+		{
+			String[] parts = command.split(" ");
+			if (parts.length < 2)
+			{
+				activeChar.sendMessage("Example: //script_unload questName/questId");
+			}
+			else
+			{
+				Quest q = Util.isDigit(parts[1]) ? QuestManager.getInstance().getQuest(Integer.parseInt(parts[1])) : QuestManager.getInstance().getQuest(parts[1]);
+				
+				if (q != null)
+				{
+					if (q.unload())
+					{
+						activeChar.sendMessage("Script Successfully Unloaded [" + q.getName() + "/" + q.getQuestIntId() + "]");
+					}
+					else
+					{
+						activeChar.sendMessage("Failed unloading [" + q.getName() + "/" + q.getQuestIntId() + "].");
+					}
+				}
+				else
+				{
+					activeChar.sendMessage("The quest [" + parts[1] + "] was not found!.");
+				}
+			}
 		}
 		return true;
 	}

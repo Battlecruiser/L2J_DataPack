@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -170,9 +171,9 @@ public class QuestLink implements IBypassHandler
 					}
 				}
 				// check for start point
-				Quest[] qlst = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
+				List<Quest> qlst = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 				
-				if ((qlst != null) && (qlst.length > 0))
+				if ((qlst != null) && !qlst.isEmpty())
 				{
 					for (Quest temp : qlst)
 					{
@@ -237,7 +238,7 @@ public class QuestLink implements IBypassHandler
 		List<Quest> options = new FastList<Quest>();
 		
 		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getNpcId());
-		Quest[] starts = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
+		List<Quest> starts = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering

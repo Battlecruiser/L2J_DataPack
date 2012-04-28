@@ -14,6 +14,8 @@
  */
 package handlers.actionhandlers;
 
+import java.util.List;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
@@ -24,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
@@ -123,29 +126,37 @@ public class L2NpcAction implements IActionHandler
 				}
 				else
 				{
-					if (((L2Npc)target).hasRandomAnimation())
-						((L2Npc)target).onRandomAnimation(Rnd.get(8));
+					L2Npc npc = (L2Npc) target;
+					if (npc.hasRandomAnimation())
+						npc.onRandomAnimation(Rnd.get(8));
 					
 					// Open a chat window on client with the text of the L2Npc
-					if (((L2Npc)target).isEventMob)
+					if (npc.isEventMob)
 					{
 						L2Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
 					}
 					else
 					{
-						Quest[] qlsa = ((L2Npc)target).getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
-						if ((qlsa != null) && qlsa.length > 0)
+						List<Quest> qlsa = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
+						List<Quest> qlst = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
+						
+						if ((qlsa != null) && !qlsa.isEmpty())
+						{
 							activeChar.setLastQuestNpcObject(target.getObjectId());
-						Quest[] qlst = ((L2Npc)target).getTemplate().getEventQuests(Quest.QuestEventType.ON_FIRST_TALK);
-						if ((qlst != null) && qlst.length == 1)
-							qlst[0].notifyFirstTalk((L2Npc)target, activeChar);
+						}
+						
+						if ((qlst != null) && qlst.size() == 1)
+						{
+							qlst.get(0).notifyFirstTalk(npc, activeChar);
+						}
 						else
-							((L2Npc)target).showChatWindow(activeChar);
+						{
+							npc.showChatWindow(activeChar);
+						}
 					}
-					if(Config.PLAYER_MOVEMENT_BLOCK_TIME > 0
-							&& !activeChar.isGM())
-							activeChar.updateNotMoveUntil();
-
+					
+					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0 && !activeChar.isGM())
+						activeChar.updateNotMoveUntil();
 				}
 			}
 		}
