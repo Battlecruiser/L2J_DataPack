@@ -57,7 +57,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="successBonus" use="required">
+						<xs:attribute name="successRate" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:decimal">
 									<xs:minInclusive value="1.0" />
