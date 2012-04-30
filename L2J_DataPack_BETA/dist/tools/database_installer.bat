@@ -5,18 +5,18 @@ REM ##############################################
 REM ## Interactive script setup -  (by TanelTM) ##
 REM ##############################################
 REM Copyright (C) 2012 L2J DataPack
-REM This program is free software; you can redistribute it and/or modify 
-REM it under the terms of the GNU General Public License as published by 
+REM This program is free software; you can redistribute it and/or modify
+REM it under the terms of the GNU General Public License as published by
 REM the Free Software Foundation; either version 3 of the License, or (at
 REM your option) any later version.
 REM
-REM This program is distributed in the hope that it will be useful, but 
+REM This program is distributed in the hope that it will be useful, but
 REM WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-REM or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+REM or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
 REM for more details.
 REM
-REM You should have received a copy of the GNU General Public License along 
-REM with this program; if not, write to the Free Software Foundation, Inc., 
+REM You should have received a copy of the GNU General Public License along
+REM with this program; if not, write to the Free Software Foundation, Inc.,
 REM 675 Mass Ave, Cambridge, MA 02139, USA. Or contact the Official L2J
 REM DataPack Project at http://www.l2jdp.com, http://www.l2jdp.com/forum or
 REM #l2j @ irc://irc.freenode.net
@@ -60,10 +60,10 @@ echo (2) Import and configure: This tool has some new available
 echo     options, you choose the values that fit your needs
 echo     using former settings as a base.
 echo.
-echo (3) Ignose stored settings: I'll let you configure me 
+echo (3) Ignose stored settings: I'll let you configure me
 echo     with a fresh set of default values as a base.
 echo.
-echo (4) View saved settings: See the contents of the config 
+echo (4) View saved settings: See the contents of the config
 echo     file.
 echo.
 echo (5) Quit: Did you came here by mistake?
@@ -130,12 +130,12 @@ echo.
 path|find "MySQL">NUL
 if %errorlevel% == 0 (
 echo I found MySQL is in your PATH, this will be used by default.
-echo If you want to use something different, change 'use path' for 
+echo If you want to use something different, change 'use path' for
 echo something else.
 set mysqlBinPath=use path
 ) else (
 echo Look, I can't find "MYSQL" in your PATH environment variable.
-echo It would be good if you go and find out where "mysql.exe" and 
+echo It would be good if you go and find out where "mysql.exe" and
 echo "mysqldump.exe" are.
 echo.
 echo If you have no idea about the meaning of words such as MYSQL
@@ -255,8 +255,8 @@ set lsdbprompt=y
 call :colors 47
 title L2JDP Installer - Login Server DataBase Backup ERROR!
 echo.
-echo Backup attempt failed! A possible reason for this to 
-echo happen, is that your DB doesn't exist yet. I could 
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
 echo try to create %lsdb% for you, or maybe you prefer to
 echo contunue with the Community Server part of this tool.
 echo.
@@ -284,7 +284,7 @@ set cmdline=
 set stage=2
 title L2JDP Installer - Login Server DataBase Creation
 echo.
-echo Trying to create a Login Server DataBase...
+echo Trying to create a Login Server DataBase.
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_install
@@ -296,16 +296,16 @@ set omfgprompt=q
 call :colors 47
 title L2JDP Installer - Login Server DataBase Creation ERROR!
 echo.
-echo An error occured while trying to create a database for 
+echo An error occured while trying to create a database for
 echo your login server.
 echo.
 echo Possible reasons:
 echo 1-You provided innacurate info , check user, password, etc.
-echo 2-User %lsuser% don't have enough privileges for 
+echo 2-User %lsuser% don't have enough privileges for
 echo database creation. Check your MySQL privileges.
 echo 3-Database exists already...?
 echo.
-echo Unless you're sure that the pending actions of this tool 
+echo Unless you're sure that the pending actions of this tool
 echo could work, i'd suggest you to look for correct values
 echo and try this script again later.
 echo.
@@ -329,7 +329,8 @@ title L2JDP Installer - Login Server DataBase WARNING!
 echo.
 echo LOGINSERVER DATABASE install type:
 echo.
-echo (f) Full: I will destroy data in your `accounts` tables.
+echo (f) Full: WARNING! I'll destroy ALL of your existing login
+echo     data.
 echo.
 echo (u) Upgrade: I'll do my best to preserve all login data.
 echo.
@@ -369,11 +370,11 @@ echo.
 echo Upgrading structure of Login Server tables.
 echo.
 echo @echo off> temp.bat
-if exist ls_errors.txt del ls_errors.txt
-for %%i in (..\sql\login\updates\*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% --force ^< %%i 2^>^> ls_errors.txt >> temp.bat
+if exist ls_errors.log del ls_errors.log
+for %%i in (..\sql\login\updates\*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% --force ^< %%i 2^>^> ls_errors.log >> temp.bat
 call temp.bat> nul
 del temp.bat
-move ls_errors.txt %workdir%
+move ls_errors.log %workdir%
 goto ls_install
 
 :ls_install
@@ -415,8 +416,8 @@ set cbdbprompt=y
 call :colors 47
 title L2JDP Installer - Community Server DataBase Backup ERROR!
 echo.
-echo Backup attempt failed! A possible reason for this to 
-echo happen, is that your DB doesn't exist yet. I could 
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
 echo try to create %cbdb% for you, or maybe you prefer to
 echo continue with the GameServer part of this tool.
 echo.
@@ -456,16 +457,16 @@ set omfgprompt=q
 call :colors 47
 title L2JDP Installer - Community Server DataBase Creation ERROR!
 echo.
-echo An error occured while trying to create a database for 
+echo An error occured while trying to create a database for
 echo your Community Server.
 echo.
 echo Possible reasons:
 echo 1-You provided innacurate info , check user, password, etc.
-echo 2-User %cbuser% don't have enough privileges for 
+echo 2-User %cbuser% don't have enough privileges for
 echo database creation. Check your MySQL privileges.
 echo 3-Database exists already...?
 echo.
-echo Unless you're sure that the pending actions of this tool 
+echo Unless you're sure that the pending actions of this tool
 echo could work, i'd suggest you to look for correct values
 echo and try this script again later.
 echo.
@@ -531,11 +532,11 @@ echo.
 echo Upgrading structure of Community Server tables.
 echo.
 echo @echo off> temp.bat
-if exist cs_errors.txt del cs_errors.txt
-for %%i in (..\sql\community\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% --force ^< %%i 2^>^> cs_errors.txt >> temp.bat
+if exist cs_errors.log del cs_errors.log
+for %%i in (..\sql\community\updates\*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% --force ^< %%i 2^>^> cs_errors.log >> temp.bat
 call temp.bat> nul
 del temp.bat
-move cs_errors.txt %workdir%
+move cs_errors.log %workdir%
 goto cs_install
 
 :cs_install
@@ -618,12 +619,12 @@ set omfgprompt=q
 call :colors 47
 title L2JDP Installer - Game Server DataBase Creation ERROR!
 echo.
-echo An error occured while trying to create a database for 
+echo An error occured while trying to create a database for
 echo your Game Server.
 echo.
 echo Possible reasons:
 echo 1-You provided innacurate info, check username, pass, etc.
-echo 2-User %gsuser% don't have enough privileges for 
+echo 2-User %gsuser% don't have enough privileges for
 echo database creation.
 echo 3-Database exists already...?
 echo.
@@ -670,7 +671,7 @@ call :colors 17
 set cmdline=
 title L2JDP Installer - Game Server DataBase Full Install
 echo.
-echo Deleting all Game Server tables for new content...
+echo Deleting all Game Server tables for new content.
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< gs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
@@ -681,14 +682,14 @@ goto gs_install
 
 :gs_upgrade
 echo.
-echo Upgrading structure of Game Server tables.
+echo Upgrading structure of Game Server tables (this could take awhile, be patient).
 echo.
 echo @echo off> temp.bat
-if exist gs_errors.txt del gs_errors.txt
-for %%i in (..\sql\game\updates\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% --force ^< %%i 2^>^> gs_errors.txt >> temp.bat
+if exist gs_errors.log del gs_errors.log
+for %%i in (..\sql\game\updates\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% --force ^< %%i 2^>^> gs_errors.log >> temp.bat
 call temp.bat> nul
 del temp.bat
-move gs_errors.txt %workdir%
+move gs_errors.log %workdir%
 goto gs_install
 
 :gs_install
@@ -794,6 +795,9 @@ echo.
 echo L2J provides some "Custom Server Tables" for non-retail modifications
 echo in order to avoid override the original Server Tables.
 echo.
+echo Remember that in order to get these additions actually working
+echo you need to edit your configuration files.
+echo.
 set /p cstprompt=Install Custom Server Tables: (y) yes or (n) no (default no):
 if /i %cstprompt%==y goto custom_install
 if /i %cstprompt%==n goto mod_ask
@@ -803,19 +807,11 @@ cls
 echo.
 echo Installing Custom content.
 echo @echo off> temp.bat
-if exist custom_errors.txt del custom_errors.txt
-for %%i in (..\sql\game\custom\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
+if exist custom_errors.log del custom_errors.log
+for %%i in (..\sql\game\custom\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.log >> temp.bat
 call temp.bat> nul
 del temp.bat
-move custom_errors.txt %workdir%
-title L2JDP Installer - Custom Server Tables Process Complete
-cls
-echo Database structure for L2J Custom finished.
-echo.
-echo Remember that in order to get these additions actually working 
-echo you need to edit your configuration files. 
-echo.
-pause
+move custom_errors.log %workdir%
 goto mod_ask
 
 :mod_ask
@@ -829,6 +825,9 @@ echo.
 echo Some of these mods would require extra tables in order to work
 echo and those tables could be created now if you wanted to.
 echo.
+echo Remember that in order to get these additions actually working
+echo you need to edit your configuration files.
+echo.
 set /p cstprompt=Install Mod Server Tables: (y) yes or (n) no (default no):
 if /i %cstprompt%==y goto mod_install
 if /i %cstprompt%==n goto end
@@ -838,19 +837,11 @@ cls
 echo.
 echo Installing Mods content.
 echo @echo off> temp.bat
-if exist mods_errors.txt del mods_errors.txt
-for %%i in (..\sql\game\mods\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.txt >> temp.bat
+if exist mods_errors.log del mods_errors.log
+for %%i in (..\sql\game\mods\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.log >> temp.bat
 call temp.bat> nul
 del temp.bat
-move mods_errors.txt %workdir%
-title L2JDP Installer - Mod Server Tables Process Complete
-cls
-echo Database structure for L2J Mods finished.
-echo.
-echo Remember that in order to get these additions actually working 
-echo you need to edit your configuration files. 
-echo.
-pause
+move mods_errors.log %workdir%
 goto end
 
 :omfg
@@ -896,7 +887,7 @@ echo.
 echo L2JDP Database Installer 2012
 echo.
 echo (C) 2004-2012 L2J DataPack Team
-echo L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY;
+echo L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
 echo details.
