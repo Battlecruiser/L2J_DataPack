@@ -292,7 +292,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else if (type.startsWith("access"))
 				{
-					AdminTable.getInstance().reload();
+					AdminTable.getInstance().load();
 					activeChar.sendMessage("Access Rights have been reloaded");
 				}
 				else if (type.startsWith("quests"))
