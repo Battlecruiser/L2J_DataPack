@@ -52,6 +52,8 @@ public class TargetCorpseMob implements ITargetTypeHandler
 				if (isSummon && ((L2ServitorInstance)target).getOwner() != null
 						&& ((L2ServitorInstance)target).getOwner().getObjectId() == activeChar.getObjectId())
 					return _emptyTargetList;
+				
+				break;
 			}
 			case DRAIN:
 			{
