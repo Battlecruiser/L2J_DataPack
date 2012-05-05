@@ -21,6 +21,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * No Secrets?? (215)
+ * @author Dumpster
+ */
 public class Q251_NoSecrets extends Quest
 {
 	public static final int PINAPS = 30201;
@@ -51,85 +55,70 @@ public class Q251_NoSecrets extends Quest
 		
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
-		
-		for (int i : MOBS)
-		{
-			addKillId(i);
-		}
-		for (int i : MOBS2)
-		{
-			addKillId(i);
-		}
+		addKillId(MOBS);
+		addKillId(MOBS2);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == PINAPS)
+		if (event.equalsIgnoreCase("30201-03.htm"))
 		{
-			if (event.equalsIgnoreCase("30201-03.htm"))
-			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
-			}
+			st.set("cond", "1");
+			st.setState(State.STARTED);
+			st.playSound("ItemSound.quest_accept");
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == PINAPS)
+		switch (st.getState())
 		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					if (player.getLevel() >= 82)
+			case State.CREATED:
+				if (player.getLevel() >= 82)
+				{
+					htmltext = "30201-01.htm";
+				}
+				else
+				{
+					htmltext = "30201-00.htm";
+				}
+				break;
+			case State.STARTED:
+				if (st.getInt("cond") == 1)
+				{
+					htmltext = "30201-05.htm";
+				}
+				else if (st.getInt("cond") == 2)
+				{
+					if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 					{
-						htmltext = "30201-01.htm";
+						htmltext = "30201-04.htm";
+						st.rewardItems(57, 313355);
+						st.addExpAndSp(56787, 160578);
+						st.playSound("ItemSound.quest_finish");
+						st.exitQuest(false);
 					}
-					else
-					{
-						htmltext = "30201-00.htm";
-					}
-					break;
-				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
-						htmltext = "30201-05.htm";
-					}
-					else if (st.getInt("cond") == 2)
-					{
-						if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-						{
-							htmltext = "30201-04.htm";
-							st.takeItems(DIARY, -1);
-							st.takeItems(TABLE, -1);
-							st.giveAdena(313355, true);
-							st.addExpAndSp(56787, 160578);
-							st.playSound("ItemSound.quest_finish");
-							st.exitQuest(false);
-						}
-					}
-					break;
-				case State.COMPLETED:
-					htmltext = "30201-06.htm";
-			}
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = "30201-06.htm";
+				break;
 		}
 		return htmltext;
 	}
@@ -137,31 +126,34 @@ public class Q251_NoSecrets extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		if ((st == null) || (st.getState() != State.STARTED))
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 		{
-			return null;
-		}
-		if (st.getInt("cond") == 1)
-		{
-			if ((Util.contains(MOBS, npcId)) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
+			final int npcId = npc.getNpcId();
+			
+			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
 			{
 				st.giveItems(DIARY, 1);
-				st.playSound("ItemSound.quest_itemget");
 				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
 					st.set("cond", "2");
+					st.playSound("ItemSound.quest_middle");
+				}
+				else
+				{
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
-			else if ((Util.contains(MOBS2, npcId)) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5))
+			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5))
 			{
 				st.giveItems(TABLE, 1);
-				st.playSound("ItemSound.quest_itemget");
 				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
 					st.set("cond", "2");
+					st.playSound("ItemSound.quest_middle");
+				}
+				else
+				{
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
