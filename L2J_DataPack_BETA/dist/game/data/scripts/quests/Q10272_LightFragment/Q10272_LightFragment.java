@@ -24,7 +24,8 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Light Fragment (10272)
- * @author Gladicek Updated 28-10-2011
+ * @author Gladicek
+ * @version last updated 01-05-2012
  */
 public class Q10272_LightFragment extends Quest
 {
@@ -81,14 +82,7 @@ public class Q10272_LightFragment extends Quest
 					else
 					{
 						final QuestState _prev = player.getQuestState("10271_TheEnvelopingDarkness");
-						if ((_prev != null) && _prev.isCompleted())
-						{
-							htmltext = "32560-01.htm";
-						}
-						else
-						{
-							htmltext = "32560-02.htm";
-						}
+						htmltext = ((_prev != null) && _prev.isCompleted()) ? "32560-01.htm" : "32560-02.htm";
 					}
 					break;
 				case State.STARTED:
@@ -144,20 +138,20 @@ public class Q10272_LightFragment extends Quest
 						}
 						else
 						{
+							htmltext = "32559-17.htm";
 							st.set("cond", "7");
 							st.playSound("ItemSound.quest_middle");
-							htmltext = "32559-17.htm";
 						}
 						break;
 					case 7:
 						// TODO Nothing here?
 						break;
 					case 8:
-						st.giveAdena(556980, false);
+						htmltext = "32559-18.htm";
+						st.giveAdena(556980, true);
 						st.addExpAndSp(1009016, 91363);
 						st.playSound("ItemSound.quest_finish");
 						st.exitQuest(false);
-						htmltext = "32559-18.htm";
 						break;
 				}
 			}
