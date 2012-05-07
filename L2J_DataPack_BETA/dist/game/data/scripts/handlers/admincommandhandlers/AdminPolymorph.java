@@ -25,10 +25,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 
-
 /**
  * This class handles following admin commands: polymorph
- *
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2007/07/31 10:05:56 $
  */
 public class AdminPolymorph implements IAdminCommandHandler
@@ -48,9 +46,27 @@ public class AdminPolymorph implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (activeChar.isMounted())
+		if (activeChar.isSitting())
 		{
-			activeChar.sendMessage("You can't transform while mounted, please dismount and try again.");
+			activeChar.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
+			return false;
+		}
+		
+		if (activeChar.isTransformed() || activeChar.isInStance())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+			return false;
+		}
+		
+		if (activeChar.isInWater())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
+			return false;
+		}
+		
+		if (activeChar.isFlyingMounted() || activeChar.isMounted() || activeChar.isRidingStrider())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
 			return false;
 		}
 		
@@ -90,7 +106,9 @@ public class AdminPolymorph implements IAdminCommandHandler
 					}
 				}
 				else if (parts.length == 1)
+				{
 					cha.untransform();
+				}
 				else
 				{
 					activeChar.sendMessage("Usage: //transform <id>");
@@ -115,7 +133,9 @@ public class AdminPolymorph implements IAdminCommandHandler
 					doPolymorph(activeChar, target, p2, p1);
 				}
 				else
+				{
 					doPolymorph(activeChar, target, p1, "npc");
+				}
 			}
 			catch (Exception e)
 			{
@@ -142,7 +162,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 	
 	/**
 	 * @param activeChar
-	 * @param obj 
+	 * @param obj
 	 * @param id
 	 * @param type
 	 */
@@ -151,7 +171,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		if (obj != null)
 		{
 			obj.getPoly().setPolyInfo(type, id);
-			//animation
+			// animation
 			if (obj instanceof L2Character)
 			{
 				L2Character Char = (L2Character) obj;
@@ -160,13 +180,15 @@ public class AdminPolymorph implements IAdminCommandHandler
 				SetupGauge sg = new SetupGauge(0, 4000);
 				Char.sendPacket(sg);
 			}
-			//end of animation
+			// end of animation
 			obj.decayMe();
 			obj.spawnMe(obj.getX(), obj.getY(), obj.getZ());
 			activeChar.sendMessage("Polymorph succeed");
 		}
 		else
+		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+		}
 	}
 	
 	/**
@@ -183,16 +205,24 @@ public class AdminPolymorph implements IAdminCommandHandler
 			activeChar.sendMessage("Unpolymorph succeed");
 		}
 		else
+		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+		}
 	}
 	
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
 		if (command.contains("transform"))
+		{
 			AdminHelpPage.showHelpPage(activeChar, "transform.htm");
+		}
 		else if (command.contains("abnormal"))
+		{
 			AdminHelpPage.showHelpPage(activeChar, "abnormal.htm");
+		}
 		else
+		{
 			AdminHelpPage.showHelpPage(activeChar, "effects_menu.htm");
+		}
 	}
 }
