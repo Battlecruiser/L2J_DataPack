@@ -64,6 +64,12 @@ public class Transformation extends L2Effect
 			return false;
 		}
 		
+		if (trg.isSitting())
+		{
+			trg.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
+			return false;
+		}
+		
 		if (trg.isTransformed() || trg.isInStance())
 		{
 			trg.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
@@ -76,7 +82,7 @@ public class Transformation extends L2Effect
 			return false;
 		}
 		
-		if (trg.isMounted() || trg.isFlyingMounted())
+		if (trg.isFlyingMounted() || trg.isMounted() || trg.isRidingStrider())
 		{
 			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
 			return false;
