@@ -88,7 +88,7 @@ public class Q50_LanoscosSpecialBait extends Quest
 				htmltext = (player.getLevel() >= 27) ? "31570-01.htm" : "31570-02.html";
 				break;
 			case State.STARTED:
-				htmltext = (st.getInt("cond") == 1) ? "31570-04.html" : "31570-05.html";
+				htmltext = (st.getInt("cond") == 2) ? "31570-04.html" : "31570-05.html";
 				break;
 		}
 		return htmltext;
@@ -125,15 +125,15 @@ public class Q50_LanoscosSpecialBait extends Quest
 				if ((count + numItems) >= 100)
 				{
 					numItems = 100 - count;
+					st.set("cond", "2");
+					st.playSound("ItemSound.quest_middle");
 				}
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
+				else
+				{
+					st.playSound("ItemSound.quest_itemget");
+				}
+				st.giveItems(ESSENCE_OF_WIND, (int) numItems);
 			}
-			else
-			{
-				st.playSound("ItemSound.quest_itemget");
-			}
-			st.giveItems(ESSENCE_OF_WIND, (int) numItems);
 		}
 		
 		return super.onKill(npc, player, isPet);
