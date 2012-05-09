@@ -611,9 +611,9 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-		<set name="itemConsumeCount" val="1" />
+		<!--  Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
-		<set name="staticHitTime" val="true" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -621,22 +621,22 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="valakas_item">
-				<add order="0x40" stat="valakasRes" val="11" />
+				<sub order="0x40" stat="valakasVuln" val="11" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
-		<set name="itemConsumeCount" val="1" />
+		<!--  Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="valakas_item">
-				<add order="0x40" stat="valakas" val="11" />
+				<add order="0x40" stat="valakasProf" val="20" />
 			</effect>
 		</for>
 	</skill>
