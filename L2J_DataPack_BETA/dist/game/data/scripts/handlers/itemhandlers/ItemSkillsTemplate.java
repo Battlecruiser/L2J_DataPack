@@ -102,7 +102,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				
 				if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0) && (itemSkill.isPotion() || itemSkill.isSimultaneousCast()))
 				{
-					if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
+					if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), playable, false))
 					{
 						activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 						return false;
@@ -126,8 +126,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						case 2037:
 						case 26025:
 						case 26026:
-							int buffId = activeChar._shortBuffTaskSkillId;
-							// greater healing potions
+							final int buffId = activeChar._shortBuffTaskSkillId;
 							if ((skillId == 2037) || (skillId == 26025))
 							{
 								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
@@ -135,7 +134,6 @@ public class ItemSkillsTemplate implements IItemHandler
 							else if (((skillId == 2032) || (skillId == 26026)) && (buffId != 2037) && (buffId != 26025))
 							{
 								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
-								// lesser healing potions
 							}
 							else
 							{
@@ -169,7 +167,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					// Consume.
 					if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0))
 					{
-						if (!activeChar.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
+						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
 							activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							return false;
