@@ -52,26 +52,8 @@ public class AdminPolymorph implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isTransformed() || activeChar.isInStance())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-			return false;
-		}
-		
-		if (activeChar.isInWater())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
-			return false;
-		}
-		
-		if (activeChar.isFlyingMounted() || activeChar.isMounted() || activeChar.isRidingStrider())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
-			return false;
-		}
-		
 		if (command.startsWith("admin_untransform"))
-		{
+		{	
 			L2Object obj = activeChar.getTarget();
 			if (obj instanceof L2Character)
 			{
@@ -84,6 +66,24 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_transform"))
 		{
+			if (activeChar.isTransformed() || activeChar.isInStance())
+			{
+				activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				return false;
+			}
+			
+			else if (activeChar.isInWater())
+			{
+				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
+				return false;
+			}
+			
+			else if (activeChar.isFlyingMounted() || activeChar.isMounted() || activeChar.isRidingStrider())
+			{
+				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
+				return false;
+			}
+			
 			L2Object obj = activeChar.getTarget();
 			if (obj instanceof L2PcInstance)
 			{
