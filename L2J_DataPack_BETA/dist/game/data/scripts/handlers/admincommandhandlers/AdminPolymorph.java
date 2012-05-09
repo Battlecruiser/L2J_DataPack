@@ -90,15 +90,15 @@ public class AdminPolymorph implements IAdminCommandHandler
 					return false;
 				}
 				
-				String[] parts = command.split(" ");
+				final String[] parts = command.split(" ");
 				if (parts.length > 1)
 				{
-					int id = Integer.parseInt(parts[1]);
 					if (Util.isDigit(parts[1]))
 					{
+						final int id = Integer.parseInt(parts[1]);
 						if (!TransformationManager.getInstance().transformPlayer(id, cha))
 						{
-							cha.sendMessage("Unknow transformation id: " + id);
+							cha.sendMessage("Unknown transformation Id: " + id);
 						}
 					}
 					else
