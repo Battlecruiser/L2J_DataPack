@@ -214,7 +214,8 @@ public class Continuous implements ISkillHandler
 					L2Summon summon = target.getPet();
 					if (summon != null && summon != activeChar && summon instanceof L2ServitorInstance && effects.length > 0)
 					{
-						skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
+						if (effects[0].canBeStolen())
+							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
 					}
 				}
 				
