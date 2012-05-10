@@ -57,28 +57,6 @@ public class Fear extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		// Fear skills cannot be used l2pcinstance to l2pcinstance. Heroic
-		// Dread, Curse: Fear, Fear, Horror, Sword Symphony, Word of Fear, Hell Scream and
-		// Mass Curse Fear are the exceptions.
-		if (getEffected() instanceof L2PcInstance
-				&& getEffector() instanceof L2PcInstance)
-		{
-			switch (getSkill().getId())
-			{
-				case 1376:
-				case 1169:
-				case 65:
-				case 1092:
-				case 98:
-				case 1272:
-				case 1381:
-				case 763:
-					break;
-				default:
-					return false;
-			}
-		}
-		
 		if (getEffected() instanceof L2NpcInstance
 				|| getEffected() instanceof L2DefenderInstance
 				|| getEffected() instanceof L2FortCommanderInstance
