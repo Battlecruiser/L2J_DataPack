@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
