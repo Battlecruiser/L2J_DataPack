@@ -195,7 +195,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 							registerClan(clan);
 							html = getFlagHtml(_data.get(clan.getClanId()).flag);
 						}
-						else // Quest not accoplished, try by paying
+						else // Quest not accomplished, try by paying
 							html = "messenger_noquest.htm";
 					}
 					// Register paying the fee
