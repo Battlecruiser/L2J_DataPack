@@ -209,7 +209,9 @@ public class EnergySeeds extends L2AttackableAIScript
 			{
 				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
 				if (doorInstance != null)
+				{
 					doorInstance.openMe();
+				}
 			}
 			startAI(GraciaSeeds.DESTRUCTION);
 		}
@@ -219,19 +221,29 @@ public class EnergySeeds extends L2AttackableAIScript
 			{
 				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
 				if (doorInstance != null)
+				{
 					doorInstance.closeMe();
+				}
 			}
-			for(L2Character chars : ZoneManager.getInstance().getZoneById(SOD_ZONE).getCharactersInsideArray())
-				if (chars instanceof L2PcInstance)
-					chars.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+			for(L2PcInstance ch : ZoneManager.getInstance().getZoneById(SOD_ZONE).getPlayersInside())
+			{
+				if (ch != null)
+				{
+					ch.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+				}
+			}
 			stopAI(GraciaSeeds.DESTRUCTION);
 		}
 		else if (event.equalsIgnoreCase("DeSpawnTask"))
 		{
 			if (npc.isInCombat())
+			{
 				startQuestTimer("DeSpawnTask", 30000, npc, null);
+			}
 			else
+			{
 				npc.deleteMe();
+			}
 		}
 		return null;
 	}

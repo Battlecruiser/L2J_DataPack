@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -1051,14 +1050,14 @@ public class TowerOfNaia extends Quest
 		if ((party != null) && ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2Character ch : zone.getCharactersInsideArray())
+			for (L2PcInstance player : zone.getPlayersInside())
 			{
-				if (ch instanceof L2PcInstance)
+				if (player != null)
 				{
-					L2Party charParty = ((L2PcInstance) ch).getParty();
+					L2Party charParty = player.getParty();
 					if ((charParty == null) || (charParty.getLeaderObjectId() != party.getLeaderObjectId()))
 					{
-						ch.teleToLocation(16110, 243841, 11616);
+						player.teleToLocation(16110, 243841, 11616);
 					}
 				}
 			}
@@ -1070,11 +1069,11 @@ public class TowerOfNaia extends Quest
 		if (ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2Character ch : zone.getCharactersInsideArray())
+			for (L2PcInstance player : zone.getPlayersInside())
 			{
-				if (ch instanceof L2PcInstance)
+				if (player != null)
 				{
-					ch.teleToLocation(16110, 243841, 11616);
+					player.teleToLocation(16110, 243841, 11616);
 				}
 			}
 		}

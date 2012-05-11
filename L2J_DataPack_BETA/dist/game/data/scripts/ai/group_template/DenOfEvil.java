@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
@@ -201,11 +200,11 @@ public class DenOfEvil extends L2AttackableAIScript
 		
 		private void destroyZone()
 		{
-			for (L2Character character : _zone.getCharactersInsideArray())
+			for (L2Character character : _zone.getCharactersInside())
 			{
 				if (character == null)
 					continue;
-				if (character instanceof L2Playable)
+				if (character.isPlayable())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(6149, 1);
 					skill.getEffects(character, character); // apply effect
@@ -214,7 +213,7 @@ public class DenOfEvil extends L2AttackableAIScript
 				{
 					if (character.doDie(null)) // mobs die
 					{
-						if (character instanceof L2Npc)
+						if (character.isNpc())
 						{
 							// respawn eye
 							L2Npc npc = (L2Npc) character;
