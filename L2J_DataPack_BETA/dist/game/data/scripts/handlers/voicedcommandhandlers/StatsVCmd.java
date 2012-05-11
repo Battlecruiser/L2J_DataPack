@@ -26,7 +26,7 @@ import com.l2jserver.util.StringUtil;
 /**
  * @author Zoey76.
  */
-public class stats implements IVoicedCommandHandler
+public class StatsVCmd implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{
@@ -36,7 +36,7 @@ public class stats implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (!command.equals("stats") || (params == null) || !params.isEmpty())
+		if (!command.equals("stats") || (params == null) || params.isEmpty())
 		{
 			activeChar.sendMessage("Syntax: .stats <player name>");
 			return false;
