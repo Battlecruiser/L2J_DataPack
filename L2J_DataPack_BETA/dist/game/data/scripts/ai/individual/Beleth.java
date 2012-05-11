@@ -184,7 +184,7 @@ public class Beleth extends L2AttackableAIScript
 				{
 					case 1:
 						movie = true;
-						for (L2Character npc : _zone.getCharactersInsideArray())
+						for (L2Character npc : _zone.getCharactersInside())
 						{
 							if (npc instanceof L2Npc)
 							{

@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -187,7 +188,7 @@ public class RainbowSpringsChateau extends Quest
 		{
 			for (int arenaId : ARENA_ZONES)
 			{
-				final L2Character[] chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInsideArray();
+				final Collection<L2Character> chars = ZoneManager.getInstance().getZoneById(arenaId).getCharactersInside();
 				for (L2Character chr : chars)
 				{
 					if (chr != null)
@@ -804,7 +805,7 @@ public class RainbowSpringsChateau extends Quest
 				continue;
 			}
 			
-			final L2Character[] chars = ZoneManager.getInstance().getZoneById(id).getCharactersInsideArray();
+			final Collection<L2Character> chars = ZoneManager.getInstance().getZoneById(id).getCharactersInside();
 			for (L2Character chr : chars)
 			{
 				if (chr != null)

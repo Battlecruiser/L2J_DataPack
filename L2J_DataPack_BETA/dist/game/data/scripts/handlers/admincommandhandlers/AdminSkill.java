@@ -280,7 +280,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final L2PcInstance player = target.getActingPlayer();
-		final L2Skill[] skills = player.getAllSkills();
+		final L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
 		
 		int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
@@ -404,12 +404,16 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Skill[] skills = player.getAllSkills();
-			adminSkills = activeChar.getAllSkills();
+			L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
+			adminSkills = activeChar.getAllSkills().toArray(new L2Skill[activeChar.getAllSkills().size()]);
 			for (L2Skill skill: adminSkills)
+			{
 				activeChar.removeSkill(skill);
+			}
 			for (L2Skill skill: skills)
+			{
 				activeChar.addSkill(skill, true);
+			}
 			activeChar.sendMessage("You now have all the skills of " + player.getName() + ".");
 			activeChar.sendSkillList();
 		}
@@ -434,15 +438,23 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Skill[] skills = player.getAllSkills();
+			L2Skill[] skills = player.getAllSkills().toArray(new L2Skill[player.getAllSkills().size()]);
 			for (L2Skill skill: skills)
+			{
 				player.removeSkill(skill);
+			}
 			for (L2Skill skill: activeChar.getAllSkills())
+			{
 				player.addSkill(skill, true);
+			}
 			for (L2Skill skill: skills)
+			{
 				activeChar.removeSkill(skill);
+			}
 			for (L2Skill skill: adminSkills)
+			{
 				activeChar.addSkill(skill, true);
+			}
 			player.sendMessage("[GM]" + activeChar.getName() + " updated your skills.");
 			activeChar.sendMessage("You now have all your skills back.");
 			adminSkills = null;
