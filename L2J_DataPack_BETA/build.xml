@@ -27,7 +27,7 @@
 	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 
-	<target name="init" depends="clean,checkRequirements,getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
+	<target name="init" depends="checkRequirements,getChangelogDateVersion" description="Create the output directories. Do nothing if dirs were already created">
 		<mkdir dir="${build}" />
 	</target>
 
@@ -40,11 +40,7 @@
 	</target>
 	
 	<target name="build" depends="dist">
-		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" level="9" />
-	</target>
-
-	<target name="clean" description="Deletes the datapack distribution ZIP file only, preserving synchronized build files.">
-		<delete file="${build}/L2J_DataPack_BETA.zip" />
+		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" level="9" update="true" />
 	</target>
 
 	<target name="checkRequirements" description="Check Requirements">
