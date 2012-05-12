@@ -56,6 +56,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
+		// Verify that item is not under reuse.
 		if (!checkReuse(activeChar, null, item))
 		{
 			return false;
@@ -91,7 +92,12 @@ public class ItemSkillsTemplate implements IItemHandler
 				
 				if (playable.isSkillDisabled(itemSkill))
 				{
-					checkReuse(activeChar, itemSkill, item);
+					return false;
+				}
+				
+				// Verify that skill is not under reuse.
+				if (!checkReuse(activeChar, itemSkill, item))
+				{
 					return false;
 				}
 				
@@ -158,7 +164,6 @@ public class ItemSkillsTemplate implements IItemHandler
 				else
 				{
 					playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					
 					if (!playable.useMagic(itemSkill, forceUse, false))
 					{
 						return false;
@@ -185,14 +190,14 @@ public class ItemSkillsTemplate implements IItemHandler
 	}
 	
 	/**
-	 * @param player
-	 * @param skill
-	 * @param item
-	 * @return
+	 * @param player the player using the item or skill
+	 * @param skill the skill being used, can be null
+	 * @param item the item being used
+	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
 	private boolean checkReuse(L2PcInstance player, L2Skill skill, L2ItemInstance item)
 	{
-		final SystemMessage sm;
+		SystemMessage sm = null;
 		final long remainingTime = (skill != null) ? player.getSkillRemainingReuseTime(skill.getReuseHashCode()) : player.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
 		if (!isAvailable)
@@ -241,12 +246,15 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			sm.addNumber(seconds);
 		}
-		else
+		else if (skill == null)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 			sm.addItemName(item);
 		}
-		player.sendPacket(sm);
+		if (sm != null)
+		{
+			player.sendPacket(sm);
+		}
 		return isAvailable;
 	}
 }
