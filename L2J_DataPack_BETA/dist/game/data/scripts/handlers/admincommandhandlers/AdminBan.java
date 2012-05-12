@@ -31,8 +31,8 @@ import com.l2jserver.gameserver.util.GMAudit;
 
 /**
  * This class handles following admin commands:
- * - ban_acc <account_name> = changes account access level to -100 and logs him off. If no account is specified target's account is used.
- * - ban_char <char_name> = changes a characters access level to -100 and logs him off. If no character is specified target is used.
+ * - ban_acc <account_name> = changes account access level to -1 and logs him off. If no account is specified target's account is used.
+ * - ban_char <char_name> = changes a characters access level to -1 and logs him off. If no character is specified target is used.
  * - ban_chat <char_name> <duration> = chat bans a character for the specified duration. If no name is specified the target is chat banned indefinitely.
  * - unban_acc <account_name> = changes account access level to 0.
  * - unban_char <char_name> = changes specified characters access level to 0.
@@ -116,7 +116,7 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			else if (targetPlayer == null)
 			{
-				LoginServerThread.getInstance().sendAccessLevel(player, -100);
+				LoginServerThread.getInstance().sendAccessLevel(player, -1);
 				activeChar.sendMessage("Ban request sent for account "+player);
 				auditAction(command, activeChar, player);
 			}
@@ -135,7 +135,7 @@ public class AdminBan implements IAdminCommandHandler
 				return false;
 			}
 			auditAction(command, activeChar, (targetPlayer == null ? player : targetPlayer.getName()));
-			return changeCharAccessLevel(targetPlayer, player, activeChar, -100);
+			return changeCharAccessLevel(targetPlayer, player, activeChar, -1);
 		}
 		else if (command.startsWith("admin_ban_chat"))
 		{
