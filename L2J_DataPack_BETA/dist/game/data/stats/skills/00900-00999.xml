@@ -285,11 +285,11 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="80" effectType="CANCEL_DEBUFF" />
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_purification">
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="80" effectType="CANCEL_DEBUFF" />
 		</for>
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
