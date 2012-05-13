@@ -162,7 +162,6 @@ public class Q401_PathToWarrior extends Quest
 			{
 				st.takeItems(RustedBronzeSword3, 1);
 				st.takeItems(PoisonSpiderLeg, -1);
-				st.giveItems(MedallionOfWarrior, 1);
 				if (player.getLevel() >= 20)
 				{
 					st.addExpAndSp(320534, 21012);
@@ -176,6 +175,7 @@ public class Q401_PathToWarrior extends Quest
 					st.addExpAndSp(160267, 34408);
 				}
 				st.giveItems(57, 163800);
+				st.giveItems(MedallionOfWarrior, 1);
 				st.playSound("ItemSound.quest_finish");
 				player.sendPacket(new SocialAction(player.getObjectId(), 3));
 				st.saveGlobalQuestVar("1ClassQuestFinished", "1");
