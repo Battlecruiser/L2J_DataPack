@@ -98,16 +98,16 @@ class Quest (JQuest) :
           htmltext = Quest.getNoQuestMsg(player)
     elif event == "30417-13.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
+          for item in range(1162,1180) :
+               st.takeItems(item,-1)
+          st.takeItems(MARK_OF_ESQUIRE,-1)
           if player.getLevel() >= 20 :
               st.addExpAndSp(160267, 11576)
           elif player.getLevel() == 19 :
               st.addExpAndSp(228064, 14925)
           else:
               st.addExpAndSp(295862, 18274)
-          st.giveItems(57, 81900)
-          for item in range(1162,1180) :
-               st.takeItems(item,-1)
-          st.takeItems(MARK_OF_ESQUIRE,-1)
+          st.giveItems(57, 163800)
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
           st.exitQuest(False)
