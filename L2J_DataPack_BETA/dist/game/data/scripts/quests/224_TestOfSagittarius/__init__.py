@@ -177,13 +177,13 @@ class Quest (JQuest) :
       htmltext = "30626-12.htm"
    elif npcId == 30626 and step==14 :
       htmltext = "30626-13.htm"
-      st.giveItems(MARK_OF_SAGITTARIUS,1)
-      st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       st.takeItems(CRESCENT_MOON_BOW,1)
       st.takeItems(TALISMAN_OF_KADESH,1)
       st.takeItems(BLOOD_OF_LIZARDMAN,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN))
-      st.addExpAndSp(447444,30704)
-      st.giveItems(57,80903)
+      st.addExpAndSp(894888,61408)
+      st.giveItems(57,161806)
+      st.giveItems(MARK_OF_SAGITTARIUS,1)
+      st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       st.unset("step")
       st.set("cond","0")
       st.exitQuest(False)

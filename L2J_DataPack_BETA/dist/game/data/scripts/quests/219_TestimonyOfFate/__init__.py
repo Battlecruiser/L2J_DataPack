@@ -221,12 +221,12 @@ class Quest (JQuest) :
       htmltext = "30358-03.htm"
    elif npcId == 30358 and st.getInt("cond")>=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_LETTER_ID) :
       htmltext = "30358-04.htm"
-      st.giveItems(MARK_OF_FATE_ID,1)
-      st.giveItems(7562,16)
-      st.addExpAndSp(682735,45562)
-      st.giveItems(57,123854)
       st.takeItems(ARKENIAS_LETTER_ID,1)
       st.takeItems(PALUS_CHARM_ID,1)
+      st.addExpAndSp(1365470,91124)
+      st.giveItems(57,247708)
+      st.giveItems(7562,16)
+      st.giveItems(MARK_OF_FATE_ID,1)
       st.set("cond","0")
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")

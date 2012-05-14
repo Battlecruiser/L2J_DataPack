@@ -148,12 +148,12 @@ class Quest (JQuest) :
    elif npcId == 30624 and st.getInt("cond") == 9 and st.getQuestItemsCount(ASCALONS_LETTER3) :
       htmltext = "30624-15.htm"
    elif npcId == 30624 and st.getInt("cond") == 14 and st.getQuestItemsCount(MOUENS_LETTER) :
-      st.addExpAndSp(635371,43600)
-      st.giveItems(57,114882)
-      htmltext = "30624-17.htm"
+      st.takeItems(MOUENS_LETTER,1)
+      st.addExpAndSp(1270742,87200)
+      st.giveItems(57,229764)
       st.giveItems(MARK_OF_CHAMPION,1)
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-      st.takeItems(MOUENS_LETTER,1)
+      htmltext = "30624-17.htm"
       st.set("cond","0")
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")

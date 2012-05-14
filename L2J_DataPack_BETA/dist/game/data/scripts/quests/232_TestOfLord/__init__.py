@@ -123,11 +123,11 @@ class Quest (JQuest) :
     elif st.getInt("phase")==2:
       if event == "30565_2":
         htmltext = "30565-12.htm"
-        st.addExpAndSp(447444,30704)
-        st.giveItems(57,80903)
+        st.takeItems(IMMORTAL_FLAME,1)
+        st.addExpAndSp(894888,61408)
+        st.giveItems(57,161806)
         st.giveItems(MARK_OF_LORD,1)
         st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-        st.takeItems(IMMORTAL_FLAME,1)
         st.playSound("ItemSound.quest_finish")
         for var in STATS[0]:
           st.unset(var)

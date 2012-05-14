@@ -82,15 +82,16 @@ class Quest (JQuest) :
           htmltext = "30473-08.htm"
     elif event == "30473_2" :
           htmltext = "30473-09.htm"
+          st.takeItems(GOLDEN_STATUE,1)
           if st.getQuestItemsCount(GOLDEN_STATUE):
-            st.addExpAndSp(738283,50662)
+            st.addExpAndSp(1476566,101324)
           else:
-            st.addExpAndSp(118304,26250)
+            st.addExpAndSp(1476566,101324)
           st.giveItems(MARK_OF_HEALER,1)
-          st.giveItems(ADENA,133490)
+          st.giveItems(ADENA,266980)
           st.giveItems(7562,60)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-          st.takeItems(GOLDEN_STATUE,1)
+          
           st.set("cond","0")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")

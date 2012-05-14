@@ -156,11 +156,11 @@ class Quest (JQuest) :
             elif cond == 20 :
                 htmltext = "32220-20.htm"
                 st.takeItems(Research,-1)
-                st.giveItems(Mark,1)
                 st.exitQuest(False)
                 st.playSound("ItemSound.quest_finish")
-                st.giveItems(57,38833)
-                st.addExpAndSp(214773,14738)
+                st.addExpAndSp(429546,29476)
+                st.giveItems(57,77666)
+                st.giveItems(Mark,1)
                 st.unset("cond")
         elif npcId == Gaius :
             if cond == 13 :

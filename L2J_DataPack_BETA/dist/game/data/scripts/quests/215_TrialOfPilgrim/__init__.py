@@ -113,13 +113,13 @@ class Quest (JQuest) :
    elif npcId == 30648 and cond==1 and st.hasQuestItems(VOUCHER_OF_TRIAL) :
       htmltext = "30648-09.htm"
    elif npcId == 30648 and cond==17 and st.hasQuestItems(BOOK_OF_SAGE) :
-      st.addExpAndSp(629125,40803)
+      st.takeItems(BOOK_OF_SAGE,1)
+      st.addExpAndSp(1258250,81606)
+      st.giveAdena(229298,True)
       st.giveItems(7562,49)
-      st.giveAdena(114649,True)
+      st.giveItems(MARK_OF_PILGRIM,1)
       player.sendPacket(SocialAction(player.getObjectId(),3))
       htmltext = "30648-10.htm"
-      st.giveItems(MARK_OF_PILGRIM,1)
-      st.takeItems(BOOK_OF_SAGE,1)
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
    elif npcId == 30571 and cond==1 and st.hasQuestItems(VOUCHER_OF_TRIAL) :

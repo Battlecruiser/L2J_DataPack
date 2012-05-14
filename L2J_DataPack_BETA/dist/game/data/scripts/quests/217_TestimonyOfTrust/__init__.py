@@ -253,12 +253,12 @@ class Quest (JQuest) :
          if npcId == 30191 :
            htmltext = "30191-07.htm"
          elif npcId == 30031 and st.getQuestItemsCount(RECOMMENDATION_OF_HOLLIN_ID) :
-           st.giveItems(ADENA,126106)
-           st.addExpAndSp(659149,46391)
-           st.giveItems(7562,96)
-           htmltext = "30031-01.htm"
            st.takeItems(RECOMMENDATION_OF_HOLLIN_ID,1)
+           st.addExpAndSp(1390298,92782)
+           st.giveItems(ADENA,252212)
+           st.giveItems(7562,96)
            st.giveItems(MARK_OF_TRUST_ID,1)
+           htmltext = "30031-01.htm"
            st.unset("cond")
            st.unset("id")
            st.exitQuest(False)
