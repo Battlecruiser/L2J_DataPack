@@ -79,12 +79,12 @@ class Quest (JQuest) :
       htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30109 and cond == 18  and st.getQuestItemsCount(LETTER_OF_DUSTIN):
-      st.addExpAndSp(381288,24729)
-      st.giveItems(57,69484)
-      st.giveItems(7562,8)
-      htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN,1)
+      st.addExpAndSp(762576,49458)
+      st.giveItems(57,138968)
+      st.giveItems(7562,8)
       st.giveItems(MARK_OF_DUTY,1)
+      htmltext = "30109-05.htm"
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")

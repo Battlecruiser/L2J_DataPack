@@ -231,14 +231,14 @@ class Quest (JQuest) :
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
                   htmltext = "30634-12.htm"
-                  st.addExpAndSp(832247,57110)
-                  st.giveItems(57,150480)
+                  st.addExpAndSp(1664494,114220)
+                  st.giveItems(57,300960)
+                  st.giveItems(MARK_OF_SUMMONER,1)
+                  st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
                   for var in STATS:
                      st.unset(var)
                   st.exitQuest(False)
                   st.playSound("ItemSound.quest_finish")
-                  st.giveItems(MARK_OF_SUMMONER,1)
-                  st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
                   for item in [LARS_LIST1,LARS_LIST2,LARS_LIST3,LARS_LIST4,LARS_LIST5,ALMORS_ARCANA,BASILLIA_ARCANA,CAMONIELL_ARCANA,CELESTIEL_ARCANA,BELTHUS_ARCANA,BRYNTHEA_ARCANA]:
                      st.takeItems(item,-1)
                else:                # he lost something :) or didnt finished

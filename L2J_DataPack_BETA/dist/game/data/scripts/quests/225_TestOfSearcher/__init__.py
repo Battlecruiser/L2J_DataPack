@@ -117,15 +117,15 @@ class Quest (JQuest) :
        elif cond>1 and cond<19 :
          htmltext = "30690-07.htm"
        elif cond==19 :
-         st.addExpAndSp(447444,30704)
-         st.giveItems(57,80903)
+         st.takeItems(ALANKELLS_RECOMMEND,1)
+         st.addExpAndSp(894888,61408)
+         st.giveItems(57,161806)
          st.giveItems(7562,82)
+         st.giveItems(MARK_OF_SEARCHER,1)
          htmltext = "30690-08.htm"
          st.set("cond","0")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
-         st.takeItems(ALANKELLS_RECOMMEND,1)
-         st.giveItems(MARK_OF_SEARCHER,1)
          st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
      elif npcId == NPC[0] :
       if cond==1 :

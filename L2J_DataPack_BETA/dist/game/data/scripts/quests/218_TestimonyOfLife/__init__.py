@@ -168,8 +168,8 @@ class Quest(JQuest):
 			elif st.getQuestItemsCount(CAMOMILE_CHARM_ID):
 				if self.getGameTicks() != st.getInt("id"):
 					st.set("id",str(self.getGameTicks())) # TODO should it really be like this?
-					st.addExpAndSp(943416,62959)
-					st.giveItems(57,171144)
+					st.addExpAndSp(1886832,125918)
+					st.giveItems(57,342288)
 					st.giveItems(7562,16)
 					st.giveItems(MARK_OF_LIFE_ID,1)
 					st.takeItems(CAMOMILE_CHARM_ID,1)

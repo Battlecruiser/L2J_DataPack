@@ -145,10 +145,10 @@ class Quest (JQuest) :
             st.takeItems(TONE_OF_FIRE,1)
             st.takeItems(TONE_OF_WIND,1)
             st.takeItems(TONE_OF_EARTH,1)
+            st.addExpAndSp(2058244,141240)
+            st.giveItems(57,372154)
             st.giveItems(MARK_OF_MAGUS,1)
             st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-            st.addExpAndSp(1029122,70620)
-            st.giveItems(57,186077)
             htmltext = "30629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")

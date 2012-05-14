@@ -284,8 +284,8 @@ class Quest (JQuest) :
             htmltext = "30461-14.htm"
             st.takeItems(MIRIENS_SIGIL3_ID,-1)
             st.takeItems(SYMBOL_OF_CRONOS_ID,-1)
-            st.addExpAndSp(876963,56877)
-            st.giveItems(57,159814)
+            st.addExpAndSp(1753926,113754)
+            st.giveItems(57,319628)
             st.giveItems(7562,8)
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
             st.set("cond","0")

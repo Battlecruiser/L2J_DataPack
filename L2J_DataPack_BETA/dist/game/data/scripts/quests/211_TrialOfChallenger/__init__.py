@@ -149,12 +149,12 @@ class Quest (JQuest) :
    elif npcId == 30646 and cond == 7 :
       htmltext = "30646-06a.htm"
    elif npcId == 30646 and cond == 10 :
-      st.addExpAndSp(533803,34621)
-      st.giveItems(57,97278)
-      st.giveItems(7562,8)
-      htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY,1)
+      st.addExpAndSp(1067606,69242)
+      st.giveItems(57,194556)
+      st.giveItems(7562,8)
       st.giveItems(MARK_OF_CHALLENGER,1)
+      htmltext = "30646-07.htm"
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("cond","0")

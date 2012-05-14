@@ -117,20 +117,20 @@ class Quest (JQuest) :
         st.takeItems(OLMAHUMS_MONEY,1)
         st.giveItems(GREETINGS,3)
    elif npcId == 30666 and st.getInt("cond")==20 and st.getQuestItemsCount(KATARIS_LETTER)>0 and st.getQuestItemsCount(KAKANS_LETTER)>0 and st.getQuestItemsCount(NYAKURIS_LETTER)>0 and st.getQuestItemsCount(RAMUSS_LETTER)>0 :
-          st.giveItems(MARK_OF_REFORMER,1)
+          st.takeItems(KATARIS_LETTER,1)
+          st.takeItems(KAKANS_LETTER,1)
+          st.takeItems(NYAKURIS_LETTER,1)
+          st.takeItems(RAMUSS_LETTER,1)
+          st.addExpAndSp(1252844,85972)
+          st.giveItems(ADENA,226528)
           st.giveItems(7562,60)
-          st.giveItems(ADENA,113246)
+          st.giveItems(MARK_OF_REFORMER,1)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-          st.addExpAndSp(626422,42986)
           htmltext = "30666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
-          st.takeItems(KATARIS_LETTER,1)
-          st.takeItems(KAKANS_LETTER,1)
-          st.takeItems(NYAKURIS_LETTER,1)
-          st.takeItems(RAMUSS_LETTER,1)
    elif npcId == 30668 and (st.getInt("cond")==5 or st.getInt("cond")==6) :
         htmltext = "30668-01.htm"
         st.set("cond","6")

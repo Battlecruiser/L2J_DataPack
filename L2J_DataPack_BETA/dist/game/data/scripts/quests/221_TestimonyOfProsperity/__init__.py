@@ -217,12 +217,12 @@ class Quest (JQuest) :
    elif npcId == 30104 and st.getInt("cond")>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30104-12.htm"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
-          st.addExpAndSp(599979,40040)
-          st.giveItems(57,108841)
-          st.giveItems(7562,50)
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
-          st.giveItems(MARK_OF_PROSPERITY_ID,1)
           st.takeItems(MAPHR_TABLET_FRAGMENT_ID,1)
+          st.addExpAndSp(1199958,80080)
+          st.giveItems(57,217682)
+          st.giveItems(7562,50)
+          st.giveItems(MARK_OF_PROSPERITY_ID,1)
           htmltext = "30104-13.htm"
           st.set("cond","0")
           st.set("onlyone","1")
