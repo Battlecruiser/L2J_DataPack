@@ -367,7 +367,7 @@ public class SagasSuperClass extends QuestJython
 					st.set("cond", "0");
 					htmltext = "0-07.htm";
 					st.takeItems(Items[10], -1);
-					st.addExpAndSp(2586527, 0);
+					st.addExpAndSp(2299404, 0);
 					st.giveItems(57, 5000000);
 					st.giveItems(6622, 1);
 					int Class = getClassId(player);
