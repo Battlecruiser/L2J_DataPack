@@ -287,7 +287,7 @@ echo.
 echo Trying to create a Login Server DataBase.
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
-if %ERRORLEVEL% == 0 goto ls_install
+if %ERRORLEVEL% == 0 goto ls_db_ok
 if %safe_mode% == 1 goto omfg
 
 :ls_err2
@@ -366,6 +366,7 @@ echo Login Server tables has been deleted.
 goto ls_install
 
 :ls_upgrade
+cls
 echo.
 echo Upgrading structure of Login Server tables.
 echo.
@@ -448,7 +449,7 @@ echo.
 echo Trying to create a Community Server DataBase...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
 %cmdline%
-if %ERRORLEVEL% == 0 goto cs_install
+if %ERRORLEVEL% == 0 goto cs_db_ok
 if %safe_mode% == 1 goto omfg
 
 :cs_err2
@@ -528,6 +529,7 @@ echo Community Server tables has been deleted.
 goto cs_install
 
 :cs_upgrade
+cls
 echo.
 echo Upgrading structure of Community Server tables.
 echo.
@@ -610,7 +612,7 @@ echo.
 echo Trying to create a Game Server DataBase...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
 %cmdline%
-if %ERRORLEVEL% == 0 goto gs_install
+if %ERRORLEVEL% == 0 goto gs_db_ok
 if %safe_mode% == 1 goto omfg
 
 :gs_err2
@@ -681,6 +683,7 @@ echo Game Server tables has been deleted.
 goto gs_install
 
 :gs_upgrade
+cls
 echo.
 echo Upgrading structure of Game Server tables (this could take awhile, be patient).
 echo.

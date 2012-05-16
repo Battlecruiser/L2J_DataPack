@@ -40,7 +40,7 @@
 	</target>
 
 	<target name="build" depends="dist">
-		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" level="9" update="true" />
+		<zip destfile="${build}/L2J_DataPack_BETA.zip" basedir="${build.dist}" level="9" />
 	</target>
 
 	<target name="checkRequirements" description="Check Requirements.">
