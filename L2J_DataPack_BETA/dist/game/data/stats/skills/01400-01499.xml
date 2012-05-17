@@ -2642,17 +2642,18 @@
 		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
-		<!-- CT2.5 retail confirmed -->
-		<set name="mpConsume" val="37" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
-		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5567" chanceType="ON_ATTACKED" activationChance="10">
+			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" activationChance="10" chanceType="ON_ATTACKED" triggeredId="5567">
 				<add order="0x40" stat="fireRes" val="60" />
 			</effect>
 		</for>
