@@ -15,7 +15,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -53,7 +52,7 @@ public class CancelDebuff extends L2Effect
 	
 	private static boolean cancel(L2Character caster, L2Character target, L2Skill skill, double baseRate)
 	{
-		if (!(target instanceof L2PcInstance) || target.isDead())
+		if (target.isDead())
 		{
 			return false;
 		}
