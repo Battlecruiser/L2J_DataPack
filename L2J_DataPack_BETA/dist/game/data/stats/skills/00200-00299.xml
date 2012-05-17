@@ -270,6 +270,7 @@
 	</skill>
 	<skill id="217" levels="45" name="Sword/Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1">
 		<table name="#pAtk"> 1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13 14 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72 74.2 76.4 </table>
+		<table name="#hate"> 20 20 20 20 20 20 20 20 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 40 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 </table>
 		<table name="#ench1pAtk"> 81 81 82 82 83 84 84 85 85 86 86 87 88 88 89 89 90 90 91 92 92 93 93 94 94 95 96 96 97 97 </table>
 		<table name="#ench2pAtkSpd"> 1.011 1.012 1.014 1.015 1.016 1.018 1.019 1.020 1.022 1.023 1.024 1.026 1.027 1.028 1.030 1.031 1.032 1.034 1.035 1.036 1.038 1.039 1.040 1.042 1.043 1.044 1.046 1.047 1.048 1.050 </table>
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -281,14 +282,26 @@
 			<add order="0x40" stat="pAtk" val="#pAtk">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<!-- TODO: It probably will require a proper effect -->
+			<add order="0x40" stat="aggression" val="#hate" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</add>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="#ench1pAtk">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<!-- TODO: It probably will require a proper effect -->
+			<add order="0x40" stat="aggression" val="60" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</add>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="76.4">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</add>
+			<!-- TODO: It probably will require a proper effect -->
+			<add order="0x40" stat="aggression" val="60" />
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
