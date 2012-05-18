@@ -23,7 +23,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
@@ -39,7 +39,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
@@ -55,7 +55,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="1000" />
@@ -1421,7 +1421,7 @@
 	<skill id="2485" levels="1" name="Herb of Life">
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
@@ -1435,7 +1435,7 @@
 	<skill id="2486" levels="1" name="Herb of Mana">
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
@@ -1578,7 +1578,7 @@
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="10410" />
 		<set name="hitTime" val="500" />
-		<set name="isPotion" val="true" /> <!-- TEMP FIX -->
+		<set name="isPotion" val="true" /> <!-- FIXME: TEMP FIX -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1592,7 +1592,7 @@
 	</skill>
 	<skill id="2499" levels="1" name="Bottle of Full Soul">
 		<!-- Confirmed CT2.5 -->
-		<set name="isPotion" val="true" /> <!-- TEMP FIX -->
+		<set name="isPotion" val="true" /> <!-- FIXME: TEMP FIX -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="num_souls" val="5" />

@@ -1441,7 +1441,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#stackOrder" abnormalType="max_hp_up">
