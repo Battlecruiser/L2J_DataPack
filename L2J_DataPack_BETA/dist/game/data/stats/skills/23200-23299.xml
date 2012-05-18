@@ -140,7 +140,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="500" />
@@ -153,7 +153,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="500" />
@@ -956,7 +956,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">

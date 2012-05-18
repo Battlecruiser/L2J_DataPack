@@ -1081,7 +1081,7 @@
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="41" />
@@ -1093,7 +1093,7 @@
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="51" />
@@ -1105,7 +1105,7 @@
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="59" />
@@ -1148,7 +1148,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1165,11 +1165,13 @@
 		<set name="magicLvl" val="80" />
 		<set name="maxNegated" val="3" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="CANCEL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" effectType="CANCEL" />
+		</for>
 	</skill>
 	<skill id="5683" levels="1" name="PvP Weapon - Ignore Shield Defense">
 		<!-- Confirmed CT2.5 -->
@@ -1453,7 +1455,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="staticReuse" val="true" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

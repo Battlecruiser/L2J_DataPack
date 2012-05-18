@@ -794,7 +794,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -813,7 +813,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1425,7 +1425,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1444,7 +1444,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1603,7 +1603,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1620,7 +1620,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="MANAHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
@@ -1636,7 +1636,7 @@
 		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player levelRange="#levelRange" />
