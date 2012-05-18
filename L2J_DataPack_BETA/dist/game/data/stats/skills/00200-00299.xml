@@ -283,7 +283,7 @@
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<!-- TODO: It probably will require a proper effect -->
-			<add order="0x40" stat="aggression" val="#hate" />
+			<add order="0x40" stat="aggression" val="#hate">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</for>
@@ -292,7 +292,7 @@
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<!-- TODO: It probably will require a proper effect -->
-			<add order="0x40" stat="aggression" val="60" />
+			<add order="0x40" stat="aggression" val="60">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 		</enchant1for>
@@ -301,7 +301,7 @@
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<!-- TODO: It probably will require a proper effect -->
-			<add order="0x40" stat="aggression" val="60" />
+			<add order="0x40" stat="aggression" val="60">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
 			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
