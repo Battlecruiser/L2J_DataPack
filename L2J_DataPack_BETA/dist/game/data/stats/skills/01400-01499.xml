@@ -1143,11 +1143,12 @@
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">
 		<table name="#mpConsume"> 50 55 60 64 67 </table>
-		<table name="#power"> 3 4 5 6 7 </table>
+		<table name="#maxNegated"> 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<set name="power" val="25" /> <!-- TODO: Implement me to work like Cancel (H5 Changes) -->
+		<set name="maxNegated" val="#maxNegated" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="reuseDelay" val="15000" />
