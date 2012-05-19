@@ -82,7 +82,7 @@ public class StealBuffs implements ISkillHandler
 		L2Character target;
 		L2Effect effect;
 		
-		int count = (int) skill.getPower();
+		int count = skill.getMaxNegatedEffects();
 		for (L2Object obj : targets)
 		{
 			if (!(obj instanceof L2Character))
