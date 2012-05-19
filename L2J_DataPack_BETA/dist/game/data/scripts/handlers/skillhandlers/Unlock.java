@@ -77,7 +77,7 @@ public class Unlock implements ISkillHandler
 					}
 				}
 				
-				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
+				if ((!door.isOpenableBySkill() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
 					activeChar.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
@@ -86,11 +86,7 @@ public class Unlock implements ISkillHandler
 				}
 				
 				if (doorUnlock(skill) && (!door.getOpen()))
-				{
 					door.openMe();
-					if(skill.getAfterEffectId() == 0)
-						door.onOpen();
-				}
 				else
 					activeChar.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
 			}
