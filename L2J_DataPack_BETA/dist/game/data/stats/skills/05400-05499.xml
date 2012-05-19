@@ -27,8 +27,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="2" val="0" />
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
+			<effect name="Stun" abnormalTime="2" val="0" />
 		</for>
 	</skill>
 	<skill id="5402" levels="1" name="Presentation - Balor 2">
@@ -430,7 +430,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -449,7 +449,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />

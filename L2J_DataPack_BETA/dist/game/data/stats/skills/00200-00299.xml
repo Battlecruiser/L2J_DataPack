@@ -1114,21 +1114,21 @@
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>
 		<enchant1for>
-			<effect name="Spoil" noicon="1" val="0" />
 			<effect name="Debuff" abnormalTime="15" val="0" effectPower="#ench123Power" abnormalLvl="3" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
+			<effect name="Spoil" noicon="1" val="0" />
 		</enchant1for>
 		<enchant2for>
-			<effect name="Spoil" noicon="1" val="0" />
 			<!-- Retail Values CT2.3: 118HP * 3 Sec -->
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="354" effectPower="#ench123Power" abnormalLvl="3" abnormalType="dot_attr" />
+			<effect name="Spoil" noicon="1" val="0" />
 		</enchant2for>
 		<enchant3for>
-			<effect name="Spoil" noicon="1" val="0" />
 			<effect name="Debuff" abnormalTime="15" val="0" effectPower="#ench123Power" abnormalLvl="1" abnormalType="holy_attack">
 				<sub order="0x40" stat="earthPower" val="#ench3EarthPowerVuln" />
 			</effect>
+			<effect name="Spoil" noicon="1" val="0" />
 		</enchant3for>
 	</skill>
 	<skill id="255" levels="15" name="Power Smash">

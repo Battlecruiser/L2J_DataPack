@@ -113,7 +113,7 @@
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY_NOTME" />
 		<for>
 			<effect name="Invincible" abnormalTime="15" val="0" special="invincible" abnormalLvl="2" abnormalType="invincibility" />
@@ -1251,7 +1251,7 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Heal" noicon="1" val="796" />
@@ -1441,7 +1441,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#stackOrder" abnormalType="max_hp_up">

@@ -1394,10 +1394,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
@@ -1511,10 +1511,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
@@ -1626,10 +1626,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
@@ -1739,10 +1739,10 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
