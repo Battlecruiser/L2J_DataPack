@@ -2637,12 +2637,12 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="70" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 		<enchant2for>
-			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="#ench2Chance" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 		</enchant2for>
 	</skill>
 	<skill id="495" levels="10" name="Blade Rush" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">

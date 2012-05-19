@@ -253,8 +253,8 @@
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="450" />
 			<effect count="15" name="HealOverTime" val="30" abnormalLvl="6" abnormalType="life_force_others" />
+			<effect name="Heal" noicon="1" val="450" />
 		</for>
 	</skill>
 	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">

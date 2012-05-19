@@ -8,11 +8,11 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Heal" noicon="1" val="400" />
 			<effect count="15" name="HealOverTime" val="27" abnormalLvl="5" abnormalType="life_force_others" />
+			<effect name="Heal" noicon="1" val="400" />
 		</for>
 	</skill>
 	<skill id="701" levels="1" name="Divine Healer Resurrection">
@@ -48,7 +48,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="300" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
@@ -214,7 +214,6 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<add order="0x40" stat="runSpd" val="10" />
 				<add order="0x40" stat="accCombat" val="2" />
@@ -227,6 +226,7 @@
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
@@ -322,11 +322,11 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 			</effect>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="715" levels="4" name="Zaken Energy Drain">
@@ -496,7 +496,7 @@
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="aggroPoints" val="624" />
@@ -1795,7 +1795,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player active_effect_id_lvl="5563,3" />
