@@ -41,6 +41,22 @@
 							<xs:element name="door" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="doorId" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="default_status">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="open" />
+												<xs:enumeration value="close" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="random_time" type="xs:integer" />
+									<xs:attribute name="open_time" type="xs:integer" />
+									<xs:attribute name="close_time" type="xs:integer" />
+									<xs:attribute name="level" type="xs:nonNegativeInteger" />
+									<xs:attribute name="open_method" type="xs:nonNegativeInteger" />
+									<xs:attribute name="targetable" type="xs:boolean" />
+									<xs:attribute name="check_collision" type="xs:boolean" />
+									<xs:attribute name="clanhall_id" type="xs:positiveInteger" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
