@@ -141,7 +141,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
-		<set name="price" val="14000" />
+		<set name="price" val="7000" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -159,7 +159,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
-		<set name="price" val="6120" />
+		<set name="price" val="3060" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@all_wolf_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -285,7 +285,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
-		<set name="price" val="100" />
+		<set name="price" val="100" /> <!-- H5 Price -->
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
