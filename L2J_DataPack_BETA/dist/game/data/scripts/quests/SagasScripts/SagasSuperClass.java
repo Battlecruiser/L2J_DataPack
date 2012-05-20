@@ -379,12 +379,6 @@ public class SagasSuperClass extends QuestJython
 					}
 					player.broadcastUserInfo();
 					Cast(npc, player, 4339, 1);
-					
-					Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
-					if (q != null)
-					{
-						q.startQuestTimer("givePormanders", 1, npc, player);
-					}
 				}
 				else
 				{
@@ -895,12 +889,6 @@ public class SagasSuperClass extends QuestJython
 								}
 								player.broadcastUserInfo();
 								Cast(npc, player, 4339, 1);
-								
-								Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
-								if (q != null)
-								{
-									q.startQuestTimer("givePormanders", 1, npc, player);
-								}
 							}
 						}
 						else
