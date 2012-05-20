@@ -6,18 +6,6 @@
 				<xs:element name="route" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="stat" minOccurs="0" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:attribute name="name" use="required">
-										<xs:simpleType>
-											<xs:restriction base="xs:token">
-												<xs:enumeration value="debug" />
-											</xs:restriction>
-										</xs:simpleType>
-									</xs:attribute>
-									<xs:attribute name="val" type="xs:token" use="required" />
-								</xs:complexType>
-							</xs:element>
 							<xs:element name="point" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="string" type="xs:normalizedString" use="required" />
