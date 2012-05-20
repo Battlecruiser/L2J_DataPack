@@ -51,12 +51,6 @@ public final class SkillTransferValidator extends L2Script
 	}
 	
 	@Override
-	public void init()
-	{
-		
-	}
-	
-	@Override
 	public String onEnterWorld(L2PcInstance player)
 	{
 		if (getTransferClassIndex(player) > 0)
