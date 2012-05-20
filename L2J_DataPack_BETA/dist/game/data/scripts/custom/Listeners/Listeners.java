@@ -57,11 +57,6 @@ public class Listeners extends L2Script
 	public Listeners(String name, String descr)
 	{
 		super(name, descr);
-	}
-	
-	@Override
-	public void init()
-	{
 		addLoginLogoutNotify();
 		addClanCreationLevelUpNotify();
 		addFortSiegeNotify();
