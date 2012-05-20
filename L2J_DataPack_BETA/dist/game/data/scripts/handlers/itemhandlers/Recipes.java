@@ -14,7 +14,7 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.RecipeController;
+import com.l2jserver.gameserver.datatables.RecipeData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -37,14 +37,13 @@ public class Recipes implements IItemHandler
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		
 		if (activeChar.isInCraftMode())
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeController.getInstance().getRecipeByItemId(item.getItemId());
+		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
 		if (rp == null)
 		{
 			return false;
