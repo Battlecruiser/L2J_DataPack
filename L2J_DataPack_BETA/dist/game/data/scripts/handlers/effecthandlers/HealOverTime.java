@@ -14,7 +14,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -50,7 +49,10 @@ public class HealOverTime extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().sendPacket(new ExRegMax(calc(), getTotalCount() * getAbnormalTime(), getAbnormalTime()));
+		if (getEffected().isPlayer())
+		{
+			getEffected().sendPacket(new ExRegMax(calc(), getTotalCount() * getAbnormalTime(), getAbnormalTime()));
+		}
 		return true;
 	}
 	
@@ -60,7 +62,7 @@ public class HealOverTime extends L2Effect
 		if (getEffected().isDead())
 			return false;
 		
-		if (getEffected() instanceof L2DoorInstance)
+		else if (getEffected().isDoor())
 			return false;
 		
 		double hp = getEffected().getCurrentHp();
