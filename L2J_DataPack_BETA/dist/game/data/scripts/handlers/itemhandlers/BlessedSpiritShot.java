@@ -14,12 +14,15 @@
  */
 package handlers.itemhandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2ActionType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -27,15 +30,25 @@ import com.l2jserver.gameserver.util.Broadcast;
 public class BlessedSpiritShot implements IItemHandler
 {
 	@Override
-	public synchronized boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
 			return false;
+		}
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final SkillHolder[] skills = item.getItem().getSkills();
+		
 		int itemId = item.getItemId();
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
 		
 		// Check if Blessed SpiritShot can be used
 		if (weaponInst == null || weaponItem == null || weaponItem.getSpiritShotCount() == 0)
@@ -50,39 +63,7 @@ public class BlessedSpiritShot implements IItemHandler
 			return false;
 		
 		// Check for correct grade
-		final int weaponGrade = weaponItem.getCrystalType();
-		
-		boolean gradeCheck = true;
-		
-		switch (weaponGrade)
-		{
-			case L2Item.CRYSTAL_NONE:
-				if (itemId != 3947)
-					gradeCheck = false;
-				break;
-			case L2Item.CRYSTAL_D:
-				if (itemId != 3948 && itemId != 22072)
-					gradeCheck = false;
-				break;
-			case L2Item.CRYSTAL_C:
-				if (itemId != 3949 && itemId != 22073)
-					gradeCheck = false;
-				break;
-			case L2Item.CRYSTAL_B:
-				if (itemId != 3950 && itemId != 22074)
-					gradeCheck = false;
-				break;
-			case L2Item.CRYSTAL_A:
-				if (itemId != 3951 && itemId != 22075)
-					gradeCheck = false;
-				break;
-			case L2Item.CRYSTAL_S:
-			case L2Item.CRYSTAL_S80:
-			case L2Item.CRYSTAL_S84:
-				if (itemId != 3952 && itemId != 22076)
-					gradeCheck = false;
-				break;
-		}
+		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.spiritshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
 		
 		if (!gradeCheck)
 		{
@@ -91,7 +72,6 @@ public class BlessedSpiritShot implements IItemHandler
 			
 			return false;
 		}
-		
 		
 		// Consume Blessed SpiritShot if player has enough of them
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
@@ -106,45 +86,7 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
-		int skillId = 0;
-		switch (itemId)
-		{
-			case 3947:
-				skillId=2061;
-				break;
-			case 3948:
-				skillId=2160;
-				break;
-			case 3949:
-				skillId=2161;
-				break;
-			case 3950:
-				skillId=2162;
-				break;
-			case 3951:
-				skillId=2163;
-				break;
-			case 3952:
-				skillId=2164;
-				break;
-			case 22072:
-				skillId=26050;
-				break;
-			case 22073:
-				skillId=26051;
-				break;
-			case 22074:
-				skillId=26052;
-				break;
-			case 22075:
-				skillId=26053;
-				break;
-			case 22076:
-				skillId=26054;
-				break;
-				
-		}
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 360000);
 		return true;
 	}
 }
