@@ -1303,8 +1303,11 @@
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="poison,9" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="2579" levels="1" name="Cure Death Clock">
 		<!-- Confirmed CT2.5 -->
@@ -1312,8 +1315,11 @@
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="death_clack,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="2580" levels="1" name="Vitality Replenishing Herb">
 		<set name="hitTime" val="100" />

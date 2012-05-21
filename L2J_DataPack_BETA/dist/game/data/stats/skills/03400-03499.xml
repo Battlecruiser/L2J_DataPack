@@ -1026,7 +1026,10 @@
 		<set name="magicLvl" val="56" />
 		<set name="negateAbnormals" val="transform,9" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 </list>

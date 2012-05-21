@@ -87,12 +87,15 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="turn_stone,99" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="1902">
 			<player levelRange="61;85" />
 		</cond>
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="2308" levels="36" name="Event Item">
 		<!-- Confirmed CT2.5 -->

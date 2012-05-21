@@ -648,8 +648,11 @@
 		<set name="negateAbnormals" val="dragon_breath,1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
 		<!-- Confirmed CT2.5 -->
@@ -1382,8 +1385,11 @@
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="fishing_mastery_down,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">
 		<set name="target" val="TARGET_NONE" />

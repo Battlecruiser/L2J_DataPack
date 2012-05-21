@@ -1240,7 +1240,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="bleeding,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1248,6 +1248,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9922" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
 		<set name="target" val="TARGET_SELF" />
@@ -1255,7 +1258,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_physically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1263,6 +1266,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9957" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
 		<set name="target" val="TARGET_SELF" />
@@ -1270,7 +1276,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_magically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1278,6 +1284,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9956" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3289" levels="1" name="Black Talisman - Escape">
 		<set name="target" val="TARGET_SELF" />
@@ -1285,7 +1294,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1293,6 +1302,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9923" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3290" levels="1" name="Black Talisman of Rescue">
 		<set name="target" val="TARGET_SELF" />
@@ -1300,7 +1312,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence_physical,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1308,6 +1320,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9958" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
 		<set name="target" val="TARGET_SELF" />
@@ -1315,7 +1330,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1323,6 +1338,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9955" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
 		<set name="target" val="TARGET_SELF" />
@@ -1330,7 +1348,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence_all,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1338,6 +1356,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9959" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="3293" levels="1" name="Yellow Talisman of Power">
 		<!-- Confirmed CT2.5 -->
