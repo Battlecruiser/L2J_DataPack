@@ -31,8 +31,9 @@ public class Recipes implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
 		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		

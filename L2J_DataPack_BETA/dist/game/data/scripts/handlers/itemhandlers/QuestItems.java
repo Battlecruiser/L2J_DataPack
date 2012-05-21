@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * @author BiggBoss
@@ -30,19 +31,22 @@ public class QuestItems implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceuse)
 	{
-		if(!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
-		L2PcInstance player = (L2PcInstance) playable;
+		L2PcInstance player = playable.getActingPlayer();
 		
-		if(!player.destroyItem("Item Handler - QuestItems", item, player, true))
+		if (!player.destroyItem("Item Handler - QuestItems", item, player, true))
 			return false;
 		
 		L2Item itm = item.getItem();
-		for(Quest quest : itm.getQuestEvents())
+		for (Quest quest : itm.getQuestEvents())
 		{
 			QuestState state = player.getQuestState(quest.getName());
-			if(state == null || !state.isStarted())
+			if (state == null || !state.isStarted())
 				continue;
 			
 			quest.notifyItemUse(itm, player);

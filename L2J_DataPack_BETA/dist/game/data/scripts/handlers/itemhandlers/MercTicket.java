@@ -41,6 +41,12 @@ public class MercTicket implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
+		
 		int itemId = item.getItemId();
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		Castle castle = CastleManager.getInstance().getCastle(activeChar);
