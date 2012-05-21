@@ -14,54 +14,62 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * @author  l3x
+ * @author l3x
  */
 public class Harvester implements IItemHandler
 {
-	L2PcInstance _activeChar;
-	L2MonsterInstance _target;
-	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance _item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
 		if (CastleManorManager.getInstance().isDisabled())
-			return false;
-		
-		_activeChar = (L2PcInstance) playable;
-		
-		if (!(_activeChar.getTarget() instanceof L2MonsterInstance))
 		{
-			_activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		_target = (L2MonsterInstance) _activeChar.getTarget();
-		
-		if (_target == null || !_target.isDead())
+		final L2PcInstance activeChar = playable.getActingPlayer();
+		final SkillHolder[] skills = item.getItem().getSkills();
+		L2MonsterInstance target = null;
+		if (activeChar.getTarget() != null && activeChar.getTarget().isMonster())
 		{
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			target = (L2MonsterInstance) activeChar.getTarget();
+		}
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
-		L2Skill skill = SkillTable.getInstance().getInfo(2098, 1); //harvesting skill
-		if (skill != null)
-			_activeChar.useMagic(skill, false, false);
+		if (target == null || !target.isDead())
+		{
+			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		
+		for (SkillHolder sk : skills)
+		{
+			activeChar.useMagic(sk.getSkill(), false, false);
+		}
 		return true;
 	}
 }

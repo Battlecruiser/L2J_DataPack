@@ -34,6 +34,7 @@ public class BlessedSpiritShot implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
@@ -59,7 +60,7 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Check if Blessed SpiritShot is already active (it can be charged over SpiritShot)
-		if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+		if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
 			return false;
 		
 		// Check for correct grade
@@ -86,7 +87,7 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 2000);
 		return true;
 	}
 }

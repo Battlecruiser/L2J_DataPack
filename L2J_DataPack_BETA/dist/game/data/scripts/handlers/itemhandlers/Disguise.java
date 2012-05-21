@@ -29,10 +29,13 @@ public class Disguise implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		L2PcInstance activeChar = playable.getActingPlayer();
 		
 		int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(activeChar);
 		if (regId > 0 && regId == (item.getItemId() - 13596))

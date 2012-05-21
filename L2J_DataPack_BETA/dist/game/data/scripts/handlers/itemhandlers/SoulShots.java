@@ -35,6 +35,7 @@ public class SoulShots implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
@@ -106,7 +107,7 @@ public class SoulShots implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 2000);
 		return true;
 	}
 }

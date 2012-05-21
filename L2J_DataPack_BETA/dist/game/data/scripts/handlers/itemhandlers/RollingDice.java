@@ -30,10 +30,13 @@ public class RollingDice implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		L2PcInstance activeChar = playable.getActingPlayer();
 		int itemId = item.getItemId();
 		
 		if (activeChar.isInOlympiadMode())
@@ -42,29 +45,30 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		if (itemId == 4625 || itemId == 4626 || itemId == 4627 || itemId == 4628)
+		int number = rollDice(activeChar);
+		if (number == 0)
 		{
-			int number = rollDice(activeChar);
-			if (number == 0)
-			{
-				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
-				return false;
-			}
-			
-			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
-			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
-			sm.addString(activeChar.getName());
-			sm.addNumber(number);
-			
-			activeChar.sendPacket(sm);
-			if (activeChar.isInsideZone(L2Character.ZONE_PEACE))
-				Broadcast.toKnownPlayers(activeChar, sm);
-			else if (activeChar.isInParty())
-				activeChar.getParty().broadcastToPartyMembers(activeChar, sm);
-			return true;
+			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
+			return false;
 		}
-		return false;
+		
+		Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), itemId, number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
+		
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
+		sm.addString(activeChar.getName());
+		sm.addNumber(number);
+		
+		activeChar.sendPacket(sm);
+		if (activeChar.isInsideZone(L2Character.ZONE_PEACE))
+		{
+			Broadcast.toKnownPlayers(activeChar, sm);
+		}
+		else if (activeChar.isInParty()) // TODO: Verify this!
+		{
+			activeChar.getParty().broadcastToPartyMembers(activeChar, sm);
+		}
+		return true;
+		
 	}
 	
 	/**
@@ -74,8 +78,7 @@ public class RollingDice implements IItemHandler
 	private int rollDice(L2PcInstance player)
 	{
 		// Check if the dice is ready
-		if (!player.getFloodProtectors().getRollDice().
-				tryPerformAction("roll dice"))
+		if (!player.getFloodProtectors().getRollDice().tryPerformAction("roll dice"))
 		{
 			return 0;
 		}

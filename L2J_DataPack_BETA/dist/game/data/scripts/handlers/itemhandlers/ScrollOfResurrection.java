@@ -14,7 +14,8 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -23,8 +24,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -36,6 +37,7 @@ public class ScrollOfResurrection implements IItemHandler
 	{
 		if (!playable.isPlayer())
 		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
@@ -58,8 +60,14 @@ public class ScrollOfResurrection implements IItemHandler
 		}
 		
 		final int itemId = item.getItemId();
-		// boolean blessedScroll = (itemId != 737);
-		boolean petScroll = (itemId == 6387);
+		final boolean petScroll = (itemId == 6387);
+		final SkillHolder[] skills = item.getItem().getSkills();
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
 		
 		// SoR Animation section
 		final L2Character target = (L2Character) activeChar.getTarget();
@@ -154,42 +162,13 @@ public class ScrollOfResurrection implements IItemHandler
 					return false;
 				}
 				
-				int skillId = 0;
-				int skillLevel = 1;
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				sm.addItemName(item);
+				activeChar.sendPacket(sm);
 				
-				switch (itemId)
+				for (SkillHolder sk : skills)
 				{
-					case 737:
-						skillId = 2014;
-						break; // Scroll of Resurrection
-					case 3936:
-						skillId = 2049;
-						break; // Blessed Scroll of Resurrection
-					case 3959:
-						skillId = 2062;
-						break; // L2Day - Blessed Scroll of Resurrection
-					case 6387:
-						skillId = 2179;
-						break; // Blessed Scroll of Resurrection: For Pets
-					case 9157:
-						skillId = 2321;
-						break; // Blessed Scroll of Resurrection Event
-					case 10150:
-						skillId = 2393;
-						break; // Blessed Scroll of Battlefield Resurrection
-					case 13259:
-						skillId = 2596;
-						break; // Gran Kain's Blessed Scroll of Resurrection
-				}
-				
-				if (skillId != 0)
-				{
-					L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-					activeChar.useMagic(skill, true, true);
-					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-					sm.addItemName(item);
-					activeChar.sendPacket(sm);
+					activeChar.useMagic(sk.getSkill(), true, true);
 				}
 				return true;
 			}

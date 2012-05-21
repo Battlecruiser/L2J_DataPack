@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * @author  chris
+ * @author chris
  */
 public class PaganKeys implements IItemHandler
 {
@@ -35,11 +35,15 @@ public class PaganKeys implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		int itemId = item.getItemId();
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2Object target = activeChar.getTarget();
+		}
+		
+		final int itemId = item.getItemId();
+		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2Object target = activeChar.getTarget();
 		
 		if (!(target instanceof L2DoorInstance))
 		{
@@ -65,6 +69,7 @@ public class PaganKeys implements IItemHandler
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
 			return false;
 		
+		// TODO: Unhardcode these!
 		switch (itemId)
 		{
 			case 9698:
@@ -73,10 +78,13 @@ public class PaganKeys implements IItemHandler
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
 						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						{
 							if (instanceDoor.getDoorId() == door.getDoorId())
 							{
 								instanceDoor.openMe();
+								break;
 							}
+						}
 					}
 					else
 					{
@@ -94,10 +102,13 @@ public class PaganKeys implements IItemHandler
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
 						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						{
 							if (instanceDoor.getDoorId() == door.getDoorId())
 							{
 								instanceDoor.openMe();
+								break;
 							}
+						}
 					}
 					else
 					{
@@ -110,7 +121,7 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 			case 8056:
-				if (door.getDoorId() == 23150004||door.getDoorId() == 23150003)
+				if (door.getDoorId() == 23150004 || door.getDoorId() == 23150003)
 				{
 					DoorTable.getInstance().getDoor(23150003).openMe();
 					DoorTable.getInstance().getDoor(23150004).openMe();

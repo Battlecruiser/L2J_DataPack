@@ -29,7 +29,13 @@ public class ChristmasTree implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
+		
+		L2PcInstance activeChar = playable.getActingPlayer();
 		L2NpcTemplate template1 = null;
 		
 		switch (item.getItemId())
@@ -55,6 +61,7 @@ public class ChristmasTree implements IItemHandler
 			spawn.setLocx(target.getX());
 			spawn.setLocy(target.getY());
 			spawn.setLocz(target.getZ());
+			spawn.setInstanceId(activeChar.getInstanceId());
 			spawn.spawnOne(false);
 			
 			activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);

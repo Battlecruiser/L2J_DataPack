@@ -14,11 +14,13 @@
  */
 package handlers.itemhandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -33,21 +35,19 @@ public class BeastSoulShot implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (playable == null)
-			return false;
-		
-		L2PcInstance activeOwner = null;
-		if (playable instanceof L2Summon)
+		if (!playable.isPlayer())
 		{
-			activeOwner = ((L2Summon) playable).getOwner();
-			activeOwner.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
-		else if (playable instanceof L2PcInstance)
-			activeOwner = (L2PcInstance) playable;
 		
-		if (activeOwner == null)
+		L2PcInstance activeOwner = playable.getActingPlayer();
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
 			return false;
+		}
+		
 		L2Summon activePet = activeOwner.getPet();
 		
 		if (activePet == null)
@@ -62,9 +62,16 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		int itemId = item.getItemId();
-		short shotConsumption = activePet.getSoulShotsPerHit();
-		long shotCount = item.getCount();
+		final int itemId = item.getItemId();
+		final short shotConsumption = activePet.getSoulShotsPerHit();
+		final long shotCount = item.getCount();
+		final SkillHolder[] skills = item.getItem().getSkills();
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
 		
 		if (!(shotCount > shotConsumption))
 		{
@@ -74,23 +81,21 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		L2ItemInstance weaponInst = null;
-		
-		if (activePet instanceof L2PetInstance)
-			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();
+		L2ItemInstance weaponInst = activePet.getActiveWeaponInstance();
 		
 		if (weaponInst == null)
 		{
-			if (activePet.getChargedSoulShot() != L2ItemInstance.CHARGED_NONE)
+			if (activePet.getChargedSoulShot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
+			{
 				return false;
+			}
 			
 			activePet.setChargedSoulShot(L2ItemInstance.CHARGED_SOULSHOT);
 		}
 		else
 		{
-			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
-			{
-				// SoulShots are already active.
+			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
+			{	
 				return false;
 			}
 			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
@@ -107,7 +112,7 @@ public class BeastSoulShot implements IItemHandler
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.PET_USE_SPIRITSHOT);
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, itemId == 6645 ? 2033 : 22036, 1, 0, 0), 360000/*600*/);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 2000);
 		return true;
 	}
 }

@@ -27,23 +27,27 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * @author  l3x
+ * @author l3x
  */
 public class Seed implements IItemHandler
 {
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
 		if (CastleManorManager.getInstance().isDisabled())
+		{
 			return false;
+		}
 		
 		final L2Object tgt = playable.getTarget();
 		if (!(tgt instanceof L2Npc))
@@ -52,14 +56,14 @@ public class Seed implements IItemHandler
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character)tgt).isRaid())
+		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character) tgt).isRaid())
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance)tgt;
+		final L2MonsterInstance target = (L2MonsterInstance) tgt;
 		if (target.isDead())
 		{
 			playable.sendPacket(SystemMessageId.INCORRECT_TARGET);
@@ -80,21 +84,20 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		target.setSeeded(seedId, (L2PcInstance)playable);
-		final SkillHolder[] skills = item.getEtcItem().getSkills();
+		target.setSeeded(seedId, (L2PcInstance) playable);
+		final SkillHolder[] skills = item.getItem().getSkills();
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		if (skills != null)
 		{
-			if(skills[0] == null)
-				return false;
-			
-			L2Skill itemskill = skills[0].getSkill();
-			((L2PcInstance)playable).useMagic(itemskill, false, false);
+			for (SkillHolder sk : skills)
+			{
+				activeChar.useMagic(sk.getSkill(), false, false);
+			}
 		}
 		return true;
 	}
 	
 	/**
-	 * 
 	 * @param seedId
 	 * @param castleId
 	 * @return

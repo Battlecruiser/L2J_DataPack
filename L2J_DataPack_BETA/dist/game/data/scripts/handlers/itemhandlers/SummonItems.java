@@ -46,14 +46,19 @@ import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
-
+/**
+ * UnAfraid: TODO: Rewrite me :D
+ */
 public class SummonItems implements IItemHandler
 {
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
+		}
 		
 		if (!TvTEvent.onItemSummon(playable.getObjectId()))
 			return false;
@@ -69,9 +74,9 @@ public class SummonItems implements IItemHandler
 			return false;
 		}
 		
-		if(activeChar.getBlockCheckerArena() != -1)
+		if (activeChar.getBlockCheckerArena() != -1)
 			return false;
-
+		
 		if (activeChar.inObserverMode())
 			return false;
 		
@@ -216,9 +221,7 @@ public class SummonItems implements IItemHandler
 				_activeChar.setIsCastingNow(false);
 				
 				// check for summon item validity
-				if (_item == null
-						|| _item.getOwnerId() != _activeChar.getObjectId()
-						|| _item.getLocation() != L2ItemInstance.ItemLocation.INVENTORY)
+				if (_item == null || _item.getOwnerId() != _activeChar.getObjectId() || _item.getLocation() != L2ItemInstance.ItemLocation.INVENTORY)
 					return;
 				
 				final L2PetInstance petSummon = L2PetInstance.spawnPet(_npcTemplate, _activeChar, _item);
@@ -243,8 +246,8 @@ public class SummonItems implements IItemHandler
 				
 				_activeChar.setPet(petSummon);
 				
-				//JIV remove - done on spawn
-				//L2World.getInstance().storeObject(petSummon);
+				// JIV remove - done on spawn
+				// L2World.getInstance().storeObject(petSummon);
 				petSummon.spawnMe(_activeChar.getX() + 50, _activeChar.getY() + 100, _activeChar.getZ());
 				petSummon.startFeed();
 				_item.setEnchantLevel(petSummon.getLevel());
