@@ -1678,8 +1678,11 @@
 		<set name="negateAbnormals" val="root_physically,3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
 		<set name="target" val="TARGET_SELF" />
@@ -1863,11 +1866,14 @@
 		<set name="numCharges" val="#numCharges" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player Charges="#numCharges" /> <!-- Level 2 3 Focused Force charge required. -->
 		</cond>
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="462" levels="1" name="Guilted Body">
 		<!-- Confirmed CT2.5 -->

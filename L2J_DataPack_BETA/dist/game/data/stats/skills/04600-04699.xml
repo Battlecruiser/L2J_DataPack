@@ -388,8 +388,11 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="4618" levels="1" name="NPC Cancel PC Target">
 		<set name="mpConsume" val="35" />
@@ -1061,8 +1064,11 @@
 		<set name="negateAbnormals" val="root_magically,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="4651" levels="3" name="NPC AE - Dispel Slow">
 		<table name="#magicLvl"> 20 40 60 </table>
@@ -1076,8 +1082,11 @@
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="4652" levels="1" name="NPC AE - Dispel Silence">
 		<set name="isMagic" val="true" />
@@ -1087,8 +1096,11 @@
 		<set name="negateAbnormals" val="silence,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="4653" levels="12" name="NPC Corpse Life Drain">
 		<table name="#drain"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
@@ -1833,8 +1845,11 @@
 		<set name="magicLvl" val="76" />
 		<set name="negateAbnormals" val="big_body,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Negate" val="0" noicon="1" />
+		</for>
 	</skill>
 	<skill id="4694" levels="1" name="Ultimate Debuff">
 		<set name="power" val="100" />
