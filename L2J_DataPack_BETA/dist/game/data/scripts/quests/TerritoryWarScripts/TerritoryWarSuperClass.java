@@ -153,7 +153,7 @@ public class TerritoryWarSuperClass extends Quest
 						if (st.getState() != State.STARTED)
 						{
 							st.set("cond", "1");
-							st.setStateAndNotSave(State.STARTED);
+							st.setState(State.STARTED, false);
 						}
 					}
 				}
@@ -433,7 +433,7 @@ public class TerritoryWarSuperClass extends Quest
 				st = territoryQuest.newQuestState(player);
 			}
 			st.set("cond", "1");
-			st.setStateAndNotSave(State.STARTED);
+			st.setState(State.STARTED, false);
 			
 			// register player on Death
 			if (player.getLevel() >= 61)
@@ -479,7 +479,7 @@ public class TerritoryWarSuperClass extends Quest
 				if (val)
 				{
 					st.set("cond", "1");
-					st.setStateAndNotSave(State.STARTED);
+					st.setState(State.STARTED, false);
 					// register player on Death
 					if (player.getLevel() >= 61)
 					{
@@ -501,13 +501,13 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
-					st.setStateAndNotSave(State.COMPLETED);
+					st.setState(State.COMPLETED, false);
 					st.exitQuest(false);
 					for (Quest q : _protectTheScripts.values())
 					{
 						if (player.getQuestState(q.getName()) != null)
 						{
-							player.getQuestState(q.getName()).setStateAndNotSave(State.COMPLETED);
+							player.getQuestState(q.getName()).setState(State.COMPLETED, false);
 							player.getQuestState(q.getName()).exitQuest(false);
 						}
 					}
