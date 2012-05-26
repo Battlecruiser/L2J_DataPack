@@ -150,9 +150,9 @@ public class TerritoryWarSuperClass extends Quest
 						{
 							st = newQuestState(pl);
 						}
-						if (st.getState() != State.STARTED)
+						if (!st.isStarted())
 						{
-							st.set("cond", "1");
+							st.setCond(1);
 							st.setState(State.STARTED, false);
 						}
 					}
@@ -165,21 +165,22 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
+		TerritoryWarManager manager = TerritoryWarManager.getInstance();
 		if (npc.getNpcId() == CATAPULT_ID)
 		{
-			TerritoryWarManager.getInstance().territoryCatapultDestroyed(TERRITORY_ID - 80);
-			TerritoryWarManager.getInstance().giveTWPoint(killer, TERRITORY_ID, 4);
-			TerritoryWarManager.getInstance().announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
+			manager.territoryCatapultDestroyed(TERRITORY_ID - 80);
+			manager.giveTWPoint(killer, TERRITORY_ID, 4);
+			manager.announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
 			handleBecomeMercenaryQuest(killer, true);
 		}
 		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
 		{
-			TerritoryWarManager.getInstance().giveTWPoint(killer, TERRITORY_ID, 3);
+			manager.giveTWPoint(killer, TERRITORY_ID, 3);
 		}
 		
 		if ((killer.getSiegeSide() != TERRITORY_ID) && (TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80) != null))
 		{
-			TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
+			manager.getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
 		}
 		return super.onKill(npc, killer, isPet);
 	}
@@ -236,7 +237,7 @@ public class TerritoryWarSuperClass extends Quest
 			if (!st.isStarted())
 			{
 				st.setState(State.STARTED);
-				st.set("cond", "1");
+				st.setCond(1);
 				st.set("kill", "1");
 				max = getRandom(RANDOM_MIN, RANDOM_MAX);
 				st.set("max", String.valueOf(max));
@@ -251,7 +252,6 @@ public class TerritoryWarSuperClass extends Quest
 				TerritoryWarManager.getInstance().giveTWQuestPoint(player);
 				st.addExpAndSp(534000, 51000);
 				st.set("doneDate", String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
-				st.setState(State.COMPLETED);
 				st.exitQuest(true);
 				player.sendPacket(new ExShowScreenMessage(npcString[1], 2, 10000));
 			}
@@ -269,7 +269,7 @@ public class TerritoryWarSuperClass extends Quest
 		else if (st.getInt("doneDate") != Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
 		{
 			st.setState(State.STARTED);
-			st.set("cond", "1");
+			st.setCond(1);
 			st.set("kill", "1");
 			max = getRandom(RANDOM_MIN, RANDOM_MAX);
 			st.set("max", String.valueOf(max));
@@ -284,7 +284,7 @@ public class TerritoryWarSuperClass extends Quest
 			// just for test
 			player.sendMessage("Cleaning " + getName() + " Territory War quest by force!");
 			st.setState(State.STARTED);
-			st.set("cond", "1");
+			st.setCond(1);
 			st.set("kill", "1");
 			max = getRandom(RANDOM_MIN, RANDOM_MAX);
 			st.set("max", String.valueOf(max));
@@ -306,11 +306,11 @@ public class TerritoryWarSuperClass extends Quest
 			{
 				if (_cond == 2)
 				{
-					_state.set("cond", "4");
+					_state.setCond(4);
 				}
 				else if (_cond == 1)
 				{
-					_state.set("cond", "3");
+					_state.setCond(3);
 				}
 			}
 			else
@@ -328,11 +328,11 @@ public class TerritoryWarSuperClass extends Quest
 					{
 						if (_cond == 1)
 						{
-							_state.set("cond", "2");
+							_state.setCond(2);
 						}
 						else if (_cond == 3)
 						{
-							_state.set("cond", "4");
+							_state.setCond(4);
 						}
 					}
 				}
@@ -360,22 +360,22 @@ public class TerritoryWarSuperClass extends Quest
 				// Check
 				if ((cond == 1) && (kills >= 9))
 				{
-					_sfh.set("cond", "2");
+					_sfh.setCond(2);
 					_sfh.set("kills", "0");
 				}
 				else if ((cond == 3) && (kills >= 18))
 				{
-					_sfh.set("cond", "4");
+					_sfh.setCond(4);
 					_sfh.set("kills", "0");
 				}
 				else if ((cond == 5) && (kills >= 27))
 				{
-					_sfh.set("cond", "6");
+					_sfh.setCond(6);
 					_sfh.set("kills", "0");
 				}
 				else if ((cond == 7) && (kills >= 36))
 				{
-					_sfh.set("cond", "8");
+					_sfh.setCond(8);
 					_sfh.unset("kills");
 				}
 			}
@@ -432,8 +432,8 @@ public class TerritoryWarSuperClass extends Quest
 			{
 				st = territoryQuest.newQuestState(player);
 			}
-			st.set("cond", "1");
 			st.setState(State.STARTED, false);
+			st.setCond(1);
 			
 			// register player on Death
 			if (player.getLevel() >= 61)
@@ -478,8 +478,8 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				if (val)
 				{
-					st.set("cond", "1");
 					st.setState(State.STARTED, false);
+					st.setCond(1);
 					// register player on Death
 					if (player.getLevel() >= 61)
 					{
@@ -501,14 +501,13 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
-					st.setState(State.COMPLETED, false);
 					st.exitQuest(false);
 					for (Quest q : _protectTheScripts.values())
 					{
-						if (player.getQuestState(q.getName()) != null)
+						st = player.getQuestState(q.getName());
+						if (st != null)
 						{
-							player.getQuestState(q.getName()).setState(State.COMPLETED, false);
-							player.getQuestState(q.getName()).exitQuest(false);
+							st.exitQuest(false);
 						}
 					}
 					// unregister player on Death
