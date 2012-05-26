@@ -1,5 +1,4 @@
 ALTER TABLE `characters` ADD `createDate` date NOT NULL DEFAULT '0000-00-00' AFTER `createTime`;
-UPDATE `characters` SET `createDate`=FROM_UNIXTIME(`createTime`/1000, '%Y-%m%-%d');
 UPDATE `characters` SET `createDate`=CURDATE() WHERE `createDate`='0000-00-00';
 ALTER TABLE `characters` DROP `createTime`;
 
