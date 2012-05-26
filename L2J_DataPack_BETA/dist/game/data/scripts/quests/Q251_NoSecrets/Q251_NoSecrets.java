@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * No Secrets?? (215)
+ * No Secrets (251)
  * @author Dumpster
  */
 public class Q251_NoSecrets extends Quest
@@ -52,11 +52,15 @@ public class Q251_NoSecrets extends Quest
 	public Q251_NoSecrets(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS);
 		addKillId(MOBS2);
+		questItemIds = new int[]
+		{
+			DIARY,
+			TABLE
+		};
 	}
 	
 	@Override
@@ -68,11 +72,9 @@ public class Q251_NoSecrets extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("30201-03.htm"))
+		if (event.equals("30201-03.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		return event;
 	}
@@ -90,30 +92,20 @@ public class Q251_NoSecrets extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getLevel() >= 82)
-				{
-					htmltext = "30201-01.htm";
-				}
-				else
-				{
-					htmltext = "30201-00.htm";
-				}
+				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+				int cond = st.getInt("cond");
+				if (cond == 1)
 				{
 					htmltext = "30201-05.htm";
 				}
-				else if (st.getInt("cond") == 2)
+				else if ((cond == 2) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
-					if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-					{
-						htmltext = "30201-04.htm";
-						st.rewardItems(57, 313355);
-						st.addExpAndSp(56787, 160578);
-						st.playSound("ItemSound.quest_finish");
-						st.exitQuest(false);
-					}
+					htmltext = "30201-04.htm";
+					st.rewardItems(57, 313355);
+					st.addExpAndSp(56787, 160578);
+					st.exitQuest(false, true);
 				}
 				break;
 			case State.COMPLETED:
@@ -127,7 +119,7 @@ public class Q251_NoSecrets extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
+		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
 			final int npcId = npc.getNpcId();
 			
@@ -136,8 +128,7 @@ public class Q251_NoSecrets extends Quest
 				st.giveItems(DIARY, 1);
 				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
 				}
 				else
 				{
@@ -149,8 +140,7 @@ public class Q251_NoSecrets extends Quest
 				st.giveItems(TABLE, 1);
 				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
 				}
 				else
 				{
