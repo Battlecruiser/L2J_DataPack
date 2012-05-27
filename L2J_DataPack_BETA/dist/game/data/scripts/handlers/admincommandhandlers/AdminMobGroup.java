@@ -451,7 +451,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	
 	private void doAnimation(L2PcInstance activeChar)
 	{
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 1008, 1, 4000, 0), 2250000/*1500*/);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 1008, 1, 4000, 0), 1500);
 		activeChar.sendPacket(new SetupGauge(0, 4000));
 	}
 	

@@ -112,7 +112,7 @@ public class Escape implements IUserCommandHandler
 		activeChar.disableAllSkills();
 		
 		MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000/*900*/);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 900);
 		SetupGauge sg = new SetupGauge(0, unstuckTimer);
 		activeChar.sendPacket(sg);
 		//End SoE Animation section

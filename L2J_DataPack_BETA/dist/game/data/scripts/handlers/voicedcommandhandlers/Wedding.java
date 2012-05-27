@@ -469,7 +469,7 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.disableAllSkills();
 		
 		final MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, teleportTimer, 0);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000/* 900 */);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 900);
 		final SetupGauge sg = new SetupGauge(0, teleportTimer);
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
