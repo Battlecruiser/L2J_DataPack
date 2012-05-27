@@ -804,7 +804,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5561" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="20" val="0" activationChance="#activationChance" chanceType="ON_ATTACKED_HIT" triggeredId="5561" triggeredLevel="#triggeredLevel" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight">
 				<add order="0x40" stat="pAtk" val="300" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
@@ -824,7 +824,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5562" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="20" val="0" activationChance="#activationChance" chanceType="ON_ATTACKED_HIT" triggeredId="5562" triggeredLevel="#triggeredLevel" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight">
 				<add order="0x40" stat="pDef" val="500" />
 				<add order="0x40" stat="fireRes" val="#elementRes" />
 				<add order="0x40" stat="darkRes" val="#elementRes" />
@@ -845,7 +845,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5563" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="20" val="0" activationChance="#activationChance" chanceType="ON_ATTACKED_HIT" triggeredId="5563" triggeredLevel="#triggeredLevel" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight">
 				<add order="0x40" stat="mDef" val="400" />
 				<add order="0x40" stat="waterPower" val="#waterPower" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
@@ -865,7 +865,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="20" triggeredId="5564" triggeredLevel="#triggeredLevel" activationChance="#activationChance" chanceType="ON_ATTACKED" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="20" val="0" activationChance="#activationChance" chanceType="ON_ATTACKED" triggeredId="5564" triggeredLevel="#triggeredLevel" abnormalLvl="#abnormalLvl" abnormalType="seed_of_knight">
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<add order="0x40" stat="windPower" val="#windPower" />
 				<add order="0x40" stat="absorbDam" val="#absorbDam" />

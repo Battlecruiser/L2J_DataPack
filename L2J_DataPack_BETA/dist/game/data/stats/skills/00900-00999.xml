@@ -1595,14 +1595,13 @@
 	</skill>
 	<skill id="983" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="6687" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="6687" />
+		</for>
 	</skill>
 	<skill id="984" levels="25" name="Shield Strike">
 		<!-- High Five Skill -->
@@ -1643,7 +1642,7 @@
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="TargetMe" abnormalTime="15" val="0" />
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" abnormalTime="15" val="0" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" triggeredLevel="1" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" abnormalTime="15" val="0" activationChance="30" chanceType="ON_ATTACKED_HIT" triggeredId="6913" />
 		</for>
 	</skill>
 	<skill id="986" levels="25" name="Deadly Strike">
@@ -1777,38 +1776,34 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
-		<set name="activationChance" val="15" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="6813" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
-		<cond msgId="113" addName="1">
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
-		</cond>
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel">
+				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel">
+				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="993" levels="8" name="Force Mastery">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
-		<set name="activationChance" val="15" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="6814" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
-		<cond msgId="113" addName="1">
-			<using kind="Dual Fist" />
-		</cond>
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel">
+				<using kind="Dual Fist" />
+			</effect>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel">
+				<using kind="Dual Fist" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="994" levels="1" name="Rush">

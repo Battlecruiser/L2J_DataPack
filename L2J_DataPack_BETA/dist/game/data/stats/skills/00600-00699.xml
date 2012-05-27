@@ -792,65 +792,60 @@
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5572" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
+		</for>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
 		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5573" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5573" />
+		</for>
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5574" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
+		</for>
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5575" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
+		</for>
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5576" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5576" />
+		</for>
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
@@ -1397,7 +1392,7 @@
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
@@ -1514,7 +1509,7 @@
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
@@ -1629,7 +1624,7 @@
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
@@ -1742,7 +1737,7 @@
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="transform_sacrifice">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">

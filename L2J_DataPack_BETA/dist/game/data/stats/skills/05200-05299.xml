@@ -1003,7 +1003,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="death_clack" triggeredId="5257" triggeredLevel="1" chanceType="ON_EXIT" abnormalVisualEffect="bleed" />
+			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="5257" abnormalLvl="1" abnormalType="death_clack" />
 		</for>
 	</skill>
 	<skill id="5257" levels="2" name="Death">
