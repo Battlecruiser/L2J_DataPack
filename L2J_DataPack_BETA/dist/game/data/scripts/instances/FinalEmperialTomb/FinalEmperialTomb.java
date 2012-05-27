@@ -1243,6 +1243,16 @@ public class FinalEmperialTomb extends Quest
 	}
 	
 	@Override
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+	{
+		if (skill.isSuicideAttack())
+		{
+			return onKill(npc, null, false);
+		}
+		return super.onSpellFinished(npc, player, skill);
+	}
+	
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -1320,12 +1330,13 @@ public class FinalEmperialTomb extends Quest
 		addKillId(DARK_CHOIR_PLAYER);
 		addAttackId(SCARLET1);
 		addKillId(SCARLET2);
-		for (int mobId : PORTRAITS)
-			addKillId(mobId);
-		for (int mobId : DEMONS)
-			addKillId(mobId);
+		addKillId(PORTRAITS);
+		addKillId(DEMONS);
 		for (int mobId : _mustKillMobsId)
+		{
 			addKillId(mobId);
+		}
+		addSpellFinishedId(18333);
 	}
 	
 	public static void main(String[] args)
