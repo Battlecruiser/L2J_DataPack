@@ -652,7 +652,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" abnormalLvl="1" abnormalType="death_clack" />
+			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="6281" abnormalLvl="1" abnormalType="death_clack" />
 		</for>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
@@ -972,7 +972,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="1" chanceType="ON_START" />
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" chanceType="ON_START" />
 		</for>
 	</skill>
 </list>

@@ -55,7 +55,7 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5602" />
 			<effect name="HealPercent" noicon="1" val="100" />
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
@@ -226,7 +226,7 @@
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
@@ -326,7 +326,7 @@
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_START" />
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="715" levels="4" name="Zaken Energy Drain">
@@ -1100,64 +1100,48 @@
 		</for>
 	</skill>
 	<skill id="755" levels="1" name="Protection of Rune">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="triggeredId" val="5556" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="20" />
-		<set name="activationElements" val="0,1,2,3,4,5" />
-		<set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.15" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="300" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="756" levels="1" name="Protection of Elemental">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="triggeredId" val="5556" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="20" />
-		<set name="activationElements" val="0,1,2,3" />
-		<set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="20" />
 			<add order="0x40" stat="waterRes" val="20" />
 			<add order="0x40" stat="windRes" val="20" />
 			<add order="0x40" stat="earthRes" val="20" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="757" levels="1" name="Protection of Alignment">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="triggeredId" val="5556" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="20" />
-		<set name="activationElements" val="4,5" />
-		<set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="20" />
 			<add order="0x40" stat="darkRes" val="20" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="3" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5559" />
-		<set name="triggeredLevel" val="1" />
-		<cond>
-			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
-		</cond>
 		<for>
 			<add order="0x40" stat="pAtk" val="100">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
@@ -1165,21 +1149,17 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.1">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 			</mul>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="759" levels="1" name="Archer's Will">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="3" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5559" />
-		<set name="triggeredLevel" val="1" />
-		<cond>
-			<using kind="Bow,Crossbow" />
-		</cond>
 		<for>
 			<add order="0x40" stat="accCombat" val="8">
 				<using kind="Crossbow,Bow" />
@@ -1187,6 +1167,9 @@
 			<add order="0x40" stat="pAtkRange" val="50">
 				<using kind="Crossbow,Bow" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559">
+				<using kind="Crossbow,Bow" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="760" levels="1" name="Anti Magic Armor">
@@ -1216,7 +1199,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5561" triggeredLevel="1" activationChance="8" chanceType="ON_ATTACKED" val="0" abnormalLvl="1" abnormalType="seed_of_knight">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="8" chanceType="ON_ATTACKED_HIT" triggeredId="5561" abnormalLvl="1" abnormalType="seed_of_knight">
 				<add order="0x40" stat="pAtk" val="100" />
 			</effect>
 		</for>
@@ -1352,14 +1335,14 @@
 		</for>
 	</skill>
 	<skill id="767" levels="1" name="Expose Weak Point">
-		<set name="activationChance" val="3" />
-		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5565" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_ATTACKED_HIT" triggeredId="5565" />
+		</for>
 	</skill>
 	<skill id="768" levels="1" name="Exciting Adventure">
 		<set name="magicLvl" val="81" />
@@ -1435,7 +1418,7 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23298" triggeredLevel="1" />
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23298" />
 		</for>
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
@@ -1458,7 +1441,7 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23299" triggeredLevel="1" />
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23299" />
 		</for>
 	</skill>
 	<skill id="773" levels="1" name="Ghost Piercing">
@@ -1481,7 +1464,7 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23300" triggeredLevel="1" />
+			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23300" />
 		</for>
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
@@ -1726,7 +1709,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5562" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5562" abnormalLvl="1" abnormalType="seed_of_knight" >
 				<add order="0x40" stat="pDef" val="200" />
 			</effect>
 		</for>
@@ -1777,7 +1760,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5563" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5563" abnormalLvl="1" abnormalType="seed_of_knight">
 				<add order="0x40" stat="mDef" val="200" />
 			</effect>
 		</for>
@@ -1824,7 +1807,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" triggeredId="5564" triggeredLevel="1" activationChance="20" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="seed_of_knight" val="0">
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5564" abnormalLvl="1" abnormalType="seed_of_knight">
 				<mul order="0x30" stat="cAtk" val="1.1" />
 			</effect>
 		</for>
@@ -1900,7 +1883,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="5" val="0" triggeredId="6092" triggeredLevel="1" chanceType="ON_EXIT" effectPower="50" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze">
+			<effect name="ChanceSkillTrigger" abnormalTime="5" val="0" triggeredId="6092" chanceType="ON_EXIT" effectPower="50" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -1924,7 +1907,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="poison" triggeredId="5600" activationChance="10" chanceType="ON_ATTACKED" abnormalLvl="1" abnormalType="betrayal_mark" />
+			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="poison" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5600" abnormalLvl="1" abnormalType="betrayal_mark" />
 		</for>
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">

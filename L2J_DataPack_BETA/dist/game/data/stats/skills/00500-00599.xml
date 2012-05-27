@@ -890,10 +890,10 @@
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="iron_shield" triggeredId="5425" chanceType="ON_ATTACKED" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5425" abnormalLvl="1" abnormalType="iron_shield" />
 		</for>
 	</skill>
 	<skill id="528" levels="1" name="Shield of Faith" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
@@ -1018,47 +1018,43 @@
 	</skill>
 	<skill id="532" levels="1" name="Counter Chance">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5426" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5426" />
+		</for>
 	</skill>
 	<skill id="533" levels="1" name="Counter Rapid Shot">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5427" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5427" />
+		</for>
 	</skill>
 	<skill id="534" levels="1" name="Counter Dash">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5428" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5428" />
+		</for>
 	</skill>
 	<skill id="535" levels="1" name="Counter Mind">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5429" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5429" />
+		</for>
 	</skill>
 	<skill id="536" levels="1" name="Over the Body">
 		<set name="cpConsume" val="99999" /> <!-- When the skill is used, all of your CP are consumed. -->
@@ -1102,7 +1098,7 @@
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="Spoil" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="spoil_bomb" />
-			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" triggeredId="5430" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" triggeredId="5430" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="538" levels="1" name="Final Form">

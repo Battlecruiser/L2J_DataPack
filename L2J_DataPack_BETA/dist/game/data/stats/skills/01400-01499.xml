@@ -2382,10 +2382,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" abnormalVisualEffect="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5448" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormalVisualEffect="poison" triggeredId="5448" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5448" />
 		</enchant1for>
 	</skill>
 	<skill id="1482" levels="4" name="Weak Constitution" enchantGroup1="1" enchantGroup2="1">
@@ -2412,10 +2412,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" triggeredId="5449" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5449" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" triggeredId="5449" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5449" />
 		</enchant1for>
 	</skill>
 	<skill id="1483" levels="7" name="Thin Skin" enchantGroup1="1" enchantGroup2="1">
@@ -2443,10 +2443,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" triggeredId="5450" triggeredLevel="#lvl" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5450" triggeredLevel="#lvl" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" triggeredId="5450" triggeredLevel="7" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5450" triggeredLevel="7" />
 		</enchant1for>
 	</skill>
 	<skill id="1484" levels="4" name="Enervation" enchantGroup1="1" enchantGroup2="1">
@@ -2473,10 +2473,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" triggeredId="5451" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5451" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" triggeredId="5451" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5451" />
 		</enchant1for>
 	</skill>
 	<skill id="1485" levels="3" name="Spite" enchantGroup1="1" enchantGroup2="1">
@@ -2503,10 +2503,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" triggeredId="5452" triggeredLevel="#lvl" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" triggeredId="5452" triggeredLevel="3" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" />
 		</enchant1for>
 	</skill>
 	<skill id="1486" levels="4" name="Mental Impoverish" enchantGroup1="1" enchantGroup2="1">
@@ -2534,10 +2534,10 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" triggeredId="5453" triggeredLevel="#lvl" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" triggeredId="5453" triggeredLevel="4" chanceType="ON_ATTACKED_HIT" activationChance="30" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" />
 		</enchant1for>
 	</skill>
 	<skill id="1487" levels="8" name="Restoration" enchantGroup1="1" enchantGroup2="1">
@@ -2619,31 +2619,30 @@
 		</for>
 	</skill>
 	<skill id="1490" levels="1" name="Healer Ability - Heal">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5577" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
+		</for>
 	</skill>
 	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5578" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
+		</for>
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
 		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
@@ -2654,39 +2653,43 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" activationChance="10" chanceType="ON_ATTACKED" triggeredId="5567">
+			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5567" abnormalLvl="1" abnormalType="elemental_armor">
 				<add order="0x40" stat="fireRes" val="60" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1493" levels="1" name="Frost Armor">
-		<!-- CT2.5 retail confirmed -->
-		<set name="mpConsume" val="37" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A2" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5568" chanceType="ON_ATTACKED" activationChance="10">
+			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5568" abnormalType="elemental_armor">
 				<add order="0x40" stat="waterRes" val="60" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="1494" levels="1" name="Hurricane Armor">
-		<!-- CT2.5 retail confirmed -->
-		<set name="mpConsume" val="37" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="29" />
+		<set name="mpInitialConsume" val="8" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="elemental_armor" triggeredId="5569" chanceType="ON_ATTACKED" activationChance="10">
+			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5569" abnormalLvl="1" abnormalType="elemental_armor">
 				<add order="0x40" stat="windRes" val="60" />
 			</effect>
 		</for>
@@ -2737,26 +2740,24 @@
 		</for>
 	</skill>
 	<skill id="1497" levels="1" name="Excessive Loyalty">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5570" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="30" />
-		<set name="chanceType" val="ON_ATTACKED" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
+		</for>
 	</skill>
 	<skill id="1498" levels="1" name="Mutual Response">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_HIT" />
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5571" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
+		</for>
 	</skill>
 	<skill id="1499" levels="1" name="Improved Combat">
 		<set name="mpConsume" val="27" />

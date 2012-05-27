@@ -9,24 +9,20 @@
 		<table name="#ench1runSpd"> 1 2 2 3 4 4 5 6 6 7 7 8 9 9 10 11 11 12 13 13 14 14 15 16 16 17 18 18 19 20 </table>
 		<table name="#ench2cAtkAdd"> 65 81 96 112 127 143 158 174 189 205 220 236 251 267 282 298 313 329 344 360 375 391 406 422 437 453 468 484 499 515 </table>
 		<table name="#ench3pAtkSpd"> 1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5 </table>
-		<set name="activationChance" val="50" />
-		<set name="chanceType" val="ON_CRIT" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
-		<set name="triggeredId" val="#triggeredId" />
-		<set name="triggeredLevel" val="1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<cond msgId="113" addName="1">
-			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-		</cond>
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="#triggeredId">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="129.3">
@@ -35,6 +31,9 @@
 			<add order="0x40" stat="runSpd" val="#ench1runSpd">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="129.3">
@@ -43,6 +42,9 @@
 			<add order="0x40" stat="cAtkAdd" val="#ench2cAtkAdd">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<add order="0x40" stat="pAtk" val="129.3">
@@ -51,6 +53,9 @@
 			<add order="0x40" stat="pAtkSpd" val="#ench3pAtkSpd">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="208" levels="52" name="Bow Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -90,29 +95,28 @@
 		<table name="#ench1pAtk"> 116.84 117.78 118.72 119.66 120.6 121.54 122.48 123.42 124.36 125.3 126.24 127.18 128.12 129.06 130 130.94 131.88 132.82 133.76 134.7 135.64 136.58 137.52 138.46 139.4 140.34 141.28 142.22 143.16 144.1 </table>
 		<table name="#ench2rCrit"> 0.0019 0.0029 0.0039 0.0048 0.0058 0.0068 0.0077 0.0087 0.0097 0.0106 0.0116 0.0126 0.0135 0.0145 0.0155 0.0164 0.0174 0.0184 0.0193 0.0203 0.0213 0.0222 0.0232 0.0242 0.0251 0.0261 0.0271 0.028 0.029 0.03 </table>
 		<table name="#ench3cAtk"> 1.0019 1.0029 1.0039 1.0048 1.0058 1.0068 1.0077 1.0087 1.0097 1.0106 1.0116 1.0126 1.0135 1.0145 1.0155 1.0164 1.0174 1.0184 1.0193 1.0203 1.0213 1.0222 1.0232 1.0242 1.0251 1.0261 1.0271 1.028 1.029 1.03 </table>
-		<set name="activationChance" val="33" />
-		<set name="chanceType" val="ON_CRIT" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
-		<set name="triggeredId" val="#triggeredId" />
-		<set name="triggeredLevel" val="1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<cond msgId="113" addName="1">
-			<using kind="Dagger,Dual Dagger" />
-		</cond>
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
 				<using kind="Dagger,Dual Dagger" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="#triggeredId">
+				<using kind="Dagger,Dual Dagger" />
+			</effect>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="#ench1pAtk">
 				<using kind="Dagger,Dual Dagger" />
 			</add>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603">
+				<using kind="Dagger,Dual Dagger" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="112.8">
@@ -121,6 +125,9 @@
 			<basemul order="0x30" stat="rCrit" val="#ench2rCrit">
 				<using kind="Dagger,Dual Dagger" />
 			</basemul>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603">
+				<using kind="Dagger,Dual Dagger" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<add order="0x40" stat="pAtk" val="112.8">
@@ -129,6 +136,9 @@
 			<mul order="0x30" stat="cAtk" val="#ench3cAtk">
 				<using kind="Dagger,Dual Dagger" />
 			</mul>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603">
+				<using kind="Dagger,Dual Dagger" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="210" levels="45" name="Fist Weapon Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -2016,14 +2026,14 @@
 		<enchant2 name="mpConsume" val="#enchantMpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" triggeredLevel="1" chanceType="ON_EXIT" effectPower="40" effectType="DEBUFF">
+			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" triggeredLevel="1" chanceType="ON_EXIT" effectPower="#ench3Power" effectType="DEBUFF">
+			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="#ench3Power" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />

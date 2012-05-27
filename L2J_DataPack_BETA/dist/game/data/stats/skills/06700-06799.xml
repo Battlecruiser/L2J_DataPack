@@ -267,7 +267,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="6726" triggeredLevel="1" abnormalLvl="1" abnormalType="bless_the_blood" />
+			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="6726" abnormalLvl="1" abnormalType="bless_the_blood" />
 		</for>
 	</skill>
 	<skill id="6726" levels="1" name="Bless the Blood">

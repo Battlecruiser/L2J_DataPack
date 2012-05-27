@@ -282,15 +282,14 @@
 		</for>
 	</skill>
 	<skill id="3829" levels="1" name="Sword of Stun">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="6" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5665" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5665" />
+		</for>
 	</skill>
 	<skill id="3830" levels="3" name="Rapier of Might">
 		<!-- CT2.5 retail confirmed -->
@@ -331,15 +330,14 @@
 		</for>
 	</skill>
 	<skill id="3834" levels="1" name="Rapier of Stun">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="6" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5666" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5666" />
+		</for>
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
 		<!-- CT2.5 retail confirmed -->
@@ -380,15 +378,14 @@
 		</for>
 	</skill>
 	<skill id="3839" levels="1" name="Dual-Blade Weapon of Stun">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="6" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5667" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5667" />
+		</for>
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
 		<!-- CT2.5 retail confirmed -->
@@ -594,15 +591,14 @@
 		</for>
 	</skill>
 	<skill id="3861" levels="1" name="Dagger of Poison">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5668" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5668" />
+		</for>
 	</skill>
 	<skill id="3862" levels="1" name="Dagger of Guidance">
 		<!-- CT2.5 retail confirmed -->
@@ -748,15 +744,14 @@
 		</for>
 	</skill>
 	<skill id="3876" levels="1" name="Polearm of Stun">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="6" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5669" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5669" />
+		</for>
 	</skill>
 	<skill id="3877" levels="2" name="Polearm of Boost HP">
 		<!-- CT2.5 retail confirmed -->
@@ -808,15 +803,14 @@
 		</for>
 	</skill>
 	<skill id="3882" levels="1" name="Fist Weapon of Stun">
-		<!-- CT2.5 retail confirmed -->
-		<set name="activationChance" val="6" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5670" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5670" />
+		</for>
 	</skill>
 	<skill id="3883" levels="1" name="Fist Weapon of Critical Power">
 		<!-- CT2.5 retail confirmed -->
@@ -838,17 +832,16 @@
 		</for>
 	</skill>
 	<skill id="3885" levels="2" name="Blunt Weapon of Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#triggeredId"> 5671 5672 </table>
 		<table name="#activationChance"> 5 8 </table>
-		<set name="activationChance" val="#activationChance" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="#triggeredId" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="#triggeredId" />
+		</for>
 	</skill>
 	<skill id="3886" levels="1" name="Blunt Weapon of Haste">
 		<!-- CT2.5 retail confirmed -->

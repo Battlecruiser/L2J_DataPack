@@ -159,15 +159,10 @@
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
-		<set name="activationChance" val="10" />
-		<set name="activationMinDamage" val="50" />
-		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5605" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -175,6 +170,7 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5605" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="3609" levels="3" name="Apella Light Armor Set">
@@ -182,15 +178,10 @@
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
-		<set name="activationChance" val="10" />
-		<set name="activationMinDamage" val="50" />
-		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5607" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -198,6 +189,7 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5607" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="3610" levels="2" name="Apella Robe Set">
@@ -205,15 +197,10 @@
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
-		<set name="activationChance" val="10" />
-		<set name="activationMinDamage" val="50" />
-		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5608" />
-		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -221,6 +208,7 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5608" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
@@ -854,171 +842,143 @@
 	</skill>
 	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="20" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5681" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5681" />
+		</for>
 	</skill>
 	<skill id="3651" levels="1" name="PvP Weapon - Cancel">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5682" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5682" />
+		</for>
 	</skill>
 	<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="20" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5683" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5683" />
+		</for>
 	</skill>
 	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5684" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5684" />
+		</for>
 	</skill>
 	<skill id="3654" levels="1" name="PvP Weapon - Casting">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5685" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5685" />
+		</for>
 	</skill>
 	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5686" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5686" />
+		</for>
 	</skill>
 	<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5687" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5687" />
+		</for>
 	</skill>
 	<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5688" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5688" />
+		</for>
 	</skill>
 	<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_HIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5689" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="40" chanceType="ON_ATTACKED_HIT" triggeredId="5689" />
+		</for>
 	</skill>
 	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="20" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5690" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5690" />
+		</for>
 	</skill>
 	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="20" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5691" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+		</for>
 	</skill>
 	<skill id="3661" levels="1" name="PvP Armor - Heal">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="5" />
-		<set name="chanceType" val="ON_MAGIC_GOOD" /> <!-- FIXME: this should be when Major Heal skill is used -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5692" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationSkills="1401" chanceType="ON_CAST" triggeredId="5692" />
+		</for>
 	</skill>
 	<skill id="3662" levels="1" name="PvP Armor - Speed Down">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5693" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+		</for>
 	</skill>
 	<skill id="3663" levels="1" name="PvP Armor - Mirage">
 		<!-- Confirmed CT2.5 -->
-		<set name="activationChance" val="25" />
-		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="pvpChanceOnly" val="true" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5694" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+		</for>
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
 		<set name="mpConsume" val="50" />
@@ -1054,13 +1014,14 @@
 		</for>
 	</skill>
 	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+                <!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="triggeredId" val="5695" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="1" />
-		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" activationMinDamage="20" chanceType="ON_ATTACKED_HIT" triggeredId="5695" />
+		</for>
 	</skill>
 	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
 		<set name="target" val="TARGET_SELF" />

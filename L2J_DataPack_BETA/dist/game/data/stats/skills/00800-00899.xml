@@ -299,34 +299,34 @@
 		</cond>
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5673" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_EVADED_HIT" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
+		</for>
 	</skill>
 	<skill id="819" levels="1" name="Evasion Chance">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5674" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_EVADED_HIT" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
+		</for>
 	</skill>
 	<skill id="820" levels="1" name="Evasion Haste">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5675" />
-		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="10" />
-		<set name="chanceType" val="ON_EVADED_HIT" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
+		</for>
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">
 		<set name="magicLvl" val="72" />

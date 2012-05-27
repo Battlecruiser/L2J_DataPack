@@ -530,7 +530,7 @@
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
 			<effect count="#count" name="DamOverTime" abnormalTime="#time" noicon="1" val="#dot" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_START" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="6302" />
 		</for>
 	</skill>
 	<skill id="6663" levels="1" name="Level 76 Raid Boss">
@@ -935,7 +935,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" triggeredLevel="1" chanceType="ON_START" />
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
@@ -957,7 +957,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="5" noicon="1" val="575" />
 			<!-- 5MP * 5 during 15 seconds -->
 			<effect count="3" name="ManaDamOverTime" abnormalTime="5" noicon="1" val="25" />
-			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="6302" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="6699" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">

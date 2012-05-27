@@ -1479,10 +1479,10 @@
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="mirage" triggeredId="5144" chanceType="ON_ATTACKED" activationChance="80" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="80" chanceType="ON_ATTACKED_HIT" triggeredId="5144" abnormalLvl="1" abnormalType="mirage" />
 		</for>
 	</skill>
 	<skill id="446" levels="1" name="Dodge">
@@ -1982,16 +1982,15 @@
 		<table name="#expNeeded"> 73 147 220 294 385 486 614 777 960 1109 1269 1440 1622 1815 2018 2160 2306 2457 2613 2774 2940 3110 3285 </table>
 		<table name="#magicLvl"> 5 10 15 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#num_souls"> 5 8 10 12 14 16 18 20 21 22 23 24 25 26 27 28 29 30 32 34 36 38 40 </table>
-		<set name="activationChance" val="#activationChance" />
-		<set name="chanceType" val="ON_CRIT" />
 		<set name="expNeeded" val="#expNeeded" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="num_souls" val="#num_souls" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="triggeredId" val="5548" />
-		<set name="triggeredLevel" val="1" />
+		<for>
+			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="5548" />
+		</for>
 	</skill>
 	<skill id="468" levels="9" name="Fallen Attack">
 		<!-- Confirmed CT2.5 -->

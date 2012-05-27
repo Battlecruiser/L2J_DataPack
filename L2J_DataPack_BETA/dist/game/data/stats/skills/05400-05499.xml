@@ -374,7 +374,7 @@
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
 	<skill id="5435" levels="1" name="Gust">
@@ -393,7 +393,7 @@
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
 	<skill id="5436" levels="1" name="Increase Recovery Rate">
