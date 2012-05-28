@@ -876,7 +876,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="STR" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
