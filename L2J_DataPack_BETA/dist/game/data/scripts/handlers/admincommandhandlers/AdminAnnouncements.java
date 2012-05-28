@@ -237,7 +237,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				return false;
 			}
 			token = st.nextToken();
-			if (!Util.isDigit(token))
+			if (!token.equals("-1") && !Util.isDigit(token))
 			{
 				activeChar.sendMessage("Not a valid repeat value!");
 				return false;
