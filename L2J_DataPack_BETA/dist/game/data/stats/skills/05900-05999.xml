@@ -46,7 +46,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="STR" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5904" levels="3" name="Mist of Souleater">

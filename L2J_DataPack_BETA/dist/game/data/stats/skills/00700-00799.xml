@@ -1512,7 +1512,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
@@ -1990,7 +1990,7 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2Reuse" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="795" levels="1" name="Divine Knight Brandish">

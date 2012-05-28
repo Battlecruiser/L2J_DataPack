@@ -1228,7 +1228,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
