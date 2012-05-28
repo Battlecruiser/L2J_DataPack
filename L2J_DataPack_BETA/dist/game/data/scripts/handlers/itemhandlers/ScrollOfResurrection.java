@@ -100,7 +100,7 @@ public class ScrollOfResurrection implements IItemHandler
 			{
 				castle = CastleManager.getInstance().getCastle(targetPlayer.getX(), targetPlayer.getY(), targetPlayer.getZ());
 			}
-			else
+			else if (targetPet != null)
 			{
 				castle = CastleManager.getInstance().getCastle(targetPet.getOwner().getX(), targetPet.getOwner().getY(), targetPet.getOwner().getZ());
 			}
@@ -129,7 +129,7 @@ public class ScrollOfResurrection implements IItemHandler
 					}
 				}
 			}
-			else
+			else if (targetPlayer != null)
 			{
 				if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
 				{

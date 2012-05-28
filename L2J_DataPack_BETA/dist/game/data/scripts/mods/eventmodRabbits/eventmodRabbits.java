@@ -157,7 +157,7 @@ public class eventmodRabbits extends Event
 		return true;
 	}
 	
-	private void timeUp()
+	protected void timeUp()
 	{
 		Announcements.getInstance().announceToAll("Time up !");
 		eventStop();

@@ -85,7 +85,7 @@ public class Stage1 extends Quest
 		}
 	}
 	
-	private static class SODSpawn
+	protected static class SODSpawn
 	{
 		public boolean isZone = false;
 		public boolean isNeededNextFlag = false;

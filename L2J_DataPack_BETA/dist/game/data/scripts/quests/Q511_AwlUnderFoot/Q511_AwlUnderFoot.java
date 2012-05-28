@@ -16,6 +16,8 @@ package quests.Q511_AwlUnderFoot;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+import java.util.logging.Logger;
+
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
@@ -38,7 +40,9 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class Q511_AwlUnderFoot extends Quest
 {
-	private class FAUWorld extends InstanceWorld
+	protected static final Logger log = Logger.getLogger(Q511_AwlUnderFoot.class.getName());
+	
+	protected class FAUWorld extends InstanceWorld
 	{
 	}
 	
@@ -82,20 +86,20 @@ public final class Q511_AwlUnderFoot extends Quest
 	private static final int KNIGHT_EPALUETTE = 9912;
 	
 	// MONSTER TO KILL -- Only last 3 Raids (lvl ordered) give DL_MARK
-	private static final int[] RAIDS1 =
+	protected static final int[] RAIDS1 =
 	{
 		25572,
 		25575,
 		25578
 	};
-	private static final int[] RAIDS2 =
+	protected static final int[] RAIDS2 =
 	{
 		25579,
 		25582,
 		25585,
 		25588
 	};
-	private static final int[] RAIDS3 =
+	protected static final int[] RAIDS3 =
 	{
 		25589,
 		25592,
@@ -180,7 +184,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		world.status = 0;
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		log.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
 		
 		// teleport players
@@ -239,7 +243,7 @@ public final class Q511_AwlUnderFoot extends Quest
 			}
 			catch (Exception e)
 			{
-				_log.warning("Fortress AwlUnderFoot Raid Spawn error: " + e);
+				log.warning("Fortress AwlUnderFoot Raid Spawn error: " + e);
 			}
 		}
 	}

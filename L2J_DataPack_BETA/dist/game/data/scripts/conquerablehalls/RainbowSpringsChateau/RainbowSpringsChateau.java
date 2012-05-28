@@ -66,7 +66,7 @@ public class RainbowSpringsChateau extends Quest
 {
 	private static final Logger _log = Logger.getLogger(RainbowSpringsChateau.class.getName());
 	
-	private static class SetFinalAttackers implements Runnable
+	protected static class SetFinalAttackers implements Runnable
 	{
 		@Override
 		public void run()
@@ -108,7 +108,7 @@ public class RainbowSpringsChateau extends Quest
 							clan = actingClan;
 						}
 					}
-					if (_acceptedClans.size() < 4)
+					if ((clan != null) && _acceptedClans.size() < 4)
 					{
 						_acceptedClans.add(clan);
 						L2PcInstance leader = clan.getLeader().getPlayerInstance();
@@ -131,7 +131,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static class SiegeStart implements Runnable
+	protected static class SiegeStart implements Runnable
 	{
 		@Override
 		public void run()
@@ -152,7 +152,7 @@ public class RainbowSpringsChateau extends Quest
 	{
 		private final L2Clan _winner;
 		
-		private SiegeEnd(L2Clan winner)
+		protected SiegeEnd(L2Clan winner)
 		{
 			_winner = winner;
 		}
@@ -181,7 +181,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static class TeleportBack implements Runnable
+	protected static class TeleportBack implements Runnable
 	{
 		@Override
 		public void run()
@@ -255,7 +255,7 @@ public class RainbowSpringsChateau extends Quest
 		}, // Arena 4
 	};
 	
-	private static final int[] ARENA_ZONES =
+	protected static final int[] ARENA_ZONES =
 	{
 		112081,
 		112082,
@@ -282,13 +282,13 @@ public class RainbowSpringsChateau extends Quest
 		SkillTable.getInstance().getInfo(0, 1)
 	};
 	
-	private static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
-	private static List<L2Clan> _acceptedClans = new ArrayList<L2Clan>(4);
+	protected static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
+	protected static List<L2Clan> _acceptedClans = new ArrayList<L2Clan>(4);
 	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<String, ArrayList<L2Clan>>();
 	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<L2Clan, Integer>();
 	
-	private static SiegableHall _rainbow;
-	private static ScheduledFuture<?> _nextSiege, _siegeEnd;
+	protected static SiegableHall _rainbow;
+	protected static ScheduledFuture<?> _nextSiege, _siegeEnd;
 	private static String _registrationEnds;
 	
 	/**
@@ -730,7 +730,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static void spawnGourds()
+	protected static void spawnGourds()
 	{
 		for (int i = 0; i < _acceptedClans.size(); i++)
 		{
@@ -755,7 +755,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static void unSpawnGourds()
+	protected static void unSpawnGourds()
 	{
 		for (int i = 0; i < _acceptedClans.size(); i++)
 		{
@@ -927,7 +927,7 @@ public class RainbowSpringsChateau extends Quest
 		}
 	}
 	
-	private static void setRegistrationEndString(long time)
+	protected static void setRegistrationEndString(long time)
 	{
 		Calendar c = Calendar.getInstance();
 		c.setTime(new Date(time));

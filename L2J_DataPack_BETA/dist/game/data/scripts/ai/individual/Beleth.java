@@ -55,21 +55,21 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Beleth extends L2AttackableAIScript
 {
-	private static L2Npc camera;
-	private static L2Npc camera2;
-	private static L2Npc camera3;
-	private static L2Npc camera4;
-	private static L2Npc beleth;
-	private static L2Npc priest;
-	private static L2ZoneType _zone = null;
+	protected static L2Npc camera;
+	protected static L2Npc camera2;
+	protected static L2Npc camera3;
+	protected static L2Npc camera4;
+	protected static L2Npc beleth;
+	protected static L2Npc priest;
+	protected static L2ZoneType _zone = null;
 	private static L2PcInstance belethKiller;
 	private static boolean debug = false;
-	private static boolean movie = false;
+	protected static boolean movie = false;
 	private static boolean attacked = false;
 	private static int allowObjectId = 0;
 	private static int killed = 0;
-	private static ScheduledFuture<?> spawnTimer = null;
-	private static ArrayList<L2Npc> minions = new ArrayList<L2Npc>();
+	protected static ScheduledFuture<?> spawnTimer = null;
+	protected static ArrayList<L2Npc> minions = new ArrayList<L2Npc>();
 	private static L2Skill Bleed = SkillTable.getInstance().getInfo(5495, 1);
 	private static L2Skill Fireball = SkillTable.getInstance().getInfo(5496, 1);
 	private static L2Skill HornOfRising = SkillTable.getInstance().getInfo(5497, 1);
@@ -108,7 +108,7 @@ public class Beleth extends L2AttackableAIScript
 		DoorTable.getInstance().getDoor(20240001).openMe();
 	}
 	
-	private static L2Npc spawn(int npcId, Location loc)
+	protected static L2Npc spawn(int npcId, Location loc)
 	{
 		try
 		{
@@ -133,7 +133,7 @@ public class Beleth extends L2AttackableAIScript
 		ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(1), debug ? 10000 : 300000);
 	}
 	
-	private static class unlock implements Runnable
+	protected static class unlock implements Runnable
 	{
 		@Override
 		public void run()
@@ -661,7 +661,7 @@ public class Beleth extends L2AttackableAIScript
 		attacked = false;
 	}
 	
-	private static void SpawnBeleths()
+	protected static void SpawnBeleths()
 	{
 		int a = 0;
 		L2Npc npc;

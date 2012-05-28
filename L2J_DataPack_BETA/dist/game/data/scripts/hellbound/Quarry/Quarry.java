@@ -39,7 +39,7 @@ public class Quarry extends Quest
 	private static final int TRUST = 50;
 	private static final int ZONE = 40107;
 	// Id, chance (n from 10000)
-	private static final int[][] DROPLIST =
+	protected static final int[][] DROPLIST =
 	{
 		{
 			9628, 261

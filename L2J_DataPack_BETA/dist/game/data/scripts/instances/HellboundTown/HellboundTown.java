@@ -101,7 +101,8 @@ public class HellboundTown extends Quest
 	{
 		14117, 255434, -2016
 	};
-	private static final int[] EXIT_POINT =
+	
+	protected static final int[] EXIT_POINT =
 	{
 		16262, 283651, -9700
 	};

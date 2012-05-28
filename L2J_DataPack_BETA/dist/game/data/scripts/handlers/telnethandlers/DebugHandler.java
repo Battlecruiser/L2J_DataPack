@@ -67,6 +67,7 @@ public class DebugHandler implements ITelnetHandler
 		if (command.startsWith("debug") && command.length() > 6)
 		{
 			StringTokenizer st = new StringTokenizer(command.substring(6));
+			// TODO: Rewrite to use ARM.
 			FileOutputStream fos = null;
 			OutputStreamWriter out = null;
 			try
@@ -304,7 +305,10 @@ public class DebugHandler implements ITelnetHandler
 			{
 				try
 				{
-					out.close();
+					if (out != null)
+					{
+						out.close();
+					}
 				}
 				catch (Exception e)
 				{
@@ -312,7 +316,10 @@ public class DebugHandler implements ITelnetHandler
 				
 				try
 				{
-					fos.close();
+					if (fos != null)
+					{
+						fos.close();
+					}
 				}
 				catch (Exception e)
 				{

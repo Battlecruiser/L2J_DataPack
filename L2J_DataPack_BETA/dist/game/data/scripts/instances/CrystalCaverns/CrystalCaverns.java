@@ -73,7 +73,7 @@ import com.l2jserver.gameserver.util.Util;
 public class CrystalCaverns extends Quest
 {
 	
-	private static class CrystalGolem
+	protected static class CrystalGolem
 	{
 		public         L2ItemInstance foodItem = null;
 		public boolean isAtDestination         = false;
@@ -102,14 +102,14 @@ public class CrystalCaverns extends Quest
 		public           List<L2Npc> guards                               = new FastList<L2Npc>();
 		public           List<L2Npc> oracle                               = new FastList<L2Npc>();
 		// baylor variables
-		private final List<L2PcInstance> _raiders = new FastList<L2PcInstance>();
-		private int _raidStatus = 0;
-		private long _dragonClawStart = 0;
-		private int _dragonClawNeed = 0;
-		private final List<L2Npc> _animationMobs = new FastList<L2Npc>();
-		private L2Npc _camera = null;
-		private L2Npc _baylor = null;
-		private L2Npc _alarm = null;
+		protected final List<L2PcInstance> _raiders = new FastList<L2PcInstance>();
+		protected int _raidStatus = 0;
+		protected long _dragonClawStart = 0;
+		protected int _dragonClawNeed = 0;
+		protected final List<L2Npc> _animationMobs = new FastList<L2Npc>();
+		protected L2Npc _camera = null;
+		protected L2Npc _baylor = null;
+		protected L2Npc _alarm = null;
 		
 		public CCWorld(Long time)
 		{
@@ -324,7 +324,7 @@ public class CrystalCaverns extends Quest
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
-	private static class teleCoord
+	protected static class teleCoord
 	{
 		int instanceId;
 		int x;
@@ -1656,7 +1656,7 @@ public class CrystalCaverns extends Quest
 				{
 					if (!checkOracleConditions(player))
 						return "";
-					else if (player.getParty() != null)
+					else if (party != null)
 						for (L2PcInstance partyMember : party.getMembers())
 						{
 							partyMember.destroyItemByItemId("Quest", RED_CORAL, 1, player, true);

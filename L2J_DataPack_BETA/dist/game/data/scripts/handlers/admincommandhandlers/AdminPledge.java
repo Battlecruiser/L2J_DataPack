@@ -71,6 +71,8 @@ public class AdminPledge implements IAdminCommandHandler
 			}
 			catch (NoSuchElementException nse)
 			{
+				// TODO: Send some message.
+				return false;
 			}
 			if (action.equals("create"))
 			{

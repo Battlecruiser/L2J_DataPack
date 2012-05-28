@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * TODO: Rewrite.
  * @author DS
  */
 public final class SubClassSkills extends Quest
@@ -75,10 +76,9 @@ public final class SubClassSkills extends Quest
 			return null;
 		
 		final L2Skill[] certSkills = getCertSkills(player);
-		final boolean hasCertSkills = certSkills != null;
 		if (player.isSubClassActive())
 		{
-			if (hasCertSkills)
+			if (certSkills != null)
 			{
 				for (L2Skill s : certSkills)
 				{
@@ -93,7 +93,7 @@ public final class SubClassSkills extends Quest
 		
 		L2Skill skill;
 		int[][] cSkills = null; // skillId/skillLvl
-		if (hasCertSkills)
+		if (certSkills != null)
 		{
 			cSkills = new int[certSkills.length][2];
 			for (int i = certSkills.length; --i >= 0;)
@@ -107,8 +107,7 @@ public final class SubClassSkills extends Quest
 		L2ItemInstance item;
 		int[][] cItems = null; // objectId/number
 		final L2ItemInstance[] certItems = getCertItems(player);
-		final boolean hasCertItems = certItems != null;
-		if (hasCertItems)
+		if (certItems != null)
 		{
 			cItems = new int[certItems.length][2];
 			for (int i = certItems.length; --i >= 0;)
@@ -141,16 +140,19 @@ public final class SubClassSkills extends Quest
 						id = Integer.parseInt(qValue.replace(";", ""));
 						
 						skill = null;
-						if (hasCertSkills)
+						if (certSkills != null)
 						{
 							// searching skill in test array
-							for (index = certSkills.length; --index >= 0;)
+							if (cSkills != null)
 							{
-								if (cSkills[index][0] == id)
+								for (index = certSkills.length; --index >= 0;)
 								{
-									skill = certSkills[index];
-									cSkills[index][1]--;
-									break;
+									if (cSkills[index][0] == id)
+									{
+										skill = certSkills[index];
+										cSkills[index][1]--;
+										break;
+									}
 								}
 							}
 							if (skill != null)
@@ -185,16 +187,19 @@ public final class SubClassSkills extends Quest
 							continue;
 						
 						item = null;
-						if (hasCertItems)
+						if (certItems != null)
 						{
 							// searching item in test array
-							for (index = certItems.length; --index >= 0;)
+							if (cItems != null)
 							{
-								if (cItems[index][0] == id)
+								for (index = certItems.length; --index >= 0;)
 								{
-									item = certItems[index];
-									cItems[index][1]--;
-									break;
+									if (cItems[index][0] == id)
+									{
+										item = certItems[index];
+										cItems[index][1]--;
+										break;
+									}
 								}
 							}
 							if (item != null)
@@ -227,7 +232,7 @@ public final class SubClassSkills extends Quest
 			}
 		}
 		
-		if (hasCertSkills)
+		if ((certSkills != null) && (cSkills != null))
 		{
 			for (int i = cSkills.length; --i >= 0;)
 			{
@@ -257,7 +262,7 @@ public final class SubClassSkills extends Quest
 			}
 		}
 		
-		if (hasCertItems)
+		if ((certItems != null) && (cItems != null))
 		{
 			for (int i = cItems.length; --i >= 0;)
 			{

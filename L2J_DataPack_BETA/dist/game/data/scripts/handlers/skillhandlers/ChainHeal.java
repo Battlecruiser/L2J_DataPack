@@ -33,8 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.ValueSortMap;
 
 /**
- * @author Nik
- * @author UnAfraid
+ * @author Nik, UnAfraid
  */
 public class ChainHeal implements ISkillHandler
 {

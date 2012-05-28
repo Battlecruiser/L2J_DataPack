@@ -35,7 +35,7 @@ public class DenOfEvil extends L2AttackableAIScript
 {
 	// private static final int _buffer_id = 32656;
 	
-	private static final int[] _eye_ids = { 18812, 18813, 18814 };
+	protected static final int[] _eye_ids = { 18812, 18813, 18814 };
 	private static final int _skill_id = 6150; // others +2
 	
 	private static final Location[] _eye_spawn =

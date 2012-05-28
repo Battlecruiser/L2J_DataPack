@@ -51,7 +51,6 @@ public class Festival implements IBypassHandler
 		}
 		
 		final L2FestivalGuideInstance npc = (L2FestivalGuideInstance) target;
-		
 		try
 		{
 			final int val;
@@ -243,7 +242,7 @@ public class Festival implements IBypassHandler
 						strBuffer.append("Dusk: No record exists. Score 0<br>");
 					}
 					
-					if (overallScore > 0)
+					if ((overallScore > 0) && (overallData != null))
 					{
 						final String cabalStr;
 						if (overallData.getString("cabal").equals("dawn"))

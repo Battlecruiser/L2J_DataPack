@@ -37,7 +37,7 @@ public class PailakaSongOfIceAndFire extends Quest
 	private static final int MAX_LEVEL = 42;
 	private static final int EXIT_TIME = 5;
 	private static final int INSTANCE_ID = 43;
-	private static final int[] TELEPORT =
+	protected static final int[] TELEPORT =
 	{
 		-52875,
 		188232,
@@ -223,7 +223,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		}
 	}
 	
-	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	protected static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);

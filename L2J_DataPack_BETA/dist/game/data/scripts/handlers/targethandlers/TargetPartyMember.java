@@ -17,8 +17,6 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -31,29 +29,21 @@ public class TargetPartyMember implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if ((target != null
-				&& target == activeChar)
-				|| (target != null
-						&& activeChar.isInParty()
-						&& target.isInParty()
-						&& activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
-						|| (target != null
-								&& activeChar instanceof L2PcInstance
-								&& target instanceof L2Summon
-								&& activeChar.getPet() == target)
-								|| (target != null
-										&& activeChar instanceof L2Summon
-										&& target instanceof L2PcInstance
-										&& activeChar == target.getPet()))
+		if (target == null)
 		{
-			if (!target.isDead())
-			{
-				// If a target is found, return it in a table else send a system message TARGET_IS_INCORRECT
-				return new L2Character[] { target };
-			}
+			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
-		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+		if (!target.isDead())
+		{
+			if ((target == activeChar) ||
+				(activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) ||
+				(activeChar.isPlayer() && target.isSummon() && (activeChar.getPet() == target)) ||
+				(activeChar.isSummon() && target.isPlayer() && (activeChar == target.getPet())))
+			{
+				return new L2Character[] { target };
+			}
+		}
 		return _emptyTargetList;
 	}
 	
