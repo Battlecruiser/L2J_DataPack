@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javolution.util.FastList;
 import ai.group_template.L2AttackableAIScript;
@@ -60,6 +61,8 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Baium extends L2AttackableAIScript
 {
+	protected static final Logger log = Logger.getLogger(Baium.class.getName());
+	
 	private L2Character _target;
 	private L2Skill _skill;
 	private static final int STONE_BAIUM = 29025;
@@ -83,7 +86,7 @@ public class Baium extends L2AttackableAIScript
 	};
 	
 	private long _LastAttackVsBaiumTime = 0;
-	private final List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
+	protected final List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
 	private L2BossZone _Zone;
 	
 	public Baium(int questId, String name, String descr)
@@ -203,7 +206,7 @@ public class Baium extends L2AttackableAIScript
 						}
 						catch (Exception e)
 						{
-							_log.log(Level.WARNING, "", e);
+							log.log(Level.WARNING, "", e);
 						}
 					}
 				}, 11100L);
@@ -315,7 +318,7 @@ public class Baium extends L2AttackableAIScript
 						}
 						catch (Throwable e)
 						{
-							_log.log(Level.WARNING, "", e);
+							log.log(Level.WARNING, "", e);
 						}
 					}
 				}, 100L);

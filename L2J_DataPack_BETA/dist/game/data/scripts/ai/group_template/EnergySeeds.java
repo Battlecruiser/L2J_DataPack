@@ -53,7 +53,7 @@ public class EnergySeeds extends L2AttackableAIScript
 	private static final int RESPAWN = 480000;
 	private static final int RANDOM_RESPAWN_OFFSET = 180000;
 	private static Map<Integer, ESSpawn> _spawns = new FastMap<Integer, ESSpawn>();
-	private static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
+	protected static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
 	private static final int[] SEEDIDS = { 18678, 18679, 18680, 18681, 18682, 18683 };
@@ -83,10 +83,10 @@ public class EnergySeeds extends L2AttackableAIScript
 	
 	private class ESSpawn
 	{
-		private final int _spawnId;
-		private final GraciaSeeds _seedId;
-		private final int[] _npcIds;
-		private final Location _loc;
+		protected final int _spawnId;
+		protected final GraciaSeeds _seedId;
+		protected final int[] _npcIds;
+		protected final Location _loc;
 		
 		public ESSpawn(int spawnId, GraciaSeeds seedId, Location loc, int[] npcIds)
 		{
@@ -127,7 +127,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		startAI();
 	}
 	
-	private boolean isSeedActive(GraciaSeeds seed)
+	protected boolean isSeedActive(GraciaSeeds seed)
 	{
 		switch(seed)
 		{

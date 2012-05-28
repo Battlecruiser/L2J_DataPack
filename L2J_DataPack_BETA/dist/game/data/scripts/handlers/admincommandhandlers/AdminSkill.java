@@ -581,6 +581,7 @@ public class AdminSkill implements IAdminCommandHandler
 		if (skill == null)
 		{
 			activeChar.sendMessage("Error: there is no such skill.");
+			return;
 		}
 		
 		String skillname = skill.getName();

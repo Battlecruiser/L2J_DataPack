@@ -101,7 +101,7 @@ public class TullyWorkshop extends Quest
 	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<Integer, int[]>();
 	private static final Map<Integer, int[][]> TELE_COORDS = new FastMap<Integer, int[][]>();
 	
-	private int countdownTime;
+	protected int countdownTime;
 	private int nextServantIdx = 0;
 	private int killedFollowersCount = 0;
 	private boolean allowServantSpawn = true;
@@ -109,13 +109,13 @@ public class TullyWorkshop extends Quest
 	private boolean allowAgentSpawn_7th = true;
 	private boolean is7thFloorAttackBegan = false;
 	
-	private ScheduledFuture<?> _countdown = null;
+	protected ScheduledFuture<?> _countdown = null;
 	
 	// NPC's, spawned after Tully's death are stored here
-	private static List<L2Npc> postMortemSpawn = new FastList<L2Npc>();
-	private static TIntHashSet brokenContraptions = new TIntHashSet();
-	private static TIntHashSet rewardedContraptions = new TIntHashSet();
-	private static TIntHashSet talkedContraptions = new TIntHashSet();
+	protected static List<L2Npc> postMortemSpawn = new FastList<L2Npc>();
+	protected static TIntHashSet brokenContraptions = new TIntHashSet();
+	protected static TIntHashSet rewardedContraptions = new TIntHashSet();
+	protected static TIntHashSet talkedContraptions = new TIntHashSet();
 	
 	private final List<L2MonsterInstance> spawnedFollowers = new FastList<L2MonsterInstance>();
 	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<L2MonsterInstance>();
@@ -1611,7 +1611,7 @@ public class TullyWorkshop extends Quest
 		}, STATE_CLOSE), 4000);
 	}
 	
-	private class CountdownTask implements Runnable
+	protected class CountdownTask implements Runnable
 	{
 		@Override
 		public void run()

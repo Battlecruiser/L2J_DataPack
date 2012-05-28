@@ -19,6 +19,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Logger;
 
 import javolution.util.FastList;
 import ai.group_template.L2AttackableAIScript;
@@ -54,6 +55,8 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  */
 public class Antharas extends L2AttackableAIScript
 {
+	protected static final Logger log = Logger.getLogger(Antharas.class.getName());
+	
 	// config
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
 	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
@@ -209,7 +212,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			_log.warning(e.getMessage());
+			log.warning(e.getMessage());
 		}
 		
 		// Setting spawn data of teleport cube.
@@ -233,7 +236,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			_log.warning(e.getMessage());
+			log.warning(e.getMessage());
 		}
 		int status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
 		if (FWA_OLDANTHARAS || (status == WAITING))
@@ -379,7 +382,7 @@ public class Antharas extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private void startMinionSpawns(int antharasId)
+	protected void startMinionSpawns(int antharasId)
 	{
 		int intervalOfMobs;
 		
@@ -552,7 +555,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 	}
 	
-	private void broadcastPacket(L2GameServerPacket mov)
+	protected void broadcastPacket(L2GameServerPacket mov)
 	{
 		if (_Zone != null)
 		{
@@ -638,7 +641,7 @@ public class Antharas extends L2AttackableAIScript
 			}
 			catch (Exception e)
 			{
-				_log.warning(e.getMessage());
+				log.warning(e.getMessage());
 			}
 		}
 	}
@@ -728,7 +731,7 @@ public class Antharas extends L2AttackableAIScript
 	}
 	
 	// At end of activity time.
-	private class CheckActivity implements Runnable
+	protected class CheckActivity implements Runnable
 	{
 		@Override
 		public void run()

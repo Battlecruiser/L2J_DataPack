@@ -529,7 +529,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		return false;
 	}
 	
-	private void doSpawns(int clanId, ClanData data)
+	void doSpawns(int clanId, ClanData data)
 	{
 		try
 		{

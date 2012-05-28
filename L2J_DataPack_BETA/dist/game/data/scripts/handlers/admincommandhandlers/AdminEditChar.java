@@ -781,13 +781,19 @@ public class AdminEditChar implements IAdminCommandHandler
 				player = activeChar;
 			}
 			else if (activeChar.getTarget() != null && activeChar.getTarget() instanceof L2PcInstance)
-				player = (L2PcInstance)activeChar.getTarget();
-			player.setNoble(!player.isNoble());
-			if (player.getObjectId() != activeChar.getObjectId())
 			{
-				activeChar.sendMessage("You've changed nobless status of: " + player.getName());
+				player = (L2PcInstance) activeChar.getTarget();
 			}
-			player.sendMessage("GM changed your nobless status!");
+			
+			if (player != null)
+			{
+				player.setNoble(!player.isNoble());
+				if (player.getObjectId() != activeChar.getObjectId())
+				{
+					activeChar.sendMessage("You've changed nobless status of: " + player.getName());
+				}
+				player.sendMessage("GM changed your nobless status!");
+			}
 		}
 		return true;
 	}
@@ -1475,7 +1481,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		private final L2PcInstance _player;
 
-		private Untransform(L2PcInstance player)
+		protected Untransform(L2PcInstance player)
 		{
 			_player = player;
 		}

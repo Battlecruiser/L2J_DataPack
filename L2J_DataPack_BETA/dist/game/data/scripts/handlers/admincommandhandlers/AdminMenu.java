@@ -231,8 +231,10 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			L2PcInstance plyr = L2World.getInstance().getPlayer(player);
 			if (plyr != null)
+			{
 				target = plyr;
-			activeChar.sendMessage("You killed " + plyr.getName());
+				activeChar.sendMessage("You killed " + plyr.getName());
+			}
 		}
 		if (target != null)
 		{

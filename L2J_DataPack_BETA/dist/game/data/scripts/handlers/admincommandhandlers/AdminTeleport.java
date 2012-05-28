@@ -446,15 +446,16 @@ public class AdminTeleport implements IAdminCommandHandler
 			else
 			{
 				// Set player to same instance as GM teleporting.
-				if (activeChar != null && activeChar.getInstanceId() >= 0)
+				if ((activeChar != null) && activeChar.getInstanceId() >= 0)
+				{
 					player.setInstanceId(activeChar.getInstanceId());
+					activeChar.sendMessage("You have recalled " + player.getName());
+				}
 				else
+				{
 					player.setInstanceId(0);
-				
-				// Information
-				activeChar.sendMessage("You have recalled " + player.getName());
+				}
 				player.sendMessage("Admin is teleporting you.");
-				
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				player.teleToLocation(x, y, z, true);
 			}

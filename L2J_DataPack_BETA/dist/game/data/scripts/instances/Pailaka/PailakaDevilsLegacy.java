@@ -50,7 +50,7 @@ public class PailakaDevilsLegacy extends Quest
 	private static final int MAX_LEVEL = 67;
 	private static final int EXIT_TIME = 5;
 	private static final int INSTANCE_ID = 44;
-	private static final int[] TELEPORT =
+	protected static final int[] TELEPORT =
 	{
 		76428,
 		-219038,
@@ -216,7 +216,7 @@ public class PailakaDevilsLegacy extends Quest
 		}
 	}
 	
-	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	protected static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);

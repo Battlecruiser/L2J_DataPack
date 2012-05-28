@@ -131,7 +131,11 @@ public class Q10277_MutatedKaneusDion extends Quest
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
-				if (((st != null) && st.isStarted() && (st.getInt("cond") == 1) && ((npcId == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH))) || ((npcId == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF)))
+				if (st == null)
+				{
+					continue;
+				}
+				if ((st.isStarted() && (st.getInt("cond") == 1) && ((npcId == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH))) || ((npcId == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF)))
 				{
 					PartyMembers.add(st);
 				}

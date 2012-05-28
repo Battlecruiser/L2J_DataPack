@@ -45,7 +45,7 @@ public class SecretArea extends Quest
 		new Location(-23758, -8959, -5384), new Location(-185057, 242821, 1576)
 	};
 	
-	private class SecretAreaWorld extends InstanceWorld
+	protected class SecretAreaWorld extends InstanceWorld
 	{
 		
 	}

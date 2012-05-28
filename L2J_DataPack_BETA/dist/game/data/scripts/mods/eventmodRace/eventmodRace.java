@@ -154,7 +154,7 @@ public class eventmodRace extends Event
 		
 	}
 	
-	private void StartRace()
+	protected void StartRace()
 	{
 		// Abort race if no players signup
 		if (_players.isEmpty())
@@ -434,7 +434,7 @@ public class eventmodRace extends Event
 		activeChar.sendPacket(html);
 	}
 	
-	private void timeUp()
+	protected void timeUp()
 	{
 		Announcements.getInstance().announceToAll("Time up, nobody wins!");
 		eventStop();

@@ -922,7 +922,7 @@ public class TowerOfNaia extends Quest
 		return ret;
 	}
 	
-	private void initRoom(int managerId)
+	protected void initRoom(int managerId)
 	{
 		removeAllPlayers(managerId);
 		_activeRooms.put(managerId, false);

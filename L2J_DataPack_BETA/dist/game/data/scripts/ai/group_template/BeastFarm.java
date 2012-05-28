@@ -55,7 +55,7 @@ public class BeastFarm extends L2AttackableAIScript
 		18869, 18870, 18871, 18872
 	};
 	private static final int TAME_CHANCE = 20;
-	private static final int[] SPECIAL_SPICE_CHANCES =
+	protected static final int[] SPECIAL_SPICE_CHANCES =
 	{
 		33, 75
 	};
