@@ -188,7 +188,6 @@
 		<set name="power" val="30" /> <!-- Freya retail 0, no level depend, possibly done differently -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="true" />
@@ -207,7 +206,6 @@
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -225,7 +223,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -924,7 +921,6 @@
 		<table name="#vuln"> 0 50 </table>
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A2" />
@@ -948,7 +944,6 @@
 		<set name="power" val="100" />
 		<table name="#vuln"> 0 50 </table>
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -969,7 +964,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1234,7 +1228,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1000" />
-		<set name="saveVs" val="NULL" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A2" />
