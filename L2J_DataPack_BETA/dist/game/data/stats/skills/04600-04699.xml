@@ -314,7 +314,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
-		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -387,10 +386,9 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4618" levels="1" name="NPC Cancel PC Target">
@@ -1063,10 +1061,9 @@
 		<set name="negateAbnormals" val="root_magically,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4651" levels="3" name="NPC AE - Dispel Slow">
@@ -1081,10 +1078,9 @@
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4652" levels="1" name="NPC AE - Dispel Silence">
@@ -1095,10 +1091,9 @@
 		<set name="negateAbnormals" val="silence,1" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4653" levels="12" name="NPC Corpse Life Drain">
@@ -1742,7 +1737,6 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4688" levels="1" name="Valakas Stun">
@@ -1844,10 +1838,9 @@
 		<set name="magicLvl" val="76" />
 		<set name="negateAbnormals" val="big_body,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4694" levels="1" name="Ultimate Debuff">

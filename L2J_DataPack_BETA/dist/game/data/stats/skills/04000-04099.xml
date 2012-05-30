@@ -1313,9 +1313,9 @@
 		<set name="isPotion" val="true" />
 		<set name="killByDOT" val="true" />
 		<for>
-			<effect count="1400" name="DamOverTime" abnormalTime="3" val="60" abnormalVisualEffect="poison" abnormalLvl="1" abnormalType="fatal_poison" noicon="1" />
-			<effect name="Root" abnormalTime="4200" val="0" />
-			<effect name="ImmobileBuff" abnormalTime="4200" val="0" noicon="1" />
+			<effect count="1400" name="DamOverTime" abnormalTime="3" val="60" abnormalVisualEffect="poison" abnormalLvl="1" abnormalType="fatal_poison" />
+			<effect name="Root" abnormalTime="4200" noicon="1" val="0" />
+			<effect name="ImmobileBuff" abnormalTime="4200" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4083" levels="1" name="Die! You fool!">
@@ -1501,10 +1501,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="CancelAll" val="0" noicon="1" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
 		</for>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">

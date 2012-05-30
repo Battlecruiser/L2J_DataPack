@@ -10,7 +10,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5401" levels="1" name="Stun">
@@ -34,7 +33,6 @@
 	<skill id="5402" levels="1" name="Presentation - Balor 2">
 		<!-- Balor - Magic Skill1 -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="4000" />
@@ -44,7 +42,6 @@
 		<!-- Balor - Magic Skill2 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="500" />
@@ -53,7 +50,6 @@
 		<!-- Balor - Instant Cast Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="85" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -64,7 +60,6 @@
 		<!-- Demonic - General Long Range Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="85" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -73,7 +68,6 @@
 	<skill id="5406" levels="1" name="Presentation - Demonic 2">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
@@ -83,7 +77,6 @@
 	<skill id="5407" levels="1" name="Presentation - Crystalline Golem 1">
 		<!-- Crystaline-Instant Cast Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="2000" />
@@ -91,7 +84,6 @@
 	<skill id="5408" levels="1" name="Presentation - Crystalline Golem 2">
 		<!-- Crystaline-General Long Range Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="true" />
@@ -102,7 +94,6 @@
 	<skill id="5409" levels="1" name="Presentation - Crystalline Golem 3">
 		<!-- Crystaline Golem -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="true" />
@@ -133,7 +124,6 @@
 	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
 		<!-- TODO: Needs to be verified -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16026" />
@@ -142,7 +132,6 @@
 	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
 		<!-- TODO: Needs to be verified -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16027" />
@@ -151,7 +140,6 @@
 	<skill id="5415" levels="1" name="Performing Agathion - Castle">
 		<!-- TODO: Needs to be verified -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16028" />
@@ -319,7 +307,6 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="49" />
@@ -430,7 +417,6 @@
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -449,7 +435,6 @@
 		<set name="skillRadius" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -460,14 +445,12 @@
 	<skill id="5440" levels="1" name="Presentation - Trap Activate">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5441" levels="1" name="Presentation - Tears Mirror Image">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="1" />
 		<set name="hitTime" val="3000" />
 	</skill>
@@ -681,7 +664,6 @@
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
 		<!-- TODO: Needs to be verified -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16029" />
@@ -948,7 +930,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" />

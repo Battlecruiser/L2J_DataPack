@@ -302,7 +302,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
@@ -312,7 +311,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
@@ -322,7 +320,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
@@ -573,7 +570,6 @@
 		<set name="mpConsume" val="94" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="100" />
@@ -772,7 +768,6 @@
 	</skill>
 	<skill id="845" levels="1" name="Outpost Demolition">
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="staticHitTime" val="true" />
@@ -799,7 +794,6 @@
 	</skill>
 	<skill id="847" levels="1" name="Ward Transport">
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="180000" />
 		<set name="staticHitTime" val="true" />

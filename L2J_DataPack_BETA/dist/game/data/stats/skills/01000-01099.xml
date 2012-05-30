@@ -500,11 +500,11 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 		<enchant1for>
 			<effect name="Heal" noicon="1" val="#ench1amount" />
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</enchant1for>
 	</skill>
 	<skill id="1027" levels="15" name="Group Heal">
@@ -517,7 +517,6 @@
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="7000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="aggroPoints" val="#amount" />
