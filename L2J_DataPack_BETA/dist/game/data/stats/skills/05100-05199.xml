@@ -26,7 +26,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
@@ -95,7 +94,6 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5110" levels="1" name="Cannon Fodder">
@@ -305,7 +303,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5122" levels="1" name="Sailren Use Might">
@@ -651,7 +648,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
@@ -700,7 +696,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="6000" />
 		<set name="staticHitTime" val="true" />
@@ -748,7 +743,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
@@ -1249,7 +1243,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="300" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1265,7 +1258,6 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="1200" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5185" levels="1" name="Production: Magic-type Guard">

@@ -630,7 +630,6 @@
 		<set name="hitTime" val="20000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4135" levels="1" name="Baium Heal">
@@ -640,7 +639,6 @@
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="1000000" />
@@ -833,10 +831,9 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="CancelAll" val="0" noicon="1" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
 		</for>
 	</skill>
 	<skill id="4148" levels="12" name="Poison">
@@ -1391,10 +1388,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="200" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="CancelAll" val="0" noicon="1" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
 		</for>
 	</skill>
 	<skill id="4178" levels="12" name="BOSS Flame Strike">

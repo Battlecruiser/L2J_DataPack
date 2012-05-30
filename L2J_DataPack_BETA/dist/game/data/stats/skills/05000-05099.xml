@@ -101,7 +101,6 @@
 		<set name="hitTime" val="34000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5007" levels="5" name="Frintezza's Songs">
@@ -112,7 +111,6 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5008" levels="5" name="Frintezza's Songs">
@@ -504,7 +502,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -522,7 +519,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="reuseDelay" val="1200000" />
 		<for>
-			<effect name="CharmOfCourage" abnormalTime="1200" val="0" noicon="1" />
+			<effect name="CharmOfCourage" abnormalTime="1200" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
@@ -540,7 +537,7 @@
 		<set name="maxNegated" val="20" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Cancel" val="0" effectPower="25" effectType="CANCEL" />
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" effectType="CANCEL" />
 		</for>
 	</skill>
 	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">
@@ -1078,7 +1075,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="300" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
@@ -1089,7 +1085,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5090" levels="1" name="Sailren Production">
@@ -1098,7 +1093,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5091" levels="1" name="Sailren Production 2">
@@ -1106,7 +1100,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">

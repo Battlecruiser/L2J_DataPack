@@ -122,7 +122,6 @@
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="aggroPoints" val="#aggro" />
@@ -1988,7 +1987,7 @@
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="9" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
-			<effect name="Buff" abnormalTime="1200" val="0" noicon="1" abnormalLvl="90" abnormalType="critDamEvas">
+			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="90" abnormalType="critDamEvas">
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
 		</for>
@@ -1996,7 +1995,7 @@
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="9" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
-			<effect name="Buff" abnormalTime="#ench1Time" val="0" noicon="1" abnormalLvl="90" abnormalType="critDamEvas">
+			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="90" abnormalType="critDamEvas">
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -2588,7 +2587,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>

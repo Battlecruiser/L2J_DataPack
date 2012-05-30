@@ -87,14 +87,13 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="turn_stone,99" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="1902">
 			<player levelRange="61;85" />
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="2308" levels="36" name="Event Item">
@@ -140,7 +139,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -160,7 +158,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -344,7 +341,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -364,7 +360,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -384,7 +379,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -404,7 +398,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -424,7 +417,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -444,7 +436,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -827,7 +818,6 @@
 		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
@@ -839,7 +829,6 @@
 		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -1316,7 +1305,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">

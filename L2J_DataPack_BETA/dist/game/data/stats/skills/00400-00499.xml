@@ -805,7 +805,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<for>
 			<effect name="ManaHeal" noicon="1" val="#amount" />
@@ -845,7 +844,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1387,7 +1385,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="1000" />
@@ -1678,10 +1675,9 @@
 		<set name="negateAbnormals" val="root_physically,3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
@@ -1866,13 +1862,12 @@
 		<set name="numCharges" val="#numCharges" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player Charges="#numCharges" /> <!-- Level 2 3 Focused Force charge required. -->
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="462" levels="1" name="Guilted Body">
@@ -1986,7 +1981,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="num_souls" val="#num_souls" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="5548" />
@@ -2361,7 +2355,6 @@
 		<set name="neutral" val="true" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -2498,7 +2491,6 @@
 		<set name="magicLvl" val="36" />
 		<set name="mpInitialConsume" val="366" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>

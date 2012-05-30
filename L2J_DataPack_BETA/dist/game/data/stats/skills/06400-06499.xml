@@ -192,7 +192,6 @@
 	<skill id="6411" levels="1" name="Reptilikon Summon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -425,7 +424,6 @@
 		<!-- Fantasy Mushroom Skill -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillType" val="DUMMY" />
 		<set name="skillRadius" val="300" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
@@ -434,7 +432,7 @@
 		<!-- Sticky Mushroom Skill -->
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
+		<set name="skillType" val="ROOT" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="saveVs" val="MEN" />
@@ -465,7 +463,6 @@
 		<!-- Energy Plant Skill -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />

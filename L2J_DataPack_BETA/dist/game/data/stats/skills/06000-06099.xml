@@ -189,9 +189,9 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="stun" />
-			<effect name="Invincible" abnormalTime="10" val="0" noicon="1" abnormalLvl="1" abnormalType="invincibility" />
-			<effect name="ImmobileBuff" abnormalTime="10" val="0" noicon="1" abnormalLvl="1" abnormalType="pd_up_special" />
+			<effect name="Invincible" abnormalTime="10" noicon="1" val="0" abnormalLvl="1" abnormalType="invincibility" />
+			<effect name="Stun" abnormalTime="10" noicon="1" val="0" />
+			<effect name="ImmobileBuff" abnormalTime="10" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6035" levels="1" name="Red Team Transformation">

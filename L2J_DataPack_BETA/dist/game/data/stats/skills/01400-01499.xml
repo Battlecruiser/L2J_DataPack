@@ -116,7 +116,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -134,11 +133,11 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Heal" noicon="1" val="#ench34amount" />
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant3for>
 		<enchant4for>
 			<effect name="Heal" noicon="1" val="#ench34amount" />
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant4for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
@@ -755,7 +754,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
-		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
@@ -797,7 +795,6 @@
 		<set name="target" val="TARGET_PARTY" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
@@ -1555,7 +1552,7 @@
 			<target active_effect_id="1339" />
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
 	<skill id="1452" levels="1" name="Count of Fire" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1627,7 +1624,7 @@
 			<target active_effect_id="1340" />
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
 	<skill id="1454" levels="1" name="Diamond Dust" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1728,7 +1725,7 @@
 			<target active_effect_id="1341" />
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
 	<skill id="1457" levels="1" name="Empowering Echo" enchantGroup1="5" enchantGroup2="5">
@@ -2338,14 +2335,14 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
 		<for>
-			<effect count="15" name="ManaHealOverTime" noicon="1" val="200" abnormalLvl="1" abnormalType="instinct" />
-			<effect name="Paralyze" abnormalTime="15" val="0">
+			<effect count="15" name="ManaHealOverTime" val="200" abnormalLvl="1" abnormalType="instinct" />
+			<effect name="Paralyze" abnormalTime="15" noicon="1" val="0">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect count="#ench2Time" name="ManaHealOverTime" noicon="1" val="200" abnormalLvl="1" abnormalType="instinct" />
-			<effect name="Paralyze" abnormalTime="15" val="0">
+			<effect count="#ench2Time" name="ManaHealOverTime" val="200" abnormalLvl="1" abnormalType="instinct" />
+			<effect name="Paralyze" abnormalTime="15" noicon="1" val="0">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 		</enchant2for>
@@ -2596,11 +2593,11 @@
 			<target active_effect_id="1487" />
 		</cond>
 		<for>
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 		<enchant1for>
-			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 			<effect name="HealPercent" noicon="1" val="#ench1amount" />
 		</enchant1for>
 	</skill>
@@ -2623,7 +2620,6 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
@@ -2634,7 +2630,6 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
@@ -2743,7 +2738,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
@@ -2753,7 +2747,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
