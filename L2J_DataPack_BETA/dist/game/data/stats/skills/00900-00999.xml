@@ -369,6 +369,7 @@
 		<set name="mpConsume" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
@@ -391,6 +392,7 @@
 		<set name="mpConsume" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -676,6 +678,7 @@
 	</skill>
 	<skill id="932" levels="9" name="Star Stone Gathering">
 		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="6000" />
@@ -819,11 +822,13 @@
 	</skill>
 	<skill id="940" levels="1" name="Fake Attack">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="941" levels="1" name="Special Motion">
 		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="castRange" val="600" />
@@ -831,11 +836,13 @@
 	</skill>
 	<skill id="942" levels="1" name="Special Motion">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="943" levels="1" name="Special Motion">
 		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="castRange" val="600" />
@@ -843,6 +850,7 @@
 	</skill>
 	<skill id="944" levels="1" name="Special Motion">
 		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="castRange" val="600" />
@@ -1228,6 +1236,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="966" levels="1" name="Special Motion">
@@ -1239,6 +1248,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="967" levels="1" name="Cursed Body">
@@ -1584,6 +1594,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="6687" />
@@ -1764,6 +1775,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel">
@@ -1780,6 +1792,7 @@
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel">
@@ -1803,6 +1816,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1909,6 +1923,7 @@
 		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<and>

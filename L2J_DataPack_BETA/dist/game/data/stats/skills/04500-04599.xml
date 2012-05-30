@@ -262,6 +262,7 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="10" />
@@ -314,6 +315,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="5" />
@@ -325,6 +327,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="ManaHealPercent" noicon="1" val="5" />

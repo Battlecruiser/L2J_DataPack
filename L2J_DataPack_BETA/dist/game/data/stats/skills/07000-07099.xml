@@ -33,6 +33,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
@@ -43,6 +44,7 @@
 		<!-- This skill only has one level, 2. -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
