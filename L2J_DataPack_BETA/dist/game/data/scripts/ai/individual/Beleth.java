@@ -69,7 +69,7 @@ public class Beleth extends L2AttackableAIScript
 	private static int allowObjectId = 0;
 	private static int killed = 0;
 	protected static ScheduledFuture<?> spawnTimer = null;
-	protected static ArrayList<L2Npc> minions = new ArrayList<L2Npc>();
+	protected static ArrayList<L2Npc> minions = new ArrayList<>();
 	private static L2Skill Bleed = SkillTable.getInstance().getInfo(5495, 1);
 	private static L2Skill Fireball = SkillTable.getInstance().getInfo(5496, 1);
 	private static L2Skill HornOfRising = SkillTable.getInstance().getInfo(5497, 1);

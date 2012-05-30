@@ -131,9 +131,9 @@ public class TowerOfNaia extends Quest
 		NpcStringId.ITS_S1, NpcStringId.S1_IS_STRONG, NpcStringId.ITS_ALWAYS_S1, NpcStringId.S1_WONT_DO
 	};
 	
-	private static Map<Integer, int[]> DOORS = new HashMap<Integer, int[]>();
-	private static Map<Integer, Integer> ZONES = new HashMap<Integer, Integer>();
-	private static Map<Integer, int[][]> SPAWNS = new HashMap<Integer, int[][]>();
+	private static Map<Integer, int[]> DOORS = new HashMap<>();
+	private static Map<Integer, Integer> ZONES = new HashMap<>();
+	private static Map<Integer, int[][]> SPAWNS = new HashMap<>();
 	
 	private L2MonsterInstance _lock;
 	private final L2Npc _controller;
@@ -146,8 +146,8 @@ public class TowerOfNaia extends Quest
 	private int _challengeState;
 	private int _winIndex;
 	
-	private final Map<Integer, Boolean> _activeRooms = new FastMap<Integer, Boolean>();
-	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<Integer, List<L2Npc>>();
+	private final Map<Integer, Boolean> _activeRooms = new FastMap<>();
+	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<>();
 	private final FastList<L2Npc> _sporeSpawn = new FastList<L2Npc>().shared();
 	
 	static
@@ -1032,7 +1032,7 @@ public class TowerOfNaia extends Quest
 		if (SPAWNS.containsKey(managerId))
 		{
 			int[][] spawnList = SPAWNS.get(managerId);
-			List<L2Npc> spawned = new FastList<L2Npc>();
+			List<L2Npc> spawned = new FastList<>();
 			for (int[] spawn : spawnList)
 			{
 				L2Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);

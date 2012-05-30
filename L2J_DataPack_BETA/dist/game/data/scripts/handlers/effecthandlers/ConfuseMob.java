@@ -64,7 +64,7 @@ public class ConfuseMob extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		
 		// Getting the possible targets
 		

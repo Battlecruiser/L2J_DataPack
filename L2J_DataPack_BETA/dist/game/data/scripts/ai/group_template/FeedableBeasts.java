@@ -56,7 +56,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		16015,16016,16017,16018
 	};
 	
-	private static final Map<Integer,Integer> MAD_COW_POLYMORPH = new FastMap<Integer,Integer>();
+	private static final Map<Integer,Integer> MAD_COW_POLYMORPH = new FastMap<>();
 	
 	static
 	{
@@ -103,8 +103,8 @@ public class FeedableBeasts extends L2AttackableAIScript
 		"Yam, yam, yam, yam, yam!"
 	};
 	
-	private static Map<Integer,Integer> _FeedInfo = new FastMap<Integer,Integer>();
-	private static Map<Integer,GrowthCapableMob> _GrowthCapableMobs = new FastMap<Integer,GrowthCapableMob>();
+	private static Map<Integer,Integer> _FeedInfo = new FastMap<>();
+	private static Map<Integer,GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
@@ -112,7 +112,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		private final int _growthLevel;
 		private final int _chance;
 		
-		private final Map<Integer, int[][]> _spiceToMob = new FastMap<Integer,int[][]>();
+		private final Map<Integer, int[][]> _spiceToMob = new FastMap<>();
 		
 		public GrowthCapableMob(int growthLevel, int chance)
 		{

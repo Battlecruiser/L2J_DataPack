@@ -85,14 +85,14 @@ public class Antharas extends L2AttackableAIScript
 		}
 	};
 	
-	protected List<L2Spawn> _teleportCubeSpawn = new FastList<L2Spawn>();
-	protected List<L2Npc> _teleportCube = new FastList<L2Npc>();
+	protected List<L2Spawn> _teleportCubeSpawn = new FastList<>();
+	protected List<L2Npc> _teleportCube = new FastList<>();
 	
 	// Spawn data of monsters.
-	protected TIntObjectHashMap<L2Spawn> _monsterSpawn = new TIntObjectHashMap<L2Spawn>();
+	protected TIntObjectHashMap<L2Spawn> _monsterSpawn = new TIntObjectHashMap<>();
 	
 	// Instance of monsters.
-	protected List<L2Npc> _monsters = new FastList<L2Npc>();
+	protected List<L2Npc> _monsters = new FastList<>();
 	protected L2GrandBossInstance _antharas = null;
 	
 	// monstersId

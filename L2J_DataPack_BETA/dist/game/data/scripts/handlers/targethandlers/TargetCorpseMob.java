@@ -36,7 +36,7 @@ public class TargetCorpseMob implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		final boolean isSummon = target instanceof L2ServitorInstance;
 		if (!(isSummon || target instanceof L2Attackable) || !target.isDead())
 		{

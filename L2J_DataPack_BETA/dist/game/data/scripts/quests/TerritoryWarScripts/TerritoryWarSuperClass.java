@@ -37,9 +37,9 @@ import com.l2jserver.util.L2FastMap;
 
 public class TerritoryWarSuperClass extends Quest
 {
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _protectTheScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
-	private static L2FastMap<Integer, TerritoryWarSuperClass> _killTheScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
+	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<>();
+	private static L2FastMap<Integer, TerritoryWarSuperClass> _protectTheScripts = new L2FastMap<>();
+	private static L2FastMap<Integer, TerritoryWarSuperClass> _killTheScripts = new L2FastMap<>();
 	
 	public static String qn = "TerritoryWarSuperClass";
 	

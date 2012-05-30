@@ -72,7 +72,7 @@ public class AnomicFoundry extends Quest
 	{
 		0, 0, 0, 0, 0
 	};
-	private final Map<Integer, Integer> _atkIndex = new FastMap<Integer, Integer>();
+	private final Map<Integer, Integer> _atkIndex = new FastMap<>();
 	
 	public AnomicFoundry(int questId, String name, String descr)
 	{

@@ -84,7 +84,7 @@ public class FinalEmperialTomb extends Quest
 	private class FETWorld extends InstanceWorld
 	{
 		public         Lock                 lock                         = new ReentrantLock();
-		public         List<L2Npc>          npcList                      = new FastList<L2Npc>();
+		public         List<L2Npc>          npcList                      = new FastList<>();
 		public         int                  darkChoirPlayerCount         = 0;
 		public         FrintezzaSong        OnSong                       = null;
 		public         ScheduledFuture<?>   songTask                     = null;
@@ -97,8 +97,8 @@ public class FinalEmperialTomb extends Quest
 		public         L2Npc                scarletDummy                 = null;
 		public         L2GrandBossInstance  frintezza                    = null;
 		public         L2GrandBossInstance  activeScarlet                = null;
-		public         List<L2MonsterInstance>  demons                   = new FastList<L2MonsterInstance>();
-		public         Map<L2MonsterInstance, Integer>  portraits        = new FastMap<L2MonsterInstance, Integer>();
+		public         List<L2MonsterInstance>  demons                   = new FastList<>();
+		public         Map<L2MonsterInstance, Integer>  portraits        = new FastMap<>();
 		public         int                  scarlet_x                    = 0;
 		public         int                  scarlet_y                    = 0;
 		public         int                  scarlet_z                    = 0;
@@ -145,9 +145,9 @@ public class FinalEmperialTomb extends Quest
 	private static final int MAX_PLAYERS = 45;
 	private static final boolean debug = false;
 	
-	private final TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<L2Territory>();
-	private final TIntObjectHashMap<List<FETSpawn>> _spawnList = new TIntObjectHashMap<List<FETSpawn>>();
-	private final List<Integer> _mustKillMobsId = new FastList<Integer>();
+	private final TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<>();
+	private final TIntObjectHashMap<List<FETSpawn>> _spawnList = new TIntObjectHashMap<>();
+	private final List<Integer> _mustKillMobsId = new FastList<>();
 	
 	// Teleports
 	private static final int[] ENTER_TELEPORT = {-88015,-141153,-9168};
@@ -733,7 +733,7 @@ public class FinalEmperialTomb extends Quest
 					
 					if (_world.frintezza != null && !_world.frintezza.isDead() && _world.activeScarlet != null && !_world.activeScarlet.isDead())
 					{
-						List<L2Character> targetList = new FastList<L2Character>();
+						List<L2Character> targetList = new FastList<>();
 						if (skill.getSkillType() == L2SkillType.STUN || skill.getSkillType() == L2SkillType.DEBUFF)
 						{
 							for (int objId : _world.allowed)

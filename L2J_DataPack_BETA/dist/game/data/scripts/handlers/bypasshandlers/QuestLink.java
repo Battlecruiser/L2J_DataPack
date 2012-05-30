@@ -235,7 +235,7 @@ public class QuestLink implements IBypassHandler
 	public static void showQuestWindow(L2PcInstance player, L2Npc npc)
 	{
 		// collect awaiting quests and start points
-		List<Quest> options = new FastList<Quest>();
+		List<Quest> options = new FastList<>();
 		
 		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getNpcId());
 		List<Quest> starts = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);

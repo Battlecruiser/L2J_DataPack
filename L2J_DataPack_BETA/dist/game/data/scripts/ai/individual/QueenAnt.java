@@ -74,7 +74,7 @@ public class QueenAnt extends L2AttackableAIScript
 	
 	private L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
-	private final List<L2MonsterInstance> _nurses = new FastList<L2MonsterInstance>(5);
+	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
 	
 	public QueenAnt(int questId, String name, String descr)
 	{

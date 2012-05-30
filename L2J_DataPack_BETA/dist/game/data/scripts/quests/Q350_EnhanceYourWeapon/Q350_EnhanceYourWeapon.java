@@ -55,9 +55,9 @@ public class Q350_EnhanceYourWeapon extends Quest
 	private static final int GREEN_SOUL_CRYSTAL0_ID = 4640;
 	private static final int BLUE_SOUL_CRYSTAL0_ID = 4651;
 	
-	private final FastMap<Integer, SoulCrystal> _soulCrystals = new FastMap<Integer, SoulCrystal>();
+	private final FastMap<Integer, SoulCrystal> _soulCrystals = new FastMap<>();
 	// <npcid, <level, LevelingInfo>>
-	private final FastMap<Integer, FastMap<Integer, LevelingInfo>> _npcLevelingInfos = new FastMap<Integer, FastMap<Integer, LevelingInfo>>();
+	private final FastMap<Integer, FastMap<Integer, LevelingInfo>> _npcLevelingInfos = new FastMap<>();
 	
 	private static enum AbsorbCrystalType
 	{
@@ -208,7 +208,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 								}
 								int npcId = Integer.parseInt(att.getNodeValue());
 								
-								FastMap<Integer, LevelingInfo> temp = new FastMap<Integer, LevelingInfo>();
+								FastMap<Integer, LevelingInfo> temp = new FastMap<>();
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{

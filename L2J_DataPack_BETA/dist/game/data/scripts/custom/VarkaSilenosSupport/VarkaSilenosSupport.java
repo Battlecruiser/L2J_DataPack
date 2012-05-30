@@ -49,7 +49,7 @@ public class VarkaSilenosSupport extends Quest
 
 	private static final int SEED = 7187;
 
-	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<BuffsData>();
+	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<>();
 
 	private class BuffsData
 	{

@@ -86,7 +86,7 @@ public class Baium extends L2AttackableAIScript
 	};
 	
 	private long _LastAttackVsBaiumTime = 0;
-	protected final List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
+	protected final List<L2Npc> _Minions = new ArrayList<>(5);
 	private L2BossZone _Zone;
 	
 	public Baium(int questId, String name, String descr)

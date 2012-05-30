@@ -1369,7 +1369,7 @@ public class Valakas extends L2AttackableAIScript
 	
 	public L2Character getRandomTarget(L2Npc npc)
 	{
-		FastList<L2Character> result = new FastList<L2Character>();
+		FastList<L2Character> result = new FastList<>();
 		Collection<L2Character> objs = npc.getKnownList().getKnownCharacters();
 		{
 			for (L2Character cha : objs)

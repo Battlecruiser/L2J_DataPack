@@ -66,7 +66,7 @@ public class Engine extends Quest implements Runnable
 	
 	private int _cachedLevel = -1;
 	
-	private static Map<Integer, PointsInfoHolder> pointsInfo = new FastMap<Integer, PointsInfoHolder>();
+	private static Map<Integer, PointsInfoHolder> pointsInfo = new FastMap<>();
 	
 	// Holds info about points for mob killing
 	private class PointsInfoHolder

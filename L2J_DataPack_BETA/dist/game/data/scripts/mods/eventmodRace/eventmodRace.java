@@ -129,8 +129,8 @@ public class eventmodRace extends Event
 			return false;
 		}
 		// Initialize list
-		_npclist = new FastList<L2Npc>();
-		_players = new FastList<L2PcInstance>();
+		_npclist = new FastList<>();
+		_players = new FastList<>();
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager

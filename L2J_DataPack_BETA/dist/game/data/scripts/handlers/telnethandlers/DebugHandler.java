@@ -202,7 +202,7 @@ public class DebugHandler implements ITelnetHandler
 					sb.append("## Threads Information ##\n");
 					Map<Thread, StackTraceElement[]> allThread = Thread.getAllStackTraces();
 					
-					FastTable<Entry<Thread, StackTraceElement[]>> entries = new FastTable<Entry<Thread, StackTraceElement[]>>();
+					FastTable<Entry<Thread, StackTraceElement[]>> entries = new FastTable<>();
 					entries.setValueComparator(new FastComparator<Entry<Thread, StackTraceElement[]>>()
 					{
 						

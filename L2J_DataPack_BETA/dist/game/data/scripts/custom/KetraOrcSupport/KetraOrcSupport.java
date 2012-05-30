@@ -49,7 +49,7 @@ public class KetraOrcSupport extends Quest
 
 	private static final int HORN = 7186;
 
-	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<BuffsData>();
+	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<>();
 
 	private class BuffsData
 	{

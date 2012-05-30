@@ -98,8 +98,8 @@ public class TullyWorkshop extends Quest
 		22377, 22378, 22379, 22383
 	};
 	
-	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<Integer, int[]>();
-	private static final Map<Integer, int[][]> TELE_COORDS = new FastMap<Integer, int[][]>();
+	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<>();
+	private static final Map<Integer, int[][]> TELE_COORDS = new FastMap<>();
 	
 	protected int countdownTime;
 	private int nextServantIdx = 0;
@@ -112,13 +112,13 @@ public class TullyWorkshop extends Quest
 	protected ScheduledFuture<?> _countdown = null;
 	
 	// NPC's, spawned after Tully's death are stored here
-	protected static List<L2Npc> postMortemSpawn = new FastList<L2Npc>();
+	protected static List<L2Npc> postMortemSpawn = new FastList<>();
 	protected static TIntHashSet brokenContraptions = new TIntHashSet();
 	protected static TIntHashSet rewardedContraptions = new TIntHashSet();
 	protected static TIntHashSet talkedContraptions = new TIntHashSet();
 	
-	private final List<L2MonsterInstance> spawnedFollowers = new FastList<L2MonsterInstance>();
-	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<L2MonsterInstance>();
+	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
+	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();
 	private L2Npc spawnedAgent = null;
 	private L2Spawn pillarSpawn = null;
 	

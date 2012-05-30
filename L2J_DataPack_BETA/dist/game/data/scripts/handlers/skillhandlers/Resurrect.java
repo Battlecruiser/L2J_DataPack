@@ -44,7 +44,7 @@ public class Resurrect implements ISkillHandler
 			player = (L2PcInstance) activeChar;
 		
 		L2PcInstance targetPlayer;
-		List<L2Character> targetToRes = new FastList<L2Character>();
+		List<L2Character> targetToRes = new FastList<>();
 		
 		for (L2Character target: (L2Character[]) targets)
 		{

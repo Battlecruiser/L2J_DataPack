@@ -66,9 +66,9 @@ public class BeastFarm extends L2AttackableAIScript
 		18873, 18874, 18875, 18876, 18877, 18878, 18879, 18880, 18881, 18882, 18883, 18884, 18885, 18886, 18887, 18888, 18889, 18890, 18891, 18892, 18893, 18894, 18895, 18896, 18897, 18898, 18899, 18900
 	};
 	
-	private static Map<Integer, Integer> _FeedInfo = new FastMap<Integer, Integer>();
-	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<Integer, GrowthCapableMob>();
-	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<String, SkillHolder[]>();
+	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
+	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
@@ -76,7 +76,7 @@ public class BeastFarm extends L2AttackableAIScript
 		private final int _chance;
 		private final int _growthLevel;
 		private final int _tameNpcId;
-		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<Integer, Integer>();
+		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
 		
 		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
 		{

@@ -122,7 +122,7 @@ public class eventmodRabbits extends Event
 		}
 		
 		// Initialize list
-		_npclist = new FastList<L2Npc>();
+		_npclist = new FastList<>();
 		
 		// Set Event active
 		_isactive = true;

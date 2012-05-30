@@ -34,7 +34,7 @@ public class NewbieTravelToken extends Quest
 {
 	private static final int TOKEN = 8542;
 	//NPC Id - Teleport Location
-	private static final Map<Integer, Location> DATA = new FastMap<Integer, Location>();
+	private static final Map<Integer, Location> DATA = new FastMap<>();
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

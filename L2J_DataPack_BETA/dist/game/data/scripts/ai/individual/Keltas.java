@@ -186,7 +186,7 @@ public class Keltas extends Quest
 		addKillId(KELTAS);
 		addSpawnId(KELTAS);
 		
-		spawnedMonsters = new FastList<L2Spawn>();
+		spawnedMonsters = new FastList<>();
 	}
 	
 	public static void main(String[] args)

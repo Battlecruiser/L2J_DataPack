@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 public class TeleportToFantasy extends Quest
 {
 	private static final int PADDIES = 32378;
-	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<Integer, Integer>();
+	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
 	
 	private static final Location[] RETURN_LOCS =
 	{

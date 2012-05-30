@@ -38,7 +38,7 @@ public class DemonPrince extends L2AttackableAIScript
 		new SkillHolder(5376, 4), new SkillHolder(5376, 5), new SkillHolder(5376, 6)
 	};
 	
-	private static final Map<Integer, Boolean> _attackState = new FastMap<Integer, Boolean>();
+	private static final Map<Integer, Boolean> _attackState = new FastMap<>();
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

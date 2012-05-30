@@ -34,7 +34,7 @@ public class TargetAuraCorpseMob implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		// Go through the L2Character _knownList
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
 		for (L2Character obj : objs)

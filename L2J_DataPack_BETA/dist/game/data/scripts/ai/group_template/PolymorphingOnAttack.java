@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
  */
 public class PolymorphingOnAttack extends L2AttackableAIScript
 {
-	private static final TIntObjectHashMap<Integer[]> MOBSPAWNS = new TIntObjectHashMap<Integer[]>();
+	private static final TIntObjectHashMap<Integer[]> MOBSPAWNS = new TIntObjectHashMap<>();
 	
 	static
 	{

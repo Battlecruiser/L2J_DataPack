@@ -38,7 +38,7 @@ public final class Q691_MatrasSuspiciousRequest extends Quest
 	private static final int RED_GEM = 10372;
 	private static final int DYNASTY_SOUL_II = 10413;
 	
-	private static final Map<Integer, Integer> REWARD_CHANCES = new HashMap<Integer, Integer>();
+	private static final Map<Integer, Integer> REWARD_CHANCES = new HashMap<>();
 	
 	static
 	{
