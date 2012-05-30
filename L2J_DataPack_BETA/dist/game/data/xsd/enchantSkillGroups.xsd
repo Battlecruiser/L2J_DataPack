@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="enchant" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute type="xs:byte" name="level" use="optional" />
+											<xs:attribute type="xs:integer" name="adena" use="optional" />
+											<xs:attribute type="xs:integer" name="exp" use="optional" />
+											<xs:attribute type="xs:integer" name="sp" use="optional" />
+											<xs:attribute type="xs:byte" name="chance76" use="optional" />
+											<xs:attribute type="xs:byte" name="chance77" use="optional" />
+											<xs:attribute type="xs:byte" name="chance78" use="optional" />
+											<xs:attribute type="xs:byte" name="chance79" use="optional" />
+											<xs:attribute type="xs:byte" name="chance80" use="optional" />
+											<xs:attribute type="xs:byte" name="chance81" use="optional" />
+											<xs:attribute type="xs:byte" name="chance82" use="optional" />
+											<xs:attribute type="xs:byte" name="chance83" use="optional" />
+											<xs:attribute type="xs:byte" name="chance84" use="optional" />
+											<xs:attribute type="xs:byte" name="chance85" use="optional" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:byte" name="id" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
