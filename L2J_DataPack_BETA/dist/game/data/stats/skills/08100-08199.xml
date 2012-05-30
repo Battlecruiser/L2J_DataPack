@@ -958,6 +958,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
@@ -973,6 +974,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
@@ -988,6 +990,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
@@ -1004,6 +1007,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
@@ -1022,6 +1026,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
@@ -1038,6 +1043,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
@@ -1054,6 +1060,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->

@@ -588,6 +588,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillRadius" val="3000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
@@ -600,6 +601,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6278" levels="1" name="Ice Ball">
@@ -759,6 +761,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillRadius" val="1100" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="CpHealPercent" noicon="1" val="100" />
@@ -898,6 +901,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6296" levels="1" name="Rush">
@@ -950,6 +954,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">

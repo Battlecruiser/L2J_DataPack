@@ -54,6 +54,7 @@
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="3406" levels="1" name="Weight Decrease Ring">
@@ -283,6 +284,7 @@
 		<!-- Rapier +4 Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
@@ -292,6 +294,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
@@ -324,6 +327,7 @@
 	</skill>
 	<skill id="3429" levels="1" name="Red Talisman - Life Force">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="equipDelay" val="30000" />
@@ -984,6 +988,7 @@
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
@@ -1021,6 +1026,7 @@
 		<set name="magicLvl" val="56" />
 		<set name="negateAbnormals" val="transform,9" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />

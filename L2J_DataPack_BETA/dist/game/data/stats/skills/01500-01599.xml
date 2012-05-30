@@ -628,6 +628,7 @@
 		<table name="#triggeredId"> 5676 5677 5678 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="#activationMinDamage" chanceType="ON_HIT" triggeredId="#triggeredId" />
@@ -1034,6 +1035,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationSkills="927" chanceType="ON_CAST" triggeredId="6060" />
@@ -1218,6 +1220,7 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1235,6 +1238,7 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1252,6 +1256,7 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="9000" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="Heal" noicon="1" val="796" />
@@ -1518,6 +1523,7 @@
 		<!-- High Five Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<!-- FIXME: activationChance unconfirmed -->

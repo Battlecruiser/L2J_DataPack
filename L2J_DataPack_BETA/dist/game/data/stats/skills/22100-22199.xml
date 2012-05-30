@@ -35,6 +35,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -164,6 +165,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -183,6 +185,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -222,6 +225,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -241,6 +245,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -884,6 +889,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -909,6 +915,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -959,6 +966,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond>
 			<player hp="30" />
@@ -971,6 +979,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond>
 			<player mp="10" />
@@ -989,6 +998,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
 		<for>
@@ -1004,6 +1014,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1024,6 +1035,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<!-- set name="reuseDelay" val="86400000" / -->
+		<set name="skillType" val="DUMMY" />
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />

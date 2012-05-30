@@ -23,6 +23,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
@@ -38,6 +39,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="52" />
@@ -53,6 +55,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="1000" />
@@ -313,6 +316,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -333,6 +337,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -353,6 +358,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -373,6 +379,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -393,6 +400,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -413,6 +421,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -598,6 +607,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1411,6 +1421,7 @@
 	<skill id="2485" levels="1" name="Herb of Life">
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
@@ -1424,6 +1435,7 @@
 	<skill id="2486" levels="1" name="Herb of Mana">
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
@@ -1439,6 +1451,7 @@
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2488" levels="1" name="Wild Shot">
@@ -1485,6 +1498,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>

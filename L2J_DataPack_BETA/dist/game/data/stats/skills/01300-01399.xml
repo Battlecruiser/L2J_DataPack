@@ -122,6 +122,7 @@
 		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2500" />
+		<set name="skillType" val="DUMMY" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="aggroPoints" val="#aggro" />
@@ -2587,6 +2588,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>

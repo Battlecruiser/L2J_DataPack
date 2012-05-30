@@ -114,6 +114,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="12000" />
 		<set name="staticReuse" val="true" />
 		<set name="operateType" val="A1" />
@@ -797,6 +798,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="staticReuse" val="true" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="3262" levels="1" name="Pardon">
@@ -863,6 +865,7 @@
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="19" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="300000" />
@@ -955,6 +958,7 @@
 		<set name="operateType" val="A1" />
 		<set name="referenceId" val="9925" />
 		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -1236,6 +1240,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="bleeding,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1253,6 +1258,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_physically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1270,6 +1276,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_magically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1287,6 +1294,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1304,6 +1312,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence_physical,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1321,6 +1330,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />
@@ -1338,6 +1348,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
+		<set name="skillType" val="DUMMY" />
 		<set name="negateAbnormals" val="silence_all,9" />
 		<set name="hitTime" val="1200" />
 		<set name="staticHitTime" val="true" />

@@ -448,6 +448,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="3" />
@@ -492,60 +493,70 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2150" levels="1" name="Soulshot: D-Grade">
@@ -629,6 +640,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="simultaneousCast" val="true" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect count="2" name="IncreaseCharges" noicon="1" val="1" />
@@ -638,6 +650,7 @@
 		<table name="#amount"> 50 200 </table>
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="isPotion" val="true" />
 		<for>
@@ -704,6 +717,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -723,6 +737,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -742,6 +757,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -763,6 +779,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -782,6 +799,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -804,6 +822,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -888,6 +907,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2188" levels="1" name="Golden Spice">
@@ -928,6 +948,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -955,6 +976,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -982,6 +1004,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1009,6 +1032,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1036,6 +1060,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1063,6 +1088,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1090,6 +1116,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1117,6 +1144,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1144,6 +1172,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -1165,6 +1194,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>

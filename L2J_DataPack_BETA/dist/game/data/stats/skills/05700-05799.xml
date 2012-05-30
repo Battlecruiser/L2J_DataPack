@@ -141,6 +141,7 @@
 	</skill>
 	<skill id="5714" levels="1" name="Boom Up">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
@@ -983,6 +984,7 @@
 	</skill>
 	<skill id="5780" levels="9" name="Agathion Collection">
 		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="6000" />

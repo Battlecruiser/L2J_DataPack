@@ -495,6 +495,7 @@
 	</skill>
 	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16031" />
@@ -502,6 +503,7 @@
 	</skill>
 	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16032" />
@@ -509,6 +511,7 @@
 	</skill>
 	<skill id="5537" levels="1" name="Rudolph Cuteness Trick">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16033" />
@@ -516,6 +519,7 @@
 	</skill>
 	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<cond msgId="2292">
@@ -562,6 +566,7 @@
 	</skill>
 	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
 		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<cond msgId="2292">
@@ -1035,6 +1040,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="10" />
@@ -1062,6 +1068,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="150" />

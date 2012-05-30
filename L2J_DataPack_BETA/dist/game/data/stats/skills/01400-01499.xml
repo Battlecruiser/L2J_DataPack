@@ -116,6 +116,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -754,6 +755,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
+		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
@@ -795,6 +797,7 @@
 		<set name="target" val="TARGET_PARTY" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="DUMMY" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
@@ -2620,6 +2623,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
@@ -2630,6 +2634,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
@@ -2738,6 +2743,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
@@ -2747,6 +2753,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
