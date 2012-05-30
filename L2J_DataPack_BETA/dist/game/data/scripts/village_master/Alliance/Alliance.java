@@ -57,12 +57,11 @@ public class Alliance extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		if (!"9001-01.htm".equals(event) && player.getClan() == null)
 		{
-			htmltext = "<html><body>You must be in Clan.</body></html>";
+			return "9001-04.htm";
 		}
-		return htmltext;
+		return event;
 	}
 	
 	public static void main(String[] args)
