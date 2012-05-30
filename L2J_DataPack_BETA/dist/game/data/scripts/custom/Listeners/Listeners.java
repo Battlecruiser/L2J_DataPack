@@ -14,11 +14,10 @@
  */
 package custom.Listeners;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -75,7 +74,7 @@ public class Listeners extends L2Script
 	public void onPlayerLogin(L2PcInstance player)
 	{
 		_log.log(Level.INFO, "Player " + player.getName() + " just logged in!");
-		List<Integer> items = new FastList<Integer>();
+		List<Integer> items = new ArrayList<>();
 		for (L2ItemInstance item : player.getInventory().getItems())
 		{
 			items.add(item.getItemId());

@@ -45,7 +45,7 @@ public class Epidos extends L2AttackableAIScript
 		3, 6, 11
 	};
 	
-	private final Map<Integer, Double> _lastHp = new FastMap<Integer, Double>();
+	private final Map<Integer, Double> _lastHp = new FastMap<>();
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

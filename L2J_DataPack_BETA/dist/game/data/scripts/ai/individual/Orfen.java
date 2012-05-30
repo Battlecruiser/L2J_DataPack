@@ -44,7 +44,6 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  */
 public class Orfen extends L2AttackableAIScript
 {
-	
 	//@formatter:off
 	private static final Location[] Pos =
 	{
@@ -70,7 +69,7 @@ public class Orfen extends L2AttackableAIScript
 	private static final int RIBA_IREN = 29018;
 	
 	private static boolean _IsTeleported;
-	private static List<L2Attackable> _Minions = new FastList<L2Attackable>();
+	private static List<L2Attackable> _Minions = new FastList<>();
 	private static L2BossZone _Zone;
 	
 	private static final byte ALIVE = 0;

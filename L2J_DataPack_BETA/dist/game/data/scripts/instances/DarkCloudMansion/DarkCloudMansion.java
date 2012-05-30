@@ -68,7 +68,7 @@ public class DarkCloudMansion extends Quest
 	
 	protected static class DMCRoom
 	{
-		public FastList<DMCNpc> npcList = new FastList<DMCNpc>();
+		public FastList<DMCNpc> npcList = new FastList<>();
 		public int counter = 0;
 		public int reset = 0;
 		public int founded = 0;
@@ -77,7 +77,7 @@ public class DarkCloudMansion extends Quest
 	
 	private class DMCWorld extends InstanceWorld
 	{
-		public FastMap<String,DMCRoom> rooms = new FastMap<String,DMCRoom>();
+		public FastMap<String,DMCRoom> rooms = new FastMap<>();
 		
 		public DMCWorld()
 		{

@@ -35,7 +35,7 @@ public class SummonMinions extends L2AttackableAIScript
 	private static int HasSpawned;
 	private static TIntHashSet myTrackingSet = new TIntHashSet(); // Used to track instances of npcs
 	private final FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
-	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<int[]>();
+	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<>();
 	
 	static
 	{
@@ -204,7 +204,7 @@ public class SummonMinions extends L2AttackableAIScript
 							{
 								if (_attackersList.get(npcObjId) == null)
 								{
-									FastList<L2PcInstance> player = new FastList<L2PcInstance>();
+									FastList<L2PcInstance> player = new FastList<>();
 									player.add(member);
 									_attackersList.put(npcObjId, player);
 								}
@@ -218,7 +218,7 @@ public class SummonMinions extends L2AttackableAIScript
 						{
 							if (_attackersList.get(npcObjId) == null)
 							{
-								FastList<L2PcInstance> player = new FastList<L2PcInstance>();
+								FastList<L2PcInstance> player = new FastList<>();
 								player.add(attacker);
 								_attackersList.put(npcObjId, player);
 							}

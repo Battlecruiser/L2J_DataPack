@@ -52,7 +52,7 @@ public class RandomizeHate extends L2Effect
 		
 		L2Attackable effectedMob = (L2Attackable) getEffected();
 		
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		
 		// Getting the possible targets
 		
@@ -61,7 +61,7 @@ public class RandomizeHate extends L2Effect
 		{
 			if (cha != null && (cha != effectedMob) && (cha != getEffector()))
 			{
-				// Aggro cannot be transfared to a mob of the same faction.
+				// Aggro cannot be transfered to a mob of the same faction.
 				if (cha instanceof L2Attackable && ((L2Attackable) cha).getFactionId() != null && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
 					continue;
 				

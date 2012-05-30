@@ -14,7 +14,8 @@
  */
 package quests.Q10281_MutatedKaneusRune;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -127,7 +128,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 		final int npcId = npc.getNpcId();
 		if (killer.getParty() != null)
 		{
-			final FastList<QuestState> PartyMembers = new FastList<QuestState>();
+			final List<QuestState> PartyMembers = new ArrayList<>();
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);

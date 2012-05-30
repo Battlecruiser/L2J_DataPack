@@ -77,7 +77,7 @@ public final class Q511_AwlUnderFoot extends Quest
 	private static final long REENTERTIME = 14400000;
 	private static final long RAID_SPAWN_DELAY = 120000;
 	
-	private final TIntObjectHashMap<FortDungeon> _fortDungeons = new TIntObjectHashMap<FortDungeon>(21);
+	private final TIntObjectHashMap<FortDungeon> _fortDungeons = new TIntObjectHashMap<>(21);
 	
 	// QUEST ITEMS
 	private static final int DL_MARK = 9797;

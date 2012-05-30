@@ -35,7 +35,7 @@ public class BaseTower extends Quest
 	private static final int KENDAL = 32301;
 	private static final int BODY_DESTROYER = 22363;
 	
-	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new FastMap<Integer, L2PcInstance>();
+	private static final Map<Integer, L2PcInstance> BODY_DESTROYER_TARGET_LIST = new FastMap<>();
 	
 	private static final SkillHolder DEATH_WORD = new SkillHolder(5256, 1);
 	

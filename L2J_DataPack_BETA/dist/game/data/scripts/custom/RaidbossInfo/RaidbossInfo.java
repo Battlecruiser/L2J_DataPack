@@ -49,7 +49,7 @@ public class RaidbossInfo extends Quest
 		31833, 31834, 31835, 31836, 31837, 31838, 31839, 31840, 31841, 32337, 32338, 32339, 32340
 	};
 
-	private static final Map<Integer, Location> RADAR = new FastMap<Integer, Location>();
+	private static final Map<Integer, Location> RADAR = new FastMap<>();
 
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

@@ -53,7 +53,7 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	private boolean _firstAttacked = false;
 	
-	private final Map<L2Npc, Integer> _guards = new FastMap<L2Npc, Integer>();
+	private final Map<L2Npc, Integer> _guards = new FastMap<>();
 	
 	public PrisonGuards(int questId, String name, String descr)
 	{

@@ -123,7 +123,7 @@ public class SignetMDam extends L2Effect
 			}
 		}
 		
-		FastList<L2Character> targets = new FastList<L2Character>();
+		FastList<L2Character> targets = new FastList<>();
 		
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{

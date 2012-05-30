@@ -283,9 +283,9 @@ public class RainbowSpringsChateau extends Quest
 	};
 	
 	protected static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
-	protected static List<L2Clan> _acceptedClans = new ArrayList<L2Clan>(4);
-	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<String, ArrayList<L2Clan>>();
-	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<L2Clan, Integer>();
+	protected static List<L2Clan> _acceptedClans = new ArrayList<>(4);
+	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<>();
+	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<>();
 	
 	protected static SiegableHall _rainbow;
 	protected static ScheduledFuture<?> _nextSiege, _siegeEnd;

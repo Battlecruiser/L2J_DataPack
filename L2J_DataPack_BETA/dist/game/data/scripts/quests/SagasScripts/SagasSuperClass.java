@@ -36,7 +36,7 @@ import com.l2jserver.util.L2FastMap;
 
 public class SagasSuperClass extends QuestJython
 {
-	private static L2FastList<Quest> _scripts = new L2FastList<Quest>();
+	private static L2FastList<Quest> _scripts = new L2FastList<>();
 	public String qn = "SagasSuperClass";
 	public int qnu;
 	public int[] NPC = {};
@@ -48,7 +48,7 @@ public class SagasSuperClass extends QuestJython
 	public int[] Y = {};
 	public int[] Z = {};
 	public String[] Text = {};
-	L2FastMap<L2Npc, Integer> _SpawnList = new L2FastMap<L2Npc, Integer>();
+	L2FastMap<L2Npc, Integer> _SpawnList = new L2FastMap<>();
 	
 	int[] QuestClass[] =
 	{
@@ -1062,7 +1062,7 @@ public class SagasSuperClass extends QuestJython
 				L2Party party = player.getParty();
 				if (party != null)
 				{
-					L2FastList<QuestState> PartyQuestMembers = new L2FastList<QuestState>();
+					L2FastList<QuestState> PartyQuestMembers = new L2FastList<>();
 					for (L2PcInstance player1 : party.getMembers())
 					{
 						QuestState st1 = findQuest(player1);

@@ -104,7 +104,7 @@ public class StealBuffs implements ISkillHandler
 			Env env;
 			int lastSkillId = 0;
 			final L2Effect[] effects = target.getAllEffects();
-			final ArrayList<L2Effect> toSteal = new ArrayList<L2Effect>(count);
+			final ArrayList<L2Effect> toSteal = new ArrayList<>(count);
 			
 			for (int i = effects.length; --i >= 0;) // reverse order
 			{

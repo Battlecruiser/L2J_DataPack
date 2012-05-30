@@ -90,7 +90,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	protected static L2CharPosition CENTER;
 	
-	protected TIntObjectHashMap<ClanData> _data =  new TIntObjectHashMap<ClanData>(6);
+	protected TIntObjectHashMap<ClanData> _data =  new TIntObjectHashMap<>(6);
 	protected L2Clan _winner;
 	private boolean _firstPhase;
 	
@@ -852,8 +852,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		int flag = 0;
 		int npc = 0;
-		ArrayList<Integer> players = new ArrayList<Integer>(18);
-		ArrayList<L2PcInstance> playersInstance = new ArrayList<L2PcInstance>(18);
+		ArrayList<Integer> players = new ArrayList<>(18);
+		ArrayList<L2PcInstance> playersInstance = new ArrayList<>(18);
 		L2Spawn warrior = null;
 		L2Spawn flagInstance = null;
 	}

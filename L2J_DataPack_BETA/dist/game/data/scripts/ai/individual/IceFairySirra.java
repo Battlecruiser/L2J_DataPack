@@ -48,7 +48,7 @@ public class IceFairySirra extends L2AttackableAIScript
 	private static final int SILVER_HEMOCYTE = 8057;
 	private static L2BossZone _sirrasZone;
 	private static L2PcInstance _player = null;
-	protected FastList<L2Npc> _allMobs = new FastList<L2Npc>();
+	protected FastList<L2Npc> _allMobs = new FastList<>();
 	protected Future<?> _onDeadEventTask = null;
 	
 	public IceFairySirra(int id, String name, String descr)

@@ -36,7 +36,7 @@ public class TowerOfInfinitum extends Quest
 	
 	private static final int PASS_SKILL = 2357;
 	
-	private static final Map<Integer, Location[]> TELE_COORDS = new HashMap<Integer, Location[]>();
+	private static final Map<Integer, Location[]> TELE_COORDS = new HashMap<>();
 	
 	public TowerOfInfinitum(int questId, String name, String descr)
 	{

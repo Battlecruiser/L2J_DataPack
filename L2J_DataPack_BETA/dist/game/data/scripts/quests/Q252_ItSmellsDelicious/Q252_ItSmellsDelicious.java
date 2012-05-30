@@ -14,7 +14,8 @@
  */
 package quests.Q252_ItSmellsDelicious;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
@@ -191,7 +192,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			return st;
 		}
 		
-		final FastList<QuestState> candidates = new FastList<QuestState>();
+		final List<QuestState> candidates = new ArrayList<>();
 		// get the target for enforcing distance limitations.
 		L2Object target = player.getTarget();
 		

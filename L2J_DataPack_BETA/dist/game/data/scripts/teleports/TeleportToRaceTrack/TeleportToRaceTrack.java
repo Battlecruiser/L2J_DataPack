@@ -33,7 +33,7 @@ public class TeleportToRaceTrack extends Quest
 {
 	private static final int RACE_MANAGER = 30995;
 	
-	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<Integer, Integer>();
+	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
 	
 	private static final Location[] RETURN_LOCS =
 	{
