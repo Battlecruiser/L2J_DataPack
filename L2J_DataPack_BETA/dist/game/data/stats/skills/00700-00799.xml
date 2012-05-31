@@ -1134,9 +1134,16 @@
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
 		<!-- Confirmed CT2.5 -->
+		<set name="activationChance" val="3" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<!-- TODO: Remove when support for effects using conditions is done -->
+		<cond>
+			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
+		</cond>
 		<for>
 			<add order="0x40" stat="pAtk" val="100">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
@@ -1144,16 +1151,24 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.1">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 			</mul>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
-			</effect>
+			<!-- TODO: Require support for effects using conditions -->
+			<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
+			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" /> -->
+			<!-- </effect> -->
 		</for>
 	</skill>
 	<skill id="759" levels="1" name="Archer's Will">
 		<!-- Confirmed CT2.5 -->
+		<set name="activationChance" val="3" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5559" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<!-- TODO: Remove when support for effects using conditions is done -->
+		<cond>
+			<using kind="Bow,Crossbow" />
+		</cond>
 		<for>
 			<add order="0x40" stat="accCombat" val="8">
 				<using kind="Crossbow,Bow" />
@@ -1161,9 +1176,10 @@
 			<add order="0x40" stat="pAtkRange" val="50">
 				<using kind="Crossbow,Bow" />
 			</add>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559">
-				<using kind="Crossbow,Bow" />
-			</effect>
+			<!-- TODO: Require support for effects using conditions -->
+			<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
+			<!-- <using kind="Crossbow,Bow" /> -->
+			<!-- </effect> -->
 		</for>
 	</skill>
 	<skill id="760" levels="1" name="Anti Magic Armor">
