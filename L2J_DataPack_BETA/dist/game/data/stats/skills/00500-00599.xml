@@ -461,7 +461,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DUMMY" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -605,7 +604,6 @@
 		<set name="mpConsume" val="366" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -631,7 +629,6 @@
 		<set name="mpConsume" val="398" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -814,7 +811,6 @@
 		<set name="negateAbnormals" val="dark_seed,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1020,7 +1016,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5426" />
@@ -1030,7 +1025,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5427" />
@@ -1040,7 +1034,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5428" />
@@ -1050,7 +1043,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5429" />
