@@ -1762,33 +1762,51 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
+		<set name="activationChance" val="15" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel">
-				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
-			</effect>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel">
-				<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
-			</effect>
-		</for>
+		<set name="triggeredId" val="6813" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<!-- TODO: Remove when support for effects using conditions is done -->
+		<cond>
+			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" />
+		</cond>
+		<!-- TODO: Require support for effects using conditions -->
+		<!-- <for> -->
+		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
+		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
+		<!-- </effect> -->
+		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
+		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
+		<!-- </effect> -->
+		<!-- </for> -->
 	</skill>
 	<skill id="993" levels="8" name="Force Mastery">
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
+		<set name="activationChance" val="15" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="chanceType" val="ON_HIT" /> <!-- TODO: Remove when support for effects using conditions is done -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel">
-				<using kind="Dual Fist" />
-			</effect>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel">
-				<using kind="Dual Fist" />
-			</effect>
-		</for>
+		<set name="triggeredId" val="6814" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<set name="triggeredLevel" val="#triggeredLevel" /> <!-- TODO: Remove when support for effects using conditions is done -->
+		<!-- TODO: Remove when support for effects using conditions is done -->
+		<cond>
+			<using kind="Dual Fist" />
+		</cond>
+		<!-- TODO: Require support for effects using conditions -->
+		<!-- <for> -->
+		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
+		<!-- <using kind="Dual Fist" /> -->
+		<!-- </effect> -->
+		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
+		<!-- <using kind="Dual Fist" /> -->
+		<!-- </effect> -->
+		<!-- </for> -->
 	</skill>
 	<skill id="994" levels="1" name="Rush">
 		<!-- High Five Skill -->
