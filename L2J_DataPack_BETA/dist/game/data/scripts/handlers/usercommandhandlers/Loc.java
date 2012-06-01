@@ -20,6 +20,7 @@ import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.zone.type.L2RespawnZone;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class Loc implements IUserCommandHandler
@@ -40,12 +41,21 @@ public class Loc implements IUserCommandHandler
 		else
 			region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(region);
-		if(sm.getSystemMessageId().getParamCount() == 3)
+		SystemMessage sm;
+		if (region > 0)
 		{
-			sm.addNumber(activeChar.getX());
-			sm.addNumber(activeChar.getY());
-			sm.addNumber(activeChar.getZ());
+			sm = SystemMessage.getSystemMessage(region);
+			if(sm.getSystemMessageId().getParamCount() == 3)
+			{
+				sm.addNumber(activeChar.getX());
+				sm.addNumber(activeChar.getY());
+				sm.addNumber(activeChar.getZ());
+			}
+		}
+		else
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.CURRENT_LOCATION_S1);
+			sm.addString(activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ());
 		}
 		activeChar.sendPacket(sm);
 		return true;
