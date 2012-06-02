@@ -580,7 +580,6 @@
 	<skill id="4628" levels="1" name="Mysterious Aura">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" /> <!-- Just Boadcast -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4629" levels="12" name="NPC MR - HP Drain">
@@ -915,7 +914,6 @@
 		<table name="#magicLvl"> 20 40 60 70 75 80 85 90 95 </table>
 		<table name="#mAtkSpd"> 1.05 1.07 1.1 1.12 1.15 1.17 1.2 1.22 1.25 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<for>
@@ -1481,7 +1479,6 @@
 	<skill id="4672" levels="1" name="NPC Corpse Remove">
 		<!-- TODO: Needs to be done -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
@@ -1593,7 +1590,6 @@
 		<!-- Valakas Skills -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="valakasVuln" val="8" />
@@ -1899,7 +1895,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="A1" />
 		<set name="isMagic" val="true" />
 	</skill>

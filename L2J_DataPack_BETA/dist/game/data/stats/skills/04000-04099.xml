@@ -44,7 +44,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.3" />
@@ -58,7 +57,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bluntWpnVuln" val="1.1" />
@@ -69,7 +67,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="windRes" val="15" />
@@ -80,7 +77,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="fireRes" val="15" />
@@ -91,7 +87,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="20" />
@@ -102,7 +97,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="fireRes" val="15" />
@@ -111,56 +105,48 @@
 	<skill id="4009" levels="6" name="Resist Fire">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4010" levels="6" name="Resist Water">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4011" levels="6" name="Resist Wind">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4012" levels="1" name="Resist Earth">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -240,7 +226,6 @@
 		<!-- Queen Ant Skills -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
@@ -251,7 +236,6 @@
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4023" levels="1" name="Body Of Royal Guard Ant">
@@ -259,7 +243,6 @@
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4024" levels="1" name="Heal Queen Ant2">
@@ -683,7 +666,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="50" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="100" />
@@ -881,13 +863,11 @@
 	<skill id="4056" levels="1" name="Immortal Attack">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4057" levels="1" name="Insect Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<for>
@@ -897,7 +877,6 @@
 	<skill id="4058" levels="1" name="Plant Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<for>
@@ -907,7 +886,6 @@
 	<skill id="4059" levels="1" name="Animal Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<for>
@@ -917,7 +895,6 @@
 	<skill id="4060" levels="1" name="Beast Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<for>
@@ -927,7 +904,6 @@
 	<skill id="4061" levels="1" name="Dragon Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<for>
@@ -939,7 +915,6 @@
 		<!-- Orfen Skills -->
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
@@ -1096,7 +1071,6 @@
 	<skill id="4071" levels="5" name="Resist Archery">
 		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="#vuln" />
@@ -1293,7 +1267,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A1" />
@@ -1334,7 +1307,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 3.33 10 1001 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef" />
@@ -1343,7 +1315,6 @@
 	<skill id="4085" levels="1" name="Critical Power">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="cAtk" val="1.25" />
@@ -1352,7 +1323,6 @@
 	<skill id="4086" levels="1" name="Critical Chance">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="0.5" />
@@ -1482,7 +1452,6 @@
 	<skill id="4093" levels="1" name="Evasion">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" />
@@ -1510,7 +1479,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="reflectDam" val="20" />

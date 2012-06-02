@@ -389,35 +389,30 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1317" levels="1" name="Fishing Expertise: B Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1318" levels="1" name="Fishing Expertise: A-Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1319" levels="1" name="Fishing Expertise: S-Grade">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="1320" levels="9" name="Create Common Item">
@@ -2110,7 +2105,6 @@
 	<skill id="1368" levels="8" name="Expand Dwarven Craft">
 		<table name="#power"> 6 12 18 24 30 36 42 48 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="DwarfRecipeLimit" val="#power" />
@@ -2119,7 +2113,6 @@
 	<skill id="1369" levels="8" name="Expand Common Craft">
 		<table name="#power"> 6 12 18 24 30 36 42 48 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="CommonRecipeLimit" val="#power" />
@@ -2128,7 +2121,6 @@
 	<skill id="1370" levels="8" name="Expand Trade">
 		<table name="#power"> 1 2 3 4 5 6 7 8 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="PrivateSellLimit" val="#power" />
@@ -2138,7 +2130,6 @@
 	<skill id="1371" levels="8" name="Expand Storage">
 		<table name="#power"> 6 12 18 24 30 36 42 48 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="whLimit" val="#power" />
@@ -2148,7 +2139,6 @@
 	<skill id="1372" levels="8" name="Expand Inventory">
 		<table name="#power"> 6 12 18 24 30 36 42 48 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="inventoryLimit" val="#power" />
@@ -2156,7 +2146,6 @@
 	</skill>
 	<skill id="1373" levels="1" name="Strider Mastery">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.25" />

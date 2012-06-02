@@ -580,7 +580,6 @@
 	</skill>
 	<skill id="316" levels="1" name="Aegis">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x10" stat="shieldDefAngle" val="360" />
@@ -638,7 +637,6 @@
 		<table name="#magicLvl"> 20 40 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="runSpd" val="#runSpd">
@@ -872,7 +870,6 @@
 		<table name="#enchVuln"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -903,7 +900,6 @@
 		<table name="#enchVuln"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -924,7 +920,6 @@
 		<!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by STR. -->
 		<set name="magicLvl" val="77" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
@@ -934,7 +929,6 @@
 		<!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by INT. -->
 		<set name="magicLvl" val="77" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
@@ -944,7 +938,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="inventoryLimit" val="1" />
@@ -954,7 +947,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="PrivateBuyLimit" val="1" />
@@ -2279,7 +2271,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="#maxHp" />
@@ -2291,7 +2282,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
@@ -2303,7 +2293,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="#maxMp" />
@@ -2315,7 +2304,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regHp" val="#regHp" />
@@ -2328,7 +2316,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<for>
 			<mul order="0x30" stat="regCp" val="#regCp" />
 		</for>
@@ -2339,7 +2326,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="#regMp" />
@@ -2351,7 +2337,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -2363,7 +2348,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef" />
@@ -2375,7 +2359,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="#mAtk" />
@@ -2387,7 +2370,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="#mDef" />
@@ -2399,7 +2381,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
@@ -2411,7 +2392,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas" />
@@ -2423,7 +2403,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="rShld" val="#rShld" />
@@ -2435,7 +2414,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="sDef" val="#sDef" />
@@ -2448,7 +2426,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#res" />
 			<add order="0x40" stat="waterRes" val="#res" />
@@ -2460,7 +2437,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#res" />
@@ -2473,7 +2449,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="#vuln" />
@@ -2485,7 +2460,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="#vuln" />
@@ -2497,7 +2471,6 @@
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="#vuln" />
@@ -2510,7 +2483,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="#runSpd" />
 		</for>

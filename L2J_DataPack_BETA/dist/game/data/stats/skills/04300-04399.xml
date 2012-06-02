@@ -24,67 +24,56 @@
 	<skill id="4303" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4304" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4305" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4306" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4307" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4308" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4309" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4310" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4311" levels="1" name="Feeble Type">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4312" levels="1" name="Heavy Armor">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4313" levels="1" name="Light Armor">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4314" levels="12" name="BOSS Holy Light Burst">
@@ -400,7 +389,6 @@
 	<skill id="4332" levels="1" name="Mental Aegis">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="100" />
@@ -412,7 +400,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
@@ -433,7 +420,6 @@
 	<skill id="4335" levels="1" name="Sacred Attack">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="20" />
@@ -443,7 +429,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 11 25 43 67 100 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="darkRes" val="#darkRes" />
@@ -453,7 +438,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#darkRes" />
@@ -483,7 +467,6 @@
 	<skill id="4339" levels="1" name="Mimir's Elixir">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1147,7 +1130,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="3" /> <!-- pDef +200% -->
@@ -1191,7 +1173,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#poleVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="poleWpnVuln" val="#poleVuln" />
@@ -1214,8 +1195,7 @@
 	<skill id="4381" levels="1" name="Magic Skill Block">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" /> <!-- Just Boadcast -->
+		<set name="operateType" val="P" /> <!-- Just Boadcast -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4382" levels="12" name="Curse of Lake Ghost">
@@ -1308,7 +1288,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="#power" />
@@ -1318,7 +1297,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="#power" />
@@ -1328,7 +1306,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
