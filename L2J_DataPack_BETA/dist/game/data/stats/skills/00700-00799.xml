@@ -1336,7 +1336,6 @@
 	<skill id="766" levels="1" name="Sixth Sense">
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="15">
@@ -2074,7 +2073,6 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDefHeavy">

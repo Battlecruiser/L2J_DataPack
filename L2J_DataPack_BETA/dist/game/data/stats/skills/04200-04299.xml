@@ -443,7 +443,6 @@
 		<table name="#stunVuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="#stunVuln" />
@@ -452,7 +451,6 @@
 	<skill id="4226" levels="1" name="Ban Heal">
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="0" />
@@ -555,7 +553,6 @@
 		<!-- Freya retail confirmed -->
 		<!-- Summon Shadow Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="absorbDam" val="15" />
@@ -582,7 +579,6 @@
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" /> <!-- Just Boadcast -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4236" levels="1" name="Decrease Heal">
@@ -747,7 +743,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.5" />
@@ -925,7 +920,6 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="100" />
@@ -1137,14 +1131,12 @@
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4269" levels="1" name="Block All Chat">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4270" levels="4" name="Weight Penalty">
@@ -1166,13 +1158,11 @@
 	<skill id="4271" levels="8" name="Increase Force">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4272" levels="1" name="Greater Resist Archery Attack">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.3" />
@@ -1183,7 +1173,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#daggerVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="#daggerVuln" />
@@ -1195,7 +1184,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#bluntVuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bluntWpnVuln" val="#bluntVuln" />
@@ -1205,14 +1193,12 @@
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4276" levels="5" name="Archery Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#bowVuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="#bowVuln" />
@@ -1223,7 +1209,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#poisonVuln"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
@@ -1231,7 +1216,6 @@
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="20" />
@@ -1240,31 +1224,26 @@
 	<skill id="4279" levels="5" name="Fire Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4280" levels="5" name="Water Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4281" levels="5" name="Wind Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4282" levels="5" name="Earth Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4283" levels="1" name="Greater Resist Magic Attack">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="2" />
@@ -1274,7 +1253,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#bleedVuln"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
@@ -1284,7 +1262,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#sleepVuln"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
@@ -1293,7 +1270,6 @@
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="95" />
@@ -1303,7 +1279,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rootVuln"> 10 20 30 40 50 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="#rootVuln" />
@@ -1312,7 +1287,6 @@
 	<skill id="4288" levels="1" name="Greater Resist Hold">
 		<!-- Freya retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="95" />

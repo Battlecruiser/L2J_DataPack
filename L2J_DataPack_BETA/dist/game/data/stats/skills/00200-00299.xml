@@ -75,7 +75,6 @@
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -168,7 +167,6 @@
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 54 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -198,7 +196,6 @@
 		<table name="#magicLvl"> 20 28 36 43 49 55 62 66 70 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -227,7 +224,6 @@
 		<table name="#hp"> 1.1 1.6 1.7 2.1 2.6 2.7 3.4 4 </table>
 		<table name="#ench1hp"> 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 5 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 6 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 7 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="regHp" val="#hp" />
@@ -242,7 +238,6 @@
 		<table name="#magicLvl"> 20 30 40 48 56 60 66 72 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="#mp" />
@@ -254,7 +249,6 @@
 	<skill id="214" levels="1" name="Mana Recovery">
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.2">
@@ -271,7 +265,6 @@
 		<table name="#ench2countMax"> 9 9 9 9 9 9 10 10 10 10 10 10 10 11 11 11 11 11 11 11 11 12 12 12 12 12 12 12 12 13 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -306,7 +299,6 @@
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -426,7 +418,6 @@
 		<table name="#magicLvl"> 28 43 55 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#evas">
@@ -456,7 +447,6 @@
 		<table name="#magicLvl"> 18 20 22 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -494,7 +484,6 @@
 		<table name="#ench1Power"> 1.101 1.102 1.103 1.104 1.105 1.106 1.107 1.108 1.109 1.11 1.111 1.112 1.113 1.114 1.115 1.116 1.117 1.118 1.119 1.12 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
@@ -511,7 +500,6 @@
 		<table name="#ench1regMp"> 4 4.1 4.2 4.2 4.3 4.4 4.4 4.5 4.6 4.6 4.7 4.8 4.8 4.9 5 5 5.1 5.2 5.2 5.3 5.4 5.4 5.5 5.6 5.6 5.7 5.8 5.8 5.9 6 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
@@ -581,7 +569,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -613,7 +600,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -652,7 +638,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -699,7 +684,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -743,7 +727,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -786,7 +769,6 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -836,7 +818,6 @@
 	<skill id="239" levels="7" name="Expertise S84">
 		<table name="#magicLvl"> 20 40 52 61 76 80 84 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 	</skill>
@@ -845,7 +826,6 @@
 		<table name="#magicLvl"> 7 11 14 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef" />
@@ -914,7 +894,6 @@
 		<table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -937,7 +916,6 @@
 		<table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -961,7 +939,6 @@
 		<table name="#magicLvl"> 4 7 11 14 17 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -1000,7 +977,6 @@
 		<table name="#magicLvl"> 4 7 11 14 17 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -1053,7 +1029,6 @@
 		<table name="#magicLvl"> 11 14 17 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -1208,7 +1183,6 @@
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -1223,7 +1197,6 @@
 		<table name="#magicLvl"> 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -1276,7 +1249,6 @@
 		<table name="#magicLvl"> 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
@@ -2264,7 +2236,6 @@
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="gainMp" val="#gainMp" />
@@ -2388,7 +2359,6 @@
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#final">
@@ -2408,7 +2378,6 @@
 		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="#final">
@@ -2468,7 +2437,6 @@
 		<table name="#magicLvl"> 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#Attack">
@@ -2498,7 +2466,6 @@
 	<skill id="294" levels="1" name="Shadow Sense">
 		<set name="magicLvl" val="15" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="accCombat" val="3">
@@ -2510,7 +2477,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="15" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="damageZoneVuln" val="40" />

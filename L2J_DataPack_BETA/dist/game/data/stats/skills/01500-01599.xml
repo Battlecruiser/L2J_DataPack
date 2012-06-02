@@ -639,7 +639,6 @@
 		<table name="#mReuse"> 0.9 0.85 0.8 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.1" />
@@ -1391,7 +1390,6 @@
 		<table name="#cAtkAdd"> 177 295 384 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="#rCrit">
@@ -1530,7 +1528,6 @@
 		<table name="#maxMp"> 70 100 140 150 180 200 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="#maxMp" />

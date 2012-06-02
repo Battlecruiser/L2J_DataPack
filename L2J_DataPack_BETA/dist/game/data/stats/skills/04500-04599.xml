@@ -3,103 +3,88 @@
 	<skill id="4500" levels="1" name="Treasure Chest - Level 27">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4501" levels="1" name="Treasure Chest - Level 29">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4502" levels="1" name="Treasure Chest - Level 31">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4503" levels="1" name="Treasure Chest - Level 32">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4504" levels="1" name="Treasure Chest - Level 33">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4505" levels="1" name="Treasure Chest - Level 35">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4506" levels="1" name="Treasure Chest - Level 39">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4507" levels="1" name="Treasure Chest - Level 42">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4508" levels="1" name="Treasure Chest - Level 43">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4509" levels="1" name="Treasure Chest - Level 45">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4510" levels="1" name="Treasure Chest - Level 47">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4511" levels="1" name="Treasure Chest - Level 49">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4512" levels="1" name="Treasure Chest - Level 52">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4513" levels="1" name="Squash - Level up">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="4514" levels="1" name="Squash - Poisoned">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -189,7 +174,6 @@
 	<skill id="4521" levels="1" name="Quest - BOSS Resist non Bow Weapon">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="swordWpnVuln" val="0" />
@@ -239,7 +223,6 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="public_slot" />
@@ -502,7 +485,6 @@
 	<skill id="4542" levels="1" name="Quest - Henchman 90% Sleep Stun Weakness">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="sleepVuln" val="90" />
@@ -512,7 +494,6 @@
 	<skill id="4543" levels="1" name="Quest - BOSS Stun Weakness">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="stunVuln" val="10" />
@@ -553,7 +534,6 @@
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4547" levels="1" name="Gaze of Watcher">
@@ -584,14 +564,12 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4550" levels="1" name="Quest - Cursed Altar">
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" /> <!-- Just Broadcast -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4551" levels="10" name="Hot Springs Rheumatism">
@@ -689,7 +667,6 @@
 	<skill id="4555" levels="1" name="NPC Resist Mutant">
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="20" />

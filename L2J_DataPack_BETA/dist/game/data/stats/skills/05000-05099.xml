@@ -394,73 +394,61 @@
 	<skill id="5025" levels="1" name="Raid Boss - Level 30">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5026" levels="1" name="Raid Boss - Level 39">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5027" levels="1" name="Raid Boss - Level 37">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5028" levels="1" name="Raid Boss - Level 53">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5029" levels="1" name="Raid Boss - Level 52">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5030" levels="1" name="Raid Boss - Level 59">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5031" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5032" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5033" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5034" levels="1" name="Raid Boss - Level 73">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5035" levels="1" name="Raid Boss - Level 76">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5036" levels="1" name="Raid Boss - Level 60">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Spd">
@@ -475,7 +463,6 @@
 		<table name="#pvpDmg"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5 </table>
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpDmg" />
@@ -514,7 +501,6 @@
 	<skill id="5041" levels="1" name="Charm of Courage">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="reuseDelay" val="1200000" />
@@ -871,7 +857,6 @@
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.1" />
@@ -879,7 +864,6 @@
 	</skill>
 	<skill id="5075" levels="1" name="The Vanquished of War">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="0.9" />
@@ -892,7 +876,6 @@
 		<table name="#runSpd"> 0.95 0.9 0.87 0.83 0.8 0.77 0.74 0.71 0.68 0.66 0.64 0.63 0.62 0.61 0.6 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
@@ -916,7 +899,6 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="cAtk" val="1.5" />

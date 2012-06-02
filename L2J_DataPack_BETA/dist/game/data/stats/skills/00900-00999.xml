@@ -472,7 +472,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="87.5">
@@ -504,7 +503,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.05">
@@ -519,7 +517,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusHp" val="30">
@@ -703,7 +700,6 @@
 	</skill>
 	<skill id="934" levels="1" name="Sigil Mastery">
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.05">
@@ -716,7 +712,6 @@
 	</skill>
 	<skill id="935" levels="1" name="Sigil Mastery">
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.05">
@@ -736,7 +731,6 @@
 		<table name="#pDef"> 693.67 693.41 692.68 691.47 689.81 687.68 685.11 682.09 678.64 674.76 670.46 665.75 660.63 655.12 649.22 642.95 636.3 629.3 621.95 614.26 606.25 597.92 589.29 580.37 571.18 561.71 552.0 542.06 531.89 521.51 510.94 500.2 489.29 478.24 467.07 455.79 443.26 428.04 410.53 386.66 361.72 372.57 383.75 395.26 407.12 418.52 0.0 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -760,7 +754,6 @@
 		<table name="#pDef"> 725.49 725.63 725.29 724.47 723.18 721.43 719.23 716.58 713.5 709.98 706.04 701.68 696.91 691.75 686.19 680.26 673.95 667.29 660.27 652.91 645.22 637.22 628.91 620.31 611.43 602.28 592.88 583.24 573.37 563.3 553.03 542.59 531.98 521.23 510.35 499.36 487.12 472.19 454.97 431.38 406.72 418.92 431.49 444.43 457.77 470.58 0.0 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -787,7 +780,6 @@
 		<table name="#pDef"> 786.59 787.48 787.89 787.81 787.25 786.23 784.75 782.81 780.42 777.6 774.34 770.66 766.57 762.07 757.18 751.9 746.24 740.21 733.83 727.1 720.04 712.66 704.97 696.98 688.7 680.16 671.35 662.3 653.03 643.54 633.85 623.98 613.95 603.76 593.44 583.01 571.33 556.95 540.28 517.23 493.12 507.91 523.15 538.84 555.01 570.55 0.0 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
@@ -850,7 +842,6 @@
 	</skill>
 	<skill id="945" levels="1" name="Magician's Will">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<for>
@@ -862,7 +853,6 @@
 	</skill>
 	<skill id="946" levels="1" name="Silent Mind">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<for>
@@ -988,7 +978,6 @@
 		<table name="#rShld"> 1.1 1.15 1.2 1.25 1.3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk">
@@ -1215,7 +1204,6 @@
 	</skill>
 	<skill id="964" levels="1" name="Children of Shilen">
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtkSpd" val="13" />
@@ -1245,7 +1233,6 @@
 		<!-- Cursed body. Recovery is not possible. -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<!-- TODO: Implement and use proper effects. -->
 	</skill>

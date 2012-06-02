@@ -394,7 +394,6 @@
 		<table name="#def"> 0.6 1 </table>
 		<table name="#avoid"> 50 0 </table>
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="0.95" />
@@ -705,32 +704,26 @@
 	</skill>
 	<skill id="5462" levels="1" name="Fire Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5463" levels="1" name="Water Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5464" levels="1" name="Wind Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5465" levels="1" name="Earth Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5466" levels="1" name="Holy Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5467" levels="1" name="Dark Attacks">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5468" levels="12" name="Castle Gunner Fire">
@@ -754,61 +747,51 @@
 	<skill id="5469" levels="1" name="Raid Boss - Level 22">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5470" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5471" levels="1" name="Raid Boss - Level 82">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5472" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5473" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5474" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5475" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5476" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5477" levels="1" name="Raid Boss - Level 86">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5478" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5479" levels="1" name="Boss Petrification Resistance">
@@ -891,7 +874,6 @@
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="0.5">

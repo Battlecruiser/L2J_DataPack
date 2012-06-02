@@ -581,7 +581,6 @@
 	<skill id="8233" levels="1" name="Zubei's Helmet">
 		<set name="magicLvl" val="58" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="0.88" />
@@ -590,7 +589,6 @@
 	<skill id="8234" levels="1" name="Zubei's Helmet">
 		<set name="magicLvl" val="58" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0125" />
@@ -599,7 +597,6 @@
 	<skill id="8235" levels="1" name="Nightmare Helm">
 		<set name="magicLvl" val="67" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0062" />
@@ -610,7 +607,6 @@
 	<skill id="8236" levels="1" name="Nightmare Helm">
 		<set name="magicLvl" val="67" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0062" />
@@ -1038,7 +1034,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -1052,7 +1047,6 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -1070,7 +1064,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -1083,7 +1076,6 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -1100,7 +1092,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
@@ -1114,7 +1105,6 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
@@ -1132,7 +1122,6 @@
 		<table name="#rCrit"> 128.7 137.1 137.1 </table>
 		<table name="#magicLvl"> 84 85 86 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
@@ -1145,7 +1134,6 @@
 	<skill id="8290" levels="12" name="Add Belt Inventory Slot">
 		<table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="inventoryLimit" val="#inventoryLimit" />
@@ -1154,7 +1142,6 @@
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
 		<table name="#maxLoad"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxLoad" val="#maxLoad" />
@@ -1162,7 +1149,6 @@
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="30" /> <!-- Increases resistance to hold attacks by 30% -->
@@ -1173,7 +1159,6 @@
 	</skill>
 	<skill id="8293" levels="1" name="Olympiad Warrior's Earring">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="20" /> <!-- Increases resistance to shock attack by 20% -->
@@ -1185,7 +1170,6 @@
 	</skill>
 	<skill id="8294" levels="1" name="Olympiad Warrior's Necklace">
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="15" /> <!-- Increases resistance to paralysis attacks by 15% -->
@@ -1202,7 +1186,6 @@
 	<skill id="8295" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="81" />
 		<for>
@@ -1215,7 +1198,6 @@
 	<skill id="8296" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="83" />
 		<for>
@@ -1228,7 +1210,6 @@
 	<skill id="8297" levels="1" name="Special Ability Haste">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
 		<for>
@@ -1241,7 +1222,6 @@
 	<skill id="8298" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
 		<for>

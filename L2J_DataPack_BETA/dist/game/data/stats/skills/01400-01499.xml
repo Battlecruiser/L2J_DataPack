@@ -2138,7 +2138,6 @@
 	<skill id="1474" levels="1" name="Abyssal Power" enchantGroup1="1">
 		<table name="#ench1mAtk"> 1.101 1.103 1.105 1.106 1.108 1.11 1.111 1.113 1.115 1.116 1.118 1.12 1.121 1.123 1.125 1.126 1.128 1.13 1.131 1.133 1.135 1.136 1.138 1.14 1.141 1.143 1.145 1.146 1.148 1.15 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.1" />
@@ -2606,7 +2605,6 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="5" />
