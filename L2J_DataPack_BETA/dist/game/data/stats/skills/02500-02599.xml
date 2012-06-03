@@ -159,7 +159,6 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="operateType" val="A1" />
 		<!-- set name="reuseDelay" val="86400000" / -->
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -191,7 +190,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
@@ -209,7 +207,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="113" addName="1">
@@ -234,7 +231,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
