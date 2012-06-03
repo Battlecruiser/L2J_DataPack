@@ -87,6 +87,7 @@
 		</for>
 	</skill>
 	<skill id="8509" levels="1" name="High Angel Circlet">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -94,6 +95,7 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8510" levels="1" name="Summon Friend">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -164,7 +166,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="npcId" val="16077" />
 	</skill>

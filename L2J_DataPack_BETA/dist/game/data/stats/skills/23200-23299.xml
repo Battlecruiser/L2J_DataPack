@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -19,105 +20,109 @@
 		</cond>
 	</skill>
 	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1576" />
 		</cond>
 	</skill>
 	<skill id="23202" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1577" />
 		</cond>
 	</skill>
 	<skill id="23203" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1578" />
 		</cond>
 	</skill>
 	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1579" />
 		</cond>
 	</skill>
 	<skill id="23205" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1580" />
 		</cond>
 	</skill>
 	<skill id="23206" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1581" />
 		</cond>
 	</skill>
 	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1582" />
 		</cond>
 	</skill>
 	<skill id="23208" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1583" />
 		</cond>
 	</skill>
 	<skill id="23209" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1584" />
 		</cond>
 	</skill>
 	<skill id="23210" levels="85" name="Aura Flare">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="7000" />
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -126,6 +131,7 @@
 	<skill id="23214" levels="1" name="Good/Bad of Life">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered from 22175 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
@@ -139,6 +145,7 @@
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered from 22176 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="85" />
@@ -149,12 +156,14 @@
 		</for>
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
 		<!-- For 1 minute(s), 50% of the standard short-range physical damage inflicted on the enemy is recovered as HP. Reuse delay is 1 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -162,12 +171,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
 		<!-- For 5 minutes, increases Atk. Spd. by 30% and all attribute defense by 10. Reuse delay is 1 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -175,12 +186,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -188,12 +201,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -201,12 +216,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -214,12 +231,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -227,12 +246,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -240,12 +261,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -253,12 +276,14 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -294,7 +319,6 @@
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -315,7 +339,6 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -334,7 +357,6 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -366,7 +388,6 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -471,7 +492,6 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -489,7 +509,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -509,7 +528,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -552,7 +570,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -567,7 +584,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -582,7 +598,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -597,7 +612,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -612,7 +626,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -627,7 +640,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -642,7 +654,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -657,7 +668,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -672,7 +682,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -687,7 +696,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -702,7 +710,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -717,7 +724,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -732,7 +738,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -747,7 +752,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -762,7 +766,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -777,7 +780,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -799,7 +801,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -814,7 +815,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -829,7 +829,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -844,7 +843,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -861,7 +859,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="78" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
@@ -889,7 +886,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -916,7 +912,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -942,7 +937,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -969,7 +963,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -987,7 +980,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1005,7 +997,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1023,7 +1014,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1041,7 +1031,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1059,7 +1048,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1115,7 +1103,6 @@
 		<!-- GM Skill -->
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1127,7 +1114,6 @@
 	<skill id="23286" levels="1" name="Master's Blessing - Eye of Pa'agrio">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
@@ -1146,7 +1132,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1164,7 +1149,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1194,7 +1178,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
@@ -1293,7 +1276,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
@@ -1309,7 +1291,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -1327,7 +1308,6 @@
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<set name="hitTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />

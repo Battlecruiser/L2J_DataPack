@@ -160,10 +160,10 @@
 	</skill>
 	<skill id="3318" levels="1" name="Flag Display">
 		<!-- Flag Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_FLAGPOLE" />
 		<set name="hitTime" val="180000" />
 		<set name="reuseDelay" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="TAKEFORT" />
 		<set name="operateType" val="CA1" />
 	</skill>
@@ -189,7 +189,7 @@
 		<set name="aggroPoints" val="379" />
 		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="mpConsume" val="14" />
 		<set name="mpInitialConsume" val="4" />
@@ -287,6 +287,7 @@
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="10166" />
 		<set name="equipDelay" val="30000" />
@@ -309,6 +310,7 @@
 	</skill>
 	<skill id="3333" levels="1" name="Orange Talisman - A Grade Elixir of Life">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="8626" />
 		<set name="equipDelay" val="30000" />
@@ -330,6 +332,7 @@
 	</skill>
 	<skill id="3334" levels="1" name="Orange Talisman - A Grade Elixir of Mental Strength">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="8632" />
 		<set name="equipDelay" val="30000" />
@@ -351,6 +354,7 @@
 		</cond>
 	</skill>
 	<skill id="3335" levels="1" name="Transform Yeti">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -365,6 +369,7 @@
 		</for>
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -379,6 +384,7 @@
 		</for>
 	</skill>
 	<skill id="3337" levels="1" name="Transform Cutie Pig">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="600000" />
@@ -596,7 +602,7 @@
 	<skill id="3359" levels="1" name="Transform Native">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -620,10 +626,10 @@
 		</for>
 	</skill>
 	<skill id="3361" levels="1" name="Summon Agathion - Fortress">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16029" />
 	</skill>

@@ -622,7 +622,7 @@
 		<set name="hitTime" val="5000" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="61" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="aggroPoints" val="743" />
@@ -662,6 +662,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="8241" levels="1" name="Critical Up">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -677,7 +678,6 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="3100" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -691,12 +691,12 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="850" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -711,14 +711,15 @@
 		</for>
 	</skill>
 	<skill id="8245" levels="1" name="Summon Agathion - Love">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16049" />
 	</skill>
 	<skill id="8246" levels="1" name="Transform Pumpkin Ghost">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -732,6 +733,7 @@
 	</skill>
 	<skill id="8247" levels="1" name="Mount Darkmane Pacer">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -745,13 +747,14 @@
 		</for>
 	</skill>
 	<skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
-		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="8249" levels="1" name="Cancel Critical Hit">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -765,88 +768,91 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 14916 14917 </table>
 		<set name="npcId" val="#npcIds" />
 	</skill>
 	<skill id="8251" levels="1" name="Collection Agathion Release Seal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16061" />
 	</skill>
 	<skill id="8252" levels="1" name="Test - Transform Mount1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="8253" levels="1" name="Test - Transform Mount2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="8254" levels="1" name="Release Seal on Agathion - Monkey">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16054" />
 	</skill>
 	<skill id="8255" levels="1" name="Release Seal on Agathion - Griffin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16055" />
 	</skill>
 	<skill id="8256" levels="1" name="Release Seal on Agathion - Joy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16056" />
 	</skill>
 	<skill id="8257" levels="1" name="Release Seal on Agathion - Anger">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16058" />
 	</skill>
 	<skill id="8258" levels="1" name="Release Seal on Agathion - Sorrow">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16057" />
 	</skill>
 	<skill id="8259" levels="1" name="Release Seal on Agathion - Girl Teddy Boy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16059" />
 	</skill>
 	<skill id="8260" levels="1" name="Release Seal on Agathion - Girl Teddy Girl">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16060" />
 	</skill>
 	<skill id="8261" levels="1" name="Steam Beatle Mount">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -861,6 +867,7 @@
 	</skill>
 	<skill id="8262" levels="1" name="Tawny Maned Lion Mount">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -875,6 +882,7 @@
 	</skill>
 	<skill id="8263" levels="1" name="Transform Snow King">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -889,6 +897,7 @@
 	</skill>
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -903,6 +912,7 @@
 	</skill>
 	<skill id="8265" levels="1" name="Transform Tin Golem">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -961,10 +971,10 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8275" levels="1" name="Release Seal on Agathion - pvp">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16062" />
 	</skill>
@@ -981,7 +991,7 @@
 	<skill id="8277" levels="1" name="Transform Native">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -995,6 +1005,7 @@
 		</for>
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1007,6 +1018,7 @@
 		</for>
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -1014,6 +1026,7 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="8280" levels="1" name="Blessing of Earth">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />

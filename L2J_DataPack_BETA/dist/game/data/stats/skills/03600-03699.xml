@@ -67,7 +67,6 @@
 		<set name="magicLvl" val="78" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
-		<set name="isMagic" val="true" />
 		<set name="minPledgeClass" val="2" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -422,13 +421,12 @@
 		<set name="triggeredId" val="5106" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="25000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -441,13 +439,12 @@
 		<set name="triggeredId" val="5107" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="25000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -460,13 +457,12 @@
 		<set name="triggeredId" val="5108" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="25000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
@@ -491,7 +487,6 @@
 		<set name="magicLvl" val="78" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
-		<set name="isMagic" val="true" />
 		<set name="minPledgeClass" val="2" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -921,11 +916,11 @@
 		</for>
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
@@ -938,11 +933,11 @@
 	</skill>
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
 		<!-- This skill only has one level, 2. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />

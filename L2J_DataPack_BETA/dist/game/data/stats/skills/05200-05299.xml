@@ -14,7 +14,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="power" val="#amount" />
 		<set name="reuseDelay" val="12000" />
@@ -36,7 +36,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -118,7 +118,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="power" val="80" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="lvlDepend" val="2" />
 		<set name="castRange" val="600" />
@@ -139,7 +139,7 @@
 		<set name="power" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="A2" />
@@ -158,7 +158,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -173,7 +173,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -188,7 +188,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -200,6 +200,7 @@
 	</skill>
 	<skill id="5211" levels="1" name="Event Vampiric rage">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -217,7 +218,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -232,7 +233,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -247,7 +248,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -262,7 +263,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -277,7 +278,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -292,7 +293,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -345,7 +346,6 @@
 		<set name="skillType" val="FEAR" />
 		<set name="coolTime" val="2000" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -441,7 +441,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
@@ -640,7 +640,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -799,7 +799,7 @@
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -843,7 +843,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3300" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5250" levels="1" name="Stun">
@@ -906,7 +906,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="trait" val="PARALYZE" />
@@ -921,6 +921,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="200" />
@@ -957,7 +958,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="BLEED" />
@@ -980,13 +980,13 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="operateType" val="A1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="canBeReflected" val="false" />
 	</skill>
 	<skill id="5256" levels="1" name="Announcement of Death">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="85" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1008,7 +1008,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" />
@@ -1027,7 +1027,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="operateType" val="A1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="canBeReflected" val="false" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1047,7 +1047,7 @@
 		<set name="skillRadius" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="FEAR" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1126,7 +1126,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1146,7 +1146,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1172,7 +1172,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1193,7 +1193,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="hitTime" val="4000" />
@@ -1219,7 +1219,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1237,7 +1237,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="POISON" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1255,7 +1255,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="all_speed_down">
@@ -1268,6 +1268,7 @@
 	<skill id="5270" levels="16" name="Flash Trap">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="1" />
@@ -1287,6 +1288,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#traits"> NONE HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="1" />

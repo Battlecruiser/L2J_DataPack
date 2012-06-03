@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
 	<skill id="10000" levels="1" name="Mana Drug">
 		<set name="displayId" val="2288" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeId" val="726" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -15,9 +15,9 @@
 	</skill>
 	<skill id="10001" levels="1" name="Mana Potion">
 		<set name="displayId" val="2288" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeId" val="728" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="500" />
@@ -29,7 +29,7 @@
 	<skill id="10002" levels="1" name="Custom Trap skill">
 		<!-- Use this skill if you want to handle trap activation in scripts(example Seed of Destruction Spawn Traps) -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="P" />
 	</skill>
 </list>

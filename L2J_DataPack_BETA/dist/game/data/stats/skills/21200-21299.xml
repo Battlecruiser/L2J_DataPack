@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" levels="1" name="Age of the Three Kingdoms">
 		<!-- For 20 minutes, raises moving speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, physical P. Atk., and physical P. Def. by 15%. Reuse Delay 2 hours. Consumes 1 Proof of Friendship upon skill use. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -10,6 +11,7 @@
 	</skill>
 	<skill id="21201" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -17,74 +19,74 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21202" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1576" />
 	</skill>
 	<skill id="21203" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1577" />
 	</skill>
 	<skill id="21204" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1578" />
 	</skill>
 	<skill id="21205" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1579" />
 	</skill>
 	<skill id="21206" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1580" />
 	</skill>
 	<skill id="21207" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1581" />
 	</skill>
 	<skill id="21208" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1582" />
 	</skill>
 	<skill id="21209" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1583" />
 	</skill>
 	<skill id="21210" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1584" />
 	</skill>
@@ -95,52 +97,62 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21212" levels="1" name="Agathion Seal Cancel - Granny Tiger">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21213" levels="1" name="Agathion Seal Cancel - Flower Fairy Spirit">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21214" levels="1" name="Agathion Seal Cancel - Cheerleader Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21215" levels="1" name="Agathion Seal Cancel - Cheerleader Lana">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21216" levels="1" name="Agathion Seal Cancel - Cheerleader Naonin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21217" levels="1" name="Agathion Seal Cancel - Cheerleader Mortia">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21218" levels="1" name="Agathion Seal Cancel - Cheerleader Kaurin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21219" levels="1" name="Agathion Seal Cancel - Cheerleader Meruril">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21220" levels="1" name="Agathion Seal Cancel - Handy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21221" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -281,7 +293,6 @@
 		<set name="hitTime" val="20000" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />
@@ -292,7 +303,6 @@
 		<set name="hitTime" val="20000" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />
@@ -303,7 +313,6 @@
 		<set name="hitTime" val="20000" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />

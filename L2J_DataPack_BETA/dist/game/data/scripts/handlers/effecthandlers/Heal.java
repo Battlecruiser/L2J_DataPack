@@ -126,11 +126,11 @@ public class Heal extends L2Effect
 			// Healer proficiency (since CT1)
 			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!getSkill().isPotion())
+			if (!getSkill().isStatic())
 				amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
 			
 			// Heal critic, since CT2.3 Gracia Final
-			if (!getSkill().isPotion() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
 				amount *= 3;
 		}
 		

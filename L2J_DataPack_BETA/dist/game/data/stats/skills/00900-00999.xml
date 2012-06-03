@@ -89,7 +89,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -188,7 +188,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="POISON" />
@@ -250,7 +250,7 @@
 		<set name="reuseDelay" val="45000" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<!-- Summon-specific -->
@@ -272,13 +272,12 @@
 	</skill>
 	<skill id="914" levels="1" name="Song of Purification">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
-		<set name="isDance" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="maxNegated" val="3" />
 		<set name="mpConsume" val="60" />
-		<set name="nextDanceCost" val="30" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillRadius" val="1000" />
@@ -294,12 +293,11 @@
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
-		<set name="isDance" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="60" />
-		<set name="nextDanceCost" val="30" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillRadius" val="1000" />
@@ -591,7 +589,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
@@ -619,7 +617,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
@@ -647,7 +645,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
@@ -672,11 +670,11 @@
 		</for>
 	</skill>
 	<skill id="932" levels="9" name="Star Stone Gathering">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="6000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="600" />
@@ -1127,7 +1125,7 @@
 	<skill id="959" levels="1" name="Frog Jump">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
 		<set name="mpConsume" val="24" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1142,7 +1140,7 @@
 	<skill id="960" levels="1" name="Race Running">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
 		<set name="mpConsume" val="24" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1157,7 +1155,7 @@
 	<skill id="961" levels="1" name="Swift Dash">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
 		<set name="mpConsume" val="24" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1173,7 +1171,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="19" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="4000" />
@@ -1259,7 +1257,7 @@
 		<set name="mpConsume" val="30" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="495" />
@@ -1295,7 +1293,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A2" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="438" />
@@ -1397,7 +1395,7 @@
 		<set name="reuseDelay" val="1200" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -1418,7 +1416,7 @@
 		<set name="reuseDelay" val="1200" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1442,7 +1440,7 @@
 		<set name="coolTime" val="200" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -1537,7 +1535,7 @@
 		<set name="hitTime" val="10000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1667,10 +1665,8 @@
 		<table name="#amount"> 1.05 1.07 1.1 </table>
 		<set name="aggroPoints" val="100" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
-		<set name="isDance" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="30" />
-		<set name="nextDanceCost" val="15" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
@@ -1687,10 +1683,8 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="100" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
-		<set name="isDance" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="30" />
-		<set name="nextDanceCost" val="15" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />

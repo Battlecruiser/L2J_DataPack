@@ -2,84 +2,97 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6100" levels="3" name="Turkey's Choice - Scissors">
 		<set name="target" val="TARGET_SELF" />
-		<set name="isMagic" val="true" />
-		<set name="staticHitTime" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6104" levels="1" name="Event Cancel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6105" levels="1" name="Turkey's Mistake">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="6106" levels="1" name="Winter Holiday Festival">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6107" levels="1" name="Winter Holiday Blessing - Gludio">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6108" levels="1" name="Winter Holiday Blessing - Dion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6109" levels="1" name="Winter Holiday Blessing - Giran">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6110" levels="1" name="Winter Holiday Blessing - Oren">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6111" levels="1" name="Winter Holiday Blessing - Aden">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6112" levels="1" name="Winter Holiday Blessing - Innadril">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6113" levels="1" name="Winter Holiday Blessing - Goddard">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6114" levels="1" name="Winter Holiday Blessing - Rune">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6115" levels="1" name="Winter Holiday Blessing - Schuttgart">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6116" levels="1" name="Attack Turkey">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6117" levels="3" name="Choice - Scissors">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -87,7 +100,7 @@
 	<skill id="6120" levels="1" name="Santa Claus' Reward">
 		<set name="target" val="TARGET_AURA" />
 		<set name="magicLvl" val="1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="1" />
@@ -107,6 +120,7 @@
 	</skill>
 	<skill id="6121" levels="1" name="Agathion's New Year's Gift 1">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="14676" />
@@ -127,6 +141,7 @@
 	</skill>
 	<skill id="6122" levels="1" name="Agathion's New Year's Gift 2">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="14677" />
@@ -146,6 +161,7 @@
 		</cond>
 	</skill>
 	<skill id="6123" levels="1" name="Agathion's New Year's Wish">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -155,10 +171,10 @@
 		<set name="coolTime" val="1000" />
 	</skill>
 	<skill id="6124" levels="1" name="Agathion Cute Trick - Saerom">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="16063" />
 		</cond>
@@ -166,6 +182,7 @@
 	<skill id="6125" levels="1" name="Paralysis">
 		<!-- Summon Binding Cubic Skill Effect -->
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
@@ -181,7 +198,7 @@
 	<skill id="6126" levels="1" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="40" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="A2" />
@@ -227,6 +244,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6131" levels="1" name="Decrease Spd">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -236,6 +254,7 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="6132" levels="1" name="Decrease Atk. Spd">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -245,12 +264,14 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="6133" levels="1" name="Effect of Doubt">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6134" levels="1" name="Curse of the Mutant Animal">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -272,16 +293,17 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<cond msgId="2292">
 			<player agathionId="16064" />
 		</cond>
 	</skill>
 	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -290,6 +312,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6138" levels="1" name="Agathion Juju - Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -297,6 +320,7 @@
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="6139" levels="1" name="Fake Tears">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -304,11 +328,13 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="6140" levels="3" name="Bog Stride">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6141" levels="1" name="Swamp's Wish">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -319,6 +345,7 @@
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
 		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -327,23 +354,27 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="6143" levels="1" name="Ancient Beam">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="6144" levels="1" name="Ancient Beam">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="6145" levels="1" name="Earthworm's Evil Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6146" levels="1" name="Forfeiture of Will">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -353,7 +384,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="15" />
@@ -372,7 +403,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MUTE" />
 		<set name="mpConsume" val="59" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
@@ -393,6 +424,7 @@
 	<skill id="6149" levels="1" name="Kasha's Betrayal">
 		<!-- Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%. -->
 		<!-- Only when a eye explode -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -482,6 +514,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6166" levels="1" name="Hold">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -565,127 +598,151 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6174" levels="1" name="Presentation - Incense for Relic">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6175" levels="1" name="Presentation - High Ranking Dawn Priest's Prayer">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6176" levels="1" name="Presentation - Dawn's Seal Stone">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6177" levels="1" name="Presentation - Anakim's Message">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6178" levels="1" name="Presentation - Ultimate Seal Motion1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6179" levels="1" name="Presentation - Ultimate Seal Motion2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6180" levels="1" name="Presentation - Lilith Presentation1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6181" levels="1" name="Presentation - Lilith Presentation2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6182" levels="1" name="Presentation - Lilith Presentation3">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6183" levels="1" name="Presentation - Lilith Presentation4">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6184" levels="1" name="Presentation - Anakim's Presentation1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6185" levels="1" name="Presentation - Anakim's Presentation2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6186" levels="1" name="Presentation - Anakim's Presentation3">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6187" levels="1" name="Presentation - Lilith Battle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6188" levels="1" name="Presentation - Lilith's Steward Battle1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6189" levels="1" name="Presentation - Lilith's Steward Battle2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6190" levels="1" name="Presentation - Lilith's Bodyguards Battle1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6191" levels="1" name="Presentation - Anakim Battle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6192" levels="1" name="Presentation - Anakim's Guardian Battle1">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6193" levels="1" name="Presentation - Anakim's Guardian Battle2">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6194" levels="1" name="Presentation - Anakim's Guard Battle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6195" levels="1" name="Presentation - Anakim's Executor Battle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="6196" levels="1" name="Agathion Oink Oink's Ability">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -694,15 +751,16 @@
 		<set name="coolTime" val="1000" />
 	</skill>
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="16065" />
 		</cond>
 	</skill>
 	<skill id="6198" levels="1" name="Agathion Cute Trick - Light of the Dawn">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />

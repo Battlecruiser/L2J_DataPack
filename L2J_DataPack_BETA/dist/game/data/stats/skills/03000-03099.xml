@@ -222,7 +222,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
@@ -246,7 +246,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="castRange" val="600" />
@@ -447,7 +447,7 @@
 		<set name="absorbPart" val="#absorbPart" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
@@ -461,7 +461,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
@@ -481,7 +481,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
@@ -594,7 +594,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="8.39" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="1000" />
@@ -755,7 +755,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="35" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
@@ -769,7 +769,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="35" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
@@ -782,7 +782,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
@@ -800,7 +800,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
@@ -972,7 +972,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="trait" val="DERANGEMENT" />
@@ -991,7 +991,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1036,7 +1036,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1055,7 +1055,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="PARALYZE" />
@@ -1071,6 +1071,7 @@
 		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="AGGDAMAGE" />
@@ -1087,6 +1088,7 @@
 	<skill id="3081" levels="10" name="Item Skill: Charm">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" />
@@ -1109,11 +1111,12 @@
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
 	<skill id="3083" levels="10" name="Item Skill: Slow">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1128,6 +1131,7 @@
 	<skill id="3084" levels="10" name="Item Skill: Winter">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1142,6 +1146,7 @@
 	<skill id="3085" levels="10" name="Item Skill: Stun">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
@@ -1157,6 +1162,7 @@
 	<skill id="3086" levels="10" name="Item Skill: Hold">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
@@ -1172,6 +1178,7 @@
 	<skill id="3087" levels="10" name="Item Skill: Sleep">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1187,6 +1194,7 @@
 	<skill id="3088" levels="10" name="Item Skill: Paralyze">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
@@ -1202,6 +1210,7 @@
 	<skill id="3089" levels="10" name="Item Skill: Medusa">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1216,6 +1225,7 @@
 	<skill id="3090" levels="10" name="Item Skill: Fear">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1231,6 +1241,7 @@
 	<skill id="3091" levels="10" name="Item Skill: Poison">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1244,6 +1255,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="3092" levels="10" name="Item Skill: Bleed">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="nextActionAttack" val="true" />
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
@@ -1262,6 +1274,7 @@
 	<skill id="3093" levels="10" name="Item Skill: Silence">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="BUFF" />
@@ -1277,6 +1290,7 @@
 	<skill id="3094" levels="10" name="Item Skill: Doom">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1301,11 +1315,12 @@
 		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
 	<skill id="3096" levels="10" name="Item Skill: Slow">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1320,6 +1335,7 @@
 	<skill id="3097" levels="10" name="Item Skill: Winter">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1334,6 +1350,7 @@
 	<skill id="3098" levels="10" name="Item Skill: Stun">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -1349,6 +1366,7 @@
 	<skill id="3099" levels="10" name="Item Skill: Hold">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />

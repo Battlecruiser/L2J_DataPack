@@ -6,7 +6,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="5000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
@@ -69,7 +69,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
@@ -86,7 +86,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -96,7 +96,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -123,6 +123,7 @@
 	</skill>
 	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
 		<!-- TODO: Needs to be verified -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -131,6 +132,7 @@
 	</skill>
 	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
 		<!-- TODO: Needs to be verified -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -139,6 +141,7 @@
 	</skill>
 	<skill id="5415" levels="1" name="Performing Agathion - Castle">
 		<!-- TODO: Needs to be verified -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -164,6 +167,7 @@
 	</skill>
 	<skill id="5419" levels="1" name="Invincible Blow">
 		<!-- Crystaline Golem -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -181,7 +185,7 @@
 		<table name="#mAtk"> 9.16 15.36 27.82 41.49 61.66 84.61 111.26 126.31 142.73 160.7 180.46 201.65 </table>
 		<table name="#dot"> 6.45 11.1 20.39 30.49 30.49 60.43 77 85.7 94.66 103.89 113.38 123.15 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -205,7 +209,7 @@
 		<table name="#dot"> 40 105 285 455 665 895 1115 1255 1445 1590 1620 1770 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="A2" />
@@ -225,7 +229,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#dot"> 75 105 215 275 445 515 700 840 870 1160 1325 1475 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="skillRadius" val="300" />
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_AURA" />
@@ -315,7 +319,7 @@
 	<skill id="5430" levels="1" name="Spoil Bomb">
 		<!-- Confirmed CT2.5 -->
 		<!-- Spoil Bomb effect -->
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isSuicideAttack" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
@@ -410,6 +414,7 @@
 		<table name="#amount"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
 		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="aggroPoints" val="100" />
@@ -428,6 +433,7 @@
 		<table name="#amount"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
 		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
 		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="aggroPoints" val="100" />
@@ -546,6 +552,7 @@
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
 		<!-- Imbue Dark Seed effect -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="A2" />
@@ -628,12 +635,14 @@
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
 		<!-- Immobilized. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5455" levels="1" name="Voice Bind">
 		<!-- Silenced. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -656,12 +665,14 @@
 		</for>
 	</skill>
 	<skill id="5457" levels="1" name="NPC Full Recover">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
 		<!-- TODO: Needs to be verified -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -807,7 +818,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="negateAbnormals" val="invincibility,9" />
 		<set name="operateType" val="A1" />
@@ -868,6 +879,7 @@
 	</skill>
 	<skill id="5490" levels="1" name="Weakened Life">
 		<!-- You have been infected by a fatal poison. -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -898,6 +910,7 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
@@ -944,7 +957,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="607" />
@@ -979,7 +992,7 @@
 		<!-- Beleth Skills -->
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -998,7 +1011,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
