@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22100" levels="1" name="Soul Scent">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
@@ -31,6 +32,7 @@
 		<table name="#extractableItems">
 			20590,1,40;9207,1,60
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -48,6 +50,7 @@
 	</skill>
 	<skill id="22102" levels="1" name="Soul Magic Box">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20623" />
@@ -67,17 +70,18 @@
 	</skill>
 	<skill id="22103" levels="1" name="Blessed Scroll of Escape (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="200" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20583" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="RECALL" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
@@ -87,11 +91,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
 	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
@@ -114,6 +118,7 @@
 	</skill>
 	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
@@ -136,6 +141,7 @@
 	</skill>
 	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="20707" />
@@ -161,6 +167,7 @@
 		<table name="#extractableItems">
 			20712,1,20;20713,1,20;20714,1,20;20715,1,20;20716,1,20
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -180,6 +187,7 @@
 		<table name="#extractableItems">
 			20718,1,20;20719,1,20;20720,1,20;20721,1,20;20722,1,20
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -195,21 +203,25 @@
 		</for>
 	</skill>
 	<skill id="22110" levels="1" name="Lucky Sky Lantern Summon">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22111" levels="1" name="Ambient Sky Lantern Summon">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22112" levels="1" name="Sway Sky Lantern Summon">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22113" levels="1" name="Comfort Sky Lantern Summon">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -219,6 +231,7 @@
 		<table name="#extractableItems">
 			20364,1,33;20365,1,33;20366,1,34
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -238,6 +251,7 @@
 		<table name="#extractableItems">
 			20755,1,99.99949;20757,1,0.00051
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -253,17 +267,20 @@
 		</for>
 	</skill>
 	<skill id="22116" levels="1" name="Summon Flames Box">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22117" levels="1" name="Flames Box Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22118" levels="1" name="Warmth of Kotatz">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="BUFF" />
@@ -278,6 +295,7 @@
 	</skill>
 	<skill id="22119" levels="1" name="Love for All Seasons">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -291,6 +309,7 @@
 	</skill>
 	<skill id="22120" levels="1" name="Happy New Year">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -305,6 +324,7 @@
 	</skill>
 	<skill id="22121" levels="1" name="Female Aniruddha">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -319,6 +339,7 @@
 	</skill>
 	<skill id="22122" levels="1" name="Kung Hei Fat Choy">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -339,6 +360,7 @@
 	</skill>
 	<skill id="22123" levels="1" name="Chinese Feast">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -355,6 +377,7 @@
 	</skill>
 	<skill id="22124" levels="1" name="Hwa Gei Bu Gwi">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -368,6 +391,7 @@
 	</skill>
 	<skill id="22125" levels="1" name="Fire Stamp">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -382,6 +406,7 @@
 	</skill>
 	<skill id="22126" levels="1" name="Baby Food Skill">
 		<!-- TODO: Implement. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="500" />
 		<set name="itemConsumeCount" val="1" />
@@ -396,6 +421,7 @@
 	</skill>
 	<skill id="22127" levels="1" name="Summon Warm Kotatz">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="7200" /> <!-- FIXME: Custom. -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -410,6 +436,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#AtkSpd"> 1.1 1.15 1.2 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -423,6 +450,7 @@
 	</skill>
 	<skill id="22129" levels="1" name="Red Dimensional Stone">
 		<!-- TODO: Implement. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -434,12 +462,14 @@
 	</skill>
 	<skill id="22130" levels="1" name="Food of Doubt's Effect">
 		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="22131" levels="1" name="Red Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -453,6 +483,7 @@
 	</skill>
 	<skill id="22132" levels="1" name="Gold Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -466,6 +497,7 @@
 	</skill>
 	<skill id="22133" levels="1" name="Blue Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -479,6 +511,7 @@
 	</skill>
 	<skill id="22134" levels="1" name="Pink Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -492,6 +525,7 @@
 	</skill>
 	<skill id="22135" levels="1" name="White Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -505,6 +539,7 @@
 	</skill>
 	<skill id="22136" levels="1" name="Silver Firework Flames">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -518,6 +553,7 @@
 	</skill>
 	<skill id="22137" levels="1" name="Star Food">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="20000" />
@@ -526,6 +562,7 @@
 	</skill>
 	<skill id="22138" levels="1" name="Mango Dessert">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -535,6 +572,7 @@
 	</skill>
 	<skill id="22139" levels="1" name="Branding Wind Walk">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -546,6 +584,7 @@
 	</skill>
 	<skill id="22140" levels="1" name="Hwa Gei Bu Gwi Haste">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -557,6 +596,7 @@
 	</skill>
 	<skill id="22141" levels="1" name="Branding Agility">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -568,6 +608,7 @@
 	</skill>
 	<skill id="22142" levels="1" name="Female Aniruddha's Shield">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -579,6 +620,7 @@
 	</skill>
 	<skill id="22143" levels="1" name="Happy New Year Death Whisper">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -590,6 +632,7 @@
 	</skill>
 	<skill id="22144" levels="1" name="Happy New Year Guidance">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -601,6 +644,7 @@
 	</skill>
 	<skill id="22145" levels="1" name="Love for All Seasons Empower">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -612,6 +656,7 @@
 	</skill>
 	<skill id="22146" levels="1" name="Chinese Feast Greater Acumen">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -623,6 +668,7 @@
 	</skill>
 	<skill id="22147" levels="1" name="Kung Hei Fat Choy Vampiric Rage">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -634,6 +680,7 @@
 	</skill>
 	<skill id="22148" levels="1" name="Branding Blessed Body">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -645,6 +692,7 @@
 	</skill>
 	<skill id="22149" levels="1" name="Kung Hei Fat Choy Berserker Spirit">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -662,6 +710,7 @@
 	</skill>
 	<skill id="22150" levels="1" name="Female Aniruddha's Magic Barrier">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -673,6 +722,7 @@
 	</skill>
 	<skill id="22151" levels="1" name="Chinese Feast Blessed Soul">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -684,6 +734,7 @@
 	</skill>
 	<skill id="22152" levels="1" name="Chinese Feast Clarity">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -697,6 +748,7 @@
 	</skill>
 	<skill id="22153" levels="1" name="Love for All Seasons Wild Magic">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -708,6 +760,7 @@
 	</skill>
 	<skill id="22154" levels="1" name="Happy New Year Focus">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -719,6 +772,7 @@
 	</skill>
 	<skill id="22155" levels="1" name="Female Aniruddha's Blessed Shield">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -730,6 +784,7 @@
 	</skill>
 	<skill id="22156" levels="1" name="Hwa Gei Bu Gwi Decrease Weight">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -741,6 +796,7 @@
 	</skill>
 	<skill id="22157" levels="1" name="Kung Hei Fat Choy Might">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -753,6 +809,7 @@
 	<skill id="22158" levels="10" name="Rose Petal">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="1" />
@@ -768,11 +825,11 @@
 	</skill>
 	<skill id="22159" levels="1" name="Vesper Super Power">
 		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="Buff" event="vesper1" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
@@ -784,11 +841,11 @@
 	</skill>
 	<skill id="22160" levels="1" name="Vesper Critical Power">
 		<!-- Increases Physical critical attack rate by 15, Magical critical attack rate by 2 and Speed by 10 for 10 minutes. 5% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="Buff" event="vesper2" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
@@ -801,11 +858,11 @@
 	</skill>
 	<skill id="22161" levels="1" name="Invincible Vesper">
 		<!-- Increases Atk. Spd. by 20%, Casting Spd. by 20% and Speed by 20 for 10 minutes. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="isPotion" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<for>
 			<effect name="Buff" event="vesper3" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
@@ -817,9 +874,9 @@
 	</skill>
 	<skill id="22162" levels="1" name="Mt. Fuji Herb">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
-		<set name="isPotion" val="true" /> <!-- FIXME: Custom. -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -832,9 +889,9 @@
 	</skill>
 	<skill id="22163" levels="1" name="Hawk Herb">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
-		<set name="isPotion" val="true" /> <!-- FIXME: Custom. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -849,9 +906,9 @@
 	</skill>
 	<skill id="22164" levels="1" name="Eggplant Herb">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
-		<set name="isPotion" val="true" /> <!-- FIXME: Custom. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -866,12 +923,14 @@
 	</skill>
 	<skill id="22165" levels="1" name="Energy Replenish">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22166" levels="1" name="Energy Replenish">
 		<!-- 10000 Soul Avatar Energy is replenished. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -881,6 +940,7 @@
 		<table name="#extractableItems">
 			13457,1,13.32;13458,1,6.66;13459,1,6.66;13460,1,6.66;13461,1,6.66;13462,1,6.66;13463,1,6.66;13464,1,6.66;13466,1,6.66;13467,1,6.66;13468,1,6.66;13469,1,6.66;13470,1,6.66;13465,1,6.66
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -897,6 +957,7 @@
 	</skill>
 	<skill id="22168" levels="1" name="Thirst Quencher">
 		<!-- Replenishes an Agathion's energy by 2500 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -906,6 +967,7 @@
 		<table name="#extractableItems">
 			6575,2,45;6573,1,30;6571,1,15;6569,1,9.4;6577,1,0.6
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -922,6 +984,7 @@
 	</skill>
 	<skill id="22170" levels="1" name="Hardin's Protection">
 		<!-- Maximies P. Def. for 10 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -929,6 +992,7 @@
 	</skill>
 	<skill id="22171" levels="1" name="Hardin's Blessing">
 		<!-- Maximies M. Def. for 10 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -936,6 +1000,7 @@
 	</skill>
 	<skill id="22172" levels="1" name="Sylphide's Wings">
 		<!-- Increases one's own moving speed by 300 for 15 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -943,6 +1008,7 @@
 	</skill>
 	<skill id="22173" levels="1" name="Sylphide's Blessing">
 		<!-- Increases the moving speed of yourself and friendly nearby targets by 300 for 15 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -950,6 +1016,7 @@
 	</skill>
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -980,12 +1047,14 @@
 		</for>
 	</skill>
 	<skill id="22177" levels="1" name="Warrior's Breath">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1001,6 +1070,7 @@
 		<table name="#extractableItems">
 			8618,3,13.999;8619,1,26;8620,3,17;8621,1,0.011;14700,25,4;14701,12,4;21038,6,5;9627,1,5;6622,3,19;21030,4,1.5;21031,4,1.5;21032,8,1;21033,8,1;21037,5,1
 		</table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
@@ -1024,7 +1094,6 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<!-- set name="reuseDelay" val="86400000" / -->
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -1051,7 +1120,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3600000" />
-		<set name="isPotion" val="true" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="stayOnSubclassChange" val="false" />
 		<set name="canBeDispeled" val="false" />

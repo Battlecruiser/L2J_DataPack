@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" levels="1" name="Burst of Oblivion">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -11,6 +12,7 @@
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<table name="#hitTime"> 2000 22940 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -43,7 +45,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="saveVs" val="STR" />
 		<for>
 			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
@@ -56,7 +58,7 @@
 		<table name="#mpConsume"> 146 150 153 </table>
 		<table name="#hitTime"> 2000 22940 22940 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="#power" />
 		<set name="skillType" val="DRAIN" />
 		<set name="target" val="TARGET_AURA" />
@@ -70,6 +72,7 @@
 		<set name="skillRadius" val="300" />
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -79,6 +82,7 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5906" levels="1" name="Ritual of Revive">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -86,6 +90,7 @@
 	</skill>
 	<skill id="5907" levels="2" name="Ritual of Entombment">
 		<table name="#hitTime"> 3000 34400 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -95,6 +100,7 @@
 	</skill>
 	<skill id="5908" levels="2" name="Ritual of Entombment">
 		<table name="#hitTime"> 3000 34400 </table>
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -111,7 +117,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="5910" levels="1" name="Stronghold Attack">
 		<set name="power" val="5000" /> <!-- FIXME: value unconfirmed -->
@@ -122,7 +128,7 @@
 		<set name="effectRange" val="500" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
 	<skill id="5911" levels="1" name="Pestilence Cleanse">
 		<set name="target" val="TARGET_NONE" />
@@ -130,6 +136,7 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5912" levels="1" name="Pestilence Cleanse">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -143,6 +150,7 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5914" levels="1" name="Putrefaction Cleanse">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -151,16 +159,19 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5915" levels="9" name="Mummifying Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5916" levels="9" name="Cruising Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5917" levels="9" name="Shrouding Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -177,7 +188,7 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="12610" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
@@ -196,7 +207,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="91740" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="239" />
 		<set name="mpInitialConsume" val="60" />
@@ -214,7 +225,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="26950" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="179" />
@@ -242,7 +253,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="22700" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="179" />
@@ -263,6 +274,7 @@
 		</for>
 	</skill>
 	<skill id="5923" levels="1" name="Soul Retain">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -270,6 +282,7 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5924" levels="1" name="Devour Soul">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -285,6 +298,7 @@
 		</cond>
 	</skill>
 	<skill id="5926" levels="1" name="Breath Corruption">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -357,6 +371,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -411,54 +426,64 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5940" levels="12" name="Energy of Generation">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5941" levels="1" name="Energy of Erosion">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5942" levels="1" name="Energy of Pollution">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5943" levels="1" name="Energy of Contamination">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5944" levels="1" name="Energy of Oblivion">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5945" levels="1" name="Region2 Rotation5">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5946" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="5947" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="5948" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="5949" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -467,6 +492,7 @@
 	<skill id="5950" levels="1" name="Birthday Cake">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -481,30 +507,35 @@
 		</for>
 	</skill>
 	<skill id="5951" levels="1" name="Agathion's Blessing">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5952" levels="1" name="Agathion's Blessing">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5953" levels="1" name="Agathion's Blessing">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5954" levels="1" name="Agathion Cute Trick - Tin Plate Golem">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5955" levels="1" name="Agathion Cute Trick - Joy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
@@ -513,6 +544,7 @@
 		</cond>
 	</skill>
 	<skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
@@ -521,6 +553,7 @@
 		</cond>
 	</skill>
 	<skill id="5957" levels="1" name="Agathion Cute Trick - Sorrow">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
@@ -529,19 +562,19 @@
 		</cond>
 	</skill>
 	<skill id="5958" levels="1" name="Agathion Cute Trick - Teddy Bear Boy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="16059" />
 		</cond>
 	</skill>
 	<skill id="5959" levels="1" name="Agathion Cute Trick - Teddy Bear Girl">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="16060" />
 		</cond>
@@ -576,18 +609,20 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5964" levels="1" name="Fairy Flame">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5965" levels="1" name="Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="500" />
-		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="5966" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -622,6 +657,7 @@
 		<set name="coolTime" val="440" />
 	</skill>
 	<skill id="5970" levels="1" name="Seduced Knight's Help">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -629,6 +665,7 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5971" levels="1" name="Seduced Ranger's Help">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -636,6 +673,7 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5972" levels="1" name="Seduced Wizard's Help">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -643,6 +681,7 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5973" levels="1" name="Seduced Warrior's Help">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -714,11 +753,13 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="5981" levels="3" name="Lilith's Curse">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5982" levels="1" name="Aura Bird - Falcon">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="75" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
@@ -727,7 +768,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="8" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
@@ -739,6 +779,7 @@
 		</for>
 	</skill>
 	<skill id="5983" levels="1" name="Aura Bird - Owl">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="75" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
@@ -747,7 +788,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="9" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
@@ -766,11 +806,13 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="5985" levels="9" name="Decaying Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5986" levels="9" name="Vampiric Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -842,6 +884,7 @@
 		<set name="hitTime" val="3500" />
 	</skill>
 	<skill id="5990" levels="3" name="Lesser Heal">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -849,6 +892,7 @@
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5991" levels="1" name="Presentation - Summon Tiat">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -865,7 +909,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
@@ -884,6 +928,7 @@
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="target" val="TARGET_ONE" />

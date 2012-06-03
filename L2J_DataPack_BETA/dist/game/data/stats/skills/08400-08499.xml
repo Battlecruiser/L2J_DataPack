@@ -855,12 +855,14 @@
 		</for>
 	</skill>
 	<skill id="8464" levels="1" name="Release the Seal on Agathion - Kid Rudolph">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="8465" levels="1" name="Notifier">
 		<!-- It's time to return Santa Claus's gift that the Agathions gave you. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />

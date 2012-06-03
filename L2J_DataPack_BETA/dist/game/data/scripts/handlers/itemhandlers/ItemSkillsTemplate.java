@@ -101,12 +101,12 @@ public class ItemSkillsTemplate implements IItemHandler
 					return false;
 				}
 				
-				if (!itemSkill.isPotion() && playable.isCastingNow())
+				if (!item.isPotion() && !item.isElixir() && playable.isCastingNow())
 				{
 					return false;
 				}
 				
-				if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0) && (itemSkill.isPotion() || itemSkill.isSimultaneousCast()))
+				if ((itemSkill.getItemConsumeId() == 0) && (itemSkill.getItemConsume() > 0) && (item.isPotion() || item.isElixir() || itemSkill.isSimultaneousCast()))
 				{
 					if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), playable, false))
 					{
@@ -152,7 +152,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					}
 				}
 				
-				if (itemSkill.isPotion() || itemSkill.isSimultaneousCast())
+				if (item.isPotion() || item.isElixir() || itemSkill.isSimultaneousCast())
 				{
 					playable.doSimultaneousCast(itemSkill);
 					// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
@@ -208,7 +208,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			if (hours > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isPotion())
+				if ((skill == null) || skill.isStatic())
 				{
 					sm.addItemName(item);
 				}
@@ -222,7 +222,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			else if (minutes > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isPotion())
+				if ((skill == null) || skill.isStatic())
 				{
 					sm.addItemName(item);
 				}
@@ -235,7 +235,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			else
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isPotion())
+				if ((skill == null) || skill.isStatic())
 				{
 					sm.addItemName(item);
 				}

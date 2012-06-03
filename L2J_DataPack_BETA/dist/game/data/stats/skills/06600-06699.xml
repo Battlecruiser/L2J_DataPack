@@ -160,7 +160,7 @@
 		<table name="#pAtk"> 100 150 200 250 300 350 400 </table>
 		<table name="#mAtk"> 5 10 15 20 25 30 35 </table>
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="castRange" val="400" />
@@ -184,7 +184,7 @@
 		<table name="#pAtk"> 200 250 300 350 400 450 500 </table>
 		<table name="#mAtk"> 15 20 25 30 35 40 45 </table>
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="castRange" val="400" />
@@ -214,6 +214,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6623" levels="1" name="Fungus Hub">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -228,6 +229,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6625" levels="1" name="Energy of Life">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -235,6 +237,7 @@
 	</skill>
 	<skill id="6626" levels="2" name="Energy of Life's Power">
 		<!-- This skill only has one level, 2. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -242,12 +245,14 @@
 	</skill>
 	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
 		<!-- This skill only has one level, 3. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6628" levels="1" name="Energy of Mana">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -255,6 +260,7 @@
 	</skill>
 	<skill id="6629" levels="2" name="Energy of Mana's Power">
 		<!-- This skill only has one level, 2. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -262,42 +268,49 @@
 	</skill>
 	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
 		<!-- This skill only has one level, 3. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6632" levels="1" name="Energy of Enchant">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6633" levels="1" name="Energy of Attack Speed\">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6634" levels="1" name="Energy of Casting Speed">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6635" levels="1" name="Energy of Crt Rate\">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6636" levels="1" name="Energy of Moving Speed">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -305,6 +318,7 @@
 	</skill>
 	<skill id="6637" levels="1" name="Vampiric Aura">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
 		<set name="magicLvl" val="1" />
@@ -325,6 +339,7 @@
 		</for>
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -332,12 +347,14 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6640" levels="1" name="Energizing Aura">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -352,7 +369,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
@@ -424,11 +441,13 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6648" levels="1" name="Komodo Heal">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6649" levels="1" name="Treykan Transformation">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -481,6 +500,7 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6657" levels="1" name="Lavasaurus Firstborn Heal">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -514,6 +534,7 @@
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -553,7 +574,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -570,7 +591,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -587,7 +608,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -604,7 +625,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -621,7 +642,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -638,7 +659,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -662,7 +683,7 @@
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -674,12 +695,14 @@
 		</for>
 	</skill>
 	<skill id="6673" levels="1" name="Presentation - Attain Noblesse">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6674" levels="1" name="Energy of Range Increment">
 		<!-- Bow/Crossbow range is temporarily increased by 50. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -696,11 +719,11 @@
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
-		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="82" />
 		<set name="power" val="450" />
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -710,6 +733,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6678" levels="1" name="Hold Cancel">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -738,7 +762,7 @@
 	<skill id="6681" levels="1" name="Maguen Speed Walk">
 		<!-- Moving Spd. increases by 40 for 20 minutes. -->
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="88" />
 		<set name="target" val="TARGET_ONE" />
@@ -758,7 +782,7 @@
 	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
 		<!-- Moving Spd. increases by 45 for 20 minutes. -->
 		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="88" />
 		<set name="target" val="TARGET_PARTY" />
@@ -779,7 +803,7 @@
 	<skill id="6683" levels="1" name="Maguen Recall">
 		<set name="magicLvl" val="1" />
 		<set name="teleCoords" val="-178244,153389,2472" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="operateType" val="A1" />
@@ -791,7 +815,7 @@
 	<skill id="6684" levels="1" name="Maguen Recall">
 		<set name="magicLvl" val="1" />
 		<set name="teleCoords" val="-178244,153389,2472" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="operateType" val="A1" />
@@ -802,6 +826,7 @@
 	</skill>
 	<skill id="6685" levels="1" name="Santa Claus's Gift">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="17003" />
@@ -836,6 +861,7 @@
 	<skill id="6687" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
@@ -850,6 +876,7 @@
 	<skill id="6688" levels="1" name="Soup of Failure">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isDebuff" val="true" />
@@ -913,6 +940,7 @@
 		<set name="coolTime" val="660" />
 	</skill>
 	<skill id="6696" levels="1" name="Presentation - Quest Done">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -940,6 +968,7 @@
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />

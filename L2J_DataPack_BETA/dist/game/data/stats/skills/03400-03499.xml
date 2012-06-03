@@ -32,6 +32,7 @@
 	</skill>
 	<skill id="3404" levels="1" name="Mystery Effect">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
@@ -48,6 +49,7 @@
 		</for>
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="target" val="TARGET_SELF" />
@@ -63,6 +65,7 @@
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<!-- set name="avoidAggro" val="100" / -->
 		<set name="magicLvl" val="1" />
 		<set name="reuseDelay" val="600000" />
@@ -77,6 +80,7 @@
 	</skill>
 	<skill id="3408" levels="1" name="Blessed Ring of Escape">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="200" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -86,6 +90,7 @@
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
@@ -97,11 +102,11 @@
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="referenceId" val="9919" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
@@ -232,36 +237,38 @@
 		</for>
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16031" />
 	</skill>
 	<skill id="3424" levels="1" name="Little Devil Agathion - Summon (or Release)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16032" />
 	</skill>
 	<skill id="3425" levels="1" name="Rudolph Agathion - Summon (or Release)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16033" />
 	</skill>
@@ -293,11 +300,11 @@
 		</for>
 	</skill>
 	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
@@ -310,21 +317,21 @@
 		</for>
 	</skill>
 	<skill id="3429" levels="1" name="Red Talisman - Life Force">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="equipDelay" val="30000" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="100" />
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3430" levels="1" name="White Talisman - Darkness">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -339,8 +346,8 @@
 		</for>
 	</skill>
 	<skill id="3431" levels="1" name="White Talisman - Storm">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -355,8 +362,8 @@
 		</for>
 	</skill>
 	<skill id="3432" levels="1" name="White Talisman - Water">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -371,8 +378,8 @@
 		</for>
 	</skill>
 	<skill id="3433" levels="1" name="White Talisman - Fire">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -387,8 +394,8 @@
 		</for>
 	</skill>
 	<skill id="3434" levels="1" name="White Talisman - Earth">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -403,8 +410,8 @@
 		</for>
 	</skill>
 	<skill id="3435" levels="1" name="White Talisman - Light">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -420,6 +427,7 @@
 	</skill>
 	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<!-- set name="affectLimit = "6;12" / -->
 		<set name="hitTime" val="3000" />
 		<set name="hpConsume" val="800" />
@@ -432,11 +440,11 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
@@ -449,10 +457,10 @@
 		</for>
 	</skill>
 	<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -824,13 +832,13 @@
 		</for>
 	</skill>
 	<skill id="3487" levels="1" name="Blue Talisman of Power">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -841,13 +849,13 @@
 		</for>
 	</skill>
 	<skill id="3488" levels="1" name="Blue Talisman of Protection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -914,11 +922,11 @@
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />

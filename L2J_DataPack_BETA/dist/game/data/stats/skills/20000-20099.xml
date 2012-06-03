@@ -46,7 +46,6 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
-		<set name="isMagic" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_up_special">
 				<mul order="0x30" stat="runSpd" val="2.0" />
@@ -60,7 +59,6 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="critical_prob_up">

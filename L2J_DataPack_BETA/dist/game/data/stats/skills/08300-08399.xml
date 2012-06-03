@@ -129,11 +129,10 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
@@ -148,11 +147,10 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
@@ -189,10 +187,10 @@
 		</for>
 	</skill>
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16063" />
 	</skill>
@@ -237,6 +235,7 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -250,6 +249,7 @@
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -262,28 +262,30 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16064" />
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16065" />
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -295,11 +297,10 @@
 		<set name="power" val="25" />
 		<set name="maxNegated" val="5" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
@@ -312,13 +313,12 @@
 		<set name="power" val="3" />
 		<set name="magicLvl" val="55" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
@@ -327,11 +327,10 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
@@ -343,6 +342,7 @@
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Damage received during PVP is decreased 75% using the power of the talisman. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -351,8 +351,8 @@
 	</skill>
 	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 seconds, increases resistance to all attributes by 15 using the power of the talisman. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
@@ -372,6 +372,7 @@
 		</for>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -610,11 +611,13 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -622,6 +625,7 @@
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
@@ -641,8 +645,8 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_RELEASE" />
 		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
@@ -653,8 +657,8 @@
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_ACCOMPANY" />
 		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
@@ -665,8 +669,8 @@
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_SKILL" />
 		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
@@ -697,18 +701,21 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -716,6 +723,7 @@
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -724,6 +732,7 @@
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -732,6 +741,7 @@
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -740,6 +750,7 @@
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -748,6 +759,7 @@
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -756,6 +768,7 @@
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -763,8 +776,8 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_RELEASE_ALL" />
 		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />

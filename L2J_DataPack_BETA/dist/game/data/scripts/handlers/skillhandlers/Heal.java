@@ -156,11 +156,11 @@ public class Heal implements ISkillHandler
 			// Healer proficiency (since CT1)
 			hp *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!skill.isPotion())
+			if (!skill.isStatic())
 				hp += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
 			
 			// Heal critic, since CT2.3 Gracia Final
-			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isPotion()
+			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isStatic()
 					&& Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				hp *= 3;
 			

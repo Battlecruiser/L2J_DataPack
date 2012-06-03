@@ -274,7 +274,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -291,7 +291,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -307,7 +307,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -326,7 +326,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="80" />
 		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="600" />
@@ -339,7 +339,7 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
 		<set name="maxNegated" val="3" />
 		<set name="target" val="TARGET_ONE" />
@@ -359,7 +359,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -376,7 +376,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
@@ -400,7 +400,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
@@ -418,7 +418,7 @@
 	<skill id="5527" levels="1" name="Overflow">
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
@@ -429,6 +429,7 @@
 		<set name="target" val="TARGET_PARTY_OTHER" />
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -444,7 +445,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -470,29 +471,34 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5532" levels="1" name="Direction-Beleth Summon Skill 1">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -500,6 +506,7 @@
 		</cond>
 	</skill>
 	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -507,6 +514,7 @@
 		</cond>
 	</skill>
 	<skill id="5537" levels="1" name="Rudolph Cuteness Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
@@ -514,6 +522,7 @@
 		</cond>
 	</skill>
 	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -522,6 +531,7 @@
 		</cond>
 	</skill>
 	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -535,9 +545,9 @@
 		</for>
 	</skill>
 	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
@@ -546,10 +556,10 @@
 		</cond>
 	</skill>
 	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
@@ -560,6 +570,7 @@
 		</cond>
 	</skill>
 	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -568,6 +579,7 @@
 		</cond>
 	</skill>
 	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -581,9 +593,9 @@
 		</for>
 	</skill>
 	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
@@ -592,10 +604,10 @@
 		</cond>
 	</skill>
 	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
@@ -606,6 +618,7 @@
 		</cond>
 	</skill>
 	<skill id="5546" levels="1" name="Alert">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -725,6 +738,7 @@
 	<skill id="5556" levels="1" name="Protection Power">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered Skill for Protection of Rune/Elemental/Alignment -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="target" val="TARGET_SELF" />
@@ -745,6 +759,7 @@
 	</skill>
 	<skill id="5557" levels="1" name="Protection of Elemental">
 		<!-- Not Used Anymore -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="30000" />
@@ -752,6 +767,7 @@
 	</skill>
 	<skill id="5558" levels="1" name="Protection of Alignment">
 		<!-- Not Used Anymore -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="30000" />
@@ -760,6 +776,7 @@
 	<skill id="5559" levels="1" name="Physical Pose">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered Skill for Fighter's/Archer's Will -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
@@ -775,6 +792,7 @@
 	</skill>
 	<skill id="5560" levels="1" name="Archer's Will">
 		<!-- Not Used Anymore -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="30000" />
@@ -787,6 +805,7 @@
 		<table name="#cAtk"> 1 1 1.25 </table>
 		<table name="#rCrit"> 0 0.3 0.3 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
@@ -807,6 +826,7 @@
 		<table name="#elementRes"> 0 30 30 </table>
 		<table name="#gainHp"> 1 1 1.3 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
@@ -828,6 +848,7 @@
 		<table name="#rCrit"> 0 0 0.2 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
 		<table name="#waterPower"> 0 20 20 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="skillType" val="BUFF" />
@@ -848,6 +869,7 @@
 		<table name="#activationChance"> 10 10 0 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
 		<table name="#windPower"> 0 20 20 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
@@ -887,12 +909,14 @@
 		</for>
 	</skill>
 	<skill id="5566" levels="1" name="Post of Destruction">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5567" levels="1" name="Flame Armor">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -904,6 +928,7 @@
 	</skill>
 	<skill id="5568" levels="1" name="Frost Armor">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isDebuff" val="true" />
@@ -923,6 +948,7 @@
 	</skill>
 	<skill id="5569" levels="1" name="Hurricane Armor">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isDebuff" val="true" />
@@ -942,6 +968,7 @@
 	</skill>
 	<skill id="5570" levels="1" name="Excessive Loyalty">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="target" val="TARGET_PET" />
 		<set name="skillType" val="BUFF" />
@@ -958,6 +985,7 @@
 	</skill>
 	<skill id="5571" levels="1" name="Mutual Response">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -973,6 +1001,7 @@
 	<skill id="5572" levels="1" name="Warrior Ability - Haste">
 		<!-- CT2.5 retail confirmed -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -990,6 +1019,7 @@
 	</skill>
 	<skill id="5573" levels="1" name="Knight Ability - Defense">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1008,6 +1038,7 @@
 	</skill>
 	<skill id="5574" levels="1" name="Log Ability - Critical Chance">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1036,6 +1067,7 @@
 	</skill>
 	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1063,6 +1095,7 @@
 	</skill>
 	<skill id="5578" levels="1" name="Summoner Ability - Spirit">
 		<!-- CT2.5 retail confirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1085,7 +1118,7 @@
 		<!-- Smart Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="408" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
@@ -1189,7 +1222,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1214,7 +1247,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1239,7 +1272,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1264,7 +1297,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1287,7 +1320,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="HEAL" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="power" val="#amount" />
 		<set name="castRange" val="600" />
@@ -1298,6 +1331,7 @@
 		<!-- Curse of Life Flow effect -->
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#amount"> 189 196 203 210 217 223 229 234 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1313,6 +1347,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 80 81 81 81 82 82 82 83 83 83 84 84 85 85 85 85 </table>
 		<table name="#power"> 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
@@ -1337,7 +1372,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="119" />
 		<set name="mpInitialConsume" val="29" />

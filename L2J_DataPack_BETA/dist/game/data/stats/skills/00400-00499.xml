@@ -836,7 +836,6 @@
 		<table name="#mpConsume"> 122 159 183 204 </table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1661" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1067,12 +1066,14 @@
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
 		<!-- Not Used Anymore -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA5" />
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
 		<!-- Not Used Anymore -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA5" />
@@ -1348,7 +1349,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="PhoenixBless" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="resurrection_special" />
@@ -1503,6 +1504,7 @@
 	<skill id="448" levels="1" name="Summon Swoop Cannon" enchantGroup1="1">
 		<!-- TODO: Needs to be verified "Is enchantable but no stats for the +Power versions" -->
 		<table name="#ench1npcId"> 14840 14841 14842 14843 14844 14845 14846 14847 14848 14849 14850 14851 14852 14853 14854 14855 14856 14857 14858 14859 14860 14861 14862 14863 14864 14865 14866 14867 14868 14869 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="530" />
 		<set name="magicLvl" val="68" />
 		<set name="itemConsumeIdOT" val="2132" />
@@ -1531,7 +1533,7 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1919 1967 2015 2061 2106 2151 2194 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 </table>
 		<set name="hitTime" val="6000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1671,11 +1673,11 @@
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="180" />
@@ -1695,11 +1697,11 @@
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="castRange" val="900" />
@@ -1721,11 +1723,11 @@
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="180" />
@@ -1745,11 +1747,11 @@
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="180" />
@@ -1769,11 +1771,11 @@
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="180" />
@@ -1793,11 +1795,11 @@
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="180" />
@@ -1817,11 +1819,11 @@
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillRadius" val="180" />
@@ -1997,7 +1999,7 @@
 	<skill id="469" levels="1" name="Rapid Attack">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="10" />
 		<set name="mpConsume" val="11" />
 		<set name="mpInitialConsume" val="3" />
@@ -2466,7 +2468,7 @@
 	<skill id="491" levels="1" name="Not In Use">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="1461" />
 		<set name="magicLvl" val="36" />

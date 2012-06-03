@@ -457,7 +457,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 20 28 36 43 49 55 60 64 68 72 </table>
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="1" />
 		<set name="operateType" val="A1" />
@@ -475,7 +475,7 @@
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="10112" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A1" />
@@ -597,7 +597,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="1461" />
 		<set name="magicLvl" val="60" />
@@ -624,7 +624,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="1462" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="398" />
 		<set name="operateType" val="A1" />
@@ -831,7 +831,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="DECOY" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="summonTotalLifeTime" val="20000" />
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -930,14 +930,13 @@
 	<skill id="529" levels="1" name="Song of Elemental" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
+		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="54" />
-		<set name="nextDanceCost" val="27" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
-		<set name="isDance" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="523" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -961,14 +960,13 @@
 	<skill id="530" levels="1" name="Dance of Alignment" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
+		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="54" />
-		<set name="nextDanceCost" val="27" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
-		<set name="isDance" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="523" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -1161,7 +1159,7 @@
 	<skill id="541" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1186,7 +1184,7 @@
 	<skill id="542" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1211,7 +1209,7 @@
 	<skill id="543" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1236,7 +1234,7 @@
 	<skill id="544" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1261,7 +1259,7 @@
 	<skill id="545" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1286,7 +1284,7 @@
 	<skill id="546" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1311,7 +1309,7 @@
 	<skill id="547" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1336,7 +1334,7 @@
 	<skill id="548" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1361,7 +1359,7 @@
 	<skill id="549" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1386,7 +1384,7 @@
 	<skill id="550" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1411,7 +1409,7 @@
 	<skill id="551" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1436,7 +1434,7 @@
 	<skill id="552" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1461,7 +1459,7 @@
 	<skill id="553" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1486,7 +1484,7 @@
 	<skill id="554" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1511,7 +1509,7 @@
 	<skill id="555" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1536,7 +1534,7 @@
 	<skill id="556" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1561,7 +1559,7 @@
 	<skill id="557" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1586,7 +1584,7 @@
 	<skill id="558" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1759,7 +1757,7 @@
 		<set name="skillType" val="HEAL" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
@@ -1849,7 +1847,7 @@
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />

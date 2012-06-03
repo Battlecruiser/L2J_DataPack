@@ -1,100 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23100" levels="1" name="Fourth Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23101" levels="1" name="5th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23102" levels="1" name="6th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23103" levels="1" name="7th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23104" levels="1" name="8th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23105" levels="1" name="9th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23106" levels="1" name="10th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23107" levels="1" name="11th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23108" levels="1" name="12th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23109" levels="1" name="13th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23110" levels="1" name="14th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23111" levels="1" name="15th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23112" levels="1" name="16th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23113" levels="1" name="17th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23114" levels="1" name="18th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23115" levels="1" name="19th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23116" levels="1" name="20th Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23117" levels="1" name="Zombie Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1535" />
 		</cond>
 	</skill>
 	<skill id="23118" levels="1" name="Zombie Agathion Special Skill - Escape from Death">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -104,44 +122,47 @@
 		</cond>
 	</skill>
 	<skill id="23119" levels="1" name="Baekyi Hwamae Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1536" />
 		</cond>
 	</skill>
 	<skill id="23120" levels="1" name="Kwanwoo Hwamae Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1537" />
 		</cond>
 	</skill>
 	<skill id="23121" levels="1" name="Jack Game - Gauge">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23122" levels="1" name="Jack Game - Target">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23123" levels="1" name="Gwangong Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1551" />
 		</cond>
 	</skill>
 	<skill id="23124" levels="1" name="Gwangong Agathion Special Skill - Aura of Fury">
 		<!-- Stimulates the enemy's attack by 6983 Power. Cooldown of 1 minute. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -152,15 +173,16 @@
 		</cond>
 	</skill>
 	<skill id="23125" levels="1" name="Gwanseum Nyang Nyang Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1552" />
 		</cond>
 	</skill>
 	<skill id="23126" levels="1" name="Gwanseum Nyang Nyang Agathion Special Skill - Blessing of Mercy">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -169,15 +191,16 @@
 		</cond>
 	</skill>
 	<skill id="23127" levels="1" name="Blue Opera Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1553" />
 		</cond>
 	</skill>
 	<skill id="23128" levels="1" name="Blue Opera Agathion Special Skill - Sword of Recovery">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -194,10 +217,10 @@
 		</cond>
 	</skill>
 	<skill id="23130" levels="1" name="Red Opera Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1554" />
 		</cond>
@@ -211,30 +234,30 @@
 		</cond>
 	</skill>
 	<skill id="23132" levels="1" name="Opera Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1555" />
 		</cond>
 	</skill>
 	<skill id="23133" levels="1" name="Miss Chipao Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1556" />
 		</cond>
 	</skill>
 	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill - Decrease Weight">
 		<!-- For 1 hour, increases the weight penalty interval by 9000. Reuse delay is 4 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<cond msgId="2292">
 			<player agathionId="1556" />
@@ -246,21 +269,21 @@
 		</for>
 	</skill>
 	<skill id="23135" levels="1" name="Nepal Snow Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1557" />
 		</cond>
 	</skill>
 	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hour. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -273,21 +296,21 @@
 		</for>
 	</skill>
 	<skill id="23137" levels="1" name="Round Ball Snow Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1558" />
 		</cond>
 	</skill>
 	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
 		<!-- Increases Casting Spd. by 30% for 20 minutes. Reuse delay is 1 hour. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -300,21 +323,21 @@
 		</for>
 	</skill>
 	<skill id="23139" levels="1" name="Ladder Snow Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1559" />
 		</cond>
 	</skill>
 	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hour. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="trait" val="ETC" />
@@ -328,115 +351,116 @@
 		</for>
 	</skill>
 	<skill id="23141" levels="1" name="Iken Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1539" />
 		</cond>
 	</skill>
 	<skill id="23142" levels="1" name="Lana Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1540" />
 		</cond>
 	</skill>
 	<skill id="23143" levels="1" name="Gnocian Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1541" />
 		</cond>
 	</skill>
 	<skill id="23144" levels="1" name="Orodriel Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1542" />
 		</cond>
 	</skill>
 	<skill id="23145" levels="1" name="Lakinos Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1543" />
 		</cond>
 	</skill>
 	<skill id="23146" levels="1" name="Mortia Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1544" />
 		</cond>
 	</skill>
 	<skill id="23147" levels="1" name="Hayance Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1545" />
 		</cond>
 	</skill>
 	<skill id="23148" levels="1" name="Meruril Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1546" />
 		</cond>
 	</skill>
 	<skill id="23149" levels="1" name="Taman ze Lapatui Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1547" />
 		</cond>
 	</skill>
 	<skill id="23150" levels="1" name="Kaurin Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1548" />
 		</cond>
 	</skill>
 	<skill id="23151" levels="1" name="Ahertbein Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1549" />
 		</cond>
 	</skill>
 	<skill id="23152" levels="1" name="Naonin Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1550" />
 		</cond>
 	</skill>
 	<skill id="23153" levels="1" name="Prominent Outsider Adventurer's Ability">
 		<!-- For 20 minutes, raises HP by 20%, Max MP by 20%, and moving speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. Increases resistance to de-buffs by 10%. Reuse delay is 4 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -444,21 +468,23 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23154" levels="1" name="Kadomas Special Skill - Fireworks">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="60000" />
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23155" levels="1" name="Reindeer Scratch">
 		<!-- Raises affection level. For 10 minutes, raises physical critical rate by 30% and chance of magical critical rate by 2. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23156" levels="1" name="Gift of Thanks">
 		<!-- Energy level is maintained for 10 minutes. Reuse delay is 2 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -466,46 +492,54 @@
 	</skill>
 	<skill id="23157" levels="1" name="Donateloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases physical Atk. Spd. by 20%. Bestows the ability to recover as HP 10% of the standard short-range physical damage inflicted on the enemy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23158" levels="1" name="Raphaeloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increasesw physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases the rate of Critical attack by 30%. Increases the power of Critical attack by 10%. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23159" levels="1" name="Leonardoph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magic M. Atk. by 10%. Increases magic Casting Spd. by 20%. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23160" levels="1" name="Michelangeloph's Blessing">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magical critical power by 20% and the chance of magical critical rate by 2. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23161" levels="1" name="Rudolphina's Blessing - Maintain Vitality">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23162" levels="1" name="Rudolphina's Blessing - Replenish Vitality">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23163" levels="1" name="Turkey's Big Mistake">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 50%. Increases physical P. Atk., magic M. Atk., physical P. Def., and magic M. Def. by 20%. Increases moving speed by 30%. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23164" levels="1" name="Opera Agathion Special Skill - Sword of Life">
 		<!-- Can use the ability of Blessed Resurrection through the power of life. Reuse delay is 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -516,24 +550,28 @@
 	</skill>
 	<skill id="23165" levels="1" name="Inadequate Affection">
 		<!-- For 10 seconds, moving speed decreases by 2%, and your head gets bigger. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23166" levels="1" name="Energized Rose Spirit">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23167" levels="1" name="Rosy Seduction">
 		<!-- Increases Max HP by 20%, Max MP by 20%, and the moving speed by 20% for 5 minutes. Increases the resistance to de-buffs by 10%. Reuse delay 10 minutes. Consumes 3 Rose Essence during skill use. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23168" levels="1" name="Critical Seduction">
 		<!-- Increases party members' Max HP by 30%, Max MP by 30%, Max CP by 30%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20%, and physical P. Atk. by 10%, and decreases MP consumption during skill use by 15% for 20 minutes. Reuse delay 40 minutes. Consumes 10 Rose Essence during skill use. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -541,6 +579,7 @@
 	</skill>
 	<skill id="23169" levels="1" name="Mesmerized">
 		<!-- Critical Seduction has left you mesmerized. You cannot be buffed with Critical Seduction again during the next 40 minutes. -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -548,27 +587,28 @@
 	</skill>
 	<skill id="23170" levels="1" name="Mesmerized">
 		<!-- Rosy Seduction has left you mesmerized. You cannot be buffed with Rosy Seduction again during the next 10 minutes. -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23171" levels="1" name="Phoenix Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1574" />
 		</cond>
 	</skill>
 	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill - Nirvana Rebirth">
 		<!-- All HP, MP, CP are recovered, and becomes invincible for 5 seconds with the power of Phoenix. Possible to use under HP 30% only. Cooldown of 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
@@ -587,13 +627,13 @@
 	</skill>
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="power" val="100" />
 		<set name="hitTime" val="2000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<cond msgId="2292">
@@ -602,6 +642,7 @@
 	</skill>
 	<skill id="23174" levels="1" name="Narrow Escape from Death">
 		<!-- Revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained, though the Blessing of Noblesse and the Amulet of Luck will both be lost. Cooldown of 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -610,6 +651,7 @@
 	</skill>
 	<skill id="23175" levels="1" name="Soul Stealth">
 		<!-- Hides for 5 seconds, then bestows the ability not to provoke preemptive attacks from monsters for 2 minutes. Decreases moving speed by 50% while the skill is in effect. Reuse delay is 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -618,6 +660,7 @@
 	</skill>
 	<skill id="23176" levels="1" name="Hide">
 		<!-- Hides for 5 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -626,6 +669,7 @@
 	</skill>
 	<skill id="23177" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -634,6 +678,7 @@
 	</skill>
 	<skill id="23178" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -642,6 +687,7 @@
 	</skill>
 	<skill id="23179" levels="1" name="Blessing of Vitality">
 		<!-- Your Vitality level is maintained for 2 hours thanks to an old magic unsealed by the Magic Research Institute. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="GIVE_VITALITY" />
@@ -653,26 +699,27 @@
 		</for>
 	</skill>
 	<skill id="23180" levels="1" name="Joy of Vitality">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23181" levels="1" name="Three-headed Dragon Agathion Cute Trick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1575" />
 		</cond>
 	</skill>
 	<skill id="23182" levels="1" name="Three-headed Dragon Agathion Special Skill - Wind Walk">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -686,6 +733,7 @@
 	</skill>
 	<skill id="23183" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 30 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -694,6 +742,7 @@
 	</skill>
 	<skill id="23184" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -712,6 +761,7 @@
 	</skill>
 	<skill id="23185" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -720,6 +770,7 @@
 	</skill>
 	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -738,6 +789,7 @@
 	</skill>
 	<skill id="23187" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -746,6 +798,7 @@
 	</skill>
 	<skill id="23188" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -764,6 +817,7 @@
 	</skill>
 	<skill id="23189" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -772,6 +826,7 @@
 	</skill>
 	<skill id="23190" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -790,6 +845,7 @@
 	</skill>
 	<skill id="23191" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -798,6 +854,7 @@
 	</skill>
 	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -816,6 +873,7 @@
 	</skill>
 	<skill id="23193" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -824,6 +882,7 @@
 	</skill>
 	<skill id="23194" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -842,6 +901,7 @@
 	</skill>
 	<skill id="23195" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -850,6 +910,7 @@
 	</skill>
 	<skill id="23196" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -868,6 +929,7 @@
 	</skill>
 	<skill id="23197" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -876,6 +938,7 @@
 	</skill>
 	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="20993" />
 		<set name="operateType" val="A1" />
@@ -894,6 +957,7 @@
 	</skill>
 	<skill id="23199" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
