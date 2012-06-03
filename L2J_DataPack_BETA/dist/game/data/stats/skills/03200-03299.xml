@@ -10,7 +10,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -30,7 +29,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -50,7 +48,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -66,7 +63,6 @@
 		<set name="mpConsume" val="10" />
 		<set name="magicLvl" val="1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -117,7 +113,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="12000" />
-		<set name="staticReuse" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
@@ -729,7 +724,6 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
 		<set name="staticDamage" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -748,7 +742,6 @@
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="3262" levels="1" name="Pardon">
@@ -766,7 +759,6 @@
 		<set name="reuseDelay" val="40000" />
 		<set name="skillType" val="PDAM" />
 		<set name="staticDamage" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -868,7 +860,6 @@
 		<set name="referenceId" val="9914" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -889,7 +880,6 @@
 		<set name="referenceId" val="9926" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -910,7 +900,6 @@
 		<set name="operateType" val="A1" />
 		<set name="referenceId" val="9925" />
 		<set name="reuseDelay" val="300000" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="200" />
@@ -930,7 +919,6 @@
 		<set name="referenceId" val="9921" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -951,7 +939,6 @@
 		<set name="referenceId" val="9929" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -972,7 +959,6 @@
 		<set name="referenceId" val="9927" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -993,7 +979,6 @@
 		<set name="referenceId" val="9915" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1014,7 +999,6 @@
 		<set name="referenceId" val="9928" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1036,7 +1020,6 @@
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1059,7 +1042,6 @@
 		<set name="referenceId" val="9920" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="SilentMove" abnormalTime="120" abnormalVisualEffect="stealth" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1080,7 +1062,6 @@
 		<set name="referenceId" val="9917" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1103,7 +1084,6 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="referenceId" val="9918" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1126,7 +1106,6 @@
 		<set name="referenceId" val="9924" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1147,7 +1126,6 @@
 		<set name="referenceId" val="9932" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1169,7 +1147,6 @@
 		<set name="referenceId" val="9916" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1194,7 +1171,6 @@
 		<set name="negateAbnormals" val="bleeding,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9922" />
 		<for>
@@ -1211,7 +1187,6 @@
 		<set name="negateAbnormals" val="root_physically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9957" />
 		<for>
@@ -1228,7 +1203,6 @@
 		<set name="negateAbnormals" val="root_magically,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9956" />
 		<for>
@@ -1245,7 +1219,6 @@
 		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9923" />
 		<for>
@@ -1262,7 +1235,6 @@
 		<set name="negateAbnormals" val="silence_physical,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9958" />
 		<for>
@@ -1279,7 +1251,6 @@
 		<set name="negateAbnormals" val="silence,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9955" />
 		<for>
@@ -1296,7 +1267,6 @@
 		<set name="negateAbnormals" val="silence_all,9" />
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9959" />
 		<for>

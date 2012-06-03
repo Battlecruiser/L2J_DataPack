@@ -105,7 +105,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -120,7 +119,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -135,7 +133,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -149,7 +146,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="staticReuse" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="500" />
 		<cond msgId="109">
@@ -163,7 +159,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="staticReuse" val="true" />
 		<set name="castRange" val="400" />
 		<cond msgId="109">
 			<target npcId="13183" />
@@ -176,7 +171,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="staticReuse" val="true" />
 		<set name="castRange" val="400" />
 		<cond msgId="109">
 			<target npcId="13183" />

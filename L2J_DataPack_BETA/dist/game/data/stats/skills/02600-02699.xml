@@ -48,7 +48,6 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<!-- set name="reuseDelay" val="86400000" / -->
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -239,7 +238,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>

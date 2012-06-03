@@ -62,7 +62,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="21105" levels="1" name="Agathion Seal Cancel - Chon-chon">
@@ -275,7 +274,6 @@
 		<set name="effectRange" val="500" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
@@ -285,7 +283,6 @@
 		<set name="effectRange" val="500" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
@@ -705,7 +702,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="300000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21153" levels="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Reuse Delay 1 hours. -->
@@ -715,7 +711,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.25" />
@@ -730,7 +725,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxMp" val="1.25" />
@@ -886,7 +880,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.25" />
@@ -1078,7 +1071,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="staticReuse" val="true" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1090,7 +1082,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="staticReuse" val="true" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1102,7 +1093,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21198" levels="1" name="Silence of Fidelity">
 		<!-- Through the power of loyalty, raises party members' physical P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and moving speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
@@ -1111,7 +1101,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
@@ -1121,6 +1110,5 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 </list>

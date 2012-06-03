@@ -59,7 +59,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -413,7 +412,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="1538" />
@@ -429,7 +427,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="SPAWN" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">

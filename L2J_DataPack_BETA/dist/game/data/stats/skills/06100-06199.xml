@@ -130,7 +130,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -151,7 +150,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -166,7 +164,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="1000" />
 	</skill>
@@ -747,7 +744,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="72000000" />
-		<set name="staticReuse" val="true" />
 		<set name="coolTime" val="1000" />
 	</skill>
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">

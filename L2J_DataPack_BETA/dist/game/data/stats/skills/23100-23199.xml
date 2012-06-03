@@ -285,7 +285,6 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1557" />
 		</cond>
@@ -312,7 +311,6 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1558" />
 		</cond>
@@ -339,7 +337,6 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
 			<player agathionId="1559" />
@@ -465,7 +462,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23154" levels="1" name="Kadomas Special Skill - Fireworks">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -473,7 +469,6 @@
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="60000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23155" levels="1" name="Reindeer Scratch">
 		<!-- Raises affection level. For 10 minutes, raises physical critical rate by 30% and chance of magical critical rate by 2. -->
@@ -610,7 +605,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -634,7 +628,6 @@
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="power" val="100" />
 		<set name="hitTime" val="2000" />
-		<set name="staticReuse" val="true" />
 		<set name="reuseDelay" val="14400000" />
 		<cond msgId="2292">
 			<player agathionId="1574" />
@@ -647,7 +640,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23175" levels="1" name="Soul Stealth">
 		<!-- Hides for 5 seconds, then bestows the ability not to provoke preemptive attacks from monsters for 2 minutes. Decreases moving speed by 50% while the skill is in effect. Reuse delay is 12 hours. -->
@@ -656,7 +648,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23176" levels="1" name="Hide">
 		<!-- Hides for 5 seconds. -->
@@ -665,7 +656,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23177" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
@@ -674,7 +664,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23178" levels="1" name="Soul Stealth">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
@@ -721,7 +710,6 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1575" />
 		</cond>
@@ -738,7 +726,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23184" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -766,7 +753,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -794,7 +780,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23188" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -822,7 +807,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23190" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -850,7 +834,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -878,7 +861,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23194" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -906,7 +888,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23196" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -934,7 +915,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
@@ -962,6 +942,5 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 </list>
