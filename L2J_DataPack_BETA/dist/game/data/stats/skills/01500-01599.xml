@@ -1147,6 +1147,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1185,6 +1186,7 @@
 		<!-- NOTE: skill desc says "increases the elemental attribute" but is client typo, it increase defense (see skill icon) -->
 		<set name="aggroPoints" val="624" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="220" />
 		<set name="mpInitialConsume" val="55" />
@@ -1206,6 +1208,7 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="566" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
@@ -1222,6 +1225,7 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="566" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="67" />
 		<set name="mpInitialConsume" val="16" />
@@ -1238,6 +1242,7 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="936" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="155" />
 		<set name="mpInitialConsume" val="38" />
@@ -1255,6 +1260,7 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="398" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="4" />
 		<set name="itemConsumeId" val="3031" />
 		<!-- set name="maxTargets" val="10" / TODO: Require Support -->
@@ -1273,6 +1279,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="116" />
 		<set name="mpInitialConsume" val="29" />
@@ -1292,6 +1299,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="82" />
 		<set name="mpConsume" val="99" />
 		<set name="mpInitialConsume" val="24" />
@@ -1309,6 +1317,7 @@
 		<!-- High Five Skill -->
 		<set name="aggroPoints" val="204" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="90" />
 		<set name="mpInitialConsume" val="22" />
@@ -1329,6 +1338,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="35" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -1358,6 +1368,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -1453,6 +1464,7 @@
 		<table name="#stackOrder"> 1 2 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1484,6 +1496,7 @@
 		<table name="#stackOrder"> 1 2 </table>
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
