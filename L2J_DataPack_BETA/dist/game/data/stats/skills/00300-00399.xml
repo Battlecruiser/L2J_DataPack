@@ -1802,32 +1802,37 @@
 		</enchant2for>
 	</skill>
 	<skill id="358" levels="1" name="Bluff" enchantGroup1="6">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="35" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
-		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="A2" />
-		<set name="castRange" val="40" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="1000" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" effectType="STUN" />
-			<effect name="Bluff" noicon="1" val="0" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" effectType="DEBUFF" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Bluff" noicon="1" val="0" effectPower="80" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
 		</for>
+		<enchant1for>
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="#ench1Power" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Bluff" noicon="1" val="0" effectPower="80" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
+		</enchant1for>
 	</skill>
 	<skill id="359" levels="1" name="Eye of Hunter" enchantGroup1="5" enchantGroup2="5">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
