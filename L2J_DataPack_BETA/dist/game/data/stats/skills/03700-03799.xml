@@ -387,7 +387,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="poisonVuln" val="8" />
 			<sub order="0x40" stat="bleedVuln" val="8" />
 		</for>
@@ -398,7 +398,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="poisonVuln" val="8" />
 			<sub order="0x40" stat="bleedVuln" val="8" />
 		</for>
@@ -410,7 +410,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bleedVuln" val="52" />
-			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="weightPenalty" val="8159" />
 			<add order="0x40" stat="poisonVuln" val="52" />
 			<mul order="0x30" stat="pAtkSpd" val="1.0932" />
 		</for>
@@ -421,7 +421,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
-			<add order="0x40" stat="maxLoad" val="1440" />
+			<add order="0x40" stat="weightPenalty" val="1440" />
 			<sub order="0x40" stat="poisonVuln" val="12" />
 			<sub order="0x40" stat="bleedVuln" val="12" />
 		</for>
@@ -570,7 +570,7 @@
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="stunVuln" val="8.33" />
 		</for>
 	</skill>
@@ -580,7 +580,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="weightPenalty" val="8159" />
 			<add order="0x40" stat="maxMp" val="340" />
 			<mul order="0x30" stat="pAtk" val="1.0932">
 				<using kind="Bow,Crossbow" />
@@ -597,7 +597,7 @@
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="stunVuln" val="8.33" />
 		</for>
 	</skill>
@@ -610,7 +610,7 @@
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="60" />
-			<add order="0x40" stat="maxLoad" val="1440" />
+			<add order="0x40" stat="weightPenalty" val="1440" />
 			<sub order="0x40" stat="stunVuln" val="12.5" />
 		</for>
 	</skill>
@@ -778,7 +778,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="maxMp" val="74" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
 	<skill id="3776" levels="1" name="Draconic Leather Boots">
@@ -789,7 +789,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="maxMp" val="74" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
 	<skill id="3777" levels="1" name="Draconic Leather Armor">
@@ -798,7 +798,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="weightPenalty" val="8159" />
 			<add order="0x40" stat="maxMp" val="630" />
 			<mul order="0x30" stat="pAtk" val="1.058" />
 			<mul order="0x30" stat="pAtkSpd" val="1.058" />
@@ -812,7 +812,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="maxMp" val="111" />
-			<add order="0x40" stat="maxLoad" val="1440" />
+			<add order="0x40" stat="weightPenalty" val="1440" />
 		</for>
 	</skill>
 	<skill id="3779" levels="1" name="Major Arcana Gloves">
@@ -823,7 +823,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="stunVuln" val="8.3" />
 		</for>
 	</skill>
@@ -834,7 +834,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="cancel" val="21" />
-			<add order="0x40" stat="maxLoad" val="8159" />
+			<add order="0x40" stat="weightPenalty" val="8159" />
 			<mul order="0x30" stat="mAtk" val="1.1603" />
 			<mul order="0x30" stat="runSpd" val="1.0991" />
 			<sub order="0x40" stat="stunVuln" val="20.83" />
@@ -848,7 +848,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 			<sub order="0x40" stat="stunVuln" val="8.3" />
 		</for>
 	</skill>
@@ -860,7 +860,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0062" />
 			<add order="0x40" stat="runSpd" val="1.175" />
 			<sub order="0x40" stat="cancel" val="13" />
-			<add order="0x40" stat="maxLoad" val="1440" />
+			<add order="0x40" stat="weightPenalty" val="1440" />
 			<sub order="0x40" stat="stunVuln" val="12.5" />
 		</for>
 	</skill>

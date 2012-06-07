@@ -90,7 +90,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
+			<add order="0x40" stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
 		</for>
 	</skill>
 	<skill id="3513" levels="1" name="Demon's Set">
@@ -156,7 +156,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0525" /> <!-- M. Def. +5.25% -->
-			<add order="0x40" stat="maxLoad" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
+			<add order="0x40" stat="weightPenalty" val="5795" /> <!-- Point at which a weight penalty is applied +5795 -->
 		</for>
 	</skill>
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
@@ -239,7 +239,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
 			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
 		</for>
@@ -320,7 +320,7 @@
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 		</for>
 	</skill>
@@ -468,7 +468,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
 			<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 		</for>
 	</skill>
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
@@ -478,7 +478,7 @@
 			<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
 		</for>
 	</skill>

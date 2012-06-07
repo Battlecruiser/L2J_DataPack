@@ -618,7 +618,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="maxLoad" val="2" />
+			<mul order="0x30" stat="weightLimit" val="2" />
 		</for>
 	</skill>
 	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">

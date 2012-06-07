@@ -60,7 +60,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="9000" />
+			<add order="0x40" stat="weightPenalty" val="9000" />
 		</for>
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
@@ -934,7 +934,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<mul order="0x30" stat="maxLoad" val="1.2" />
+			<mul order="0x30" stat="weightLimit" val="1.2" />
 		</for>
 	</skill>
 	<skill id="3499" levels="1" name="Transform Dispel">

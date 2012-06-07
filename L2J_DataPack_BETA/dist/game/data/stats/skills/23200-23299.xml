@@ -680,7 +680,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="decrease_weight_penalty">
-				<add order="0x40" stat="maxLoad" val="9000" />
+				<add order="0x40" stat="weightPenalty" val="9000" />
 			</effect>
 		</for>
 	</skill>
