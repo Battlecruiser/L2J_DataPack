@@ -379,6 +379,7 @@ move ls_errors.log %workdir%
 goto ls_install
 
 :ls_install
+cls
 set cmdline=
 if %full% == 1 (
 title L2JDP Installer - Login Server DataBase Installing...
@@ -542,6 +543,7 @@ move cs_errors.log %workdir%
 goto cs_install
 
 :cs_install
+cls
 set cmdline=
 if %full% == 1 (
 title L2JDP Installer - Community Server DataBase Installing...
@@ -696,6 +698,7 @@ move gs_errors.log %workdir%
 goto gs_install
 
 :gs_install
+cls
 set cmdline=
 if %full% == 1 (
 title L2JDP Installer - Game Server DataBase Installing...
