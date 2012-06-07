@@ -9,7 +9,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
 			<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -26,7 +26,7 @@
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
 			<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight Limit +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -1157,7 +1157,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="#maxLoad" />
+			<add order="0x40" stat="weightLimit" val="#maxLoad" />
 		</for>
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">

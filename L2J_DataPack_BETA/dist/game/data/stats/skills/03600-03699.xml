@@ -239,7 +239,7 @@
 			<add order="0x40" stat="pDef" val="16">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
@@ -282,7 +282,7 @@
 			<add order="0x40" stat="pDef" val="24">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
@@ -325,7 +325,7 @@
 			<add order="0x40" stat="pDef" val="28">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
@@ -368,7 +368,7 @@
 			<add order="0x40" stat="pDef" val="32">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
@@ -411,7 +411,7 @@
 			<add order="0x40" stat="pDef" val="38">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
@@ -1136,7 +1136,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0125" />
-			<add order="0x40" stat="maxLoad" val="1440" />
+			<add order="0x40" stat="weightPenalty" val="1440" />
 		</for>
 	</skill>
 	<skill id="3689" levels="1" name="Avadon Gloves">
@@ -1145,7 +1145,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0083" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
 	<skill id="3690" levels="1" name="Avadon Leather Armor">
@@ -1154,7 +1154,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="11038" />
+			<add order="0x40" stat="weightPenalty" val="11038" />
 			<mul order="0x30" stat="mDef" val="1.1708" />
 		</for>
 	</skill>
@@ -1164,7 +1164,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0083" />
-			<add order="0x40" stat="maxLoad" val="960" />
+			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
 	<skill id="3692" levels="1" name="Avadon Circlet">

@@ -917,7 +917,7 @@
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />

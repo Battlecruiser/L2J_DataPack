@@ -533,7 +533,7 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="decrease_weight_penalty">
-				<add order="0x40" stat="maxLoad" val="#Weight" />
+				<add order="0x40" stat="weightPenalty" val="#Weight" />
 			</effect>
 		</for>
 		<table name="#mpConsume"> 50 0 100 </table>
@@ -971,7 +971,7 @@
 		<set name="canBeDispeled" val="false" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ssq_town_blessing">
-				<mul order="0x30" stat="maxLoad" val="1.25" />
+				<mul order="0x30" stat="weightLimit" val="1.25" />
 				<sub order="0x40" stat="poisonVuln" val="25" />
 				<sub order="0x40" stat="bleedVuln" val="25" />
 				<sub order="0x40" stat="rootVuln" val="#additionalVulns" />
@@ -1012,8 +1012,8 @@
 		<set name="effectRange" val="900" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="decrease_weight_penalty	">
-				<mul order="0x30" stat="maxLoad" val="1.25" />
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="decrease_weight_penalty">
+				<mul order="0x30" stat="weightLimit" val="1.25" />
 				<sub order="0x40" stat="poisonVuln" val="25" />
 				<sub order="0x40" stat="bleedVuln" val="25" />
 			</effect>

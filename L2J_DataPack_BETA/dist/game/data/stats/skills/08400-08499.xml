@@ -765,7 +765,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="3000" />
+			<add order="0x40" stat="weightLimit" val="3000" />
 		</for>
 	</skill>
 	<skill id="8459" levels="1" name="Necklace of Freya">
@@ -851,7 +851,7 @@
 			<add order="0x40" stat="pDef" val="45">
 				<using kind="Magic" />
 			</add>
-			<mul order="0x30" stat="maxLoad" val="1.3" />
+			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
 	<skill id="8464" levels="1" name="Release the Seal on Agathion - Kid Rudolph">

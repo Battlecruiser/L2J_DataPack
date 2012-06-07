@@ -981,7 +981,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<mul order="0x30" stat="maxLoad" val="#rate" />
+			<mul order="0x30" stat="weightLimit" val="#rate" />
 		</for>
 	</skill>
 	<skill id="153" levels="4" name="Shield Mastery" enchantGroup1="1">
