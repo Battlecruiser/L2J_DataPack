@@ -252,6 +252,7 @@ ls_install
 }
 
 ls_install(){
+clear
 if [ "$1" == "I" ]; then 
 echo ""
 echo "Installing new Login Server content."
@@ -338,6 +339,7 @@ cs_install
 }
 
 cs_install(){
+clear
 if [ "$1" == "I" ]; then 
 echo ""
 echo "Installing new Community Server content."
@@ -424,6 +426,7 @@ gs_install
 }
 
 gs_install(){
+clear
 if [ "$1" == "I" ]; then 
 echo ""
 echo "Installing new Game Server content."

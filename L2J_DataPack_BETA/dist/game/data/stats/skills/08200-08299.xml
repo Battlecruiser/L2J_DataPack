@@ -1153,11 +1153,11 @@
 		</for>
 	</skill>
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
-		<table name="#maxLoad"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
+		<table name="weightPenalty"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="weightLimit" val="#maxLoad" />
+			<add order="0x40" stat="weightPenalty" val="weightPenalty" />
 		</for>
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">
