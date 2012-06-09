@@ -53,7 +53,7 @@ public final class SkillTransferValidator extends L2Script
 	@Override
 	public String onEnterWorld(L2PcInstance player)
 	{
-		if (getTransferClassIndex(player) > 0)
+		if (getTransferClassIndex(player) >= 0)
 		{
 			addProfessionChangeNotify(player);
 			startQuestTimer("givePormanders", 2000, null, player);
