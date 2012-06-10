@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Require support -->
 <pcBaseStats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/pcBaseStats.xsd">
 	<!-- PC's basic weapons and armor stats -->
 	<!-- Base pAtk -->
@@ -85,27 +86,27 @@
 	<baseAtkSpd classId="53" sex="male" val="300" /> <!-- Male Dwarven Fighter -->
 	<baseAtkSpd classId="124" sex="female" val="300" /> <!-- Female Soldier -->
 	<baseAtkSpd classId="123" sex="male" val="300" /> <!-- Male Male Soldier -->
-	<!-- Base pDef "Chest,Legs,Pitch,Boots,Glooves,Underwear,Cloak" -->
-	<basePdef classId="0" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Human Fighter -->
-	<basePdef classId="0" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Human Fighter -->
-	<basePdef classId="10" sex="female" val="15,8,12,7,8,3,1" /> <!-- Female Human Mystic -->
-	<basePdef classId="10" sex="male" val="15,8,12,7,8,3,1" /> <!-- Male Human Mystic -->
-	<basePdef classId="18" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Elven Fighter -->
-	<basePdef classId="18" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Elven Fighter -->
-	<basePdef classId="25" sex="female" val="15,8,12,7,8,3,1" /> <!-- Female Elven Mystic -->
-	<basePdef classId="25" sex="male" val="15,8,12,7,8,3,1" /> <!-- Male Elven Mystic -->
-	<basePdef classId="31" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Dark Fighter -->
-	<basePdef classId="31" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Dark Fighter -->
-	<basePdef classId="38" sex="female" val="15,8,12,7,8,3,1" /> <!-- Female Dark Mystic -->
-	<basePdef classId="38" sex="male" val="15,8,12,7,8,3,1" /> <!-- Male Dark Mystic -->
-	<basePdef classId="44" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Orc Fighter -->
-	<basePdef classId="44" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Orc Fighter -->
-	<basePdef classId="49" sex="female" val="15,8,12,7,8,3,1" /> <!-- Female Orc Mystic -->
-	<basePdef classId="49" sex="male" val="15,8,12,7,8,3,1" /> <!-- Male Orc Mystic -->
-	<basePdef classId="53" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Dwarven Fighter -->
-	<basePdef classId="53" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Dwarven Fighter -->
-	<basePdef classId="124" sex="female" val="31,18,12,7,8,3,1" /> <!-- Female Soldier -->
-	<basePdef classId="123" sex="male" val="31,18,12,7,8,3,1" /> <!-- Male Male Soldier -->
+	<!-- Base pDef -->
+	<basePdef classId="0" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Human Fighter -->
+	<basePdef classId="0" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Human Fighter -->
+	<basePdef classId="10" sex="female" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Human Mystic -->
+	<basePdef classId="10" sex="male" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Human Mystic -->
+	<basePdef classId="18" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Elven Fighter -->
+	<basePdef classId="18" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Elven Fighter -->
+	<basePdef classId="25" sex="female" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Elven Mystic -->
+	<basePdef classId="25" sex="male" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Elven Mystic -->
+	<basePdef classId="31" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Dark Fighter -->
+	<basePdef classId="31" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Dark Fighter -->
+	<basePdef classId="38" sex="female" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Dark Mystic -->
+	<basePdef classId="38" sex="male" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Dark Mystic -->
+	<basePdef classId="44" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Orc Fighter -->
+	<basePdef classId="44" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Orc Fighter -->
+	<basePdef classId="49" sex="female" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Orc Mystic -->
+	<basePdef classId="49" sex="male" chest="15" legs="8" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Orc Mystic -->
+	<basePdef classId="53" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Dwarven Fighter -->
+	<basePdef classId="53" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Dwarven Fighter -->
+	<basePdef classId="124" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Soldier -->
+	<basePdef classId="123" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Male Soldier -->
 	<!-- Base mAtk -->
 	<baseMatk classId="0" sex="female" val="6" /> <!-- Female Human Fighter -->
 	<baseMatk classId="0" sex="male" val="6" /> <!-- Male Human Fighter -->
@@ -127,27 +128,27 @@
 	<baseMatk classId="53" sex="male" val="6" /> <!-- Male Dwarven Fighter -->
 	<baseMatk classId="124" sex="female" val="6" /> <!-- Female Soldier -->
 	<baseMatk classId="123" sex="male" val="6" /> <!-- Male Male Soldier -->
-	<!-- Base mDef "Right Earring,Left Earring,Right Ring,Left Ring,Neck" -->
-	<baseMdef classId="0" sex="female" val="9,9,5,5,13" /> <!-- Female Human Fighter -->
-	<baseMdef classId="0" sex="male" val="9,9,5,5,13" /> <!-- Male Human Fighter -->
-	<baseMdef classId="10" sex="female" val="9,9,5,5,13" /> <!-- Female Human Mystic -->
-	<baseMdef classId="10" sex="male" val="9,9,5,5,13" /> <!-- Male Human Mystic -->
-	<baseMdef classId="18" sex="female" val="9,9,5,5,13" /> <!-- Female Elven Fighter -->
-	<baseMdef classId="18" sex="male" val="9,9,5,5,13" /> <!-- Male Elven Fighter -->
-	<baseMdef classId="25" sex="female" val="9,9,5,5,13" /> <!-- Female Elven Mystic -->
-	<baseMdef classId="25" sex="male" val="9,9,5,5,13" /> <!-- Male Elven Mystic -->
-	<baseMdef classId="31" sex="female" val="9,9,5,5,13" /> <!-- Female Dark Fighter -->
-	<baseMdef classId="31" sex="male" val="9,9,5,5,13" /> <!-- Male Dark Fighter -->
-	<baseMdef classId="38" sex="female" val="9,9,5,5,13" /> <!-- Female Dark Mystic -->
-	<baseMdef classId="38" sex="male" val="9,9,5,5,13" /> <!-- Male Dark Mystic -->
-	<baseMdef classId="44" sex="female" val="9,9,5,5,13" /> <!-- Female Orc Fighter -->
-	<baseMdef classId="44" sex="male" val="9,9,5,5,13" /> <!-- Male Orc Fighter -->
-	<baseMdef classId="49" sex="female" val="9,9,5,5,13" /> <!-- Female Orc Mystic -->
-	<baseMdef classId="49" sex="male" val="9,9,5,5,13" /> <!-- Male Orc Mystic -->
-	<baseMdef classId="53" sex="female" val="9,9,5,5,13" /> <!-- Female Dwarven Fighter -->
-	<baseMdef classId="53" sex="male" val="9,9,5,5,13" /> <!-- Male Dwarven Fighter -->
-	<baseMdef classId="124" sex="female" val="9,9,5,5,13" /> <!-- Female Soldier -->
-	<baseMdef classId="123" sex="male" val="9,9,5,5,13" /> <!-- Male Male Soldier -->
+	<!-- Base mDef -->
+	<baseMdef classId="0" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Human Fighter -->
+	<baseMdef classId="0" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Human Fighter -->
+	<baseMdef classId="10" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Human Mystic -->
+	<baseMdef classId="10" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Human Mystic -->
+	<baseMdef classId="18" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Elven Fighter -->
+	<baseMdef classId="18" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Elven Fighter -->
+	<baseMdef classId="25" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Elven Mystic -->
+	<baseMdef classId="25" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Elven Mystic -->
+	<baseMdef classId="31" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Dark Fighter -->
+	<baseMdef classId="31" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Dark Fighter -->
+	<baseMdef classId="38" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Dark Mystic -->
+	<baseMdef classId="38" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Dark Mystic -->
+	<baseMdef classId="44" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Orc Fighter -->
+	<baseMdef classId="44" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Orc Fighter -->
+	<baseMdef classId="49" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Orc Mystic -->
+	<baseMdef classId="49" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Orc Mystic -->
+	<baseMdef classId="53" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Dwarven Fighter -->
+	<baseMdef classId="53" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Dwarven Fighter -->
+	<baseMdef classId="124" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Soldier -->
+	<baseMdef classId="123" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Male Soldier -->
 	<!-- Base canPenetrate -->
 	<baseCanPenetrate classId="0" sex="female" val="0" /> <!-- Female Human Fighter -->
 	<baseCanPenetrate classId="0" sex="male" val="0" /> <!-- Male Human Fighter -->

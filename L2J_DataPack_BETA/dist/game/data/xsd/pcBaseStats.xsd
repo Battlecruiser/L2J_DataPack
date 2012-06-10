@@ -124,7 +124,8 @@
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="basePdef" minOccurs="20" maxOccurs="20">
-					<xs:complexType>
+					<xs:complexType>
+						<xs:attribute name="chest" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="classId" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
@@ -142,6 +143,11 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="cloak" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="feet" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="gloves" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="head" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="legs" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="sex" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
@@ -149,8 +155,7 @@
 									<xs:enumeration value="male" />
 								</xs:restriction>
 							</xs:simpleType>
-						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						</xs:attribute>						<xs:attribute name="underwear" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseMatk" minOccurs="20" maxOccurs="20">
@@ -202,6 +207,11 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="lear" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="lfinger" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="neck" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="rear" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="rfinger" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="sex" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
@@ -210,7 +220,6 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseCanPenetrate" minOccurs="20" maxOccurs="20">
