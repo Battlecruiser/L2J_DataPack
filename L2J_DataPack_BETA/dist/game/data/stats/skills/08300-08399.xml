@@ -304,19 +304,20 @@
 		<set name="skillRadius" val="150" />
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
-		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="STEAL_BUFF" />
-		<set name="power" val="3" />
-		<set name="magicLvl" val="55" />
-		<set name="hitTime" val="4000" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="maxNegated" val="3" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="25" /> <!-- TODO: Implement me to work like Cancel (H5 Changes) -->
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="STEAL_BUFF" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<set name="target" val="TARGET_SELF" />
