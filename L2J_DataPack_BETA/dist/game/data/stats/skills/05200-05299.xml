@@ -1199,7 +1199,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="15000" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />

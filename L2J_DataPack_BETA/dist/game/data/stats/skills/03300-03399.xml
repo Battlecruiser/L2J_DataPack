@@ -187,7 +187,7 @@
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="379" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="40" />
@@ -290,7 +290,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="10166" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="16" />
 		<set name="itemConsumeId" val="1785" />
@@ -313,7 +313,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="8626" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="50" />
 		<set name="itemConsumeId" val="1785" />
@@ -335,7 +335,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="8632" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="57" />
 		<set name="itemConsumeId" val="1785" />
@@ -358,7 +358,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="500" />
 		<set name="transformId" val="102" />
 		<cond msgId="1509">
@@ -373,7 +373,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="equipDelay" val="30000" />
+		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="hitTime" val="500" />
 		<set name="transformId" val="103" />
 		<cond msgId="1509">
