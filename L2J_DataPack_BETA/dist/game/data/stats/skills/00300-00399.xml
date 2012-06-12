@@ -53,7 +53,7 @@
 		<enchant1 name="isDebuff" val="true" />
 		<enchant1 name="lvlDepend" val="1" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="offensive" val="True" />
+		<enchant1 name="offensive" val="true" />
 		<enchant1 name="saveVs" val="MEN" />
 		<enchant1 name="skillType" val="DUMMY" />
 		<enchant2 name="element" val="3" /> <!-- Earth -->
@@ -61,7 +61,7 @@
 		<enchant2 name="isDebuff" val="true" />
 		<enchant2 name="lvlDepend" val="1" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="offensive" val="True" />
+		<enchant2 name="offensive" val="true" />
 		<enchant2 name="saveVs" val="MEN" />
 		<enchant2 name="skillType" val="DUMMY" />
 		<enchant3 name="element" val="3" /> <!-- Earth -->
@@ -69,7 +69,7 @@
 		<enchant3 name="isDebuff" val="true" />
 		<enchant3 name="lvlDepend" val="1" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="offensive" val="True" />
+		<enchant3 name="offensive" val="true" />
 		<enchant3 name="saveVs" val="MEN" />
 		<enchant3 name="skillType" val="DUMMY" />
 		<for>
@@ -82,7 +82,7 @@
 			<effect name="Spoil" noicon="1" val="0" />
 		</enchant1for>
 		<enchant2for>
-			<!-- 118HP * 3 During 15 sec -->
+			<!-- 118HP * 3 During 15 Sec -->
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="354" effectPower="#ench2Power" abnormalLvl="3" abnormalType="dot_attr" />
 			<effect name="Spoil" noicon="1" val="0" />
 		</enchant2for>
