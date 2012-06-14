@@ -109,7 +109,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="referenceId" val="9919" />
 		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -305,7 +304,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -319,7 +317,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="reuseDelay" val="1800000" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="100" />
@@ -331,7 +328,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -346,7 +342,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -361,7 +356,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -376,7 +370,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -391,7 +384,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -406,7 +398,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
@@ -436,7 +427,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="600000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -914,7 +904,6 @@
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="300000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<for>
 			<effect name="CpHeal" noicon="1" val="100" />
 			<effect name="Heal" noicon="1" val="100" />

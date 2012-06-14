@@ -300,7 +300,6 @@
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillRadius" val="150" />
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
@@ -350,7 +349,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
