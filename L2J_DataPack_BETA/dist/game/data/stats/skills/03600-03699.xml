@@ -922,7 +922,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -938,7 +937,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="360000" />
-		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
