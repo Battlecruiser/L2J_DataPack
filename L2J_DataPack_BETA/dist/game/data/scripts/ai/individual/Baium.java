@@ -455,9 +455,10 @@ public class Baium extends L2AttackableAIScript
 			}
 		}
 		_Minions.clear();
-		if (getQuestTimer("skill_range", npc, null) != null)
+		final QuestTimer timer =  getQuestTimer("skill_range", npc, null);
+		if (timer != null)
 		{
-			getQuestTimer("skill_range", npc, null).cancel();
+			timer.cancelAndRemove();
 		}
 		return super.onKill(npc, killer, isPet);
 	}
@@ -514,7 +515,7 @@ public class Baium extends L2AttackableAIScript
 		QuestTimer timer = getQuestTimer("clean_player", npc, null);
 		if (timer != null)
 		{
-			timer.cancel();
+			timer.cancelAndRemove();
 		}
 		startQuestTimer("clean_player", 20000, npc, null);
 		L2Character target = (L2Character) characters[getRandom(characters.length)];

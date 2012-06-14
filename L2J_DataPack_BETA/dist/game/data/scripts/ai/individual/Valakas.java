@@ -1310,7 +1310,7 @@ public class Valakas extends L2AttackableAIScript
 		{
 			if (timer != null)
 			{
-				timer.cancel();
+				timer.cancelAndRemove();
 			}
 			return;
 		}
@@ -1342,7 +1342,6 @@ public class Valakas extends L2AttackableAIScript
 			npc.setIsCastingNow(true);
 			npc.setTarget(target);
 			npc.doCast(skill);
-			
 		}
 		else
 		{
