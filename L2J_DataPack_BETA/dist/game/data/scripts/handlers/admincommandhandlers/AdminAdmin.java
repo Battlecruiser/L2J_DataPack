@@ -15,6 +15,7 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javolution.text.TextBuilder;
@@ -298,7 +299,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				else if (type.startsWith("quests"))
 				{
 					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All Quests have been reloaded");
+					activeChar.sendMessage("All Quests have been reloaded.");
 				}
 				else if (type.startsWith("door"))
 				{
@@ -311,7 +312,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
 				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
-				_log.warning("An error occured while reloading " + type + ": " + e); //do not mask an exception here
+				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}
 		else if (command.startsWith("admin_setconfig"))
