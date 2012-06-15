@@ -825,7 +825,7 @@ public class FinalEmperialTomb extends Quest
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy.getObjectId(), 0, 75, -89, 0, 100, 0, 0, 1, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy.getObjectId(), 300, 90, -10, 6500, 7000, 0, 0, 1, 0));
 					
-					_world.frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA, -87784, -155083, -9087, 16048, false, 0, false, _world.instanceId);
+					_world.frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, _world.instanceId);
 					_world.frintezza.setIsImmobilized(true);
 					_world.frintezza.setIsInvul(true);
 					_world.frintezza.disableAllSkills();
@@ -915,7 +915,7 @@ public class FinalEmperialTomb extends Quest
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 18), 5000);
 					break;
 				case 18:
-					_world.activeScarlet = (L2GrandBossInstance) addSpawn(29046, -87784, -153298, -9165, 16384, false, 0, false, _world.instanceId);
+					_world.activeScarlet = (L2GrandBossInstance) addSpawn(29046, -87789, -153295, -9176, 16384, false, 0, false, _world.instanceId);
 					_world.activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
 					_world.activeScarlet.setIsInvul(true);
 					_world.activeScarlet.setIsImmobilized(true);
