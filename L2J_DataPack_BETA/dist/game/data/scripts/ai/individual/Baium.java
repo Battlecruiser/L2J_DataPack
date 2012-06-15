@@ -121,7 +121,7 @@ public class Baium extends L2AttackableAIScript
 			{
 				// the time has already expired while the server was offline. Delete the saved time and
 				// immediately spawn the stone-baium. Also the state need not be changed from ASLEEP
-				addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
+				addSpawn(STONE_BAIUM, 116033, 17447, 10107, -25348, false, 0);
 				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
 			}
 		}
@@ -159,7 +159,7 @@ public class Baium extends L2AttackableAIScript
 		}
 		else
 		{
-			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
+			addSpawn(STONE_BAIUM, 116033, 17447, 10107, -25348, false, 0);
 		}
 	}
 	
@@ -169,7 +169,7 @@ public class Baium extends L2AttackableAIScript
 		if (event.equalsIgnoreCase("baium_unlock"))
 		{
 			GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
-			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
+			addSpawn(STONE_BAIUM, 116033, 17447, 10107, -25348, false, 0);
 		}
 		else if (event.equalsIgnoreCase("skill_range") && (npc != null))
 		{
@@ -243,7 +243,7 @@ public class Baium extends L2AttackableAIScript
 						}
 					}
 					_Minions.clear();
-					addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0); // spawn stone-baium
+					addSpawn(STONE_BAIUM, 116033, 17447, 10107, -25348, false, 0); // spawn stone-baium
 					GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP); // mark that Baium is not awake any more
 					_Zone.oustAllPlayers();
 					cancelQuestTimer("baium_despawn", npc, null);
