@@ -177,85 +177,91 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
-		<!-- TODO: Needs to be verified -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1npcId"> 14871 14872 14873 14874 14875 14876 14877 14878 14879 14880 14881 14882 14883 14884 14885 </table>
-		<set name="mpInitialConsume" val="28" />
-		<set name="mpConsume" val="116" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeCountOT" val="11" />
-		<set name="itemConsumeSteps" val="14" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="15000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<set name="hitTime" val="6000" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14836" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeCountOT" val="11" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeIdOT" val="3031" />
+		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="115" />
+		<set name="mpInitialConsume" val="29" />
+		<set name="npcId" val="14836" /> <!-- Summon specific -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonTimeLostActive" val="1000" />
+		<set name="summonTimeLostIdle" val="500" />
+		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
-		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
+		<enchant1 name="mpInitialConsume" val="29" />
 	</skill>
 	<skill id="1407" levels="1" name="Summon Magnus the Unicorn" enchantGroup1="5">
-		<!-- TODO: Needs to be verified -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1npcId"> 14886 14887 14888 14889 14890 14891 14892 14893 14894 14895 14896 14897 14898 14899 14900 </table>
-		<set name="mpInitialConsume" val="28" />
-		<set name="mpConsume" val="116" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeCountOT" val="11" />
-		<set name="itemConsumeSteps" val="14" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="15000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<set name="hitTime" val="6000" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14837" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeCountOT" val="11" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeIdOT" val="3031" />
+		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="115" />
+		<set name="mpInitialConsume" val="29" />
+		<set name="npcId" val="14837" /> <!-- Summon specific -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonTimeLostActive" val="1000" />
+		<set name="summonTimeLostIdle" val="500" />
+		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
-		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
+		<enchant1 name="mpInitialConsume" val="29" />
 	</skill>
 	<skill id="1408" levels="1" name="Summon Spectral Lord" enchantGroup1="5">
-		<!-- TODO: Needs to be verified -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1npcId"> 14901 14902 14903 14904 14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14915 </table>
-		<set name="mpInitialConsume" val="28" />
-		<set name="mpConsume" val="116" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeIdOT" val="3031" />
-		<set name="itemConsumeCountOT" val="11" />
-		<set name="itemConsumeSteps" val="14" />
-		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="15000" />
-		<set name="skillType" val="SUMMON" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<set name="hitTime" val="6000" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="14838" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeCountOT" val="11" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeIdOT" val="3031" />
+		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="115" />
+		<set name="mpInitialConsume" val="29" />
+		<set name="npcId" val="14838" /> <!-- Summon specific -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonTimeLostActive" val="1000" />
+		<set name="summonTimeLostIdle" val="500" />
+		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
-		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
+		<enchant1 name="mpInitialConsume" val="29" />
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
 		<set name="itemConsumeId" val="8874" />
