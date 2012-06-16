@@ -760,7 +760,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
 		</for>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
@@ -770,7 +770,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5573" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5573" />
 		</for>
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
@@ -780,7 +780,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
 		</for>
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
@@ -790,7 +790,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
 		</for>
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
@@ -800,7 +800,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5576" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5576" />
 		</for>
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">

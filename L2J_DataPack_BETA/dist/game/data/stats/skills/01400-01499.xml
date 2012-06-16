@@ -2625,7 +2625,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
 		</for>
 	</skill>
 	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
@@ -2635,7 +2635,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
 		</for>
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
@@ -2743,7 +2743,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
 		</for>
 	</skill>
 	<skill id="1498" levels="1" name="Mutual Response">
@@ -2752,7 +2752,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
 		</for>
 	</skill>
 	<skill id="1499" levels="1" name="Improved Combat">

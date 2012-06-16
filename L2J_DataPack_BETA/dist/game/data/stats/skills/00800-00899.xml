@@ -295,7 +295,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
 		</for>
 	</skill>
 	<skill id="819" levels="1" name="Evasion Chance">
@@ -304,7 +304,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
 		</for>
 	</skill>
 	<skill id="820" levels="1" name="Evasion Haste">
@@ -313,7 +313,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
 		</for>
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">

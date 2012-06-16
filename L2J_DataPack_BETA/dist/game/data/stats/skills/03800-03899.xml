@@ -258,7 +258,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5665" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5665" />
 		</for>
 	</skill>
 	<skill id="3830" levels="3" name="Rapier of Might">
@@ -301,7 +301,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5666" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5666" />
 		</for>
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
@@ -344,7 +344,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5667" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5667" />
 		</for>
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
@@ -536,7 +536,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5668" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5668" />
 		</for>
 	</skill>
 	<skill id="3862" levels="1" name="Dagger of Guidance">
@@ -675,7 +675,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5669" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5669" />
 		</for>
 	</skill>
 	<skill id="3877" levels="2" name="Polearm of Boost HP">
@@ -728,7 +728,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5670" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="6" chanceType="ON_HIT" triggeredId="5670" />
 		</for>
 	</skill>
 	<skill id="3883" levels="1" name="Fist Weapon of Critical Power">
@@ -756,7 +756,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="#triggeredId" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="#triggeredId" />
 		</for>
 	</skill>
 	<skill id="3886" levels="1" name="Blunt Weapon of Haste">

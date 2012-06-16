@@ -1963,7 +1963,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="5548" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="#activationChance" chanceType="ON_HIT" triggeredId="5548" />
 		</for>
 	</skill>
 	<skill id="468" levels="9" name="Fallen Attack">
