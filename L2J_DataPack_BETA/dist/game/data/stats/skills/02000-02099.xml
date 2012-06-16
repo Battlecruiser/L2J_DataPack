@@ -1027,15 +1027,20 @@
 		<set name="castRange" val="40" />
 	</skill>
 	<skill id="2098" levels="1" name="Harvesting">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="3" />
-		<set name="target" val="TARGET_CORPSE_MOB" />
-		<set name="hitTime" val="500" />
-		<set name="skillType" val="HARVEST" />
-		<set name="reuseDelay" val="1000" />
-		<set name="operateType" val="A1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="20" />
-		<set name="effectRange" val="100" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="3" />
+		<set name="neutral" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="target" val="TARGET_CORPSE_MOB" />
+		<for>
+			<effect name="Harvesting" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
