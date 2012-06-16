@@ -207,7 +207,6 @@ import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveSp;
 import handlers.skillhandlers.GiveVitality;
-import handlers.skillhandlers.Harvest;
 import handlers.skillhandlers.Heal;
 import handlers.skillhandlers.HealPercent;
 import handlers.skillhandlers.InstantJump;
@@ -562,7 +561,6 @@ public class MasterHandler
 			DeluxeKey.class,
 			Sow.class,
 			Soul.class,
-			Harvest.class,
 			GetPlayer.class,
 			TransformDispel.class,
 			Trap.class,
