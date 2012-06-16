@@ -630,7 +630,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="#activationMinDamage" chanceType="ON_HIT" triggeredId="#triggeredId" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="#activationMinDamage" chanceType="ON_HIT" triggeredId="#triggeredId" />
 		</for>
 	</skill>
 	<skill id="1527" levels="3" name="Expert Casting">
@@ -1035,7 +1035,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationSkills="927" chanceType="ON_CAST" triggeredId="6060" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationSkills="927" chanceType="ON_CAST" triggeredId="6060" />
 		</for>
 	</skill>
 	<skill id="1544" levels="7" name="Death Beam">
@@ -1518,7 +1518,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<!-- FIXME: activationChance unconfirmed -->
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="6706" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="6706" />
 		</for>
 	</skill>
 	<skill id="1565" levels="6" name="Mana Pump">

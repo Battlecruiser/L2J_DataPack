@@ -1106,7 +1106,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.15" />
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="300" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="300" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="756" levels="1" name="Protection of Elemental">
@@ -1119,7 +1119,7 @@
 			<add order="0x40" stat="waterRes" val="20" />
 			<add order="0x40" stat="windRes" val="20" />
 			<add order="0x40" stat="earthRes" val="20" />
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="757" levels="1" name="Protection of Alignment">
@@ -1130,7 +1130,7 @@
 		<for>
 			<add order="0x40" stat="holyRes" val="20" />
 			<add order="0x40" stat="darkRes" val="20" />
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
 		</for>
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
@@ -1153,7 +1153,7 @@
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 			</mul>
 			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
+			<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
 			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" /> -->
 			<!-- </effect> -->
 		</for>
@@ -1178,7 +1178,7 @@
 				<using kind="Crossbow,Bow" />
 			</add>
 			<!-- TODO: Require support for effects using conditions -->
-			<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
+			<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="5559"> -->
 			<!-- <using kind="Crossbow,Bow" /> -->
 			<!-- </effect> -->
 		</for>
@@ -1348,7 +1348,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_ATTACKED_HIT" triggeredId="5565" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_ATTACKED_HIT" triggeredId="5565" />
 		</for>
 	</skill>
 	<skill id="768" levels="1" name="Exciting Adventure">

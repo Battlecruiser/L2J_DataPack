@@ -983,7 +983,7 @@
 			</add>
 			<mul order="0x30" stat="rShld" val="#rShld" />
 			<!-- FIXME: activationChance value unconfirmed -->
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationSkills="997" chanceType="ON_CAST" triggeredId="6920" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationSkills="997" chanceType="ON_CAST" triggeredId="6920" />
 		</for>
 	</skill>
 	<skill id="953" levels="1" name="Life to Soul">
@@ -1571,7 +1571,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="6687" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="6687" />
 		</for>
 	</skill>
 	<skill id="984" levels="25" name="Shield Strike">
@@ -1758,10 +1758,10 @@
 		</cond>
 		<!-- TODO: Require support for effects using conditions -->
 		<!-- <for> -->
-		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
+		<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
 		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
 		<!-- </effect> -->
-		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
+		<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6813" triggeredLevel="#triggeredLevel"> -->
 		<!-- <using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt" /> -->
 		<!-- </effect> -->
 		<!-- </for> -->
@@ -1783,10 +1783,10 @@
 		</cond>
 		<!-- TODO: Require support for effects using conditions -->
 		<!-- <for> -->
-		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
+		<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="15" chanceType="ON_HIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
 		<!-- <using kind="Dual Fist" /> -->
 		<!-- </effect> -->
-		<!-- <effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
+		<!-- <effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" chanceType="ON_CRIT" triggeredId="6814" triggeredLevel="#triggeredLevel"> -->
 		<!-- <using kind="Dual Fist" /> -->
 		<!-- </effect> -->
 		<!-- </for> -->

@@ -1016,7 +1016,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5426" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5426" />
 		</for>
 	</skill>
 	<skill id="533" levels="1" name="Counter Rapid Shot">
@@ -1025,7 +1025,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5427" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5427" />
 		</for>
 	</skill>
 	<skill id="534" levels="1" name="Counter Dash">
@@ -1034,7 +1034,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5428" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5428" />
 		</for>
 	</skill>
 	<skill id="535" levels="1" name="Counter Mind">
@@ -1043,7 +1043,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5429" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5429" />
 		</for>
 	</skill>
 	<skill id="536" levels="1" name="Over the Body">
