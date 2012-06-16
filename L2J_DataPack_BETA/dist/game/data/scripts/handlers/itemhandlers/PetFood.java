@@ -38,6 +38,12 @@ public class PetFood implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
+		if (playable.isPet() && !((L2PetInstance) playable).canEatFoodId(item.getItemId()))
+		{
+			playable.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
+			return false;
+		}
+		
 		final SkillHolder[] skills = item.getItem().getSkills();
 		if (skills != null)
 		{
@@ -51,20 +57,20 @@ public class PetFood implements IItemHandler
 	
 	public boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
 	{
-		L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+		final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 		if (skill != null)
 		{
 			if (activeChar.isPet())
 			{
-				L2PetInstance pet = (L2PetInstance) activeChar;
+				final L2PetInstance pet = (L2PetInstance) activeChar;
 				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
 					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
-					pet.setCurrentFed(((L2PetInstance) activeChar).getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
+					pet.setCurrentFed(pet.getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					pet.broadcastStatusUpdate();
 					if (pet.getCurrentFed() < ((pet.getPetData().getHungryLimit() / 100f) * pet.getPetLevelData().getPetMaxFeed()))
 					{
-						activeChar.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
+						pet.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
 					}
 					return true;
 				}
@@ -74,25 +80,20 @@ public class PetFood implements IItemHandler
 				final L2PcInstance player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
 					if (foodIds.contains(Integer.valueOf(item.getItemId())))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{
-							player.broadcastPacket(new MagicSkillUse(activeChar, activeChar, skillId, skillLevel, 0, 0));
+							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
 							player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
+							return true;
 						}
-						return true;
 					}
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-					sm.addItemName(item);
-					activeChar.sendPacket(sm);
-					return false;
 				}
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 				sm.addItemName(item);
-				activeChar.sendPacket(sm);
-				return false;
+				player.sendPacket(sm);
 			}
 		}
 		return false;
