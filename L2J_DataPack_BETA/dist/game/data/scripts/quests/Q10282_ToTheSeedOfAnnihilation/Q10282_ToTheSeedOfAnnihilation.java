@@ -60,7 +60,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				}
 				break;
 			case State.CREATED:
-				htmltext = (player.getLevel() < 84) ? "32733-01.htm" : "32733-00.htm";
+				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
 				break;
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
