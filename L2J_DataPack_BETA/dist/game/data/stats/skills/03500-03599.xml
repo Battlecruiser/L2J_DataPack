@@ -1147,7 +1147,7 @@
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
-		<cond msgId="113" addName="1">
+		<cond>
 			<not>
 				<target npcType="L2Attackable" />
 			</not>
