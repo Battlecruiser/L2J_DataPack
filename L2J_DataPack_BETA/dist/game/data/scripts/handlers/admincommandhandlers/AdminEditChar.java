@@ -646,21 +646,22 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				return false;
 			}
-
-			if (pl.getClient() == null)
+			
+			final L2GameClient client = pl.getClient();
+			if (client == null)
 			{
 				activeChar.sendMessage("Client is null.");
 				return false;
 			}
 
-			if (pl.getClient().isDetached())
+			if (client.isDetached())
 			{
 				activeChar.sendMessage("Client is detached.");
 				return false;
 			}
 
 			String ip;
-			int[][] trace = pl.getClient().getTrace();
+			int[][] trace = client.getTrace();
 			for (int i = 0 ; i < trace.length; i++)
 			{
 				ip = "";
@@ -883,31 +884,25 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void gatherCharacterInfo(L2PcInstance activeChar, L2PcInstance player, String filename)
 	{
 		String ip = "N/A";
-		String account = "N/A";
 		
-		if (player != null)
-		{
-			account = player.getAccountName();
-			if(player.getClient() != null)
-			{
-				if (player.getClient().isDetached())
-				{
-					activeChar.sendMessage("Client is detached.");
-				}
-				else
-				{
-					ip = player.getClient().getConnection().getInetAddress().getHostAddress();
-				}
-			}
-			else
-			{
-				activeChar.sendMessage("Client is null.");
-			}
-		}
-		else
+		if (player == null)
 		{
 			activeChar.sendMessage("Player is null.");
 			return;
+		}
+		
+		final L2GameClient client = player.getClient();
+		if(client == null)
+		{
+			activeChar.sendMessage("Client is null.");
+		}
+		else if (client.isDetached())
+		{
+			activeChar.sendMessage("Client is detached.");
+		}
+		else
+		{
+			ip = client.getConnection().getInetAddress().getHostAddress();
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -948,7 +943,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%patkspd%", String.valueOf(player.getPAtkSpd()));
 		adminReply.replace("%matkspd%", String.valueOf(player.getMAtkSpd()));
 		adminReply.replace("%access%", player.getAccessLevel().getLevel() + " (" + player.getAccessLevel().getName() + ")");
-		adminReply.replace("%account%", account);
+		adminReply.replace("%account%", player.getAccountName());
 		adminReply.replace("%ip%", ip);
 		adminReply.replace("%ai%", String.valueOf(player.getAI().getIntention().name()));
 		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns "+String.valueOf(player.getInstanceId())+"\">"+String.valueOf(player.getInstanceId())+"</a></td></tr>" : "");
@@ -1157,6 +1152,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (L2PcInstance player: players)
 		{
 			client = player.getClient();
+			if (client == null)
+			{
+				continue;
+			}
+			
 			if (client.isDetached())
 			{
 				if (!findDisconnected)
@@ -1265,7 +1265,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (L2PcInstance player : players)
 		{
 			client = player.getClient();
-			if (client == null || client.isDetached())
+			if ((client == null) || client.isDetached())
 			{
 				continue;
 			}
@@ -1322,7 +1322,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (L2PcInstance player : players)
 		{
 			client = player.getClient();
-			if (client == null || client.isDetached())
+			if ((client == null) || client.isDetached())
 			{
 				continue;
 			}
