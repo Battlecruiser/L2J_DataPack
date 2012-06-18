@@ -771,7 +771,7 @@
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
 		<cond msgId="2721">
-			<player landingZone="True" />
+			<player landingZone="true" />
 		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
@@ -790,7 +790,7 @@
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
 		<cond msgId="2721">
-			<player landingZone="True" />
+			<player landingZone="true" />
 		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->

@@ -1000,7 +1000,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.03" /> <!-- Atk. Spd. +3% -->
 			<add order="0x40" stat="regMp" val="0.51" /> <!-- MP regen per tick +0.51 -->
 			<basemul order="0x30" stat="rCrit" val="0.22"> <!-- Critical +22% from behind target -->
-				<player behind="True" />
+				<player behind="true" />
 			</basemul>
 			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
 			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->

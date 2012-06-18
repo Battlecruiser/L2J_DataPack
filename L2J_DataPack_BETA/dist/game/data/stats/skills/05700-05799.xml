@@ -650,7 +650,7 @@
 		<set name="nextActionAttack" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
-				<player flyMounted="False" />
+				<player flyMounted="false" />
 				<player active_effect_id="5753" />
 			</and>
 		</cond>
