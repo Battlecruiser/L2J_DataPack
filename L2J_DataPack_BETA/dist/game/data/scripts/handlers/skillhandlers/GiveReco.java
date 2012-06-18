@@ -40,9 +40,9 @@ public class GiveReco implements ISkillHandler
 	{
 		for (L2Object obj : targets)
 		{
-			if (obj instanceof L2PcInstance)
+			if (obj.isPlayer())
 			{
-				L2PcInstance target = (L2PcInstance) obj;
+				L2PcInstance target = obj.getActingPlayer();
 				int power = (int)skill.getPower();
 				int reco  = target.getRecomHave();
 				

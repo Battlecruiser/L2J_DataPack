@@ -37,8 +37,10 @@ public class Dummy implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
+		
+		activeChar.ssChecker();
 		
 		switch(skill.getId())
 		{
@@ -47,7 +49,7 @@ public class Dummy implements ISkillHandler
 			{
 				final L2Object obj = targets[0];
 				if(obj != null)
-					useBlockCheckerSkill((L2PcInstance)activeChar, skill, obj);
+					useBlockCheckerSkill(activeChar.getActingPlayer(), skill, obj);
 				break;
 			}
 			default:

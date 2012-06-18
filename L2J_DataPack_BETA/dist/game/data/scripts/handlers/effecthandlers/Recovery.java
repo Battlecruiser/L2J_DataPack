@@ -14,7 +14,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -39,9 +38,9 @@ public class Recovery extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			((L2PcInstance) getEffected()).reduceDeathPenaltyBuffLevel();
+			getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
 			return true;
 		}
 		return false;

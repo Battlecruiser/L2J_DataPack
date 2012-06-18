@@ -40,9 +40,9 @@ public class GetPlayer implements ISkillHandler
 			return;
 		for (L2Object target : targets)
 		{
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
-				L2PcInstance trg = (L2PcInstance) target;
+				L2PcInstance trg = target.getActingPlayer();
 				if (trg.isAlikeDead())
 					continue;
 				//trg.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);

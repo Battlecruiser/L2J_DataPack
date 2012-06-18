@@ -40,7 +40,7 @@ public class BeastSkills implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
 		L2SkillType type = skill.getSkillType();

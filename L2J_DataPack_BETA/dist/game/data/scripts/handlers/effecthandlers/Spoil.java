@@ -16,7 +16,6 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -46,10 +45,10 @@ public class Spoil extends L2Effect
 	public boolean onStart()
 	{
 		
-		if (!(getEffector() instanceof L2PcInstance))
+		if (!getEffector().isPlayer())
 			return false;
 		
-		if (!(getEffected() instanceof L2MonsterInstance))
+		if (!getEffected().isMonster())
 			return false;
 		
 		L2MonsterInstance target = (L2MonsterInstance) getEffected();

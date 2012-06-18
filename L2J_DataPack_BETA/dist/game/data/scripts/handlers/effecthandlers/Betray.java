@@ -16,7 +16,6 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -42,8 +41,7 @@ public class Betray extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffector() instanceof L2PcInstance &&
-				getEffected() instanceof L2Summon)
+		if (getEffector().isPlayer() && getEffected().isSummon())
 		{
 			L2PcInstance targetOwner = getEffected().getActingPlayer();
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);

@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.L2Manor;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -47,7 +46,7 @@ public class Sow implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
 		final L2Object[] targetList = skill.getTargetList(activeChar);
@@ -61,7 +60,7 @@ public class Sow implements ISkillHandler
 		
 		for (L2Object tgt: targetList)
 		{
-			if (!(tgt instanceof L2MonsterInstance))
+			if (!tgt.isMonster())
 				continue;
 			
 			target = (L2MonsterInstance) tgt;
@@ -91,7 +90,7 @@ public class Sow implements ISkillHandler
 			if (calcSuccess(activeChar, target, seedId))
 			{
 				activeChar.sendPacket(new PlaySound("Itemsound.quest_itemget"));
-				target.setSeeded((L2PcInstance)activeChar);
+				target.setSeeded(activeChar.getActingPlayer());
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
 			}
 			else

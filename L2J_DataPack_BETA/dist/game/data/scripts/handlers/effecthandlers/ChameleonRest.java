@@ -16,7 +16,6 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -40,9 +39,9 @@ public class ChameleonRest extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			((L2PcInstance) getEffected()).sitDown(false);
+			getEffected().getActingPlayer().sitDown(false);
 		}
 		else
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
@@ -65,9 +64,9 @@ public class ChameleonRest extends L2Effect
 		if (getSkill().getSkillType() != L2SkillType.CONT)
 			return false;
 		
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			if (!((L2PcInstance) getEffected()).isSitting())
+			if (!getEffected().getActingPlayer().isSitting())
 				return false;
 		}
 		

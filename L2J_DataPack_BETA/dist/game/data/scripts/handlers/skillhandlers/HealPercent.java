@@ -18,8 +18,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -88,19 +86,19 @@ public class HealPercent implements ISkillHandler
 			if ((target == null || target.isDead() || target.isInvul()) && skill.getId() != 1505)
 				continue;
 			
-			targetPlayer = target instanceof L2PcInstance;
+			targetPlayer = target.isPlayer();
 			
 			// Cursed weapon owner can't heal or be healed
 			if (target != activeChar)
 			{
-				if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isCursedWeaponEquipped())
+				if (activeChar.isPlayer() && activeChar.getActingPlayer().isCursedWeaponEquipped())
 					continue;
-				if (targetPlayer && ((L2PcInstance)target).isCursedWeaponEquipped())
+				if (targetPlayer && target.getActingPlayer().isCursedWeaponEquipped())
 					continue;
 			}
 			
 			// Doors and flags can't be healed in any way
-			if (hp && (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance))
+			if (hp && (target.isDoor() || target instanceof L2SiegeFlagInstance))
 				continue;
 			
 			if (targetPlayer)

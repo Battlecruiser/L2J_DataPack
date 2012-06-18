@@ -17,7 +17,6 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -39,8 +38,10 @@ public class ManaHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
+		activeChar.ssChecker();
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (target.isInvul())
@@ -99,10 +100,10 @@ public class ManaHeal implements ISkillHandler
 			target.sendPacket(sump);
 			
 			SystemMessage sm;
-			if (actChar instanceof L2PcInstance && actChar != target)
+			if (activeChar.isPlayer() && activeChar != target)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-				sm.addString(actChar.getName());
+				sm.addString(activeChar.getName());
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
@@ -116,7 +117,7 @@ public class ManaHeal implements ISkillHandler
 			if (skill.hasEffects())
 			{
 				target.stopSkillEffects(skill.getId());
-				skill.getEffects(actChar, target);
+				skill.getEffects(activeChar, target);
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 				sm.addSkillName(skill);
 				target.sendPacket(sm);
@@ -125,14 +126,14 @@ public class ManaHeal implements ISkillHandler
 		
 		if (skill.hasSelfEffects())
 		{
-			L2Effect effect = actChar.getFirstEffect(skill.getId());
+			L2Effect effect = activeChar.getFirstEffect(skill.getId());
 			if (effect != null && effect.isSelfEffect())
 			{
 				//Replace old effect with new one.
 				effect.exit();
 			}
 			// cast self effect if any
-			skill.getEffectsSelf(actChar);
+			skill.getEffectsSelf(activeChar);
 		}
 	}
 	

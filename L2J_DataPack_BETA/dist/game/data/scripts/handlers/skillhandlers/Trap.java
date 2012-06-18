@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Trap;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -45,7 +44,7 @@ public class Trap implements ISkillHandler
 			{
 				for (L2Character target: activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius()))
 				{
-					if (!(target instanceof L2Trap))
+					if (!target.isTrap())
 						continue;
 					
 					if (target.isAlikeDead())
@@ -62,7 +61,7 @@ public class Trap implements ISkillHandler
 			{
 				for (L2Character target: (L2Character[]) targets)
 				{
-					if (!(target instanceof L2Trap))
+					if (!target.isTrap())
 						continue;
 					
 					if (target.isAlikeDead())
@@ -72,7 +71,7 @@ public class Trap implements ISkillHandler
 					
 					if (!trap.canSee(activeChar))
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 						continue;
 					}
@@ -85,7 +84,7 @@ public class Trap implements ISkillHandler
 							quest.notifyTrapAction(trap, activeChar, TrapAction.TRAP_DISARMED);
 					
 					trap.unSummon();
-					if (activeChar instanceof L2PcInstance)
+					if (activeChar.isPlayer())
 						activeChar.sendPacket(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED);
 				}
 			}

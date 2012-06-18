@@ -23,10 +23,7 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
@@ -75,10 +72,9 @@ public class SignetMDam extends L2Effect
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
 		
-		if (getEffector() instanceof L2PcInstance
-				&& getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
+		if (getEffector().isPlayer() && getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
 		{
-			Point3D wordPosition = ((L2PcInstance) getEffector()).getCurrentSkillWorldPosition();
+			Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
 			
 			if (wordPosition != null)
 			{
@@ -102,7 +98,7 @@ public class SignetMDam extends L2Effect
 			return true; // do nothing first 2 times
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = (L2PcInstance) getEffector();
+		L2PcInstance caster = getEffector().getActingPlayer();
 		
 		boolean ss = false;
 		boolean bss = false;
@@ -130,7 +126,7 @@ public class SignetMDam extends L2Effect
 			if (cha == null || cha == caster)
 				continue;
 			
-			if (cha instanceof L2Attackable || cha instanceof L2Playable)
+			if (cha.isL2Attackable() || cha.isPlayable())
 			{
 				if (cha.isAlikeDead())
 					continue;
@@ -142,7 +138,7 @@ public class SignetMDam extends L2Effect
 				}
 				
 				caster.reduceCurrentMp(mpConsume);
-				if (cha instanceof L2Playable)
+				if (cha.isPlayable())
 				{
 					if (caster.canAttackCharacter(cha))
 					{
@@ -164,7 +160,7 @@ public class SignetMDam extends L2Effect
 				byte shld = Formulas.calcShldUse(caster, target, getSkill());
 				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, ss, bss, mcrit);
 				
-				if (target instanceof L2Summon)
+				if (target.isSummon())
 					target.broadcastStatusUpdate();
 				
 				if (mdam > 0)

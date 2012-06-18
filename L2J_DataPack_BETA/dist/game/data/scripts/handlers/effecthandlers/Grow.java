@@ -37,7 +37,7 @@ public class Grow extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2Npc)
+		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
 			//TODO: Uncomment line when fix for mobs falling underground is found
@@ -59,7 +59,7 @@ public class Grow extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Npc)
+		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
 			//TODO: Uncomment line when fix for mobs falling underground is found

@@ -15,7 +15,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -41,9 +40,9 @@ public class CharmOfCourage extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
+			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
 			return true;
 		}
 		return false;
@@ -52,9 +51,9 @@ public class CharmOfCourage extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
+			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
 		}
 	}
 	
