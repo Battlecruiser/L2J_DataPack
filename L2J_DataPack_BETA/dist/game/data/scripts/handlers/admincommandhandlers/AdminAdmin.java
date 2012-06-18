@@ -145,9 +145,9 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			L2PcInstance target = null;
 			
-			if (activeChar.getTarget() instanceof L2PcInstance)
+			if (activeChar.getTarget().isPlayer())
 			{
-				target = (L2PcInstance) activeChar.getTarget();
+				target = activeChar.getTarget().getActingPlayer();
 				target.setHero(target.isHero() ? false : true);
 			}
 			else

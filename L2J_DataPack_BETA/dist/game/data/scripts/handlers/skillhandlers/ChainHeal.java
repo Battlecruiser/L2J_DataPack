@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -67,7 +66,7 @@ public class ChainHeal implements ISkillHandler
 			// Cursed weapon owner can't heal or be healed
 			if (character != activeChar)
 			{
-				if (character instanceof L2PcInstance && ((L2PcInstance) character).isCursedWeaponEquipped())
+				if (character.isPlayer() && character.getActingPlayer().isCursedWeaponEquipped())
 					continue;
 			}
 			

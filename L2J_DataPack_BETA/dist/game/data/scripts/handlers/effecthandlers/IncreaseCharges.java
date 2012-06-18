@@ -14,7 +14,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -44,10 +43,10 @@ public class IncreaseCharges extends L2Effect
 		if (getEffected() == null)
 			return false;
 		
-		if (!(getEffected() instanceof L2PcInstance))
+		if (!getEffected().isPlayer())
 			return false;
 		
-		((L2PcInstance)getEffected()).increaseCharges((int)calc(), getCount());
+		getEffected().getActingPlayer().increaseCharges((int)calc(), getCount());
 		return true;
 	}
 	

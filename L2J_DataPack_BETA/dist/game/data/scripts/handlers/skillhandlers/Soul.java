@@ -37,10 +37,10 @@ public class Soul implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance) || activeChar.isAlikeDead())
+		if (!activeChar.isPlayer() || activeChar.isAlikeDead())
 			return;
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		L2PcInstance player = activeChar.getActingPlayer();
 
 		int level = player.getSkillLevel(467);
 		if (level > 0)

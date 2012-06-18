@@ -19,7 +19,6 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -40,9 +39,9 @@ public class Charge implements ISkillHandler
 		
 		for (L2Object target: targets)
 		{
-			if (!(target instanceof L2PcInstance))
+			if (!target.isPlayer())
 				continue;
-			skill.getEffects(activeChar, (L2PcInstance) target);
+			skill.getEffects(activeChar, target.getActingPlayer());
 		}
 		
 		// self Effect :]

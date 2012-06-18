@@ -47,7 +47,7 @@ public class RandomizeHate extends L2Effect
 			return false;
 		
 		// Effect is for mobs only.
-		if (!(getEffected() instanceof L2Attackable))
+		if (!getEffected().isL2Attackable())
 			return false;
 		
 		L2Attackable effectedMob = (L2Attackable) getEffected();
@@ -62,7 +62,7 @@ public class RandomizeHate extends L2Effect
 			if (cha != null && (cha != effectedMob) && (cha != getEffector()))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha instanceof L2Attackable && ((L2Attackable) cha).getFactionId() != null && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
+				if (cha.isL2Attackable() && ((L2Attackable) cha).getFactionId() != null && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
 					continue;
 				
 				targetList.add(cha);

@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -1373,7 +1372,7 @@ public class Valakas extends L2AttackableAIScript
 		{
 			for (L2Character cha : objs)
 			{
-				if ((cha instanceof L2PcInstance) || (cha instanceof L2Summon) || (cha instanceof L2DecoyInstance))
+				if (cha.isPlayer() || cha.isSummon() || cha instanceof L2DecoyInstance)
 				{
 					if (Util.checkIfInRange(5000, npc, cha, true) && !cha.isDead() && !cha.isGM())
 					{

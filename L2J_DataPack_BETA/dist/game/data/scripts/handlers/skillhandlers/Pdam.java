@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.L2WeaponType;
@@ -64,7 +62,7 @@ public class Pdam implements ISkillHandler
 		boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 		
 		// If there is no weapon equipped, check for an active summon.
-		if (weapon == null && activeChar instanceof L2Summon)
+		if (weapon == null && activeChar.isSummon())
 		{
 			L2Summon activeSummon = (L2Summon) activeChar;
 			if (activeSummon.getChargedSoulShot() == L2ItemInstance.CHARGED_SOULSHOT)
@@ -77,7 +75,7 @@ public class Pdam implements ISkillHandler
 		for (L2Character target: (L2Character[]) targets)
 		{
 			
-			if (activeChar instanceof L2PcInstance && target instanceof L2PcInstance && ((L2PcInstance)target).isFakeDeath())
+			if (activeChar.isPlayer() && target.isPlayer() && target.getActingPlayer().isFakeDeath())
 			{
 				target.stopFakeDeath(true);
 			}
@@ -96,9 +94,9 @@ public class Pdam implements ISkillHandler
 				damage = 0;
 			else
 				damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, dual, soul);
-			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
 			{
-				switch (((L2PcInstance) activeChar).getSouls())
+				switch (activeChar.getActingPlayer().getSouls())
 				{
 					case 0:
 						break;
@@ -161,7 +159,7 @@ public class Pdam implements ISkillHandler
 					activeChar.sendDamageMessage(target, damage, false, crit, false);
 					
 					if (Config.LOG_GAME_DAMAGE
-							&& activeChar instanceof L2Playable
+							&& activeChar.isPlayable()
 							&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
 					{
 						LogRecord record = new LogRecord(Level.INFO, "");
@@ -178,13 +176,13 @@ public class Pdam implements ISkillHandler
 					// vengeance reflected damage
 					if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
 					{
-						if (target instanceof L2PcInstance)
+						if (target.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.COUNTERED_C1_ATTACK);
 							sm.addCharName(activeChar);
 							target.sendPacket(sm);
 						}
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_PERFORMING_COUNTERATTACK);
 							sm.addCharName(target);
@@ -200,24 +198,24 @@ public class Pdam implements ISkillHandler
 			}
 			else
 			{
-				if (activeChar instanceof L2PcInstance)
+				if (activeChar.isPlayer())
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
 					sm.addString(target.getName());
-					((L2PcInstance) activeChar).sendPacket(sm);
+					activeChar.getActingPlayer().sendPacket(sm);
 				}
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
 					sm.addString(activeChar.getName());
-					((L2PcInstance) target).sendPacket(sm);
+					target.getActingPlayer().sendPacket(sm);
 				}
 				
 				// Possibility of a lethal strike despite skill is evaded
 				Formulas.calcLethalHit(activeChar, target, skill);
 			}
 			
-			if (activeChar instanceof L2PcInstance)
+			if (activeChar.isPlayer())
 			{
 				int soulMasteryLevel = activeChar.getSkillLevel(467);
 				if (soulMasteryLevel > 0)
@@ -225,20 +223,20 @@ public class Pdam implements ISkillHandler
 					L2Skill soulmastery = SkillTable.getInstance().getInfo(467, soulMasteryLevel);
 					if (soulmastery != null)
 					{
-						if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+						if (activeChar.getActingPlayer().getSouls() < soulmastery.getNumSouls())
 						{
 							int count = 0;
 							
-							if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+							if (activeChar.getActingPlayer().getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
 								count = skill.getNumSouls();
 							else
-								count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
-							((L2PcInstance) activeChar).increaseSouls(count);
+								count = soulmastery.getNumSouls() - activeChar.getActingPlayer().getSouls();
+							activeChar.getActingPlayer().increaseSouls(count);
 						}
 						else
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-							((L2PcInstance) activeChar).sendPacket(sm);
+							activeChar.getActingPlayer().sendPacket(sm);
 						}
 					}
 				}

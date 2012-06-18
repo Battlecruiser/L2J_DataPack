@@ -49,9 +49,9 @@ public class Hide extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = ((L2PcInstance) getEffected());
+			L2PcInstance activeChar = getEffected().getActingPlayer();
 			activeChar.getAppearance().setInvisible();
 			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
 			
@@ -72,7 +72,7 @@ public class Hide extends L2Effect
 						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					}
 					
-					if (target instanceof L2PcInstance)
+					if (target.isPlayer())
 						target.sendPacket(del);
 				}
 				catch (NullPointerException e)
@@ -86,9 +86,9 @@ public class Hide extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = ((L2PcInstance) getEffected());
+			L2PcInstance activeChar = getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
 				activeChar.getAppearance().setVisible();
 			activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);

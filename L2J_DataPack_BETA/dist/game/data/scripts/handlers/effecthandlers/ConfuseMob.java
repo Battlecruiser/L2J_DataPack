@@ -22,7 +22,6 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -73,7 +72,7 @@ public class ConfuseMob extends L2Effect
 		{
 			for (L2Object obj : objs)
 			{
-				if ((obj instanceof L2Attackable) && (obj != getEffected()))
+				if (obj.isL2Attackable() && obj != getEffected())
 					targetList.add((L2Character) obj);
 			}
 		}

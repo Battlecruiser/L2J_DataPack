@@ -45,7 +45,7 @@ public class Fishing implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
 		final L2PcInstance player = activeChar.getActingPlayer();

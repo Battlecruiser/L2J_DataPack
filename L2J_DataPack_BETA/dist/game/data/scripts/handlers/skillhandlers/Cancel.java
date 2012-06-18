@@ -19,9 +19,7 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -42,30 +40,9 @@ public class Cancel implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		if (weaponInst != null)
-		{
-			if (skill.isMagic())
-			{
-				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-				else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-			}
-		}
-		else if (activeChar instanceof L2Summon)
-		{
-			final L2Summon activeSummon = (L2Summon) activeChar;
-			
-			if (skill.isMagic())
-			{
-				if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-				else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			}
-		}
-		else if (activeChar instanceof L2Npc)
+		activeChar.ssChecker();
+		
+		if (activeChar.isNpc())
 		{
 			((L2Npc)activeChar)._soulshotcharged = false;
 			((L2Npc)activeChar)._spiritshotcharged = false;

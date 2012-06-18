@@ -561,7 +561,7 @@ public class Antharas extends L2AttackableAIScript
 		{
 			for (L2Character characters : _Zone.getCharactersInside())
 			{
-				if (characters instanceof L2PcInstance)
+				if (characters.isPlayer())
 				{
 					characters.sendPacket(mov);
 				}

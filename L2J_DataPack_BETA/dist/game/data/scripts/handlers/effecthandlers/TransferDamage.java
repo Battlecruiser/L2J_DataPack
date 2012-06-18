@@ -15,7 +15,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -45,15 +44,15 @@ public class TransferDamage extends L2Effect
    @Override
    public boolean onStart()
    {
-      if (getEffected() instanceof L2Playable && getEffector() instanceof L2PcInstance)
-    	  ((L2Playable) getEffected()).setTransferDamageTo((L2PcInstance) getEffector());
+      if (getEffected().isPlayable() && getEffector().isPlayer())
+    	  ((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
       return true;
    }
    
    @Override
    public void onExit()
    {
-      if (getEffected() instanceof L2Playable && getEffector() instanceof L2PcInstance)
+      if (getEffected().isPlayable() && getEffector().isPlayer())
          ((L2Playable) getEffected()).setTransferDamageTo(null);
    }
    

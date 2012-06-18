@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -51,17 +50,17 @@ public class InstantJump implements ISkillHandler
 		
 		if (Formulas.calcPhysicalSkillEvasion(target, skill))
 		{
-			if (activeChar instanceof L2PcInstance)
+			if (activeChar.isPlayer())
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
 				sm.addString(target.getName());
-				((L2PcInstance) activeChar).sendPacket(sm);
+				activeChar.getActingPlayer().sendPacket(sm);
 			}
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
 				sm.addString(activeChar.getName());
-				((L2PcInstance) target).sendPacket(sm);
+				target.getActingPlayer().sendPacket(sm);
 			}
 			return;
 		}

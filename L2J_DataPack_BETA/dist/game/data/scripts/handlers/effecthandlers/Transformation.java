@@ -48,12 +48,12 @@ public class Transformation extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (!(getEffected() instanceof L2PcInstance))
+		if (!getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		L2PcInstance trg = (L2PcInstance) getEffected();
+		L2PcInstance trg = getEffected().getActingPlayer();
 		if (trg == null)
 		{
 			return false;

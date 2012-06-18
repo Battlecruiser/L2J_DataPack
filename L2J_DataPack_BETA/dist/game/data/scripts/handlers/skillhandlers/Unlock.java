@@ -46,7 +46,7 @@ public class Unlock implements ISkillHandler
 		
 		for (L2Object target: targets)
 		{
-			if (target instanceof L2DoorInstance)
+			if (target.isDoor())
 			{
 				L2DoorInstance door = (L2DoorInstance) target;
 				// Check if door in the different instance

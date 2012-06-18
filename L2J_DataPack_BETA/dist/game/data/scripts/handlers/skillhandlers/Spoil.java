@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -39,7 +38,7 @@ public class Spoil implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
 		if (targets == null)
@@ -47,7 +46,7 @@ public class Spoil implements ISkillHandler
 		
 		for (L2Object tgt: targets)
 		{
-			if (!(tgt instanceof L2MonsterInstance))
+			if (!tgt.isMonster())
 				continue;
 			
 			L2MonsterInstance target = (L2MonsterInstance) tgt;

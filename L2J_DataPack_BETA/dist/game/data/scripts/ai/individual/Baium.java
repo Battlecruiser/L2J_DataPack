@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -470,11 +469,11 @@ public class Baium extends L2AttackableAIScript
 		{
 			for (L2Object obj : objs)
 			{
-				if ((obj instanceof L2Playable) || (obj instanceof L2DecoyInstance))
+				if (obj.isPlayable() || obj instanceof L2DecoyInstance)
 				{
-					if (obj instanceof L2PcInstance)
+					if (obj.isPlayer())
 					{
-						if (((L2PcInstance) obj).getAppearance().getInvisible())
+						if (obj.getActingPlayer().getAppearance().getInvisible())
 						{
 							continue;
 						}
@@ -485,7 +484,7 @@ public class Baium extends L2AttackableAIScript
 						continue;
 					}
 				}
-				if ((obj instanceof L2Playable) || (obj instanceof L2DecoyInstance))
+				if (obj.isPlayable() || obj instanceof L2DecoyInstance)
 				{
 					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
 					{

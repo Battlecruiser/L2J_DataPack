@@ -38,10 +38,10 @@ public class TransformDispel implements ISkillHandler
 		if (activeChar.isAlikeDead())
 			return;
 		
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
-		L2PcInstance pc = (L2PcInstance) activeChar;
+		L2PcInstance pc = activeChar.getActingPlayer();
 		
 		if (pc.isAlikeDead() || pc.isCursedWeaponEquipped())
 			return;

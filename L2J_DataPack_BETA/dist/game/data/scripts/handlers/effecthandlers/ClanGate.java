@@ -15,7 +15,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.AbnormalEffect;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -38,13 +37,13 @@ public class ClanGate extends L2Effect
 	public boolean onStart()
 	{
 		getEffected().startAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			L2Clan clan = ((L2PcInstance) getEffected()).getClan();
+			L2Clan clan = getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
-				clan.broadcastToOtherOnlineMembers(msg, ((L2PcInstance) getEffected()));
+				clan.broadcastToOtherOnlineMembers(msg, getEffected().getActingPlayer());
 			}
 		}
 		

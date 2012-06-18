@@ -88,9 +88,9 @@ public class AdminBan implements IAdminCommandHandler
 		}
 		else
 		{
-			if (activeChar.getTarget() != null && activeChar.getTarget() instanceof L2PcInstance)
+			if (activeChar.getTarget() != null && activeChar.getTarget().isPlayer())
 			{
-				targetPlayer = (L2PcInstance)activeChar.getTarget();
+				targetPlayer = activeChar.getTarget().getActingPlayer();
 			}
 		}
 		

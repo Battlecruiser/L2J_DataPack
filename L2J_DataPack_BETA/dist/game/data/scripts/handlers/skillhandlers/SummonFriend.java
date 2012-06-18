@@ -38,7 +38,7 @@ public class SummonFriend implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 		{
 			return;
 		}
@@ -58,7 +58,7 @@ public class SummonFriend implements ISkillHandler
 					continue;
 				}
 				
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					if (isMastersCall) //Master's Call
 					{

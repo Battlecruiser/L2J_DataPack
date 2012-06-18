@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -36,13 +35,13 @@ public class NornilsPower implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		InstanceWorld world = null;
 
 		final int instanceId = activeChar.getInstanceId();
 		if (instanceId > 0)
-			world = InstanceManager.getInstance().getPlayerWorld((L2PcInstance)activeChar);
+			world = InstanceManager.getInstance().getPlayerWorld(activeChar.getActingPlayer());
 		
 		if (world != null && world.instanceId == instanceId && world.templateId == 11)
 		{

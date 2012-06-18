@@ -16,7 +16,6 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -58,22 +57,22 @@ public class SignetAntiSummon extends L2Effect
 			return true; // do nothing first time
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = (L2PcInstance) getEffector();
+		L2PcInstance caster = getEffector().getActingPlayer();
 		
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (cha == null)
 				continue;
 			
-			if (cha instanceof L2Playable)
+			if (cha.isPlayable())
 			{
 				if (caster.canAttackCharacter(cha))
 				{
 					L2PcInstance owner = null;
-					if (cha instanceof L2Summon)
+					if (cha.isSummon())
 						owner = ((L2Summon) cha).getOwner();
 					else
-						owner = (L2PcInstance) cha;
+						owner = cha.getActingPlayer();
 					
 					if (owner != null && owner.getPet() != null)
 					{

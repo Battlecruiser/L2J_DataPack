@@ -17,7 +17,6 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -36,18 +35,18 @@ public class GiveVitality implements ISkillHandler
 	{
 		for (L2Object target : targets)
 		{
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				if (skill.hasEffects())
 				{
-					((L2PcInstance) target).stopSkillEffects(skill.getId());
-					skill.getEffects(activeChar, ((L2PcInstance)target));
+					target.getActingPlayer().stopSkillEffects(skill.getId());
+					skill.getEffects(activeChar, target.getActingPlayer());
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 					sm.addSkillName(skill);
 					target.sendPacket(sm);
 				}
-				((L2PcInstance) target).updateVitalityPoints((float)skill.getPower(), false, false);
-				((L2PcInstance) target).sendPacket(new UserInfo((L2PcInstance)target));
+				target.getActingPlayer().updateVitalityPoints((float)skill.getPower(), false, false);
+				target.getActingPlayer().sendPacket(new UserInfo(target.getActingPlayer()));
 			}
 		}
 	}

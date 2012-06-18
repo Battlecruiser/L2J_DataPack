@@ -186,7 +186,7 @@ public class Beleth extends L2AttackableAIScript
 						movie = true;
 						for (L2Character npc : _zone.getCharactersInside())
 						{
-							if (npc instanceof L2Npc)
+							if (npc.isNpc())
 							{
 								npc.deleteMe();
 							}
@@ -390,7 +390,7 @@ public class Beleth extends L2AttackableAIScript
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (((character instanceof L2PcInstance) && (GrandBossManager.getInstance().getBossStatus(29118) == 1)) || (debug && (GrandBossManager.getInstance().getBossStatus(29118) != 2) && (character instanceof L2PcInstance)))
+		if (((character.isPlayer()) && (GrandBossManager.getInstance().getBossStatus(29118) == 1)) || (debug && (GrandBossManager.getInstance().getBossStatus(29118) != 2) && (character.isPlayer())))
 		{
 			startSpawnTask();
 			GrandBossManager.getInstance().setBossStatus(29118, 2);

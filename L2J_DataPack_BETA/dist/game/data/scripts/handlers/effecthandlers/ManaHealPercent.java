@@ -4,7 +4,6 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -34,7 +33,7 @@ public class ManaHealPercent extends L2Effect
 	public boolean onStart()
 	{
 		L2Character target = getEffected();
-		if (target == null || target.isDead() || target instanceof L2DoorInstance)
+		if (target == null || target.isDead() || target.isDoor())
 			return false;
 		StatusUpdate su = new StatusUpdate(target);
 		double amount = 0;
