@@ -1304,10 +1304,10 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<add order="0x40" stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
 				<mul order="0x30" stat="cAtk" val="1.2">
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<player behind="True" />
+					<player behind="true" />
 				</basemul>
 				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>
@@ -1319,10 +1319,10 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<add order="0x40" stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
 				<mul order="0x30" stat="cAtk" val="1.2">
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<player behind="True" />
+					<player behind="true" />
 				</basemul>
 				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>

@@ -1638,10 +1638,10 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" /> <!-- Decreases critical attack rate by 30% -->
 				<mul order="0x30" stat="blowRate" val="1.6" /> <!-- Increases blow land rate by 60% -->
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Decreases frontal critical damage by 30% -->
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.9"> <!-- Increases rear critical damage by 90% -->
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</for>
@@ -1650,10 +1650,10 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" />
 				<mul order="0x30" stat="blowRate" val="#ench1blowRate" />
 				<mul order="0x30" stat="cAtk" val="0.7">
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.9">
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant1for>
@@ -1662,10 +1662,10 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" />
 				<mul order="0x30" stat="blowRate" val="1.6" />
 				<mul order="0x30" stat="cAtk" val="0.7">
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench2cAtk">
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant2for>
@@ -1691,48 +1691,48 @@
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Decreases frontal critical attack rate by 30% -->
-					<player front="True" />
+					<player front="true" />
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.3"> <!-- Increase side critical attack rate by 30% -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.6"> <!-- Increase rear critical attack rate by 60% -->
-					<player behind="True" />
+					<player behind="true" />
 				</basemul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
-					<player front="True" />
+					<player front="true" />
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.3"> <!-- Critical Chance from side +30% -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="#ench1rCrit"> <!-- Critical Chance from back +60% -->
-					<player behind="True" />
+					<player behind="true" />
 				</basemul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
-					<player front="True" />
+					<player front="true" />
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="#ench2rCrit"> <!-- Critical Chance from side +30% -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.6"> <!-- Critical Chance from back +60% -->
-					<player behind="True" />
+					<player behind="true" />
 				</basemul>
 			</effect>
 		</enchant2for>
@@ -1758,48 +1758,48 @@
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Decreases frontal critical attack damage by 30% -->
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.3"> <!-- Increases side critical attack damage by 30% -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.6"> <!-- Increases rear critical attack damage by 60% -->
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.3"> <!-- Critical Damage from side +30% -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench1cAtk"> <!-- Critical Damage from back + enchant % -->
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
-					<player front="True" />
+					<player front="true" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench2cAtk"> <!-- Critical Damage from side + enchant % -->
 					<and>
-						<player front="False" />
-						<player behind="False" />
+						<player front="false" />
+						<player behind="false" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.6"> <!-- Critical Damage from back +60% -->
-					<player behind="True" />
+					<player behind="true" />
 				</mul>
 			</effect>
 		</enchant2for>

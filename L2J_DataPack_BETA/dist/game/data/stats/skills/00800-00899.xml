@@ -665,7 +665,7 @@
 		<set name="soulConsumeCount" val="20" />
 		<set name="stayAfterDeath" val="true" />
 		<cond msgId="2721">
-			<player landingZone="True" />
+			<player landingZone="true" />
 		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
@@ -691,7 +691,7 @@
 		<set name="transformId" val="8" />
 		<set name="stayAfterDeath" val="true" />
 		<cond msgId="2721">
-			<player landingZone="True" />
+			<player landingZone="true" />
 		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
@@ -717,7 +717,7 @@
 		<set name="transformId" val="9" />
 		<set name="stayAfterDeath" val="true" />
 		<cond msgId="2721">
-			<player landingZone="True" />
+			<player landingZone="true" />
 		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
