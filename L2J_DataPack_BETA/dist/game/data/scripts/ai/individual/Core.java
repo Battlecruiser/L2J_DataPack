@@ -198,8 +198,8 @@ public class Core extends L2AttackableAIScript
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
-			// time is 60hour +/- 23hour
-			long respawnTime = (long) Config.Interval_Of_Core_Spawn + getRandom(Config.Random_Of_Core_Spawn);
+			// Respawn time is 60 Hours - 24 Random Hours
+			long respawnTime = (long) Config.Interval_Of_Core_Spawn - getRandom(Config.Random_Of_Core_Spawn);
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);

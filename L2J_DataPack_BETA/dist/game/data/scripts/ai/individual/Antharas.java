@@ -948,7 +948,8 @@ public class Antharas extends L2AttackableAIScript
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
-			long respawnTime = (long) Config.Interval_Of_Antharas_Spawn + getRandom(Config.Random_Of_Antharas_Spawn);
+			// Respawn time is 264 Hours - 72 Random Hours
+			long respawnTime = (long) Config.Interval_Of_Antharas_Spawn - getRandom(Config.Random_Of_Antharas_Spawn);
 			ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(npc.getNpcId());

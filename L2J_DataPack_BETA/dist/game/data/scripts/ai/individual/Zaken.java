@@ -878,8 +878,8 @@ public class Zaken extends L2AttackableAIScript
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
-			// time is 36hour +/- 17hour
-			long respawnTime = (long) Config.Interval_Of_Zaken_Spawn + getRandom(Config.Random_Of_Zaken_Spawn);
+			// Respawn time is 60 Hours - 20 Random Hours
+			long respawnTime = (long) Config.Interval_Of_Zaken_Spawn - getRandom(Config.Random_Of_Zaken_Spawn);
 			startQuestTimer("zaken_unlock", respawnTime, null, null);
 			cancelQuestTimer("1001", npc, null);
 			cancelQuestTimer("1003", npc, null);
