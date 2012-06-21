@@ -139,7 +139,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25319,1,184542,-106330,-6304,0,43200,129600,0,1100996,4304), -- Ember (80)
 (25322,1,93296,-75104,-1824,0,43200,129600,0,834231,2707), -- Demon's Agent Falston (66)
 (25325,1,91008,-85904,-2736,0,43200,129600,0,888658,2987), -- Flame Of Splendor Barakiel (70)
-(25328,1,59331,-42403,-3003,0,43200,129600,0,900867,3058), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night)
+(25328,1,59331,-42403,-3003,0,7200,10800,0,900867,3058), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night)
 -- (25339,1,0,0,0,0,43200,129600,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Four Sepulchers Instance)
 -- (25342,1,0,0,0,0,43200,129600,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Four Sepulchers Instance)
 -- (25346,1,0,0,0,0,43200,129600,0,96646,3718), -- Shadow Of Halisha (81) -- (Spawn by Four Sepulchers Instance)
