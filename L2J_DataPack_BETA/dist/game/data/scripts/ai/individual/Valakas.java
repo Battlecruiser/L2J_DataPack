@@ -983,7 +983,8 @@ public class Valakas extends L2AttackableAIScript
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0, 10000, -20, 1, 1));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
-		long respawnTime = (long) Config.Interval_Of_Valakas_Spawn + getRandom(Config.Random_Of_Valakas_Spawn);
+		// Respawn time is 264 Hours - 72 Random Hours
+		long respawnTime = (long) Config.Interval_Of_Valakas_Spawn - getRandom(Config.Random_Of_Valakas_Spawn);
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);

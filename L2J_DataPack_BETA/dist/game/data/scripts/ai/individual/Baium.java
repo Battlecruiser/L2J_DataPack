@@ -437,8 +437,8 @@ public class Baium extends L2AttackableAIScript
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		// spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
 		addSpawn(29055, 115203, 16620, 10078, 0, false, 900000); // //should we teleport everyone out if the cubic despawns??
-		// "lock" baium for 5 days and 1 to 8 hours [i.e. 432,000,000 + 1*3,600,000 + random-less-than(8*3,600,000) millisecs]
-		long respawnTime = (long) Config.Interval_Of_Baium_Spawn + getRandom(Config.Random_Of_Baium_Spawn);
+		// Respawn time is 168 Hours - 48 Random Hours
+		long respawnTime = (long) Config.Interval_Of_Baium_Spawn - getRandom(Config.Random_Of_Baium_Spawn);
 		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
 		startQuestTimer("baium_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
