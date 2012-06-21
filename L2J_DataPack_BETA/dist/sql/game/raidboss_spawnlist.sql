@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `loc_y` int NOT NULL default '0',
   `loc_z` int NOT NULL default '0',
   `heading` int NOT NULL default '0',
-  `respawn_min_delay` int(11) NOT NULL default '43200',
-  `respawn_max_delay` int(11) NOT NULL default '129600',
+  `respawn_min_delay` int(11) NOT NULL default '43200', -- 12 Hours (36 Hours - (24 Random Hours))
+  `respawn_max_delay` int(11) NOT NULL default '129600', -- (36 Hours)
   `respawn_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
@@ -209,8 +209,8 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25539,1,-17475,253163,-3432,0,43200,129600,0,2076371,9999), -- Typhoon (84)
 -- (25540,1,0,0,0,0,43200,129600,0,3524173,9999), -- Demon Prince (83) -- stats to be done
 -- (25542,1,0,0,0,0,43200,129600,0,3524173,9999), -- Ranku (83) -- stats to be done
-(25544,1,-12557,273901,-9000,0,43200,216000,0,2682423,4177), -- Tully (83)
-(25603,1,20886,244088,11062,0,43200,216000,0,2308600,4255), -- Darion (87)
+(25544,1,-12557,273901,-9000,0,43200,129600,0,2682423,4177), -- Tully (83)
+(25603,1,20886,244088,11062,0,43200,129600,0,2308600,4255), -- Darion (87)
 -- (25609,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25610,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
 -- (25611,1,0,0,0,0,43200,129600,0,9999,9999), -- Epidos (?) -- stats to be done
@@ -233,13 +233,13 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25666,1,0,0,0,0,43200,129600,0,9999,9999), -- Yehan Klanikus (?) -- stats to be done
 -- (25667,1,0,0,0,0,43200,129600,0,9999,9999), -- Cannibalistic Stakato Chief (?) -- stats to be done
 (25671,1,79634,-55428,-6104,0,43200,86400,0,743801,4022), -- Queen Shyeed (84)
-(25674,1,86534,216888,-3176,0,86400,129600,0,736436,3945), -- Gwindorr (83)
+(25674,1,86534,216888,-3176,0,43200,129600,0,736436,3945), -- Gwindorr (83)
 (25677,1,83056,183232,-3616,0,43200,129600,0,743801,4022), -- Water Spirit Lian (84)
-(25680,1,193902,54135,-4184,0,21600,21600,0,2035459,3869), -- Giant Marpanak (82)
-(25681,1,186210,61479,-4000,0,21600,21600,0,729145,3869), -- Gorgolos (82)
-(25684,1,186919,56297,-4480,0,21600,21600,0,736436,3945), -- Last Titan Utenus (83)
--- (25687,1,191777,56197,-7624,0,3600,3600,0,1027906,3945), -- Hekaton Prime (83) (Spawn by Quest)
-(25701,1,112798,-76800,-10,-15544,86400,129600,0,2231403,48422), -- Anays (84)
+(25680,1,193902,54135,-4184,0,0,21600,0,2035459,3869), -- Giant Marpanak (82)
+(25681,1,186210,61479,-4000,0,0,21600,0,729145,3869), -- Gorgolos (82)
+(25684,1,186919,56297,-4480,0,0,21600,0,736436,3945), -- Last Titan Utenus (83)
+-- (25687,1,191777,56197,-7624,0,0,3600,0,1027906,3945), -- Hekaton Prime (83) (Spawn by Quest)
+(25701,1,112798,-76800,-10,-15544,43200,129600,0,2231403,48422), -- Anays (84)
 (29040,1,189400,-105702,-782,0,604800,604800,0,520605,4140), -- Wings of Flame Ixion (84)
 -- (29054,1,11882,-49216,-3008,0,43200,129600,0,1352750,1494), -- Benom (75) (spawn 1hr before siege in rune start)
 -- (29060,1,106000,-128000,-3000,0,43200,129600,0,1566263,9999), -- Captain Of The Ice Queen's Royal Guard (59) (Spawn by Quest)
