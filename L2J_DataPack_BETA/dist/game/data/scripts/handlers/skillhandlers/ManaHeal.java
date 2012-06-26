@@ -40,7 +40,7 @@ public class ManaHeal implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		activeChar.ssChecker();
+		activeChar.spsChecker(skill);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{

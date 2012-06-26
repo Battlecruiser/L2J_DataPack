@@ -43,7 +43,7 @@ public class Resurrect implements ISkillHandler
 		if (activeChar.isPlayer())
 			player = activeChar.getActingPlayer();
 		
-		activeChar.ssChecker();
+		activeChar.spsChecker(skill);
 		
 		L2PcInstance targetPlayer;
 		List<L2Character> targetToRes = new FastList<>();

@@ -117,7 +117,7 @@ public class Continuous implements ISkillHandler
 			if (skill.getSkillType() == L2SkillType.BUFF)
 			{
 				
-				activeChar.ssChecker();
+				activeChar.spsChecker(skill);
 			}
 			
 			if (skill.isOffensive() || skill.isDebuff())

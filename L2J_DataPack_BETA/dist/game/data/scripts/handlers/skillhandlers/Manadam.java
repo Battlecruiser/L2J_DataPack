@@ -126,7 +126,7 @@ public class Manadam implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.ssChecker();
+		activeChar.spsChecker(skill);
 	}
 	
 	@Override
