@@ -33,31 +33,32 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="101" levels="40" name="Stunning Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
-		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#enchpmDef"> 0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.9 0.9 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.8 0.8 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72 </table>
-		<table name="#ench2mpConsume"> 107 106 104 103 101 100 98 97 96 94 93 91 90 88 87 85 84 83 81 80 78 77 75 74 73 71 70 68 67 65 </table>
-		<table name="#mpConsume"> 46 48 49 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
+	<skill id="101" levels="40" name="Stun Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+		<table name="#mpConsume"> 46 48 49 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
 		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1effectPower"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
+		<table name="#ench2mpConsume"> 107 106 104 103 101 100 98 97 96 94 93 91 90 88 87 85 84 83 81 80 78 77 75 74 73 71 70 68 67 65 </table>
 		<table name="#ench2Power"> 2211 2231 2251 2270 2290 2310 2330 2349 2369 2389 2409 2428 2448 2468 2488 2507 2527 2547 2566 2586 2606 2626 2645 2665 2685 2705 2724 2744 2764 2784 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="3000" />
+		<table name="#ench34pmDef"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.83 0.82 0.81 0.8 0.79 0.78 0.77 0.76 0.75 0.73 0.73 0.72 0.71 0.7 </table>
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="overHit" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="A2" />
-		<set name="castRange" val="900" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="1400" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -70,23 +71,23 @@
 		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</for>
 		<enchant1for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="#ench1effectPower" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</enchant1for>
 		<enchant3for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun">
-				<mul order="0x30" stat="pDef" val="#enchpmDef" />
+				<mul order="0x30" stat="pDef" val="#ench34pmDef" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</enchant3for>
 		<enchant4for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun">
-				<mul order="0x30" stat="mDef" val="#enchpmDef" />
+				<mul order="0x30" stat="mDef" val="#ench34pmDef" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</enchant4for>
 	</skill>
 	<skill id="102" levels="16" name="Entangle" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
