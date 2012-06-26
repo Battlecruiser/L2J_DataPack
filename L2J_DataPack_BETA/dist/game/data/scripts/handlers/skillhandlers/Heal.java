@@ -58,8 +58,7 @@ public class Heal implements ISkillHandler
 				final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 				double staticShotBonus = 0;
 				int mAtkMul = 1; // mAtk multiplier
-				if (weaponInst != null
-						&& weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+				if (weaponInst != null && weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
 				{
 					if (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())
 					{
@@ -96,8 +95,7 @@ public class Heal implements ISkillHandler
 					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 				}
 				// If there is no weapon equipped, check for an active summon.
-				else if (activeChar.isSummon()
-						&& ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
+				else if (activeChar.isSummon() && ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
 				{
 					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
 					

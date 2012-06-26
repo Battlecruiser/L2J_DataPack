@@ -40,7 +40,7 @@ public class Dummy implements ISkillHandler
 		if (!activeChar.isPlayer())
 			return;
 		
-		activeChar.ssChecker();
+		activeChar.spsChecker(skill);
 		
 		switch(skill.getId())
 		{

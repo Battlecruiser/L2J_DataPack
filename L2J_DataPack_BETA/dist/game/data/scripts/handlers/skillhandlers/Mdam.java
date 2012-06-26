@@ -184,7 +184,7 @@ public class Mdam implements ISkillHandler
 			activeChar.doDie(activeChar);
 		}
 		
-		activeChar.ssChecker();
+		activeChar.spsChecker(skill);
 	}
 	
 	@Override
