@@ -22,18 +22,14 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
-
 /**
- * This class ...
- *
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-
 public class AdminTest implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
@@ -53,17 +49,21 @@ public class AdminTest implements IAdminCommandHandler
 				activeChar.sendMessage(line);
 			}
 		}
-		else if (command.startsWith("admin_skill_test") || command.startsWith("admin_st"))
+		else if (command.startsWith("admin_skill_test"))
 		{
 			try
 			{
 				StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				int id = Integer.parseInt(st.nextToken());
-				if(command.startsWith("admin_skill_test"))
+				if (command.startsWith("admin_skill_test"))
+				{
 					adminTestSkill(activeChar, id, true);
+				}
 				else
+				{
 					adminTestSkill(activeChar, id, false);
+				}
 			}
 			catch (NumberFormatException e)
 			{
@@ -88,35 +88,39 @@ public class AdminTest implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 * @param id
-	 * @param msu 
+	 * @param msu
 	 */
 	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
 	{
 		L2Character caster;
 		L2Object target = activeChar.getTarget();
 		if (!(target instanceof L2Character))
+		{
 			caster = activeChar;
+		}
 		else
+		{
 			caster = (L2Character) target;
-
+		}
+		
 		L2Skill _skill = SkillTable.getInstance().getInfo(id, 1);
-		if(_skill != null)
+		if (_skill != null)
 		{
 			caster.setTarget(activeChar);
-			if(msu)
+			if (msu)
+			{
 				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, _skill.getHitTime(), _skill.getReuseDelay()));
+			}
 			else
+			{
 				caster.doCast(_skill);
+			}
 		}
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

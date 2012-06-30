@@ -17,7 +17,6 @@ package hellbound.Kanaf;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -31,7 +30,7 @@ public class Kanaf extends Quest
 	{
 		if (event.equalsIgnoreCase("info"))
 		{
-			return "32346-0" + Rnd.get(1, 3) + ".htm";
+			return "32346-0" + getRandom(1, 3) + ".htm";
 		}
 		
 		return null;

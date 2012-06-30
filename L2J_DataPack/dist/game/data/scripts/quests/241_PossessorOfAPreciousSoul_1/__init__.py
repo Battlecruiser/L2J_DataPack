@@ -268,7 +268,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMember(player, "6")
      if partyMember :
          st = partyMember.getQuestState(qn)
-         chance = st.getRandom(100)
+         chance = self.getRandom(100)
          if MALRUK_SUCCUBUS_CLAW_CHANCE >= chance and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10 :
            st.giveItems(MALRUK_SUCCUBUS_CLAW,1)
            st.playSound("ItemSound.quest_itemget")
@@ -280,7 +280,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMember(player, "14")
      if partyMember :
          st = partyMember.getQuestState(qn)
-         chance = st.getRandom(100)
+         chance = self.getRandom(100)
          if CRIMSON_MOSS_CHANCE >= chance and st.getQuestItemsCount(CRIMSON_MOSS) < 5 :
            st.giveItems(CRIMSON_MOSS,1)
            st.playSound("ItemSound.quest_itemget")

@@ -52,7 +52,7 @@ class Quest (JQuest) :
        if hills < 50 :
          htmltext = "32173-07a.htm"
        else:
-         rnd = st.getRandom(len(REWARDS))
+         rnd = self.getRandom(len(REWARDS))
          REWARD = REWARDS[rnd]
          newbie = player.getNewbie()
          if newbie | NEWBIE_REWARD != newbie :
@@ -95,7 +95,7 @@ class Quest (JQuest) :
      if not st: return
      if st.getState() == State.STARTED :
        npcId = npc.getNpcId()
-       chance = st.getRandom(100)
+       chance = self.getRandom(100)
        if (npcId in MOBS) and (chance < 50) : #Retail statistic info. 53 mob's - 28 hills
          st.giveItems(HILLS,1)
          st.playSound("ItemSound.quest_itemget")

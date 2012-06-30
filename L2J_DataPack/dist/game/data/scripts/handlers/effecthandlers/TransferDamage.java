@@ -14,18 +14,15 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- *
  * @author UnAfraid
  */
-
 public class TransferDamage extends L2Effect
 {  
    public TransferDamage(Env env, EffectTemplate template)
@@ -37,44 +34,28 @@ public class TransferDamage extends L2Effect
    {
       super(env, effect);
    }
-
-   /**
-    *
-    * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-    */
+   
    @Override
    public L2EffectType getEffectType()
    {
       return L2EffectType.DAMAGE_TRANSFER;
    }
-
-   /**
-    *
-    * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-    */
+   
    @Override
    public boolean onStart()
    {
-      if (getEffected() instanceof L2Playable && getEffector() instanceof L2PcInstance)
-    	  ((L2Playable) getEffected()).setTransferDamageTo((L2PcInstance) getEffector());
+      if (getEffected().isPlayable() && getEffector().isPlayer())
+    	  ((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
       return true;
    }
-
-   /**
-    *
-    * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-    */
+   
    @Override
    public void onExit()
    {
-      if (getEffected() instanceof L2Playable && getEffector() instanceof L2PcInstance)
+      if (getEffected().isPlayable() && getEffector().isPlayer())
          ((L2Playable) getEffected()).setTransferDamageTo(null);
    }
-
-   /**
-    *
-    * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-    */
+   
    @Override
    public boolean onActionTime()
    {

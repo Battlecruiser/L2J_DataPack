@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * A Trap for Revenge (702)
@@ -32,7 +31,16 @@ public class Q702_ATrapForRevenge extends Quest
 	private static final int Plenos = 32563;
 	private static final int Lekon = 32557;
 	private static final int Tenius = 32555;
-	private static final int[] Monsters = { 22612, 22613, 25632, 22610, 22611, 25631, 25626 };
+	private static final int[] Monsters =
+	{
+		22612,
+		22613,
+		25632,
+		22610,
+		22611,
+		25631,
+		25626
+	};
 	// Items
 	private static final int DrakeFlesh = 13877;
 	private static final int RottenBlood = 13878;
@@ -44,10 +52,11 @@ public class Q702_ATrapForRevenge extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return getNoQuestMsg(player);
+		}
 		
 		if (event.equalsIgnoreCase("32563-04.htm"))
 		{
@@ -57,26 +66,25 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-07.html"))
 		{
-			if (st.hasQuestItems(DrakeFlesh))
-				htmltext = "32563-08.html";
-			else
-				htmltext = "32563-07.html";
+			htmltext = st.hasQuestItems(DrakeFlesh) ? "32563-08.html" : "32563-07.html";
 		}
 		else if (event.equalsIgnoreCase("32563-09.html"))
 		{
-			st.giveItems(57, st.getQuestItemsCount(DrakeFlesh) * 100);
+			st.giveAdena(st.getQuestItemsCount(DrakeFlesh) * 100, false);
 			st.takeItems(DrakeFlesh, -1);
 		}
 		else if (event.equalsIgnoreCase("32563-11.html"))
 		{
 			if (st.hasQuestItems(VariantDrakeWingHorns))
 			{
-				st.giveItems(57, st.getQuestItemsCount(VariantDrakeWingHorns) * 200000);
+				st.giveAdena(st.getQuestItemsCount(VariantDrakeWingHorns) * 200000, false);
 				st.takeItems(VariantDrakeWingHorns, -1);
 				htmltext = "32563-12.html";
 			}
 			else
+			{
 				htmltext = "32563-11.html";
+			}
 		}
 		else if (event.equalsIgnoreCase("32563-14.html"))
 		{
@@ -85,13 +93,19 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
-			if (!st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
+			if (!st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) < 100))
+			{
 				htmltext = "32557-03.html";
-			else if (st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) < 100)
+			}
+			else if (st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) < 100))
+			{
 				htmltext = "32557-04.html";
-			else if (!st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
+			}
+			else if (!st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) >= 100))
+			{
 				htmltext = "32557-05.html";
-			else if (st.hasQuestItems(RottenBlood) && st.getQuestItemsCount(ExtractedRedStarStone) >= 100)
+			}
+			else if (st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) >= 100))
 			{
 				st.giveItems(BaitForDrakes, 1);
 				st.takeItems(RottenBlood, 1);
@@ -106,15 +120,19 @@ public class Q702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-05.html"))
 		{
-			st.exitQuest(true);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(true);
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{
 			if (st.getQuestItemsCount(DrakeFlesh) < 100)
+			{
 				htmltext = "32555-06.html";
+			}
 			else
+			{
 				htmltext = "32555-07.html";
+			}
 		}
 		else if (event.equalsIgnoreCase("32555-08.html"))
 		{
@@ -124,94 +142,110 @@ public class Q702_ATrapForRevenge extends Quest
 		else if (event.equalsIgnoreCase("32555-10.html"))
 		{
 			if (st.hasQuestItems(VariantDrakeWingHorns))
+			{
 				htmltext = "32555-11.html";
+			}
 			else
+			{
 				htmltext = "32555-10.html";
+			}
 		}
 		else if (event.equalsIgnoreCase("32555-15.html"))
 		{
-			int i0 = Rnd.get(1000);
-			int i1 = Rnd.get(1000);
+			int i0 = getRandom(1000);
+			int i1 = getRandom(1000);
 			
-			if (i0 >= 500 && i1 >= 600)
+			if ((i0 >= 500) && (i1 >= 600))
 			{
-				st.giveItems(57, Rnd.get(49917) + 125000);
+				st.giveAdena(getRandom(49917) + 125000, false);
 				if (i1 < 720)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9629, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
 				}
 				else if (i1 < 840)
 				{
-					st.giveItems(9629, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				else if (i1 < 960)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				else if (i1 < 1000)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9629, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				htmltext = "32555-15.html";
 			}
-			else if (i0 >= 500 && i1 < 600)
+			else if ((i0 >= 500) && (i1 < 600))
 			{
-				st.giveItems(57, Rnd.get(49917) + 125000);
+				st.giveAdena(getRandom(49917) + 125000, false);
 				if (i1 < 210)
 				{
 				}
 				else if (i1 < 340)
-					st.giveItems(9628, Rnd.get(3) + 1);
+				{
+					st.giveItems(9628, getRandom(3) + 1);
+				}
 				else if (i1 < 470)
-					st.giveItems(9629, Rnd.get(3) + 1);
+				{
+					st.giveItems(9629, getRandom(3) + 1);
+				}
 				else if (i1 < 600)
-					st.giveItems(9630, Rnd.get(3) + 1);
+				{
+					st.giveItems(9630, getRandom(3) + 1);
+				}
 				
 				htmltext = "32555-16.html";
 			}
-			else if (i0 < 500 && i1 >= 600)
+			else if ((i0 < 500) && (i1 >= 600))
 			{
-				st.giveItems(57, Rnd.get(49917) + 25000);
+				st.giveAdena(getRandom(49917) + 25000, false);
 				if (i1 < 720)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9629, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
 				}
 				else if (i1 < 840)
 				{
-					st.giveItems(9629, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				else if (i1 < 960)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				else if (i1 < 1000)
 				{
-					st.giveItems(9628, Rnd.get(3) + 1);
-					st.giveItems(9629, Rnd.get(3) + 1);
-					st.giveItems(9630, Rnd.get(3) + 1);
+					st.giveItems(9628, getRandom(3) + 1);
+					st.giveItems(9629, getRandom(3) + 1);
+					st.giveItems(9630, getRandom(3) + 1);
 				}
 				htmltext = "32555-17.html";
 			}
-			else if (i0 < 500 && i1 < 600)
+			else if ((i0 < 500) && (i1 < 600))
 			{
-				st.giveItems(57, Rnd.get(49917) + 25000);
+				st.giveAdena(getRandom(49917) + 25000, false);
 				if (i1 < 210)
 				{
 				}
 				else if (i1 < 340)
-					st.giveItems(9628, Rnd.get(3) + 1);
+				{
+					st.giveItems(9628, getRandom(3) + 1);
+				}
 				else if (i1 < 470)
-					st.giveItems(9629, Rnd.get(3) + 1);
+				{
+					st.giveItems(9629, getRandom(3) + 1);
+				}
 				else if (i1 < 600)
-					st.giveItems(9630, Rnd.get(3) + 1);
+				{
+					st.giveItems(9630, getRandom(3) + 1);
+				}
 				
 				htmltext = "32555-18.html";
 			}
@@ -224,27 +258,22 @@ public class Q702_ATrapForRevenge extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		QuestState prev = player.getQuestState("10273_GoodDayToFly");
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == Plenos)
 		{
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78))
-						htmltext = "32563-01.htm";
-					else
-						htmltext = "32563-02.htm";
+					final QuestState prev = player.getQuestState("10273_GoodDayToFly");
+					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-						htmltext = "32563-05.html";
-					else
-						htmltext = "32563-06.html";
+					htmltext = (st.getInt("cond") == 1) ? "32563-05.html" : "32563-06.html";
 					break;
 			}
 		}
@@ -281,59 +310,94 @@ public class Q702_ATrapForRevenge extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player, "2");
+		final L2PcInstance partyMember = getRandomPartyMember(player, "2");
 		if (partyMember == null)
+		{
 			return null;
+		}
 		final QuestState st = partyMember.getQuestState(qn);
-		int chance = Rnd.get(1000);
-		
+		final int chance = getRandom(1000);
 		switch (npc.getNpcId())
 		{
 			case 22612:
 				if (chance < 413)
+				{
 					st.giveItems(DrakeFlesh, 2);
+				}
 				else
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 22613:
 				if (chance < 440)
+				{
 					st.giveItems(DrakeFlesh, 2);
+				}
 				else
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 25632:
 				if (chance < 996)
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 22610:
 				if (chance < 485)
+				{
 					st.giveItems(DrakeFlesh, 2);
+				}
 				else
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 22611:
 				if (chance < 451)
+				{
 					st.giveItems(DrakeFlesh, 2);
+				}
 				else
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 25631:
 				if (chance < 485)
+				{
 					st.giveItems(DrakeFlesh, 2);
+				}
 				else
+				{
 					st.giveItems(DrakeFlesh, 1);
+				}
 				break;
 			case 25626:
+				int count = 0;
 				if (chance < 708)
-					st.giveItems(VariantDrakeWingHorns, Rnd.get(2) + 1);
+				{
+					count = getRandom(2) + 1;
+				}
 				else if (chance < 978)
-					st.giveItems(VariantDrakeWingHorns, Rnd.get(3) + 3);
+				{
+					count = getRandom(3) + 3;
+				}
 				else if (chance < 994)
-					st.giveItems(VariantDrakeWingHorns, Rnd.get(4) + 6);
+				{
+					count = getRandom(4) + 6;
+				}
 				else if (chance < 998)
-					st.giveItems(VariantDrakeWingHorns, Rnd.get(4) + 10);
+				{
+					count = getRandom(4) + 10;
+				}
 				else if (chance < 1000)
-					st.giveItems(VariantDrakeWingHorns, Rnd.get(5) + 14);
+				{
+					count = getRandom(5) + 14;
+				}
+				st.giveItems(VariantDrakeWingHorns, count);
 				break;
 		}
 		st.playSound("ItemSound.quest_itemget");
@@ -347,10 +411,7 @@ public class Q702_ATrapForRevenge extends Quest
 		addTalkId(Plenos);
 		addTalkId(Lekon);
 		addTalkId(Tenius);
-		for (int i : Monsters)
-		{
-			addKillId(i);
-		}
+		addKillId(Monsters);
 	}
 	
 	public static void main(String[] args)

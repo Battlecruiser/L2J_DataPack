@@ -17,15 +17,15 @@ package handlers.effecthandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -58,27 +58,19 @@ public class Warp extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.WARP;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
 		_actor = isSelfEffect() ? getEffector() : getEffected();
 		
-		if (_actor.isMovementDisabled())
-			return false;
+		/*if (_actor.isMovementDisabled()) This is removed because in retail you can use Warp while movement is disabled.
+			return false;*/
 		
 		int _radius = getSkill().getFlyRadius();
 		
@@ -115,10 +107,6 @@ public class Warp extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

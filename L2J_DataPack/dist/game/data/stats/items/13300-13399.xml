@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13300" type="EtcItem" name="Feather of Blessing (Event)">
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="liquid" />
@@ -50,7 +50,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13304" type="EtcItem" name="Fairy Princess Hunting Helper Necklace (Event)">
@@ -67,7 +67,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13305" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace (Event)">
@@ -84,7 +84,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13306" type="EtcItem" name="Fox Shaman Hunting Helper Necklace (Event)">
@@ -101,7 +101,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13307" type="EtcItem" name="Color Name (Event)">
@@ -1446,7 +1446,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13396" type="EtcItem" name="Scroll of Escape: Elven Village">
@@ -1461,7 +1461,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-2" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13397" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
@@ -1476,7 +1476,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-3" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13398" type="EtcItem" name="Scroll of Escape: Orc Village">
@@ -1491,7 +1491,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-4" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13399" type="EtcItem" name="Scroll of Escape: Dwarven Village">
@@ -1506,7 +1506,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2609-5" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 </list>

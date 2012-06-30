@@ -26,7 +26,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- ** @author Gladicek Secret Area in the Keucereus Fortress (For Quest 10272 Light Fragment)
+ *  Secret Area in the Keucereus Fortress (For Quest 10272 Light Fragment)
+ ** @author Gladicek
  */
 public class SecretArea extends Quest
 {
@@ -44,7 +45,7 @@ public class SecretArea extends Quest
 		new Location(-23758, -8959, -5384), new Location(-185057, 242821, 1576)
 	};
 	
-	private class SecretAreaWorld extends InstanceWorld
+	protected class SecretAreaWorld extends InstanceWorld
 	{
 		
 	}

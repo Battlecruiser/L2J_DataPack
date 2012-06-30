@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `fort` (
   `castleId` int(1) NOT NULL default 0,
   `blood` int(3) NOT NULL default 0,
   `supplyLvL` int(2) NOT NULL default 0,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `fort` VALUES 

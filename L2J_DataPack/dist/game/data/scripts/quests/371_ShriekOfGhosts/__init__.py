@@ -62,7 +62,7 @@ class Quest (JQuest) :
        if not porcelain :
          htmltext = "30929-02.htm"
        else :
-           test = st.getRandom(100)
+           test = self.getRandom(100)
            st.takeItems(PORCELAIN,1)
            htmltext = "30929-07.htm"
            for item in PORC.keys():
@@ -104,7 +104,7 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      if not st : return
      npcId = npc.getNpcId()
-     chance = st.getRandom(100)
+     chance = self.getRandom(100)
      if npcId in MOBS.keys() :
          urnchance, porcchance = MOBS[npcId]
          if chance < urnchance :

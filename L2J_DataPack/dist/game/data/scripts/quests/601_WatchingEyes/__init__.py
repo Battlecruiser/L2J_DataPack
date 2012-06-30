@@ -37,7 +37,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_accept")
    elif event == "31683-4.htm" :
      if st.getQuestItemsCount(PROOF_OF_AVENGER) == 100 :
-        random = st.getRandom(100)
+        random = self.getRandom(100)
         i = 0
         while i < len(REWARDS) :
             item,adena,chance,chance2=REWARDS[i]
@@ -80,7 +80,7 @@ class Quest (JQuest) :
        if st.getInt("cond") == 1 and count < 100 :
          chance = DROP_CHANCE * Config.RATE_QUEST_DROP
          numItems, chance = divmod(chance,100)
-         if st.getRandom(100) < chance : 
+         if self.getRandom(100) < chance : 
            numItems = numItems + 1
          if numItems :
            if count + numItems >= 100 :

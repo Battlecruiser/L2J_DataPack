@@ -20,9 +20,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * Good Day to Fly (10273). Original Jython script by Kerberos v1.0 on 2009/04/25
+ * Good Day to Fly (10273).<br>
+ * Original Jython script by Kerberos v1.0 on 2009/04/25
  * @author nonom
  */
 public class Q10273_GoodDayToFly extends Quest
@@ -34,39 +36,35 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22614, 22615
+		22614,
+		22615
 	};
 	
 	// Items
 	private static final int MARK = 13856;
 	
+	// Skills
+	private static final L2Skill AuraBirdFalcon = SkillTable.getInstance().getInfo(5982, 1);
+	private static final L2Skill AuraBirdOwl = SkillTable.getInstance().getInfo(5983, 1);
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		int transform = st.getInt("transform");
-		
+		final int transform = st.getInt("transform");
 		switch (st.getState())
 		{
 			case State.COMPLETED:
 				htmltext = "32557-0a.htm";
 				break;
 			case State.CREATED:
-				if (player.getLevel() < 75)
-				{
-					htmltext = "32557-00.htm";
-				}
-				else
-				{
-					htmltext = "32557-01.htm";
-				}
+				htmltext = (player.getLevel() < 75) ? "32557-00.htm" : "32557-01.htm";
 				break;
 			default:
 				if (st.getQuestItemsCount(MARK) >= 5)
@@ -82,8 +80,8 @@ public class Q10273_GoodDayToFly extends Quest
 					}
 					st.giveItems(13857, 1);
 					st.addExpAndSp(25160, 2525);
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 				}
 				else if (transform == 0)
 				{
@@ -102,8 +100,7 @@ public class Q10273_GoodDayToFly extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -118,20 +115,20 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 			case "32557-09.htm":
 				st.set("transform", "1");
-				SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player);
+				AuraBirdFalcon.getEffects(player, player);
 				break;
 			case "32557-10.htm":
 				st.set("transform", "2");
-				SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player);
+				AuraBirdOwl.getEffects(player, player);
 				break;
 			case "32557-13.htm":
 				if (st.getInt("transform") == 1)
 				{
-					SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player);
+					AuraBirdFalcon.getEffects(player, player);
 				}
 				else if (st.getInt("transform") == 2)
 				{
-					SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player);
+					AuraBirdOwl.getEffects(player, player);
 				}
 				break;
 		}
@@ -141,20 +138,13 @@ public class Q10273_GoodDayToFly extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		QuestState st = killer.getQuestState(qn);
-		
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if (!st.isStarted())
+		final QuestState st = killer.getQuestState(qn);
+		if ((st == null) || !st.isStarted())
 		{
 			return null;
 		}
 		
 		final long count = st.getQuestItemsCount(MARK);
-		
 		if ((st.getInt("cond") == 1) && (count < 5))
 		{
 			st.giveItems(MARK, 1);
@@ -176,10 +166,8 @@ public class Q10273_GoodDayToFly extends Quest
 		super(questId, name, descr);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
-		for (int i : MOBS)
-		{
-			addKillId(i);
-		}
+		addKillId(MOBS);
+		
 		questItemIds = new int[]
 		{
 			MARK

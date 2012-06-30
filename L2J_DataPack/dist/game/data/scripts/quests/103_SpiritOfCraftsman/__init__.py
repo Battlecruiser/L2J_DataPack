@@ -141,7 +141,7 @@ class Quest (JQuest) :
       bones = st.getQuestItemsCount(BONE_FRAGMENT1_ID)
       if st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID) == 1 and bones < 10 :
          numItems, chance = divmod(30*Config.RATE_QUEST_DROP,100)
-         if st.getRandom(100) <= chance :
+         if self.getRandom(100) <= chance :
             numItems += 1
          numItems = int(numItems)
          if numItems != 0 :
@@ -154,7 +154,7 @@ class Quest (JQuest) :
             st.giveItems(BONE_FRAGMENT1_ID,numItems)
    elif npcId in [20015,20020] :
       if st.getQuestItemsCount(PRESERVE_OIL_ID) == 1 :
-         if st.getRandom(10)<3*Config.RATE_QUEST_DROP :
+         if self.getRandom(10)<3*Config.RATE_QUEST_DROP :
             st.set("cond","7")
             st.giveItems(ZOMBIE_HEAD_ID,1)
             st.playSound("ItemSound.quest_middle")

@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 /**
- * 
  * @author moved to java by DS, jython script by Polo, BiTi and DrLecter
- *
  */
 public final class Q636_TruthBeyond extends Quest
 {
@@ -53,7 +51,9 @@ public final class Q636_TruthBeyond extends Quest
 	{
 		final QuestState st = player.getQuestState(QN);
 		if (st == null)
+		{
 			return null;
+		}
 		
 		if ("31329-04.htm".equalsIgnoreCase(event))
 		{
@@ -75,7 +75,9 @@ public final class Q636_TruthBeyond extends Quest
 	{
 		final QuestState st = player.getQuestState(QN);
 		if (st == null)
+		{
 			return getNoQuestMsg(player);
+		}
 		
 		if (npc.getNpcId() == ELIAH)
 		{
@@ -87,13 +89,17 @@ public final class Q636_TruthBeyond extends Quest
 			if (st.getState() == State.CREATED)
 			{
 				if (player.getLevel() > 72)
+				{
 					return "31329-02.htm";
+				}
 				
 				st.exitQuest(true);
 				return "31329-01.htm";
 			}
 			else if (st.getState() == State.STARTED)
+			{
 				return "31329-05.htm";
+			}
 		}
 		else if (st.getState() == State.STARTED) // Flauron only
 		{
@@ -113,8 +119,10 @@ public final class Q636_TruthBeyond extends Quest
 		// QuestState already null on enter because quest is finished
 		if (character instanceof L2PcInstance)
 		{
-			if (((L2PcInstance)character).destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
-				((L2PcInstance)character).addItem("Mark", FADED_MARK, 1, character, true);
+			if (((L2PcInstance) character).destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
+			{
+				((L2PcInstance) character).addItem("Mark", FADED_MARK, 1, character, true);
+			}
 		}
 		return null;
 	}

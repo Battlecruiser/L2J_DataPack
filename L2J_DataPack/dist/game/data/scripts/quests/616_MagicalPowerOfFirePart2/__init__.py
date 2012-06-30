@@ -134,7 +134,7 @@ class Quest (JQuest) :
         party = player.getParty()
         if party :
             PartyQuestMembers = []
-            for player1 in party.getPartyMembers().toArray() :
+            for player1 in party.getMembers().toArray() :
                 st1 = player1.getQuestState(qn)
                 if st1 :
                     if st1.getState() == State.STARTED and (st1.getInt("cond") == 1 or st1.getInt("cond") == 2) :

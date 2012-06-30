@@ -20,19 +20,22 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 public class ChristmasTree implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
+		
+		L2PcInstance activeChar = playable.getActingPlayer();
 		L2NpcTemplate template1 = null;
 		
 		switch (item.getItemId())
@@ -46,7 +49,7 @@ public class ChristmasTree implements IItemHandler
 		}
 		
 		if (template1 == null)
-			return;
+			return false;
 		
 		L2Object target = activeChar.getTarget();
 		if (target == null)
@@ -58,15 +61,18 @@ public class ChristmasTree implements IItemHandler
 			spawn.setLocx(target.getX());
 			spawn.setLocy(target.getY());
 			spawn.setLocz(target.getZ());
+			spawn.setInstanceId(activeChar.getInstanceId());
 			spawn.spawnOne(false);
 			
 			activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
 			activeChar.sendMessage("Created " + template1.getName() + " at x: " + spawn.getLocx() + " y: " + spawn.getLocy() + " z: " + spawn.getLocz());
+			return true;
 		}
 		catch (Exception e)
 		{
-			activeChar.sendMessage("Target is not ingame.");
+			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+			return false;
 		}
 	}
 }

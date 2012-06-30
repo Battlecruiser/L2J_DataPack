@@ -146,7 +146,7 @@ class Quest (JQuest) :
       npcId = npc.getNpcId()
       if npcId in [20013,20019] :
          if st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)<10 :
-            if st.getRandom(10)<3 :
+            if self.getRandom(10)<3 :
                st.giveItems(DRYAD_TEARS_ID,1)
                if st.getQuestItemsCount(DRYAD_TEARS_ID) == 10 :
                  st.playSound("ItemSound.quest_middle")

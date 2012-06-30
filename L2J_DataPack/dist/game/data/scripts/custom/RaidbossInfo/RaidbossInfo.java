@@ -24,9 +24,9 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -49,7 +49,7 @@ public class RaidbossInfo extends Quest
 		31833, 31834, 31835, 31836, 31837, 31838, 31839, 31840, 31841, 32337, 32338, 32339, 32340
 	};
 
-	private static final Map<Integer, Location> RADAR = new FastMap<Integer, Location>();
+	private static final Map<Integer, Location> RADAR = new FastMap<>();
 
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

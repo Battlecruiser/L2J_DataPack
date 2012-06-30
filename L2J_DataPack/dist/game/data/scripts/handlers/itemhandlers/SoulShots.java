@@ -14,31 +14,43 @@
  */
 package handlers.itemhandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.L2Item;
-import com.l2jserver.gameserver.model.item.L2Weapon;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2ActionType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.util.Rnd;
 
 public class SoulShots implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
 		{
-			return;
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
-		final int itemId = item.getItemId();
+		final SkillHolder[] skills = item.getItem().getSkills();
+		
+		int itemId = item.getItemId();
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
 		
 		// Check if Soul shot can be used
 		if ((weaponInst == null) || (weaponItem.getSoulShotCount() == 0))
@@ -47,52 +59,10 @@ public class SoulShots implements IItemHandler
 			{
 				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
 			}
-			return;
+			return false;
 		}
 		
-		boolean gradeCheck = true;
-		final int weaponGrade = weaponItem.getCrystalType();
-		switch (weaponGrade)
-		{
-			case L2Item.CRYSTAL_NONE:
-				if ((itemId != 5789) && (itemId != 1835))
-				{
-					gradeCheck = false;
-				}
-				break;
-			case L2Item.CRYSTAL_D:
-				if ((itemId != 1463) && (itemId != 22082))
-				{
-					gradeCheck = false;
-				}
-				break;
-			case L2Item.CRYSTAL_C:
-				if ((itemId != 1464) && (itemId != 22083))
-				{
-					gradeCheck = false;
-				}
-				break;
-			case L2Item.CRYSTAL_B:
-				if ((itemId != 1465) && (itemId != 22084))
-				{
-					gradeCheck = false;
-				}
-				break;
-			case L2Item.CRYSTAL_A:
-				if ((itemId != 1466) && (itemId != 22085))
-				{
-					gradeCheck = false;
-				}
-				break;
-			case L2Item.CRYSTAL_S:
-			case L2Item.CRYSTAL_S80:
-			case L2Item.CRYSTAL_S84:
-				if ((itemId != 1467) && (itemId != 22086))
-				{
-					gradeCheck = false;
-				}
-				break;
-		}
+		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.soulshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
 		
 		if (!gradeCheck)
 		{
@@ -100,7 +70,7 @@ public class SoulShots implements IItemHandler
 			{
 				activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
 			}
-			return;
+			return false;
 		}
 		
 		activeChar.soulShotLock.lock();
@@ -109,12 +79,15 @@ public class SoulShots implements IItemHandler
 			// Check if Soul shot is already active
 			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
 			{
-				return;
+				return false;
 			}
 			
 			// Consume Soul shots if player has enough of them
-			final int saSSCount = (int) activeChar.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
-			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
+			int SSCount = weaponItem.getSoulShotCount();
+			if (weaponItem.getReducedSoulShot() > 0 && Rnd.get(100) < weaponItem.getReducedSoulShotChance())
+			{
+				SSCount = weaponItem.getReducedSoulShot();
+			}
 			
 			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
@@ -122,7 +95,7 @@ public class SoulShots implements IItemHandler
 				{
 					activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
 				}
-				return;
+				return false;
 			}
 			// Charge soul shot
 			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
@@ -131,46 +104,10 @@ public class SoulShots implements IItemHandler
 		{
 			activeChar.soulShotLock.unlock();
 		}
-		int skillId = 0;
-		switch (itemId)
-		{
-			case 1835:
-			case 5789:
-				skillId = 2039;
-				break;
-			case 1463:
-				skillId = 2150;
-				break;
-			case 1464:
-				skillId = 2151;
-				break;
-			case 1465:
-				skillId = 2152;
-				break;
-			case 1466:
-				skillId = 2153;
-				break;
-			case 1467:
-				skillId = 2154;
-				break;
-			case 22082:
-				skillId = 26060;
-				break;
-			case 22083:
-				skillId = 26061;
-				break;
-			case 22084:
-				skillId = 26062;
-				break;
-			case 22085:
-				skillId = 26063;
-				break;
-			case 22086:
-				skillId = 26064;
-				break;
-		}
+		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		return true;
 	}
 }

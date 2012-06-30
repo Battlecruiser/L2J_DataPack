@@ -18,18 +18,15 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager.ArenaParticipantsHolder;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
- * This class ...
- *
  * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
  */
-
 public class Dummy implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -37,15 +34,13 @@ public class Dummy implements ISkillHandler
 		L2SkillType.DUMMY
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
+		
+		activeChar.spsChecker(skill);
 		
 		switch(skill.getId())
 		{
@@ -54,7 +49,7 @@ public class Dummy implements ISkillHandler
 			{
 				final L2Object obj = targets[0];
 				if(obj != null)
-					useBlockCheckerSkill((L2PcInstance)activeChar, skill, obj);
+					useBlockCheckerSkill(activeChar.getActingPlayer(), skill, obj);
 				break;
 			}
 			default:
@@ -71,10 +66,6 @@ public class Dummy implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

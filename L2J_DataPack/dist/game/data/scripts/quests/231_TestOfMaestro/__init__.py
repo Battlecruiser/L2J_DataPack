@@ -118,13 +118,13 @@ class Quest (JQuest) :
      elif progress>0 and progress<17 :
        htmltext = "30531-05.htm"
      elif progress==17 :
-       st.addExpAndSp(1029122,70620)
-       st.giveItems(57,186077)
-       htmltext = "30531-06.htm"
-       st.giveItems(MARK_OF_MAESTRO,1)
        st.takeItems(RECOMMENDATION_OF_BALANKI,1)
        st.takeItems(RECOMMENDATION_OF_FILAUR,1)
        st.takeItems(RECOMMENDATION_OF_ARIN,1)
+       st.addExpAndSp(2058244,141240)
+       st.giveItems(57,372154)
+       st.giveItems(MARK_OF_MAESTRO,1)
+       htmltext = "30531-06.htm"
        st.unset("progress")
        st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")

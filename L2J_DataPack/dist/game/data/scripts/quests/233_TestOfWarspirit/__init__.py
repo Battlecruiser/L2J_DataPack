@@ -128,12 +128,12 @@ class Quest (JQuest) :
       st.takeItems(BRAKIS_REMAINS2,-1)
       st.takeItems(HERMODTS_REMAINS2,-1)
       st.takeItems(KIRUNAS_REMAINS2,-1)
-      st.addExpAndSp(447444,30704)
-      st.giveItems(57,80903)
       st.takeItems(TONARS_REMAINS2,-1)
+      st.addExpAndSp(894888,61408)
+      st.giveItems(57,161806)
       st.giveItems(MARK_OF_WARSPIRIT,1)
-      st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
       st.giveItems(7562,92)
+      st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
       htmltext = "30649-03.htm"
       for var in STATS:
         st.unset(var)
@@ -327,7 +327,7 @@ class Quest (JQuest) :
 
 #    [accepted values for this part],variable for the current part from the mob,maxcount,chance in %, items to give(one per kill max)=DROPLIST[npcId]
     value,var,maxcount,chance,itemList=DROPLIST[npcId]
-    random=st.getRandom(100)
+    random=self.getRandom(100)
 #    return the current value of the var
     isValue = st.getInt(var)
     if isValue in value and random < chance:

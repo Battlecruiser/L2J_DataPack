@@ -21,23 +21,22 @@ import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -102,7 +101,8 @@ public class HellboundTown extends Quest
 	{
 		14117, 255434, -2016
 	};
-	private static final int[] EXIT_POINT =
+	
+	protected static final int[] EXIT_POINT =
 	{
 		16262, 283651, -9700
 	};
@@ -176,7 +176,7 @@ public class HellboundTown extends Quest
 				}
 				else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1)
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, npc, partyMember, true))
 						{
@@ -240,7 +240,7 @@ public class HellboundTown extends Quest
 						HellboundManager.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
-						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false))
+						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false))
 						{
 							if (world.activeAmaskariCall != null)
 							{
@@ -291,7 +291,7 @@ public class HellboundTown extends Quest
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NPCSTRING_ID[0]));
 				npc.setBusy(true);
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
 				{
 					if (world.activeAmaskariCall != null)
 					{
@@ -338,7 +338,7 @@ public class HellboundTown extends Quest
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (Rnd.get(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false))
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false))
 				{
 					if (world.activeAmaskariCall != null)
 					{
@@ -387,19 +387,19 @@ public class HellboundTown extends Quest
 			return false;
 		}
 		
-		if (player.getObjectId() != party.getPartyLeaderOID())
+		if (player.getObjectId() != party.getLeaderObjectId())
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			
@@ -407,7 +407,7 @@ public class HellboundTown extends Quest
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			
@@ -415,7 +415,7 @@ public class HellboundTown extends Quest
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 		}
@@ -425,7 +425,7 @@ public class HellboundTown extends Quest
 	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
 	{
 		player.setInstanceId(instanceId);
-		player.teleToLocation((tele[0] - 50) + Rnd.get(100), (tele[1] - 50) + Rnd.get(100), tele[2]);
+		player.teleToLocation((tele[0] - 50) + getRandom(100), (tele[1] - 50) + getRandom(100), tele[2]);
 	}
 	
 	private int enterInstance(L2PcInstance player, String template)
@@ -458,7 +458,7 @@ public class HellboundTown extends Quest
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
-		for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
 			world.allowed.add(partyMember.getObjectId());
@@ -532,13 +532,13 @@ public class HellboundTown extends Quest
 		{
 			if ((_party != null) && (_world != null))
 			{
-				for (L2PcInstance partyMember : _party.getPartyMembers())
+				for (L2PcInstance partyMember : _party.getMembers())
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{
 						_world.allowed.remove(_world.allowed.indexOf(partyMember.getObjectId()));
 						partyMember.setInstanceId(0);
-						partyMember.teleToLocation((EXIT_POINT[0] - 100) + Rnd.get(50), (EXIT_POINT[1] - 100) + Rnd.get(50), EXIT_POINT[2]);
+						partyMember.teleToLocation((EXIT_POINT[0] - 100) + getRandom(50), (EXIT_POINT[1] - 100) + getRandom(50), EXIT_POINT[2]);
 					}
 				}
 			}

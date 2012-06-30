@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS `forums` (
   `forum_type` int(8) NOT NULL default '0',
   `forum_perm` int(8) NOT NULL default '0',
   `forum_owner_id` int(8) NOT NULL default '0',
-  UNIQUE KEY `forum_id` (`forum_id`)
+  PRIMARY KEY (`forum_id`),
+  KEY `forum_owner_id` (`forum_owner_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `forums` VALUES

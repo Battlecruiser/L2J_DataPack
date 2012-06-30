@@ -175,19 +175,19 @@ class Quest (JQuest) :
    elif event == "matild_timer3":
      autochat(npc,"One! Two! May your dreams come true!")
      wish = st.getInt("wish")
-     WISH_CHANCE = st.getRandom(100)
+     WISH_CHANCE = self.getRandom(100)
      if wish == 1 :
        if WISH_CHANCE <= 50:
-         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
-         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
-         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][st.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][self.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][self.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(SUCCUBUS_OF_SEDUCTION,200000),MESSAGES[SUCCUBUS_OF_SEDUCTION][self.getRandom(len(MESSAGES))])
        else:
          autochat(st.addSpawn(RUPINA,120000),"Your love... love!")
      elif wish == 2 :
        if WISH_CHANCE <= 33 :
-         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
-         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
-         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][st.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][self.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][self.getRandom(len(MESSAGES))])
+         autochat(st.addSpawn(GRIMA,200000),MESSAGES[GRIMA][self.getRandom(len(MESSAGES))])
        else :
          st.giveItems(ADENA,10000)
      elif wish == 3 :
@@ -201,10 +201,10 @@ class Quest (JQuest) :
          st.startQuestTimer("sanches_timer1",200000,spawnedNpc)
      elif wish == 4 :
        if WISH_CHANCE <= 33:
-         st.giveItems(R1[st.getRandom(len(R1))],1)
-         st.giveItems(R2[st.getRandom(len(R2))],1)
-         st.giveItems(R3[st.getRandom(len(R3))],1)
-         if not st.getRandom(3):
+         st.giveItems(R1[self.getRandom(len(R1))],1)
+         st.giveItems(R2[self.getRandom(len(R2))],1)
+         st.giveItems(R3[self.getRandom(len(R3))],1)
+         if not self.getRandom(3):
             st.giveItems(HEART_OF_PAAGRIO,1)
        else:
          autochat(st.addSpawn(WISDOM_CHEST,120000),"I contain the wisdom, I am the wisdom box!")
@@ -240,21 +240,21 @@ class Quest (JQuest) :
        st.giveItems(ADENA,500000)
        htmltext = "30557-01.htm"
    elif npcId == WISDOM_CHEST :
-     st.giveItems(R1[st.getRandom(len(R1))],1)
-     st.giveItems(R2[st.getRandom(len(R2))],1)
-     st.giveItems(R3[st.getRandom(len(R3))],1)
-     if not st.getRandom(3):
+     st.giveItems(R1[self.getRandom(len(R1))],1)
+     st.giveItems(R2[self.getRandom(len(R2))],1)
+     st.giveItems(R3[self.getRandom(len(R3))],1)
+     if not self.getRandom(3):
         st.giveItems(HEART_OF_PAAGRIO,1)
      st.giveItems(4409,1)
      st.giveItems(4408,1)
-     htmltext = "30743-0"+str(st.getRandom(6)+1)+".htm"
+     htmltext = "30743-0"+str(self.getRandom(6)+1)+".htm"
      npc.deleteMe()
    elif npcId == RUPINA:
-     if st.getRandom(100) <= 4:
+     if self.getRandom(100) <= 4:
        st.giveItems(NECKLACE_OF_GRACE,1)
        htmltext = "30742-01.htm"
      else:
-       st.giveItems(R4[st.getRandom(len(R4))],1)
+       st.giveItems(R4[self.getRandom(len(R4))],1)
        htmltext = "30742-02.htm"
      npc.decayMe()
    elif npcId == ALCHEMIST_MATILD:
@@ -291,7 +291,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_itemget")
    elif npcId in DROPLIST.keys() and cond == 3 :
       item,chance=DROPLIST[npcId]
-      if st.getRandom(100) <= chance and not st.getQuestItemsCount(item) :
+      if self.getRandom(100) <= chance and not st.getQuestItemsCount(item) :
          st.giveItems(item,1)
          if check_ingredients(st,1):
             st.playSound("ItemSound.quest_middle")
@@ -299,13 +299,13 @@ class Quest (JQuest) :
          else: st.playSound("ItemSound.quest_itemget")
    else:
      if npcId == SUCCUBUS_OF_SEDUCTION:
-       if st.getRandom(100) <= 3 :
+       if self.getRandom(100) <= 3 :
          st.playSound("ItemSound.quest_itemget")
          st.giveItems(FORBIDDEN_LOVE_SCROLL,1)
      elif npcId == GRIMA:
-       if st.getRandom(100) < 4 :
+       if self.getRandom(100) < 4 :
           st.playSound("ItemSound.quest_itemget")
-          if st.getRandom(1000) == 0 :
+          if self.getRandom(1000) == 0 :
              st.giveItems(ADENA,100000000)
           else:
              st.giveItems(ADENA,900000)
@@ -313,37 +313,37 @@ class Quest (JQuest) :
        try :
          if st.getQuestTimer("sanches_timer1") :
             st.getQuestTimer("sanches_timer1").cancel()
-         if st.getRandom(100) <= 50 :
+         if self.getRandom(100) <= 50 :
             autochat(npc,"It's time to come out my Remless... Bonaparterius!")
             spawnedNpc=st.addSpawn(BONAPARTERIUS,npc,True,0)
             autochat(spawnedNpc,"I am the Great Emperor's son!")
             st.startQuestTimer("bonaparterius_timer1",600000,spawnedNpc)
          else :
-            st.giveItems(R4[st.getRandom(len(R4))],1)
+            st.giveItems(R4[self.getRandom(len(R4))],1)
        except : pass
      elif npcId == BONAPARTERIUS:
        try :
          if st.getQuestTimer("bonaparterius_timer1") :
             st.getQuestTimer("bonaparterius_timer1").cancel()
          autochat(npc,"Only Ramsebalius would be able to avenge me!")
-         if st.getRandom(100) <= 50 :
+         if self.getRandom(100) <= 50 :
            spawnedNpc=st.addSpawn(RAMSEBALIUS,npc,True,0)
            autochat(spawnedNpc,"Meet the absolute ruler!")
            st.startQuestTimer("ramsebalius_timer1",600000,spawnedNpc)
          else :
-           st.giveItems(R4[st.getRandom(len(R4))],1)
+           st.giveItems(R4[self.getRandom(len(R4))],1)
        except : pass
      elif npcId == RAMSEBALIUS:
        try :
          if st.getQuestTimer("ramsebalius_timer1") :
             st.getQuestTimer("ramsebalius_timer1").cancel()
          autochat(npc,"You evil piece of...")
-         if st.getRandom(100) <= 50 :
+         if self.getRandom(100) <= 50 :
            spawnedNpc=st.addSpawn(GREAT_DEMON_KING,npc,True,0)
            autochat(spawnedNpc,"Who dares to kill my fiendly minion?!")
            st.startQuestTimer("greatdemon_timer1",600000,spawnedNpc)
          else :
-           st.giveItems(R4[st.getRandom(len(R4))],1)
+           st.giveItems(R4[self.getRandom(len(R4))],1)
        except: pass
      elif npcId == GREAT_DEMON_KING:
        try :

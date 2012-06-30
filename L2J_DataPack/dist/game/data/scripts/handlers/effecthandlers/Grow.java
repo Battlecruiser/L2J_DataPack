@@ -14,12 +14,12 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.skills.AbnormalEffect;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 public class Grow extends L2Effect
 {
@@ -37,7 +37,7 @@ public class Grow extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2Npc)
+		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
 			//TODO: Uncomment line when fix for mobs falling underground is found
@@ -59,7 +59,7 @@ public class Grow extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Npc)
+		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
 			//TODO: Uncomment line when fix for mobs falling underground is found

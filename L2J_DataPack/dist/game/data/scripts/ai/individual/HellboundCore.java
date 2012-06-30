@@ -19,8 +19,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.skills.SkillHolder;
 
 /**
  * Manages Naia's cast on the Hellbound Core
@@ -40,7 +40,7 @@ public class HellboundCore extends Quest
 		{
 			for (L2Character naia : npc.getKnownList().getKnownCharactersInRadius(900))
 			{
-				if ((naia != null) && (naia instanceof L2MonsterInstance) && (((L2MonsterInstance) naia).getNpcId() == NAIA) && !naia.isDead())
+				if (naia != null && naia.isMonster() && ((L2MonsterInstance) naia).getNpcId() == NAIA && !naia.isDead())
 				{
 					naia.setTarget(npc);
 					naia.doSimultaneousCast(BEAM.getSkill());

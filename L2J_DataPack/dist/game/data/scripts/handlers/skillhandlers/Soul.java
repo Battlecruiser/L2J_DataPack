@@ -17,18 +17,16 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
- * 
  * @author nBd
  */
-
 public class Soul implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -36,17 +34,13 @@ public class Soul implements ISkillHandler
 		L2SkillType.CHARGESOUL
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance) || activeChar.isAlikeDead())
+		if (!activeChar.isPlayer() || activeChar.isAlikeDead())
 			return;
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		L2PcInstance player = activeChar.getActingPlayer();
 
 		int level = player.getSkillLevel(467);
 		if (level > 0)
@@ -76,10 +70,6 @@ public class Soul implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

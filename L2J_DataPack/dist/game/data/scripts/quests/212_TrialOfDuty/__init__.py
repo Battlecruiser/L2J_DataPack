@@ -79,12 +79,12 @@ class Quest (JQuest) :
       htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30109 and cond == 18  and st.getQuestItemsCount(LETTER_OF_DUSTIN):
-      st.addExpAndSp(381288,24729)
-      st.giveItems(57,69484)
-      st.giveItems(7562,8)
-      htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN,1)
+      st.addExpAndSp(762576,49458)
+      st.giveItems(57,138968)
+      st.giveItems(7562,8)
       st.giveItems(MARK_OF_DUTY,1)
+      htmltext = "30109-05.htm"
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("onlyone","1")
@@ -191,7 +191,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId in [20190,20191] :
       if cond == 2 :
-        if st.getRandom(50)<2 :
+        if self.getRandom(50)<2 :
           st.addSpawn(27119,npc,True,0)
           st.playSound("Itemsound.quest_before_battle")
    elif npcId == 27119 :
@@ -202,28 +202,28 @@ class Quest (JQuest) :
    elif npcId == 20200 :
       if cond == 5 and st.getQuestItemsCount(REPORT_PIECE) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE) == 9 :
-          if st.getRandom(2) == 1 :
+          if self.getRandom(2) == 1 :
             st.takeItems(REPORT_PIECE,st.getQuestItemsCount(REPORT_PIECE))
             st.giveItems(TALIANUSS_REPORT,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")
-        elif st.getRandom(2) == 1 :
+        elif self.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE,1)
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20201 :
       if cond == 5 and st.getQuestItemsCount(REPORT_PIECE) < 10 and st.getQuestItemsCount(TALIANUSS_REPORT) == 0 :
         if st.getQuestItemsCount(REPORT_PIECE) == 9 :
-          if st.getRandom(2) == 1 :
+          if self.getRandom(2) == 1 :
             st.takeItems(REPORT_PIECE,st.getQuestItemsCount(REPORT_PIECE))
             st.giveItems(TALIANUSS_REPORT,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","6")
-        elif st.getRandom(2) == 1 :
+        elif self.getRandom(2) == 1 :
           st.giveItems(REPORT_PIECE,1)
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20144 :
       if cond == 7 :
-        if st.getRandom(100)<33 :
+        if self.getRandom(100)<33 :
            st.addSpawn(30656,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
            st.playSound("Itemsound.quest_middle")
            st.set("cond","8")
@@ -283,7 +283,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20270 :
       if cond == 14 :
-        if st.getRandom(2) == 1 :
+        if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(ATEBALTS_SKULL) == 0 :
             st.giveItems(ATEBALTS_SKULL,1)
             st.playSound("ItemSound.quest_itemget")

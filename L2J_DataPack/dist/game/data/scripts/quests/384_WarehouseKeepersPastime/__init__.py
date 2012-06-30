@@ -19,7 +19,6 @@ Droplist = {
     20948 : 18, #Bartal
     20945 : 12, #Cadeine
     20946 : 15, #Sanhidro
-    20947 : 16, #Connabi
     20635 : 15, #Carinkain
     20773 : 61, #Conjurer Bat Lord
     20774 : 60, #Conjurer Bat
@@ -32,7 +31,6 @@ Droplist = {
     20668 : 21, #Grave Guard
     20241 : 22, #Hunter Gargoyle
     20286 : 22, #Hunter Gargoyle (2)
-    20950 : 20, #Innersen
     20949 : 19, #Luminun
     20942 : 9,  #Nightmare Guide
     20943 : 12, #Nightmare Keeper
@@ -249,7 +247,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST = Quest(384,qn,"Warehouse Keeper’s Pastime") 
+QUEST = Quest(384,qn,"Warehouse Keeperï¿½s Pastime") 
 
 QUEST.addStartNpc(Cliff)
 QUEST.addTalkId(Cliff)

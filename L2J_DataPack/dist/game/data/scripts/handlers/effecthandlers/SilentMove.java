@@ -15,12 +15,12 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class SilentMove extends L2Effect
 {
@@ -35,20 +35,12 @@ public class SilentMove extends L2Effect
 		super(env, effect);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#effectCanBeStolen()
-	 */
 	@Override
 	protected boolean effectCanBeStolen()
 	{
 		return true;
 	}
-
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
+	
 	@Override
 	public boolean onStart()
 	{
@@ -56,30 +48,18 @@ public class SilentMove extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		super.onExit();
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SILENT_MOVE;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -102,9 +82,6 @@ public class SilentMove extends L2Effect
 		return true;
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
 	@Override
 	public int getEffectFlags()
 	{

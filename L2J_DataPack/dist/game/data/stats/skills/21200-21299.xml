@@ -1,215 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skills.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" levels="1" name="Age of the Three Kingdoms">
 		<!-- For 20 minutes, raises moving speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, physical P. Atk., and physical P. Def. by 15%. Reuse Delay 2 hours. Consumes 1 Proof of Friendship upon skill use. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21201" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21202" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1576" />
 	</skill>
 	<skill id="21203" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1577" />
 	</skill>
 	<skill id="21204" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1578" />
 	</skill>
 	<skill id="21205" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1579" />
 	</skill>
 	<skill id="21206" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1580" />
 	</skill>
 	<skill id="21207" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1581" />
 	</skill>
 	<skill id="21208" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1582" />
 	</skill>
 	<skill id="21209" levels="1" name="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1583" />
 	</skill>
 	<skill id="21210" levels="1" name="Agathion Seal Cancel - Penalty Kick">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="1584" />
 	</skill>
 	<skill id="21211" levels="1" name="Blessing of Victory">
 		<!-- Increases moving speed by 2% through the Blessing of Victory. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21212" levels="1" name="Agathion Seal Cancel - Granny Tiger">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21213" levels="1" name="Agathion Seal Cancel - Flower Fairy Spirit">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21214" levels="1" name="Agathion Seal Cancel - Cheerleader Orodriel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21215" levels="1" name="Agathion Seal Cancel - Cheerleader Lana">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21216" levels="1" name="Agathion Seal Cancel - Cheerleader Naonin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21217" levels="1" name="Agathion Seal Cancel - Cheerleader Mortia">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21218" levels="1" name="Agathion Seal Cancel - Cheerleader Kaurin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21219" levels="1" name="Agathion Seal Cancel - Cheerleader Meruril">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21220" levels="1" name="Agathion Seal Cancel - Handy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="21221" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 	</skill>
 	<skill id="21222" levels="1" name="Resist Elemental">
 		<!-- "For 1 hour, increases Resistance to Fire/Water/Wind/Earth by 20. Reuse delay is 4 hours." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21223" levels="1" name="Ultimate Defense">
 		<!-- "For 30 seconds, increases one's own P. Def. by 3636, M. Def. by 2727, and resistance to buff canceling attacks by 80%, and becomes unable to move. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21224" levels="1" name="Soul of an Adventurer of Immortality's Ability">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21225" levels="1" name="Soul of a Strong Warrior's Ability">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21226" levels="1" name="Soul of a Wise Magician's Ability">
 		<!-- "For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21227" levels="1" name="Ability of Prominent Adventure's Soul">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21228" levels="1" name="Soul of a Brave Warrior's Ability">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21229" levels="1" name="Blood Awakening">
 		<!-- "Combines general attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 4 hours." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21230" levels="1" name="Improved Magic">
 		<!-- "Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. Reuse delay is 4 hours." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21231" levels="1" name="Improved Critical Attack">
 		<!-- "Combines critical rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases critical rate by 30% and Critical Damage by 35%. Reuse delay is 4 hours." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21232" levels="1" name="Shiny Lit Platform">
 		<!-- High Five Skill -->
 		<!-- Steps onto the shiny lit platform. -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20004" />
@@ -226,62 +236,61 @@
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21234" levels="1" name="Release Seal on Agathion - Zaken Spirit Sword">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21235" levels="1" name="7th Anniversary T-shirt: Speed">
 		<!-- Increases Speed by 7. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21236" levels="1" name="7th Anniversary T-shirt: Blessed Escape Ability">
 		<!-- Allows the use of Blessed Escape every 20 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21237" levels="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
 		<!-- Temporarily becomes invincible for 7 seconds. Can be used every 20 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21238" levels="1" name="Jet Bike">
 		<!-- Mounts a jet bike. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21239" levels="1" name="Release Seal on Agathion - Kau">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21240" levels="1" name="Release Seal on Agathion - Tow">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21241" levels="1" name="Magic Glasses">
 		<!-- Increases M. Def. by 70. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<!-- Can move to near Zaken's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />
@@ -290,20 +299,18 @@
 	<skill id="21243" levels="1" name="Freya's Call">
 		<!-- Can move to near Freya's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />
-		<set name="teleCoords" val="52195,218787,-3231" />
+		<set name="teleCoords" val="102728,-126242,-2840" />
 	</skill>
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<!-- Can move to near Frintezza's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="TELEPORT" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1500000" />
 		<set name="staticReuse" val="true" />
@@ -313,84 +320,84 @@
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21246" levels="1" name="Rudolph's Energy">
 		<!-- "For 10 minute(s), energy is replenished when Exp. is acquired through hunting. Reuse time is 30 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21247" levels="1" name="Gift from Santa Claus">
 		<!-- "Receives a gift from Santa Claus. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21248" levels="1" name="Release Seal on Agathion - Zinenze">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21249" levels="1" name="Release Seal on Agathion - Enze">
 		<!-- Removes the seal of Agathion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21250" levels="1" name="Academy Circlet">
 		<!-- "Characters between levels 40 to 75, when worn this item decreases death EXP. Penalty by 50%." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21251" levels="1" name="Shiny Party Hat - Greater Body">
 		<!-- Increases Max HP by 35% for 20 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21252" levels="1" name="Caladbolg">
 		<!-- "When attacking, has a chance of inflicting Critical Damage and bleed on the target." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21253" levels="1" name="Habu">
 		<!-- "When attacking, has a chance of inflicting bleed on the target." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21254" levels="1" name="Tiatenon">
 		<!-- "During a PvP attack, has a chance of inflicting fear on the target and causing them to flee." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21255" levels="1" name="Astaroth">
 		<!-- Has a chance of decreasing the target's P. Def. when attacking. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21256" levels="1" name="Tyrbing">
 		<!-- Has a chance of decreasing the target's P. Def. and inflicting shock. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21257" levels="1" name="Mardil">
 		<!-- Has a chance of increasing Casting Spd. and wind attribute attack power when attacked. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
 		<!-- High Five Skill -->
 		<!-- Mounts a rocking horse. -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="20007" />
@@ -405,53 +412,53 @@
 		<!-- Description: Removes the Agathion's seal. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21260" levels="1" name="Notifier">
 		<!-- Description: You can use to learn the number of received gifts and the number of remaining gifts. The gift provision time is reset every morning at 6:30. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21261" levels="1" name="Bad Bunny's Necklace">
 		<!-- Description: Its effects are MP+250, HP+500, CP+1035, increased P. Atk., increased M. Atk., wild magic effect, and increased Critical attack power. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21262" levels="1" name="Bad Bunny's Earring">
 		<!-- Description: Its effects are HP+250, Vampiric Rage effect, increased accuracy, decreased re-use time for magic skills, and decreased MP consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21263" levels="1" name="Bad Bunny's Ring">
 		<!-- Description: Its effects are increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21264" levels="1" name="Summon Friend">
 		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Shining Couple Ring and be a party member. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21265" levels="1" name="Summon Friend">
 		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21266" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- Description: Removes the seal of Agathion. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
 	<skill id="21267" levels="1" name="Notifier">
 		<!-- Description: Notifies the number of received gifts and remaining gifts when used. The gift supply time is initialized at 6:30 am every day. -->
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>

@@ -101,7 +101,7 @@ class Quest (JQuest) :
     st = partyMember.getQuestState(qn)
     chance = CHANCE[npc.getNpcId()]*Config.RATE_QUEST_DROP
     numItems, chance = divmod(chance,MAX)
-    if st.getRandom(MAX)<chance :
+    if self.getRandom(MAX)<chance :
       numItems = numItems + 1
     if numItems != 0 :
       st.giveItems(ANCIENT_SCROLL,int(numItems))

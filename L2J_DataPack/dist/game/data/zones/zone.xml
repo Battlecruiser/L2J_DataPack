@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- Monster Race Track -->
 	<zone name="dion_monster_race1" type="DerbyTrackZone" shape="NPoly" minZ="-3652" maxZ="-3452"> <!-- [20_23] -->
 		<node X="11714" Y="181568" />
@@ -97,7 +97,7 @@
 		<node X="-213500" Y="182800" />
 	</zone>
 
-	<!-- (vertices, min Z & Max Z are estimated) -->
+	<!-- (vertices, min Z and Max Z are estimated) -->
 	<zone name="Den of Evil 1" type="EffectZone" shape="Cylinder" minZ="-2300" maxZ="-2100" rad="750">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />

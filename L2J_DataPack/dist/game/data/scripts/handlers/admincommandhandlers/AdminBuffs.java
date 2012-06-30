@@ -14,15 +14,17 @@
  */
 package handlers.admincommandhandlers;
 
+import java.util.Collection;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.GMSkillTable;
+import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SkillCoolTime;
@@ -135,7 +137,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 				{
-					if ((knownChar instanceof L2PcInstance) && !(knownChar.equals(activeChar)))
+					if (knownChar.isPlayer() && !knownChar.equals(activeChar))
 						knownChar.stopAllEffects();
 				}
 				
@@ -172,9 +174,9 @@ public class AdminBuffs implements IAdminCommandHandler
 					return false;
 				}
 			}
-			else if (activeChar.getTarget() instanceof L2PcInstance)
+			else if (activeChar.getTarget().isPlayer())
 			{
-				player = (L2PcInstance) activeChar.getTarget();
+				player = activeChar.getTarget().getActingPlayer();
 			}
 			else
 			{
@@ -184,7 +186,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			
 			try
 			{
-				player.getReuseTimeStamp().clear();
+				player.getSkillReuseTimeStamps().clear();
 				player.getDisabledSkills().clear();
 				player.sendPacket(new SkillCoolTime(player));
 				activeChar.sendMessage("Skill reuse was removed from " + player.getName() + ".");
@@ -200,7 +202,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (Config.GM_GIVE_SPECIAL_SKILLS != Config.GM_GIVE_SPECIAL_AURA_SKILLS)
 			{
 				final boolean toAuraSkills = activeChar.getKnownSkill(7041) != null;
-				GMSkillTable.getInstance().switchSkills(activeChar, toAuraSkills);
+				switchSkills(activeChar, toAuraSkills);
 				activeChar.sendSkillList();
 				activeChar.sendMessage("You have succefully changed to target " + (toAuraSkills ? "aura" : "one") + " special skills.");
 				return true;
@@ -212,6 +214,20 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			return true;
 		}
+	}
+	
+	/**
+	 * @param gmchar the player to switch the Game Master skills.
+	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
+	 */
+	public void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
+	{
+		final Collection<L2Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
+		for (L2Skill skill : skills)
+		{
+			gmchar.removeSkill(skill, false); // Don't Save GM skills to database
+		}
+		SkillTreesData.getInstance().addSkills(gmchar, toAuraSkills);
 	}
 	
 	@Override

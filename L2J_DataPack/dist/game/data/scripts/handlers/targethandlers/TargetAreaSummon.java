@@ -21,12 +21,12 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
+import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -37,9 +37,9 @@ public class TargetAreaSummon implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		target = activeChar.getPet();
-		if (target == null || !(target instanceof L2SummonInstance) || target.isDead())
+		if (target == null || !(target instanceof L2ServitorInstance) || target.isDead())
 			return _emptyTargetList;
 		
 		if (onlyFirst)

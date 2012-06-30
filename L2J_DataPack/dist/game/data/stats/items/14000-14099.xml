@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14000" type="EtcItem" name="Dion Supply Box - Hair Accessory">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
@@ -820,7 +820,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14062" type="EtcItem" name="Spirit Shaman Summon Whistle">
@@ -838,7 +838,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14063" type="EtcItem" name="Owl Monk Summon Whistle">
@@ -856,7 +856,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14064" type="EtcItem" name="Turtle Ascetic Summon Whistle">
@@ -874,7 +874,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14065" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon - 5 hours">

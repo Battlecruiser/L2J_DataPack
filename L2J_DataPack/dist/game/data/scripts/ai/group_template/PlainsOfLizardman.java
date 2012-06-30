@@ -19,17 +19,16 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2CharPosition;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
- ** @author Gnacik
- **
+ * @author Gnacik
  */
 public class PlainsOfLizardman extends L2AttackableAIScript
 {

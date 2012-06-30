@@ -17,12 +17,11 @@ package ai.group_template;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.util.Rnd;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
  * @author DS
@@ -56,7 +55,7 @@ public class Chimeras extends L2AttackableAIScript
 	{
 		if ((HellboundManager.getInstance().getLevel() == 7) && !npc.isTeleporting()) // Have random spawn points only in 7 lvl
 		{
-			final Location loc = LOCATIONS[Rnd.get(LOCATIONS.length)];
+			final Location loc = LOCATIONS[getRandom(LOCATIONS.length)];
 			if (!npc.isInsideRadius(loc, 200, false, false))
 			{
 				npc.getSpawn().setLocation(loc);
@@ -87,11 +86,11 @@ public class Chimeras extends L2AttackableAIScript
 					}
 					else
 					{
-						if (Rnd.get(100) < 80)
+						if (getRandom(100) < 80)
 						{
 							((L2Attackable) npc).dropItem(caster, DIM_LIFE_FORCE, 1);
 						}
-						else if (Rnd.get(100) < 80)
+						else if (getRandom(100) < 80)
 						{
 							((L2Attackable) npc).dropItem(caster, LIFE_FORCE, 1);
 						}

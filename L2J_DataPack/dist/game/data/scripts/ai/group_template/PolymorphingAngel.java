@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class PolymorphingAngel extends L2AttackableAIScript
 {
 	
-	private static final Map<Integer, Integer> ANGELSPAWNS = new FastMap<Integer, Integer>();
+	private static final Map<Integer, Integer> ANGELSPAWNS = new FastMap<>();
 	static
 	{
 		ANGELSPAWNS.put(20830, 20859);

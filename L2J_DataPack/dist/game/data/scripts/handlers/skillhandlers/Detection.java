@@ -15,18 +15,17 @@
 package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
  * @author ZaKax
  */
-
 public class Detection implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -46,28 +45,22 @@ public class Detection implements ISkillHandler
 			hasParty = player.isInParty();
 			hasClan = player.getClanId() > 0;
 			hasAlly = player.getAllyId() > 0;
-		}
-		else
-		{
-			hasParty = false;
-			hasClan = false;
-			hasAlly = false;
-		}
-		
-		for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
-		{
-			if (target != null && target.getAppearance().getInvisible())
+			
+			for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
 			{
-				if (hasParty && target.getParty() != null && player.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
-					continue;
-				if (hasClan && player.getClanId() == target.getClanId())
-					continue;
-				if (hasAlly && player.getAllyId() == target.getAllyId())
-					continue;
-				
-				L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
-				if (eHide != null)
-					eHide.exit();
+				if (target != null && target.getAppearance().getInvisible())
+				{
+					if (hasParty && target.getParty() != null && player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
+						continue;
+					if (hasClan && player.getClanId() == target.getClanId())
+						continue;
+					if (hasAlly && player.getAllyId() == target.getAllyId())
+						continue;
+					
+					L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
+					if (eHide != null)
+						eHide.exit();
+				}
 			}
 		}
 	}

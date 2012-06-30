@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14300" type="EtcItem" name="Yaksa Mace">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="equip" />
@@ -2077,7 +2077,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<mul order="0x08" stat="MpConsume" val="0.96" />
 		</for>
 	</item>
 	<item id="14386" type="Weapon" name="Icarus Spitter {PvP} - Guidance">

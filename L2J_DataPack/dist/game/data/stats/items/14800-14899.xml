@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14800" type="Armor" name="Afro Perm Wig - Pink">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="immediate_effect" val="1" />
@@ -326,7 +326,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="5" />
-		<set name="price" val="9000" />
+		<set name="price" val="9000" /> <!-- H5 Price -->
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -348,7 +348,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14820" type="EtcItem" name="Skull Key of Suffering">
@@ -461,7 +461,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14829" type="EtcItem" name="Cave Exploration Text 1 Sheet">

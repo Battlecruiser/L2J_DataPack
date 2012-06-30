@@ -19,16 +19,18 @@ import java.util.List;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
+/**
+ * @author Gnacik
+ */
 public class StakatoNest extends L2AttackableAIScript
 {
 	// List of all mobs just for register
@@ -77,7 +79,7 @@ public class StakatoNest extends L2AttackableAIScript
 	{
 		L2MonsterInstance _mob = (L2MonsterInstance) npc;
 		
-		if ((_mob.getNpcId() == _stakato_leader) && (Rnd.get(1000) < 100) && (_mob.getCurrentHp() < (_mob.getMaxHp() * 0.3)))
+		if ((_mob.getNpcId() == _stakato_leader) && (getRandom(1000) < 100) && (_mob.getCurrentHp() < (_mob.getMaxHp() * 0.3)))
 		{
 			L2MonsterInstance _follower = checkMinion(npc);
 			
@@ -143,7 +145,7 @@ public class StakatoNest extends L2AttackableAIScript
 		{
 			if (killer.isInParty())
 			{
-				List<L2PcInstance> party = killer.getParty().getPartyMembers();
+				List<L2PcInstance> party = killer.getParty().getMembers();
 				for (L2PcInstance member : party)
 					giveCocoon(member, npc);
 			}
@@ -227,7 +229,7 @@ public class StakatoNest extends L2AttackableAIScript
 	
 	private void giveCocoon(L2PcInstance player, L2Npc npc)
 	{
-		if (Rnd.get(100) > 80)
+		if (getRandom(100) > 80)
 			player.addItem("StakatoCocoon", _large_cocoon, 1, npc, true);
 		else
 			player.addItem("StakatoCocoon", _small_cocoon, 1, npc, true);

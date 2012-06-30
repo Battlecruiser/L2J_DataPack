@@ -99,14 +99,14 @@ class Quest (JQuest) :
       coin = st.getQuestItemsCount(KAILS_COIN)
       clover = st.getQuestItemsCount(CLOVER_COIN)
       if npcId == ANCIENT_GARGOYLE and not coin :
-         if st.getRandom(100) < GARGOYLE_CHANCE :
+         if self.getRandom(100) < GARGOYLE_CHANCE :
             st.giveItems(KAILS_COIN,1)
             if album or clover :
                st.playSound("ItemSound.quest_middle")
             else :
                st.playSound("ItemSound.quest_itemget")
       elif npcId == VEGUS and not (clover + album) and st.getInt("id") :
-         if st.getRandom(100) < VEGUS_CHANCE :
+         if self.getRandom(100) < VEGUS_CHANCE :
             st.giveItems(CLOVER_COIN,1)
             if coin :
                st.playSound("ItemSound.quest_middle")

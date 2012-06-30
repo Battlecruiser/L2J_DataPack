@@ -53,7 +53,7 @@ public class SteelCitadelTeleport extends Quest
 				
 				final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
 				
-				if ((channel == null) || (channel.getChannelLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
+				if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
 				{
 					return "32376-02a.htm";
 				}
@@ -75,7 +75,7 @@ public class SteelCitadelTeleport extends Quest
 							continue;
 						}
 						
-						for (L2PcInstance pl : party.getPartyMembers())
+						for (L2PcInstance pl : party.getMembers())
 						{
 							if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
 							{

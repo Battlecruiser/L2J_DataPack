@@ -19,23 +19,21 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2CharPosition;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Implementation of the Fear Effect
  * @author littlecrow
- * 
- *         Implementation of the Fear Effect
  */
 public class Fear extends L2Effect
 {
@@ -49,45 +47,15 @@ public class Fear extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.FEAR;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
-		// Fear skills cannot be used l2pcinstance to l2pcinstance. Heroic
-		// Dread, Curse: Fear, Fear, Horror, Sword Symphony, Word of Fear, Hell Scream and
-		// Mass Curse Fear are the exceptions.
-		if (getEffected() instanceof L2PcInstance
-				&& getEffector() instanceof L2PcInstance)
-		{
-			switch (getSkill().getId())
-			{
-				case 1376:
-				case 1169:
-				case 65:
-				case 1092:
-				case 98:
-				case 1272:
-				case 1381:
-				case 763:
-					break;
-				default:
-					return false;
-			}
-		}
-		
 		if (getEffected() instanceof L2NpcInstance
 				|| getEffected() instanceof L2DefenderInstance
 				|| getEffected() instanceof L2FortCommanderInstance
@@ -112,20 +80,12 @@ public class Fear extends L2Effect
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		getEffected().stopFear(false);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -154,10 +114,7 @@ public class Fear extends L2Effect
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(posX, posY, posZ, 0));
 		return true;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

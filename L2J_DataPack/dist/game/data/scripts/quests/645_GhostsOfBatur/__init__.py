@@ -91,7 +91,7 @@ class Quest (JQuest) :
       if npc.getNpcId() == GHOST_COMMANDER:
         chance = DROP_CHANCE_GHOST_COMMANDER
       numItems, chance = divmod(chance,100)
-      if st.getRandom(100) < chance :
+      if self.getRandom(100) < chance :
          numItems += 1
       if numItems :
          if int(count + numItems)/500 > int(count)/500 :

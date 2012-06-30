@@ -1,18 +1,8 @@
-For a while, cummulative updates were here without a naming convention, just piling.
+Any SQL Update should be named like this:
 
-During the Kamael release we collected them all in a single file (see deprecated).
+YYYYMMDDupdate.sql
 
-Any cummulative SQL update from now on, should be named like that:
+For example, at day 5 and January 1 from 2008, then file should be named:
+20080105update.sql
 
-YYYYMMDDupdate(_s).sql
-
-For example, if only one update is done in a single day, let's say on January 1, 2008, then the
-file shall be named:
-20080101update.sql
-
-However, if a more than one updates are all done on the same day, a sequence number will be added:
-20080101update.sql
-20080101update_1.sql
-20080101update_2.sql
-20080101update_3.sql
-etc...
+During the Kamael release we collected them all in a single file (see "deprecated" folder).

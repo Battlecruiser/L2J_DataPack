@@ -115,7 +115,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-				};
+				}
 			}
 			else
 				return false;
@@ -297,7 +297,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 			else if(val[2].equals("DELETE"))
 			{
 				qs.getQuest();
-				Quest.deleteQuestInDb(qs);
+				Quest.deleteQuestInDb(qs, false);
 				target.sendPacket(new QuestList());
 				target.sendPacket(new ExShowQuestMark(qs.getQuest().getQuestIntId()));
 			}
@@ -336,7 +336,8 @@ public class AdminShowQuests implements IAdminCommandHandler
 			showquestmenu(target,actor,outval);
 		}
 		catch(Exception e)
-		{};
+		{
+		}
 	}
 	
 	@Override

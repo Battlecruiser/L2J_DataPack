@@ -95,7 +95,7 @@ class Quest (JQuest) :
     cond=st.getInt("cond")
     if cond==2:
       numItems,chance = divmod(100*Config.RATE_QUEST_DROP,100)
-      if st.getRandom(100) < chance :
+      if self.getRandom(100) < chance :
         numItems = numItems +1  
       pieces=st.getQuestItemsCount(GEMSTONE_FRAGMENT)
       if pieces + numItems >= MAX_COUNT :

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14700" type="EtcItem" name="Greater Healing Potion">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="skill_reduce" />
@@ -14,7 +14,7 @@
 		<set name="item_skill" val="2863-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14701" type="EtcItem" name="Greater Quick Healing Potion">
@@ -31,7 +31,7 @@
 		<set name="item_skill" val="2864-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14702" type="EtcItem" name="Agathion Auxiliary Stone: Enchant Weapon (D-Grade)">
@@ -271,7 +271,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2867-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14723" type="EtcItem" name="Event - Cupid's Powerful Fatigue Recovery Potion">
@@ -285,7 +285,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2868-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="14724" type="EtcItem" name="Event - Milk Cow Summon Scroll">

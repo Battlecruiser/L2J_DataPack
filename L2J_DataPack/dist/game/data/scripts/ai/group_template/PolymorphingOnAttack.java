@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Slyce
  */
 public class PolymorphingOnAttack extends L2AttackableAIScript
 {
-	private static final TIntObjectHashMap<Integer[]> MOBSPAWNS = new TIntObjectHashMap<Integer[]>();
+	private static final TIntObjectHashMap<Integer[]> MOBSPAWNS = new TIntObjectHashMap<>();
 	
 	static
 	{
@@ -124,11 +123,11 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 			final Integer[] tmp = MOBSPAWNS.get(npc.getNpcId());
 			if (tmp != null)
 			{
-				if (npc.getCurrentHp() <= (npc.getMaxHp() * tmp[1] / 100.0) && Rnd.get(100) < tmp[2])
+				if (npc.getCurrentHp() <= (npc.getMaxHp() * tmp[1] / 100.0) && getRandom(100) < tmp[2])
 				{
 					if (tmp[3] >= 0)
 					{
-						NpcStringId npcString = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
+						NpcStringId npcString = MOBTEXTS[tmp[3]][getRandom(MOBTEXTS[tmp[3]].length)];
 						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), npcString));
 						
 					}

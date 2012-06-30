@@ -71,7 +71,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 1:
      npcId = npc.getNpcId()
      count=st.getQuestItemsCount(BAT_FANG)
-     chance = st.getRandom(10)
+     chance = self.getRandom(10)
      for i in DROP[npcId]:
         if i[0]<=chance<i[1]:
            qty=i[2]

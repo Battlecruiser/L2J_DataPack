@@ -128,13 +128,13 @@ class Quest (JQuest) :
       elif event == "30634-07.htm" :
          st.giveItems(GALATEAS_LETTER,1)
       elif event == "30063-02.htm" :                  # Lara first time to give a list out
-         random = st.getRandom(5)+1
+         random = self.getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.takeItems(GALATEAS_LETTER,1)
          st.set("Lara_Part",str(random))
          st.set("step","2")
       elif event == "30063-04.htm" :                  # Lara later to give a list out
-         random = st.getRandom(5)+1
+         random = self.getRandom(5)+1
          st.giveItems(LISTS[random][0],1)
          st.set("Lara_Part",str(random))
       elif event == "30635-02.htm" :                  # Almors' Part, this is the same just other items below.. so just one time comments
@@ -231,14 +231,14 @@ class Quest (JQuest) :
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
                   htmltext = "30634-12.htm"
-                  st.addExpAndSp(832247,57110)
-                  st.giveItems(57,150480)
+                  st.addExpAndSp(1664494,114220)
+                  st.giveItems(57,300960)
+                  st.giveItems(MARK_OF_SUMMONER,1)
+                  st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
                   for var in STATS:
                      st.unset(var)
                   st.exitQuest(False)
                   st.playSound("ItemSound.quest_finish")
-                  st.giveItems(MARK_OF_SUMMONER,1)
-                  st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
                   for item in [LARS_LIST1,LARS_LIST2,LARS_LIST3,LARS_LIST4,LARS_LIST5,ALMORS_ARCANA,BASILLIA_ARCANA,CAMONIELL_ARCANA,CELESTIEL_ARCANA,BELTHUS_ARCANA,BRYNTHEA_ARCANA]:
                      st.takeItems(item,-1)
                else:                # he lost something :) or didnt finished
@@ -335,7 +335,7 @@ class Quest (JQuest) :
       if npcId in DROPLIST_LARA.keys() :
          if not st : return
          if st.getState() == State.COMPLETED : return
-         random = st.getRandom(100)
+         random = self.getRandom(100)
          var, value, chance, item = DROPLIST_LARA[npcId]
          count = st.getQuestItemsCount(item)
          if st.getInt(var) == value and count < 30 and random < chance:

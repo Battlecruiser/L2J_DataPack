@@ -66,7 +66,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    
-   chance = st.getRandom(100)
+   chance = self.getRandom(100)
    if chance < CHANCE_OF_DROP :
      st.giveItems(TREASURE_CHEST,1)
      st.playSound("ItemSound.quest_itemget")

@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.util.Rnd;
 
 /**
  * Retail Event : 'Heavy Medals'
@@ -150,8 +149,13 @@ public class HeavyMedal extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		String htmltext = event;
 		int level = checkLevel(st);
 		
 		if (event.equalsIgnoreCase("game"))
@@ -168,7 +172,7 @@ public class HeavyMedal extends Quest
 			{
 				st.takeItems(GLITTERING_MEDAL, MEDALS[level]);
 				
-				if (Rnd.get(100) > WIN_CHANCE)
+				if (getRandom(100) > WIN_CHANCE)
 				{
 					level = 0;
 				}
@@ -205,10 +209,6 @@ public class HeavyMedal extends Quest
 	public int checkLevel(QuestState st)
 	{
 		int _lev = 0;
-		if (st == null)
-		{
-			return 0;
-		}
 		if (st.hasQuestItems(6402))
 		{
 			_lev = 4;

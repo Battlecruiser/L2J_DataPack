@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapRegion.xsd">
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
 	<!-- Colosseum -->
 	<region name="colosseum" town="Coliseum" castle="5" locId="925" bbs="13">
 		<respawnPoint X="147420" Y="46378" Z="-3350" />

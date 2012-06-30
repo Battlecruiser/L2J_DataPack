@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<item>
 		<!-- Recipe: Braided Hemp -->
 		<ingredient count="1" id="2135" maintainIngredient="true" />
 		<!-- Stem -->
 		<ingredient count="5" id="1864" />
 		<!-- Adena -->
-		<ingredient count="500" id="57" isTaxIngredient="true" />
+		<ingredient count="500" id="57" />
 		<!-- Braided Hemp -->
 		<production count="1" id="1878" />
 	</item>
@@ -18,7 +18,7 @@
 		<!-- Charcoal -->
 		<ingredient count="3" id="1871" />
 		<!-- Adena -->
-		<ingredient count="1200" id="57" isTaxIngredient="true" />
+		<ingredient count="1200" id="57" />
 		<!-- Cokes -->
 		<production count="1" id="1879" />
 	</item>
@@ -30,7 +30,7 @@
 		<!-- Iron Ore -->
 		<ingredient count="5" id="1869" />
 		<!-- Adena -->
-		<ingredient count="2000" id="57" isTaxIngredient="true" />
+		<ingredient count="2000" id="57" />
 		<!-- Steel -->
 		<production count="1" id="1880" />
 	</item>
@@ -40,7 +40,7 @@
 		<!-- Animal Bone -->
 		<ingredient count="10" id="1872" />
 		<!-- Adena -->
-		<ingredient count="1500" id="57" isTaxIngredient="true" />
+		<ingredient count="1500" id="57" />
 		<!-- Coarse Bone Powder -->
 		<production count="1" id="1881" />
 	</item>
@@ -50,7 +50,7 @@
 		<!-- Animal Skin -->
 		<ingredient count="6" id="1867" />
 		<!-- Adena -->
-		<ingredient count="900" id="57" isTaxIngredient="true" />
+		<ingredient count="900" id="57" />
 		<!-- Leather -->
 		<production count="1" id="1882" />
 	</item>
@@ -64,7 +64,7 @@
 		<!-- Coal -->
 		<ingredient count="5" id="1870" />
 		<!-- Adena -->
-		<ingredient count="4500" id="57" isTaxIngredient="true" />
+		<ingredient count="4500" id="57" />
 		<!-- Steel Mold -->
 		<production count="1" id="1883" />
 	</item>
@@ -76,20 +76,20 @@
 		<!-- Thread -->
 		<ingredient count="25" id="1868" />
 		<!-- Adena -->
-		<ingredient count="325" id="57" isTaxIngredient="true" />
+		<ingredient count="325" id="57" />
 		<!-- Cord -->
 		<production count="20" id="1884" />
 	</item>
 	<item>
-		<!-- Recipe: High Grade Suede -->
+		<!-- Recipe: High-Grade Suede -->
 		<ingredient count="1" id="2140" maintainIngredient="true" />
 		<!-- Coarse Bone Powder -->
 		<ingredient count="1" id="1881" />
 		<!-- Suede -->
 		<ingredient count="3" id="1866" />
 		<!-- Adena -->
-		<ingredient count="2400" id="57" isTaxIngredient="true" />
-		<!-- High Grade Suede -->
+		<ingredient count="2400" id="57" />
+		<!-- High-Grade Suede -->
 		<production count="1" id="1885" />
 	</item>
 	<item>
@@ -102,7 +102,7 @@
 		<!-- Silver Nugget -->
 		<ingredient count="10" id="1873" />
 		<!-- Adena -->
-		<ingredient count="13500" id="57" isTaxIngredient="true" />
+		<ingredient count="13500" id="57" />
 		<!-- Silver Mold -->
 		<production count="1" id="1886" />
 	</item>
@@ -116,7 +116,7 @@
 		<!-- Stone of Purity -->
 		<ingredient count="1" id="1875" />
 		<!-- Adena -->
-		<ingredient count="8100" id="57" isTaxIngredient="true" />
+		<ingredient count="8100" id="57" />
 		<!-- Varnish of Purity -->
 		<production count="1" id="1887" />
 	</item>
@@ -128,7 +128,7 @@
 		<!-- Oriharukon Ore -->
 		<ingredient count="1" id="1874" />
 		<!-- Adena -->
-		<ingredient count="6600" id="57" isTaxIngredient="true" />
+		<ingredient count="6600" id="57" />
 		<!-- Synthetic Cokes -->
 		<production count="1" id="1888" />
 	</item>
@@ -140,7 +140,7 @@
 		<!-- Thread -->
 		<ingredient count="5" id="1868" />
 		<!-- Adena -->
-		<ingredient count="3000" id="57" isTaxIngredient="true" />
+		<ingredient count="3000" id="57" />
 		<!-- Compound Braid -->
 		<production count="1" id="1889" />
 	</item>
@@ -154,7 +154,7 @@
 		<!-- Mithril Ore -->
 		<ingredient count="1" id="1876" />
 		<!-- Adena -->
-		<ingredient count="13100" id="57" isTaxIngredient="true" />
+		<ingredient count="13100" id="57" />
 		<!-- Mithril Alloy -->
 		<production count="1" id="1890" />
 	</item>
@@ -168,7 +168,7 @@
 		<!-- Adamantite Nugget -->
 		<ingredient count="10" id="1877" />
 		<!-- Adena -->
-		<ingredient count="95000" id="57" isTaxIngredient="true" />
+		<ingredient count="95000" id="57" />
 		<!-- Artisan's Frame -->
 		<production count="1" id="1891" />
 	</item>
@@ -182,7 +182,7 @@
 		<!-- Mithril Ore -->
 		<ingredient count="10" id="1876" />
 		<!-- Adena -->
-		<ingredient count="64000" id="57" isTaxIngredient="true" />
+		<ingredient count="64000" id="57" />
 		<!-- Blacksmith's Frame -->
 		<production count="1" id="1892" />
 	</item>
@@ -196,7 +196,7 @@
 		<!-- Oriharukon Ore -->
 		<ingredient count="4" id="1874" />
 		<!-- Adena -->
-		<ingredient count="24600" id="57" isTaxIngredient="true" />
+		<ingredient count="24600" id="57" />
 		<!-- Oriharukon -->
 		<production count="1" id="1893" />
 	</item>
@@ -210,7 +210,7 @@
 		<!-- Coal -->
 		<ingredient count="4" id="1870" />
 		<!-- Adena -->
-		<ingredient count="5700" id="57" isTaxIngredient="true" />
+		<ingredient count="5700" id="57" />
 		<!-- Crafted Leather -->
 		<production count="1" id="1894" />
 	</item>
@@ -222,7 +222,7 @@
 		<!-- Silver Nugget -->
 		<ingredient count="15" id="1873" />
 		<!-- Adena -->
-		<ingredient count="700" id="57" isTaxIngredient="true" />
+		<ingredient count="700" id="57" />
 		<!-- Metallic Fiber -->
 		<production count="20" id="1895" />
 	</item>
@@ -234,7 +234,7 @@
 		<!-- Iron Ore -->
 		<ingredient count="5" id="1869" />
 		<!-- Adena -->
-		<ingredient count="2000" id="57" isTaxIngredient="true" />
+		<ingredient count="2000" id="57" />
 		<!-- Metallic Thread -->
 		<production count="1" id="5549" />
 	</item>
@@ -248,7 +248,7 @@
 		<!-- Iron Ore -->
 		<ingredient count="10" id="1869" />
 		<!-- Adena -->
-		<ingredient count="5000" id="57" isTaxIngredient="true" />
+		<ingredient count="5000" id="57" />
 		<!-- Metal Hardener -->
 		<production count="1" id="5220" />
 	</item>
@@ -260,7 +260,7 @@
 		<!-- Mithril Ore -->
 		<ingredient count="5" id="1876" />
 		<!-- Adena -->
-		<ingredient count="15000" id="57" isTaxIngredient="true" />
+		<ingredient count="15000" id="57" />
 		<!-- Durable Metal Plate -->
 		<production count="1" id="5550" />
 	</item>
@@ -272,8 +272,8 @@
 		<!-- Adamantite Nugget -->
 		<ingredient count="15" id="1877" />
 		<!-- Adena -->
-		<ingredient count="242760" id="57" isTaxIngredient="true" />
-		<!-- Leolin's Mold -->
+		<ingredient count="242760" id="57" />
+		<!-- Reorin's Mold -->
 		<production count="1" id="5551" />
 	</item>
 	<item>
@@ -284,7 +284,7 @@
 		<!-- Enria -->
 		<ingredient count="5" id="4042" />
 		<!-- Adena -->
-		<ingredient count="392700" id="57" isTaxIngredient="true" />
+		<ingredient count="392700" id="57" />
 		<!-- Warsmith's Mold -->
 		<production count="1" id="5552" />
 	</item>
@@ -296,7 +296,7 @@
 		<!-- Thons -->
 		<ingredient count="10" id="4044" />
 		<!-- Adena -->
-		<ingredient count="541824" id="57" isTaxIngredient="true" />
+		<ingredient count="541824" id="57" />
 		<!-- Arcsmith's Anvil -->
 		<production count="1" id="5553" />
 	</item>
@@ -308,7 +308,7 @@
 		<!-- Thread -->
 		<ingredient count="20" id="1868" />
 		<!-- Adena -->
-		<ingredient count="901680" id="57" isTaxIngredient="true" />
+		<ingredient count="901680" id="57" />
 		<!-- Warsmith's Holder -->
 		<production count="1" id="5554" />
 	</item>

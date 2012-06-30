@@ -14,9 +14,7 @@
  */
 package quests.TerritoryWarScripts;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -28,8 +26,19 @@ public class ProtectTheEconomic extends TerritoryWarSuperClass
 	
 	public ProtectTheEconomic()
 	{
-		super(qnu,qn1,qna);
-		NPC_IDS = new int[]{36513,36519,36525,36531,36537,36543,36549,36555,36561};
+		super(qnu, qn1, qna);
+		NPC_IDS = new int[]
+		{
+			36513,
+			36519,
+			36525,
+			36531,
+			36537,
+			36543,
+			36549,
+			36555,
+			36561
+		};
 		qn = qn1;
 		registerAttackIds();
 	}
@@ -37,6 +46,6 @@ public class ProtectTheEconomic extends TerritoryWarSuperClass
 	@Override
 	public int getTerritoryIdForThisNPCId(int npcid)
 	{
-		return 81 + (npcid - 36513) / 6;
+		return 81 + ((npcid - 36513) / 6);
 	}
 }

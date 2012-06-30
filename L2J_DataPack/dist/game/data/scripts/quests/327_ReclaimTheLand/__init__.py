@@ -38,7 +38,7 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    n=st.getRandom(100)
+    n=self.getRandom(100)
     if event == "30597-03.htm" :
       st.set("cond","1")
       st.setState(State.STARTED)
@@ -163,8 +163,8 @@ class Quest (JQuest) :
    item,chance=DROPLIST[npc.getNpcId()]
    st.giveItems(item,1)
    st.playSound("ItemSound.quest_itemget")
-   if st.getRandom(100)<chance :
-     n = st.getRandom(100)
+   if self.getRandom(100)<chance :
+     n = self.getRandom(100)
      if n < 25 :
         st.giveItems(CLAY_URN_FRAGMENT,1)
      elif n < 50 :

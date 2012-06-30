@@ -76,7 +76,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(CH_SKULL)==st.getQuestItemsCount(K_HORN)==100 :
          st.takeItems(CH_SKULL,-1)
          st.takeItems(K_HORN,-1)
-         item=REWARDS[st.getRandom(len(REWARDS))]
+         item=REWARDS[self.getRandom(len(REWARDS))]
          if ALT_RP_100 : item += 1
          st.rewardItems(item,1)
          htmltext="30515-4.htm"
@@ -95,7 +95,7 @@ class Quest (JQuest) :
       if st.getInt("cond") == 1 and count < 100 :
         chance = 75 * Config.RATE_QUEST_DROP
         numItems, chance = divmod(chance,100)
-        if st.getRandom(100) < chance :
+        if self.getRandom(100) < chance :
            numItems += 1
         if numItems :
            if count + numItems >= 100 :

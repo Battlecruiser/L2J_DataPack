@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skills.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8100" levels="1" name="Augment Option - Water Attack">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="6.42" />
 		</for>
@@ -14,8 +13,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="6.42" />
 		</for>
@@ -24,8 +22,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="6.42" />
 		</for>
@@ -34,8 +31,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="6.42" />
 		</for>
@@ -44,8 +40,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="6.42" />
 		</for>
@@ -54,8 +49,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="6.42" />
 		</for>
@@ -64,8 +58,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="6.42" />
 		</for>
@@ -74,8 +67,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="6.42" />
 		</for>
@@ -84,8 +76,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="6.42" />
 		</for>
@@ -94,8 +85,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="6.42" />
 		</for>
@@ -104,8 +94,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="6.42" />
 		</for>
@@ -114,8 +103,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="6.42" />
 		</for>
@@ -124,8 +112,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="6.42" />
 		</for>
@@ -134,8 +121,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="6.42" />
 		</for>
@@ -144,8 +130,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="6.42" />
 		</for>
@@ -154,8 +139,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="6.42" />
 		</for>
@@ -164,8 +148,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="6.42" />
 		</for>
@@ -174,8 +157,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="6.42" />
 		</for>
@@ -184,8 +166,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="6.42" />
 		</for>
@@ -194,8 +175,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="6.42" />
 		</for>
@@ -204,8 +184,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="6.42" />
 		</for>
@@ -214,8 +193,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="6.42" />
 		</for>
@@ -224,8 +202,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="6.42" />
 		</for>
@@ -234,8 +211,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="6.42" />
 		</for>
@@ -244,8 +220,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="6.42" />
 		</for>
@@ -254,8 +229,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="6.42" />
 		</for>
@@ -264,8 +238,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="6.42" />
 		</for>
@@ -274,8 +247,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="6.42" />
 		</for>
@@ -284,8 +256,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="6.42" />
 		</for>
@@ -294,8 +265,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="6.42" />
 		</for>
@@ -304,8 +274,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="6.42" />
 		</for>
@@ -314,8 +283,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="6.42" />
 		</for>
@@ -324,8 +292,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="6.42" />
 		</for>
@@ -334,8 +301,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="6.42" />
 		</for>
@@ -344,8 +310,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkPower" val="6.42" />
 		</for>
@@ -354,8 +319,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="firePower" val="6.42" />
 		</for>
@@ -364,8 +328,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterPower" val="6.42" />
 		</for>
@@ -374,8 +337,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windPower" val="6.42" />
 		</for>
@@ -384,8 +346,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthPower" val="6.42" />
 		</for>
@@ -394,8 +355,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="6.42" />
 		</for>
@@ -404,8 +364,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="6.42" />
 		</for>
@@ -414,8 +373,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="fireRes" val="6.42" />
 		</for>
@@ -424,8 +382,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="waterRes" val="6.42" />
 		</for>
@@ -434,8 +391,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="windRes" val="6.42" />
 		</for>
@@ -444,8 +400,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="earthRes" val="6.42" />
 		</for>
@@ -455,8 +410,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="1.28" />
 		</for>
@@ -466,8 +420,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="1.28" />
 		</for>
@@ -477,8 +430,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="1.28" />
 		</for>
@@ -488,8 +440,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="1.28" />
 		</for>
@@ -499,8 +450,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="1.28" />
 		</for>
@@ -510,8 +460,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="1.28" />
 		</for>
@@ -520,8 +469,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="1.28" />
 		</for>
@@ -530,8 +478,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="1.28" />
 		</for>
@@ -540,8 +487,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="1.28" />
 		</for>
@@ -550,8 +496,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="1.28" />
 		</for>
@@ -560,8 +505,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="1.28" />
 		</for>
@@ -570,8 +514,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="1.28" />
 		</for>
@@ -581,8 +524,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="1.6" />
 		</for>
@@ -592,8 +534,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="1.6" />
 		</for>
@@ -603,8 +544,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="1.6" />
 		</for>
@@ -614,8 +554,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="1.6" />
 		</for>
@@ -625,8 +564,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="1.6" />
 		</for>
@@ -636,8 +574,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="1.6" />
 		</for>
@@ -646,8 +583,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="1.6" />
 		</for>
@@ -656,8 +592,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="1.6" />
 		</for>
@@ -666,8 +601,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="1.6" />
 		</for>
@@ -676,8 +610,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="1.6" />
 		</for>
@@ -686,8 +619,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="1.6" />
 		</for>
@@ -696,8 +628,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="1.6" />
 		</for>
@@ -707,8 +638,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="2.25" />
 		</for>
@@ -718,8 +648,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="2.25" />
 		</for>
@@ -729,8 +658,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="2.25" />
 		</for>
@@ -740,8 +668,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="2.25" />
 		</for>
@@ -751,8 +678,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="2.25" />
 		</for>
@@ -762,8 +688,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="2.25" />
 		</for>
@@ -772,8 +697,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="2.25" />
 		</for>
@@ -782,8 +706,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="2.25" />
 		</for>
@@ -792,8 +715,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="2.25" />
 		</for>
@@ -802,8 +724,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="2.25" />
 		</for>
@@ -812,8 +733,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="2.25" />
 		</for>
@@ -822,8 +742,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="2.25" />
 		</for>
@@ -833,8 +752,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="stunProf" val="2.57" />
 		</for>
@@ -844,8 +762,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="2.57" />
 		</for>
@@ -855,8 +772,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="2.57" />
 		</for>
@@ -866,8 +782,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="2.57" />
 		</for>
@@ -877,8 +792,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="2.57" />
 		</for>
@@ -888,8 +802,7 @@
 		<!-- Typo in skill description -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="2.57" />
 		</for>
@@ -898,8 +811,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="2.57" />
 		</for>
@@ -908,8 +820,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="2.57" />
 		</for>
@@ -918,8 +829,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="2.57" />
 		</for>
@@ -928,8 +838,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="2.57" />
 		</for>
@@ -938,8 +847,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="2.57" />
 		</for>
@@ -948,122 +856,121 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="2.57" />
 		</for>
 	</skill>
 	<skill id="8193" levels="1" name="Heavy Armor of Nightmare Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
-			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
 	<skill id="8194" levels="1" name="Heavy Majestic Plate Armor Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<add order="0x40" stat="accCombat" val="3" /> <!-- Accuracy +3 -->
+			<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
 	<skill id="8195" levels="1" name="Light Nightmarish Leather Armor Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
+			<add order="0x40" stat="absorbDam" val="3" /> <!-- absorb 3% HP from damage inflicted on enemies -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
-			<add order="0x40" stat="absorbDam" val="3" /> <!-- absorb 3% HP from damage inflicted on enemies -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
 	<skill id="8196" levels="1" name="Light Majestic Leather Armor Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
 				<using kind="Bow,Crossbow" />
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
-			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
+			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
-			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
 	<skill id="8197" levels="1" name="Nightmare Robe Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
-			<add order="0x10" stat="INT" val="2" /> <!-- INT +2 -->
-			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
 	</skill>
 	<skill id="8198" levels="1" name="Majestic Robe Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
-			<add order="0x10" stat="MEN" val="1" /> <!-- MEN +1 -->
-			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
 	</skill>
 	<skill id="8199" levels="1" name="Heavy Imperial Crusader Breastplate Set - PvP">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
+			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Probability -70% -->
 			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Probability -70% -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
 </list>

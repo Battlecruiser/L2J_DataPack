@@ -25,7 +25,7 @@ GARVARENTZ = 30704
 
 def rewards(st,npcId):
     state=False
-    chance=st.getRandom(100)
+    chance = st.getQuest().getRandom(100)
     if npcId == ORVEN and st.getQuestItemsCount(CRUCIFIX) :
        st.set("mission","1")
        st.takeItems(CRUCIFIX,-1)
@@ -98,7 +98,7 @@ class Quest (JQuest) :
        else:
           st.giveItems(ADENA,amount*60)
           st.takeItems(ARTICLES_DEAD_HEROES,-1)
-          random = st.getRandom(1000)
+          random = self.getRandom(1000)
           if random < 10 :
              htmltext = "30754-12.htm"
              st.giveItems(OLD_KEY,1)
@@ -161,7 +161,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      chance = (CHANCE+(npcId-20234)*2)*Config.RATE_QUEST_DROP
      bonus = int(divmod(chance,100)[0])
-     if st.getInt("cond") == 1 and st.getRandom(100)<chance :
+     if st.getInt("cond") == 1 and self.getRandom(100)<chance :
          st.giveItems(ARTICLES_DEAD_HEROES,1+bonus)
          st.playSound("ItemSound.quest_itemget")
      return

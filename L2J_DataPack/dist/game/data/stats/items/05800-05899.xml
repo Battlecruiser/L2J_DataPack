@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5800" type="Weapon" name="Nephilim Lord">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
@@ -91,7 +91,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-2" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
@@ -107,7 +107,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-3" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
@@ -123,7 +123,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-4" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
@@ -139,7 +139,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-5" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
@@ -155,7 +155,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-6" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5808" type="Armor" name="Party Mask">
@@ -583,7 +583,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2177-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5859" type="EtcItem" name="Blessed Scroll of Escape: Castle">
@@ -598,7 +598,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2178-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="5860" type="EtcItem" name="Lienrik Egg">

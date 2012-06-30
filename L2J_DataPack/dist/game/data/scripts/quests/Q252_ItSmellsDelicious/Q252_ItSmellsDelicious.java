@@ -14,7 +14,8 @@
  */
 package quests.Q252_ItSmellsDelicious;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
@@ -24,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Dumpster Updated by corbin12 Thanks VLight for help.
@@ -39,7 +39,9 @@ public class Q252_ItSmellsDelicious extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22786, 22787, 22788
+		22786,
+		22787,
+		22788
 	};
 	
 	private static final int CHEF = 18908;
@@ -137,7 +139,7 @@ public class Q252_ItSmellsDelicious extends Quest
 	{
 		final int npcId = npc.getNpcId();
 		QuestState st;
-		if (Util.contains(MOBS, npcId) && (Rnd.get(1000) < 599))
+		if (Util.contains(MOBS, npcId) && (getRandom(1000) < 599))
 		{
 			st = getRandomPartyMemberQuestState(player);
 			if (st != null)
@@ -155,7 +157,7 @@ public class Q252_ItSmellsDelicious extends Quest
 		else if (npcId == CHEF)
 		{
 			st = player.getQuestState(qn);
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (Rnd.get(1000) < 360))
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (getRandom(1000) < 360))
 			{
 				st.giveItems(MAHUM_COOKBOOK, 1);
 				st.playSound("ItemSound.quest_itemget");
@@ -180,7 +182,7 @@ public class Q252_ItSmellsDelicious extends Quest
 		final L2Party party = player.getParty();
 		QuestState st;
 		
-		if ((party == null) || party.getPartyMembers().isEmpty())
+		if ((party == null) || party.getMembers().isEmpty())
 		{
 			st = player.getQuestState(qn);
 			if ((st == null) || st.isStarted() || (st.getInt("cond") != 1) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
@@ -190,7 +192,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			return st;
 		}
 		
-		final FastList<QuestState> candidates = new FastList<QuestState>();
+		final List<QuestState> candidates = new ArrayList<>();
 		// get the target for enforcing distance limitations.
 		L2Object target = player.getTarget();
 		
@@ -199,7 +201,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			target = player;
 		}
 		
-		for (final L2PcInstance partyMember : party.getPartyMembers())
+		for (final L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.isDead() || !partyMember.isInsideRadius(target, 1500, true, false))
 			{
@@ -213,7 +215,7 @@ public class Q252_ItSmellsDelicious extends Quest
 			}
 			candidates.add(st);
 		}
-		return candidates.isEmpty() ? null : candidates.get(Rnd.get(candidates.size()));
+		return candidates.isEmpty() ? null : candidates.get(getRandom(candidates.size()));
 	}
 	
 	public static void main(String[] args)

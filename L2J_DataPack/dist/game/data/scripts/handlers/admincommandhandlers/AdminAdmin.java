@@ -15,20 +15,19 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.AccessLevels;
-import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
+import com.l2jserver.gameserver.datatables.NpcWalkerRoutesData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
@@ -101,13 +100,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_gmliston"))
 		{
-			GmListTable.getInstance().showGm(activeChar);
+			AdminTable.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
 			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
-			GmListTable.getInstance().hideGm(activeChar);
+			AdminTable.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
 			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
@@ -146,9 +145,9 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			L2PcInstance target = null;
 			
-			if (activeChar.getTarget() instanceof L2PcInstance)
+			if (activeChar.getTarget().isPlayer())
 			{
-				target = (L2PcInstance) activeChar.getTarget();
+				target = activeChar.getTarget().getActingPlayer();
 				target.setHero(target.isHero() ? false : true);
 			}
 			else
@@ -229,10 +228,16 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			StringTokenizer st = new StringTokenizer(command);
 			st.nextToken();
-			String type = "";
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("You need to specify a type to reload!");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
+				return false;
+			}
+			
+			final String type = st.nextToken();
 			try
 			{
-				type = st.nextToken();
 				if (type.equals("multisell"))
 				{
 					MultiSell.getInstance().reload();
@@ -289,19 +294,18 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else if (type.startsWith("npcwalkers"))
 				{
-					NpcWalkerRoutesTable.getInstance().load();
+					NpcWalkerRoutesData.getInstance().load();
 					activeChar.sendMessage("NPC Walker Routes have been reloaded");
 				}
 				else if (type.startsWith("access"))
 				{
-					AccessLevels.getInstance().reloadAccessLevels();
-					AdminCommandAccessRights.getInstance().reloadAdminCommandAccessRights();
+					AdminTable.getInstance().load();
 					activeChar.sendMessage("Access Rights have been reloaded");
 				}
 				else if (type.startsWith("quests"))
 				{
 					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All Quests have been reloaded");
+					activeChar.sendMessage("All Quests have been reloaded.");
 				}
 				else if (type.startsWith("door"))
 				{
@@ -314,7 +318,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
 				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
-				_log.warning("An error occured while reloading " + type + ": " + e); //do not mask an exception here
+				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}
 		else if (command.startsWith("admin_setconfig"))

@@ -134,11 +134,11 @@ class Quest (JQuest) :
                 htmltext = "32213-06.htm"
                 player.sendPacket(SocialAction(player.getObjectId(),3))
                 st.takeItems(Recommend,-1)
-                st.giveItems(certificate,1)
                 st.exitQuest(False)
                 st.playSound("ItemSound.quest_finish")
-                st.giveItems(57,35597)
-                st.addExpAndSp(196875,13510)
+                st.addExpAndSp(393750,27020)
+                st.giveItems(57,71194)
+                st.giveItems(certificate,1)
         elif npcId == Kekropus :
             if cond == 1 :
                 htmltext = "32138-00.htm"
@@ -259,7 +259,7 @@ class Quest (JQuest) :
                   katenar.broadcastPacket(NpcSay(katenar.getObjectId(),0,katenar.getNpcId(),"I am late!"))
                   self.isKatenarSpawned == 1
                   self.startQuestTimer("katenar_cleanup",60000,katenar,player)
-        if npcId == Wyrm and st.getQuestItemsCount(Heart) < 10 and cond == 15 and st.getRandom(100) <= 25:
+        if npcId == Wyrm and st.getQuestItemsCount(Heart) < 10 and cond == 15 and self.getRandom(100) <= 25:
             if st.getQuestItemsCount(Heart) == 9 :
                   st.giveItems(Heart,1)
                   st.set("cond","16")

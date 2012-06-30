@@ -56,7 +56,7 @@ class Quest (JQuest) :
    
    chance=22+(((npc.getNpcId()-20000)^34)/4)
    count=st.getQuestItemsCount(VENOM_SAC)
-   if count < 10 and st.getRandom(100) < chance :
+   if count < 10 and self.getRandom(100) < chance :
      st.giveItems(VENOM_SAC,1)
      if count == 9 :
        st.playSound("ItemSound.quest_middle")

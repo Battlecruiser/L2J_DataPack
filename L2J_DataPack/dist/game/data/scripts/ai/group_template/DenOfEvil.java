@@ -17,28 +17,25 @@ package ai.group_template;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- **
- ** Dummy AI for spawns/respawns only for testing.
+ * Dummy AI for spawns/respawns only for testing.
+ * @author Gnacik
  */
 public class DenOfEvil extends L2AttackableAIScript
 {
 	// private static final int _buffer_id = 32656;
 	
-	private static final int[] _eye_ids = { 18812, 18813, 18814 };
+	protected static final int[] _eye_ids = { 18812, 18813, 18814 };
 	private static final int _skill_id = 6150; // others +2
 	
 	private static final Location[] _eye_spawn =
@@ -159,7 +156,7 @@ public class DenOfEvil extends L2AttackableAIScript
 	private void spawnEyes()
 	{
 		for(Location loc : _eye_spawn)
-			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], loc, false, 0);
+			addSpawn(_eye_ids[getRandom(_eye_ids.length)], loc, false, 0);
 	}
 	
 	private class RespawnNewEye implements Runnable
@@ -174,7 +171,7 @@ public class DenOfEvil extends L2AttackableAIScript
 		@Override
 		public void run()
 		{
-			addSpawn(_eye_ids[Rnd.get(_eye_ids.length)], _loc, false, 0);
+			addSpawn(_eye_ids[getRandom(_eye_ids.length)], _loc, false, 0);
 		}
 	}
 	
@@ -203,11 +200,11 @@ public class DenOfEvil extends L2AttackableAIScript
 		
 		private void destroyZone()
 		{
-			for (L2Character character : _zone.getCharactersInsideArray())
+			for (L2Character character : _zone.getCharactersInside())
 			{
 				if (character == null)
 					continue;
-				if (character instanceof L2Playable)
+				if (character.isPlayable())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(6149, 1);
 					skill.getEffects(character, character); // apply effect
@@ -216,7 +213,7 @@ public class DenOfEvil extends L2AttackableAIScript
 				{
 					if (character.doDie(null)) // mobs die
 					{
-						if (character instanceof L2Npc)
+						if (character.isNpc())
 						{
 							// respawn eye
 							L2Npc npc = (L2Npc) character;

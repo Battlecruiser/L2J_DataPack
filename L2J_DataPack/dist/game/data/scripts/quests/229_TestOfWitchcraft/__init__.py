@@ -121,8 +121,8 @@ class Quest (JQuest) :
       st.takeItems(SWORD_OF_BINDING,1)
       st.takeItems(IKERS_AMULET,1)
       st.takeItems(ORIMS_INSTRUCTIONS,1)
-      st.addExpAndSp(1029122,70620)
-      st.giveItems(57,186077)
+      st.addExpAndSp(2058244,141240)
+      st.giveItems(57,372154)
       st.giveItems(MARK_OF_WITCHCRAFT,1)
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       htmltext = "30630-22.htm"
@@ -381,7 +381,7 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     var,value,maxcount,chance,giveList,takeList=DROPLIST[npcId]
-    random=st.getRandom(100)
+    random=self.getRandom(100)
     isValue = int(st.get(var))
     if int(st.get(var)) in value and random<chance:
       if takeList:

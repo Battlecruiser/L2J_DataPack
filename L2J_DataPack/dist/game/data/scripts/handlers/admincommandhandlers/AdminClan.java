@@ -106,9 +106,9 @@ public class AdminClan implements IAdminCommandHandler
 			html.replace("%clan_name%", clan.getName());
 			html.replace("%clan_leader%", clan.getLeaderName());
 			html.replace("%clan_level%", String.valueOf(clan.getLevel()));
-			html.replace("%clan_has_castle%", clan.getHasCastle() > 0 ? CastleManager.getInstance().getCastleById(clan.getHasCastle()).getName() : "No");
-			html.replace("%clan_has_clanhall%", clan.getHasHideout() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHasHideout()).getName() : "No");
-			html.replace("%clan_has_fortress%", clan.getHasFort() > 0 ? FortManager.getInstance().getFortById(clan.getHasFort()).getName() : "No");
+			html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
+			html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
+			html.replace("%clan_has_fortress%", clan.getFortId() > 0 ? FortManager.getInstance().getFortById(clan.getFortId()).getName() : "No");
 			html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 			html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
 			html.replace("%clan_ally%", clan.getAllyId() > 0 ? clan.getAllyName() : "Not in ally");

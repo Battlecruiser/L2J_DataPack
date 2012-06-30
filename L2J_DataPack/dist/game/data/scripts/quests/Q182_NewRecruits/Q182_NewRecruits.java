@@ -16,19 +16,19 @@ package quests.Q182_NewRecruits;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-10-15 Based on official server Naia
+ * 2010-10-15 Based on official server Naia
+ * @author Gnacik
  */
-
 public class Q182_NewRecruits extends Quest
 {
 	private static final String qn = "182_NewRecruits";
+	
 	// NPC's
 	private static final int _kekropus = 32138;
 	private static final int _nornil = 32258;
@@ -37,14 +37,15 @@ public class Q182_NewRecruits extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _kekropus)
 		{
-			if (event.equalsIgnoreCase("32138-03.htm"))
+			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -53,13 +54,13 @@ public class Q182_NewRecruits extends Quest
 		}
 		else if (npc.getNpcId() == _nornil)
 		{
-			if (event.equalsIgnoreCase("32258-04.htm"))
+			if (event.equalsIgnoreCase("32258-04.html"))
 			{
 				st.giveItems(847, 2);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
-			else if (event.equalsIgnoreCase("32258-05.htm"))
+			else if (event.equalsIgnoreCase("32258-05.html"))
 			{
 				st.giveItems(890, 2);
 				st.playSound("ItemSound.quest_finish");
@@ -73,38 +74,47 @@ public class Q182_NewRecruits extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
-		
-		if(player.getRace().ordinal() == 5)
-		{
-			htmltext = "32138-00.htm";
-		}
-		else
-		{
-			if (npc.getNpcId() == _kekropus)
-			{
-				switch(st.getState())
-				{
-					case State.CREATED :
-							htmltext = "32138-01.htm";
-						break;
-					case State.STARTED :
-						if (st.getInt("cond") == 1)
-							htmltext = "32138-03.htm";
-						break;
-					case State.COMPLETED :
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-				}
-			}
-			else if (npc.getNpcId() == _nornil && st.getState() == State.STARTED)
-			{
-				htmltext = "32258-01.htm";
-			}
 		}
 		
+		final int npcId = npc.getNpcId();
+		if (npcId == _kekropus)
+		{
+			switch (st.getState())
+			{
+				case State.CREATED:
+					final int level = player.getLevel();
+					if (player.getRace() == Race.Kamael)
+					{
+						htmltext = "32138-00.html";
+					}
+					else if ((level >= 17) && (level <= 21) && (player.getClassId().ordinal() == 0))
+					{
+						htmltext = "32138-01.htm";
+					}
+					else
+					{
+						htmltext = "32138-00b.html";
+					}
+					break;
+				case State.STARTED:
+					if (st.getInt("cond") == 1)
+					{
+						htmltext = "32138-04.html";
+					}
+					break;
+				case State.COMPLETED:
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
+			}
+		}
+		else if ((npcId == _nornil) && st.isStarted())
+		{
+			htmltext = "32258-01.html";
+		}
 		return htmltext;
 	}
 	
@@ -113,8 +123,7 @@ public class Q182_NewRecruits extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(_kekropus);
-		addTalkId(_kekropus);
-		addTalkId(_nornil);
+		addTalkId(_kekropus, _nornil);
 	}
 	
 	public static void main(String[] args)

@@ -67,7 +67,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
 
-   chance = st.getRandom(100)
+   chance = self.getRandom(100)
    if chance in range(1,15) and st.getQuestItemsCount(CHAPTER_OF_FIRE) == 0 :
      st.giveItems(CHAPTER_OF_FIRE,1)
      st.playSound("ItemSound.quest_itemget")

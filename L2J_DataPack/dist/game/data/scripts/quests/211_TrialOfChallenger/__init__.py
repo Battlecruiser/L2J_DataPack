@@ -49,11 +49,11 @@ class Quest (JQuest) :
           if st.getQuestItemsCount(BROKEN_KEY) == 1 :
              st.giveItems(SCROLL_OF_SHYSLASSY,1)
              st.playSound("Itemsound.quest_middle")
-             if st.getRandom(10) < 2 :
+             if self.getRandom(10) < 2 :
               htmltext = "30647-03.htm"
               st.takeItems(BROKEN_KEY,1)
               st.playSound("ItemSound.quest_jackpot")
-              n = st.getRandom(100)
+              n = self.getRandom(100)
               if n > 90 :
                  st.giveItems(MITHRIL_SCALE_GAITERS_MATERIAL,1)
                  st.giveItems(BRIGANDINE_GAUNTLET_PATTERN,1)
@@ -73,7 +73,7 @@ class Quest (JQuest) :
                  st.playSound("Itemsound.quest_middle")
              else:
               htmltext = "30647-02.htm"
-              n = st.getRandom(1000)+1
+              n = self.getRandom(1000)+1
               st.takeItems(BROKEN_KEY,1)
               st.giveItems(ADENA,n)
               st.playSound("Itemsound.quest_middle")
@@ -149,12 +149,12 @@ class Quest (JQuest) :
    elif npcId == 30646 and cond == 7 :
       htmltext = "30646-06a.htm"
    elif npcId == 30646 and cond == 10 :
-      st.addExpAndSp(533803,34621)
-      st.giveItems(57,97278)
-      st.giveItems(7562,8)
-      htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY,1)
+      st.addExpAndSp(1067606,69242)
+      st.giveItems(57,194556)
+      st.giveItems(7562,8)
       st.giveItems(MARK_OF_CHALLENGER,1)
+      htmltext = "30646-07.htm"
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
       st.set("cond","0")

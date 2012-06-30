@@ -163,7 +163,7 @@ class Quest (JQuest) :
 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
-     chance=st.getRandom(100)
+     chance=self.getRandom(100)
      if cond==2 and npcId in range(20496,20500) :
         blades = st.getQuestItemsCount(BLADE_MOLD)
         if chance < CHANCE11 :

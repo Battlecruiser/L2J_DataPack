@@ -17,21 +17,19 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jserver.gameserver.model.item.L2Item;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.skills.Stats;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class Heal implements ISkillHandler
 {
@@ -41,10 +39,6 @@ public class Heal implements ISkillHandler
 		L2SkillType.HEAL_STATIC
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -64,10 +58,9 @@ public class Heal implements ISkillHandler
 				final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 				double staticShotBonus = 0;
 				int mAtkMul = 1; // mAtk multiplier
-				if (weaponInst != null
-						&& weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+				if (weaponInst != null && weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
 				{
-					if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isMageClass())
+					if (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())
 					{
 						staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
 						
@@ -102,8 +95,7 @@ public class Heal implements ISkillHandler
 					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 				}
 				// If there is no weapon equipped, check for an active summon.
-				else if (activeChar instanceof L2Summon
-						&& ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
+				else if (activeChar.isSummon() && ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
 				{
 					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
 					
@@ -117,7 +109,7 @@ public class Heal implements ISkillHandler
 					
 					((L2Summon)activeChar).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				}
-				else if (activeChar instanceof L2Npc && ((L2Npc)activeChar)._spiritshotcharged)
+				else if (activeChar.isNpc() && ((L2Npc)activeChar)._spiritshotcharged)
 				{
 					staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
 					mAtkMul = 4;
@@ -135,15 +127,15 @@ public class Heal implements ISkillHandler
 			if (target == null || target.isDead() || target.isInvul())
 				continue;
 			
-			if (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance)
+			if (target.isDoor() || target instanceof L2SiegeFlagInstance)
 				continue;
 			
 			// Player holding a cursed weapon can't be healed and can't heal
 			if (target != activeChar)
 			{
-				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
+				if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
 					continue;
-				else if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isCursedWeaponEquipped())
+				else if (activeChar.isPlayer() && activeChar.getActingPlayer().isCursedWeaponEquipped())
 					continue;
 			}
 			
@@ -160,11 +152,11 @@ public class Heal implements ISkillHandler
 			// Healer proficiency (since CT1)
 			hp *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!skill.isPotion())
+			if (!skill.isStatic())
 				hp += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
 			
 			// Heal critic, since CT2.3 Gracia Final
-			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isPotion()
+			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isStatic()
 					&& Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				hp *= 3;
 			
@@ -179,7 +171,7 @@ public class Heal implements ISkillHandler
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				if (skill.getId() == 4051)
 				{
@@ -188,7 +180,7 @@ public class Heal implements ISkillHandler
 				}
 				else
 				{
-					if (activeChar instanceof L2PcInstance && activeChar != target)
+					if (activeChar.isPlayer() && activeChar != target)
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 						sm.addString(activeChar.getName());
@@ -206,10 +198,6 @@ public class Heal implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

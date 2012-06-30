@@ -15,15 +15,13 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
- * 
  * @author nBd
  */
 public class CharmOfCourage extends L2Effect
@@ -33,55 +31,38 @@ public class CharmOfCourage extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CHARMOFCOURAGE;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
+			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
 			return true;
 		}
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
+			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
 		}
 	}
 	
-	/**
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
 		return false;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

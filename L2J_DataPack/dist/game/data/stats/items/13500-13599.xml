@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13500" type="Armor" name="Refined Black Feather Mask">
 		<set name="icon" val="icon.accessory_black_feather_mask2_i00" />
 		<set name="default_action" val="equip" />
@@ -708,7 +708,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13549" type="EtcItem" name="Soul Monk Summon Whistle">
@@ -725,7 +725,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13550" type="EtcItem" name="Owl Monk Summon Whistle">
@@ -742,7 +742,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13551" type="EtcItem" name="Turtle Ascetic Summon Whistle">
@@ -759,7 +759,7 @@
 		<set name="item_skill" val="2046-1" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13552" type="EtcItem" name="Spellbook - Flying Final Form">
@@ -1113,7 +1113,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2672-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13570" type="EtcItem" name="Transformation Scroll: Gludio Elf Mercenary">
@@ -1130,7 +1130,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2673-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13571" type="EtcItem" name="Transformation Scroll: Gludio Dark Elf Mercenary">
@@ -1147,7 +1147,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2674-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13572" type="EtcItem" name="Transformation Scroll: Gludio Orc Mercenary">
@@ -1164,7 +1164,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2675-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13573" type="EtcItem" name="Transformation Scroll: Gludio Dwarf Mercenary">
@@ -1181,7 +1181,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2676-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13574" type="EtcItem" name="Transformation Scroll: Gludio Kamael Mercenary">
@@ -1198,7 +1198,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2677-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13575" type="EtcItem" name="Transformation Scroll: Gludio Knight Mercenary">
@@ -1215,7 +1215,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2678-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13576" type="EtcItem" name="Transformation Scroll: Gludio Archer Mercenary">
@@ -1232,7 +1232,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2679-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13577" type="EtcItem" name="Transformation Scroll: Gludio Wizard Mercenary">
@@ -1249,7 +1249,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2680-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13578" type="EtcItem" name="Transformation Scroll: Gludio Kamael Captain Mercenary">
@@ -1266,7 +1266,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2681-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13579" type="EtcItem" name="Transformation Scroll: Gludio Knight Captain Mercenary">
@@ -1283,7 +1283,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2682-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13580" type="EtcItem" name="Transformation Scroll: Gludio Commander Mercenary">
@@ -1300,7 +1300,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2683-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13581" type="EtcItem" name="Transformation Scroll: Dion Human Mercenary">
@@ -1317,7 +1317,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2684-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13582" type="EtcItem" name="Transformation Scroll: Dion Elf Mercenary">
@@ -1334,7 +1334,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2685-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13583" type="EtcItem" name="Transformation Scroll: Dion Dark Elf Mercenary">
@@ -1351,7 +1351,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2686-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13584" type="EtcItem" name="Transformation Scroll: Dion Orc Mercenary">
@@ -1368,7 +1368,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2687-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13585" type="EtcItem" name="Transformation Scroll: Dion Dwarf Mercenary">
@@ -1385,7 +1385,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2688-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13586" type="EtcItem" name="Transformation Scroll: Dion Kamael Mercenary">
@@ -1402,7 +1402,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2689-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13587" type="EtcItem" name="Transformation Scroll: Dion Knight Mercenary">
@@ -1419,7 +1419,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2690-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13588" type="EtcItem" name="Transformation Scroll: Dion Archer Mercenary">
@@ -1436,7 +1436,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2691-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13589" type="EtcItem" name="Transformation Scroll: Dion Wizard Mercenary">
@@ -1453,7 +1453,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2692-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13590" type="EtcItem" name="Transformation Scroll: Dion Kamael Captain Mercenary">
@@ -1470,7 +1470,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2693-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13591" type="EtcItem" name="Transformation Scroll: Dion Knight Captain Mercenary">
@@ -1487,7 +1487,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2694-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13592" type="EtcItem" name="Transformation Scroll: Dion Commander Mercenary">
@@ -1504,7 +1504,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2695-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13593" type="EtcItem" name="Transformation Scroll: Giran Human Mercenary">
@@ -1521,7 +1521,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2696-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13594" type="EtcItem" name="Transformation Scroll: Giran Elf Mercenary">
@@ -1538,7 +1538,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2697-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13595" type="EtcItem" name="Transformation Scroll: Giran Dark Elf Mercenary">
@@ -1555,7 +1555,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2698-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13596" type="EtcItem" name="Transformation Scroll: Giran Orc Mercenary">
@@ -1572,7 +1572,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2699-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13597" type="EtcItem" name="Transformation Scroll: Giran Dwarf Mercenary">
@@ -1589,7 +1589,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2700-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13598" type="EtcItem" name="Transformation Scroll: Giran Kamael Mercenary">
@@ -1606,7 +1606,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2701-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13599" type="EtcItem" name="Transformation Scroll: Giran Knight Mercenary">
@@ -1623,7 +1623,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2702-1" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 </list>

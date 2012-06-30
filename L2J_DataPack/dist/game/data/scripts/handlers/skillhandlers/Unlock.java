@@ -18,14 +18,14 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
 public class Unlock implements ISkillHandler
@@ -36,10 +36,6 @@ public class Unlock implements ISkillHandler
 		L2SkillType.UNLOCK_SPECIAL
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -50,7 +46,7 @@ public class Unlock implements ISkillHandler
 		
 		for (L2Object target: targets)
 		{
-			if (target instanceof L2DoorInstance)
+			if (target.isDoor())
 			{
 				L2DoorInstance door = (L2DoorInstance) target;
 				// Check if door in the different instance
@@ -81,7 +77,7 @@ public class Unlock implements ISkillHandler
 					}
 				}
 				
-				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
+				if ((!door.isOpenableBySkill() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
 					activeChar.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
@@ -90,11 +86,7 @@ public class Unlock implements ISkillHandler
 				}
 				
 				if (doorUnlock(skill) && (!door.getOpen()))
-				{
 					door.openMe();
-					if(skill.getAfterEffectId() == 0)
-						door.onOpen();
-				}
 				else
 					activeChar.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
 			}
@@ -196,10 +188,6 @@ public class Unlock implements ISkillHandler
 		return Rnd.get(100) < 10;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

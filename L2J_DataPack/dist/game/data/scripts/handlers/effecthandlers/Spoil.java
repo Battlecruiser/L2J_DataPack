@@ -15,22 +15,18 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
- * 
+ * This is the Effect support for spoil.<br>
+ * This was originally done by _drunk_
  * @author Ahmed
- * 
- *         This is the Effect support for spoil.
- * 
- *         This was originally done by _drunk_
  */
 public class Spoil extends L2Effect
 {
@@ -39,28 +35,20 @@ public class Spoil extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SPOIL;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
 		
-		if (!(getEffector() instanceof L2PcInstance))
+		if (!getEffector().isPlayer())
 			return false;
 		
-		if (!(getEffected() instanceof L2MonsterInstance))
+		if (!getEffected().isMonster())
 			return false;
 		
 		L2MonsterInstance target = (L2MonsterInstance) getEffected();
@@ -92,10 +80,6 @@ public class Spoil extends L2Effect
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

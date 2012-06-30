@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 public class PinsAndPouchUnseal extends Quest
 {
@@ -108,7 +107,7 @@ public class PinsAndPouchUnseal extends Quest
 					htmltext = "";
 					st.takeItems(57, price);
 					st.takeItems(itemIds[0], 1);
-					int rand = Rnd.get(100);
+					int rand = getRandom(100);
 					if (rand < CHANCES[0])
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
 					else if (rand < CHANCES[1])

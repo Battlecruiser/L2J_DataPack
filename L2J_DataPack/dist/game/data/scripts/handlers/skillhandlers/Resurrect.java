@@ -20,14 +20,14 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.skills.Formulas;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 public class Resurrect implements ISkillHandler
 {
@@ -40,23 +40,27 @@ public class Resurrect implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
-			player = (L2PcInstance) activeChar;
+		if (activeChar.isPlayer())
+			player = activeChar.getActingPlayer();
+		
+		activeChar.spsChecker(skill);
 		
 		L2PcInstance targetPlayer;
-		List<L2Character> targetToRes = new FastList<L2Character>();
+		List<L2Character> targetToRes = new FastList<>();
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
-				targetPlayer = (L2PcInstance) target;
+				targetPlayer = target.getActingPlayer();
 				
 				// Check for same party or for same clan, if target is for clan.
 				if (skill.getTargetType() == L2TargetType.TARGET_CORPSE_CLAN)
 				{
-					if (player.getClanId() != targetPlayer.getClanId())
+					if ((player != null) && (player.getClanId() != targetPlayer.getClanId()))
+					{
 						continue;
+					}
 				}
 			}
 			if (target.isVisible())
@@ -70,12 +74,12 @@ public class Resurrect implements ISkillHandler
 		}
 		
 		for (L2Character cha : targetToRes)
-			if (activeChar instanceof L2PcInstance)
+			if (activeChar.isPlayer())
 			{
-				if (cha instanceof L2PcInstance)
-					((L2PcInstance) cha).reviveRequest((L2PcInstance) activeChar, skill, false);
-				else if (cha instanceof L2PetInstance)
-					((L2PetInstance) cha).getOwner().reviveRequest((L2PcInstance) activeChar, skill, true);
+				if (cha.isPlayer())
+					cha.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), skill, false);
+				else if (cha.isPet())
+					((L2PetInstance) cha).getOwner().reviveRequest(activeChar.getActingPlayer(), skill, true);
 			}
 			else
 			{

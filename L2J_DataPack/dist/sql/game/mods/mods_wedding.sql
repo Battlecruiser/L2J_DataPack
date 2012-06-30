@@ -1,9 +1,11 @@
 CREATE TABLE IF NOT EXISTS `mods_wedding` (
-  `id` int(11) NOT NULL auto_increment,
-  `player1Id` int(11) NOT NULL default '0',
-  `player2Id` int(11) NOT NULL default '0',
-  `married` varchar(5) default NULL,
-  `affianceDate` decimal(20,0) default '0',
-  `weddingDate` decimal(20,0) default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `player1Id` int(11) NOT NULL DEFAULT '0',
+  `player2Id` int(11) NOT NULL DEFAULT '0',
+  `married` varchar(5) DEFAULT NULL,
+  `affianceDate` decimal(20,0) DEFAULT '0',
+  `weddingDate` decimal(20,0) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `player1Id` (`player1Id`),
+  KEY `player2Id` (`player2Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

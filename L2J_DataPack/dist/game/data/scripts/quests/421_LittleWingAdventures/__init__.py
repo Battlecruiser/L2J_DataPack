@@ -248,7 +248,7 @@ class Quest (JQuest) :
          return
    if isPet and st.getInt("id") < 16:
       pet = player.getPet()
-      if st.getRandom(100) <= 2 and st.getQuestItemsCount(FT_LEAF) >= 0:
+      if self.getRandom(100) <= 2 and st.getQuestItemsCount(FT_LEAF) >= 0:
          st.takeItems(FT_LEAF,1)
          st.playSound("ItemSound.quest_middle")
          npc.broadcastPacket(NpcSay(npc.getNpcId(),0,npcId,"gives me spirit leaf...!"))

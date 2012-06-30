@@ -1,6 +1,9 @@
-Copyright 2005-2011 L2J-DataPack team
+Copyright 2004-2011 L2J-DataPack team
 
 This file is part of the L2J-DataPack.
+
+L2J-DataPack comes with ABSOLUTELY NO WARRANTY. This is 
+free software, and you are welcome to redistribute it under certain conditions.
 
 L2J-DataPack is free software; you can redistribute it and/or modify it under 
 the terms of the GNU General Public License as published by the Free Software 
@@ -16,21 +19,21 @@ L2J-DataPack; if not, write to the Free Software Foundation, Inc., 51 Franklin
 St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
-L2J-Datapack SVN Build:  
+L2J-DataPack SVN Build:  
 
 Project Website: http://www.l2jdp.com
 Project Forum: http://www.l2jdp.com/forum
 Wiki: http://trac.l2jdp.com/wiki
-Download: Our wiki contain directives for you to get the latest datapack 
+Download: Our wiki contain directives for you to get the latest DataPack 
 revision either from nightly builds or via Subversion.
 
 IRC: irc.freenode.net #l2j
 
-L2J-Datapack is *NOT* L2J. L2J is *NOT* L2J-Datapack. Comments, questions, 
+L2J-DataPack is *NOT* L2J-Server. L2J-Server is *NOT* L2J-DataPack. Comments, questions, 
 suggestions etc. should be directed to the appropriate forums.
 
-Any given datapack copy you get, is designed/optimized to work with an specific 
-L2J build. Ensure your core and datapack revisions match each other.
+Any given DataPack copy you get, is designed/optimized to work with an specific 
+L2J build. Ensure your core and DataPack revisions match each other.
 
 This readme assumes a basic understanding of MySQL commands and internals, SQL 
 queries, or at least familiarity with a MySQL frontend. This readme will not 
@@ -70,7 +73,4 @@ IMPORTANT: 	There may also be changes altering table structures, if you need  su
 an update after some certain changeset, you should run the relevant SQL sequence from
 /sql/updates/. Database_installer tool will provide a way for you to execute them all.
 
--the L2j-DataPack team
-
-L2JDP, Copyright (C) 2005-2011 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
-free software, and you are welcome to redistribute it under certain conditions.
+-the L2J-DataPack team

@@ -17,15 +17,14 @@ package ai.individual;
 import gnu.trove.set.hash.TIntHashSet;
 import ai.group_template.L2AttackableAIScript;
 
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -48,7 +47,7 @@ public class Ranku extends L2AttackableAIScript
 				if ((minion != null) && !minion.isDead() && myTrackingSet.contains(minion.getObjectId()))
 				{
 					L2PcInstance[] players = minion.getKnownList().getKnownPlayers().values().toArray(new L2PcInstance[minion.getKnownList().getKnownPlayers().size()]);
-					L2PcInstance killer = players[Rnd.get(players.length)];
+					L2PcInstance killer = players[getRandom(players.length)];
 					minion.reduceCurrentHp(minion.getMaxHp() / 100, killer, null);
 				}
 			}

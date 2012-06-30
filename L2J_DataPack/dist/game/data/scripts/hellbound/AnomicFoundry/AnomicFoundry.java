@@ -23,17 +23,16 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -73,7 +72,7 @@ public class AnomicFoundry extends Quest
 	{
 		0, 0, 0, 0, 0
 	};
-	private final Map<Integer, Integer> _atkIndex = new FastMap<Integer, Integer>();
+	private final Map<Integer, Integer> _atkIndex = new FastMap<>();
 	
 	public AnomicFoundry(int questId, String name, String descr)
 	{
@@ -98,7 +97,7 @@ public class AnomicFoundry extends Quest
 		{
 			if (HellboundManager.getInstance().getLevel() >= 10)
 			{
-				int idx = Rnd.get(3);
+				int idx = getRandom(3);
 				if (_spawned[idx] < SPAWNS[idx][5])
 				{
 					addSpawn(SPAWNS[idx][0], SPAWNS[idx][1], SPAWNS[idx][2], SPAWNS[idx][3], SPAWNS[idx][4], false, 0, false);
@@ -136,7 +135,7 @@ public class AnomicFoundry extends Quest
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		// Announcements.getInstance().announceToAll("Aggro Range triggered");
-		if (Rnd.get(10000) < 2000)
+		if (getRandom(10000) < 2000)
 		{
 			requestHelp(npc, player, 500);
 		}
@@ -164,15 +163,15 @@ public class AnomicFoundry extends Quest
 			}
 		}
 		
-		if (Rnd.get(10000) < 2000)
+		if (getRandom(10000) < 2000)
 		{
 			atkIndex++;
 			_atkIndex.put(npc.getObjectId(), atkIndex);
 			requestHelp(npc, attacker, 1000 * atkIndex);
 			
-			if (Rnd.get(10) < 1)
+			if (getRandom(10) < 1)
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + Rnd.get(-800, 800)), (npc.getY() + Rnd.get(-800, 800)), npc.getZ(), npc.getHeading()));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
 			}
 		}
 		
@@ -190,7 +189,7 @@ public class AnomicFoundry extends Quest
 		
 		else if (npc.getNpcId() == LABORER)
 		{
-			if (Rnd.get(10000) < 8000)
+			if (getRandom(10000) < 8000)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.PROCESS_SHOULDNT_BE_DELAYED_BECAUSE_OF_ME));
 				if (respawnTime < respawnMax)

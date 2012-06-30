@@ -16,14 +16,13 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Trap;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 public class Trap implements ISkillHandler
 {
@@ -33,10 +32,6 @@ public class Trap implements ISkillHandler
 		L2SkillType.REMOVE_TRAP
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -49,7 +44,7 @@ public class Trap implements ISkillHandler
 			{
 				for (L2Character target: activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius()))
 				{
-					if (!(target instanceof L2Trap))
+					if (!target.isTrap())
 						continue;
 					
 					if (target.isAlikeDead())
@@ -66,7 +61,7 @@ public class Trap implements ISkillHandler
 			{
 				for (L2Character target: (L2Character[]) targets)
 				{
-					if (!(target instanceof L2Trap))
+					if (!target.isTrap())
 						continue;
 					
 					if (target.isAlikeDead())
@@ -76,7 +71,7 @@ public class Trap implements ISkillHandler
 					
 					if (!trap.canSee(activeChar))
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 							activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 						continue;
 					}
@@ -89,17 +84,13 @@ public class Trap implements ISkillHandler
 							quest.notifyTrapAction(trap, activeChar, TrapAction.TRAP_DISARMED);
 					
 					trap.unSummon();
-					if (activeChar instanceof L2PcInstance)
+					if (activeChar.isPlayer())
 						activeChar.sendPacket(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED);
 				}
 			}
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

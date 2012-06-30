@@ -22,8 +22,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
@@ -39,11 +39,11 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.StringUtil;
 
@@ -218,7 +218,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			L2World.getInstance().deleteVisibleNpcSpawns();
-			GmListTable.broadcastMessageToGMs("NPC Unspawn completed!");
+			AdminTable.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
 		}
 		else if (command.startsWith("admin_spawnday"))
 		{
@@ -242,12 +242,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			AutoChatHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
 			QuestManager.getInstance().reloadAllQuests();
-			GmListTable.broadcastMessageToGMs("NPC Respawn completed!");
+			AdminTable.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
 		}
 		else if (command.startsWith("admin_teleport_reload"))
 		{
 			TeleportLocationTable.getInstance().reloadAll();
-			GmListTable.broadcastMessageToGMs("Teleport List Table reloaded.");
+			AdminTable.getInstance().broadcastMessageToGMs("Teleport List Table reloaded.");
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{

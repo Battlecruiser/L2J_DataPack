@@ -20,11 +20,11 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -35,7 +35,7 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		if (onlyFirst)
 			return new L2Character[] { activeChar };
 		
@@ -55,7 +55,7 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 		
 		if (activeChar.getParty() != null)
 		{
-			List<L2PcInstance> partyList = activeChar.getParty().getPartyMembers();
+			List<L2PcInstance> partyList = activeChar.getParty().getMembers();
 			
 			for (L2PcInstance partyMember : partyList)
 			{

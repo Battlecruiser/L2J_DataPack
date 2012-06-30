@@ -133,14 +133,14 @@ class Quest (JQuest) :
      elif cond == 7:
         htmltext = "31978-05.htm"
         st.takeItems(TIMORA_ORC_HEAD,-1) 
-        st.giveItems(MARK_OF_RAIDER,1)
         if player.getLevel() >= 20 :
           st.addExpAndSp(160267, 10656)
         elif player.getLevel() == 19 :
           st.addExpAndSp(228064, 14005)
         else:
           st.addExpAndSp(295862, 17354)
-        st.giveItems(57, 81900)
+        st.giveItems(57, 163800)
+        st.giveItems(MARK_OF_RAIDER,1)
         player.sendPacket(SocialAction(player.getObjectId(),3))
         st.unset("cond") 
         st.exitQuest(False) 
@@ -160,7 +160,7 @@ class Quest (JQuest) :
    if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
      if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
        if st.getQuestItemsCount(GREEN_BLOOD) > 1 : 
-         if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*10) : 
+         if self.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*10) : 
            st.takeItems(GREEN_BLOOD,-1) 
            st.addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
          else: 

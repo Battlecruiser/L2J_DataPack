@@ -14,12 +14,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * @author demonia
@@ -44,9 +43,7 @@ public class ImmobilePetBuff extends L2Effect
 	{
 		_pet = null;
 		
-		if (getEffected() instanceof L2Summon
-				&& getEffector() instanceof L2PcInstance
-				&& ((L2Summon) getEffected()).getOwner() == getEffector())
+		if (getEffected().isSummon() && getEffector().isPlayer() && ((L2Summon) getEffected()).getOwner() == getEffector())
 		{
 			_pet = (L2Summon) getEffected();
 			_pet.setIsImmobilized(true);
@@ -58,7 +55,8 @@ public class ImmobilePetBuff extends L2Effect
 	@Override
 	public void onExit()
 	{
-		_pet.setIsImmobilized(false);
+		if (_pet != null)
+			_pet.setIsImmobilized(false);
 	}
 	
 	@Override

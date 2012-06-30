@@ -79,19 +79,19 @@ class Quest (JQuest) :
    if npcId == 20105 :
       st.set("id","0")
       if st.getInt("cond") == 1 :
-        if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
+        if self.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
           st.giveItems(PERFECT_SKULL_ID,1)
           st.playSound("ItemSound.quest_middle")
-        if st.getRandom(10)>4 :
+        if self.getRandom(10)>4 :
           st.giveItems(CRACKED_SKULL_ID,1)
           st.playSound("ItemSound.quest_itemget")
    elif npcId == 20025 :
       st.set("id","0")
       if st.getInt("cond") == 1 :
-        if st.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
+        if self.getRandom(10)>7 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
           st.giveItems(PERFECT_SKULL_ID,1)
           st.playSound("ItemSound.quest_middle")
-        if st.getRandom(10)>4 :
+        if self.getRandom(10)>4 :
           st.giveItems(CRACKED_SKULL_ID,1)
           st.playSound("ItemSound.quest_itemget")
    return

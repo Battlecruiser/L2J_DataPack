@@ -20,7 +20,7 @@ import com.l2jserver.gameserver.instancemanager.MercTicketManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public class L2ItemInstanceAction implements IActionHandler
 {

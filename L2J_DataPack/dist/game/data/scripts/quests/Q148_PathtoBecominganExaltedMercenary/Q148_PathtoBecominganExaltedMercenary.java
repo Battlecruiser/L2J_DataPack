@@ -19,18 +19,27 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
- ** @author Gnacik
- **
- ** 2010-09-30 Based on official server Franz
+ * 2010-09-30 Based on official server Franz
+ * @author Gnacik
  */
 public class Q148_PathtoBecominganExaltedMercenary extends Quest
 {
 	private static final String qn = "148_PathtoBecominganExaltedMercenary";
 	// NPCs
-	private static final int[] _merc = { 36481, 36482, 36483, 36484, 36485, 36486, 36487, 36488, 36489 };
+	private static final int[] _merc =
+	{
+		36481,
+		36482,
+		36483,
+		36484,
+		36485,
+		36486,
+		36487,
+		36488,
+		36489
+	};
 	// Items
 	private static final int _cert_elite = 13767;
 	private static final int _cert_top_elite = 13768;
@@ -39,23 +48,21 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
-			return htmltext;
-		
-		if (Util.contains(_merc, npc.getNpcId()))
 		{
-			if (event.equalsIgnoreCase("exalted-00b.htm"))
-			{
-				st.giveItems(_cert_elite, 1);
-			}
-			else if (event.equalsIgnoreCase("exalted-03.htm"))
-			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
-			}
+			return htmltext;
+		}
+		
+		if (event.equalsIgnoreCase("exalted-00b.htm"))
+		{
+			st.giveItems(_cert_elite, 1);
+		}
+		else if (event.equalsIgnoreCase("exalted-03.htm"))
+		{
+			st.setState(State.STARTED);
+			st.set("cond", "1");
+			st.playSound("ItemSound.quest_accept");
 		}
 		return htmltext;
 	}
@@ -64,51 +71,52 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
-			return htmltext;
-		
-		if (Util.contains(_merc, npc.getNpcId()))
 		{
-			switch(st.getState())
-			{
-				case State.CREATED :
-					QuestState _prev = player.getQuestState("147_PathtoBecominganEliteMercenary");
-					if (player.getClan() != null && player.getClan().getHasCastle() > 0)
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				QuestState _prev = player.getQuestState("147_PathtoBecominganEliteMercenary");
+				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
+				{
+					htmltext = "castle.htm";
+				}
+				else if (st.hasQuestItems(_cert_elite))
+				{
+					htmltext = "exalted-01.htm";
+				}
+				else
+				{
+					if ((_prev != null) && _prev.isCompleted())
 					{
-						htmltext = "castle.htm";
-					}
-					else if (st.hasQuestItems(_cert_elite))
-					{
-						htmltext = "exalted-01.htm";
+						htmltext = "exalted-00a.htm";
 					}
 					else
 					{
-						if ((_prev != null) && _prev.isCompleted())
-							htmltext = "exalted-00a.htm";
-						else
-							htmltext = "exalted-00.htm";
+						htmltext = "exalted-00.htm";
 					}
-					break;
-				case State.STARTED :
-					if (st.getInt("cond") < 4)
-					{
-						htmltext = "exalted-04.htm";
-					}
-					else if (st.getInt("cond") == 4)
-					{
-						st.unset("cond");
-						st.unset("kills");
-						st.takeItems(_cert_elite, -1);
-						st.giveItems(_cert_top_elite, 1);
-						st.exitQuest(false);
-						htmltext = "exalted-05.htm";
-					}
-					break;
-				case State.COMPLETED :
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-			}
+				}
+				break;
+			case State.STARTED:
+				if (st.getInt("cond") < 4)
+				{
+					htmltext = "exalted-04.htm";
+				}
+				else if (st.getInt("cond") == 4)
+				{
+					st.takeItems(_cert_elite, -1);
+					st.giveItems(_cert_top_elite, 1);
+					st.exitQuest(false);
+					htmltext = "exalted-05.htm";
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 		}
 		return htmltext;
 	}
@@ -117,11 +125,8 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	{
 		super(questId, name, descr);
 		
-		for(int _npc : _merc)
-		{
-			addStartNpc(_npc);
-			addTalkId(_npc);
-		}
+		addStartNpc(_merc);
+		addTalkId(_merc);
 	}
 	
 	public static void main(String[] args)

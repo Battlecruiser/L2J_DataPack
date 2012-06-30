@@ -19,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Clan;
@@ -101,7 +101,7 @@ public class AdminMenu implements IAdminCommandHandler
 					teleportCharacter(player, x, y, z, activeChar, "Admin is teleporting you.");
 					return true;
 				}
-				for (L2PcInstance pm : player.getParty().getPartyMembers())
+				for (L2PcInstance pm : player.getParty().getMembers())
 					teleportCharacter(pm, x, y, z, activeChar, "Your party is being teleported by an Admin.");
 			}
 			catch (Exception e)
@@ -180,7 +180,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				String subCommand = "admin_ban_char";
-				if (!AdminCommandAccessRights.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
+				if (!AdminTable.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access right to use this command!");
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
@@ -197,7 +197,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				String subCommand = "admin_unban_char";
-				if (!AdminCommandAccessRights.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
+				if (!AdminTable.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access right to use this command!");
 					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
@@ -231,8 +231,10 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			L2PcInstance plyr = L2World.getInstance().getPlayer(player);
 			if (plyr != null)
+			{
 				target = plyr;
-			activeChar.sendMessage("You killed " + plyr.getName());
+				activeChar.sendMessage("You killed " + plyr.getName());
+			}
 		}
 		if (target != null)
 		{

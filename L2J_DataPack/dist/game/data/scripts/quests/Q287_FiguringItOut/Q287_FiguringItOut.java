@@ -28,9 +28,18 @@ import com.l2jserver.util.Rnd;
 public class Q287_FiguringItOut extends Quest
 {
 	private static final String qn = "287_FiguringItOut";
-	//NPC
+	// NPC
 	private static final int Laki = 32742;
-	private static final int[] Monsters = { 22771, 22770, 22774, 22769, 22772, 22768, 22773 };
+	private static final int[] Monsters =
+	{
+		22771,
+		22770,
+		22774,
+		22769,
+		22772,
+		22768,
+		22773
+	};
 	// Items
 	private static final int VialOfTantaBlood = 15499;
 	
@@ -41,7 +50,9 @@ public class Q287_FiguringItOut extends Quest
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (event.equalsIgnoreCase("32742-03.htm"))
 		{
@@ -54,87 +65,135 @@ public class Q287_FiguringItOut extends Quest
 			if (st.getQuestItemsCount(VialOfTantaBlood) >= 500)
 			{
 				st.takeItems(VialOfTantaBlood, 500);
-				int i0 = Rnd.get(5);
+				int i0 = getRandom(5);
 				if (i0 == 0)
+				{
 					st.giveItems(10381, 1);
+				}
 				else if (i0 == 1)
+				{
 					st.giveItems(10405, 1);
+				}
 				else if (i0 == 2)
+				{
 					st.giveItems(10405, 4);
+				}
 				else if (i0 == 3)
+				{
 					st.giveItems(10405, 4);
+				}
 				else
+				{
 					st.giveItems(10405, 6);
+				}
 				st.playSound("ItemSound.quest_finish");
 				htmltext = "32742-06.html";
 			}
 			else
+			{
 				htmltext = "32742-07.html";
+			}
 		}
 		else if (event.equalsIgnoreCase("Moirai"))
 		{
 			if (st.getQuestItemsCount(VialOfTantaBlood) >= 100)
 			{
 				st.takeItems(VialOfTantaBlood, 100);
-				int i0 = Rnd.get(10);
+				int i0 = getRandom(10);
 				if (i0 == 0)
+				{
 					st.giveItems(15776, 1);
+				}
 				else if (i0 == 1)
+				{
 					st.giveItems(15779, 1);
+				}
 				else if (i0 == 2)
+				{
 					st.giveItems(15782, 1);
+				}
 				else if (i0 == 3)
 				{
 					boolean i1 = Rnd.nextBoolean();
 					if (!i1)
+					{
 						st.giveItems(15785, 1);
+					}
 					else
+					{
 						st.giveItems(15788, 1);
+					}
 				}
 				else if (i0 == 4)
 				{
-					int i1 = Rnd.get(10);
+					int i1 = getRandom(10);
 					if (i1 < 4)
+					{
 						st.giveItems(15812, 1);
+					}
 					else if (i1 < 8)
+					{
 						st.giveItems(15813, 1);
+					}
 					else
+					{
 						st.giveItems(15814, 1);
+					}
 				}
 				else if (i0 == 5)
+				{
 					st.giveItems(15646, 5);
+				}
 				else if (i0 == 6)
+				{
 					st.giveItems(15649, 5);
+				}
 				else if (i0 == 7)
+				{
 					st.giveItems(15652, 5);
+				}
 				else if (i0 == 8)
 				{
 					boolean i1 = Rnd.nextBoolean();
 					if (!i1)
+					{
 						st.giveItems(15655, 5);
+					}
 					else
+					{
 						st.giveItems(15658, 5);
+					}
 				}
 				else
 				{
-					int i1 = Rnd.get(10);
+					int i1 = getRandom(10);
 					if (i1 < 4)
+					{
 						st.giveItems(15772, 1);
+					}
 					else if (i1 < 7)
+					{
 						st.giveItems(15773, 1);
+					}
 					else
+					{
 						st.giveItems(15774, 1);
+					}
 				}
 				st.playSound("ItemSound.quest_finish");
 				htmltext = "32742-08.html";
 			}
 			else
+			{
 				htmltext = "32742-09.html";
+			}
 		}
 		else if (event.equalsIgnoreCase("32742-11.html"))
 		{
 			if (st.hasQuestItems(VialOfTantaBlood))
+			{
 				htmltext = "32742-11.html";
+			}
 			else
 			{
 				st.playSound("ItemSound.quest_finish");
@@ -160,21 +219,31 @@ public class Q287_FiguringItOut extends Quest
 		QuestState prev = player.getQuestState("250_WatchWhatYouEat");
 		
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getLevel() >= 82 && prev != null && prev.isCompleted())
+				if ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted())
+				{
 					htmltext = "32742-01.htm";
+				}
 				else
+				{
 					htmltext = "32742-14.htm";
+				}
 				break;
 			case State.STARTED:
 				if (st.getQuestItemsCount(VialOfTantaBlood) < 100)
+				{
 					htmltext = "32742-04.html";
+				}
 				else
+				{
 					htmltext = "32742-05.html";
+				}
 				break;
 		}
 		return htmltext;
@@ -185,40 +254,56 @@ public class Q287_FiguringItOut extends Quest
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
+		{
 			return null;
+		}
 		final QuestState st = partyMember.getQuestState(qn);
-		int chance = Rnd.get(1000);
+		int chance = getRandom(1000);
 		boolean giveItem = false;
 		
 		switch (npc.getNpcId())
 		{
 			case 22771: // Tanta Lizardman Berserker
 				if (chance < 159)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22770: // Tanta Lizardman Soldier
 				if (chance < 123)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22774: // Tanta Lizardman Summoner
 				if (chance < 261)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22769: // Tanta Lizardman Warrior
 				if (chance < 689)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22772: // Tanta Lizardman Archer
 				if (chance < 739)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22768: // Tanta Lizardman Scout
 				if (chance < 509)
+				{
 					giveItem = true;
+				}
 				break;
 			case 22773: // Tanta Lizardman Magician
 				if (chance < 737)
+				{
 					giveItem = true;
+				}
 				break;
 		}
 		
@@ -240,7 +325,10 @@ public class Q287_FiguringItOut extends Quest
 			addKillId(i);
 		}
 		
-		questItemIds = new int[] { VialOfTantaBlood };
+		questItemIds = new int[]
+		{
+			VialOfTantaBlood
+		};
 	}
 	
 	public static void main(String[] args)

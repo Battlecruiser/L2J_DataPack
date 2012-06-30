@@ -15,10 +15,10 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * @author mkizub
@@ -55,10 +55,7 @@ public class Root extends L2Effect
 		// just stop this effect
 		return false;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

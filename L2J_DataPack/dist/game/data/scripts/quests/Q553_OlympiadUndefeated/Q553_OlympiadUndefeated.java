@@ -19,14 +19,20 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.CompetitionType;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author lion 2011-02-05 Based on official H5 PTS server and 551 quest ;)
- *         improved by jurchiks on Nov. 5, 2011
+ * Olympiad Undefeated (553).<br>
+ * Based on official H5 PTS server and 551 quest ;)
+ * @since Nov. 5, 2011, improved by jurchiks.
+ * @version 2011-02-05
+ * @author lion
  */
 public class Q553_OlympiadUndefeated extends Quest
 {
+	private static final String qn = "553_OlympiadUndefeated";
+	
 	private static final int MANAGER = 31688;
 	
 	private static final int WIN_CONF_2 = 17244;
@@ -36,22 +42,29 @@ public class Q553_OlympiadUndefeated extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q553_OlympiadUndefeated(final int questId, final String name, final String descr)
+	public Q553_OlympiadUndefeated(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
-		questItemIds = new int[] { WIN_CONF_2, WIN_CONF_5, WIN_CONF_10 };
+		questItemIds = new int[]
+		{
+			WIN_CONF_2,
+			WIN_CONF_5,
+			WIN_CONF_10
+		};
 		setOlympiadUse(true);
 	}
 	
 	@Override
-	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
-			return super.getNoQuestMsg(player);
+		{
+			return getNoQuestMsg(player);
+		}
 		String htmltext = event;
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
@@ -68,55 +81,79 @@ public class Q553_OlympiadUndefeated extends Quest
 			{
 				st.giveItems(OLY_CHEST, count);
 				if (count == 2)
+				{
 					st.giveItems(MEDAL_OF_GLORY, 3);
+				}
 				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(QuestType.DAILY);
 			}
 			else
-				htmltext = super.getNoQuestMsg(player); // missing items
+			{
+				htmltext = getNoQuestMsg(player); // missing items
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(final L2Npc npc, final L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
-		if (player.getLevel() < 75 || !player.isNoble())
+		if ((player.getLevel() < 75) || !player.isNoble())
+		{
 			htmltext = "31688-00.htm";
+		}
 		else if (st.isCreated())
+		{
 			htmltext = "31688-01.htm";
+		}
 		else if (st.isCompleted())
-			htmltext = "31688-05.html";
+		{
+			st.setState(State.CREATED); // Not required, but it'll set the proper state.
+			if (st.isNowAvailable())
+			{
+				if ((player.getLevel() < 75) || !player.isNoble())
+				{
+					htmltext = "31688-00.htm";
+				}
+			}
+			else
+			{
+				htmltext = "31688-05.html";
+			}
+		}
 		else
 		{
 			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5) + st.getQuestItemsCount(WIN_CONF_10);
-			
-			if (count == 3 && st.getInt("cond") == 2)
+			if ((count == 3) && (st.getInt("cond") == 2))
 			{
 				htmltext = "31688-04.html";
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
 				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(QuestType.DAILY);
 			}
 			else
+			{
 				htmltext = "31688-w" + count + ".html";
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public void onOlympiadWin(final L2PcInstance winner, final CompetitionType type)
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
 	{
 		if (winner != null)
 		{
 			final QuestState st = winner.getQuestState(getName());
-			if (st != null && st.isStarted() && st.getInt("cond") == 1)
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 			{
 				final int matches = st.getInt("undefeatable") + 1;
 				st.set("undefeatable", String.valueOf(matches));
@@ -124,11 +161,15 @@ public class Q553_OlympiadUndefeated extends Quest
 				{
 					case 2:
 						if (!st.hasQuestItems(WIN_CONF_2))
+						{
 							st.giveItems(WIN_CONF_2, 1);
+						}
 						break;
 					case 5:
 						if (!st.hasQuestItems(WIN_CONF_5))
+						{
 							st.giveItems(WIN_CONF_5, 1);
+						}
 						break;
 					case 10:
 						if (!st.hasQuestItems(WIN_CONF_10))
@@ -143,12 +184,12 @@ public class Q553_OlympiadUndefeated extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLoose(final L2PcInstance looser, final CompetitionType type)
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		if (looser != null)
+		if (loser != null)
 		{
-			final QuestState st = looser.getQuestState(getName());
-			if (st != null && st.isStarted() && st.getInt("cond") == 1)
+			final QuestState st = loser.getQuestState(getName());
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 			{
 				st.unset("undefeatable");
 				st.takeItems(WIN_CONF_2, -1);
@@ -158,8 +199,8 @@ public class Q553_OlympiadUndefeated extends Quest
 		}
 	}
 	
-	public static void main(final String[] args)
+	public static void main(String[] args)
 	{
-		new Q553_OlympiadUndefeated(553, "553_OlympiadUndefeated", "Olympiad Undefeated");
+		new Q553_OlympiadUndefeated(553, qn, "Olympiad Undefeated");
 	}
 }

@@ -21,35 +21,35 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * @author  chris
+ * @author chris
  */
 public class PaganKeys implements IItemHandler
 {
 	public static final int INTERACTION_DISTANCE = 100;
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		int itemId = item.getItemId();
-		if (!(playable instanceof L2PcInstance))
-			return;
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2Object target = activeChar.getTarget();
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
+		
+		final int itemId = item.getItemId();
+		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2Object target = activeChar.getTarget();
 		
 		if (!(target instanceof L2DoorInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		L2DoorInstance door = (L2DoorInstance) target;
 		
@@ -57,18 +57,19 @@ public class PaganKeys implements IItemHandler
 		{
 			activeChar.sendMessage("Too far.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		if (activeChar.getAbnormalEffect() > 0 || activeChar.isInCombat())
 		{
 			activeChar.sendMessage("You cannot use the key now.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			return false;
 		}
 		
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
-			return;
+			return false;
 		
+		// TODO: Unhardcode these!
 		switch (itemId)
 		{
 			case 9698:
@@ -77,10 +78,13 @@ public class PaganKeys implements IItemHandler
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
 						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						{
 							if (instanceDoor.getDoorId() == door.getDoorId())
 							{
 								instanceDoor.openMe();
+								break;
 							}
+						}
 					}
 					else
 					{
@@ -98,10 +102,13 @@ public class PaganKeys implements IItemHandler
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
 						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						{
 							if (instanceDoor.getDoorId() == door.getDoorId())
 							{
 								instanceDoor.openMe();
+								break;
 							}
+						}
 					}
 					else
 					{
@@ -114,12 +121,10 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 			case 8056:
-				if (door.getDoorId() == 23150004||door.getDoorId() == 23150003)
+				if (door.getDoorId() == 23150004 || door.getDoorId() == 23150003)
 				{
 					DoorTable.getInstance().getDoor(23150003).openMe();
-					DoorTable.getInstance().getDoor(23150003).onOpen();
 					DoorTable.getInstance().getDoor(23150004).openMe();
-					DoorTable.getInstance().getDoor(23150004).onOpen();
 				}
 				else
 				{
@@ -127,5 +132,6 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 		}
+		return true;
 	}
 }

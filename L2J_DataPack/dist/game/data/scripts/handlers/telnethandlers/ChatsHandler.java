@@ -19,7 +19,7 @@ import java.net.Socket;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.Announcements;
-import com.l2jserver.gameserver.GmListTable;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -86,7 +86,7 @@ public class ChatsHandler implements ITelnetHandler
 			{
 				command = command.substring(7);
 				CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, "Telnet GM Broadcast from " + _cSocket.getInetAddress().getHostAddress(), command);
-				GmListTable.broadcastToGMs(cs);
+				AdminTable.getInstance().broadcastToGMs(cs);
 				_print.println("Your Message Has Been Sent To " + getOnlineGMS() + " GM(s).");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -99,7 +99,7 @@ public class ChatsHandler implements ITelnetHandler
 	
 	private int getOnlineGMS()
 	{
-		return GmListTable.getInstance().getAllGms(true).size();
+		return AdminTable.getInstance().getAllGms(true).size();
 	}
 	
 	@Override

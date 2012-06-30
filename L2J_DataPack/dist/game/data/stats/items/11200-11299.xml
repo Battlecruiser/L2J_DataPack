@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11200" type="Weapon" name="Draconic Bow - Earth - Focus">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="equip" />
@@ -500,7 +500,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<mul order="0x08" stat="MpConsume" val="0.88" />
 		</for>
 	</item>
 	<item id="11216" type="Weapon" name="Sarunga - Earth - Focus">
@@ -2019,11 +2018,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="26" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="11266" type="Weapon" name="Dynasty Bow - Great Gale - Guidance">
@@ -2740,7 +2734,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<mul order="0x08" stat="MpConsume" val="0.88" />
 		</for>
 	</item>
 	<item id="11290" type="Weapon" name="Dynasty Crossbow - Great Gale - Guidance">

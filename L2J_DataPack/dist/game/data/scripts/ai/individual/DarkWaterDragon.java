@@ -33,8 +33,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
 	private static final int FAFURION = 18482;
 	private static final int DETRACTOR1 = 22270;
 	private static final int DETRACTOR2 = 22271;
-	private static FastSet<Integer> secondSpawn = new FastSet<Integer>(); // Used to track if second Shades were already spawned
-	private static FastSet<Integer> myTrackingSet = new FastSet<Integer>(); // Used to track instances of npcs
+	private static FastSet<Integer> secondSpawn = new FastSet<>(); // Used to track if second Shades were already spawned
+	private static FastSet<Integer> myTrackingSet = new FastSet<>(); // Used to track instances of npcs
 	private static FastMap<Integer, L2PcInstance> _idmap = new FastMap<Integer, L2PcInstance>().shared(); // Used to track instances of npcs
 	
 	public DarkWaterDragon(int id, String name, String descr)

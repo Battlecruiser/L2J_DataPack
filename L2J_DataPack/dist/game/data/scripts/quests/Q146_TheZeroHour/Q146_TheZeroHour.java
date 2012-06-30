@@ -36,11 +36,11 @@ public class Q146_TheZeroHour extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return getNoQuestMsg(player);
+		}
 		
 		if (event.equalsIgnoreCase("31554-03.htm"))
 		{
@@ -48,42 +48,51 @@ public class Q146_TheZeroHour extends Quest
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		QuestState prev = player.getQuestState("109_InSearchOfTheNest");
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
 				if (player.getLevel() < 81)
+				{
 					htmltext = "31554-02.htm";
+				}
 				else
 				{
+					final QuestState prev = player.getQuestState("109_InSearchOfTheNest");
 					if ((prev != null) && prev.isCompleted())
+					{
 						htmltext = "31554-01a.htm";
+					}
 					else
+					{
 						htmltext = "31554-04.html";
+					}
 				}
 				break;
 			case State.STARTED:
 				if (st.getInt("cond") == 1)
+				{
 					htmltext = "31554-06.html";
+				}
 				else
 				{
 					st.giveItems(14849, 1);
 					st.addExpAndSp(154616, 12500);
 					st.takeItems(Fang, 1);
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 					htmltext = "31554-05.html";
 				}
 				break;
@@ -99,9 +108,10 @@ public class Q146_TheZeroHour extends Quest
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
+		{
 			return null;
+		}
 		QuestState st = partyMember.getQuestState(qn);
-		
 		if (!st.hasQuestItems(Fang))
 		{
 			st.giveItems(Fang, 1);
@@ -118,7 +128,10 @@ public class Q146_TheZeroHour extends Quest
 		addTalkId(Kahman);
 		addKillId(QueenShyeed);
 		
-		questItemIds = new int[] { Fang };
+		questItemIds = new int[]
+		{
+			Fang
+		};
 	}
 	
 	public static void main(String[] args)

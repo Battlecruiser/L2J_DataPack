@@ -64,7 +64,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 1 and adamantite < 20 :
        npcId = npc.getNpcId()
        numItems, chance = divmod(40*Config.RATE_QUEST_DROP,100)
-       if st.getRandom(100) <= chance :
+       if self.getRandom(100) <= chance :
           numItems += 1
        numItems = int(numItems)   
        if numItems != 0 :

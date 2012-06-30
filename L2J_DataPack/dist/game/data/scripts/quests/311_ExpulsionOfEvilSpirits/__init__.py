@@ -118,7 +118,7 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MOBS :
-			rand = st.getRandom(100)
+			rand = self.getRandom(100)
 			if rand == 1 :
 				st.giveItems(SOUL_CORE,1)
 				st.playSound("ItemSound.quest_itemget")

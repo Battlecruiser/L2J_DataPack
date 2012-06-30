@@ -114,9 +114,9 @@ class Quest(JQuest):
 		elif event == "30300_7" :
 			htmltext = "30300-10.htm"
 			st.set("cond","6")
-			st.takeItems(PURE_MITHRIL_ORE_ID,st.getQuestItemsCount(PURE_MITHRIL_ORE_ID))
-			st.takeItems(ANT_SOLDIER_ACID_ID,st.getQuestItemsCount(ANT_SOLDIER_ACID_ID))
-			st.takeItems(WYRMS_TALON1_ID,st.getQuestItemsCount(WYRMS_TALON1_ID))
+			st.takeItems(PURE_MITHRIL_ORE_ID,-1)
+			st.takeItems(ANT_SOLDIER_ACID_ID,-1)
+			st.takeItems(WYRMS_TALON1_ID,-1)
 			st.takeItems(PUSHKINS_LIST_ID,1)
 			st.giveItems(PURE_MITHRIL_CUP_ID,1)
 		elif event == "30419_1" :
@@ -166,10 +166,10 @@ class Quest(JQuest):
 			elif st.getQuestItemsCount(MOONFLOWER_CHARM_ID):
 				htmltext = "30460-06.htm"
 			elif st.getQuestItemsCount(CAMOMILE_CHARM_ID):
-				if st.getGameTicks() != st.getInt("id"):
-					st.set("id",str(st.getGameTicks()))
-					st.addExpAndSp(943416,62959)
-					st.giveItems(57,171144)
+				if self.getGameTicks() != st.getInt("id"):
+					st.set("id",str(self.getGameTicks())) # TODO should it really be like this?
+					st.addExpAndSp(1886832,125918)
+					st.giveItems(57,342288)
 					st.giveItems(7562,16)
 					st.giveItems(MARK_OF_LIFE_ID,1)
 					st.takeItems(CAMOMILE_CHARM_ID,1)
@@ -178,37 +178,37 @@ class Quest(JQuest):
 					st.exitQuest(False)
 					st.playSound("ItemSound.quest_finish")
 		elif npcId == 30154:
-			if st.getQuestItemsCount(CARDIENS_LETTER_ID):
+			if st.hasQuestItems(CARDIENS_LETTER_ID):
 				htmltext = "30154-01.htm"
-			elif st.getQuestItemsCount(WATER_OF_LIFE_ID):
+			elif st.hasQuestItems(WATER_OF_LIFE_ID):
 				htmltext = "30154-09.htm"
 				st.set("cond","21")
 				st.takeItems(WATER_OF_LIFE_ID,1)
 				st.takeItems(MOONFLOWER_CHARM_ID,1)
 				st.giveItems(CAMOMILE_CHARM_ID,1)
-			elif st.getQuestItemsCount(MOONFLOWER_CHARM_ID):
+			elif st.hasQuestItems(MOONFLOWER_CHARM_ID):
 				htmltext = "30154-08.htm"
-			elif st.getQuestItemsCount(CAMOMILE_CHARM_ID):
+			elif st.hasQuestItems(CAMOMILE_CHARM_ID):
 				htmltext = "30154-10.htm"
 		elif npcId == 30371:
-			if st.getQuestItemsCount(HIERARCHS_LETTER_ID):
+			if st.hasQuestItems(HIERARCHS_LETTER_ID):
 				htmltext = "30371-01.htm"
-			elif st.getQuestItemsCount(GRAIL_DIAGRAM_ID):
+			elif st.hasQuestItems(GRAIL_DIAGRAM_ID):
 				htmltext = "30371-04.htm"
-			elif st.getQuestItemsCount(PUSHKINS_LIST_ID):
+			elif st.hasQuestItems(PUSHKINS_LIST_ID):
 				htmltext = "30371-05.htm"
-			elif st.getQuestItemsCount(PURE_MITHRIL_CUP_ID):
+			elif st.hasQuestItems(PURE_MITHRIL_CUP_ID):
 				htmltext = "30371-06.htm"
 				st.set("cond","7")
 				st.takeItems(PURE_MITHRIL_CUP_ID,1)
 				st.giveItems(THALIAS_LETTER1_ID,1)
-			elif st.getQuestItemsCount(THALIAS_LETTER1_ID):
+			elif st.hasQuestItems(THALIAS_LETTER1_ID):
 				htmltext = "30371-07.htm"
-			elif st.getQuestItemsCount(ARKENIAS_CONTRACT_ID):
+			elif st.hasQuestItems(ARKENIAS_CONTRACT_ID):
 				htmltext = "30371-08.htm"
-			elif st.getQuestItemsCount(STARDUST_ID):
+			elif st.hasQuestItems(STARDUST_ID):
 				htmltext = "30371-09.htm"
-			elif st.getQuestItemsCount(THALIAS_INSTRUCTIONS_ID):
+			elif st.hasQuestItems(THALIAS_INSTRUCTIONS_ID):
 				if player.getLevel() < 37:
 					htmltext = "30371-12.htm"
 					st.set("cond","13")
@@ -216,60 +216,60 @@ class Quest(JQuest):
 					st.set("cond","14")
 					st.takeItems(THALIAS_INSTRUCTIONS_ID,1)
 					st.giveItems(THALIAS_LETTER2_ID,1)
-			elif st.getQuestItemsCount(THALIAS_LETTER2_ID):
+			elif st.hasQuestItems(THALIAS_LETTER2_ID):
 				htmltext = "30371-14.htm"
-			elif st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID):
+			elif st.hasQuestItems(ISAELS_INSTRUCTIONS_ID):
 				htmltext = "30371-15.htm"
-			elif st.getQuestItemsCount(ISAELS_LETTER_ID):
+			elif st.hasQuestItems(ISAELS_LETTER_ID):
 				htmltext = "30371-16.htm"
 				st.set("cond","18")
 				st.takeItems(ISAELS_LETTER_ID,1)
 				st.giveItems(GRAIL_OF_PURITY_ID,1)
-			elif st.getQuestItemsCount(GRAIL_OF_PURITY_ID):
+			elif st.hasQuestItems(GRAIL_OF_PURITY_ID):
 				htmltext = "30371-17.htm"
-			elif st.getQuestItemsCount(TEARS_OF_UNICORN_ID):
+			elif st.hasQuestItems(TEARS_OF_UNICORN_ID):
 				htmltext = "30371-18.htm"
 				st.set("cond","20")
 				st.takeItems(TEARS_OF_UNICORN_ID,1)
 				st.giveItems(WATER_OF_LIFE_ID,1)
-			elif st.getQuestItemsCount(WATER_OF_LIFE_ID):
+			elif st.hasQuestItems(WATER_OF_LIFE_ID):
 				htmltext = "30371-19.htm"
 		elif npcId == 30300:
-			if st.getQuestItemsCount(GRAIL_DIAGRAM_ID):
+			if st.hasQuestItems(GRAIL_DIAGRAM_ID):
 				htmltext = "30300-01.htm"
-			elif st.getQuestItemsCount(PUSHKINS_LIST_ID):
+			elif st.hasQuestItems(PUSHKINS_LIST_ID):
 				if st.getInt("cond")==5:
 					htmltext = "30300-08.htm"
 				else:
 					htmltext = "30300-07.htm"
-			elif st.getQuestItemsCount(PURE_MITHRIL_CUP_ID):
+			elif st.hasQuestItems(PURE_MITHRIL_CUP_ID):
 				htmltext = "30300-11.htm"
 			elif st.getInt("cond")>5:
 				htmltext = "30300-12.htm"
 		elif npcId == 30419:
-			if st.getQuestItemsCount(THALIAS_LETTER1_ID):
+			if st.hasQuestItems(THALIAS_LETTER1_ID):
 				htmltext = "30419-01.htm"
-			elif st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID) or st.getQuestItemsCount(ADONIUS_LIST_ID):
+			elif st.hasQuestItems(ARKENIAS_INSTRUCTIONS_ID) or st.hasQuestItems(ADONIUS_LIST_ID):
 				htmltext = "30419-05.htm"
-			elif st.getQuestItemsCount(ANDARIEL_SCRIPTURE_COPY_ID):
+			elif st.hasQuestItems(ANDARIEL_SCRIPTURE_COPY_ID):
 				htmltext = "30419-06.htm"
 				st.set("cond","12")
 				st.takeItems(ARKENIAS_CONTRACT_ID,1)
 				st.takeItems(ANDARIEL_SCRIPTURE_COPY_ID,1)
 				st.giveItems(STARDUST_ID,1)
-			elif st.getQuestItemsCount(STARDUST_ID):
+			elif st.hasQuestItems(STARDUST_ID):
 				htmltext = "30419-07.htm"
 			else:
 				htmltext = "30419-08.htm"
 		elif npcId == 30375:
-			if st.getQuestItemsCount(ARKENIAS_INSTRUCTIONS_ID):
+			if st.hasQuestItems(ARKENIAS_INSTRUCTIONS_ID):
 				htmltext = "30375-01.htm"
-			elif st.getQuestItemsCount(ADONIUS_LIST_ID):
+			elif st.hasQuestItems(ADONIUS_LIST_ID):
 				if st.getInt("cond")==10:
 					htmltext = "30375-04.htm"
 					st.set("cond","11")
-					st.takeItems(SPIDER_ICHOR_ID,st.getQuestItemsCount(SPIDER_ICHOR_ID))
-					st.takeItems(HARPYS_DOWN_ID,st.getQuestItemsCount(HARPYS_DOWN_ID))
+					st.takeItems(SPIDER_ICHOR_ID,-1)
+					st.takeItems(HARPYS_DOWN_ID,-1)
 					st.takeItems(ADONIUS_LIST_ID,1)
 					st.giveItems(ANDARIEL_SCRIPTURE_COPY_ID,1)
 				else:
@@ -282,8 +282,8 @@ class Quest(JQuest):
 			if st.getQuestItemsCount(THALIAS_LETTER2_ID):
 				htmltext = "30655-01.htm"
 			elif st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID):
-				if st.getQuestItemsCount(TALINS_SPEAR_BLADE_ID) and st.getQuestItemsCount(TALINS_SPEAR_SHAFT_ID) and st.getQuestItemsCount(TALINS_RUBY_ID) \
-				and st.getQuestItemsCount(TALINS_AQUAMARINE_ID) and st.getQuestItemsCount(TALINS_AMETHYST_ID) and st.getQuestItemsCount(TALINS_PERIDOT_ID):
+				if st.hasQuestItems(TALINS_SPEAR_BLADE_ID) and st.hasQuestItems(TALINS_SPEAR_SHAFT_ID) and st.hasQuestItems(TALINS_RUBY_ID) \
+				and st.hasQuestItems(TALINS_AQUAMARINE_ID) and st.hasQuestItems(TALINS_AMETHYST_ID) and st.hasQuestItems(TALINS_PERIDOT_ID):
 					htmltext = "30655-04.htm"
 					st.set("cond","17")
 					st.takeItems(TALINS_SPEAR_BLADE_ID,1)
@@ -297,9 +297,9 @@ class Quest(JQuest):
 					st.giveItems(TALINS_SPEAR_ID,1)
 				else:
 					htmltext = "30655-03.htm"
-			elif st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(ISAELS_LETTER_ID):
+			elif st.hasQuestItems(TALINS_SPEAR_ID) and st.hasQuestItems(ISAELS_LETTER_ID):
 				htmltext = "30655-05.htm"
-			elif st.getQuestItemsCount(GRAIL_OF_PURITY_ID) or st.getQuestItemsCount(CAMOMILE_CHARM_ID):
+			elif st.hasQuestItems(GRAIL_OF_PURITY_ID) or st.hasQuestItems(CAMOMILE_CHARM_ID):
 				htmltext = "30655-06.htm"
 		return htmltext
 
@@ -309,8 +309,8 @@ class Quest(JQuest):
 		if st.getState() != State.STARTED : return
 		npcId = npc.getNpcId()
 		if npcId == 20550:
-			if st.getQuestItemsCount(PUSHKINS_LIST_ID) and st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)<10:
-				if st.getRandom(100)<50:
+			if st.hasQuestItems(PUSHKINS_LIST_ID) and st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)<10:
+				if self.getRandom(100)<50:
 					st.giveItems(PURE_MITHRIL_ORE_ID,1)
 					if st.getQuestItemsCount(PURE_MITHRIL_ORE_ID) < 10:
 						st.playSound("ItemSound.quest_itemget")
@@ -319,8 +319,8 @@ class Quest(JQuest):
 						if st.getQuestItemsCount(WYRMS_TALON1_ID)>=20 and st.getQuestItemsCount(ANT_SOLDIER_ACID_ID)>=20:
 							st.set("cond","5")
 		elif npcId == 20176:
-			if st.getQuestItemsCount(PUSHKINS_LIST_ID) and st.getQuestItemsCount(WYRMS_TALON1_ID)<20:
-				if st.getRandom(100)<50 :
+			if st.hasQuestItems(PUSHKINS_LIST_ID) and st.getQuestItemsCount(WYRMS_TALON1_ID)<20:
+				if self.getRandom(100)<50 :
 					st.giveItems(WYRMS_TALON1_ID,1)
 					if st.getQuestItemsCount(WYRMS_TALON1_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -329,11 +329,11 @@ class Quest(JQuest):
 						if st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)>=10 and st.getQuestItemsCount(ANT_SOLDIER_ACID_ID)>=20:
 							st.set("cond","5")
 		elif npcId in [20082,20084,20086,20087,20088]:
-			if st.getQuestItemsCount(PUSHKINS_LIST_ID) and st.getQuestItemsCount(ANT_SOLDIER_ACID_ID)<20:
+			if st.hasQuestItems(PUSHKINS_LIST_ID) and st.getQuestItemsCount(ANT_SOLDIER_ACID_ID)<20:
 				chance=80
 				if npcId in [20087,20088]:
 					chance=50
-				if st.getRandom(100)<80:
+				if self.getRandom(100)<80:
 					st.giveItems(ANT_SOLDIER_ACID_ID,1)
 					if st.getQuestItemsCount(ANT_SOLDIER_ACID_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -342,8 +342,8 @@ class Quest(JQuest):
 						if st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)>=10 and st.getQuestItemsCount(WYRMS_TALON1_ID)>=20:
 							st.set("cond","5")
 		elif npcId == 20233:
-			if st.getQuestItemsCount(ADONIUS_LIST_ID) and st.getQuestItemsCount(SPIDER_ICHOR_ID)<20:
-				if st.getRandom(100)<50:
+			if st.hasQuestItems(ADONIUS_LIST_ID) and st.getQuestItemsCount(SPIDER_ICHOR_ID)<20:
+				if self.getRandom(100)<50:
 					st.giveItems(SPIDER_ICHOR_ID,1)
 					if st.getQuestItemsCount(SPIDER_ICHOR_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -352,8 +352,8 @@ class Quest(JQuest):
 						if st.getQuestItemsCount(HARPYS_DOWN_ID)>=20:
 							st.set("cond","10")
 		elif npcId == 20145 :
-			if st.getQuestItemsCount(ADONIUS_LIST_ID) and st.getQuestItemsCount(HARPYS_DOWN_ID)<20:
-				if st.getRandom(100)<50:
+			if st.hasQuestItems(ADONIUS_LIST_ID) and st.getQuestItemsCount(HARPYS_DOWN_ID)<20:
+				if self.getRandom(100)<50:
 					st.giveItems(HARPYS_DOWN_ID,1)
 					if st.getQuestItemsCount(HARPYS_DOWN_ID) < 20:
 						st.playSound("ItemSound.quest_itemget")
@@ -362,19 +362,19 @@ class Quest(JQuest):
 						if st.getQuestItemsCount(SPIDER_ICHOR_ID)>=20:
 							st.set("cond","10")
 		elif npcId == 27077:
-			if st.getQuestItemsCount(TALINS_SPEAR_ID) and st.getQuestItemsCount(GRAIL_OF_PURITY_ID) and not st.getQuestItemsCount(TEARS_OF_UNICORN_ID):
+			if st.hasQuestItems(TALINS_SPEAR_ID) and st.hasQuestItems(GRAIL_OF_PURITY_ID) and not st.hasQuestItems(TEARS_OF_UNICORN_ID):
 				st.takeItems(GRAIL_OF_PURITY_ID,1)
 				st.takeItems(TALINS_SPEAR_ID,1)
 				st.giveItems(TEARS_OF_UNICORN_ID,1)
 				st.set("cond","19")
 		elif npcId in [20581,20582]:
-			if st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID) and st.getRandom(100) < 50 :
+			if st.hasQuestItems(ISAELS_INSTRUCTIONS_ID) and self.getRandom(100) < 50 :
 				for id in [TALINS_SPEAR_BLADE_ID, TALINS_SPEAR_SHAFT_ID, TALINS_RUBY_ID, TALINS_AQUAMARINE_ID, TALINS_AMETHYST_ID]:
-					if not st.getQuestItemsCount(id):
+					if not st.hasQuestItems(id):
 						st.giveItems(id,1)
 						st.playSound("ItemSound.quest_itemget")
 						return
-				if not st.getQuestItemsCount(TALINS_PERIDOT_ID) :
+				if not st.hasQuestItems(TALINS_PERIDOT_ID) :
 					st.giveItems(TALINS_PERIDOT_ID,1)
 					st.playSound("ItemSound.quest_itemget")
 					st.set("cond","16")

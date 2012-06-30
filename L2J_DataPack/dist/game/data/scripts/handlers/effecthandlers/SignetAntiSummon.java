@@ -15,16 +15,15 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
  * @author Forsaiken
@@ -38,20 +37,12 @@ public class SignetAntiSummon extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SIGNET_GROUND;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -59,10 +50,6 @@ public class SignetAntiSummon extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -70,22 +57,22 @@ public class SignetAntiSummon extends L2Effect
 			return true; // do nothing first time
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = (L2PcInstance) getEffector();
+		L2PcInstance caster = getEffector().getActingPlayer();
 		
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (cha == null)
 				continue;
 			
-			if (cha instanceof L2Playable)
+			if (cha.isPlayable())
 			{
 				if (caster.canAttackCharacter(cha))
 				{
 					L2PcInstance owner = null;
-					if (cha instanceof L2Summon)
+					if (cha.isSummon())
 						owner = ((L2Summon) cha).getOwner();
 					else
-						owner = (L2PcInstance) cha;
+						owner = cha.getActingPlayer();
 					
 					if (owner != null && owner.getPet() != null)
 					{
@@ -105,10 +92,6 @@ public class SignetAntiSummon extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{

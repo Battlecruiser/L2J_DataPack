@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2FestivalGuideInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -51,7 +51,6 @@ public class Festival implements IBypassHandler
 		}
 		
 		final L2FestivalGuideInstance npc = (L2FestivalGuideInstance) target;
-		
 		try
 		{
 			final int val;
@@ -243,7 +242,7 @@ public class Festival implements IBypassHandler
 						strBuffer.append("Dusk: No record exists. Score 0<br>");
 					}
 					
-					if (overallScore > 0)
+					if ((overallScore > 0) && (overallData != null))
 					{
 						final String cabalStr;
 						if (overallData.getString("cabal").equals("dawn"))

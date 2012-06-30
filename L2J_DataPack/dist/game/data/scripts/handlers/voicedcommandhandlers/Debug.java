@@ -14,7 +14,7 @@
  */
 package handlers.voicedcommandhandlers;
 
-import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -25,36 +25,30 @@ public class Debug implements IVoicedCommandHandler
 		"debug"
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel()))
+		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel()))
+		{
 			return false;
+		}
 		
 		if (VOICED_COMMANDS[0].equalsIgnoreCase(command))
 		{
 			if (activeChar.isDebug())
 			{
 				activeChar.setDebug(null);
-				activeChar.sendMessage("Debugging disabled");
+				activeChar.sendMessage("Debugging disabled.");
 			}
 			else
 			{
 				activeChar.setDebug(activeChar);
-				activeChar.sendMessage("Debugging enabled");
+				activeChar.sendMessage("Debugging enabled.");
 			}
 		}
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
-	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{

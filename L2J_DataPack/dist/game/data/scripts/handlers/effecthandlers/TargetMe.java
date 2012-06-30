@@ -14,18 +14,15 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
- * 
  * @author -Nemesiss-
  */
 public class TargetMe extends L2Effect
@@ -35,24 +32,16 @@ public class TargetMe extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.TARGET_ME;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected().isPlayable())
 		{
 			if (getEffected() instanceof L2SiegeSummonInstance)
 				return false;
@@ -61,33 +50,25 @@ public class TargetMe extends L2Effect
 			{
 				// Target is different
 				getEffected().setTarget(getEffector());
-				if (getEffected() instanceof L2PcInstance)
+				if (getEffected().isPlayer())
 					getEffected().sendPacket(new MyTargetSelected(getEffector().getObjectId(), 0));
 			}
 			((L2Playable)getEffected()).setLockedTarget(getEffector());
 			return true;
 		}
-		else if (getEffected() instanceof L2Attackable && !getEffected().isRaid())
+		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
 			return true;
 		
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected().isPlayable())
 			((L2Playable)getEffected()).setLockedTarget(null);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

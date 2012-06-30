@@ -57,9 +57,9 @@ class Quest (JQuest) :
             st.takeItems(Tenain_Rec,-1)
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
+            st.addExpAndSp(349006,23948)
+            st.giveItems(57,63104)
             st.giveItems(Orkurus_Rec,1)
-            st.giveItems(57,31552)
-            st.addExpAndSp(174503,11974)
             st.unset("cond")
             st.unset("kills")
             st.unset("spawned")
@@ -154,18 +154,18 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Scavenger :
-            if not st.getQuestItemsCount(Plate) and st.getRandom(20) == 1 and cond == 5 :
+            if not st.getQuestItemsCount(Plate) and self.getRandom(20) == 1 and cond == 5 :
                 st.giveItems(Plate,1)
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","6")
         elif npcId == Seeker :
-            if not st.getQuestItemsCount(Rep_E) and st.getRandom(30) == 1 and cond == 9 :
+            if not st.getQuestItemsCount(Rep_E) and self.getRandom(30) == 1 and cond == 9 :
                 st.giveItems(Rep_E,1)
                 st.playSound("ItemSound.quest_middle")
                 if st.getQuestItemsCount(Rep_N) :
                     st.set("cond","10")
         elif npcId == Drone :
-            if not st.getQuestItemsCount(Rep_N) and st.getRandom(30) == 1 and cond == 9 :
+            if not st.getQuestItemsCount(Rep_N) and self.getRandom(30) == 1 and cond == 9 :
                 st.giveItems(Rep_N,1)
                 st.playSound("ItemSound.quest_middle")
                 if st.getQuestItemsCount(Rep_E) :

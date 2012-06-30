@@ -47,7 +47,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound2.broken_key")
        st.takeItems(Silver_Ice,1)
     elif event == "32023-05.htm" :
-       if st.getRandom(100) <= 25 :
+       if self.getRandom(100) <= 25 :
           st.giveItems(Black_Ice,1)
           st.playSound("ItemSound3.sys_enchant_sucess")
        else:
@@ -104,7 +104,7 @@ class Quest (JQuest) :
     if st :
         chance = int((npc.getNpcId() - 22050)*Config.RATE_QUEST_DROP)
         numItems, chance = divmod(chance,100)
-        random = st.getRandom(100)
+        random = self.getRandom(100)
         if random <= chance:
            numItems += 1
         if int(numItems) != 0 :
@@ -114,7 +114,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if st:
         cond=st.getInt("cond")
-        random = st.getRandom(100)
+        random = self.getRandom(100)
         if cond == 2 and random <=10:
             st.giveItems(Hemocyte,1)
             st.playSound("ItemSound.quest_itemget")

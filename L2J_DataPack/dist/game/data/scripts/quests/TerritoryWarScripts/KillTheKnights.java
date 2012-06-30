@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,11 +28,25 @@ public class KillTheKnights extends TerritoryWarSuperClass
 	
 	public KillTheKnights()
 	{
-		super(qnu,qn1,qna);
-		CLASS_IDS = new int[] { 6, 91, 5, 90, 20, 99, 33, 106 };
+		super(qnu, qn1, qna);
+		CLASS_IDS = new int[]
+		{
+			6,
+			91,
+			5,
+			90,
+			20,
+			99,
+			33,
+			106
+		};
 		qn = qn1;
 		RANDOM_MIN = 10;
 		RANDOM_MAX = 15;
-		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_KNIGHTS,NpcStringId.YOU_WEAKENED_THE_ENEMYS_DEFENSE};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_KNIGHTS,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_DEFENSE
+		};
 	}
 }

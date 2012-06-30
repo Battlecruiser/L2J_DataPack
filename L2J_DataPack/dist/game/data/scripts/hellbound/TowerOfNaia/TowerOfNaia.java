@@ -31,12 +31,11 @@ import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -45,7 +44,6 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -133,9 +131,9 @@ public class TowerOfNaia extends Quest
 		NpcStringId.ITS_S1, NpcStringId.S1_IS_STRONG, NpcStringId.ITS_ALWAYS_S1, NpcStringId.S1_WONT_DO
 	};
 	
-	private static Map<Integer, int[]> DOORS = new HashMap<Integer, int[]>();
-	private static Map<Integer, Integer> ZONES = new HashMap<Integer, Integer>();
-	private static Map<Integer, int[][]> SPAWNS = new HashMap<Integer, int[][]>();
+	private static Map<Integer, int[]> DOORS = new HashMap<>();
+	private static Map<Integer, Integer> ZONES = new HashMap<>();
+	private static Map<Integer, int[][]> SPAWNS = new HashMap<>();
 	
 	private L2MonsterInstance _lock;
 	private final L2Npc _controller;
@@ -148,8 +146,8 @@ public class TowerOfNaia extends Quest
 	private int _challengeState;
 	private int _winIndex;
 	
-	private final Map<Integer, Boolean> _activeRooms = new FastMap<Integer, Boolean>();
-	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<Integer, List<L2Npc>>();
+	private final Map<Integer, Boolean> _activeRooms = new FastMap<>();
+	private final Map<Integer, List<L2Npc>> _spawns = new FastMap<>();
 	private final FastList<L2Npc> _sporeSpawn = new FastList<L2Npc>().shared();
 	
 	static
@@ -665,7 +663,7 @@ public class TowerOfNaia extends Quest
 			{
 				if (Util.checkIfInRange(3000, party.getLeader(), npc, true))
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(2000, partyMember, npc, true))
 						{
@@ -830,14 +828,14 @@ public class TowerOfNaia extends Quest
 						_indexCount[Math.abs(sporeGroup - 1)]++;
 					}
 					
-					if ((Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT) && (Math.abs(_indexCount[sporeGroup]) > 0) && ((_indexCount[sporeGroup] % 20) == 0) && (Rnd.get(100) < 50))
+					if ((Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT) && (Math.abs(_indexCount[sporeGroup]) > 0) && ((_indexCount[sporeGroup] % 20) == 0) && (getRandom(100) < 50))
 					{
 						String el = ELEMENTS_NAME[Arrays.binarySearch(ELEMENTS, npcId)];
 						for (L2Npc spore : _sporeSpawn)
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getNpcId() == npcId))
 							{
-								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[Rnd.get(4)]);
+								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[getRandom(4)]);
 								ns.addStringParameter(el);
 								spore.broadcastPacket(ns);
 							}
@@ -845,7 +843,7 @@ public class TowerOfNaia extends Quest
 					}
 					if (Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT)
 					{
-						if ((((_indexCount[sporeGroup] > 0) && ((npcId == SPORE_FIRE) || (npcId == SPORE_WIND))) || ((_indexCount[sporeGroup] <= 0) && ((npcId == SPORE_WATER) || (npcId == SPORE_EARTH)))) && (Rnd.get(1000) > 200))
+						if ((((_indexCount[sporeGroup] > 0) && ((npcId == SPORE_FIRE) || (npcId == SPORE_WIND))) || ((_indexCount[sporeGroup] <= 0) && ((npcId == SPORE_WATER) || (npcId == SPORE_EARTH)))) && (getRandom(1000) > 200))
 						{
 							spawnOppositeSpore(npcId);
 						}
@@ -895,7 +893,7 @@ public class TowerOfNaia extends Quest
 		{
 			_sporeSpawn.add(npc);
 			npc.setIsRunning(false);
-			int[] coord = SPORES_MOVE_POINTS[Rnd.get(SPORES_MOVE_POINTS.length)];
+			int[] coord = SPORES_MOVE_POINTS[getRandom(SPORES_MOVE_POINTS.length)];
 			npc.getSpawn().setLocx(coord[0]);
 			npc.getSpawn().setLocy(coord[1]);
 			npc.getSpawn().setLocz(coord[2]);
@@ -924,7 +922,7 @@ public class TowerOfNaia extends Quest
 		return ret;
 	}
 	
-	private void initRoom(int managerId)
+	protected void initRoom(int managerId)
 	{
 		removeAllPlayers(managerId);
 		_activeRooms.put(managerId, false);
@@ -966,8 +964,8 @@ public class TowerOfNaia extends Quest
 	
 	private void markElpyRespawn()
 	{
-		long respawnTime = (Rnd.get(43200, 216000) * 1000);
-		GlobalVariablesManager.getInstance().storeVariable("elpy_respawn_time", Long.toString(respawnTime + System.currentTimeMillis()));
+		final long respawnTime = (getRandom(43200, 216000) * 1000) + System.currentTimeMillis();
+		GlobalVariablesManager.getInstance().storeVariable("elpy_respawn_time", Long.toString(respawnTime));
 	}
 	
 	private int moveTo(L2Npc npc, int[] coords)
@@ -991,9 +989,8 @@ public class TowerOfNaia extends Quest
 	
 	private void spawnElpy()
 	{
-		String tmp = GlobalVariablesManager.getInstance().getStoredVariable("elpy_respawn_time");
-		long respawnTime = tmp == null ? 0 : Long.parseLong(tmp) * 1000;
-		
+		final String tmp = GlobalVariablesManager.getInstance().getStoredVariable("elpy_respawn_time");
+		final long respawnTime = tmp == null ? 0 : Long.parseLong(tmp);
 		if (respawnTime <= System.currentTimeMillis())
 		{
 			addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
@@ -1013,7 +1010,7 @@ public class TowerOfNaia extends Quest
 	
 	private L2Npc spawnRandomSpore()
 	{
-		return addSpawn(Rnd.get(SPORE_FIRE, SPORE_EARTH), -45474, 247450, -13994, 49152, false, 0, false);
+		return addSpawn(getRandom(SPORE_FIRE, SPORE_EARTH), -45474, 247450, -13994, 49152, false, 0, false);
 	}
 	
 	private L2Npc spawnOppositeSpore(int srcSporeId)
@@ -1035,7 +1032,7 @@ public class TowerOfNaia extends Quest
 		if (SPAWNS.containsKey(managerId))
 		{
 			int[][] spawnList = SPAWNS.get(managerId);
-			List<L2Npc> spawned = new FastList<L2Npc>();
+			List<L2Npc> spawned = new FastList<>();
 			for (int[] spawn : spawnList)
 			{
 				L2Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);
@@ -1053,14 +1050,14 @@ public class TowerOfNaia extends Quest
 		if ((party != null) && ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2Character ch : zone.getCharactersInsideArray())
+			for (L2PcInstance player : zone.getPlayersInside())
 			{
-				if (ch instanceof L2PcInstance)
+				if (player != null)
 				{
-					L2Party charParty = ((L2PcInstance) ch).getParty();
-					if ((charParty == null) || (charParty.getPartyLeaderOID() != party.getPartyLeaderOID()))
+					L2Party charParty = player.getParty();
+					if ((charParty == null) || (charParty.getLeaderObjectId() != party.getLeaderObjectId()))
 					{
-						ch.teleToLocation(16110, 243841, 11616);
+						player.teleToLocation(16110, 243841, 11616);
 					}
 				}
 			}
@@ -1072,11 +1069,11 @@ public class TowerOfNaia extends Quest
 		if (ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2Character ch : zone.getCharactersInsideArray())
+			for (L2PcInstance player : zone.getPlayersInside())
 			{
-				if (ch instanceof L2PcInstance)
+				if (player != null)
 				{
-					ch.teleToLocation(16110, 243841, 11616);
+					player.teleToLocation(16110, 243841, 11616);
 				}
 			}
 		}

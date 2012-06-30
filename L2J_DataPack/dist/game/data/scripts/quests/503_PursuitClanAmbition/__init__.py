@@ -512,11 +512,11 @@ class Quest (JQuest) :
       if leader_st.getState() != State.STARTED : return
       npcId=npc.getNpcId()
       condition,maxcount,chance,itemList = DROPLIST[npcId]
-      random = leader_st.getRandom(100)
+      random = self.getRandom(100)
       cond = leader_st.getInt("cond")
       if cond == condition and random < chance:
         if len(itemList) > 1:
-          stoneRandom = leader_st.getRandom(3)
+          stoneRandom = self.getRandom(3)
           if stoneRandom == 0 :
             if leader_st.getInt("Kurtz") < 4:
               return

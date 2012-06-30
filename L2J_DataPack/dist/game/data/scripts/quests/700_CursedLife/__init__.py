@@ -80,7 +80,7 @@ class Quest (JQuest) :
 		if not st : return
 
 		if st.getInt("cond") == 1 and npc.getNpcId() in MOBS :
-			chance = st.getRandom(100)
+			chance = self.getRandom(100)
 			if chance < 5 :
 				st.giveItems(SWALLOWED_SKULL,1)
 			elif chance < 20 :

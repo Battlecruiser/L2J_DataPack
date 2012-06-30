@@ -22,23 +22,23 @@ import com.l2jserver.gameserver.ai.L2AttackableAI;
 import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.skills.Stats;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -70,11 +70,6 @@ public class Disablers implements ISkillHandler
 	
 	protected static final Logger _log = Logger.getLogger(L2Skill.class.getName());
 	
-	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -107,7 +102,7 @@ public class Disablers implements ISkillHandler
 				ss = true;
 		}
 		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar instanceof L2Summon)
+		else if (activeChar.isSummon())
 		{
 			L2Summon activeSummon = (L2Summon) activeChar;
 			
@@ -127,7 +122,7 @@ public class Disablers implements ISkillHandler
 			else
 				ss = true;
 		}
-		else if (activeChar instanceof L2Npc)
+		else if (activeChar.isNpc())
 		{
 			ss = ((L2Npc) activeChar)._soulshotcharged;
 			((L2Npc) activeChar)._soulshotcharged = false;
@@ -177,7 +172,7 @@ public class Disablers implements ISkillHandler
 						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -197,7 +192,7 @@ public class Disablers implements ISkillHandler
 						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -226,7 +221,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -239,7 +234,7 @@ public class Disablers implements ISkillHandler
 				case CONFUSE_MOB_ONLY:
 				{
 					// do nothing if not on mob
-					if (target instanceof L2Attackable)
+					if (target.isL2Attackable())
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
@@ -253,7 +248,7 @@ public class Disablers implements ISkillHandler
 						}
 						else
 						{
-							if (activeChar instanceof L2PcInstance)
+							if (activeChar.isPlayer())
 							{
 								SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 								sm.addCharName(target);
@@ -268,7 +263,7 @@ public class Disablers implements ISkillHandler
 				}
 				case AGGDAMAGE:
 				{
-					if (target instanceof L2Attackable)
+					if (target.isL2Attackable())
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 					// TODO [Nemesiss] should this have 100% chance?
 					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
@@ -277,7 +272,7 @@ public class Disablers implements ISkillHandler
 				case AGGREDUCE:
 				{
 					// these skills needs to be rechecked
-					if (target instanceof L2Attackable)
+					if (target.isL2Attackable())
 					{
 						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 						
@@ -296,7 +291,7 @@ public class Disablers implements ISkillHandler
 					// these skills needs to be rechecked
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 					{
-						if (target instanceof L2Attackable)
+						if (target.isL2Attackable())
 						{
 							L2Attackable targ = (L2Attackable) target;
 							targ.stopHating(activeChar);
@@ -312,7 +307,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -326,7 +321,7 @@ public class Disablers implements ISkillHandler
 				case AGGREMOVE:
 				{
 					// these skills needs to be rechecked
-					if (target instanceof L2Attackable && !target.isRaid())
+					if (target.isL2Attackable() && !target.isRaid())
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
@@ -340,7 +335,7 @@ public class Disablers implements ISkillHandler
 						}
 						else
 						{
-							if (activeChar instanceof L2PcInstance)
+							if (activeChar.isPlayer())
 							{
 								SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 								sm.addCharName(target);
@@ -385,7 +380,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -506,7 +501,7 @@ public class Disablers implements ISkillHandler
 					}
 					else
 					{
-						if (activeChar instanceof L2PcInstance)
+						if (activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
@@ -719,11 +714,6 @@ public class Disablers implements ISkillHandler
 		return initial;
 	}
 	
-	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{
