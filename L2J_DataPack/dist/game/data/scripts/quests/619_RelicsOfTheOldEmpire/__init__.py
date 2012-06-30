@@ -48,9 +48,9 @@ class Quest (JQuest) :
           htmltext = "31538-07.htm"
           st.takeItems(RELICS,1000)
           if ALT_RP100 == 1:
-             st.giveItems(REWARDS2[st.getRandom(len(REWARDS2))],1)
+             st.giveItems(REWARDS2[self.getRandom(len(REWARDS2))],1)
           else:
-             st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
+             st.giveItems(REWARDS[self.getRandom(len(REWARDS))],1)
        else :
           htmltext = "31538-05.htm"
      elif event == "31538-08.htm" :
@@ -87,11 +87,11 @@ class Quest (JQuest) :
      if st :
        if st.getState() == State.STARTED :
          numItems, chance = divmod(100*Config.RATE_QUEST_DROP,100)
-         if st.getRandom(100) < chance :
+         if self.getRandom(100) < chance :
             numItems += 1
          st.giveItems(RELICS,int(numItems))
          st.playSound("ItemSound.quest_itemget")
-         if st.getRandom(100) < (5*Config.RATE_QUEST_DROP) :
+         if self.getRandom(100) < (5*Config.RATE_QUEST_DROP) :
              st.giveItems(ENTRANCE,1)
              st.playSound("ItemSound.quest_middle")
      return

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapRegion.xsd">
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
 	<!-- Hunter Town -->
 	<region name="hunter_town" town="Hunters Village" castle="5" locId="923" bbs="11">
 		<respawnPoint X="116127" Y="76015" Z="-2729" />
@@ -31,6 +32,7 @@
 		<map X="23" Y="20" />
 		<map X="23" Y="19" />
 		<map X="24" Y="20" />
+		<map X="24" Y="21" />
 		<map X="25" Y="20" />
 	</region>
 </list>

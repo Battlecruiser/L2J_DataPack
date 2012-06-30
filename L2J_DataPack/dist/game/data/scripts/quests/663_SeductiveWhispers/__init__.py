@@ -66,7 +66,7 @@ class Quest (JQuest) :
        htmltext = "Wilbert_Practice_NotEnoughBeads.htm"
      else:
        st.takeItems(SPIRIT_BEAD,1) # take one bead as payment for luck test
-       random=st.getRandom(100)
+       random=self.getRandom(100)
        if random<WIN_ROUND_CHANCE: # random value is in range [0..WIN_ROUND_CHANCE]
          htmltext = "Wilbert_PracticeWon.htm"
        else: # lose practice :(
@@ -86,7 +86,7 @@ class Quest (JQuest) :
      else:
        if round == 0: # take 50 beads when game just starts only (round=0)
          st.takeItems(SPIRIT_BEAD,50)
-       random=st.getRandom(100)
+       random=self.getRandom(100)
        if random>WIN_ROUND_CHANCE: # random value is in range [WIN_ROUND_CHANCE..100]
          htmltext = "Wilbert_PlayLose.htm"
          st.set("round","0") # restart game
@@ -139,11 +139,11 @@ class Quest (JQuest) :
      elif round == 5:
        st.giveItems(ADENA,388000)
        # 60% B-weap. rec number is random
-       st.giveItems(B_RECIPES[st.getRandom(len(B_RECIPES))], 1)
+       st.giveItems(B_RECIPES[self.getRandom(len(B_RECIPES))], 1)
      elif round == 6:
        st.giveItems(ADENA,675000)
        # B-weap. key number is random
-       st.giveItems(B_KEYMATS[st.getRandom(len(B_KEYMATS))], 1)
+       st.giveItems(B_KEYMATS[self.getRandom(len(B_KEYMATS))], 1)
      elif round == 7:
        st.giveItems(ADENA,1284000)
        st.giveItems(EWB,2) # Scroll: Enchant Weapon B
@@ -176,7 +176,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId in MOBS:
      numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
-     if st.getRandom(100) < chance :
+     if self.getRandom(100) < chance :
        numItems += 1
      if numItems:
        st.giveItems(SPIRIT_BEAD,int(numItems))

@@ -324,7 +324,7 @@ class Quest (JQuest) :
             elif npcId == SACRIFICE_OF_THE_SACRIFICED and st.getQuestItemsCount(REMAINS_OF_SACRIFICED)==0 and st.getInt("orven")== 0 :
                 st.giveItems(REMAINS_OF_SACRIFICED,1)
                 st.playSound("ItemSound.quest_itemget")
-            elif npcId == HARIT_LIZARDMAN_SHAMAN and st.getRandom(5) == 0 and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
+            elif npcId == HARIT_LIZARDMAN_SHAMAN and self.getRandom(5) == 0 and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
                 for i in range(3) :
                     st.addSpawn(HARIT_LIZARDMAN_ZEALOT,180000)
             elif npcId == HARIT_LIZARDMAN_ZEALOT and st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON)==0 and st.getInt("kendra")== 0 :
@@ -340,7 +340,7 @@ class Quest (JQuest) :
                 st.set("bspawned","1")
                 st.playSound("ItemSound.quest_itemget")
         elif cond == 4:
-            if npcId in (CAVE_MAIDEN, CAVE_KEEPER, CAVE_KEEPER1, CAVE_MAIDEN1) and st.getQuestItemsCount(THIRD_FRAGMENT_OF_ABYSS_JEWEL)==0 and st.getRandom(5) == 0 :
+            if npcId in (CAVE_MAIDEN, CAVE_KEEPER, CAVE_KEEPER1, CAVE_MAIDEN1) and st.getQuestItemsCount(THIRD_FRAGMENT_OF_ABYSS_JEWEL)==0 and self.getRandom(5) == 0 :
                 mob = st.addSpawn(ABYSS_JEWEL3,180000)
     elif npcId == ABYSS_JEWEL1 :
         self.cancelQuestTimer("Jewel1_Timer1",npc,None)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4200" type="EtcItem" name="Spellbook: Restore Life">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
@@ -454,7 +454,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
-		<set name="price" val="3132000" />
+		<set name="price" val="1566000" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -470,7 +470,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
-		<set name="price" val="9586000" />
+		<set name="price" val="4793000" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -486,7 +486,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="160" />
-		<set name="price" val="9586000" />
+		<set name="price" val="4793000" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -505,7 +505,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
-		<set name="price" val="5628000" />
+		<set name="price" val="2814000" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -526,7 +526,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="weight" val="100" />
-		<set name="price" val="19073000" />
+		<set name="price" val="9536500" /> <!-- H5 Price -->
 		<set name="equip_condition" val="{{ec_category;{@hatchling_group}}}" />
 		<set name="for_npc" val="true" />
 		<for>

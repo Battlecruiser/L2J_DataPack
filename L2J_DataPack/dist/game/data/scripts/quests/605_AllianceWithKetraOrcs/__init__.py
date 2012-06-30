@@ -147,7 +147,7 @@ def giveReward(st,item,chance,MAX,drop) :
     count = st.getQuestItemsCount(drop)
     if count < MAX or drop == Mane :
       numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,1000)
-      if st.getRandom(1000) < chance :
+      if st.getQuest().getRandom(1000) < chance :
         numItems += 1
       numItems = int(numItems)
       if numItems != 0 :
@@ -364,7 +364,7 @@ class Quest (JQuest) :
                   chance = Chance[npcId]
           #This is support for quest 606: War With Varka Silenos. Basically, if the person has both this quest and 606, then they only get one quest item, 50% chance for 606 quest item and 50% chance for this quest's item
                   if st2 :
-                      if (st.getRandom(2) == 1 or item == 0) and npcId in Chance_mane.keys() :
+                      if (self.getRandom(2) == 1 or item == 0) and npcId in Chance_mane.keys() :
                           item = 57
                           MAX = 100
                           drop = Mane
@@ -377,7 +377,7 @@ class Quest (JQuest) :
               elif npcId in Ketra_Orcs :
                   party = partyMember.getParty()
                   if party :
-                      for member in party.getPartyMembers().toArray() :
+                      for member in party.getMembers().toArray() :
                           if Util.checkIfInRange(5000, player, member, True) :
                               pst = member.getQuestState(qn)
                               if pst :

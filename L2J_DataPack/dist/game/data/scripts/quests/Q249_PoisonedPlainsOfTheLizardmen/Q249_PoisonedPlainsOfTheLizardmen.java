@@ -21,13 +21,13 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-08-04 Based on Freya PTS
+ * 2010-08-04 Based on Freya PTS
+ * @author Gnacik
  */
 public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 {
 	private static final String qn = "249_PoisonedPlainsOfTheLizardmen";
+	
 	private static final int _mouen = 30196;
 	private static final int _johnny = 32744;
 	
@@ -35,10 +35,11 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _mouen)
 		{
@@ -49,10 +50,9 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 				st.playSound("ItemSound.quest_accept");
 			}
 		}
-		else if (npc.getNpcId() == _johnny && event.equalsIgnoreCase("32744-03.htm"))
+		else if ((npc.getNpcId() == _johnny) && event.equalsIgnoreCase("32744-03.htm"))
 		{
-			st.unset("cond");
-			st.giveItems(57, 83056);
+			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
 			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(false);
@@ -64,25 +64,33 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
+		}
 		
 		if (npc.getNpcId() == _mouen)
 		{
-			switch(st.getState())
+			switch (st.getState())
 			{
-				case State.CREATED :
+				case State.CREATED:
 					if (player.getLevel() >= 82)
+					{
 						htmltext = "30196-01.htm";
+					}
 					else
+					{
 						htmltext = "30196-00.htm";
+					}
 					break;
-				case State.STARTED :
+				case State.STARTED:
 					if (st.getInt("cond") == 1)
+					{
 						htmltext = "30196-04.htm";
+					}
 					break;
-				case State.COMPLETED :
+				case State.COMPLETED:
 					htmltext = "30196-05.htm";
 					break;
 			}
@@ -90,9 +98,13 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 		else if (npc.getNpcId() == _johnny)
 		{
 			if (st.getInt("cond") == 1)
+			{
 				htmltext = "32744-01.htm";
+			}
 			else if (st.isCompleted())
+			{
 				htmltext = "32744-04.htm";
+			}
 		}
 		return htmltext;
 	}
@@ -102,8 +114,7 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(_mouen);
-		addTalkId(_mouen);
-		addTalkId(_johnny);
+		addTalkId(_mouen, _johnny);
 	}
 	
 	public static void main(String[] args)

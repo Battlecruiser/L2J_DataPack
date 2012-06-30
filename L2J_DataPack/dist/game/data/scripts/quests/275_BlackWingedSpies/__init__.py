@@ -70,7 +70,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
           st.set("cond","2")
         st.giveItems(DARKWING_BAT_FANG,1)
-        if 66>st.getQuestItemsCount(DARKWING_BAT_FANG)>10 and st.getRandom(100) < 10 :
+        if 66>st.getQuestItemsCount(DARKWING_BAT_FANG)>10 and self.getRandom(100) < 10 :
           st.addSpawn(27043)
           st.giveItems(VARANGKAS_PARASITE,1)
    else :

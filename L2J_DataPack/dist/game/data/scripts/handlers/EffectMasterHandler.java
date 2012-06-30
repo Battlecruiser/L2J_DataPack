@@ -43,6 +43,7 @@ import handlers.effecthandlers.FakeDeath;
 import handlers.effecthandlers.Fear;
 import handlers.effecthandlers.Fusion;
 import handlers.effecthandlers.Grow;
+import handlers.effecthandlers.Harvesting;
 import handlers.effecthandlers.Heal;
 import handlers.effecthandlers.HealOverTime;
 import handlers.effecthandlers.HealPercent;
@@ -70,6 +71,7 @@ import handlers.effecthandlers.RandomizeHate;
 import handlers.effecthandlers.Recovery;
 import handlers.effecthandlers.Relax;
 import handlers.effecthandlers.RemoveTarget;
+import handlers.effecthandlers.RestorationRandom;
 import handlers.effecthandlers.Root;
 import handlers.effecthandlers.Signet;
 import handlers.effecthandlers.SignetAntiSummon;
@@ -131,6 +133,7 @@ public final class EffectMasterHandler
 		Fear.class,
 		Fusion.class,
 		Grow.class,
+		Harvesting.class,
 		HealOverTime.class,
 		HealPercent.class,
 		Heal.class,
@@ -158,6 +161,7 @@ public final class EffectMasterHandler
 		Recovery.class,
 		Relax.class,
 		RemoveTarget.class,
+		RestorationRandom.class,
 		Root.class,
 		Signet.class,
 		SignetAntiSummon.class,
@@ -207,7 +211,7 @@ public final class EffectMasterHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
+				_log.log(Level.WARNING, "Failed loading effect handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 				continue;
 			}
 		}

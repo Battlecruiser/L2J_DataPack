@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/accessLevels.xsd">
+	<!-- Access levels -->
+	<access level="-1" name="Banned" nameColor="FFFFFF" titleColor="FFFFFF" isGM="false" allowPeaceAttack="false" allowFixedRes="false" allowTransaction="false" allowAltg="false" giveDamage="false" takeAggro="false" gainExp="false" />
+	<access level="0" name="User" nameColor="FFFFFF" titleColor="FFFFFF" childAccess="0" isGM="false" allowPeaceAttack="false" allowFixedRes="false" allowTransaction="true" allowAltg="false" giveDamage="true" takeAggro="true" gainExp="true" />
+	<access level="1" name="Chat Moderator" nameColor="FFFFFF" titleColor="FFFFFF" childAccess="0" isGM="false" allowPeaceAttack="false" allowFixedRes="false" allowTransaction="true" allowAltg="false" giveDamage="true" takeAggro="true" gainExp="true" />
+	<access level="2" name="Test GM" nameColor="FFFFFF" titleColor="FFFFFF" childAccess="1" isGM="false" allowPeaceAttack="false" allowFixedRes="true" allowTransaction="false" allowAltg="true" giveDamage="false" takeAggro="false" gainExp="false" />
+	<access level="3" name="General GM" nameColor="0000C0" titleColor="0000C0" childAccess="2" isGM="false" allowPeaceAttack="false" allowFixedRes="true" allowTransaction="false" allowAltg="true" giveDamage="false" takeAggro="false" gainExp="false" />
+	<access level="4" name="Support GM" nameColor="000C00" titleColor="000C00" childAccess="3" isGM="false" allowPeaceAttack="false" allowFixedRes="true" allowTransaction="false" allowAltg="true" giveDamage="false" takeAggro="false" gainExp="false" />
+	<access level="5" name="Event GM" nameColor="00C000" titleColor="00C000" childAccess="4" isGM="false" allowPeaceAttack="false" allowFixedRes="true" allowTransaction="false" allowAltg="true" giveDamage="false" takeAggro="false" gainExp="false" />
+	<access level="6" name="Head GM" nameColor="0C0000" titleColor="0C0000" childAccess="5" isGM="false" allowPeaceAttack="false" allowFixedRes="true" allowTransaction="true" allowAltg="true" giveDamage="true" takeAggro="true" gainExp="true" />
+	<access level="7" name="Admin" nameColor="0FF000" titleColor="0FF000" childAccess="6" isGM="true" allowPeaceAttack="true" allowFixedRes="true" allowTransaction="true" allowAltg="true" giveDamage="true" takeAggro="true" gainExp="true" />
+	<access level="8" name="Master" nameColor="00CCFF" titleColor="00CCFF" childAccess="7" isGM="true" allowPeaceAttack="true" allowFixedRes="true" allowTransaction="true" allowAltg="true" giveDamage="true" takeAggro="true" gainExp="true" />
+</list>

@@ -16,10 +16,10 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 public class ShiftTarget implements ISkillHandler
 {
@@ -28,10 +28,6 @@ public class ShiftTarget implements ISkillHandler
 		L2SkillType.SHIFT_TARGET
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -44,7 +40,7 @@ public class ShiftTarget implements ISkillHandler
 		
 		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius()))
 		{
-			if (!(obj instanceof L2Attackable) || obj.isDead())
+			if (!obj.isL2Attackable() || obj.isDead())
 				continue;
 			L2Attackable hater = ((L2Attackable) obj);
 			if (hater.getHating(activeChar) == 0)
@@ -54,10 +50,6 @@ public class ShiftTarget implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

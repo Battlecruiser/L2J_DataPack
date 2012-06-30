@@ -146,7 +146,7 @@ class Quest (JQuest) :
          st.set("cond","7")
          st.playSound("ItemSound.quest_middle")
          return htmltext
-       htmltext = "31348-0"+str(st.getRandom(3))+".htm"
+       htmltext = "31348-0"+str(self.getRandom(3))+".htm"
      elif cond == 7 :
        htmltext = "31348-03.htm"
    elif npcId == 31350 and st.getQuestItemsCount(7140) == 1 :
@@ -157,7 +157,7 @@ class Quest (JQuest) :
          st.set("cond","7")
          st.playSound("ItemSound.quest_middle")
          return htmltext
-       htmltext = "31350-0"+str(st.getRandom(3))+".htm"
+       htmltext = "31350-0"+str(self.getRandom(3))+".htm"
      elif cond == 7 :
        htmltext = "31350-03.htm"
    elif npcId == 31349 and st.getQuestItemsCount(7140) == 1 :
@@ -168,7 +168,7 @@ class Quest (JQuest) :
          st.set("cond","7")
          st.playSound("ItemSound.quest_middle")
          return htmltext
-       htmltext = "31349-0"+str(st.getRandom(3))+".htm"
+       htmltext = "31349-0"+str(self.getRandom(3))+".htm"
      elif cond == 7 :
        htmltext = "31349-03.htm"
    elif npcId == 31328:

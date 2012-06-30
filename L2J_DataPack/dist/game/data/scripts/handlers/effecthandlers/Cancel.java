@@ -17,20 +17,17 @@ package handlers.effecthandlers;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Stats;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.StringUtil;
 
 /**
- * 
  * @author DS
- *
  */
 public class Cancel extends L2Effect
 {
@@ -41,30 +38,18 @@ public class Cancel extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CANCEL;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
 		return cancel(getEffector(), getEffected(), this);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -73,12 +58,14 @@ public class Cancel extends L2Effect
 	
 	private static boolean cancel(L2Character caster, L2Character target, L2Effect effect)
 	{
-		if (!(target instanceof L2PcInstance)|| target.isDead())
+		if (target.isDead())
+		{
 			return false;
+		}
 		
 		final int cancelLvl = effect.getSkill().getMagicLevel();
 		int count = effect.getSkill().getMaxNegatedEffects();
-
+		
 		double rate = effect.getEffectPower();
 		final double vulnModifier = target.calcStat(Stats.CANCEL_VULN, 0, target, null);
 		final double profModifier = caster.calcStat(Stats.CANCEL_PROF, 0, target, null);
@@ -88,34 +75,32 @@ public class Cancel extends L2Effect
 		{
 			if (res < 0)
 			{
-				resMod = 1 - 0.075 * res;
+				resMod = 1 - (0.075 * res);
 				resMod = 1 / resMod;
 			}
 			else
-				resMod = 1 + 0.02 * res;
+			{
+				resMod = 1 + (0.02 * res);
+			}
 			
 			rate *= resMod;
 		}
-
+		
 		if (caster.isDebug())
 		{
 			final StringBuilder stat = new StringBuilder(100);
-			StringUtil.append(stat,
-					effect.getSkill().getName(),
-					" power:", String.valueOf((int)effect.getEffectPower()),
-					" lvl:", String.valueOf(cancelLvl),
-					" res:", String.format("%1.2f", resMod), "(",
-					String.format("%1.2f", profModifier), "/",
-					String.format("%1.2f", vulnModifier),
-					") total:", String.valueOf(rate)
-			);
+			StringUtil.append(stat, effect.getSkill().getName(), " power:", String.valueOf((int) effect.getEffectPower()), " lvl:", String.valueOf(cancelLvl), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", profModifier), "/", String.format("%1.2f", vulnModifier), ") total:", String.valueOf(rate));
 			final String result = stat.toString();
 			if (caster.isDebug())
+			{
 				caster.sendDebugMessage(result);
+			}
 			if (Config.DEVELOPER)
+			{
 				_log.info(result);
+			}
 		}
-
+		
 		final L2Effect[] effects = target.getAllEffects();
 		
 		if (effect.getSkill().getNegateAbnormals() != null) // Cancel for abnormals
@@ -123,14 +108,18 @@ public class Cancel extends L2Effect
 			for (L2Effect eff : effects)
 			{
 				if (eff == null)
+				{
 					continue;
+				}
 				
 				for (String negateAbnormalType : effect.getSkill().getNegateAbnormals().keySet())
 				{
-					if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && effect.getSkill().getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl())
+					if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && (effect.getSkill().getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl()))
 					{
-						if (calcCancelSuccess(eff, cancelLvl, (int)rate))
+						if (calcCancelSuccess(eff, cancelLvl, (int) rate))
+						{
 							eff.exit();
+						}
 					}
 				}
 			}
@@ -144,7 +133,9 @@ public class Cancel extends L2Effect
 			{
 				eff = effects[i];
 				if (eff == null)
+				{
 					continue;
+				}
 				
 				if (!eff.canBeStolen())
 				{
@@ -154,7 +145,9 @@ public class Cancel extends L2Effect
 				
 				// first pass - dances/songs only
 				if (!eff.getSkill().isDance())
+				{
 					continue;
+				}
 				
 				if (eff.getSkill().getId() == lastCanceledSkillId)
 				{
@@ -162,8 +155,10 @@ public class Cancel extends L2Effect
 					continue;
 				}
 				
-				if (!calcCancelSuccess(eff, cancelLvl, (int)rate))
+				if (!calcCancelSuccess(eff, cancelLvl, (int) rate))
+				{
 					continue;
+				}
 				
 				lastCanceledSkillId = eff.getSkill().getId();
 				
@@ -171,7 +166,9 @@ public class Cancel extends L2Effect
 				count--;
 				
 				if (count == 0)
+				{
 					break;
+				}
 			}
 			
 			if (count != 0)
@@ -181,11 +178,15 @@ public class Cancel extends L2Effect
 				{
 					eff = effects[i];
 					if (eff == null)
+					{
 						continue;
+					}
 					
 					// second pass - all except dances/songs
 					if (eff.getSkill().isDance())
+					{
 						continue;
+					}
 					
 					if (eff.getSkill().getId() == lastCanceledSkillId)
 					{
@@ -193,15 +194,19 @@ public class Cancel extends L2Effect
 						continue;
 					}
 					
-					if (!calcCancelSuccess(eff, cancelLvl, (int)rate))
+					if (!calcCancelSuccess(eff, cancelLvl, (int) rate))
+					{
 						continue;
+					}
 					
 					lastCanceledSkillId = eff.getSkill().getId();
 					eff.exit();
 					count--;
 					
 					if (count == 0)
+					{
 						break;
+					}
 				}
 			}
 		}
@@ -212,13 +217,17 @@ public class Cancel extends L2Effect
 	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate)
 	{
 		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
-		rate += effect.getAbnormalTime()/120;
+		rate += effect.getAbnormalTime() / 120;
 		rate += baseRate;
 		
 		if (rate < 25)
+		{
 			rate = 25;
+		}
 		else if (rate > 75)
+		{
 			rate = 75;
+		}
 		
 		return Rnd.get(100) < rate;
 	}

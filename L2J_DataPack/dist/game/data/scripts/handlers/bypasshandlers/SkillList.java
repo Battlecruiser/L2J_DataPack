@@ -50,7 +50,7 @@ public class SkillList implements IBypassHandler
 				String id = command.substring(9).trim();
 				if (id.length() != 0)
 				{
-					L2NpcInstance.showSkillList(activeChar, (L2Npc) target, ClassId.values()[Integer.parseInt(id)]);
+					L2NpcInstance.showSkillList(activeChar, (L2Npc) target, ClassId.getClassId(Integer.parseInt(id)));
 				}
 				else
 				{

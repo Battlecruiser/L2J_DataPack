@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15800" type="EtcItem" name="Recipe - Sealed Vesper Stockings (60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
@@ -1320,11 +1320,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15862" type="Weapon" name="Gemtail Rapier - Health">
@@ -1633,11 +1628,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15871" type="Weapon" name="Eternal Core Sword - Focus">

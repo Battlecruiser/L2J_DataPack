@@ -149,8 +149,7 @@ of this directory a little bit.
 364790003.xml -> Reputation Manager: Consumables
 
 326100001.xml -> Weaver Olf Kanore: Belts
-326100002.xml -> Weaver Olf Kanore: S80 & S84 Clock Unseal
-326100002.xml -> Weaver Olf Kanore: S80 & S84 Cloak Reseal
+326100002.xml -> Weaver Olf Kanore: S80 and S84 Clock Unseal
 
 325460001.xml -> Asyatei - Soul Trader
 

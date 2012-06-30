@@ -32,8 +32,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
+/**
+ * @author Gigiikun
+ */
 public class SeedOfAnnihilation extends Quest
 {
 	final private static String qn = "SeedOfAnnihilation";
@@ -185,7 +187,7 @@ public class SeedOfAnnihilation extends Quest
 		String var = loadGlobalQuestVar("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || Long.parseLong(var) < System.currentTimeMillis())
 		{
-			buffsNow = Rnd.get(ZONE_BUFFS_LIST.length);
+			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
 			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
 			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
@@ -252,7 +254,7 @@ public class SeedOfAnnihilation extends Quest
 				{
 					L2MonsterInstance mob = (L2MonsterInstance) spawn.getLastSpawn();
 					if (mob != null)
-						spawnGroupOfMinion(mob, _regionsData[i].minion_lists[Rnd.get(_regionsData[i].minion_lists.length)]);
+						spawnGroupOfMinion(mob, _regionsData[i].minion_lists[getRandom(_regionsData[i].minion_lists.length)]);
 				}
 			}
 		}
@@ -270,7 +272,7 @@ public class SeedOfAnnihilation extends Quest
 		for (int i = 0; i < _regionsData.length; i++)
 		{
 			if (Util.contains(_regionsData[i].elite_mob_ids, npc.getNpcId()))
-				spawnGroupOfMinion((L2MonsterInstance) npc, _regionsData[i].minion_lists[Rnd.get(_regionsData[i].minion_lists.length)]);
+				spawnGroupOfMinion((L2MonsterInstance) npc, _regionsData[i].minion_lists[getRandom(_regionsData[i].minion_lists.length)]);
 		}
 		return super.onSpawn(npc);
 	}
@@ -280,7 +282,7 @@ public class SeedOfAnnihilation extends Quest
 	{
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
-			int buffsNow = Rnd.get(ZONE_BUFFS_LIST.length);
+			int buffsNow = getRandom(ZONE_BUFFS_LIST.length);
 			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
 			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));

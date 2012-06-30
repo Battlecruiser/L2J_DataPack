@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -35,17 +34,24 @@ public final class Q279_TargetOfOpportunity extends Quest
 	private static final int JERIAN = 32302;
 	private static final int[] MONSTERS =
 	{
-		22373, 22374, 22375, 22376
+		22373,
+		22374,
+		22375,
+		22376
 	};
 	
 	// Items
 	private static final int[] SEAL_COMPONENTS =
 	{
-		15517, 15518, 15519, 15520
+		15517,
+		15518,
+		15519,
+		15520
 	};
 	private static final int[] SEAL_BREAKERS =
 	{
-		15515, 15516
+		15515,
+		15516
 	};
 	
 	public Q279_TargetOfOpportunity(int questId, String name, String descr)
@@ -54,11 +60,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 		
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
-		
-		for (int monster : MONSTERS)
-		{
-			addKillId(monster);
-		}
+		addKillId(MONSTERS);
 	}
 	
 	@Override
@@ -66,7 +68,6 @@ public final class Q279_TargetOfOpportunity extends Quest
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		
 		if ((st == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
@@ -96,35 +97,20 @@ public final class Q279_TargetOfOpportunity extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = Quest.getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st != null)
+		if (st == null)
 		{
-			if (st.getState() == State.CREATED)
-			{
-				if (player.getLevel() >= 82)
-				{
-					htmltext = "32302-01.htm";
-				}
-				else
-				{
-					htmltext = "32302-02.htm";
-				}
-			}
-			else if (st.getState() == State.STARTED)
-			{
-				if (st.getInt("progress") == 1)
-				{
-					if (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
-					{
-						htmltext = "32302-07.htm";
-					}
-					else
-					{
-						htmltext = "32302-06.htm";
-					}
-				}
-			}
+			return htmltext;
+		}
+		
+		if (st.getState() == State.CREATED)
+		{
+			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.htm";
+		}
+		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
+		{
+			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.htm" : "32302-06.htm";
 		}
 		return htmltext;
 	}
@@ -140,7 +126,7 @@ public final class Q279_TargetOfOpportunity extends Quest
 		}
 		
 		final QuestState st = pl.getQuestState(qn);
-		if (Rnd.get(1000) < (int) (311 * Config.RATE_QUEST_DROP))
+		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
 			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
 			{

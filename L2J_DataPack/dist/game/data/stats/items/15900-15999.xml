@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15900" type="Weapon" name="Archangel Sword - Acumen">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="equip" />
@@ -93,11 +93,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="50" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15903" type="Weapon" name="Recurve Thorne Bow - Focus">
@@ -401,11 +396,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="50" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15912" type="Weapon" name="Thorne Crossbow - Focus">
@@ -2371,11 +2361,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15974" type="Weapon" name="Gemtail Rapier {PvP} - Health">
@@ -2689,11 +2674,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="47" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="15983" type="Weapon" name="Eternal Core Sword {PvP} - Focus">

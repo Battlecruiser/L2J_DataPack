@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Event ID="Valentines Event" Active="14 Feb 2005-16 Feb 2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/faenor.xsd">
+	<Droplist>
+		<AllDrop Items="4209-4217" Count="1,1" Chance="5%" />
+	</Droplist>
+	<EventEnd>
+		<Take From="AllPlayers">
+			<Item ItemID="4209-4217" />
+		</Take>
+	</EventEnd>
+	<Message Type="OnJoin" Msg="Valentine's Event:\nCollect all 9 Hearts Blocks to recieve a reward!!\n(Quest Item.. All monster's have a chance to drop.)" />
+	<Npc ID="12371">
+		<Condition>
+			<Inventory Items="4209-4217" Count="1" Operation=">=" />
+		</Condition>
+		<Give>
+			<Item ItemID="4625" Count="1" />
+			<Item ItemID="1540" Count="10" />
+			<Item ItemID="728" Count="10" />
+		</Give>
+		<SystemMessage Msg="Congratulations. Receive your prize." />
+		<Take>
+			<Item Items="4209-4217" Count="1" Type="OfEach" />
+		</Take>
+	</Npc>
+</Event>

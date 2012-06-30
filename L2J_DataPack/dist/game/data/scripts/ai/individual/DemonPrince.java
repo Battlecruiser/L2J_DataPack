@@ -19,11 +19,10 @@ import java.util.Map;
 import javolution.util.FastMap;
 import ai.group_template.L2AttackableAIScript;
 
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.skills.SkillHolder;
-import com.l2jserver.util.Rnd;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
  * @author GKR
@@ -39,14 +38,14 @@ public class DemonPrince extends L2AttackableAIScript
 		new SkillHolder(5376, 4), new SkillHolder(5376, 5), new SkillHolder(5376, 6)
 	};
 	
-	private static final Map<Integer, Boolean> _attackState = new FastMap<Integer, Boolean>();
+	private static final Map<Integer, Boolean> _attackState = new FastMap<>();
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("cast") && (npc != null) && (npc.getNpcId() == FIEND) && !npc.isDead())
 		{
-			npc.doCast(AOE[Rnd.get(3)].getSkill());
+			npc.doCast(AOE[getRandom(3)].getSkill());
 		}
 		return null;
 	}
@@ -69,7 +68,7 @@ public class DemonPrince extends L2AttackableAIScript
 				_attackState.put(npc.getObjectId(), true);
 			}
 			
-			if (Rnd.get(1000) < 10)
+			if (getRandom(1000) < 10)
 			{
 				spawnMinions(npc);
 			}

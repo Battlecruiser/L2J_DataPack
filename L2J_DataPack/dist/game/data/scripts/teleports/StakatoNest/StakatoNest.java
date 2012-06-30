@@ -56,7 +56,7 @@ public class StakatoNest extends Quest
 			
 			if (player.getParty() != null)
 			{
-				for (L2PcInstance partyMember : player.getParty().getPartyMembers())
+				for (L2PcInstance partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius(player, 1000, true, true))
 						partyMember.teleToLocation(loc, true);

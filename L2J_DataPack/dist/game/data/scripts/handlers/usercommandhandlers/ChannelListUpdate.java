@@ -20,8 +20,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 
 /**
- *
- * @author  chris_00
+ * @author chris_00
  */
 public class ChannelListUpdate implements IUserCommandHandler
 {
@@ -30,10 +29,6 @@ public class ChannelListUpdate implements IUserCommandHandler
 		97
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -49,10 +44,6 @@ public class ChannelListUpdate implements IUserCommandHandler
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

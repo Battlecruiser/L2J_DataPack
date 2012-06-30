@@ -21,11 +21,11 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
  * @author UnAfraid
@@ -35,7 +35,7 @@ public class TargetPartyClan implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		if (onlyFirst)
 			return new L2Character[] { activeChar };
 		
@@ -80,11 +80,11 @@ public class TargetPartyClan implements ITargetTypeHandler
 				if (player.getDuelId() != obj.getDuelId())
 					continue;
 				
-				if (hasParty && obj.isInParty() && player.getParty().getPartyLeaderOID() != obj.getParty().getPartyLeaderOID())
+				if (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
 					continue;
 			}
 			
-			if (!((hasClan && obj.getClanId() == player.getClanId()) || (hasParty && obj.isInParty() && player.getParty().getPartyLeaderOID() == obj.getParty().getPartyLeaderOID())))
+			if (!((hasClan && obj.getClanId() == player.getClanId()) || (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() == obj.getParty().getLeaderObjectId())))
 				continue;
 			
 			// Don't add this target if this is a Pc->Pc pvp

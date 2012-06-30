@@ -14,47 +14,46 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2FeedableBeastInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 public class BeastSpice implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
-			return;
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = playable.getActingPlayer();
+		final SkillHolder[] skills = item.getItem().getSkills();
+		
+		if (skills == null)
+		{
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
 		
 		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			return;
+			return false;
 		}
 		
-		int skillId = 0;
-		switch (item.getItemId())
+		for (SkillHolder sk : skills)
 		{
-			case 6643:
-				skillId = 2188;
-				break;
-			case 6644:
-				skillId = 2189;
-				break;
+			activeChar.useMagic(sk.getSkill(), false, false);
 		}
-		L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
-		if (skill != null)
-			activeChar.useMagic(skill, false, false);
+		return true;
 	}
 }

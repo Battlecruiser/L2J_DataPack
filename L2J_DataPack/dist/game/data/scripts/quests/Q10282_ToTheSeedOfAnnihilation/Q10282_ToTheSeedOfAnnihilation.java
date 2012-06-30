@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269). Original jython script by Gnacik 2010-08-13 Based on Freya PTS
+ * To the Seed of Destruction (10269).<br>
+ * Original jython script by Gnacik 2010-08-13 Based on Freya PTS
  * @author nonom
  */
 public class Q10282_ToTheSeedOfAnnihilation extends Quest
@@ -39,16 +40,13 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		int npcId = npc.getNpcId();
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		int cond = st.getInt("cond");
-		
+		final int npcId = npc.getNpcId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -62,17 +60,10 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				}
 				break;
 			case State.CREATED:
-				if (player.getLevel() < 84)
-				{
-					htmltext = "32733-01.htm";
-				}
-				else
-				{
-					htmltext = "32733-00.htm";
-				}
+				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
 				break;
 			case State.STARTED:
-				if (cond == 1)
+				if (st.getInt("cond") == 1)
 				{
 					if (npcId == KBALDIR)
 					{
@@ -92,8 +83,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -121,8 +111,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(KBALDIR);
-		addTalkId(KBALDIR);
-		addTalkId(KLEMIS);
+		addTalkId(KBALDIR, KLEMIS);
 	}
 	
 	public static void main(String[] args)

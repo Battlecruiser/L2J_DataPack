@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Jude's Request (690)
@@ -39,10 +38,26 @@ public class Q690_JudesRequest extends Quest
 	private static final int[][] REWARDS =
 	{
 		{
-			10373, 10374, 10375, 10376, 10377, 10378, 10379, 10380, 10381
+			10373,
+			10374,
+			10375,
+			10376,
+			10377,
+			10378,
+			10379,
+			10380,
+			10381
 		},
 		{
-			10397, 10398, 10399, 10400, 10401, 10402, 10403, 10404, 10405
+			10397,
+			10398,
+			10399,
+			10400,
+			10401,
+			10402,
+			10403,
+			10404,
+			10405
 		}
 	};
 	
@@ -67,7 +82,7 @@ public class Q690_JudesRequest extends Quest
 		{
 			if (st.getQuestItemsCount(EVIL_WEAPON) >= 200)
 			{
-				st.giveItems(REWARDS[0][Rnd.get(REWARDS[0].length)], 1);
+				st.giveItems(REWARDS[0][getRandom(REWARDS[0].length)], 1);
 				st.takeItems(EVIL_WEAPON, 200);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "32356-07.htm";
@@ -80,14 +95,14 @@ public class Q690_JudesRequest extends Quest
 		else if (event.equalsIgnoreCase("32356-08.htm"))
 		{
 			st.takeItems(EVIL_WEAPON, -1);
-			st.exitQuest(true);
 			st.playSound("ItemSound.quest_finish");
+			st.exitQuest(true);
 		}
 		else if (event.equalsIgnoreCase("32356-09.htm"))
 		{
 			if (st.getQuestItemsCount(EVIL_WEAPON) >= 5)
 			{
-				st.giveItems(REWARDS[1][Rnd.get(REWARDS[1].length)], 1);
+				st.giveItems(REWARDS[1][getRandom(REWARDS[1].length)], 1);
 				st.takeItems(EVIL_WEAPON, 5);
 				st.playSound("ItemSound.quest_middle");
 				htmltext = "32356-09.htm";
@@ -166,7 +181,7 @@ public class Q690_JudesRequest extends Quest
 		// Normalize
 		chance %= 1000;
 		
-		if (Rnd.get(1000) <= chance)
+		if (getRandom(1000) <= chance)
 		{
 			st.giveItems(EVIL_WEAPON, Math.max(chance / 1000, 1));
 			st.playSound("ItemSound.quest_itemget");

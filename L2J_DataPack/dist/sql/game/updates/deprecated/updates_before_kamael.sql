@@ -172,9 +172,10 @@ ALTER TABLE `characters` ADD COLUMN death_penalty_level int(2) NOT NULL DEFAULT 
 ALTER TABLE `characters` ADD nobless DECIMAL( 1, 0 ) DEFAULT '0' NOT NULL AFTER power_grade;
 
 -- update12092007.sql
-DROP TABLE IF EXISTS `zone_cuboid`;
-DROP TABLE IF EXISTS `zone_cylinder`;
-DROP TABLE IF EXISTS `zone_npoly`;
+DROP TABLE IF EXISTS
+`zone_cuboid`,
+`zone_cylinder`,
+`zone_npoly`;
 
 -- update17112007.sql
 ALTER TABLE `character_skills_save` ADD buff_index int(2) NOT NULL default 0;

@@ -68,7 +68,7 @@ class Quest (JQuest) :
    item=ORC_NECKLACE
    if npc.getNpcId() == 20385 :
      item = ORC_AMULET
-   if st.getRandom(10)>4 :
+   if self.getRandom(10)>4 :
      st.giveItems(item,1)
      st.playSound("ItemSound.quest_itemget")
    return

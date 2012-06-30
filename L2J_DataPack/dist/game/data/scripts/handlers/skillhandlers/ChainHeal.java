@@ -23,19 +23,16 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.ValueSortMap;
+
 /**
- * 
- * @author Nik
- * @author UnAfraid
- *
+ * @author Nik, UnAfraid
  */
 public class ChainHeal implements ISkillHandler
 {
@@ -44,10 +41,6 @@ public class ChainHeal implements ISkillHandler
 		L2SkillType.CHAIN_HEAL 
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -73,7 +66,7 @@ public class ChainHeal implements ISkillHandler
 			// Cursed weapon owner can't heal or be healed
 			if (character != activeChar)
 			{
-				if (character instanceof L2PcInstance && ((L2PcInstance) character).isCursedWeaponEquipped())
+				if (character.isPlayer() && character.getActingPlayer().isCursedWeaponEquipped())
 					continue;
 			}
 			
@@ -109,8 +102,8 @@ public class ChainHeal implements ISkillHandler
 	
 	private L2Character[] getTargetsToHeal(L2Character[] targets)
 	{
-		Map<L2Character, Double> tmpTargets = new FastMap<L2Character, Double>();
-		List<L2Character> sortedListToReturn = new FastList<L2Character>();
+		Map<L2Character, Double> tmpTargets = new FastMap<>();
+		List<L2Character> sortedListToReturn = new FastList<>();
 		int curTargets = 0;
 		
 		for (L2Character target : targets)
@@ -137,10 +130,6 @@ public class ChainHeal implements ISkillHandler
 		return sortedListToReturn.toArray(new L2Character[sortedListToReturn.size()]);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

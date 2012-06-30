@@ -49,7 +49,7 @@ class Quest (JQuest) :
            st.exitQuest(1)
    elif npcId == SARA and st.getInt("cond") :
        htmltext = "30180-01.htm"
-       EAD_CHANCE = st.getRandom(100)
+       EAD_CHANCE = self.getRandom(100)
        st.giveItems(57,5026)
        if EAD_CHANCE <= 50:
           st.rewardItems(956,1)

@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS `character_premium_items` (
   `itemCount` bigint(20) unsigned NOT NULL,
   `itemSender` varchar(50) NOT NULL,
   KEY `charId` (`charId`),
-  KEY `itemNum` (`itemNum`)
+  KEY `itemNum` (`itemNum`),
+  KEY `itemId` (`itemId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

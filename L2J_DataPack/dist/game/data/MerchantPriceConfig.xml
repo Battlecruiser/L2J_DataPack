@@ -8,7 +8,7 @@
 <!-- zoneId -> Attaches a given Town Zone to this priceConfig for convenience. -->
 <!-- Merchant NPCs that dont explicit define an priceConfig will check if they are inside of the zone of an priceConfig, if yes that priceConfig is used for that npc. Can be ommited, then no NPC will be added based on zone (ie priceConfig direct assigned to NPCs through config or when used as the default priceConfig). -->
 <!-- Merchant Price Formula price = baseItemPrice * (1 + baseTax/100 + castleTax/100) -->
-<merchantPriceConfig defaultPriceConfig="18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MerchantPriceConfig.xsd">
+<merchantPriceConfig defaultPriceConfig="18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/MerchantPriceConfig.xsd">
 	<priceConfig id="0" name="Giran Town" baseTax="10" castleId="3" zoneId="11020" />
 	<priceConfig id="1" name="DE Village" baseTax="15" castleId="4" zoneId="11021" />
 	<priceConfig id="2" name="Talking Island" baseTax="15" castleId="1" zoneId="11022" />

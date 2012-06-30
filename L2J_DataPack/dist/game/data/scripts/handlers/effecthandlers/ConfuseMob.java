@@ -21,19 +21,17 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.CharEffectList;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
 /**
+ * Implementation of the Confusion Effect
  * @author littlecrow
- * 
- *         Implementation of the Confusion Effect
  */
 public class ConfuseMob extends L2Effect
 {
@@ -42,20 +40,12 @@ public class ConfuseMob extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CONFUSE_MOB_ONLY;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -64,24 +54,16 @@ public class ConfuseMob extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		getEffected().stopConfused(this);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
+		List<L2Character> targetList = new FastList<>();
 		
 		// Getting the possible targets
 		
@@ -90,7 +72,7 @@ public class ConfuseMob extends L2Effect
 		{
 			for (L2Object obj : objs)
 			{
-				if ((obj instanceof L2Attackable) && (obj != getEffected()))
+				if (obj.isL2Attackable() && obj != getEffected())
 					targetList.add((L2Character) obj);
 			}
 		}
@@ -108,10 +90,7 @@ public class ConfuseMob extends L2Effect
 		
 		return true;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectFlags()
-	 */
+	
 	@Override
 	public int getEffectFlags()
 	{

@@ -70,7 +70,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    st.giveItems(SUPPLY_ITEM,1)  
-   if st.getRandom(10) == 1 :        # % chance is custom
+   if self.getRandom(10) == 1 :        # % chance is custom
      st.giveItems(SUSPICIOUS_DOCUMENT,1)
      if st.getQuestItemsCount(SUSPICIOUS_DOCUMENT) == 5 :
        st.takeItems(SUSPICIOUS_DOCUMENT,5)

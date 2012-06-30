@@ -15,18 +15,17 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.skills.AbnormalEffect;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
- *
  * @author ZaKaX - nBd
  */
 public class Hide extends L2Effect
@@ -41,26 +40,18 @@ public class Hide extends L2Effect
 		super(env, effect);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.HIDE;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = ((L2PcInstance) getEffected());
+			L2PcInstance activeChar = getEffected().getActingPlayer();
 			activeChar.getAppearance().setInvisible();
 			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
 			
@@ -81,7 +72,7 @@ public class Hide extends L2Effect
 						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					}
 					
-					if (target instanceof L2PcInstance)
+					if (target.isPlayer())
 						target.sendPacket(del);
 				}
 				catch (NullPointerException e)
@@ -92,26 +83,18 @@ public class Hide extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = ((L2PcInstance) getEffected());
+			L2PcInstance activeChar = getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
 				activeChar.getAppearance().setVisible();
 			activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

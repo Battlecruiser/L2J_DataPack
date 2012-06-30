@@ -19,33 +19,25 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
- * This class ...
- *
  * @version $Revision: 1.1.2.2.2.9 $ $Date: 2005/04/03 15:55:04 $
  */
-
 public class Continuous implements ISkillHandler
 {
-	//private static Logger _log = Logger.getLogger(Continuous.class.getName());
-	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BUFF,
@@ -64,18 +56,14 @@ public class Continuous implements ISkillHandler
 		L2SkillType.FUSION
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		boolean acted = true;
 		
 		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
-			player = (L2PcInstance) activeChar;
+		if (activeChar.isPlayer())
+			player = activeChar.getActingPlayer();
 		
 		if (skill.getEffectId() != 0)
 		{
@@ -92,6 +80,8 @@ public class Continuous implements ISkillHandler
 			boolean bss = false;
 			byte shld = 0;
 			
+			L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+			
 			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 				target = activeChar;
 			
@@ -100,9 +90,9 @@ public class Continuous implements ISkillHandler
 			{
 				if (target != activeChar)
 				{
-					if (target instanceof L2PcInstance)
+					if (target.isPlayer())
 					{
-						L2PcInstance trg = (L2PcInstance)target;
+						L2PcInstance trg = target.getActingPlayer();
 						if(trg.isCursedWeaponEquipped())
 							continue;
 						// Avoiding block checker players get buffed from outside
@@ -124,9 +114,14 @@ public class Continuous implements ISkillHandler
 					break;
 			}
 			
+			if (skill.getSkillType() == L2SkillType.BUFF)
+			{
+				
+				activeChar.spsChecker(skill);
+			}
+			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
-				L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 				if (weaponInst != null)
 				{
 					if (skill.isMagic())
@@ -151,7 +146,7 @@ public class Continuous implements ISkillHandler
 							weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 					}
 				}
-				else if (activeChar instanceof L2Summon)
+				else if (activeChar.isSummon())
 				{
 					L2Summon activeSummon = (L2Summon) activeChar;
 					if (skill.isMagic())
@@ -173,7 +168,7 @@ public class Continuous implements ISkillHandler
 						activeSummon.setChargedSoulShot(L2ItemInstance.CHARGED_NONE);
 					}
 				}
-				else if (activeChar instanceof L2Npc)
+				else if (activeChar.isNpc())
 				{
 					ss = ((L2Npc) activeChar)._soulshotcharged;
 					((L2Npc) activeChar)._soulshotcharged = false;
@@ -209,30 +204,30 @@ public class Continuous implements ISkillHandler
 				// if this is a debuff let the duel manager know about it
 				// so the debuff can be removed after the duel
 				// (player & target must be in the same duel)
-				if (target instanceof L2PcInstance && ((L2PcInstance) target).isInDuel() && (skill.getSkillType() == L2SkillType.DEBUFF || skill.getSkillType() == L2SkillType.BUFF) && player != null
-						&& player.getDuelId() == ((L2PcInstance) target).getDuelId())
+				if (target.isPlayer() && target.getActingPlayer().isInDuel() && (skill.getSkillType() == L2SkillType.DEBUFF || skill.getSkillType() == L2SkillType.BUFF) && player != null
+						&& player.getDuelId() == target.getActingPlayer().getDuelId())
 				{
 					DuelManager dm = DuelManager.getInstance();
 					for (L2Effect buff : skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss)))
 						if (buff != null)
-							dm.onBuff(((L2PcInstance) target), buff);
+							dm.onBuff(target.getActingPlayer(), buff);
 				}
 				else
 				{
 					L2Effect[] effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					L2Summon summon = target.getPet();
-					if (summon != null && summon != activeChar && summon instanceof L2SummonInstance && effects.length > 0)
+					if (summon != null && summon != activeChar && summon.isServitor() && effects.length > 0)
 					{
-						if (effects[0].canBeStolen())
+						if (effects[0].canBeStolen() || skill.isHeroSkill())
 							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
 					}
 				}
 				
 				if (skill.getSkillType() == L2SkillType.AGGDEBUFF)
 				{
-					if (target instanceof L2Attackable)
+					if (target.isL2Attackable())
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) skill.getPower());
-					else if (target instanceof L2Playable)
+					else if (target.isPlayable())
 					{
 						if (target.getTarget() == activeChar)
 							target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
@@ -263,10 +258,6 @@ public class Continuous implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

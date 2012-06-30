@@ -16,35 +16,36 @@ package quests.Q179_IntoTheLargeCavern;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- ** @author Gnacik
- **
- ** 2010-10-15 Based on official server Naia
+ * 2010-10-15 Based on official server Naia
+ * @author Gnacik
  */
-
 public class Q179_IntoTheLargeCavern extends Quest
 {
 	private static final String qn = "179_IntoTheLargeCavern";
+	
 	// NPC's
 	private static final int _kekropus = 32138;
 	private static final int _nornil = 32258;
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
-
+		}
+		
 		if (npc.getNpcId() == _kekropus)
 		{
-			if (event.equalsIgnoreCase("32138-03.htm"))
+			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -53,14 +54,14 @@ public class Q179_IntoTheLargeCavern extends Quest
 		}
 		else if (npc.getNpcId() == _nornil)
 		{
-			if (event.equalsIgnoreCase("32258-08.htm"))
+			if (event.equalsIgnoreCase("32258-08.html"))
 			{
 				st.giveItems(391, 1);
 				st.giveItems(413, 1);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
 			}
-			else if (event.equalsIgnoreCase("32258-09.htm"))
+			else if (event.equalsIgnoreCase("32258-09.html"))
 			{
 				st.giveItems(847, 2);
 				st.giveItems(890, 2);
@@ -71,58 +72,70 @@ public class Q179_IntoTheLargeCavern extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
-			return htmltext;
-
-		QuestState _prev = player.getQuestState("178_IconicTrinity");
-		if (_prev != null
-			&& _prev.isCompleted()
-			&& player.getLevel() >= 17
-			&& player.getRace().ordinal() == 5
-			&& player.getClassId().level() == 0)
 		{
-			if (npc.getNpcId() == _kekropus)
+			return htmltext;
+		}
+		
+		if (npc.getNpcId() == _kekropus)
+		{
+			switch (st.getState())
 			{
-				switch(st.getState())
-				{
-					case State.CREATED :
+				case State.CREATED:
+					if (player.getRace() != Race.Kamael)
+					{
+						htmltext = "32138-00b.html";
+					}
+					else
+					{
+						final QuestState prev = player.getQuestState("178_IconicTrinity");
+						final int level = player.getLevel();
+						if ((prev != null) && prev.isCompleted() && (level >= 17) && (level <= 21) && (player.getClassId().level() == 0))
+						{
 							htmltext = "32138-01.htm";
-						break;
-					case State.STARTED :
-						if (st.getInt("cond") == 1)
-							htmltext = "32138-03.htm";
-						break;
-					case State.COMPLETED :
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-				}
-			}
-			else if (npc.getNpcId() == _nornil && st.getState() == State.STARTED)
-			{
-				htmltext = "32258-01.htm";
+						}
+						else if (level < 17)
+						{
+							htmltext = "32138-00.html";
+						}
+						else
+						{
+							htmltext = "32138-00c.html";
+						}
+					}
+					break;
+				case State.STARTED:
+					if (st.getInt("cond") == 1)
+					{
+						htmltext = "32138-03.htm";
+					}
+					break;
+				case State.COMPLETED:
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
 			}
 		}
-		else
-			htmltext = "32138-00.htm";
-
+		else if ((npc.getNpcId() == _nornil) && (st.getState() == State.STARTED))
+		{
+			htmltext = "32258-01.html";
+		}
 		return htmltext;
 	}
-
+	
 	public Q179_IntoTheLargeCavern(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-
+		
 		addStartNpc(_kekropus);
-		addTalkId(_kekropus);
-		addTalkId(_nornil);
+		addTalkId(_kekropus, _nornil);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new Q179_IntoTheLargeCavern(179, qn, "Into The Large Cavern");

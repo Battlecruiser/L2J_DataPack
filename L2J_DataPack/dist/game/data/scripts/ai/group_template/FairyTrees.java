@@ -16,17 +16,26 @@ package ai.group_template;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
+/**
+ * @author Charus
+ */
 public class FairyTrees extends L2AttackableAIScript
 {
-	private static final int[] mobs = { 27185, 27186, 27187, 27188 };
+	private static final int[] mobs =
+	{
+		27185,
+		27186,
+		27187,
+		27188
+	};
 	
 	public FairyTrees(int questId, String name, String descr)
 	{
@@ -35,7 +44,8 @@ public class FairyTrees extends L2AttackableAIScript
 		addSpawnId(27189);
 	}
 	
-	public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
 		if (Util.contains(mobs, npcId))
@@ -47,15 +57,16 @@ public class FairyTrees extends L2AttackableAIScript
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalKiller, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
-				if (Rnd.get(1, 2) == 1)
+				if (Rnd.nextBoolean())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
-					if (skill != null && originalKiller != null)
+					if ((skill != null) && (originalKiller != null))
+					{
 						skill.getEffects(newNpc, originalKiller);
+					}
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

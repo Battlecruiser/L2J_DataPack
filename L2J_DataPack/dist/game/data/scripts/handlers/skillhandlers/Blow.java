@@ -20,20 +20,19 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.item.type.L2WeaponType;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2WeaponType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.stats.BaseStats;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.BaseStats;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
  * @author  Steuf
@@ -102,9 +101,9 @@ public class Blow implements ISkillHandler
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
 				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
-				if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+				if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
 				{
-					switch (((L2PcInstance) activeChar).getSouls())
+					switch (activeChar.getActingPlayer().getSouls())
 					{
 						case 0:
 							break;
@@ -134,7 +133,7 @@ public class Blow implements ISkillHandler
 					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 				
 				if (Config.LOG_GAME_DAMAGE
-						&& activeChar instanceof L2Playable
+						&& activeChar.isPlayable()
 						&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
 				{
 					LogRecord record = new LogRecord(Level.INFO, "");
@@ -148,13 +147,13 @@ public class Blow implements ISkillHandler
 				// vengeance reflected damage
 				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
 				{
-					if (target instanceof L2PcInstance)
+					if (target.isPlayer())
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.COUNTERED_C1_ATTACK);
 						sm.addCharName(activeChar);
 						target.sendPacket(sm);
 					}
-					if (activeChar instanceof L2PcInstance)
+					if (activeChar.isPlayer())
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_PERFORMING_COUNTERATTACK);
 						sm.addCharName(target);
@@ -172,9 +171,9 @@ public class Blow implements ISkillHandler
 					target.breakCast();
 				}
 
-				if(activeChar instanceof L2PcInstance)
+				if(activeChar.isPlayer())
 				{
-					L2PcInstance activePlayer = (L2PcInstance) activeChar;
+					L2PcInstance activePlayer = activeChar.getActingPlayer();
 					
 					activePlayer.sendDamageMessage(target, (int)damage, false, true, false);
 				}
@@ -183,17 +182,17 @@ public class Blow implements ISkillHandler
 			// Sending system messages
 			if (skillIsEvaded)
 			{
-				if (activeChar instanceof L2PcInstance)
+				if (activeChar.isPlayer())
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
 					sm.addString(target.getName());
-					((L2PcInstance) activeChar).sendPacket(sm);
+					activeChar.getActingPlayer().sendPacket(sm);
 				}
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
 					sm.addString(activeChar.getName());
-					((L2PcInstance) target).sendPacket(sm);
+					target.getActingPlayer().sendPacket(sm);
 				}
 			}
 			
@@ -210,8 +209,6 @@ public class Blow implements ISkillHandler
 			}
 		}
 	}
-
-	
 	
 	@Override
 	public L2SkillType[] getSkillIds()

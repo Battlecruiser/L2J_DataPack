@@ -28,10 +28,6 @@ public class DisMount implements IUserCommandHandler
 		62
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -46,10 +42,6 @@ public class DisMount implements IUserCommandHandler
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

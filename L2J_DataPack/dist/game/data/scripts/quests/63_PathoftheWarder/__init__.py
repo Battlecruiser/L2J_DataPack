@@ -135,10 +135,11 @@ class Quest (JQuest) :
             elif cond == 12 :
                 htmltext = "32198-15.htm"
                 st.takeItems(Soul_C,-1)
-                st.giveItems(Eval,1)
                 isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
-                if isFinished == "" : 
+                if isFinished == "" :
                   st.addExpAndSp(160267,2967)
+                  st.giveItems(57, 163800)
+                  st.giveItems(Eval,1)
                 st.playSound("ItemSound.quest_finish")
                 st.exitQuest(False)
                 st.saveGlobalQuestVar("1ClassQuestFinished","1")
@@ -190,7 +191,7 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Lizard :
-            if not st.getQuestItemsCount(Soul_C) and st.getRandom(10) < 2 and cond == 11 :
+            if not st.getQuestItemsCount(Soul_C) and self.getRandom(10) < 2 and cond == 11 :
                 npc = st.addSpawn(Tak,180000)
         elif npcId == Tak :
             if not st.getQuestItemsCount(Soul_C) and cond == 11 :

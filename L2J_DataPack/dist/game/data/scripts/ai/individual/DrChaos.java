@@ -33,7 +33,7 @@ public class DrChaos extends Quest
 	
 	private static final int DOCTER_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
-	private static final int CHAOS_GOLEM = 25512;
+	private static final int CHAOS_GOLEM = 25703;
 	private static boolean _IsGolemSpawned;
 	
 	public DrChaos(int questId, String name, String descr)

@@ -251,7 +251,7 @@ class Quest (JQuest) :
           soul_count=200
           heal_count=25
         while claw > 0:
-          n = st.getRandom(5)
+          n = self.getRandom(5)
           if n < 1 :
             st.rewardItems(ALACRITY_POTION,ala_count)
           elif n < 2 :
@@ -287,7 +287,7 @@ class Quest (JQuest) :
     elif event == "f_info":
       text = st.getInt("text")
       if text<4:
-        rnd=int(st.getRandom(20))
+        rnd=int(self.getRandom(20))
         st.set("text",str(text+1))
         text_rnd = html+redfoot+f_rnd_list[rnd]+back+htmlend
         return text_rnd
@@ -298,7 +298,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(ADENA_ID)>=OPEN_BOX_PRICE:
           st.takeItems(CARGO_BOX1,1)
           st.takeItems(ADENA_ID,650)
-          random = st.getRandom(162)
+          random = self.getRandom(162)
           standart = "All right, lets go ahead and open this box  Opening a padlock like this one is a piece of cake  Here we go!  There that was too easy.  Now, lets see whats in the box.<br>"
           statue = "Whats this?  A fragment of a stone statue?  Hmm it looks like a Statue of Shilen, the goddess  Isnt she the goddess of death?  For some reason, I dont have a good feeling about this.  But, if this was not a fragment but the complete statue, it could have fetched a large amount of money  There is someone who can put together a broken relic like this Hes Blacksmith Rupio.  If you collect all the fragments of the statue and take them to him, he will put them together to restore it and make it complete.<br>" 
           tablet = "A broken tablet fragment?  Hmm  It has some incomprehensible symbols on it.  Is this a relic from ancient times?  If it was not a fragment but a complete tablet, this might have been a very valuable historical object.  If you can find all the fragments of the tablet, you can get them to be restored to its complete form  If you are interested, go see <font color=\"LEVEL\">Rupio</font> the blacksmith. He is an expert of relic restoration.<br>"
@@ -342,7 +342,7 @@ class Quest (JQuest) :
             st.rewardItems(IMPERIAL_DIAMOND,1)
             return html+redfoot+standart+"Hmm?  Dont tell me!  I dont believe it!!!  Wow, an Imperial Diamond?  Isnt this the one that was used to decorate the crown of the king of Elmo-Aden?  Its truly beautiful!   You are extremely lucky!  You got yourself a priceless item.  If you take it to the market, Im sure you will be able to get a huge amount of money for it.<br>"+back+htmlend
           elif random < 147:
-            random_stat=st.getRandom(4)
+            random_stat=self.getRandom(4)
             if random_stat == 3 :
               st.giveItems(STATUE_SHILIEN_HEAD,1)
               return html+redfoot+standart+statue+back+htmlend
@@ -356,7 +356,7 @@ class Quest (JQuest) :
               st.giveItems(STATUE_SHILIEN_LEG,1)
               return html+redfoot+standart+statue+back+htmlend
           elif random < 162:
-            random_tab=st.getRandom(4)
+            random_tab=self.getRandom(4)
             if random_tab == 0 :
               st.giveItems(FRAGMENT_ANCIENT_TABLE1,1)
               return html+redfoot+standart+tablet+back+htmlend
@@ -393,7 +393,7 @@ class Quest (JQuest) :
       if count>3:
         for id in items:
           st.takeItems(id,1)
-        if st.getRandom(2)==1 :
+        if self.getRandom(2)==1 :
           st.giveItems(item,1)
           return complete
         else:
@@ -424,7 +424,7 @@ class Quest (JQuest) :
         st.giveItems(GUILD_COIN,1)
         st.giveItems(ADENA_ID,(1+count)*100)
         st.takeItems(CARGO_BOX1,1)
-        random = st.getRandom(3)
+        random = self.getRandom(3)
         if random == 0:
           return m_rnd_1
         elif random == 1:
@@ -559,8 +559,8 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     part,allowDrop,chancePartItem,chanceBox,partItem=DROPLIST[npcId]
-    random1 = st.getRandom(101)
-    random2 = st.getRandom(101)
+    random1 = self.getRandom(101)
+    random2 = self.getRandom(101)
     mobLevel = npc.getLevel()
     playerLevel = player.getLevel()
     if playerLevel - mobLevel > 8:

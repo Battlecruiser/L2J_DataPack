@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skills.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" levels="1" name="Dynasty Sigil">
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.05" />
 		</for>
@@ -12,12 +11,9 @@
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- Dex -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP +531 -->
@@ -26,17 +22,15 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
-		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
-			<sub order="0x10" stat="DEX" val="2" /> <!-- Dex -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
@@ -49,18 +43,15 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
@@ -68,18 +59,15 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
-		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
@@ -91,18 +79,15 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- Men -2 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
@@ -111,18 +96,15 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
-		<!-- Confirmed CT2.5 & Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- Men -2 -->
-			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
@@ -134,25 +116,24 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1200" />
@@ -162,16 +143,14 @@
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="800" />
@@ -180,8 +159,7 @@
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="magicDamVul" val="0.98" />
@@ -189,8 +167,7 @@
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="magicDamVul" val="0.98" />
@@ -200,8 +177,7 @@
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
 		<set name="magicLvl" val="80" />
 		<table name="#MpConsumeRate"> 0.96 0.92 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
@@ -209,152 +185,149 @@
 		</for>
 	</skill>
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16063" />
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="672" />
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16064" />
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16065" />
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="CANCEL" />
 		<set name="power" val="25" />
 		<set name="maxNegated" val="5" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="skillRadius" val="150" />
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="STEAL_BUFF" />
-		<set name="power" val="3" />
-		<set name="magicLvl" val="55" />
-		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="maxNegated" val="3" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="25" /> <!-- TODO: Implement me to work like Cancel (H5 Changes) -->
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="STEAL_BUFF" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="55" />
-		<set name="isMagic" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1500" />
@@ -364,22 +337,20 @@
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Damage received during PVP is decreased 75% using the power of the talisman. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 seconds, increases resistance to all attributes by 15 using the power of the talisman. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="mpConsume" val="50" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -393,17 +364,17 @@
 		</for>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="5000" />
+			<add order="0x40" stat="weightPenalty" val="5000" />
 		</for>
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
@@ -411,8 +382,7 @@
 		<table name="#hp"> 0.4 1 1.4 2 </table>
 		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="regHp" val="#hp" />
@@ -426,8 +396,7 @@
 		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
 		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="regHp" val="#hp" />
@@ -441,8 +410,7 @@
 		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
 		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="regMp" val="#mp" />
@@ -455,8 +423,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="regMp" val="#amount" />
@@ -469,8 +436,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
@@ -480,8 +446,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
@@ -492,8 +457,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
@@ -504,8 +468,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
@@ -515,8 +478,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
@@ -527,8 +489,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
@@ -537,8 +498,7 @@
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="stunProf" val="15" />
@@ -548,8 +508,7 @@
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rootProf" val="15" />
@@ -559,8 +518,7 @@
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="15" />
@@ -570,8 +528,7 @@
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="15" />
@@ -581,8 +538,7 @@
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="15" />
@@ -592,8 +548,7 @@
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="15" />
@@ -603,8 +558,7 @@
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="stunProf" val="15" />
@@ -614,8 +568,7 @@
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="15" />
@@ -625,8 +578,7 @@
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rootProf" val="15" />
@@ -642,7 +594,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1300" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="300" />
@@ -651,23 +603,25 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="vp_keep" abnormalVisualEffect="vitality">
@@ -679,146 +633,144 @@
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_RELEASE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<set name="staticReuse" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_ACCOMPANY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_SKILL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
-		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BEAST_RELEASE_ALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<set name="staticReuse" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
@@ -826,8 +778,7 @@
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
 		<table name="#waterRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
@@ -835,8 +786,7 @@
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
@@ -844,8 +794,7 @@
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
@@ -853,8 +802,7 @@
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
@@ -862,8 +810,7 @@
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
@@ -871,8 +818,7 @@
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
@@ -880,8 +826,7 @@
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
 		<table name="#windRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
@@ -889,8 +834,7 @@
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
@@ -898,8 +842,7 @@
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
 		<table name="#waterRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
@@ -907,8 +850,7 @@
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
@@ -916,8 +858,7 @@
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
 		<table name="#windRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
@@ -925,8 +866,7 @@
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
@@ -934,8 +874,7 @@
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
@@ -943,8 +882,7 @@
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
 		<table name="#waterRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
@@ -952,8 +890,7 @@
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
@@ -961,8 +898,7 @@
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
@@ -970,8 +906,7 @@
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
 		<table name="#windRes"> 26 30 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
@@ -980,12 +915,9 @@
 	<skill id="8397" levels="1" name="Moirai Armor Set">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
@@ -1000,12 +932,9 @@
 	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="DEX" val="2" /> <!-- DEX +2 -->
-			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
@@ -1020,12 +949,9 @@
 	<skill id="8399" levels="1" name="Moirai Robe Set">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
-			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
 			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->

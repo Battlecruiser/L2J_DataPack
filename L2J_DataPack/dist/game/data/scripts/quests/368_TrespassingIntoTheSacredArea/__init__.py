@@ -59,7 +59,7 @@ class Quest (JQuest) :
 
      chance = CHANCE + npc.getNpcId() - 20794
      numItems, chance = divmod(chance * Config.RATE_QUEST_DROP,100)
-     if st.getRandom(100) < chance :
+     if self.getRandom(100) < chance :
         numItems += 1
         if numItems :
            st.giveItems(BLADE_STAKATO_FANG,1)

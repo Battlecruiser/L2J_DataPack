@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Journey To Gracia (10267). Original jython script by Kerberos v1.0 on 2009/05/2
+ * Journey To Gracia (10267).<br>
+ * Original jython script by Kerberos v1.0 on 2009/05/2
  * @author nonom
  */
 public class Q10267_JourneyToGracia extends Quest
@@ -40,15 +41,13 @@ public class Q10267_JourneyToGracia extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
-		int npcId = npc.getNpcId();
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
+		final int npcId = npc.getNpcId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -64,38 +63,22 @@ public class Q10267_JourneyToGracia extends Quest
 			case State.CREATED:
 				if (npcId == ORVEN)
 				{
-					if (player.getLevel() < 75)
-					{
-						htmltext = "30857-00.htm";
-					}
-					else
-					{
-						htmltext = "30857-01.htm";
-					}
+					htmltext = (player.getLevel() < 75) ? "30857-00.htm" : "30857-01.htm";
 				}
 				break;
 			case State.STARTED:
+				final int cond = st.getInt("cond");
 				if (npcId == ORVEN)
 				{
 					htmltext = "30857-07.htm";
 				}
 				else if (npcId == PAPIKU)
 				{
-					if (Integer.valueOf(st.get("cond")) == 1)
-					{
-						htmltext = "32564-01.htm";
-					}
-					else
-					{
-						htmltext = "32564-03.htm";
-					}
+					htmltext = (cond == 1) ? "32564-01.htm" : "32564-03.htm";
 				}
-				else if (npcId == KEUCEREUS)
+				else if ((npcId == KEUCEREUS) && (cond == 2))
 				{
-					if (Integer.valueOf(st.get("cond")) == 2)
-					{
-						htmltext = "32548-01.htm";
-					}
+					htmltext = "32548-01.htm";
 				}
 				break;
 		}
@@ -105,12 +88,10 @@ public class Q10267_JourneyToGracia extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
@@ -126,13 +107,13 @@ public class Q10267_JourneyToGracia extends Quest
 				st.playSound("ItemSound.quest_middle");
 				break;
 			case "32548-02.htm":
-				st.giveItems(57, 92500);
+				st.giveAdena(92500, true);
 				st.addExpAndSp(75480, 7570);
-				st.exitQuest(false);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(false);
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	public Q10267_JourneyToGracia(int questId, String name, String descr)
@@ -141,9 +122,7 @@ public class Q10267_JourneyToGracia extends Quest
 		
 		addStartNpc(ORVEN);
 		
-		addTalkId(ORVEN);
-		addTalkId(KEUCEREUS);
-		addTalkId(PAPIKU);
+		addTalkId(ORVEN, KEUCEREUS, PAPIKU);
 		
 		questItemIds = new int[]
 		{

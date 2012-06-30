@@ -18,51 +18,47 @@ import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * This class provides handling for items that should display a map
- * when double clicked.
- * 
- * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:07 $
+ * This class provides handling for items that should display a map when double clicked.
  */
-
 public class Disguise implements IItemHandler
 {
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
-			return;
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		L2PcInstance activeChar = playable.getActingPlayer();
 		
 		int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(activeChar);
 		if (regId > 0 && regId == (item.getItemId() - 13596))
 		{
-			if (activeChar.getClan() != null && activeChar.getClan().getHasCastle() > 0)
+			if (activeChar.getClan() != null && activeChar.getClan().getCastleId() > 0)
 			{
 				activeChar.sendPacket(SystemMessageId.TERRITORY_OWNING_CLAN_CANNOT_USE_DISGUISE_SCROLL);
-				return;
+				return false;
 			}
 			TerritoryWarManager.getInstance().addDisguisedPlayer(activeChar.getObjectId());
 			activeChar.broadcastUserInfo();
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
+			return true;
 		}
 		else if (regId > 0)
 		{
 			activeChar.sendPacket(SystemMessageId.THE_DISGUISE_SCROLL_MEANT_FOR_DIFFERENT_TERRITORY);
-			return;
+			return false;
 		}
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.TERRITORY_WAR_SCROLL_CAN_NOT_USED_NOW);
-			return;
+			return false;
 		}
 	}
 }

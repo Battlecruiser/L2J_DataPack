@@ -71,7 +71,7 @@ class Quest (JQuest) :
 
 		if st.getInt("cond") == 1 and npc.getNpcId() in MOBS :
 			numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
-			if st.getRandom(100) < chance :
+			if self.getRandom(100) < chance :
 				numItems += 1
 			if numItems :
 				st.giveItems(GOLDEN_FEATHER,1)

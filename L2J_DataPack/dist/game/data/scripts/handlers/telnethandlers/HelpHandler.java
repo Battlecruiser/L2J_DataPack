@@ -63,6 +63,7 @@ public class HelpHandler implements ITelnetHandler
 			_print.println("The following is a list of all available debug commands: ");
 			_print.println("full                - Dumps complete debug information to an file (recommended)");
 			_print.println("decay               - prints info about the DecayManager");
+			_print.println("packetsend          - Send packet data to a player");
 			_print.println("PacketTP            - prints info about the General Packet ThreadPool");
 			_print.println("IOPacketTP          - prints info about the I/O Packet ThreadPool");
 			_print.println("GeneralTP           - prints info about the General ThreadPool");

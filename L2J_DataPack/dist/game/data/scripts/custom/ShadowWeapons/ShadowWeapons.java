@@ -20,8 +20,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @authors: DrLecter (python), Nyaran (java)
- * @version
+ * @author DrLecter (python), Nyaran (java)
  */
 public class ShadowWeapons extends Quest
 {

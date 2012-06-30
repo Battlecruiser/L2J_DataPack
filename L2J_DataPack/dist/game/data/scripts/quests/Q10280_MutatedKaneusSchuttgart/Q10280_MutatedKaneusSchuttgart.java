@@ -14,17 +14,18 @@
  */
 package quests.Q10280_MutatedKaneusSchuttgart;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
- * Mutated Kaneus - Schuttgart (10280). Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Schuttgart (10280).<br>
+ * Original Jython script by Gnacik on 2010-06-29
  * @author nonom
  */
 public class Q10280_MutatedKaneusSchuttgart extends Quest
@@ -45,8 +46,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -59,15 +59,11 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 				{
 					htmltext = "31981-06.htm";
 				}
-				else if (st.isCreated() && (player.getLevel() >= 58))
+				else if (st.isCreated())
 				{
-					htmltext = "31981-01.htm";
+					htmltext = (player.getLevel() >= 58) ? "31981-01.htm" : "31981-00.htm";
 				}
-				else if (st.isCreated() && (player.getLevel() < 58))
-				{
-					htmltext = "31981-00.htm";
-				}
-				else if ((st.getQuestItemsCount(TISSUE_VS) > 0) && (st.getQuestItemsCount(TISSUE_KB) > 0))
+				else if (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB))
 				{
 					htmltext = "31981-05.htm";
 				}
@@ -79,9 +75,9 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 			case ATRAXIA:
 				if (st.isCompleted())
 				{
-					htmltext = Quest.getAlreadyCompletedMsg(player);
+					htmltext = getAlreadyCompletedMsg(player);
 				}
-				else if ((st.getQuestItemsCount(TISSUE_VS) > 0) && (st.getQuestItemsCount(TISSUE_KB) > 0))
+				else if (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB))
 				{
 					htmltext = "31972-02.htm";
 				}
@@ -98,11 +94,10 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
@@ -114,8 +109,8 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 				break;
 			case "31972-03.htm":
 				st.rewardItems(57, 210000);
-				st.exitQuest(false);
 				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(false);
 				break;
 		}
 		return htmltext;
@@ -125,67 +120,59 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		QuestState st = killer.getQuestState(qn);
-		
 		if (st == null)
 		{
 			return null;
 		}
 		
+		final int npcId = npc.getNpcId();
 		if (killer.getParty() != null)
 		{
-			FastList<QuestState> PartyMembers = new FastList<>();
-			
-			for (L2PcInstance member : killer.getParty().getPartyMembers())
+			final List<QuestState> PartyMembers = new ArrayList<>();
+			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
 				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
 				{
-					if ((npc.getNpcId() == VENOMOUS_STORACE) && (st.getQuestItemsCount(TISSUE_VS) == 0))
+					if ((npcId == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS))
 					{
 						PartyMembers.add(st);
 					}
-					else if ((npc.getNpcId() == KEL_BILETTE) && (st.getQuestItemsCount(TISSUE_KB) == 0))
+					else if ((npcId == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))
 					{
 						PartyMembers.add(st);
 					}
 				}
 			}
 			
-			if (PartyMembers.isEmpty())
+			if (!PartyMembers.isEmpty())
 			{
-				return null;
+				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
-			
-			QuestState winnerst = PartyMembers.get(Rnd.get(PartyMembers.size()));
-			
-			if ((npc.getNpcId() == VENOMOUS_STORACE) && (winnerst.getQuestItemsCount(TISSUE_VS) == 0))
-			{
-				winnerst.giveItems(TISSUE_VS, 1);
-				winnerst.playSound("ItemSound.quest_itemget");
-			}
-			else if ((npc.getNpcId() == KEL_BILETTE) && (winnerst.getQuestItemsCount(TISSUE_KB) == 0))
-			{
-				winnerst.giveItems(TISSUE_KB, 1);
-				winnerst.playSound("ItemSound.quest_itemget");
-			}
-			
 		}
 		else
 		{
-			
-			if ((npc.getNpcId() == VENOMOUS_STORACE) && (st.getQuestItemsCount(TISSUE_VS) == 0))
-			{
-				st.giveItems(TISSUE_VS, 1);
-				st.playSound("ItemSound.quest_itemget");
-			}
-			else if ((npc.getNpcId() == KEL_BILETTE) && (st.getQuestItemsCount(TISSUE_KB) == 0))
-			{
-				st.giveItems(TISSUE_KB, 1);
-				st.playSound("ItemSound.quest_itemget");
-			}
+			rewardItem(npcId, st);
 		}
-		
 		return null;
+	}
+	
+	/**
+	 * @param npcId the killed monster Id.
+	 * @param st the quest state of the killer or party member.
+	 */
+	private final void rewardItem(int npcId, QuestState st)
+	{
+		if ((npcId == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS))
+		{
+			st.giveItems(TISSUE_VS, 1);
+			st.playSound("ItemSound.quest_itemget");
+		}
+		else if ((npcId == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))
+		{
+			st.giveItems(TISSUE_KB, 1);
+			st.playSound("ItemSound.quest_itemget");
+		}
 	}
 	
 	public Q10280_MutatedKaneusSchuttgart(int questId, String name, String descr)
@@ -193,15 +180,14 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(VISHOTSKY);
-		addTalkId(VISHOTSKY);
-		addTalkId(ATRAXIA);
+		addTalkId(VISHOTSKY, ATRAXIA);
 		
-		addKillId(VENOMOUS_STORACE);
-		addKillId(KEL_BILETTE);
+		addKillId(VENOMOUS_STORACE, KEL_BILETTE);
 		
 		questItemIds = new int[]
 		{
-			TISSUE_VS, TISSUE_KB
+			TISSUE_VS,
+			TISSUE_KB
 		};
 	}
 	

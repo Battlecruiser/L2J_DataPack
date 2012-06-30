@@ -13,6 +13,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers;
+
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
 import handlers.actionhandlers.L2DoorInstanceAction;
@@ -108,11 +109,11 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.DrawHenna;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FortSiege;
 import handlers.bypasshandlers.Freight;
+import handlers.bypasshandlers.Henna;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
@@ -128,7 +129,6 @@ import handlers.bypasshandlers.QuestList;
 import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RemoveDeathPenalty;
-import handlers.bypasshandlers.RemoveHennaList;
 import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.RideWyvern;
 import handlers.bypasshandlers.Rift;
@@ -157,6 +157,7 @@ import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
+import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
@@ -200,14 +201,12 @@ import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
 import handlers.skillhandlers.Disablers;
 import handlers.skillhandlers.Dummy;
-import handlers.skillhandlers.Extractable;
 import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveSp;
 import handlers.skillhandlers.GiveVitality;
-import handlers.skillhandlers.Harvest;
 import handlers.skillhandlers.Heal;
 import handlers.skillhandlers.HealPercent;
 import handlers.skillhandlers.InstantJump;
@@ -291,9 +290,9 @@ import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Hellbound;
 import handlers.voicedcommandhandlers.Lang;
+import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
-import handlers.voicedcommandhandlers.stats;
 
 import java.lang.reflect.Method;
 import java.util.logging.Level;
@@ -317,7 +316,7 @@ import com.l2jserver.gameserver.handler.VoicedCommandHandler;
  */
 public class MasterHandler
 {
-	private static Logger _log = Logger.getLogger(MasterHandler.class.getName());
+	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
 	private static final Class<?>[] _loadInstances =
 	{
@@ -336,7 +335,8 @@ public class MasterHandler
 	
 	private static final Class<?>[][] _handlers = 
 	{
-		{ // Action Handlers
+		{
+			// Action Handlers
 			L2ArtefactInstanceAction.class,
 			L2DecoyAction.class,
 			L2DoorInstanceAction.class,
@@ -348,7 +348,8 @@ public class MasterHandler
 			L2SummonAction.class,
 			L2TrapAction.class,
 		},
-		{ // Action Shift Handlers
+		{
+			// Action Shift Handlers
 			L2DoorInstanceActionShift.class,
 			L2ItemInstanceActionShift.class,
 			L2NpcActionShift.class,
@@ -356,7 +357,8 @@ public class MasterHandler
 			L2StaticObjectInstanceActionShift.class,
 			L2SummonActionShift.class,
 		},
-		{ // Admin Command Handlers
+		{
+			// Admin Command Handlers
 			AdminAdmin.class,
 			AdminAnnouncements.class,
 			AdminBan.class,
@@ -430,7 +432,8 @@ public class MasterHandler
 			AdminVitality.class,
 			AdminZone.class,
 		},
-		{ // Bypass Handlers
+		{
+			// Bypass Handlers
 			Augment.class,
 			ArenaBuff.class,
 			BloodAlliance.class,
@@ -438,11 +441,11 @@ public class MasterHandler
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			DrawHenna.class,
 			EventEngine.class,
 			Festival.class,
 			FortSiege.class,
 			Freight.class,
+			Henna.class,
 			ItemAuctionLink.class,
 			Link.class,
 			Loto.class,
@@ -458,7 +461,6 @@ public class MasterHandler
 			ReceivePremium.class,
 			ReleaseAttribute.class,
 			RemoveDeathPenalty.class,
-			RemoveHennaList.class,
 			RentPet.class,
 			RideWyvern.class,
 			Rift.class,
@@ -470,7 +472,8 @@ public class MasterHandler
 			VoiceCommand.class,
 			Wear.class,
 		},
-		{ // Chat Handlers
+		{
+			// Chat Handlers
 			ChatAll.class,
 			ChatAlliance.class,
 			ChatBattlefield.class,
@@ -485,13 +488,15 @@ public class MasterHandler
 			ChatTell.class,
 			ChatTrade.class,
 		},
-		{ // Item Handlers
+		{
+			// Item Handlers
 			ScrollOfResurrection.class,
 			SoulShots.class,
 			SpiritShot.class,
 			BlessedSpiritShot.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
+			Calculator.class,
 			PaganKeys.class,
 			Maps.class,
 			NicknameColor.class,
@@ -519,7 +524,8 @@ public class MasterHandler
 			EnergyStarStone.class,
 			EventItem.class,
 		},
-		{ // Skill Handlers
+		{
+			// Skill Handlers
 			Blow.class,
 			Pdam.class,
 			Mdam.class,
@@ -555,7 +561,6 @@ public class MasterHandler
 			DeluxeKey.class,
 			Sow.class,
 			Soul.class,
-			Harvest.class,
 			GetPlayer.class,
 			TransformDispel.class,
 			Trap.class,
@@ -564,11 +569,11 @@ public class MasterHandler
 			GiveVitality.class,
 			InstantJump.class,
 			Dummy.class,
-			Extractable.class,
 			RefuelAirShip.class,
 			NornilsPower.class,
 		},
-		{ // User Command Handlers
+		{
+			// User Command Handlers
 			ClanPenalty.class,
 			ClanWarsList.class,
 			DisMount.class,
@@ -584,8 +589,12 @@ public class MasterHandler
 			ChannelListUpdate.class,
 			Birthday.class,
 		},
-		{ // Voiced Command Handlers
-			stats.class,
+		{
+			// Voiced Command Handlers
+			StatsVCmd.class,
+			// TODO: Add configuration options for this voiced commands:
+			// CastleVCmd.class,
+			// SetVCmd.class,
 			(Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
 			(Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
 			(Config.TVT_ALLOW_VOICED_COMMAND ? TvTVoicedInfo.class : null),
@@ -595,7 +604,8 @@ public class MasterHandler
 			(Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null),
 			(Config.L2JMOD_HELLBOUND_STATUS ? Hellbound.class : null),
 		},
-		{ // Target Handlers
+		{
+			// Target Handlers
 			TargetAlly.class,
 			TargetArea.class,
 			TargetAreaCorpseMob.class,
@@ -629,7 +639,8 @@ public class MasterHandler
 			TargetSummon.class,
 			TargetUnlockable.class,
 		},
-		{ // Telnet Handlers
+		{
+			// Telnet Handlers
 			ChatsHandler.class,
 			DebugHandler.class,
 			HelpHandler.class,
@@ -688,7 +699,7 @@ public class MasterHandler
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
+					_log.log(Level.WARNING, "Failed loading handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 					continue;
 				}
 			}

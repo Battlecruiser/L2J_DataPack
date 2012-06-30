@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.taskmanager.AutoAnnounceTaskManager;
 import com.l2jserver.gameserver.taskmanager.AutoAnnounceTaskManager.AutoAnnouncement;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
 
@@ -211,19 +212,37 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
 				return false;
 			}
-			long initial = Long.parseLong(st.nextToken());
+			String token = st.nextToken();
+			if (!Util.isDigit(token))
+			{
+				activeChar.sendMessage("Not a valid initial value!");
+				return false;
+			}
+			long initial = Long.parseLong(token);
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
 				return false;
 			}
-			long delay = Long.parseLong(st.nextToken());
+			token = st.nextToken();
+			if (!Util.isDigit(token))
+			{
+				activeChar.sendMessage("Not a valid delay value!");
+				return false;
+			}
+			long delay = Long.parseLong(token);
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
 				return false;
 			}
-			int repeat = Integer.parseInt(st.nextToken());
+			token = st.nextToken();
+			if (!token.equals("-1") && !Util.isDigit(token))
+			{
+				activeChar.sendMessage("Not a valid repeat value!");
+				return false;
+			}
+			int repeat = Integer.parseInt(token);
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
@@ -256,8 +275,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				activeChar.sendMessage("Not enough parameters for deleting autoannounce!");
 				return false;
 			}
-			
-			AutoAnnounceTaskManager.getInstance().deleteAutoAnnounce(Integer.parseInt(st.nextToken()));
+			String token = st.nextToken();
+			if (!Util.isDigit(token))
+			{
+				activeChar.sendMessage("Not a valid auto announce Id value!");
+				return false;
+			}
+			AutoAnnounceTaskManager.getInstance().deleteAutoAnnounce(Integer.parseInt(token));
 			listAutoAnnouncements(activeChar);
 		}
 		return true;

@@ -37,7 +37,7 @@ public class SinWardens extends L2AttackableAIScript
 		22424, 22425, 22426, 22427, 22428, 22429, 22430, 22432, 22433, 22434, 22435, 22436, 22437, 22438
 	};
 	
-	private final Map<Integer, Integer> killedMinionsCount = new FastMap<Integer, Integer>();
+	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)

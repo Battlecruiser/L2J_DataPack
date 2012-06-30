@@ -14,12 +14,12 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.RecipeController;
+import com.l2jserver.gameserver.datatables.RecipeData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -29,61 +29,59 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class Recipes implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!playable.isPlayer())
 		{
-			return;
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		
 		if (activeChar.isInCraftMode())
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_ALTER_RECIPEBOOK_WHILE_CRAFTING);
-			return;
+			return false;
 		}
 		
-		final L2RecipeList rp = RecipeController.getInstance().getRecipeByItemId(item.getItemId());
+		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
 		if (rp == null)
 		{
-			return;
+			return false;
 		}
 		
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.RECIPE_ALREADY_REGISTERED);
-			return;
+			return false;
 		}
 		
 		boolean canCraft = false;
 		boolean recipeLevel = false;
 		boolean recipeLimit = false;
-		if (rp.isDwarvenRecipe() && (canCraft = activeChar.hasDwarvenCraft()))
+		if (rp.isDwarvenRecipe())
 		{
-			if (recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft()))
-			{
-				recipeLimit = activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit();
-			}
+			canCraft = activeChar.hasDwarvenCraft();
+			recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft());
+			recipeLimit = (activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit());
 		}
-		else if (canCraft = activeChar.hasCommonCraft())
+		else
 		{
-			if (recipeLevel = (rp.getLevel() > activeChar.getCommonCraft()))
-			{
-				recipeLimit = activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit();
-			}
+			canCraft = activeChar.hasCommonCraft();
+			recipeLevel = (rp.getLevel() > activeChar.getCommonCraft());
+			recipeLimit = (activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit());
 		}
 		
 		if (!canCraft)
 		{
 			activeChar.sendPacket(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-			return;
+			return false;
 		}
 		
 		if (recipeLevel)
 		{
 			activeChar.sendPacket(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-			return;
+			return false;
 		}
 		
 		if (recipeLimit)
@@ -91,7 +89,7 @@ public class Recipes implements IItemHandler
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
 			sm.addNumber(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
 			activeChar.sendPacket(sm);
-			return;
+			return false;
 		}
 		
 		if (rp.isDwarvenRecipe())
@@ -107,5 +105,6 @@ public class Recipes implements IItemHandler
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADDED);
 		sm.addItemName(item);
 		activeChar.sendPacket(sm);
+		return true;
 	}
 }

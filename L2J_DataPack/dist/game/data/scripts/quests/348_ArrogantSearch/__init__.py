@@ -262,7 +262,7 @@ class Quest (JQuest) :
             htmltext = "30864-08.htm" #you want more of this?
             st.giveItems(ANIMAL_BONE,2)
             st.giveItems(SYNTHETIC_COKES,2)
-            lowbgrade = st.getRandom(10)+4103 #Low B grade weapon key materials
+            lowbgrade = self.getRandom(10)+4103 #Low B grade weapon key materials
             st.giveItems(lowbgrade,1)
             st.set("reward1","1")
         elif cond == 26 and st.getQuestItemsCount(WHITE_FABRIC_1)>0 :
@@ -280,7 +280,7 @@ class Quest (JQuest) :
         elif cond == 27 :
             htmltext = "30864-10.htm" # good money
             st.giveItems(ANIMAL_BONE,5)
-            highbgrade = st.getRandom(8)+4113
+            highbgrade = self.getRandom(8)+4113
             st.giveItems(highbgrade,1)
             st.set("cond","28")
         elif cond == 28:
@@ -354,7 +354,7 @@ class Quest (JQuest) :
      if npcId in ATTACK_DROPS_24.keys() :
          cond = ATTACK_DROPS_24[npcId][0]
          chance =  ATTACK_DROPS_24[npcId][3]
-         if st.getInt("cond") == cond and st.getRandom(1000) < ATTACK_DROPS_24[npcId][3] and st.getQuestItemsCount(ATTACK_DROPS_24[npcId][4]) > 0 :  # Attack drops are low chance
+         if st.getInt("cond") == cond and self.getRandom(1000) < ATTACK_DROPS_24[npcId][3] and st.getQuestItemsCount(ATTACK_DROPS_24[npcId][4]) > 0 :  # Attack drops are low chance
              st.giveItems(ATTACK_DROPS_24[npcId][1],ATTACK_DROPS_24[npcId][2])
              st.playSound("ItemSound.quest_itemget")
              st.takeItems(ATTACK_DROPS_24[npcId][4],1)
@@ -364,7 +364,7 @@ class Quest (JQuest) :
      elif npcId in ATTACK_DROPS_25.keys() :
          cond = ATTACK_DROPS_25[npcId][0]
          chance =  ATTACK_DROPS_25[npcId][3]
-         if st.getInt("cond") == cond and st.getRandom(1000) < ATTACK_DROPS_25[npcId][3] and st.getQuestItemsCount(ATTACK_DROPS_25[npcId][4]) > 0 :  # Attack drops are low chance
+         if st.getInt("cond") == cond and self.getRandom(1000) < ATTACK_DROPS_25[npcId][3] and st.getQuestItemsCount(ATTACK_DROPS_25[npcId][4]) > 0 :  # Attack drops are low chance
              st.giveItems(ATTACK_DROPS_25[npcId][1],ATTACK_DROPS_25[npcId][2])
              st.playSound("ItemSound.quest_itemget")
              st.takeItems(ATTACK_DROPS_25[npcId][4],1)
@@ -381,7 +381,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      if npcId in DROPS.keys() :
          cond = DROPS[npcId][0]
-         if st.getInt("cond") == cond and st.getQuestItemsCount(DROPS[npcId][1]) < DROPS[npcId][2] and st.getRandom(100) < DROPS[npcId][3] and (DROPS[npcId][4] == 0 or st.getQuestItemsCount(DROPS[npcId][4])>0) :
+         if st.getInt("cond") == cond and st.getQuestItemsCount(DROPS[npcId][1]) < DROPS[npcId][2] and self.getRandom(100) < DROPS[npcId][3] and (DROPS[npcId][4] == 0 or st.getQuestItemsCount(DROPS[npcId][4])>0) :
              st.giveItems(DROPS[npcId][1],1)
              st.playSound("ItemSound.quest_itemget")
              if DROPS[npcId][4] != 0:
@@ -393,7 +393,7 @@ class Quest (JQuest) :
                  st.exitQuest(1)
      if npcId in DROPS_29.keys() :
          cond = DROPS_29[npcId][0]
-         if st.getInt("cond") == cond and st.getQuestItemsCount(DROPS_29[npcId][1]) < DROPS[npcId][2] and st.getRandom(100) < DROPS[npcId][3] and (DROPS[npcId][4] == 0 or st.getQuestItemsCount(DROPS[npcId][4])>0) :
+         if st.getInt("cond") == cond and st.getQuestItemsCount(DROPS_29[npcId][1]) < DROPS[npcId][2] and self.getRandom(100) < DROPS[npcId][3] and (DROPS[npcId][4] == 0 or st.getQuestItemsCount(DROPS[npcId][4])>0) :
              st.giveItems(DROPS_29[npcId][1],1)
              st.playSound("ItemSound.quest_itemget")
              if DROPS_29[npcId][4] != 0:

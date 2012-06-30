@@ -185,15 +185,16 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					}
 				}
 				cw = cwm.getCursedWeapon(id);
-				if (cw == null)
-				{
-					activeChar.sendMessage("Unknown cursed weapon ID.");
-					return false;
-				}
 			}
 			catch (Exception e)
 			{
 				activeChar.sendMessage("Usage: //cw_remove|//cw_goto|//cw_add <itemid|name>");
+			}
+			
+			if (cw == null)
+			{
+				activeChar.sendMessage("Unknown cursed weapon ID.");
+				return false;
 			}
 			
 			if (command.startsWith("admin_cw_remove "))
@@ -206,12 +207,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			else if (command.startsWith("admin_cw_add"))
 			{
-				if (cw == null)
-				{
-					activeChar.sendMessage("Usage: //cw_add <itemid|name>");
-					return false;
-				}
-				else if (cw.isActive())
+				if (cw.isActive())
 					activeChar.sendMessage("This cursed weapon is already active.");
 				else
 				{
@@ -222,7 +218,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						activeChar.addItem("AdminCursedWeaponAdd", id, 1, activeChar, true);
 					cw.setEndTime(System.currentTimeMillis() + cw.getDuration() * 60000L);
 					cw.reActivate();
-					
 				}
 			}
 			else

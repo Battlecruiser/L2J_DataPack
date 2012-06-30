@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skills.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="mReuse" val="0.85" />
@@ -24,16 +23,15 @@
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="pReuse" val="0.85" />
@@ -44,16 +42,15 @@
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
-		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="mReuse" val="0.85" />
@@ -62,11 +59,11 @@
 		</for>
 	</skill>
 	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="10" />
 		<set name="magicLvl" val="1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="ETC" />
@@ -86,8 +83,8 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<add order="0x40" stat="reflectDam" val="#reflectDam" />
@@ -107,17 +104,16 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="skillType" val="RECALL" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3206" levels="10" name="Item Skill: Music">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
 		<set name="reuseDelay" val="12000" />
-		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
 		<!-- Confirmed CT2.5 -->
@@ -126,8 +122,7 @@
 		<set name="activationChance" val="2" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5146" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -139,8 +134,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5147" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -152,8 +146,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5148" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -165,8 +158,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5149" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -178,8 +170,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5150" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -191,8 +182,7 @@
 		<set name="activationChance" val="2" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5151" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -204,8 +194,7 @@
 		<set name="activationChance" val="2" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5152" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -217,8 +206,7 @@
 		<set name="activationChance" val="2" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5153" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -230,8 +218,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5154" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -243,8 +230,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5156" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -255,8 +241,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5157" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -268,8 +253,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5158" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -281,8 +265,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5159" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -294,8 +277,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5160" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -307,8 +289,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5161" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -320,8 +301,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5162" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -333,8 +313,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5163" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -346,8 +325,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5164" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -359,8 +337,7 @@
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5165" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -372,8 +349,7 @@
 		<set name="activationChance" val="2" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5166" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -385,8 +361,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5167" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -398,8 +373,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5168" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -411,8 +385,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5169" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -424,8 +397,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5170" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -437,8 +409,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5171" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -450,8 +421,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5172" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -463,8 +433,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5173" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -476,8 +445,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5174" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -489,8 +457,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5175" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -502,8 +469,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5176" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -515,8 +481,7 @@
 		<set name="activationChance" val="4" />
 		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5177" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -525,8 +490,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.01" />
@@ -536,8 +500,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainMp" val="1.01" />
@@ -548,8 +511,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#pAtk"> 10.26 11.22 11.94 12.94 13.55 14.44 14.85 15.92 16.68 17.84 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
@@ -559,8 +521,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="55" />
@@ -570,8 +531,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -583,8 +543,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#pDef"> 12.78 13.73 14.14 15.13 16.46 17.43 17.69 18.63 19.77 20.3 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef" />
@@ -595,8 +554,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mDef"> 10.8 11.62 11.96 12.66 13.01 13.08 14 14.99 15.88 16.32 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mDef" />
@@ -607,8 +565,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#bonusHp"> 10 11 12 13 14 16 17 18 19 20 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusHp" val="#bonusHp" />
@@ -618,8 +575,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2" />
@@ -629,8 +585,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="2" />
@@ -640,8 +595,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="0.2" />
@@ -651,8 +605,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="mCritRate" val="0.04" />
@@ -662,19 +615,17 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="maxLoad" val="2" />
+			<mul order="0x30" stat="weightLimit" val="2" />
 		</for>
 	</skill>
 	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="breath" val="6" />
@@ -684,8 +635,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="fall" val="100" />
@@ -695,8 +645,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="damageZoneVuln" val="40" />
@@ -707,8 +656,7 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#PhysicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
@@ -719,8 +667,7 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
@@ -731,8 +678,7 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#DanceMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
@@ -744,8 +690,7 @@
 		<table name="#PhysicalMpConsumeRate"> 0.9 0.85 0.8 </table>
 		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
@@ -758,8 +703,7 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="reflectDam" val="#reflectDam" />
@@ -767,19 +711,18 @@
 	</skill>
 	<skill id="3260" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
 		<set name="staticDamage" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -787,35 +730,32 @@
 	</skill>
 	<skill id="3261" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="staticReuse" val="true" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="3262" levels="1" name="Pardon">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="40000" />
 		<set name="skillType" val="PDAM" />
 		<set name="staticDamage" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
@@ -831,9 +771,8 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="equipDelay" val="30000" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
@@ -844,14 +783,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="RECALL" />
-		<set name="equipDelay" val="30000" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
 	</skill>
 	<skill id="3265" levels="1" name="Mysterious Ability">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="target" val="TARGET_SELF" />
@@ -862,62 +801,58 @@
 	</skill>
 	<skill id="3266" levels="1" name="Large Fireworks Ability">
 		<!-- Allows the use of Large Fireworks. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="19" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="300000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3267" levels="1" name="Dismiss Agathion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="0" />
 	</skill>
 	<skill id="3268" levels="1" name="Summon Agathion - Castle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16028" />
 	</skill>
 	<skill id="3269" levels="1" name="Summon Agathion - Rainbow Clan Hall">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16027" />
 	</skill>
 	<skill id="3270" levels="1" name="Summon Agathion - Beast Farm">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="npcId" val="16026" />
 	</skill>
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9914" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -927,18 +862,16 @@
 	</skill>
 	<skill id="3272" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9926" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -948,19 +881,16 @@
 	</skill>
 	<skill id="3273" levels="1" name="Red Talisman of Recovery">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="1200" />
 		<set name="isStaticHeal" val="true" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="referenceId" val="9925" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="HEAL" />
-		<set name="staticReuse" val="true" />
-		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="200" />
@@ -969,18 +899,16 @@
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9921" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -990,18 +918,16 @@
 	</skill>
 	<skill id="3275" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9929" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1011,18 +937,16 @@
 	</skill>
 	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9927" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1032,18 +956,16 @@
 	</skill>
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9915" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1053,18 +975,16 @@
 	</skill>
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9928" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1074,19 +994,17 @@
 	</skill>
 	<skill id="3279" levels="1" name="Red Talisman of Meditation">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9931" />
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1098,18 +1016,16 @@
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9920" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="SilentMove" abnormalTime="120" abnormalVisualEffect="stealth" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1119,18 +1035,16 @@
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9917" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1142,18 +1056,16 @@
 	</skill>
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="referenceId" val="9918" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1165,18 +1077,16 @@
 	</skill>
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9924" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1186,18 +1096,16 @@
 	</skill>
 	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9932" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1208,18 +1116,16 @@
 	</skill>
 	<skill id="3285" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="referenceId" val="9916" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -1235,115 +1141,114 @@
 		</for>
 	</skill>
 	<skill id="3286" levels="1" name="Black Talisman - Mending">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="bleeding,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9922" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="root_physically,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9957" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="root_magically,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9956" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3289" levels="1" name="Black Talisman - Escape">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9923" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3290" levels="1" name="Black Talisman of Rescue">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="silence_physical,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9958" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="silence,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9955" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="silence_all,9" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="referenceId" val="9959" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3293" levels="1" name="Yellow Talisman of Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="20.8" />
@@ -1352,8 +1257,7 @@
 	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="24.3" />
@@ -1362,8 +1266,7 @@
 	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="32.8" />
@@ -1372,8 +1275,7 @@
 	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mDef" val="26.4" />
@@ -1382,8 +1284,7 @@
 	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="2" />
@@ -1392,8 +1293,7 @@
 	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2" />
@@ -1402,8 +1302,7 @@
 	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="30" />

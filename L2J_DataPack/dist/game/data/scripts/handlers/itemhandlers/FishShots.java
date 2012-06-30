@@ -14,71 +14,72 @@
  */
 package handlers.itemhandlers;
 
+import java.util.logging.Level;
+
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.L2Item;
-import com.l2jserver.gameserver.model.item.L2Weapon;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.item.type.L2WeaponType;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.L2ActionType;
+import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * @author -Nemesiss-
- *
  */
 public class FishShots implements IItemHandler
 {
-	private static final int[] SKILL_IDS =
-	{
-		2181, 2182, 2183, 2184, 2185, 2186
-	};
-	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.item.instance.L2ItemInstance, boolean)
-	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		if (!(playable instanceof L2PcInstance))
-			return;
+		if (!playable.isPlayer())
+		{
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			return false;
+		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final L2PcInstance activeChar = playable.getActingPlayer();
+		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
 		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.FISHINGROD)
-			return;
+			return false;
 		
-		if (weaponInst.getChargedFishshot())
-			// spirit shot is already active
-			return;
+		if (weaponInst.getChargedFishshot()) // spirit shot is already active
+			return false;
 		
-		int FishshotId = item.getItemId();
-		int grade = weaponItem.getCrystalType();
-		long count = item.getCount();
+		final long count = item.getCount();
+		final SkillHolder[] skills = item.getItem().getSkills();
 		
-		if ((grade == L2Item.CRYSTAL_NONE && FishshotId != 6535) || (grade == L2Item.CRYSTAL_D && FishshotId != 6536) || (grade == L2Item.CRYSTAL_C && FishshotId != 6537) || (grade == L2Item.CRYSTAL_B && FishshotId != 6538)
-				|| (grade == L2Item.CRYSTAL_A && FishshotId != 6539) || (FishshotId != 6540 && grade == L2Item.CRYSTAL_S ))
+		if (skills == null)
 		{
-			//1479 - This fishing shot is not fit for the fishing pole crystal.
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
+		
+		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.fishingshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		
+		if (!gradeCheck)
+		{
 			activeChar.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
-			return;
+			return false;
 		}
 		
 		if (count < 1)
-			return;
+			return false;
 		
 		weaponInst.setChargedFishshot(true);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
-		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0));
+		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0));
 		activeChar.setTarget(oldTarget);
+		return true;
 	}
 }

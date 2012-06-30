@@ -52,9 +52,9 @@ class Quest (JQuest) :
        htmltext = "31539-07.htm"
        st.takeItems(TORCH,1000)
        if ALT_RP100 == 1:
-         st.giveItems(REWARDS2[st.getRandom(len(REWARDS2))],1)
+         st.giveItems(REWARDS2[self.getRandom(len(REWARDS2))],1)
        else:
-         st.giveItems(REWARDS[st.getRandom(len(REWARDS))],1)
+         st.giveItems(REWARDS[self.getRandom(len(REWARDS))],1)
      elif event == "31539-08.htm" :
        st.takeItems(TORCH,-1)
        st.exitQuest(1)
@@ -112,7 +112,7 @@ class Quest (JQuest) :
      if not st : return
      torches = st.getQuestItemsCount(TORCH)
      chance = DROPLIST[npc.getNpcId()]
-     drop = st.getRandom(100)
+     drop = self.getRandom(100)
      qty,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
      if drop < chance : qty += 1
      qty = int(qty)

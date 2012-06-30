@@ -43,7 +43,6 @@ import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -53,15 +52,15 @@ import com.l2jserver.gameserver.model.actor.L2Trap;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * TODO:
@@ -77,7 +76,7 @@ public class Stage1 extends Quest
 {
 	private class SOD1World extends InstanceWorld
 	{
-		public           Map<L2Npc,Boolean> npcList                      = new FastMap<L2Npc,Boolean>();
+		public           Map<L2Npc,Boolean> npcList                      = new FastMap<>();
 		public           int                deviceSpawnedMobCount        = 0;
 		public           Lock               lock                         = new ReentrantLock();
 
@@ -86,7 +85,7 @@ public class Stage1 extends Quest
 		}
 	}
 	
-	private static class SODSpawn
+	protected static class SODSpawn
 	{
 		public boolean isZone = false;
 		public boolean isNeededNextFlag = false;
@@ -105,9 +104,9 @@ public class Stage1 extends Quest
 	private static final int MAX_PLAYERS = 45;
 	private static final int MAX_DEVICESPAWNEDMOBCOUNT = 100; // prevent too much mob spawn
 	
-	private TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<L2Territory>();
-	private TIntObjectHashMap<List<SODSpawn>> _spawnList = new TIntObjectHashMap<List<SODSpawn>>();
-	private List<Integer> _mustKillMobsId = new FastList<Integer>();
+	private TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<>();
+	private TIntObjectHashMap<List<SODSpawn>> _spawnList = new TIntObjectHashMap<>();
+	private List<Integer> _mustKillMobsId = new FastList<>();
 
 	// teleports
 	private static final int[] ENTER_TELEPORT_1 = {-242759,219981,-9986};
@@ -370,7 +369,7 @@ public class Stage1 extends Quest
 			player.sendPacket(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER);
 			return false;
 		}
-		else if (channel.getChannelLeader() != player)
+		else if (channel.getLeader() != player)
 		{
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
@@ -386,14 +385,14 @@ public class Stage1 extends Quest
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
@@ -401,7 +400,7 @@ public class Stage1 extends Quest
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 				sm.addPcName(partyMember);
-				party.broadcastToPartyMembers(sm);
+				party.broadcastPacket(sm);
 				return false;
 			}
 		}
@@ -485,7 +484,7 @@ public class Stage1 extends Quest
 							if (_spawnZoneList.contains(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
-								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],null), Rnd.get(65535), spw.isNeededNextFlag);
+								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],null), getRandom(65535), spw.isNeededNextFlag);
 							}
 							else
 								_log.info("[Seed of Destruction] Missing zone: " + spw.zone);
@@ -645,7 +644,7 @@ public class Stage1 extends Quest
 	public String onSpawn (L2Npc npc) 
 	{
 		if (npc.getNpcId() == TIAT_GUARD)
-			startQuestTimer("GuardThink", 2500 + Rnd.get(-200, 200), npc, null, true);
+			startQuestTimer("GuardThink", 2500 + getRandom(-200, 200), npc, null, true);
 		else
 			npc.disableCoreAI(true);
 		return super.onSpawn(npc); 
@@ -719,12 +718,12 @@ public class Stage1 extends Quest
 			SOD1World world = (SOD1World) tmpworld;
 			if (event.equalsIgnoreCase("Spawn"))
 			{
-				L2PcInstance target = L2World.getInstance().getPlayer(world.allowed.get(Rnd.get(world.allowed.size())));
+				L2PcInstance target = L2World.getInstance().getPlayer(world.allowed.get(getRandom(world.allowed.size())));
 				if (world.deviceSpawnedMobCount < MAX_DEVICESPAWNEDMOBCOUNT
 						&& target != null && target.getInstanceId() == npc.getInstanceId()
 						&& !target.isDead())
 				{
-					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.instanceId);
+					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.instanceId);
 					world.deviceSpawnedMobCount++;
 					mob.setSeeThroughSilentMove(true);
 					mob.setRunning();

@@ -89,7 +89,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return
 
    count=st.getQuestItemsCount(GOLEM_SHARD_ID)
-   if st.getInt("cond")==2 and st.getRandom(100) < 30 and count < 5 :
+   if st.getInt("cond")==2 and self.getRandom(100) < 30 and count < 5 :
       st.giveItems(GOLEM_SHARD_ID,1)
       if count == 4 :
          st.playSound("ItemSound.quest_middle")

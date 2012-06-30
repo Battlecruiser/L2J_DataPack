@@ -19,13 +19,13 @@ import java.util.logging.Level;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -38,7 +38,7 @@ public class SummonFriend implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 		{
 			return;
 		}
@@ -58,14 +58,14 @@ public class SummonFriend implements ISkillHandler
 					continue;
 				}
 				
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					if (isMastersCall) //Master's Call
 					{
 						final L2Party party = target.getParty();
 						if (party != null)
 						{
-							for (L2PcInstance partyMember : party.getPartyMembers())
+							for (L2PcInstance partyMember : party.getMembers())
 							{
 								if (target != partyMember)
 								{

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 /**
  * Event Code for "Master of Enchanting"<br>
@@ -236,7 +235,7 @@ public class MasterOfEnchanting extends Quest
 						st.giveItems(6407, 2); // Large Firework
 						break;
 					case 7:
-						st.giveItems(_hat_shadow_reward[Rnd.get(3)], 1);
+						st.giveItems(_hat_shadow_reward[getRandom(3)], 1);
 						break;
 					case 8:
 						st.giveItems(955, 1); // Scroll: Enchant Weapon (D)
@@ -259,7 +258,7 @@ public class MasterOfEnchanting extends Quest
 						st.giveItems(729, 1); // Scroll: Enchant Weapon (A)
 						break;
 					case 14:
-						st.giveItems(_hat_event_reward[Rnd.get(3)], 1);
+						st.giveItems(_hat_event_reward[getRandom(3)], 1);
 						break;
 					case 15:
 						st.giveItems(13992, 1); // Grade S Accessory Chest (Event)
@@ -277,12 +276,12 @@ public class MasterOfEnchanting extends Quest
 						st.giveItems(13990, 1); // Grade S Weapon Chest (Event)
 						break;
 					case 20:
-						st.giveItems(_crystal_reward[Rnd.get(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+						st.giveItems(_crystal_reward[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
 					case 21:
 						st.giveItems(8762, 1); // Top-Grade Life Stone: level 76
 						st.giveItems(8752, 1); // High-Grade Life Stone: level 76
-						st.giveItems(_crystal_reward[Rnd.get(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+						st.giveItems(_crystal_reward[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
 					case 22:
 						st.giveItems(13989, 1); // S80 Grade Armor Chest (Event)

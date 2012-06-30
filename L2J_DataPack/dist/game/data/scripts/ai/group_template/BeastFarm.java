@@ -23,19 +23,18 @@ import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.skills.SkillHolder;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Growth-capable mobs: Polymorphing upon successful feeding.
@@ -56,7 +55,7 @@ public class BeastFarm extends L2AttackableAIScript
 		18869, 18870, 18871, 18872
 	};
 	private static final int TAME_CHANCE = 20;
-	private static final int[] SPECIAL_SPICE_CHANCES =
+	protected static final int[] SPECIAL_SPICE_CHANCES =
 	{
 		33, 75
 	};
@@ -67,9 +66,9 @@ public class BeastFarm extends L2AttackableAIScript
 		18873, 18874, 18875, 18876, 18877, 18878, 18879, 18880, 18881, 18882, 18883, 18884, 18885, 18886, 18887, 18888, 18889, 18890, 18891, 18892, 18893, 18894, 18895, 18896, 18897, 18898, 18899, 18900
 	};
 	
-	private static Map<Integer, Integer> _FeedInfo = new FastMap<Integer, Integer>();
-	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<Integer, GrowthCapableMob>();
-	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<String, SkillHolder[]>();
+	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
+	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
@@ -77,7 +76,7 @@ public class BeastFarm extends L2AttackableAIScript
 		private final int _chance;
 		private final int _growthLevel;
 		private final int _tameNpcId;
-		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<Integer, Integer>();
+		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
 		
 		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
 		{
@@ -102,9 +101,9 @@ public class BeastFarm extends L2AttackableAIScript
 				return -1;
 			else if (skillId == SKILL_BLESSED_GOLDEN_SPICE || skillId == SKILL_BLESSED_CRYSTAL_SPICE || skillId == SKILL_SGRADE_GOLDEN_SPICE || skillId == SKILL_SGRADE_CRYSTAL_SPICE)
 			{
-				if (Rnd.get(100) < SPECIAL_SPICE_CHANCES[0])
+				if (getRandom(100) < SPECIAL_SPICE_CHANCES[0])
 				{
-					if (Rnd.get(100) < SPECIAL_SPICE_CHANCES[1])
+					if (getRandom(100) < SPECIAL_SPICE_CHANCES[1])
 						return _skillSuccessNpcIdList.get(skillId);
 					else if (skillId == SKILL_BLESSED_GOLDEN_SPICE || skillId == SKILL_SGRADE_GOLDEN_SPICE)
 						return _skillSuccessNpcIdList.get(SKILL_GOLDEN_SPICE);
@@ -113,9 +112,9 @@ public class BeastFarm extends L2AttackableAIScript
 				}
 				return -1;
 			}
-			else if (_growthLevel == 2 && Rnd.get(100) < TAME_CHANCE)
+			else if (_growthLevel == 2 && getRandom(100) < TAME_CHANCE)
 				return _tameNpcId;
-			else if (Rnd.get(100) < _chance)
+			else if (getRandom(100) < _chance)
 				return _skillSuccessNpcIdList.get(skillId);
 			else
 				return -1;
@@ -287,7 +286,7 @@ public class BeastFarm extends L2AttackableAIScript
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
 			
-			String name = _TamedBeastsData.keySet().toArray(new String[_TamedBeastsData.keySet().size()])[Rnd.get(_TamedBeastsData.size())];
+			String name = _TamedBeastsData.keySet().toArray(new String[_TamedBeastsData.keySet().size()])[getRandom(_TamedBeastsData.size())];
 			SkillHolder[] skillList = _TamedBeastsData.get(name);
 			switch (nextNpcId)
 			{
@@ -311,7 +310,7 @@ public class BeastFarm extends L2AttackableAIScript
 			nextNpc.setRunning();
 			
 			QuestState st = player.getQuestState("20_BringUpWithLove");
-			if (st != null && st.getInt("cond") == 1 && !st.hasQuestItems(7185) && Rnd.get(10) == 1)
+			if (st != null && st.getInt("cond") == 1 && !st.hasQuestItems(7185) && getRandom(10) == 1)
 			{
 				// if player has quest 20 going, give quest item
 				// it's easier to hardcode it in here than to try and repeat this stuff in the quest

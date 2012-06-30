@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6500" type="EtcItem" name="Big Blue Treasure Chest">
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="capsule" />
@@ -1353,11 +1353,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<set order="0x08" stat="MpConsume" val="1">
-				<and>
-					<game skill="false" chance="50" />
-				</and>
-			</set>
 		</for>
 	</item>
 	<item id="6594" type="Weapon" name="Shining Bow - Focus">

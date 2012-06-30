@@ -89,7 +89,7 @@ class Quest (JQuest) :
      htmltext = "30069-10.htm"
    elif cond == 6 :
      st.giveItems(RITRON_JELLY,1)
-     if st.getRandom(100) < RECIPE_CHANCE :
+     if self.getRandom(100) < RECIPE_CHANCE :
         htmltext = "30069-11.htm"
      else :
         htmltext = "30069-13.htm"
@@ -107,7 +107,7 @@ class Quest (JQuest) :
       numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
       count = st.getQuestItemsCount(item)
       if count < max :
-         if st.getRandom(100) < chance :
+         if self.getRandom(100) < chance :
             numItems = numItems + 1
          numItems = int(numItems)
          if count + numItems > max :

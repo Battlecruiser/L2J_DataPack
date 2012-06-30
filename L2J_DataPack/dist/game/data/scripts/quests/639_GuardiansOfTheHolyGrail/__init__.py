@@ -108,7 +108,7 @@ class Quest (JQuest) :
     st = partyMember.getQuestState(qn)
     if not st : return
     numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
-    if st.getRandom(100) < chance :
+    if self.getRandom(100) < chance :
         numItems += 1
     if numItems :
         st.giveItems(SCRIPTURES,int(numItems))

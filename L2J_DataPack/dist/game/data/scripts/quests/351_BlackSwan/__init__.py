@@ -84,7 +84,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
      npcId = npc.getNpcId()
      cond = st.getInt("cond")
-     random = st.getRandom(20)
+     random = self.getRandom(20)
      if random<CHANCE :
          st.giveItems(LIZARD_FANG,1)
          st.playSound("ItemSound.quest_itemget")
@@ -97,7 +97,7 @@ class Quest (JQuest) :
          if random==CHANCE_barrel :
              st.giveItems(BARREL_OF_LEAGUE,1)
              st.set("cond","2")
-     elif st.getRandom(100)<4:
+     elif self.getRandom(100)<4:
          st.giveItems(BARREL_OF_LEAGUE,1)
          st.playSound("ItemSound.quest_itemget")
          st.set("cond","2")

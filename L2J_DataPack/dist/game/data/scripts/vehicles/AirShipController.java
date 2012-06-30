@@ -373,7 +373,7 @@ public abstract class AirShipController extends Quest
 		}
 	}
 	
-	private final class DecayTask implements Runnable
+	protected final class DecayTask implements Runnable
 	{
 		@Override
 		public void run()
@@ -383,7 +383,7 @@ public abstract class AirShipController extends Quest
 		}
 	}
 	
-	private final class DepartTask implements Runnable
+	protected final class DepartTask implements Runnable
 	{
 		@Override
 		public void run()

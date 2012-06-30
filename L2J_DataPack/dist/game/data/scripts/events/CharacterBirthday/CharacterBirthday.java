@@ -59,7 +59,7 @@ public class CharacterBirthday extends Quest
 			
 			htmltext = null;
 		}
-		if (event.equalsIgnoreCase("change"))
+		else if (event.equalsIgnoreCase("change"))
 		{
 			// Change Hat
 			if (st.hasQuestItems(10250))
@@ -90,7 +90,7 @@ public class CharacterBirthday extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return null;
+			st = newQuestState(player);
 		}
 		
 		if (!Util.checkIfInRange(10, npc, player, true))

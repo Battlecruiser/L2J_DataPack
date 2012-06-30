@@ -284,8 +284,8 @@ class Quest (JQuest) :
             htmltext = "30461-14.htm"
             st.takeItems(MIRIENS_SIGIL3_ID,-1)
             st.takeItems(SYMBOL_OF_CRONOS_ID,-1)
-            st.addExpAndSp(876963,56877)
-            st.giveItems(57,159814)
+            st.addExpAndSp(1753926,113754)
+            st.giveItems(57,319628)
             st.giveItems(7562,8)
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
             st.set("cond","0")
@@ -482,7 +482,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20580 :
     if st.getInt("cond") == 11 and st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID)<5 :
-      if st.getRandom(100) < 50 :
+      if self.getRandom(100) < 50 :
         st.giveItems(BROWN_SCROLL_SCRAP_ID,1)
         if st.getQuestItemsCount(BROWN_SCROLL_SCRAP_ID) < 5 :
           st.playSound("ItemSound.quest_itemget")
@@ -492,7 +492,7 @@ class Quest (JQuest) :
    if st.getInt("cond") == 16 :
       if npcId == 20068 :
          if st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID)<5 :
-            if st.getRandom(100) < 50 :
+            if self.getRandom(100) < 50 :
                st.giveItems(MEYEDESTROYERS_SKIN_ID,1)
                if st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID) < 5 :
                   st.playSound("ItemSound.quest_itemget")
@@ -502,7 +502,7 @@ class Quest (JQuest) :
                      st.set("cond","17")
       elif npcId == 20269 :
          if st.getQuestItemsCount(SHAMANS_NECKLACE_ID)<5 :
-            if st.getRandom(100) < 50 :
+            if self.getRandom(100) < 50 :
                st.giveItems(SHAMANS_NECKLACE_ID,1)
                if st.getQuestItemsCount(SHAMANS_NECKLACE_ID) < 5 :
                   st.playSound("ItemSound.quest_itemget")
@@ -520,7 +520,7 @@ class Quest (JQuest) :
                if st.getQuestItemsCount(SHACKLES_SCALP_ID)==2 and st.getQuestItemsCount(SHAMANS_NECKLACE_ID) == 5 and st.getQuestItemsCount(MEYEDESTROYERS_SKIN_ID) == 5:
                   st.set("cond","17")
    elif npcId == 20554 and st.getInt("cond") in [26,27] and st.getQuestItemsCount(SCRIPTURE_CHAPTER_3_ID) == 0 :
-      if st.getRandom(100) < 30 :
+      if self.getRandom(100) < 30 :
         st.giveItems(SCRIPTURE_CHAPTER_3_ID,1)
         st.playSound("ItemSound.quest_middle")
    elif npcId == 20201 :

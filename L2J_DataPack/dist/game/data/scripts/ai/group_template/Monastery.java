@@ -21,7 +21,6 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -29,21 +28,29 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
+/**
+ * @author Kerberos
+ */
 public class Monastery extends L2AttackableAIScript
 {
 	private static final int[] mobs1 =
 	{
-		22124, 22125, 22126, 22127, 22129
+		22124,
+		22125,
+		22126,
+		22127,
+		22129
 	};
 	private static final int[] mobs2 =
 	{
-		22134, 22135
+		22134,
+		22135
 	};
 	
 	private static final NpcStringId[] messages =
@@ -63,7 +70,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if (Util.contains(mobs1, npc.getNpcId()) && !npc.isInCombat() && npc.getTarget() == null)
+		if (Util.contains(mobs1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
 			if (player.getActiveWeaponInstance() != null)
 			{
@@ -88,7 +95,9 @@ public class Monastery extends L2AttackableAIScript
 				}
 			}
 			else if (((L2Attackable) npc).getMostHated() == null)
+			{
 				return null;
+			}
 		}
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
@@ -98,13 +107,13 @@ public class Monastery extends L2AttackableAIScript
 	{
 		if (Util.contains(mobs2, npc.getNpcId()))
 		{
-			if (skill.getSkillType() == L2SkillType.AGGDAMAGE && targets.length != 0)
+			if ((skill.getSkillType() == L2SkillType.AGGDAMAGE) && (targets.length != 0))
 			{
 				for (L2Object obj : targets)
 				{
 					if (obj.equals(npc))
 					{
-						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[Rnd.get(2) + 1]);
+						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[getRandom(2) + 1]);
 						packet.addStringParameter(caster.getName());
 						npc.broadcastPacket(packet);
 						((L2Attackable) npc).addDamageHate(caster, 0, 999);
@@ -122,23 +131,25 @@ public class Monastery extends L2AttackableAIScript
 	{
 		if (Util.contains(mobs1, npc.getNpcId()))
 		{
-			FastList<L2Playable> result = new FastList<L2Playable>();
+			FastList<L2Playable> result = new FastList<>();
 			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
 			for (L2Object obj : objs)
 			{
-				if (obj instanceof L2PcInstance || obj instanceof L2PetInstance)
+				if ((obj instanceof L2PcInstance) || (obj instanceof L2PetInstance))
 				{
 					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((L2Character) obj).isDead())
+					{
 						result.add((L2Playable) obj);
+					}
 				}
 			}
-			if (!result.isEmpty() && result.size() != 0)
+			if (!result.isEmpty() && (result.size() != 0))
 			{
 				Object[] characters = result.toArray();
 				for (Object obj : characters)
 				{
 					L2Playable target = (L2Playable) (obj instanceof L2PcInstance ? obj : ((L2Summon) obj).getOwner());
-					if (target.getActiveWeaponInstance() != null && !npc.isInCombat() && npc.getTarget() == null)
+					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[0]));
@@ -170,7 +181,7 @@ public class Monastery extends L2AttackableAIScript
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if (Util.contains(mobs1, npc.getNpcId()) && skill.getId() == 4589)
+		if (Util.contains(mobs1, npc.getNpcId()) && (skill.getId() == 4589))
 		{
 			npc.setIsRunning(true);
 			((L2Attackable) npc).addDamageHate(player, 0, 999);

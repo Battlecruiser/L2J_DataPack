@@ -17,15 +17,14 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
  * @author _drunk_
- *
  */
 public class TakeCastle implements ISkillHandler
 {
@@ -34,17 +33,13 @@ public class TakeCastle implements ISkillHandler
 		L2SkillType.TAKECASTLE
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!activeChar.isPlayer())
 			return;
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		L2PcInstance player = activeChar.getActingPlayer();
 		
 		if (player.getClan() == null || player.getClan().getLeaderId() != player.getObjectId())
 			return;
@@ -63,17 +58,11 @@ public class TakeCastle implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;
 	}
-	
-	
 	
 	public static void main(String[] args)
 	{

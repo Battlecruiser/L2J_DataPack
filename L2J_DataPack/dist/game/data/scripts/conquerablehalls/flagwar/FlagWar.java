@@ -40,13 +40,13 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 
 /**
  * @author BiggBoss
@@ -90,7 +90,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	protected static L2CharPosition CENTER;
 	
-	protected TIntObjectHashMap<ClanData> _data =  new TIntObjectHashMap<ClanData>(6);
+	protected TIntObjectHashMap<ClanData> _data =  new TIntObjectHashMap<>(6);
 	protected L2Clan _winner;
 	private boolean _firstPhase;
 	
@@ -135,8 +135,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(_hall.getOwnerId());
 				String content = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/flagwar/"+qn+"/messenger_initial.htm");
-				content.replaceAll("%clanName%", clan == null? "no owner" : clan.getName());
-				content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+				content = content.replaceAll("%clanName%", clan == null? "no owner" : clan.getName());
+				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 				html = content;
 			}
 			else
@@ -195,7 +195,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 							registerClan(clan);
 							html = getFlagHtml(_data.get(clan.getClanId()).flag);
 						}
-						else // Quest not accoplished, try by paying
+						else // Quest not accomplished, try by paying
 							html = "messenger_noquest.htm";
 					}
 					// Register paying the fee
@@ -288,15 +288,15 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 					L2Clan attacker = ClanTable.getInstance().getClan(_data.keys()[i]);
 					if(attacker == null)
 						continue;
-					html.replaceAll("%clan"+i+"%", clan.getName());
-					html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
+					html = html.replaceAll("%clan"+i+"%", clan.getName());
+					html = html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
 				}
 				if(_data.size() < 5)
 				{
 					for(int i = _data.size(); i < 5; i++)
 					{
-						html.replaceAll("%clan"+i+"%", "Empty pos. ");
-						html.replaceAll("%clanMem"+i+"%", "Empty pos. ");
+						html = html.replaceAll("%clan"+i+"%", "Empty pos. ");
+						html = html.replaceAll("%clanMem"+i+"%", "Empty pos. ");
 					}
 				}
 			}
@@ -474,7 +474,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		if(_hall.getOwnerId() > 0)
 		{
 			L2Clan clan = ClanTable.getInstance().getClan(_hall.getOwnerId());
-			clan.setHasHideout(0);
+			clan.setHideoutId(0);
 			_hall.free();
 		}
 		super.endSiege();
@@ -529,7 +529,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		return false;
 	}
 	
-	private void doSpawns(int clanId, ClanData data)
+	void doSpawns(int clanId, ClanData data)
 	{
 		try
 		{
@@ -692,7 +692,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				}
 				
 				ClanData data = new ClanData();
-				data.flag = rset.getInt("flag");;
+				data.flag = rset.getInt("flag");
 				data.npc = rset.getInt("npc");
 
 				_data.put(clanId, data);
@@ -852,8 +852,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		int flag = 0;
 		int npc = 0;
-		ArrayList<Integer> players = new ArrayList<Integer>(18);
-		ArrayList<L2PcInstance> playersInstance = new ArrayList<L2PcInstance>(18);
+		ArrayList<Integer> players = new ArrayList<>(18);
+		ArrayList<L2PcInstance> playersInstance = new ArrayList<>(18);
 		L2Spawn warrior = null;
 		L2Spawn flagInstance = null;
 	}

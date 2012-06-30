@@ -152,7 +152,7 @@ class Quest (JQuest) :
         else:
              st.addExpAndSp(295862, 18194)
         st.giveItems(57, 81900)
-        player.sendPacket(SocialAction(player,3))
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
@@ -304,7 +304,7 @@ class Quest (JQuest) :
    elif npcId == 20038 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPIRIT_NET) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT) == 0 and st.getQuestItemsCount(DURKA_PARASITE)<8 :
-          n = st.getRandom(10)
+          n = self.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.addSpawn(27056)
@@ -327,7 +327,7 @@ class Quest (JQuest) :
    elif npcId == 20043 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPIRIT_NET) == 1 and st.getQuestItemsCount(BOUND_DURKA_SPIRIT) == 0 and st.getQuestItemsCount(DURKA_PARASITE)<8 :
-          n = st.getRandom(10)
+          n = self.getRandom(10)
           if st.getQuestItemsCount(DURKA_PARASITE) == 5 and n<1 :
             st.takeItems(DURKA_PARASITE,st.getQuestItemsCount(DURKA_PARASITE))
             st.addSpawn(27056)

@@ -6,7 +6,7 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets import SocialAction
-from com.l2jserver.gameserver.model.item.type import L2WeaponType 
+from com.l2jserver.gameserver.model.items.type import L2WeaponType 
 
 qn = "415_PathToOrcMonk"
 
@@ -263,7 +263,7 @@ class Quest (JQuest) :
             st.giveItems(S_SALAMANDER_SCALE,1)
             st.playSound("ItemSound.quest_itemget")
    elif npcId == 20476 and st.getInt("cond") == 15:
-        if st.getQuestItemsCount(8545) < 6 and st.getRandom(100) <= 50:
+        if st.getQuestItemsCount(8545) < 6 and self.getRandom(100) <= 50:
           if st.getQuestItemsCount(8545) == 5 :
             st.playSound("ItemSound.quest_middle")
             st.set("cond","16")
@@ -283,7 +283,7 @@ class Quest (JQuest) :
             st.giveItems(KASHA_BSPIDER_TALON,1)
             st.playSound("ItemSound.quest_itemget")
         elif st.getInt("cond") == 15:
-            if st.getQuestItemsCount(8545) < 6 and st.getRandom(100) <= 50:
+            if st.getQuestItemsCount(8545) < 6 and self.getRandom(100) <= 50:
               if st.getQuestItemsCount(8545) == 5 :
                 st.playSound("ItemSound.quest_middle")
                 st.set("cond","16")

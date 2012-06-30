@@ -25,21 +25,20 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
-import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 public class Kamaloka extends Quest
 {
@@ -462,7 +461,7 @@ public class Kamaloka extends Quest
 		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
@@ -630,7 +629,7 @@ public class Kamaloka extends Quest
 		
 		// and finally teleport party into instance
 		final L2Party party = player.getParty();
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (L2PcInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getQuestState(qn) == null)
 				newQuestState(partyMember);
@@ -696,7 +695,7 @@ public class Kamaloka extends Quest
 		if (npcs != null)
 		{
 			world.firstRoom = new ArrayList<L2Spawn>(spawns.length - 1);
-			int shaman = Rnd.get(spawns.length); // random position for shaman
+			int shaman = getRandom(spawns.length); // random position for shaman
 			
 			for (int i = 0; i < spawns.length; i++)
 			{
@@ -798,7 +797,7 @@ public class Kamaloka extends Quest
 						Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
 						
 						// teleports entire party away
-						for (L2PcInstance partyMember : party.getPartyMembers())
+						for (L2PcInstance partyMember : party.getMembers())
 							if (partyMember != null && partyMember.getInstanceId() == world.instanceId)
 								teleportPlayer(partyMember, inst.getSpawnLoc(), 0);
 					}

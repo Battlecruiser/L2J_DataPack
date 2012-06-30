@@ -23,23 +23,20 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.model.L2Effect;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.item.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.skills.l2skills.L2SkillSignetCasttime;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jserver.gameserver.skills.Env;
-import com.l2jserver.gameserver.skills.Formulas;
-import com.l2jserver.gameserver.skills.l2skills.L2SkillSignetCasttime;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
-import com.l2jserver.gameserver.templates.effects.EffectTemplate;
-import com.l2jserver.gameserver.templates.skills.L2EffectType;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
 import com.l2jserver.gameserver.util.Point3D;
 
 public class SignetMDam extends L2Effect
@@ -51,20 +48,12 @@ public class SignetMDam extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SIGNET_GROUND;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public boolean onStart()
 	{
@@ -83,10 +72,9 @@ public class SignetMDam extends L2Effect
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
 		
-		if (getEffector() instanceof L2PcInstance
-				&& getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
+		if (getEffector().isPlayer() && getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
 		{
-			Point3D wordPosition = ((L2PcInstance) getEffector()).getCurrentSkillWorldPosition();
+			Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
 			
 			if (wordPosition != null)
 			{
@@ -103,10 +91,6 @@ public class SignetMDam extends L2Effect
 		
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -114,7 +98,7 @@ public class SignetMDam extends L2Effect
 			return true; // do nothing first 2 times
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = (L2PcInstance) getEffector();
+		L2PcInstance caster = getEffector().getActingPlayer();
 		
 		boolean ss = false;
 		boolean bss = false;
@@ -135,14 +119,14 @@ public class SignetMDam extends L2Effect
 			}
 		}
 		
-		FastList<L2Character> targets = new FastList<L2Character>();
+		FastList<L2Character> targets = new FastList<>();
 		
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (cha == null || cha == caster)
 				continue;
 			
-			if (cha instanceof L2Attackable || cha instanceof L2Playable)
+			if (cha.isL2Attackable() || cha.isPlayable())
 			{
 				if (cha.isAlikeDead())
 					continue;
@@ -154,7 +138,7 @@ public class SignetMDam extends L2Effect
 				}
 				
 				caster.reduceCurrentMp(mpConsume);
-				if (cha instanceof L2Playable)
+				if (cha.isPlayable())
 				{
 					if (caster.canAttackCharacter(cha))
 					{
@@ -176,7 +160,7 @@ public class SignetMDam extends L2Effect
 				byte shld = Formulas.calcShldUse(caster, target, getSkill());
 				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, ss, bss, mcrit);
 				
-				if (target instanceof L2Summon)
+				if (target.isSummon())
 					target.broadcastStatusUpdate();
 				
 				if (mdam > 0)
@@ -196,10 +180,6 @@ public class SignetMDam extends L2Effect
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{

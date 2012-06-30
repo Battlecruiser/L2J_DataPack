@@ -21,12 +21,12 @@ import javolution.util.FastList;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.templates.skills.L2TargetType;
 
 /**
  * @author UnAfraid
@@ -36,8 +36,8 @@ public class TargetCorpseMob implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<L2Character>();
-		final boolean isSummon = target instanceof L2SummonInstance;
+		List<L2Character> targetList = new FastList<>();
+		final boolean isSummon = target instanceof L2ServitorInstance;
 		if (!(isSummon || target instanceof L2Attackable) || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
@@ -49,9 +49,11 @@ public class TargetCorpseMob implements ITargetTypeHandler
 		{
 			case SUMMON:
 			{
-				if (isSummon && ((L2SummonInstance)target).getOwner() != null
-						&& ((L2SummonInstance)target).getOwner().getObjectId() == activeChar.getObjectId())
+				if (isSummon && ((L2ServitorInstance)target).getOwner() != null
+						&& ((L2ServitorInstance)target).getOwner().getObjectId() == activeChar.getObjectId())
 					return _emptyTargetList;
+				
+				break;
 			}
 			case DRAIN:
 			{

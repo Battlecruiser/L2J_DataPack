@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11000" type="Weapon" name="Kaim Vanul's Bones - Earth - Conversion">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="equip" />
@@ -396,11 +396,6 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<sub order="0x08" stat="MpConsume" val="2">
-				<and>
-					<game skill="false" chance="42" />
-				</and>
-			</sub>
 		</for>
 	</item>
 	<item id="11013" type="Weapon" name="Hell Hound - Earth">
@@ -533,7 +528,6 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<mul order="0x08" stat="MpConsume" val="0.88" />
 		</for>
 	</item>
 	<item id="11017" type="Weapon" name="Dasparion's Staff - Hail">

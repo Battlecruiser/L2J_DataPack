@@ -64,10 +64,11 @@ class Quest (JQuest) :
                     htmltext = "32197-05.htm"
                 else :
                     st.takeItems(Heart,-1)
-                    st.giveItems(Gwain_Rec,1)
                     isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
                     if isFinished == "" :
                       st.addExpAndSp(8064,2368)
+                      st.giveItems(57, 163800)
+                      st.giveItems(Gwain_Rec,1)
                     st.exitQuest(False)
                     st.saveGlobalQuestVar("1ClassQuestFinished","1")
                     st.playSound("ItemSound.quest_finish")

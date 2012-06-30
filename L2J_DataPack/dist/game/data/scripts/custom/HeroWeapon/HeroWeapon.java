@@ -61,8 +61,9 @@ public class HeroWeapon extends Quest
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
-			newQuestState(player);
-		
+		{
+			st = newQuestState(player);
+		}
 		if (player.isHero())
 		{
 			if (hasHeroWeapon(player))

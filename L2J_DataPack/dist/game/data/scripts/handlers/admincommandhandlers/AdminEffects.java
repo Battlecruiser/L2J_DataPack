@@ -22,12 +22,13 @@ import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
@@ -42,7 +43,6 @@ import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.skills.AbnormalEffect;
 import com.l2jserver.gameserver.util.Broadcast;
 
 
@@ -407,20 +407,15 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				String val = st.nextToken();
+				int radius = 400;
+				if (st.hasMoreTokens())
+					radius = Integer.parseInt(st.nextToken());
 				int teamVal = Integer.parseInt(val);
-				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
+				Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
 				
-				for (L2PcInstance player : plrs)
+				for (L2Character player : plrs)
 				{
-					if (activeChar.isInsideRadius(player, 400, false, true))
-					{
-						player.setTeam(teamVal);
-						if (teamVal != 0)
-						{
-							player.sendMessage("You have joined team " + teamVal);
-						}
-						player.broadcastUserInfo();
-					}
+					player.setTeam(teamVal);
 				}
 			}
 			catch (Exception e)
@@ -434,18 +429,12 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String val = st.nextToken();
 				int teamVal = Integer.parseInt(val);
-				L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
-					player = (L2PcInstance) target;
+				L2Character target = null;
+				if (activeChar.getTarget() instanceof L2Character)
+					target = (L2Character) activeChar.getTarget();
 				else
 					return false;
-				player.setTeam(teamVal);
-				if (teamVal != 0)
-				{
-					player.sendMessage("You have joined team " + teamVal);
-				}
-				player.broadcastUserInfo();
+				target.setTeam(teamVal);
 			}
 			catch (Exception e)
 			{

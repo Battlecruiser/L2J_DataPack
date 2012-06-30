@@ -130,7 +130,7 @@ class Quest (JQuest) :
            return
    elif event == "30757-05.htm" :
        if player.isClanLeader() : return "Only Clan Members can sacrifice themselves!"
-       if st.getRandom(10) > 5 :
+       if self.getRandom(10) > 5 :
            htmltext = "30757-06.htm"
            st.giveItems(SYMBOL_OF_LOYALTY,1)
            deadlist = leaderst.get("dead_list").split()
@@ -159,7 +159,7 @@ class Quest (JQuest) :
            leaderst.set("part","4")
            leaderst.set("chest_wins","0")
            for x,y,z in CHEST_LOCS :
-               rand = st.getRandom(5)
+               rand = self.getRandom(5)
                self.addSpawn(27173+rand,x,y,z,0,0,300000)
                self.startQuestTimer("chest_timer",300000,npc,player,0)
        else :
@@ -305,7 +305,7 @@ class Quest (JQuest) :
      npcId = npc.getNpcId()
      if npcId in CHESTS and part == 4 :
          wins = leaderst.getInt("chest_wins")
-         if (self.chests - wins) == 12 or (wins < 4 and not leaderst.getRandom(4)) :
+         if (self.chests - wins) == 12 or (wins < 4 and not self.getRandom(4)) :
              wins += 1
              leaderst.set("chest_wins",str(wins))
              npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"###### BINGO! ######"))
@@ -315,7 +315,7 @@ class Quest (JQuest) :
          if not st : st = self.newQuestState(player)
          if st == leaderst : return
          if part >=3 and part < 6 :
-             if not st.getRandom(10) :
+             if not self.getRandom(10) :
                  st.giveItems(MOBS[npcId],1)
                  st.playSound("ItemSound.quest_itemget")
          elif DEBUG :

@@ -84,7 +84,7 @@ class Quest (JQuest) :
     if st.getInt("cond")==2 :
        st.playSound("ItemSound.quest_itemget")
        st.giveItems(FRAGMENT,1)
-       if st.getRandom(100) <= 2 :
+       if self.getRandom(100) <= 2 :
           st.giveItems(CHEST,1)
     return
 

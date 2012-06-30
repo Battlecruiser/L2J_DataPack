@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Plim
@@ -112,7 +111,7 @@ public class GrandBossTeleporters extends Quest
 							if (zone != null)
 								zone.allowPlayerEntry(player, 30);
 							
-							player.teleToLocation(179700 + Rnd.get(700), 113800 + Rnd.get(2100), -7709);
+							player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
 							
 							if (status == 0)
 							{
@@ -128,7 +127,7 @@ public class GrandBossTeleporters extends Quest
 				break;
 			
 			case 31859:
-				player.teleToLocation(79800 + Rnd.get(600), 151200 + Rnd.get(1100), -3534);
+				player.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 				break;
 			
 			case 31385:
@@ -149,7 +148,7 @@ public class GrandBossTeleporters extends Quest
 							if (zone != null)
 								zone.allowPlayerEntry(player, 30);
 							
-							player.teleToLocation(204328 + Rnd.get(600), -111874 + Rnd.get(600), 70);
+							player.teleToLocation(204328 + getRandom(600), -111874 + getRandom(600), 70);
 							
 							playerCount++;
 							
@@ -204,7 +203,7 @@ public class GrandBossTeleporters extends Quest
 				break;
 				
 			case 31759:
-				player.teleToLocation(150037 + Rnd.get(500), -57720 + Rnd.get(500), -2976);
+				player.teleToLocation(150037 + getRandom(500), -57720 + getRandom(500), -2976);
 				break;
 		}
 		

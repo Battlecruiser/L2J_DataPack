@@ -8,7 +8,8 @@ CREATE TABLE `teleport` (
   `price` int(10) unsigned DEFAULT NULL,
   `fornoble` tinyint(1) NOT NULL DEFAULT '0',
   `itemId` smallint(5) unsigned NOT NULL DEFAULT '57',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `itemId` (`itemId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `teleport` VALUES

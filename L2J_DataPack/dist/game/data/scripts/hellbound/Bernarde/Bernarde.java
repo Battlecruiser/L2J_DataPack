@@ -44,9 +44,8 @@ public class Bernarde extends Quest
 			{
 				if (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5)
 				{
-					if (player.destroyItemByItemId("Quest", DARION_BADGE, 5, npc, true))
+					if (player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true))
 					{
-						player.addItem("Quest", HOLY_WATER, 1, npc, true);
 						return "32300-02b.htm";
 					}
 				}

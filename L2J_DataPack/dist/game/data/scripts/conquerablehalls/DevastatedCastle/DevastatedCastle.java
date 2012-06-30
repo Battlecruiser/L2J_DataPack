@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
+ * Devastated Castle clan hall siege script.
  * @author BiggBoss
- * Devastated Castle clan hall siege script
  */
 public final class DevastatedCastle extends ClanHallSiegeEngine
 {		

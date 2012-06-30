@@ -147,7 +147,7 @@ class Quest (JQuest) :
      elif npcId == ANGEL_CORPSE :
          if cond == 4 :
            npc.doDie(npc)
-           chance = st.getRandom(100)
+           chance = self.getRandom(100)
            if CHANCE_FOR_HAIR < chance :
              htmltext = "31752-2.htm"
            else :

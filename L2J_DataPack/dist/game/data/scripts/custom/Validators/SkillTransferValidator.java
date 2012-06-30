@@ -15,26 +15,23 @@
 package custom.Validators;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
-import com.l2jserver.gameserver.model.ItemHolder;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2SkillLearn;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.scripting.scriptengine.events.ProfessionChangeEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author Zoey76
  */
-public final class SkillTransferValidator extends Quest
+public final class SkillTransferValidator extends L2Script
 {
-	public SkillTransferValidator(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		setOnEnterWorld(true);
-	}
-	
 	private static final String qn = "SkillTransfer";
 	
 	private static final ItemHolder[] PORMANDERS =
@@ -47,58 +44,78 @@ public final class SkillTransferValidator extends Quest
 		new ItemHolder(15309, 4)
 	};
 	
+	public SkillTransferValidator(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		setOnEnterWorld(true);
+	}
+	
 	@Override
 	public String onEnterWorld(L2PcInstance player)
 	{
-		givePormanders(player);
+		if (getTransferClassIndex(player) >= 0)
+		{
+			addProfessionChangeNotify(player);
+			startQuestTimer("givePormanders", 2000, null, player);
+		}
 		return null;
 	}
 	
-	private void givePormanders(L2PcInstance player)
+	@Override
+	public void onProfessionChange(ProfessionChangeEvent event)
 	{
-		final int index = getTransferClassIndex(player);
-		
-		if (index >= 0)
+		startQuestTimer("givePormanders", 2000, null, event.getPlayer());
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("givePormanders"))
 		{
-			QuestState st = player.getQuestState(qn);
-			if (st == null)
+			final int index = getTransferClassIndex(player);
+			if (index >= 0)
 			{
-				st = newQuestState(player);
-			}
-			
-			final String name = qn + String.valueOf(player.getClassId().getId());
-			if (st.getInt(name) == 0)
-			{
-				st.setInternal(name, "1");
-				if (st.getGlobalQuestVar(name).isEmpty())
+				QuestState st = player.getQuestState(qn);
+				if (st == null)
 				{
-					st.saveGlobalQuestVar(name, "1");
-					player.addItem(qn, PORMANDERS[index].getId(), PORMANDERS[index].getCount(), null, true);
+					st = newQuestState(player);
 				}
-			}
-			
-			if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
-			{
-				long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
-				for (L2Skill sk : player.getAllSkills())
+				
+				final String name = qn + String.valueOf(player.getClassId().getId());
+				if (st.getInt(name) == 0)
 				{
-					for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
+					st.setInternal(name, "1");
+					if (st.getGlobalQuestVar(name).isEmpty())
 					{
-						if (s.getSkillId() == sk.getId())
+						st.saveGlobalQuestVar(name, "1");
+						player.addItem(qn, PORMANDERS[index].getId(), PORMANDERS[index].getCount(), null, true);
+					}
+				}
+				
+				if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
+				{
+					long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
+					for (L2Skill sk : player.getAllSkills())
+					{
+						for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
 						{
-							// Holy Weapon allowed for Shilien Saint/Inquisitor stance
-							if ((sk.getId() == 1043) && (index == 2) && player.isInStance())
+							if (s.getSkillId() == sk.getId())
 							{
-								continue;
-							}
-							
-							count--;
-							if (count < 0)
-							{
-								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + player.getTemplate().className, 1);
-								if (Config.SKILL_CHECK_REMOVE)
+								// Holy Weapon allowed for Shilien Saint/Inquisitor stance
+								if ((sk.getId() == 1043) && (index == 2) && player.isInStance())
 								{
-									player.removeSkill(sk);
+									continue;
+								}
+								
+								count--;
+								if (count < 0)
+								{
+									final String className = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+									Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, 1);
+									if (Config.SKILL_CHECK_REMOVE)
+									{
+										player.removeSkill(sk);
+									}
 								}
 							}
 						}
@@ -106,6 +123,7 @@ public final class SkillTransferValidator extends Quest
 				}
 			}
 		}
+		return null;
 	}
 	
 	private int getTransferClassIndex(L2PcInstance player)

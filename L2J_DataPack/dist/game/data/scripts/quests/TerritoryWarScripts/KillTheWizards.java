@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,11 +28,31 @@ public class KillTheWizards extends TerritoryWarSuperClass
 	
 	public KillTheWizards()
 	{
-		super(qnu,qn1,qna);
-		CLASS_IDS = new int[] { 40, 110, 27, 103, 13, 95, 12, 94, 41, 111, 28, 104, 14, 96 };
+		super(qnu, qn1, qna);
+		CLASS_IDS = new int[]
+		{
+			40,
+			110,
+			27,
+			103,
+			13,
+			95,
+			12,
+			94,
+			41,
+			111,
+			28,
+			104,
+			14,
+			96
+		};
 		qn = qn1;
 		RANDOM_MIN = 10;
 		RANDOM_MAX = 15;
-		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_ENEMIES,NpcStringId.YOU_WEAKENED_THE_ENEMYS_MAGIC};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_ENEMIES,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_MAGIC
+		};
 	}
 }

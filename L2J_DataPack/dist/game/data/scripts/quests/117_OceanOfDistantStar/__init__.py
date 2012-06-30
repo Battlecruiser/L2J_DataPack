@@ -116,7 +116,7 @@ class Quest (JQuest) :
    if st :
      if st.getState() == State.STARTED :
        count = st.getQuestItemsCount(GREY_STAR)
-       if st.getInt("cond") == 7 and count < 1 and st.getRandom(100)<CHANCE :
+       if st.getInt("cond") == 7 and count < 1 and self.getRandom(100)<CHANCE :
           st.giveItems(GREY_STAR,1)
           st.playSound("ItemSound.quest_itemget")
           st.set("cond","8")

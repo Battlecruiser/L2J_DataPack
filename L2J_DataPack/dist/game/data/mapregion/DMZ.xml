@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapRegion.xsd">
+<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/MapRegion.xsd">
 	<!-- DMZ -->
-	<region name="DMZ" town="Neutral Zone" castle="1" locId="913" bbs="7">
+	<region name="DMZ" town="Neutral Zone" castle="0" locId="913" bbs="7">
 		<respawnPoint X="-14288" Y="122752" Z="-3000" />
 		<respawnPoint X="-14592" Y="123232" Z="-3000" />
 		<respawnPoint X="-14704" Y="122032" Z="-3000" />

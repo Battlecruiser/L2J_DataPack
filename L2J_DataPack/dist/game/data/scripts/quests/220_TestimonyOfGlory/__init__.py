@@ -425,12 +425,12 @@ class Quest (JQuest) :
          htmltext = "30571-06.htm"
        elif npcId == 30565 and st.getQuestItemsCount(RITUAL_BOX) :
          player.sendPacket(SocialAction(player.getObjectId(),3))
-         st.addExpAndSp(724113,48324)
-         st.giveItems(57,131360)
-         st.giveItems(7562,109)
-         htmltext = "30565-02.htm"
-         st.giveItems(MARK_OF_GLORY,1)
          st.takeItems(RITUAL_BOX,1)
+         st.addExpAndSp(1448226,96648)
+         st.giveItems(57,262720)
+         st.giveItems(7562,109)
+         st.giveItems(MARK_OF_GLORY,1)
+         htmltext = "30565-02.htm"
          st.set("cond","0")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
@@ -486,7 +486,7 @@ class Quest (JQuest) :
      required,item,maxquanty,chance=DROPLIST_COND_6[npcId]
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
-       if st.getRandom(100) < chance :
+       if self.getRandom(100) < chance :
          st.giveItems(item,1)
          if count+1 == maxquanty :                          # Check if got enough number of items
            if st.getQuestItemsCount(TIMAK_ORC_HEAD) == maxquanty and st.getQuestItemsCount(TAMLIN_ORC_SKULL) == maxquanty :

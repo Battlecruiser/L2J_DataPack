@@ -141,17 +141,17 @@ class Quest (JQuest) :
           elif cond >= 1 and st.getInt("id") != 18 :
             htmltext = "30106-07.htm"
           elif cond == 17 and st.getInt("id") == 18 :
-              st.addExpAndSp(514739,33384)
-              st.giveItems(57,93803)
+              st.takeItems(TERYS_REPORT_ID,1)
+              st.addExpAndSp(1029478,66768)
+              st.giveItems(57,187606)
               st.giveItems(7562,8)
+              st.giveItems(MARK_OF_SEEKER_ID,1)
               htmltext = "30106-08.htm"
               st.set("cond","0")
               st.set("onlyone","1")
               st.set("id","0")
               st.exitQuest(False)
               st.playSound("ItemSound.quest_finish")
-              st.takeItems(TERYS_REPORT_ID,1)
-              st.giveItems(MARK_OF_SEEKER_ID,1)
    elif npcId == 30064 and st.getQuestItemsCount(TERYS_ORDER3_ID)==1 :
       if player.getLevel()<35 :
         htmltext = "30064-20.htm"
@@ -239,7 +239,7 @@ class Quest (JQuest) :
    required,item,chance,maxqty=DROPLIST[npcId]
    count = st.getQuestItemsCount(item)
    if st.getQuestItemsCount(required) and count < maxqty :
-      if st.getRandom(100) < chance :
+      if self.getRandom(100) < chance :
         st.giveItems(item,1)
         if count+1 == maxqty :
            st.playSound("Itemsound.quest_middle")

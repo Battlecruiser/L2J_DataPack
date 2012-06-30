@@ -37,9 +37,9 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -446,15 +446,16 @@ public class AdminTeleport implements IAdminCommandHandler
 			else
 			{
 				// Set player to same instance as GM teleporting.
-				if (activeChar != null && activeChar.getInstanceId() >= 0)
+				if ((activeChar != null) && activeChar.getInstanceId() >= 0)
+				{
 					player.setInstanceId(activeChar.getInstanceId());
+					activeChar.sendMessage("You have recalled " + player.getName());
+				}
 				else
+				{
 					player.setInstanceId(0);
-				
-				// Information
-				activeChar.sendMessage("You have recalled " + player.getName());
+				}
 				player.sendMessage("Admin is teleporting you.");
-				
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				player.teleToLocation(x, y, z, true);
 			}

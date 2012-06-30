@@ -129,7 +129,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMember(player,"awaitSealedMStone","1")
      if partyMember :
         st = partyMember.getQuestState(qn)
-        if st.getRandom(DROP_MAX_2) < DROP_RATE_2  and not st.getQuestItemsCount(SEALD_MSTONE) :
+        if self.getRandom(DROP_MAX_2) < DROP_RATE_2  and not st.getQuestItemsCount(SEALD_MSTONE) :
            st.giveItems(SEALD_MSTONE,1)
            st.unset("awaitSealedMStone")
            st.playSound("ItemSound.quest_middle")
@@ -142,7 +142,7 @@ class Quest (JQuest) :
          st = partyMember.getQuestState(qn)
          count = st.getQuestItemsCount(item)
          numItems, chance = divmod(DROP_RATE,DROP_MAX)
-         if st.getRandom(DROP_MAX) < chance : 
+         if self.getRandom(DROP_MAX) < chance : 
             numItems += 1
          if count + numItems >= 65 :
             numItems = 65 - count

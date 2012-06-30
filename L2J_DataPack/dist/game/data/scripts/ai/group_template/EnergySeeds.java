@@ -27,31 +27,33 @@ import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
+/**
+ * @author Gigiikun
+ */
 public class EnergySeeds extends L2AttackableAIScript
 {
 	private static final String qn = "EnergySeeds";
-	private static final String HOWTOOPPOSEEVIL = "Q692_HowtoOpposeEvil";
+	private static final String HOWTOOPPOSEEVIL = "692_HowtoOpposeEvil";
 	private static final int HOWTOOPPOSEEVIL_CHANCE = 60;
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;
 	private static final int RANDOM_RESPAWN_OFFSET = 180000;
-	private static Map<Integer, ESSpawn> _spawns = new FastMap<Integer, ESSpawn>();
-	private static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
+	private static Map<Integer, ESSpawn> _spawns = new FastMap<>();
+	protected static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
 	private static final int[] SEEDIDS = { 18678, 18679, 18680, 18681, 18682, 18683 };
@@ -81,10 +83,10 @@ public class EnergySeeds extends L2AttackableAIScript
 	
 	private class ESSpawn
 	{
-		private final int _spawnId;
-		private final GraciaSeeds _seedId;
-		private final int[] _npcIds;
-		private final Location _loc;
+		protected final int _spawnId;
+		protected final GraciaSeeds _seedId;
+		protected final int[] _npcIds;
+		protected final Location _loc;
 		
 		public ESSpawn(int spawnId, GraciaSeeds seedId, Location loc, int[] npcIds)
 		{
@@ -106,7 +108,7 @@ public class EnergySeeds extends L2AttackableAIScript
 					{
 						//get a random NPC that should spawn at this location
 						Integer spawnId = _spawnId; // the map uses "Integer", not "int"
-						_spawnedNpcs.put(addSpawn(_npcIds[Rnd.get(_npcIds.length)], _loc, false, 0), spawnId);
+						_spawnedNpcs.put(addSpawn(_npcIds[getRandom(_npcIds.length)], _loc, false, 0), spawnId);
 					}
 				}
 			}, waitTime);
@@ -125,7 +127,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		startAI();
 	}
 	
-	private boolean isSeedActive(GraciaSeeds seed)
+	protected boolean isSeedActive(GraciaSeeds seed)
 	{
 		switch(seed)
 		{
@@ -152,7 +154,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		if (_spawnedNpcs.containsKey(npc) && _spawns.containsKey(_spawnedNpcs.get(npc)))
 		{
 			ESSpawn spawn = _spawns.get(_spawnedNpcs.get(npc));
-			spawn.scheduleRespawn(RESPAWN+Rnd.get(RANDOM_RESPAWN_OFFSET));
+			spawn.scheduleRespawn(RESPAWN+getRandom(RANDOM_RESPAWN_OFFSET));
 			_spawnedNpcs.remove(npc);
 			if (isSeedActive(spawn._seedId))
 			{
@@ -181,15 +183,15 @@ public class EnergySeeds extends L2AttackableAIScript
 					default:
 						return super.onSkillSee(npc, caster, skill, targets, isPet);
 				}
-				if (Rnd.get(100) < 33)
+				if (getRandom(100) < 33)
 				{
 					caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
-					caster.addItem("EnergySeed", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
+					caster.addItem("EnergySeed", itemId, getRandom(RATE + 1, 2 * RATE), null, true);
 				}
 				else
 				{
 					caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
-					caster.addItem("EnergySeed", itemId, Rnd.get(1, RATE), null, true);
+					caster.addItem("EnergySeed", itemId, getRandom(1, RATE), null, true);
 				}
 				seedCollectEvent(caster, npc, spawn._seedId);
 			}
@@ -207,7 +209,9 @@ public class EnergySeeds extends L2AttackableAIScript
 			{
 				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
 				if (doorInstance != null)
+				{
 					doorInstance.openMe();
+				}
 			}
 			startAI(GraciaSeeds.DESTRUCTION);
 		}
@@ -217,19 +221,29 @@ public class EnergySeeds extends L2AttackableAIScript
 			{
 				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
 				if (doorInstance != null)
+				{
 					doorInstance.closeMe();
+				}
 			}
-			for(L2Character chars : ZoneManager.getInstance().getZoneById(SOD_ZONE).getCharactersInsideArray())
-				if (chars instanceof L2PcInstance)
-					chars.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+			for(L2PcInstance ch : ZoneManager.getInstance().getZoneById(SOD_ZONE).getPlayersInside())
+			{
+				if (ch != null)
+				{
+					ch.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+				}
+			}
 			stopAI(GraciaSeeds.DESTRUCTION);
 		}
 		else if (event.equalsIgnoreCase("DeSpawnTask"))
 		{
 			if (npc.isInCombat())
+			{
 				startQuestTimer("DeSpawnTask", 30000, npc, null);
+			}
 			else
+			{
 				npc.deleteMe();
+			}
 		}
 		return null;
 	}
@@ -248,7 +262,7 @@ public class EnergySeeds extends L2AttackableAIScript
 	{
 		if (_spawnedNpcs.containsKey(npc) && _spawns.containsKey(_spawnedNpcs.get(npc)))
 		{
-			_spawns.get(_spawnedNpcs.get(npc)).scheduleRespawn(RESPAWN+Rnd.get(RANDOM_RESPAWN_OFFSET));
+			_spawns.get(_spawnedNpcs.get(npc)).scheduleRespawn(RESPAWN+getRandom(RANDOM_RESPAWN_OFFSET));
 			_spawnedNpcs.remove(npc);
 		}
 		return super.onKill(npc, player, isPet);
@@ -314,9 +328,9 @@ public class EnergySeeds extends L2AttackableAIScript
 			case ANNIHILATION_BISTAKON:
 				if (st != null && st.getInt("cond") == 3)
 					handleQuestDrop(st, 15535);
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[0][Rnd.get(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
+					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player,0,999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -325,9 +339,9 @@ public class EnergySeeds extends L2AttackableAIScript
 			case ANNIHILATION_REPTILIKON:
 				if (st != null && st.getInt("cond") == 3)
 					handleQuestDrop(st, 15535);
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[1][Rnd.get(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
+					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player,0,999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -336,9 +350,9 @@ public class EnergySeeds extends L2AttackableAIScript
 			case ANNIHILATION_COKRAKON:
 				if (st != null && st.getInt("cond") == 3)
 					handleQuestDrop(st, 15535);
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[2][Rnd.get(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
+					L2MonsterInstance mob = spawnSupriseMob(seedEnergy,ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player,0,999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -376,7 +390,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		double chance = HOWTOOPPOSEEVIL_CHANCE * Config.RATE_QUEST_DROP;
 		int numItems = (int) (chance / 100);
 		chance = chance % 100;
-		if (st.getRandom(100) < chance)
+		if (getRandom(100) < chance)
 			numItems++;
 		if (numItems > 0)
 		{

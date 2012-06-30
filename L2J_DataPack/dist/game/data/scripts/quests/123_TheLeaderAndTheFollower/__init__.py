@@ -182,7 +182,7 @@ class Quest (JQuest) :
            if sponsor :
              if player.isInsideRadius(sponsor, 1100, 1, 0) :
                enabled=True
-    if st.getInt("cond") == cond and count < max and st.getRandom(100) < chance and enabled :
+    if st.getInt("cond") == cond and count < max and self.getRandom(100) < chance and enabled :
        st.giveItems(item,1)
        if count == max-1:
           st.set("cond",str(cond+1))

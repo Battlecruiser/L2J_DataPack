@@ -16,9 +16,7 @@ package quests.TerritoryWarScripts;
 
 import com.l2jserver.gameserver.network.NpcStringId;
 
-
 /**
- *
  * @author Gigiikun
  */
 
@@ -30,11 +28,27 @@ public class KillThePriests extends TerritoryWarSuperClass
 	
 	public KillThePriests()
 	{
-		super(qnu,qn1,qna);
-		CLASS_IDS = new int[] { 43, 112, 30, 105, 16, 97, 17, 98, 52, 116 };
+		super(qnu, qn1, qna);
+		CLASS_IDS = new int[]
+		{
+			43,
+			112,
+			30,
+			105,
+			16,
+			97,
+			17,
+			98,
+			52,
+			116
+		};
 		qn = qn1;
 		RANDOM_MIN = 3;
 		RANDOM_MAX = 8;
-		npcString = new NpcStringId[]{NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_HEALERS_AND_BUFFERS,NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_HEALERS_AND_BUFFERS,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK
+		};
 	}
 }

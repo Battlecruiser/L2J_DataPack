@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2DoorInstanceAction implements IActionHandler
 {
@@ -42,22 +41,8 @@ public class L2DoorInstanceAction implements IActionHandler
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
 			
-			StaticObject su;
-			L2DoorInstance door = (L2DoorInstance)target;
-			// send HP amount if doors are inside castle/fortress zone
-			// TODO: needed to be added here doors from conquerable clanhalls
-			if ((door.getCastle() != null && door.getCastle().getCastleId() > 0)
-				|| (door.getFort() != null && door.getFort().getFortId() > 0)
-				|| (door.getClanHall() != null && door.getClanHall().isSiegableHall())
-				&& !door.getIsCommanderDoor())
-				su = new StaticObject(door, true);
-			else
-				su = new StaticObject(door, false);
-			
+			StaticObject su = new StaticObject((L2DoorInstance)target, activeChar.isGM());
 			activeChar.sendPacket(su);
-			
-			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation(door));
 		}
 		else if (interact)
 		{
@@ -90,7 +75,7 @@ public class L2DoorInstanceAction implements IActionHandler
 			else if (activeChar.getClan() != null
 					&& ((L2DoorInstance)target).getFort() != null
 					&& activeChar.getClan() == ((L2DoorInstance)target).getFort().getOwnerClan()
-					&& ((L2DoorInstance)target).isUnlockable()
+					&& ((L2DoorInstance)target).isOpenableBySkill()
 					&& !((L2DoorInstance)target).getFort().getSiege().getIsInProgress())
 			{
 				if (!((L2Character)target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))

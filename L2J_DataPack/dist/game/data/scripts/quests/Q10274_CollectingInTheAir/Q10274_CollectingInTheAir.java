@@ -15,16 +15,17 @@
 package quests.Q10274_CollectingInTheAir;
 
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Collecting in the Air (10274). Original Jython script by Kerberos v1.0 on 2009/04/26
+ * Collecting in the Air (10274).<br>
+ * Original Jython script by Kerberos v1.0 on 2009/04/26
  * @author nonom
  */
 public class Q10274_CollectingInTheAir extends Quest
@@ -42,15 +43,22 @@ public class Q10274_CollectingInTheAir extends Quest
 	
 	private static final int MOBS[] =
 	{
-		18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692
+		18684,
+		18685,
+		18686,
+		18687,
+		18688,
+		18689,
+		18690,
+		18691,
+		18692
 	};
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -65,14 +73,7 @@ public class Q10274_CollectingInTheAir extends Quest
 				QuestState qs = player.getQuestState("10273_GoodDayToFly");
 				if (qs != null)
 				{
-					if (qs.isCompleted() && (player.getLevel() >= 75))
-					{
-						htmltext = "32557-01.htm";
-					}
-					else
-					{
-						htmltext = "32557-00.htm";
-					}
+					htmltext = (qs.isCompleted() && (player.getLevel() >= 75)) ? "32557-01.htm" : "32557-00.htm";
 				}
 				else
 				{
@@ -85,9 +86,8 @@ public class Q10274_CollectingInTheAir extends Quest
 					htmltext = "32557-05.htm";
 					st.giveItems(13728, 1);
 					st.addExpAndSp(25160, 2525);
-					st.unset("transform");
-					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
+					st.exitQuest(false);
 				}
 				else
 				{
@@ -102,8 +102,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
 			return htmltext;
@@ -122,22 +121,8 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		super.onSkillSee(npc, caster, skill, targets, isPet);
-		
-		QuestState st = caster.getQuestState(qn);
-		int npcId = npc.getNpcId();
-		
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if (!st.isStarted())
-		{
-			return null;
-		}
-		
-		if (!Util.contains(MOBS, npcId))
+		final QuestState st = caster.getQuestState(qn);
+		if ((st == null) || !st.isStarted())
 		{
 			return null;
 		}
@@ -145,7 +130,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		if (Util.contains(targets, npc) && (st.getInt("cond") == 1) && (skill.getId() == 2630))
 		{
 			st.playSound("ItemSound.quest_itemget");
-			
+			final int npcId = npc.getNpcId();
 			// Red Star Stones
 			if ((npcId >= 18684) && (npcId <= 18686))
 			{
@@ -163,7 +148,7 @@ public class Q10274_CollectingInTheAir extends Quest
 			}
 			npc.doDie(caster);
 		}
-		return null;
+		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
 	public Q10274_CollectingInTheAir(int questId, String name, String descr)
@@ -173,19 +158,14 @@ public class Q10274_CollectingInTheAir extends Quest
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		
-		addSkillSeeId(18684);
-		addSkillSeeId(18685);
-		addSkillSeeId(18686);
-		addSkillSeeId(18687);
-		addSkillSeeId(18688);
-		addSkillSeeId(18689);
-		addSkillSeeId(18690);
-		addSkillSeeId(18691);
-		addSkillSeeId(18692);
+		addSkillSeeId(MOBS);
 		
 		questItemIds = new int[]
 		{
-			SCROLL, RED, BLUE, GREEN
+			SCROLL,
+			RED,
+			BLUE,
+			GREEN
 		};
 	}
 	

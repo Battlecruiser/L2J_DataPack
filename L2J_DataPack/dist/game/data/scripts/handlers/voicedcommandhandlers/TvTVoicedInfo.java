@@ -24,17 +24,18 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * Tvt info.
- * 
  * @author denser
  */
 public class TvTVoicedInfo implements IVoicedCommandHandler
 {
-	private static final String[] _voicedCommands = { "tvt" };
+	private static final String[] _voicedCommands =
+	{
+		"tvt"
+	};
 	
 	/**
-	 * Set this to false and recompile script if you dont want to use string cache.
-	 * This will decrease performance but will be more consistent against possible html editions during runtime
-	 * Recompiling the script will get the new html would be enough too [DrHouse]
+	 * Set this to false and recompile script if you don't want to use string cache.<br>
+	 * This will decrease performance but will be more consistent against possible html editions during runtime Recompiling the script will get the new html would be enough too [DrHouse]
 	 */
 	private static final boolean USE_STATIC_HTML = true;
 	private static final String HTML = HtmCache.getInstance().getHtm(null, "data/html/mods/TvTEvent/Status.htm");
@@ -42,13 +43,11 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
-		if (command.equalsIgnoreCase("tvt"))
+		if (command.equals("tvt"))
 		{
 			if (TvTEvent.isStarting() || TvTEvent.isStarted())
 			{
-				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML :
-					HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/TvTEvent/Status.htm");
-				
+				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML : HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/TvTEvent/Status.htm");
 				try
 				{
 					NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(5);

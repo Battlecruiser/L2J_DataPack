@@ -57,7 +57,7 @@ class Quest (JQuest) :
         st.giveItems(5875,1)
    elif cond == 2 and relic :
      st.takeItems(5879,-1)
-     st.giveItems(4553+st.getRandom(12),1)
+     st.giveItems(4553+self.getRandom(12),1)
      st.giveItems(5875,1)
      st.set("cond","1")
      htmltext = "30673-06.htm"
@@ -68,7 +68,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   chance=st.getRandom(100)
+   chance=self.getRandom(100)
    if chance < 3 :
       count = 0
       for item in range(5875,5879):

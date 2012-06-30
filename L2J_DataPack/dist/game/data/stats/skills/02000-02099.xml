@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skills.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2001" levels="1" name="Red Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="15000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect count="3" name="HealOverTime" abnormalTime="5" val="2" abnormalLvl="2" abnormalType="hp_recover" />
 		</for>
 	</skill>
 	<skill id="2002" levels="1" name="Healing Drug">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="20000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect count="4" name="HealOverTime" abnormalTime="5" val="1.5" abnormalLvl="1" abnormalType="hp_recover" />
 		</for>
@@ -25,12 +21,13 @@
 	<skill id="2003" levels="1" name="Squash Seed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Summer Squash Event Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="180000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="hitTime" val="1500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12774" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
@@ -38,12 +35,13 @@
 	<skill id="2004" levels="1" name="Large Squash Seed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Summer Squash Event Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="180000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="hitTime" val="1500" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="npcId" val="12777" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
@@ -51,41 +49,44 @@
 	<skill id="2005" levels="1" name="Nectar">
 		<!-- Confirmed CT2.5 -->
 		<!-- Summer Squash Event Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="300" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="neutral" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DUMMY" />
 		<set name="target" val="TARGET_ONE" /> <!-- FIXME: This should be TARGET_OTHERS -->
 	</skill>
 	<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2007" levels="1" name="Scroll: Enchant Armor (Grade A)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="buffDuration" val="300000" />
-		<set name="isPotion" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -95,12 +96,11 @@
 		</for>
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="20" />
@@ -108,12 +108,11 @@
 		</for>
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
@@ -121,119 +120,130 @@
 		</for>
 	</skill>
 	<skill id="2013" levels="1" name="Scroll Of Escape">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2014" levels="1" name="Scroll Of Resurrection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 		<set name="hitTime" val="15000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
 	<skill id="2015" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2016" levels="1" name="Scroll: Enchant Armor (Grade B)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2017" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2018" levels="1" name="Scroll: Enchant Armor (Grade C)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2019" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2020" levels="1" name="Scroll: Enchant Armor (Grade D)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2021" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2022" levels="1" name="Scroll: Enchant Armor (Grade S)">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2023" levels="1" name="Star Shard">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2024" levels="1" name="Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="2025" levels="1" name="Large Firework">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
 		<!-- Blessed Enchant -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
 		<!-- Blessed Enchant -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
 		<!-- Blessed Enchant -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
 		<!-- Blessed Enchant -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
 		<!-- Blessed Enchant -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="15000" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<for>
 			<!-- retail value: 8HP/sec; stat update every 2 sec -->
@@ -242,12 +252,10 @@
 		</for>
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="15000" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<for>
 			<!-- retail value: 24HP/sec; stat update every 2 sec -->
@@ -256,17 +264,17 @@
 		</for>
 	</skill>
 	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -274,12 +282,11 @@
 		</for>
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -287,19 +294,18 @@
 		</for>
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="15000" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<for>
 			<!-- retail value: 50HP/sec; stat update every 2 sec -->
@@ -308,105 +314,118 @@
 		</for>
 	</skill>
 	<skill id="2038" levels="1" name="Quick Healing Potion">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<set name="operateType" val="A1" />
 		<for>
 			<effect name="Heal" noicon="1" val="435" />
 		</for>
 	</skill>
 	<skill id="2039" levels="1" name="Soulshot: No Grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="ClanHall" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Castle" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2042" levels="1" name="Antidote">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="poison,3" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2043" levels="1" name="Greater Antidote">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="poison,7" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2044" levels="1" name="Bandage">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="bleeding,3" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2045" levels="1" name="Emergency Dressing">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="bleeding,7" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2046" levels="1" name="Wolf's Necklace">
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="5000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="COREDONE" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2048" levels="1" name="Wolves' Food">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="100" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -414,12 +433,12 @@
 		</for>
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -427,12 +446,12 @@
 		</for>
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
@@ -440,12 +459,12 @@
 		</for>
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -453,12 +472,12 @@
 		</for>
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -466,12 +485,12 @@
 		</for>
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
@@ -479,12 +498,12 @@
 		</for>
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -492,12 +511,12 @@
 		</for>
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -505,12 +524,12 @@
 		</for>
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -518,12 +537,12 @@
 		</for>
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -531,42 +550,49 @@
 		</for>
 	</skill>
 	<skill id="2060" levels="1" name="Healing Medicine">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateId" val="4082" />
+		<set name="magicLvl" val="1" />
+		<set name="negateAbnormals" val="fatal_poison,1" />
+		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="NEGATE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
 	<skill id="2063" levels="1" name="Hatchling Food">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="150" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="mp_regen_up">
 				<add order="0x40" stat="regMp" val="1.82" />
@@ -574,79 +600,71 @@
 		</for>
 	</skill>
 	<skill id="2065" levels="8" name="Box Key">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_UNLOCKABLE" />
 		<set name="hitTime" val="500" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="UNLOCK" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2068" levels="1" name="Item - Race Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2069" levels="1" name="Item - Race Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2070" levels="1" name="Item - Race Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2071" levels="1" name="Item - Race Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2072" levels="1" name="Item - Race Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
 		<set name="isDebuff" val="true" />
-		<set name="isPotion" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A3" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="CONFUSION" />
@@ -659,20 +677,21 @@
 		</for>
 	</skill>
 	<skill id="2075" levels="1" name="Decrease Hate Scroll">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
-		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="70" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -683,8 +702,9 @@
 	</skill>
 	<skill id="2077" levels="1" name="Potion of Revenge">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -696,10 +716,11 @@
 	</skill>
 	<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1835" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -711,10 +732,11 @@
 	</skill>
 	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1463" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -726,10 +748,11 @@
 	</skill>
 	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1464" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -741,10 +764,11 @@
 	</skill>
 	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1465" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -756,10 +780,11 @@
 	</skill>
 	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1466" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -771,10 +796,11 @@
 	</skill>
 	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="1467" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -786,10 +812,11 @@
 	</skill>
 	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2509" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -801,10 +828,11 @@
 	</skill>
 	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2510" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -816,10 +844,11 @@
 	</skill>
 	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2511" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -831,10 +860,11 @@
 	</skill>
 	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2512" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -846,10 +876,11 @@
 	</skill>
 	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2513" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -861,10 +892,11 @@
 	</skill>
 	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="2514" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -876,10 +908,11 @@
 	</skill>
 	<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3947" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -891,10 +924,11 @@
 	</skill>
 	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3948" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -906,10 +940,11 @@
 	</skill>
 	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3949" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -921,10 +956,11 @@
 	</skill>
 	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3950" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -936,10 +972,11 @@
 	</skill>
 	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3951" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -951,10 +988,11 @@
 	</skill>
 	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
 		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="300" />
 		<set name="create_item_id" val="3952" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
@@ -965,46 +1003,50 @@
 		</cond>
 	</skill>
 	<skill id="2096" levels="1" name="Soul Crystal">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="26" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="1200" />
-		<set name="staticHitTime" val="true" />
-		<set name="skillType" val="DUMMY" />
 		<set name="neutral" val="true" />
 		<set name="reuseDelay" val="3000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
 	</skill>
 	<skill id="2097" levels="3" name="Sowing">
 		<table name="#mpConsume"> 4 6 8 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1800" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="SOW" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="400" />
 		<set name="castRange" val="40" />
 	</skill>
 	<skill id="2098" levels="1" name="Harvesting">
-		<set name="mpConsume" val="3" />
-		<set name="target" val="TARGET_CORPSE_MOB" />
-		<set name="hitTime" val="500" />
-		<set name="skillType" val="HARVEST" />
-		<set name="reuseDelay" val="1000" />
-		<set name="staticHitTime" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="20" />
-		<set name="effectRange" val="100" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="3" />
+		<set name="neutral" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="target" val="TARGET_CORPSE_MOB" />
+		<for>
+			<effect name="Harvesting" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="300000" />
-		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="A1" />
 	</skill>
 </list>

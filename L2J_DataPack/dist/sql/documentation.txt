@@ -1,19 +1,24 @@
-This directory contains table definitions and data dumps you need to import into your L2J login and server databases in order to run an L2J server. Additionally, there are directories whose content serve different purposes. You should read documentation.txt files included inside these directories for further explanation about them.
+This directory contains tables needed for L2J "cs", ls and "gs" DataBases in order to run an L2J Server.
 
-For community board related SQL files, please refer to the cb_sql directory (located at the same level this directory resides)
+Additionally, there are directories whose content serve different purposes.
+You should read documentation.txt files included inside these directories for further explanation about them.
 
 In general, and unless otherwise stated by specific conventions or guidelines the following tips should be considered:
 
 - File names should be made by using underscore_separation, instead of camelCase.
 
-- Field names should be made by using camelCase, instead of underscore_separation. This is not (totally) arbitrary, but trying to keep an acceptable balance between name length, readability, and intuitive model perception.
+- Field names should be made by using camelCase, instead of underscore_separation.
+  This is not (totally) arbitrary, but trying to keep an acceptable balance between name length, readability, and intuitive model perception.
 
-- Field types should be defined according to the actual domain they're meant to describe. Said in other words, we shouldn't have atrocities such as INTEGER(14) for 'level' just because somebody was too lazy to check column ranges in a manual and preferred to be on the safe side by guessing ;)
+- Field types should be defined according to the actual domain they're meant to describe.
+  Said in other words, we shouldn't have atrocities such as int(14) for 'level' just because somebody was too lazy to check column ranges in a manual and preferred to be on the safe side by guessing ;)
 
-- Further, when specifying a numeric type, INTEGER or its variations should be chosen instead of DECIMAL(M,0).
+- Further, when specifying a numeric type, INT or its variations should be chosen instead of DECIMAL(M,0).
 
-- Since L2J supports MySQL as its one and only data management backend, we should not hesitate to introduce any standards extension or column type MySQL provides as a non-portable feature. This statement applies particularly when we could obtain any gain either from a readability, code maintenance or system performance perspective.
+- Since L2J supports MySQL as its one and only data management backend, we should not hesitate to introduce any standards extension or column type MySQL provides as a non-portable feature.
+  This statement applies particularly when we could obtain any gain either from a readability, code maintenance or system performance perspective.
 
-- During data dump queries, no quotes should be used for numeric values and spaces after field separation commas should be ommited. This is in order to reduce file sizes.
+- During data dump queries, no quotes should be used for numeric values and spaces after field separation commas should be ommited.
+  This is in order to reduce file sizes.
 
 - Comments should be used at the developers discretion, to either serve as separators between structure and data, description of the ingame meaning of an statement or any other form of documentation intended to help administrators to understand the way they should use a table, or how could it be customized.

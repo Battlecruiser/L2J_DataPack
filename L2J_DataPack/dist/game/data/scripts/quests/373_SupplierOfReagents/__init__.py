@@ -232,7 +232,7 @@ class Quest (JQuest) :
                    else :
                       st.playSound("SkillSound5.liquid_fail_01")
                       return "31149-7d.htm"
-                if st.getRandom(100) < chance :
+                if self.getRandom(100) < chance :
                    st.giveItems(item,qty)
                    st.playSound("SkillSound5.liquid_success_01")
                 else :
@@ -279,11 +279,11 @@ class Quest (JQuest) :
      # that appear later in the list, first check with the sum of all entries to
      # see if any one of them will drop, then select which one...
      totalDropChance = DROPLIST[npcId][0]
-     if totalDropChance*Config.RATE_QUEST_DROP > st.getRandom(100) :
+     if totalDropChance*Config.RATE_QUEST_DROP > self.getRandom(100) :
          # At this point, we decided that one entry from this list will definitely be dropped
          # to select which one, get a random value in the range of the total chance and find
          # the first item that passes this range.
-         itemToDrop =st.getRandom(totalDropChance)
+         itemToDrop =self.getRandom(totalDropChance)
          indexChance = 0
          for i in range(1,len(DROPLIST[npcId])) :
              item, chance = DROPLIST[npcId][i]
@@ -295,7 +295,7 @@ class Quest (JQuest) :
                  # definitely give at least 1 item.  If the chance exceeds 100%, then give some
                  # additional bonus...
                  numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
-                 if numItems == 0 or chance > st.getRandom(100) :
+                 if numItems == 0 or chance > self.getRandom(100) :
                      numItems += 1
                  st.giveItems(item,int(numItems))
                  st.playSound("ItemSound.quest_itemget")

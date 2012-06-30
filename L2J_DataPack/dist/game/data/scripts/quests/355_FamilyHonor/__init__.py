@@ -47,7 +47,7 @@ class Quest (JQuest) :
    if event == "30929-1.htm" :
      return htmltext
    if event == "appraise" :
-     appraising = st.getRandom(100)
+     appraising = self.getRandom(100)
      if appraising in range(0,20) : 
        htmltext = "30929-2.htm"       
        st.takeItems(WORK_OF_BERONA,1)
@@ -113,8 +113,8 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") == 1 :
-     chance_1 = st.getRandom(100)
-     chance_2 = st.getRandom(100)
+     chance_1 = self.getRandom(100)
+     chance_2 = self.getRandom(100)
      if chance_1 < CHANCE_FOR_GALFREDOS_BUST :
        st.giveItems(GALFREDOS_BUST,1)
        st.playSound("ItemSound.quest_itemget")

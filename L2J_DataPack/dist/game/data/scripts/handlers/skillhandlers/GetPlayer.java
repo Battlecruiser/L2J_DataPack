@@ -16,17 +16,16 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
-/*
+/**
  * Mobs can teleport players to them
  */
-
 public class GetPlayer implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -34,10 +33,6 @@ public class GetPlayer implements ISkillHandler
 		L2SkillType.GET_PLAYER
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -45,9 +40,9 @@ public class GetPlayer implements ISkillHandler
 			return;
 		for (L2Object target : targets)
 		{
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
-				L2PcInstance trg = (L2PcInstance) target;
+				L2PcInstance trg = target.getActingPlayer();
 				if (trg.isAlikeDead())
 					continue;
 				//trg.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
@@ -57,10 +52,6 @@ public class GetPlayer implements ISkillHandler
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

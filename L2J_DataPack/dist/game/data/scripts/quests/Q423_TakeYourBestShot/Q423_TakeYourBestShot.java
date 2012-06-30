@@ -15,7 +15,6 @@
 package quests.Q423_TakeYourBestShot;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -23,12 +22,11 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
- ** @author Gnacik
- ** 
- ** 2010-06-26 Based on official server Franz
+ * Based on official server Franz.
+ * @version 2010-06-26
+ * @author Gnacik
  */
 public class Q423_TakeYourBestShot extends Quest
 {
@@ -43,19 +41,28 @@ public class Q423_TakeYourBestShot extends Quest
 	// Guard
 	private static final int _tanta_guard = 18862;
 	// Mobs
-	private static final int[] _mobs = {
-		22768, 22769, 22770, 22771, 22772, 22773, 22774
+	private static final int[] _mobs =
+	{
+		22768,
+		22769,
+		22770,
+		22771,
+		22772,
+		22773,
+		22774
 	};
-
+	
 	@Override
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
+		{
 			return htmltext;
-
+		}
+		
 		if (npc.getNpcId() == _johnny)
 		{
 			if (event.equalsIgnoreCase("32744-04.htm"))
@@ -78,40 +85,62 @@ public class Q423_TakeYourBestShot extends Quest
 		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
-
+		}
+		
 		if (npc.getNpcId() == _johnny)
 		{
-			switch(st.getState())
+			switch (st.getState())
 			{
-				case State.CREATED :
+				case State.CREATED:
 					QuestState _prev = player.getQuestState("249_PoisonedPlainsOfTheLizardmen");
 					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
+					{
 						if (st.hasQuestItems(_seer_ugoros_pass))
+						{
 							htmltext = "32744-07.htm";
+						}
 						else
+						{
 							htmltext = "32744-01.htm";
+						}
+					}
 					else
+					{
 						htmltext = "32744-00.htm";
+					}
 					break;
-				case State.STARTED :
+				case State.STARTED:
 					if (st.getInt("cond") == 1)
+					{
 						htmltext = "32744-05.htm";
+					}
 					else if (st.getInt("cond") == 2)
+					{
 						htmltext = "32744-06.htm";
+					}
 					break;
 			}
 		}
 		else if (npc.getNpcId() == _batracos)
 		{
 			if (st.getState() == State.CREATED)
+			{
 				if (st.hasQuestItems(_seer_ugoros_pass))
+				{
 					htmltext = "32740-05.htm";
+				}
 				else
+				{
 					htmltext = "32740-00.htm";
-			else if (st.getState() == State.STARTED && st.getInt("cond") == 1)
+				}
+			}
+			else if ((st.getState() == State.STARTED) && (st.getInt("cond") == 1))
+			{
 				htmltext = "32740-02.htm";
-			else if (st.getState() == State.STARTED && st.getInt("cond") == 2)
+			}
+			else if ((st.getState() == State.STARTED) && (st.getInt("cond") == 2))
 			{
 				st.giveItems(_seer_ugoros_pass, 1);
 				st.playSound("ItemSound.quest_finish");
@@ -122,42 +151,45 @@ public class Q423_TakeYourBestShot extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			Quest q = QuestManager.getInstance().getQuest(getName());
-			st = q.newQuestState(player);
+			st = newQuestState(player);
 		}
 		
 		if (npc.isInsideRadius(96782, 85918, 100, true))
+		{
 			return "32740-ugoros.htm";
+		}
 		return "32740.htm";
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) 
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return null;
+		}
 		
-		if (Util.contains(_mobs, npc.getNpcId()) && Rnd.get(1000) <= _spawn_chance)
+		if (Util.contains(_mobs, npc.getNpcId()) && (getRandom(1000) <= _spawn_chance))
 		{
 			L2Npc guard = addSpawn(_tanta_guard, npc, false);
 			attackPlayer((L2Attackable) guard, player);
 		}
-		else if (npc.getNpcId() == _tanta_guard && st.getInt("cond") == 1)
+		else if ((npc.getNpcId() == _tanta_guard) && (st.getInt("cond") == 1))
 		{
 			st.set("cond", "2");
 			st.playSound("ItemSound.quest_middle");
 		}
 		return null;
 	}
-
+	
 	private void attackPlayer(L2Attackable npc, L2PcInstance player)
 	{
 		npc.setIsRunning(true);
@@ -168,18 +200,20 @@ public class Q423_TakeYourBestShot extends Quest
 	public Q423_TakeYourBestShot(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-
+		
 		addStartNpc(_johnny);
 		addTalkId(_johnny);
 		addStartNpc(_batracos);
 		addTalkId(_batracos);
 		addFirstTalkId(_batracos);
-
+		
 		addKillId(_tanta_guard);
-		for(int _mob : _mobs)
+		for (int _mob : _mobs)
+		{
 			addKillId(_mob);
+		}
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new Q423_TakeYourBestShot(423, qn, "Take Your Best Shot!");

@@ -10605,23 +10605,23 @@ INSERT INTO `npc_elementals` VALUES
 -- Teleport Device
 (4314,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Warehouse Keeper
-(4315,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4315,0,0,150,150,150,150,150,150),
 -- Photo Snow
-(4316,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4316,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4317,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4317,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4318,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4318,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4319,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4319,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4320,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4320,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4321,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4321,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4322,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4322,0,0,20,20,20,20,20,20),
 -- Photo Snow
-(4323,0,0,20,20,20,20,20,20), -- TODO: Stats require check
+(4323,0,0,20,20,20,20,20,20),
 -- Worshipper
 (4324,0,0,20,20,20,20,20,20), -- TODO: Stats require check
 -- Altar Guard

@@ -64,7 +64,7 @@ class Quest (JQuest) :
    
    count=st.getQuestItemsCount(FLOATING_STONE)
    if count < 50 :
-     if st.getRandom(100) < 25 and count < 49 :
+     if self.getRandom(100) < 25 and count < 49 :
        st.giveItems(FLOATING_STONE,2)
      else:
        st.giveItems(FLOATING_STONE,1)

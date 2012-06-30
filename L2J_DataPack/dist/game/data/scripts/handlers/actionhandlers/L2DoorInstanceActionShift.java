@@ -33,40 +33,26 @@ public class L2DoorInstanceActionShift implements IActionHandler
 			activeChar.setTarget(target);
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel()));
 			
-			StaticObject su;
-			L2DoorInstance door = (L2DoorInstance)target;
-			// send HP amount if doors are inside castle/fortress zone
-
-			if ((door.getCastle() != null && door.getCastle().getCastleId() > 0)
-				|| (door.getFort() != null && door.getFort().getFortId() > 0
-				|| (door.getClanHall() != null && door.getClanHall().isSiegableHall())
-				&& !door.getIsCommanderDoor()))
-			{
-				su = new StaticObject(door, true);
-			}
-			else
-			{
-				su  = new StaticObject(door, false);
-			}
-			
+			L2DoorInstance door = (L2DoorInstance) target;
+			StaticObject su = new StaticObject(door, activeChar.isGM());
 			activeChar.sendPacket(su);
 			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
 			html.replace("%class%", target.getClass().getSimpleName());
-			html.replace("%hp%",    String.valueOf((int)door.getCurrentHp()));
+			html.replace("%hp%", String.valueOf((int) door.getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(door.getMaxHp()));
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
-			html.replace("%doorid%",  String.valueOf(door.getDoorId()));
+			html.replace("%doorid%", String.valueOf(door.getDoorId()));
 			
-			html.replace("%minx%", String.valueOf(door.getXMin()));
-			html.replace("%miny%", String.valueOf(door.getYMin()));
+			html.replace("%minx%", String.valueOf(door.getX(0)));
+			html.replace("%miny%", String.valueOf(door.getY(0)));
 			html.replace("%minz%", String.valueOf(door.getZMin()));
 			
-			html.replace("%maxx%", String.valueOf(door.getXMax()));
-			html.replace("%maxy%", String.valueOf(door.getYMax()));
+			html.replace("%maxx%", String.valueOf(door.getX(2)));
+			html.replace("%maxy%", String.valueOf(door.getY(2)));
 			html.replace("%maxz%", String.valueOf(door.getZMax()));
-			html.replace("%unlock%", door.isUnlockable() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
+			html.replace("%unlock%", door.isOpenableBySkill() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
 			
 			activeChar.sendPacket(html);
 		}

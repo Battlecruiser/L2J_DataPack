@@ -150,7 +150,7 @@ class Quest (JQuest) :
         if st.getState() != State.STARTED : return 
         npcId = npc.getNpcId()
         if not st.getQuestItemsCount(Totem) and st.getInt("cond") == 9:
-            if npcId in [21557,21558,21560,21563,21564,21565,21566,21567] and st.getRandom(100) <=30:
+            if npcId in [21557,21558,21560,21563,21564,21565,21566,21567] and self.getRandom(100) <=30:
                 st.giveItems(Totem,1)
                 st.set("cond","10")
                 st.playSound("ItemSound.quest_middle")

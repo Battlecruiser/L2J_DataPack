@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4600" type="EtcItem" name="Greater Dye of WIT (Wit+2 Men-2)">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
@@ -777,7 +777,7 @@
 		<set name="item_skill" val="2074-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="4678" type="EtcItem" name="Decrease Haste Potion">
@@ -795,7 +795,7 @@
 		<set name="item_skill" val="2075-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="4679" type="EtcItem" name="Bless of Eva">
@@ -813,7 +813,7 @@
 		<set name="item_skill" val="2076-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="4680" type="EtcItem" name="Potion of Revenge">
@@ -831,7 +831,7 @@
 		<set name="item_skill" val="2077-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
+			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="4681" type="Weapon" name="Stormbringer - Critical Anger">

@@ -79,7 +79,7 @@ class Quest (JQuest) :
    elif event == "31683-04.htm" : 
       if st.getQuestItemsCount(ESSENCE) >= 1 : 
          st.takeItems(ESSENCE,1) 
-         st.giveItems(REWARDS[st.getRandom(len(REWARDS))],5) 
+         st.giveItems(REWARDS[self.getRandom(len(REWARDS))],5) 
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1) 
          htmltext = "31683-04.htm"
@@ -131,7 +131,7 @@ class Quest (JQuest) :
         party = player.getParty()
         if party :
             PartyQuestMembers = []
-            for player1 in party.getPartyMembers().toArray() :
+            for player1 in party.getMembers().toArray() :
                 st1 = player1.getQuestState(qn)
                 if st1 :
                     if st1.getState() == State.STARTED and (st1.getInt("cond") == 1 or st1.getInt("cond") == 2) :

@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
@@ -40,6 +39,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2DamageZone;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -48,7 +48,6 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author GKR
@@ -99,10 +98,10 @@ public class TullyWorkshop extends Quest
 		22377, 22378, 22379, 22383
 	};
 	
-	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<Integer, int[]>();
-	private static final Map<Integer, int[][]> TELE_COORDS = new FastMap<Integer, int[][]>();
+	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<>();
+	private static final Map<Integer, int[][]> TELE_COORDS = new FastMap<>();
 	
-	private int countdownTime;
+	protected int countdownTime;
 	private int nextServantIdx = 0;
 	private int killedFollowersCount = 0;
 	private boolean allowServantSpawn = true;
@@ -110,16 +109,16 @@ public class TullyWorkshop extends Quest
 	private boolean allowAgentSpawn_7th = true;
 	private boolean is7thFloorAttackBegan = false;
 	
-	private ScheduledFuture<?> _countdown = null;
+	protected ScheduledFuture<?> _countdown = null;
 	
 	// NPC's, spawned after Tully's death are stored here
-	private static List<L2Npc> postMortemSpawn = new FastList<L2Npc>();
-	private static TIntHashSet brokenContraptions = new TIntHashSet();
-	private static TIntHashSet rewardedContraptions = new TIntHashSet();
-	private static TIntHashSet talkedContraptions = new TIntHashSet();
+	protected static List<L2Npc> postMortemSpawn = new FastList<>();
+	protected static TIntHashSet brokenContraptions = new TIntHashSet();
+	protected static TIntHashSet rewardedContraptions = new TIntHashSet();
+	protected static TIntHashSet talkedContraptions = new TIntHashSet();
 	
-	private final List<L2MonsterInstance> spawnedFollowers = new FastList<L2MonsterInstance>();
-	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<L2MonsterInstance>();
+	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
+	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();
 	private L2Npc spawnedAgent = null;
 	private L2Spawn pillarSpawn = null;
 	
@@ -649,7 +648,7 @@ public class TullyWorkshop extends Quest
 		else if (npcId == AGENT)
 		{
 			final L2Party party = player.getParty();
-			if ((party == null) || (party.getPartyLeaderOID() != player.getObjectId()))
+			if ((party == null) || (party.getLeaderObjectId() != player.getObjectId()))
 			{
 				return "32372-01a.htm";
 			}
@@ -703,7 +702,7 @@ public class TullyWorkshop extends Quest
 				false, false, false, false, false
 			};
 			// For teleportation party should have all 5 medals
-			for (L2PcInstance pl : party.getPartyMembers())
+			for (L2PcInstance pl : party.getMembers())
 			{
 				if (pl == null)
 				{
@@ -738,7 +737,7 @@ public class TullyWorkshop extends Quest
 				return "32344-02.htm";
 			}
 			
-			for (L2PcInstance pl : party.getPartyMembers())
+			for (L2PcInstance pl : party.getMembers())
 			{
 				if ((pl != null) && Util.checkIfInRange(6000, pl, npc, false))
 				{
@@ -857,9 +856,9 @@ public class TullyWorkshop extends Quest
 		{
 			L2Party party = player.getParty();
 			
-			if ((party != null) && (party.getPartyLeaderOID() == player.getObjectId()))
+			if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 			{
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(300, partyMember, npc, true))
 					{
@@ -867,7 +866,7 @@ public class TullyWorkshop extends Quest
 					}
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					partyMember.teleToLocation(-13400, 272827, -15300, true);
 				}
@@ -904,7 +903,7 @@ public class TullyWorkshop extends Quest
 			{
 				player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
 			}
-			else if (party.getPartyLeaderOID() != player.getObjectId())
+			else if (party.getLeaderObjectId() != player.getObjectId())
 			{
 				player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			}
@@ -915,7 +914,7 @@ public class TullyWorkshop extends Quest
 			else
 			{
 				final int tele[] = TELE_COORDS.get(npcId)[direction];
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(4000, partyMember, npc, true))
 					{
@@ -932,7 +931,7 @@ public class TullyWorkshop extends Quest
 				int i0 = talkedContraptions.contains(npc.getObjectId()) ? 0 : 1;
 				int i1 = player.getClassId().equalsOrChildOf(ClassId.maestro) ? 6 : 3;
 				
-				if (Rnd.get(1000) < ((i1 - i0) * 100))
+				if (getRandom(1000) < ((i1 - i0) * 100))
 				{
 					talkedContraptions.add(npc.getObjectId());
 					htmltext = player.getClassId().equalsOrChildOf(ClassId.maestro) ? "32371-03a.htm" : "32371-03.htm";
@@ -997,13 +996,13 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					if (party.getPartyLeaderOID() != player.getObjectId())
+					if (party.getLeaderObjectId() != player.getObjectId())
 					{
 						player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					}
 					else
 					{
-						for (L2PcInstance partyMember : party.getPartyMembers())
+						for (L2PcInstance partyMember : party.getMembers())
 						{
 							if (Util.checkIfInRange(6000, partyMember, npc, true))
 							{
@@ -1042,7 +1041,7 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(400, partyMember, npc, true))
 						{
@@ -1050,7 +1049,7 @@ public class TullyWorkshop extends Quest
 						}
 					}
 					
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						npc.setTarget(partyMember);
 						npc.doCast(SkillTable.getInstance().getInfo(5526, 1));
@@ -1074,7 +1073,7 @@ public class TullyWorkshop extends Quest
 							MinionList.spawnMinion(monster, 25596);
 						}
 						
-						L2PcInstance target = player.getParty() == null ? player : player.getParty().getPartyMembers().get(Rnd.get(player.getParty().getPartyMembers().size()));
+						L2PcInstance target = player.getParty() == null ? player : player.getParty().getMembers().get(getRandom(player.getParty().getMembers().size()));
 						
 						if ((target != null) && !target.isDead())
 						{
@@ -1101,13 +1100,13 @@ public class TullyWorkshop extends Quest
 			}
 			else
 			{
-				if (party.getPartyLeaderOID() != player.getObjectId())
+				if (party.getLeaderObjectId() != player.getObjectId())
 				{
 					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 					return null;
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(3000, partyMember, npc, true))
 					{
@@ -1115,7 +1114,7 @@ public class TullyWorkshop extends Quest
 					}
 				}
 				
-				for (L2PcInstance partyMember : party.getPartyMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(6000, partyMember, npc, true))
 					{
@@ -1132,7 +1131,7 @@ public class TullyWorkshop extends Quest
 			
 			if (party != null)
 			{
-				if (party.getPartyLeaderOID() != player.getObjectId())
+				if (party.getLeaderObjectId() != player.getObjectId())
 				{
 					player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 				}
@@ -1142,7 +1141,7 @@ public class TullyWorkshop extends Quest
 				}
 				else
 				{
-					for (L2PcInstance partyMember : party.getPartyMembers())
+					for (L2PcInstance partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(6000, partyMember, npc, true))
 						{
@@ -1180,7 +1179,7 @@ public class TullyWorkshop extends Quest
 			if ((actor != null) && !actor.isDead())
 			{
 				double transferringHp = actor.getMaxHp() * 0.0001;
-				if ((Rnd.get(10000) > 1500) && (victim1 != null) && !victim1.isDead())
+				if ((getRandom(10000) > 1500) && (victim1 != null) && !victim1.isDead())
 				{
 					if ((actor.getCurrentHp() - transferringHp) > 1)
 					{
@@ -1189,7 +1188,7 @@ public class TullyWorkshop extends Quest
 					}
 				}
 				
-				if ((Rnd.get(10000) > 3000) && (victim2 != null) && !victim2.isDead())
+				if ((getRandom(10000) > 3000) && (victim2 != null) && !victim2.isDead())
 				{
 					if ((actor.getCurrentHp() - transferringHp) > 1)
 					{
@@ -1205,7 +1204,7 @@ public class TullyWorkshop extends Quest
 			L2MonsterInstance victim = npcId == TEMENIR ? spawnedFollowers.get(1) : spawnedFollowers.get(2);
 			L2MonsterInstance actor = spawnedFollowers.get(0);
 			
-			if ((actor != null) && (victim != null) && !actor.isDead() && !victim.isDead() && (Rnd.get(1000) > 333))
+			if ((actor != null) && (victim != null) && !actor.isDead() && !victim.isDead() && (getRandom(1000) > 333))
 			{
 				actor.clearAggroList();
 				actor.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -1269,7 +1268,7 @@ public class TullyWorkshop extends Quest
 		}
 		else if ((npcId == TIMETWISTER_GOLEM) && (_countdown != null))
 		{
-			if (Rnd.get(1000) >= 700)
+			if (getRandom(1000) >= 700)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
 				if (countdownTime > 180000)
@@ -1358,11 +1357,11 @@ public class TullyWorkshop extends Quest
 						}
 						else
 						{
-							deathCount[roomData[0]][i] = (deathCount[roomData[0]][i] + 1) * Rnd.get(3);
+							deathCount[roomData[0]][i] = (deathCount[roomData[0]][i] + 1) * getRandom(3);
 						}
 					}
 					
-					if (Rnd.get(1000) > 500)
+					if (getRandom(1000) > 500)
 					{
 						nextServantIdx++;
 					}
@@ -1498,7 +1497,7 @@ public class TullyWorkshop extends Quest
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			deathCount[floor][i] = Rnd.get(DEATH_COUNTS[floor]);
+			deathCount[floor][i] = getRandom(DEATH_COUNTS[floor]);
 		}
 	}
 	
@@ -1612,7 +1611,7 @@ public class TullyWorkshop extends Quest
 		}, STATE_CLOSE), 4000);
 	}
 	
-	private class CountdownTask implements Runnable
+	protected class CountdownTask implements Runnable
 	{
 		@Override
 		public void run()
