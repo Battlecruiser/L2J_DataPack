@@ -102,14 +102,15 @@
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-		<set name="referenceId" val="9919" />
-		<set name="reuseDelay" val="360000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="reflectDam" val="10" />
@@ -298,13 +299,17 @@
 		</for>
 	</skill>
 	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="600000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="pAtk" val="1.2" />
@@ -313,23 +318,29 @@
 		</for>
 	</skill>
 	<skill id="3429" levels="1" name="Red Talisman - Life Force">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="100" />
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3430" levels="1" name="White Talisman - Darkness">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -338,12 +349,16 @@
 		</for>
 	</skill>
 	<skill id="3431" levels="1" name="White Talisman - Storm">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -352,12 +367,16 @@
 		</for>
 	</skill>
 	<skill id="3432" levels="1" name="White Talisman - Water">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -366,12 +385,16 @@
 		</for>
 	</skill>
 	<skill id="3433" levels="1" name="White Talisman - Fire">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -380,12 +403,16 @@
 		</for>
 	</skill>
 	<skill id="3434" levels="1" name="White Talisman - Earth">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -394,12 +421,16 @@
 		</for>
 	</skill>
 	<skill id="3435" levels="1" name="White Talisman - Light">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="mpConsume" val="50" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
@@ -409,10 +440,10 @@
 	</skill>
 	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<!-- set name="affectLimit = "6;12" / -->
 		<set name="hitTime" val="3000" />
 		<set name="hpConsume" val="800" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
@@ -421,28 +452,36 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="600000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
-				<mul order="0x30" stat="mAtk" val="1.15" />
-				<basemul order="0x30" stat="mCritRate" val="0.15" />
+				<add order="0x40" stat="mCritRate" val="4" />
+				<mul order="0x30" stat="mAtk" val="1.55" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="50" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="600000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="bonusHp" val="1000" />
@@ -810,15 +849,17 @@
 		</for>
 	</skill>
 	<skill id="3487" levels="1" name="Blue Talisman of Power">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="pAtk" val="9.4" />
@@ -826,15 +867,17 @@
 		</for>
 	</skill>
 	<skill id="3488" levels="1" name="Blue Talisman of Protection">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
 		<set name="mpConsume" val="40" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="sDef" val="63" />
@@ -842,77 +885,89 @@
 		</for>
 	</skill>
 	<skill id="3489" levels="1" name="Yellow Talisman of Arcane Power">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="11.7" />
 		</for>
 	</skill>
 	<skill id="3490" levels="1" name="Yellow Talisman of Defense">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="18.3" />
 		</for>
 	</skill>
 	<skill id="3491" levels="1" name="Yellow Talisman of Evasion">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="1.1" />
 		</for>
 	</skill>
 	<skill id="3492" levels="1" name="Yellow Talisman of Speed">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="3" />
 		</for>
 	</skill>
 	<skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regHp" val="1.01" />
 		</for>
 	</skill>
 	<skill id="3494" levels="1" name="Yellow Talisman of CP Regeneration">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regCp" val="1.01" />
 		</for>
 	</skill>
 	<skill id="3495" levels="1" name="Yellow Talisman of Healing">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusHp" val="8" />
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="300000" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="CpHeal" noicon="1" val="100" />
 			<effect name="Heal" noicon="1" val="100" />
+			<effect name="CpHeal" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.01" />
 		</for>
