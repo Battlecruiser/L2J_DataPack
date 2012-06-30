@@ -843,14 +843,13 @@
 	</skill>
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9914" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -862,14 +861,13 @@
 	</skill>
 	<skill id="3272" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9926" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -881,32 +879,30 @@
 	</skill>
 	<skill id="3273" levels="1" name="Red Talisman of Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="referenceId" val="9925" />
 		<set name="reuseDelay" val="300000" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="CpHeal" noicon="1" val="200" />
 			<effect name="Heal" noicon="1" val="200" />
+			<effect name="CpHeal" noicon="1" val="200" />
 		</for>
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9921" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -918,14 +914,13 @@
 	</skill>
 	<skill id="3275" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9929" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -937,14 +932,13 @@
 	</skill>
 	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9927" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -956,14 +950,13 @@
 	</skill>
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9915" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -975,14 +968,13 @@
 	</skill>
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9928" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -994,14 +986,13 @@
 	</skill>
 	<skill id="3279" levels="1" name="Red Talisman of Meditation">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9931" />
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
@@ -1011,19 +1002,18 @@
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 			<!-- 27MP * 3 during 30 seconds -->
-			<effect count="10" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="81" />
+			<effect count="10" name="ManaHealOverTime" noicon="1" val="81" abnormalTime="3" />
 		</for>
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9920" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1035,14 +1025,13 @@
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9917" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1056,15 +1045,14 @@
 	</skill>
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="referenceId" val="9918" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -1077,14 +1065,13 @@
 	</skill>
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9924" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1096,14 +1083,13 @@
 	</skill>
 	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9932" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1116,14 +1102,13 @@
 	</skill>
 	<skill id="3285" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9916" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1141,106 +1126,113 @@
 		</for>
 	</skill>
 	<skill id="3286" levels="1" name="Black Talisman - Mending">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="bleeding,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="bleeding,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9922" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="root_physically,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="root_physically,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9957" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="root_magically,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="root_magically,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9956" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3289" levels="1" name="Black Talisman - Escape">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="root_physically,3;root_magically,3" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9923" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3290" levels="1" name="Black Talisman of Rescue">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="silence_physical,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="silence_physical,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9958" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="silence,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="silence,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9955" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="55" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="mpConsume" val="40" />
-		<set name="negateAbnormals" val="silence_all,9" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="negateAbnormals" val="silence_all,9" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
-		<set name="referenceId" val="9959" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
