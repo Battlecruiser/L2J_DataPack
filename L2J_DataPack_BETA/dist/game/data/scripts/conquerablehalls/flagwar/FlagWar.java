@@ -41,6 +41,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.entity.Siegable;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
@@ -432,19 +433,34 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		
 		// Schedule open doors closement and siege start in 2 minutes
-		ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+		ThreadPoolManager.getInstance().scheduleGeneral(new CloseOutterDoorsTask(FlagWar.super), 300000);
+	}
+	
+	/**
+	 * Runnable class to schedule doors closing and siege start.
+	 * @author Zoey76
+	 */
+	protected class CloseOutterDoorsTask implements Runnable
+	{
+		private Siegable _siegable;
+		
+		protected CloseOutterDoorsTask(Siegable clanHallSiege)
 		{
-			@Override
-			public void run()
+			_siegable = clanHallSiege;
+		}
+		
+		@Override
+		public void run()
+		{
+			for(int door : OUTTER_DOORS_TO_OPEN)
 			{
-				for(int door : OUTTER_DOORS_TO_OPEN)
-					_hall.openCloseDoor(door, false);
-				
-				_hall.getZone().banishNonSiegeParticipants();
-				
-				FlagWar.super.startSiege();
+				_hall.openCloseDoor(door, false);
 			}
-		}, 300000);
+			
+			_hall.getZone().banishNonSiegeParticipants();
+			
+			_siegable.startSiege();
+		}
 	}
 	
 	@Override
