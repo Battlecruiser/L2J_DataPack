@@ -60,7 +60,7 @@ public class ChainHeal implements ISkillHandler
 		for (L2Character character : characters)
 		{
 			//1505 - sublime self sacrifice
-			if ((character == null || character.isDead() || character.isInvul()) && skill.getId() != 1505)
+			if ((character.isDead() || character.isInvul()) && skill.getId() != 1505)
 				continue;
 			
 			// Cursed weapon owner can't heal or be healed
