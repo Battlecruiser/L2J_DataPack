@@ -608,7 +608,7 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<basemul order="0x30" stat="mCritRate" val="0.04" />
+			<add order="0x40" stat="mCritRate" val="4" />
 		</for>
 	</skill>
 	<skill id="3251" levels="10" name="Item Skill: Weight Limit">

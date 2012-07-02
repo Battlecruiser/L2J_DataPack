@@ -62,12 +62,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="magic_critical_up">
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<add order="0x40" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="2" abnormalType="magic_critical_up">
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -1259,7 +1259,7 @@
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -1534,7 +1534,7 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1551,7 +1551,7 @@
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="multi_buff">
-				<basemul order="0x40" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1568,7 +1568,7 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
-				<basemul order="0x40" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1608,7 +1608,7 @@
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1625,7 +1625,7 @@
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1642,7 +1642,7 @@
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1919,7 +1919,7 @@
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.02" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -1936,7 +1936,7 @@
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.02" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
