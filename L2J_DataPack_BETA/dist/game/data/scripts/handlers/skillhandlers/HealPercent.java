@@ -83,7 +83,7 @@ public class HealPercent implements ISkillHandler
 		for (L2Character target: (L2Character[]) targets)
 		{
 			//1505 - sublime self sacrifice
-			if ((target == null || target.isDead() || target.isInvul()) && skill.getId() != 1505)
+			if ((target.isDead() || target.isInvul()) && skill.getId() != 1505)
 				continue;
 			
 			targetPlayer = target.isPlayer();
