@@ -762,7 +762,7 @@
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+				<add order="0x40" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
