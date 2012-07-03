@@ -1643,8 +1643,8 @@
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="skillRadius" val="150" />
+		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1653,7 +1653,7 @@
 		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="2" abnormalType="stun" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower"/>
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower" />
 		</for>
 		<enchant1for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="2" abnormalType="stun" />
