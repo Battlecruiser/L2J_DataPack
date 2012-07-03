@@ -1628,22 +1628,24 @@
 		</for>
 	</skill>
 	<skill id="452" levels="5" name="Shock Stomp" enchantGroup1="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#effectPower"> 40 50 60 70 80 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<table name="#effectPower"> 40 50 60 70 80 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="52" />
-		<set name="power" val="50" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="reuseDelay" val="5000" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="52" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="skillRadius" val="150" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
@@ -1651,11 +1653,11 @@
 		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="2" abnormalType="stun" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower"/>
 		</for>
 		<enchant1for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="2" abnormalType="stun" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench1Power" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="453" levels="1" name="Escape Shackle">

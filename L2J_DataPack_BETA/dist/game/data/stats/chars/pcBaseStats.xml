@@ -191,27 +191,27 @@
 	<baseAtkRange classId="53" sex="male" val="20" /> <!-- Male Dwarven Fighter -->
 	<baseAtkRange classId="124" sex="female" val="20" /> <!-- Female Soldier -->
 	<baseAtkRange classId="123" sex="male" val="20" /> <!-- Male Male Soldier -->
-	<!-- Base damRange "Unknown,Unknown,Radius?,Distance?" -->
-	<baseDamRange classId="0" sex="female" val="0,0,26,120" /> <!-- Female Human Fighter -->
-	<baseDamRange classId="0" sex="male" val="0,0,26,120" /> <!-- Male Human Fighter -->
-	<baseDamRange classId="10" sex="female" val="0,0,26,120" /> <!-- Female Human Mystic -->
-	<baseDamRange classId="10" sex="male" val="0,0,26,120" /> <!-- Male Human Mystic -->
-	<baseDamRange classId="18" sex="female" val="0,0,26,120" /> <!-- Female Elven Fighter -->
-	<baseDamRange classId="18" sex="male" val="0,0,26,120" /> <!-- Male Elven Fighter -->
-	<baseDamRange classId="25" sex="female" val="0,0,26,120" /> <!-- Female Elven Mystic -->
-	<baseDamRange classId="25" sex="male" val="0,0,26,120" /> <!-- Male Elven Mystic -->
-	<baseDamRange classId="31" sex="female" val="0,0,26,120" /> <!-- Female Dark Fighter -->
-	<baseDamRange classId="31" sex="male" val="0,0,26,120" /> <!-- Male Dark Fighter -->
-	<baseDamRange classId="38" sex="female" val="0,0,26,120" /> <!-- Female Dark Mystic -->
-	<baseDamRange classId="38" sex="male" val="0,0,26,120" /> <!-- Male Dark Mystic -->
-	<baseDamRange classId="44" sex="female" val="0,0,26,120" /> <!-- Female Orc Fighter -->
-	<baseDamRange classId="44" sex="male" val="0,0,26,120" /> <!-- Male Orc Fighter -->
-	<baseDamRange classId="49" sex="female" val="0,0,26,120" /> <!-- Female Orc Mystic -->
-	<baseDamRange classId="49" sex="male" val="0,0,26,120" /> <!-- Male Orc Mystic -->
-	<baseDamRange classId="53" sex="female" val="0,0,26,120" /> <!-- Female Dwarven Fighter -->
-	<baseDamRange classId="53" sex="male" val="0,0,26,120" /> <!-- Male Dwarven Fighter -->
-	<baseDamRange classId="124" sex="female" val="0,0,26,120" /> <!-- Female Soldier -->
-	<baseDamRange classId="123" sex="male" val="0,0,26,120" /> <!-- Male Male Soldier -->
+	<!-- Base damRange (NOTE: Direction is represented in degrees 0=Front, 180=Back, positive degree=Left, negative degree=Right) -->
+	<baseDamRange classId="0" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Human Fighter -->
+	<baseDamRange classId="0" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Human Fighter -->
+	<baseDamRange classId="10" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Human Mystic -->
+	<baseDamRange classId="10" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Human Mystic -->
+	<baseDamRange classId="18" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Elven Fighter -->
+	<baseDamRange classId="18" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Elven Fighter -->
+	<baseDamRange classId="25" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Elven Mystic -->
+	<baseDamRange classId="25" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Elven Mystic -->
+	<baseDamRange classId="31" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Dark Fighter -->
+	<baseDamRange classId="31" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Dark Fighter -->
+	<baseDamRange classId="38" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Dark Mystic -->
+	<baseDamRange classId="38" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Dark Mystic -->
+	<baseDamRange classId="44" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Orc Fighter -->
+	<baseDamRange classId="44" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Orc Fighter -->
+	<baseDamRange classId="49" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Orc Mystic -->
+	<baseDamRange classId="49" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Orc Mystic -->
+	<baseDamRange classId="53" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Dwarven Fighter -->
+	<baseDamRange classId="53" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Dwarven Fighter -->
+	<baseDamRange classId="124" sex="female" unknown="0" direction="0" distance="26" width="120" /> <!-- Female Soldier -->
+	<baseDamRange classId="123" sex="male" unknown="0" direction="0" distance="26" width="120" /> <!-- Male Male Soldier -->
 	<!-- Base rndDam -->
 	<baseRndDam classId="0" sex="female" val="10" /> <!-- Female Human Fighter -->
 	<baseRndDam classId="0" sex="male" val="10" /> <!-- Male Human Fighter -->
