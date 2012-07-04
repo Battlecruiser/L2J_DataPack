@@ -716,6 +716,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22271-1" />
+		<cond msgId="113" addName="1">
+			<target levelRange="21;85" />
+		</cond>
 	</item>
 	<item id="21747" type="EtcItem" name="Beginner Adventurer's Treasure Sack">
 		<!-- Description: Treasure sack containing the treasure of beginner adventurers. Open it to obtain one random C or D-Grade Weapon. -->
