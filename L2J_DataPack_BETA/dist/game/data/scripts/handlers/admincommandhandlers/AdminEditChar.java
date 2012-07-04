@@ -377,10 +377,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
-
-					// Transform-untransorm player quickly to force the client to reload the character textures
-					TransformationManager.getInstance().transformPlayer(105, player);
-					ThreadPoolManager.getInstance().scheduleGeneral(new Untransform(player), 200);
 				}
 				else
 					activeChar.sendMessage("Usage: //setclass <valid_new_classid>");
