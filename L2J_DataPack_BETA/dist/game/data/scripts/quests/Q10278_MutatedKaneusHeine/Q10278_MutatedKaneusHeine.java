@@ -24,8 +24,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Heine (10278).<br>
- * Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Heine (10278)
  * @author nonom
  */
 public class Q10278_MutatedKaneusHeine extends Quest
@@ -55,35 +54,30 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		switch (npc.getNpcId())
 		{
 			case GOSTA:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = "30916-06.htm";
-				}
-				else if (st.isCreated())
-				{
-					htmltext = (player.getLevel() >= 38) ? "30916-01.htm" : "30916-00.htm";
-				}
-				else if (st.hasQuestItems(TISSUE_BO) && st.hasQuestItems(TISSUE_WB))
-				{
-					htmltext = "30916-05.htm";
-				}
-				else if (st.getInt("cond") == 1)
-				{
-					htmltext = "30916-04.htm";
+					case State.CREATED:
+						htmltext = (player.getLevel() > 37) ? "30916-01.htm" : "30916-00.htm";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_BO) && st.hasQuestItems(TISSUE_WB)) ? "30916-05.htm" : "30916-04.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = "30916-06.htm";
+						break;
 				}
 				break;
 			case MINEVIA:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = getAlreadyCompletedMsg(player);
-				}
-				else if (st.hasQuestItems(TISSUE_BO) && !st.hasQuestItems(TISSUE_WB))
-				{
-					htmltext = "30907-02.htm";
-				}
-				else
-				{
-					htmltext = "30907-01.htm";
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_BO) && st.hasQuestItems(TISSUE_WB)) ? "30907-02.htm" : "30907-01.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
 				}
 				break;
 		}
@@ -93,27 +87,23 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
 		{
 			case "30916-03.htm":
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "30907-03.htm":
-				st.rewardItems(57, 50000);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.giveAdena(50000, true);
+				st.exitQuest(false, true);
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -132,7 +122,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
-				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) || ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))))
+				if ((st != null) && st.isStarted() && (((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) || ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))))
 				{
 					PartyMembers.add(st);
 				}
@@ -143,7 +133,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
 		}
-		else
+		else if (st.isStarted())
 		{
 			rewardItem(npcId, st);
 		}
@@ -151,8 +141,8 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	}
 	
 	/**
-	 * @param npcId the killed monster Id.
-	 * @param st the quest state of the killer or party member.
+	 * @param npcId the ID of the killed monster
+	 * @param st the quest state of the killer or party member
 	 */
 	private final void rewardItem(int npcId, QuestState st)
 	{
@@ -171,14 +161,9 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	public Q10278_MutatedKaneusHeine(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(GOSTA);
-		addTalkId(MINEVIA);
-		addTalkId(MINEVIA);
-		
-		addKillId(BLADE_OTIS);
-		addKillId(WEIRD_BUNEI);
-		
+		addTalkId(GOSTA, MINEVIA);
+		addKillId(BLADE_OTIS, WEIRD_BUNEI);
 		questItemIds = new int[]
 		{
 			TISSUE_BO,

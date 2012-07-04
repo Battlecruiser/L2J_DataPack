@@ -24,8 +24,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Oren (10279).<br>
- * Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Oren (10279)
  * @author nonom
  */
 public class Q10279_MutatedKaneusOren extends Quest
@@ -55,35 +54,30 @@ public class Q10279_MutatedKaneusOren extends Quest
 		switch (npc.getNpcId())
 		{
 			case MOUEN:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = "30196-06.htm";
-				}
-				else if (st.isCreated())
-				{
-					htmltext = (player.getLevel() >= 48) ? "30196-01.htm" : "30196-00.htm";
-				}
-				else if (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM))
-				{
-					htmltext = "30196-05.htm";
-				}
-				else if (st.getInt("cond") == 1)
-				{
-					htmltext = "30196-04.htm";
+					case State.CREATED:
+						htmltext = (player.getLevel() > 47) ? "30196-01.htm" : "30196-00.htm";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM)) ? "30196-05.htm" : "30196-04.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = "30916-06.htm";
+						break;
 				}
 				break;
 			case ROVIA:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = getAlreadyCompletedMsg(player);
-				}
-				else if (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM))
-				{
-					htmltext = "30189-02.htm";
-				}
-				else
-				{
-					htmltext = "30189-01.htm";
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_KA) && st.hasQuestItems(TISSUE_KM)) ? "30189-02.htm" : "30189-01.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
 				}
 				break;
 		}
@@ -93,27 +87,23 @@ public class Q10279_MutatedKaneusOren extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
 		{
 			case "30196-03.htm":
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "30189-03.htm":
-				st.rewardItems(57, 100000);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.giveAdena(100000, true);
+				st.exitQuest(false, true);
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -132,16 +122,9 @@ public class Q10279_MutatedKaneusOren extends Quest
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
-				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
+				if ((st != null) && st.isStarted() && (((npcId == KAIM_ABIGORE) && !st.hasQuestItems(TISSUE_KA)) || ((npcId == KNIGHT_MONTAGNAR) && !st.hasQuestItems(TISSUE_KM))))
 				{
-					if ((npcId == KAIM_ABIGORE) && !st.hasQuestItems(TISSUE_KA))
-					{
-						PartyMembers.add(st);
-					}
-					else if ((npcId == KNIGHT_MONTAGNAR) && !st.hasQuestItems(TISSUE_KM))
-					{
-						PartyMembers.add(st);
-					}
+					PartyMembers.add(st);
 				}
 			}
 			
@@ -150,7 +133,7 @@ public class Q10279_MutatedKaneusOren extends Quest
 				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
 		}
-		else
+		else if (st.isStarted())
 		{
 			rewardItem(npcId, st);
 		}
@@ -158,8 +141,8 @@ public class Q10279_MutatedKaneusOren extends Quest
 	}
 	
 	/**
-	 * @param npcId the killed monster Id.
-	 * @param st the quest state of the killer or party member.
+	 * @param npcId the ID of the killed monster
+	 * @param st the quest state of the killer or party member
 	 */
 	private final void rewardItem(int npcId, QuestState st)
 	{
@@ -178,12 +161,9 @@ public class Q10279_MutatedKaneusOren extends Quest
 	public Q10279_MutatedKaneusOren(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MOUEN);
 		addTalkId(MOUEN, ROVIA);
-		
 		addKillId(KAIM_ABIGORE, KNIGHT_MONTAGNAR);
-		
 		questItemIds = new int[]
 		{
 			TISSUE_KA,
