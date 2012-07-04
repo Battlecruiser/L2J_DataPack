@@ -453,8 +453,10 @@
 		<set name="skillType" val="DELUXE_KEY_UNLOCK" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="109">
-			<!-- <target levelRange="21;85" /> TODO: Require Support -->
 			<target npcType="L2ChestInstance" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<target levelRange="21;85" />
 		</cond>
 	</skill>
 	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
