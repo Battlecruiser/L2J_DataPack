@@ -824,19 +824,18 @@
 		</for>
 	</skill>
 	<skill id="419" levels="4" name="Summon Treasure Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#extractableItems">
-			6667,2,30;6668,3,50;6669,2,20
-			6668,2,30;6669,3,50;6670,2,20
-			6669,2,30;6670,3,50;6671,2,20
-			6670,2,30;6671,3,50;6672,2,20
+			21746,1,100
+			21746,1,50;21746,2,50
+			21746,1,34;21746,2,33;21746,3,33
+			21746,1,25;21746,2,25;21746,3,25;21746,4,25
 		</table>
-		<table name="#itemConsumeCount"> 2 3 4 6 </table>
 		<table name="#magicLvl"> 46 58 66 74 </table>
 		<table name="#mpConsume"> 122 159 183 204 </table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="hitTime" val="3000" />
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
+		<set name="itemConsumeCount" val="2" />
 		<set name="itemConsumeId" val="1661" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
