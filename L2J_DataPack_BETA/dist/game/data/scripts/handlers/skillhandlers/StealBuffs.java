@@ -39,8 +39,6 @@ public class StealBuffs implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		activeChar.spsChecker(skill);
-		
 		if (activeChar.isNpc())
 		{
 			((L2Npc) activeChar)._spiritshotcharged = false;
@@ -194,6 +192,8 @@ public class StealBuffs implements ISkillHandler
 			}
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

@@ -40,8 +40,6 @@ public class Cancel implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		activeChar.spsChecker(skill);
-		
 		if (activeChar.isNpc())
 		{
 			((L2Npc)activeChar)._soulshotcharged = false;
@@ -205,6 +203,8 @@ public class Cancel implements ISkillHandler
 			}
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	private boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate, int minRate, int maxRate)
