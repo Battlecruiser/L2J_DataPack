@@ -32,14 +32,12 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.Manager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-
 
 /**
  * This class handles following admin commands:
@@ -48,7 +46,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  * - silence = toggles private messages acceptance mode
  * - diet = toggles weight penalty mode
  * - tradeoff = toggles trade acceptance mode
- * - reload = reloads specified component from multisell|skill|npc|htm|item|instancemanager
+ * - reload = reloads specified component from multisell|skill|npc|htm|item
  * - set/set_menu/set_mod = alters specified server setting
  * - saveolymp = saves olympiad state manually
  * - manualhero = cycles olympiad and calculate new heroes.
@@ -56,7 +54,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminAdmin.class.getName());
+	private static final Logger _log = Logger.getLogger(AdminAdmin.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -231,7 +229,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("You need to specify a type to reload!");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
 				return false;
 			}
 			
@@ -287,11 +285,6 @@ public class AdminAdmin implements IAdminCommandHandler
 					Config.load();
 					activeChar.sendMessage("All Config Settings have been reloaded");
 				}
-				else if (type.startsWith("instancemanager"))
-				{
-					Manager.reloadAll();
-					activeChar.sendMessage("All Instance Manager has been reloaded");
-				}
 				else if (type.startsWith("npcwalkers"))
 				{
 					NpcWalkerRoutesData.getInstance().load();
@@ -317,7 +310,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
 				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}
