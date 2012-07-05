@@ -24,8 +24,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.BaseStats;
@@ -96,8 +94,7 @@ public class Blow implements ISkillHandler
 					}
 				}
 				
-				L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
-				boolean soul = (weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && (weapon.getItemType() == L2WeaponType.DAGGER || weapon.getItemType() == L2WeaponType.DUALDAGGER || weapon.getItemType() == L2WeaponType.RAPIER));
+				boolean soul = activeChar.isSoulshotCharged(skill);
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
 				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
@@ -128,9 +125,6 @@ public class Blow implements ISkillHandler
 				// Crit rate base crit rate for skill, modified with STR bonus
 				if (!skill.isStaticDamage() && Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
 					damage *= 2;
-				
-				if (soul)
-					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 				
 				if (Config.LOG_GAME_DAMAGE
 						&& activeChar.isPlayable()
@@ -207,6 +201,8 @@ public class Blow implements ISkillHandler
 					effect.exit();
 				skill.getEffectsSelf(activeChar);
 			}
+			
+			activeChar.ssUncharge(skill);
 		}
 	}
 	

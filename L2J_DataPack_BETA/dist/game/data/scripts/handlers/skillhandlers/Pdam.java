@@ -23,10 +23,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.BaseStats;
@@ -58,19 +55,7 @@ public class Pdam implements ISkillHandler
 			_log.fine("Begin Skill processing in Pdam.java " + skill.getSkillType());
 		}
 		
-		L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
-		boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
-		
-		// If there is no weapon equipped, check for an active summon.
-		if (weapon == null && activeChar.isSummon())
-		{
-			L2Summon activeSummon = (L2Summon) activeChar;
-			if (activeSummon.getChargedSoulShot() == L2ItemInstance.CHARGED_SOULSHOT)
-			{
-				soul = true;
-				activeSummon.setChargedSoulShot(L2ItemInstance.CHARGED_NONE);
-			}
-		}
+		boolean soul = activeChar.isSoulshotCharged(skill);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
@@ -255,8 +240,7 @@ public class Pdam implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		if (soul && weapon != null)
-			weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
+		activeChar.ssUncharge(skill);
 		
 		if (skill.isSuicideAttack())
 			activeChar.doDie(activeChar);

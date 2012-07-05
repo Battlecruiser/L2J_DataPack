@@ -22,8 +22,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Fort;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -73,10 +71,10 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			// damage calculation
 			int damage = 0;
+			boolean soul = activeChar.isSoulshotCharged(skill);
 			
 			for (L2Character target: (L2Character[]) targets)
 			{
-				L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
 				if (activeChar.isPlayer() && target.isPlayer() && target.getActingPlayer().isFakeDeath())
 				{
 					target.stopFakeDeath(true);
@@ -87,7 +85,6 @@ public class StrSiegeAssault implements ISkillHandler
 				boolean dual = activeChar.isUsingDualWeapon();
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				boolean crit = Formulas.calcCrit(activeChar.getCriticalHit(target, skill), true, target);
-				boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 				
 				if (!crit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
 					damage = 0;
@@ -97,8 +94,6 @@ public class StrSiegeAssault implements ISkillHandler
 				if (damage > 0)
 				{
 					target.reduceCurrentHp(damage, activeChar, skill);
-					if (soul && weapon != null)
-						weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 					
 					activeChar.sendDamageMessage(target, damage, false, false, false);
 					
@@ -106,6 +101,8 @@ public class StrSiegeAssault implements ISkillHandler
 				else
 					activeChar.sendMessage(skill.getName() + " failed.");
 			}
+			
+			activeChar.ssUncharge(skill);
 		}
 		catch (Exception e)
 		{
