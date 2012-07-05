@@ -114,12 +114,6 @@ public class Continuous implements ISkillHandler
 					break;
 			}
 			
-			if (skill.getSkillType() == L2SkillType.BUFF)
-			{
-				
-				activeChar.spsChecker(skill);
-			}
-			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
 				if (weaponInst != null)
@@ -256,6 +250,8 @@ public class Continuous implements ISkillHandler
 			}
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

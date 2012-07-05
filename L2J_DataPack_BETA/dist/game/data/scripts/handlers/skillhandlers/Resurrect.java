@@ -43,8 +43,6 @@ public class Resurrect implements ISkillHandler
 		if (activeChar.isPlayer())
 			player = activeChar.getActingPlayer();
 		
-		activeChar.spsChecker(skill);
-		
 		L2PcInstance targetPlayer;
 		List<L2Character> targetToRes = new FastList<>();
 		
@@ -74,6 +72,7 @@ public class Resurrect implements ISkillHandler
 		}
 		
 		for (L2Character cha : targetToRes)
+		{
 			if (activeChar.isPlayer())
 			{
 				if (cha.isPlayer())
@@ -86,6 +85,9 @@ public class Resurrect implements ISkillHandler
 				DecayTaskManager.getInstance().cancelDecayTask(cha);
 				cha.doRevive(Formulas.calculateSkillResurrectRestorePercent(skill.getPower(), activeChar));
 			}
+		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

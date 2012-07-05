@@ -63,7 +63,7 @@ public class CpDam implements ISkillHandler
 			target.setCurrentCp(target.getCurrentCp() - damage);
 		}
 		
-		activeChar.spsChecker(skill);
+		activeChar.spsUncharge(skill);
 		
 	}
 	
