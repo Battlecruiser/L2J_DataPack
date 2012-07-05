@@ -243,7 +243,7 @@ ls_install
 ls_upgrade(){
 clear
 echo ""
-echo "Upgrading structure of Community Server tables."
+echo "Upgrading structure of Login Server tables."
 echo ""
 for file in $(ls ../sql/login/updates/*.sql);do
 	$MYL --force < $file 2>> ls_error.log
@@ -330,7 +330,7 @@ cs_install
 cs_upgrade(){
 clear
 echo ""
-echo "Upgrading structure of Game Server tables."
+echo "Upgrading structure of Community Server tables."
 echo ""
 for file in $(ls ../sql/community/updates/*sql);do
 	$MYC --force < $file 2>> cs_error.log
