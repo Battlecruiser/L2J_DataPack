@@ -430,18 +430,26 @@
 		<set name="coolTime" val="1000" />
 	</skill>
 	<skill id="6428" levels="1" name="Hold">
+		<!-- Confirmed CT2.5 -->
 		<!-- Sticky Mushroom Skill -->
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="DUMMY" /> <!-- Set to DUMMY in order to work properly -->
 		<set name="castRange" val="2000" />
-		<set name="hitTime" val="500" />
-		<set name="saveVs" val="MEN" />
+		<set name="effectRange" val="2000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="84" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="5" val="0" effectPower="50" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="root_magically">
+				<sub order="0x40" stat="rootVuln" val="100" />
+			</effect>
 			<effect name="HealPercent" noicon="1" val="90" />
 		</for>
 	</skill>
