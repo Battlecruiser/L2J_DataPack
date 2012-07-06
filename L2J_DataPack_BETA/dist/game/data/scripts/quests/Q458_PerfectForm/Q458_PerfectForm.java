@@ -219,7 +219,7 @@ public class Q458_PerfectForm extends Quest
 				case State.COMPLETED:
 					if (st.isNowAvailable())
 					{
-						st.setState(State.CREATED); // Not required, but it'll set the proper state.
+						st.setState(State.CREATED);
 						htmltext = (player.getLevel() >= 82) ? "32768-01.htm" : "32768-03.html";
 					}
 					else
