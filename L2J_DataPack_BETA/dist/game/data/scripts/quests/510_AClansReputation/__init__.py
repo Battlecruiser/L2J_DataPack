@@ -13,9 +13,6 @@ Valdis = 31331
 # Quest Items
 Claw = 8767
 
-# Reward
-CLAN_POINTS_REWARD = 100 # Rep Points Per Tyrannosaurus Item - need to be confirmed
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr) :
@@ -58,11 +55,14 @@ class Quest (JQuest) :
         if not count :
            htmltext = "31331-4.htm"
         elif count >= 1 :
-           htmltext = "31331-7.htm" # custom html
+           htmltext = "31331-7.htm"
+           if count < 10 :
+           		CLAN_POINTS_REWARD = 30 * count
+           else :
+           		CLAN_POINTS_REWARD = 59 + 30 * count
            st.takeItems(Claw,-1)
-           reward = int(CLAN_POINTS_REWARD * count)
-           clan.addReputationScore(reward,True)
-           player.sendPacket(SystemMessage.getSystemMessage(1777).addNumber(reward))
+           clan.addReputationScore(CLAN_POINTS_REWARD,True)
+           player.sendPacket(SystemMessage.getSystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
            clan.broadcastToOnlineMembers(PledgeShowInfoUpdate(clan))
   return htmltext
 
