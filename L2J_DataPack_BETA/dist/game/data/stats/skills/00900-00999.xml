@@ -1723,16 +1723,18 @@
 	<skill id="991" levels="1" name="Throwing Dagger">
 		<!-- High Five Skill -->
 		<set name="castRange" val="300" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="800" />
 		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="82" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="power" val="3488" />
 		<set name="reuseDelay" val="45000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
+		<set name="skillType" val="BLOW" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="Dagger,Dual Dagger" />
