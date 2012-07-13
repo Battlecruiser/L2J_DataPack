@@ -1722,6 +1722,7 @@
 	</skill>
 	<skill id="991" levels="1" name="Throwing Dagger">
 		<!-- High Five Skill -->
+		<set name="blowChance" val="20" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="300" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="800" />
