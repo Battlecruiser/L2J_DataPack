@@ -23,8 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * Good Day to Fly (10273).<br>
- * Original Jython script by Kerberos v1.0 on 2009/04/25
+ * Good Day to Fly (10273)
  * @author nonom
  */
 public class Q10273_GoodDayToFly extends Quest
@@ -36,8 +35,8 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22614,
-		22615
+		22614, // Vulture Rider
+		22615, // Vulture Rider
 	};
 	
 	// Items
@@ -61,15 +60,15 @@ public class Q10273_GoodDayToFly extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
-				htmltext = "32557-0a.htm";
+				htmltext = "32557-0a.html";
 				break;
 			case State.CREATED:
-				htmltext = (player.getLevel() < 75) ? "32557-00.htm" : "32557-01.htm";
+				htmltext = (player.getLevel() < 75) ? "32557-00.html" : "32557-01.htm";
 				break;
 			default:
 				if (st.getQuestItemsCount(MARK) >= 5)
 				{
-					htmltext = "32557-14.htm";
+					htmltext = "32557-14.html";
 					if (transform == 1)
 					{
 						st.giveItems(13553, 1);
@@ -80,16 +79,15 @@ public class Q10273_GoodDayToFly extends Quest
 					}
 					st.giveItems(13857, 1);
 					st.addExpAndSp(25160, 2525);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else if (transform == 0)
 				{
-					htmltext = "32557-07.htm";
+					htmltext = "32557-07.html";
 				}
 				else
 				{
-					htmltext = "32557-11.htm";
+					htmltext = "32557-11.html";
 				}
 				break;
 		}
@@ -99,40 +97,38 @@ public class Q10273_GoodDayToFly extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
 		{
 			case "32557-06.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
-			case "32557-09.htm":
+			case "32557-09.html":
 				st.set("transform", "1");
 				AuraBirdFalcon.getEffects(player, player);
 				break;
-			case "32557-10.htm":
+			case "32557-10.html":
 				st.set("transform", "2");
 				AuraBirdOwl.getEffects(player, player);
 				break;
-			case "32557-13.htm":
-				if (st.getInt("transform") == 1)
+			case "32557-13.html":
+				switch (st.getInt("transform"))
 				{
-					AuraBirdFalcon.getEffects(player, player);
-				}
-				else if (st.getInt("transform") == 2)
-				{
-					AuraBirdOwl.getEffects(player, player);
+					case 1:
+						AuraBirdFalcon.getEffects(player, player);
+						break;
+					case 2:
+						AuraBirdOwl.getEffects(player, player);
+						break;
 				}
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -145,13 +141,12 @@ public class Q10273_GoodDayToFly extends Quest
 		}
 		
 		final long count = st.getQuestItemsCount(MARK);
-		if ((st.getInt("cond") == 1) && (count < 5))
+		if (st.isCond(1) && (count < 5))
 		{
 			st.giveItems(MARK, 1);
 			if (count == 4)
 			{
-				st.playSound("ItemSound.quest_middle");
-				st.set("cond", "2");
+				st.setCond(2, true);
 			}
 			else
 			{
@@ -167,7 +162,6 @@ public class Q10273_GoodDayToFly extends Quest
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);
-		
 		questItemIds = new int[]
 		{
 			MARK
