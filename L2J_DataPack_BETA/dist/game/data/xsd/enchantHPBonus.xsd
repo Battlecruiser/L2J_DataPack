@@ -5,6 +5,9 @@
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="enchantHP" minOccurs="6" maxOccurs="6">
 					<xs:complexType>
+						<xs:sequence minOccurs="1" maxOccurs="20">
+							<xs:element name="bonus" type="xs:int"></xs:element>
+						</xs:sequence>
 						<xs:attribute name="grade" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -13,8 +16,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="values" type="xs:normalizedString" use="required" />
-					</xs:complexType>
+                    </xs:complexType>
 				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
