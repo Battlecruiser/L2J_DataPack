@@ -628,11 +628,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private boolean storeTradeList(int itemID, long price, int tradeListID, int order)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			String table = "merchant_buylists";
 			if (Config.CUSTOM_MERCHANT_TABLES)
 				table = "custom_merchant_buylists";
@@ -650,20 +647,13 @@ public class AdminEditNpc implements IAdminCommandHandler
 			_log.warning("Could not store trade list (" + itemID + ", " + price + ", " + tradeListID + ", " + order + "): " + e);
 			return false;
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 		return true;
 	}
 	
 	private void updateTradeList(int itemID, long price, int tradeListID, int order)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			int updated = 0;
 			if (Config.CUSTOM_MERCHANT_TABLES)
 			{
@@ -688,19 +678,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			_log.warning("Could not update trade list (" + itemID + ", " + price + ", " + tradeListID + ", " + order + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void deleteTradeList(int tradeListID, int order)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			int updated = 0;
 			if (Config.CUSTOM_MERCHANT_TABLES)
 			{
@@ -723,19 +706,13 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			_log.warning("Could not delete trade list (" + tradeListID + ", " + order + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private int findOrderTradeList(int itemID, long price, int tradeListID)
 	{
-		Connection con = null;
 		int order = -1;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement("SELECT `order` FROM `merchant_buylists` WHERE `shop_id` = ? AND `item_id` = ? AND `price` = ?");
 			stmt.setInt(1, tradeListID);
 			stmt.setInt(2, itemID);
@@ -751,10 +728,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			_log.warning("Could not get order for (" + itemID + ", " + price + ", " + tradeListID + "): " + e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 		return order;
 	}
@@ -1157,12 +1130,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void updateDropData(L2PcInstance activeChar, int npcId, int itemId, int min, int max, int category, int chance)
 	{
-		Connection con = null;
-		
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			int updated = 0;
 			if (Config.CUSTOM_DROPLIST_TABLE)
 			{
@@ -1201,20 +1170,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not update drop data!");
 			_log.warning("Error while updating drop data (" + npcId + ", " + itemId + ", " + min + ", " + max + ", " + category + ", " + chance + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void addDropData(L2PcInstance activeChar, int npcId, int itemId, int min, int max, int category, int chance)
 	{
-		Connection con = null;
-		
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			String table = "droplist";
 			if (Config.CUSTOM_DROPLIST_TABLE)
 				table = "custom_droplist";
@@ -1238,10 +1199,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			activeChar.sendMessage("Could not add drop data!");
 			_log.warning("Error while adding drop data (" + npcId + ", " + itemId + ", " + min + ", " + max + ", " + category + ", " + chance + "): " + e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -1274,11 +1231,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			int updated = 0;
 			if (Config.CUSTOM_DROPLIST_TABLE)
 			{
@@ -1309,10 +1263,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not delete drop data!");
 			_log.warning("Error while deleting drop data (" + npcId + ", " + itemId + ", " + category + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void reloadNpcDropList(int npcId)
@@ -1325,11 +1275,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		npcData.clearAllDropData();
 		
 		// get the drops
-		Connection con = null;
-		
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			L2DropData dropData = null;
 			
 			PreparedStatement statement = con.prepareStatement("SELECT `mobId`, `itemId`, `min`, `max`, `category`, `chance` FROM `droplist` WHERE `mobId`=?");
@@ -1376,10 +1323,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			_log.warning("Error while reloading npc droplist (" + npcId + "): " + e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -1535,8 +1478,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void updateNpcSkillData(L2PcInstance activeChar, int npcId, int skillId, int level)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
 			L2Skill skillData = SkillTable.getInstance().getInfo(skillId, level);
 			if (skillData == null)
@@ -1553,7 +1495,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 				return;
 			}
 			
-			con = L2DatabaseFactory.getInstance().getConnection();
 			int updated = 0;
 			if(Config.CUSTOM_NPC_SKILLS_TABLE)
 			{
@@ -1585,10 +1526,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not update npc skill!");
 			_log.warning("Error while updating npc skill (" + npcId + ", " + skillId + ", " + level + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void showNpcSkillAdd(L2PcInstance activeChar, int npcId)
@@ -1612,8 +1549,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void addNpcSkillData(L2PcInstance activeChar, int npcId, int skillId, int level)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
 			// skill check
 			L2Skill skillData = SkillTable.getInstance().getInfo(skillId, level);
@@ -1623,8 +1559,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 				showNpcSkillAdd(activeChar, npcId);
 				return;
 			}
-			
-			con = L2DatabaseFactory.getInstance().getConnection();
 			
 			if (Config.CUSTOM_NPC_SKILLS_TABLE)
 			{
@@ -1655,19 +1589,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not add npc skill!");
 			_log.warning("Error while adding a npc skill (" + npcId + ", " + skillId + ", " + level + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void deleteNpcSkillData(L2PcInstance activeChar, int npcId, int skillId)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			if (npcId > 0)
 			{
 				int updated = 0;
@@ -1699,18 +1626,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not delete npc skill!");
 			_log.warning("Error while deleting npc skill (" + npcId + ", " + skillId + "): " + e);
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void reloadNpcSkillList(int npcId)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			L2NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 			
 			L2Skill skillData = null;
@@ -1754,10 +1675,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			_log.warning("Error while reloading npc skill list (" + npcId + "): " + e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 }

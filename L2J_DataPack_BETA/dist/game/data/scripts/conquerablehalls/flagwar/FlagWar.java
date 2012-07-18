@@ -684,16 +684,11 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	public abstract String getFlagHtml(int flag);	
 	public abstract String getAllyHtml(int ally);
 	
-	// =============================================
-	// Database access methods
-	// =============================================
 	@Override
 	public final void loadAttackers()
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_LOAD_ATTACKERS);
 			statement.setInt(1, _hall.getId());
 			ResultSet rset = statement.executeQuery();
@@ -722,16 +717,11 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_log.warning(qn+".loadAttackers()->"+e.getMessage());
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private final void loadAttackerMembers(int clanId)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
 			ArrayList<Integer> listInstance = _data.get(clanId).players;
 			
@@ -741,7 +731,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				return;
 			}
 			
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_LOAD_MEMEBERS);
 			statement.setInt(1, clanId);
 			ResultSet rset = statement.executeQuery();
@@ -758,18 +747,12 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_log.warning(qn+".loadAttackerMembers()->"+e.getMessage());
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private final void saveClan(int clanId, int flag)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_SAVE_CLAN);
 			statement.setInt(1, _hall.getId());
 			statement.setInt(2, flag);
@@ -783,18 +766,12 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_log.warning(qn+".saveClan()->"+e.getMessage());
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private final void saveNpc(int npc, int clanId)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_SAVE_NPC);
 			statement.setInt(1, npc);
 			statement.setInt(2, clanId);
@@ -806,18 +783,12 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_log.warning(qn+".saveNpc()->"+e.getMessage());
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private final void saveMember(int clanId, int objectId)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_SAVE_ATTACKER);
 			statement.setInt(1, _hall.getId());
 			statement.setInt(2, clanId);
@@ -830,19 +801,12 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			_log.warning(qn+".saveMember()->"+e.getMessage());
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void clearTables()
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement stat1 = con.prepareStatement(SQL_CLEAR_CLAN);
 			stat1.setInt(1, _hall.getId());
 			stat1.execute();
@@ -856,11 +820,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch(Exception e)
 		{
 			_log.warning(qn+".clearTables()->"+e.getMessage());
-			e.printStackTrace();
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 	
