@@ -871,10 +871,8 @@ public class RainbowSpringsChateau extends Quest
 	
 	private static void updateAttacker(int clanId, long count, boolean remove)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
 			if (remove)
 			{
@@ -894,18 +892,12 @@ public class RainbowSpringsChateau extends Quest
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private static void loadAttackers()
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM rainbowsprings_attacker_list");
 			ResultSet rset = statement.executeQuery();
 			while (rset.next())
@@ -920,10 +912,6 @@ public class RainbowSpringsChateau extends Quest
 		catch (Exception e)
 		{
 			e.printStackTrace();
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 	
