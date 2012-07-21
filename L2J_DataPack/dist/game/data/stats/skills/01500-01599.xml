@@ -168,6 +168,7 @@
 		</for>
 	</skill>
 	<skill id="1508" levels="1" name="Throne Root">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -176,7 +177,7 @@
 		<set name="mpConsume" val="87" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
@@ -184,9 +185,11 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="10" val="0" abnormalVisualEffect="poison" abnormalLvl="1" abnormalType="root_magically" />
-			<effect count="2" name="DamOverTime" abnormalTime="5" val="180" noicon="1" />
-			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="60" noicon="1" />
+			<effect name="Root" abnormalTime="10" val="0" abnormalVisualEffect="poison" abnormalLvl="1" abnormalType="root_magically">
+				<sub order="0x40" stat="rootVuln" val="100" />
+			</effect>
+			<effect count="10" name="DamOverTime" noicon="1" val="90" />
+			<effect count="10" name="ManaDamOverTime" noicon="1" val="30" />
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">

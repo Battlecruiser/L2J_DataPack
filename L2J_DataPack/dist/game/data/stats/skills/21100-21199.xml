@@ -263,7 +263,7 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -462,7 +462,7 @@
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -612,7 +612,7 @@
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="darkRes" val="20" />
 			</effect>
 		</for>
@@ -762,7 +762,7 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mDef" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>

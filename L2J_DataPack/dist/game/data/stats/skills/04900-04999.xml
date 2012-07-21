@@ -559,37 +559,56 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="4993" levels="1" name="Venom - Strike">
+		<!-- Confirmed CT2.5 -->
 		<!-- Benom Skills -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="88" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="57742" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4994" levels="1" name="Venom - Sonic Storm">
+		<!-- Confirmed CT2.5 -->
 		<!-- Benom Skills -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1900" />
-		<set name="reuseDelay" val="20000" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
-		<set name="baseCritRate" val="15" />
+		<set name="effectRange" val="1000" />
+		<set name="hitTime" val="1900" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="88" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="28871" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4995" levels="1" name="Venom - Teleport">
+		<!-- Confirmed CT2.5 -->
 		<!-- Benom Skills -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="2900" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="100" />
+		<set name="effectRange" val="1300" />
+		<set name="hitTime" val="2900" />
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4996" levels="1" name="Venom - Range Teleport">
+		<!-- Confirmed CT2.5 -->
 		<!-- Benom Skills -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="2900" />
-		<set name="coolTime" val="100" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="800" />
+		<set name="coolTime" val="100" />
+		<set name="effectRange" val="1300" />
+		<set name="hitTime" val="2900" />
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="skillRadius" val="300" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4997" levels="1" name="Lidia - Regen">
 		<!-- TODO: Needs to be done -->

@@ -441,10 +441,20 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="22271" levels="1" name="Maestro's Key">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="DELUXE_KEY_UNLOCK" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="109">
+			<target npcType="L2ChestInstance" />
+		</cond>
 	</skill>
 	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
 		<!-- none -->

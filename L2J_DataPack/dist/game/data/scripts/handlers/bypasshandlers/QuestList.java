@@ -35,7 +35,7 @@ public class QuestList implements IBypassHandler
 			return false;
 		}
 		
-		activeChar.sendPacket(new ExShowQuestInfo());
+		activeChar.sendPacket(ExShowQuestInfo.STATIC_PACKET);
 		return true;
 	}
 	

@@ -698,7 +698,7 @@
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
-				<basemul order="0x30" stat="mCritRate" val="0.02" />
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>

@@ -18,8 +18,6 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -49,33 +47,40 @@ public class Heal implements ISkillHandler
 			handler.useSkill(activeChar, skill, targets);
 		
 		double power = skill.getPower();
+		boolean sps = activeChar.isSpiritshotCharged(skill);
+		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
 		
 		switch (skill.getSkillType())
 		{
 			case HEAL_STATIC:
 				break;
 			default:
-				final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 				double staticShotBonus = 0;
 				int mAtkMul = 1; // mAtk multiplier
-				if (weaponInst != null && weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+				if ((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
 				{
-					if (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())
+					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
+					
+					if (bss)
 					{
-						staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
-						
-						if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-						{
-							mAtkMul = 4;
-							staticShotBonus *= 2.4; // static bonus for blessed spiritshots
-						}
-						else
-							mAtkMul = 2;
+						mAtkMul = 4;
+						staticShotBonus *= 2.4; // static bonus for blessed spiritshots
 					}
 					else
+						mAtkMul = 2;
+				}
+				else if ((sps || bss) && activeChar.isNpc())
+				{
+					staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
+					mAtkMul = 4;
+				}
+				else
+				{
+					// no static bonus
+					// grade dynamic bonus
+					final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+					if (weaponInst != null)
 					{
-						// no static bonus
-						// grade dynamic bonus
 						switch (weaponInst.getItem().getItemGrade())
 						{
 							case L2Item.CRYSTAL_S84:
@@ -85,39 +90,16 @@ public class Heal implements ISkillHandler
 								mAtkMul = 2;
 								break;
 						}
-						// shot dynamic bonus
-						if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-							mAtkMul *= 4; // 16x/8x/4x s84/s80/other
-						else
-							mAtkMul += 1; // 5x/3x/1x s84/s80/other
 					}
-					
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-				}
-				// If there is no weapon equipped, check for an active summon.
-				else if (activeChar.isSummon() && ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
-				{
-					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
-					
-					if (((L2Summon)activeChar).getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-					{
-						staticShotBonus *= 2.4; // static bonus for blessed spiritshots
-						mAtkMul = 4;
-					}
+					// shot dynamic bonus
+					if (bss)
+						mAtkMul *= 4; // 16x/8x/4x s84/s80/other
 					else
-						mAtkMul = 2;
-					
-					((L2Summon)activeChar).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-				}
-				else if (activeChar.isNpc() && ((L2Npc)activeChar)._spiritshotcharged)
-				{
-					staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
-					mAtkMul = 4;
-					
-					((L2Npc)activeChar)._spiritshotcharged = false;
+						mAtkMul += 1; // 5x/3x/1x s84/s80/other
 				}
 				
 				power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
+				activeChar.spsUncharge(skill);
 		}
 		
 		double hp;

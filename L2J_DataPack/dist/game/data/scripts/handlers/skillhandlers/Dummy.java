@@ -37,11 +37,6 @@ public class Dummy implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!activeChar.isPlayer())
-			return;
-		
-		activeChar.spsChecker(skill);
-		
 		switch(skill.getId())
 		{
 			case 5852:
@@ -64,6 +59,8 @@ public class Dummy implements ISkillHandler
 				break;
 			}
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

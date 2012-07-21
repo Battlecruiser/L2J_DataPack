@@ -211,10 +211,8 @@ public class Wedding implements IVoicedCommandHandler
 		// check if target has player on friendlist
 		boolean FoundOnFriendList = false;
 		int objectId;
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			final PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=?");
 			statement.setInt(1, ptarget.getObjectId());
 			final ResultSet rset = statement.executeQuery();
@@ -231,10 +229,6 @@ public class Wedding implements IVoicedCommandHandler
 		catch (Exception e)
 		{
 			_log.warning("could not read friend data:" + e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 		
 		if (!FoundOnFriendList)

@@ -605,3 +605,7 @@ INSERT INTO `minions` VALUES
 (29001, 29003, 5, 5),
 (29001, 29005, 7, 7),
 (29002, 29003, 2, 2);
+
+-- Adolph + Linda
+INSERT INTO `minions` VALUES
+(32070,32071,1,1);

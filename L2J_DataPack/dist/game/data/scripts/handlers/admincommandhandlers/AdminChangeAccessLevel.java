@@ -90,10 +90,8 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				onLineChange(activeChar, player, lvl);
 			else
 			{
-				Connection con = null;
-				try
+				try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 				{
-					con = L2DatabaseFactory.getInstance().getConnection();
 					PreparedStatement statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE char_name=?");
 					statement.setInt(1, lvl);
 					statement.setString(2, name);
@@ -110,10 +108,6 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 					activeChar.sendMessage("SQLException while changing character's access level");
 					if (Config.DEBUG)
 						se.printStackTrace();
-				}
-				finally
-				{
-					L2DatabaseFactory.close(con);
 				}
 			}
 		}

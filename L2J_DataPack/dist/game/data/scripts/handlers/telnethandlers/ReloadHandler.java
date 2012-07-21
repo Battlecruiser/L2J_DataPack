@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jserver.gameserver.instancemanager.Manager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
@@ -86,12 +85,6 @@ public class ReloadHandler implements ITelnetHandler
 				{
 					_print.print("Reloading item templates... ");
 					ItemTable.getInstance().reload();
-					_print.println("done");
-				}
-				else if (type.equals("instancemanager"))
-				{
-					_print.print("Reloading instance managers... ");
-					Manager.reloadAll();
 					_print.println("done");
 				}
 				else if (type.equals("zone"))

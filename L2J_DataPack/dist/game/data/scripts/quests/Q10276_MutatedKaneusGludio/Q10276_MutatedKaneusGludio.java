@@ -24,8 +24,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Gludio (10276).<br>
- * Original Jython script by Gnacik on 2010-06-29
+ * Mutated Kaneus - Gludio (10276)
  * @author nonom
  */
 public class Q10276_MutatedKaneusGludio extends Quest
@@ -55,35 +54,30 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		switch (npc.getNpcId())
 		{
 			case BATHIS:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = "30332-06.htm";
-				}
-				else if (st.isCreated())
-				{
-					htmltext = (player.getLevel() >= 18) ? "30332-01.htm" : "30332-00.htm";
-				}
-				else if (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA))
-				{
-					htmltext = "30332-05.htm";
-				}
-				else if (st.getInt("cond") == 1)
-				{
-					htmltext = "30332-04.htm";
+					case State.CREATED:
+						htmltext = (player.getLevel() > 17) ? "30332-01.htm" : "30332-00.htm";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30332-05.htm" : "30332-04.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = "30332-06.htm";
+						break;
 				}
 				break;
 			case ROHMER:
-				if (st.isCompleted())
+				switch (st.getState())
 				{
-					htmltext = getAlreadyCompletedMsg(player);
-				}
-				else if (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA))
-				{
-					htmltext = "30344-02.htm";
-				}
-				else
-				{
-					htmltext = "30344-01.htm";
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30344-02.htm" : "30344-01.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
 				}
 				break;
 		}
@@ -93,27 +87,23 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
 		switch (event)
 		{
 			case "30332-03.htm":
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "30344-03.htm":
-				st.rewardItems(57, 8500);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.giveAdena(8500, true);
+				st.exitQuest(false, true);
 				break;
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -132,7 +122,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				st = member.getQuestState(qn);
-				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (((npcId == TOMLAN_KAMOS) && !st.hasQuestItems(TISSUE_TK)) || ((npcId == TISSUE_OA) && !st.hasQuestItems(TISSUE_OA))))
+				if ((st != null) && st.isStarted() && (((npcId == TOMLAN_KAMOS) && !st.hasQuestItems(TISSUE_TK)) || ((npcId == OL_ARIOSH) && !st.hasQuestItems(TISSUE_OA))))
 				{
 					PartyMembers.add(st);
 				}
@@ -143,7 +133,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
 		}
-		else
+		else if (st.isStarted())
 		{
 			rewardItem(npcId, st);
 		}
@@ -151,8 +141,8 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	}
 	
 	/**
-	 * @param npcId the killed monster Id.
-	 * @param st the quest state of the killer or party member.
+	 * @param npcId the ID of the killed monster
+	 * @param st the quest state of the killer or party member
 	 */
 	private final void rewardItem(int npcId, QuestState st)
 	{
@@ -171,12 +161,9 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	public Q10276_MutatedKaneusGludio(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, ROHMER);
-		
 		addKillId(TOMLAN_KAMOS, OL_ARIOSH);
-		
 		questItemIds = new int[]
 		{
 			TISSUE_TK,

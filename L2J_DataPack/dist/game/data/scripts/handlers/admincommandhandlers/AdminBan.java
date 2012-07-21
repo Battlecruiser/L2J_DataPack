@@ -290,7 +290,6 @@ public class AdminBan implements IAdminCommandHandler
 	
 	private void banChatOfflinePlayer(L2PcInstance activeChar, String name, int delay, boolean ban)
 	{
-		Connection con = null;
 		int level = 0;
 		long value = 0;
 		if(ban)
@@ -304,10 +303,8 @@ public class AdminBan implements IAdminCommandHandler
 			value = 0;
 		}
 		
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, level);
 			statement.setLong(2, value);
@@ -331,19 +328,12 @@ public class AdminBan implements IAdminCommandHandler
 			if (Config.DEBUG)
 				se.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void jailOfflinePlayer(L2PcInstance activeChar, String name, int delay)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
@@ -367,18 +357,12 @@ public class AdminBan implements IAdminCommandHandler
 			if (Config.DEBUG)
 				se.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private void unjailOfflinePlayer(L2PcInstance activeChar, String name)
 	{
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, 17836);
 			statement.setInt(2, 170178);
@@ -400,10 +384,6 @@ public class AdminBan implements IAdminCommandHandler
 			if (Config.DEBUG)
 				se.printStackTrace();
 		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
-		}
 	}
 	
 	private boolean changeCharAccessLevel(L2PcInstance targetPlayer, String player, L2PcInstance activeChar, int lvl)
@@ -418,10 +398,8 @@ public class AdminBan implements IAdminCommandHandler
 		}
 		else
 		{
-			Connection con = null;
-			try
+			try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 			{
-				con = L2DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE char_name=?");
 				statement.setInt(1, lvl);
 				statement.setString(2, player);
@@ -441,10 +419,6 @@ public class AdminBan implements IAdminCommandHandler
 				if (Config.DEBUG)
 					se.printStackTrace();
 				return false;
-			}
-			finally
-			{
-				L2DatabaseFactory.close(con);
 			}
 		}
 		return true;

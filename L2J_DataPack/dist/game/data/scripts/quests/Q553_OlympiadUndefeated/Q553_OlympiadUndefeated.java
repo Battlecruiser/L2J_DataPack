@@ -115,9 +115,9 @@ public class Q553_OlympiadUndefeated extends Quest
 		}
 		else if (st.isCompleted())
 		{
-			st.setState(State.CREATED); // Not required, but it'll set the proper state.
 			if (st.isNowAvailable())
 			{
+				st.setState(State.CREATED);
 				if ((player.getLevel() < 75) || !player.isNoble())
 				{
 					htmltext = "31688-00.htm";

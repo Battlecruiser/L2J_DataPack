@@ -14,17 +14,18 @@
  */
 package quests.Q452_FindingtheLostSoldiers;
 
-import java.util.Calendar;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- ** @author Gigiikun 2010-08-17 Based on Freya PTS
+ * Finding the Lost Soldiers (452)
+ * @author Gigiikun
+ * @version 2010-08-17 Based on Freya PTS
  */
 public class Q452_FindingtheLostSoldiers extends Quest
 {
@@ -39,47 +40,36 @@ public class Q452_FindingtheLostSoldiers extends Quest
 		32772
 	};
 	
-	/*
-	 * Reset time for Quest Default: 6:30AM on server time
-	 */
-	private static final int RESET_HOUR = 6;
-	private static final int RESET_MIN = 30;
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
-		
+		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return event;
 		}
 		
 		if (npc.getNpcId() == JAKAN)
 		{
 			if (event.equalsIgnoreCase("32773-3.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 		}
 		else if (Util.contains(SOLDIER_CORPSES, npc.getNpcId()))
 		{
-			if (st.getInt("cond") == 1)
+			if (st.isCond(1))
 			{
 				st.giveItems(TAG_ID, 1);
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
+				st.setCond(2, true);
 				npc.deleteMe();
 			}
 			else
 			{
-				htmltext = getNoQuestMsg(player);
+				return getNoQuestMsg(player);
 			}
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -97,64 +87,38 @@ public class Q452_FindingtheLostSoldiers extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getLevel() >= 84)
-					{
-						htmltext = "32773-1.htm";
-					}
-					else
-					{
-						htmltext = "32773-0.htm";
-					}
+					htmltext = (player.getLevel() < 84) ? "32773-0.htm" : "32773-1.htm";
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
 						htmltext = "32773-4.htm";
 					}
-					else if (st.getInt("cond") == 2)
+					else if (st.isCond(2))
 					{
 						htmltext = "32773-5.htm";
-						st.unset("cond");
 						st.takeItems(TAG_ID, 1);
-						st.giveItems(57, 95200);
+						st.giveAdena(95200, true);
 						st.addExpAndSp(435024, 50366);
-						st.playSound("ItemSound.quest_finish");
-						
-						Calendar reDo = Calendar.getInstance();
-						reDo.set(Calendar.MINUTE, RESET_MIN);
-						if (reDo.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR)
-						{
-							reDo.add(Calendar.DATE, 1);
-						}
-						reDo.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
-						st.set("reDoTime", String.valueOf(reDo.getTimeInMillis()));
-						st.exitQuest(false);
+						st.exitQuest(QuestType.DAILY, true);
 					}
 					break;
 				case State.COMPLETED:
-					Long reDoTime = Long.parseLong(st.get("reDoTime"));
-					if (reDoTime > System.currentTimeMillis())
+					if (st.isNowAvailable())
 					{
-						htmltext = "32773-6.htm";
+						st.setState(State.CREATED);
+						htmltext = (player.getLevel() < 84) ? "32773-0.htm" : "32773-1.htm";
 					}
 					else
 					{
-						st.setState(State.CREATED);
-						if (player.getLevel() >= 84)
-						{
-							htmltext = "32773-1.htm";
-						}
-						else
-						{
-							htmltext = "32773-0.htm";
-						}
+						htmltext = "32773-6.htm";
 					}
 					break;
 			}
 		}
 		else if (Util.contains(SOLDIER_CORPSES, npc.getNpcId()))
 		{
-			if (st.getInt("cond") == 1)
+			if (st.isCond(1))
 			{
 				htmltext = "corpse-1.htm";
 			}
@@ -172,10 +136,7 @@ public class Q452_FindingtheLostSoldiers extends Quest
 		};
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
-		for (int i : SOLDIER_CORPSES)
-		{
-			addTalkId(i);
-		}
+		addTalkId(SOLDIER_CORPSES);
 	}
 	
 	public static void main(String[] args)

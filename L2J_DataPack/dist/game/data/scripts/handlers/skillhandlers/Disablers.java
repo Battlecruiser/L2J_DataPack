@@ -25,12 +25,10 @@ import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -76,59 +74,9 @@ public class Disablers implements ISkillHandler
 		L2SkillType type = skill.getSkillType();
 		
 		byte shld = 0;
-		boolean ss = false;
-		boolean sps = false;
-		boolean bss = false;
-		
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		if (weaponInst != null)
-		{
-			if (skill.isMagic())
-			{
-				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-				{
-					bss = true;
-					if (skill.getId() != 1020) // vitalize
-						weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-				}
-				else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-				{
-					sps = true;
-					if (skill.getId() != 1020) // vitalize
-						weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-				}
-			}
-			else
-				ss = true;
-		}
-		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar.isSummon())
-		{
-			L2Summon activeSummon = (L2Summon) activeChar;
-			
-			if (skill.isMagic())
-			{
-				if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-				{
-					bss = true;
-					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-				}
-				else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-				{
-					sps = true;
-					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-				}
-			}
-			else
-				ss = true;
-		}
-		else if (activeChar.isNpc())
-		{
-			ss = ((L2Npc) activeChar)._soulshotcharged;
-			((L2Npc) activeChar)._soulshotcharged = false;
-			bss = ((L2Npc) activeChar)._spiritshotcharged;
-			((L2Npc) activeChar)._spiritshotcharged = false;
-		}
+		boolean ss = activeChar.isSoulshotCharged(skill);
+		boolean sps = activeChar.isSpiritshotCharged(skill);
+		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
 		
 		for (L2Object obj: targets)
 		{
@@ -603,6 +551,8 @@ public class Disablers implements ISkillHandler
 			}
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	} //end void
 	
 	/**

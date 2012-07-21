@@ -21,12 +21,10 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
@@ -73,14 +71,13 @@ public class Continuous implements ISkillHandler
 				skill = sk;
 		}
 		
+		boolean ss = activeChar.isSoulshotCharged(skill);
+		boolean sps = activeChar.isSpiritshotCharged(skill);
+		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			boolean ss = false;
-			boolean sps = false;
-			boolean bss = false;
 			byte shld = 0;
-			
-			L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 			
 			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 				target = activeChar;
@@ -114,68 +111,8 @@ public class Continuous implements ISkillHandler
 					break;
 			}
 			
-			if (skill.getSkillType() == L2SkillType.BUFF)
-			{
-				
-				activeChar.spsChecker(skill);
-			}
-			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
-				if (weaponInst != null)
-				{
-					if (skill.isMagic())
-					{
-						if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-						{
-							bss = true;
-							if (skill.getId() != 1020) // vitalize
-								weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-						}
-						else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-						{
-							sps = true;
-							if (skill.getId() != 1020) // vitalize
-								weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-						}
-					}
-					else if (weaponInst.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT)
-					{
-						ss = true;
-						if (skill.getId() != 1020) // vitalize
-							weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
-					}
-				}
-				else if (activeChar.isSummon())
-				{
-					L2Summon activeSummon = (L2Summon) activeChar;
-					if (skill.isMagic())
-					{
-						if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-						{
-							bss = true;
-							activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-						}
-						else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-						{
-							sps = true;
-							activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-						}
-					}
-					else if (activeSummon.getChargedSoulShot() == L2ItemInstance.CHARGED_SOULSHOT)
-					{
-						ss = true;
-						activeSummon.setChargedSoulShot(L2ItemInstance.CHARGED_NONE);
-					}
-				}
-				else if (activeChar.isNpc())
-				{
-					ss = ((L2Npc) activeChar)._soulshotcharged;
-					((L2Npc) activeChar)._soulshotcharged = false;
-					bss = ((L2Npc) activeChar)._spiritshotcharged;
-					((L2Npc) activeChar)._spiritshotcharged = false;
-				}
-				
 				shld = Formulas.calcShldUse(activeChar, target, skill);
 				acted = Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss);
 			}
@@ -218,7 +155,7 @@ public class Continuous implements ISkillHandler
 					L2Summon summon = target.getPet();
 					if (summon != null && summon != activeChar && summon.isServitor() && effects.length > 0)
 					{
-						if (effects[0].canBeStolen() || skill.isHeroSkill())
+						if (effects[0].canBeStolen() || skill.isHeroSkill() || skill.isStatic())
 							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
 					}
 				}
@@ -256,6 +193,8 @@ public class Continuous implements ISkillHandler
 			}
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

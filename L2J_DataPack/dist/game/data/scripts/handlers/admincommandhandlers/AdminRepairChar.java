@@ -61,10 +61,8 @@ public class AdminRepairChar implements IAdminCommandHandler
 		}
 		
 		String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
-		Connection con = null;
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(cmd);
 			statement.setString(1, parts[1]);
 			statement.execute();
@@ -103,10 +101,6 @@ public class AdminRepairChar implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "could not repair char:", e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 	}
 }
