@@ -1557,9 +1557,13 @@
 		<set name="reuseDelay" val="8000" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
-				<mul order="0x30" stat="mDef" val="1.16" />
+				<add order="0x40" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>
 		</for>
 	</skill>

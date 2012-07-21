@@ -40,8 +40,6 @@ public class ManaHeal implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		activeChar.spsChecker(skill);
-		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (target.isInvul())
@@ -135,6 +133,8 @@ public class ManaHeal implements ISkillHandler
 			// cast self effect if any
 			skill.getEffectsSelf(activeChar);
 		}
+		
+		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

@@ -215,11 +215,8 @@ public class PlayerHandler implements ITelnetHandler
 				}
 				else
 				{
-					Connection con = null;
-					try
+					try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
-						
 						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 						statement.setInt(1, -114356);
 						statement.setInt(2, -249645);
@@ -242,10 +239,6 @@ public class PlayerHandler implements ITelnetHandler
 						_print.println("SQLException while jailing player");
 						if (Config.DEBUG)
 							se.printStackTrace();
-					}
-					finally
-					{
-						L2DatabaseFactory.close(con);
 					}
 				}
 			}
@@ -274,11 +267,8 @@ public class PlayerHandler implements ITelnetHandler
 				}
 				else
 				{
-					Connection con = null;
-					try
+					try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
-						
 						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 						statement.setInt(1, 17836);
 						statement.setInt(2, 170178);
@@ -301,10 +291,6 @@ public class PlayerHandler implements ITelnetHandler
 						_print.println("SQLException while jailing player");
 						if (Config.DEBUG)
 							se.printStackTrace();
-					}
-					finally
-					{
-						L2DatabaseFactory.close(con);
 					}
 				}
 			}

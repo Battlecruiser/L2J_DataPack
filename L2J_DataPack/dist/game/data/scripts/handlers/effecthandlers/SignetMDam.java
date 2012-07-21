@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.l2skills.L2SkillSignetCasttime;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.stats.Env;
@@ -100,24 +99,8 @@ public class SignetMDam extends L2Effect
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
 		
-		boolean ss = false;
-		boolean bss = false;
-		
-		L2ItemInstance weaponInst = caster.getActiveWeaponInstance();
-		if (weaponInst != null)
-		{
-			switch (weaponInst.getChargedSpiritshot())
-			{
-				case L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT:
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-					bss = true;
-					break;
-				case L2ItemInstance.CHARGED_SPIRITSHOT:
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-					ss = true;
-					break;
-			}
-		}
+		boolean sps = caster.isSpiritshotCharged(getSkill());
+		boolean bss = caster.isBlessedSpiritshotCharged(getSkill());
 		
 		FastList<L2Character> targets = new FastList<>();
 		
@@ -158,7 +141,7 @@ public class SignetMDam extends L2Effect
 			{
 				boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
 				byte shld = Formulas.calcShldUse(caster, target, getSkill());
-				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, ss, bss, mcrit);
+				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, sps, bss, mcrit);
 				
 				if (target.isSummon())
 					target.broadcastStatusUpdate();

@@ -30,7 +30,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseRcrit" minOccurs="20" maxOccurs="20">
@@ -60,7 +60,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseAtkType" minOccurs="20" maxOccurs="20">
@@ -90,7 +90,13 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="fist" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseAtkSpd" minOccurs="20" maxOccurs="20">
@@ -120,11 +126,11 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="basePdef" minOccurs="20" maxOccurs="20">
-					<xs:complexType>
+					<xs:complexType>
 						<xs:attribute name="chest" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="classId" use="required">
 							<xs:simpleType>
@@ -144,8 +150,8 @@
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="cloak" type="xs:positiveInteger" use="required" />
-                        <xs:attribute name="feet" type="xs:positiveInteger" use="required" />
-                        <xs:attribute name="gloves" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="feet" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="gloves" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="head" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="legs" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="sex" use="required">
@@ -155,7 +161,8 @@
 									<xs:enumeration value="male" />
 								</xs:restriction>
 							</xs:simpleType>
-						</xs:attribute>						<xs:attribute name="underwear" type="xs:positiveInteger" use="required" />
+						</xs:attribute>
+						<xs:attribute name="underwear" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseMatk" minOccurs="20" maxOccurs="20">
@@ -185,7 +192,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseMdef" minOccurs="20" maxOccurs="20">
@@ -249,7 +256,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:nonNegativeInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseAtkRange" minOccurs="20" maxOccurs="20">
@@ -279,7 +286,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseDamRange" minOccurs="20" maxOccurs="20">
@@ -309,7 +316,17 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="direction" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="-180" />
+									<xs:maxInclusive value="180" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="distance" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="width" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="unknown" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseRndDam" minOccurs="20" maxOccurs="20">
@@ -339,7 +356,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="val" type="xs:token" use="required" />
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

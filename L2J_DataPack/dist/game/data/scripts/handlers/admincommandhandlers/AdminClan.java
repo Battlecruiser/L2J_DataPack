@@ -180,10 +180,8 @@ public class AdminClan implements IAdminCommandHandler
 				}
 				else if (clan.getLeaderId() > 0)
 				{
-					Connection con = null;
-					try
+					try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 					{
-						con = L2DatabaseFactory.getInstance().getConnection();
 						PreparedStatement statement = con.prepareStatement("UPDATE characters SET clan_privs = ? WHERE charId = ?");
 						statement.setInt(1, L2Clan.CP_NOTHING);
 						statement.setInt(2, clan.getLeaderId());
@@ -198,10 +196,6 @@ public class AdminClan implements IAdminCommandHandler
 					catch (Exception e)
 					{
 						activeChar.sendPacket(SystemMessageId.NOT_WORKING_PLEASE_TRY_AGAIN_LATER);
-					}
-					finally
-					{
-						L2DatabaseFactory.close(con);
 					}
 				}
 				

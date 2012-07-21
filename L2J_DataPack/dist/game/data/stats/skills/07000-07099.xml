@@ -647,7 +647,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="magic_critical_up">
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -685,7 +685,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -716,7 +716,7 @@
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -772,7 +772,7 @@
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
-				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />

@@ -961,7 +961,7 @@
 		<set name="hitTime" val="4000" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<basemul order="0x30" stat="mCritRate" val="#rate" />
+				<add order="0x40" stat="mCritRate" val="#rate" />
 			</effect>
 		</for>
 	</skill>

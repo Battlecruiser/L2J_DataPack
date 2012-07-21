@@ -116,7 +116,7 @@ public class Q551_OlympiadStarter extends Quest
 		{
 			if(st.isNowAvailable())
 			{
-				st.setState(State.CREATED); // Not required, but it'll set the proper state.
+				st.setState(State.CREATED);
 				if ((player.getLevel() < 75) || !player.isNoble())
 				{
 					htmltext = "31688-00.htm";

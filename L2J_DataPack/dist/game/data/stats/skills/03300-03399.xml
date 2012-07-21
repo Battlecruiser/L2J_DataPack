@@ -82,8 +82,10 @@
 		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="cancelVuln" val="100" />
 		</for>
@@ -121,9 +123,9 @@
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="3" />
-			<add order="0x40" stat="mAtkSpd" val="4" />
 			<add order="0x40" stat="pAtkSpd" val="5" />
+			<add order="0x40" stat="mAtkSpd" val="4" />
+			<add order="0x40" stat="runSpd" val="3" />
 		</for>
 	</skill>
 	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
@@ -136,6 +138,7 @@
 		</for>
 	</skill>
 	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
+		<!-- TODO: Require Support -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -193,7 +196,6 @@
 		<set name="mpConsume" val="14" />
 		<set name="mpInitialConsume" val="4" />
 		<set name="operateType" val="A2" />
-		<set name="referenceId" val="9930" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
@@ -292,6 +294,7 @@
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="16" />
 		<set name="itemConsumeId" val="1785" />
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -314,11 +317,13 @@
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="50" />
 		<set name="itemConsumeId" val="1785" />
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="CREATE_ITEM" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
@@ -335,6 +340,7 @@
 		<set name="hitTime" val="20000" />
 		<set name="itemConsumeCount" val="57" />
 		<set name="itemConsumeId" val="1785" />
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
@@ -350,45 +356,45 @@
 		</cond>
 	</skill>
 	<skill id="3335" levels="1" name="Transform Yeti">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="102" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="56" />
+		<set name="negateAbnormals" val="big_head,9" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="103" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
 	<skill id="3337" levels="1" name="Transform Cutie Pig">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="600000" />
+		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="104" />
-		<cond msgId="1509">
-			<player olympiad="false" />
-		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3338" levels="1" name="Shield Master">

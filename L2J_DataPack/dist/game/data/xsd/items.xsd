@@ -184,6 +184,11 @@
 												<xs:attribute name="vehicleMounted" type="xs:boolean" />
 											</xs:complexType>
 										</xs:element>
+										<xs:element name="target" maxOccurs="unbounded" minOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="levelRange" type="xs:token" />
+											</xs:complexType>
+										</xs:element>
 									</xs:choice>
 									<xs:attribute name="msgId" type="xs:positiveInteger" />
 									<xs:attribute name="addName" type="xs:integer" fixed="1" />

@@ -14,6 +14,7 @@
  */
 package handlers.usercommandhandlers;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
@@ -53,11 +54,8 @@ public class ClanWarsList implements IUserCommandHandler
 		}
 		
 		SystemMessage sm;
-		java.sql.Connection con = null;
-		
-		try
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
 		{
-			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
 			
 			if (id == 88)
@@ -118,10 +116,6 @@ public class ClanWarsList implements IUserCommandHandler
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "", e);
-		}
-		finally
-		{
-			L2DatabaseFactory.close(con);
 		}
 		
 		return true;

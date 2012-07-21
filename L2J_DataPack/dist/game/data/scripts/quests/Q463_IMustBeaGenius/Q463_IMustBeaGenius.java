@@ -136,7 +136,7 @@ public class Q463_IMustBeaGenius extends Quest
 				case State.COMPLETED:
 					if (st.isNowAvailable())
 					{
-						st.setState(State.CREATED); // Not required, but it'll set the proper state.
+						st.setState(State.CREATED);
 						htmltext = (player.getLevel() >= 70) ? "32069-01.htm" : "32069-00.htm";
 					}
 					else
