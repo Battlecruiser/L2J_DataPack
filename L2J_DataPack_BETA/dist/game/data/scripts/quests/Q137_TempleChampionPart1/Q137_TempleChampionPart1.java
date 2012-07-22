@@ -161,6 +161,12 @@ public class Q137_TempleChampionPart1 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);
+		questItemIds = new int[]
+		{
+			FRAGMENT,
+			EXECUTOR,
+			MISSIONARY
+		};
 	}
 	
 	public static void main(String[] args)

@@ -238,6 +238,13 @@ public class Q138_TempleChampionPart2 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);
+		questItemIds = new int[]
+		{
+			MANIFESTO,
+			RELIC,
+			ANGUS_REC,
+			PUPINA_REC
+		};
 	}
 	
 	public static void main(String[] args)
