@@ -21,8 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269).<br>
- * Original jython script by Kerberos v1.0 on 2009/05/1
+ * To the Seed of Destruction (10269)
  * @author nonom
  */
 public class Q10269_ToTheSeedOfDestruction extends Quest
@@ -46,30 +45,36 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		switch (st.getState())
+		switch (npc.getNpcId())
 		{
-			case State.COMPLETED:
-				htmltext = (npcId == ALLENOS) ? "32526-02.htm" : "32548-0a.htm";
-				break;
-			case State.CREATED:
-				if (npcId == KEUCEREUS)
+			case KEUCEREUS:
+				switch (st.getState())
 				{
-					htmltext = (player.getLevel() < 75) ? "32548-00.htm" : "32548-01.htm";
+					case State.CREATED:
+						htmltext = (player.getLevel() < 75) ? "32548-00.html" : "32548-01.htm";
+						break;
+					case State.STARTED:
+						htmltext = "32548-06.html";
+						break;
+					case State.COMPLETED:
+						htmltext = "32548-0a.html";
+						break;
 				}
 				break;
-			case State.STARTED:
-				if (npcId == KEUCEREUS)
+			case ALLENOS:
+				switch (st.getState())
 				{
-					htmltext = "32548-06.htm";
-				}
-				else if (npcId == ALLENOS)
-				{
-					htmltext = "32526-01.htm";
-					st.giveAdena(29174, true);
-					st.addExpAndSp(176121, 7671);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					case State.STARTED:
+						htmltext = "32526-01.html";
+						st.giveAdena(29174, true);
+						st.addExpAndSp(176121, 7671);
+						st.exitQuest(false, true);
+						break;
+					case State.COMPLETED:
+						htmltext = "32526-02.html";
+						break;
+					default:
+						break;
 				}
 				break;
 		}
@@ -79,30 +84,25 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("32548-05.htm"))
+		if (event.equals("32548-05.html"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 			st.giveItems(INTRODUCTION, 1);
 		}
-		return htmltext;
+		return event;
 	}
 	
 	public Q10269_ToTheSeedOfDestruction(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, ALLENOS);
-		
 		questItemIds = new int[]
 		{
 			INTRODUCTION
