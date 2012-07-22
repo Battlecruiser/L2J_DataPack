@@ -83,7 +83,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				{
 					htmltext = "32556-02.html";
 				}
-				else if (st.isCreated())
+				else if (st.isStarted())
 				{
 					switch (st.getInt("cond"))
 					{
@@ -107,7 +107,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				{
 					htmltext = "32528-02.html";
 				}
-				else if (st.isCreated())
+				else if (st.isStarted())
 				{
 					switch (st.getInt("cond"))
 					{
