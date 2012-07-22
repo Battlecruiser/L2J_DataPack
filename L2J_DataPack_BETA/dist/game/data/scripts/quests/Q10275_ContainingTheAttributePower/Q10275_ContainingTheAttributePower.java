@@ -26,8 +26,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Containing the Attribute Power (10275).<br>
- * Original jython script by Kerberos v1.0 on 2009/05/03
+ * Containing the Attribute Power (10275)
  * @author nonom
  */
 public class Q10275_ContainingTheAttributePower extends Quest
@@ -63,108 +62,108 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
 		final int cond = st.getInt("cond");
-		switch (st.getState())
+		
+		switch (npc.getNpcId())
 		{
-			case State.COMPLETED:
-				if (npcId == HOLLY)
+			case HOLLY:
+			{
+				switch (st.getState())
 				{
-					htmltext = "30839-0a.htm";
-				}
-				else if (npcId == WEBER)
-				{
-					htmltext = "31307-0a.htm";
-				}
-				break;
-			case State.CREATED:
-				if (player.getLevel() >= 76)
-				{
-					if (npcId == HOLLY)
-					{
-						htmltext = "30839-01.htm";
-					}
-					else
-					{
-						htmltext = "31307-01.htm";
-					}
-				}
-				else if (npcId == HOLLY)
-				{
-					htmltext = "30839-00.htm";
-				}
-				else
-				{
-					htmltext = "31307-00.htm";
-				}
-				break;
-			default:
-				switch (npcId)
-				{
-					case HOLLY:
+					case State.CREATED:
+						htmltext = (player.getLevel() > 75) ? "30839-01.htm" : "30839-00.html";
+						break;
+					case State.STARTED:
 						switch (cond)
 						{
 							case 1:
-								htmltext = "30839-03.htm";
+								htmltext = "30839-03.html";
 								break;
 							case 2:
-								htmltext = "30839-05.htm";
+								htmltext = "30839-05.html";
 								break;
 						}
 						break;
-					case WEBER:
-						switch (cond)
-						{
-							case 1:
-								htmltext = "31307-03.htm";
-								break;
-							case 7:
-								htmltext = "31307-05.htm";
-								break;
-						}
-						break;
-					case YIN:
-						switch (cond)
-						{
-							case 2:
-								htmltext = "32325-01.htm";
-								break;
-							case 3:
-							case 5:
-								htmltext = "32325-04.htm";
-								break;
-							case 4:
-								htmltext = "32325-08.htm";
-								st.takeItems(YINSWORD, 1);
-								st.takeItems(SOULPIECEWATER, -1);
-								break;
-							case 6:
-								htmltext = "32325-10.htm";
-								break;
-						}
-						break;
-					case YANG:
-						switch (cond)
-						{
-							case 7:
-								htmltext = "32326-01.htm";
-								break;
-							case 8:
-							case 10:
-								htmltext = "32326-04.htm";
-								break;
-							case 9:
-								htmltext = "32326-08.htm";
-								st.takeItems(YANGSWORD, 1);
-								st.takeItems(SOULPIECEAIR, -1);
-								break;
-							case 11:
-								htmltext = "32326-10.htm";
-								break;
-						}
+					case State.COMPLETED:
+						htmltext = "30839-0a.html";
 						break;
 				}
 				break;
+			}
+			case WEBER:
+			{
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 75) ? "31307-01.htm" : "31307-00.html";
+						break;
+					case State.STARTED:
+						switch (cond)
+						{
+							case 1:
+								htmltext = "31307-03.html";
+								break;
+							case 7:
+								htmltext = "31307-05.html";
+								break;
+						}
+						break;
+					case State.COMPLETED:
+						htmltext = "31307-0a.html";
+						break;
+				}
+				break;
+			}
+			case YIN:
+			{
+				if (st.isStarted())
+				{
+					switch (cond)
+					{
+						case 2:
+							htmltext = "32325-01.html";
+							break;
+						case 3:
+						case 5:
+							htmltext = "32325-04.html";
+							break;
+						case 4:
+							htmltext = "32325-08.html";
+							st.takeItems(YINSWORD, 1);
+							st.takeItems(SOULPIECEWATER, -1);
+							break;
+						case 6:
+							htmltext = "32325-10.html";
+							break;
+					}
+				}
+				break;
+			}
+			case YANG:
+			{
+				if (st.isStarted())
+				{
+					switch (cond)
+					{
+						case 7:
+							htmltext = "32326-01.html";
+							break;
+						case 8:
+						case 10:
+							htmltext = "32326-04.html";
+							break;
+						case 9:
+							htmltext = "32326-08.html";
+							st.takeItems(YANGSWORD, 1);
+							st.takeItems(SOULPIECEAIR, -1);
+							break;
+						case 11:
+							htmltext = "32326-10.html";
+							break;
+					}
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -181,67 +180,58 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		
 		switch (event)
 		{
-			case "30839-02.htm":
-			case "31307-02.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+			case "30839-02.html":
+			case "31307-02.html":
+				st.startQuest();
 				break;
-			case "30839-05.htm":
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
+			case "30839-05.html":
+				st.setCond(2, true);
 				break;
-			case "31307-05.htm":
-				st.set("cond", "7");
-				st.playSound("ItemSound.quest_middle");
+			case "31307-05.html":
+				st.setCond(7, true);
 				break;
-			case "32325-03.htm":
-				st.set("cond", "3");
+			case "32325-03.html":
+				st.setCond(3, true);
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
-				st.playSound("ItemSound.quest_middle");
 				break;
-			case "32326-03.htm":
-				st.set("cond", "8");
+			case "32326-03.html":
+				st.setCond(8, true);
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
-				st.playSound("ItemSound.quest_middle");
 				break;
-			case "32325-06.htm":
+			case "32325-06.html":
 				if (st.hasQuestItems(YINSWORD))
 				{
 					st.takeItems(YINSWORD, 1);
-					htmltext = "32325-07.htm";
+					htmltext = "32325-07.html";
 				}
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
 				break;
-			case "32326-06.htm":
+			case "32326-06.html":
 				if (st.hasQuestItems(YANGSWORD))
 				{
 					st.takeItems(YANGSWORD, 1);
-					htmltext = "32326-07.htm";
+					htmltext = "32326-07.html";
 				}
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
-			case "32325-09.htm":
-				st.set("cond", "5");
+			case "32325-09.html":
+				st.setCond(5, true);
 				BlessingOfFire.getEffects(player, player);
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
-				st.playSound("ItemSound.quest_middle");
 				break;
-			case "32326-09.htm":
-				st.set("cond", "10");
+			case "32326-09.html":
+				st.setCond(10, true);
 				BlessingOfEarth.getEffects(player, player);
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
-				st.playSound("ItemSound.quest_middle");
 				break;
 		}
 		
 		if (Util.isDigit(event))
 		{
+			htmltext = Integer.toString(npc.getNpcId()) + "-1" + event + ".html";
 			st.giveItems(10520 + Integer.valueOf(event), 2);
 			st.addExpAndSp(202160, 20375);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
-			htmltext = Integer.toString(npc.getNpcId()) + "-1" + event + ".htm";
+			st.exitQuest(false, true);
 		}
 		
 		return htmltext;
@@ -260,13 +250,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		switch (npc.getNpcId())
 		{
 			case AIR:
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
+				if (((cond == 8) || (cond == 10)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEAIR, 1);
 					if (st.getQuestItemsCount(SOULPIECEAIR) >= 6)
 					{
-						st.set("cond", Integer.toString(cond + 1));
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(cond + 1, true);
 					}
 					else
 					{
@@ -275,13 +264,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				break;
 			case WATER:
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && ((cond >= 3) || (cond <= 5)) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (getRandom(100) < 30))
+				if (((cond >= 3) || (cond <= 5)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (getRandom(100) < 30))
 				{
 					st.giveItems(SOULPIECEWATER, 1);
 					if (st.getQuestItemsCount(SOULPIECEWATER) >= 6)
 					{
-						st.set("cond", Integer.toString(cond + 1));
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(cond + 1, true);
 					}
 					else
 					{
@@ -297,13 +285,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	public Q10275_ContainingTheAttributePower(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(HOLLY, WEBER);
-		
 		addTalkId(HOLLY, WEBER, YIN, YANG);
-		
 		addKillId(AIR, WATER);
-		
 		questItemIds = new int[]
 		{
 			YINSWORD,

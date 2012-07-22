@@ -163,9 +163,7 @@ public class Q137_TempleChampionPart1 extends Quest
 		addKillId(MOBS);
 		questItemIds = new int[]
 		{
-			FRAGMENT,
-			EXECUTOR,
-			MISSIONARY
+			FRAGMENT
 		};
 	}
 	
