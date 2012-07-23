@@ -274,7 +274,7 @@ public class Q309_ForAGoodCause extends Quest
 			}
 			else if (st.isStarted())
 			{
-				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.htm" : "32647-06.htm";
+				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.html" : "32647-06.html";
 			}
 			else
 			{
