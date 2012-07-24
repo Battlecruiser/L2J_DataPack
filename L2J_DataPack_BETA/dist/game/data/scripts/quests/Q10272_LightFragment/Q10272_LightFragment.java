@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Light Fragment (10272)
+ * Light Fragment (10272).
  * @author Gladicek
  */
 public class Q10272_LightFragment extends Quest

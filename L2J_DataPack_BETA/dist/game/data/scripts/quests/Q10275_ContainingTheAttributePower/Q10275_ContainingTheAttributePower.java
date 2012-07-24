@@ -26,7 +26,8 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Containing the Attribute Power (10275)
+ * Containing the Attribute Power (10275).<br>
+ * Original Jython script by Kerberos.
  * @author nonom
  */
 public class Q10275_ContainingTheAttributePower extends Quest
