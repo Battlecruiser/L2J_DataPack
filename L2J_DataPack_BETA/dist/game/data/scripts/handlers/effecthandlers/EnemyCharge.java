@@ -47,6 +47,9 @@ public class EnemyCharge extends L2Effect
 	@Override
 	public boolean onStart()
 	{
+		if (getEffected().isMovementDisabled())
+			return false;
+		
 		// Get current position of the L2Character
 		final int curX = getEffector().getX();
 		final int curY = getEffector().getY();
