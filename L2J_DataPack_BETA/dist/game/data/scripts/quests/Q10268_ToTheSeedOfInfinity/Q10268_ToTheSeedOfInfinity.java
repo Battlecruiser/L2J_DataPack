@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Infinity (10268)
+ * To the Seed of Infinity (10268).<br>
+ * Original Jython script by Kerberos.
  * @author nonom
  */
 public class Q10268_ToTheSeedOfInfinity extends Quest

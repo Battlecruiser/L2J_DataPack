@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Journey To Gracia (10267)
+ * Journey To Gracia (10267).<br>
+ * Original Jython script by Kerberos.
  * @author nonom
  */
 public class Q10267_JourneyToGracia extends Quest
