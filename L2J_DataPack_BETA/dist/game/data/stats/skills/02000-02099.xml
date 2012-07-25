@@ -555,6 +555,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="negateAbnormals" val="fatal_poison,1" />
+		<set name="negateId" val="4082" /> <!-- TODO: This is a TEMP-FIX (to clean all effects from skill 4082), this should be removed if somebody fix the cancel/negate effect/skill handlers (and when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes) -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
