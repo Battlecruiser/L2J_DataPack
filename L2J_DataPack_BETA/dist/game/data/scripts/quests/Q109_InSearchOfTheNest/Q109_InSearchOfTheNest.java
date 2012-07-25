@@ -14,21 +14,21 @@
  */
 package quests.Q109_InSearchOfTheNest;
 
-/**
- * In Search of the Nest (109).<br>
- * Original Jython script by Eyerobot and Emperorc.
- * @author Adry_85
- */
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
+/**
+ * In Search of the Nest (109)<br>
+ * Original Jython script by Eyerobot and Emperorc.
+ * @author Adry_85
+ */
 public class Q109_InSearchOfTheNest extends Quest
 {
 	private static final String qn = "109_InSearchOfTheNest";
+	
 	// NPC
 	private static final int PIERCE = 31553;
 	private static final int SCOUTS_CORPSE = 32015;
@@ -65,7 +65,6 @@ public class Q109_InSearchOfTheNest extends Quest
 				st.exitQuest(false, true);
 				break;
 		}
-		
 		return event;
 	}
 	

@@ -14,11 +14,6 @@
  */
 package quests.Q510_AClansPrestige;
 
-/**
- * A Clan's Prestige (510).
- * @author Adry_85
- */
-
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -29,9 +24,14 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * A Clan's Prestige (510)
+ * @author Adry_85
+ */
 public class Q510_AClansPrestige extends Quest
 {
 	private static final String qn = "510_AClansPrestige";
+	
 	// NPC
 	private static final int VALDIS = 31331;
 	
@@ -49,7 +49,6 @@ public class Q510_AClansPrestige extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -78,7 +77,6 @@ public class Q510_AClansPrestige extends Quest
 		}
 		
 		L2Clan clan = player.getClan();
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -122,7 +120,6 @@ public class Q510_AClansPrestige extends Quest
 		}
 		
 		QuestState st = null;
-		
 		if (player.isClanLeader())
 		{
 			st = player.getQuestState(qn);

@@ -14,21 +14,21 @@
  */
 package quests.Q110_ToThePrimevalIsle;
 
-/**
- * To the Primeval Isle (110).<br>
- * Original Jython script by Ethernaly, updated by Zoey76.
- * @author Adry_85
- */
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
+/**
+ * To the Primeval Isle (110)<br>
+ * Original Jython script by Ethernaly, updated by Zoey76.
+ * @author Adry_85
+ */
 public class Q110_ToThePrimevalIsle extends Quest
 {
 	private static final String qn = "110_ToThePrimevalIsle";
+	
 	// NPC
 	private static final int ANTON = 31338;
 	private static final int MARQUEZ = 32113;
@@ -59,7 +59,6 @@ public class Q110_ToThePrimevalIsle extends Quest
 				st.exitQuest(false, true);
 				break;
 		}
-		
 		return event;
 	}
 	
