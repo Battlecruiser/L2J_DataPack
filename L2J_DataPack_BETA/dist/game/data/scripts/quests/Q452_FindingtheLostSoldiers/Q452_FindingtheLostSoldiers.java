@@ -111,7 +111,7 @@ public class Q452_FindingtheLostSoldiers extends Quest
 					}
 					else
 					{
-						htmltext = "32773-6.htm";
+						htmltext = "32773-6.html";
 					}
 					break;
 			}

@@ -14,12 +14,6 @@
  */
 package quests.Q508_AClansReputation;
 
-/**
- * A Clan's Reputation (508).<br>
- * Original Jython script by chris_00, @katmai and DrLecter.
- * @author Adry_85
- */
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.model.L2Clan;
@@ -33,9 +27,15 @@ import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * A Clan's Reputation (508)<br>
+ * Original Jython script by chris_00, @katmai and DrLecter.
+ * @author Adry_85
+ */
 public class Q508_AClansReputation extends Quest
 {
 	private static final String qn = "508_AClansReputation";
+	
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;
 	
@@ -119,7 +119,6 @@ public class Q508_AClansReputation extends Quest
 		}
 		
 		L2Clan clan = player.getClan();
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -170,7 +169,6 @@ public class Q508_AClansReputation extends Quest
 		}
 		
 		QuestState st = null;
-		
 		if (player.isClanLeader())
 		{
 			st = player.getQuestState(qn);

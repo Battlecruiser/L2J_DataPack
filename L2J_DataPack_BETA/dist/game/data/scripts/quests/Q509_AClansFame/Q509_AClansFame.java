@@ -14,11 +14,6 @@
  */
 package quests.Q509_AClansFame;
 
-/**
- * A Clan's Fame (509).
- * @author Adry_85
- */
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.model.L2Clan;
@@ -32,9 +27,14 @@ import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * A Clan's Fame (509)
+ * @author Adry_85
+ */
 public class Q509_AClansFame extends Quest
 {
 	private static final String qn = "509_AClansFame";
+	
 	// NPC
 	private static final int VALDIS = 31331;
 	
@@ -106,7 +106,6 @@ public class Q509_AClansFame extends Quest
 		}
 		
 		L2Clan clan = player.getClan();
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -157,7 +156,6 @@ public class Q509_AClansFame extends Quest
 		}
 		
 		QuestState st = null;
-		
 		if (player.isClanLeader())
 		{
 			st = player.getQuestState(qn);

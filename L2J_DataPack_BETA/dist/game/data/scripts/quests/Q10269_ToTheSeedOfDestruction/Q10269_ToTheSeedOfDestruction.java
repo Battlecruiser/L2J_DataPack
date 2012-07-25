@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269).<br>
+ * To the Seed of Destruction (10269)<br>
  * Original Jython script by Kerberos.
  * @author nonom
  */

@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Seven Signs, Series of Doubt (192).<br>
+ * Seven Signs, Series of Doubt (192)<br>
  * Original Jython script by Bloodshed.
  * @author Tavo22
  */
