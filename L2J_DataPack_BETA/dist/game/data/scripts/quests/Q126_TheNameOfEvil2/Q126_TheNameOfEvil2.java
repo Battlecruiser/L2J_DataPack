@@ -14,11 +14,6 @@
  */
 package quests.Q126_TheNameOfEvil2;
 
-/**
- * The Name of Evil - 2 (126).
- * @author Adry_85
- */
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -26,6 +21,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
+/**
+ * The Name of Evil - 2 (126)
+ * @author Adry_85
+ */
 public class Q126_TheNameOfEvil2 extends Quest
 {
 	private static final String qn = "126_TheNameOfEvil2";

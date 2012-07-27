@@ -14,17 +14,16 @@
  */
 package quests.Q641_AttackSailren;
 
-/**
- * Attack Sailren! (641).
- * @author Adry_85
- */
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
+/**
+ * Attack Sailren! (641)
+ * @author Adry_85
+ */
 public class Q641_AttackSailren extends Quest
 {
 	private static final String qn = "641_AttackSailren";
