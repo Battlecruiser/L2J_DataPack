@@ -163,7 +163,7 @@ public class Q509_AClansFame extends Quest
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if (player.isInsideRadius(pleader, 1500, true, false))
+			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = pleader.getQuestState(qn);
 			}

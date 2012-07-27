@@ -127,7 +127,7 @@ public class Q510_AClansPrestige extends Quest
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if (player.isInsideRadius(pleader, 1500, true, false))
+			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = pleader.getQuestState(qn);
 			}
