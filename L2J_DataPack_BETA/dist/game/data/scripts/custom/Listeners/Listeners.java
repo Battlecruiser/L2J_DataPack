@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.scripting.scriptengine.events.AttackEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.AugmentEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ClanCreationEvent;
@@ -33,11 +34,14 @@ import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseAddItemEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseDeleteItemEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ClanWarehouseTransferEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.DlgAnswerEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.FortSiegeEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.HennaEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ItemCreateEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ItemDropEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ItemPickupEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.PlayerEvent;
+import com.l2jserver.gameserver.scripting.scriptengine.events.RequestBypassToServerEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.SiegeEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.SkillUseEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.TransformEvent;
@@ -64,6 +68,9 @@ public class Listeners extends L2Script
 		addItemAugmentNotify();
 		addItemDropPickupNotify();
 		addHennaNotify();
+		addDlgAnswerNotify(SystemMessageId.RESSURECTION_REQUEST_BY_C1_FOR_S2_XP.getId());
+		addRequestBypassToServerNotify();
+		addPlayerNotify();
 	}
 	
 	/**
@@ -96,6 +103,9 @@ public class Listeners extends L2Script
 		removeTransformNotify(player);
 		removeSkillUseNotify(player);
 		removeAttackNotify(player);
+		removeDlgAnswerNotify();
+		removeRequestBypassToServerNotify();
+		removePlayerNotify();
 	}
 	
 	/**
@@ -364,8 +374,74 @@ public class Listeners extends L2Script
 	@Override
 	public boolean onUseSkill(SkillUseEvent event)
 	{
-		_log.log(Level.INFO, event.getTargets() + " has been used by " + event.getCaster());
+		_log.log(Level.INFO, event.getSkill() + " has been used by " + event.getCaster());
 		return true;
+	}
+	
+	/**
+	 * Fired when client answer on dialog request<br>
+	 * Register using addDlgAnswerNotify()
+	 * @param event
+	 */
+	@Override
+	public void onDlgAnswer(DlgAnswerEvent event)
+	{
+		_log.log(Level.INFO, event.getActiveChar() + " has been answered on " + event.getMessageId() + " with " + event.getAnswer() + " requester: " + event.getRequesterId());
+	}
+	
+	/**
+	 * Fired when client answer on dialog request<br>
+	 * Register using addDlgAnswerNotify()
+	 * @param event
+	 */
+	@Override
+	protected void onRequestBypassToServer(RequestBypassToServerEvent event)
+	{
+		_log.log(Level.INFO, event.getActiveChar() + " has sent command to server: " + event.getCommand());
+	}
+	
+	/**
+	 * Fired when client select a player<br>
+	 * Register using addPlayerNotify()
+	 * @param event
+	 */
+	@Override
+	protected void onCharSelect(PlayerEvent event)
+	{
+		_log.log(Level.INFO, event.getClient() + " has selected char: " + event.getName());
+	}
+	
+	/**
+	 * Fired when client create a character<br>
+	 * Register using addPlayerNotify()
+	 * @param event
+	 */
+	@Override
+	protected void onCharCreate(PlayerEvent event)
+	{
+		_log.log(Level.INFO, event.getClient() + " has created char: " + event.getName());
+	}
+	
+	/**
+	 * Fired when client select a character for delete<br>
+	 * Register using addPlayerNotify()
+	 * @param event
+	 */
+	@Override
+	protected void onCharDelete(PlayerEvent event)
+	{
+		_log.log(Level.INFO, event.getClient() + " has deleted char: " + event.getName());
+	}
+	
+	/**
+	 * Fired when client select a character for restore<br>
+	 * Register using addPlayerNotify()
+	 * @param event
+	 */
+	@Override
+	protected void onCharRestore(PlayerEvent event)
+	{
+		_log.log(Level.INFO, event.getClient() + " has restored char: " + event.getName());
 	}
 	
 	public static void main(String[] args)
