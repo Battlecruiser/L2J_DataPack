@@ -24306,11 +24306,17 @@ INSERT INTO `spawnlist` VALUES
 -- Dr. Chaos
 ("PavelRuins", 1, 32033, 96320, -110912, -3328, 0, 0, 8191, 60, 0, 0),
 -- Yumi
-("pavel_ruins_npc", 1, 32041, 91374, -116884, -3928, 0, 0, 54750, 60, 0, 0),
+("pavel_ruins_npc", 1, 32041, 91374, -116884, -3920, 0, 0, 54750, 60, 0, 0),
 -- Weathermaster
 ("PavelRuins", 1, 32043, 94108, -105820, -3313, 0, 0, 8191, 60, 0, 0),
 -- Dr. Chaos' Secret Bookshelf
-("PavelRuins/ArchaicL", 1, 32045, 96352, -110320, -3305, 0, 0, 0, 60, 0, 0),
+("PavelRuins/ArchaicL", 1, 32045, 96313, -110455, -3340, 0, 0, 50600, 60, 0, 0),
+-- Suspicious-Looking Pile of Stones
+("PavelRuins/ArchaicL", 1, 32046, 90336, -107264, -3323, 0, 0, 57344, 60, 0, 0),
+-- Wendy
+("PavelRuins/ArchaicL", 1, 32047, 97014, -110618, -3293, 0, 0, 45056, 60, 0, 0),
+-- Parts Box
+("PavelRuins/ArchaicL", 1, 32050, 96848, -111076, -3344, 0, 0, 36864, 60, 0, 0),
 -- Gutenhagen
 ("pavel_ruins_npc", 1, 32069, 91316, -116927, -3928, 0, 0, 55000, 60, 0, 0),
 -- Chairen
