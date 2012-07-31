@@ -108,10 +108,10 @@ public class Q00509_AClansFame extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (clan == null || !player.isClanLeader() || clan.getLevel() < 6) ? "31331-0a.htm" : "31331-0b.htm";
+				htmltext = ((clan == null) || !player.isClanLeader() || (clan.getLevel() < 6)) ? "31331-0a.htm" : "31331-0b.htm";
 				break;
 			case State.STARTED:
-				if (clan == null || !player.isClanLeader())
+				if ((clan == null) || !player.isClanLeader())
 				{
 					st.exitQuest(true);
 					return "31331-6.html";
@@ -162,18 +162,18 @@ public class Q00509_AClansFame extends Quest
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
+			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = pleader.getQuestState(getName());
 			}
 		}
 		
-		if (st != null && st.isStarted())
+		if ((st != null) && st.isStarted())
 		{
 			int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if (npc.getNpcId() == REWARD_POINTS.get(raid)[0] && !st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
+				if ((npc.getNpcId() == REWARD_POINTS.get(raid)[0]) && !st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
 				{
 					st.rewardItems(REWARD_POINTS.get(raid)[1], 1);
 					st.playSound("ItemSound.quest_itemget");

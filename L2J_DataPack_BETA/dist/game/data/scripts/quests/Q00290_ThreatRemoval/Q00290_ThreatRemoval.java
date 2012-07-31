@@ -27,7 +27,6 @@ public class Q00290_ThreatRemoval extends Quest
 	public static final int PINAPS = 30201;
 	public static final int TAGS = 15714;
 	
-	
 	private static final int[] MOBS1 =
 	{
 		22780,

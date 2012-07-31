@@ -35,7 +35,6 @@ public class Q00252_ItSmellsDelicious extends Quest
 	public static final int MAHUM_DIARY = 15500;
 	public static final int MAHUM_COOKBOOK = 15501;
 	
-	
 	private static final int[] MOBS =
 	{
 		22786,

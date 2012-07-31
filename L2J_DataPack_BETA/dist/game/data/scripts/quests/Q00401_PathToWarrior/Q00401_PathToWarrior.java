@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 public class Q00401_PathToWarrior extends Quest
 {
 	
-	
 	// Item
 	private static final int AuronsLetter = 1138;
 	private static final int WarriorGuildMark = 1139;

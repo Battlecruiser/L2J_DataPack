@@ -167,7 +167,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	{
 		super(questId, name, descr);
 		
-		addStartNpc(LINNAEUS);		
+		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);
 	}

@@ -109,7 +109,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		}
 		else if (st.isCompleted())
 		{
-			if(st.isNowAvailable())
+			if (st.isNowAvailable())
 			{
 				st.setState(State.CREATED);
 				if ((player.getLevel() < 75) || !player.isNoble())

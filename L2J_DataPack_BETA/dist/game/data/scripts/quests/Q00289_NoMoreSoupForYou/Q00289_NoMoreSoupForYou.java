@@ -27,7 +27,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public static final int RATE = 5;
 	public static final int SOUP = 15712;
 	
-	
 	private static final int[] MOBS =
 	{
 		18908,
