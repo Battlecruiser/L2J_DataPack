@@ -79,7 +79,7 @@ public class Q00510_AClansPrestige extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (clan == null || !player.isClanLeader() || clan.getLevel() < 5) ? "31331-0.htm" : "31331-1.htm";
+				htmltext = ((clan == null) || !player.isClanLeader() || (clan.getLevel() < 5)) ? "31331-0.htm" : "31331-1.htm";
 				break;
 			case State.STARTED:
 				if ((clan == null) || !player.isClanLeader())
@@ -95,7 +95,7 @@ public class Q00510_AClansPrestige extends Quest
 				else
 				{
 					int count = (int) st.getQuestItemsCount(TYRANNOSAURUS_CLAW);
-					int reward = (count < 10) ? (30 * count) : (59 + 30 * count);
+					int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
 					st.playSound("ItemSound.quest_fanfare_1");
 					st.takeItems(TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);
@@ -126,13 +126,13 @@ public class Q00510_AClansPrestige extends Quest
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
+			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = pleader.getQuestState(getName());
 			}
 		}
 		
-		if (st != null && st.isStarted())
+		if ((st != null) && st.isStarted())
 		{
 			st.rewardItems(TYRANNOSAURUS_CLAW, 1);
 			st.playSound("ItemSound.quest_itemget");

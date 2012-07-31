@@ -31,7 +31,6 @@ public class Q00251_NoSecrets extends Quest
 	public static final int DIARY = 15508;
 	public static final int TABLE = 15509;
 	
-	
 	private static final int[] MOBS =
 	{
 		22783,

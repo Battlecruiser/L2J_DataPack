@@ -114,7 +114,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		else if (event.equalsIgnoreCase("32734-08.html"))
 		{
 			st.setCond(3, true);
-		}	
+		}
 		else if (event.equalsIgnoreCase("32734-09.html"))
 		{
 			st.setCond(4, true);
