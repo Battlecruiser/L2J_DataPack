@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00423_TakeYourBestShot extends Quest
 {
-	private static final String qn = "423_TakeYourBestShot";
 	// NPC
 	private static final int _batracos = 32740;
 	private static final int _johnny = 32744;
@@ -56,7 +55,7 @@ public class Q00423_TakeYourBestShot extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -83,7 +82,7 @@ public class Q00423_TakeYourBestShot extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -171,7 +170,7 @@ public class Q00423_TakeYourBestShot extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -216,6 +215,6 @@ public class Q00423_TakeYourBestShot extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00423_TakeYourBestShot(423, qn, "Take Your Best Shot!");
+		new Q00423_TakeYourBestShot(423, Q00423_TakeYourBestShot.class.getSimpleName(), "Take Your Best Shot!");
 	}
 }

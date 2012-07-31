@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00702_ATrapForRevenge extends Quest
 {
-	private static final String qn = "702_ATrapForRevenge";
 	// NPC
 	private static final int Plenos = 32563;
 	private static final int Lekon = 32557;
@@ -52,7 +51,7 @@ public class Q00702_ATrapForRevenge extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -258,7 +257,7 @@ public class Q00702_ATrapForRevenge extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -315,7 +314,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		final int chance = getRandom(1000);
 		switch (npc.getNpcId())
 		{
@@ -416,6 +415,6 @@ public class Q00702_ATrapForRevenge extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00702_ATrapForRevenge(702, qn, "A Trap for Revenge");
+		new Q00702_ATrapForRevenge(702, Q00702_ATrapForRevenge.class.getSimpleName(), "A Trap for Revenge");
 	}
 }

@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00026_TiredOfWaiting extends Quest
 {
-	private static final String qn = "26_TiredOfWaiting";
 	
 	// NPCs
 	private static final int ISAEL_SILVERSHADOW = 30655;
@@ -42,7 +41,7 @@ public class Q00026_TiredOfWaiting extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -92,7 +91,7 @@ public class Q00026_TiredOfWaiting extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -146,6 +145,6 @@ public class Q00026_TiredOfWaiting extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00026_TiredOfWaiting(26, qn, "Tired of Waiting");
+		new Q00026_TiredOfWaiting(26, Q00026_TiredOfWaiting.class.getSimpleName(), "Tired of Waiting");
 	}
 }

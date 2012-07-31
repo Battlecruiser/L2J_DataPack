@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 {
-	private static final String qn = "29_ChestCaughtWithABaitOfEarth";
 	
 	// NPCs
 	private static final int WILLIE = 31574;
@@ -42,7 +41,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +83,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -148,6 +147,6 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00029_ChestCaughtWithABaitOfEarth(29, qn, "Chest Caught With A Bait Of Earth");
+		new Q00029_ChestCaughtWithABaitOfEarth(29, Q00029_ChestCaughtWithABaitOfEarth.class.getSimpleName(), "Chest Caught With A Bait Of Earth");
 	}
 }

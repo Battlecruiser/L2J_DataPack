@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00147_PathtoBecominganEliteMercenary extends Quest
 {
-	private static final String qn = "147_PathtoBecominganEliteMercenary";
 	
 	// NPCs
 	private static final int[] _merc =
@@ -49,7 +48,7 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -77,7 +76,7 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -126,6 +125,6 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00147_PathtoBecominganEliteMercenary(147, qn, "Path to Becoming an Elite Mercenary");
+		new Q00147_PathtoBecominganEliteMercenary(147, Q00147_PathtoBecominganEliteMercenary.class.getSimpleName(), "Path to Becoming an Elite Mercenary");
 	}
 }

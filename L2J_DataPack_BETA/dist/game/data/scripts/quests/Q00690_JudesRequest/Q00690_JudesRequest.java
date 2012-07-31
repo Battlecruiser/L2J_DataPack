@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00690_JudesRequest extends Quest
 {
-	private static final String qn = "690_JudesRequest";
 	// NPC
 	private static final int JUDE = 32356;
 	private static final int LESSER_EVIL = 22398;
@@ -65,7 +64,7 @@ public class Q00690_JudesRequest extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -119,7 +118,7 @@ public class Q00690_JudesRequest extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -164,7 +163,7 @@ public class Q00690_JudesRequest extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		
 		final int npcId = npc.getNpcId();
 		int chance = 0;
@@ -201,6 +200,6 @@ public class Q00690_JudesRequest extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00690_JudesRequest(690, qn, "Jude's Request");
+		new Q00690_JudesRequest(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
 	}
 }

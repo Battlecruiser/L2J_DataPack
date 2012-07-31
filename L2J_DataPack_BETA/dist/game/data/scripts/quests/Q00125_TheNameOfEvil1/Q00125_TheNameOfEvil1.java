@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Q00125_TheNameOfEvil1 extends Quest
 {
-	private static final String qn = "125_TheNameOfEvil1";
 	
 	// NPC
 	private static final int MUSHIKA = 32114;
@@ -456,7 +455,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -524,6 +523,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00125_TheNameOfEvil1(125, qn, "The Name of Evil - 1");
+		new Q00125_TheNameOfEvil1(125, Q00125_TheNameOfEvil1.class.getSimpleName(), "The Name of Evil - 1");
 	}
 }

@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10275_ContainingTheAttributePower extends Quest
 {
-	private static final String qn = "10275_ContainingTheAttributePower";
 	
 	// NPCs
 	private static final int HOLLY = 30839;
@@ -57,7 +56,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -173,7 +172,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -241,7 +240,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -300,6 +299,6 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10275_ContainingTheAttributePower(10275, qn, "Containing the Attribute Power");
+		new Q10275_ContainingTheAttributePower(10275, Q10275_ContainingTheAttributePower.class.getSimpleName(), "Containing the Attribute Power");
 	}
 }

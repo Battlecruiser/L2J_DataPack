@@ -34,7 +34,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00508_AClansReputation extends Quest
 {
-	private static final String qn = "508_AClansReputation";
 	
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;
@@ -171,14 +170,14 @@ public class Q00508_AClansReputation extends Quest
 		QuestState st = null;
 		if (player.isClanLeader())
 		{
-			st = player.getQuestState(qn);
+			st = player.getQuestState(getName());
 		}
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = pleader.getQuestState(qn);
+				st = pleader.getQuestState(getName());
 			}
 		}
 		
@@ -208,6 +207,6 @@ public class Q00508_AClansReputation extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00508_AClansReputation(508, qn, "A Clan's Reputation");
+		new Q00508_AClansReputation(508, Q00508_AClansReputation.class.getSimpleName(), "A Clan's Reputation");
 	}
 }

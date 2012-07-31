@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10272_LightFragment extends Quest
 {
-	private static final String qn = "10272_LightFragment";
 	
 	private static final int ORBYU = 32560;
 	private static final int ARTIUS = 32559;
@@ -61,7 +60,7 @@ public class Q10272_LightFragment extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -218,7 +217,7 @@ public class Q10272_LightFragment extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -286,7 +285,7 @@ public class Q10272_LightFragment extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(5))
 		{
 			final long count = st.getQuestItemsCount(FRAGMENT_POWDER);
@@ -331,6 +330,6 @@ public class Q10272_LightFragment extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10272_LightFragment(10272, qn, "Light Fragment");
+		new Q10272_LightFragment(10272, Q10272_LightFragment.class.getSimpleName(), "Light Fragment");
 	}
 }

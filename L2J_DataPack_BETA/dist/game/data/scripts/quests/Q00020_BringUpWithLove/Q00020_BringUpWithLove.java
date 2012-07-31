@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00020_BringUpWithLove extends Quest
 {
-	private static final String qn = "20_BringUpWithLove";
 	
 	// Npc
 	private static final int _tunatun = 31537;
@@ -39,7 +38,7 @@ public class Q00020_BringUpWithLove extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -89,7 +88,7 @@ public class Q00020_BringUpWithLove extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -127,7 +126,7 @@ public class Q00020_BringUpWithLove extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			newQuestState(player);
@@ -146,6 +145,6 @@ public class Q00020_BringUpWithLove extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00020_BringUpWithLove(20, qn, "Bring Up With Love");
+		new Q00020_BringUpWithLove(20, Q00020_BringUpWithLove.class.getSimpleName(), "Bring Up With Love");
 	}
 }

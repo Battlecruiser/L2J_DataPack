@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00051_OFullesSpecialBait extends Quest
 {
-	private static final String qn = "51_OFullesSpecialBait";
 	
 	// NPCs
 	private static final int OFULLE = 31572;
@@ -42,7 +41,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -73,7 +72,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -103,7 +102,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -150,6 +149,6 @@ public class Q00051_OFullesSpecialBait extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00051_OFullesSpecialBait(51, qn, "O'Fulle's Special Bait");
+		new Q00051_OFullesSpecialBait(51, Q00051_OFullesSpecialBait.class.getSimpleName(), "O'Fulle's Special Bait");
 	}
 }

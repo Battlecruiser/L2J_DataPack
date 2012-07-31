@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10281_MutatedKaneusRune extends Quest
 {
-	private static final String qn = "10281_MutatedKaneusRune";
 	
 	// NPCs
 	private static final int MATHIAS = 31340;
@@ -43,7 +42,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +84,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -107,7 +106,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		QuestState st = killer.getQuestState(qn);
+		QuestState st = killer.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -119,7 +118,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 			final List<QuestState> PartyMembers = new ArrayList<>();
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				st = member.getQuestState(qn);
+				st = member.getQuestState(getName());
 				if ((st != null) && st.isStarted() && !st.hasQuestItems(TISSUE_WA))
 				{
 					PartyMembers.add(st);
@@ -162,6 +161,6 @@ public class Q10281_MutatedKaneusRune extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10281_MutatedKaneusRune(10281, qn, "Mutated Kaneus - Rune");
+		new Q10281_MutatedKaneusRune(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
 	}
 }

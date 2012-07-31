@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00124_MeetingTheElroki extends Quest
 {
-	private static final String qn = "124_MeetingTheElroki";
 	
 	// NPC
 	private static final int MARQUEZ = 32113;
@@ -236,6 +235,6 @@ public class Q00124_MeetingTheElroki extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00124_MeetingTheElroki(124, qn, "Meeting the Elroki");
+		new Q00124_MeetingTheElroki(124, Q00124_MeetingTheElroki.class.getSimpleName(), "Meeting the Elroki");
 	}
 }

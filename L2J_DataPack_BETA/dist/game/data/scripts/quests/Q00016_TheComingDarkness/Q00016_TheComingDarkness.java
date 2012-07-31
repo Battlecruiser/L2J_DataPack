@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00016_TheComingDarkness extends Quest
 {
-	private static final String qn = "16_TheComingDarkness";
 	
 	// NPCs
 	private static final int HIERARCH = 31517;
@@ -45,7 +44,7 @@ public class Q00016_TheComingDarkness extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -81,7 +80,7 @@ public class Q00016_TheComingDarkness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,6 +146,6 @@ public class Q00016_TheComingDarkness extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00016_TheComingDarkness(16, qn, "The Coming Darkness");
+		new Q00016_TheComingDarkness(16, Q00016_TheComingDarkness.class.getSimpleName(), "The Coming Darkness");
 	}
 }

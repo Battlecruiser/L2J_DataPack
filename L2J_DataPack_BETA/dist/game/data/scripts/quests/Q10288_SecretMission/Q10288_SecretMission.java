@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10288_SecretMission extends Quest
 {
-	private static final String qn = "10288_SecretMission";
 	// NPC's
 	private static final int _dominic = 31350;
 	private static final int _aquilani = 32780;
@@ -38,7 +37,7 @@ public class Q10288_SecretMission extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -87,7 +86,7 @@ public class Q10288_SecretMission extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -141,7 +140,7 @@ public class Q10288_SecretMission extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -165,6 +164,6 @@ public class Q10288_SecretMission extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10288_SecretMission(10288, qn, "Secret Mission");
+		new Q10288_SecretMission(10288, Q10288_SecretMission.class.getSimpleName(), "Secret Mission");
 	}
 }

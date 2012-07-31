@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10289_FadeToBlack extends Quest
 {
-	private static final String qn = "10289_FadeToBlack";
 	
 	// NPCs
 	private static final int GREYMORE = 32757;
@@ -42,7 +41,7 @@ public class Q10289_FadeToBlack extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -74,7 +73,7 @@ public class Q10289_FadeToBlack extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState secretMission = player.getQuestState("10288_SecretMission");
 		if (st == null)
 		{
@@ -132,7 +131,7 @@ public class Q10289_FadeToBlack extends Quest
 			return super.onKill(npc, player, isPet);
 		}
 		
-		final QuestState st = randomPartyMember.getQuestState(qn);
+		final QuestState st = randomPartyMember.getQuestState(getName());
 		if (st != null)
 		{
 			st.giveItems(MARK_OF_SPLENDOR, 1);
@@ -145,7 +144,7 @@ public class Q10289_FadeToBlack extends Quest
 			QuestState st2;
 			for (L2PcInstance partyMember : player.getParty().getMembers())
 			{
-				st2 = partyMember.getQuestState(qn);
+				st2 = partyMember.getQuestState(getName());
 				if ((st2 != null) && (st2.getInt("cond") == 1) && (partyMember.getObjectId() != randomPartyMember.getObjectId()))
 				{
 					st2.giveItems(MARK_OF_DARKNESS, 1);
@@ -168,6 +167,6 @@ public class Q10289_FadeToBlack extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10289_FadeToBlack(10289, qn, "Fade to Black");
+		new Q10289_FadeToBlack(10289, Q10289_FadeToBlack.class.getSimpleName(), "Fade to Black");
 	}
 }

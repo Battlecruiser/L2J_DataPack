@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10271_TheEnvelopingDarkness extends Quest
 {
-	private static final String qn = "10271_TheEnvelopingDarkness";
 	
 	private static final int ORBYU = 32560;
 	private static final int EL = 32556;
@@ -37,7 +36,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -130,7 +129,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -170,6 +169,6 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10271_TheEnvelopingDarkness(10271, qn, "The Enveloping Darkness");
+		new Q10271_TheEnvelopingDarkness(10271, Q10271_TheEnvelopingDarkness.class.getSimpleName(), "The Enveloping Darkness");
 	}
 }

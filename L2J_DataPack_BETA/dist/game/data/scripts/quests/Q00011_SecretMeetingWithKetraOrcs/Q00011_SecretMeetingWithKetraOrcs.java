@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 {
-	private static final String qn = "11_SecretMeetingWithKetraOrcs";
 	
 	// NPCs
 	private static final int CADMON = 31296;
@@ -41,7 +40,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +83,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -142,6 +141,6 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00011_SecretMeetingWithKetraOrcs(11, qn, "Secret Meeting With Ketra Orcs");
+		new Q00011_SecretMeetingWithKetraOrcs(11, Q00011_SecretMeetingWithKetraOrcs.class.getSimpleName(), "Secret Meeting With Ketra Orcs");
 	}
 }

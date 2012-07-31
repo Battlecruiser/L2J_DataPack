@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 {
-	private static final String qn = "249_PoisonedPlainsOfTheLizardmen";
 	
 	private static final int _mouen = 30196;
 	private static final int _johnny = 32744;
@@ -35,7 +34,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -64,7 +63,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -119,6 +118,6 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00249_PoisonedPlainsOfTheLizardmen(249, qn, "Poisoned Plains of the Lizardmen");
+		new Q00249_PoisonedPlainsOfTheLizardmen(249, Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName(), "Poisoned Plains of the Lizardmen");
 	}
 }

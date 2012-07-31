@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00015_SweetWhispers extends Quest
 {
-	private static final String qn = "15_SweetWhispers";
 	
 	// NPCs
 	private static final int VLADIMIR = 31302;
@@ -38,7 +37,7 @@ public class Q00015_SweetWhispers extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -75,7 +74,7 @@ public class Q00015_SweetWhispers extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -137,6 +136,6 @@ public class Q00015_SweetWhispers extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00015_SweetWhispers(15, qn, "Sweet Whispers");
+		new Q00015_SweetWhispers(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
 	}
 }

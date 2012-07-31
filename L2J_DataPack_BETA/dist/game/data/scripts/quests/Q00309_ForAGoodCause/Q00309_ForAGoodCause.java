@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00309_ForAGoodCause extends Quest
 {
-	private static final String qn = "309_ForAGoodCause";
 	
 	// NPC's
 	private static final int ATRA = 32647;
@@ -85,7 +84,7 @@ public class Q00309_ForAGoodCause extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -259,7 +258,7 @@ public class Q00309_ForAGoodCause extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -287,7 +286,7 @@ public class Q00309_ForAGoodCause extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.getInt("cond") == 1))
 		{
 			if (Util.contains(MUCROKIANS, npc.getNpcId()))
@@ -347,6 +346,6 @@ public class Q00309_ForAGoodCause extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00309_ForAGoodCause(309, qn, "For A Good Cause");
+		new Q00309_ForAGoodCause(309, Q00309_ForAGoodCause.class.getSimpleName(), "For A Good Cause");
 	}
 }

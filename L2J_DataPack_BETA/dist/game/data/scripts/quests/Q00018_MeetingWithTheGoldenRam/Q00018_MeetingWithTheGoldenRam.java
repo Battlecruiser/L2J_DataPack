@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00018_MeetingWithTheGoldenRam extends Quest
 {
-	private static final String qn = "18_MeetingWithTheGoldenRam";
 	
 	// NPCs
 	private static final int DONAL = 31314;
@@ -41,7 +40,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -82,7 +81,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -131,6 +130,6 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00018_MeetingWithTheGoldenRam(18, qn, "Meeting With The Golden Ram");
+		new Q00018_MeetingWithTheGoldenRam(18, Q00018_MeetingWithTheGoldenRam.class.getSimpleName(), "Meeting With The Golden Ram");
 	}
 }

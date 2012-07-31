@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 {
-	private static final String qn = "12_SecretMeetingWithVarkaSilenos";
 	
 	// NPCs
 	private static final int CADMON = 31296;
@@ -41,7 +40,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -84,7 +83,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -139,6 +138,6 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00012_SecretMeetingWithVarkaSilenos(12, qn, "Secret Meeting With Varka Silenos");
+		new Q00012_SecretMeetingWithVarkaSilenos(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
 	}
 }

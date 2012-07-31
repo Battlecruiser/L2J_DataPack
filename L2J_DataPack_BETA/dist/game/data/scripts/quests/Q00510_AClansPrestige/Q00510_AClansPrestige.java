@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00510_AClansPrestige extends Quest
 {
-	private static final String qn = "510_AClansPrestige";
 	
 	// NPC
 	private static final int VALDIS = 31331;
@@ -122,14 +121,14 @@ public class Q00510_AClansPrestige extends Quest
 		QuestState st = null;
 		if (player.isClanLeader())
 		{
-			st = player.getQuestState(qn);
+			st = player.getQuestState(getName());
 		}
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = pleader.getQuestState(qn);
+				st = pleader.getQuestState(getName());
 			}
 		}
 		
@@ -152,6 +151,6 @@ public class Q00510_AClansPrestige extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00510_AClansPrestige(510, qn, "A Clan's Prestige");
+		new Q00510_AClansPrestige(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
 	}
 }

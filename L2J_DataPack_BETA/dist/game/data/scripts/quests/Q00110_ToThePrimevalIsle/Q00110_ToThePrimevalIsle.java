@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00110_ToThePrimevalIsle extends Quest
 {
-	private static final String qn = "110_ToThePrimevalIsle";
 	
 	// NPC
 	private static final int ANTON = 31338;
@@ -108,6 +107,6 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00110_ToThePrimevalIsle(110, qn, "To the Primeval Isle");
+		new Q00110_ToThePrimevalIsle(110, Q00110_ToThePrimevalIsle.class.getSimpleName(), "To the Primeval Isle");
 	}
 }

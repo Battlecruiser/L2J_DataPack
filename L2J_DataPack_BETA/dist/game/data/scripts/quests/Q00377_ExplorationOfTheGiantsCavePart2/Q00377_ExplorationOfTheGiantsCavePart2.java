@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {
-	private static final String qn = "377_ExplorationOfTheGiantsCavePart2";
 	
 	// NPC's
 	private static final int SOBLING = 31147;
@@ -71,7 +70,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -118,7 +117,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -143,7 +142,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -189,6 +188,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00377_ExplorationOfTheGiantsCavePart2(377, qn, "Exploration of the Giants' Cave - Part 2");
+		new Q00377_ExplorationOfTheGiantsCavePart2(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
 	}
 }

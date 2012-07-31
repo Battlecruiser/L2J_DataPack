@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00109_InSearchOfTheNest extends Quest
 {
-	private static final String qn = "109_InSearchOfTheNest";
 	
 	// NPC
 	private static final int PIERCE = 31553;
@@ -138,6 +137,6 @@ public class Q00109_InSearchOfTheNest extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00109_InSearchOfTheNest(109, qn, "In Search of the Nest");
+		new Q00109_InSearchOfTheNest(109, Q00109_InSearchOfTheNest.class.getSimpleName(), "In Search of the Nest");
 	}
 }

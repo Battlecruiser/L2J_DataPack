@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00463_IMustBeaGenius extends Quest
 {
-	private static final String qn = "463_IMustBeaGenius";
 	private static final int _gutenhagen = 32069;
 	private static final int _corpse_log = 15510;
 	private static final int _collection = 15511;
@@ -53,7 +52,7 @@ public class Q00463_IMustBeaGenius extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -110,7 +109,7 @@ public class Q00463_IMustBeaGenius extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -152,7 +151,7 @@ public class Q00463_IMustBeaGenius extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -208,6 +207,6 @@ public class Q00463_IMustBeaGenius extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00463_IMustBeaGenius(463, qn, "I Must Be a Genius");
+		new Q00463_IMustBeaGenius(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
 	}
 }

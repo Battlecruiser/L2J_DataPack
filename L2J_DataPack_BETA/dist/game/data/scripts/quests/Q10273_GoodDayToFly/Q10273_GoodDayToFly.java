@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  */
 public class Q10273_GoodDayToFly extends Quest
 {
-	private static final String qn = "10273_GoodDayToFly";
 	
 	// NPCs
 	private static final int LEKON = 32557;
@@ -50,7 +49,7 @@ public class Q10273_GoodDayToFly extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -97,7 +96,7 @@ public class Q10273_GoodDayToFly extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -134,7 +133,7 @@ public class Q10273_GoodDayToFly extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		final QuestState st = killer.getQuestState(qn);
+		final QuestState st = killer.getQuestState(getName());
 		if ((st == null) || !st.isStarted())
 		{
 			return null;
@@ -170,6 +169,6 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10273_GoodDayToFly(10273, qn, "Good Day to Fly");
+		new Q10273_GoodDayToFly(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
 	}
 }

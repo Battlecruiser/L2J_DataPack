@@ -72,7 +72,6 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 	}
 	
-	private static final String qn = "511_AwlUnderFoot";
 	private static final boolean debug = false;
 	private static final long REENTERTIME = 14400000;
 	private static final long RAID_SPAWN_DELAY = 120000;
@@ -125,7 +124,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			QuestState st = partyMember.getQuestState(qn);
+			QuestState st = partyMember.getQuestState(getName());
 			if ((st == null) || (st.getInt("cond") < 1))
 			{
 				return getHtm(player.getHtmlPrefix(), "FortressWarden-05.htm").replace("%player%", partyMember.getName());
@@ -199,7 +198,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			{
 				teleportPlayer(partyMember, coords, instanceId);
 				world.allowed.add(partyMember.getObjectId());
-				if (partyMember.getQuestState(qn) == null)
+				if (partyMember.getQuestState(getName()) == null)
 				{
 					newQuestState(partyMember);
 				}
@@ -291,7 +290,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	private void rewardPlayer(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st.getInt("cond") == 1)
 		{
 			st.giveItems(DL_MARK, 140);
@@ -311,7 +310,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[2] = -6580;
 			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getNpcId()), checkFortCondition(player, npc, true));
 		}
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -339,7 +338,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		String ret = checkFortCondition(player, npc, false);
 		if (ret != null)
 		{
@@ -500,6 +499,6 @@ public final class Q00511_AwlUnderFoot extends Quest
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the)
-		new Q00511_AwlUnderFoot(511, qn, "instances");
+		new Q00511_AwlUnderFoot(511, Q00511_AwlUnderFoot.class.getSimpleName(), "instances");
 	}
 }

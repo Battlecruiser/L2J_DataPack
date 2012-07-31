@@ -44,7 +44,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class Q00350_EnhanceYourWeapon extends Quest
 {
-	private static final String qn = "350_EnhanceYourWeapon";
 	private static final int[] STARTING_NPCS =
 	{
 		30115,
@@ -354,7 +353,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (event.endsWith("-04.htm"))
 		{
 			st.set("cond", "1");
@@ -384,7 +383,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -411,7 +410,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00350_EnhanceYourWeapon(350, qn, "Enhance Your Weapon");
+		new Q00350_EnhanceYourWeapon(350, Q00350_EnhanceYourWeapon.class.getSimpleName(), "Enhance Your Weapon");
 	}
 	
 	/**
@@ -577,7 +576,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	
 	private SoulCrystal getSCForPlayer(L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if ((st == null) || (st.getState() != State.STARTED))
 		{
 			return null;

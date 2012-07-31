@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00279_TargetOfOpportunity extends Quest
 {
-	private static final String qn = "279_TargetOfOpportunity";
 	
 	// NPC's
 	private static final int JERIAN = 32302;
@@ -67,7 +66,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
@@ -98,7 +97,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -125,7 +124,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			return null;
 		}
 		
-		final QuestState st = pl.getQuestState(qn);
+		final QuestState st = pl.getQuestState(getName());
 		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
 			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
@@ -164,6 +163,6 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00279_TargetOfOpportunity(279, qn, "Target of Opportunity");
+		new Q00279_TargetOfOpportunity(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
 	}
 }
