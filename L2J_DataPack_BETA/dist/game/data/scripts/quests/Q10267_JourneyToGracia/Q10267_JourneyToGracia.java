@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10267_JourneyToGracia extends Quest
 {
-	private static final String qn = "10267_JourneyToGracia";
 	
 	// NPCs
 	private static final int ORVEN = 30857;
@@ -41,7 +40,7 @@ public class Q10267_JourneyToGracia extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -83,7 +82,7 @@ public class Q10267_JourneyToGracia extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -120,6 +119,6 @@ public class Q10267_JourneyToGracia extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10267_JourneyToGracia(10267, qn, "Journey to Gracia");
+		new Q10267_JourneyToGracia(10267, Q10267_JourneyToGracia.class.getSimpleName(), "Journey to Gracia");
 	}
 }

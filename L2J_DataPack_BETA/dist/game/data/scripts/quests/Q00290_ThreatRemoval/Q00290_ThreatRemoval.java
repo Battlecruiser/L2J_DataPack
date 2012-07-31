@@ -27,7 +27,6 @@ public class Q00290_ThreatRemoval extends Quest
 	public static final int PINAPS = 30201;
 	public static final int TAGS = 15714;
 	
-	public static final String qn = "290_ThreatRemoval";
 	
 	private static final int[] MOBS1 =
 	{
@@ -108,7 +107,7 @@ public class Q00290_ThreatRemoval extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -151,7 +150,7 @@ public class Q00290_ThreatRemoval extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState _prev = player.getQuestState("251_NoSecrets");
 		if (st == null)
 		{
@@ -249,6 +248,6 @@ public class Q00290_ThreatRemoval extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00290_ThreatRemoval(290, qn, "Threat Removal");
+		new Q00290_ThreatRemoval(290, Q00290_ThreatRemoval.class.getSimpleName(), "Threat Removal");
 	}
 }

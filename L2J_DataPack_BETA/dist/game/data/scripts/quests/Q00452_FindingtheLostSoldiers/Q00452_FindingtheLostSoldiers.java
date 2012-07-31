@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00452_FindingtheLostSoldiers extends Quest
 {
-	private static final String qn = "452_FindingtheLostSoldiers";
 	private static final int JAKAN = 32773;
 	private static final int TAG_ID = 15513;
 	private static final int[] SOLDIER_CORPSES =
@@ -43,7 +42,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
@@ -76,7 +75,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -141,6 +140,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00452_FindingtheLostSoldiers(452, qn, "Finding the Lost Soldiers");
+		new Q00452_FindingtheLostSoldiers(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
 	}
 }

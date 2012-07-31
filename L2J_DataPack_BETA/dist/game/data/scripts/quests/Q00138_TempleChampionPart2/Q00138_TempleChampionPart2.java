@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class Q00138_TempleChampionPart2 extends Quest
 {
-	private static final String qn = "138_TempleChampionPart2";
 	
 	// NPCs
 	private static final int SYLVAIN = 30070;
@@ -50,7 +49,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -108,7 +107,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -216,7 +215,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isStarted() && st.isCond(4) && (st.getQuestItemsCount(RELIC) < 10))
 		{
 			st.giveItems(RELIC, 1);
@@ -249,6 +248,6 @@ public class Q00138_TempleChampionPart2 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00138_TempleChampionPart2(138, qn, "Temple Champion Part 2");
+		new Q00138_TempleChampionPart2(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion Part 2");
 	}
 }

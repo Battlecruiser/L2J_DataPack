@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10291_FireDragonDestroyer extends Quest
 {
-	private static final String qn = "10291_FireDragonDestroyer";
 	// NPC
 	private static final int Klein = 31540;
 	private static final int Valakas = 29028;
@@ -40,7 +39,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -60,7 +59,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -144,7 +143,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	 */
 	private void rewardPlayer(L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.getInt("cond") == 1))
 		{
 			st.takeItems(PoorNecklace, 1);
@@ -171,6 +170,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10291_FireDragonDestroyer(10291, qn, "Fire Dragon Destroyer");
+		new Q10291_FireDragonDestroyer(10291, Q10291_FireDragonDestroyer.class.getSimpleName(), "Fire Dragon Destroyer");
 	}
 }

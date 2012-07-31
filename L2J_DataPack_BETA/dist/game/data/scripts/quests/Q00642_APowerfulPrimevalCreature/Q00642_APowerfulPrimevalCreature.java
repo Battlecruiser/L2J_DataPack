@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00642_APowerfulPrimevalCreature extends Quest
 {
-	private static final String qn = "642_APowerfulPrimevalCreature";
 	
 	// NPC
 	private static final int DINN = 32105;
@@ -133,7 +132,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		int npcId = npc.getNpcId();
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
@@ -175,6 +174,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00642_APowerfulPrimevalCreature(642, qn, "A Powerful Primeval Creature");
+		new Q00642_APowerfulPrimevalCreature(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
 	}
 }

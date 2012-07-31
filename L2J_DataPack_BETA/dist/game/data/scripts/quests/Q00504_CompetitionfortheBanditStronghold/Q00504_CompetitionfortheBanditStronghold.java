@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 {
-	private static final String qn = "504_CompetitionfortheBanditStronghold";
 	// Quest reward item
 	private static final int TARLK_AMULET = 4332;
 	private static final int TROPHY_OF_ALLIANCE = 5009;
@@ -68,7 +67,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String result = "azit_messenger_q0504_01.htm";
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		final L2Clan clan = player.getClan();
 		
 		if (st == null)
@@ -137,7 +136,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 			return null;
 		}
 		
-		QuestState st = killer.getQuestState(qn);
+		QuestState st = killer.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -182,6 +181,6 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00504_CompetitionfortheBanditStronghold(504, qn, "Right to Participate");
+		new Q00504_CompetitionfortheBanditStronghold(504, Q00504_CompetitionfortheBanditStronghold.class.getSimpleName(), "Right to Participate");
 	}
 }

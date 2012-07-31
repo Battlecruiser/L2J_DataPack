@@ -35,7 +35,6 @@ public class Q00252_ItSmellsDelicious extends Quest
 	public static final int MAHUM_DIARY = 15500;
 	public static final int MAHUM_COOKBOOK = 15501;
 	
-	public static final String qn = "252_ItSmellsDelicious";
 	
 	private static final int[] MOBS =
 	{
@@ -63,7 +62,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -94,7 +93,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -156,7 +155,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 		}
 		else if (npcId == CHEF)
 		{
-			st = player.getQuestState(qn);
+			st = player.getQuestState(getName());
 			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (getRandom(1000) < 360))
 			{
 				st.giveItems(MAHUM_COOKBOOK, 1);
@@ -184,7 +183,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 		
 		if ((party == null) || party.getMembers().isEmpty())
 		{
-			st = player.getQuestState(qn);
+			st = player.getQuestState(getName());
 			if ((st == null) || st.isStarted() || (st.getInt("cond") != 1) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
 			{
 				return null;
@@ -208,7 +207,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 				continue;
 			}
 			
-			st = partyMember.getQuestState(qn);
+			st = partyMember.getQuestState(getName());
 			if ((st == null) || (st.getState() != State.STARTED) || (st.getInt("cond") != 1) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
 			{
 				continue;
@@ -220,6 +219,6 @@ public class Q00252_ItSmellsDelicious extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00252_ItSmellsDelicious(252, qn, "It Smells Delicious!");
+		new Q00252_ItSmellsDelicious(252, Q00252_ItSmellsDelicious.class.getSimpleName(), "It Smells Delicious!");
 	}
 }

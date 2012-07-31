@@ -27,7 +27,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public static final int RATE = 5;
 	public static final int SOUP = 15712;
 	
-	public static final String qn = "289_NoMoreSoupForYou";
 	
 	private static final int[] MOBS =
 	{
@@ -161,14 +160,14 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00289_NoMoreSoupForYou(289, qn, "No More Soup For You");
+		new Q00289_NoMoreSoupForYou(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -220,7 +219,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;

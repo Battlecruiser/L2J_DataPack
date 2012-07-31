@@ -31,7 +31,6 @@ public class Q00251_NoSecrets extends Quest
 	public static final int DIARY = 15508;
 	public static final int TABLE = 15509;
 	
-	public static final String qn = "251_NoSecrets";
 	
 	private static final int[] MOBS =
 	{
@@ -66,7 +65,7 @@ public class Q00251_NoSecrets extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -83,7 +82,7 @@ public class Q00251_NoSecrets extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -153,6 +152,6 @@ public class Q00251_NoSecrets extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00251_NoSecrets(251, qn, "No Secrets");
+		new Q00251_NoSecrets(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
 	}
 }

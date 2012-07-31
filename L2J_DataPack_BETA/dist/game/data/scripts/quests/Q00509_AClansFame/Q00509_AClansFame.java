@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00509_AClansFame extends Quest
 {
-	private static final String qn = "509_AClansFame";
 	
 	// NPC
 	private static final int VALDIS = 31331;
@@ -158,14 +157,14 @@ public class Q00509_AClansFame extends Quest
 		QuestState st = null;
 		if (player.isClanLeader())
 		{
-			st = player.getQuestState(qn);
+			st = player.getQuestState(getName());
 		}
 		else
 		{
 			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if (pleader != null && player.isInsideRadius(pleader, 1500, true, false))
 			{
-				st = pleader.getQuestState(qn);
+				st = pleader.getQuestState(getName());
 			}
 		}
 		
@@ -195,6 +194,6 @@ public class Q00509_AClansFame extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00509_AClansFame(509, qn, "A Clan's Fame");
+		new Q00509_AClansFame(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
 	}
 }

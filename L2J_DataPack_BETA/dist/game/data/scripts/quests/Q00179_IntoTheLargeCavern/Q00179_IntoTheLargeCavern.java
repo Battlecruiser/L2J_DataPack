@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00179_IntoTheLargeCavern extends Quest
 {
-	private static final String qn = "179_IntoTheLargeCavern";
 	
 	// NPC's
 	private static final int _kekropus = 32138;
@@ -37,7 +36,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -77,7 +76,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -138,6 +137,6 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00179_IntoTheLargeCavern(179, qn, "Into The Large Cavern");
+		new Q00179_IntoTheLargeCavern(179, Q00179_IntoTheLargeCavern.class.getSimpleName(), "Into The Large Cavern");
 	}
 }

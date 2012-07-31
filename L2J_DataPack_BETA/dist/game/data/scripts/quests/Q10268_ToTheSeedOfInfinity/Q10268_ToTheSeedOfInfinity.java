@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10268_ToTheSeedOfInfinity extends Quest
 {
-	private static final String qn = "10268_ToTheSeedOfInfinity";
 	
 	// NPCs
 	private static final int KEUCEREUS = 32548;
@@ -40,7 +39,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +84,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -112,6 +111,6 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10268_ToTheSeedOfInfinity(10268, qn, "To the Seed of Infinity");
+		new Q10268_ToTheSeedOfInfinity(10268, Q10268_ToTheSeedOfInfinity.class.getSimpleName(), "To the Seed of Infinity");
 	}
 }

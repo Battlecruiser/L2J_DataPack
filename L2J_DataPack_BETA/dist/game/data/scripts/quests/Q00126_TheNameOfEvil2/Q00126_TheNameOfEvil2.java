@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Q00126_TheNameOfEvil2 extends Quest
 {
-	private static final String qn = "126_TheNameOfEvil2";
 	// NPC
 	private static final int SHILENS_STONE_STATUE = 32109;
 	private static final int MUSHIKA = 32114;
@@ -615,6 +614,6 @@ public class Q00126_TheNameOfEvil2 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00126_TheNameOfEvil2(126, qn, "The Name of Evil - 2");
+		new Q00126_TheNameOfEvil2(126, Q00126_TheNameOfEvil2.class.getSimpleName(), "The Name of Evil - 2");
 	}
 }

@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00153_DeliverGoods extends Quest
 {
-	private static final String qn = "153_DeliverGoods";
 	
 	// NPCs
 	private static final int JacksonId = 30002;
@@ -73,7 +72,7 @@ public class Q00153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (npc.getNpcId() == ArnoldId))
 		{
 			if (event.equalsIgnoreCase("30041-02.html"))
@@ -94,7 +93,7 @@ public class Q00153_DeliverGoods extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
 			if (npc.getNpcId() == ArnoldId)
@@ -184,6 +183,6 @@ public class Q00153_DeliverGoods extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00153_DeliverGoods(153, qn, "Deliver Goods");
+		new Q00153_DeliverGoods(153, Q00153_DeliverGoods.class.getSimpleName(), "Deliver Goods");
 	}
 }

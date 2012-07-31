@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00250_WatchWhatYouEat extends Quest
 {
-	private static final String qn = "250_WatchWhatYouEat";
 	
 	// NPCs
 	private static final int _sally = 32743;
@@ -51,7 +50,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -85,7 +84,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -137,7 +136,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -167,7 +166,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			newQuestState(player);
@@ -204,6 +203,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00250_WatchWhatYouEat(250, qn, "Watch What You Eat");
+		new Q00250_WatchWhatYouEat(250, Q00250_WatchWhatYouEat.class.getSimpleName(), "Watch What You Eat");
 	}
 }

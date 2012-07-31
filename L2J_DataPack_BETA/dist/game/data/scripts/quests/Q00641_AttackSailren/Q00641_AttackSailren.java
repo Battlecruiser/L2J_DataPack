@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00641_AttackSailren extends Quest
 {
-	private static final String qn = "641_AttackSailren";
 	// NPC
 	private static final int SHILENS_STONE_STATUE = 32109;
 	
@@ -109,7 +108,7 @@ public class Q00641_AttackSailren extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -143,6 +142,6 @@ public class Q00641_AttackSailren extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00641_AttackSailren(641, qn, "Attack Sailren!");
+		new Q00641_AttackSailren(641, Q00641_AttackSailren.class.getSimpleName(), "Attack Sailren!");
 	}
 }

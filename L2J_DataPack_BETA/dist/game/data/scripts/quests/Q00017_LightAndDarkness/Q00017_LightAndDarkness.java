@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00017_LightAndDarkness extends Quest
 {
-	private static final String qn = "17_LightAndDarkness";
 	
 	// NPCs
 	private static final int HIERARCH = 31517;
@@ -43,7 +42,7 @@ public class Q00017_LightAndDarkness extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -87,7 +86,7 @@ public class Q00017_LightAndDarkness extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -151,6 +150,6 @@ public class Q00017_LightAndDarkness extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00017_LightAndDarkness(17, qn, "Light and Darkness");
+		new Q00017_LightAndDarkness(17, Q00017_LightAndDarkness.class.getSimpleName(), "Light and Darkness");
 	}
 }

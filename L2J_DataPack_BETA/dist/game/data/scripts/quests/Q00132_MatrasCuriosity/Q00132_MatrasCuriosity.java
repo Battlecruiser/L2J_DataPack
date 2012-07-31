@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00132_MatrasCuriosity extends Quest
 {
-	private static final String qn = "132_MatrasCuriosity";
 	
 	// NPCs
 	private static final int MATRAS = 32245;
@@ -45,7 +44,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -88,7 +87,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -139,7 +138,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");
 				if (pl != null)
 				{
-					final QuestState st = pl.getQuestState(qn);
+					final QuestState st = pl.getQuestState(getName());
 					st.giveItems(BLUEPRINT_PRINCE, 1);
 					st.set("rewarded_prince", "2");
 					
@@ -158,7 +157,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 				pl = getRandomPartyMember(player, "rewarded_ranku", "1");
 				if (pl != null)
 				{
-					final QuestState st = pl.getQuestState(qn);
+					final QuestState st = pl.getQuestState(getName());
 					st.giveItems(BLUEPRINT_RANKU, 1);
 					st.set("rewarded_ranku", "2");
 					
@@ -189,6 +188,6 @@ public final class Q00132_MatrasCuriosity extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00132_MatrasCuriosity(132, qn, "Matras' Curiosity");
+		new Q00132_MatrasCuriosity(132, Q00132_MatrasCuriosity.class.getSimpleName(), "Matras' Curiosity");
 	}
 }

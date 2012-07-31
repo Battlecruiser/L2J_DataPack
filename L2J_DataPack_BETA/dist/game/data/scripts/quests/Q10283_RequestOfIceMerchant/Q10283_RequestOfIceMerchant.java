@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10283_RequestOfIceMerchant extends Quest
 {
-	private static final String qn = "10283_RequestOfIceMerchant";
 	// NPC's
 	private static final int _rafforty = 32020;
 	private static final int _kier = 32022;
@@ -45,7 +44,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -85,7 +84,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,7 +146,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return "32760-10.html";
 		}
 		
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((npc.getNpcId() == _jinia) && (st != null) && (st.getInt("cond") == 2))
 		{
 			return "32760-01.html";
@@ -157,6 +156,6 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10283_RequestOfIceMerchant(10283, qn, "Request of Ice Merchant");
+		new Q10283_RequestOfIceMerchant(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
 	}
 }

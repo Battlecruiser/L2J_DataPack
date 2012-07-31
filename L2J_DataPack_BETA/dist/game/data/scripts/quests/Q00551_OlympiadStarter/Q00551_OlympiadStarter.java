@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00551_OlympiadStarter extends Quest
 {
-	private static final String qn = "551_OlympiadStarter";
 	
 	private static final int MANAGER = 31688;
 	
@@ -218,6 +217,6 @@ public class Q00551_OlympiadStarter extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00551_OlympiadStarter(551, qn, "Olympiad Starter");
+		new Q00551_OlympiadStarter(551, Q00551_OlympiadStarter.class.getSimpleName(), "Olympiad Starter");
 	}
 }

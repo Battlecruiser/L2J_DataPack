@@ -27,7 +27,6 @@ import com.l2jserver.util.Rnd;
  */
 public class Q00287_FiguringItOut extends Quest
 {
-	private static final String qn = "287_FiguringItOut";
 	// NPC
 	private static final int Laki = 32742;
 	private static final int[] Monsters =
@@ -47,7 +46,7 @@ public class Q00287_FiguringItOut extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -215,7 +214,7 @@ public class Q00287_FiguringItOut extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		QuestState prev = player.getQuestState("250_WatchWhatYouEat");
 		
 		if (st == null)
@@ -257,7 +256,7 @@ public class Q00287_FiguringItOut extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		int chance = getRandom(1000);
 		boolean giveItem = false;
 		
@@ -333,6 +332,6 @@ public class Q00287_FiguringItOut extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00287_FiguringItOut(287, qn, "Figuring It Out!");
+		new Q00287_FiguringItOut(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
 	}
 }

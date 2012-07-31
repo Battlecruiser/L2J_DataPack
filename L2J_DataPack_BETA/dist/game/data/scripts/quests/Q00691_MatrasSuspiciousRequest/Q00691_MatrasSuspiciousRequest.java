@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00691_MatrasSuspiciousRequest extends Quest
 {
-	private static final String qn = "691_MatrasSuspiciousRequest";
 	
 	// NPCs
 	private static final int MATRAS = 32245;
@@ -71,7 +70,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -125,7 +124,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)
 		{
@@ -170,7 +169,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 			return null;
 		}
 		
-		final QuestState st = pl.getQuestState(qn);
+		final QuestState st = pl.getQuestState(getName());
 		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
 		int numItems = Math.max((chance / 1000), 1);
 		chance = chance % 1000;
@@ -184,6 +183,6 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00691_MatrasSuspiciousRequest(691, qn, "Matras' Suspicious Request");
+		new Q00691_MatrasSuspiciousRequest(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
 	}
 }

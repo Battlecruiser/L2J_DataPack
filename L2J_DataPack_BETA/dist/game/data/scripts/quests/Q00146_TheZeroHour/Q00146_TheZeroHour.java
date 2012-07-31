@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00146_TheZeroHour extends Quest
 {
-	private static final String qn = "146_TheZeroHour";
 	// Npc
 	private static final int Kahman = 31554;
 	private static final int QueenShyeed = 25671;
@@ -36,7 +35,7 @@ public class Q00146_TheZeroHour extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -55,7 +54,7 @@ public class Q00146_TheZeroHour extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -111,7 +110,7 @@ public class Q00146_TheZeroHour extends Quest
 		{
 			return null;
 		}
-		QuestState st = partyMember.getQuestState(qn);
+		QuestState st = partyMember.getQuestState(getName());
 		if (!st.hasQuestItems(Fang))
 		{
 			st.giveItems(Fang, 1);
@@ -136,6 +135,6 @@ public class Q00146_TheZeroHour extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00146_TheZeroHour(146, qn, "The Zero Hour");
+		new Q00146_TheZeroHour(146, Q00146_TheZeroHour.class.getSimpleName(), "The Zero Hour");
 	}
 }

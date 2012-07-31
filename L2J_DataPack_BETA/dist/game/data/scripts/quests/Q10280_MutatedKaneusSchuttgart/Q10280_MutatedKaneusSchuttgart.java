@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10280_MutatedKaneusSchuttgart extends Quest
 {
-	private static final String qn = "10280_MutatedKaneusSchuttgart";
 	
 	// NPCs
 	private static final int VISHOTSKY = 31981;
@@ -45,7 +44,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -87,7 +86,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -109,7 +108,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		QuestState st = killer.getQuestState(qn);
+		QuestState st = killer.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
@@ -121,7 +120,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 			final List<QuestState> PartyMembers = new ArrayList<>();
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				st = member.getQuestState(qn);
+				st = member.getQuestState(getName());
 				if ((st != null) && st.isStarted() && (((npcId == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS)) || ((npcId == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))))
 				{
 					PartyMembers.add(st);
@@ -173,6 +172,6 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10280_MutatedKaneusSchuttgart(10280, qn, "Mutated Kaneus - Schuttgart");
+		new Q10280_MutatedKaneusSchuttgart(10280, Q10280_MutatedKaneusSchuttgart.class.getSimpleName(), "Mutated Kaneus - Schuttgart");
 	}
 }

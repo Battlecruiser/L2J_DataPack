@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10290_LandDragonConqueror extends Quest
 {
-	private static final String qn = "10290_LandDragonConqueror";
 	// NPC
 	private static final int Theodoric = 30755;
 	// Old, Weak, Normal, Strong
@@ -47,7 +46,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -67,7 +66,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -147,7 +146,7 @@ public class Q10290_LandDragonConqueror extends Quest
 	
 	private void rewardPlayer(L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.getInt("cond") == 1))
 		{
 			st.takeItems(ShabbyNecklace, 1);
@@ -174,6 +173,6 @@ public class Q10290_LandDragonConqueror extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10290_LandDragonConqueror(10290, qn, "Land Dragon Conqueror");
+		new Q10290_LandDragonConqueror(10290, Q10290_LandDragonConqueror.class.getSimpleName(), "Land Dragon Conqueror");
 	}
 }

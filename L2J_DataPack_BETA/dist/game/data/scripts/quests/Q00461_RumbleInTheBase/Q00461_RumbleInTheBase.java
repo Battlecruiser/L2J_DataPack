@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00461_RumbleInTheBase extends Quest
 {
-	public static final String qn = "461_RumbleInTheBase";
 	
 	// NPC
 	public static final int Stan = 30200;
@@ -50,7 +49,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -69,7 +68,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -120,7 +119,7 @@ public class Q00461_RumbleInTheBase extends Quest
 			return null;
 		}
 		
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		int chance = getRandom(1000);
 		boolean giveItem = false;
 		switch (npc.getNpcId())
@@ -200,6 +199,6 @@ public class Q00461_RumbleInTheBase extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00461_RumbleInTheBase(461, qn, "Rumble in the Base");
+		new Q00461_RumbleInTheBase(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
 	}
 }

@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00192_SevenSignSeriesOfDoubt extends Quest
 {
-	private static final String qn = "192_SevenSignSeriesOfDoubt";
 	// NPC
 	private static final int CROOP = 30676;
 	private static final int HECTOR = 30197;
@@ -227,6 +226,6 @@ public class Q00192_SevenSignSeriesOfDoubt extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00192_SevenSignSeriesOfDoubt(192, qn, "Seven Sign Series Of Doubt");
+		new Q00192_SevenSignSeriesOfDoubt(192, Q00192_SevenSignSeriesOfDoubt.class.getSimpleName(), "Seven Sign Series Of Doubt");
 	}
 }

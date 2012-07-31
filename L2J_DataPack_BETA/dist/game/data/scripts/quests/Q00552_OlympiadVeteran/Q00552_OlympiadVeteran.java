@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00552_OlympiadVeteran extends Quest
 {
-	private static final String qn = "552_OlympiadVeteran";
 	
 	private static final int MANAGER = 31688;
 	
@@ -236,6 +235,6 @@ public class Q00552_OlympiadVeteran extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00552_OlympiadVeteran(552, qn, "Olympiad Veteran");
+		new Q00552_OlympiadVeteran(552, Q00552_OlympiadVeteran.class.getSimpleName(), "Olympiad Veteran");
 	}
 }

@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  */
 public class Q10274_CollectingInTheAir extends Quest
 {
-	private static final String qn = "10274_CollectingInTheAir";
 	
 	// NPCs
 	private static final int LEKON = 32557;
@@ -56,7 +55,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -98,7 +97,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -115,7 +114,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		final QuestState st = caster.getQuestState(qn);
+		final QuestState st = caster.getQuestState(getName());
 		if ((st == null) || !st.isStarted())
 		{
 			return null;
@@ -159,6 +158,6 @@ public class Q10274_CollectingInTheAir extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10274_CollectingInTheAir(10274, qn, "Collecting in the Air");
+		new Q10274_CollectingInTheAir(10274, Q10274_CollectingInTheAir.class.getSimpleName(), "Collecting in the Air");
 	}
 }
