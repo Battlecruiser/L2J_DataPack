@@ -55,7 +55,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_SYNTAX);
+				activeChar.sendMessage("Usage: //targetsay <text>");
 				return false;
 			}
 		}

@@ -38,7 +38,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 	{
 		if (!command.equals("stats") || (params == null) || params.isEmpty())
 		{
-			activeChar.sendMessage("Syntax: .stats <player name>");
+			activeChar.sendMessage("Usage: .stats <player name>");
 			return false;
 		}
 		

@@ -52,8 +52,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				// Send syntax to the user
-				activeChar.sendMessage("Usage mode: //unblockip <ip>");
+				activeChar.sendMessage("Usage: //unblockip <ip>");
 			}
 		}
 		
