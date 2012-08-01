@@ -14,6 +14,8 @@
  */
 package quests.Q00028_ChestCaughtWithABaitOfIcyAir;
 
+import quests.Q00051_OFullesSpecialBait.Q00051_OFullesSpecialBait;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -96,7 +98,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			case State.CREATED:
-				final QuestState qs = player.getQuestState("51_OFullesSpecialBait");
+				final QuestState qs = player.getQuestState(Q00051_OFullesSpecialBait.class.getSimpleName());
 				if (npcId == OFULLE)
 				{
 					htmltext = "31572-02.htm";

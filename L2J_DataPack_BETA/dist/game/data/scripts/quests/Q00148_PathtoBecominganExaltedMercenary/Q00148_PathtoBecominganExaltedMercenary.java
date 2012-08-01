@@ -14,6 +14,8 @@
  */
 package quests.Q00148_PathtoBecominganExaltedMercenary;
 
+import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -79,7 +81,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState _prev = player.getQuestState("147_PathtoBecominganEliteMercenary");
+				QuestState _prev = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
 				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
 				{
 					htmltext = "castle.htm";

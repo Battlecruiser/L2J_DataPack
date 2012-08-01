@@ -14,6 +14,8 @@
  */
 package quests.Q00289_NoMoreSoupForYou;
 
+import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -229,7 +231,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					QuestState _prev = player.getQuestState("252_ItSmellsDelicious");
+					QuestState _prev = player.getQuestState(Q00252_ItSmellsDelicious.class.getSimpleName());
 					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
 					{
 						htmltext = "30200-01.htm";

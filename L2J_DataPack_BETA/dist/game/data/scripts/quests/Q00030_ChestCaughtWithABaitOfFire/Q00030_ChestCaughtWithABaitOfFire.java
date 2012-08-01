@@ -14,6 +14,8 @@
  */
 package quests.Q00030_ChestCaughtWithABaitOfFire;
 
+import quests.Q00053_LinnaeusSpecialBait.Q00053_LinnaeusSpecialBait;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -97,7 +99,7 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			case State.CREATED:
-				final QuestState qs = player.getQuestState("53_LinnaeusSpecialBait");
+				final QuestState qs = player.getQuestState(Q00053_LinnaeusSpecialBait.class.getSimpleName());
 				if (npcId == LINNAEUS)
 				{
 					htmltext = "31577-00.htm";

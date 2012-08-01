@@ -14,6 +14,8 @@
  */
 package quests.Q10271_TheEnvelopingDarkness;
 
+import quests.Q10269_ToTheSeedOfDestruction.Q10269_ToTheSeedOfDestruction;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,7 +50,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						st = player.getQuestState("10269_ToTheSeedOfDestruction");
+						st = player.getQuestState(Q10269_ToTheSeedOfDestruction.class.getSimpleName());
 						htmltext = ((player.getLevel() >= 75) && (st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						break;
 					case State.STARTED:

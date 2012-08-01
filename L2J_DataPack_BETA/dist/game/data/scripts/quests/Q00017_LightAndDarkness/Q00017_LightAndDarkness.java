@@ -14,6 +14,8 @@
  */
 package quests.Q00017_LightAndDarkness;
 
+import quests.Q00015_SweetWhispers.Q00015_SweetWhispers;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -98,7 +100,7 @@ public class Q00017_LightAndDarkness extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			case State.CREATED:
-				final QuestState st2 = player.getQuestState("15_SweetWhispers");
+				final QuestState st2 = player.getQuestState(Q00015_SweetWhispers.class.getSimpleName());
 				htmltext = ((st2 != null) && (st2.isCompleted())) ? "31517-00.htm" : "31517-06.html";
 				break;
 			case State.STARTED:

@@ -14,6 +14,8 @@
  */
 package quests.Q00290_ThreatRemoval;
 
+import quests.Q00251_NoSecrets.Q00251_NoSecrets;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -150,7 +152,7 @@ public class Q00290_ThreatRemoval extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState _prev = player.getQuestState("251_NoSecrets");
+		QuestState _prev = player.getQuestState(Q00251_NoSecrets.class.getSimpleName());
 		if (st == null)
 		{
 			return htmltext;

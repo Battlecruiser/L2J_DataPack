@@ -14,6 +14,8 @@
  */
 package quests.Q00641_AttackSailren;
 
+import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -88,7 +90,7 @@ public class Q00641_AttackSailren extends Quest
 				}
 				else
 				{
-					st = player.getQuestState("126_TheNameOfEvil2");
+					st = player.getQuestState(Q00126_TheNameOfEvil2.class.getSimpleName());
 					htmltext = ((st != null) && st.isCompleted()) ? "32109-0a.htm" : "32109-0b.htm";
 				}
 				break;

@@ -14,6 +14,8 @@
  */
 package quests.Q00146_TheZeroHour;
 
+import quests.Q00109_InSearchOfTheNest.Q00109_InSearchOfTheNest;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -69,7 +71,7 @@ public class Q00146_TheZeroHour extends Quest
 				}
 				else
 				{
-					final QuestState prev = player.getQuestState("109_InSearchOfTheNest");
+					final QuestState prev = player.getQuestState(Q00109_InSearchOfTheNest.class.getSimpleName());
 					if ((prev != null) && prev.isCompleted())
 					{
 						htmltext = "31554-01a.htm";

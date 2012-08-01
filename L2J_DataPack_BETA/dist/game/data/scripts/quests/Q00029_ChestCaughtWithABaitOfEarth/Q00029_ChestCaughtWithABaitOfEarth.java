@@ -14,6 +14,8 @@
  */
 package quests.Q00029_ChestCaughtWithABaitOfEarth;
 
+import quests.Q00052_WilliesSpecialBait.Q00052_WilliesSpecialBait;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -96,7 +98,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			case State.CREATED:
-				final QuestState qs = player.getQuestState("52_WilliesSpecialBait");
+				final QuestState qs = player.getQuestState(Q00052_WilliesSpecialBait.class.getSimpleName());
 				if (npcId == WILLIE)
 				{
 					htmltext = "31574-02.htm";

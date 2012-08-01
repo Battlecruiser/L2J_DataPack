@@ -14,6 +14,8 @@
  */
 package quests.Q10274_CollectingInTheAir;
 
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
+
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -67,7 +69,7 @@ public class Q10274_CollectingInTheAir extends Quest
 				htmltext = "32557-0a.html";
 				break;
 			case State.CREATED:
-				st = player.getQuestState("10273_GoodDayToFly");
+				st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 				if (st == null)
 				{
 					htmltext = "32557-00.html";

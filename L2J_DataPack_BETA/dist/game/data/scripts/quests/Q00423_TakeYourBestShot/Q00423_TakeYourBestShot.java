@@ -14,6 +14,8 @@
  */
 package quests.Q00423_TakeYourBestShot;
 
+import quests.Q00249_PoisonedPlainsOfTheLizardmen.Q00249_PoisonedPlainsOfTheLizardmen;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -93,7 +95,7 @@ public class Q00423_TakeYourBestShot extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					QuestState _prev = player.getQuestState("249_PoisonedPlainsOfTheLizardmen");
+					QuestState _prev = player.getQuestState(Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName());
 					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
 					{
 						if (st.hasQuestItems(_seer_ugoros_pass))
