@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.Util;
 
 
 /**
@@ -50,8 +51,16 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(command.substring(22));
-				serverShutdown(activeChar, val, false);
+				final String val = command.substring(22);
+				if (Util.isDigit(val))
+				{
+					serverShutdown(activeChar, Integer.valueOf(val), false);
+				}
+				else
+				{
+					activeChar.sendMessage("Usage: //server_shutdown <seconds>");
+					sendHtmlForm(activeChar);
+				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -62,8 +71,16 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(command.substring(21));
-				serverShutdown(activeChar, val, true);
+				final String val = command.substring(21);
+				if (Util.isDigit(val))
+				{
+					serverShutdown(activeChar, Integer.parseInt(val), true);
+				}
+				else
+				{
+					activeChar.sendMessage("Usage: //server_restart <seconds>");
+					sendHtmlForm(activeChar);
+				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
