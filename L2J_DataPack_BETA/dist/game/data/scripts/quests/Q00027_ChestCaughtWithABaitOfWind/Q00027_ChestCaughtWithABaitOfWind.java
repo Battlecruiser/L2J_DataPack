@@ -14,6 +14,8 @@
  */
 package quests.Q00027_ChestCaughtWithABaitOfWind;
 
+import quests.Q00050_LanoscosSpecialBait.Q00050_LanoscosSpecialBait;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -96,7 +98,7 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			case State.CREATED:
-				final QuestState qs = player.getQuestState("50_LanoscosSpecialBait");
+				final QuestState qs = player.getQuestState(Q00050_LanoscosSpecialBait.class.getSimpleName());
 				if (npcId == LANOSCO)
 				{
 					htmltext = "31570-02.htm";

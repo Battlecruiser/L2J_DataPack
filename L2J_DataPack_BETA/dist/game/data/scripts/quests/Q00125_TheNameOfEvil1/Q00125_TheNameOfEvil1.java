@@ -17,6 +17,8 @@ package quests.Q00125_TheNameOfEvil1;
 import java.util.HashMap;
 import java.util.Map;
 
+import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -259,7 +261,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						}
 						else
 						{
-							st = player.getQuestState("124_MeetingTheElroki");
+							st = player.getQuestState(Q00124_MeetingTheElroki.class.getSimpleName());
 							htmltext = ((st != null) && st.isCompleted()) ? "32114-01.htm" : "32114-01b.htm";
 						}
 						break;

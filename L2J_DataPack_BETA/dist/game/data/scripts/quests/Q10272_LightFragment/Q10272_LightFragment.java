@@ -14,6 +14,8 @@
  */
 package quests.Q10272_LightFragment;
 
+import quests.Q10271_TheEnvelopingDarkness.Q10271_TheEnvelopingDarkness;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -81,7 +83,7 @@ public class Q10272_LightFragment extends Quest
 						}
 						else
 						{
-							final QuestState _prev = player.getQuestState("10271_TheEnvelopingDarkness");
+							final QuestState _prev = player.getQuestState(Q10271_TheEnvelopingDarkness.class.getSimpleName());
 							htmltext = ((_prev != null) && _prev.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						}
 						break;

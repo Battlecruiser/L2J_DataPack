@@ -14,6 +14,8 @@
  */
 package quests.Q00287_FiguringItOut;
 
+import quests.Q00250_WatchWhatYouEat.Q00250_WatchWhatYouEat;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -215,7 +217,7 @@ public class Q00287_FiguringItOut extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState prev = player.getQuestState("250_WatchWhatYouEat");
+		QuestState prev = player.getQuestState(Q00250_WatchWhatYouEat.class.getSimpleName());
 		
 		if (st == null)
 		{

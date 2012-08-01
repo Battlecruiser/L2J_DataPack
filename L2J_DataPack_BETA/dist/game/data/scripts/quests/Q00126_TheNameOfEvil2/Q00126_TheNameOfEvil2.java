@@ -14,6 +14,8 @@
  */
 package quests.Q00126_TheNameOfEvil2;
 
+import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -343,7 +345,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 						}
 						else
 						{
-							st = player.getQuestState("125_TheNameOfEvil1");
+							st = player.getQuestState(Q00125_TheNameOfEvil1.class.getSimpleName());
 							htmltext = ((st != null) && st.isCompleted()) ? "32115-0a.htm" : "32115-0b.htm";
 						}
 						break;

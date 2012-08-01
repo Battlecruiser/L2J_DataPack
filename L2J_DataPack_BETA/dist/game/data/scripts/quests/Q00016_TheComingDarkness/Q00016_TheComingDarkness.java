@@ -14,6 +14,8 @@
  */
 package quests.Q00016_TheComingDarkness;
 
+import quests.Q00017_LightAndDarkness.Q00017_LightAndDarkness;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -86,7 +88,7 @@ public class Q00016_TheComingDarkness extends Quest
 			return htmltext;
 		}
 		
-		final QuestState st2 = player.getQuestState("17_LightAndDarkness");
+		final QuestState st2 = player.getQuestState(Q00017_LightAndDarkness.class.getSimpleName());
 		if ((st2 != null) && !st2.isCompleted())
 		{
 			return "31517-04.html";

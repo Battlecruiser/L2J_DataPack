@@ -14,6 +14,8 @@
  */
 package quests.Q10289_FadeToBlack;
 
+import quests.Q10288_SecretMission.Q10288_SecretMission;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -74,7 +76,7 @@ public class Q10289_FadeToBlack extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState secretMission = player.getQuestState("10288_SecretMission");
+		QuestState secretMission = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
 		if (st == null)
 		{
 			return htmltext;

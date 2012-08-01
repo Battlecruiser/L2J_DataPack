@@ -14,6 +14,8 @@
  */
 package quests.Q00453_NotStrongEnoughAlone;
 
+import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -127,7 +129,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState prev = player.getQuestState("10282_ToTheSeedOfAnnihilation");
+		QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
 		if (st == null)
 		{
 			return htmltext;

@@ -14,6 +14,8 @@
  */
 package quests.Q00461_RumbleInTheBase;
 
+import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -74,7 +76,7 @@ public class Q00461_RumbleInTheBase extends Quest
 			return htmltext;
 		}
 		
-		final QuestState prev = player.getQuestState("252_ItSmellsDelicious");
+		final QuestState prev = player.getQuestState(Q00252_ItSmellsDelicious.class.getSimpleName());
 		switch (st.getState())
 		{
 			case State.CREATED:

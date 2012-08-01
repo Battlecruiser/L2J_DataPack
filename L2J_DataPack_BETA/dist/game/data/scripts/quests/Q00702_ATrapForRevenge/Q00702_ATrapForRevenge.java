@@ -14,6 +14,8 @@
  */
 package quests.Q00702_ATrapForRevenge;
 
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -268,7 +270,7 @@ public class Q00702_ATrapForRevenge extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					final QuestState prev = player.getQuestState("10273_GoodDayToFly");
+					final QuestState prev = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
 					break;
 				case State.STARTED:
