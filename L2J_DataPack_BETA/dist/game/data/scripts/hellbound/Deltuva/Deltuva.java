@@ -14,6 +14,8 @@
  */
 package hellbound.Deltuva;
 
+import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -32,7 +34,7 @@ public class Deltuva extends Quest
 		String htmltext = null;
 		if (event.equalsIgnoreCase("teleport"))
 		{
-			final QuestState hostQuest = player.getQuestState("132_MatrasCuriosity");
+			final QuestState hostQuest = player.getQuestState(Q00132_MatrasCuriosity.class.getSimpleName());
 			if ((hostQuest == null) || !hostQuest.isCompleted())
 			{
 				htmltext = "32313-02.htm";

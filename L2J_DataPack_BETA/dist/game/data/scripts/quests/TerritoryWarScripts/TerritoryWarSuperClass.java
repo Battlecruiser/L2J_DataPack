@@ -17,6 +17,8 @@ package quests.TerritoryWarScripts;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
+import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
+
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
@@ -298,7 +300,7 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
 	{
-		QuestState _state = player.getQuestState("147_PathtoBecominganEliteMercenary");
+		QuestState _state = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
 		if ((_state != null) && (_state.getState() == State.STARTED))
 		{
 			int _cond = _state.getInt("cond");
