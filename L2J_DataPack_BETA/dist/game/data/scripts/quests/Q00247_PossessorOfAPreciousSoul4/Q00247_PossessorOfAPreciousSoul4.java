@@ -14,12 +14,14 @@
  */
 package quests.Q00247_PossessorOfAPreciousSoul4;
 
+import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 
 /**
  * Possessor Of A PreciousSoul part 4 (247)<br>
@@ -69,6 +71,9 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 					player.setNoble(true);
 					st.addExpAndSp(93836, 0);
 					st.giveItems(NOBLESS_TIARA, 1);
+					npc.setTarget(player);
+					npc.doCast(SkillTable.getInstance().getInfo(4339, 1));
+					player.sendPacket(new SocialAction(player.getObjectId(), 3));
 					st.exitQuest(false, true);
 				}
 				break;
