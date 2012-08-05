@@ -265,7 +265,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				break;
 			case BARAKIEL:
 				QuestState pst;
-				if ((player.getParty() != null) && player.getParty().getMembers().isEmpty())
+				if ((player.getParty() != null) && !player.getParty().getMembers().isEmpty())
 				{
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
