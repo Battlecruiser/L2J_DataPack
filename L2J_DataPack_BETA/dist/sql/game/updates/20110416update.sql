@@ -1,0 +1,1 @@
+DELETE FROM `raidboss_spawnlist` WHERE `boss_id`=29096;
