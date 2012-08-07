@@ -14,6 +14,7 @@
  */
 package quests.Q00242_PossessorOfAPreciousSoul2;
 
+import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -264,6 +265,8 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 							st.setCond(10);
 						}
 						st.playSound("ItemSound.quest_middle");
+						npc.setTarget(player);
+						npc.doCast(SkillTable.getInstance().getInfo(4546, 1));
 					}
 					else
 					{
