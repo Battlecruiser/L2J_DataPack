@@ -74,9 +74,9 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * TODO:<br>
  * Test when Frintezza song use 5008 effect skill.<br>
- * Maybe test more deeply halishas AI.<br>
+ * Test deeply Scarlet van Halisha's AI.<br>
  * Use correct Song names.<br>
- * Use proper zone spawn system.<br>
+ * Use proper zone spawn system.
  * @author Gigiikun
 */
 public class FinalEmperialTomb extends Quest
@@ -84,7 +84,7 @@ public class FinalEmperialTomb extends Quest
 	private class FETWorld extends InstanceWorld
 	{
 		public         Lock                 lock                         = new ReentrantLock();
-		public         List<L2Npc>          npcList                      = new FastList<>();
+		public         FastList<L2Npc>      npcList                      = new FastList<>();
 		public         int                  darkChoirPlayerCount         = 0;
 		public         FrintezzaSong        OnSong                       = null;
 		public         ScheduledFuture<?>   songTask                     = null;
@@ -107,6 +107,7 @@ public class FinalEmperialTomb extends Quest
 
 		public FETWorld()
 		{
+			npcList.shared();
 		}
 	}
 	
@@ -526,11 +527,11 @@ public class FinalEmperialTomb extends Quest
 		return instanceId;
 	}
 	
-	protected synchronized boolean checkKillProgress(L2Npc mob, FETWorld world)
+	protected boolean checkKillProgress(L2Npc mob, FETWorld world)
 	{
 		if (world.npcList.contains(mob))
 			world.npcList.remove(mob);
-		return world.npcList.size() == 0;
+		return world.npcList.isEmpty();
 	}
 	
 	private void spawnFlaggedNPCs(FETWorld world, int flag)
