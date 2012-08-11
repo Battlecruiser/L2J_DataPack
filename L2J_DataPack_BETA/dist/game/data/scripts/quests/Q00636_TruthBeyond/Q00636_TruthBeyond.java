@@ -23,13 +23,13 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 /**
- * @author moved to java by DS, jython script by Polo, BiTi and DrLecter
+ * The Truth Beyond the Gate (636)<br>
+ * Original Jython script by Polo, BiTi and DrLecter
+ * @author DS
  */
 public final class Q00636_TruthBeyond extends Quest
 {
-	private static final String QN = "636_TruthBeyond";
-	
-	private static final int ELIAH = 31329;
+	private static final int ELIYAH = 31329;
 	private static final int FLAURON = 32010;
 	private static final int ZONE = 30100;
 	private static final int VISITOR_MARK = 8064;
@@ -40,32 +40,28 @@ public final class Q00636_TruthBeyond extends Quest
 	{
 		super(questId, name, descr);
 		
-		addStartNpc(ELIAH);
-		addTalkId(ELIAH);
-		addTalkId(FLAURON);
+		addStartNpc(ELIYAH);
+		addTalkId(ELIYAH, FLAURON);
 		addEnterZoneId(ZONE);
 	}
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
 		}
 		
-		if ("31329-04.htm".equalsIgnoreCase(event))
+		if ("31329-04.htm".equals(event))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
-		else if ("32010-02.htm".equalsIgnoreCase(event))
+		else if ("32010-02.htm".equals(event))
 		{
 			st.giveItems(VISITOR_MARK, 1);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		return event;
 	}
@@ -73,13 +69,13 @@ public final class Q00636_TruthBeyond extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == ELIAH)
+		if (npc.getNpcId() == ELIYAH)
 		{
 			if (st.hasQuestItems(VISITOR_MARK) || st.hasQuestItems(FADED_MARK) || st.hasQuestItems(MARK))
 			{
@@ -117,11 +113,11 @@ public final class Q00636_TruthBeyond extends Quest
 	public final String onEnterZone(L2Character character, L2ZoneType zone)
 	{
 		// QuestState already null on enter because quest is finished
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
-			if (((L2PcInstance) character).destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
+			if (character.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
 			{
-				((L2PcInstance) character).addItem("Mark", FADED_MARK, 1, character, true);
+				character.getActingPlayer().addItem("Mark", FADED_MARK, 1, character, true);
 			}
 		}
 		return null;
@@ -129,6 +125,6 @@ public final class Q00636_TruthBeyond extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00636_TruthBeyond(636, QN, "The Truth Beyond the Gate");
+		new Q00636_TruthBeyond(636, Q00636_TruthBeyond.class.getSimpleName(), "The Truth Beyond the Gate");
 	}
 }

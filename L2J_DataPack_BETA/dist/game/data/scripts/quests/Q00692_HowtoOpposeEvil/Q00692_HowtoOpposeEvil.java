@@ -24,12 +24,11 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * How to Oppose Evil(692)
+ * How to Oppose Evil (692)
  * @author Gigiikun
  */
 public final class Q00692_HowtoOpposeEvil extends Quest
 {
-	private static final String QN = "692_HowtoOpposeEvil";
 	private static final int DILIOS = 32549;
 	private static final int LEKONS_CERTIFICATE = 13857;
 	private static final int[] QUEST_ITEMS =
@@ -116,7 +115,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(QN);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -180,7 +179,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -236,7 +235,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		{
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(QN);
+		final QuestState st = partyMember.getQuestState(getName());
 		final int npcId = npc.getNpcId();
 		if ((st != null) && _questMobs.containsKey(npcId))
 		{
@@ -267,6 +266,6 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00692_HowtoOpposeEvil(692, QN, "How to Oppose Evil");
+		new Q00692_HowtoOpposeEvil(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
 	}
 }

@@ -22,12 +22,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author moved to java by DS, jython script by BiTi! and DrLecter
+ * Through the Gate Once More (637)<br>
+ * Original Jython script by BiTi! and DrLecter
+ * @author DS
  */
 public final class Q00637_ThroughOnceMore extends Quest
 {
-	private static final String QN = "637_ThroughOnceMore";
-	
 	private static final int FLAURON = 32010;
 	private static final int[] MOBS =
 	{
@@ -48,10 +48,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 		
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
-		for (int id : MOBS)
-		{
-			addKillId(id);
-		}
+		addKillId(MOBS);
 		
 		questItemIds = new int[]
 		{
@@ -62,19 +59,17 @@ public final class Q00637_ThroughOnceMore extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
 		}
 		
-		if ("32010-03.htm".equalsIgnoreCase(event))
+		if ("32010-03.htm".equals(event))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
-		else if ("32010-10.htm".equalsIgnoreCase(event))
+		else if ("32010-10.htm".equals(event))
 		{
 			st.exitQuest(true);
 		}
@@ -85,7 +80,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -122,8 +117,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 				st.takeItems(FADED_MARK, 1);
 				st.giveItems(MARK, 1);
 				st.giveItems(8273, 10);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(true);
+				st.exitQuest(true, true);
 				return "32010-05.htm";
 			}
 			return "32010-04.htm";
@@ -134,7 +128,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(QN);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.getState() == State.STARTED))
 		{
 			final long count = st.getQuestItemsCount(NECRO_HEART);
@@ -152,8 +146,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 					if ((count + numItems) >= 10)
 					{
 						numItems = 10 - (int) count;
-						st.playSound("ItemSound.quest_middle");
-						st.set("cond", "2");
+						st.setCond(2, true);
 					}
 					else
 					{
@@ -169,6 +162,6 @@ public final class Q00637_ThroughOnceMore extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00637_ThroughOnceMore(637, QN, "Through the Gate Once More");
+		new Q00637_ThroughOnceMore(637, Q00637_ThroughOnceMore.class.getSimpleName(), "Through the Gate Once More");
 	}
 }

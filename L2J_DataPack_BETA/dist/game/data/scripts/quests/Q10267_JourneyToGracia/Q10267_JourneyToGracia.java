@@ -63,7 +63,10 @@ public class Q10267_JourneyToGracia extends Quest
 				}
 				break;
 			case PAPIKU:
-				htmltext = st.isStarted() ? "32564-01.html" : "32564-03.html";
+				if (st.isStarted())
+				{
+					htmltext = st.isCond(1) ? "32564-01.html" : "32564-03.html";
+				}
 				break;
 			case KEUCEREUS:
 				if (st.isStarted() && st.isCond(2))
