@@ -20,12 +20,11 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Finding the Lost Soldiers (452)
  * @author Gigiikun
- * @version 2010-08-17 Based on Freya PTS
+ * @version 2012-08-10
  */
 public class Q00452_FindingtheLostSoldiers extends Quest
 {
@@ -42,33 +41,42 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return event;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
 		
 		if (npc.getNpcId() == JAKAN)
 		{
-			if (event.equalsIgnoreCase("32773-3.htm"))
+			if (event.equals("32773-3.htm"))
 			{
 				st.startQuest();
 			}
 		}
-		else if (Util.contains(SOLDIER_CORPSES, npc.getNpcId()))
+		else
 		{
 			if (st.isCond(1))
 			{
-				st.giveItems(TAG_ID, 1);
+				if (getRandom(10) < 5)
+				{
+					st.giveItems(TAG_ID, 1);
+				}
+				else
+				{
+					htmltext = "corpse-3.html";
+				}
 				st.setCond(2, true);
 				npc.deleteMe();
 			}
 			else
 			{
-				return getNoQuestMsg(player);
+				htmltext = "corpse-3.html";
 			}
 		}
-		return event;
+		return htmltext;
 	}
 	
 	@Override
@@ -86,17 +94,17 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					htmltext = (player.getLevel() < 84) ? "32773-0.htm" : "32773-1.htm";
+					htmltext = (player.getLevel() < 84) ? "32773-0.html" : "32773-1.htm";
 					break;
 				case State.STARTED:
 					if (st.isCond(1))
 					{
-						htmltext = "32773-4.htm";
+						htmltext = "32773-4.html";
 					}
 					else if (st.isCond(2))
 					{
-						htmltext = "32773-5.htm";
-						st.takeItems(TAG_ID, 1);
+						htmltext = "32773-5.html";
+						st.takeItems(TAG_ID, -1);
 						st.giveAdena(95200, true);
 						st.addExpAndSp(435024, 50366);
 						st.exitQuest(QuestType.DAILY, true);
@@ -106,7 +114,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 					if (st.isNowAvailable())
 					{
 						st.setState(State.CREATED);
-						htmltext = (player.getLevel() < 84) ? "32773-0.htm" : "32773-1.htm";
+						htmltext = (player.getLevel() < 84) ? "32773-0.html" : "32773-1.htm";
 					}
 					else
 					{
@@ -115,11 +123,11 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 					break;
 			}
 		}
-		else if (Util.contains(SOLDIER_CORPSES, npc.getNpcId()))
+		else
 		{
 			if (st.isCond(1))
 			{
-				htmltext = "corpse-1.htm";
+				htmltext = "corpse-1.html";
 			}
 		}
 		return htmltext;

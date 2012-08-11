@@ -36,7 +36,7 @@ public class Q10272_LightFragment extends Quest
 	private static final int GINBY = 32566;
 	private static final int LELRIKIA = 32567;
 	private static final int LEKON = 32557;
-	private static final int[] Monsters =
+	private static final int[] MOBS =
 	{
 		22536, // Royal Guard Captain
 		22537, // Dragon Steed Troop Grand Magician
@@ -51,7 +51,7 @@ public class Q10272_LightFragment extends Quest
 		22550, // Savage Warrior
 		22551, // Priest of Darkness
 		22552, // Mutation Drake
-		22596, // White Dragon Leader
+		22596 // White Dragon Leader
 	};
 	private static final int FRAGMENT_POWDER = 13853;
 	private static final int LIGHT_FRAGMENT_POWDER = 13854;
@@ -62,7 +62,7 @@ public class Q10272_LightFragment extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -83,8 +83,8 @@ public class Q10272_LightFragment extends Quest
 						}
 						else
 						{
-							final QuestState _prev = player.getQuestState(Q10271_TheEnvelopingDarkness.class.getSimpleName());
-							htmltext = ((_prev != null) && _prev.isCompleted()) ? "32560-01.htm" : "32560-02.html";
+							st = player.getQuestState(Q10271_TheEnvelopingDarkness.class.getSimpleName());
+							htmltext = ((st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						}
 						break;
 					case State.STARTED:
@@ -322,7 +322,7 @@ public class Q10272_LightFragment extends Quest
 		super(questId, name, descr);
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU, ARTIUS, GINBY, LELRIKIA, LEKON);
-		addKillId(Monsters);
+		addKillId(MOBS);
 		questItemIds = new int[]
 		{
 			FRAGMENT_POWDER,

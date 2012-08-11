@@ -124,18 +124,23 @@ public class Q10274_CollectingInTheAir extends Quest
 		
 		if (st.isCond(1) && (skill.getId() == 2630))
 		{
-			final int npcId = npc.getNpcId();
-			if ((npcId >= 18684) && (npcId <= 18686))
+			switch (npc.getNpcId())
 			{
-				st.giveItems(RED, 1);
-			}
-			else if ((npcId >= 18687) && (npcId <= 18689))
-			{
-				st.giveItems(BLUE, 1);
-			}
-			else if ((npcId >= 18690) && (npcId <= 18692))
-			{
-				st.giveItems(GREEN, 1);
+				case 18684:
+				case 18685:
+				case 18686:
+					st.giveItems(RED, 1);
+					break;
+				case 18687:
+				case 18688:
+				case 18689:
+					st.giveItems(BLUE, 1);
+					break;
+				case 18690:
+				case 18691:
+				case 18692:
+					st.giveItems(BLUE, 1);
+					break;
 			}
 			st.playSound("ItemSound.quest_itemget");
 			npc.doDie(caster);
