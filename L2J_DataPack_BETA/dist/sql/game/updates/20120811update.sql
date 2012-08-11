@@ -1,0 +1,1 @@
+DELETE FROM `raidboss_spawnlist` WHERE `boss_id` IN (25470,25487,25509,25512,29056);
