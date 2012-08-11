@@ -150,11 +150,12 @@ public class Gordon extends L2AttackableAIScript
 			cancelQuestTimer("check_ai", null, null);
 			if (_isSpawned == false)
 			{
-				L2Npc gordon_ai = findTemplate(GORDON);
-				if (gordon_ai != null)
+				final L2Npc gordon = findTemplate(GORDON);
+				if (gordon != null)
 				{
 					_isSpawned = true;
-					startQuestTimer("Start", 1000, gordon_ai, null, true);
+					((L2Attackable)gordon).setCanReturnToSpawnPoint(false);
+					startQuestTimer("Start", 1000, gordon, null, true);
 					return super.onAdvEvent(event, npc, player);
 				}
 			}
@@ -228,6 +229,7 @@ public class Gordon extends L2AttackableAIScript
 		{
 			_isSpawned = true;
 			_isWalkTo = 1;
+			((L2Attackable)npc).setCanReturnToSpawnPoint(false);
 			startQuestTimer("Start", 1000, npc, null, true);
 		}
 		return super.onSpawn(npc);
