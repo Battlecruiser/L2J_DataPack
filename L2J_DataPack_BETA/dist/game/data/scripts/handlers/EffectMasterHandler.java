@@ -204,9 +204,9 @@ public final class EffectMasterHandler
 					continue; // Disabled handler
 					
 				if (method == null)
-					method = loadInstance.getClass().getMethod("registerHandler", String.class, Class.class);
+					method = loadInstance.getClass().getMethod("registerHandler", Class.class);
 				
-				method.invoke(loadInstance, c.getSimpleName(), c);
+				method.invoke(loadInstance, c);
 				
 			}
 			catch (Exception e)
