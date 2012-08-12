@@ -99,10 +99,20 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 		{
 			case CARADINE:
 			{
-				htmltext = ((player.getLevel() >= 75) ? "31740-1.htm" : "31740-2.html");
-				if (st.getState() == State.COMPLETED)
+				switch (st.getState())
 				{
-					htmltext = getAlreadyCompletedMsg(player);
+					case State.CREATED:
+						htmltext = ((player.getLevel() >= 75) ? "31740-1.htm" : "31740-2.html");
+						break;
+					case State.STARTED:
+						if (st.isCond(1) && st.hasQuestItems(CARADINE_LETTER_LAST))
+						{
+							htmltext = "31740-6.html";
+						}
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
 				}
 				break;
 			}
