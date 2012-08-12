@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
@@ -64,17 +65,13 @@ public class QuestLink implements IBypassHandler
 		{
 			showQuestWindow(activeChar, (L2Npc) target, quest);
 		}
-		
 		return true;
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li><BR>
-	 * <BR>
+	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
 	 * @param player The L2PcInstance that talk with the L2NpcInstance
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
@@ -132,16 +129,16 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the L2NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li> <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li> <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the
-	 * client wait another packet</li><BR>
-	 * <BR>
-	 * @param player the L2PcInstance that talk with the {@code npc}.
-	 * @param npc the L2NpcInstance that chats with the {@code player}.
-	 * @param questId the Id of the quest to display the message.
+	 * Open a quest window on client with the text of the L2NpcInstance.<br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <ul>
+	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
+	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
+	 * </ul>
+	 * @param player the L2PcInstance that talk with the {@code npc}
+	 * @param npc the L2NpcInstance that chats with the {@code player}
+	 * @param questId the Id of the quest to display the message
 	 */
 	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
 	{
@@ -164,9 +161,12 @@ public class QuestLink implements IBypassHandler
 			{
 				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000))
 				{
-					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
+					// Too many ongoing quests.
+					if (player.getAllActiveQuests().length > 40)
 					{
-						player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
+						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+						html.setFile(player.getHtmlPrefix(), "data/html/fullquest.html");
+						player.sendPacket(html);
 						return;
 					}
 				}
@@ -193,7 +193,7 @@ public class QuestLink implements IBypassHandler
 		
 		if (qs != null)
 		{
-			// If the quest is alreday started, no need to show a window
+			// If the quest is already started, no need to show a window
 			if (!qs.getQuest().notifyTalk(npc, qs))
 			{
 				return;
