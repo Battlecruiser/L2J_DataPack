@@ -101,18 +101,16 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				}
 				break;
 			case "31741-9.html":
-				if (st.isCond(5))
+				if (st.isCond(5) && (st.hasQuestItems(RAIN_SONG) || (st.getQuestItemsCount(FRAGMENTS) >= 100)))
 				{
-					if (st.hasQuestItems(RAIN_SONG))
-					{
-						st.takeItems(RAIN_SONG, -1);
-					}
-					if (st.getQuestItemsCount(FRAGMENTS) >= 100)
-					{
-						st.takeItems(FRAGMENTS, -1);
-					}
+					st.takeItems(RAIN_SONG, -1);
+					st.takeItems(FRAGMENTS, -1);
 					st.giveItems(RELIC_BOX, 1);
 					st.setCond(6, true);
+				}
+				else
+				{
+					return "31741-8.html";
 				}
 				break;
 			case "30721-2.html":
@@ -181,12 +179,17 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 								{
 									htmltext = "31741-7.html";
 								}
+								else
+								{
+									htmltext = "31741-8.html";
+								}
+								break;
 							case 6:
 								if (st.getQuestItemsCount(RELIC_BOX) == 1)
 								{
 									htmltext = "31741-11.html";
 								}
-								
+								break;
 						}
 				}
 				break;
