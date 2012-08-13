@@ -91,9 +91,9 @@ public class Totems extends AbstractNpcAI
 		private final L2Npc _npc;
 		private final SkillHolder _holder;
 		
-		protected TotemAI(L2Npc cake, SkillHolder holder)
+		protected TotemAI(L2Npc npc, SkillHolder holder)
 		{
-			_npc = cake;
+			_npc = npc;
 			_holder = holder;
 		}
 		
