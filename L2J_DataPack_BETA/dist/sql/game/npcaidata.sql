@@ -34,7 +34,7 @@ INSERT INTO `npcaidata` VALUES
 (103, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Christmas Santa
 (104, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Christmas Santa
 (105, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Christmas Sled
-(106, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Birthday Cake
+(106, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Birthday Cake
 (107, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spirit of Fire
 (108, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Reckless Spirit of Fire
 (109, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Steve Shyagel
@@ -67,14 +67,14 @@ INSERT INTO `npcaidata` VALUES
 (136, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Shiny Platform
 (137, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Big Wedding Cake
 (138, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Jetbike
-(139, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Birthday Cake
+(139, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Birthday Cake
 (140, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Block Checker Blue
 (141, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dimensional Door
 (142, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dimensional Door
-(143, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Body
-(144, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Spirit
-(145, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Bravery
-(146, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Fortitude
+(143, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Body
+(144, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Spirit
+(145, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Bravery
+(146, 7, 15, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Totem of Fortitude
 (147, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Party Cake
 (148, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Campfire
 (149, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Bad Bunny
