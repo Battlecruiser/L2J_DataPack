@@ -102,7 +102,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 		
 		if (st.getQuestItemsCount(TARLK_EYE) < 100)
 		{
-			float chance = (33 * Config.RATE_QUEST_DROP) % 100;
+			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
 			{
 				st.rewardItems(TARLK_EYE, 1);

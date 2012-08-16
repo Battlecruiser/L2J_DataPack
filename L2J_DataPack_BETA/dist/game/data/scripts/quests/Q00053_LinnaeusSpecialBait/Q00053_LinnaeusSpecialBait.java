@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00053_LinnaeusSpecialBait extends Quest
 {
-	
 	// NPCs
 	private static final int LINNAEUS = 31577;
 	private static final int CRIMSON_DRAKE = 20670;
@@ -46,27 +45,24 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
 		
 		switch (event)
 		{
 			case "31577-1.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31577-3.htm":
-				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) >= 100))
+				if (st.isCond(2) && (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) >= 100))
 				{
 					st.giveItems(FLAMING_FISHING_LURE, 4);
-					st.takeItems(CRIMSON_DRAKE_HEART, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else
 				{
@@ -96,7 +92,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 				htmltext = ((player.getLevel() > 59) && (fishingLevel(player) > 19)) ? "31577-0.htm" : "31577-0a.html";
 				break;
 			case State.STARTED:
-				htmltext = (st.getInt("cond") == 1) ? "31577-4.html" : "31577-2.html";
+				htmltext = (st.isCond(1)) ? "31577-4.html" : "31577-2.html";
 				break;
 		}
 		return htmltext;
@@ -112,36 +108,21 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
 		
-		final long count = st.getQuestItemsCount(CRIMSON_DRAKE_HEART);
-		if ((st.getInt("cond") == 1) && (count < 100))
+		if (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
-			float numItems = chance / 100;
-			chance = chance % 100;
-			
 			if (getRandom(100) < chance)
 			{
-				numItems += 1;
-			}
-			if (numItems > 0)
-			{
-				if ((count + numItems) >= 100)
-				{
-					numItems = 100 - count;
-				}
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
-			}
-			else
-			{
+				st.rewardItems(CRIMSON_DRAKE_HEART, 1);
 				st.playSound("ItemSound.quest_itemget");
 			}
-			st.giveItems(CRIMSON_DRAKE_HEART, (int) numItems);
+		}
+		
+		if (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) >= 100)
+		{
+			st.setCond(2, true);
+			
 		}
 		
 		return super.onKill(npc, player, isPet);
@@ -170,6 +151,10 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);
+		questItemIds = new int[]
+		{
+			CRIMSON_DRAKE_HEART
+		};
 	}
 	
 	public static void main(String[] args)

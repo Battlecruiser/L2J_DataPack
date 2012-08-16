@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00051_OFullesSpecialBait extends Quest
 {
-	
 	// NPCs
 	private static final int OFULLE = 31572;
 	private static final int FETTERED_SOUL = 20552;
@@ -40,28 +39,25 @@ public class Q00051_OFullesSpecialBait extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
 		
 		switch (event)
 		{
 			case "31572-03.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31572-07.html":
-				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(LOST_BAIT) >= 100))
+				if ((st.isCond(2)) && (st.getQuestItemsCount(LOST_BAIT) >= 100))
 				{
 					htmltext = "31572-06.htm";
 					st.giveItems(ICY_AIR_LURE, 4);
-					st.takeItems(LOST_BAIT, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				break;
 		}
@@ -87,7 +83,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 				htmltext = (player.getLevel() >= 36) ? "31572-01.htm" : "31572-02.html";
 				break;
 			case State.STARTED:
-				htmltext = (st.getInt("cond") == 1) ? "31572-04.html" : "31572-05.html";
+				htmltext = (st.isCond(1)) ? "31572-05.html" : "31572-04.html";
 				break;
 		}
 		return htmltext;
@@ -103,36 +99,21 @@ public class Q00051_OFullesSpecialBait extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
 		
-		final long count = st.getQuestItemsCount(LOST_BAIT);
-		if ((st.getInt("cond") == 1) && (count < 100))
+		if (st.getQuestItemsCount(LOST_BAIT) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
-			float numItems = chance / 100;
-			chance = chance % 100;
-			
 			if (getRandom(100) < chance)
 			{
-				numItems += 1;
-			}
-			if (numItems > 0)
-			{
-				if ((count + numItems) >= 100)
-				{
-					numItems = 100 - count;
-				}
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
-			}
-			else
-			{
+				st.rewardItems(LOST_BAIT, 1);
 				st.playSound("ItemSound.quest_itemget");
 			}
-			st.giveItems(LOST_BAIT, (int) numItems);
+		}
+		
+		if (st.getQuestItemsCount(LOST_BAIT) >= 100)
+		{
+			st.setCond(2, true);
+			
 		}
 		
 		return super.onKill(npc, player, isPet);
@@ -145,6 +126,10 @@ public class Q00051_OFullesSpecialBait extends Quest
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);
+		questItemIds = new int[]
+		{
+			LOST_BAIT
+		};
 	}
 	
 	public static void main(String[] args)
