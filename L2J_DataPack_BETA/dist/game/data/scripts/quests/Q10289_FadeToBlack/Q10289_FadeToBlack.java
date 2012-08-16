@@ -14,8 +14,12 @@
  */
 package quests.Q10289_FadeToBlack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import quests.Q10288_SecretMission.Q10288_SecretMission;
 
+import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -24,49 +28,145 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Fade to Black (10289)
  * @author Plim
  */
 public class Q10289_FadeToBlack extends Quest
 {
-	
 	// NPCs
 	private static final int GREYMORE = 32757;
 	
 	// Items
-	private static final int MARK_OF_DARKNESS = 15528;
 	private static final int MARK_OF_SPLENDOR = 15527;
+	private static final int MARK_OF_DARKNESS = 15528;
 	
-	// MOBs
+	// Monsters
 	private static final int ANAYS = 25701;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == GREYMORE)
+		String htmltext = event;
+		
+		switch (event)
 		{
-			if (event.equalsIgnoreCase("32757-04.htm"))
-			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
-			}
-			else if (Util.isDigit(event) && st.hasQuestItems(MARK_OF_SPLENDOR))
-			{
-				int itemId = Integer.parseInt(event);
-				st.takeItems(MARK_OF_SPLENDOR, 1);
-				st.giveItems(itemId, 1);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
-				htmltext = "32757-08.htm";
-			}
+			case "32757-03.htm":
+				st.startQuest();
+				break;
+			case "32757-06.html":
+				if (st.isCond(2) && st.hasQuestItems(MARK_OF_DARKNESS))
+				{
+					htmltext = "32757-07.html";
+				}
+				else if (st.isCond(3) && st.hasQuestItems(MARK_OF_SPLENDOR))
+				{
+					htmltext = "32757-08.html";
+				}
+				break;
+			default:
+				if (st.isCond(3) && Util.isDigit(event) && st.hasQuestItems(MARK_OF_SPLENDOR))
+				{
+					htmltext = "32757-09.html";
+					// see 32757-08.html for recipe list (all moirai armor 60%)
+					switch (Integer.parseInt(event))
+					{
+						case 11:
+							st.rewardItems(15775, 1);
+							st.giveAdena(420920, true);
+							break;
+						case 12:
+							st.rewardItems(15776, 1);
+							st.giveAdena(420920, true);
+							break;
+						case 13:
+							st.rewardItems(15777, 1);
+							st.giveAdena(420920, true);
+							break;
+						case 14:
+							st.rewardItems(15778, 1);
+							break;
+						case 15:
+							st.rewardItems(15779, 1);
+							st.giveAdena(168360, true);
+							break;
+						case 16:
+							st.rewardItems(15780, 1);
+							st.giveAdena(168360, true);
+							break;
+						case 17:
+							st.rewardItems(15781, 1);
+							st.giveAdena(252540, true);
+							break;
+						case 18:
+							st.rewardItems(15782, 1);
+							st.giveAdena(357780, true);
+							break;
+						case 19:
+							st.rewardItems(15783, 1);
+							st.giveAdena(357780, true);
+							break;
+						case 20:
+							st.rewardItems(15784, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 21:
+							st.rewardItems(15785, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 22:
+							st.rewardItems(15786, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 23:
+							st.rewardItems(15787, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 24:
+							st.rewardItems(15787, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 25:
+							st.rewardItems(15789, 1);
+							st.giveAdena(505100, true);
+							break;
+						case 26:
+							st.rewardItems(15790, 1);
+							st.giveAdena(496680, true);
+							break;
+						case 27:
+							st.rewardItems(15791, 1);
+							st.giveAdena(496680, true);
+							break;
+						case 28:
+							st.rewardItems(15792, 1);
+							st.giveAdena(563860, true);
+							break;
+						case 29:
+							st.rewardItems(15793, 1);
+							st.giveAdena(509040, true);
+							break;
+						case 30:
+							st.rewardItems(15794, 1);
+							st.giveAdena(454240, true);
+							break;
+						default:
+							return null;
+					}
+					
+					int marksOfDarkness = (int) st.getQuestItemsCount(MARK_OF_DARKNESS);
+					if (marksOfDarkness > 0)
+					{
+						st.addExpAndSp(55983 * marksOfDarkness, 136500 * marksOfDarkness);
+					}
+					st.exitQuest(false, true);
+				}
+				break;
 		}
 		return htmltext;
 	}
@@ -76,95 +176,122 @@ public class Q10289_FadeToBlack extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState secretMission = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == GREYMORE)
+		switch (st.getState())
 		{
-			final int cond = st.getInt("cond");
-			switch (st.getState())
-			{
-				case State.CREATED:
-					if ((player.getLevel() >= 82) && (secretMission != null) && secretMission.isCompleted())
-					{
-						htmltext = "32757-02.htm";
-					}
-					else if (player.getLevel() < 82)
-					{
-						htmltext = "32757-00.htm";
-					}
-					else
-					{
-						htmltext = "32757-01.htm";
-					}
-					break;
-				case State.STARTED:
-					if (cond == 1)
-					{
-						htmltext = "32757-04b.htm";
-					}
-					if ((cond == 2) && st.hasQuestItems(MARK_OF_DARKNESS))
-					{
-						htmltext = "32757-05.htm";
-						st.takeItems(MARK_OF_DARKNESS, 1);
-						player.addExpAndSp(55983, 136500);
-						st.set("cond", "1");
-						st.playSound("ItemSound.quest_middle");
-					}
-					else if (cond == 3)
-					{
-						htmltext = "32757-06.htm";
-					}
-					break;
-			}
+			case State.CREATED:
+				st = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
+				htmltext = ((player.getLevel() < 82) || (st == null) || !st.isCompleted()) ? "32757-00.htm" : "32757-01.htm";
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
+						htmltext = "32757-04.html";
+						break;
+					case 2:
+					case 3:
+						htmltext = "32757-05.html";
+						break;
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = "32757-10.html";
+				break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc anays, L2PcInstance killer, boolean isPet)
 	{
-		final L2PcInstance randomPartyMember = getRandomPartyMember(player, "1");
-		if (randomPartyMember == null)
+		List<L2PcInstance> killers = new ArrayList<>();
+		// first, populate the list of players liable for a reward
+		QuestState st = killer.getQuestState(getName());
+		
+		if ((st != null) && st.isStarted() && (st.getCond() < 3))
 		{
-			return super.onKill(npc, player, isPet);
+			killers.add(killer);
 		}
 		
-		final QuestState st = randomPartyMember.getQuestState(getName());
-		if (st != null)
-		{
-			st.giveItems(MARK_OF_SPLENDOR, 1);
-			st.playSound("ItemSound.quest_itemget");
-			st.set("cond", "3");
-		}
+		L2Party party = killer.getParty();
 		
-		if (player.getParty() != null)
+		if (party != null)
 		{
-			QuestState st2;
-			for (L2PcInstance partyMember : player.getParty().getMembers())
+			for (L2PcInstance member : party.getMembers())
 			{
-				st2 = partyMember.getQuestState(getName());
-				if ((st2 != null) && (st2.getInt("cond") == 1) && (partyMember.getObjectId() != randomPartyMember.getObjectId()))
+				st = member.getQuestState(getName());
+				
+				if ((st != null) && st.isStarted() && (st.getCond() < 3))
 				{
-					st2.giveItems(MARK_OF_DARKNESS, 1);
-					st2.playSound("ItemSound.quest_itemget");
-					st2.set("cond", "2");
+					killers.add(member);
 				}
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		
+		// if at least one killer is found...
+		if (!killers.isEmpty())
+		{
+			// .. then first, we roll for a random one
+			L2PcInstance randomKiller = killers.get(getRandom(killers.size()));
+			
+			if (Util.checkIfInRange(1500, anays, randomKiller, false))
+			{
+				st = randomKiller.getQuestState(getName());
+				
+				// technically, this should never be false (a player can't have this item at cond < 3), but l2off checks it
+				if (!st.hasQuestItems(MARK_OF_SPLENDOR))
+				{
+					if (party == null) // if no party, the winner gets it all
+					{
+						st.giveItems(MARK_OF_SPLENDOR, 1);
+						st.setCond(3, true);
+					}
+					else
+					// otherwise, reward all party members
+					{
+						int idx = 0;
+						int rnd = getRandom(party.getMemberCount());
+						
+						for (L2PcInstance member : party.getMembers())
+						{
+							st = member.getQuestState(getName());
+							
+							if (idx == rnd) // only one lucky player will get the good item
+							{
+								st.giveItems(MARK_OF_SPLENDOR, 1);
+								st.setCond(3, true);
+							}
+							else
+							// the rest will get the bad one and can get multiple ones (the reward increases so not entirely bad)
+							{
+								st.giveItems(MARK_OF_DARKNESS, 1);
+								st.setCond(2, true);
+							}
+							idx++;
+						}
+					}
+				}
+			}
+		}
+		return super.onKill(anays, killer, isPet);
 	}
 	
 	public Q10289_FadeToBlack(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(GREYMORE);
 		addTalkId(GREYMORE);
 		addKillId(ANAYS);
+		questItemIds = new int[]
+		{
+			MARK_OF_SPLENDOR,
+			MARK_OF_DARKNESS
+		};
 	}
 	
 	public static void main(String[] args)
