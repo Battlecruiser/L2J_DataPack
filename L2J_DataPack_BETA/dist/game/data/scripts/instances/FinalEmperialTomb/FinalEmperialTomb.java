@@ -716,7 +716,7 @@ public class FinalEmperialTomb extends Quest
 							if (rnd < FRINTEZZASONGLIST[i].chance)
 							{
 								_world.OnSong = FRINTEZZASONGLIST[i];
-								broadCastPacket(_world, new ExShowScreenMessage(FRINTEZZASONGLIST[i].songName, 2, 500));
+								broadCastPacket(_world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, FRINTEZZASONGLIST[i].songName));
 								broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, FRINTEZZASONGLIST[i].skill.getSkillId(), FRINTEZZASONGLIST[i].skill.getSkillLvl(), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime(), 0));
 								_world.songEffectTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 1), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime() - 10000);
 								_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime());
