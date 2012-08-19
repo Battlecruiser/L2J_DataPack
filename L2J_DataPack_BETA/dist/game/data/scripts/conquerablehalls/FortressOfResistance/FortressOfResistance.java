@@ -14,7 +14,9 @@
  */
 package conquerablehalls.FortressOfResistance;
 
-import gnu.trove.map.hash.TIntLongHashMap;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ClanTable;
@@ -46,7 +48,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	};
 	
 	private L2Spawn _nurka; 
-	private TIntLongHashMap _damageToNurka = new TIntLongHashMap();
+	private Map<Integer, Long> _damageToNurka = new HashMap<>();
 	private NpcHtmlMessage _messengerMsg;
 	
 	/**
@@ -148,12 +150,12 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	{
 		int winnerId = 0;
 		long counter = 0;
-		for(int i : _damageToNurka.keys())
+		for(Entry<Integer, Long> e : _damageToNurka.entrySet())
 		{	
-			long dam = _damageToNurka.get(i);
+			long dam = e.getValue();
 			if(dam > counter)
 			{
-				winnerId = i;
+				winnerId = e.getKey();
 				counter = dam;
 			}
 		}

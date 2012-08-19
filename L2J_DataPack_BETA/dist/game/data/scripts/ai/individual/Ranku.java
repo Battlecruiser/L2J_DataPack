@@ -14,7 +14,9 @@
  */
 package ai.individual;
 
-import gnu.trove.set.hash.TIntHashSet;
+import java.util.HashSet;
+import java.util.Set;
+
 import ai.group_template.L2AttackableAIScript;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,6 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.MinionList;
 
 /**
+ * Ranku's AI.
  * @author GKR
  */
 public class Ranku extends L2AttackableAIScript
@@ -35,7 +38,7 @@ public class Ranku extends L2AttackableAIScript
 	private static final int MINION = 32305;
 	private static final int MINION_2 = 25543;
 	
-	private static TIntHashSet myTrackingSet = new TIntHashSet();
+	private static Set<Integer> myTrackingSet = new HashSet<>();
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)

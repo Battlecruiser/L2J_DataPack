@@ -14,14 +14,14 @@
  */
 package ai.individual;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import javolution.util.FastList;
+import javolution.util.FastMap;
 import ai.group_template.L2AttackableAIScript;
 
 import com.l2jserver.Config;
@@ -89,7 +89,7 @@ public class Antharas extends L2AttackableAIScript
 	protected List<L2Npc> _teleportCube = new FastList<>();
 	
 	// Spawn data of monsters.
-	protected TIntObjectHashMap<L2Spawn> _monsterSpawn = new TIntObjectHashMap<>();
+	protected Map<Integer, L2Spawn> _monsterSpawn = new FastMap<>();
 	
 	// Instance of monsters.
 	protected List<L2Npc> _monsters = new FastList<>();

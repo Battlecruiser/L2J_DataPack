@@ -14,7 +14,10 @@
  */
 package quests.Q00509_AClansFame;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -33,21 +36,18 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00509_AClansFame extends Quest
 {
-	
 	// NPC
 	private static final int VALDIS = 31331;
 	
-	private static final TIntObjectHashMap<int[]> REWARD_POINTS = new TIntObjectHashMap<>();
+	private static final Map<Integer, List<Integer>> REWARD_POINTS = new HashMap<>();
 	
-	//@formatter:off
 	static
 	{
-		REWARD_POINTS.put(1, new int[] {25290, 8489, 1378 }); // Daimon The White-Eyed
-		REWARD_POINTS.put(2, new int[] {25293, 8490, 1378 }); // Hestia, Guardian Deity Of The Hot Springs
-		REWARD_POINTS.put(3, new int[] {25523, 8491, 1070 }); // Plague Golem
-		REWARD_POINTS.put(4, new int[] {25322, 8492, 782 }); // Demon's Agent Falston
+		REWARD_POINTS.put(1, Arrays.asList(25290, 8489, 1378)); // Daimon The White-Eyed
+		REWARD_POINTS.put(2, Arrays.asList(25293, 8490, 1378)); // Hestia, Guardian Deity Of The Hot Springs
+		REWARD_POINTS.put(3, Arrays.asList(25523, 8491, 1070)); // Plague Golem
+		REWARD_POINTS.put(4, Arrays.asList(25322, 8492, 782)); // Demon's Agent Falston
 	}
-	//@formatter:on
 	
 	private static final int[] RAID_BOSS =
 	{
@@ -121,13 +121,14 @@ public class Q00509_AClansFame extends Quest
 				
 				if (REWARD_POINTS.containsKey(raid))
 				{
-					if (st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
+					if (st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 					{
 						htmltext = "31331-" + raid + "b.html";
 						st.playSound("ItemSound.quest_fanfare_1");
-						st.takeItems(REWARD_POINTS.get(raid)[1], -1);
-						clan.addReputationScore(REWARD_POINTS.get(raid)[2], true);
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(REWARD_POINTS.get(raid)[2]));
+						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
+						final int rep = REWARD_POINTS.get(raid).get(2);
+						clan.addReputationScore(rep, true);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(rep));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					}
 					else
@@ -173,9 +174,9 @@ public class Q00509_AClansFame extends Quest
 			int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if ((npc.getNpcId() == REWARD_POINTS.get(raid)[0]) && !st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
+				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 				{
-					st.rewardItems(REWARD_POINTS.get(raid)[1], 1);
+					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}

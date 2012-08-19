@@ -14,7 +14,10 @@
  */
 package quests.Q00508_AClansReputation;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -34,23 +37,20 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00508_AClansReputation extends Quest
 {
-	
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;
 	
-	private static final TIntObjectHashMap<int[]> REWARD_POINTS = new TIntObjectHashMap<>();
+	private static final Map<Integer, List<Integer>> REWARD_POINTS = new HashMap<>();
 	
-	//@formatter:off
 	static
 	{
-		REWARD_POINTS.put(1, new int[] {25252, 8277, 560 }); // Palibati Queen Themis
-		REWARD_POINTS.put(2, new int[] {25478, 14883, 584 }); // Shilen's Priest Hisilrome
-		REWARD_POINTS.put(3, new int[] {25255, 8280, 602 }); // Gargoyle Lord Tiphon
-		REWARD_POINTS.put(4, new int[] {25245, 8281, 784 }); // Last Lesser Giant Glaki
-		REWARD_POINTS.put(5, new int[] {25051, 8282, 558 }); // Rahha
-		REWARD_POINTS.put(6, new int[] {25524, 8494, 768 }); // Flamestone Giant
+		REWARD_POINTS.put(1, Arrays.asList(25252, 8277, 560)); // Palibati Queen Themis
+		REWARD_POINTS.put(2, Arrays.asList(25478, 14883, 584)); // Shilen's Priest Hisilrome
+		REWARD_POINTS.put(3, Arrays.asList(25255, 8280, 602)); // Gargoyle Lord Tiphon
+		REWARD_POINTS.put(4, Arrays.asList(25245, 8281, 784)); // Last Lesser Giant Glaki
+		REWARD_POINTS.put(5, Arrays.asList(25051, 8282, 558)); // Rahha
+		REWARD_POINTS.put(6, Arrays.asList(25524, 8494, 768)); // Flamestone Giant
 	}
-	//@formatter:on
 	
 	private static final int[] RAID_BOSS =
 	{
@@ -134,13 +134,14 @@ public class Q00508_AClansReputation extends Quest
 				
 				if (REWARD_POINTS.containsKey(raid))
 				{
-					if (st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
+					if (st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 					{
 						htmltext = "30868-" + raid + "b.html";
 						st.playSound("ItemSound.quest_fanfare_1");
-						st.takeItems(REWARD_POINTS.get(raid)[1], -1);
-						clan.addReputationScore(REWARD_POINTS.get(raid)[2], true);
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(REWARD_POINTS.get(raid)[2]));
+						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
+						final int rep = REWARD_POINTS.get(raid).get(2);
+						clan.addReputationScore(rep, true);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(rep));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					}
 					else
@@ -186,9 +187,9 @@ public class Q00508_AClansReputation extends Quest
 			int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if ((npc.getNpcId() == REWARD_POINTS.get(raid)[0]) && !st.hasQuestItems(REWARD_POINTS.get(raid)[1]))
+				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 				{
-					st.rewardItems(REWARD_POINTS.get(raid)[1], 1);
+					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}

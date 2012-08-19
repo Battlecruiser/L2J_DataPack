@@ -14,7 +14,8 @@
  */
 package custom.KetraOrcSupport;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -49,7 +50,7 @@ public class KetraOrcSupport extends Quest
 
 	private static final int HORN = 7186;
 
-	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<>();
+	private static final Map<Integer, BuffsData> BUFF = new HashMap<>();
 
 	private class BuffsData
 	{

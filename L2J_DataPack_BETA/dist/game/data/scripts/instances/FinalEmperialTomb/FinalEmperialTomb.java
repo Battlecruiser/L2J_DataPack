@@ -14,10 +14,9 @@
  */
 package instances.FinalEmperialTomb;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
@@ -146,8 +145,8 @@ public class FinalEmperialTomb extends Quest
 	private static final int MAX_PLAYERS = 45;
 	private static final boolean debug = false;
 	
-	private final TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<>();
-	private final TIntObjectHashMap<List<FETSpawn>> _spawnList = new TIntObjectHashMap<>();
+	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
+	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
 	private final List<Integer> _mustKillMobsId = new FastList<>();
 	
 	// Teleports
@@ -260,7 +259,7 @@ public class FinalEmperialTomb extends Quest
 									continue;
 								}
 								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
-								if (!_spawnList.contains(flag))
+								if (!_spawnList.containsKey(flag))
 									_spawnList.put(flag, new FastList<FETSpawn>());
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -546,7 +545,7 @@ public class FinalEmperialTomb extends Quest
 					{
 						for (int i = 0; i < spw.count; i++)
 						{
-							if (_spawnZoneList.contains(spw.zone))
+							if (_spawnZoneList.containsKey(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
 								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3], null), getRandom(65535), spw.isNeededNextFlag);

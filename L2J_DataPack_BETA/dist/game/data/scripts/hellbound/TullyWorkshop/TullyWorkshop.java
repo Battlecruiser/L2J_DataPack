@@ -14,11 +14,11 @@
  */
 package hellbound.TullyWorkshop;
 
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 
 import javolution.util.FastList;
@@ -113,9 +113,10 @@ public class TullyWorkshop extends Quest
 	
 	// NPC's, spawned after Tully's death are stored here
 	protected static List<L2Npc> postMortemSpawn = new FastList<>();
-	protected static TIntHashSet brokenContraptions = new TIntHashSet();
-	protected static TIntHashSet rewardedContraptions = new TIntHashSet();
-	protected static TIntHashSet talkedContraptions = new TIntHashSet();
+	// TODO: Zoey76: Not thread-safe, probably will lead to problems.
+	protected static Set<Integer> brokenContraptions = new HashSet<>();
+	protected static Set<Integer> rewardedContraptions = new HashSet<>();
+	protected static Set<Integer> talkedContraptions = new HashSet<>();
 	
 	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
 	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();

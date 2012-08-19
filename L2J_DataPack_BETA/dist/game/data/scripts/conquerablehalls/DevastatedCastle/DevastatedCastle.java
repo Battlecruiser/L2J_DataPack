@@ -14,7 +14,9 @@
  */
 package conquerablehalls.DevastatedCastle;
 
-import gnu.trove.map.hash.TIntIntHashMap;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.ClanTable;
@@ -39,7 +41,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	private static final int DIETRICH = 35408;
 	private static final double GUSTAV_TRIGGER_HP = NpcTable.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
 	
-	private static TIntIntHashMap _damageToGustav = new TIntIntHashMap();
+	private static Map<Integer, Integer> _damageToGustav = new HashMap<>();
 
 	public DevastatedCastle(int questId, String name, String descr, int hallId)
 	{
@@ -118,19 +120,18 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	@Override
 	public L2Clan getWinner()
 	{
-		double counter = 0;
+		int counter = 0;
 		int damagest = 0;
-		for(int clan : _damageToGustav.keys())
+		for(Entry<Integer, Integer> e : _damageToGustav.entrySet())
 		{
-			final double damage = _damageToGustav.get(clan);
+			final int damage = e.getValue();
 			if(damage > counter)
 			{
 				counter = damage;
-				damagest = clan;
+				damagest = e.getKey();
 			}
 		}
-		L2Clan winner = ClanTable.getInstance().getClan(damagest);
-		return winner;
+		return ClanTable.getInstance().getClan(damagest);
 	}
 	
 	public static void main(String[] args)
