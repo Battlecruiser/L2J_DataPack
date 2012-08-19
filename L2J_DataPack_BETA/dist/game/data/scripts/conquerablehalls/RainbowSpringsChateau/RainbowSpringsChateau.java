@@ -14,8 +14,6 @@
  */
 package conquerablehalls.RainbowSpringsChateau;
 
-import gnu.trove.map.hash.TIntLongHashMap;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -92,7 +90,7 @@ public class RainbowSpringsChateau extends Quest
 				{
 					long counter = 0;
 					L2Clan clan = null;
-					for (int clanId : _warDecreesCount.keys())
+					for (int clanId : _warDecreesCount.keySet())
 					{
 						L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
 						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
@@ -282,7 +280,7 @@ public class RainbowSpringsChateau extends Quest
 		SkillTable.getInstance().getInfo(0, 1)
 	};
 	
-	protected static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
+	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
 	protected static List<L2Clan> _acceptedClans = new ArrayList<>(4);
 	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<>();
 	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<>();
@@ -448,7 +446,7 @@ public class RainbowSpringsChateau extends Quest
 					case "unregister":
 						if (_rainbow.isRegistering())
 						{
-							if (_warDecreesCount.contains(clan.getClanId()))
+							if (_warDecreesCount.containsKey(clan.getClanId()))
 							{
 								player.addItem("Rainbow Spring unregister", WAR_DECREES, _warDecreesCount.get(clan.getClanId()) / 2, npc, true);
 								_warDecreesCount.remove(clan.getClanId());

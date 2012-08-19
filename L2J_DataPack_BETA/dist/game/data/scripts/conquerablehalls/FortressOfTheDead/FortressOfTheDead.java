@@ -14,7 +14,9 @@
  */
 package conquerablehalls.FortressOfTheDead;
 
-import gnu.trove.map.hash.TIntIntHashMap;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -37,7 +39,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	private static final int ALFRED = 35630;
 	private static final int GISELLE = 35631;
 	
-	private static TIntIntHashMap _damageToLidia = new TIntIntHashMap();
+	private static Map<Integer, Integer> _damageToLidia = new HashMap<>();
 	
 	/**
 	 * @param questId
@@ -125,13 +127,13 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	{
 		int counter = 0;
 		int damagest = 0;
-		for(int clan : _damageToLidia.keys())
+		for(Entry<Integer, Integer> e : _damageToLidia.entrySet())
 		{
-			final int damage = _damageToLidia.get(clan);
+			final int damage = e.getValue();
 			if(damage > counter)
 			{
 				counter = damage;
-				damagest = clan;
+				damagest = e.getKey();
 			}
 		}
 		return ClanTable.getInstance().getClan(damagest);
@@ -140,9 +142,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	@Override
 	public void startSiege()
 	{
-		/*
-		 * Siege must start at night
-		 */
+		// Siege must start at night
 		int hoursLeft = (GameTimeController.getInstance().getGameTime() / 60) % 24;
 		
 		if(hoursLeft < 0 || hoursLeft > 6)

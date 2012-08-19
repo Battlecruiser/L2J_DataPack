@@ -14,8 +14,13 @@
  */
 package ai.group_template;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
@@ -33,112 +38,54 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 public class SummonMinions extends L2AttackableAIScript
 {
 	private static int HasSpawned;
-	private static TIntHashSet myTrackingSet = new TIntHashSet(); // Used to track instances of npcs
+	private static Set<Integer> myTrackingSet = new HashSet<>(); // Used to track instances of npcs
 	private final FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
-	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<>();
+	private static final Map<Integer, List<Integer>> MINIONS = new HashMap<>();
 	
 	static
 	{
 		// Timak Orc Troop
-		MINIONS.put(20767, new int[]
-		{
-			20768,
-			20769,
-			20770
-		});
+		MINIONS.put(20767, Arrays.asList(20768, 20769, 20770));
 		// Ragna Orc Shaman
-		// MINIONS.put(22030,new Integer[]{22045,22047,22048});
+		// MINIONS.put(22030, Arrays.asList(22045, 22047, 22048));
 		// Ragna Orc Warrior - summons shaman but not 22030 ><
-		// MINIONS.put(22032,new Integer[]{22036});
+		// MINIONS.put(22032, Arrays.asList(22036));
 		// Ragna Orc Hero
-		// MINIONS.put(22038,new Integer[]{22037});
+		// MINIONS.put(22038, Arrays.asList(22037));
 		// Blade of Splendor
-		MINIONS.put(21524, new int[]
-		{
-			21525
-		});
+		MINIONS.put(21524, Arrays.asList(21525));
 		// Punishment of Splendor
-		MINIONS.put(21531, new int[]
-		{
-			21658
-		});
+		MINIONS.put(21531, Arrays.asList(21658));
 		// Wailing of Splendor
-		MINIONS.put(21539, new int[]
-		{
-			21540
-		});
+		MINIONS.put(21539, Arrays.asList(21540));
 		// Island Guardian
-		MINIONS.put(22257, new int[]
-		{
-			18364,
-			18364
-		});
+		MINIONS.put(22257, Arrays.asList(18364, 18364));
 		// White Sand Mirage
-		MINIONS.put(22258, new int[]
-		{
-			18364,
-			18364
-		});
+		MINIONS.put(22258, Arrays.asList(18364, 18364));
 		// Muddy Coral
-		MINIONS.put(22259, new int[]
-		{
-			18364,
-			18364
-		});
+		MINIONS.put(22259, Arrays.asList(18364, 18364));
 		// Kleopora
-		MINIONS.put(22260, new int[]
-		{
-			18364,
-			18364
-		});
+		MINIONS.put(22260, Arrays.asList(18364, 18364));
 		// Seychelles
-		MINIONS.put(22261, new int[]
-		{
-			18365,
-			18365
-		});
+		MINIONS.put(22261, Arrays.asList(18365, 18365));
 		// Naiad
-		MINIONS.put(22262, new int[]
-		{
-			18365,
-			18365
-		});
+		MINIONS.put(22262, Arrays.asList(18365, 18365));
 		// Sonneratia
-		MINIONS.put(22263, new int[]
-		{
-			18365,
-			18365
-		});
+		MINIONS.put(22263, Arrays.asList(18365, 18365));
 		// Castalia
-		MINIONS.put(22264, new int[]
-		{
-			18366,
-			18366
-		});
+		MINIONS.put(22264, Arrays.asList(18366, 18366));
 		// Chrysocolla
-		MINIONS.put(22265, new int[]
-		{
-			18366,
-			18366
-		});
+		MINIONS.put(22265, Arrays.asList(18366, 18366));
 		// Pythia
-		MINIONS.put(22266, new int[]
-		{
-			18366,
-			18366
-		});
+		MINIONS.put(22266, Arrays.asList(18366, 18366));
 		// Tanta Lizardman Summoner
-		MINIONS.put(22774, new int[]
-		{
-			22768,
-			22768
-		});
+		MINIONS.put(22774, Arrays.asList(22768, 22768));
 	}
 	
 	public SummonMinions(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		registerMobs(MINIONS.keys(), QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
+		registerMobs(MINIONS.keySet(), QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 	}
 	
 	@Override
@@ -170,15 +117,13 @@ public class SummonMinions extends L2AttackableAIScript
 							HasSpawned = 0;
 							if (getRandom(100) < 33) // mobs that summon minions only on certain chance
 							{
-								int[] minions = MINIONS.get(npcId);
-								for (int val : minions)
+								for (int val : MINIONS.get(npcId))
 								{
 									L2Attackable newNpc = (L2Attackable) this.addSpawn(val, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, 0);
 									newNpc.setRunning();
 									newNpc.addDamageHate(attacker, 0, 999);
 									newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 								}
-								minions = null;
 							}
 						}
 						break;

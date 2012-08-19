@@ -16,6 +16,7 @@ package ai.group_template;
 
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
+import java.util.Collection;
 import java.util.List;
 
 import com.l2jserver.Config;
@@ -71,6 +72,17 @@ public class L2AttackableAIScript extends QuestJython
 	 * @param types
 	 */
 	public void registerMobs(int[] mobs, QuestEventType... types)
+	{
+		for (int id : mobs)
+		{
+			for (QuestEventType type : types)
+			{
+				addEventId(id, type);
+			}
+		}
+	}
+	
+	public void registerMobs(Collection<Integer> mobs, QuestEventType... types)
 	{
 		for (int id : mobs)
 		{

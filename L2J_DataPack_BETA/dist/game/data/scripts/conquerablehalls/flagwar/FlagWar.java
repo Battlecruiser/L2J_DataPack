@@ -14,12 +14,14 @@
  */
 package conquerablehalls.flagwar;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.Announcements;
@@ -91,7 +93,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	protected static L2CharPosition CENTER;
 	
-	protected TIntObjectHashMap<ClanData> _data =  new TIntObjectHashMap<>(6);
+	protected Map<Integer, ClanData> _data =  new HashMap<>(6);
 	protected L2Clan _winner;
 	private boolean _firstPhase;
 	
@@ -284,20 +286,22 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			else
 			{
 				html = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/flagwar/"+qn+"/messenger_registeredclans.htm");
-				for(int i = 0; i < _data.size(); i++)
+				int i = 0;
+				for(Entry<Integer, ClanData> clanData : _data.entrySet())
 				{
-					L2Clan attacker = ClanTable.getInstance().getClan(_data.keys()[i]);
+					L2Clan attacker = ClanTable.getInstance().getClan(clanData.getKey());
 					if(attacker == null)
 						continue;
 					html = html.replaceAll("%clan"+i+"%", clan.getName());
-					html = html.replaceAll("%clanMem"+i+"%", String.valueOf(_data.values()[i].players.size()));
+					html = html.replaceAll("%clanMem"+i+"%", String.valueOf(clanData.getValue().players.size()));
+					i++;
 				}
 				if(_data.size() < 5)
 				{
-					for(int i = _data.size(); i < 5; i++)
+					for(int c = _data.size(); c < 5; c++)
 					{
-						html = html.replaceAll("%clan"+i+"%", "Empty pos. ");
-						html = html.replaceAll("%clanMem"+i+"%", "Empty pos. ");
+						html = html.replaceAll("%clan"+c+"%", "Empty pos. ");
+						html = html.replaceAll("%clanMem"+c+"%", "Empty pos. ");
 					}
 				}
 			}
@@ -312,22 +316,26 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		if(_hall.isInSiege())
 		{
 			final int npcId = npc.getNpcId();
-			for(int keys : _data.keys())
+			for(int keys : _data.keySet())
 				if(_data.get(keys).npc == npcId)
 					removeParticipant(keys, true);
-			_data.trimToSize();
 			
 			synchronized(this)
 			{
+				// TODO: Zoey76: previous bad implementation.
+				// Converting map.keySet() to List and map.values() to List doesn't ensure that
+				// first element in the key's List correspond to the first element in the values' List
+				// That's the reason that values aren't copied to a List, instead using _data.get(clanIds.get(0))
+				final List<Integer> clanIds = new ArrayList<>(_data.keySet());
 				if(_firstPhase)
 				{
 					// Siege ends if just 1 flag is alive
-					if((_data.size() == 1 && _hall.getOwnerId() <= 0)	// Hall was free before battle
-						|| _data.values()[0].npc == 0) 					// or owner didnt set the ally npc
+					// Hall was free before battle or owner didn't set the ally npc
+					if((clanIds.size() == 1 && _hall.getOwnerId() <= 0) || (_data.get(clanIds.get(0)).npc == 0))
 					{
 						_missionAccomplished = true;
-						_winner = ClanTable.getInstance().getClan(_data.keys()[0]);
-						removeParticipant(_data.keys()[0], false);
+						//_winner = ClanTable.getInstance().getClan(_data.keySet()[0]);
+						//removeParticipant(_data.keySet()[0], false);
 						cancelSiegeTask();
 						endSiege();
 					}
@@ -350,8 +358,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 								for(int doorId : INNER_DOORS_TO_OPEN)
 									_hall.openCloseDoor(doorId, false);
 								
-								for(int i = 0; i< _data.size(); i++)
-									doSpawns(_data.keys()[i], _data.values()[i]);
+								for(Entry<Integer, ClanData> e : _data.entrySet())
+									doSpawns(e.getKey(), e.getValue());
 								
 								_hall.getSiegeZone().setIsActive(true);
 							}
@@ -361,8 +369,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				else
 				{
 					_missionAccomplished = true;
-					_winner = ClanTable.getInstance().getClan(_data.keys()[0]);
-					removeParticipant(_data.keys()[0], false);
+					_winner = ClanTable.getInstance().getClan(clanIds.get(0));
+					removeParticipant(clanIds.get(0), false);
 					endSiege();
 				}
 			}
@@ -466,13 +474,13 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	@Override
 	public void onSiegeStarts()
 	{
-		for(int i = 1; i < _data.size(); i++)
+		for(Entry<Integer, ClanData> clan : _data.entrySet())
 		{
 			// Spawns challengers flags and npcs
 			try
 			{
-				ClanData data = _data.values()[i];				
-				doSpawns(_data.keys()[i], data);
+				ClanData data = clan.getValue();				
+				doSpawns(clan.getKey(), data);
 				fillPlayerList(data);
 			}
 			catch(Exception e)
@@ -481,7 +489,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				_log.warning(qn+": Problems in siege initialization!");
 				e.printStackTrace();
 			}
-		}	
+		}
 	}
 	
 	@Override
@@ -501,7 +509,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		if(_data.size() > 0)
 		{
-			for(int clanId : _data.keys())
+			for(int clanId : _data.keySet())
 			{
 				if(_hall.getOwnerId() == clanId)
 					removeParticipant(clanId, false);
