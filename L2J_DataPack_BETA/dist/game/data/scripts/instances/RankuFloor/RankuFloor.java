@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -54,14 +55,8 @@ public class RankuFloor extends Quest
 	
 	private static final int SEAL_BREAKER_10 = 15516;
 	
-	private static final int[] ENTRY_POINT =
-	{
-		-19008, 277024, -15000
-	};
-	private static final int[] EXIT_POINT =
-	{
-		-19008, 277122, -13376
-	};
+	private static final Location ENTRY_POINT = new Location(-19008, 277024, -15000);
+	private static final Location EXIT_POINT = new Location(-19008, 277122, -13376);
 	
 	public RankuFloor(int questId, String name, String descr)
 	{
@@ -287,16 +282,15 @@ public class RankuFloor extends Quest
 		}
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
+	private void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
-		player.teleToLocation(tele[0], tele[1], tele[2], true);
+		player.teleToLocation(loc, true);
 	}
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
 		new RankuFloor(-1, qn, "instances");
 	}
 }

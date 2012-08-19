@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -112,27 +113,27 @@ public class Kamaloka extends Quest
 	 * 
 	 * x, y, z
 	 */
-	private static final int[][] TELEPORTS =
+	private static final Location[] TELEPORTS =
 	{
-		{ -88429, -220629,  -7903 },
-		{ -82464, -219532,  -7899 },
-		{ -10700, -174882, -10936 }, // -76280, -185540, -10936
-		{ -89683, -213573,  -8106 },
-		{ -81413, -213568,  -8104 },
-		{ -10700, -174882, -10936 }, // -76280, -174905, -10936
-		{ -89759, -206143,  -8120 },
-		{ -81415, -206078,  -8107 },
-		{ -10700, -174882, -10936 },
-		{ -56999, -219856,  -8117 },
-		{ -48794, -220261,  -8075 },
-		{ -10700, -174882, -10936 },
-		{ -56940, -212939,  -8072 },
-		{ -55566, -206139,  -8120 },
-		{ -10700, -174882, -10936 },
-		{ -49805, -206139,  -8117 },
-		{ -10700, -174882, -10936 },
-		{ -10700, -174882, -10936 },
-		{  22010, -174867, -10904 }
+		new Location(-88429, -220629,  -7903),
+		new Location(-82464, -219532,  -7899),
+		new Location(-10700, -174882, -10936),  // -76280, -185540, -10936
+		new Location(-89683, -213573,  -8106),
+		new Location(-81413, -213568,  -8104),
+		new Location(-10700, -174882, -10936),  // -76280, -174905, -10936
+		new Location(-89759, -206143,  -8120),
+		new Location(-81415, -206078,  -8107),
+		new Location(-10700, -174882, -10936),
+		new Location(-56999, -219856,  -8117),
+		new Location(-48794, -220261,  -8075),
+		new Location(-10700, -174882, -10936),
+		new Location(-56940, -212939,  -8072),
+		new Location(-55566, -206139,  -8120),
+		new Location(-10700, -174882, -10936),
+		new Location(-49805, -206139,  -8117),
+		new Location(-10700, -174882, -10936),
+		new Location(-10700, -174882, -10936),
+		new Location( 22010, -174867, -1090),
 	};
 	
 	/*
@@ -541,14 +542,14 @@ public class Kamaloka extends Quest
 	 * Teleport player and pet to/from instance
 	 * 
 	 * @param player
-	 * @param coords x,y,z
+	 * @param loc
 	 * @param instanceId
 	 */
-	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private static final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2], true);
+		player.teleToLocation(loc, true);
 	}
 	
 	/**
@@ -608,8 +609,7 @@ public class Kamaloka extends Quest
 		// set name for the kamaloka
 		inst.setName(InstanceManager.getInstance().getInstanceIdName(templateId));
 		// set return location
-		final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
-		inst.setSpawnLoc(returnLoc);
+		inst.setSpawnLoc(new Location(player));
 		// disable summon friend into instance
 		inst.setAllowSummon(false);
 		// set duration and empty destroy time

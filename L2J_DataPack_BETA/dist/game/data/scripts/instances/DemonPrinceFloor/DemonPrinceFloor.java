@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -54,14 +55,8 @@ public class DemonPrinceFloor extends Quest
 	
 	private static final int SEAL_BREAKER_5 = 15515;
 	
-	private static final int[] ENTRY_POINT =
-	{
-		-22208, 277056, -8239
-	};
-	private static final int[] EXIT_POINT =
-	{
-		-19024, 277122, -8256
-	};
+	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
+	private static final Location EXIT_POINT =  new Location(-19024, 277122, -8256);
 	
 	public DemonPrinceFloor(int questId, String name, String descr)
 	{
@@ -283,11 +278,11 @@ public class DemonPrinceFloor extends Quest
 		}
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
+	private void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
-		player.teleToLocation(tele[0], tele[1], tele[2], true);
+		player.teleToLocation(loc, true);
 	}
 	
 	public static void main(String[] args)

@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -171,12 +172,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		L2Party party = player.getParty();
 		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		ins.setSpawnLoc(new int[]
-		{
-			player.getX(),
-			player.getY(),
-			player.getZ()
-		});
+		ins.setSpawnLoc(new Location(player));
 		world = new FAUWorld();
 		world.instanceId = instanceId;
 		world.templateId = dungeon.getInstanceId();
