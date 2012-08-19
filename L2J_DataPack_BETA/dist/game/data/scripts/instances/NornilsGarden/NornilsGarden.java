@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
@@ -309,13 +310,7 @@ public class NornilsGarden extends Quest
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
 		
 		inst.setName(InstanceManager.getInstance().getInstanceIdName(INSTANCE_ID));
-		final int[] returnLoc =
-		{
-			player.getX(),
-			player.getY(),
-			player.getZ()
-		};
-		inst.setSpawnLoc(returnLoc);
+		inst.setSpawnLoc(new Location(player));
 		inst.setAllowSummon(false);
 		inst.setDuration(DURATION_TIME * 60000);
 		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
