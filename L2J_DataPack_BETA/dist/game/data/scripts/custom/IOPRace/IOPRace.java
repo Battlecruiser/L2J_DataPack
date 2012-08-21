@@ -21,6 +21,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
+/**
+ * IOP Race AI.
+ * @author Gigiikun, Charus
+ */
 public class IOPRace extends Quest
 {
 	final private static int RIGNOS = 32349;

@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Stakato Nest AI.
  * @author Gnacik
  */
 public class StakatoNest extends L2AttackableAIScript
@@ -201,7 +202,7 @@ public class StakatoNest extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new StakatoNest(-1, "StakatoNestAI", "ai");
+		new StakatoNest(-1, StakatoNest.class.getSimpleName(), "ai");
 	}
 	
 	private L2MonsterInstance checkMinion(L2Npc npc)

@@ -25,13 +25,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @authors DrLecter (python), Plim (java)
- * @notes Formerly based on Elektra's script
+ * Echo Crystals AI.<br>
+ * Original Jython script by DrLecter, formerly based on Elektra's script.
+ * @author Plim
  */
 public class EchoCrystals extends Quest
 {
-	private static final String qn = "EchoCrystals";
-
 	private final static int[] NPCs =
 	{
 		31042, 31043
@@ -83,7 +82,7 @@ public class EchoCrystals extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(EchoCrystals.class.getSimpleName());
 
 		if (st != null && Util.isDigit(event))
 		{
@@ -146,6 +145,6 @@ public class EchoCrystals extends Quest
 
 	public static void main(String[] args)
 	{
-		new EchoCrystals(-1, qn, "custom");
+		new EchoCrystals(-1, EchoCrystals.class.getSimpleName(), "custom");
 	}
 }

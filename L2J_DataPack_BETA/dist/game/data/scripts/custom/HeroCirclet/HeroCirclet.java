@@ -19,6 +19,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
+/**
+ * Hero Circlet AI.
+ */
 public class HeroCirclet extends Quest
 {
 	private final static int[] npcIds =

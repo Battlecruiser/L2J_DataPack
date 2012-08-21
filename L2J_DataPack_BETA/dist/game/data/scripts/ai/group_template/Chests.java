@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Chests extends L2AttackableAIScript
 {
-	
 	private static final int SKILL_DELUXE_KEY = 2229;
 	
 	// Base chance for BOX to be opened
@@ -214,7 +213,6 @@ public class Chests extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new Chests(-1, "chests", "ai");
+		new Chests(-1, Chests.class.getSimpleName(), "ai");
 	}
 }

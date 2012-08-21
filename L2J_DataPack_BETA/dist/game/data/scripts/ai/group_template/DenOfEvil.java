@@ -102,11 +102,6 @@ public class DenOfEvil extends L2AttackableAIScript
 		spawnEyes();
 	}
 	
-	public static void main(String[] args)
-	{
-		new DenOfEvil(-1, "DenOfEvil", "ai");
-	}
-	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
@@ -228,5 +223,10 @@ public class DenOfEvil extends L2AttackableAIScript
 				_zone.removeSkill(i);
 			}
 		}
+	}
+	
+	public static void main(String[] args)
+	{
+		new DenOfEvil(-1, DenOfEvil.class.getSimpleName(), "ai");
 	}
 }

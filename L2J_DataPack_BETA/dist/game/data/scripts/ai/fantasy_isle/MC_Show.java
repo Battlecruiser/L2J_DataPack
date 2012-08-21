@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * MC show script
+ * MC Show AI.
  * @author Kerberos
  */
 public class MC_Show extends L2AttackableAIScript

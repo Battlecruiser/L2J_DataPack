@@ -16,6 +16,9 @@ package ai.fantasy_isle;
 
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 
+/**
+ * Start MC Show.
+ */
 public class StartMCShow implements Runnable
 {
 	@Override

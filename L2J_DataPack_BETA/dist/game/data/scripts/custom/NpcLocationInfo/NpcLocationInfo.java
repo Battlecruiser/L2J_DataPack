@@ -23,7 +23,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @authors L2Emu Team (python), Nyaran (java)
+ * Npc Location Info AI.
+ * @author Nyaran
  */
 public class NpcLocationInfo extends Quest
 {

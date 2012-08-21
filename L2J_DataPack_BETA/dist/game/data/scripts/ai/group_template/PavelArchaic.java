@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Pavel Archaic AI.
  * @author Gnacik
  */
 public class PavelArchaic extends L2AttackableAIScript
@@ -74,6 +75,6 @@ public class PavelArchaic extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new PavelArchaic(-1, "PavelArchaic", "ai");
+		new PavelArchaic(-1, PavelArchaic.class.getSimpleName(), "ai");
 	}
 }

@@ -21,6 +21,11 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
+/**
+ * Pins And Pouch Unseal AI.<br>
+ * Updated by Bloodshed.
+ * @author Gigiikun
+ */
 public class PinsAndPouchUnseal extends Quest
 {
 	private final static int[] NPCs =

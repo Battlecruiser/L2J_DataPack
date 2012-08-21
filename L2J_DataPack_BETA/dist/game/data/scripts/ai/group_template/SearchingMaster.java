@@ -20,6 +20,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
+ * Searching Master AI.
  * @author Charus
  */
 public class SearchingMaster extends L2AttackableAIScript
@@ -50,6 +51,6 @@ public class SearchingMaster extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new SearchingMaster(-1, "SearchingMaster", "ai");
+		new SearchingMaster(-1, SearchingMaster.class.getSimpleName(), "ai");
 	}
 }

@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
+ * Chimeras AI.
  * @author DS
  */
 public class Chimeras extends L2AttackableAIScript
@@ -134,6 +135,6 @@ public class Chimeras extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Chimeras(-1, "Chimeras", "ai");
+		new Chimeras(-1, Chimeras.class.getSimpleName(), "ai");
 	}
 }

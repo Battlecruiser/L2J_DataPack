@@ -577,7 +577,6 @@ public class FeedableBeasts extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new FeedableBeasts(-1, "feedable_beasts", "ai");
+		new FeedableBeasts(-1, FeedableBeasts.class.getSimpleName(), "ai");
 	}
 }

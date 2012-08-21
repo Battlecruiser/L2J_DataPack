@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Sub-class skills validator.<br>
  * TODO: Rewrite.
  * @author DS
  */

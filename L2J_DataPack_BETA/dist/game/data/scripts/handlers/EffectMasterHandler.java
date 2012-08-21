@@ -94,6 +94,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.handler.EffectHandler;
 
 /**
+ * Effect Master handler.
  * @author BiggBoss
  */
 public final class EffectMasterHandler

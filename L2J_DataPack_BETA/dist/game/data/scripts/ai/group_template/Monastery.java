@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Monastery AI.
  * @author Kerberos
  */
 public class Monastery extends L2AttackableAIScript
@@ -192,6 +193,6 @@ public class Monastery extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Monastery(-1, "Monastery", "ai");
+		new Monastery(-1, Monastery.class.getSimpleName(), "ai");
 	}
 }

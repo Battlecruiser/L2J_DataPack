@@ -23,7 +23,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 /**
- * @authors Kerberos (python), Nyaran (java)
+ * Nottingale AI.<br>
+ * Original Jython script by Kerberos.
+ * @author Nyaran
  */
 public class Nottingale extends Quest
 {

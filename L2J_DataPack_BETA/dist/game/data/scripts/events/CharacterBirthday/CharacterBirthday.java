@@ -22,7 +22,9 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Gnacik. Updated to H5 by Nyaran
+ * Character Birthday event AI.<br>
+ * Updated to H5 by Nyaran.
+ * @author Gnacik
  */
 public class CharacterBirthday extends Quest
 {

@@ -26,12 +26,11 @@ import com.l2jserver.gameserver.network.serverpackets.ExCubeGameRequestReady;
 import com.l2jserver.gameserver.network.serverpackets.ExCubeGameTeamList;
 
 /**
+ * Handys Block Checker Event AI.
  * @authors BiggBoss, Gigiikun
  */
 public class HandysBlockCheckerEvent extends Quest
 {
-	private static final String qn = "HandysBlockCheckerEvent";
-	
 	// Arena Managers
 	private static final int A_MANAGER_1 = 32521;
 	private static final int A_MANAGER_2 = 32522;
@@ -104,7 +103,7 @@ public class HandysBlockCheckerEvent extends Quest
 		}
 		else
 		{
-			new HandysBlockCheckerEvent(-1, qn, "Handy's Block Checker Event");
+			new HandysBlockCheckerEvent(-1, HandysBlockCheckerEvent.class.getSimpleName(), "Handy's Block Checker Event");
 			HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
 			_log.info("Handy's Block Checker Event is enabled");
 		}

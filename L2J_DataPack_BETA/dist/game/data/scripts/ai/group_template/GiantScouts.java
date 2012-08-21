@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 
 /**
+ * Giant Scouts AI.
  * @author Gnacik
  */
 public class GiantScouts extends L2AttackableAIScript
@@ -82,6 +83,6 @@ public class GiantScouts extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new GiantScouts(-1, "GiantScouts", "ai");
+		new GiantScouts(-1, GiantScouts.class.getSimpleName(), "ai");
 	}
 }

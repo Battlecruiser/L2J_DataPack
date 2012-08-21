@@ -34,11 +34,11 @@ import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Seed Of Annihilation AI.
  * @author Gigiikun
  */
 public class SeedOfAnnihilation extends Quest
 {
-	final private static String qn = "SeedOfAnnihilation";
 	private static final Map<Integer, Location> _teleportZones = new FastMap<>();
 	private static final int ANNIHILATION_FURNACE = 18928;
 
@@ -333,6 +333,6 @@ public class SeedOfAnnihilation extends Quest
 	
 	public static void main(String[] args)
 	{
-		new SeedOfAnnihilation(-1, qn, "ai");
+		new SeedOfAnnihilation(-1, SeedOfAnnihilation.class.getSimpleName(), "ai");
 	}
 }

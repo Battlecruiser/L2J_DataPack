@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
+ * Sandstorms AI.
  * @author Ectis
  */
 public class Sandstorms extends L2AttackableAIScript
@@ -44,6 +45,6 @@ public class Sandstorms extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Sandstorms(-1, "Sandstorms", "ai");
+		new Sandstorms(-1, Sandstorms.class.getSimpleName(), "ai");
 	}
 }

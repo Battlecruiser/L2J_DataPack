@@ -20,6 +20,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
+ * Remnants AI.
  * @author DS
  */
 public class Remnants extends L2AttackableAIScript

@@ -21,7 +21,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * @authors Kerberos (python), Nyaran (java)
+ * Fortune Telling AI.<br>
+ * Original Jython script by Kerberos.
+ * @authors Nyaran
  */
 public class FortuneTelling extends Quest
 {

@@ -121,6 +121,6 @@ public class RandomSpawn extends L2AttackableAIScript
 
 	public static void main(String[] args)
 	{
-		new RandomSpawn(-1, "RandomSpawn", "ai");
+		new RandomSpawn(-1, RandomSpawn.class.getSimpleName(), "ai");
 	}
 }
