@@ -24,7 +24,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Oren (10279)
+ * Mutated Kaneus - Oren (10279)<br>
+ * Original Jython script by Gnacik on 2010-06-29.
  * @author nonom
  */
 public class Q10279_MutatedKaneusOren extends Quest

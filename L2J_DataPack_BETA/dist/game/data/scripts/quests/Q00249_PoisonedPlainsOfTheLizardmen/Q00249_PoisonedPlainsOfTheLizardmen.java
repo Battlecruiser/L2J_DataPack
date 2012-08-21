@@ -21,8 +21,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-08-04 Based on Freya PTS
+ * Poisoned Plains of the Lizardmen (249)
  * @author Gnacik
+ * @version 2010-08-04 Based on Freya PTS
  */
 public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 {

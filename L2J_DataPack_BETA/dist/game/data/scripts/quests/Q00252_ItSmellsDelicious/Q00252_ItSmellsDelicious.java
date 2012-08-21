@@ -27,7 +27,9 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @author Dumpster Updated by corbin12 Thanks VLight for help.
+ * It Smells Delicious! (252)
+ * Updated by corbin12, thanks VLight for help.
+ * @author Dumpster
  */
 public class Q00252_ItSmellsDelicious extends Quest
 {

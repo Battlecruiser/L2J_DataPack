@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Where abouts Of The Archaeologist (14).<br>
+ * Where abouts Of The Archaeologist (14)<br>
  * Original Jython script by disKret.
  * @author nonom
  */

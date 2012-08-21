@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Pavel the Giants (121)<br>
- * Original Jython script by Ethernaly
+ * Original Jython script by Ethernaly.
  * @author malyelfik
  */
 public class Q00121_PavelTheGiant extends Quest

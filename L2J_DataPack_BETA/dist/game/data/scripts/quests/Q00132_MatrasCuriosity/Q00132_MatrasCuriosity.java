@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
+ * Matras' Curiosity (132)
  * @author GKR, Gladicek
  */
 public final class Q00132_MatrasCuriosity extends Quest

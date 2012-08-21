@@ -21,8 +21,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-09-30 Based on official server Franz
+ * Path to Becoming an Elite Mercenary (147)
  * @author Gnacik
+ * @version 2010-09-30 Based on official server Franz
  */
 public class Q00147_PathtoBecominganEliteMercenary extends Quest
 {

@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Light And Darkness (17).<br>
+ * Light And Darkness (17)<br>
  * Original jython script by disKret, Skeleton & DrLecter.
  * @author nonom
  */

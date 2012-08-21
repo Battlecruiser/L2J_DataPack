@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * The Coming Darkness (16).<br>
+ * The Coming Darkness (16)<br>
  * Original jython script by disKret.<br>
  * TODO: Zoey76: This quest is still not retail like, Altars AI is incomplete.
  * @author nonom

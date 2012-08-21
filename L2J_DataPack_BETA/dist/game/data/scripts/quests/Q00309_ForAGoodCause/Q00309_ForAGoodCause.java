@@ -23,14 +23,12 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * For A Good Cause (309).<br>
- * 2011/09/30 Based on official server Naia.<br>
- * Thanks to Belgarion.
+ * For A Good Cause (309)
  * @author nonom, Zoey76
+ * @version 2011/09/30 based on official server Naia
  */
 public class Q00309_ForAGoodCause extends Quest
 {
-	
 	// NPC's
 	private static final int ATRA = 32647;
 	

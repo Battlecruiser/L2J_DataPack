@@ -24,6 +24,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * Threat Removal (290)
+ * @author kostantinos
+ */
 public class Q00290_ThreatRemoval extends Quest
 {
 	public static final int PINAPS = 30201;

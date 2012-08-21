@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
+ * Matras' Suspicious Request (691)
  * @author GKR
  */
 public final class Q00691_MatrasSuspiciousRequest extends Quest

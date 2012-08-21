@@ -26,11 +26,11 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Perfect Form (458)
  * @author centrio, Zoey76
  */
 public class Q00458_PerfectForm extends Quest
 {
-	
 	// NPCs
 	private static final int _Kelleyia = 32768;
 	

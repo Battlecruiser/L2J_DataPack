@@ -23,6 +23,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * No More Soup For You (289)
+ * @author kostantinos
+ */
 public class Q00289_NoMoreSoupForYou extends Quest
 {
 	public static final int STAN = 30200;

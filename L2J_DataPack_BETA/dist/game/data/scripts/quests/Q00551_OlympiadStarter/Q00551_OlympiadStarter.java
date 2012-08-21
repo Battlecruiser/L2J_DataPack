@@ -23,15 +23,13 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Olympiad Starter (551).<br>
- * Based on official H5 PTS server.
- * @since Nov. 5, 2011, improved by jurchiks.
- * @version 2011-02-04
+ * Olympiad Starter (551)<br>
  * @author Gnacik
+ * @since Nov. 5, 2011, improved by jurchiks
+ * @version 2011-02-04 Based on official H5 PTS server
  */
 public class Q00551_OlympiadStarter extends Quest
 {
-	
 	private static final int MANAGER = 31688;
 	
 	private static final int CERT_3 = 17238;

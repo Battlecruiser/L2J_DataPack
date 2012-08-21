@@ -22,8 +22,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-10-15 Based on official server Naia
+ * Into the Large Cavern (179)
  * @author Gnacik
+ * @version 2010-10-15 Based on official server Naia
  */
 public class Q00179_IntoTheLargeCavern extends Quest
 {

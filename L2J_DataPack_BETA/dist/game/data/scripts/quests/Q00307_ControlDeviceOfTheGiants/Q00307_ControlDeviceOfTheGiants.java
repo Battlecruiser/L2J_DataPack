@@ -14,10 +14,6 @@
  */
 package quests.Q00307_ControlDeviceOfTheGiants;
 
-/**
- * @author Gladicek, malyelfik
- */
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -25,6 +21,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
+/**
+ * Control Device of the Giants (307)
+ * @author Gladicek, malyelfik
+ */
 public class Q00307_ControlDeviceOfTheGiants extends Quest
 {
 	// NPC

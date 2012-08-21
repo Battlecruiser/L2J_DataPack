@@ -23,8 +23,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-09-30 Based on official server Franz
+ * Path to Becoming an Exalted Mercenary (148)
  * @author Gnacik
+ * @version 2010-09-30 Based on official server Franz
  */
 public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 {

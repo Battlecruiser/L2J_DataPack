@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10268_ToTheSeedOfInfinity extends Quest
 {
-	
 	// NPCs
 	private static final int KEUCEREUS = 32548;
 	private static final int TEPIOS = 32603;

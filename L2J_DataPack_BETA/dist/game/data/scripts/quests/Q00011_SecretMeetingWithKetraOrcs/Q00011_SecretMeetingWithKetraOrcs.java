@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Secret Meeting With Ketra Orcs (11).<br>
+ * Secret Meeting With Ketra Orcs (11)<br>
  * Original Jython script by Emperorc.
  * @author nonom
  */

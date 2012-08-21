@@ -21,13 +21,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Based on Naia (EURO)
+ * Deliver Goods (153)
  * @author Zoey76
- * @version 1.0 Freya (11/16/2010)
+ * @version 1.0 Freya (11/16/2010), Based on Naia (EURO)
  */
 public class Q00153_DeliverGoods extends Quest
 {
-	
 	// NPCs
 	private static final int JacksonId = 30002;
 	private static final int SilviaId = 30003;

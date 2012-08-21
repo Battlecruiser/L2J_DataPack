@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Help The Sister! (43)<br>
- * Original Jython script by zerghase
+ * Original Jython script by zerghase.
  * @author malyelfik
  */
 public class Q00043_HelpTheSister extends Quest

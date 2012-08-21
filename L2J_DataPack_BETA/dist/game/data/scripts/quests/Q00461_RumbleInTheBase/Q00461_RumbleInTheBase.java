@@ -24,12 +24,11 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Rumble in the Base (461).
+ * Rumble in the Base (461)
  * @author malyelfik
  */
 public class Q00461_RumbleInTheBase extends Quest
 {
-	
 	// NPC
 	public static final int Stan = 30200;
 	public static final int[] Monsters =

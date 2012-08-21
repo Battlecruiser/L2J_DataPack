@@ -23,15 +23,13 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Olympiad Undefeated (553).<br>
- * Based on official H5 PTS server and 551 quest ;)
- * @since Nov. 5, 2011, improved by jurchiks.
- * @version 2011-02-05
+ * Olympiad Undefeated (553)<br>
  * @author lion
+ * @since Nov. 5, 2011, improved by jurchiks
+ * @version 2011-02-05 Based on official H5 PTS server and 551 quest ;)
  */
 public class Q00553_OlympiadUndefeated extends Quest
 {
-	
 	private static final int MANAGER = 31688;
 	
 	private static final int WIN_CONF_2 = 17244;

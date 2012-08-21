@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10272_LightFragment extends Quest
 {
-	
 	private static final int ORBYU = 32560;
 	private static final int ARTIUS = 32559;
 	private static final int GINBY = 32566;

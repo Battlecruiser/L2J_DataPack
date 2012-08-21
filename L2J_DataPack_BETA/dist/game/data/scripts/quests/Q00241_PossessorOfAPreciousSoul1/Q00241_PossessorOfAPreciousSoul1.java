@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Possessor Of A PreciousSoul part 1 (241)<br>
- * Original Jython script by disKret
+ * Original Jython script by disKret.
  * @author Joxit
  */
 public class Q00241_PossessorOfAPreciousSoul1 extends Quest

@@ -24,12 +24,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Gludio (10276)
+ * Mutated Kaneus - Gludio (10276)<br>
+ * Original Jython script by Gnacik on 2010-06-29.
  * @author nonom
  */
 public class Q10276_MutatedKaneusGludio extends Quest
 {
-	
 	// NPCs
 	private static final int BATHIS = 30332;
 	private static final int ROHMER = 30344;
