@@ -39,8 +39,9 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Growth-capable mobs: Polymorphing upon successful feeding.
- * @author Fulminus Updated to Freya by Gigiikun
+ * Growth-capable mobs: Polymorphing upon successful feeding.<br>
+ * Updated to Freya.
+ * @author Fulminus, Gigiikun
  */
 public class BeastFarm extends L2AttackableAIScript
 {
@@ -434,7 +435,6 @@ public class BeastFarm extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new BeastFarm(-1, "beast_farm", "ai");
+		new BeastFarm(-1, BeastFarm.class.getSimpleName(), "ai");
 	}
 }

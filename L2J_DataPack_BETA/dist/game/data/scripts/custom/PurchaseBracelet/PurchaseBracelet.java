@@ -20,7 +20,8 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @authors L2Emu Team (python), Nyaran (java)
+ * Purchase Bracelet AI.
+ * @author Nyaran
  */
 public class PurchaseBracelet extends Quest
 {

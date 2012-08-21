@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Skill Transfer validator.
  * @author Zoey76
  */
 public final class SkillTransferValidator extends L2Script

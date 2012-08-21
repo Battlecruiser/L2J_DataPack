@@ -313,6 +313,7 @@ import com.l2jserver.gameserver.handler.UserCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
 /**
+ * Master handler.
  * @author UnAfraid
  */
 public class MasterHandler

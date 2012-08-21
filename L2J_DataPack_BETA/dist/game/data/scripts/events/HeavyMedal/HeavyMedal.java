@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Retail Event : 'Heavy Medals'
+ * Heavy Medals event AI.
  * @author Gnacik
  */
 public class HeavyMedal extends Quest

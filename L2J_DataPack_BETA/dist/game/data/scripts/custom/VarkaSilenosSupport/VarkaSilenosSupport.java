@@ -29,8 +29,9 @@ import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @authors Emperorc (python), Nyaran (java)
- * @notes Finished by Kerberos_20 (python) 10/23/07
+ * Varka Silenos Support AI.<br>
+ * Original Jython script by Emperorc and Kerberos_20.
+ * @author Nyaran
  */
 public class VarkaSilenosSupport extends Quest
 {

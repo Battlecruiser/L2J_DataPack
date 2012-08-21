@@ -21,9 +21,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @authors Vice (python), Nyaran (java)
- * @notes Newbie Weapon/Accesories Coupons for the Hellbound opening event.
- *        based in the Miss Queen script.
+ * Newbie Weapon/Accesories Coupons for the Hellbound opening event.<br>
+ * Original Jython script by Vice.
+ * @author Nyaran
  */
 public class NewbieCoupons extends Quest
 {

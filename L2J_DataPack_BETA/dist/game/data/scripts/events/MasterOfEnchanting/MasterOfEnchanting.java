@@ -27,8 +27,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Event Code for "Master of Enchanting"<br>
- * http://www.lineage2.com/archive/2009/06/master_of_encha.html
+ * Master of Enchanting event AI.
  * @author Gnacik
  */
 public class MasterOfEnchanting extends Quest

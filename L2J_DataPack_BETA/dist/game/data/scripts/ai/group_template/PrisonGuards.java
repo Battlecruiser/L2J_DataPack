@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
+ * Prison Guards AI.
  * @author Gigiikun
  */
 public class PrisonGuards extends L2AttackableAIScript
@@ -254,6 +255,6 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new PrisonGuards(-1, "PrisonGuards", "ai");
+		new PrisonGuards(-1, PrisonGuards.class.getSimpleName(), "ai");
 	}
 }

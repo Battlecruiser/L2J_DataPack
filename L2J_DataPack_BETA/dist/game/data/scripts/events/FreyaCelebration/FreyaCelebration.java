@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Retail Event : 'Freya Celebration'
+ * Freya Celebration event AI.
  * @author Gnacik
  */
 public class FreyaCelebration extends Quest

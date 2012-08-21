@@ -20,6 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * Herro Weapon AI.
+ */
 public class HeroWeapon extends Quest
 {
 	private final static int[] npcIds =

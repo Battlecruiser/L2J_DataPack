@@ -20,7 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author DrLecter (python), Nyaran (java)
+ * Shadow Weapons AI.<br>
+ * Original Jython script by DrLecter.
+ * @author Nyaran
  */
 public class ShadowWeapons extends Quest
 {

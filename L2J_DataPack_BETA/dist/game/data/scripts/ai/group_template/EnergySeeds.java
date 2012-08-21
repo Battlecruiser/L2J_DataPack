@@ -16,6 +16,8 @@ package ai.group_template;
 
 import java.util.Map;
 
+import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
+
 import javolution.util.FastMap;
 
 import com.l2jserver.Config;
@@ -42,12 +44,11 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Energy Seeds AI.
  * @author Gigiikun
  */
 public class EnergySeeds extends L2AttackableAIScript
 {
-	private static final String qn = "EnergySeeds";
-	private static final String HOWTOOPPOSEEVIL = "692_HowtoOpposeEvil";
 	private static final int HOWTOOPPOSEEVIL_CHANCE = 60;
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;
@@ -314,7 +315,7 @@ public class EnergySeeds extends L2AttackableAIScript
 	{
 		if (player == null)
 			return;
-		QuestState st = player.getQuestState(HOWTOOPPOSEEVIL);
+		QuestState st = player.getQuestState(Q00692_HowtoOpposeEvil.class.getSimpleName());
 		switch(seedType)
 		{
 			case INFINITY:
@@ -737,6 +738,6 @@ public class EnergySeeds extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new EnergySeeds(-1, qn, "instances");
+		new EnergySeeds(-1, EnergySeeds.class.getSimpleName(), "instances");
 	}
 }

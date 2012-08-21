@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * See Through Silent Move AI.
  * @author Gigiikun
  */
 public class SeeThroughSilentMove extends L2AttackableAIScript
@@ -93,6 +94,6 @@ public class SeeThroughSilentMove extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new SeeThroughSilentMove(-1, "SeeThroughSilentMove", "ai");
+		new SeeThroughSilentMove(-1, SeeThroughSilentMove.class.getSimpleName(), "ai");
 	}
 }

@@ -30,7 +30,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * @authors: Kerberos (python), Nyaran (java)
+ * Raidboss Info AI.<br>
+ * Original Jython script Kerberos.
+ * @author Nyaran
  */
 public class RaidbossInfo extends Quest
 {

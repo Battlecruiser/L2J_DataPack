@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
+ * Fairy Trees AI
  * @author Charus
  */
 public class FairyTrees extends L2AttackableAIScript
@@ -72,6 +73,6 @@ public class FairyTrees extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new FairyTrees(-1, "fairy_trees", "ai");
+		new FairyTrees(-1, FairyTrees.class.getSimpleName(), "ai");
 	}
 }

@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
+ * Plains Of Lizardman AI.
  * @author Gnacik
  */
 public class PlainsOfLizardman extends L2AttackableAIScript
@@ -55,7 +56,7 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new PlainsOfLizardman(-1, "PlainsOfLizardman", "ai");
+		new PlainsOfLizardman(-1, PlainsOfLizardman.class.getSimpleName(), "ai");
 	}
 	
 	@Override

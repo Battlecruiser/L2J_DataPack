@@ -38,12 +38,11 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Overarching Superclass for all mob AI
+ * Overarching Superclass for all mob AI.
  * @author Fulminus
  */
 public class L2AttackableAIScript extends QuestJython
 {
-	
 	/**
 	 * This is used to register all monsters contained in mobs for a particular script<BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method register ID for all QuestEventTypes<BR>

@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
 /**
+ * Hellbound Slaves AI.
  * @author DS
  */
 public class Slaves extends L2AttackableAIScript
@@ -94,6 +95,6 @@ public class Slaves extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Slaves(-1, "Slaves", "ai");
+		new Slaves(-1, Slaves.class.getSimpleName(), "ai");
 	}
 }

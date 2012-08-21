@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Retail Event : 'Gift of Vitality'
+ * Gift of Vitality event AI.
  * @author Gnacik
  */
 public class GiftOfVitality extends Quest
