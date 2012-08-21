@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 
 /**
  * Possessor Of A PreciousSoul part 4 (247)<br>
- * Original Jython script by disKret
+ * Original Jython script by disKret.
  * @author nonom
  */
 public class Q00247_PossessorOfAPreciousSoul4 extends Quest

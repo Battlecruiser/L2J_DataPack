@@ -24,13 +24,12 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Exploration of the Giants' Cave Part 1 (376)<br>
- * 2010-02-17 based on official Franz server.<br>
- * Jython script by Gnacik.
+ * Original Jython script by Gnacik.
  * @author nonom
+ * @version 2010-02-17 based on official Franz server
  */
 public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 {
-	
 	// NPC's
 	private static final int SOBLING = 31147;
 	

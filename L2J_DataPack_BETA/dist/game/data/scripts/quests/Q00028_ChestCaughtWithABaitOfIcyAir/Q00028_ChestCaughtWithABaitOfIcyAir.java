@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Chest Caught With A Bait Of Icy Air (28)<br>
- * Original Jython script by Skeleton
+ * Original Jython script by Skeleton.
  * @author nonom
  */
 public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest

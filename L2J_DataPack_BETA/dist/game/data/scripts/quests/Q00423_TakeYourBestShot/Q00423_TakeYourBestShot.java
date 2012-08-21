@@ -26,9 +26,9 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Based on official server Franz.
- * @version 2010-06-26
+ * Take Your Best Shot (423)
  * @author Gnacik
+ * @version 2010-06-26 Based on official server Franz
  */
 public class Q00423_TakeYourBestShot extends Quest
 {

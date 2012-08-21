@@ -24,11 +24,11 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
+ * Target of Opportunity (279)
  * @author GKR
  */
 public final class Q00279_TargetOfOpportunity extends Quest
 {
-	
 	// NPC's
 	private static final int JERIAN = 32302;
 	private static final int[] MONSTERS =

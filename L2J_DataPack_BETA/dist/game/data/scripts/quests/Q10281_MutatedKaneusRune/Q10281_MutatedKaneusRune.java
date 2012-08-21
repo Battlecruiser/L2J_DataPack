@@ -24,7 +24,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Rune (10281)
+ * Mutated Kaneus - Rune (10281)<br>
+ * Original Jython script by Gnacik on 2010-06-29.
  * @author nonom
  */
 public class Q10281_MutatedKaneusRune extends Quest

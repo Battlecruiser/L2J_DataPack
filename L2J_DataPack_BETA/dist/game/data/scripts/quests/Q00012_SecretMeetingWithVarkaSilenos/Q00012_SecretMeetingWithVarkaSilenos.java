@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Secret Meeting With Varka Silenos (12).<br>
+ * Secret Meeting With Varka Silenos (12)<br>
  * Original Jython script by Emperorc.
  * @author nonom
  */

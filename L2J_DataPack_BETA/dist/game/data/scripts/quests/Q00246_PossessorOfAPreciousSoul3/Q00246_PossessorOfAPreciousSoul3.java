@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Possessor Of A PreciousSoul part 3 (246)<br>
- * Updated from disKret' script.
+ * Original Jython script by disKret.
  * @author nonom
  */
 public class Q00246_PossessorOfAPreciousSoul3 extends Quest

@@ -24,9 +24,9 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Exploration of the Giants' Cave Part 2 (377)<br>
- * 2010-02-17 based on official Franz server.<br>
  * Original Jython script by Gnacik.
  * @author nonom
+ * @version 2010-02-17 based on official Franz server
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {

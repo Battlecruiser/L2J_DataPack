@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Chest Caught With A Bait Of Fire (30)<br>
- * Original Jython script by Ethernaly
+ * Original Jython script by Ethernaly.
  * @author nonom
  */
 public class Q00030_ChestCaughtWithABaitOfFire extends Quest

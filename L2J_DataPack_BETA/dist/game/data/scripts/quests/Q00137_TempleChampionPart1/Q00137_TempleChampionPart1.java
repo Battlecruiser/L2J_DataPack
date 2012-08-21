@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class Q00137_TempleChampionPart1 extends Quest
 {
-	
 	// NPCs
 	private static final int SYLVAIN = 30070;
 	

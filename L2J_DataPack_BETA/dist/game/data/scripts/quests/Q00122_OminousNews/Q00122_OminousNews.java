@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Ominous News (122)<br>
- * Original Jython script by Polo
+ * Original Jython script by Polo.
  * @author malyelfik
  */
 public class Q00122_OminousNews extends Quest

@@ -25,9 +25,9 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * I Must Be a Genius (463).<br>
- * 2010-08-19 Based on Freya PTS.
+ * I Must Be a Genius (463)<br>
  * @author Gnacik
+ * @version 2010-08-19 Based on Freya PTS
  */
 public class Q00463_IMustBeaGenius extends Quest
 {

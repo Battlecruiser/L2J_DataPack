@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Sweet Whisper (15).<br>
+ * Sweet Whisper (15)<br>
  * Original jython script by disKret.
  * @author nonom
  */

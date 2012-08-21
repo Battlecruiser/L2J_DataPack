@@ -24,7 +24,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Mutated Kaneus - Schuttgart (10280)
+ * Mutated Kaneus - Schuttgart (10280)<br>
+ * Original Jython script by Gnacik on 2010-06-29.
  * @author nonom
  */
 public class Q10280_MutatedKaneusSchuttgart extends Quest

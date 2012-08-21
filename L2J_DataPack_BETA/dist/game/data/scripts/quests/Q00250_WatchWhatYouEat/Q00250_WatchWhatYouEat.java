@@ -21,12 +21,12 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-08-05 Based on Freya PTS
+ * Watch What You Eat (250)
  * @author Gnacik
+ * @version 2010-08-05 Based on Freya PTS
  */
 public class Q00250_WatchWhatYouEat extends Quest
 {
-	
 	// NPCs
 	private static final int _sally = 32743;
 	// Mobs - Items

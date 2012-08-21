@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
 /**
  * The Truth Beyond the Gate (636)<br>
- * Original Jython script by Polo, BiTi and DrLecter
+ * Original Jython script by Polo, BiTi and DrLecter.
  * @author DS
  */
 public final class Q00636_TruthBeyond extends Quest

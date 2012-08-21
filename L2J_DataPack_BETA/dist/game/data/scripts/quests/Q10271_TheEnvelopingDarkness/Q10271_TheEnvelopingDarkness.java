@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10271_TheEnvelopingDarkness extends Quest
 {
-	
 	private static final int ORBYU = 32560;
 	private static final int EL = 32556;
 	private static final int MEDIBAL_CORPSE = 32528;

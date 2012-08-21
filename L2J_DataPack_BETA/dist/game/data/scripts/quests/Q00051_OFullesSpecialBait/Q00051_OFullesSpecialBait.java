@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * O'Fulle's Special Bait (51)<br>
- * Original Jython script by Kilkenny
+ * Original Jython script by Kilkenny.
  * @author nonom
  */
 public class Q00051_OFullesSpecialBait extends Quest

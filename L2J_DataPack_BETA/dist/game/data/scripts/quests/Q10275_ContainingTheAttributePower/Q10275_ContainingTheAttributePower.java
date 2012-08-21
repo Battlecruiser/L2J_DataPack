@@ -27,12 +27,11 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Containing the Attribute Power (10275)<br>
- * Original Jython script by Kerberos.
+ * Original Jython script by Kerberos v1.0 on 2009/05/03.
  * @author nonom
  */
 public class Q10275_ContainingTheAttributePower extends Quest
 {
-	
 	// NPCs
 	private static final int HOLLY = 30839;
 	private static final int WEBER = 31307;

@@ -22,8 +22,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-10-15 Based on official server Naia
+ * New Recruits (182)
  * @author Gnacik
+ * @version 2010-10-15 Based on official server Naia
  */
 public class Q00182_NewRecruits extends Quest
 {

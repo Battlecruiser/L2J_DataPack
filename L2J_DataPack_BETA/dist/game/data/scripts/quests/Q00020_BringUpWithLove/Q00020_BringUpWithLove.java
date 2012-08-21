@@ -21,8 +21,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-09-29 Based on official server Franz
+ * Bring Up With Love (20)
  * @author Gnacik
+ * @version 2010-09-29 Based on official server Franz
  */
 public class Q00020_BringUpWithLove extends Quest
 {

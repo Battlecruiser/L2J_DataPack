@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Awl Under Foot (511)
  * @author Gigiikun
  */
 public final class Q00511_AwlUnderFoot extends Quest

@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Lanosco's Special Bait (50)<br>
- * Original Jython script by Kilkenny
+ * Original Jython script by Kilkenny.
  * @author nonom
  */
 public class Q00050_LanoscosSpecialBait extends Quest

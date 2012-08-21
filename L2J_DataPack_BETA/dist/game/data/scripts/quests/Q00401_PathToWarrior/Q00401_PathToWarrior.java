@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 
 /**
  * Path of the Warrior (401)<br>
- * Jython script by ElgarL, Mr
+ * Original Jython script by ElgarL, Mr
  * @author malyelfik
  * @version 2010-12-29 (Freya)
  */

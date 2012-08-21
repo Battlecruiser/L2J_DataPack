@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Competition for the Bandit Stronghold (504)
  * @author BiggBoss
  */
 public final class Q00504_CompetitionfortheBanditStronghold extends Quest

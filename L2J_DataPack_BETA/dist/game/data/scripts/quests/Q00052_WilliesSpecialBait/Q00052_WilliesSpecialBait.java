@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Willie's Special Bait (52)<br>
- * Original Jython script by Kilkenny
+ * Original Jython script by Kilkenny.
  * @author nonom
  */
 public class Q00052_WilliesSpecialBait extends Quest

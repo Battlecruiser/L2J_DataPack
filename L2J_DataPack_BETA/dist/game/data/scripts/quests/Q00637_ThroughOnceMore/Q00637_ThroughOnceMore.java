@@ -23,7 +23,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Through the Gate Once More (637)<br>
- * Original Jython script by BiTi! and DrLecter
+ * Original Jython script by BiTi! and DrLecter.
  * @author DS
  */
 public final class Q00637_ThroughOnceMore extends Quest

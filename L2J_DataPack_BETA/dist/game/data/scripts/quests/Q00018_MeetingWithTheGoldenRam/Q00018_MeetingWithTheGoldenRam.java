@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Meeting With The Golden Ram (18).<br>
+ * Meeting With The Golden Ram (18)<br>
  * Original jython script by disKret.
  * @author nonom
  */

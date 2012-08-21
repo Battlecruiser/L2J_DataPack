@@ -25,12 +25,12 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * Collecting in the Air (10274)
+ * Collecting in the Air (10274)<br>
+ * Original Jython script by Kerberos v1.0 on 2009/04/26.
  * @author nonom
  */
 public class Q10274_CollectingInTheAir extends Quest
 {
-	
 	// NPCs
 	private static final int LEKON = 32557;
 	

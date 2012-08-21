@@ -42,6 +42,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * Enhance Your Weapon (350)
+ * @author Gigiikun
+ */
 public class Q00350_EnhanceYourWeapon extends Quest
 {
 	private static final int[] STARTING_NPCS =

@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Linnaeus Special Bait (53)<br>
- * Original Jython script by Next and DooMita
+ * Original Jython script by Next and DooMita.
  * @author nonom
  */
 public class Q00053_LinnaeusSpecialBait extends Quest

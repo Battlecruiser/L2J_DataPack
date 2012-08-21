@@ -21,8 +21,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * 2010-08-07 Based on Freya PTS
+ * Request of Ice Merchant (10283)
  * @author Gnacik
+ * @version 2010-08-07 Based on Freya PTS
  */
 public class Q10283_RequestOfIceMerchant extends Quest
 {

@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Parcel Delivery (13).<br>
+ * Parcel Delivery (13)<br>
  * Original Jython script by Emperorc.
  * @author nonom
  */

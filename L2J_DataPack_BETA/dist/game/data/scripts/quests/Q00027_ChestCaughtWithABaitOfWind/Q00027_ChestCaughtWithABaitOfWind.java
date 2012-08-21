@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Chest Caught With A Bait Of Wind (27)<br>
- * Original Jython script by DooMIta
+ * Original Jython script by DooMIta.
  * @author nonom
  */
 public class Q00027_ChestCaughtWithABaitOfWind extends Quest
