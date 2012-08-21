@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Ghost Hunter (81)
  * @author Emperorc
  */
-
 public class SagaOfTheGhostHunter extends SagasSuperClass
 {
 	public static String qn1 = "81_SagaOfTheGhostHunter";

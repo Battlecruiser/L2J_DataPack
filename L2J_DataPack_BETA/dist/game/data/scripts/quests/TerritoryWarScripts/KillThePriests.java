@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * Deny Blessings (737)
  * @author Gigiikun
  */
-
 public class KillThePriests extends TerritoryWarSuperClass
 {
 	public static String qn1 = "737_DenyBlessings";

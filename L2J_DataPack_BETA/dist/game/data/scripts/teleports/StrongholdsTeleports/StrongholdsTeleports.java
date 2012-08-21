@@ -19,7 +19,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
- * @author Plim Original python script by Kerberos
+ * Strongholds teleport AI.<br>
+ * Original Jython script by Kerberos.
+ * @author Plim
  */
 public class StrongholdsTeleports extends Quest
 {

@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Dreadnought (74)
  * @author Emperorc
  */
-
 public class SagaOfTheDreadnoughts extends SagasSuperClass
 {
 	public static String qn1 = "74_SagaOfTheDreadnoughts";

@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Mystic Muse (89)
  * @author Emperorc
  */
-
 public class SagaOfTheMysticMuse extends SagasSuperClass
 {
 	public static String qn1 = "89_SagaOfTheMysticMuse";

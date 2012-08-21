@@ -15,9 +15,9 @@
 package quests.TerritoryWarScripts;
 
 /**
+ * Protect the Religious Association Leader (732)
  * @author Gigiikun
  */
-
 public class ProtectTheReligious extends TerritoryWarSuperClass
 {
 	public static String qn1 = "732_ProtecttheReligiousAssociationLeader";

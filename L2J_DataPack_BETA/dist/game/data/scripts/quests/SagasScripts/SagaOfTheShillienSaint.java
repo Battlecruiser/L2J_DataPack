@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Shillien Saint (98)
  * @author Emperorc
  */
-
 public class SagaOfTheShillienSaint extends SagasSuperClass
 {
 	public static String qn1 = "98_SagaOfTheShillienSaint";

@@ -21,7 +21,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim Original python script by BiTi
+ * Pagan Temple teleporters AI.<br>
+ * Original Jython script by BiTi.
+ * @author Plim
  */
 public class PaganTeleporters extends Quest
 {

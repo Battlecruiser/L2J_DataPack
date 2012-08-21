@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Arcana Lord (91)
  * @author Emperorc
  */
-
 public class SagaOfTheArcanaLord extends SagasSuperClass
 {
 	public static String qn1 = "91_SagaOfTheArcanaLord";

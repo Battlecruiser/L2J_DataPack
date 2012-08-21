@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Innadril (722)
  * @author Gigiikun
  */
-
 public class TheTerritoryInnadril extends TerritoryWarSuperClass
 {
 	public static String qn1 = "722_FortheSakeoftheTerritoryInnadril";

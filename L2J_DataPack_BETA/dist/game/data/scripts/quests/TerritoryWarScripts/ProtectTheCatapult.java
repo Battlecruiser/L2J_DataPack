@@ -15,9 +15,9 @@
 package quests.TerritoryWarScripts;
 
 /**
+ * Protect the Territory Catapult! (729)
  * @author Gigiikun
  */
-
 public class ProtectTheCatapult extends TerritoryWarSuperClass
 {
 	public static String qn1 = "729_Protecttheterritorycatapult";

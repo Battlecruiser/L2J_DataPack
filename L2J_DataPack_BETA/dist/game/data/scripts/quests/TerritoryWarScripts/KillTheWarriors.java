@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * Make Spears Dull! (735)
  * @author Gigiikun
  */
-
 public class KillTheWarriors extends TerritoryWarSuperClass
 {
 	public static String qn1 = "735_Makespearsdull";

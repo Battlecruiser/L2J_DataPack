@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Soultaker (94)
  * @author Emperorc
  */
-
 public class SagaOfTheSoultaker extends SagasSuperClass
 {
 	public static String qn1 = "94_SagaOfTheSoultaker";

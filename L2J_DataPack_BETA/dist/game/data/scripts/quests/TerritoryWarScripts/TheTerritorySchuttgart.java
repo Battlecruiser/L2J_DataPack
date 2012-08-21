@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Schuttgart (725)
  * @author Gigiikun
  */
-
 public class TheTerritorySchuttgart extends TerritoryWarSuperClass
 {
 	public static String qn1 = "725_FortheSakeoftheTerritorySchuttgart";

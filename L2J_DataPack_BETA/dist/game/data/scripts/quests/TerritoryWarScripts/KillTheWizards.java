@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * Weaken the magic! (736)
  * @author Gigiikun
  */
-
 public class KillTheWizards extends TerritoryWarSuperClass
 {
 	public static String qn1 = "736_Weakenmagic";

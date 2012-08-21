@@ -20,6 +20,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
+/**
+ * Stakato Nest teleport AI.
+ * @author Charus
+ */
 public class StakatoNest extends Quest
 {
 	private final static Location[] _locs =

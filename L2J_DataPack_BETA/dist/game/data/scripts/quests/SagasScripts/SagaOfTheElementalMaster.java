@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Elemental Master (92)
  * @author Emperorc
  */
-
 public class SagaOfTheElementalMaster extends SagasSuperClass
 {
 	public static String qn1 = "92_SagaOfTheElementalMaster";

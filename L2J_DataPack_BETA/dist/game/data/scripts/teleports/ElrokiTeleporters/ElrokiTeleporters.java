@@ -20,8 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * Elroki teleporters.<br>
+ * Original Jython script by kerberos_20
  * @author Plim
- * Original python script by kerberos_20
  */
 public class ElrokiTeleporters extends Quest
 {

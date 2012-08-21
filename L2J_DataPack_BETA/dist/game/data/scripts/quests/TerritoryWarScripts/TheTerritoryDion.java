@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Dion (718)
  * @author Gigiikun
  */
-
 public class TheTerritoryDion extends TerritoryWarSuperClass
 {
 	public static String qn1 = "718_FortheSakeoftheTerritoryDion";

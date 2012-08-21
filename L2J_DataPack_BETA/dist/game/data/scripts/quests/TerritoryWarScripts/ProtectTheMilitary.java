@@ -15,9 +15,9 @@
 package quests.TerritoryWarScripts;
 
 /**
+ * Protect the Military Association Leader (731)
  * @author Gigiikun
  */
-
 public class ProtectTheMilitary extends TerritoryWarSuperClass
 {
 	public static String qn1 = "731_ProtecttheMilitaryAssociationLeader";

@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Aden (721)
  * @author Gigiikun
  */
-
 public class TheTerritoryAden extends TerritoryWarSuperClass
 {
 	public static String qn1 = "721_FortheSakeoftheTerritoryAden";

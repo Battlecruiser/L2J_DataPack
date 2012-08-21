@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Soul Hound (68)
  * @author Emperorc
  */
-
 public class SagaOfTheSoulHound extends SagasSuperClass
 {
 	public static String qn1 = "68_SagaOfTheSoulHound";

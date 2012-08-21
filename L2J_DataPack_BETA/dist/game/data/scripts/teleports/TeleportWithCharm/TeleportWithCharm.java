@@ -20,7 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim Original python script by DraX
+ * Charm teleport AI.<br>
+ * Original Jython script by DraX.
+ * @author Plim
  */
 public class TeleportWithCharm extends Quest
 {

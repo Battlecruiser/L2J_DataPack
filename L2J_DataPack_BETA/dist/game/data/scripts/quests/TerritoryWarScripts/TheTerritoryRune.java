@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Rune (724)
  * @author Gigiikun
  */
-
 public class TheTerritoryRune extends TerritoryWarSuperClass
 {
 	public static String qn1 = "724_FortheSakeoftheTerritoryRune";

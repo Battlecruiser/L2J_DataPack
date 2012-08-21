@@ -15,9 +15,9 @@
 package quests.TerritoryWarScripts;
 
 /**
+ * Protect the Supplies Safe (730)
  * @author Gigiikun
  */
-
 public class ProtectTheSupplies extends TerritoryWarSuperClass
 {
 	public static String qn1 = "730_ProtecttheSuppliesSafe.";

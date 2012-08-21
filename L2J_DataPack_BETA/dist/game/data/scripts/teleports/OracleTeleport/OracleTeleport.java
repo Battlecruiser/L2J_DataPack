@@ -24,6 +24,10 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * Oracle teleport AI.
+ * @author Charus
+ */
 public class OracleTeleport extends Quest
 {
 	private final static int[] TOWN_DAWN =

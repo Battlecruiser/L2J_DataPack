@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Goddard (723)
  * @author Gigiikun
  */
-
 public class TheTerritoryGoddard extends TerritoryWarSuperClass
 {
 	public static String qn1 = "723_FortheSakeoftheTerritoryGoddard";

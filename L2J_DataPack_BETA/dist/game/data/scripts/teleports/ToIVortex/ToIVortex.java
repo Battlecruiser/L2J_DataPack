@@ -20,7 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim update to H5 by pmq
+ * Tower of Insolence Vortex teleport AI.<br>
+ * Updated to High Five by pmq.
+ * @author Plim
  */
 public class ToIVortex extends Quest
 {

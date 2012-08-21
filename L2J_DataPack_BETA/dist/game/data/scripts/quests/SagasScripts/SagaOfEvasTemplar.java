@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of Eva's Templar (71)
  * @author Emperorc
  */
-
 public class SagaOfEvasTemplar extends SagasSuperClass
 {
 	public static String qn1 = "71_SagaOfEvasTemplar";
