@@ -19,9 +19,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * Saga of the Duelist (73)
  * @author Emperorc
  */
-
 public class SagaOfTheDuelist extends SagasSuperClass
 {
 	public static String qn1 = "73_SagaOfTheDuelist";

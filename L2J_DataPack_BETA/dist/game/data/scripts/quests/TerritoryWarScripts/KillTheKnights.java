@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * Pierce through a Shield! (734)
  * @author Gigiikun
  */
-
 public class KillTheKnights extends TerritoryWarSuperClass
 {
 	public static String qn1 = "734_Piercethroughashield";

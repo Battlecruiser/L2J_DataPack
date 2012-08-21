@@ -20,6 +20,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * Cruma Tower teleport.
  * @author Plim
  */
 public class CrumaTower extends Quest

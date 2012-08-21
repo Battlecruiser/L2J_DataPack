@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Wind Rider (80)
  * @author Emperorc
  */
-
 public class SagaOfTheWindRider extends SagasSuperClass
 {
 	public static String qn1 = "80_SagaOfTheWindRider";

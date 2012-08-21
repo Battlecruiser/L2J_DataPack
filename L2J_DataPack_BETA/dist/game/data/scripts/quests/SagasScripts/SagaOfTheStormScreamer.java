@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Storm Screamer (90)
  * @author Emperorc
  */
-
 public class SagaOfTheStormScreamer extends SagasSuperClass
 {
 	public static String qn1 = "90_SagaOfTheStormScreamer";

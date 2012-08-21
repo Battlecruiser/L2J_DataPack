@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * Destroy Key Targets (738)
  * @author Gigiikun
  */
-
 public class KillTheKeyTargets extends TerritoryWarSuperClass
 {
 	public static String qn1 = "738_DestroyKeyTargets";

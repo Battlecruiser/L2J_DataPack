@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Grand Khavatari (76)
  * @author Emperorc
  */
-
 public class SagaOfTheGrandKhavatari extends SagasSuperClass
 {
 	public static String qn1 = "76_SagaOfTheGrandKhavatari";

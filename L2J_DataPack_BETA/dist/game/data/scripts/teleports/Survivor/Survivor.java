@@ -20,7 +20,9 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim Original python script by Kerberos
+ * Gracia Survivor teleport AI.<br>
+ * Original Jython script by Kerberos.
+ * @author Plim
  */
 public class Survivor extends Quest
 {

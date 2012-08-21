@@ -27,7 +27,9 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Plim Original python script by DraX & updated by DrLecter
+ * Race Track teleport AI.<br>
+ * Original python script by DraX & updated by DrLecter.
+ * @author Plim
  */
 public class TeleportToRaceTrack extends Quest
 {

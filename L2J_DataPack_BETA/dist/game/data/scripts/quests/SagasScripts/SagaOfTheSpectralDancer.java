@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Spectral Dancer (96)
  * @author Emperorc
  */
-
 public class SagaOfTheSpectralDancer extends SagasSuperClass
 {
 	public static String qn1 = "96_SagaOfTheSpectralDancer";

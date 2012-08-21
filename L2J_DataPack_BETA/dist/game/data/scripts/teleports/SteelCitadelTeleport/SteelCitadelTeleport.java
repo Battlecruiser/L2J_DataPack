@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 
 /**
+ * Steel Citadel teleport AI.
  * @author GKR
  */
 public class SteelCitadelTeleport extends Quest

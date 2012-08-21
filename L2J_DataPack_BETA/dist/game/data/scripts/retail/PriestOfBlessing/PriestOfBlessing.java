@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Priest Of Blessing AI.
  * @author Gnacik
  */
 public class PriestOfBlessing extends Quest

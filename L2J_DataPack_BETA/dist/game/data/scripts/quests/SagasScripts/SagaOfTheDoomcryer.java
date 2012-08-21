@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Doomcryer (78)
  * @author Emperorc
  */
-
 public class SagaOfTheDoomcryer extends SagasSuperClass
 {
 	public static String qn1 = "78_SagaOfTheDoomcryer";

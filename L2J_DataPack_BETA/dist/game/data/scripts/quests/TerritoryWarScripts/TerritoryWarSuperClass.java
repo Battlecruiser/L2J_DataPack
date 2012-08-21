@@ -37,6 +37,10 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.L2FastMap;
 
+/**
+ * Territory War quests superclass.
+ * @author Gigiikun
+ */
 public class TerritoryWarSuperClass extends Quest
 {
 	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<>();

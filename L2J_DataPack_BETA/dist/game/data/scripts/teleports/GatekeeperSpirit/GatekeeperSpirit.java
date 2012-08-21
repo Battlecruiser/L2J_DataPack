@@ -19,6 +19,10 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 
+/**
+ * Gatekeeper Spirit AI.
+ * @author Charus, lion
+ */
 public class GatekeeperSpirit extends Quest
 {
 	private final static int EnterGk = 31111;

@@ -27,8 +27,9 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Newbie Travel Token AI.<br>
+ * Original Jython script by DrLecter.
  * @author Plim
- * Original python script by DrLecter
  */
 public class NewbieTravelToken extends Quest
 {

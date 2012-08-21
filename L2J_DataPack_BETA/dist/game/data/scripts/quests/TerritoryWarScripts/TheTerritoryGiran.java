@@ -17,9 +17,9 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
+ * For the Sake of the Territory - Giran (719)
  * @author Gigiikun
  */
-
 public class TheTerritoryGiran extends TerritoryWarSuperClass
 {
 	public static String qn1 = "719_FortheSakeoftheTerritoryGiran";

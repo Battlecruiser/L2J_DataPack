@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Hierophant (86)
  * @author Emperorc
  */
-
 public class SagaOfTheHierophant extends SagasSuperClass
 {
 	public static String qn1 = "86_SagaOfTheHierophant";

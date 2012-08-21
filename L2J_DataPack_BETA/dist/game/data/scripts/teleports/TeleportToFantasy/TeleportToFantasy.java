@@ -28,7 +28,9 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Plim Original python script by Kerberos
+ * Fantasy Island teleport AI.<br>
+ * Original python script by Kerberos.
+ * @author Plim
  */
 public class TeleportToFantasy extends Quest
 {

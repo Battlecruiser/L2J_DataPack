@@ -20,6 +20,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.util.Util;
 
+/**
+ * Hunting Grounds teleport AI.
+ * @author Charus
+ */
 public class HuntingGroundsTeleport extends Quest
 {
 	private final static int[] PRIESTS =

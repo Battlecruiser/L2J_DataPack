@@ -26,8 +26,9 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 
 /**
+ * Grand Bosses teleporters AI.<br>
+ * Original python script by Emperorc.
  * @author Plim
- * Original python script by Emperorc
  */
 public class GrandBossTeleporters extends Quest
 {

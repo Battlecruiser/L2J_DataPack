@@ -15,9 +15,9 @@
 package quests.SagasScripts;
 
 /**
+ * Saga of the Ghost Sentinel (84)
  * @author Emperorc
  */
-
 public class SagaOfTheGhostSentinel extends SagasSuperClass
 {
 	public static String qn1 = "84_SagaOfTheGhostSentinel";

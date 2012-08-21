@@ -27,14 +27,17 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.quest.jython.QuestJython;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.L2FastList;
 import com.l2jserver.util.L2FastMap;
 
-public class SagasSuperClass extends QuestJython
+/**
+ * Saga quests superclass.
+ * @author Kerberos
+ */
+public class SagasSuperClass extends Quest
 {
 	private static L2FastList<Quest> _scripts = new L2FastList<>();
 	public String qn = "SagasSuperClass";
