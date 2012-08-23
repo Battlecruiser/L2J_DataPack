@@ -302,7 +302,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else if (type.startsWith("door"))
 				{
-					DoorTable.getInstance().reloadAll();
+					DoorTable.getInstance().load();
 					activeChar.sendMessage("All Doors have been reloaded");
 				}
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
