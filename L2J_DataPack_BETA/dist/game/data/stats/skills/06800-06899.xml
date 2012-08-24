@@ -175,6 +175,11 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="10000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="324">
+			<not>
+				<player Charges="#maxCharges" />
+			</not>
+		</cond>
 		<for>
 			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
@@ -189,6 +194,11 @@
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="10000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="324">
+			<not>
+				<player Charges="#maxCharges" />
+			</not>
+		</cond>
 		<for>
 			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
