@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package teleports.StakatoNest;
+package teleports.StakatoNestTeleporter;
 
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -21,10 +21,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Stakato Nest teleport AI.
+ * Stakato Nest Teleporter AI.
  * @author Charus
  */
-public class StakatoNest extends Quest
+public class StakatoNestTeleporter extends Quest
 {
 	private final static Location[] _locs =
 	{
@@ -37,7 +37,7 @@ public class StakatoNest extends Quest
 	
 	private final static int npcId = 32640;
 	
-	public StakatoNest(int questId, String name, String descr)
+	public StakatoNestTeleporter(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(npcId);
@@ -88,6 +88,6 @@ public class StakatoNest extends Quest
 	
 	public static void main(String[] args)
 	{
-		new StakatoNest(-1, "StakatoNest", "teleports");
+		new StakatoNestTeleporter(-1, StakatoNestTeleporter.class.getSimpleName(), "teleports");
 	}
 }
