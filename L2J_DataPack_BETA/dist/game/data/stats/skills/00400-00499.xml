@@ -1111,10 +1111,14 @@
 		</enchant1for>
 	</skill>
 	<skill id="430" levels="1" name="Master of Combat" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchPAtk"> 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
 		<set name="magicLvl" val="78" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<add order="0x40" stat="pAtk" val="80">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Dual Fist" />
@@ -1122,11 +1126,11 @@
 			<mul order="0x30" stat="maxCp" val="1.05" />
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="80">
-				<using kind="Big Sword,Big Blunt,Dual Sword,Dual Fist" />
-			</add>
 			<add order="0x40" stat="pAtk" val="#enchPAtk">
-				<using kind="Sword,Blunt,Pole" />
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+			</add>
+			<add order="0x40" stat="pAtk" val="80">
+				<using kind="Dual Sword,Dual Fist" />
 			</add>
 			<mul order="0x30" stat="maxCp" val="1.05" />
 		</enchant1for>
