@@ -82,7 +82,8 @@ public class Beleth extends L2AttackableAIScript
 		addEnterZoneId(12018);
 		registerMobs(new int[]
 		{
-			29118, 29119
+			29118,
+			29119
 		});
 		addStartNpc(32470);
 		addTalkId(32470);
@@ -157,9 +158,9 @@ public class Beleth extends L2AttackableAIScript
 		@Override
 		public void run()
 		{
-			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			if ((_npc != null) && !_npc.isDead() && !_npc.isCastingNow())
 			{
+				_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				_npc.doCast(_skill);
 			}
 		}
@@ -327,7 +328,7 @@ public class Beleth extends L2AttackableAIScript
 						if (spawnTimer != null)
 						{
 							spawnTimer.cancel(false);
-							spawnTimer = null;
+							setSpawnTimer(0);
 						}
 						SpawnBeleths();
 						break;
@@ -408,21 +409,7 @@ public class Beleth extends L2AttackableAIScript
 		
 		if ((npc.getNpcId() == 29118) && (killer != null))
 		{
-			if (killer.getParty() != null)
-			{
-				if (killer.getParty().getCommandChannel() != null)
-				{
-					belethKiller = killer.getParty().getCommandChannel().getLeader();
-				}
-				else
-				{
-					belethKiller = killer.getParty().getLeader();
-				}
-			}
-			else
-			{
-				belethKiller = killer;
-			}
+			setBelethKiller(1, killer);
 			GrandBossManager.getInstance().setBossStatus(29118, 3);
 			// Respawn time is 192 Hours - 148 Random Hours
 			long respawnTime = (long) Config.INTERVAL_OF_BELETH_SPAWN - getRandom(Config.RANDOM_OF_BELETH_SPAWN);
@@ -452,7 +439,7 @@ public class Beleth extends L2AttackableAIScript
 				if (killed >= 5)
 				{
 					deleteAll();
-					spawnTimer = ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(333), 60000);
+					setSpawnTimer(1);
 				}
 				else
 				{
@@ -463,7 +450,7 @@ public class Beleth extends L2AttackableAIScript
 			else if (spawnTimer == null)
 			{
 				deleteAll();
-				spawnTimer = ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(26), 60000);
+				setSpawnTimer(2);
 				killed = 0;
 			}
 			npc.abortCast();
@@ -625,7 +612,7 @@ public class Beleth extends L2AttackableAIScript
 		if ((belethKiller != null) && (player.getObjectId() == belethKiller.getObjectId()))
 		{
 			player.addItem("Kill Beleth", 10314, 1, null, true);// giveItems(10314, 1, 0)
-			belethKiller = null;
+			setBelethKiller(0, player);
 			html = "32470a.htm";
 		}
 		else
@@ -639,6 +626,50 @@ public class Beleth extends L2AttackableAIScript
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		return null;
+	}
+	
+	private static void setBelethKiller(int event, L2PcInstance killer)
+	{
+		if (event == 0)
+		{
+			belethKiller = null;
+		}
+		else if (event == 1)
+		{
+			if (killer.getParty() != null)
+			{
+				if (killer.getParty().getCommandChannel() != null)
+				{
+					belethKiller = killer.getParty().getCommandChannel().getLeader();
+				}
+				else
+				{
+					belethKiller = killer.getParty().getLeader();
+				}
+			}
+			else
+			{
+				belethKiller = killer;
+			}
+		}
+	}
+	
+	protected static void setSpawnTimer(int event)
+	{
+		switch (event)
+		{
+			case 0:
+				spawnTimer = null;
+				break;
+			case 1:
+				spawnTimer = ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(333), 60000);
+				break;
+			case 2:
+				spawnTimer = ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(26), 60000);
+				break;
+			default:
+				break;
+		}
 	}
 	
 	private static void deleteAll()
@@ -656,8 +687,8 @@ public class Beleth extends L2AttackableAIScript
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				npc.deleteMe();
 			}
+			minions.clear();
 		}
-		minions.clear();
 		allowObjectId = 0;
 		attacked = false;
 	}
