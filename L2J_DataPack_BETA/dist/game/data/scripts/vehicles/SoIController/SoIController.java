@@ -53,7 +53,8 @@ public class SoIController extends AirShipController
 	
 	private static final int[] FUEL =
 	{
-		0, 50
+		0,
+		50
 	};
 	
 	public SoIController(int questId, String name, String descr)

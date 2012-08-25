@@ -36,7 +36,8 @@ public class AirShipGludioGracia extends Quest implements Runnable
 {
 	private static final int[] CONTROLLERS =
 	{
-		32607, 32609
+		32607,
+		32609
 	};
 	
 	private static final int GLUDIO_DOCK_ID = 10;
@@ -88,7 +89,12 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GLUDIO =
 	{
-		new VehiclePathPoint(-153414, 255385, 221), new VehiclePathPoint(-149548, 258172, 221), new VehiclePathPoint(-146884, 257097, 221), new VehiclePathPoint(-146672, 254239, 221), new VehiclePathPoint(-147855, 252712, 206), new VehiclePathPoint(-149378, 252552, 198)
+		new VehiclePathPoint(-153414, 255385, 221),
+		new VehiclePathPoint(-149548, 258172, 221),
+		new VehiclePathPoint(-146884, 257097, 221),
+		new VehiclePathPoint(-146672, 254239, 221),
+		new VehiclePathPoint(-147855, 252712, 206),
+		new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
 	private final L2AirShipInstance _ship;
@@ -165,10 +171,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-			newQuestState(player);
-		
+	{		
 		return npc.getNpcId() + ".htm";
 	}
 	

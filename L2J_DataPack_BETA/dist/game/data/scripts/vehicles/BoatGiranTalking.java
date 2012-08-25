@@ -191,11 +191,15 @@ public class BoatGiranTalking implements Runnable
 					if (BoatManager.getInstance().dockBusy(BoatManager.TALKING_ISLAND))
 					{
 						if (_shoutCount == 0)
+						{
 							BoatManager.getInstance().broadcastPacket(TALKING_DOCK[0], GIRAN_DOCK, BUSY_TALKING);
+						}
 						
 						_shoutCount++;
 						if (_shoutCount > 35)
+						{
 							_shoutCount = 0;
+						}
 						
 						ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 						return;
@@ -256,7 +260,9 @@ public class BoatGiranTalking implements Runnable
 			_shoutCount = 0;
 			_cycle++;
 			if (_cycle > 18)
+			{
 				_cycle = 0;
+			}
 		}
 		catch (Exception e)
 		{
