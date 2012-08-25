@@ -38,17 +38,19 @@ public class AdminQuest implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
+		{
 			return false;
+		}
 		
 		// syntax will either be:
-		//                           //quest_reload <id>
-		//                           //quest_reload <questName>
+		// //quest_reload <id>
+		// //quest_reload <questName>
 		// The questName MUST start with a non-numeric character for this to work,
 		// regardless which of the two formats is used.
-		// Example:  //quest_reload orc_occupation_change_1
-		// Example:  //quest_reload chests
-		// Example:  //quest_reload SagasSuperclass
-		// Example:  //quest_reload 12
+		// Example: //quest_reload orc_occupation_change_1
+		// Example: //quest_reload chests
+		// Example: //quest_reload SagasSuperclass
+		// Example: //quest_reload 12
 		if (command.startsWith("admin_quest_reload"))
 		{
 			String[] parts = command.split(" ");
@@ -84,10 +86,10 @@ public class AdminQuest implements IAdminCommandHandler
 				}
 			}
 		}
-		// script load should NOT be used in place of reload.  If a script is already loaded
-		// successfully, quest_reload ought to be used.  The script_load command should only
+		// script load should NOT be used in place of reload. If a script is already loaded
+		// successfully, quest_reload ought to be used. The script_load command should only
 		// be used for scripts that failed to load altogether (eg. due to errors) or that
-		// did not at all exist during server boot.  Using script_load to re-load a previously
+		// did not at all exist during server boot. Using script_load to re-load a previously
 		// loaded script may cause unpredictable script flow, minor loss of data, and more.
 		// This provides a way to load new scripts without having to reboot the server.
 		else if (command.startsWith("admin_script_load"))
@@ -95,12 +97,23 @@ public class AdminQuest implements IAdminCommandHandler
 			String[] parts = command.split(" ");
 			if (parts.length < 2)
 			{
-				//activeChar.sendMessage("Example: //script_load <questFolder>/<questSubFolders...>/<filename>.<ext> ");
+				// activeChar.sendMessage("Example: //script_load <questFolder>/<questSubFolders...>/<filename>.<ext> ");
 				activeChar.sendMessage("Example: //script_load quests/SagasSuperclass/__init__.py");
 			}
 			else
 			{
 				File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, parts[1]);
+				// Trying to reload by script name.
+				if (!file.exists())
+				{
+					Quest quest = QuestManager.getInstance().getQuest(parts[1]);
+					if (quest != null)
+					{
+						file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, quest.getClass().getName().replaceAll("\\.", "/") + ".java");
+					}
+				}
+				
+				// Reloading by full path
 				if (file.isFile())
 				{
 					try
