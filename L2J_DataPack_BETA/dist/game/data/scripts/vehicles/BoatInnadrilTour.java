@@ -159,7 +159,9 @@ public class BoatInnadrilTour implements Runnable
 			}
 			_cycle++;
 			if (_cycle > 9)
+			{
 				_cycle = 0;
+			}
 		}
 		catch (Exception e)
 		{

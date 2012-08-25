@@ -70,9 +70,6 @@ public class EngineerLekon extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-			newQuestState(player);
-		
 		return npc.getNpcId() + ".htm";
 	}
 	

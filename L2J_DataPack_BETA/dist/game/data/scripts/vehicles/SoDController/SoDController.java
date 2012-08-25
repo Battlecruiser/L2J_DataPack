@@ -49,7 +49,8 @@ public class SoDController extends AirShipController
 	
 	private static final int[] FUEL =
 	{
-		0, 100
+		0,
+		100
 	};
 	
 	public SoDController(int questId, String name, String descr)
