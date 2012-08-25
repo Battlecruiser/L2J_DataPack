@@ -16,9 +16,8 @@ package ai.group_template;
 
 import java.util.Map;
 
-import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
-
 import javolution.util.FastMap;
+import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;

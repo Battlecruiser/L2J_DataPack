@@ -16,9 +16,8 @@ package ai.group_template;
 
 import java.util.Map;
 
-import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
-
 import javolution.util.FastMap;
+import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
