@@ -2160,20 +2160,21 @@
 		</for>
 	</skill>
 	<skill id="1273" levels="13" name="Serenade of Eva">
-		<table name="#mpInitialConsume"> 24 26 28 31 32 33 35 36 37 38 39 40 41 </table>
-		<table name="#mpConsume"> 93 103 112 122 127 132 137 142 147 151 155 159 163 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="reuseDelay" val="900000" />
+		<table name="#mpConsume"> 93 103 112 122 127 132 137 142 147 151 155 159 163 </table>
+		<table name="#mpInitialConsume"> 24 26 28 31 32 33 35 36 37 38 39 40 41 </table>
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="AGGREMOVE" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="80" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="AGGREMOVE" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="1274" levels="4" name="Energy Bolt">
