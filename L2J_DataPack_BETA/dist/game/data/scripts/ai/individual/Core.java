@@ -195,8 +195,6 @@ public class Core extends L2AttackableAIScript
 			npc.broadcastPacket(new NpcSay(objId, 0, npcId, NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
 			npc.broadcastPacket(new NpcSay(objId, 0, npcId, NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
 			_FirstAttacked = false;
-			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
-			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Respawn time is 60 Hours - 24 Random Hours
 			long respawnTime = (long) Config.Interval_Of_Core_Spawn - getRandom(Config.Random_Of_Core_Spawn);
