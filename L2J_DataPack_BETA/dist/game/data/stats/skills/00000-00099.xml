@@ -2123,24 +2123,26 @@
 		</enchant4for>
 	</skill>
 	<skill id="98" levels="5" name="Sword Symphony">
-		<table name="#mpConsume"> 58 64 69 73 77 </table>
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
+		<table name="#mpConsume"> 58 64 69 73 77 </table>
 		<table name="#power"> 825 1023 1194 1373 1554 </table>
-		<set name="baseCritRate" val="15" />
+		<set name="baseCritRate" val="10" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="saveVs" val="MEN" />
-		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="150" />
-		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="15000" />
-		<set name="hitTime" val="2000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence" effectPower="60" effectType="MUTE" />
