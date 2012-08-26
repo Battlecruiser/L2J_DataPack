@@ -37,11 +37,9 @@ public class Q00126_TheNameOfEvil2 extends Quest
 	private static final int BALU_KAIMU = 32120;
 	private static final int CHUTA_KAIMU = 32121;
 	private static final int WARRIORS_GRAVE = 32122;
-	
-	// Quest Item
+	// Items
 	private static final int GAZKH_FRAGMENT = 8782;
 	private static final int BONE_POWDER = 8783;
-	
 	// Reward
 	private static final int ENCHANT_WEAPON_A = 729;
 	
@@ -607,11 +605,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 		
 		addStartNpc(ASAMAH);
 		addTalkId(ASAMAH, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIORS_GRAVE, SHILENS_STONE_STATUE, MUSHIKA);
-		questItemIds = new int[]
-		{
-			GAZKH_FRAGMENT,
-			BONE_POWDER
-		};
+		registerQuestItems(GAZKH_FRAGMENT, BONE_POWDER);
 	}
 	
 	public static void main(String[] args)

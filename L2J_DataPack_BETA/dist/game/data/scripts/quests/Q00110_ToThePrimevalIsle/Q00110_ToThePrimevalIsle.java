@@ -21,18 +21,15 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To the Primeval Isle (110)<br>
- * Original Jython script by Ethernaly, updated by Zoey76.
+ * To the Primeval Isle (110)
  * @author Adry_85
  */
 public class Q00110_ToThePrimevalIsle extends Quest
 {
-	
 	// NPC
 	private static final int ANTON = 31338;
 	private static final int MARQUEZ = 32113;
-	
-	// Quest Item
+	// Items
 	private static final int ANCIENT_BOOK = 8777;
 	
 	@Override
@@ -103,6 +100,7 @@ public class Q00110_ToThePrimevalIsle extends Quest
 		
 		addStartNpc(ANTON);
 		addTalkId(ANTON, MARQUEZ);
+		registerQuestItems(ANCIENT_BOOK);
 	}
 	
 	public static void main(String[] args)

@@ -30,8 +30,7 @@ public class Q00641_AttackSailren extends Quest
 {
 	// NPC
 	private static final int SHILENS_STONE_STATUE = 32109;
-	
-	// Quest Item
+	// Items
 	public static final int GAZKH_FRAGMENT = 8782;
 	public static final int GAZKH = 8784;
 	
@@ -67,7 +66,6 @@ public class Q00641_AttackSailren extends Quest
 				}
 				break;
 		}
-		
 		return event;
 	}
 	
@@ -105,27 +103,22 @@ public class Q00641_AttackSailren extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
+		if (partyMember != null)
 		{
-			return null;
+			final QuestState st = partyMember.getQuestState(getName());
+			if (st != null)
+			{
+				st.giveItems(GAZKH_FRAGMENT, 1);
+				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
+				{
+					st.playSound("ItemSound.quest_itemget");
+				}
+				else
+				{
+					st.setCond(2, true);
+				}
+			}
 		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
-		st.giveItems(GAZKH_FRAGMENT, 1);
-		if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
-		{
-			st.playSound("ItemSound.quest_itemget");
-		}
-		else
-		{
-			st.setCond(2, true);
-		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -136,10 +129,7 @@ public class Q00641_AttackSailren extends Quest
 		addStartNpc(SHILENS_STONE_STATUE);
 		addTalkId(SHILENS_STONE_STATUE);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			GAZKH_FRAGMENT
-		};
+		registerQuestItems(GAZKH_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

@@ -21,21 +21,18 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Meeting the Elroki (124)<br>
- * Original Jython script by Kerb.
+ * Meeting the Elroki (124)
  * @author Adry_85
  */
 public class Q00124_MeetingTheElroki extends Quest
 {
-	
 	// NPC
 	private static final int MARQUEZ = 32113;
 	private static final int MUSHIKA = 32114;
 	private static final int ASAMAH = 32115;
 	private static final int KARAKAWEI = 32117;
 	private static final int MANTARASA = 32118;
-	
-	// Quest Item
+	// Items
 	private static final int MANTARASA_EGG = 8778;
 	
 	@Override
@@ -84,7 +81,6 @@ public class Q00124_MeetingTheElroki extends Quest
 				}
 				break;
 		}
-		
 		return event;
 	}
 	
@@ -227,10 +223,7 @@ public class Q00124_MeetingTheElroki extends Quest
 		
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
-		questItemIds = new int[]
-		{
-			MANTARASA_EGG
-		};
+		registerQuestItems(MANTARASA_EGG);
 	}
 	
 	public static void main(String[] args)
