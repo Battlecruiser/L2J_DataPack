@@ -19870,6 +19870,8 @@ INSERT INTO `spawnlist` VALUES
 ("unset", 1, 32632, 43648, -47742, -792, 0, 0, 50423, 60, 0, 0),
 -- Hedinger
 ("rune02_npc2116_01", 1, 32883, 45524, -48446, -792, 0, 0, 8191, 60, 0, 0),
+-- Massymore Dungeon Gatekeeper
+("rune03_npc2016_18", 1, 35506, 11532, -49136, -1087, 0, 0, 0, 0, 0, 0),
 -- Manor Manager
 ("Rune - Manor Manager", 1, 35512, 38278, -48426, 896, 0, 0, 1353, 60, 0, 0),
 -- Ronald
