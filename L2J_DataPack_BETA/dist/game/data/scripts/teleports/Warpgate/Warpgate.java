@@ -14,6 +14,9 @@
  */
 package teleports.Warpgate;
 
+import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
+import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
+
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -23,11 +26,12 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
+/**
+ * Warpgate teleport AI.
+ * @author _DS_
+ */
 public class Warpgate extends Quest
 {
-	private static final String THATS_BLOODY_HOT = "133_ThatsBloodyHot";
-	private static final String PATH_TO_HELLBOUND = "130_PathToHellbound";
-	
 	private static final int MAP = 9994;
 	private static final int ZONE = 40101;
 	
@@ -46,19 +50,17 @@ public class Warpgate extends Quest
 		QuestState st;
 		if (!HellboundManager.getInstance().isLocked())
 		{
-			st = player.getQuestState(PATH_TO_HELLBOUND);
+			st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
 			if ((st != null) && st.isCompleted())
 			{
 				return true;
 			}
 		}
-		
-		st = player.getQuestState(THATS_BLOODY_HOT);
+		st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
 		if ((st != null) && st.isCompleted())
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -72,7 +74,6 @@ public class Warpgate extends Quest
 				return "warpgate-locked.htm";
 			}
 		}
-		
 		return npc.getNpcId() + ".htm";
 	}
 	
@@ -146,6 +147,6 @@ public class Warpgate extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Warpgate(-1, "Warpgate", "teleports");
+		new Warpgate(-1, Warpgate.class.getSimpleName(), "teleports");
 	}
 }

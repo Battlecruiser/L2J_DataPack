@@ -21,20 +21,17 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * In Search of the Nest (109)<br>
- * Original Jython script by Eyerobot and Emperorc.
+ * In Search of the Nest (109)
  * @author Adry_85
  */
 public class Q00109_InSearchOfTheNest extends Quest
 {
-	
 	// NPC
 	private static final int PIERCE = 31553;
 	private static final int SCOUTS_CORPSE = 32015;
 	private static final int KAHMAN = 31554;
-	
-	// Quest Item
-	private static final int SCOUTS_MEMO = 8083;
+	// Items
+	private static final int SCOUTS_NOTE = 14858;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -51,11 +48,11 @@ public class Q00109_InSearchOfTheNest extends Quest
 				st.startQuest();
 				break;
 			case "32015-2.html":
-				st.giveItems(SCOUTS_MEMO, 1);
+				st.giveItems(SCOUTS_NOTE, 1);
 				st.setCond(2, true);
 				break;
 			case "31553-3.html":
-				st.takeItems(SCOUTS_MEMO, -1);
+				st.takeItems(SCOUTS_NOTE, -1);
 				st.setCond(3, true);
 				break;
 			case "31554-2.html":
@@ -133,6 +130,7 @@ public class Q00109_InSearchOfTheNest extends Quest
 		
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
+		registerQuestItems(SCOUTS_NOTE);
 	}
 	
 	public static void main(String[] args)

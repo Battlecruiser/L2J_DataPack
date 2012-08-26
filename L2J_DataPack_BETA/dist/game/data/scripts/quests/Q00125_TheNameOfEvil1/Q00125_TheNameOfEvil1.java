@@ -33,21 +33,20 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Q00125_TheNameOfEvil1 extends Quest
 {
-	
 	// NPC
 	private static final int MUSHIKA = 32114;
 	private static final int KARAKAWEI = 32117;
 	private static final int ULU_KAIMU = 32119;
 	private static final int BALU_KAIMU = 32120;
 	private static final int CHUTA_KAIMU = 32121;
-	
-	// Quest Item
+	// Items
 	private static final int ORNITHOMIMUS_CLAW = 8779;
 	private static final int DEINONYCHUS_BONE = 8780;
 	private static final int EPITAPH_OF_WISDOM = 8781;
 	private static final int GAZKH_FRAGMENT = 8782;
 	
 	private static final Map<Integer, Integer> ORNITHOMIMUS = new HashMap<>();
+	private static final Map<Integer, Integer> DEINONYCHUS = new HashMap<>();
 	
 	static
 	{
@@ -56,12 +55,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		ORNITHOMIMUS.put(22202, 661);
 		ORNITHOMIMUS.put(22219, 327);
 		ORNITHOMIMUS.put(22224, 327);
-	}
-	
-	private static final Map<Integer, Integer> DEINONYCHUS = new HashMap<>();
-	
-	static
-	{
 		DEINONYCHUS.put(22203, 651);
 		DEINONYCHUS.put(22204, 326);
 		DEINONYCHUS.put(22205, 651);
@@ -79,7 +72,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		}
 		
 		String htmltext = event;
-		
 		switch (event)
 		{
 			case "32114-05.html":
@@ -235,7 +227,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 	
@@ -444,7 +435,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 	
@@ -458,7 +448,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		
 		int npcId = npc.getNpcId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
@@ -489,7 +478,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		{
 			st.setCond(4, true);
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -499,24 +487,9 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		
 		addStartNpc(MUSHIKA);
 		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
-		
-		for (int npcId : ORNITHOMIMUS.keySet())
-		{
-			addKillId(npcId);
-		}
-		
-		for (int npcId : DEINONYCHUS.keySet())
-		{
-			addKillId(npcId);
-		}
-		
-		questItemIds = new int[]
-		{
-			ORNITHOMIMUS_CLAW,
-			DEINONYCHUS_BONE,
-			EPITAPH_OF_WISDOM,
-			GAZKH_FRAGMENT
-		};
+		addKillId(ORNITHOMIMUS.keySet());
+		addKillId(DEINONYCHUS.keySet());
+		registerQuestItems(ORNITHOMIMUS_CLAW, DEINONYCHUS_BONE, EPITAPH_OF_WISDOM, GAZKH_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

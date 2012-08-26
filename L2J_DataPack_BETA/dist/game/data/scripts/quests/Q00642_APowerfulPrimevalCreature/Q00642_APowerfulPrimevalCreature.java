@@ -25,17 +25,14 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * A Powerful Primeval Creature (642)<br>
- * Original Jython script by Gigiikun.
+ * A Powerful Primeval Creature (642)
  * @author Adry_85
  */
 public class Q00642_APowerfulPrimevalCreature extends Quest
 {
-	
 	// NPC
 	private static final int DINN = 32105;
-	
-	// Quest Item
+	// Items
 	private static final int DINOSAUR_TISSUE = 8774;
 	private static final int DINOSAUR_EGG = 8775;
 	
@@ -66,7 +63,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		}
 		
 		String htmltext = event;
-		
 		switch (event)
 		{
 			case "32105-05.html":
@@ -96,7 +92,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 	
@@ -119,7 +114,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 				htmltext = (!st.hasQuestItems(DINOSAUR_TISSUE) && !st.hasQuestItems(DINOSAUR_EGG)) ? "32105-07.html" : "32105-08.html";
 				break;
 		}
-		
 		return htmltext;
 	}
 	
@@ -148,7 +142,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			st.rewardItems(DINOSAUR_EGG, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -159,17 +152,8 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);
-		
-		for (int npcId : MOBS_TISSUE.keySet())
-		{
-			addKillId(npcId);
-		}
-		
-		questItemIds = new int[]
-		{
-			DINOSAUR_TISSUE,
-			DINOSAUR_EGG
-		};
+		addKillId(MOBS_TISSUE.keySet());
+		registerQuestItems(DINOSAUR_TISSUE, DINOSAUR_EGG);
 	}
 	
 	public static void main(String[] args)
