@@ -33,7 +33,6 @@ public class ToIVortex extends Quest
 	private static final int DIMENSION_VORTEX_1 = 30952;
 	private static final int DIMENSION_VORTEX_2 = 30953;
 	private static final int DIMENSION_VORTEX_3 = 30954;
-	private static final int TELEPORT_CUBIC = 29055;
 	
 	// ITEMS
 	private static final int ADENA = 57;
@@ -243,49 +242,6 @@ public class ToIVortex extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-			return null;
-		
-		// ToI Vortex exit
-		if (npc.getNpcId() == TELEPORT_CUBIC)
-		{
-			int chance = getRandom(3);
-			int x, y, z;
-			
-			switch (chance)
-			{
-				case 0:
-					x = 108784 + getRandom(100);
-					y = 16000 + getRandom(100);
-					z = -4928;
-					break;
-				
-				case 1:
-					x = 113824 + getRandom(100);
-					y = 10448 + getRandom(100);
-					z = -5164;
-					break;
-				
-				default:
-					x = 115488 + getRandom(100);
-					y = 22096 + getRandom(100);
-					z = -5168;
-					break;
-			}
-			
-			player.teleToLocation(x, y, z);
-			st.exitQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
 	public ToIVortex(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -302,8 +258,6 @@ public class ToIVortex extends Quest
 		addTalkId(DIMENSION_VORTEX_2);
 		addStartNpc(DIMENSION_VORTEX_3);
 		addTalkId(DIMENSION_VORTEX_3);
-		addStartNpc(TELEPORT_CUBIC);
-		addTalkId(TELEPORT_CUBIC);
 	}
 	
 	public static void main(String[] args)

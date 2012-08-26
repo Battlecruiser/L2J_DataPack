@@ -68,6 +68,7 @@ public class Baium extends L2AttackableAIScript
 	private static final int ANGELIC_VORTEX = 31862;
 	private static final int LIVE_BAIUM = 29020;
 	private static final int ARCHANGEL = 29021;
+	private static final int TELEPORT_CUBIC = 31842;
 	
 	// Baium status tracking
 	private static final byte ASLEEP = 0; // baium is in the stone version, waiting to be woken up. Entry is unlocked
@@ -99,8 +100,8 @@ public class Baium extends L2AttackableAIScript
 		registerMobs(mob);
 		
 		// Quest NPC starter initialization
-		addStartNpc(STONE_BAIUM, ANGELIC_VORTEX);
-		addTalkId(STONE_BAIUM, ANGELIC_VORTEX);
+		addStartNpc(STONE_BAIUM, ANGELIC_VORTEX, TELEPORT_CUBIC);
+		addTalkId(STONE_BAIUM, ANGELIC_VORTEX, TELEPORT_CUBIC);
 		
 		_Zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
@@ -348,6 +349,34 @@ public class Baium extends L2AttackableAIScript
 				npc.showChatWindow(player, 1);
 			}
 		}
+		else if (npc.getNpcId() == TELEPORT_CUBIC)
+		{
+			int chance = getRandom(3);
+			int x, y, z;
+			
+			switch (chance)
+			{
+				case 0:
+					x = 108784 + getRandom(100);
+					y = 16000 + getRandom(100);
+					z = -4928;
+					break;
+				
+				case 1:
+					x = 113824 + getRandom(100);
+					y = 10448 + getRandom(100);
+					z = -5164;
+					break;
+				
+				default:
+					x = 115488 + getRandom(100);
+					y = 22096 + getRandom(100);
+					z = -5168;
+					break;
+			}
+			
+			player.teleToLocation(x, y, z);
+		}
 		return htmltext;
 	}
 	
@@ -436,7 +465,7 @@ public class Baium extends L2AttackableAIScript
 		cancelQuestTimer("baium_despawn", npc, null);
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		// spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
-		addSpawn(29055, 115203, 16620, 10078, 0, false, 900000); // //should we teleport everyone out if the cubic despawns??
+		addSpawn(TELEPORT_CUBIC, 115017, 15549, 10090, 0, false, 900000);
 		// Respawn time is 168 Hours - 48 Random Hours
 		long respawnTime = (long) Config.Interval_Of_Baium_Spawn - getRandom(Config.Random_Of_Baium_Spawn);
 		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);

@@ -6189,7 +6189,7 @@ INSERT INTO `npcaidata` VALUES
 (29051, 7, 15, 0, 1500, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2000, 0, "frintessa_clan", 2000, "null", 0, 0, "balanced"), -- Breath of Halisha
 (29052, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "frintessa_clan", 0, "null", 0, 0, "balanced"), --  
 (29053, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "frintessa_clan", 0, "null", 0, 0, "balanced"), --  
-(29054, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, "null", 0, "null", 0, 0, "fighter"), -- Benom
+(29054, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, "null", 0, "null", 0, 0, "fighter"), -- Benom
 (29055, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Teleportation Cubic
 (29056, 7, 15, 0, 1000, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, "ice_clan", 300, "null", 0, 0, "balanced"), -- Ice Fairy Sirra
 (29057, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "ice_clan", 300, "null", 0, 0, "balanced"), -- Sirra's Page
