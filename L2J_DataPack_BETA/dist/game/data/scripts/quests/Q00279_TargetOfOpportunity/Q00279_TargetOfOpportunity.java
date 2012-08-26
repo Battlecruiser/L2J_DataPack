@@ -38,7 +38,6 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		22375,
 		22376
 	};
-	
 	// Items
 	private static final int[] SEAL_COMPONENTS =
 	{
@@ -60,6 +59,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);
+		registerQuestItems(SEAL_COMPONENTS);
 	}
 	
 	@Override
@@ -72,23 +72,16 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("32302-05.htm"))
+		if (event.equalsIgnoreCase("32302-05.html"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
+			st.startQuest();
 			st.set("progress", "1");
-			st.playSound("ItemSound.quest_accept");
 		}
-		else if (event.equalsIgnoreCase("32302-08.htm") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
+		else if (event.equalsIgnoreCase("32302-08.html") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
 		{
-			st.takeItems(SEAL_COMPONENTS[0], -1);
-			st.takeItems(SEAL_COMPONENTS[1], -1);
-			st.takeItems(SEAL_COMPONENTS[2], -1);
-			st.takeItems(SEAL_COMPONENTS[3], -1);
 			st.giveItems(SEAL_BREAKERS[0], 1);
 			st.giveItems(SEAL_BREAKERS[1], 1);
-			st.playSound("IItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		return htmltext;
 	}
@@ -105,11 +98,11 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		
 		if (st.getState() == State.CREATED)
 		{
-			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.htm";
+			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.html";
 		}
 		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
 		{
-			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.htm" : "32302-06.htm";
+			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
 		}
 		return htmltext;
 	}
@@ -132,8 +125,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 				st.giveItems(SEAL_COMPONENTS[idx], 1);
 				if (haveAllExceptThis(st, idx))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
 				}
 				else
 				{
