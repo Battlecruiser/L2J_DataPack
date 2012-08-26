@@ -26,12 +26,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00026_TiredOfWaiting extends Quest
 {
-	
 	// NPCs
 	private static final int ISAEL_SILVERSHADOW = 30655;
 	private static final int KITZKA = 31045;
-	
-	// Quest Item - Rewards
+	// Items
 	private static final int DELIVERY_BOX = 17281;
 	private static final int WILL_OF_ANTHARAS = 17266;
 	private static final int LARGE_DRAGON_BONE = 17248;
@@ -47,16 +45,13 @@ public class Q00026_TiredOfWaiting extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		switch (npcId)
+		switch (npc.getNpcId())
 		{
 			case ISAEL_SILVERSHADOW:
 				if (event.equalsIgnoreCase("30655-04.html"))
 				{
-					st.setState(State.STARTED);
-					st.set("cond", "1");
 					st.giveItems(DELIVERY_BOX, 1);
-					st.playSound("ItemSound.quest_accept");
+					st.startQuest();
 				}
 				break;
 			case KITZKA:
@@ -67,20 +62,17 @@ public class Q00026_TiredOfWaiting extends Quest
 				else if (event.equalsIgnoreCase("31045-10.html"))
 				{
 					st.giveItems(LARGE_DRAGON_BONE, 1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else if (event.equalsIgnoreCase("31045-11.html"))
 				{
 					st.giveItems(WILL_OF_ANTHARAS, 1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else if (event.equalsIgnoreCase("31045-12.html"))
 				{
 					st.giveItems(SEALED_BLOOD_CRYSTAL, 1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				break;
 		}
@@ -136,11 +128,7 @@ public class Q00026_TiredOfWaiting extends Quest
 		
 		addStartNpc(ISAEL_SILVERSHADOW);
 		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
-		
-		questItemIds = new int[]
-		{
-			DELIVERY_BOX
-		};
+		registerQuestItems(DELIVERY_BOX);
 	}
 	
 	public static void main(String[] args)
