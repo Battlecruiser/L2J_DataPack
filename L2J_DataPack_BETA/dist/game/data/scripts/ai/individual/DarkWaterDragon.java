@@ -14,9 +14,12 @@
  */
 package ai.individual;
 
+import java.util.Map;
+import java.util.Set;
+
 import javolution.util.FastMap;
 import javolution.util.FastSet;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -25,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class DarkWaterDragon extends L2AttackableAIScript
+public class DarkWaterDragon extends AbstractNpcAI
 {
 	private static final int DRAGON = 22267;
 	private static final int SHADE1 = 22268;
@@ -33,20 +36,25 @@ public class DarkWaterDragon extends L2AttackableAIScript
 	private static final int FAFURION = 18482;
 	private static final int DETRACTOR1 = 22270;
 	private static final int DETRACTOR2 = 22271;
-	private static FastSet<Integer> secondSpawn = new FastSet<>(); // Used to track if second Shades were already spawned
-	private static FastSet<Integer> myTrackingSet = new FastSet<>(); // Used to track instances of npcs
-	private static FastMap<Integer, L2PcInstance> _idmap = new FastMap<Integer, L2PcInstance>().shared(); // Used to track instances of npcs
+	private static Set<Integer> SECOND_SPAWN = new FastSet<>(); // Used to track if second Shades were already spawned
+	private static Set<Integer> MY_TRACKING_SET = new FastSet<>(); // Used to track instances of npcs
+	private static Map<Integer, L2PcInstance> ID_MAP = new FastMap<Integer, L2PcInstance>().shared(); // Used to track instances of npcs
 	
-	public DarkWaterDragon(int id, String name, String descr)
+	private DarkWaterDragon(String name, String descr)
 	{
-		super(id, name, descr);
+		super(name, descr);
 		int[] mobs =
 		{
-			DRAGON, SHADE1, SHADE2, FAFURION, DETRACTOR1, DETRACTOR2
+			DRAGON,
+			SHADE1,
+			SHADE2,
+			FAFURION,
+			DETRACTOR1,
+			DETRACTOR2
 		};
 		registerMobs(mobs, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN, QuestEventType.ON_ATTACK);
-		myTrackingSet.clear();
-		secondSpawn.clear();
+		MY_TRACKING_SET.clear();
+		SECOND_SPAWN.clear();
 	}
 	
 	@Override
@@ -94,10 +102,12 @@ public class DarkWaterDragon extends L2AttackableAIScript
 				cancelQuestTimer("3", npc, null);
 				cancelQuestTimer("4", npc, null);
 				
-				myTrackingSet.remove(npc.getObjectId());
-				player = _idmap.remove(npc.getObjectId());
-				if (player != null) // You never know ...
+				MY_TRACKING_SET.remove(npc.getObjectId());
+				player = ID_MAP.remove(npc.getObjectId());
+				if (player != null)
+				{
 					((L2Attackable) npc).doItemDrop(NpcTable.getInstance().getTemplate(18485), player);
+				}
 				
 				npc.deleteMe();
 			}
@@ -114,8 +124,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
 					cancelQuestTimer("2", npc, null);
 					cancelQuestTimer("3", npc, null);
 					cancelQuestTimer("4", npc, null);
-					myTrackingSet.remove(npc.getObjectId());
-					_idmap.remove(npc.getObjectId());
+					MY_TRACKING_SET.remove(npc.getObjectId());
+					ID_MAP.remove(npc.getObjectId());
 				}
 				npc.reduceCurrentHp(500, npc, null); // poison kills Fafurion if he is not healed
 			}
@@ -130,9 +140,9 @@ public class DarkWaterDragon extends L2AttackableAIScript
 		int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
-			if (!myTrackingSet.contains(npcObjId)) // this allows to handle multiple instances of npc
+			if (!MY_TRACKING_SET.contains(npcObjId)) // this allows to handle multiple instances of npc
 			{
-				myTrackingSet.add(npcObjId);
+				MY_TRACKING_SET.add(npcObjId);
 				// Spawn first 5 shades on first attack on Dark Water Dragon
 				L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() + 100, npc.getZ());
@@ -141,9 +151,9 @@ public class DarkWaterDragon extends L2AttackableAIScript
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() - 150, npc.getY() + 150, npc.getZ());
 			}
-			else if (npc.getCurrentHp() < (npc.getMaxHp() / 2.0) && !(secondSpawn.contains(npcObjId)))
+			else if ((npc.getCurrentHp() < (npc.getMaxHp() / 2.0)) && !(SECOND_SPAWN.contains(npcObjId)))
 			{
-				secondSpawn.add(npcObjId);
+				SECOND_SPAWN.add(npcObjId);
 				// Spawn second 5 shades on half hp of on Dark Water Dragon
 				L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() + 100, npc.getZ());
@@ -163,10 +173,10 @@ public class DarkWaterDragon extends L2AttackableAIScript
 		int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
-			myTrackingSet.remove(npcObjId);
-			secondSpawn.remove(npcObjId);
+			MY_TRACKING_SET.remove(npcObjId);
+			SECOND_SPAWN.remove(npcObjId);
 			L2Attackable faf = (L2Attackable) addSpawn(FAFURION, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0); // spawns Fafurion Kindred when Dard Water Dragon is dead
-			_idmap.put(faf.getObjectId(), killer);
+			ID_MAP.put(faf.getObjectId(), killer);
 		}
 		else if (npcId == FAFURION)
 		{
@@ -180,8 +190,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
 			cancelQuestTimer("2", npc, null);
 			cancelQuestTimer("3", npc, null);
 			cancelQuestTimer("4", npc, null);
-			myTrackingSet.remove(npcObjId);
-			_idmap.remove(npcObjId);
+			MY_TRACKING_SET.remove(npcObjId);
+			ID_MAP.remove(npcObjId);
 		}
 		return super.onKill(npc, killer, isPet);
 	}
@@ -193,9 +203,9 @@ public class DarkWaterDragon extends L2AttackableAIScript
 		int npcObjId = npc.getObjectId();
 		if (npcId == FAFURION)
 		{
-			if (!myTrackingSet.contains(npcObjId))
+			if (!MY_TRACKING_SET.contains(npcObjId))
 			{
-				myTrackingSet.add(npcObjId);
+				MY_TRACKING_SET.add(npcObjId);
 				// Spawn 4 Detractors on spawn of Fafurion
 				int x = npc.getX();
 				int y = npc.getY();
@@ -224,7 +234,6 @@ public class DarkWaterDragon extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// Quest class and state definition
-		new DarkWaterDragon(-1, "DarkWaterDragon", "ai");
+		new DarkWaterDragon(DarkWaterDragon.class.getSimpleName(), "ai");
 	}
 }

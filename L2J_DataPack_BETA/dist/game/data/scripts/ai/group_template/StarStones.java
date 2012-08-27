@@ -14,20 +14,21 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Star Stones AI.
  * @author Gigiikun
  */
-public class StarStones extends L2AttackableAIScript
+public class StarStones extends AbstractNpcAI
 {
-	private static final int[] mobs =
+	private static final int[] MOBS =
 	{
 		18684,
 		18685,
@@ -42,16 +43,16 @@ public class StarStones extends L2AttackableAIScript
 	
 	private static final int RATE = 1;
 	
-	public StarStones(int questId, String name, String descr)
+	private StarStones(String name, String descr)
 	{
-		super(questId, name, descr);
-		registerMobs(mobs, QuestEventType.ON_SKILL_SEE);
+		super(name, descr);
+		registerMobs(MOBS, QuestEventType.ON_SKILL_SEE);
 	}
 	
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (Util.contains(targets, npc) && (skill.getId() == 932))
+		if (skill.getId() == 932)
 		{
 			int itemId = 0;
 			
@@ -100,6 +101,6 @@ public class StarStones extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new StarStones(-1, StarStones.class.getSimpleName(), "ai");
+		new StarStones(StarStones.class.getSimpleName(), "ai");
 	}
 }

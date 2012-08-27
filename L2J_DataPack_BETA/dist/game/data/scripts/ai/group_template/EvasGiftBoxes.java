@@ -14,15 +14,16 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
  * Evas Gift Boxes AI.
  * @author Gigiikun
  */
-public class EvasGiftBoxes extends Quest
+public class EvasGiftBoxes extends AbstractNpcAI
 {
 	private static final int GIFTBOX = 32342;
 	
@@ -47,9 +48,9 @@ public class EvasGiftBoxes extends Quest
 		}
 	};
 	
-	public EvasGiftBoxes(int questId, String name, String descr)
+	private EvasGiftBoxes(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		addKillId(GIFTBOX);
 		addSpawnId(GIFTBOX);
 	}
@@ -84,6 +85,6 @@ public class EvasGiftBoxes extends Quest
 	
 	public static void main(String[] args)
 	{
-		new EvasGiftBoxes(-1, EvasGiftBoxes.class.getSimpleName(), "ai");
+		new EvasGiftBoxes(EvasGiftBoxes.class.getSimpleName(), "ai");
 	}
 }

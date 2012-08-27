@@ -16,6 +16,8 @@ package ai.group_template;
 
 import java.util.Collection;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
@@ -32,14 +34,18 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
  * Giant Scouts AI.
  * @author Gnacik
  */
-public class GiantScouts extends L2AttackableAIScript
+public class GiantScouts extends AbstractNpcAI
 {
-	final private static int _scouts[] = { 22668, 22669 };
-	
-	public GiantScouts(int questId, String name, String descr)
+	private static final int[] SCOUTS =
 	{
-		super(questId, name, descr);
-		registerMobs(_scouts, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		22668,
+		22669
+	};
+	
+	private GiantScouts(String name, String descr)
+	{
+		super(name, descr);
+		registerMobs(SCOUTS, QuestEventType.ON_AGGRO_RANGE_ENTER);
 	}
 	
 	@Override
@@ -47,10 +53,12 @@ public class GiantScouts extends L2AttackableAIScript
 	{
 		L2Character target = isPet ? player.getPet() : player;
 		
-		if(GeoData.getInstance().canSeeTarget(npc, target))
+		if (GeoData.getInstance().canSeeTarget(npc, target))
 		{
-			if (!npc.isInCombat() && npc.getTarget() == null)
+			if (!npc.isInCombat() && (npc.getTarget() == null))
+			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
+			}
 			
 			npc.setTarget(target);
 			npc.setRunning();
@@ -59,14 +67,14 @@ public class GiantScouts extends L2AttackableAIScript
 			
 			// Notify clan
 			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-			for(L2Object obj : objs)
+			for (L2Object obj : objs)
 			{
 				if (obj != null)
 				{
 					if (obj instanceof L2MonsterInstance)
 					{
 						L2MonsterInstance monster = (L2MonsterInstance) obj;
-						if (( npc.getClan() != null && monster.getClan() != null) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster))
+						if (((npc.getClan() != null) && (monster.getClan() != null)) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster))
 						{
 							monster.setTarget(target);
 							monster.setRunning();
@@ -83,6 +91,6 @@ public class GiantScouts extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new GiantScouts(-1, GiantScouts.class.getSimpleName(), "ai");
+		new GiantScouts(GiantScouts.class.getSimpleName(), "ai");
 	}
 }

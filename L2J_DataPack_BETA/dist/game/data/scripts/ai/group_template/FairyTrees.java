@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -28,9 +30,9 @@ import com.l2jserver.util.Rnd;
  * Fairy Trees AI
  * @author Charus
  */
-public class FairyTrees extends L2AttackableAIScript
+public class FairyTrees extends AbstractNpcAI
 {
-	private static final int[] mobs =
+	private static final int[] MOBS =
 	{
 		27185,
 		27186,
@@ -38,10 +40,10 @@ public class FairyTrees extends L2AttackableAIScript
 		27188
 	};
 	
-	public FairyTrees(int questId, String name, String descr)
+	private FairyTrees(String name, String descr)
 	{
-		super(questId, name, descr);
-		registerMobs(mobs, QuestEventType.ON_KILL);
+		super(name, descr);
+		registerMobs(MOBS, QuestEventType.ON_KILL);
 		addSpawnId(27189);
 	}
 	
@@ -49,7 +51,7 @@ public class FairyTrees extends L2AttackableAIScript
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
-		if (Util.contains(mobs, npcId))
+		if (Util.contains(MOBS, npcId))
 		{
 			for (int i = 0; i < 20; i++)
 			{
@@ -73,6 +75,6 @@ public class FairyTrees extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new FairyTrees(-1, FairyTrees.class.getSimpleName(), "ai");
+		new FairyTrees(FairyTrees.class.getSimpleName(), "ai");
 	}
 }

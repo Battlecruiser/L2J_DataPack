@@ -17,7 +17,7 @@ package ai.individual;
 import java.util.ArrayList;
 import java.util.List;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -31,10 +31,10 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Dilios AI
  * @author JIV, Sephiroth, Apocalipce
  */
-public class GeneralDilios extends L2AttackableAIScript
+public class GeneralDilios extends AbstractNpcAI
 {
-	private static final int generalId = 32549;
-	private static final int guardId = 32619;
+	private static final int GENERAL_ID = 32549;
+	private static final int GUARD_ID = 32619;
 	
 	private L2Npc _general;
 	private final List<L2Npc> _guards = new ArrayList<>();
@@ -51,26 +51,28 @@ public class GeneralDilios extends L2AttackableAIScript
 	// NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_EKIMUS_IS_ABOUT_TO_BE_REVIVED_BY_THE_RESURRECTED_UNDEAD_IN_SEED_OF_INFINITY_SEND_ALL_REINFORCEMENTS_TO_THE_HEART_AND_THE_HALL_OF_SUFFERING
 	};
 	
-	public GeneralDilios(int questId, String name, String descr)
+	private GeneralDilios(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		findNpcs();
-		if (_general == null || _guards.isEmpty())
+		if ((_general == null) || _guards.isEmpty())
+		{
 			throw new NullPointerException("Cannot find npcs!");
+		}
 		startQuestTimer("command_0", 60000, null, null);
 	}
 	
-	public void findNpcs()
+	private void findNpcs()
 	{
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 		{
 			if (spawn != null)
 			{
-				if (spawn.getNpcid() == generalId)
+				if (spawn.getNpcid() == GENERAL_ID)
 				{
 					_general = spawn.getLastSpawn();
 				}
-				else if (spawn.getNpcid() == guardId)
+				else if (spawn.getNpcid() == GUARD_ID)
 				{
 					_guards.add(spawn.getLastSpawn());
 				}
@@ -86,13 +88,13 @@ public class GeneralDilios extends L2AttackableAIScript
 			int value = Integer.parseInt(event.substring(8));
 			if (value < 6)
 			{
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_ALL, generalId, NpcStringId.STABBING_THREE_TIMES));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_ALL, GENERAL_ID, NpcStringId.STABBING_THREE_TIMES));
 				startQuestTimer("guard_animation_0", 3400, null, null);
 			}
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, generalId, diliosText[getRandom(diliosText.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, GENERAL_ID, diliosText[getRandom(diliosText.length)]));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}
@@ -104,13 +106,15 @@ public class GeneralDilios extends L2AttackableAIScript
 				guard.broadcastSocialAction(4);
 			}
 			if (value < 2)
+			{
 				startQuestTimer("guard_animation_" + (value + 1), 1500, null, null);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	public static void main(String[] args)
 	{
-		new GeneralDilios(-1, "GeneralDilios", "ai");
+		new GeneralDilios(GeneralDilios.class.getSimpleName(), "ai");
 	}
 }

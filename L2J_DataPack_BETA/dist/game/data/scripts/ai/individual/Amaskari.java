@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Amaskari's and minions' chat and some skill usage.
  * @author GKR
  */
-public class Amaskari extends L2AttackableAIScript
+public class Amaskari extends AbstractNpcAI
 {
 	private static final int AMASKARI = 22449;
 	private static final int AMASKARI_PRISONER = 22450;
@@ -40,28 +40,33 @@ public class Amaskari extends L2AttackableAIScript
 	private static final int BUFF_ID = 4632;
 	private static SkillHolder[] BUFF =
 	{
-		new SkillHolder(BUFF_ID, 1), 
-		new SkillHolder(BUFF_ID, 2), 
+		new SkillHolder(BUFF_ID, 1),
+		new SkillHolder(BUFF_ID, 2),
 		new SkillHolder(BUFF_ID, 3)
 	};
 	// private static SkillHolder INVINCIBILITY = new SkillHolder(5417, 1);
 	
 	private static final NpcStringId[] AMASKARI_NPCSTRING_ID =
 	{
-		NpcStringId.ILL_MAKE_EVERYONE_FEEL_THE_SAME_SUFFERING_AS_ME, NpcStringId.HA_HA_YES_DIE_SLOWLY_WRITHING_IN_PAIN_AND_AGONY, NpcStringId.MORE_NEED_MORE_SEVERE_PAIN, NpcStringId.SOMETHING_IS_BURNING_INSIDE_MY_BODY
+		NpcStringId.ILL_MAKE_EVERYONE_FEEL_THE_SAME_SUFFERING_AS_ME,
+		NpcStringId.HA_HA_YES_DIE_SLOWLY_WRITHING_IN_PAIN_AND_AGONY,
+		NpcStringId.MORE_NEED_MORE_SEVERE_PAIN,
+		NpcStringId.SOMETHING_IS_BURNING_INSIDE_MY_BODY
 	};
 	
 	private static final NpcStringId[] MINIONS_NPCSTRING_ID =
 	{
-		NpcStringId.AHH_MY_LIFE_IS_BEING_DRAINED_OUT, NpcStringId.THANK_YOU_FOR_SAVING_ME, NpcStringId.IT_WILL_KILL_EVERYONE, NpcStringId.EEEK_I_FEEL_SICKYOW
+		NpcStringId.AHH_MY_LIFE_IS_BEING_DRAINED_OUT,
+		NpcStringId.THANK_YOU_FOR_SAVING_ME,
+		NpcStringId.IT_WILL_KILL_EVERYONE,
+		NpcStringId.EEEK_I_FEEL_SICKYOW
 	};
 	
-	public Amaskari(int id, String name, String descr)
+	private Amaskari(String name, String descr)
 	{
-		super(id, name, descr);
+		super(name, descr);
 		
-		addKillId(AMASKARI);
-		addKillId(AMASKARI_PRISONER);
+		addKillId(AMASKARI, AMASKARI_PRISONER);
 		addAttackId(AMASKARI);
 		addSpawnId(AMASKARI_PRISONER);
 	}
@@ -177,6 +182,6 @@ public class Amaskari extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Amaskari(-1, "Amaskari", "ai");
+		new Amaskari(Amaskari.class.getSimpleName(), "ai");
 	}
 }

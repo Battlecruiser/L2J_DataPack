@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -27,12 +29,15 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * Chimeras AI.
  * @author DS
  */
-public class Chimeras extends L2AttackableAIScript
+public class Chimeras extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
 	{
-		22349, 22350, 22351, 22352
+		22349,
+		22350,
+		22351,
+		22352
 	};
 	private static final int CELTUS = 22353;
 	
@@ -50,6 +55,14 @@ public class Chimeras extends L2AttackableAIScript
 	private static final int DIM_LIFE_FORCE = 9680;
 	private static final int LIFE_FORCE = 9681;
 	private static final int CONTAINED_LIFE_FORCE = 9682;
+	
+	private Chimeras(int questId, String name, String descr)
+	{
+		super(name, descr);
+		addSkillSeeId(NPCS);
+		addSpawnId(CELTUS);
+		addSkillSeeId(CELTUS);
+	}
 	
 	@Override
 	public final String onSpawn(L2Npc npc)
@@ -119,18 +132,6 @@ public class Chimeras extends L2AttackableAIScript
 		{
 			_npc.teleToLocation(_loc, false);
 		}
-	}
-	
-	public Chimeras(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npcId : NPCS)
-		{
-			addSkillSeeId(npcId);
-		}
-		
-		addSpawnId(CELTUS);
-		addSkillSeeId(CELTUS);
 	}
 	
 	public static void main(String[] args)

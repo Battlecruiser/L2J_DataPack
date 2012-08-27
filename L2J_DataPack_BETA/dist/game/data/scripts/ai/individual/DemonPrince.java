@@ -17,7 +17,7 @@ package ai.individual;
 import java.util.Map;
 
 import javolution.util.FastMap;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 /**
  * @author GKR
  */
-public class DemonPrince extends L2AttackableAIScript
+public class DemonPrince extends AbstractNpcAI
 {
 	private static final int DEMON_PRINCE = 25540;
 	private static final int FIEND = 25541;
@@ -35,17 +35,27 @@ public class DemonPrince extends L2AttackableAIScript
 	private static final SkillHolder UD = new SkillHolder(5044, 2);
 	private static final SkillHolder[] AOE =
 	{
-		new SkillHolder(5376, 4), new SkillHolder(5376, 5), new SkillHolder(5376, 6)
+		new SkillHolder(5376, 4),
+		new SkillHolder(5376, 5),
+		new SkillHolder(5376, 6)
 	};
 	
 	private static final Map<Integer, Boolean> _attackState = new FastMap<>();
+	
+	private DemonPrince(String name, String descr)
+	{
+		super(name, descr);
+		addAttackId(DEMON_PRINCE);
+		addKillId(DEMON_PRINCE);
+		addSpawnId(FIEND);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("cast") && (npc != null) && (npc.getNpcId() == FIEND) && !npc.isDead())
 		{
-			npc.doCast(AOE[getRandom(3)].getSkill());
+			npc.doCast(AOE[getRandom(AOE.length)].getSkill());
 		}
 		return null;
 	}
@@ -53,7 +63,7 @@ public class DemonPrince extends L2AttackableAIScript
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
-		if ((npc.getNpcId() == DEMON_PRINCE) && !npc.isDead())
+		if (!npc.isDead())
 		{
 			if (!_attackState.containsKey(npc.getObjectId()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)))
 			{
@@ -79,10 +89,7 @@ public class DemonPrince extends L2AttackableAIScript
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if (npc.getNpcId() == DEMON_PRINCE)
-		{
-			_attackState.remove(npc.getObjectId());
-		}
+		_attackState.remove(npc.getObjectId());
 		return super.onKill(npc, killer, isPet);
 	}
 	
@@ -113,17 +120,8 @@ public class DemonPrince extends L2AttackableAIScript
 		}
 	}
 	
-	public DemonPrince(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		
-		addAttackId(DEMON_PRINCE);
-		addKillId(DEMON_PRINCE);
-		addSpawnId(FIEND);
-	}
-	
 	public static void main(String[] args)
 	{
-		new DemonPrince(-1, "DemonPrince", "ai");
+		new DemonPrince(DemonPrince.class.getSimpleName(), "ai");
 	}
 }

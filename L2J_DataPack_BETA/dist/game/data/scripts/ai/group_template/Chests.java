@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -27,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
  * Chest AI implementation.
  * @author Fulminus
  */
-public class Chests extends L2AttackableAIScript
+public class Chests extends AbstractNpcAI
 {
 	private static final int SKILL_DELUXE_KEY = 2229;
 	
@@ -106,11 +108,9 @@ public class Chests extends L2AttackableAIScript
 		21822
 	};
 	
-	public Chests(int questId, String name, String descr)
+	private Chests(String name, String descr)
 	{
-		// firstly, don't forget to call the parent constructor to prepare the event triggering
-		// mechanisms etc.
-		super(questId, name, descr);
+		super(name, descr);
 		registerMobs(NPC_IDS, QuestEventType.ON_ATTACK, QuestEventType.ON_SKILL_SEE);
 	}
 	
@@ -149,8 +149,10 @@ public class Chests extends L2AttackableAIScript
 						int keyLevelNeeded = chest.getLevel() / 10;
 						keyLevelNeeded -= skillLevel;
 						if (keyLevelNeeded < 0)
+						{
 							keyLevelNeeded *= -1;
-						int chance = BASE_CHANCE - keyLevelNeeded * LEVEL_DECREASE;
+						}
+						int chance = BASE_CHANCE - (keyLevelNeeded * LEVEL_DECREASE);
 						
 						// success, pretend-death with rewards: chest.reduceCurrentHp(99999999, player)
 						if (getRandom(100) < chance)
@@ -213,6 +215,6 @@ public class Chests extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Chests(-1, Chests.class.getSimpleName(), "ai");
+		new Chests(Chests.class.getSimpleName(), "ai");
 	}
 }
