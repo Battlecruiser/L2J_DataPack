@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
@@ -58,9 +59,9 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	public String onSpawn(L2Npc npc)
 	{
 		if(npc.getNpcId() == MIKHAIL)
-			broadcastNpcSay(npc, Say2.SHOUT, 1000276);
+			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.GLORY_TO_ADEN_THE_KINGDOM_OF_THE_LION_GLORY_TO_SIR_GUSTAV_OUR_IMMORTAL_LORD);
 		else if(npc.getNpcId() == DIETRICH)
-			broadcastNpcSay(npc, Say2.SHOUT, 1000277);
+			broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.SOLDIERS_OF_GUSTAV_GO_FORTH_AND_DESTROY_THE_INVADERS);
 		return null;
 	}
 	
@@ -90,7 +91,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 			if(npc.getCurrentHp() < GUSTAV_TRIGGER_HP
 					&& npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST)
 			{
-				broadcastNpcSay(npc, Say2.ALL, 1000278);
+				broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, SkillTable.getInstance().getInfo(4235, 1), npc);
 			}
 		}

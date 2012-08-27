@@ -730,7 +730,7 @@ public class TowerOfNaia extends Quest
 					MinionList.spawnMinion(_lock, 18493);
 				}
 				
-				_controller.broadcastPacket(new NpcSay(_controller.getObjectId(), Say2.ALL, _controller.getNpcId(), NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY));
+				_controller.broadcastPacket(new NpcSay(_controller.getObjectId(), Say2.NPC_ALL, _controller.getNpcId(), NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY));
 				_counter -= 10;
 			}
 		}
@@ -835,7 +835,7 @@ public class TowerOfNaia extends Quest
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getNpcId() == npcId))
 							{
-								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[getRandom(4)]);
+								NpcSay ns = new NpcSay(spore.getObjectId(), Say2.NPC_ALL, spore.getNpcId(), SPORES_NPCSTRING_ID[getRandom(4)]);
 								ns.addStringParameter(el);
 								spore.broadcastPacket(ns);
 							}

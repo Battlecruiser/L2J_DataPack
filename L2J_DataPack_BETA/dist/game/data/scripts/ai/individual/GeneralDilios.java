@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -62,11 +63,19 @@ public class GeneralDilios extends L2AttackableAIScript
 	public void findNpcs()
 	{
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		{
 			if (spawn != null)
+			{
 				if (spawn.getNpcid() == generalId)
+				{
 					_general = spawn.getLastSpawn();
+				}
 				else if (spawn.getNpcid() == guardId)
+				{
 					_guards.add(spawn.getLastSpawn());
+				}
+			}
+		}
 	}
 	
 	@Override
@@ -77,13 +86,13 @@ public class GeneralDilios extends L2AttackableAIScript
 			int value = Integer.parseInt(event.substring(8));
 			if (value < 6)
 			{
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), 0, generalId, NpcStringId.STABBING_THREE_TIMES));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_ALL, generalId, NpcStringId.STABBING_THREE_TIMES));
 				startQuestTimer("guard_animation_0", 3400, null, null);
 			}
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), 1, generalId, diliosText[getRandom(diliosText.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, generalId, diliosText[getRandom(diliosText.length)]));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}

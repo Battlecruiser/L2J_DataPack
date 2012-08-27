@@ -80,7 +80,7 @@ public class Quarry extends Quest
 				}
 			}
 			
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
 			npc.doDie(npc);
 			return null;
 		}
@@ -150,7 +150,7 @@ public class Quarry extends Quest
 						ThreadPoolManager.getInstance().scheduleGeneral(new Decay(npc), 1000);
 						try
 						{
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.THANK_YOU_FOR_THE_RESCUE_ITS_A_SMALL_GIFT));
+							npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.THANK_YOU_FOR_THE_RESCUE_ITS_A_SMALL_GIFT));
 						}
 						catch (Exception e)
 						{

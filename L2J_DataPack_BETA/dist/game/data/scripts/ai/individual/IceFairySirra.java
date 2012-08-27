@@ -367,10 +367,6 @@ public class IceFairySirra extends L2AttackableAIScript
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState("IceFairySirra") == null)
-		{
-			newQuestState(player);
-		}
 		player.setLastQuestNpcObject(npc.getObjectId());
 		String filename = "";
 		if (npc.isBusy())

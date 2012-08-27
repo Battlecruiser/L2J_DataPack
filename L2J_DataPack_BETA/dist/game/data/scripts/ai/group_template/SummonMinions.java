@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -208,7 +209,7 @@ public class SummonMinions extends L2AttackableAIScript
 						}
 						if (npcId == 20767)
 						{
-							npc.broadcastPacket(new NpcSay(npcObjId, 0, npcId, NpcStringId.COME_OUT_YOU_CHILDREN_OF_DARKNESS));
+							npc.broadcastPacket(new NpcSay(npcObjId, Say2.NPC_ALL, npcId, NpcStringId.COME_OUT_YOU_CHILDREN_OF_DARKNESS));
 						}
 						break;
 					}

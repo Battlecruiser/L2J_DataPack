@@ -254,7 +254,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGludio = findController();
 		}
 		if (_atcGludio != null)
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), npcString));
+			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
 	}
 	
 	private final void broadcastInGracia(NpcStringId npcStringId)
@@ -265,7 +265,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGracia = findController();
 		}
 		if (_atcGracia != null)
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.SHOUT, _atcGracia.getNpcId(), npcStringId));
+			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
 	}
 	
 	private final L2Npc findController()

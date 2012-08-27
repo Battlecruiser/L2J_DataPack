@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -171,13 +172,13 @@ public class Core extends L2AttackableAIScript
 			if (_FirstAttacked)
 			{
 				if (getRandom(100) == 0)
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.REMOVING_INTRUDERS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.REMOVING_INTRUDERS));
 			}
 			else
 			{
 				_FirstAttacked = true;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.A_NON_PERMITTED_TARGET_HAS_BEEN_DISCOVERED));
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.INTRUDER_REMOVAL_SYSTEM_INITIATED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.A_NON_PERMITTED_TARGET_HAS_BEEN_DISCOVERED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.INTRUDER_REMOVAL_SYSTEM_INITIATED));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -191,9 +192,9 @@ public class Core extends L2AttackableAIScript
 		{
 			int objId = npc.getObjectId();
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
+			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
+			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
+			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
 			_FirstAttacked = false;
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Respawn time is 60 Hours - 24 Random Hours

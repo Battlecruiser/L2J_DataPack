@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -331,7 +332,7 @@ public class MC_Show extends L2AttackableAIScript
 			switch (npc.getNpcId())
 			{
 				case 32433:
-					autoChat(npc, messages[0], 1);
+					autoChat(npc, messages[0], Say2.NPC_SHOUT);
 					startQuestTimer("1", 30000, npc, null);
 					break;
 				case 32431:
@@ -382,7 +383,7 @@ public class MC_Show extends L2AttackableAIScript
 		{
 			if (event.equalsIgnoreCase("6"))
 			{
-				autoChat(npc, messages[6], 1);
+				autoChat(npc, messages[6], Say2.NPC_SHOUT);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56511, -56647, -2008, 36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
 				addSpawn(singers[0], -56344, -56328, -2008, 32768, false, 224000);
@@ -399,7 +400,7 @@ public class MC_Show extends L2AttackableAIScript
 				switch (npc.getNpcId())
 				{
 					case 32433:
-						autoChat(npc, messages[7], 1);
+						autoChat(npc, messages[7], Say2.NPC_SHOUT);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56698, -56430, -2008, 32768));
 						startQuestTimer("8", 12000, npc, null);
 						break;
@@ -429,7 +430,7 @@ public class MC_Show extends L2AttackableAIScript
 				switch (npc.getNpcId())
 				{
 					case 32433:
-						autoChat(npc, messages[10], 1);
+						autoChat(npc, messages[10], Say2.NPC_SHOUT);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56698, -56430, -2008, 32768));
 						startQuestTimer("12", 5000, npc, null);
 						break;
@@ -445,7 +446,7 @@ public class MC_Show extends L2AttackableAIScript
 			}
 			else if (event.equalsIgnoreCase("17"))
 			{
-				autoChat(npc, messages[15], 1);
+				autoChat(npc, messages[15], Say2.NPC_SHOUT);
 				startQuestTimer("social1", 2000, addSpawn(individuals[1], -56700, -56340, -2008, 32768, false, 32000), null);
 				startQuestTimer("18", 9000, npc, null);
 			}
@@ -466,7 +467,7 @@ public class MC_Show extends L2AttackableAIScript
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
-				autoChat(npc, messages[22], 0);
+				autoChat(npc, messages[22], Say2.NPC_ALL);
 				startQuestTimer("social1", 1, npc, null);
 			}
 			else if (event.equalsIgnoreCase("29"))
@@ -491,7 +492,7 @@ public class MC_Show extends L2AttackableAIScript
 					final ShoutInfo si = talks.get(event);
 					if (si != null)
 					{
-						autoChat(npc, si.getNpcStringId(), 1);
+						autoChat(npc, si.getNpcStringId(), Say2.NPC_SHOUT);
 						startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
 					}
 				}

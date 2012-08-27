@@ -92,7 +92,7 @@ public class Natives extends Quest
 				if (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 10)
 				{
 					qs.takeItems(MARK_OF_BETRAYAL, 10);
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
 					HellboundManager.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : doors)
@@ -130,7 +130,7 @@ public class Natives extends Quest
 		}
 		else if ((npc.getNpcId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
 			npc.doDie(null);
 		}
 		else if (npc.getNpcId() == INCASTLE)
