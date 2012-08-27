@@ -44,7 +44,8 @@ public class AdminClan implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_clan_info", "admin_clan_changeleader"
+		"admin_clan_info",
+		"admin_clan_changeleader"
 	};
 	
 	@Override
@@ -174,7 +175,7 @@ public class AdminClan implements IAdminCommandHandler
 					exLeader.setClan(clan);
 					exLeader.setClanPrivileges(L2Clan.CP_NOTHING);
 					exLeader.broadcastUserInfo();
-					exLeader.setPledgeClass(exLeader.getClan().getClanMember(exLeader.getObjectId()).calculatePledgeClass(exLeader));
+					exLeader.setPledgeClass(L2ClanMember.calculatePledgeClass(exLeader));
 					exLeader.broadcastUserInfo();
 					exLeader.checkItemRestriction();
 				}
@@ -203,7 +204,7 @@ public class AdminClan implements IAdminCommandHandler
 				clan.updateClanInDB();
 				
 				player.setClan(clan);
-				player.setPledgeClass(member.calculatePledgeClass(player));
+				player.setPledgeClass(L2ClanMember.calculatePledgeClass(player));
 				player.setClanPrivileges(L2Clan.CP_ALL);
 				
 				if (clan.getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel())
