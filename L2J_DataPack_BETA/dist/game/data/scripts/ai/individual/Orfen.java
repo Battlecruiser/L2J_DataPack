@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
@@ -237,7 +238,7 @@ public class Orfen extends L2AttackableAIScript
 			L2Character originalCaster = isPet ? caster.getPet() : caster;
 			if (skill.getAggroPoints() > 0 && getRandom(5) == 0 && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
-				NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), Text[getRandom(4)]);
+				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), Text[getRandom(4)]);
 				packet.addStringParameter(caster.getName().toString());
 				npc.broadcastPacket(packet);
 				originalCaster.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
@@ -288,7 +289,7 @@ public class Orfen extends L2AttackableAIScript
 			}
 			else if (npc.isInsideRadius(attacker, 1000, false, false) && !npc.isInsideRadius(attacker, 300, false, false) && getRandom(10) == 0)
 			{
-				NpcSay packet = new NpcSay(npc.getObjectId(), 0, npcId, Text[getRandom(3)]);
+				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npcId, Text[getRandom(3)]);
 				packet.addStringParameter(attacker.getName().toString());
 				npc.broadcastPacket(packet);
 				attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());

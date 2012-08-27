@@ -68,7 +68,7 @@ public class Ranku extends L2AttackableAIScript
 			{
 				if ((minion != null) && !minion.isDead() && !myTrackingSet.contains(minion.getObjectId()))
 				{
-					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.ALL, minion.getNpcId(), NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME));
+					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME));
 					startQuestTimer("checkup", 1000, npc, null);
 					synchronized (myTrackingSet)
 					{

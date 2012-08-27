@@ -17,7 +17,6 @@ package ai.group_template;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Evas Gift Boxes AI.
@@ -67,11 +66,6 @@ public class EvasGiftBoxes extends Quest
 	{
 		if (npc.getNpcId() == GIFTBOX)
 		{
-			QuestState st = killer.getQuestState(EvasGiftBoxes.class.getSimpleName());
-			if (st == null)
-			{
-				st = newQuestState(killer);
-			}
 			int isKissOfEvaBuffed = 0;
 			if (killer.getFirstEffect(KISSOFEVA) != null)
 			{
@@ -81,7 +75,7 @@ public class EvasGiftBoxes extends Quest
 			{
 				if (getRandom(100) < CHANCES[isKissOfEvaBuffed][i])
 				{
-					st.giveItems(CHANCES[isKissOfEvaBuffed][i + 1], 1);
+					giveItems(killer, CHANCES[isKissOfEvaBuffed][i + 1], 1);
 				}
 			}
 		}

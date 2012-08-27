@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -1109,14 +1110,14 @@ public class DarkCloudMansion extends Quest
 					mob.count = 1;
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _successChat[getRandom(_successChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _successChat[getRandom(_successChat.length)]));
 						FifthRoom.founded += 1;
 						startQuestTimer("decayMe", 1500, npc, player);
 					}
 					else
 					{
 						FifthRoom.reset = 1;
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _faildChat[getRandom(_faildChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _faildChat[getRandom(_faildChat.length)]));
 						startQuestTimer("decayChatBelethSamples", 4000, npc, player);
 						startQuestTimer("decayBelethSamples", 4500, npc, player);
 					}
@@ -1283,7 +1284,7 @@ public class DarkCloudMansion extends Quest
 				{
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _decayChat[getRandom(_decayChat.length)]));
+						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), Say2.NPC_ALL, mob.npc.getNpcId(), _decayChat[getRandom(_decayChat.length)]));
 					}
 				}
 			}

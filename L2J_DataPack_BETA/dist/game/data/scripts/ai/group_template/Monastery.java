@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -76,7 +77,7 @@ public class Monastery extends L2AttackableAIScript
 			if (player.getActiveWeaponInstance() != null)
 			{
 				npc.setTarget(player);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[0]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), messages[0]));
 				switch (npc.getNpcId())
 				{
 					case 22124:
@@ -114,7 +115,7 @@ public class Monastery extends L2AttackableAIScript
 				{
 					if (obj.equals(npc))
 					{
-						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[getRandom(2) + 1]);
+						NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), messages[getRandom(2) + 1]);
 						packet.addStringParameter(caster.getName());
 						npc.broadcastPacket(packet);
 						((L2Attackable) npc).addDamageHate(caster, 0, 999);
@@ -153,7 +154,7 @@ public class Monastery extends L2AttackableAIScript
 					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[0]));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), messages[0]));
 						switch (npc.getNpcId())
 						{
 							case 22124:

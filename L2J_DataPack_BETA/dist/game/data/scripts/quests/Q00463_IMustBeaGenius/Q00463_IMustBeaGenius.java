@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
 
@@ -166,7 +167,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			{
 				st.giveItems(_corpse_log, _number);
 				st.playSound("ItemSound.quest_itemget");
-				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
+				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(_number));
 				
@@ -177,7 +178,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			{
 				st.takeItems(_corpse_log, Math.abs(_number));
 				st.playSound("ItemSound.quest_itemget");
-				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
+				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(_number));
 				

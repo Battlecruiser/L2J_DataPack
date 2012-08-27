@@ -40,7 +40,9 @@ public class Amaskari extends L2AttackableAIScript
 	private static final int BUFF_ID = 4632;
 	private static SkillHolder[] BUFF =
 	{
-		new SkillHolder(BUFF_ID, 1), new SkillHolder(BUFF_ID, 2), new SkillHolder(BUFF_ID, 3)
+		new SkillHolder(BUFF_ID, 1), 
+		new SkillHolder(BUFF_ID, 2), 
+		new SkillHolder(BUFF_ID, 3)
 	};
 	// private static SkillHolder INVINCIBILITY = new SkillHolder(5417, 1);
 	
@@ -69,7 +71,7 @@ public class Amaskari extends L2AttackableAIScript
 	{
 		if (event.equalsIgnoreCase("stop_toggle"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[2]));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[2]));
 			((L2MonsterInstance) npc).clearAggroList();
 			((L2MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			npc.setIsInvul(false);
@@ -79,11 +81,11 @@ public class Amaskari extends L2AttackableAIScript
 		{
 			if (getRandom(100) > 20)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[2]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[2]));
 			}
 			else if (getRandom(100) > 40)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[3]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[3]));
 			}
 			startQuestTimer("onspawn_msg", (getRandom(8) + 1) * 30000, npc, null);
 		}
@@ -95,12 +97,12 @@ public class Amaskari extends L2AttackableAIScript
 	{
 		if ((npc.getNpcId() == AMASKARI) && (getRandom(1000) < 25))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[0]));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[0]));
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && (getRandom(10) == 0))
 				{
-					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[0]));
+					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[0]));
 					minion.setCurrentHp(minion.getCurrentHp() - (minion.getCurrentHp() / 5));
 				}
 			}
@@ -116,7 +118,7 @@ public class Amaskari extends L2AttackableAIScript
 			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
-				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[1]));
+				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[1]));
 				final L2Effect e = master.getFirstEffect(BUFF_ID);
 				if ((e != null) && (e.getAbnormalLvl() == 3) && master.isInvul())
 				{
@@ -136,7 +138,7 @@ public class Amaskari extends L2AttackableAIScript
 					}
 					else
 					{
-						master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[3]));
+						master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[3]));
 						// master.doCast(INVINCIBILITY.getSkill())
 						master.setIsInvul(true);
 						startQuestTimer("stop_toggle", 10000, master, null);
@@ -152,7 +154,7 @@ public class Amaskari extends L2AttackableAIScript
 				{
 					if (getRandom(1000) > 300)
 					{
-						minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[1]));
+						minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[1]));
 					}
 					
 					HellboundManager.getInstance().updateTrust(30, true);
