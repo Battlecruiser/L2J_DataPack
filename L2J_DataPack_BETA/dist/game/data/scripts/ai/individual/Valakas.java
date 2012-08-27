@@ -571,6 +571,6 @@ public class Valakas extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new Valakas(-1, "valakas", "ai");
+		new Valakas(-1, Valakas.class.getSimpleName(), "ai");
 	}
 }
