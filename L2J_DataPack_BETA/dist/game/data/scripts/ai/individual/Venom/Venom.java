@@ -14,7 +14,9 @@
  */
 package ai.individual.Venom;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
+
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -94,9 +96,9 @@ public final class Venom extends AbstractNpcAI
 	};
 	// @formatter:on
 	
-	private static FastList<L2PcInstance> _targets = new FastList<>();
+	private static List<L2PcInstance> _targets = new ArrayList<>();
 	
-	public Venom(String name, String descr)
+	private Venom(String name, String descr)
 	{
 		super(name, descr);
 		
