@@ -1,0 +1,171 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="27400" templateId="27400" clientName="Shilen's Evil Thoughts" serverName="evil_of_shilen13" level="51" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="13" special="13" />
+			<height normal="40" special="40" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>45525133</exp>
+		<speed>
+			<run ground="100" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="321.13207" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="219.29157" pDef="204.85194" mDef="149.90176" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>evil_of_shilen13</ai>
+			<ai_param name="Skill01_Probablity" val="1000" />
+			<ai_param name="Skill02_Probablity" val="1000" />
+			<ai_skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
+			<ai_skill name="Skill02_ID" id="5976" level="1" /> <!-- Dark Storm -->
+		</npc_ai>
+		<org hp="1470.41596" hp_regen="6.5" mp="775.8" mp_regen="2.4" />
+		<physical hitModify="5" avoidModify="0" />
+		<race>ETC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>ETC</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="27401" templateId="27401" clientName="Shilen's Evil Thoughts" serverName="evil_of_shilen14" level="61" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="13" special="13" />
+			<height normal="40" special="40" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>146308200</exp>
+		<speed>
+			<run ground="100" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="501.08068" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="342.17315" pDef="252.49346" mDef="184.76376" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>evil_of_shilen14</ai>
+			<ai_param name="Skill01_Probablity" val="1000" />
+			<ai_param name="Skill02_Probablity" val="1000" />
+			<ai_skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
+			<ai_skill name="Skill02_ID" id="5976" level="2" /> <!-- Dark Storm -->
+		</npc_ai>
+		<org hp="1985.55926" hp_regen="7.5" mp="1066.8" mp_regen="2.7" />
+		<physical hitModify="5" avoidModify="0" />
+		<race>ETC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>ETC</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="27402" templateId="27402" clientName="Shilen's Evil Thoughts" serverName="evil_of_shilen15" level="79" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="14" special="14" />
+			<height normal="27.5" special="27.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>2099275834</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="200" />
+			<defend fire="170" water="170" wind="170" earth="170" holy="120" dark="200" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>evil_of_shilen15</ai>
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="0" />
+			<ai_param name="MoveAroundSocial2" val="0" />
+			<ai_param name="Skill01_Probablity" val="1000" />
+			<ai_param name="Skill02_Probablity" val="1000" />
+			<ai_skill name="Skill01_ID" id="5975" level="3" /> <!-- Dark Attack -->
+			<ai_skill name="Skill02_ID" id="5976" level="3" /> <!-- Dark Storm -->
+		</npc_ai>
+		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
+		<physical hitModify="5" avoidModify="0" />
+		<race>DEMONIC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>
