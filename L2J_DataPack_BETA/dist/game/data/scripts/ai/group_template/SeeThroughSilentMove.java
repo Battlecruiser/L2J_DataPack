@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -24,57 +26,33 @@ import com.l2jserver.gameserver.util.Util;
  * See Through Silent Move AI.
  * @author Gigiikun
  */
-public class SeeThroughSilentMove extends L2AttackableAIScript
+public class SeeThroughSilentMove extends AbstractNpcAI
 {
+	//@formatter:off
 	private static final int[] MOBIDS =
 	{
-		18001,
-		18002,
-		22199,
-		22215,
-		22216,
-		22217,
-		22327,
-		22746,
-		22747,
-		22748,
-		22749,
-		22750,
-		22751,
-		22752,
-		22753,
-		22754,
-		22755,
-		22756,
-		22757,
-		22758,
-		22759,
-		22760,
-		22761,
-		22762,
-		22763,
-		22764,
-		22765,
-		22794,
-		22795,
-		22796,
-		22797,
-		22798,
-		22799,
-		22800,
-		29009,
-		29010,
-		29011,
-		29012,
-		29013
+		18001, 18002, 22199,
+		22215, 22216, 22217,
+		22327, 22746, 22747,
+		22748, 22749, 22750,
+		22751, 22752, 22753,
+		22754, 22755, 22756,
+		22757, 22758, 22759,
+		22760, 22761, 22762,
+		22763, 22764, 22765,
+		22794, 22795, 22796,
+		22797, 22798, 22799,
+		22800, 29009, 29010,
+		29011, 29012, 29013
 	};
+	//@formatter:on
 	
-	public SeeThroughSilentMove(int questId, String name, String descr)
+	private SeeThroughSilentMove(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		for (L2Spawn npc : SpawnTable.getInstance().getSpawnTable())
 		{
-			if (Util.contains(MOBIDS, npc.getNpcid()) && (npc.getLastSpawn() != null) && (npc.getLastSpawn() instanceof L2Attackable))
+			if (Util.contains(MOBIDS, npc.getNpcid()) && (npc.getLastSpawn() != null) && npc.getLastSpawn().isL2Attackable())
 			{
 				((L2Attackable) npc.getLastSpawn()).setSeeThroughSilentMove(true);
 			}
@@ -85,7 +63,7 @@ public class SeeThroughSilentMove extends L2AttackableAIScript
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc instanceof L2Attackable)
+		if (npc.isL2Attackable())
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
 		}
@@ -94,6 +72,6 @@ public class SeeThroughSilentMove extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new SeeThroughSilentMove(-1, SeeThroughSilentMove.class.getSimpleName(), "ai");
+		new SeeThroughSilentMove(SeeThroughSilentMove.class.getSimpleName(), "ai");
 	}
 }

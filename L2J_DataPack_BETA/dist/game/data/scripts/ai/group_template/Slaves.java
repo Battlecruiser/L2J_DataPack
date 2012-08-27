@@ -16,6 +16,8 @@ package ai.group_template;
 
 import java.util.List;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
@@ -31,14 +33,24 @@ import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
  * Hellbound Slaves AI.
  * @author DS
  */
-public class Slaves extends L2AttackableAIScript
+public class Slaves extends AbstractNpcAI
 {
 	private static final int[] MASTERS =
 	{
-		22320, 22321
+		22320,
+		22321
 	};
+	
 	private static final L2CharPosition MOVE_TO = new L2CharPosition(-25451, 252291, -3252, 3500);
+	
 	private static final int TRUST_REWARD = 10;
+	
+	private Slaves(String name, String descr)
+	{
+		super(name, descr);
+		addSpawnId(MASTERS);
+		addKillId(MASTERS);
+	}
 	
 	@Override
 	public final String onSpawn(L2Npc npc)
@@ -83,18 +95,8 @@ public class Slaves extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public Slaves(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npcId : MASTERS)
-		{
-			addSpawnId(npcId);
-			addKillId(npcId);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new Slaves(-1, Slaves.class.getSimpleName(), "ai");
+		new Slaves(Slaves.class.getSimpleName(), "ai");
 	}
 }

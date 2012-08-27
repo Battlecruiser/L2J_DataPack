@@ -17,6 +17,7 @@ package ai.group_template;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -31,15 +32,18 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
+import custom.IOPRace.IOPRace;
+
 /**
  * Prison Guards AI.
  * @author Gigiikun
  */
-public class PrisonGuards extends L2AttackableAIScript
+public class PrisonGuards extends AbstractNpcAI
 {
 	final private static int GUARD1 = 18367;
 	final private static int GUARD2 = 18368;
 	final private static int STAMP = 10013;
+	
 	final private static String[] GUARDVARS =
 	{
 		"1st",
@@ -47,7 +51,6 @@ public class PrisonGuards extends L2AttackableAIScript
 		"3rd",
 		"4th"
 	};
-	final private static String qn = "IOPRace";
 	
 	private final static int silence = 4098;
 	private final static int pertification = 4578;
@@ -57,9 +60,9 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	private final Map<L2Npc, Integer> _guards = new FastMap<>();
 	
-	public PrisonGuards(int questId, String name, String descr)
+	private PrisonGuards(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		int[] mob =
 		{
 			GUARD1,
@@ -216,7 +219,7 @@ public class PrisonGuards extends L2AttackableAIScript
 		}
 		else if ((npc.getNpcId() == GUARD1) && (getRandom(100) < 5))
 		{
-			final QuestState qs = player.getQuestState(qn);
+			final QuestState qs = player.getQuestState(IOPRace.class.getSimpleName());
 			if ((qs != null) && (qs.getInt(GUARDVARS[_guards.get(npc)]) != 1))
 			{
 				qs.set(GUARDVARS[_guards.get(npc)], "1");
@@ -256,6 +259,6 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new PrisonGuards(-1, PrisonGuards.class.getSimpleName(), "ai");
+		new PrisonGuards(PrisonGuards.class.getSimpleName(), "ai");
 	}
 }

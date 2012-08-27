@@ -14,24 +14,36 @@
  */
 package ai.individual;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
  * @author DS
  */
-public class OutpostCaptain extends Quest
+public class OutpostCaptain extends AbstractNpcAI
 {
 	private static final int CAPTAIN = 18466;
+	
 	private static final int[] DEFENDERS =
 	{
-		22357, 22358
+		22357,
+		22358
 	};
+	
 	private static final int DOORKEEPER = 32351;
+	
+	private OutpostCaptain(String name, String descr)
+	{
+		super(name, descr);
+		addKillId(CAPTAIN);
+		addSpawnId(CAPTAIN, DOORKEEPER);
+		addSpawnId(DEFENDERS);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -76,21 +88,8 @@ public class OutpostCaptain extends Quest
 		return super.onSpawn(npc);
 	}
 	
-	public OutpostCaptain(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addKillId(CAPTAIN);
-		addSpawnId(CAPTAIN);
-		addSpawnId(DOORKEEPER);
-		
-		for (int i : DEFENDERS)
-		{
-			addSpawnId(i);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new OutpostCaptain(-1, OutpostCaptain.class.getSimpleName(), "ai");
+		new OutpostCaptain(OutpostCaptain.class.getSimpleName(), "ai");
 	}
 }

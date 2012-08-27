@@ -17,7 +17,7 @@ package ai.individual;
 import java.util.List;
 
 import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -41,9 +41,8 @@ import com.l2jserver.util.Rnd;
  * Queen Ant AI
  * @author Emperorc
  */
-public class QueenAnt extends L2AttackableAIScript
+public class QueenAnt extends AbstractNpcAI
 {
-	
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;
 	private static final int NURSE = 29003;
@@ -76,9 +75,9 @@ public class QueenAnt extends L2AttackableAIScript
 	private L2MonsterInstance _larva = null;
 	private final List<L2MonsterInstance> _nurses = new FastList<>(5);
 	
-	public QueenAnt(int questId, String name, String descr)
+	private QueenAnt(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		
 		registerMobs(MOBS, QuestEventType.ON_SPAWN, QuestEventType.ON_KILL, QuestEventType.ON_AGGRO_RANGE_ENTER);
 		addFactionCallId(NURSE);
@@ -365,7 +364,6 @@ public class QueenAnt extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new QueenAnt(-1, "queen_ant", "ai");
+		new QueenAnt(QueenAnt.class.getSimpleName(), "ai");
 	}
 }

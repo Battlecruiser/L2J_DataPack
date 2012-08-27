@@ -18,11 +18,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Logger;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -53,10 +52,8 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  * This class ... control for sequence of fight against Antharas.
  * @author L2J_JP SANDMAN
  */
-public class Antharas extends L2AttackableAIScript
+public class Antharas extends AbstractNpcAI
 {
-	protected static final Logger log = Logger.getLogger(Antharas.class.getName());
-	
 	// config
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
 	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
@@ -123,16 +120,10 @@ public class Antharas extends L2AttackableAIScript
 	
 	protected static L2BossZone _Zone;
 	
-	public static void main(String[] args)
-	{
-		// now call the constructor (starts up the ai)
-		new Antharas(-1, "antharas", "ai");
-	}
-	
 	// Boss: Antharas
-	public Antharas(int id, String name, String descr)
+	private Antharas(String name, String descr)
 	{
-		super(id, name, descr);
+		super(name, descr);
 		int[] mob =
 		{
 			ANTHARASOLDID,
@@ -148,7 +139,7 @@ public class Antharas extends L2AttackableAIScript
 			29075,
 			29076
 		};
-		this.registerMobs(mob);
+		registerMobs(mob);
 		init();
 	}
 	
@@ -212,7 +203,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			log.warning(e.getMessage());
+			_log.warning(e.getMessage());
 		}
 		
 		// Setting spawn data of teleport cube.
@@ -236,7 +227,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			log.warning(e.getMessage());
+			_log.warning(e.getMessage());
 		}
 		int status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
 		if (FWA_OLDANTHARAS || (status == WAITING))
@@ -641,7 +632,7 @@ public class Antharas extends L2AttackableAIScript
 			}
 			catch (Exception e)
 			{
-				log.warning(e.getMessage());
+				_log.warning(e.getMessage());
 			}
 		}
 	}
@@ -974,5 +965,10 @@ public class Antharas extends L2AttackableAIScript
 			_monsters.remove(npc);
 		}
 		return super.onKill(npc, killer, isPet);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Antharas(Antharas.class.getSimpleName(), "ai");
 	}
 }

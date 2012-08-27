@@ -17,35 +17,52 @@ package ai.individual;
 import java.util.Arrays;
 import java.util.Map;
 
-import javolution.util.FastMap;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.MinionList;
+import com.l2jserver.util.L2FastMap;
 
 /**
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-public class Epidos extends L2AttackableAIScript
+public class Epidos extends AbstractNpcAI
 {
 	private static final int[] EPIDOSES =
 	{
-		25609, 25610, 25611, 25612
-	};
-	private static final int[] MINIONS =
-	{
-		25605, 25606, 25607, 25608
-	};
-	private static final int[] MINIONS_COUNT =
-	{
-		3, 6, 11
+		25609,
+		25610,
+		25611,
+		25612
 	};
 	
-	private final Map<Integer, Double> _lastHp = new FastMap<>();
+	private static final int[] MINIONS =
+	{
+		25605,
+		25606,
+		25607,
+		25608
+	};
+	
+	private static final int[] MINIONS_COUNT =
+	{
+		3,
+		6,
+		11
+	};
+	
+	private final Map<Integer, Double> _lastHp = new L2FastMap<>(true);
+	
+	private Epidos(String name, String descr)
+	{
+		super(name, descr);
+		addKillId(EPIDOSES);
+		addSpawnId(EPIDOSES);
+	}
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -117,19 +134,8 @@ public class Epidos extends L2AttackableAIScript
 		return super.onSpawn(npc);
 	}
 	
-	public Epidos(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		
-		for (int i : EPIDOSES)
-		{
-			addKillId(i);
-			addSpawnId(i);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new Epidos(-1, "Epidos", "ai");
+		new Epidos(Epidos.class.getSimpleName(), "ai");
 	}
 }

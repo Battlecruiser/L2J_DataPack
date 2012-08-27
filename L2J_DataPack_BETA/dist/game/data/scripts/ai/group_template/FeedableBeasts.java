@@ -18,6 +18,7 @@ import java.util.Map;
 
 import javolution.util.FastMap;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -37,75 +38,155 @@ import com.l2jserver.gameserver.util.Util;
  * Growth-capable mobs: Polymorphing upon successful feeding.
  * @author Fulminus
  */
-public class FeedableBeasts extends L2AttackableAIScript
+public class FeedableBeasts extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 6643;
 	private static final int CRYSTAL_SPICE = 6644;
 	private static final int SKILL_GOLDEN_SPICE = 2188;
 	private static final int SKILL_CRYSTAL_SPICE = 2189;
-	private static final int[] TAMED_BEASTS = {16013, 16014, 16015, 16016, 16017, 16018};
+	private static final int[] TAMED_BEASTS =
+	{
+		16013,
+		16014,
+		16015,
+		16016,
+		16017,
+		16018
+	};
 	private static final int FOODSKILLDIFF = GOLDEN_SPICE - SKILL_GOLDEN_SPICE;
 	
 	// all mobs that can eat...
-	private static final int[] FEEDABLE_BEASTS = 
+	private static final int[] FEEDABLE_BEASTS =
 	{
-		21451,21452,21453,21454,21455,21456,21457,21458,21459,21460,21461,21462,21463,
-		21464,21465,21466,21467,21468,21469,21470,21471,21472,21473,21474,21475,21476,
-		21477,21478,21479,21480,21481,21482,21483,21484,21485,21486,21487,21488,21489,
-		21490,21491,21492,21493,21494,21495,21496,21497,21498,21499,21500,21501,21502,
-		21503,21504,21505,21506,21507,21824,21825,21826,21827,21828,21829,16013,16014,
-		16015,16016,16017,16018
+		21451,
+		21452,
+		21453,
+		21454,
+		21455,
+		21456,
+		21457,
+		21458,
+		21459,
+		21460,
+		21461,
+		21462,
+		21463,
+		21464,
+		21465,
+		21466,
+		21467,
+		21468,
+		21469,
+		21470,
+		21471,
+		21472,
+		21473,
+		21474,
+		21475,
+		21476,
+		21477,
+		21478,
+		21479,
+		21480,
+		21481,
+		21482,
+		21483,
+		21484,
+		21485,
+		21486,
+		21487,
+		21488,
+		21489,
+		21490,
+		21491,
+		21492,
+		21493,
+		21494,
+		21495,
+		21496,
+		21497,
+		21498,
+		21499,
+		21500,
+		21501,
+		21502,
+		21503,
+		21504,
+		21505,
+		21506,
+		21507,
+		21824,
+		21825,
+		21826,
+		21827,
+		21828,
+		21829,
+		16013,
+		16014,
+		16015,
+		16016,
+		16017,
+		16018
 	};
 	
-	private static final Map<Integer,Integer> MAD_COW_POLYMORPH = new FastMap<>();
-	
+	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new FastMap<>();
 	static
 	{
-		MAD_COW_POLYMORPH.put(21824,21468);
-		MAD_COW_POLYMORPH.put(21825,21469);
-		MAD_COW_POLYMORPH.put(21826,21487);
-		MAD_COW_POLYMORPH.put(21827,21488);
-		MAD_COW_POLYMORPH.put(21828,21506);
-		MAD_COW_POLYMORPH.put(21829,21507);
+		MAD_COW_POLYMORPH.put(21824, 21468);
+		MAD_COW_POLYMORPH.put(21825, 21469);
+		MAD_COW_POLYMORPH.put(21826, 21487);
+		MAD_COW_POLYMORPH.put(21827, 21488);
+		MAD_COW_POLYMORPH.put(21828, 21506);
+		MAD_COW_POLYMORPH.put(21829, 21507);
 	}
 	
-	//TODO: NpcString
+	// TODO: NpcString
 	private static final String[][] TEXT =
 	{
 		{
-			"What did you just do to me?","You want to tame me, huh?",
+			"What did you just do to me?",
+			"You want to tame me, huh?",
 			"Do not give me this. Perhaps you will be in danger.",
 			"Bah bah. What is this unpalatable thing?",
 			"My belly has been complaining.  This hit the spot.",
-			"What is this? Can I eat it?","You don't need to worry about me.",
-			"Delicious food, thanks.","I am starting to like you!","Gulp"
+			"What is this? Can I eat it?",
+			"You don't need to worry about me.",
+			"Delicious food, thanks.",
+			"I am starting to like you!",
+			"Gulp"
 		},
 		{
 			"I do not think you have given up on the idea of taming me.",
 			"That is just food to me.  Perhaps I can eat your hand too.",
-			"Will eating this make me fat? Ha ha","Why do you always feed me?",
+			"Will eating this make me fat? Ha ha",
+			"Why do you always feed me?",
 			"Do not trust me.  I may betray you"
 		},
 		{
-			"Destroy","Look what you have done!",
+			"Destroy",
+			"Look what you have done!",
 			"Strange feeling...!  Evil intentions grow in my heart...!",
-			"It is happenning!","This is sad...Good is sad...!"
+			"It is happenning!",
+			"This is sad...Good is sad...!"
 		}
 	};
 	
 	private static final String[] TAMED_TEXT =
 	{
-		"Refills! Yeah!","I am such a gluttonous beast, it is embarrassing! Ha ha",
+		"Refills! Yeah!",
+		"I am such a gluttonous beast, it is embarrassing! Ha ha",
 		"Your cooperative feeling has been getting better and better.",
-		"I will help you!","The weather is really good.  Wanna go for a picnic?",
+		"I will help you!",
+		"The weather is really good.  Wanna go for a picnic?",
 		"I really like you! This is tasty...",
 		"If you do not have to leave this place, then I can help you.",
-		"What can I help you with?","I am not here only for food!",
+		"What can I help you with?",
+		"I am not here only for food!",
 		"Yam, yam, yam, yam, yam!"
 	};
 	
-	private static Map<Integer,Integer> _FeedInfo = new FastMap<>();
-	private static Map<Integer,GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
+	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
+	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob
@@ -126,7 +207,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			_spiceToMob.put(spice, Mobs);
 		}
 		
-		public Integer getMob(int spice,int mobType, int classType)
+		public Integer getMob(int spice, int mobType, int classType)
 		{
 			if (_spiceToMob.containsKey(spice))
 			{
@@ -154,13 +235,14 @@ public class FeedableBeasts extends L2AttackableAIScript
 		}
 	}
 	
-	public FeedableBeasts (int questId, String name, String descr)
+	private FeedableBeasts(String name, String descr)
 	{
-		super(questId, name, descr);
-		this.registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
+		super(name, descr);
+		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
 		
 		GrowthCapableMob temp;
 		
+		//@formatter:off
 		final int[][] Kookabura_0_Gold = {{21452,21453, 21454, 21455}};
 		final int[][] Kookabura_0_Crystal = {{21456,21457, 21458, 21459}};
 		final int[][] Kookabura_1_Gold_1= {{21460,21462}};
@@ -187,147 +269,148 @@ public class FeedableBeasts extends L2AttackableAIScript
 		final int[][] Cougar_1_Crystal_2 = {{21503,21505}};
 		final int[][] Cougar_2_1 = {{21506,21828},{16015,16016}};
 		final int[][] Cougar_2_2 = {{21507,21829},{16015,16016}};
+		//@formatter:on
 		
 		// Alpen Kookabura
-		temp = new GrowthCapableMob(0,100);
-		temp.addMobs(GOLDEN_SPICE,Kookabura_0_Gold);
-		temp.addMobs(CRYSTAL_SPICE,Kookabura_0_Crystal);
+		temp = new GrowthCapableMob(0, 100);
+		temp.addMobs(GOLDEN_SPICE, Kookabura_0_Gold);
+		temp.addMobs(CRYSTAL_SPICE, Kookabura_0_Crystal);
 		_GrowthCapableMobs.put(21451, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Kookabura_1_Gold_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Kookabura_1_Gold_1);
 		_GrowthCapableMobs.put(21452, temp);
 		_GrowthCapableMobs.put(21454, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Kookabura_1_Gold_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Kookabura_1_Gold_2);
 		_GrowthCapableMobs.put(21453, temp);
 		_GrowthCapableMobs.put(21455, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Kookabura_1_Crystal_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Kookabura_1_Crystal_1);
 		_GrowthCapableMobs.put(21456, temp);
 		_GrowthCapableMobs.put(21458, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Kookabura_1_Crystal_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Kookabura_1_Crystal_2);
 		_GrowthCapableMobs.put(21457, temp);
 		_GrowthCapableMobs.put(21459, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Kookabura_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Kookabura_2_1);
 		_GrowthCapableMobs.put(21460, temp);
 		_GrowthCapableMobs.put(21462, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Kookabura_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Kookabura_2_2);
 		_GrowthCapableMobs.put(21461, temp);
 		_GrowthCapableMobs.put(21463, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Kookabura_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Kookabura_2_1);
 		_GrowthCapableMobs.put(21464, temp);
 		_GrowthCapableMobs.put(21466, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Kookabura_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Kookabura_2_2);
 		_GrowthCapableMobs.put(21465, temp);
 		_GrowthCapableMobs.put(21467, temp);
 		
 		// Alpen Buffalo
-		temp = new GrowthCapableMob(0,100);
-		temp.addMobs(GOLDEN_SPICE,Buffalo_0_Gold);
-		temp.addMobs(CRYSTAL_SPICE,Buffalo_0_Crystal);
+		temp = new GrowthCapableMob(0, 100);
+		temp.addMobs(GOLDEN_SPICE, Buffalo_0_Gold);
+		temp.addMobs(CRYSTAL_SPICE, Buffalo_0_Crystal);
 		_GrowthCapableMobs.put(21470, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Buffalo_1_Gold_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Buffalo_1_Gold_1);
 		_GrowthCapableMobs.put(21471, temp);
 		_GrowthCapableMobs.put(21473, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Buffalo_1_Gold_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Buffalo_1_Gold_2);
 		_GrowthCapableMobs.put(21472, temp);
 		_GrowthCapableMobs.put(21474, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Buffalo_1_Crystal_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Buffalo_1_Crystal_1);
 		_GrowthCapableMobs.put(21475, temp);
 		_GrowthCapableMobs.put(21477, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Buffalo_1_Crystal_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Buffalo_1_Crystal_2);
 		_GrowthCapableMobs.put(21476, temp);
 		_GrowthCapableMobs.put(21478, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Buffalo_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Buffalo_2_1);
 		_GrowthCapableMobs.put(21479, temp);
 		_GrowthCapableMobs.put(21481, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Buffalo_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Buffalo_2_2);
 		_GrowthCapableMobs.put(21480, temp);
 		_GrowthCapableMobs.put(21482, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Buffalo_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Buffalo_2_1);
 		_GrowthCapableMobs.put(21483, temp);
 		_GrowthCapableMobs.put(21485, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Buffalo_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Buffalo_2_2);
 		_GrowthCapableMobs.put(21484, temp);
 		_GrowthCapableMobs.put(21486, temp);
 		
 		// Alpen Cougar
-		temp = new GrowthCapableMob(0,100);
-		temp.addMobs(GOLDEN_SPICE,Cougar_0_Gold);
-		temp.addMobs(CRYSTAL_SPICE,Cougar_0_Crystal);
+		temp = new GrowthCapableMob(0, 100);
+		temp.addMobs(GOLDEN_SPICE, Cougar_0_Gold);
+		temp.addMobs(CRYSTAL_SPICE, Cougar_0_Crystal);
 		_GrowthCapableMobs.put(21489, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Cougar_1_Gold_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Cougar_1_Gold_1);
 		_GrowthCapableMobs.put(21490, temp);
 		_GrowthCapableMobs.put(21492, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(GOLDEN_SPICE,Cougar_1_Gold_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(GOLDEN_SPICE, Cougar_1_Gold_2);
 		_GrowthCapableMobs.put(21491, temp);
 		_GrowthCapableMobs.put(21493, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Cougar_1_Crystal_1);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Cougar_1_Crystal_1);
 		_GrowthCapableMobs.put(21494, temp);
 		_GrowthCapableMobs.put(21496, temp);
 		
-		temp = new GrowthCapableMob(1,40);
-		temp.addMobs(CRYSTAL_SPICE,Cougar_1_Crystal_2);
+		temp = new GrowthCapableMob(1, 40);
+		temp.addMobs(CRYSTAL_SPICE, Cougar_1_Crystal_2);
 		_GrowthCapableMobs.put(21495, temp);
 		_GrowthCapableMobs.put(21497, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Cougar_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Cougar_2_1);
 		_GrowthCapableMobs.put(21498, temp);
 		_GrowthCapableMobs.put(21500, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(GOLDEN_SPICE,Cougar_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(GOLDEN_SPICE, Cougar_2_2);
 		_GrowthCapableMobs.put(21499, temp);
 		_GrowthCapableMobs.put(21501, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Cougar_2_1);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Cougar_2_1);
 		_GrowthCapableMobs.put(21502, temp);
 		_GrowthCapableMobs.put(21504, temp);
 		
-		temp = new GrowthCapableMob(2,25);
-		temp.addMobs(CRYSTAL_SPICE,Cougar_2_2);
+		temp = new GrowthCapableMob(2, 25);
+		temp.addMobs(CRYSTAL_SPICE, Cougar_2_2);
 		_GrowthCapableMobs.put(21503, temp);
 		_GrowthCapableMobs.put(21505, temp);
 	}
 	
-	public void spawnNext(L2Npc npc, int growthLevel, L2PcInstance player, int food)
+	private void spawnNext(L2Npc npc, int growthLevel, L2PcInstance player, int food)
 	{
 		int npcId = npc.getNpcId();
 		int nextNpcId = 0;
@@ -371,23 +454,36 @@ public class FeedableBeasts extends L2AttackableAIScript
 		if (_FeedInfo.containsKey(npc.getObjectId()))
 		{
 			if (_FeedInfo.get(npc.getObjectId()) == player.getObjectId())
+			{
 				_FeedInfo.remove(npc.getObjectId());
+			}
 		}
 		// despawn the old mob
 		// TODO: same code? FIXED?
+		// @formatter:off
 		/*
-		 * if (_GrowthCapableMobs.get(npcId).getGrowthLevel() == 0) { npc.deleteMe(); } else {
+		 * if (_GrowthCapableMobs.get(npcId).getGrowthLevel() == 0)
+			{
+				npc.deleteMe();
+			}
+			else 
+			{
 		 */
 		npc.deleteMe();
 		// }
+		// @formatter:on
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the
 		// player might have and initialize the Tamed Beast.
 		if (Util.contains(TAMED_BEASTS, nextNpcId))
 		{
-			if (player.getTrainedBeasts() != null && !player.getTrainedBeasts().isEmpty())
+			if ((player.getTrainedBeasts() != null) && !player.getTrainedBeasts().isEmpty())
+			{
 				for (L2TamedBeastInstance oldTrained : player.getTrainedBeasts())
+				{
 					oldTrained.deleteMe();
+				}
+			}
 			
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
@@ -398,7 +494,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 			QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
 			if (st != null)
 			{
-				if (getRandom(100) <= 5 && !st.hasQuestItems(7185))
+				if ((getRandom(100) <= 5) && !st.hasQuestItems(7185))
 				{
 					// if player has quest 20 going, give quest item
 					// it's easier to hardcode it in here than to try and repeat this stuff in the quest
@@ -451,7 +547,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("polymorph Mad Cow") && npc != null && player != null)
+		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
 		{
 			if (MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
 			{
@@ -488,7 +584,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		int npcId = npc.getNpcId();
 		int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
-		if (!Util.contains(FEEDABLE_BEASTS, npcId) || (skillId != SKILL_GOLDEN_SPICE && skillId != SKILL_CRYSTAL_SPICE))
+		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE)))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isPet);
 		}
@@ -503,7 +599,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
-		if (growthLevel == 0 && _FeedInfo.containsKey(objectId))
+		if ((growthLevel == 0) && _FeedInfo.containsKey(objectId))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isPet);
 		}
@@ -538,7 +634,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 				npc.broadcastPacket(new NpcSay(objectId, 0, npc.getNpcId(), TEXT[growthLevel][getRandom(TEXT[growthLevel].length)]));
 			}
 			
-			if (growthLevel > 0 && _FeedInfo.get(objectId) != caster.getObjectId())
+			if ((growthLevel > 0) && (_FeedInfo.get(objectId) != caster.getObjectId()))
 			{
 				// check if this is the same player as the one who raised it from growth 0.
 				// if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
@@ -548,10 +644,10 @@ public class FeedableBeasts extends L2AttackableAIScript
 			// Polymorph the mob, with a certain chance, given its current growth level
 			if (getRandom(100) < _GrowthCapableMobs.get(npcId).getChance())
 			{
-				this.spawnNext(npc, growthLevel, caster, food);
+				spawnNext(npc, growthLevel, caster, food);
 			}
 		}
-		else if (Util.contains(TAMED_BEASTS, npcId) && npc instanceof L2TamedBeastInstance)
+		else if (Util.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance))
 		{
 			L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);
 			if (skillId == beast.getFoodType())
@@ -576,6 +672,6 @@ public class FeedableBeasts extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new FeedableBeasts(-1, FeedableBeasts.class.getSimpleName(), "ai");
+		new FeedableBeasts(FeedableBeasts.class.getSimpleName(), "ai");
 	}
 }

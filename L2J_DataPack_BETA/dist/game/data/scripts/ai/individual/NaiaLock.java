@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -24,9 +24,15 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Removes minions after master's death
  * @author GKR
  */
-public class NaiaLock extends L2AttackableAIScript
+public class NaiaLock extends AbstractNpcAI
 {
 	private static final int LOCK = 18491;
+	
+	public NaiaLock(String name, String descr)
+	{
+		super(name, descr);
+		addKillId(LOCK);
+	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
@@ -35,14 +41,8 @@ public class NaiaLock extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public NaiaLock(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addKillId(LOCK);
-	}
-	
 	public static void main(String[] args)
 	{
-		new NaiaLock(-1, "NaiaLock", "ai");
+		new NaiaLock(NaiaLock.class.getSimpleName(), "ai");
 	}
 }

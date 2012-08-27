@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -22,29 +24,26 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Sandstorms AI.
  * @author Ectis
  */
-public class Sandstorms extends L2AttackableAIScript
+public class Sandstorms extends AbstractNpcAI
 {
 	private static final int SANDSTORM = 32350;
 	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if (npc.getNpcId() == SANDSTORM)
-		{
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getInfo(5435, 1));
-		}
+		npc.setTarget(player);
+		npc.doCast(SkillTable.getInstance().getInfo(5435, 1));
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
-	public Sandstorms(int questId, String name, String descr)
+	public Sandstorms(String name, String descr)
 	{
-		super(questId, name, descr);
-		addAttackId(SANDSTORM);
+		super(name, descr);
+		addAggroRangeEnterId(SANDSTORM);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Sandstorms(-1, Sandstorms.class.getSimpleName(), "ai");
+		new Sandstorms(Sandstorms.class.getSimpleName(), "ai");
 	}
 }

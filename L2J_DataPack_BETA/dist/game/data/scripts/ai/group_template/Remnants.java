@@ -14,6 +14,8 @@
  */
 package ai.group_template;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -23,11 +25,13 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * Remnants AI.
  * @author DS
  */
-public class Remnants extends L2AttackableAIScript
+public class Remnants extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{
-		18463, 18464, 18465
+		18463,
+		18464,
+		18465
 	};
 	
 	private static final int HOLY_WATER = 2358;
@@ -35,6 +39,18 @@ public class Remnants extends L2AttackableAIScript
 	// TODO: Find retail strings.
 	// private static final String MSG = "The holy water affects Remnants Ghost. You have freed his soul.";
 	// private static final String MSG_DEREK = "The holy water affects Derek. You have freed his soul.";
+	
+	/**
+	 * Do not override onKill for Derek here. Let's make global Hellbound manipulations in Engine where it is possible.
+	 * @param name
+	 * @param descr
+	 */
+	private Remnants(String name, String descr)
+	{
+		super(name, descr);
+		addSpawnId(NPCS);
+		addSkillSeeId(NPCS);
+	}
 	
 	@Override
 	public final String onSpawn(L2Npc npc)
@@ -73,20 +89,8 @@ public class Remnants extends L2AttackableAIScript
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
-	// Do not override onKill for Derek here. Let's make global Hellbound manipulations in Engine where it is possible.
-	
-	public Remnants(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npcId : NPCS)
-		{
-			addSpawnId(npcId);
-			addSkillSeeId(npcId);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new Remnants(-1, Remnants.class.getSimpleName(), "ai");
+		new Remnants(Remnants.class.getSimpleName(), "ai");
 	}
 }

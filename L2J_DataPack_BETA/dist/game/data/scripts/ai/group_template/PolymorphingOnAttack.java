@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -32,10 +34,9 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
  * Polymorphing on attack monsters AI.
  * @author Slyce
  */
-public class PolymorphingOnAttack extends L2AttackableAIScript
+public class PolymorphingOnAttack extends AbstractNpcAI
 {
 	private static final Map<Integer, List<Integer>> MOBSPAWNS = new HashMap<>();
-	
 	static
 	{
 		MOBSPAWNS.put(21258, Arrays.asList(21259, 100, 100, -1)); // Fallen Orc Shaman -> Sharp Talon Tiger (always polymorphs)
@@ -52,6 +53,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 		MOBSPAWNS.put(21533, Arrays.asList(21534, 100, 30, -1)); // Alliance of Splendor
 		MOBSPAWNS.put(21537, Arrays.asList(21538, 100, 30, -1)); // Fang of Splendor
 	}
+	
 	protected static final NpcStringId[][] MOBTEXTS =
 	{
 		new NpcStringId[]
@@ -74,9 +76,9 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 		}
 	};
 	
-	public PolymorphingOnAttack(int questId, String name, String descr)
+	private PolymorphingOnAttack(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		registerMobs(MOBSPAWNS.keySet(), QuestEventType.ON_ATTACK);
 	}
 	
@@ -110,6 +112,6 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		new PolymorphingOnAttack(-1, PolymorphingOnAttack.class.getSimpleName(), "ai");
+		new PolymorphingOnAttack(PolymorphingOnAttack.class.getSimpleName(), "ai");
 	}
 }

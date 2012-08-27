@@ -14,7 +14,7 @@
  */
 package ai.individual;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -25,11 +25,25 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 /**
  * @author GKR
  */
-public class Typhoon extends L2AttackableAIScript
+public class Typhoon extends AbstractNpcAI
 {
 	private static final int TYPHOON = 25539;
 	
 	private static SkillHolder STORM = new SkillHolder(5434, 1);
+	
+	private Typhoon(String name, String descr)
+	{
+		super(name, descr);
+		
+		addAggroRangeEnterId(TYPHOON);
+		addSpawnId(TYPHOON);
+		
+		final L2RaidBossInstance boss = RaidBossSpawnManager.getInstance().getBosses().get(TYPHOON);
+		if (boss != null)
+		{
+			onSpawn(boss);
+		}
+	}
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -60,22 +74,8 @@ public class Typhoon extends L2AttackableAIScript
 		return super.onSpawn(npc);
 	}
 	
-	public Typhoon(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		
-		addAggroRangeEnterId(TYPHOON);
-		addSpawnId(TYPHOON);
-		
-		final L2RaidBossInstance boss = RaidBossSpawnManager.getInstance().getBosses().get(TYPHOON);
-		if (boss != null)
-		{
-			onSpawn(boss);
-		}
-	}
-	
 	public static void main(String[] args)
 	{
-		new Typhoon(-1, "typhoon", "ai");
+		new Typhoon(Typhoon.class.getSimpleName(), "ai");
 	}
 }

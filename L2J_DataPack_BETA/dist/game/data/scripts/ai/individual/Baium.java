@@ -21,10 +21,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -58,12 +57,8 @@ import com.l2jserver.gameserver.util.Util;
  * Not true with Baium. Once he gets attacked, the port to Baium closes. byebye, see you in 5 days. If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the vortex
  * @author Fulminus version 0.1
  */
-public class Baium extends L2AttackableAIScript
+public class Baium extends AbstractNpcAI
 {
-	protected static final Logger log = Logger.getLogger(Baium.class.getName());
-	
-	private L2Character _target;
-	private L2Skill _skill;
 	private static final int STONE_BAIUM = 29025;
 	private static final int ANGELIC_VORTEX = 31862;
 	private static final int LIVE_BAIUM = 29020;
@@ -89,15 +84,13 @@ public class Baium extends L2AttackableAIScript
 	protected final List<L2Npc> _Minions = new ArrayList<>(5);
 	private L2BossZone _Zone;
 	
-	public Baium(int questId, String name, String descr)
+	private L2Character _target;
+	private L2Skill _skill;
+	
+	private Baium(String name, String descr)
 	{
-		super(questId, name, descr);
-		
-		int[] mob =
-		{
-			LIVE_BAIUM
-		};
-		registerMobs(mob);
+		super(name, descr);
+		registerMobs(LIVE_BAIUM);
 		
 		// Quest NPC starter initialization
 		addStartNpc(STONE_BAIUM, ANGELIC_VORTEX, TELEPORT_CUBIC);
@@ -206,7 +199,7 @@ public class Baium extends L2AttackableAIScript
 						}
 						catch (Exception e)
 						{
-							log.log(Level.WARNING, "", e);
+							_log.log(Level.WARNING, "", e);
 						}
 					}
 				}, 11100L);
@@ -318,7 +311,7 @@ public class Baium extends L2AttackableAIScript
 						}
 						catch (Throwable e)
 						{
-							log.log(Level.WARNING, "", e);
+							_log.log(Level.WARNING, "", e);
 						}
 					}
 				}, 100L);
@@ -483,7 +476,7 @@ public class Baium extends L2AttackableAIScript
 			}
 		}
 		_Minions.clear();
-		final QuestTimer timer =  getQuestTimer("skill_range", npc, null);
+		final QuestTimer timer = getQuestTimer("skill_range", npc, null);
 		if (timer != null)
 		{
 			timer.cancelAndRemove();
@@ -498,7 +491,7 @@ public class Baium extends L2AttackableAIScript
 		{
 			for (L2Object obj : objs)
 			{
-				if (obj.isPlayable() || obj instanceof L2DecoyInstance)
+				if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
 				{
 					if (obj.isPlayer())
 					{
@@ -513,7 +506,7 @@ public class Baium extends L2AttackableAIScript
 						continue;
 					}
 				}
-				if (obj.isPlayable() || obj instanceof L2DecoyInstance)
+				if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
 				{
 					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
 					{
@@ -739,7 +732,6 @@ public class Baium extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// Quest class and state definition
-		new Baium(-1, "baium", "ai");
+		new Baium(Baium.class.getSimpleName(), "ai");
 	}
 }

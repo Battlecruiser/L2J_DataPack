@@ -16,7 +16,7 @@ package ai.individual;
 
 import java.util.logging.Logger;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 /**
  * Zaken AI
  */
-public class Zaken extends L2AttackableAIScript
+public class Zaken extends AbstractNpcAI
 {
 	protected static final Logger log = Logger.getLogger(Zaken.class.getName());
 	
@@ -81,6 +81,7 @@ public class Zaken extends L2AttackableAIScript
 		53950,
 		53930
 	};
+	
 	private static final int[] Ycoords =
 	{
 		219860,
@@ -99,6 +100,7 @@ public class Zaken extends L2AttackableAIScript
 		219860,
 		217760
 	};
+	
 	private static final int[] Zcoords =
 	{
 		-3488,
@@ -124,9 +126,9 @@ public class Zaken extends L2AttackableAIScript
 	
 	private static L2BossZone _Zone;
 	
-	public Zaken(int questId, String name, String descr)
+	private Zaken(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		
 		// Zaken doors handling
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Runnable()
@@ -171,6 +173,7 @@ public class Zaken extends L2AttackableAIScript
 			pirates_zombie_captain_b,
 			pirates_zombie_b
 		};
+		
 		registerMobs(mobs);
 		_Zone = GrandBossManager.getInstance().getZone(55312, 219168, -3223);
 		
@@ -1055,7 +1058,6 @@ public class Zaken extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new Zaken(-1, "zaken", "ai");
+		new Zaken(Zaken.class.getSimpleName(), "ai");
 	}
 }
