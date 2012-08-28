@@ -522,10 +522,10 @@
 		</for>
 	</skill>
 	<skill id="3559" levels="2" name="Earring of Zaken">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Boss Jewel Skill -->
 		<table name="#darkRes"> 0 15 </table>
-		<table name="#derangementProfVuln"> 20 30 </table>
+		<table name="#bonus"> 20 30 </table>
 		<table name="#hpGain"> 1.1 1.15 </table>
 		<table name="#magicLvl"> 75 80 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -533,11 +533,11 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="30" />
-			<sub order="0x40" stat="stunVuln" val="20" />
-			<sub order="0x40" stat="derangementVuln" val="#derangementProfVuln" />
+			<sub order="0x40" stat="stunVuln" val="#bonus" />
+			<sub order="0x40" stat="derangementVuln" val="#bonus" />
 			<add order="0x40" stat="bleedProf" val="30" />
-			<add order="0x40" stat="stunProf" val="20" />
-			<add order="0x40" stat="derangementProf" val="#derangementProfVuln" />
+			<add order="0x40" stat="stunProf" val="#bonus" />
+			<add order="0x40" stat="derangementProf" val="#bonus" />
 			<mul order="0x30" stat="gainHp" val="#hpGain" />
 			<add order="0x40" stat="absorbDam" val="4" />
 			<add order="0x40" stat="darkRes" val="#darkRes" />
