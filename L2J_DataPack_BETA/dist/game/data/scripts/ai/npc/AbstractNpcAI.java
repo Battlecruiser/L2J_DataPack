@@ -46,12 +46,6 @@ public abstract class AbstractNpcAI extends L2Script
 		return npc.getNpcId() + ".html";
 	}
 	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		return null;
-	}
-	
 	public AbstractNpcAI(String name, String descr)
 	{
 		super(-1, name, descr);

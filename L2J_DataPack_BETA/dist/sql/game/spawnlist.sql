@@ -18,6 +18,8 @@ CREATE TABLE `spawnlist` (
 INSERT INTO `spawnlist` VALUES
 -- [12_24]
 
+-- Lindvior Camera
+('unset', 1, 18669, -184991, 242893, 1554, 0, 0, 0, 60, 0, 0),
 -- Red Star Stone
 ("unset", 1, 18684, -246875, 219422, 5187, 0, 0, 0, 60, 0, 0),
 -- Red Star Stone
@@ -19871,7 +19873,7 @@ INSERT INTO `spawnlist` VALUES
 -- Hedinger
 ("rune02_npc2116_01", 1, 32883, 45524, -48446, -792, 0, 0, 8191, 60, 0, 0),
 -- Massymore Dungeon Gatekeeper
-("rune03_npc2016_18", 1, 35506, 11532, -49136, -1087, 0, 0, 0, 0, 0, 0),
+("rune03_npc2016_18", 1, 35506, 11532, -49136, -1087, 0, 0, 0, 60, 0, 0),
 -- Manor Manager
 ("Rune - Manor Manager", 1, 35512, 38278, -48426, 896, 0, 0, 1353, 60, 0, 0),
 -- Ronald
