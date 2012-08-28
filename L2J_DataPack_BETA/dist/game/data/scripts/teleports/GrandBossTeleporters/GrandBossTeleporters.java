@@ -14,6 +14,9 @@
  */
 package teleports.GrandBossTeleporters;
 
+import ai.individual.Antharas;
+import ai.individual.Valakas;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
@@ -46,12 +49,12 @@ public class GrandBossTeleporters extends Quest
 	 
     private Quest valakasAI()
     {
-        return QuestManager.getInstance().getQuest("valakas");
+        return QuestManager.getInstance().getQuest(Valakas.class.getSimpleName());
     }
     
     private Quest antharasAI()
     {
-        return QuestManager.getInstance().getQuest("antharas");
+        return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
     }
  
 	private static int playerCount = 0;
