@@ -164,28 +164,41 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			return null;
 		}
 		else if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
+		{
 			_ship.addPassenger(player);
+		}
 		
 		return null;
 	}
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{		
+	{
 		return npc.getNpcId() + ".htm";
+	}
+	
+	@Override
+	public boolean unload(boolean removeFromList)
+	{
+		if (_ship != null)
+		{
+			_ship.oustPlayers();
+			_ship.deleteMe();
+		}
+		return super.unload(removeFromList);
 	}
 	
 	public AirShipGludioGracia(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : CONTROLLERS)
-		{
-			addStartNpc(id);
-			addFirstTalkId(id);
-			addTalkId(id);
-		}
+		
+		addStartNpc(CONTROLLERS);
+		addFirstTalkId(CONTROLLERS);
+		addTalkId(CONTROLLERS);
+		
 		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
 		_ship.setOustLoc(OUST_GLUDIO);
+		_ship.setInDock(GLUDIO_DOCK_ID);
 		_ship.registerEngine(this);
 		_ship.runEngine(60000);
 	}
