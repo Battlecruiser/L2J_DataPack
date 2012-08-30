@@ -329,9 +329,9 @@ public class Baium extends AbstractNpcAI
 				return "<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>";
 			}
 			
-			if ((GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP) && player.getQuestState("baium").hasQuestItems(4295)) // bloody fabric
+			if ((GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP) && player.getQuestState("Baium").hasQuestItems(4295)) // bloody fabric
 			{
-				player.getQuestState("baium").takeItems(4295, 1);
+				player.getQuestState("Baium").takeItems(4295, 1);
 				// allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
 				// Note: this just means 30secs to get in, no limits on how long it takes before we get out.
 				_Zone.allowPlayerEntry(player, 30);
