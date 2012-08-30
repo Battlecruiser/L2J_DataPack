@@ -139,6 +139,6 @@ public class Lindvior extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Lindvior("Lindvior", "ai/individual");
+		new Lindvior(Lindvior.class.getSimpleName(), "ai/individual");
 	}
 }
