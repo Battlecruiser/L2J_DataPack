@@ -15,13 +15,18 @@
 package handlers.admincommandhandlers;
 
 import java.io.File;
+import java.util.List;
+import java.util.Map.Entry;
 
 import javax.script.ScriptException;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
 
@@ -32,6 +37,7 @@ public class AdminQuest implements IAdminCommandHandler
 		"admin_quest_reload",
 		"admin_script_load",
 		"admin_script_unload",
+		"admin_show_quests"
 	};
 	
 	@Override
@@ -166,6 +172,35 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("The quest [" + parts[1] + "] was not found!.");
 				}
+			}
+		}
+		else if (command.startsWith("admin_show_quests"))
+		{
+			if (activeChar.getTarget() == null)
+			{
+				activeChar.sendMessage("Get a target first.");
+			}
+			else if (!activeChar.getTarget().isNpc())
+			{
+				activeChar.sendMessage("Invalid Target.");
+			}
+			else
+			{
+				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
+				NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
+				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
+				StringBuilder sb = new StringBuilder();
+				for (Entry<QuestEventType, List<Quest>> quests : npc.getTemplate().getEventQuests().entrySet())
+				{
+					for (Quest quest : quests.getValue())
+					{
+						sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">" + quest.getName() + "</font></td> <td width=100>[<font color=00FF00>" + quest.getDescr() + "</font>]</td></tr></table></td></tr>");
+					}
+					sb.append("<tr><td colspan=\"4\"><table width=270 border=0><tr><td width=270>" + quests.getKey().toString() + "</td></tr></table></td></tr>");
+				}
+				msg.replace("%quests%", sb.toString());
+				msg.replace("%tmplid%", Integer.toString(npc.getTemplate().getNpcId()));
+				activeChar.sendPacket(msg);
 			}
 		}
 		return true;
