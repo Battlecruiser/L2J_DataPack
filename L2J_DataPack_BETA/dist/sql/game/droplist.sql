@@ -1112,9 +1112,9 @@ INSERT INTO `droplist` VALUES
 (18873, 15772, 1, 1, -1, 13393), -- Sealed Moirai Ring Gem
 (18873, 15773, 1, 1, -1, 7527), -- Sealed Moirai Earring Gem
 (18873, 15774, 1, 1, -1, 6495), -- Sealed Moirai Necklace Gem
-(18873, 15812, 1, 1, -1, 1772), -- Recipe - Sealed Moirai Ring (70%) 
-(18873, 15813, 1, 1, -1, 1181), -- Recipe - Sealed Moirai Earring (70%) 
-(18873, 15814, 1, 1, -1, 886), -- Recipe - Sealed Moirai Necklace (70%) 
+(18873, 15812, 1, 1, -1, 1772), -- Recipe - Sealed Moirai Ring (70%)
+(18873, 15813, 1, 1, -1, 1181), -- Recipe - Sealed Moirai Earring (70%)
+(18873, 15814, 1, 1, -1, 886), -- Recipe - Sealed Moirai Necklace (70%)
 (18873, 57, 475, 959, 0, 700000), -- Adena
 (18873, 15766, 1, 1, 1, 5.818546), -- Sealed Moirai Ring
 (18873, 15767, 1, 1, 1, 3.877526), -- Sealed Moirai Earring
@@ -1132,16 +1132,16 @@ INSERT INTO `droplist` VALUES
 (18874, 15657, 1, 1, -1, 13628), -- Sealed Moirai Boots Piece
 (18874, 15658, 1, 1, -1, 13628), -- Sealed Moirai Leather Boots Piece
 (18874, 15659, 1, 1, -1, 13628), -- Sealed Moirai Shoes Piece
-(18874, 15784, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18874, 15785, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18874, 15786, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Gloves (60%) 
-(18874, 15787, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Boots (60%) 
-(18874, 15788, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18874, 15789, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Shoes (60%) 
+(18874, 15784, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18874, 15785, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18874, 15786, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Gloves (60%)
+(18874, 15787, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Boots (60%)
+(18874, 15788, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18874, 15789, 1, 1, -1, 1813), -- Recipe - Sealed Moirai Shoes (60%)
 (18874, 57, 1494, 3016, 0, 700000), -- Adena
-(18874, 15703, 1, 1, 1, 11.90856), -- Sealed Moirai Gauntlet 
-(18874, 15704, 1, 1, 1, 11.90856), -- Sealed Moirai Leather Gloves 
-(18874, 15705, 1, 1, 1, 11.90856), -- Sealed Moirai Gloves 
+(18874, 15703, 1, 1, 1, 11.90856), -- Sealed Moirai Gauntlet
+(18874, 15704, 1, 1, 1, 11.90856), -- Sealed Moirai Leather Gloves
+(18874, 15705, 1, 1, 1, 11.90856), -- Sealed Moirai Gloves
 (18874, 15654, 1, 1, 1, 4473.433744), -- Sealed Moirai Gauntlet Piece
 (18874, 15655, 1, 1, 1, 4473.433744), -- Sealed Moirai Leather Gloves Piece
 (18874, 15656, 1, 1, 1, 4473.406832), -- Sealed Moirai Gloves Piece
@@ -1156,9 +1156,9 @@ INSERT INTO `droplist` VALUES
 -- Adult Kookaburra
 (18876, 15649, 1, 1, -1, 55084), -- Sealed Moirai Leather Breastplate Piece
 (18876, 1894, 1, 1, -1, 602057), -- Crafted Leather
-(18876, 15782, 1, 1, -1, 10871), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(18876, 15782, 1, 1, -1, 10871), -- Recipe - Sealed Moirai Leather Legging (60%)
 (18876, 57, 4199, 8477, 0, 700000), -- Adena
-(18876, 15698, 1, 1, 1, 33.4696), -- Sealed Moirai Leather Breastplate 
+(18876, 15698, 1, 1, 1, 33.4696), -- Sealed Moirai Leather Breastplate
 (18876, 15649, 1, 1, 1, 13566.5304), -- Sealed Moirai Leather Breastplate Piece
 (18876, 1879, 1, 1, 2, 100624.99375), -- Cokes
 (18876, 1885, 1, 1, 2, 50312.395), -- High-Grade Suede
@@ -1173,7 +1173,7 @@ INSERT INTO `droplist` VALUES
 (18876, 10483, 1, 1, 2, 4192.7675), -- Life Stone - Level 82
 (18876, 10484, 1, 1, 2, 1048.09), -- Mid-Grade Life Stone - Level 82
 (18876, 10485, 1, 1, 2, 104.7275), -- High-Grade Life Stone - Level 82
-(18876, 15779, 1, 1, 2, 238.99875), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
+(18876, 15779, 1, 1, 2, 238.99875), -- Recipe - Sealed Moirai Leather Breastplate (60%)
 -- Full Grown Kookaburra
 (18878, 10397, 1, 1, -1, 2321), -- Icarus Sawsword Piece
 (18878, 10399, 1, 1, -1, 2321), -- Icarus Spirit Piece
@@ -1182,9 +1182,9 @@ INSERT INTO `droplist` VALUES
 (18878, 10373, 1, 1, -1, 349), -- Recipe - Icarus Sawsword (60%)
 (18878, 10375, 1, 1, -1, 349), -- Recipe - Icarus Spirit (60%)
 (18878, 10376, 1, 1, -1, 349), -- Recipe - Icarus Heavy Arms (60%)
-(18878, 15801, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(18878, 15802, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(18878, 15803, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Gloves (60%) 
+(18878, 15801, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Gauntlet (60%)
+(18878, 15802, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(18878, 15803, 1, 1, -1, 4640), -- Recipe - Sealed Vesper Gloves (60%)
 (18878, 57, 4416, 8914, 0, 700000), -- Adena
 (18878, 10215, 1, 1, 1, 1.145718), -- Icarus Sawsword
 (18878, 10217, 1, 1, 1, 1.145718), -- Icarus Spirit
@@ -1214,9 +1214,9 @@ INSERT INTO `droplist` VALUES
 (18880, 15772, 1, 1, -1, 13393), -- Sealed Moirai Ring Gem
 (18880, 15773, 1, 1, -1, 7527), -- Sealed Moirai Earring Gem
 (18880, 15774, 1, 1, -1, 6495), -- Sealed Moirai Necklace Gem
-(18880, 15812, 1, 1, -1, 1772), -- Recipe - Sealed Moirai Ring (70%) 
-(18880, 15813, 1, 1, -1, 1181), -- Recipe - Sealed Moirai Earring (70%) 
-(18880, 15814, 1, 1, -1, 886), -- Recipe - Sealed Moirai Necklace (70%) 
+(18880, 15812, 1, 1, -1, 1772), -- Recipe - Sealed Moirai Ring (70%)
+(18880, 15813, 1, 1, -1, 1181), -- Recipe - Sealed Moirai Earring (70%)
+(18880, 15814, 1, 1, -1, 886), -- Recipe - Sealed Moirai Necklace (70%)
 (18880, 57, 475, 959, 0, 700000), -- Adena
 (18880, 15766, 1, 1, 1, 5.818546), -- Sealed Moirai Ring
 (18880, 15767, 1, 1, 1, 3.877526), -- Sealed Moirai Earring
@@ -1235,16 +1235,16 @@ INSERT INTO `droplist` VALUES
 (18881, 15658, 1, 1, -1, 12579), -- Sealed Moirai Leather Boots Piece
 (18881, 15659, 1, 1, -1, 12579), -- Sealed Moirai Shoes Piece
 (18881, 960, 1, 1, -1, 564), -- Scroll: Enchant Armor (S-Grade)
-(18881, 15784, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18881, 15785, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18881, 15786, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Gloves (60%) 
-(18881, 15787, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Boots (60%) 
-(18881, 15788, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18881, 15789, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Shoes (60%) 
+(18881, 15784, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18881, 15785, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18881, 15786, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Gloves (60%)
+(18881, 15787, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Boots (60%)
+(18881, 15788, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18881, 15789, 1, 1, -1, 1674), -- Recipe - Sealed Moirai Shoes (60%)
 (18881, 57, 1494, 3016, 0, 700000), -- Adena
-(18881, 15706, 1, 1, 1, 11.90856), -- Sealed Moirai Boots 
-(18881, 15707, 1, 1, 1, 11.90856), -- Sealed Moirai Leather Boots 
-(18881, 15708, 1, 1, 1, 11.90856), -- Sealed Moirai Shoes 
+(18881, 15706, 1, 1, 1, 11.90856), -- Sealed Moirai Boots
+(18881, 15707, 1, 1, 1, 11.90856), -- Sealed Moirai Leather Boots
+(18881, 15708, 1, 1, 1, 11.90856), -- Sealed Moirai Shoes
 (18881, 15657, 1, 1, 1, 4473.433744), -- Sealed Moirai Boots Piece
 (18881, 15658, 1, 1, 1, 4473.433744), -- Sealed Moirai Leather Boots Piece
 (18881, 15659, 1, 1, 1, 4473.406832), -- Sealed Moirai Shoes Piece
@@ -1261,10 +1261,10 @@ INSERT INTO `droplist` VALUES
 (18883, 15651, 1, 1, -1, 34113), -- Sealed Moirai Gaiter Piece
 (18883, 959, 1, 1, -1, 343), -- Scroll: Enchant Weapon (S-Grade)
 (18883, 9630, 1, 1, -1, 45154), -- Orichalcum
-(18883, 15778, 1, 1, -1, 2548), -- Recipe - Sealed Moirai Breastplate (60%) 
-(18883, 15781, 1, 1, -1, 4076), -- Recipe - Sealed Moirai Gaiter (60%) 
+(18883, 15778, 1, 1, -1, 2548), -- Recipe - Sealed Moirai Breastplate (60%)
+(18883, 15781, 1, 1, -1, 4076), -- Recipe - Sealed Moirai Gaiter (60%)
 (18883, 57, 4199, 8477, 0, 700000), -- Adena
-(18883, 15697, 1, 1, 1, 25.102341), -- Sealed Moirai Breastplate 
+(18883, 15697, 1, 1, 1, 25.102341), -- Sealed Moirai Breastplate
 (18883, 15648, 1, 1, 1, 10027.897659), -- Sealed Moirai Breastplate Piece
 (18883, 1879, 1, 1, 2, 100625.187219), -- Cokes
 (18883, 1885, 1, 1, 2, 50312.695455), -- High-Grade Suede
@@ -1279,16 +1279,16 @@ INSERT INTO `droplist` VALUES
 (18883, 10483, 1, 1, 2, 4192.775544), -- Life Stone - Level 82
 (18883, 10484, 1, 1, 2, 1048.193886), -- Mid-Grade Life Stone - Level 82
 (18883, 10485, 1, 1, 2, 104.900865), -- High-Grade Life Stone - Level 82
-(18883, 15778, 1, 1, 2, 179.044389), -- Recipe - Sealed Moirai Breastplate (60%) 
+(18883, 15778, 1, 1, 2, 179.044389), -- Recipe - Sealed Moirai Breastplate (60%)
 -- Full Grown Cougar
 (18885, 10404, 1, 1, -1, 2892), -- Icarus Hall Piece
 (18885, 10402, 1, 1, -1, 2892), -- Icarus Hammer Piece
 (18885, 9628, 1, 1, -1, 53068), -- Leonard
 (18885, 10380, 1, 1, -1, 436), -- Recipe - Icarus Hall (60%)
 (18885, 10378, 1, 1, -1, 436), -- Recipe - Icarus Hammer (60%)
-(18885, 15804, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Boots (60%) 
-(18885, 15805, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(18885, 15806, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Shoes (60%) 
+(18885, 15804, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Boots (60%)
+(18885, 15805, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Leather Boots (60%)
+(18885, 15806, 1, 1, -1, 5799), -- Recipe - Sealed Vesper Shoes (60%)
 (18885, 57, 4416, 8914, 0, 700000), -- Adena
 (18885, 10222, 1, 1, 1, 1.432145), -- Icarus Hall
 (18885, 10404, 1, 1, 1, 474.144151), -- Icarus Hall Piece
@@ -1315,9 +1315,9 @@ INSERT INTO `droplist` VALUES
 (18887, 15772, 1, 1, -1, 14529), -- Sealed Moirai Ring Gem
 (18887, 15773, 1, 1, -1, 8165), -- Sealed Moirai Earring Gem
 (18887, 15774, 1, 1, -1, 7046), -- Sealed Moirai Necklace Gem
-(18887, 15812, 1, 1, -1, 1922), -- Recipe - Sealed Moirai Ring (70%) 
-(18887, 15813, 1, 1, -1, 1281), -- Recipe - Sealed Moirai Earring (70%) 
-(18887, 15814, 1, 1, -1, 961), -- Recipe - Sealed Moirai Necklace (70%) 
+(18887, 15812, 1, 1, -1, 1922), -- Recipe - Sealed Moirai Ring (70%)
+(18887, 15813, 1, 1, -1, 1281), -- Recipe - Sealed Moirai Earring (70%)
+(18887, 15814, 1, 1, -1, 961), -- Recipe - Sealed Moirai Necklace (70%)
 (18887, 57, 511, 1045, 0, 700000), -- Adena
 (18887, 15766, 1, 1, 1, 6.312233), -- Sealed Moirai Ring
 (18887, 15767, 1, 1, 1, 4.206523), -- Sealed Moirai Earring
@@ -1328,9 +1328,9 @@ INSERT INTO `droplist` VALUES
 (18887, 9573, 1, 1, 2, 1200.99072), -- Life Stone - Level 80
 (18887, 9574, 1, 1, 2, 300.24768), -- Mid-Grade Life Stone - Level 80
 (18887, 9575, 1, 1, 2, 30.024325), -- High-Grade Life Stone - Level 80
-(18887, 15812, 1, 1, 2, 315.58877), -- Recipe - Sealed Moirai Ring (70%) 
-(18887, 15813, 1, 1, 2, 210.36741), -- Recipe - Sealed Moirai Earring (70%) 
-(18887, 15814, 1, 1, 2, 157.781095), -- Recipe - Sealed Moirai Necklace (70%) 
+(18887, 15812, 1, 1, 2, 315.58877), -- Recipe - Sealed Moirai Ring (70%)
+(18887, 15813, 1, 1, 2, 210.36741), -- Recipe - Sealed Moirai Earring (70%)
+(18887, 15814, 1, 1, 2, 157.781095), -- Recipe - Sealed Moirai Necklace (70%)
 -- Young Buffalo
 (18888, 15654, 1, 1, -1, 13453), -- Sealed Moirai Gauntlet Piece
 (18888, 15655, 1, 1, -1, 13453), -- Sealed Moirai Leather Gloves Piece
@@ -1339,16 +1339,16 @@ INSERT INTO `droplist` VALUES
 (18888, 15658, 1, 1, -1, 13453), -- Sealed Moirai Leather Boots Piece
 (18888, 15659, 1, 1, -1, 13453), -- Sealed Moirai Shoes Piece
 (18888, 960, 1, 1, -1, 603), -- Scroll: Enchant Armor (S-Grade)
-(18888, 15784, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18888, 15785, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18888, 15786, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gloves (60%) 
-(18888, 15787, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Boots (60%) 
-(18888, 15788, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18888, 15789, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Shoes (60%) 
+(18888, 15784, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18888, 15785, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18888, 15786, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gloves (60%)
+(18888, 15787, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Boots (60%)
+(18888, 15788, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18888, 15789, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Shoes (60%)
 (18888, 57, 1585, 3238, 0, 700000), -- Adena
-(18888, 15703, 1, 1, 1, 12.736035), -- Sealed Moirai Gauntlet 
-(18888, 15704, 1, 1, 1, 12.736035), -- Sealed Moirai Leather Gloves 
-(18888, 15705, 1, 1, 1, 12.736035), -- Sealed Moirai Gloves 
+(18888, 15703, 1, 1, 1, 12.736035), -- Sealed Moirai Gauntlet
+(18888, 15704, 1, 1, 1, 12.736035), -- Sealed Moirai Leather Gloves
+(18888, 15705, 1, 1, 1, 12.736035), -- Sealed Moirai Gloves
 (18888, 15654, 1, 1, 1, 4784.273559), -- Sealed Moirai Gauntlet Piece
 (18888, 15655, 1, 1, 1, 4784.273559), -- Sealed Moirai Leather Gloves Piece
 (18888, 15656, 1, 1, 1, 4784.244777), -- Sealed Moirai Gloves Piece
@@ -1359,18 +1359,18 @@ INSERT INTO `droplist` VALUES
 (18888, 9573, 1, 1, 2, 1718.16357), -- Life Stone - Level 80
 (18888, 9574, 1, 1, 2, 429.499475), -- Mid-Grade Life Stone - Level 80
 (18888, 9575, 1, 1, 2, 42.991365), -- High-Grade Life Stone - Level 80
-(18888, 15784, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18888, 15785, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18888, 15786, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gloves (60%) 
-(18888, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%) 
-(18888, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18888, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%) 
+(18888, 15784, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18888, 15785, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18888, 15786, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gloves (60%)
+(18888, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%)
+(18888, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18888, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%)
 -- Adult Buffalo
 (18890, 15653, 1, 1, -1, 95975), -- Sealed Moirai Stockings Piece
 (18890, 959, 1, 1, -1, 737), -- Scroll: Enchant Weapon (S-Grade)
-(18890, 15783, 1, 1, -1, 11675), -- Recipe - Sealed Moirai Stockings (60%) 
+(18890, 15783, 1, 1, -1, 11675), -- Recipe - Sealed Moirai Stockings (60%)
 (18890, 57, 4472, 9140, 0, 700000), -- Adena
-(18890, 15699, 1, 1, 1, 35.942905), -- Sealed Moirai Tunic 
+(18890, 15699, 1, 1, 1, 35.942905), -- Sealed Moirai Tunic
 (18890, 15650, 1, 1, 1, 14569.057095), -- Sealed Moirai Tunic Piece
 (18890, 1879, 1, 1, 2, 108064.57611), -- Cokes
 (18890, 1885, 1, 1, 2, 54032.178648), -- High-Grade Suede
@@ -1385,7 +1385,7 @@ INSERT INTO `droplist` VALUES
 (18890, 10483, 1, 1, 2, 4502.754492), -- Life Stone - Level 82
 (18890, 10484, 1, 1, 2, 1125.579216), -- Mid-Grade Life Stone - Level 82
 (18890, 10485, 1, 1, 2, 112.470396), -- High-Grade Life Stone - Level 82
-(18890, 15780, 1, 1, 2, 256.668822), -- Recipe - Sealed Moirai Tunic (60%) 
+(18890, 15780, 1, 1, 2, 256.668822), -- Recipe - Sealed Moirai Tunic (60%)
 -- Full Grown Buffalo
 (18892, 10403, 1, 1, -1, 6197), -- Icarus Hand Piece
 (18892, 1894, 1, 1, -1, 508785), -- Crafted Leather
@@ -1413,9 +1413,9 @@ INSERT INTO `droplist` VALUES
 (18894, 15772, 1, 1, -1, 14529), -- Sealed Moirai Ring Gem
 (18894, 15773, 1, 1, -1, 8165), -- Sealed Moirai Earring Gem
 (18894, 15774, 1, 1, -1, 7046), -- Sealed Moirai Necklace Gem
-(18894, 15812, 1, 1, -1, 1922), -- Recipe - Sealed Moirai Ring (70%) 
-(18894, 15813, 1, 1, -1, 1281), -- Recipe - Sealed Moirai Earring (70%) 
-(18894, 15814, 1, 1, -1, 961), -- Recipe - Sealed Moirai Necklace (70%) 
+(18894, 15812, 1, 1, -1, 1922), -- Recipe - Sealed Moirai Ring (70%)
+(18894, 15813, 1, 1, -1, 1281), -- Recipe - Sealed Moirai Earring (70%)
+(18894, 15814, 1, 1, -1, 961), -- Recipe - Sealed Moirai Necklace (70%)
 (18894, 57, 511, 1045, 0, 700000), -- Adena
 (18894, 15766, 1, 1, 1, 6.312233), -- Sealed Moirai Ring
 (18894, 15767, 1, 1, 1, 4.206523), -- Sealed Moirai Earring
@@ -1426,9 +1426,9 @@ INSERT INTO `droplist` VALUES
 (18894, 9573, 1, 1, 2, 1200.99072), -- Life Stone - Level 80
 (18894, 9574, 1, 1, 2, 300.24768), -- Mid-Grade Life Stone - Level 80
 (18894, 9575, 1, 1, 2, 30.024325), -- High-Grade Life Stone - Level 80
-(18894, 15812, 1, 1, 2, 315.58877), -- Recipe - Sealed Moirai Ring (70%) 
-(18894, 15813, 1, 1, 2, 210.36741), -- Recipe - Sealed Moirai Earring (70%) 
-(18894, 15814, 1, 1, 2, 157.781095), -- Recipe - Sealed Moirai Necklace (70%) 
+(18894, 15812, 1, 1, 2, 315.58877), -- Recipe - Sealed Moirai Ring (70%)
+(18894, 15813, 1, 1, 2, 210.36741), -- Recipe - Sealed Moirai Earring (70%)
+(18894, 15814, 1, 1, 2, 157.781095), -- Recipe - Sealed Moirai Necklace (70%)
 -- Young Grendel
 (18895, 15654, 1, 1, -1, 13453), -- Sealed Moirai Gauntlet Piece
 (18895, 15655, 1, 1, -1, 13453), -- Sealed Moirai Leather Gloves Piece
@@ -1437,16 +1437,16 @@ INSERT INTO `droplist` VALUES
 (18895, 15658, 1, 1, -1, 13453), -- Sealed Moirai Leather Boots Piece
 (18895, 15659, 1, 1, -1, 13453), -- Sealed Moirai Shoes Piece
 (18895, 960, 1, 1, -1, 603), -- Scroll: Enchant Armor (S-Grade)
-(18895, 15784, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18895, 15785, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18895, 15786, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gloves (60%) 
-(18895, 15787, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Boots (60%) 
-(18895, 15788, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18895, 15789, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Shoes (60%) 
+(18895, 15784, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18895, 15785, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18895, 15786, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Gloves (60%)
+(18895, 15787, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Boots (60%)
+(18895, 15788, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18895, 15789, 1, 1, -1, 1790), -- Recipe - Sealed Moirai Shoes (60%)
 (18895, 57, 1585, 3238, 0, 700000), -- Adena
-(18895, 15706, 1, 1, 1, 12.736035), -- Sealed Moirai Boots 
-(18895, 15707, 1, 1, 1, 12.736035), -- Sealed Moirai Leather Boots 
-(18895, 15708, 1, 1, 1, 12.736035), -- Sealed Moirai Shoes 
+(18895, 15706, 1, 1, 1, 12.736035), -- Sealed Moirai Boots
+(18895, 15707, 1, 1, 1, 12.736035), -- Sealed Moirai Leather Boots
+(18895, 15708, 1, 1, 1, 12.736035), -- Sealed Moirai Shoes
 (18895, 15657, 1, 1, 1, 4784.273559), -- Sealed Moirai Boots Piece
 (18895, 15658, 1, 1, 1, 4784.273559), -- Sealed Moirai Leather Boots Piece
 (18895, 15659, 1, 1, 1, 4784.244777), -- Sealed Moirai Shoes Piece
@@ -1457,12 +1457,12 @@ INSERT INTO `droplist` VALUES
 (18895, 9573, 1, 1, 2, 1718.16357), -- Life Stone - Level 80
 (18895, 9574, 1, 1, 2, 429.499475), -- Mid-Grade Life Stone - Level 80
 (18895, 9575, 1, 1, 2, 42.991365), -- High-Grade Life Stone - Level 80
-(18895, 15784, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18895, 15785, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18895, 15786, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gloves (60%) 
-(18895, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%) 
-(18895, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18895, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%) 
+(18895, 15784, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18895, 15785, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18895, 15786, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Gloves (60%)
+(18895, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%)
+(18895, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18895, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%)
 -- Adult Grendel
 (18897, 10398, 1, 1, -1, 7900), -- Icarus Disperser Piece
 (18897, 959, 1, 1, -1, 737), -- Scroll: Enchant Weapon (S-Grade)
@@ -1515,19 +1515,19 @@ INSERT INTO `droplist` VALUES
 (18906, 15658, 1, 1, -1, 5826), -- Sealed Moirai Leather Boots Piece
 (18906, 15659, 1, 1, -1, 5826), -- Sealed Moirai Shoes Piece
 (18906, 9630, 1, 1, -1, 3434), -- Orichalcum
-(18906, 15784, 1, 1, -1, 775), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(18906, 15785, 1, 1, -1, 775), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(18906, 15786, 1, 1, -1, 775), -- Recipe - Sealed Moirai Gloves (60%) 
-(18906, 15787, 1, 1, -1, 775), -- Recipe - Sealed Moirai Boots (60%) 
-(18906, 15788, 1, 1, -1, 775), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(18906, 15789, 1, 1, -1, 775), -- Recipe - Sealed Moirai Shoes (60%) 
+(18906, 15784, 1, 1, -1, 775), -- Recipe - Sealed Moirai Gauntlet (60%)
+(18906, 15785, 1, 1, -1, 775), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(18906, 15786, 1, 1, -1, 775), -- Recipe - Sealed Moirai Gloves (60%)
+(18906, 15787, 1, 1, -1, 775), -- Recipe - Sealed Moirai Boots (60%)
+(18906, 15788, 1, 1, -1, 775), -- Recipe - Sealed Moirai Leather Boots (60%)
+(18906, 15789, 1, 1, -1, 775), -- Recipe - Sealed Moirai Shoes (60%)
 (18906, 57, 686, 1402, 0, 700000), -- Adena
-(18906, 15703, 1, 1, 1, 2.757638), -- Sealed Moirai Gauntlet 
-(18906, 15704, 1, 1, 1, 2.757638), -- Sealed Moirai Leather Gloves 
-(18906, 15705, 1, 1, 1, 2.757638), -- Sealed Moirai Gloves 
-(18906, 15706, 1, 1, 1, 2.757638), -- Sealed Moirai Boots 
-(18906, 15707, 1, 1, 1, 2.757638), -- Sealed Moirai Leather Boots 
-(18906, 15708, 1, 1, 1, 2.757638), -- Sealed Moirai Shoes 
+(18906, 15703, 1, 1, 1, 2.757638), -- Sealed Moirai Gauntlet
+(18906, 15704, 1, 1, 1, 2.757638), -- Sealed Moirai Leather Gloves
+(18906, 15705, 1, 1, 1, 2.757638), -- Sealed Moirai Gloves
+(18906, 15706, 1, 1, 1, 2.757638), -- Sealed Moirai Boots
+(18906, 15707, 1, 1, 1, 2.757638), -- Sealed Moirai Leather Boots
+(18906, 15708, 1, 1, 1, 2.757638), -- Sealed Moirai Shoes
 (18906, 15654, 1, 1, 1, 1037.071536), -- Sealed Moirai Gauntlet Piece
 (18906, 15655, 1, 1, 1, 1037.071536), -- Sealed Moirai Leather Gloves Piece
 (18906, 15656, 1, 1, 1, 1037.071536), -- Sealed Moirai Gloves Piece
@@ -1548,17 +1548,17 @@ INSERT INTO `droplist` VALUES
 (18907, 15647, 1, 1, -1, 5317), -- Sealed Moirai Circlet Piece
 (18907, 15693, 1, 1, -1, 9532), -- Sealed Moirai Shield Piece
 (18907, 15692, 1, 1, -1, 9532), -- Sealed Moirai Sigil Piece
-(18907, 15775, 1, 1, -1, 710), -- Recipe - Sealed Moirai Helmet (60%) 
-(18907, 15776, 1, 1, -1, 710), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(18907, 15777, 1, 1, -1, 710), -- Recipe - Sealed Moirai Circlet (60%) 
-(18907, 15791, 1, 1, -1, 1014), -- Recipe - Sealed Moirai Shield (60%) 
-(18907, 15790, 1, 1, -1, 1014), -- Recipe - Sealed Moirai Sigil (60%) 
+(18907, 15775, 1, 1, -1, 710), -- Recipe - Sealed Moirai Helmet (60%)
+(18907, 15776, 1, 1, -1, 710), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(18907, 15777, 1, 1, -1, 710), -- Recipe - Sealed Moirai Circlet (60%)
+(18907, 15791, 1, 1, -1, 1014), -- Recipe - Sealed Moirai Shield (60%)
+(18907, 15790, 1, 1, -1, 1014), -- Recipe - Sealed Moirai Sigil (60%)
 (18907, 57, 725, 1481, 0, 700000), -- Adena
-(18907, 15694, 1, 1, 1, 2.330272), -- Sealed Moirai Helmet 
-(18907, 15695, 1, 1, 1, 2.330272), -- Sealed Moirai Leather Helmet 
-(18907, 15696, 1, 1, 1, 2.330272), -- Sealed Moirai Circlet 
-(18907, 15710, 1, 1, 1, 3.333904), -- Sealed Moirai Shield 
-(18907, 15709, 1, 1, 1, 3.333904), -- Sealed Moirai Sigil 
+(18907, 15694, 1, 1, 1, 2.330272), -- Sealed Moirai Helmet
+(18907, 15695, 1, 1, 1, 2.330272), -- Sealed Moirai Leather Helmet
+(18907, 15696, 1, 1, 1, 2.330272), -- Sealed Moirai Circlet
+(18907, 15710, 1, 1, 1, 3.333904), -- Sealed Moirai Shield
+(18907, 15709, 1, 1, 1, 3.333904), -- Sealed Moirai Sigil
 (18907, 15645, 1, 1, 1, 873.840464), -- Sealed Moirai Helmet Piece
 (18907, 15646, 1, 1, 1, 873.840464), -- Sealed Moirai Leather Helmet Piece
 (18907, 15647, 1, 1, 1, 873.840464), -- Sealed Moirai Circlet Piece
@@ -1582,12 +1582,12 @@ INSERT INTO `droplist` VALUES
 (18909, 15672, 1, 1, -1, 8451), -- Sealed Vesper Leather Boots Piece
 (18909, 15675, 1, 1, -1, 8451), -- Sealed Vesper Shoes Piece
 (18909, 9630, 1, 1, -1, 5805), -- Orichalcum
-(18909, 15801, 1, 1, -1, 945), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(18909, 15802, 1, 1, -1, 945), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(18909, 15803, 1, 1, -1, 945), -- Recipe - Sealed Vesper Gloves (60%) 
-(18909, 15804, 1, 1, -1, 945), -- Recipe - Sealed Vesper Boots (60%) 
-(18909, 15805, 1, 1, -1, 945), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(18909, 15806, 1, 1, -1, 945), -- Recipe - Sealed Vesper Shoes (60%) 
+(18909, 15801, 1, 1, -1, 945), -- Recipe - Sealed Vesper Gauntlet (60%)
+(18909, 15802, 1, 1, -1, 945), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(18909, 15803, 1, 1, -1, 945), -- Recipe - Sealed Vesper Gloves (60%)
+(18909, 15804, 1, 1, -1, 945), -- Recipe - Sealed Vesper Boots (60%)
+(18909, 15805, 1, 1, -1, 945), -- Recipe - Sealed Vesper Leather Boots (60%)
+(18909, 15806, 1, 1, -1, 945), -- Recipe - Sealed Vesper Shoes (60%)
 (18909, 57, 1170, 2361, 0, 700000), -- Adena
 (18909, 14109, 1, 1, 1, 3.363252), -- Sealed Vesper Gauntlet
 (18909, 14113, 1, 1, 1, 3.363252), -- Sealed Vesper Leather Gloves
@@ -1609,12 +1609,12 @@ INSERT INTO `droplist` VALUES
 (18909, 9573, 1, 1, 2, 1167.795746), -- Life Stone - Level 80
 (18909, 9574, 1, 1, 2, 291.925272), -- Mid-Grade Life Stone - Level 80
 (18909, 9575, 1, 1, 2, 29.201993), -- High-Grade Life Stone - Level 80
-(18909, 15801, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(18909, 15802, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(18909, 15803, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Gloves (60%) 
-(18909, 15804, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Boots (60%) 
-(18909, 15805, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(18909, 15806, 1, 1, 2, 144.211463), -- Recipe - Sealed Vesper Shoes (60%) 
+(18909, 15801, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Gauntlet (60%)
+(18909, 15802, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(18909, 15803, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Gloves (60%)
+(18909, 15804, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Boots (60%)
+(18909, 15805, 1, 1, 2, 144.116805), -- Recipe - Sealed Vesper Leather Boots (60%)
+(18909, 15806, 1, 1, 2, 144.211463), -- Recipe - Sealed Vesper Shoes (60%)
 -- Solina Knight Captain
 (18910, 15667, 1, 1, -1, 13541), -- Sealed Vesper Gauntlet Piece
 (18910, 15671, 1, 1, -1, 13541), -- Sealed Vesper Leather Gloves Piece
@@ -1622,12 +1622,12 @@ INSERT INTO `droplist` VALUES
 (18910, 15668, 1, 1, -1, 13541), -- Sealed Vesper Boots Piece
 (18910, 15672, 1, 1, -1, 13541), -- Sealed Vesper Leather Boots Piece
 (18910, 15675, 1, 1, -1, 13541), -- Sealed Vesper Shoes Piece
-(18910, 15801, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(18910, 15802, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(18910, 15803, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Gloves (60%) 
-(18910, 15804, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Boots (60%) 
-(18910, 15805, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(18910, 15806, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Shoes (60%) 
+(18910, 15801, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Gauntlet (60%)
+(18910, 15802, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(18910, 15803, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Gloves (60%)
+(18910, 15804, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Boots (60%)
+(18910, 15805, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Leather Boots (60%)
+(18910, 15806, 1, 1, -1, 1515), -- Recipe - Sealed Vesper Shoes (60%)
 (18910, 57, 1730, 3492, 0, 700000), -- Adena
 (18910, 14109, 1, 1, 1, 4.974012), -- Sealed Vesper Gauntlet
 (18910, 14113, 1, 1, 1, 4.974012), -- Sealed Vesper Leather Gloves
@@ -33602,16 +33602,16 @@ INSERT INTO `droplist` VALUES
 (22373, 15658, 1, 1, -1, 26714), -- Sealed Moirai Leather Boots Piece
 (22373, 15659, 1, 1, -1, 26714), -- Sealed Moirai Shoes Piece
 (22373, 9630, 1, 1, -1, 15747), -- Orichalcum
-(22373, 15784, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22373, 15785, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22373, 15786, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Gloves (60%) 
-(22373, 15787, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Boots (60%) 
-(22373, 15788, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22373, 15789, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Shoes (60%) 
+(22373, 15784, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22373, 15785, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22373, 15786, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Gloves (60%)
+(22373, 15787, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Boots (60%)
+(22373, 15788, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22373, 15789, 1, 1, -1, 3554), -- Recipe - Sealed Moirai Shoes (60%)
 (22373, 57, 3173, 6405, 0, 700000), -- Adena
-(22373, 15703, 1, 1, 1, 25.290645), -- Sealed Moirai Gauntlet 
-(22373, 15704, 1, 1, 1, 25.290645), -- Sealed Moirai Leather Gloves 
-(22373, 15705, 1, 1, 1, 25.290645), -- Sealed Moirai Gloves 
+(22373, 15703, 1, 1, 1, 25.290645), -- Sealed Moirai Gauntlet
+(22373, 15704, 1, 1, 1, 25.290645), -- Sealed Moirai Leather Gloves
+(22373, 15705, 1, 1, 1, 25.290645), -- Sealed Moirai Gloves
 (22373, 15654, 1, 1, 1, 9500.395073), -- Sealed Moirai Gauntlet Piece
 (22373, 15655, 1, 1, 1, 9500.395073), -- Sealed Moirai Leather Gloves Piece
 (22373, 15656, 1, 1, 1, 9500.337919), -- Sealed Moirai Gloves Piece
@@ -33632,16 +33632,16 @@ INSERT INTO `droplist` VALUES
 (22374, 15658, 1, 1, -1, 74628), -- Sealed Moirai Leather Boots Piece
 (22374, 15659, 1, 1, -1, 74628), -- Sealed Moirai Shoes Piece
 (22374, 9630, 1, 1, -1, 43991), -- Orichalcum
-(22374, 15784, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22374, 15785, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22374, 15786, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Gloves (60%) 
-(22374, 15787, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Boots (60%) 
-(22374, 15788, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22374, 15789, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Shoes (60%) 
+(22374, 15784, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22374, 15785, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22374, 15786, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Gloves (60%)
+(22374, 15787, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Boots (60%)
+(22374, 15788, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22374, 15789, 1, 1, -1, 9929), -- Recipe - Sealed Moirai Shoes (60%)
 (22374, 57, 8864, 17893, 0, 700000), -- Adena
-(22374, 15706, 1, 1, 1, 70.650435), -- Sealed Moirai Boots 
-(22374, 15707, 1, 1, 1, 70.650435), -- Sealed Moirai Leather Boots 
-(22374, 15708, 1, 1, 1, 70.650435), -- Sealed Moirai Shoes 
+(22374, 15706, 1, 1, 1, 70.650435), -- Sealed Moirai Boots
+(22374, 15707, 1, 1, 1, 70.650435), -- Sealed Moirai Leather Boots
+(22374, 15708, 1, 1, 1, 70.650435), -- Sealed Moirai Shoes
 (22374, 15657, 1, 1, 1, 26539.736119), -- Sealed Moirai Boots Piece
 (22374, 15658, 1, 1, 1, 26539.736119), -- Sealed Moirai Leather Boots Piece
 (22374, 15659, 1, 1, 1, 26539.576457), -- Sealed Moirai Shoes Piece
@@ -33660,14 +33660,14 @@ INSERT INTO `droplist` VALUES
 (22375, 15647, 1, 1, -1, 136502), -- Sealed Moirai Circlet Piece
 (22375, 15693, 1, 1, -1, 244687), -- Sealed Moirai Shield Piece
 (22375, 15692, 1, 1, -1, 244687), -- Sealed Moirai Sigil Piece
-(22375, 15775, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Helmet (60%) 
-(22375, 15776, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22375, 15777, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Circlet (60%) 
-(22375, 15791, 1, 1, -1, 26022), -- Recipe - Sealed Moirai Shield (60%) 
-(22375, 15790, 1, 1, -1, 26022), -- Recipe - Sealed Moirai Sigil (60%) 
+(22375, 15775, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Helmet (60%)
+(22375, 15776, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22375, 15777, 1, 1, -1, 18215), -- Recipe - Sealed Moirai Circlet (60%)
+(22375, 15791, 1, 1, -1, 26022), -- Recipe - Sealed Moirai Shield (60%)
+(22375, 15790, 1, 1, -1, 26022), -- Recipe - Sealed Moirai Sigil (60%)
 (22375, 57, 18763, 37877, 0, 700000), -- Adena
-(22375, 15694, 1, 1, 1, 149.55116), -- Sealed Moirai Helmet 
-(22375, 15695, 1, 1, 1, 149.55116), -- Sealed Moirai Leather Helmet 
+(22375, 15694, 1, 1, 1, 149.55116), -- Sealed Moirai Helmet
+(22375, 15695, 1, 1, 1, 149.55116), -- Sealed Moirai Leather Helmet
 (22375, 15645, 1, 1, 1, 56030.44884), -- Sealed Moirai Helmet Piece
 (22375, 15646, 1, 1, 1, 56030.44884), -- Sealed Moirai Leather Helmet Piece
 (22375, 1879, 3, 9, 2, 174850.854585), -- Cokes
@@ -33681,9 +33681,9 @@ INSERT INTO `droplist` VALUES
 (22376, 15772, 1, 3, -1, 701627), -- Sealed Moirai Ring Gem
 (22376, 15773, 1, 1, -1, 788650), -- Sealed Moirai Earring Gem
 (22376, 15774, 1, 1, -1, 680508), -- Sealed Moirai Necklace Gem
-(22376, 15812, 1, 1, -1, 185649), -- Recipe - Sealed Moirai Ring (70%) 
-(22376, 15813, 1, 1, -1, 123751), -- Recipe - Sealed Moirai Earring (70%) 
-(22376, 15814, 1, 1, -1, 92816), -- Recipe - Sealed Moirai Necklace (70%) 
+(22376, 15812, 1, 1, -1, 185649), -- Recipe - Sealed Moirai Ring (70%)
+(22376, 15813, 1, 1, -1, 123751), -- Recipe - Sealed Moirai Earring (70%)
+(22376, 15814, 1, 1, -1, 92816), -- Recipe - Sealed Moirai Necklace (70%)
 (22376, 57, 49794, 100522, 0, 700000), -- Adena
 (22376, 15766, 1, 1, 1, 609.686688), -- Sealed Moirai Ring
 (22376, 15767, 1, 1, 1, 406.300128), -- Sealed Moirai Earring
@@ -33740,17 +33740,17 @@ INSERT INTO `droplist` VALUES
 (22379, 15647, 1, 1, -1, 48618), -- Sealed Moirai Circlet Piece
 (22379, 15693, 1, 1, -1, 87150), -- Sealed Moirai Shield Piece
 (22379, 15692, 1, 1, -1, 87150), -- Sealed Moirai Sigil Piece
-(22379, 15775, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Helmet (60%) 
-(22379, 15776, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22379, 15777, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Circlet (60%) 
-(22379, 15791, 1, 1, -1, 9268), -- Recipe - Sealed Moirai Shield (60%) 
-(22379, 15790, 1, 1, -1, 9268), -- Recipe - Sealed Moirai Sigil (60%) 
+(22379, 15775, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Helmet (60%)
+(22379, 15776, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22379, 15777, 1, 1, -1, 6488), -- Recipe - Sealed Moirai Circlet (60%)
+(22379, 15791, 1, 1, -1, 9268), -- Recipe - Sealed Moirai Shield (60%)
+(22379, 15790, 1, 1, -1, 9268), -- Recipe - Sealed Moirai Sigil (60%)
 (22379, 57, 6683, 13491, 0, 700000), -- Adena
-(22379, 15694, 1, 1, 1, 21.306556), -- Sealed Moirai Helmet 
-(22379, 15695, 1, 1, 1, 21.306556), -- Sealed Moirai Leather Helmet 
-(22379, 15696, 1, 1, 1, 21.306556), -- Sealed Moirai Circlet 
-(22379, 15710, 1, 1, 1, 30.483142), -- Sealed Moirai Shield 
-(22379, 15709, 1, 1, 1, 30.483142), -- Sealed Moirai Sigil 
+(22379, 15694, 1, 1, 1, 21.306556), -- Sealed Moirai Helmet
+(22379, 15695, 1, 1, 1, 21.306556), -- Sealed Moirai Leather Helmet
+(22379, 15696, 1, 1, 1, 21.306556), -- Sealed Moirai Circlet
+(22379, 15710, 1, 1, 1, 30.483142), -- Sealed Moirai Shield
+(22379, 15709, 1, 1, 1, 30.483142), -- Sealed Moirai Sigil
 (22379, 15645, 1, 1, 1, 7989.853022), -- Sealed Moirai Helmet Piece
 (22379, 15646, 1, 1, 1, 7989.853022), -- Sealed Moirai Leather Helmet Piece
 (22379, 15647, 1, 1, 1, 7989.853022), -- Sealed Moirai Circlet Piece
@@ -33808,19 +33808,19 @@ INSERT INTO `droplist` VALUES
 (22382, 15657, 1, 1, -1, 105016), -- Sealed Moirai Boots Piece
 (22382, 15658, 1, 1, -1, 105016), -- Sealed Moirai Leather Boots Piece
 (22382, 15659, 1, 1, -1, 105016), -- Sealed Moirai Shoes Piece
-(22382, 15784, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22382, 15785, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22382, 15786, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Gloves (60%) 
-(22382, 15787, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Boots (60%) 
-(22382, 15788, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22382, 15789, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Shoes (60%) 
+(22382, 15784, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22382, 15785, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22382, 15786, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Gloves (60%)
+(22382, 15787, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Boots (60%)
+(22382, 15788, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22382, 15789, 1, 1, -1, 13972), -- Recipe - Sealed Moirai Shoes (60%)
 (22382, 57, 11514, 23243, 0, 700000), -- Adena
-(22382, 15703, 1, 1, 1, 45.885788), -- Sealed Moirai Gauntlet 
-(22382, 15704, 1, 1, 1, 45.885788), -- Sealed Moirai Leather Gloves 
-(22382, 15705, 1, 1, 1, 45.885788), -- Sealed Moirai Gloves 
-(22382, 15706, 1, 1, 1, 45.885788), -- Sealed Moirai Boots 
-(22382, 15707, 1, 1, 1, 45.885788), -- Sealed Moirai Leather Boots 
-(22382, 15708, 1, 1, 1, 45.885788), -- Sealed Moirai Shoes 
+(22382, 15703, 1, 1, 1, 45.885788), -- Sealed Moirai Gauntlet
+(22382, 15704, 1, 1, 1, 45.885788), -- Sealed Moirai Leather Gloves
+(22382, 15705, 1, 1, 1, 45.885788), -- Sealed Moirai Gloves
+(22382, 15706, 1, 1, 1, 45.885788), -- Sealed Moirai Boots
+(22382, 15707, 1, 1, 1, 45.885788), -- Sealed Moirai Leather Boots
+(22382, 15708, 1, 1, 1, 45.885788), -- Sealed Moirai Shoes
 (22382, 15654, 1, 1, 1, 17256.378336), -- Sealed Moirai Gauntlet Piece
 (22382, 15655, 1, 1, 1, 17256.378336), -- Sealed Moirai Leather Gloves Piece
 (22382, 15656, 1, 1, 1, 17256.378336), -- Sealed Moirai Gloves Piece
@@ -33839,11 +33839,11 @@ INSERT INTO `droplist` VALUES
 (22383, 15649, 1, 1, -1, 17341), -- Sealed Moirai Leather Breastplate Piece
 (22383, 15652, 1, 1, -1, 28134), -- Sealed Moirai Leather Legging Piece
 (22383, 9630, 1, 1, -1, 28431), -- Orichalcum
-(22383, 15779, 1, 1, -1, 2139), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22383, 15782, 1, 1, -1, 3422), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22383, 15779, 1, 1, -1, 2139), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22383, 15782, 1, 1, -1, 3422), -- Recipe - Sealed Moirai Leather Legging (60%)
 (22383, 57, 2203, 4448, 0, 700000), -- Adena
-(22383, 15698, 1, 1, 1, 8.780618), -- Sealed Moirai Leather Breastplate 
-(22383, 15701, 1, 1, 1, 14.050861), -- Sealed Moirai Leather Legging 
+(22383, 15698, 1, 1, 1, 8.780618), -- Sealed Moirai Leather Breastplate
+(22383, 15701, 1, 1, 1, 14.050861), -- Sealed Moirai Leather Legging
 (22383, 15649, 1, 1, 1, 3560.9244), -- Sealed Moirai Leather Breastplate Piece
 (22383, 15652, 1, 1, 1, 5777.244121), -- Sealed Moirai Leather Legging Piece
 (22383, 1894, 1, 1, 2, 15561.21413), -- Crafted Leather
@@ -33861,11 +33861,11 @@ INSERT INTO `droplist` VALUES
 (22384, 15648, 1, 1, -1, 13458), -- Sealed Moirai Breastplate Piece
 (22384, 15651, 1, 1, -1, 22556), -- Sealed Moirai Gaiter Piece
 (22384, 1894, 1, 1, -1, 199044), -- Crafted Leather
-(22384, 15778, 1, 1, -1, 1685), -- Recipe - Sealed Moirai Breastplate (60%) 
-(22384, 15781, 1, 1, -1, 2695), -- Recipe - Sealed Moirai Gaiter (60%) 
+(22384, 15778, 1, 1, -1, 1685), -- Recipe - Sealed Moirai Breastplate (60%)
+(22384, 15781, 1, 1, -1, 2695), -- Recipe - Sealed Moirai Gaiter (60%)
 (22384, 57, 2314, 4671, 0, 700000), -- Adena
-(22384, 15697, 1, 1, 1, 6.915396), -- Sealed Moirai Breastplate 
-(22384, 15700, 1, 1, 1, 11.066116), -- Sealed Moirai Gaiter 
+(22384, 15697, 1, 1, 1, 6.915396), -- Sealed Moirai Breastplate
+(22384, 15700, 1, 1, 1, 11.066116), -- Sealed Moirai Gaiter
 (22384, 15648, 1, 1, 1, 2763.141716), -- Sealed Moirai Breastplate Piece
 (22384, 15651, 1, 1, 1, 4630.876772), -- Sealed Moirai Gaiter Piece
 (22384, 1879, 1, 1, 2, 129372.932898), -- Cokes
@@ -33879,11 +33879,11 @@ INSERT INTO `droplist` VALUES
 (22385, 15649, 1, 1, -1, 130176), -- Sealed Moirai Leather Breastplate Piece
 (22385, 15652, 1, 1, -1, 211197), -- Sealed Moirai Leather Legging Piece
 (22385, 1894, 1, 3, -1, 711399), -- Crafted Leather
-(22385, 15779, 1, 1, -1, 16056), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22385, 15782, 1, 1, -1, 25690), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22385, 15779, 1, 1, -1, 16056), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22385, 15782, 1, 1, -1, 25690), -- Recipe - Sealed Moirai Leather Legging (60%)
 (22385, 57, 16539, 33388, 0, 700000), -- Adena
-(22385, 15698, 1, 1, 1, 65.912322), -- Sealed Moirai Leather Breastplate 
-(22385, 15701, 1, 1, 1, 105.473769), -- Sealed Moirai Leather Legging 
+(22385, 15698, 1, 1, 1, 65.912322), -- Sealed Moirai Leather Breastplate
+(22385, 15701, 1, 1, 1, 105.473769), -- Sealed Moirai Leather Legging
 (22385, 15649, 1, 1, 1, 26730.3276), -- Sealed Moirai Leather Breastplate Piece
 (22385, 15652, 1, 1, 1, 43367.286309), -- Sealed Moirai Leather Legging Piece
 (22385, 1866, 9, 27, 2, 154129.92012), -- Suede
@@ -33899,11 +33899,11 @@ INSERT INTO `droplist` VALUES
 (22386, 15650, 1, 1, -1, 83173), -- Sealed Moirai Tunic Piece
 (22386, 15653, 1, 1, -1, 134939), -- Sealed Moirai Stockings Piece
 (22386, 1894, 1, 1, -1, 909065), -- Crafted Leather
-(22386, 15780, 1, 1, -1, 10259), -- Recipe - Sealed Moirai Tunic (60%) 
-(22386, 15783, 1, 1, -1, 16414), -- Recipe - Sealed Moirai Stockings (60%) 
+(22386, 15780, 1, 1, -1, 10259), -- Recipe - Sealed Moirai Tunic (60%)
+(22386, 15783, 1, 1, -1, 16414), -- Recipe - Sealed Moirai Stockings (60%)
 (22386, 57, 10567, 21333, 0, 700000), -- Adena
-(22386, 15699, 1, 1, 1, 42.112448), -- Sealed Moirai Tunic 
-(22386, 15702, 1, 1, 1, 67.388896), -- Sealed Moirai Stockings 
+(22386, 15699, 1, 1, 1, 42.112448), -- Sealed Moirai Tunic
+(22386, 15702, 1, 1, 1, 67.388896), -- Sealed Moirai Stockings
 (22386, 15650, 1, 1, 1, 17078.4384), -- Sealed Moirai Tunic Piece
 (22386, 15653, 1, 1, 1, 27708.060256), -- Sealed Moirai Stockings Piece
 (22386, 1879, 3, 9, 2, 84409.714227), -- Cokes
@@ -33918,9 +33918,9 @@ INSERT INTO `droplist` VALUES
 (22387, 15772, 1, 1, -1, 297797), -- Sealed Moirai Ring Gem
 (22387, 15773, 1, 1, -1, 167367), -- Sealed Moirai Earring Gem
 (22387, 15774, 1, 1, -1, 144417), -- Sealed Moirai Necklace Gem
-(22387, 15812, 1, 1, -1, 39398), -- Recipe - Sealed Moirai Ring (70%) 
-(22387, 15813, 1, 1, -1, 26262), -- Recipe - Sealed Moirai Earring (70%) 
-(22387, 15814, 1, 1, -1, 19697), -- Recipe - Sealed Moirai Necklace (70%) 
+(22387, 15812, 1, 1, -1, 39398), -- Recipe - Sealed Moirai Ring (70%)
+(22387, 15813, 1, 1, -1, 26262), -- Recipe - Sealed Moirai Earring (70%)
+(22387, 15814, 1, 1, -1, 19697), -- Recipe - Sealed Moirai Necklace (70%)
 (22387, 57, 10567, 21333, 0, 700000), -- Adena
 (22387, 15766, 1, 1, 1, 129.387242), -- Sealed Moirai Ring
 (22387, 15767, 1, 1, 1, 86.224702), -- Sealed Moirai Earring
@@ -33941,19 +33941,19 @@ INSERT INTO `droplist` VALUES
 (22388, 15657, 1, 1, -1, 202500), -- Sealed Moirai Boots Piece
 (22388, 15658, 1, 1, -1, 202500), -- Sealed Moirai Leather Boots Piece
 (22388, 15659, 1, 1, -1, 202500), -- Sealed Moirai Shoes Piece
-(22388, 15784, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22388, 15785, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22388, 15786, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Gloves (60%) 
-(22388, 15787, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Boots (60%) 
-(22388, 15788, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22388, 15789, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Shoes (60%) 
+(22388, 15784, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22388, 15785, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22388, 15786, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Gloves (60%)
+(22388, 15787, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Boots (60%)
+(22388, 15788, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22388, 15789, 1, 1, -1, 26942), -- Recipe - Sealed Moirai Shoes (60%)
 (22388, 57, 22201, 44819, 0, 700000), -- Adena
-(22388, 15703, 1, 1, 1, 88.480444), -- Sealed Moirai Gauntlet 
-(22388, 15704, 1, 1, 1, 88.480444), -- Sealed Moirai Leather Gloves 
-(22388, 15705, 1, 1, 1, 88.480444), -- Sealed Moirai Gloves 
-(22388, 15706, 1, 1, 1, 88.480444), -- Sealed Moirai Boots 
-(22388, 15707, 1, 1, 1, 88.480444), -- Sealed Moirai Leather Boots 
-(22388, 15708, 1, 1, 1, 88.480444), -- Sealed Moirai Shoes 
+(22388, 15703, 1, 1, 1, 88.480444), -- Sealed Moirai Gauntlet
+(22388, 15704, 1, 1, 1, 88.480444), -- Sealed Moirai Leather Gloves
+(22388, 15705, 1, 1, 1, 88.480444), -- Sealed Moirai Gloves
+(22388, 15706, 1, 1, 1, 88.480444), -- Sealed Moirai Boots
+(22388, 15707, 1, 1, 1, 88.480444), -- Sealed Moirai Leather Boots
+(22388, 15708, 1, 1, 1, 88.480444), -- Sealed Moirai Shoes
 (22388, 15654, 1, 1, 1, 33275.052768), -- Sealed Moirai Gauntlet Piece
 (22388, 15655, 1, 1, 1, 33275.052768), -- Sealed Moirai Leather Gloves Piece
 (22388, 15656, 1, 1, 1, 33275.052768), -- Sealed Moirai Gloves Piece
@@ -33979,17 +33979,17 @@ INSERT INTO `droplist` VALUES
 (22389, 15693, 1, 1, -1, 263211), -- Sealed Moirai Shield Piece
 (22389, 15692, 1, 1, -1, 263211), -- Sealed Moirai Sigil Piece
 (22389, 960, 1, 1, -1, 9897), -- Scroll: Enchant Armor (S-Grade)
-(22389, 15775, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Helmet (60%) 
-(22389, 15776, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22389, 15777, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Circlet (60%) 
-(22389, 15791, 1, 1, -1, 27992), -- Recipe - Sealed Moirai Shield (60%) 
-(22389, 15790, 1, 1, -1, 27992), -- Recipe - Sealed Moirai Sigil (60%) 
+(22389, 15775, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Helmet (60%)
+(22389, 15776, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22389, 15777, 1, 1, -1, 19594), -- Recipe - Sealed Moirai Circlet (60%)
+(22389, 15791, 1, 1, -1, 27992), -- Recipe - Sealed Moirai Shield (60%)
+(22389, 15790, 1, 1, -1, 27992), -- Recipe - Sealed Moirai Sigil (60%)
 (22389, 57, 22201, 44819, 0, 700000), -- Adena
-(22389, 15694, 1, 1, 1, 70.784436), -- Sealed Moirai Helmet 
-(22389, 15695, 1, 1, 1, 70.784436), -- Sealed Moirai Leather Helmet 
-(22389, 15696, 1, 1, 1, 70.784436), -- Sealed Moirai Circlet 
-(22389, 15710, 1, 1, 1, 101.270802), -- Sealed Moirai Shield 
-(22389, 15709, 1, 1, 1, 101.270802), -- Sealed Moirai Sigil 
+(22389, 15694, 1, 1, 1, 70.784436), -- Sealed Moirai Helmet
+(22389, 15695, 1, 1, 1, 70.784436), -- Sealed Moirai Leather Helmet
+(22389, 15696, 1, 1, 1, 70.784436), -- Sealed Moirai Circlet
+(22389, 15710, 1, 1, 1, 101.270802), -- Sealed Moirai Shield
+(22389, 15709, 1, 1, 1, 101.270802), -- Sealed Moirai Sigil
 (22389, 15645, 1, 1, 1, 26543.813082), -- Sealed Moirai Helmet Piece
 (22389, 15646, 1, 1, 1, 26543.813082), -- Sealed Moirai Leather Helmet Piece
 (22389, 15647, 1, 1, 1, 26543.813082), -- Sealed Moirai Circlet Piece
@@ -34330,19 +34330,19 @@ INSERT INTO `droplist` VALUES
 (22408, 15658, 1, 1, -1, 86701), -- Sealed Moirai Leather Boots Piece
 (22408, 15659, 1, 1, -1, 86701), -- Sealed Moirai Shoes Piece
 (22408, 9630, 1, 1, -1, 51108), -- Orichalcum
-(22408, 15784, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22408, 15785, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22408, 15786, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Gloves (60%) 
-(22408, 15787, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Boots (60%) 
-(22408, 15788, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22408, 15789, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Shoes (60%) 
+(22408, 15784, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22408, 15785, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22408, 15786, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Gloves (60%)
+(22408, 15787, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Boots (60%)
+(22408, 15788, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22408, 15789, 1, 1, -1, 11535), -- Recipe - Sealed Moirai Shoes (60%)
 (22408, 57, 10298, 20788, 0, 700000), -- Adena
-(22408, 15703, 1, 1, 1, 41.0397), -- Sealed Moirai Gauntlet 
-(22408, 15704, 1, 1, 1, 41.0397), -- Sealed Moirai Leather Gloves 
-(22408, 15705, 1, 1, 1, 41.0397), -- Sealed Moirai Gloves 
-(22408, 15706, 1, 1, 1, 41.0397), -- Sealed Moirai Boots 
-(22408, 15707, 1, 1, 1, 41.0397), -- Sealed Moirai Leather Boots 
-(22408, 15708, 1, 1, 1, 41.0397), -- Sealed Moirai Shoes 
+(22408, 15703, 1, 1, 1, 41.0397), -- Sealed Moirai Gauntlet
+(22408, 15704, 1, 1, 1, 41.0397), -- Sealed Moirai Leather Gloves
+(22408, 15705, 1, 1, 1, 41.0397), -- Sealed Moirai Gloves
+(22408, 15706, 1, 1, 1, 41.0397), -- Sealed Moirai Boots
+(22408, 15707, 1, 1, 1, 41.0397), -- Sealed Moirai Leather Boots
+(22408, 15708, 1, 1, 1, 41.0397), -- Sealed Moirai Shoes
 (22408, 15654, 1, 1, 1, 15433.8984), -- Sealed Moirai Gauntlet Piece
 (22408, 15655, 1, 1, 1, 15433.8984), -- Sealed Moirai Leather Gloves Piece
 (22408, 15656, 1, 1, 1, 15433.8984), -- Sealed Moirai Gloves Piece
@@ -34362,17 +34362,17 @@ INSERT INTO `droplist` VALUES
 (22409, 15647, 1, 1, -1, 168991), -- Sealed Moirai Circlet Piece
 (22409, 15693, 1, 1, -1, 302925), -- Sealed Moirai Shield Piece
 (22409, 15692, 1, 1, -1, 302925), -- Sealed Moirai Sigil Piece
-(22409, 15775, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Helmet (60%) 
-(22409, 15776, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22409, 15777, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Circlet (60%) 
-(22409, 15791, 1, 1, -1, 32215), -- Recipe - Sealed Moirai Shield (60%) 
-(22409, 15790, 1, 1, -1, 32215), -- Recipe - Sealed Moirai Sigil (60%) 
+(22409, 15775, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Helmet (60%)
+(22409, 15776, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22409, 15777, 1, 1, -1, 22551), -- Recipe - Sealed Moirai Circlet (60%)
+(22409, 15791, 1, 1, -1, 32215), -- Recipe - Sealed Moirai Shield (60%)
+(22409, 15790, 1, 1, -1, 32215), -- Recipe - Sealed Moirai Sigil (60%)
 (22409, 57, 23228, 46892, 0, 700000), -- Adena
-(22409, 15694, 1, 1, 1, 74.058856), -- Sealed Moirai Helmet 
-(22409, 15695, 1, 1, 1, 74.058856), -- Sealed Moirai Leather Helmet 
-(22409, 15696, 1, 1, 1, 74.058856), -- Sealed Moirai Circlet 
-(22409, 15710, 1, 1, 1, 105.955492), -- Sealed Moirai Shield 
-(22409, 15709, 1, 1, 1, 105.955492), -- Sealed Moirai Sigil 
+(22409, 15694, 1, 1, 1, 74.058856), -- Sealed Moirai Helmet
+(22409, 15695, 1, 1, 1, 74.058856), -- Sealed Moirai Leather Helmet
+(22409, 15696, 1, 1, 1, 74.058856), -- Sealed Moirai Circlet
+(22409, 15710, 1, 1, 1, 105.955492), -- Sealed Moirai Shield
+(22409, 15709, 1, 1, 1, 105.955492), -- Sealed Moirai Sigil
 (22409, 15645, 1, 1, 1, 27771.704372), -- Sealed Moirai Helmet Piece
 (22409, 15646, 1, 1, 1, 27771.704372), -- Sealed Moirai Leather Helmet Piece
 (22409, 15647, 1, 1, 1, 27771.704372), -- Sealed Moirai Circlet Piece
@@ -34394,9 +34394,9 @@ INSERT INTO `droplist` VALUES
 (22410, 15772, 1, 1, -1, 769024), -- Sealed Moirai Ring Gem
 (22410, 15773, 1, 1, -1, 432203), -- Sealed Moirai Earring Gem
 (22410, 15774, 1, 1, -1, 372938), -- Sealed Moirai Necklace Gem
-(22410, 15812, 1, 1, -1, 101741), -- Recipe - Sealed Moirai Ring (70%) 
-(22410, 15813, 1, 1, -1, 67819), -- Recipe - Sealed Moirai Earring (70%) 
-(22410, 15814, 1, 1, -1, 50866), -- Recipe - Sealed Moirai Necklace (70%) 
+(22410, 15812, 1, 1, -1, 101741), -- Recipe - Sealed Moirai Ring (70%)
+(22410, 15813, 1, 1, -1, 67819), -- Recipe - Sealed Moirai Earring (70%)
+(22410, 15814, 1, 1, -1, 50866), -- Recipe - Sealed Moirai Necklace (70%)
 (22410, 57, 27289, 55089, 0, 700000), -- Adena
 (22410, 15766, 1, 1, 1, 334.125557), -- Sealed Moirai Ring
 (22410, 15767, 1, 1, 1, 222.663967), -- Sealed Moirai Earring
@@ -34717,9 +34717,9 @@ INSERT INTO `droplist` VALUES
 (22428, 15772, 1, 1, -1, 74848), -- Sealed Moirai Ring Gem
 (22428, 15773, 1, 1, -1, 42066), -- Sealed Moirai Earring Gem
 (22428, 15774, 1, 1, -1, 36297), -- Sealed Moirai Necklace Gem
-(22428, 15812, 1, 1, -1, 9902), -- Recipe - Sealed Moirai Ring (70%) 
-(22428, 15813, 1, 1, -1, 6601), -- Recipe - Sealed Moirai Earring (70%) 
-(22428, 15814, 1, 1, -1, 4951), -- Recipe - Sealed Moirai Necklace (70%) 
+(22428, 15812, 1, 1, -1, 9902), -- Recipe - Sealed Moirai Ring (70%)
+(22428, 15813, 1, 1, -1, 6601), -- Recipe - Sealed Moirai Earring (70%)
+(22428, 15814, 1, 1, -1, 4951), -- Recipe - Sealed Moirai Necklace (70%)
 (22428, 57, 2656, 5362, 0, 700000), -- Adena
 (22428, 15766, 1, 1, 1, 32.520181), -- Sealed Moirai Ring
 (22428, 15767, 1, 1, 1, 21.671711), -- Sealed Moirai Earring
@@ -34743,16 +34743,16 @@ INSERT INTO `droplist` VALUES
 (22429, 15658, 1, 1, -1, 22362), -- Sealed Moirai Leather Boots Piece
 (22429, 15659, 1, 1, -1, 22362), -- Sealed Moirai Shoes Piece
 (22429, 9630, 1, 1, -1, 13182), -- Orichalcum
-(22429, 15784, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22429, 15785, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22429, 15786, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Gloves (60%) 
-(22429, 15787, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Boots (60%) 
-(22429, 15788, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22429, 15789, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Shoes (60%) 
+(22429, 15784, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22429, 15785, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22429, 15786, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Gloves (60%)
+(22429, 15787, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Boots (60%)
+(22429, 15788, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22429, 15789, 1, 1, -1, 2975), -- Recipe - Sealed Moirai Shoes (60%)
 (22429, 57, 2656, 5362, 0, 700000), -- Adena
-(22429, 15703, 1, 1, 1, 21.170085), -- Sealed Moirai Gauntlet 
-(22429, 15704, 1, 1, 1, 21.170085), -- Sealed Moirai Leather Gloves 
-(22429, 15705, 1, 1, 1, 21.170085), -- Sealed Moirai Gloves 
+(22429, 15703, 1, 1, 1, 21.170085), -- Sealed Moirai Gauntlet
+(22429, 15704, 1, 1, 1, 21.170085), -- Sealed Moirai Leather Gloves
+(22429, 15705, 1, 1, 1, 21.170085), -- Sealed Moirai Gloves
 (22429, 15654, 1, 1, 1, 7952.512529), -- Sealed Moirai Gauntlet Piece
 (22429, 15655, 1, 1, 1, 7952.512529), -- Sealed Moirai Leather Gloves Piece
 (22429, 15656, 1, 1, 1, 7952.464687), -- Sealed Moirai Gloves Piece
@@ -34771,14 +34771,14 @@ INSERT INTO `droplist` VALUES
 (22430, 15647, 1, 1, -1, 19323), -- Sealed Moirai Circlet Piece
 (22430, 15693, 1, 1, -1, 34637), -- Sealed Moirai Shield Piece
 (22430, 15692, 1, 1, -1, 34637), -- Sealed Moirai Sigil Piece
-(22430, 15775, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Helmet (60%) 
-(22430, 15776, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22430, 15777, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Circlet (60%) 
-(22430, 15791, 1, 1, -1, 3684), -- Recipe - Sealed Moirai Shield (60%) 
-(22430, 15790, 1, 1, -1, 3684), -- Recipe - Sealed Moirai Sigil (60%) 
+(22430, 15775, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Helmet (60%)
+(22430, 15776, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22430, 15777, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Circlet (60%)
+(22430, 15791, 1, 1, -1, 3684), -- Recipe - Sealed Moirai Shield (60%)
+(22430, 15790, 1, 1, -1, 3684), -- Recipe - Sealed Moirai Sigil (60%)
 (22430, 57, 2656, 5362, 0, 700000), -- Adena
-(22430, 15694, 1, 1, 1, 21.169555), -- Sealed Moirai Helmet 
-(22430, 15695, 1, 1, 1, 21.169555), -- Sealed Moirai Leather Helmet 
+(22430, 15694, 1, 1, 1, 21.169555), -- Sealed Moirai Helmet
+(22430, 15695, 1, 1, 1, 21.169555), -- Sealed Moirai Leather Helmet
 (22430, 15645, 1, 1, 1, 7931.330445), -- Sealed Moirai Helmet Piece
 (22430, 15646, 1, 1, 1, 7931.330445), -- Sealed Moirai Leather Helmet Piece
 (22430, 1879, 1, 1, 2, 148507.381962), -- Cokes
@@ -34791,9 +34791,9 @@ INSERT INTO `droplist` VALUES
 -- Original Sin Warden
 (22431, 15649, 1, 1, -1, 201187), -- Sealed Moirai Leather Breastplate Piece
 (22431, 9630, 1, 1, -1, 329842), -- Orichalcum
-(22431, 15779, 1, 1, -1, 24815), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
+(22431, 15779, 1, 1, -1, 24815), -- Recipe - Sealed Moirai Leather Breastplate (60%)
 (22431, 57, 15337, 30961, 0, 700000), -- Adena
-(22431, 15698, 1, 1, 1, 122.240331), -- Sealed Moirai Leather Breastplate 
+(22431, 15698, 1, 1, 1, 122.240331), -- Sealed Moirai Leather Breastplate
 (22431, 15649, 1, 1, 1, 49548.759669), -- Sealed Moirai Leather Breastplate Piece
 (22431, 1871, 24, 72, 2, 91880.470746), -- Charcoal
 (22431, 1866, 52, 156, 2, 28001.641086), -- Suede
@@ -34806,9 +34806,9 @@ INSERT INTO `droplist` VALUES
 -- Slave of Greed
 (22432, 15652, 1, 1, -1, 49141), -- Sealed Moirai Leather Legging Piece
 (22432, 9630, 1, 1, -1, 49658), -- Orichalcum
-(22432, 15782, 1, 1, -1, 5978), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22432, 15782, 1, 1, -1, 5978), -- Recipe - Sealed Moirai Leather Legging (60%)
 (22432, 57, 2309, 4661, 0, 700000), -- Adena
-(22432, 15701, 1, 1, 1, 29.446791), -- Sealed Moirai Leather Legging 
+(22432, 15701, 1, 1, 1, 29.446791), -- Sealed Moirai Leather Legging
 (22432, 15652, 1, 1, 1, 12103.553209), -- Sealed Moirai Leather Legging Piece
 (22432, 1865, 1, 3, 2, 211264.24527), -- Varnish
 (22432, 1870, 1, 3, 2, 140842.985283), -- Coal
@@ -34826,9 +34826,9 @@ INSERT INTO `droplist` VALUES
 (22433, 15772, 1, 1, -1, 65069), -- Sealed Moirai Ring Gem
 (22433, 15773, 1, 1, -1, 36570), -- Sealed Moirai Earring Gem
 (22433, 15774, 1, 1, -1, 31555), -- Sealed Moirai Necklace Gem
-(22433, 15812, 1, 1, -1, 8609), -- Recipe - Sealed Moirai Ring (70%) 
-(22433, 15813, 1, 1, -1, 5738), -- Recipe - Sealed Moirai Earring (70%) 
-(22433, 15814, 1, 1, -1, 4304), -- Recipe - Sealed Moirai Necklace (70%) 
+(22433, 15812, 1, 1, -1, 8609), -- Recipe - Sealed Moirai Ring (70%)
+(22433, 15813, 1, 1, -1, 5738), -- Recipe - Sealed Moirai Earring (70%)
+(22433, 15814, 1, 1, -1, 4304), -- Recipe - Sealed Moirai Necklace (70%)
 (22433, 57, 2309, 4661, 0, 700000), -- Adena
 (22433, 15766, 1, 1, 1, 28.271637), -- Sealed Moirai Ring
 (22433, 15767, 1, 1, 1, 18.840447), -- Sealed Moirai Earring
@@ -34851,16 +34851,16 @@ INSERT INTO `droplist` VALUES
 (22434, 15658, 1, 1, -1, 19440), -- Sealed Moirai Leather Boots Piece
 (22434, 15659, 1, 1, -1, 19440), -- Sealed Moirai Shoes Piece
 (22434, 9630, 1, 1, -1, 11460), -- Orichalcum
-(22434, 15784, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22434, 15785, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22434, 15786, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Gloves (60%) 
-(22434, 15787, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Boots (60%) 
-(22434, 15788, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22434, 15789, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Shoes (60%) 
+(22434, 15784, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22434, 15785, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22434, 15786, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Gloves (60%)
+(22434, 15787, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Boots (60%)
+(22434, 15788, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22434, 15789, 1, 1, -1, 2587), -- Recipe - Sealed Moirai Shoes (60%)
 (22434, 57, 2309, 4661, 0, 700000), -- Adena
-(22434, 15706, 1, 1, 1, 18.40446), -- Sealed Moirai Boots 
-(22434, 15707, 1, 1, 1, 18.40446), -- Sealed Moirai Leather Boots 
-(22434, 15708, 1, 1, 1, 18.40446), -- Sealed Moirai Shoes 
+(22434, 15706, 1, 1, 1, 18.40446), -- Sealed Moirai Boots
+(22434, 15707, 1, 1, 1, 18.40446), -- Sealed Moirai Leather Boots
+(22434, 15708, 1, 1, 1, 18.40446), -- Sealed Moirai Shoes
 (22434, 15657, 1, 1, 1, 6913.609404), -- Sealed Moirai Boots Piece
 (22434, 15658, 1, 1, 1, 6913.609404), -- Sealed Moirai Leather Boots Piece
 (22434, 15659, 1, 1, 1, 6913.567812), -- Sealed Moirai Shoes Piece
@@ -34876,9 +34876,9 @@ INSERT INTO `droplist` VALUES
 -- Slave of Sloth
 (22435, 15650, 1, 1, -1, 30289), -- Sealed Moirai Tunic Piece
 (22435, 1894, 1, 1, -1, 331055), -- Crafted Leather
-(22435, 15780, 1, 1, -1, 3736), -- Recipe - Sealed Moirai Tunic (60%) 
+(22435, 15780, 1, 1, -1, 3736), -- Recipe - Sealed Moirai Tunic (60%)
 (22435, 57, 2309, 4661, 0, 700000), -- Adena
-(22435, 15699, 1, 1, 1, 18.403358), -- Sealed Moirai Tunic 
+(22435, 15699, 1, 1, 1, 18.403358), -- Sealed Moirai Tunic
 (22435, 15650, 1, 1, 1, 7459.596642), -- Sealed Moirai Tunic Piece
 (22435, 1895, 1, 1, 2, 221324.709935), -- Metallic Fiber
 (22435, 4040, 1, 1, 2, 15492.767717), -- Mold Lubricant
@@ -34890,9 +34890,9 @@ INSERT INTO `droplist` VALUES
 -- Slave of Envy
 (22436, 15648, 1, 1, -1, 22384), -- Sealed Moirai Breastplate Piece
 (22436, 1894, 1, 1, -1, 331055), -- Crafted Leather
-(22436, 15778, 1, 1, -1, 2802), -- Recipe - Sealed Moirai Breastplate (60%) 
+(22436, 15778, 1, 1, -1, 2802), -- Recipe - Sealed Moirai Breastplate (60%)
 (22436, 57, 2309, 4661, 0, 700000), -- Adena
-(22436, 15697, 1, 1, 1, 13.803416), -- Sealed Moirai Breastplate 
+(22436, 15697, 1, 1, 1, 13.803416), -- Sealed Moirai Breastplate
 (22436, 15648, 1, 1, 1, 5514.196584), -- Sealed Moirai Breastplate Piece
 (22436, 1868, 3, 9, 2, 258211.777049), -- Thread
 (22436, 1873, 2, 6, 2, 77463.384075), -- Silver Nugget
@@ -34904,9 +34904,9 @@ INSERT INTO `droplist` VALUES
 -- Slave of Pride
 (22437, 15651, 1, 1, -1, 37515), -- Sealed Moirai Gaiter Piece
 (22437, 1894, 1, 1, -1, 331055), -- Crafted Leather
-(22437, 15781, 1, 1, -1, 4483), -- Recipe - Sealed Moirai Gaiter (60%) 
+(22437, 15781, 1, 1, -1, 4483), -- Recipe - Sealed Moirai Gaiter (60%)
 (22437, 57, 2309, 4661, 0, 700000), -- Adena
-(22437, 15700, 1, 1, 1, 22.082992), -- Sealed Moirai Gaiter 
+(22437, 15700, 1, 1, 1, 22.082992), -- Sealed Moirai Gaiter
 (22437, 15651, 1, 1, 1, 9240.917008), -- Sealed Moirai Gaiter Piece
 (22437, 1868, 3, 9, 2, 193658.78067), -- Thread
 (22437, 1873, 2, 6, 2, 46478.290494), -- Silver Nugget
@@ -34920,9 +34920,9 @@ INSERT INTO `droplist` VALUES
 -- Slave of Gluttony
 (22438, 15653, 1, 1, -1, 49141), -- Sealed Moirai Stockings Piece
 (22438, 959, 1, 1, -1, 377), -- Scroll: Enchant Weapon (S-Grade)
-(22438, 15783, 1, 1, -1, 5978), -- Recipe - Sealed Moirai Stockings (60%) 
+(22438, 15783, 1, 1, -1, 5978), -- Recipe - Sealed Moirai Stockings (60%)
 (22438, 57, 2309, 4661, 0, 700000), -- Adena
-(22438, 15702, 1, 1, 1, 29.446791), -- Sealed Moirai Stockings 
+(22438, 15702, 1, 1, 1, 29.446791), -- Sealed Moirai Stockings
 (22438, 15653, 1, 1, 1, 12103.553209), -- Sealed Moirai Stockings Piece
 (22438, 1895, 1, 1, 2, 221324.709935), -- Metallic Fiber
 (22438, 4040, 1, 1, 2, 15492.767717), -- Mold Lubricant
@@ -35460,7 +35460,7 @@ INSERT INTO `droplist` VALUES
 (22526, 4040, 1, 1, 2, 18387.829138), -- Mold Lubricant
 (22526, 9628, 1, 1, 2, 7210.944524), -- Leonard
 (22526, 9630, 1, 1, 2, 4838.923299), -- Orichalcum
-(22526, 6867, 1, 1, 2, 1712.222183), -- Recipe: Sealed Draconic Leather Gloves (60%)
+(22526, 6867, 1, 1, 2, 1712.222183), -- Recipe: Sealed Draconic Leather Gloves (60%)
 (22526, 1345, 60, 180, 2, 102155.709075), -- Shining Arrow
 -- Emissary of Death
 (22527, 6691, 1, 1, -1, 24809), -- Angel Slayer Blade
@@ -35478,7 +35478,7 @@ INSERT INTO `droplist` VALUES
 (22527, 9628, 1, 1, 2, 7390.755892), -- Leonard
 (22527, 9630, 1, 1, 2, 4959.739798), -- Orichalcum
 (22527, 9629, 1, 1, 2, 4097.121184), -- Adamantine
-(22527, 6869, 1, 1, 2, 1754.93019), -- Recipe: Sealed Draconic Leather Boots (60%)
+(22527, 6869, 1, 1, 2, 1754.93019), -- Recipe: Sealed Draconic Leather Boots (60%)
 -- Cursed Prefect
 (22528, 1894, 1, 1, -1, 495837), -- Crafted Leather
 (22528, 6693, 1, 1, -1, 31098), -- Dragon Hunter Axe Blade
@@ -35730,7 +35730,7 @@ INSERT INTO `droplist` VALUES
 (22543, 9628, 1, 1, 2, 6392.528856), -- Leonard
 (22543, 9630, 1, 1, 2, 4289.684532), -- Orichalcum
 (22543, 9629, 1, 1, 2, 3544.03686), -- Adamantine
-(22543, 6867, 1, 1, 2, 1517.82036), -- Recipe: Sealed Draconic Leather Gloves (60%)
+(22543, 6867, 1, 1, 2, 1517.82036), -- Recipe: Sealed Draconic Leather Gloves (60%)
 (22543, 1345, 20, 60, 2, 271691.809256), -- Shining Arrow
 -- Dragon Steed Troop Magic Soldier
 (22544, 5162, 1, 1, -1, 5568), -- Recipe: Spiritshot (S) Compressed Package (100%)
@@ -35746,7 +35746,7 @@ INSERT INTO `droplist` VALUES
 (22544, 9628, 1, 1, 2, 8067.318196), -- Leonard
 (22544, 9630, 1, 1, 2, 5413.762774), -- Orichalcum
 (22544, 9629, 1, 1, 2, 4472.178592), -- Adamantine
-(22544, 6869, 1, 1, 2, 1915.57947), -- Recipe: Sealed Draconic Leather Boots (60%)
+(22544, 6869, 1, 1, 2, 1915.57947), -- Recipe: Sealed Draconic Leather Boots (60%)
 -- Wife of the Dragon of Darkness
 (22545, 6688, 1, 1, -1, 65807), -- Forgotten Blade Edge
 (22545, 960, 1, 1, -1, 12178), -- Scroll: Enchant Armor (S-Grade)
@@ -35949,7 +35949,7 @@ INSERT INTO `droplist` VALUES
 (22572, 9628, 1, 1, 2, 89419.367685), -- Leonard
 (22572, 9630, 1, 1, 2, 60005.12619), -- Orichalcum
 (22572, 9629, 1, 1, 2, 49569.404109), -- Adamantine
-(22572, 6867, 1, 1, 2, 21230.688039), -- Recipe: Sealed Draconic Leather Gloves (60%)
+(22572, 6867, 1, 1, 2, 21230.688039), -- Recipe: Sealed Draconic Leather Gloves (60%)
 (22572, 14052, 4, 12, 2, 35628.020694), -- Noble Enhancement Stone
 (22572, 1345, 2700, 8100, 2, 28150.820859), -- Shining Arrow
 -- Dragon Steed Troops No 1 Battalion Commander
@@ -35970,7 +35970,7 @@ INSERT INTO `droplist` VALUES
 (22573, 9628, 1, 1, 2, 27965.849345), -- Leonard
 (22573, 9630, 1, 1, 2, 18766.386765), -- Orichalcum
 (22573, 9629, 1, 1, 2, 15502.638515), -- Adamantine
-(22573, 6869, 1, 1, 2, 6639.822455), -- Recipe: Sealed Draconic Leather Boots (60%)
+(22573, 6869, 1, 1, 2, 6639.822455), -- Recipe: Sealed Draconic Leather Boots (60%)
 (22573, 14052, 1, 1, 2, 89141.08266), -- Noble Enhancement Stone
 -- White Dragon Leader
 (22574, 3036, 1, 1, -1, 18882), -- Recipe: Spiritshot S
@@ -36219,7 +36219,7 @@ INSERT INTO `droplist` VALUES
 (22589, 4040, 1, 1, 2, 65852.62551), -- Mold Lubricant
 (22589, 9628, 1, 1, 2, 25824.301605), -- Leonard
 (22589, 9630, 1, 1, 2, 17329.4154), -- Orichalcum
-(22589, 6867, 1, 1, 2, 6131.36061), -- Recipe: Sealed Draconic Leather Gloves (60%)
+(22589, 6867, 1, 1, 2, 6131.36061), -- Recipe: Sealed Draconic Leather Gloves (60%)
 (22589, 1345, 300, 900, 2, 73169.77212), -- Shining Arrow
 -- 
 (22590, 8690, 1, 1, -1, 2276), -- Recipe: Sirra's Blade (60%)
@@ -38549,8 +38549,8 @@ INSERT INTO `droplist` VALUES
 (22746, 15666, 1, 1, -1, 235474), -- Sealed Vesper Gaiter Piece
 (22746, 959, 1, 1, -1, 3231), -- Scroll: Enchant Weapon (S-Grade)
 (22746, 9628, 1, 1, -1, 633470), -- Leonard
-(22746, 15795, 1, 1, -1, 17307), -- Recipe - Sealed Vesper Breastplate (60%) 
-(22746, 15798, 1, 1, -1, 27690), -- Recipe - Sealed Vesper Gaiter (60%) 
+(22746, 15795, 1, 1, -1, 17307), -- Recipe - Sealed Vesper Breastplate (60%)
+(22746, 15798, 1, 1, -1, 27690), -- Recipe - Sealed Vesper Gaiter (60%)
 (22746, 57, 38976, 80332, 0, 700000), -- Adena
 (22746, 14105, 1, 1, 1, 85.255525), -- Sealed Vesper Breastplate
 (22746, 15663, 1, 1, 1, 35998.085625), -- Sealed Vesper Breastplate Piece
@@ -38564,14 +38564,14 @@ INSERT INTO `droplist` VALUES
 (22746, 14166, 1, 1, 2, 38441.653764), -- Life Stone - Level 84
 (22746, 14167, 1, 1, 2, 9598.820176), -- Mid-Grade Life Stone - Level 84
 (22746, 14168, 1, 1, 2, 959.72072), -- High-Grade Life Stone - Level 84
-(22746, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment 
+(22746, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment
 (22746, 1345, 2400, 7200, 2, 22103.81986), -- Shining Arrow
 -- Brakian
 (22747, 15664, 1, 1, -1, 229943), -- Sealed Vesper Leather Breastplate Piece
 (22747, 15670, 1, 1, -1, 354373), -- Sealed Vesper Leather Legging Piece
 (22747, 9630, 1, 1, -1, 510110), -- Orichalcum
-(22747, 15796, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Breastplate (60%) 
-(22747, 15799, 1, 1, -1, 44305), -- Recipe - Sealed Vesper Leather Legging (60%) 
+(22747, 15796, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Breastplate (60%)
+(22747, 15799, 1, 1, -1, 44305), -- Recipe - Sealed Vesper Leather Legging (60%)
 (22747, 57, 38976, 80332, 0, 700000), -- Adena
 (22747, 14106, 1, 1, 1, 113.677036), -- Sealed Vesper Leather Breastplate
 (22747, 14112, 1, 1, 1, 181.811158), -- Sealed Vesper Leather Leggings
@@ -38585,13 +38585,13 @@ INSERT INTO `droplist` VALUES
 (22747, 14166, 1, 1, 2, 42712.93613), -- Life Stone - Level 84
 (22747, 14167, 1, 1, 2, 10665.477436), -- Mid-Grade Life Stone - Level 84
 (22747, 14168, 1, 1, 2, 1066.740296), -- High-Grade Life Stone - Level 84
-(22747, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment 
+(22747, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment
 -- Groikan
 (22748, 15665, 1, 1, -1, 229983), -- Sealed Vesper Tunic Piece
 (22748, 15673, 1, 1, -1, 354435), -- Sealed Vesper Stockings Piece
 (22748, 9630, 1, 1, -1, 510199), -- Orichalcum
-(22748, 15797, 1, 1, -1, 27697), -- Recipe - Sealed Vesper Tunic (60%) 
-(22748, 15800, 1, 1, -1, 44312), -- Recipe - Sealed Vesper Stockings (60%) 
+(22748, 15797, 1, 1, -1, 27697), -- Recipe - Sealed Vesper Tunic (60%)
+(22748, 15800, 1, 1, -1, 44312), -- Recipe - Sealed Vesper Stockings (60%)
 (22748, 57, 38982, 80346, 0, 700000), -- Adena
 (22748, 14107, 1, 1, 1, 113.696902), -- Sealed Vesper Tunic
 (22748, 14115, 1, 1, 1, 181.842931), -- Sealed Vesper Stockings
@@ -38606,7 +38606,7 @@ INSERT INTO `droplist` VALUES
 (22748, 14167, 1, 1, 2, 8727.6679), -- Mid-Grade Life Stone - Level 84
 (22748, 14168, 1, 1, 2, 872.95026), -- High-Grade Life Stone - Level 84
 (22748, 959, 1, 1, 2, 289.51566), -- Scroll: Enchant Weapon (S-Grade)
-(22748, 15486, 1, 1, 2, 32156.7869), -- Spirit Stone Fragment 
+(22748, 15486, 1, 1, 2, 32156.7869), -- Spirit Stone Fragment
 (22748, 1345, 2400, 7200, 2, 20098.03768), -- Shining Arrow
 -- Treykan
 (22749, 15667, 1, 1, -1, 287295), -- Sealed Vesper Gauntlet Piece
@@ -38616,12 +38616,12 @@ INSERT INTO `droplist` VALUES
 (22749, 15672, 1, 1, -1, 287295), -- Sealed Vesper Leather Boots Piece
 (22749, 15675, 1, 1, -1, 287295), -- Sealed Vesper Shoes Piece
 (22749, 9628, 1, 1, -1, 294054), -- Leonard
-(22749, 15801, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(22749, 15802, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(22749, 15803, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Gloves (60%) 
-(22749, 15804, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Boots (60%) 
-(22749, 15805, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(22749, 15806, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Shoes (60%) 
+(22749, 15801, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22749, 15802, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22749, 15803, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Gloves (60%)
+(22749, 15804, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Boots (60%)
+(22749, 15805, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22749, 15806, 1, 1, -1, 32135), -- Recipe - Sealed Vesper Shoes (60%)
 (22749, 57, 39200, 80795, 0, 700000), -- Adena
 (22749, 14109, 1, 1, 1, 114.328248), -- Sealed Vesper Gauntlet
 (22749, 14113, 1, 1, 1, 114.328248), -- Sealed Vesper Leather Gloves
@@ -38644,7 +38644,7 @@ INSERT INTO `droplist` VALUES
 (22749, 14167, 1, 1, 2, 9654.002372), -- Mid-Grade Life Stone - Level 84
 (22749, 14168, 1, 1, 2, 965.224662), -- High-Grade Life Stone - Level 84
 (22749, 960, 1, 1, 2, 3201.174834), -- Scroll: Enchant Armor (S-Grade)
-(22749, 15486, 1, 1, 2, 35569.779768), -- Spirit Stone Fragment 
+(22749, 15486, 1, 1, 2, 35569.779768), -- Spirit Stone Fragment
 -- Elite Bgurent
 (22750, 15634, 1, 1, -1, 87220), -- Vesper Cutter Piece
 (22750, 15635, 1, 1, -1, 87064), -- Vesper Slasher Piece
@@ -38670,7 +38670,7 @@ INSERT INTO `droplist` VALUES
 (22750, 15815, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Cutter (60%)
 (22750, 15816, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Slasher (60%)
 (22750, 15817, 1, 1, 2, 1070.436289), -- Recipe - Vesper Buster (60%)
-(22750, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment 
+(22750, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment
 -- Elite Brakian
 (22751, 15640, 1, 1, -1, 75665), -- Vesper Avenger Piece
 (22751, 15641, 1, 1, -1, 76544), -- Vesper Retributer Piece
@@ -38700,7 +38700,7 @@ INSERT INTO `droplist` VALUES
 (22751, 15822, 1, 1, 2, 980.986897), -- Recipe - Vesper Retributer (60%)
 (22751, 15823, 1, 1, 2, 980.986897), -- Recipe - Vesper Caster (60%)
 (22751, 15824, 1, 1, 2, 980.986897), -- Recipe - Vesper Singer (60%)
-(22751, 15486, 1, 1, 2, 62510.124986), -- Spirit Stone Fragment 
+(22751, 15486, 1, 1, 2, 62510.124986), -- Spirit Stone Fragment
 -- Elite Groikan
 (22752, 15638, 1, 1, -1, 151155), -- Vesper Fighter Piece
 (22752, 959, 1, 1, -1, 10266), -- Scroll: Enchant Weapon (S-Grade)
@@ -38717,7 +38717,7 @@ INSERT INTO `droplist` VALUES
 (22752, 16161, 1, 1, 2, 22594.399392), -- Mid-Grade Life Stone - Level 85
 (22752, 9554, 1, 1, 2, 3746.246342), -- Earth Crystal
 (22752, 15819, 1, 1, 2, 1306.487714), -- Recipe - Vesper Fighter (60%)
-(22752, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment 
+(22752, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment
 -- Elite Treykan
 (22753, 15644, 1, 1, -1, 204362), -- Vesper Thrower Piece
 (22753, 959, 1, 1, -1, 13705), -- Scroll: Enchant Weapon (S-Grade)
@@ -38732,7 +38732,7 @@ INSERT INTO `droplist` VALUES
 (22753, 16160, 1, 1, 2, 101917.039901), -- Life Stone - Level 85
 (22753, 16161, 1, 1, 2, 25448.677272), -- Mid-Grade Life Stone - Level 85
 (22753, 15825, 1, 1, 2, 1471.837924), -- Recipe - Vesper Thrower (60%)
-(22753, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment 
+(22753, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment
 -- Turtlelian
 (22754, 15667, 1, 1, -1, 309454), -- Sealed Vesper Gauntlet Piece
 (22754, 15671, 1, 1, -1, 309454), -- Sealed Vesper Leather Gloves Piece
@@ -38740,12 +38740,12 @@ INSERT INTO `droplist` VALUES
 (22754, 15668, 1, 1, -1, 309454), -- Sealed Vesper Boots Piece
 (22754, 15672, 1, 1, -1, 309454), -- Sealed Vesper Leather Boots Piece
 (22754, 15675, 1, 1, -1, 309454), -- Sealed Vesper Shoes Piece
-(22754, 15801, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(22754, 15802, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(22754, 15803, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gloves (60%) 
-(22754, 15804, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Boots (60%) 
-(22754, 15805, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(22754, 15806, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Shoes (60%) 
+(22754, 15801, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22754, 15802, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22754, 15803, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gloves (60%)
+(22754, 15804, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Boots (60%)
+(22754, 15805, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22754, 15806, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Shoes (60%)
 (22754, 57, 38976, 80332, 0, 700000), -- Adena
 (22754, 14109, 1, 1, 1, 113.673528), -- Sealed Vesper Gauntlet
 (22754, 14113, 1, 1, 1, 113.673528), -- Sealed Vesper Leather Gloves
@@ -38767,7 +38767,7 @@ INSERT INTO `droplist` VALUES
 (22754, 14166, 1, 1, 2, 38441.653764), -- Life Stone - Level 84
 (22754, 14167, 1, 1, 2, 9598.820176), -- Mid-Grade Life Stone - Level 84
 (22754, 14168, 1, 1, 2, 959.72072), -- High-Grade Life Stone - Level 84
-(22754, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment 
+(22754, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment
 (22754, 1345, 2400, 7200, 2, 22103.81986), -- Shining Arrow
 -- Krajian
 (22755, 15660, 1, 1, -1, 222296), -- Sealed Vesper Helmet Piece
@@ -38775,11 +38775,11 @@ INSERT INTO `droplist` VALUES
 (22755, 15662, 1, 1, -1, 222296), -- Sealed Vesper Circlet Piece
 (22755, 15669, 1, 1, -1, 328546), -- Sealed Vesper Verteidiger Piece
 (22755, 15691, 1, 1, -1, 328546), -- Sealed Vesper Sigil Piece
-(22755, 15792, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Helmet (60%) 
-(22755, 15793, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Helmet (60%) 
-(22755, 15794, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Circlet (60%) 
-(22755, 15808, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Shield (60%) 
-(22755, 15807, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Sigil (60%) 
+(22755, 15792, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Helmet (60%)
+(22755, 15793, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Helmet (60%)
+(22755, 15794, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Circlet (60%)
+(22755, 15808, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Shield (60%)
+(22755, 15807, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Sigil (60%)
 (22755, 57, 38976, 80332, 0, 700000), -- Adena
 (22755, 13143, 1, 1, 1, 90.941445), -- Sealed Vesper Helmet
 (22755, 13144, 1, 1, 1, 90.941445), -- Sealed Vesper Leather Helmet
@@ -38799,15 +38799,15 @@ INSERT INTO `droplist` VALUES
 (22755, 14166, 1, 1, 2, 42712.93613), -- Life Stone - Level 84
 (22755, 14167, 1, 1, 2, 10665.477436), -- Mid-Grade Life Stone - Level 84
 (22755, 14168, 1, 1, 2, 1066.740296), -- High-Grade Life Stone - Level 84
-(22755, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment 
+(22755, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment
 -- Tardyon
 (22756, 15770, 1, 1, -1, 435480), -- Sealed Vesper Earring Gem
 (22756, 15771, 1, 1, -1, 313309), -- Sealed Vesper Necklace Gem
 (22756, 15769, 1, 1, -1, 725040), -- Sealed Vesper Ring Gem
 (22756, 9630, 1, 1, -1, 364428), -- Orichalcum
-(22756, 15810, 1, 1, -1, 60770), -- Recipe - Sealed Vesper Earring (70%) 
-(22756, 15811, 1, 1, -1, 45577), -- Recipe - Sealed Vesper Necklace (70%) 
-(22756, 15809, 1, 1, -1, 91155), -- Recipe - Sealed Vesper Ring (70%) 
+(22756, 15810, 1, 1, -1, 60770), -- Recipe - Sealed Vesper Earring (70%)
+(22756, 15811, 1, 1, -1, 45577), -- Recipe - Sealed Vesper Necklace (70%)
+(22756, 15809, 1, 1, -1, 91155), -- Recipe - Sealed Vesper Ring (70%)
 (22756, 57, 38982, 80346, 0, 700000), -- Adena
 (22756, 14160, 1, 1, 1, 232.83561), -- Sealed Vesper Earring
 (22756, 14161, 1, 1, 1, 174.768335), -- Sealed Vesper Necklace
@@ -38824,10 +38824,10 @@ INSERT INTO `droplist` VALUES
 (22756, 14167, 1, 1, 2, 6857.654364), -- Mid-Grade Life Stone - Level 84
 (22756, 14168, 1, 1, 2, 685.682424), -- High-Grade Life Stone - Level 84
 (22756, 959, 1, 1, 2, 227.453976), -- Scroll: Enchant Weapon (S-Grade)
-(22756, 15809, 1, 1, 2, 7483.982922), -- Recipe - Sealed Vesper Ring (70%) 
-(22756, 15810, 1, 1, 2, 4989.460302), -- Recipe - Sealed Vesper Earring (70%) 
-(22756, 15811, 1, 1, 2, 3741.78393), -- Recipe - Sealed Vesper Necklace (70%) 
-(22756, 15486, 1, 1, 2, 25266.069126), -- Spirit Stone Fragment 
+(22756, 15809, 1, 1, 2, 7483.982922), -- Recipe - Sealed Vesper Ring (70%)
+(22756, 15810, 1, 1, 2, 4989.460302), -- Recipe - Sealed Vesper Earring (70%)
+(22756, 15811, 1, 1, 2, 3741.78393), -- Recipe - Sealed Vesper Necklace (70%)
+(22756, 15486, 1, 1, 2, 25266.069126), -- Spirit Stone Fragment
 (22756, 1345, 300, 900, 2, 126329.100444), -- Shining Arrow
 -- Elite Turtlelian
 (22757, 15637, 1, 1, -1, 203512), -- Vesper Shaper Piece
@@ -38844,7 +38844,7 @@ INSERT INTO `droplist` VALUES
 (22757, 16161, 1, 1, 2, 22620.748272), -- Mid-Grade Life Stone - Level 85
 (22757, 9554, 1, 1, 2, 3750.615097), -- Earth Crystal
 (22757, 15818, 1, 1, 2, 1308.011299), -- Recipe - Vesper Shaper (60%)
-(22757, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment 
+(22757, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment
 -- Elite Krajian
 (22758, 15639, 1, 1, -1, 203881), -- Vesper Stormer Piece
 (22758, 9630, 1, 3, -1, 900563), -- Orichalcum
@@ -38860,7 +38860,7 @@ INSERT INTO `droplist` VALUES
 (22758, 16161, 1, 1, 2, 22594.399392), -- Mid-Grade Life Stone - Level 85
 (22758, 9554, 1, 1, 2, 3746.246342), -- Earth Crystal
 (22758, 15820, 1, 1, 2, 1306.487714), -- Recipe - Vesper Stormer (60%)
-(22758, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment 
+(22758, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment
 -- Elite Tardyon
 (22759, 15638, 1, 1, -1, 201775), -- Vesper Fighter Piece
 (22759, 1894, 1, 25, -1, 924732), -- Crafted Leather
@@ -38876,7 +38876,7 @@ INSERT INTO `droplist` VALUES
 (22759, 16161, 1, 1, 2, 22620.748272), -- Mid-Grade Life Stone - Level 85
 (22759, 9554, 1, 1, 2, 3750.615097), -- Earth Crystal
 (22759, 15819, 1, 1, 2, 1308.011299), -- Recipe - Vesper Fighter (60%)
-(22759, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment 
+(22759, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment
 -- Kanibi
 (22760, 15667, 1, 1, -1, 309454), -- Sealed Vesper Gauntlet Piece
 (22760, 15671, 1, 1, -1, 309454), -- Sealed Vesper Leather Gloves Piece
@@ -38884,12 +38884,12 @@ INSERT INTO `droplist` VALUES
 (22760, 15668, 1, 1, -1, 309454), -- Sealed Vesper Boots Piece
 (22760, 15672, 1, 1, -1, 309454), -- Sealed Vesper Leather Boots Piece
 (22760, 15675, 1, 1, -1, 309454), -- Sealed Vesper Shoes Piece
-(22760, 15801, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(22760, 15802, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(22760, 15803, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gloves (60%) 
-(22760, 15804, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Boots (60%) 
-(22760, 15805, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(22760, 15806, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Shoes (60%) 
+(22760, 15801, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22760, 15802, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22760, 15803, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Gloves (60%)
+(22760, 15804, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Boots (60%)
+(22760, 15805, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22760, 15806, 1, 1, -1, 34614), -- Recipe - Sealed Vesper Shoes (60%)
 (22760, 57, 38976, 80332, 0, 700000), -- Adena
 (22760, 14109, 1, 1, 1, 113.673528), -- Sealed Vesper Gauntlet
 (22760, 14113, 1, 1, 1, 113.673528), -- Sealed Vesper Leather Gloves
@@ -38912,18 +38912,18 @@ INSERT INTO `droplist` VALUES
 (22760, 14167, 1, 1, 2, 9598.73145), -- Mid-Grade Life Stone - Level 84
 (22760, 14168, 1, 1, 2, 959.698575), -- High-Grade Life Stone - Level 84
 (22760, 960, 1, 1, 2, 3182.847525), -- Scroll: Enchant Armor (S-Grade)
-(22760, 15486, 1, 1, 2, 35366.1363), -- Spirit Stone Fragment 
+(22760, 15486, 1, 1, 2, 35366.1363), -- Spirit Stone Fragment
 -- Kiriona
 (22761, 15660, 1, 1, -1, 222296), -- Sealed Vesper Helmet Piece
 (22761, 15661, 1, 1, -1, 222296), -- Sealed Vesper Leather Helmet Piece
 (22761, 15662, 1, 1, -1, 222296), -- Sealed Vesper Circlet Piece
 (22761, 15669, 1, 1, -1, 328546), -- Sealed Vesper Verteidiger Piece
 (22761, 15691, 1, 1, -1, 328546), -- Sealed Vesper Sigil Piece
-(22761, 15792, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Helmet (60%) 
-(22761, 15793, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Helmet (60%) 
-(22761, 15794, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Circlet (60%) 
-(22761, 15808, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Shield (60%) 
-(22761, 15807, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Sigil (60%) 
+(22761, 15792, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Helmet (60%)
+(22761, 15793, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Leather Helmet (60%)
+(22761, 15794, 1, 1, -1, 27692), -- Recipe - Sealed Vesper Circlet (60%)
+(22761, 15808, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Shield (60%)
+(22761, 15807, 1, 1, -1, 39560), -- Recipe - Sealed Vesper Sigil (60%)
 (22761, 57, 38976, 80332, 0, 700000), -- Adena
 (22761, 13143, 1, 1, 1, 90.941445), -- Sealed Vesper Helmet
 (22761, 13144, 1, 1, 1, 90.941445), -- Sealed Vesper Leather Helmet
@@ -38944,16 +38944,16 @@ INSERT INTO `droplist` VALUES
 (22761, 14167, 1, 1, 2, 8726.14566), -- Mid-Grade Life Stone - Level 84
 (22761, 14168, 1, 1, 2, 872.798004), -- High-Grade Life Stone - Level 84
 (22761, 959, 1, 1, 2, 289.465164), -- Scroll: Enchant Weapon (S-Grade)
-(22761, 15486, 1, 1, 2, 32151.17826), -- Spirit Stone Fragment 
+(22761, 15486, 1, 1, 2, 32151.17826), -- Spirit Stone Fragment
 (22761, 1345, 2400, 7200, 2, 20094.532272), -- Shining Arrow
 -- Kaiona
 (22762, 15770, 1, 1, -1, 435480), -- Sealed Vesper Earring Gem
 (22762, 15771, 1, 1, -1, 313309), -- Sealed Vesper Necklace Gem
 (22762, 15769, 1, 1, -1, 725040), -- Sealed Vesper Ring Gem
 (22762, 9628, 1, 1, -1, 543069), -- Leonard
-(22762, 15810, 1, 1, -1, 60770), -- Recipe - Sealed Vesper Earring (70%) 
-(22762, 15811, 1, 1, -1, 45577), -- Recipe - Sealed Vesper Necklace (70%) 
-(22762, 15809, 1, 1, -1, 91155), -- Recipe - Sealed Vesper Ring (70%) 
+(22762, 15810, 1, 1, -1, 60770), -- Recipe - Sealed Vesper Earring (70%)
+(22762, 15811, 1, 1, -1, 45577), -- Recipe - Sealed Vesper Necklace (70%)
+(22762, 15809, 1, 1, -1, 91155), -- Recipe - Sealed Vesper Ring (70%)
 (22762, 57, 38982, 80346, 0, 700000), -- Adena
 (22762, 14160, 1, 1, 1, 232.83561), -- Sealed Vesper Earring
 (22762, 14161, 1, 1, 1, 174.768335), -- Sealed Vesper Necklace
@@ -38970,10 +38970,10 @@ INSERT INTO `droplist` VALUES
 (22762, 14167, 1, 1, 2, 7385.207414), -- Mid-Grade Life Stone - Level 84
 (22762, 14168, 1, 1, 2, 738.325029), -- High-Grade Life Stone - Level 84
 (22762, 960, 1, 1, 2, 2448.851405), -- Scroll: Enchant Armor (S-Grade)
-(22762, 15809, 1, 1, 2, 8059.925913), -- Recipe - Sealed Vesper Ring (70%) 
-(22762, 15810, 1, 1, 2, 5373.283942), -- Recipe - Sealed Vesper Earring (70%) 
-(22762, 15811, 1, 1, 2, 4029.718316), -- Recipe - Sealed Vesper Necklace (70%) 
-(22762, 15486, 1, 1, 2, 27209.405691), -- Spirit Stone Fragment 
+(22762, 15809, 1, 1, 2, 8059.925913), -- Recipe - Sealed Vesper Ring (70%)
+(22762, 15810, 1, 1, 2, 5373.283942), -- Recipe - Sealed Vesper Earring (70%)
+(22762, 15811, 1, 1, 2, 4029.718316), -- Recipe - Sealed Vesper Necklace (70%)
+(22762, 15486, 1, 1, 2, 27209.405691), -- Spirit Stone Fragment
 -- Elite Kanibi
 (22763, 15634, 1, 1, -1, 87220), -- Vesper Cutter Piece
 (22763, 15635, 1, 1, -1, 87064), -- Vesper Slasher Piece
@@ -38999,7 +38999,7 @@ INSERT INTO `droplist` VALUES
 (22763, 15815, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Cutter (60%)
 (22763, 15816, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Slasher (60%)
 (22763, 15817, 1, 1, 2, 1070.436289), -- Recipe - Vesper Buster (60%)
-(22763, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment 
+(22763, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment
 -- Elite Kiriona
 (22764, 15640, 1, 1, -1, 67180), -- Vesper Avenger Piece
 (22764, 15641, 1, 1, -1, 67960), -- Vesper Retributer Piece
@@ -39030,7 +39030,7 @@ INSERT INTO `droplist` VALUES
 (22764, 15822, 1, 1, 2, 979.842644), -- Recipe - Vesper Retributer (60%)
 (22764, 15823, 1, 1, 2, 979.842644), -- Recipe - Vesper Caster (60%)
 (22764, 15824, 1, 1, 2, 979.842644), -- Recipe - Vesper Singer (60%)
-(22764, 15486, 1, 1, 2, 62437.211272), -- Spirit Stone Fragment 
+(22764, 15486, 1, 1, 2, 62437.211272), -- Spirit Stone Fragment
 -- Elite Kaiona
 (22765, 15644, 1, 1, -1, 153272), -- Vesper Thrower Piece
 (22765, 959, 1, 1, -1, 10278), -- Scroll: Enchant Weapon (S-Grade)
@@ -39046,7 +39046,7 @@ INSERT INTO `droplist` VALUES
 (22765, 16160, 1, 1, 2, 101917.039901), -- Life Stone - Level 85
 (22765, 16161, 1, 1, 2, 25448.677272), -- Mid-Grade Life Stone - Level 85
 (22765, 15825, 1, 1, 2, 1471.837924), -- Recipe - Vesper Thrower (60%)
-(22765, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment 
+(22765, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment
 -- Mithril Millipede
 (22766, 57, 203, 419, 0, 700000), -- Adena
 (22766, 1894, 1, 1, 1, 18206.2408), -- Crafted Leather
@@ -39110,17 +39110,17 @@ INSERT INTO `droplist` VALUES
 (22770, 15647, 1, 1, -1, 10600), -- Sealed Moirai Circlet Piece
 (22770, 15693, 1, 1, -1, 19000), -- Sealed Moirai Shield Piece
 (22770, 15692, 1, 1, -1, 19000), -- Sealed Moirai Sigil Piece
-(22770, 15775, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Helmet (60%) 
-(22770, 15776, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22770, 15777, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Circlet (60%) 
-(22770, 15791, 1, 1, -1, 2021), -- Recipe - Sealed Moirai Shield (60%) 
-(22770, 15790, 1, 1, -1, 2021), -- Recipe - Sealed Moirai Sigil (60%) 
+(22770, 15775, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Helmet (60%)
+(22770, 15776, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22770, 15777, 1, 1, -1, 1414), -- Recipe - Sealed Moirai Circlet (60%)
+(22770, 15791, 1, 1, -1, 2021), -- Recipe - Sealed Moirai Shield (60%)
+(22770, 15790, 1, 1, -1, 2021), -- Recipe - Sealed Moirai Sigil (60%)
 (22770, 57, 1445, 2953, 0, 700000), -- Adena
-(22770, 15694, 1, 1, 1, 4.645192), -- Sealed Moirai Helmet 
-(22770, 15695, 1, 1, 1, 4.645192), -- Sealed Moirai Leather Helmet 
-(22770, 15696, 1, 1, 1, 4.645192), -- Sealed Moirai Circlet 
-(22770, 15710, 1, 1, 1, 6.645844), -- Sealed Moirai Shield 
-(22770, 15709, 1, 1, 1, 6.645844), -- Sealed Moirai Sigil 
+(22770, 15694, 1, 1, 1, 4.645192), -- Sealed Moirai Helmet
+(22770, 15695, 1, 1, 1, 4.645192), -- Sealed Moirai Leather Helmet
+(22770, 15696, 1, 1, 1, 4.645192), -- Sealed Moirai Circlet
+(22770, 15710, 1, 1, 1, 6.645844), -- Sealed Moirai Shield
+(22770, 15709, 1, 1, 1, 6.645844), -- Sealed Moirai Sigil
 (22770, 15645, 1, 1, 1, 1741.924004), -- Sealed Moirai Helmet Piece
 (22770, 15646, 1, 1, 1, 1741.924004), -- Sealed Moirai Leather Helmet Piece
 (22770, 15647, 1, 1, 1, 1741.924004), -- Sealed Moirai Circlet Piece
@@ -39135,11 +39135,11 @@ INSERT INTO `droplist` VALUES
 (22770, 10484, 1, 1, 2, 363.676625), -- Mid-Grade Life Stone - Level 82
 (22770, 10485, 1, 1, 2, 36.39711), -- High-Grade Life Stone - Level 82
 (22770, 9554, 1, 1, 2, 41.874345), -- Earth Crystal
-(22770, 15775, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Helmet (60%) 
-(22770, 15776, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22770, 15777, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Circlet (60%) 
-(22770, 15791, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Shield (60%) 
-(22770, 15790, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Sigil (60%) 
+(22770, 15775, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Helmet (60%)
+(22770, 15776, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22770, 15777, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Circlet (60%)
+(22770, 15791, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Shield (60%)
+(22770, 15790, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Sigil (60%)
 -- Tanta Lizardman Berserker
 (22771, 10404, 1, 1, -1, 1572), -- Icarus Hall Piece
 (22771, 10402, 1, 1, -1, 1572), -- Icarus Hammer Piece
@@ -39151,8 +39151,8 @@ INSERT INTO `droplist` VALUES
 (22771, 10220, 1, 1, 1, 0.486652), -- Icarus Hammer
 (22771, 10404, 1, 1, 1, 161.795386), -- Icarus Hall Piece
 (22771, 10402, 1, 1, 1, 161.795386), -- Icarus Hammer Piece
-(22771, 15697, 1, 1, 1, 2.247348), -- Sealed Moirai Breastplate 
-(22771, 15700, 1, 1, 1, 3.597944), -- Sealed Moirai Gaiter 
+(22771, 15697, 1, 1, 1, 2.247348), -- Sealed Moirai Breastplate
+(22771, 15700, 1, 1, 1, 3.597944), -- Sealed Moirai Gaiter
 (22771, 15648, 1, 1, 1, 898.220158), -- Sealed Moirai Breastplate Piece
 (22771, 15651, 1, 1, 1, 1505.370474), -- Sealed Moirai Gaiter Piece
 (22771, 1879, 1, 1, 2, 45770.134172), -- Cokes
@@ -39164,8 +39164,8 @@ INSERT INTO `droplist` VALUES
 (22771, 10484, 1, 1, 2, 476.756367), -- Mid-Grade Life Stone - Level 82
 (22771, 10485, 1, 1, 2, 47.668022), -- High-Grade Life Stone - Level 82
 (22771, 9554, 1, 1, 2, 54.901987), -- Earth Crystal
-(22771, 15778, 1, 1, 2, 81.553437), -- Recipe - Sealed Moirai Breastplate (60%) 
-(22771, 15781, 1, 1, 2, 130.592105), -- Recipe - Sealed Moirai Gaiter (60%) 
+(22771, 15778, 1, 1, 2, 81.553437), -- Recipe - Sealed Moirai Breastplate (60%)
+(22771, 15781, 1, 1, 2, 130.592105), -- Recipe - Sealed Moirai Gaiter (60%)
 -- Tanta Lizardman Archer
 (22772, 10405, 1, 1, -1, 495), -- Icarus Spitter Piece
 (22772, 959, 1, 1, -1, 46), -- Scroll: Enchant Weapon (S-Grade)
@@ -39174,9 +39174,9 @@ INSERT INTO `droplist` VALUES
 (22772, 15772, 1, 1, -1, 15971), -- Sealed Moirai Ring Gem
 (22772, 15773, 1, 1, -1, 8976), -- Sealed Moirai Earring Gem
 (22772, 15774, 1, 1, -1, 7745), -- Sealed Moirai Necklace Gem
-(22772, 15812, 1, 1, -1, 2113), -- Recipe - Sealed Moirai Ring (70%) 
-(22772, 15813, 1, 1, -1, 1408), -- Recipe - Sealed Moirai Earring (70%) 
-(22772, 15814, 1, 1, -1, 1056), -- Recipe - Sealed Moirai Necklace (70%) 
+(22772, 15812, 1, 1, -1, 2113), -- Recipe - Sealed Moirai Ring (70%)
+(22772, 15813, 1, 1, -1, 1408), -- Recipe - Sealed Moirai Earring (70%)
+(22772, 15814, 1, 1, -1, 1056), -- Recipe - Sealed Moirai Necklace (70%)
 (22772, 57, 945, 1907, 0, 700000), -- Adena
 (22772, 10223, 1, 1, 1, 0.30636), -- Icarus Spitter
 (22772, 10405, 1, 1, 1, 101.228152), -- Icarus Spitter Piece
@@ -39193,9 +39193,9 @@ INSERT INTO `droplist` VALUES
 (22772, 10483, 1, 1, 2, 1200.236932), -- Life Stone - Level 82
 (22772, 10484, 1, 1, 2, 300.059233), -- Mid-Grade Life Stone - Level 82
 (22772, 10485, 1, 1, 2, 30.023178), -- High-Grade Life Stone - Level 82
-(22772, 15812, 1, 1, 2, 315.415916), -- Recipe - Sealed Moirai Ring (70%) 
-(22772, 15813, 1, 1, 2, 210.162246), -- Recipe - Sealed Moirai Earring (70%) 
-(22772, 15814, 1, 1, 2, 157.707958), -- Recipe - Sealed Moirai Necklace (70%) 
+(22772, 15812, 1, 1, 2, 315.415916), -- Recipe - Sealed Moirai Ring (70%)
+(22772, 15813, 1, 1, 2, 210.162246), -- Recipe - Sealed Moirai Earring (70%)
+(22772, 15814, 1, 1, 2, 157.707958), -- Recipe - Sealed Moirai Necklace (70%)
 (22772, 1345, 10, 30, 2, 115227.921882), -- Shining Arrow
 -- Tanta Lizardman Magician
 (22773, 15654, 1, 1, -1, 8561), -- Sealed Moirai Gauntlet Piece
@@ -39204,19 +39204,19 @@ INSERT INTO `droplist` VALUES
 (22773, 15657, 1, 1, -1, 8561), -- Sealed Moirai Boots Piece
 (22773, 15658, 1, 1, -1, 8561), -- Sealed Moirai Leather Boots Piece
 (22773, 15659, 1, 1, -1, 8561), -- Sealed Moirai Shoes Piece
-(22773, 15784, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22773, 15785, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22773, 15786, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Gloves (60%) 
-(22773, 15787, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Boots (60%) 
-(22773, 15788, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22773, 15789, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Shoes (60%) 
+(22773, 15784, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22773, 15785, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22773, 15786, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Gloves (60%)
+(22773, 15787, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Boots (60%)
+(22773, 15788, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22773, 15789, 1, 1, -1, 1139), -- Recipe - Sealed Moirai Shoes (60%)
 (22773, 57, 939, 1895, 0, 700000), -- Adena
-(22773, 15703, 1, 1, 1, 3.740646), -- Sealed Moirai Gauntlet 
-(22773, 15704, 1, 1, 1, 3.740646), -- Sealed Moirai Leather Gloves 
-(22773, 15705, 1, 1, 1, 3.740646), -- Sealed Moirai Gloves 
-(22773, 15706, 1, 1, 1, 3.740646), -- Sealed Moirai Boots 
-(22773, 15707, 1, 1, 1, 3.740646), -- Sealed Moirai Leather Boots 
-(22773, 15708, 1, 1, 1, 3.740646), -- Sealed Moirai Shoes 
+(22773, 15703, 1, 1, 1, 3.740646), -- Sealed Moirai Gauntlet
+(22773, 15704, 1, 1, 1, 3.740646), -- Sealed Moirai Leather Gloves
+(22773, 15705, 1, 1, 1, 3.740646), -- Sealed Moirai Gloves
+(22773, 15706, 1, 1, 1, 3.740646), -- Sealed Moirai Boots
+(22773, 15707, 1, 1, 1, 3.740646), -- Sealed Moirai Leather Boots
+(22773, 15708, 1, 1, 1, 3.740646), -- Sealed Moirai Shoes
 (22773, 15654, 1, 1, 1, 1406.753712), -- Sealed Moirai Gauntlet Piece
 (22773, 15655, 1, 1, 1, 1406.753712), -- Sealed Moirai Leather Gloves Piece
 (22773, 15656, 1, 1, 1, 1406.753712), -- Sealed Moirai Gloves Piece
@@ -39230,29 +39230,29 @@ INSERT INTO `droplist` VALUES
 (22773, 10483, 1, 1, 2, 937.135936), -- Life Stone - Level 82
 (22773, 10484, 1, 1, 2, 234.283984), -- Mid-Grade Life Stone - Level 82
 (22773, 10485, 1, 1, 2, 23.400374), -- High-Grade Life Stone - Level 82
-(22773, 15784, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22773, 15785, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22773, 15786, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Gloves (60%) 
-(22773, 15787, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Boots (60%) 
-(22773, 15788, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22773, 15789, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Shoes (60%) 
+(22773, 15784, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22773, 15785, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22773, 15786, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Gloves (60%)
+(22773, 15787, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Boots (60%)
+(22773, 15788, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22773, 15789, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Shoes (60%)
 (22773, 1345, 10, 30, 2, 89963.508514), -- Shining Arrow
 -- Tanta Lizardman Summoner
 (22774, 15649, 1, 1, -1, 9227), -- Sealed Moirai Leather Breastplate Piece
 (22774, 15652, 1, 1, -1, 14969), -- Sealed Moirai Leather Legging Piece
 (22774, 9630, 1, 1, -1, 15127), -- Orichalcum
-(22774, 15779, 1, 1, -1, 1138), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22774, 15782, 1, 1, -1, 1821), -- Recipe - Sealed Moirai Leather Legging (60%) 
-(22774, 15780, 1, 1, -1, 1138), -- Recipe - Sealed Moirai Tunic (60%) 
-(22774, 15783, 1, 1, -1, 1821), -- Recipe - Sealed Moirai Stockings (60%) 
+(22774, 15779, 1, 1, -1, 1138), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22774, 15782, 1, 1, -1, 1821), -- Recipe - Sealed Moirai Leather Legging (60%)
+(22774, 15780, 1, 1, -1, 1138), -- Recipe - Sealed Moirai Tunic (60%)
+(22774, 15783, 1, 1, -1, 1821), -- Recipe - Sealed Moirai Stockings (60%)
 (22774, 57, 1628, 3326, 0, 700000), -- Adena
-(22774, 15698, 1, 1, 1, 3.270337), -- Sealed Moirai Leather Breastplate 
-(22774, 15701, 1, 1, 1, 5.236723), -- Sealed Moirai Leather Legging 
+(22774, 15698, 1, 1, 1, 3.270337), -- Sealed Moirai Leather Breastplate
+(22774, 15701, 1, 1, 1, 5.236723), -- Sealed Moirai Leather Legging
 (22774, 15649, 1, 1, 1, 1326.2646), -- Sealed Moirai Leather Breastplate Piece
 (22774, 15652, 1, 1, 1, 2151.72834), -- Sealed Moirai Leather Legging Piece
-(22774, 15699, 1, 1, 1, 3.270337), -- Sealed Moirai Tunic 
+(22774, 15699, 1, 1, 1, 3.270337), -- Sealed Moirai Tunic
 (22774, 15650, 1, 1, 1, 1326.2646), -- Sealed Moirai Tunic Piece
-(22774, 15702, 1, 1, 1, 5.236723), -- Sealed Moirai Stockings 
+(22774, 15702, 1, 1, 1, 5.236723), -- Sealed Moirai Stockings
 (22774, 15653, 1, 1, 1, 2151.72834), -- Sealed Moirai Stockings Piece
 (22774, 1879, 1, 1, 2, 45883.596915), -- Cokes
 (22774, 1885, 1, 1, 2, 22941.836775), -- High-Grade Suede
@@ -39262,19 +39262,19 @@ INSERT INTO `droplist` VALUES
 (22774, 10483, 1, 1, 2, 1911.813345), -- Life Stone - Level 82
 (22774, 10484, 1, 1, 2, 477.972495), -- Mid-Grade Life Stone - Level 82
 (22774, 10485, 1, 1, 2, 47.82024), -- High-Grade Life Stone - Level 82
-(22774, 15780, 1, 1, 2, 108.97497), -- Recipe - Sealed Moirai Tunic (60%) 
-(22774, 15783, 1, 1, 2, 174.42126), -- Recipe - Sealed Moirai Stockings (60%) 
-(22774, 15779, 1, 1, 2, 108.97497), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22774, 15782, 1, 1, 2, 174.497895), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22774, 15780, 1, 1, 2, 108.97497), -- Recipe - Sealed Moirai Tunic (60%)
+(22774, 15783, 1, 1, 2, 174.42126), -- Recipe - Sealed Moirai Stockings (60%)
+(22774, 15779, 1, 1, 2, 108.97497), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22774, 15782, 1, 1, 2, 174.497895), -- Recipe - Sealed Moirai Leather Legging (60%)
 -- Sel Mahum Drill Sergeant
 (22775, 15648, 1, 1, -1, 6036), -- Sealed Moirai Breastplate Piece
 (22775, 15651, 1, 1, -1, 10116), -- Sealed Moirai Gaiter Piece
 (22775, 1894, 1, 1, -1, 89267), -- Crafted Leather
-(22775, 15778, 1, 1, -1, 756), -- Recipe - Sealed Moirai Breastplate (60%) 
-(22775, 15781, 1, 1, -1, 1209), -- Recipe - Sealed Moirai Gaiter (60%) 
+(22775, 15778, 1, 1, -1, 756), -- Recipe - Sealed Moirai Breastplate (60%)
+(22775, 15781, 1, 1, -1, 1209), -- Recipe - Sealed Moirai Gaiter (60%)
 (22775, 57, 1029, 2103, 0, 700000), -- Adena
-(22775, 15697, 1, 1, 1, 3.101292), -- Sealed Moirai Breastplate 
-(22775, 15700, 1, 1, 1, 4.962732), -- Sealed Moirai Gaiter 
+(22775, 15697, 1, 1, 1, 3.101292), -- Sealed Moirai Breastplate
+(22775, 15700, 1, 1, 1, 4.962732), -- Sealed Moirai Gaiter
 (22775, 15648, 1, 1, 1, 1239.163932), -- Sealed Moirai Breastplate Piece
 (22775, 15651, 1, 1, 1, 2076.772044), -- Sealed Moirai Gaiter Piece
 (22775, 1895, 1, 1, 2, 59678.832657), -- Metallic Fiber
@@ -39285,17 +39285,17 @@ INSERT INTO `droplist` VALUES
 (22775, 10484, 1, 1, 2, 362.619705), -- Mid-Grade Life Stone - Level 82
 (22775, 10485, 1, 1, 2, 36.296277), -- High-Grade Life Stone - Level 82
 (22775, 959, 1, 1, 2, 8.370786), -- Scroll: Enchant Weapon (S-Grade)
-(22775, 15778, 1, 1, 2, 62.026152), -- Recipe - Sealed Moirai Breastplate (60%) 
-(22775, 15781, 1, 1, 2, 99.214398), -- Recipe - Sealed Moirai Gaiter (60%) 
+(22775, 15778, 1, 1, 2, 62.026152), -- Recipe - Sealed Moirai Breastplate (60%)
+(22775, 15781, 1, 1, 2, 99.214398), -- Recipe - Sealed Moirai Gaiter (60%)
 -- Sel Mahum Training Officer
 (22776, 15649, 1, 1, -1, 12239), -- Sealed Moirai Leather Breastplate Piece
 (22776, 15652, 1, 1, -1, 19856), -- Sealed Moirai Leather Legging Piece
 (22776, 1894, 1, 1, -1, 133768), -- Crafted Leather
-(22776, 15779, 1, 1, -1, 1510), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22776, 15782, 1, 1, -1, 2415), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22776, 15779, 1, 1, -1, 1510), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22776, 15782, 1, 1, -1, 2415), -- Recipe - Sealed Moirai Leather Legging (60%)
 (22776, 57, 1542, 3152, 0, 700000), -- Adena
-(22776, 15698, 1, 1, 1, 6.196428), -- Sealed Moirai Leather Breastplate 
-(22776, 15701, 1, 1, 1, 9.915606), -- Sealed Moirai Leather Legging 
+(22776, 15698, 1, 1, 1, 6.196428), -- Sealed Moirai Leather Breastplate
+(22776, 15701, 1, 1, 1, 9.915606), -- Sealed Moirai Leather Legging
 (22776, 15649, 1, 1, 1, 2512.9224), -- Sealed Moirai Leather Breastplate Piece
 (22776, 15652, 1, 1, 1, 4076.965566), -- Sealed Moirai Leather Legging Piece
 (22776, 1895, 1, 1, 2, 81299.95658), -- Metallic Fiber
@@ -39307,17 +39307,17 @@ INSERT INTO `droplist` VALUES
 (22776, 10485, 1, 1, 2, 49.421328), -- High-Grade Life Stone - Level 82
 (22776, 9552, 1, 1, 2, 56.909408), -- Fire Crystal
 (22776, 959, 1, 1, 2, 11.419322), -- Scroll: Enchant Weapon (S-Grade)
-(22776, 15779, 1, 1, 2, 112.695604), -- Recipe - Sealed Moirai Leather Breastplate (60%) 
-(22776, 15782, 1, 1, 2, 180.181925), -- Recipe - Sealed Moirai Leather Legging (60%) 
+(22776, 15779, 1, 1, 2, 112.695604), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(22776, 15782, 1, 1, 2, 180.181925), -- Recipe - Sealed Moirai Leather Legging (60%)
 -- Sel Mahum Drill Sergeant
 (22777, 15650, 1, 1, -1, 8167), -- Sealed Moirai Tunic Piece
 (22777, 15653, 1, 1, -1, 13251), -- Sealed Moirai Stockings Piece
 (22777, 1894, 1, 1, -1, 89267), -- Crafted Leather
-(22777, 15780, 1, 1, -1, 1007), -- Recipe - Sealed Moirai Tunic (60%) 
-(22777, 15783, 1, 1, -1, 1612), -- Recipe - Sealed Moirai Stockings (60%) 
+(22777, 15780, 1, 1, -1, 1007), -- Recipe - Sealed Moirai Tunic (60%)
+(22777, 15783, 1, 1, -1, 1612), -- Recipe - Sealed Moirai Stockings (60%)
 (22777, 57, 1029, 2103, 0, 700000), -- Adena
-(22777, 15699, 1, 1, 1, 4.135642), -- Sealed Moirai Tunic 
-(22777, 15702, 1, 1, 1, 6.617909), -- Sealed Moirai Stockings 
+(22777, 15699, 1, 1, 1, 4.135642), -- Sealed Moirai Tunic
+(22777, 15702, 1, 1, 1, 6.617909), -- Sealed Moirai Stockings
 (22777, 15650, 1, 1, 1, 1677.1836), -- Sealed Moirai Tunic Piece
 (22777, 15653, 1, 1, 1, 2721.062849), -- Sealed Moirai Stockings Piece
 (22777, 1895, 1, 1, 2, 59678.6595), -- Metallic Fiber
@@ -39328,15 +39328,15 @@ INSERT INTO `droplist` VALUES
 (22777, 10484, 1, 1, 2, 362.5986), -- Mid-Grade Life Stone - Level 82
 (22777, 10485, 1, 1, 2, 36.2736), -- High-Grade Life Stone - Level 82
 (22777, 9552, 1, 1, 2, 41.7696), -- Fire Crystal
-(22777, 15780, 1, 1, 2, 82.7148), -- Recipe - Sealed Moirai Tunic (60%) 
-(22777, 15783, 1, 1, 2, 132.3849), -- Recipe - Sealed Moirai Stockings (60%) 
+(22777, 15780, 1, 1, 2, 82.7148), -- Recipe - Sealed Moirai Tunic (60%)
+(22777, 15783, 1, 1, 2, 132.3849), -- Recipe - Sealed Moirai Stockings (60%)
 -- Sel Mahum Drill Sergeant
 (22778, 15772, 1, 1, -1, 29243), -- Sealed Moirai Ring Gem
 (22778, 15773, 1, 1, -1, 16435), -- Sealed Moirai Earring Gem
 (22778, 15774, 1, 1, -1, 14181), -- Sealed Moirai Necklace Gem
-(22778, 15812, 1, 1, -1, 3869), -- Recipe - Sealed Moirai Ring (70%) 
-(22778, 15813, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Earring (70%) 
-(22778, 15814, 1, 1, -1, 1934), -- Recipe - Sealed Moirai Necklace (70%) 
+(22778, 15812, 1, 1, -1, 3869), -- Recipe - Sealed Moirai Ring (70%)
+(22778, 15813, 1, 1, -1, 2579), -- Recipe - Sealed Moirai Earring (70%)
+(22778, 15814, 1, 1, -1, 1934), -- Recipe - Sealed Moirai Necklace (70%)
 (22778, 57, 1029, 2103, 0, 700000), -- Adena
 (22778, 15766, 1, 1, 1, 12.705673), -- Sealed Moirai Ring
 (22778, 15767, 1, 1, 1, 8.467163), -- Sealed Moirai Earring
@@ -39352,9 +39352,9 @@ INSERT INTO `droplist` VALUES
 (22778, 10484, 1, 1, 2, 329.677992), -- Mid-Grade Life Stone - Level 82
 (22778, 10485, 1, 1, 2, 32.974104), -- High-Grade Life Stone - Level 82
 (22778, 960, 1, 1, 2, 75.97284), -- Scroll: Enchant Armor (S-Grade)
-(22778, 15812, 1, 1, 2, 346.511808), -- Recipe - Sealed Moirai Ring (70%) 
-(22778, 15813, 1, 1, 2, 231.007872), -- Recipe - Sealed Moirai Earring (70%) 
-(22778, 15814, 1, 1, 2, 173.129808), -- Recipe - Sealed Moirai Necklace (70%) 
+(22778, 15812, 1, 1, 2, 346.511808), -- Recipe - Sealed Moirai Ring (70%)
+(22778, 15813, 1, 1, 2, 231.007872), -- Recipe - Sealed Moirai Earring (70%)
+(22778, 15814, 1, 1, 2, 173.129808), -- Recipe - Sealed Moirai Necklace (70%)
 -- Sel Mahum Escort Guard
 (22779, 15654, 1, 1, -1, 9273), -- Sealed Moirai Gauntlet Piece
 (22779, 15655, 1, 1, -1, 9273), -- Sealed Moirai Leather Gloves Piece
@@ -39362,19 +39362,19 @@ INSERT INTO `droplist` VALUES
 (22779, 15657, 1, 1, -1, 9273), -- Sealed Moirai Boots Piece
 (22779, 15658, 1, 1, -1, 9273), -- Sealed Moirai Leather Boots Piece
 (22779, 15659, 1, 1, -1, 9273), -- Sealed Moirai Shoes Piece
-(22779, 15784, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22779, 15785, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22779, 15786, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Gloves (60%) 
-(22779, 15787, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Boots (60%) 
-(22779, 15788, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22779, 15789, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Shoes (60%) 
+(22779, 15784, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22779, 15785, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22779, 15786, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Gloves (60%)
+(22779, 15787, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Boots (60%)
+(22779, 15788, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22779, 15789, 1, 1, -1, 1234), -- Recipe - Sealed Moirai Shoes (60%)
 (22779, 57, 1008, 2061, 0, 700000), -- Adena
-(22779, 15703, 1, 1, 1, 4.051814), -- Sealed Moirai Gauntlet 
-(22779, 15704, 1, 1, 1, 4.051814), -- Sealed Moirai Leather Gloves 
-(22779, 15705, 1, 1, 1, 4.051814), -- Sealed Moirai Gloves 
-(22779, 15706, 1, 1, 1, 4.051814), -- Sealed Moirai Boots 
-(22779, 15707, 1, 1, 1, 4.051814), -- Sealed Moirai Leather Boots 
-(22779, 15708, 1, 1, 1, 4.051814), -- Sealed Moirai Shoes 
+(22779, 15703, 1, 1, 1, 4.051814), -- Sealed Moirai Gauntlet
+(22779, 15704, 1, 1, 1, 4.051814), -- Sealed Moirai Leather Gloves
+(22779, 15705, 1, 1, 1, 4.051814), -- Sealed Moirai Gloves
+(22779, 15706, 1, 1, 1, 4.051814), -- Sealed Moirai Boots
+(22779, 15707, 1, 1, 1, 4.051814), -- Sealed Moirai Leather Boots
+(22779, 15708, 1, 1, 1, 4.051814), -- Sealed Moirai Shoes
 (22779, 15654, 1, 1, 1, 1523.775408), -- Sealed Moirai Gauntlet Piece
 (22779, 15655, 1, 1, 1, 1523.775408), -- Sealed Moirai Leather Gloves Piece
 (22779, 15656, 1, 1, 1, 1523.775408), -- Sealed Moirai Gloves Piece
@@ -39389,12 +39389,12 @@ INSERT INTO `droplist` VALUES
 (22779, 10484, 1, 1, 2, 253.765821), -- Mid-Grade Life Stone - Level 82
 (22779, 10485, 1, 1, 2, 25.381482), -- High-Grade Life Stone - Level 82
 (22779, 960, 1, 1, 2, 58.455807), -- Scroll: Enchant Armor (S-Grade)
-(22779, 15784, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22779, 15785, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22779, 15786, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Gloves (60%) 
-(22779, 15787, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Boots (60%) 
-(22779, 15788, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22779, 15789, 1, 1, 2, 173.701455), -- Recipe - Sealed Moirai Shoes (60%) 
+(22779, 15784, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22779, 15785, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22779, 15786, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Gloves (60%)
+(22779, 15787, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Boots (60%)
+(22779, 15788, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22779, 15789, 1, 1, 2, 173.701455), -- Recipe - Sealed Moirai Shoes (60%)
 -- Sel Mahum Recruit
 (22780, 15645, 1, 1, -1, 2290), -- Sealed Moirai Helmet Piece
 (22780, 15646, 1, 1, -1, 2290), -- Sealed Moirai Leather Helmet Piece
@@ -39402,17 +39402,17 @@ INSERT INTO `droplist` VALUES
 (22780, 15693, 1, 1, -1, 4106), -- Sealed Moirai Shield Piece
 (22780, 15692, 1, 1, -1, 4106), -- Sealed Moirai Sigil Piece
 (22780, 960, 1, 1, -1, 154), -- Scroll: Enchant Armor (S-Grade)
-(22780, 15775, 1, 1, -1, 306), -- Recipe - Sealed Moirai Helmet (60%) 
-(22780, 15776, 1, 1, -1, 306), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22780, 15777, 1, 1, -1, 306), -- Recipe - Sealed Moirai Circlet (60%) 
-(22780, 15791, 1, 1, -1, 437), -- Recipe - Sealed Moirai Shield (60%) 
-(22780, 15790, 1, 1, -1, 437), -- Recipe - Sealed Moirai Sigil (60%) 
+(22780, 15775, 1, 1, -1, 306), -- Recipe - Sealed Moirai Helmet (60%)
+(22780, 15776, 1, 1, -1, 306), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22780, 15777, 1, 1, -1, 306), -- Recipe - Sealed Moirai Circlet (60%)
+(22780, 15791, 1, 1, -1, 437), -- Recipe - Sealed Moirai Shield (60%)
+(22780, 15790, 1, 1, -1, 437), -- Recipe - Sealed Moirai Sigil (60%)
 (22780, 57, 346, 699, 0, 700000), -- Adena
-(22780, 15694, 1, 1, 1, 1.104132), -- Sealed Moirai Helmet 
-(22780, 15695, 1, 1, 1, 1.104132), -- Sealed Moirai Leather Helmet 
-(22780, 15696, 1, 1, 1, 1.104132), -- Sealed Moirai Circlet 
-(22780, 15710, 1, 1, 1, 1.579674), -- Sealed Moirai Shield 
-(22780, 15709, 1, 1, 1, 1.579674), -- Sealed Moirai Sigil 
+(22780, 15694, 1, 1, 1, 1.104132), -- Sealed Moirai Helmet
+(22780, 15695, 1, 1, 1, 1.104132), -- Sealed Moirai Leather Helmet
+(22780, 15696, 1, 1, 1, 1.104132), -- Sealed Moirai Circlet
+(22780, 15710, 1, 1, 1, 1.579674), -- Sealed Moirai Shield
+(22780, 15709, 1, 1, 1, 1.579674), -- Sealed Moirai Sigil
 (22780, 15645, 1, 1, 1, 414.044034), -- Sealed Moirai Helmet Piece
 (22780, 15646, 1, 1, 1, 414.044034), -- Sealed Moirai Leather Helmet Piece
 (22780, 15647, 1, 1, 1, 414.044034), -- Sealed Moirai Circlet Piece
@@ -39425,11 +39425,11 @@ INSERT INTO `droplist` VALUES
 (22780, 10483, 1, 1, 2, 403.4088), -- Life Stone - Level 82
 (22780, 10484, 1, 1, 2, 100.8504), -- Mid-Grade Life Stone - Level 82
 (22780, 10485, 1, 1, 2, 10.0872), -- High-Grade Life Stone - Level 82
-(22780, 15775, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Helmet (60%) 
-(22780, 15776, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22780, 15777, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Circlet (60%) 
-(22780, 15791, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Shield (60%) 
-(22780, 15790, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Sigil (60%) 
+(22780, 15775, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Helmet (60%)
+(22780, 15776, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22780, 15777, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Circlet (60%)
+(22780, 15791, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Shield (60%)
+(22780, 15790, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Sigil (60%)
 -- Sel Mahum Soldier
 (22781, 10397, 1, 1, -1, 346), -- Icarus Sawsword Piece
 (22781, 10399, 1, 1, -1, 346), -- Icarus Spirit Piece
@@ -39538,19 +39538,19 @@ INSERT INTO `droplist` VALUES
 (22787, 15658, 1, 1, -1, 7016), -- Sealed Moirai Leather Boots Piece
 (22787, 15659, 1, 1, -1, 7016), -- Sealed Moirai Shoes Piece
 (22787, 960, 1, 1, -1, 314), -- Scroll: Enchant Armor (S-Grade)
-(22787, 15784, 1, 1, -1, 933), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22787, 15785, 1, 1, -1, 933), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22787, 15786, 1, 1, -1, 933), -- Recipe - Sealed Moirai Gloves (60%) 
-(22787, 15787, 1, 1, -1, 933), -- Recipe - Sealed Moirai Boots (60%) 
-(22787, 15788, 1, 1, -1, 933), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22787, 15789, 1, 1, -1, 933), -- Recipe - Sealed Moirai Shoes (60%) 
+(22787, 15784, 1, 1, -1, 933), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22787, 15785, 1, 1, -1, 933), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22787, 15786, 1, 1, -1, 933), -- Recipe - Sealed Moirai Gloves (60%)
+(22787, 15787, 1, 1, -1, 933), -- Recipe - Sealed Moirai Boots (60%)
+(22787, 15788, 1, 1, -1, 933), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22787, 15789, 1, 1, -1, 933), -- Recipe - Sealed Moirai Shoes (60%)
 (22787, 57, 826, 1689, 0, 700000), -- Adena
-(22787, 15703, 1, 1, 1, 3.320746), -- Sealed Moirai Gauntlet 
-(22787, 15704, 1, 1, 1, 3.320746), -- Sealed Moirai Leather Gloves 
-(22787, 15705, 1, 1, 1, 3.320746), -- Sealed Moirai Gloves 
-(22787, 15706, 1, 1, 1, 3.320746), -- Sealed Moirai Boots 
-(22787, 15707, 1, 1, 1, 3.320746), -- Sealed Moirai Leather Boots 
-(22787, 15708, 1, 1, 1, 3.320746), -- Sealed Moirai Shoes 
+(22787, 15703, 1, 1, 1, 3.320746), -- Sealed Moirai Gauntlet
+(22787, 15704, 1, 1, 1, 3.320746), -- Sealed Moirai Leather Gloves
+(22787, 15705, 1, 1, 1, 3.320746), -- Sealed Moirai Gloves
+(22787, 15706, 1, 1, 1, 3.320746), -- Sealed Moirai Boots
+(22787, 15707, 1, 1, 1, 3.320746), -- Sealed Moirai Leather Boots
+(22787, 15708, 1, 1, 1, 3.320746), -- Sealed Moirai Shoes
 (22787, 15654, 1, 1, 1, 1248.840912), -- Sealed Moirai Gauntlet Piece
 (22787, 15655, 1, 1, 1, 1248.840912), -- Sealed Moirai Leather Gloves Piece
 (22787, 15656, 1, 1, 1, 1248.840912), -- Sealed Moirai Gloves Piece
@@ -39564,12 +39564,12 @@ INSERT INTO `droplist` VALUES
 (22787, 10483, 1, 1, 2, 896.012916), -- Life Stone - Level 82
 (22787, 10484, 1, 1, 2, 223.98163), -- Mid-Grade Life Stone - Level 82
 (22787, 10485, 1, 1, 2, 22.419762), -- High-Grade Life Stone - Level 82
-(22787, 15784, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Gauntlet (60%) 
-(22787, 15785, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Leather Gloves (60%) 
-(22787, 15786, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Gloves (60%) 
-(22787, 15787, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Boots (60%) 
-(22787, 15788, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Leather Boots (60%) 
-(22787, 15789, 1, 1, 2, 153.309702), -- Recipe - Sealed Moirai Shoes (60%) 
+(22787, 15784, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Gauntlet (60%)
+(22787, 15785, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Leather Gloves (60%)
+(22787, 15786, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Gloves (60%)
+(22787, 15787, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Boots (60%)
+(22787, 15788, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Leather Boots (60%)
+(22787, 15789, 1, 1, 2, 153.309702), -- Recipe - Sealed Moirai Shoes (60%)
 -- Sel Mahum Squad Leader
 (22788, 15645, 1, 1, -1, 5511), -- Sealed Moirai Helmet Piece
 (22788, 15646, 1, 1, -1, 5511), -- Sealed Moirai Leather Helmet Piece
@@ -39577,17 +39577,17 @@ INSERT INTO `droplist` VALUES
 (22788, 15693, 1, 1, -1, 9879), -- Sealed Moirai Shield Piece
 (22788, 15692, 1, 1, -1, 9879), -- Sealed Moirai Sigil Piece
 (22788, 1894, 1, 1, -1, 32584), -- Crafted Leather
-(22788, 15775, 1, 1, -1, 735), -- Recipe - Sealed Moirai Helmet (60%) 
-(22788, 15776, 1, 1, -1, 735), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22788, 15777, 1, 1, -1, 735), -- Recipe - Sealed Moirai Circlet (60%) 
-(22788, 15791, 1, 1, -1, 1051), -- Recipe - Sealed Moirai Shield (60%) 
-(22788, 15790, 1, 1, -1, 1051), -- Recipe - Sealed Moirai Sigil (60%) 
+(22788, 15775, 1, 1, -1, 735), -- Recipe - Sealed Moirai Helmet (60%)
+(22788, 15776, 1, 1, -1, 735), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22788, 15777, 1, 1, -1, 735), -- Recipe - Sealed Moirai Circlet (60%)
+(22788, 15791, 1, 1, -1, 1051), -- Recipe - Sealed Moirai Shield (60%)
+(22788, 15790, 1, 1, -1, 1051), -- Recipe - Sealed Moirai Sigil (60%)
 (22788, 57, 826, 1689, 0, 700000), -- Adena
-(22788, 15694, 1, 1, 1, 2.656704), -- Sealed Moirai Helmet 
-(22788, 15695, 1, 1, 1, 2.656704), -- Sealed Moirai Leather Helmet 
-(22788, 15696, 1, 1, 1, 2.656704), -- Sealed Moirai Circlet 
-(22788, 15710, 1, 1, 1, 3.800928), -- Sealed Moirai Shield 
-(22788, 15709, 1, 1, 1, 3.800928), -- Sealed Moirai Sigil 
+(22788, 15694, 1, 1, 1, 2.656704), -- Sealed Moirai Helmet
+(22788, 15695, 1, 1, 1, 2.656704), -- Sealed Moirai Leather Helmet
+(22788, 15696, 1, 1, 1, 2.656704), -- Sealed Moirai Circlet
+(22788, 15710, 1, 1, 1, 3.800928), -- Sealed Moirai Shield
+(22788, 15709, 1, 1, 1, 3.800928), -- Sealed Moirai Sigil
 (22788, 15645, 1, 1, 1, 996.250848), -- Sealed Moirai Helmet Piece
 (22788, 15646, 1, 1, 1, 996.250848), -- Sealed Moirai Leather Helmet Piece
 (22788, 15647, 1, 1, 1, 996.250848), -- Sealed Moirai Circlet Piece
@@ -39600,11 +39600,11 @@ INSERT INTO `droplist` VALUES
 (22788, 10483, 1, 1, 2, 970.66565), -- Life Stone - Level 82
 (22788, 10484, 1, 1, 2, 242.6548), -- Mid-Grade Life Stone - Level 82
 (22788, 10485, 1, 1, 2, 24.2469), -- High-Grade Life Stone - Level 82
-(22788, 15775, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Helmet (60%) 
-(22788, 15776, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Leather Helmet(60%) 
-(22788, 15777, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Circlet (60%) 
-(22788, 15791, 1, 1, 2, 158.1158), -- Recipe - Sealed Moirai Shield (60%) 
-(22788, 15790, 1, 1, 2, 158.2087), -- Recipe - Sealed Moirai Sigil (60%) 
+(22788, 15775, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Helmet (60%)
+(22788, 15776, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Leather Helmet(60%)
+(22788, 15777, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Circlet (60%)
+(22788, 15791, 1, 1, 2, 158.1158), -- Recipe - Sealed Moirai Shield (60%)
+(22788, 15790, 1, 1, 2, 158.2087), -- Recipe - Sealed Moirai Sigil (60%)
 -- Guide Solina
 (22789, 15634, 1, 1, -1, 987), -- Vesper Cutter Piece
 (22789, 15635, 1, 1, -1, 986), -- Vesper Slasher Piece
@@ -39732,8 +39732,8 @@ INSERT INTO `droplist` VALUES
 (22795, 15663, 1, 1, -1, 26096), -- Sealed Vesper Breastplate Piece
 (22795, 15666, 1, 1, -1, 42035), -- Sealed Vesper Gaiter Piece
 (22795, 9628, 1, 1, -1, 113082), -- Leonard
-(22795, 15795, 1, 1, -1, 3089), -- Recipe - Sealed Vesper Breastplate (60%) 
-(22795, 15798, 1, 1, -1, 4943), -- Recipe - Sealed Vesper Gaiter (60%) 
+(22795, 15795, 1, 1, -1, 3089), -- Recipe - Sealed Vesper Breastplate (60%)
+(22795, 15798, 1, 1, -1, 4943), -- Recipe - Sealed Vesper Gaiter (60%)
 (22795, 57, 5832, 11919, 0, 700000), -- Adena
 (22795, 14105, 1, 1, 1, 12.68267), -- Sealed Vesper Breastplate
 (22795, 15663, 1, 1, 1, 5355.09975), -- Sealed Vesper Breastplate Piece
@@ -39747,8 +39747,8 @@ INSERT INTO `droplist` VALUES
 (22795, 14166, 1, 1, 2, 5198.572392), -- Life Stone - Level 84
 (22795, 14167, 1, 1, 2, 1298.240632), -- Mid-Grade Life Stone - Level 84
 (22795, 14168, 1, 1, 2, 129.91264), -- High-Grade Life Stone - Level 84
-(22795, 15795, 1, 1, 2, 230.594936), -- Recipe - Sealed Vesper Breastplate (60%) 
-(22795, 15798, 1, 1, 2, 369.07), -- Recipe - Sealed Vesper Gaiter (60%) 
+(22795, 15795, 1, 1, 2, 230.594936), -- Recipe - Sealed Vesper Breastplate (60%)
+(22795, 15798, 1, 1, 2, 369.07), -- Recipe - Sealed Vesper Gaiter (60%)
 (22795, 9557, 1, 1, 2, 214.946368), -- Holy Crystal
 (22795, 15690, 1, 1, 3, 10500), -- Secret Key
 (22795, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
@@ -39757,8 +39757,8 @@ INSERT INTO `droplist` VALUES
 (22796, 15664, 1, 1, -1, 37946), -- Sealed Vesper Leather Breastplate Piece
 (22796, 15670, 1, 1, -1, 58481), -- Sealed Vesper Leather Legging Piece
 (22796, 9630, 1, 1, -1, 84181), -- Orichalcum
-(22796, 15796, 1, 1, -1, 4570), -- Recipe - Sealed Vesper Leather Breastplate (60%) 
-(22796, 15799, 1, 1, -1, 7311), -- Recipe - Sealed Vesper Leather Legging (60%) 
+(22796, 15796, 1, 1, -1, 4570), -- Recipe - Sealed Vesper Leather Breastplate (60%)
+(22796, 15799, 1, 1, -1, 7311), -- Recipe - Sealed Vesper Leather Legging (60%)
 (22796, 57, 6469, 13222, 0, 700000), -- Adena
 (22796, 14106, 1, 1, 1, 18.75918), -- Sealed Vesper Leather Breastplate
 (22796, 14112, 1, 1, 1, 30.00279), -- Sealed Vesper Leather Leggings
@@ -39772,8 +39772,8 @@ INSERT INTO `droplist` VALUES
 (22796, 14166, 1, 1, 2, 5766.97239), -- Life Stone - Level 84
 (22796, 14167, 1, 1, 2, 1440.186228), -- Mid-Grade Life Stone - Level 84
 (22796, 14168, 1, 1, 2, 143.887518), -- High-Grade Life Stone - Level 84
-(22796, 15796, 1, 1, 2, 341.200242), -- Recipe - Sealed Vesper Leather Breastplate (60%) 
-(22796, 15799, 1, 1, 2, 545.72373), -- Recipe - Sealed Vesper Leather Legging (60%) 
+(22796, 15796, 1, 1, 2, 341.200242), -- Recipe - Sealed Vesper Leather Breastplate (60%)
+(22796, 15799, 1, 1, 2, 545.72373), -- Recipe - Sealed Vesper Leather Legging (60%)
 (22796, 9557, 1, 1, 2, 238.610736), -- Holy Crystal
 (22796, 15690, 1, 1, 3, 10500), -- Secret Key
 (22796, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
@@ -39782,8 +39782,8 @@ INSERT INTO `droplist` VALUES
 (22797, 15665, 1, 1, -1, 35390), -- Sealed Vesper Tunic Piece
 (22797, 15673, 1, 1, -1, 54541), -- Sealed Vesper Stockings Piece
 (22797, 9628, 1, 1, -1, 116995), -- Leonard
-(22797, 15797, 1, 1, -1, 4262), -- Recipe - Sealed Vesper Tunic (60%) 
-(22797, 15800, 1, 1, -1, 6819), -- Recipe - Sealed Vesper Stockings (60%) 
+(22797, 15797, 1, 1, -1, 4262), -- Recipe - Sealed Vesper Tunic (60%)
+(22797, 15800, 1, 1, -1, 6819), -- Recipe - Sealed Vesper Stockings (60%)
 (22797, 57, 6033, 12331, 0, 700000), -- Adena
 (22797, 14107, 1, 1, 1, 17.495324), -- Sealed Vesper Tunic
 (22797, 14115, 1, 1, 1, 27.981422), -- Sealed Vesper Stockings
@@ -39796,8 +39796,8 @@ INSERT INTO `droplist` VALUES
 (22797, 14166, 1, 1, 2, 6573.603454), -- Life Stone - Level 84
 (22797, 14167, 1, 1, 2, 1641.295502), -- Mid-Grade Life Stone - Level 84
 (22797, 14168, 1, 1, 2, 163.99658), -- High-Grade Life Stone - Level 84
-(22797, 15797, 1, 1, 2, 388.716218), -- Recipe - Sealed Vesper Tunic (60%) 
-(22797, 15800, 1, 1, 2, 623.187004), -- Recipe - Sealed Vesper Stockings (60%) 
+(22797, 15797, 1, 1, 2, 388.716218), -- Recipe - Sealed Vesper Tunic (60%)
+(22797, 15800, 1, 1, 2, 623.187004), -- Recipe - Sealed Vesper Stockings (60%)
 (22797, 15690, 1, 1, 3, 10500), -- Secret Key
 (22797, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22797, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
@@ -39805,9 +39805,9 @@ INSERT INTO `droplist` VALUES
 (22798, 15770, 1, 1, -1, 142869), -- Sealed Vesper Earring Gem
 (22798, 15771, 1, 1, -1, 102788), -- Sealed Vesper Necklace Gem
 (22798, 15769, 1, 1, -1, 237865), -- Sealed Vesper Ring Gem
-(22798, 15810, 1, 1, -1, 19937), -- Recipe - Sealed Vesper Earring (70%) 
-(22798, 15811, 1, 1, -1, 14953), -- Recipe - Sealed Vesper Necklace (70%) 
-(22798, 15809, 1, 1, -1, 29905), -- Recipe - Sealed Vesper Ring (70%) 
+(22798, 15810, 1, 1, -1, 19937), -- Recipe - Sealed Vesper Earring (70%)
+(22798, 15811, 1, 1, -1, 14953), -- Recipe - Sealed Vesper Necklace (70%)
+(22798, 15809, 1, 1, -1, 29905), -- Recipe - Sealed Vesper Ring (70%)
 (22798, 57, 11026, 22534, 0, 700000), -- Adena
 (22798, 14160, 1, 1, 1, 65.473944), -- Sealed Vesper Earring
 (22798, 14161, 1, 1, 1, 49.145284), -- Sealed Vesper Necklace
@@ -39823,9 +39823,9 @@ INSERT INTO `droplist` VALUES
 (22798, 14166, 1, 1, 2, 9009.898172), -- Life Stone - Level 84
 (22798, 14167, 1, 1, 2, 2249.589991), -- Mid-Grade Life Stone - Level 84
 (22798, 14168, 1, 1, 2, 224.995056), -- High-Grade Life Stone - Level 84
-(22798, 15809, 1, 1, 2, 2455.114321), -- Recipe - Sealed Vesper Ring (70%) 
-(22798, 15810, 1, 1, 2, 1636.98326), -- Recipe - Sealed Vesper Earring (70%) 
-(22798, 15811, 1, 1, 2, 1227.737445), -- Recipe - Sealed Vesper Necklace (70%) 
+(22798, 15809, 1, 1, 2, 2455.114321), -- Recipe - Sealed Vesper Ring (70%)
+(22798, 15810, 1, 1, 2, 1636.98326), -- Recipe - Sealed Vesper Earring (70%)
+(22798, 15811, 1, 1, 2, 1227.737445), -- Recipe - Sealed Vesper Necklace (70%)
 (22798, 9557, 1, 1, 2, 372.828346), -- Holy Crystal
 (22798, 15690, 1, 1, 3, 10500), -- Secret Key
 (22798, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
@@ -39838,12 +39838,12 @@ INSERT INTO `droplist` VALUES
 (22799, 15672, 1, 1, -1, 81546), -- Sealed Vesper Leather Boots Piece
 (22799, 15675, 1, 1, -1, 81546), -- Sealed Vesper Shoes Piece
 (22799, 9630, 1, 1, -1, 56009), -- Orichalcum
-(22799, 15801, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(22799, 15802, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(22799, 15803, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Gloves (60%) 
-(22799, 15804, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Boots (60%) 
-(22799, 15805, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(22799, 15806, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Shoes (60%) 
+(22799, 15801, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22799, 15802, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22799, 15803, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Gloves (60%)
+(22799, 15804, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Boots (60%)
+(22799, 15805, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22799, 15806, 1, 1, -1, 9121), -- Recipe - Sealed Vesper Shoes (60%)
 (22799, 57, 11191, 22872, 0, 700000), -- Adena
 (22799, 14109, 1, 1, 1, 32.451048), -- Sealed Vesper Gauntlet
 (22799, 14113, 1, 1, 1, 32.451048), -- Sealed Vesper Leather Gloves
@@ -39865,12 +39865,12 @@ INSERT INTO `droplist` VALUES
 (22799, 14166, 1, 1, 2, 7838.46298), -- Life Stone - Level 84
 (22799, 14167, 1, 1, 2, 1957.128062), -- Mid-Grade Life Stone - Level 84
 (22799, 14168, 1, 1, 2, 195.848498), -- High-Grade Life Stone - Level 84
-(22799, 15801, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Gauntlet (60%) 
-(22799, 15802, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Leather Gloves (60%) 
-(22799, 15803, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Gloves (60%) 
-(22799, 15804, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Boots (60%) 
-(22799, 15805, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Leather Boots (60%) 
-(22799, 15806, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Shoes (60%) 
+(22799, 15801, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22799, 15802, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22799, 15803, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Gloves (60%)
+(22799, 15804, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Boots (60%)
+(22799, 15805, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22799, 15806, 1, 1, 2, 1390.84095), -- Recipe - Sealed Vesper Shoes (60%)
 (22799, 15690, 1, 1, 3, 10500), -- Secret Key
 (22799, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22799, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
@@ -39880,11 +39880,11 @@ INSERT INTO `droplist` VALUES
 (22800, 15662, 1, 1, -1, 67556), -- Sealed Vesper Circlet Piece
 (22800, 15669, 1, 1, -1, 99846), -- Sealed Vesper Verteidiger Piece
 (22800, 15691, 1, 1, -1, 99846), -- Sealed Vesper Sigil Piece
-(22800, 15792, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Helmet (60%) 
-(22800, 15793, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Leather Helmet (60%) 
-(22800, 15794, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Circlet (60%) 
-(22800, 15808, 1, 1, -1, 12022), -- Recipe - Sealed Vesper Shield (60%) 
-(22800, 15807, 1, 1, -1, 12022), -- Recipe - Sealed Vesper Sigil (60%) 
+(22800, 15792, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Helmet (60%)
+(22800, 15793, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Leather Helmet (60%)
+(22800, 15794, 1, 1, -1, 8416), -- Recipe - Sealed Vesper Circlet (60%)
+(22800, 15808, 1, 1, -1, 12022), -- Recipe - Sealed Vesper Shield (60%)
+(22800, 15807, 1, 1, -1, 12022), -- Recipe - Sealed Vesper Sigil (60%)
 (22800, 57, 11913, 24348, 0, 700000), -- Adena
 (22800, 13143, 1, 1, 1, 27.637509), -- Sealed Vesper Helmet
 (22800, 13144, 1, 1, 1, 27.637509), -- Sealed Vesper Leather Helmet
@@ -39904,11 +39904,11 @@ INSERT INTO `droplist` VALUES
 (22800, 14166, 1, 1, 2, 8986.56585), -- Life Stone - Level 84
 (22800, 14167, 1, 1, 2, 2243.94009), -- Mid-Grade Life Stone - Level 84
 (22800, 14168, 1, 1, 2, 224.394009), -- High-Grade Life Stone - Level 84
-(22800, 15792, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Helmet (60%) 
-(22800, 15793, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Leather Helmet (60%) 
-(22800, 15794, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Circlet (60%) 
-(22800, 15808, 1, 1, 2, 1518.531528), -- Recipe - Sealed Vesper Shield (60%) 
-(22800, 15807, 1, 1, 2, 1518.531528), -- Recipe - Sealed Vesper Sigil (60%) 
+(22800, 15792, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Helmet (60%)
+(22800, 15793, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Leather Helmet (60%)
+(22800, 15794, 1, 1, 2, 1062.900033), -- Recipe - Sealed Vesper Circlet (60%)
+(22800, 15808, 1, 1, 2, 1518.531528), -- Recipe - Sealed Vesper Shield (60%)
+(22800, 15807, 1, 1, 2, 1518.531528), -- Recipe - Sealed Vesper Sigil (60%)
 (22800, 15690, 1, 1, 3, 10500), -- Secret Key
 (22800, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22800, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
@@ -43004,7 +43004,7 @@ INSERT INTO `droplist` VALUES
 (25531, 7575, 1, 1, 1, 7493.152037), -- Draconic Bow
 (25531, 7579, 3, 9, 1, 583775.847963), -- Draconic Bow Shaft
 (25531, 9468, 1, 1, 2, 6670.944775), -- Dynasty Necklace - Sleep Resistance
-(25531, 9474, 1, 1, 2, 6670.944775), -- Dynasty Necklace  - Hold Resistance
+(25531, 9474, 1, 1, 2, 6670.944775), -- Dynasty Necklace - Hold Resistance
 (25531, 9477, 1, 1, 2, 6670.944775), -- Dynasty Necklace - Fear Resistance
 (25531, 6578, 1, 1, 2, 23074.165675), -- Blessed Scroll: Enchant Armor (S-Grade)
 -- Kechi
@@ -43029,8 +43029,8 @@ INSERT INTO `droplist` VALUES
 (25532, 6693, 6, 18, 1, 58944.98328), -- Dragon Hunter Axe Blade
 (25532, 6697, 3, 7, 1, 136331.442048), -- Arcana Mace Head
 (25532, 9459, 1, 1, 2, 4282.668192), -- Dynasty Necklace - Stun Resistance
-(25532, 9462, 1, 1, 2, 4282.668192), -- Dynasty Necklace  - Poison Resistance
-(25532, 9465, 1, 1, 2, 4282.668192), -- Dynasty Necklace  - Bleed Resistance
+(25532, 9462, 1, 1, 2, 4282.668192), -- Dynasty Necklace - Poison Resistance
+(25532, 9465, 1, 1, 2, 4282.668192), -- Dynasty Necklace - Bleed Resistance
 (25532, 9471, 1, 1, 2, 4282.668192), -- Dynasty Necklace - Paralysis Resistance
 (25532, 6578, 1, 1, 2, 14813.327232), -- Blessed Scroll: Enchant Armor (S-Grade)
 -- Tears
@@ -43603,8 +43603,8 @@ INSERT INTO `droplist` VALUES
 (25652, 6578, 1, 1, 2, 34244.145537), -- Blessed Scroll: Enchant Armor (S-Grade)
 (25652, 3936, 1, 1, 2, 385244.854463), -- Blessed Scroll of Resurrection
 -- Kanadis Herald
-(25653, 15700, 1, 1, 0, 3936.58586), -- Sealed Moirai Gaiter 
-(25653, 15697, 1, 1, 0, 2460.41414), -- Sealed Moirai Breastplate 
+(25653, 15700, 1, 1, 0, 3936.58586), -- Sealed Moirai Gaiter
+(25653, 15697, 1, 1, 0, 2460.41414), -- Sealed Moirai Breastplate
 (25653, 15651, 4, 12, 1, 308820.583024), -- Sealed Moirai Gaiter Piece
 (25653, 15648, 8, 22, 1, 98275.416976), -- Sealed Moirai Breastplate Piece
 (25653, 9912, 205, 415, 2, 1000000), -- Knight's Epaulette
@@ -43617,20 +43617,20 @@ INSERT INTO `droplist` VALUES
 (25655, 10403, 1, 1, 0, 470418.186141), -- Icarus Hand Piece
 (25655, 9912, 215, 444, 1, 1000000), -- Knight's Epaulette
 -- Kanadis Guide
-(25659, 15697, 1, 1, 0, 3273.940194), -- Sealed Moirai Breastplate 
-(25659, 15700, 1, 1, 0, 5238.879064), -- Sealed Moirai Gaiter 
+(25659, 15697, 1, 1, 0, 3273.940194), -- Sealed Moirai Breastplate
+(25659, 15700, 1, 1, 0, 5238.879064), -- Sealed Moirai Gaiter
 (25659, 15648, 2, 4, 0, 435946.294948), -- Sealed Moirai Breastplate Piece
 (25659, 15651, 4, 12, 0, 273982.885794), -- Sealed Moirai Gaiter Piece
 (25659, 9912, 218, 443, 1, 1000000), -- Knight's Epaulette
 -- Kanadis Guide
-(25660, 15698, 1, 1, 0, 4561.797068), -- Sealed Moirai Leather Breastplate 
-(25660, 15701, 1, 1, 0, 7298.773278), -- Sealed Moirai Leather Legging 
+(25660, 15698, 1, 1, 0, 4561.797068), -- Sealed Moirai Leather Breastplate
+(25660, 15701, 1, 1, 0, 7298.773278), -- Sealed Moirai Leather Legging
 (25660, 15649, 8, 22, 0, 123279.224254), -- Sealed Moirai Leather Breastplate Piece
 (25660, 15652, 4, 12, 0, 375014.2054), -- Sealed Moirai Leather Legging Piece
 (25660, 9912, 228, 461, 1, 1000000), -- Knight's Epaulette
 -- Kanadis Guide
-(25661, 15699, 1, 1, 0, 4743.874072), -- Sealed Moirai Tunic 
-(25661, 15702, 1, 1, 0, 7590.092412), -- Sealed Moirai Stockings 
+(25661, 15699, 1, 1, 0, 4743.874072), -- Sealed Moirai Tunic
+(25661, 15702, 1, 1, 0, 7590.092412), -- Sealed Moirai Stockings
 (25661, 15650, 8, 22, 0, 128199.721916), -- Sealed Moirai Tunic Piece
 (25661, 15653, 4, 12, 0, 389982.3116), -- Sealed Moirai Stockings Piece
 (25661, 9912, 246, 507, 1, 1000000), -- Knight's Epaulette
@@ -43936,28 +43936,28 @@ INSERT INTO `droplist` VALUES
 (25710, 959, 1, 1, 2, 147566.461799), -- Scroll: Enchant Weapon (S-Grade)
 (25710, 960, 1, 3, 2, 737830.538201), -- Scroll: Enchant Armor (S-Grade)
 -- Darnel
-(25713, 15694, 1, 1, 0, 7682.472801), -- Sealed Moirai Helmet 
-(25713, 15695, 1, 1, 0, 7682.472801), -- Sealed Moirai Leather Helmet 
-(25713, 15696, 1, 1, 0, 7682.472801), -- Sealed Moirai Circlet 
-(25713, 15710, 1, 1, 0, 10974.813297), -- Sealed Moirai Shield 
-(25713, 15709, 1, 1, 0, 10974.7683), -- Sealed Moirai Sigil 
+(25713, 15694, 1, 1, 0, 7682.472801), -- Sealed Moirai Helmet
+(25713, 15695, 1, 1, 0, 7682.472801), -- Sealed Moirai Leather Helmet
+(25713, 15696, 1, 1, 0, 7682.472801), -- Sealed Moirai Circlet
+(25713, 15710, 1, 1, 0, 10974.813297), -- Sealed Moirai Shield
+(25713, 15709, 1, 1, 0, 10974.7683), -- Sealed Moirai Sigil
 (25713, 10223, 1, 1, 1, 4689), -- Icarus Spitter
 (25713, 959, 1, 1, 2, 47155.498299), -- Scroll: Enchant Weapon (S-Grade)
 (25713, 960, 1, 1, 2, 471555.501701), -- Scroll: Enchant Armor (S-Grade)
 -- Kechi
-(25714, 15703, 1, 1, 0, 7378.014756), -- Sealed Moirai Gauntlet 
-(25714, 15704, 1, 1, 0, 7378.014756), -- Sealed Moirai Leather Gloves 
-(25714, 15705, 1, 1, 0, 7378.014756), -- Sealed Moirai Gloves 
-(25714, 15706, 1, 1, 0, 7378.014756), -- Sealed Moirai Boots 
-(25714, 15707, 1, 1, 0, 7378.014756), -- Sealed Moirai Leather Boots 
-(25714, 15708, 1, 1, 0, 7377.92622), -- Sealed Moirai Shoes 
+(25714, 15703, 1, 1, 0, 7378.014756), -- Sealed Moirai Gauntlet
+(25714, 15704, 1, 1, 0, 7378.014756), -- Sealed Moirai Leather Gloves
+(25714, 15705, 1, 1, 0, 7378.014756), -- Sealed Moirai Gloves
+(25714, 15706, 1, 1, 0, 7378.014756), -- Sealed Moirai Boots
+(25714, 15707, 1, 1, 0, 7378.014756), -- Sealed Moirai Leather Boots
+(25714, 15708, 1, 1, 0, 7377.92622), -- Sealed Moirai Shoes
 (25714, 10222, 1, 1, 1, 1801.5), -- Icarus Hall
 (25714, 10220, 1, 1, 1, 1801.5), -- Icarus Hammer
 (25714, 959, 1, 1, 2, 36230.145588), -- Scroll: Enchant Weapon (S-Grade)
 (25714, 960, 1, 1, 2, 362301.854412), -- Scroll: Enchant Armor (S-Grade)
 -- Tears
-(25716, 15698, 1, 1, 0, 10162.93464), -- Sealed Moirai Leather Breastplate 
-(25716, 15701, 1, 1, 0, 16261.06536), -- Sealed Moirai Leather Legging 
+(25716, 15698, 1, 1, 0, 10162.93464), -- Sealed Moirai Leather Breastplate
+(25716, 15701, 1, 1, 0, 16261.06536), -- Sealed Moirai Leather Legging
 (25716, 10223, 1, 1, 1, 4963), -- Icarus Spitter
 (25716, 6578, 1, 1, 2, 55453.087404), -- Blessed Scroll: Enchant Armor (S-Grade)
 (25716, 6570, 1, 1, 2, 138632.912596), -- Blessed Scroll: Enchant Armor (A-Grade)
@@ -45010,23 +45010,23 @@ INSERT INTO `droplist` VALUES
 (29181, 14108, 1, 1, 0, 17640), -- Sealed Vesper Gaiters
 (29181, 14112, 1, 1, 0, 17640), -- Sealed Vesper Leather Leggings
 (29181, 14115, 1, 1, 0, 17640), -- Sealed Vesper Stockings
-(29181, 15694, 1, 1, 1, 41440), -- Sealed Moirai Helmet 
-(29181, 15695, 1, 1, 1, 41160), -- Sealed Moirai Leather Helmet 
-(29181, 15696, 1, 1, 1, 41160), -- Sealed Moirai Circlet 
-(29181, 15703, 1, 1, 1, 41160), -- Sealed Moirai Gauntlet 
-(29181, 15704, 1, 1, 1, 41160), -- Sealed Moirai Leather Gloves 
-(29181, 15705, 1, 1, 1, 41160), -- Sealed Moirai Gloves 
-(29181, 15706, 1, 1, 1, 41160), -- Sealed Moirai Boots 
-(29181, 15707, 1, 1, 1, 41160), -- Sealed Moirai Leather Boots 
-(29181, 15708, 1, 1, 1, 41160), -- Sealed Moirai Shoes 
-(29181, 15710, 1, 1, 1, 41160), -- Sealed Moirai Shield 
-(29181, 15709, 1, 1, 1, 41160), -- Sealed Moirai Sigil 
-(29181, 15697, 1, 1, 1, 41160), -- Sealed Moirai Breastplate 
-(29181, 15698, 1, 1, 1, 41160), -- Sealed Moirai Leather Breastplate 
-(29181, 15699, 1, 1, 1, 41160), -- Sealed Moirai Tunic 
-(29181, 15700, 1, 1, 1, 41160), -- Sealed Moirai Gaiter 
-(29181, 15701, 1, 1, 1, 41160), -- Sealed Moirai Leather Legging 
-(29181, 15702, 1, 1, 1, 41160), -- Sealed Moirai Stockings 
+(29181, 15694, 1, 1, 1, 41440), -- Sealed Moirai Helmet
+(29181, 15695, 1, 1, 1, 41160), -- Sealed Moirai Leather Helmet
+(29181, 15696, 1, 1, 1, 41160), -- Sealed Moirai Circlet
+(29181, 15703, 1, 1, 1, 41160), -- Sealed Moirai Gauntlet
+(29181, 15704, 1, 1, 1, 41160), -- Sealed Moirai Leather Gloves
+(29181, 15705, 1, 1, 1, 41160), -- Sealed Moirai Gloves
+(29181, 15706, 1, 1, 1, 41160), -- Sealed Moirai Boots
+(29181, 15707, 1, 1, 1, 41160), -- Sealed Moirai Leather Boots
+(29181, 15708, 1, 1, 1, 41160), -- Sealed Moirai Shoes
+(29181, 15710, 1, 1, 1, 41160), -- Sealed Moirai Shield
+(29181, 15709, 1, 1, 1, 41160), -- Sealed Moirai Sigil
+(29181, 15697, 1, 1, 1, 41160), -- Sealed Moirai Breastplate
+(29181, 15698, 1, 1, 1, 41160), -- Sealed Moirai Leather Breastplate
+(29181, 15699, 1, 1, 1, 41160), -- Sealed Moirai Tunic
+(29181, 15700, 1, 1, 1, 41160), -- Sealed Moirai Gaiter
+(29181, 15701, 1, 1, 1, 41160), -- Sealed Moirai Leather Legging
+(29181, 15702, 1, 1, 1, 41160), -- Sealed Moirai Stockings
 (29181, 14162, 1, 1, 2, 167000), -- Sealed Vesper Ring
 (29181, 14160, 1, 1, 2, 166500), -- Sealed Vesper Earring
 (29181, 14161, 1, 1, 2, 166500), -- Sealed Vesper Necklace
