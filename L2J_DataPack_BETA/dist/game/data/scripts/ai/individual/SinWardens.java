@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * Manages Sin Wardens disappearing and chat
+ * Manages Sin Wardens disappearing and chat.
  * @author GKR
  */
 public class SinWardens extends AbstractNpcAI

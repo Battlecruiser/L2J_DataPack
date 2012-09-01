@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
+ * Outpost Captain's AI.
  * @author DS
  */
 public class OutpostCaptain extends AbstractNpcAI

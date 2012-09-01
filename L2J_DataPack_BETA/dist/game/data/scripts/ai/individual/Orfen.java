@@ -40,28 +40,26 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * Orfen AI
+ * Orfen's AI
  * @author Emperorc
  */
 public class Orfen extends AbstractNpcAI
 {
-	//@formatter:off
 	private static final Location[] POS =
 	{
-		new Location(43728, 17220, -4342), 
+		new Location(43728, 17220, -4342),
 		new Location(55024, 17368, -5412),
-		new Location(53504, 21248, -5486), 
+		new Location(53504, 21248, -5486),
 		new Location(53248, 24576, -5262)
 	};
 	
 	private static final NpcStringId[] TEXT =
 	{
 		NpcStringId.S1_STOP_KIDDING_YOURSELF_ABOUT_YOUR_OWN_POWERLESSNESS,
-		NpcStringId.S1_ILL_MAKE_YOU_FEEL_WHAT_TRUE_FEAR_IS, 
-		NpcStringId.YOURE_REALLY_STUPID_TO_HAVE_CHALLENGED_ME_S1_GET_READY, 
+		NpcStringId.S1_ILL_MAKE_YOU_FEEL_WHAT_TRUE_FEAR_IS,
+		NpcStringId.YOURE_REALLY_STUPID_TO_HAVE_CHALLENGED_ME_S1_GET_READY,
 		NpcStringId.S1_DO_YOU_THINK_THATS_GOING_TO_WORK
 	};
-	//@formatter:on
 	
 	private static final int ORFEN = 29014;
 	// private static final int RAIKEL = 29015;

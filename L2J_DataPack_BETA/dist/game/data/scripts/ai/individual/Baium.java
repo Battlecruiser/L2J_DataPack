@@ -48,13 +48,21 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Baium AI Note1: if the server gets rebooted while players are still fighting Baium, there is no lock, but players also lose their ability to wake baium up. However, should another person enter the room and wake him up, the players who had stayed inside may join the raid. This can be helpful for
- * players who became victims of a reboot (they only need 1 new player to enter and wake up baium) and is not too exploitable since any player wishing to exploit it would have to suffer 5 days of being parked in an empty room. Note2: Neither version of Baium should be a permanent spawn. This script
- * is fully capable of spawning the statue-version when the lock expires and switching it to the mob version promptly. Additional notes ( source http://aleenaresron.blogspot.com/2006_08_01_archive.html ): * Baium only first respawns five days after his last death. And from those five days he will
- * respawn within 1-8 hours of his last death. So, you have to know his last time of death. * If by some freak chance you are the only one in Baium's chamber and NO ONE comes in [ha, ha] you or someone else will have to wake Baium. There is a good chance that Baium will automatically kill whoever
- * wakes him. There are some people that have been able to wake him and not die, however if you've already gone through the trouble of getting the bloody fabric and camped him out and researched his spawn time, are you willing to take that chance that you'll wake him and not be able to finish your
- * quest? Doubtful. [ this powerful attack vs the player who wakes him up is NOT yet implemented here] * once someone starts attacking Baium no one else can port into the chamber where he is. Unlike with the other raid bosses, you can just show up at any time as long as you are there when they die.
- * Not true with Baium. Once he gets attacked, the port to Baium closes. byebye, see you in 5 days. If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the vortex
+ * Baium's AI.<br>
+ * Note1: if the server gets rebooted while players are still fighting Baium, there is no lock, but players also lose their ability to wake Baium up.<br>
+ * However, should another person enter the room and wake him up, the players who had stayed inside may join the raid.<br>
+ * This can be helpful for players who became victims of a reboot (they only need 1 new player to enter and wake up Baium) and is not too exploitable since any player wishing to exploit it would have to suffer 5 days of being parked in an empty room.<br>
+ * Note2: Neither version of Baium should be a permanent spawn.<br>
+ * This script is fully capable of spawning the statue-version when the lock expires and switching it to the mob version promptly.<br>
+ * Additional notes ( source http://aleenaresron.blogspot.com/2006_08_01_archive.html ):
+ * <ul>
+ * <li>Baium only first respawns five days after his last death. And from those five days he will respawn within 1-8 hours of his last death. So, you have to know his last time of death.</li>
+ * <li>If by some freak chance you are the only one in Baium's chamber and NO ONE comes in [ha, ha] you or someone else will have to wake Baium.<br>
+ * There is a good chance that Baium will automatically kill whoever wakes him.<br>
+ * There are some people that have been able to wake him and not die, however if you've already gone through the trouble of getting the bloody fabric and camped him out and researched his spawn time,<br>
+ * are you willing to take that chance that you'll wake him and not be able to finish your quest? Doubtful. [ this powerful attack vs the player who wakes him up is NOT yet implemented here]</li>
+ * <li>Once someone starts attacking Baium no one else can port into the chamber where he is. Unlike with the other raid bosses, you can just show up at any time as long as you are there when they die.<br>
+ * Not true with Baium. Once he gets attacked, the port to Baium closes. byebye, see you in 5 days. If nobody attacks Baium for 30 minutes, he auto-despawns and unlocks the vortex.</li>
  * @author Fulminus version 0.1
  */
 public class Baium extends AbstractNpcAI
