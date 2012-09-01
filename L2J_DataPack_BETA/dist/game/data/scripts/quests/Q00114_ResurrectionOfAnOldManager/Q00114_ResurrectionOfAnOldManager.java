@@ -18,13 +18,16 @@ import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
+import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -51,6 +54,9 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	
 	// Monster
 	private static final int GUARDIAN = 27318;
+	
+	// Zones
+	private static final int[] ZONES = {200032, 200033, 200034};
 	
 	private static L2Attackable golem = null;
 	
@@ -562,12 +568,31 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
+	// TODO: Custom until onNpcSee support is done
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.isPlayer())
+		{
+			final QuestState st = ((L2PcInstance) character).getQuestState(getName());
+			if ((st != null) && st.isCond(17))
+			{
+				st.takeItems(DETCTOR, 1);
+				st.giveItems(DETCTOR2, 1);
+				st.setCond(18, true);
+				character.sendPacket(new ExShowScreenMessage(NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500));
+			}
+		}
+		return super.onEnterZone(character, zone);
+	}
+	
 	public Q00114_ResurrectionOfAnOldManager(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
+		addEnterZoneId(ZONES);
 		
 		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
 	}
