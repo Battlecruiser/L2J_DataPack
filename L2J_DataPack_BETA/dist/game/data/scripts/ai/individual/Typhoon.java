@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 /**
+ * Typhoon's AI.
  * @author GKR
  */
 public class Typhoon extends AbstractNpcAI

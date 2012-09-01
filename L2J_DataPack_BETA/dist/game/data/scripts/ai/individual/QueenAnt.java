@@ -38,7 +38,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.util.Rnd;
 
 /**
- * Queen Ant AI
+ * Queen Ant's AI
  * @author Emperorc
  */
 public class QueenAnt extends AbstractNpcAI

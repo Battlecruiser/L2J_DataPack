@@ -21,7 +21,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Removes minions after master's death
+ * Naia Lock AI.<br>
+ * Removes minions after master's death.
  * @author GKR
  */
 public class NaiaLock extends AbstractNpcAI

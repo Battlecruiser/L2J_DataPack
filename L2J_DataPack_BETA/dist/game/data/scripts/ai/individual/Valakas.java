@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -32,6 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -40,129 +42,67 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Valakas AI
+ * Valakas' AI.
  * @author Tryskell
  */
 public class Valakas extends AbstractNpcAI
 {
-	private long _timeTracker = 0; // Time tracker for last attack on Valakas.
-	private L2Playable _actualVictim; // Actual target of Valakas.
-	
+	// NPCs
 	private static final int VALAKAS = 29028;
-	
+	// Skills
+	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
+	private static final SkillHolder[] VALAKAS_REGULAR_SKILLS =
+	{
+		new SkillHolder(4681, 1), // Valakas Trample
+		new SkillHolder(4682, 1), // Valakas Trample
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4689, 1) // Valakas Fear TODO: has two levels only level one is used.
+	};
+	private static final SkillHolder[] VALAKAS_LOWHP_SKILLS =
+	{
+		new SkillHolder(4681, 1), // Valakas Trample
+		new SkillHolder(4682, 1), // Valakas Trample
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
+		new SkillHolder(4690, 1) // Valakas Meteor Storm
+	};
+	private static final SkillHolder[] VALAKAS_AOE_SKILLS =
+	{
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4684, 1), // Valakas Dragon Breath
+		new SkillHolder(4685, 1), // Valakas Tail Stomp
+		new SkillHolder(4686, 1), // Valakas Tail Stomp
+		new SkillHolder(4688, 1), // Valakas Stun
+		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
+		new SkillHolder(4690, 1) // Valakas Meteor Storm
+	};
+	// Locations
+	private static final Location TELEPORT_CUBE_LOCATIONS[] =
+	{
+		new Location(214880, -116144, -1644),
+		new Location(213696, -116592, -1644),
+		new Location(212112, -116688, -1644),
+		new Location(211184, -115472, -1664),
+		new Location(210336, -114592, -1644),
+		new Location(211360, -113904, -1644),
+		new Location(213152, -112352, -1644),
+		new Location(214032, -113232, -1644),
+		new Location(214752, -114592, -1644),
+		new Location(209824, -115568, -1421),
+		new Location(210528, -112192, -1403),
+		new Location(213120, -111136, -1408),
+		new Location(215184, -111504, -1392),
+		new Location(215456, -117328, -1392),
+		new Location(213200, -118160, -1424)
+	};
 	// Valakas status.
 	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked.
 	private static final byte WAITING = 1; // Valakas is spawned and someone has entered, triggering a 30 minute window for additional people to enter. Entry is unlocked.
 	private static final byte FIGHTING = 2; // Valakas is engaged in battle, annihilating his foes. Entry is locked.
 	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked.
-	
-	private static final int[] VALAKAS_REGULAR_SKILLS =
-	{
-		4681,
-		4682,
-		4683,
-		4689
-	};
-	
-	private static final int[] VALAKAS_LOWHP_SKILLS =
-	{
-		4681,
-		4682,
-		4683,
-		4689,
-		4690
-	};
-	
-	private static final int[] VALAKAS_AOE_SKILLS =
-	{
-		4683,
-		4684,
-		4685,
-		4686,
-		4688,
-		4689,
-		4690
-	};
-	
-	private static final int _teleportCubeLocation[][] =
-	{
-		{
-			214880,
-			-116144,
-			-1644
-		},
-		{
-			213696,
-			-116592,
-			-1644
-		},
-		{
-			212112,
-			-116688,
-			-1644
-		},
-		{
-			211184,
-			-115472,
-			-1664
-		},
-		{
-			210336,
-			-114592,
-			-1644
-		},
-		{
-			211360,
-			-113904,
-			-1644
-		},
-		{
-			213152,
-			-112352,
-			-1644
-		},
-		{
-			214032,
-			-113232,
-			-1644
-		},
-		{
-			214752,
-			-114592,
-			-1644
-		},
-		{
-			209824,
-			-115568,
-			-1421
-		},
-		{
-			210528,
-			-112192,
-			-1403
-		},
-		{
-			213120,
-			-111136,
-			-1408
-		},
-		{
-			215184,
-			-111504,
-			-1392
-		},
-		{
-			215456,
-			-117328,
-			-1392
-		},
-		{
-			213200,
-			-118160,
-			-1424
-		}
-	};
-	
+	// Misc
+	private long _timeTracker = 0; // Time tracker for last attack on Valakas.
+	private L2Playable _actualVictim; // Actual target of Valakas.
 	private static L2BossZone ZONE;
 	
 	private Valakas(String name, String descr)
@@ -410,9 +350,9 @@ public class Valakas extends AbstractNpcAI
 			{
 				ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 10, 0, 300, 250, 20, -20, 1, 1));
 				
-				for (int[] element : _teleportCubeLocation)
+				for (Location loc : TELEPORT_CUBE_LOCATIONS)
 				{
-					addSpawn(31759, element[0], element[1], element[2], 0, false, 900000);
+					addSpawn(31759, loc, false, 900000);
 				}
 				
 				startQuestTimer("remove_players", 900000, null, null);
@@ -551,7 +491,7 @@ public class Valakas extends AbstractNpcAI
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(getRandomSkill(npc), 1);
+		final L2Skill skill = getRandomSkill(npc).getSkill();
 		
 		// Cast the skill or follow the target.
 		if (Util.checkIfInRange((skill.getCastRange() < 600) ? 600 : skill.getCastRange(), npc, _actualVictim, true))
@@ -573,16 +513,16 @@ public class Valakas extends AbstractNpcAI
 	 * Valakas will mostly use utility skills. If Valakas feels surrounded, he will use AoE skills.<br>
 	 * Lower than 50% HPs, he will begin to use Meteor skill.
 	 * @param npc valakas
-	 * @return a usable skillId
+	 * @return a skill holder
 	 */
-	private int getRandomSkill(L2Npc npc)
+	private SkillHolder getRandomSkill(L2Npc npc)
 	{
 		final int hpRatio = (int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100);
 		
-		// Valakas Lava Skin is prioritary.
-		if ((hpRatio < 75) && (getRandom(150) == 0) && (npc.getFirstEffect(4680) == null))
+		// Valakas Lava Skin has priority.
+		if ((hpRatio < 75) && (getRandom(150) == 0) && (npc.getFirstEffect(VALAKAS_LAVA_SKIN.getSkillId()) == null))
 		{
-			return 4680;
+			return VALAKAS_LAVA_SKIN;
 		}
 		
 		// Valakas will use mass spells if he feels surrounded.

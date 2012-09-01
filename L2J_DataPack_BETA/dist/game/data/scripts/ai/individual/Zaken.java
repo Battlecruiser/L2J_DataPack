@@ -14,8 +14,6 @@
  */
 package ai.individual;
 
-import java.util.logging.Logger;
-
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -42,8 +40,6 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  */
 public class Zaken extends AbstractNpcAI
 {
-	protected static final Logger log = Logger.getLogger(Zaken.class.getName());
-	
 	private int _1001 = 0; // used for first cancel of QuestTimer "1001"
 	private int _ai0 = 0; // used for zaken coords updater
 	private int _ai1 = 0; // used for X coord tracking for non-random teleporting in zaken's self teleport skill
@@ -152,7 +148,7 @@ public class Zaken extends AbstractNpcAI
 								}
 								catch (Throwable e)
 								{
-									log.warning("Cannot close door ID: 21240006 " + e);
+									_log.warning("Cannot close door ID: 21240006 " + e);
 								}
 							}
 						}, 300000L);
@@ -160,7 +156,7 @@ public class Zaken extends AbstractNpcAI
 				}
 				catch (Throwable e)
 				{
-					log.warning("Cannot open door ID: 21240006 " + e);
+					_log.warning("Cannot open door ID: 21240006 " + e);
 				}
 			}
 		}, 2000L, 600000L);
@@ -215,7 +211,7 @@ public class Zaken extends AbstractNpcAI
 	{
 		if (npc == null)
 		{
-			log.warning("Zaken AI failed to load, missing Zaken in grandboss_data.sql");
+			_log.warning("Zaken AI failed to load, missing Zaken in grandboss_data.sql");
 			return;
 		}
 		GrandBossManager.getInstance().addBoss(npc);
@@ -230,7 +226,7 @@ public class Zaken extends AbstractNpcAI
 		_quest2 = 3;
 		if (_Zone == null)
 		{
-			log.warning("Zaken AI failed to load, missing zone for Zaken");
+			_log.warning("Zaken AI failed to load, missing zone for Zaken");
 			return;
 		}
 		if (_Zone.isInsideZone(npc))

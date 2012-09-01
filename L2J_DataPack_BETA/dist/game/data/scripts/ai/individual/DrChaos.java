@@ -25,12 +25,11 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
 /**
- * DrChaos AI
+ * DrChaos' AI
  * @author Kerberos
  */
 public class DrChaos extends Quest
 {
-	
 	private static final int DOCTER_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
 	private static final int CHAOS_GOLEM = 25703;

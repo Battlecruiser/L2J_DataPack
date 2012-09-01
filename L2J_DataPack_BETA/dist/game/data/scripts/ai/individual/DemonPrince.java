@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
+ * Demon Prince's AI.
  * @author GKR
  */
 public class DemonPrince extends AbstractNpcAI
@@ -40,7 +41,7 @@ public class DemonPrince extends AbstractNpcAI
 		new SkillHolder(5376, 6)
 	};
 	
-	private static final Map<Integer, Boolean> _attackState = new FastMap<>();
+	private static final Map<Integer, Boolean> ATTACK_STATE = new FastMap<>();
 	
 	private DemonPrince(String name, String descr)
 	{
@@ -65,17 +66,17 @@ public class DemonPrince extends AbstractNpcAI
 	{
 		if (!npc.isDead())
 		{
-			if (!_attackState.containsKey(npc.getObjectId()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)))
+			if (!ATTACK_STATE.containsKey(npc.getObjectId()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)))
 			{
 				npc.doCast(UD.getSkill());
 				spawnMinions(npc);
-				_attackState.put(npc.getObjectId(), false);
+				ATTACK_STATE.put(npc.getObjectId(), false);
 			}
-			else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) && _attackState.containsKey(npc.getObjectId()) && (_attackState.get(npc.getObjectId()) == false))
+			else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) && ATTACK_STATE.containsKey(npc.getObjectId()) && (ATTACK_STATE.get(npc.getObjectId()) == false))
 			{
 				npc.doCast(UD.getSkill());
 				spawnMinions(npc);
-				_attackState.put(npc.getObjectId(), true);
+				ATTACK_STATE.put(npc.getObjectId(), true);
 			}
 			
 			if (getRandom(1000) < 10)
@@ -89,7 +90,7 @@ public class DemonPrince extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		_attackState.remove(npc.getObjectId());
+		ATTACK_STATE.remove(npc.getObjectId());
 		return super.onKill(npc, killer, isPet);
 	}
 	

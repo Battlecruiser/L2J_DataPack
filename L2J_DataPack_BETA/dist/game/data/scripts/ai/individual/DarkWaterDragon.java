@@ -17,7 +17,6 @@ package ai.individual;
 import java.util.Map;
 import java.util.Set;
 
-import javolution.util.FastMap;
 import javolution.util.FastSet;
 import ai.npc.AbstractNpcAI;
 
@@ -27,7 +26,11 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.util.L2FastMap;
 
+/**
+ * Dark Water Dragon's AI.
+ */
 public class DarkWaterDragon extends AbstractNpcAI
 {
 	private static final int DRAGON = 22267;
@@ -38,7 +41,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	private static final int DETRACTOR2 = 22271;
 	private static Set<Integer> SECOND_SPAWN = new FastSet<>(); // Used to track if second Shades were already spawned
 	private static Set<Integer> MY_TRACKING_SET = new FastSet<>(); // Used to track instances of npcs
-	private static Map<Integer, L2PcInstance> ID_MAP = new FastMap<Integer, L2PcInstance>().shared(); // Used to track instances of npcs
+	private static Map<Integer, L2PcInstance> ID_MAP = new L2FastMap<>(true); // Used to track instances of npcs
 	
 	private DarkWaterDragon(String name, String descr)
 	{
