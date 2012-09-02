@@ -14,21 +14,17 @@
  */
 package ai.group_template;
 
-import java.util.Collection;
-
-import javolution.util.FastList;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -38,69 +34,124 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Monastery AI.
- * @author Kerberos
+ * @author Kerberos, nonom
  */
 public class Monastery extends AbstractNpcAI
 {
-	private static final int[] MOBS1 =
+	private static final int CAPTAIN = 18910;
+	private static final int KNIGHT = 18909;
+	private static final int SCARECROW = 18912;
+	
+	private static final int[] SOLINA_CLAN =
 	{
-		22124,
-		22125,
-		22126,
-		22127,
-		22129
-	};
-	private static final int[] MOBS2 =
-	{
-		22134,
-		22135
+		22789, // Guide Solina
+		22790, // Seeker Solina
+		22791, // Savior Solina
+		22793, // Ascetic Solina
 	};
 	
-	private static final NpcStringId[] MESSAGES =
+	private static final int[] DIVINITY_CLAN =
 	{
-		NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION,
+		22794, // Divinity Judge
+		22795, // Divinity Manager
+	};
+
+	private static final NpcStringId[] SOLINA_KNIGHTS_MSG =
+	{
+		NpcStringId.PUNISH_ALL_THOSE_WHO_TREAD_FOOTSTEPS_IN_THIS_PLACE,
+		NpcStringId.WE_ARE_THE_SWORD_OF_TRUTH_THE_SWORD_OF_SOLINA,
+		NpcStringId.WE_RAISE_OUR_BLADES_FOR_THE_GLORY_OF_SOLINA
+	};
+	
+	private static final NpcStringId[] DIVINITY_MSG =
+	{
 		NpcStringId.S1_WHY_WOULD_YOU_CHOOSE_THE_PATH_OF_DARKNESS,
 		NpcStringId.S1_HOW_DARE_YOU_DEFY_THE_WILL_OF_EINHASAD
 	};
 	
+	private static final SkillHolder DECREASE_SPEED = new SkillHolder(4589, 8);
+	
 	private Monastery(String name, String descr)
 	{
 		super(name, descr);
-		registerMobs(MOBS1, QuestEventType.ON_AGGRO_RANGE_ENTER, QuestEventType.ON_SPAWN, QuestEventType.ON_SPELL_FINISHED);
-		registerMobs(MOBS2, QuestEventType.ON_SKILL_SEE);
+		addAggroRangeEnterId(SOLINA_CLAN);
+		addAggroRangeEnterId(CAPTAIN, KNIGHT);
+		addSpellFinishedId(SOLINA_CLAN);
+		addSkillSeeId(DIVINITY_CLAN);
+		addAttackId(KNIGHT, CAPTAIN);
+		addSpawnId(KNIGHT);
+		
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		{
+			switch (spawn.getNpcid())
+			{
+				case KNIGHT:
+					startQuestTimer("training", 5000, spawn.getLastSpawn(), null, true);
+					break;
+				case SCARECROW:
+					spawn.getLastSpawn().setIsInvul(true);
+					spawn.getLastSpawn().disableCoreAI(true);
+					break;
+			}
+		}
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		switch (event)
+		{
+			case "training":
+				if (!npc.isInCombat() && getRandom(100) < 25)
+				{
+					for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(300))
+					{
+						if (!character.isPlayable() && (((L2Npc) character).getNpcId() == SCARECROW))
+						{
+							for (L2Skill skill : npc.getAllSkills())
+							{
+								if (skill.isActive())
+								{
+									npc.disableSkill(skill, 0);
+								}
+							}
+							npc.setRunning();
+							((L2Attackable) npc).addDamageHate(character, 0, 100);
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
+							break;
+						}
+					}
+				}
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if (Util.contains(MOBS1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
+		if (player.getActiveWeaponInstance() == null)
 		{
-			if (player.getActiveWeaponInstance() != null)
+			npc.setTarget(null);
+			((L2Attackable) npc).disableAllSkills();
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			return super.onAggroRangeEnter(npc, player, isPet);
+		}
+		
+		if (player.isVisible() && !player.isGM())
+		{
+			npc.setRunning();
+			npc.setTarget(player);
+			((L2Attackable) npc).enableAllSkills();
+			if (Util.contains(SOLINA_CLAN, npc.getNpcId()))
 			{
-				npc.setTarget(player);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MESSAGES[0]));
-				switch (npc.getNpcId())
+				if (getRandom(10) < 3)
 				{
-					case 22124:
-					case 22126:
-					{
-						L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
-						npc.doCast(skill);
-						break;
-					}
-					default:
-					{
-						npc.setIsRunning(true);
-						((L2Attackable) npc).addDamageHate(player, 0, 999);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-						break;
-					}
+					broadcastNpcSay(npc, Say2.ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
 				}
+				npc.doCast(DECREASE_SPEED.getSkill());
 			}
-			else if (((L2Attackable) npc).getMostHated() == null)
-			{
-				return null;
-			}
+			((L2Attackable) npc).addDamageHate(player, 0, 100);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player, null);
 		}
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
@@ -108,21 +159,18 @@ public class Monastery extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (Util.contains(MOBS2, npc.getNpcId()))
+		if ((skill.getSkillType() == L2SkillType.AGGDAMAGE) && (targets.length != 0))
 		{
-			if ((skill.getSkillType() == L2SkillType.AGGDAMAGE) && (targets.length != 0))
+			for (L2Object obj : targets)
 			{
-				for (L2Object obj : targets)
+				if (obj.equals(npc))
 				{
-					if (obj.equals(npc))
-					{
-						NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MESSAGES[getRandom(2) + 1]);
-						packet.addStringParameter(caster.getName());
-						npc.broadcastPacket(packet);
-						((L2Attackable) npc).addDamageHate(caster, 0, 999);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
-						break;
-					}
+					NpcSay packet = new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), DIVINITY_MSG[getRandom(1)]);
+					packet.addStringParameter(caster.getName());
+					npc.broadcastPacket(packet);
+					((L2Attackable) npc).addDamageHate(caster, 0, 999);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
+					break;
 				}
 			}
 		}
@@ -130,61 +178,26 @@ public class Monastery extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	{
+		if (getRandom(10) < 1)
+		{
+			broadcastNpcSay(npc, Say2.ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
+		}
+		return super.onAttack(npc, player, damage, isPet);
+	}
+	
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(MOBS1, npc.getNpcId()))
-		{
-			FastList<L2Playable> result = new FastList<>();
-			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-			for (L2Object obj : objs)
-			{
-				if ((obj instanceof L2PcInstance) || (obj instanceof L2PetInstance))
-				{
-					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((L2Character) obj).isDead())
-					{
-						result.add((L2Playable) obj);
-					}
-				}
-			}
-			if (!result.isEmpty() && (result.size() != 0))
-			{
-				Object[] characters = result.toArray();
-				for (Object obj : characters)
-				{
-					L2Playable target = (L2Playable) (obj instanceof L2PcInstance ? obj : ((L2Summon) obj).getOwner());
-					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
-					{
-						npc.setTarget(target);
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MESSAGES[0]));
-						switch (npc.getNpcId())
-						{
-							case 22124:
-							case 22126:
-							case 22127:
-							{
-								L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
-								npc.doCast(skill);
-								break;
-							}
-							default:
-							{
-								npc.setIsRunning(true);
-								((L2Attackable) npc).addDamageHate(target, 0, 999);
-								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-								break;
-							}
-						}
-					}
-				}
-			}
-		}
+		broadcastNpcSay(npc, Say2.ALL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if (Util.contains(MOBS1, npc.getNpcId()) && (skill.getId() == 4589))
+		if (skill.getId() == DECREASE_SPEED.getSkillId())
 		{
 			npc.setIsRunning(true);
 			((L2Attackable) npc).addDamageHate(player, 0, 999);
@@ -195,6 +208,6 @@ public class Monastery extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Monastery(Monastery.class.getSimpleName(), "ai");
+		new Monastery(Monastery.class.getSimpleName(), "ai/group_template");
 	}
 }
