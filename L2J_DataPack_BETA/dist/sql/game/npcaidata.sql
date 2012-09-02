@@ -4874,11 +4874,11 @@ INSERT INTO `npcaidata` VALUES
 (22786, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
 (22787, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
 (22788, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "xel_private_clan", 400, "null", 0, 0, "fighter"), -- Sel Mahum Squad Leader
-(22789, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Guide Solina
-(22790, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Seeker Solina
-(22791, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Savior Solina
-(22792, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Disciple Solina
-(22793, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Ascetic Solina
+(22789, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Guide Solina
+(22790, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Seeker Solina
+(22791, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Savior Solina
+(22792, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Disciple Solina
+(22793, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "solina_n_clan", 300, "null", 0, 0, "balanced"), -- Ascetic Solina
 (22794, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, "divine_n_clan", 300, "null", 0, 0, "balanced"), -- Divinity Judge
 (22795, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, "divine_n_clan", 300, "null", 0, 0, "balanced"), -- Divinity Manager
 (22796, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, "divine_n_clan", 300, "null", 0, 0, "balanced"), -- Divinity Supervisor

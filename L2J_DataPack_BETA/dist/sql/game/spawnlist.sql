@@ -32920,6 +32920,9 @@ INSERT INTO `spawnlist` VALUES
 ("unset", 1, 32028, 112801, -76510, 85, 0, 0, 0, 60, 0, 0),
 -- Greymore
 ("MonasteryOfSilence_NPC", 1, 32757, 119120, -80576, -2688, 0, 0, 33792, 60, 0, 0),
+-- Escort Checkers
+("escort_checker_q0457", 1, 32764, 108457, -87835, -2888, 0, 0, 0, 60, 0, 0),
+("escort_checker_q0457", 1, 32764, 122985, -74841, -2880, 0, 0, 0, 60, 0, 0),
 -- Aquilani
 ("MonasteryOfSilence_NPC", 1, 32780, 108272, -88032, -2880, 0, 0, 21220, 60, 0, 0),
 
