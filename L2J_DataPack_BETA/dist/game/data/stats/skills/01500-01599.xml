@@ -1193,7 +1193,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="220" />
 		<set name="mpInitialConsume" val="55" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
@@ -1324,7 +1324,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="90" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1344,12 +1344,12 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="35" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PET" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="multi_buff">
+			<effect name="Buff" abnormalTime="1200" val="0">
 				<mul order="0x30" stat="pAtk" val="1.5" />
 				<mul order="0x30" stat="pDef" val="1.5" />
 				<mul order="0x30" stat="mAtk" val="1.25" />
