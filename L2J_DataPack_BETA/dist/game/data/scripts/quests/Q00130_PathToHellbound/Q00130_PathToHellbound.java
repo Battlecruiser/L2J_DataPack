@@ -35,6 +35,14 @@ public class Q00130_PathToHellbound extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
+	public Q00130_PathToHellbound(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(CASIAN);
+		addTalkId(CASIAN, GALATE);
+		registerQuestItems(CASIANS_BLUE_CRYSTAL);
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -129,6 +137,27 @@ public class Q00130_PathToHellbound extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "30612-04.htm":
+			{
+				htmltext = event;
+				break;
+			}
+			case "32292-02.html":
+			{
+				if (st.isCond(1))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "32292-06.html":
+			{
+				if (st.isCond(3))
+				{
+					htmltext = event;
+				}
+				break;
+			}
 			case "30612-05.html":
 			{
 				st.startQuest();
@@ -137,7 +166,7 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case "30612-08.html":
 			{
-				if (st.isCond(1))
+				if (st.isCond(2))
 				{
 					st.giveItems(CASIANS_BLUE_CRYSTAL, 1);
 					st.setCond(3, true);
@@ -165,14 +194,6 @@ public class Q00130_PathToHellbound extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00130_PathToHellbound(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(CASIAN);
-		addTalkId(CASIAN, GALATE);
-		registerQuestItems(CASIANS_BLUE_CRYSTAL);
 	}
 	
 	public static void main(String[] args)
