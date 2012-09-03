@@ -167,7 +167,7 @@ public class Q00309_ForAGoodCause extends Quest
 			}
 			else if (event.endsWith("180"))
 			{
-				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, FALLEN_MUCROKIAN_HIDE, 180);
+				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, MUCROKIAN_HIDE, 180);
 			}
 		}
 		else if (event.startsWith("gloves"))
