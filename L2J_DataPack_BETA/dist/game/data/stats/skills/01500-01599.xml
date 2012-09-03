@@ -1439,7 +1439,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1471,7 +1471,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
@@ -1503,7 +1503,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
@@ -1524,15 +1524,21 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="6706" />
 		</for>
 	</skill>
-	<skill id="1565" levels="6" name="Mana Pump">
+	<skill id="1565" levels="6" name="Mana Pump" enchantGroup1="1">
 		<!-- High Five Skill -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1maxMp"> 203 206 210 213 216 220 223 226 230 233 236 240 243 246 250 253 256 260 263 266 270 273 276 280 283 286 290 293 296 300 </table>
 		<table name="#magicLvl"> 40 49 58 64 68 72 </table>
 		<table name="#maxMp"> 70 100 140 150 180 200 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<add order="0x40" stat="maxMp" val="#maxMp" />
 		</for>
+		<enchant1for>
+			<add order="0x40" stat="maxMp" val="#ench1maxMp" />
+		</enchant1for>
 	</skill>
 </list>
