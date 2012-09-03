@@ -144,7 +144,7 @@ INSERT INTO `random_spawn` VALUES
 (133,32014,1,-1,1800000,1800000,'false','true'), -- Ivan (Runaway Youth quest)
 (134,32013,1,-1,1800000,1800000,'false','true'), -- Suki (Wild Maiden quest)
 (135,32049,1,-1,1200000,1200000,'false','true'), -- Rooney (Blacksmith of wind Rooney)
-(136,32012,1,-1,1800000,1800000,'false','true'), -- Tantan (Aged ExAdventurer quest)
+(136,32012,1,-1,3600000,0,'false','true'), -- Tantan (Aged ExAdventurer quest)
 (137,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
 (138,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
 (139,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
