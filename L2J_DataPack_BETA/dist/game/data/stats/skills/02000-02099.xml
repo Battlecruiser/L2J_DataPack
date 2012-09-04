@@ -388,11 +388,13 @@
 		</for>
 	</skill>
 	<skill id="2046" levels="2" name="Wolf's Necklace">
-		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="5000" />
-		<set name="skillType" val="COREDONE" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="COREDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<!-- TODO: Implement conditions, unhardcode. -->
 	</skill>
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
