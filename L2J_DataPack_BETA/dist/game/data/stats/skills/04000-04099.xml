@@ -165,6 +165,8 @@
 	<skill id="4018" levels="1" name="Decrease Speed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1000" />
@@ -186,6 +188,8 @@
 	<skill id="4019" levels="1" name="Decrease Speed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1500" />
@@ -319,6 +323,8 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -338,6 +344,8 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -358,6 +366,8 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="reuseDelay" val="8000" />
@@ -381,6 +391,8 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="reuseDelay" val="8000" />
@@ -436,6 +448,8 @@
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 11 16 23 31 41 51 61 66 70 73 76 78 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
@@ -463,6 +477,8 @@
 		<table name="#dmg"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
@@ -488,6 +504,8 @@
 		<table name="#dmg"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="35" /> <!-- Base Land Rate -->
@@ -514,6 +532,8 @@
 		<table name="#pAtk"> 0.83 0.8 0.77 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
@@ -541,6 +561,8 @@
 		<table name="#magicLvl"> 10 20 30 50 70 </table>
 		<table name="#time"> 5 10 10 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="80" />
@@ -680,6 +702,8 @@
 	<skill id="4046" levels="12" name="Sleep">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -705,6 +729,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -729,6 +755,8 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 10 10 </table>
 		<table name="#runSpd"> 1.5 1.8 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_up_special" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -789,6 +817,8 @@
 		<table name="#abnormalLvl"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
 		<table name="#dot"> 123 150 174 174 174 189 189 189 189 198 198 198 198 198 198 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="poison" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="1" />
@@ -807,6 +837,8 @@
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_down" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
@@ -826,6 +858,8 @@
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
@@ -845,6 +879,8 @@
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
@@ -923,6 +959,8 @@
 	<skill id="4063" levels="1" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="50" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="3600" />
@@ -941,6 +979,8 @@
 	<skill id="4064" levels="1" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="1300" />
 		<set name="hitTime" val="4000" />
@@ -1054,6 +1094,8 @@
 	<skill id="4070" levels="1" name="Decrease Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1081,6 +1123,8 @@
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
@@ -1104,6 +1148,8 @@
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
@@ -1129,6 +1175,8 @@
 		<table name="#magicLvl"> 30 70 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
@@ -1150,6 +1198,8 @@
 	<skill id="4075" levels="12" name="Shock">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1175,6 +1225,8 @@
 		<table name="#runSpd"> 0.9 0.8 0.7 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1275,6 +1327,8 @@
 	</skill>
 	<skill id="4082" levels="1" name="Poison of Death">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="fatal_poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -1351,6 +1405,8 @@
 		<table name="#damage"> 54 75 102 132 162 186 201 201 210 210 213 213 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -1374,6 +1430,8 @@
 	</skill>
 	<skill id="4089" levels="1" name="NPC Bear Spirit Totem">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="possession" />
 		<set name="magicLvl" val="40" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -1390,6 +1448,8 @@
 	</skill>
 	<skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="possession" />
 		<set name="magicLvl" val="40" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -1412,6 +1472,8 @@
 		<table name="#accCombat"> 3 7 7 </table>
 		<table name="#maxHp"> 1.14 1.21 1.21 </table>
 		<table name="#rEvas"> 10 10 5 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="possession" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -1433,6 +1495,8 @@
 	</skill>
 	<skill id="4092" levels="1" name="NPC Puma Spirit Totem">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="possession" />
 		<set name="magicLvl" val="40" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />
@@ -1488,6 +1552,8 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#accCombat"> 6 8 10 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ab_hawk_eye" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
@@ -1509,6 +1575,8 @@
 		<table name="#hot"> 21 36 54 81 111 138 165 69 96 126 153 174 </table>
 		<table name="#power"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
@@ -1528,6 +1596,8 @@
 	<skill id="4098" levels="12" name="Magic Skill Block">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1560,6 +1630,8 @@
 		<table name="#mDef"> 0.9 0.84 </table>
 		<table name="#rEvas"> 5 8 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="berserker" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="8000" />

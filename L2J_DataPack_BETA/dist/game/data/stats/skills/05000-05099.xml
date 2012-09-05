@@ -27,6 +27,8 @@
 	</skill>
 	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -60,6 +62,8 @@
 	<skill id="5004" levels="1" name="Dimensional Stun">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="fly_away" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
 		<set name="flyRadius" val="300" />
@@ -81,6 +85,8 @@
 	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -210,6 +216,8 @@
 	<skill id="5012" levels="1" name="Breath of Scarlet">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
@@ -285,6 +293,8 @@
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1000" />
@@ -306,6 +316,8 @@
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="big_body" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="1000" />
@@ -353,6 +365,8 @@
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
 		<!-- Crumples to the ground because of unknown power. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="5000" />
@@ -361,6 +375,8 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -372,6 +388,8 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -380,6 +398,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5023" levels="12" name="Hold">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -389,6 +409,8 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -457,6 +479,8 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Spd">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_up" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -489,6 +513,8 @@
 		<table name="#mpConsume"> 1 1 1 1 1 1 1 193 201 207 209 209 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -558,6 +584,8 @@
 		<table name="#reuseDelay"> 1800000 1800000 5000 </table>
 		<table name="#time"> 30 30 5 </table>
 		<table name="#abnormalLvl"> 1 2 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -816,6 +844,8 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5068" levels="12" name="Decrease Speed">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -826,6 +856,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -836,6 +868,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="casting_time_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -846,6 +880,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5071" levels="12" name="Decrease P. Atk.">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -856,6 +892,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="ma_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -931,6 +969,8 @@
 	</skill>
 	<skill id="5079" levels="1" name="NPC Focused Haste">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="60" />
 		<set name="magicLvl" val="85" />
@@ -950,6 +990,8 @@
 	</skill>
 	<skill id="5080" levels="1" name="NPC Mighty Haste">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="60" />
@@ -969,6 +1011,8 @@
 	<skill id="5081" levels="4" name="Silence">
 		<table name="#mpConsume"> 75 75 75 20 </table>
 		<table name="#power"> 1715 3540 7306 8602 </table>
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="silence_physical" />
 		<set name="blowChance" val="20" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="80" />
@@ -1000,6 +1044,8 @@
 	<skill id="5083" levels="4" name="Stun">
 		<table name="#mpConsume"> 93 93 93 5 </table>
 		<table name="#power"> 1715 3540 7305 8602 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="85" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1020,6 +1066,8 @@
 		</for>
 	</skill>
 	<skill id="5084" levels="4" name="NPC Blinding Blow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_up_special" />
 		<set name="blowChance" val="15" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="83" />
@@ -1041,6 +1089,8 @@
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
 		<!-- Temporarily stunned and Immobilized. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="anesthesia" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1050,6 +1100,8 @@
 	</skill>
 	<skill id="5086" levels="1" name="Deadly Poison">
 		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="critical_poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1114,6 +1166,8 @@
 	<skill id="5092" levels="1" name="Antharas Terror">
 		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2700" />
 		<set name="effectRange" val="1100" />
@@ -1200,6 +1254,8 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="seizure_penalty" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />

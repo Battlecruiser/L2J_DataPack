@@ -24,6 +24,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -50,6 +52,8 @@
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -74,6 +78,8 @@
 		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
@@ -96,6 +102,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
@@ -123,6 +131,8 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -143,6 +153,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -166,6 +178,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -191,6 +205,8 @@
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -214,6 +230,8 @@
 		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -555,6 +573,8 @@
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="lvlDepend" val="2" />
@@ -882,6 +902,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -908,6 +930,8 @@
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -932,6 +956,8 @@
 		<table name="#dot"> 725 725 785 785 785 840 840 840 840 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -955,6 +981,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -980,6 +1008,8 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1001,6 +1031,8 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1021,6 +1053,8 @@
 	</skill>
 	<skill id="5368" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -1037,6 +1071,8 @@
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1055,6 +1091,8 @@
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -1365,6 +1403,8 @@
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="lvlDepend" val="2" />
@@ -1393,6 +1433,8 @@
 		<table name="#mpConsume"> 23 42 78 </table>
 		<table name="#mpInitialConsume"> 6 11 20 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1418,6 +1460,8 @@
 		<set name="hitTime" val="15000" />
 	</skill>
 	<skill id="5397" levels="3" name="NPC - Spell Force">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="magical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1442,6 +1486,8 @@
 	<skill id="5399" levels="1" name="Heat of Desert">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="hot_ground" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />

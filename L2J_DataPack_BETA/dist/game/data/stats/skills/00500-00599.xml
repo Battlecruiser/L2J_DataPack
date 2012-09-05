@@ -50,6 +50,8 @@
 		<table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2Time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1800" />
@@ -371,6 +373,8 @@
 		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="lvlDepend" val="1" />
 		<set name="itemConsumeId" val="10113" />
 		<set name="itemConsumeCount" val="1" />
@@ -651,6 +655,8 @@
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#enchabnormalLvl"> 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 12 </table>
 		<table name="#aggroPoints"> 566 582 597 611 624 635 646 655 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="snipe" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="75000" />
@@ -721,6 +727,8 @@
 		<table name="#bowWpnVuln"> 1.12 1.16 1.2 1.24 </table>
 		<table name="#crossbowWpnVuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="real_target" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1500" />
@@ -777,6 +785,8 @@
 		<table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="dark_seed" />
 		<set name="lvlDepend" val="2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -880,6 +890,8 @@
 	</skill>
 	<skill id="527" levels="1" name="Iron Shield">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="iron_shield" />
 		<set name="aggroPoints" val="673" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="79" />
@@ -897,6 +909,8 @@
 		<table name="#ench1mDef"> 2790 2880 2970 3060 3150 3240 3330 3420 3510 3600 3690 3780 3870 3960 4050 </table>
 		<table name="#ench2Time"> 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 </table>
 		<table name="#ench3Reuse"> 870000 840000 811000 781000 751000 722000 692000 662000 633000 603000 573000 544000 514000 484000 455000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transfer_damage" />
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A2" />
@@ -930,6 +944,8 @@
 	<skill id="529" levels="1" name="Song of Elemental" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="song_of_elemental" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY" />
@@ -960,6 +976,8 @@
 	<skill id="530" levels="1" name="Dance of Alignment" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 52 50 48 46 45 43 41 39 38 36 34 32 31 29 27 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="dance_of_alignment" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY" />
@@ -987,6 +1005,8 @@
 		</enchant1for>
 	</skill>
 	<skill id="531" levels="1" name="Critical Wound">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="t_crt_rate_up" />
 		<set name="castRange" val="40" />
 		<set name="lvlDepend" val="2" />
 		<set name="effectRange" val="400" />
@@ -1047,6 +1067,8 @@
 		</for>
 	</skill>
 	<skill id="536" levels="1" name="Over the Body">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="cpConsume" val="99999" /> <!-- When the skill is used, all of your CP are consumed. -->
 		<set name="hitTime" val="2000" />
 		<set name="mpConsume" val="143" />
@@ -1070,6 +1092,8 @@
 	</skill>
 	<skill id="537" levels="1" name="Spoil Bomb">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="spoil_bomb" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
@@ -1093,6 +1117,8 @@
 	</skill>
 	<skill id="538" levels="1" name="Final Form">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="hpConsume" val="200" />
 		<set name="mpConsume" val="70" />
@@ -1158,6 +1184,8 @@
 	</skill>
 	<skill id="541" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1183,6 +1211,8 @@
 	</skill>
 	<skill id="542" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1208,6 +1238,8 @@
 	</skill>
 	<skill id="543" levels="1" name="Transform Grail Apostle">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1233,6 +1265,8 @@
 	</skill>
 	<skill id="544" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1258,6 +1292,8 @@
 	</skill>
 	<skill id="545" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1283,6 +1319,8 @@
 	</skill>
 	<skill id="546" levels="1" name="Transform Unicorn">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1308,6 +1346,8 @@
 	</skill>
 	<skill id="547" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1333,6 +1373,8 @@
 	</skill>
 	<skill id="548" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1358,6 +1400,8 @@
 	</skill>
 	<skill id="549" levels="1" name="Transform Lilim Knight">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1383,6 +1427,8 @@
 	</skill>
 	<skill id="550" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1408,6 +1454,8 @@
 	</skill>
 	<skill id="551" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1433,6 +1481,8 @@
 	</skill>
 	<skill id="552" levels="1" name="Transform Golem Guardian">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1458,6 +1508,8 @@
 	</skill>
 	<skill id="553" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1483,6 +1535,8 @@
 	</skill>
 	<skill id="554" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1508,6 +1562,8 @@
 	</skill>
 	<skill id="555" levels="1" name="Transform Inferno Drake">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1533,6 +1589,8 @@
 	</skill>
 	<skill id="556" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1558,6 +1616,8 @@
 	</skill>
 	<skill id="557" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1583,6 +1643,8 @@
 	</skill>
 	<skill id="558" levels="1" name="Transform Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -1612,6 +1674,8 @@
 		<table name="#power"> 900 1013 1129 1248 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1655,6 +1719,8 @@
 	</skill>
 	<skill id="561" levels="4" name="Bless of Angel">
 		<table name="#mpConsume"> 61 63 67 70 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="dance_of_warrior" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -1670,6 +1736,8 @@
 	</skill>
 	<skill id="562" levels="4" name="Wind of Angel">
 		<table name="#mpConsume"> 61 63 67 70 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="song_of_water" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -1708,6 +1776,8 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#pAtkSpd"> 0.9 0.85 0.8 0.75 </table>
 		<table name="#runSpd"> 0.8 0.7 0.65 0.6 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="skillType" val="DEBUFF" />
@@ -1837,6 +1907,8 @@
 		<table name="#mpInitialConsume"> 5 6 6 7 </table>
 		<table name="#mpConsume"> 18 21 23 26 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="poison" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1876,6 +1948,8 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 625 703 784 867 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1979,6 +2053,8 @@
 		<table name="#power"> 625 703 784 867 </table>
 		<table name="#dot"> 81 81 93 93 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="dot_attr" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="PDAM" />
@@ -2005,6 +2081,8 @@
 		<table name="#pDef"> 1000 1100 1200 1300 </table>
 		<table name="#mDef"> 800 900 1000 1100 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="BUFF" />
@@ -2046,6 +2124,8 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#accCombat"> 6 7 8 9 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="hit_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="150" />
@@ -2069,6 +2149,8 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 875 984 1098 1213 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2091,6 +2173,8 @@
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
 		<table name="#mpConsume"> 61 63 67 70 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stealth" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2000" />
 		<set name="target" val="TARGET_SELF" />
@@ -2119,6 +2203,8 @@
 	</skill>
 	<skill id="585" levels="1" name="Fast Moving">
 		<!-- CT2.2 retail confirmed -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up_special" />
 		<set name="mpConsume" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="30000" />
@@ -2168,6 +2254,8 @@
 		<!-- CT2.2 retail confirmed -->
 		<table name="#mpConsume"> 54 58 </table>
 		<table name="#dmg"> 215 336 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />

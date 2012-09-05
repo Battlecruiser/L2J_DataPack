@@ -535,6 +535,8 @@
 	</skill>
 	<skill id="3632" levels="1" name="Clan Gate">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="60" />
@@ -552,6 +554,8 @@
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#vuln"> 80 100 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
@@ -917,6 +921,8 @@
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -936,6 +942,8 @@
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<!-- This skill only has one level, 2. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

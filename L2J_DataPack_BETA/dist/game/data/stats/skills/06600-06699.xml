@@ -113,6 +113,8 @@
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -137,6 +139,8 @@
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -159,6 +163,8 @@
 	<skill id="6620" levels="7" name="Maguen Plasma">
 		<table name="#pAtk"> 100 150 200 250 300 350 400 </table>
 		<table name="#mAtk"> 5 10 15 20 25 30 35 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="88" />
@@ -183,6 +189,8 @@
 	<skill id="6621" levels="7" name="Maguen Plasma">
 		<table name="#pAtk"> 200 250 300 350 400 450 500 </table>
 		<table name="#mAtk"> 15 20 25 30 35 40 45 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="88" />
@@ -206,6 +214,8 @@
 	</skill>
 	<skill id="6622" levels="1" name="Shock">
 		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="lvlDepend" val="1" />
@@ -221,6 +231,8 @@
 	</skill>
 	<skill id="6624" levels="1" name="Shock">
 		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -275,6 +287,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -282,6 +296,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6632" levels="1" name="Energy of Enchant">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -289,6 +305,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6633" levels="1" name="Energy of Attack Speed\">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -296,6 +314,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6634" levels="1" name="Energy of Casting Speed">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -303,6 +323,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6635" levels="1" name="Energy of Crt Rate\">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -310,6 +332,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6636" levels="1" name="Energy of Moving Speed">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -318,6 +342,8 @@
 	</skill>
 	<skill id="6637" levels="1" name="Vampiric Aura">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -339,6 +365,8 @@
 		</for>
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -347,6 +375,8 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -354,6 +384,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6640" levels="1" name="Energizing Aura">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -426,6 +458,8 @@
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="6645" levels="1" name="Cooker Invincibility On">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -447,6 +481,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6649" levels="1" name="Treykan Transformation">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -465,11 +501,15 @@
 		</for>
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
+		<set name="abnormalLvl" val="99" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6651" levels="1" name="Dopagen's Alienation">
+		<set name="abnormalLvl" val="99" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -534,6 +574,8 @@
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="freezing" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
@@ -570,6 +612,8 @@
 	</skill>
 	<skill id="6666" levels="1" name="Feral Shield">
 		<!-- Increases P. Def. by 18% by 5 minutes. -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -587,6 +631,8 @@
 	</skill>
 	<skill id="6667" levels="1" name="Feral Wind Walk">
 		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -604,6 +650,8 @@
 	</skill>
 	<skill id="6668" levels="1" name="Feral Death Whisper">
 		<!-- Increases critical attack power by 35% for 5 minutes. -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -621,6 +669,8 @@
 	</skill>
 	<skill id="6669" levels="1" name="Feral Body Bless">
 		<!-- Increases Max HP by 35% for 5 minutes. -->
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -638,6 +688,8 @@
 	</skill>
 	<skill id="6670" levels="1" name="Feral Vampiric Rage">
 		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -655,6 +707,8 @@
 	</skill>
 	<skill id="6671" levels="1" name="Feral Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="berserker" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -679,6 +733,8 @@
 	</skill>
 	<skill id="6672" levels="1" name="Feral Bless Shield">
 		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="shield_prob_up" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
@@ -702,6 +758,8 @@
 	</skill>
 	<skill id="6674" levels="1" name="Energy of Range Increment">
 		<!-- Bow/Crossbow range is temporarily increased by 50. -->
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="signal_b" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -723,6 +781,8 @@
 		<set name="power" val="450" />
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -761,6 +821,8 @@
 	</skill>
 	<skill id="6681" levels="1" name="Maguen Speed Walk">
 		<!-- Moving Spd. increases by 40 for 20 minutes. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="22" />
@@ -781,6 +843,8 @@
 	</skill>
 	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
 		<!-- Moving Spd. increases by 45 for 20 minutes. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="22" />
@@ -860,6 +924,8 @@
 	<skill id="6687" levels="1" name="Patience">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="patience" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="60" />
@@ -875,6 +941,8 @@
 	<skill id="6688" levels="1" name="Soup of Failure">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
@@ -900,6 +968,8 @@
 		<set name="coolTime" val="2000" />
 	</skill>
 	<skill id="6690" levels="1" name="Hold">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -967,6 +1037,8 @@
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="freezing" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />

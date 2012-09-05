@@ -37,6 +37,8 @@
 		</cond>
 	</skill>
 	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -76,6 +78,8 @@
 		</cond>
 	</skill>
 	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -142,6 +146,8 @@
 		</cond>
 	</skill>
 	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill - Mysterious Power">
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -181,6 +187,8 @@
 		</cond>
 	</skill>
 	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -198,6 +206,8 @@
 		</for>
 	</skill>
 	<skill id="23017" levels="1" name="Holiday Festival">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -219,6 +229,8 @@
 		</for>
 	</skill>
 	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -242,6 +254,8 @@
 	</skill>
 	<skill id="23019" levels="3" name="Scissors">
 		<table name="#magicLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -273,6 +287,8 @@
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -291,6 +307,8 @@
 	</skill>
 	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -379,6 +397,8 @@
 	</skill>
 	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -406,6 +426,8 @@
 	</skill>
 	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="armor_unholy" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -424,6 +446,8 @@
 	</skill>
 	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -451,6 +475,8 @@
 	</skill>
 	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk">
 		<!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -507,6 +533,8 @@
 	</skill>
 	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -526,6 +554,8 @@
 	</skill>
 	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -544,6 +574,8 @@
 	</skill>
 	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -670,6 +702,8 @@
 	</skill>
 	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -687,6 +721,8 @@
 	</skill>
 	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -704,6 +740,8 @@
 	</skill>
 	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
 		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -753,6 +791,8 @@
 	</skill>
 	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -771,6 +811,8 @@
 	</skill>
 	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Energy Recovery Ability">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -789,6 +831,8 @@
 	</skill>
 	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability">
 		<!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -839,6 +883,8 @@
 	</skill>
 	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
 		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="resist_derangement" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -858,6 +904,8 @@
 	</skill>
 	<skill id="23069" levels="1" name="Threatening Roar">
 		<!-- Decreases moving speed and Atk. Spd. by 80% for 10 seconds. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -865,6 +913,8 @@
 	</skill>
 	<skill id="23070" levels="1" name="Red Flame">
 		<!-- Cannot damage the spirit for 10 seconds. Exclusive use for the Reckless Spirit of Fire. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -872,6 +922,8 @@
 	</skill>
 	<skill id="23071" levels="1" name="Blue Flame">
 		<!-- Cannot damage the spirit for 8 seconds. Exclusive use for the Spirit of Fire. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -879,6 +931,8 @@
 	</skill>
 	<skill id="23072" levels="1" name="Eva's Wrath">
 		<!-- You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf2" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -891,6 +945,8 @@
 	</skill>
 	<skill id="23073" levels="1" name="Switch Mode">
 		<!-- State to switch the spirit's mode. Switches to counter-attack mode or deadly mode. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -898,6 +954,8 @@
 	</skill>
 	<skill id="23074" levels="1" name="Icy Air Explosion">
 		<!-- For 4 seconds, damage inflicted on the spirit doubles. -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -921,6 +979,8 @@
 	</skill>
 	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf">
 		<!-- For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="br_event_buf5" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -933,6 +993,8 @@
 	</skill>
 	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound">
 		<!-- For 20 minutes, through the magic of the mysterious flute sound, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="br_event_buf5" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -954,6 +1016,8 @@
 	</skill>
 	<skill id="23080" levels="1" name="Chon-chon Agathion Special Skill - Great Warrior Soul Power">
 		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and moving speed by 20%. Decreases the MP consumption of skills by 5%. -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -974,6 +1038,8 @@
 	</skill>
 	<skill id="23082" levels="1" name="Tang-tang Agathion Special Skill - Great Wizard Soul Power">
 		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical hits with magic attacks by 2% -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -994,6 +1060,8 @@
 	</skill>
 	<skill id="23084" levels="1" name="Dancing Kid Agathion Special Skill - Great Adventurer Soul Power">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1014,6 +1082,8 @@
 	</skill>
 	<skill id="23086" levels="1" name="Monkey King Agathion Special Skill - Great Wizard Soul Power">
 		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical magic attacks by 2% -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1034,6 +1104,8 @@
 	</skill>
 	<skill id="23088" levels="1" name="Utanka Agathion Special Skill - Great Warrior Soul Power">
 		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and P.Def. by 20%. Bestows the ability to recover HP equal to 5% of the melee damage -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1054,6 +1126,8 @@
 	</skill>
 	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill - Great Adventurer Soul Power">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1065,6 +1139,8 @@
 	</skill>
 	<skill id="23091" levels="1" name="Trick of Halloween Children">
 		<!-- By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

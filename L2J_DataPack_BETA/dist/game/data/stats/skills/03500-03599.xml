@@ -701,6 +701,8 @@
 	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 75 84 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
@@ -745,6 +747,8 @@
 	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 75 84 84 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
@@ -791,6 +795,8 @@
 	</skill>
 	<skill id="3577" levels="2" name="Special Ability: Magic Hold">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
@@ -827,6 +833,8 @@
 	<skill id="3579" levels="1" name="Decrease P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Blade/Rapier Skill -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
@@ -908,6 +916,8 @@
 	<skill id="3584" levels="1" name="Shock">
 		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Crusher Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
@@ -942,6 +952,8 @@
 	<skill id="3586" levels="1" name="Physical Skill Restraint">
 		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Wing Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence_physical" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="80" />
@@ -976,6 +988,8 @@
 	<skill id="3588" levels="1" name="Shock">
 		<!-- Confirmed Ct2.5 -->
 		<!-- Infinity Fang Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
@@ -1012,6 +1026,8 @@
 	<skill id="3590" levels="1" name="Silence">
 		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Stinger Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
@@ -1075,6 +1091,8 @@
 	<skill id="3594" levels="1" name="Slow">
 		<!-- Confirmed Ct2.5 -->
 		<!-- Infinity Bow/Shooter Skill -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="80" />
