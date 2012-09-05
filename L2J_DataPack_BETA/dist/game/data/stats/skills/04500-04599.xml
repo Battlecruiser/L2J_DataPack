@@ -533,7 +533,8 @@
 		<table name="#pDef"> 0.8 0.6 0.7 </table>
 		<table name="#pAtkSpd"> 0.9 0.8 0.6 </table>
 		<table name="#pAtk"> 0.7 0.6 0.5 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
@@ -615,7 +616,8 @@
 		<table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#rCrit"> 30 50 80 100 50 0 0 0 0 0 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="spa_disease_a" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="55" />
@@ -640,7 +642,8 @@
 		<table name="#rEvas"> 0 3 3 3 5 5 5 8 8 10 </table>
 		<table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="spa_disease_b" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="55" />
@@ -665,7 +668,8 @@
 		<table name="#pAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="spa_disease_c" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="55" />
@@ -690,7 +694,8 @@
 		<table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="spa_disease_d" />
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="55" />
@@ -1071,7 +1076,8 @@
 		<table name="#mpConsume"> 16 39 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1096,7 +1102,8 @@
 		<table name="#mpConsume"> 12 21 39 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="2000" />
@@ -1121,7 +1128,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="hit_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1168,7 +1176,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="blowChance" val="20" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1195,7 +1204,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1244,7 +1254,8 @@
 		<table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1269,7 +1280,8 @@
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1295,7 +1307,8 @@
 		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 11 12 12 13 13 13 13 13 13 13 13 13 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 12 13 13 13 13 13 13 13 13 13 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1328,7 +1341,8 @@
 		<table name="#pDef"> 0.95 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.9 0.84 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1358,7 +1372,8 @@
 		<table name="#rEvas"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="avoid_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1386,7 +1401,8 @@
 		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1420,7 +1436,8 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1450,7 +1467,8 @@
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1477,7 +1495,8 @@
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1503,7 +1522,8 @@
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1530,7 +1550,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1558,7 +1579,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1585,7 +1607,8 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1613,7 +1636,8 @@
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1638,7 +1662,8 @@
 		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1664,7 +1689,8 @@
 		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1689,7 +1715,8 @@
 		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1714,7 +1741,8 @@
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />

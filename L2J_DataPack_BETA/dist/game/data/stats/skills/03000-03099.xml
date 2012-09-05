@@ -182,7 +182,8 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 384 384 570 570 570 768 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
@@ -248,7 +249,8 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 573 573 873 873 873 1209 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
@@ -464,7 +466,8 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 504 504 747 747 747 1008 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
@@ -486,7 +489,8 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 951 951 1494 1494 1494 2013 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
@@ -1299,7 +1303,8 @@
 	<skill id="3091" levels="10" name="Item Skill: Poison">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -1315,7 +1320,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="3092" levels="10" name="Item Skill: Bleed">
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="nextActionAttack" val="true" />

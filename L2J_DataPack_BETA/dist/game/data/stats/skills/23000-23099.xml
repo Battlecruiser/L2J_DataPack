@@ -287,7 +287,8 @@
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />

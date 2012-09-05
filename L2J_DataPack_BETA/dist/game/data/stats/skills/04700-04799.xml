@@ -8,7 +8,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_queen_of_cat" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
@@ -52,7 +53,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
@@ -77,7 +79,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
@@ -120,7 +123,8 @@
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="debuff_nightshade" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -152,7 +156,8 @@
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="debuff_nightshade" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -1564,7 +1569,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 118 202 322 473 667 833 919 958 974 968 951 940 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
@@ -1587,7 +1593,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 99 171 272 400 563 703 776 809 826 833 832 827 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
@@ -1610,7 +1617,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 53 91 145 214 301 375 414 431 439 444 443 440 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
@@ -1633,7 +1641,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 50 86 136 200 282 352 388 405 413 417 416 414 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
@@ -1656,7 +1665,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 47 80 127 187 263 329 363 379 387 390 389 388 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />

@@ -7,7 +7,8 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="event_win" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -116,7 +117,8 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="6117" levels="3" name="Choice - Scissors">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="event_gawi" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -381,7 +383,8 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="6140" levels="3" name="Bog Stride">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -402,7 +405,8 @@
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
 		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />

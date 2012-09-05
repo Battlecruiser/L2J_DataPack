@@ -124,7 +124,8 @@
 		<set name="reuseDelay" val="7000" />
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />

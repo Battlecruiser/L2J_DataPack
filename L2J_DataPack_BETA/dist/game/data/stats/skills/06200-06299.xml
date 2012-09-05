@@ -381,7 +381,8 @@
 		</cond>
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -625,7 +626,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />

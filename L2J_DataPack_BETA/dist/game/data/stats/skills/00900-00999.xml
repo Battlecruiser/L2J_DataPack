@@ -553,7 +553,8 @@
 		<table name="#ench1Power"> 758 766 773 781 788 796 803 811 818 826 833 841 848 856 863 871 878 886 893 901 908 916 923 931 939 946 954 961 969 976 </table>
 		<table name="#dot"> 43 43 43 53 53 53 61 61 61 61 61 66 66 66 </table>
 		<table name="#abnormalLvl"> 5 5 5 6 6 6 7 7 7 7 7 8 8 8 </table>
-		<set name="abnormalLvl" val="5" />
+		<table name="#abnormalLvls"> 5 5 5 6 6 6 7 7 7 7 7 8 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dot_attr" />
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="40" />
@@ -1620,7 +1621,8 @@
 		<table name="#magicLvl"> 52 64 70 </table>
 		<table name="#mpConsume"> 38 48 52 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="knight_aura" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />

@@ -103,7 +103,8 @@
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#ench1abnormalLvl"> 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6 </table>
 		<table name="#aggro"> 438 549 597 635 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -437,7 +438,8 @@
 		<table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#pAtkRange"> 50 50 100 100 150 150 200 200 </table>
 		<table name="#ench2decreasePenalty"> 0.07 0.08 0.1 0.11 0.13 0.14 0.16 0.17 0.19 0.2 0.22 0.23 0.25 0.26 0.28 0.29 0.31 0.32 0.34 0.35 0.37 0.38 0.4 0.41 0.43 0.44 0.46 0.47 0.49 0.50 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 15 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="snipe" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />

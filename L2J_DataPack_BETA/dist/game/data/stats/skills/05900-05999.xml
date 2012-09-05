@@ -175,7 +175,8 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5915" levels="9" name="Mummifying Aura">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -183,7 +184,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5916" levels="9" name="Cruising Aura">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -191,7 +193,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5917" levels="9" name="Shrouding Aura">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="avoid_skill" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -335,14 +338,16 @@
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5927" levels="4" name="Immortal Frenzy">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5928" levels="4" name="Immortal Resilience">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -472,7 +477,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5940" levels="12" name="Energy of Generation">
-		<set name="abnormalLvl" val="3" />
+		<table name="#abnormalLvls"> 3 4 5 6 7 8 9 10 11 12 13 14 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -704,7 +710,8 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5968" levels="2" name="Rapid Shot">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_speed_up_bow" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -892,7 +899,8 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="5985" levels="9" name="Decaying Aura">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -900,7 +908,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5986" levels="9" name="Vampiric Aura">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
