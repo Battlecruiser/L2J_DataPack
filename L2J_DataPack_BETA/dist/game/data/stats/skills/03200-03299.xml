@@ -84,7 +84,8 @@
 		<table name="#mpConsume"> 20 24 28 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />

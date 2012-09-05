@@ -655,7 +655,8 @@
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#enchabnormalLvl"> 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 12 </table>
 		<table name="#aggroPoints"> 566 582 597 611 624 635 646 655 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 12 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="snipe" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -727,7 +728,8 @@
 		<table name="#bowWpnVuln"> 1.12 1.16 1.2 1.24 </table>
 		<table name="#crossbowWpnVuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="real_target" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1674,7 +1676,8 @@
 		<table name="#power"> 900 1013 1129 1248 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="6" />
+		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -1907,7 +1910,8 @@
 		<table name="#mpInitialConsume"> 5 6 6 7 </table>
 		<table name="#mpConsume"> 18 21 23 26 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="6" />
+		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2053,7 +2057,8 @@
 		<table name="#power"> 625 703 784 867 </table>
 		<table name="#dot"> 81 81 93 93 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="6" />
+		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dot_attr" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2081,7 +2086,8 @@
 		<table name="#pDef"> 1000 1100 1200 1300 </table>
 		<table name="#mDef"> 800 900 1000 1100 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up_special" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2149,7 +2155,8 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 875 984 1098 1213 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="6" />
+		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="#power" />

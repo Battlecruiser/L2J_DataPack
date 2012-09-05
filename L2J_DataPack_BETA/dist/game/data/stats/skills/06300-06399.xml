@@ -23,7 +23,8 @@
 		<!-- Freya Skills -->
 		<table name="#mdot"> 300 150 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="force_meditation" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -915,7 +916,8 @@
 		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="soa_buff1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -924,7 +926,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="soa_buff2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -933,7 +936,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="soa_buff3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -961,7 +965,8 @@
 		<set name="reuseDelay" val="6000" />
 	</skill>
 	<skill id="6372" levels="10" name="Power Up">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="signal_a" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -995,7 +1000,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="max_hp_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1003,7 +1009,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6377" levels="10" name="Assault Boost">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1057,7 +1064,8 @@
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
 		<table name="#abnormalLvl"> 1 2 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />

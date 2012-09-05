@@ -5,7 +5,8 @@
 		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
@@ -74,7 +75,8 @@
 		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="50" /> <!-- Base Land Rate -->
@@ -99,7 +101,8 @@
 		<table name="#damage"> 57 84 114 147 180 207 235 235 234 234 237 237 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
@@ -145,7 +148,8 @@
 		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
@@ -225,7 +229,8 @@
 		<table name="#hot"> 180 228 337 544 819 1060 1225 1292 1358 1427 951 940 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<set name="abnormalLvl" val="11" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1029,7 +1034,8 @@
 		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />

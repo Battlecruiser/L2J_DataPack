@@ -283,7 +283,8 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 39 48 57 66 75 84 93 102 111 120 129 138 147 156 165 174 183 192 201 210 219 228 237 246 255 264 273 282 291 300 </table>
 		<table name="#ench2Chance"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="curse_life_flow" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1037,7 +1038,8 @@
 		<table name="#mpConsume"> 18 24 29 33 </table>
 		<table name="#vuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="stigma_of_silen" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
@@ -1232,7 +1234,8 @@
 		<table name="#mAtkSpd"> 1.01 1.03 1.05 </table>
 		<table name="#physicalSkillPower"> 1.05 1.07 1.1 </table>
 		<table name="#rCrit"> 0.05 0.07 0.1 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

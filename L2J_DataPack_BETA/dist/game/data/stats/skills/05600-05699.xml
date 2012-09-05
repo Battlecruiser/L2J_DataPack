@@ -484,7 +484,8 @@
 		<table name="#mpConsume"> 38 41 48 53 </table>
 		<table name="#mpInitialConsume"> 10 11 12 14 </table>
 		<table name="#abnormalLvl"> 3 4 5 6 </table>
-		<set name="abnormalLvl" val="3" />
+		<table name="#abnormalLvls"> 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -512,7 +513,8 @@
 		<table name="#maxMp"> 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 38 41 46 52 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 </table>
-		<set name="abnormalLvl" val="3" />
+		<table name="#abnormalLvls"> 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -540,7 +542,8 @@
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -570,7 +573,8 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5642" levels="4" name="not_used">
-		<set name="abnormalLvl" val="3" />
+		<table name="#abnormalLvls"> 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="shield_prob_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -610,7 +614,8 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5645" levels="3" name="not_used">
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="resist_derangement" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -658,7 +663,8 @@
 		<table name="#MpConsumeRate"> 0.96 0.93 0.9 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#SpiritOre"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="cheap_magic" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -690,7 +696,8 @@
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#abnormalLvl"> 2 3 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -711,7 +718,8 @@
 		</for>
 	</skill>
 	<skill id="5649" levels="2" name="not_used">
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -720,7 +728,8 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5650" levels="3" name="not_used">
-		<set name="abnormalLvl" val="4" />
+		<table name="#abnormalLvls"> 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -745,7 +754,8 @@
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -773,7 +783,8 @@
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#rCrit"> 0.25 0.3 </table>
 		<table name="#abnormalLvl"> 2 3 </table>
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -801,7 +812,8 @@
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -917,7 +929,8 @@
 		<table name="#runSpd"> 5 8 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="berserker" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="skillType" val="BUFF" />

@@ -574,7 +574,8 @@
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="freezing" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />

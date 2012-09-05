@@ -154,7 +154,8 @@
 		</for>
 	</skill>
 	<skill id="5713" levels="5" name="Energy Ditch">
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="magical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -869,7 +870,8 @@
 		<set name="hitTime" val="9700" />
 	</skill>
 	<skill id="5760" levels="9" name="Critical Hit">
-		<set name="abnormalLvl" val="2" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 9 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="seed_of_critical" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
