@@ -8,6 +8,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="buff_queen_of_cat" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -50,6 +52,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -73,6 +77,8 @@
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -114,6 +120,8 @@
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="debuff_nightshade" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -144,6 +152,8 @@
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#abnormalLvl"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="debuff_nightshade" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
@@ -190,6 +200,8 @@
 		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
 		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
 		<table name="#power"> 1046 1230 1425 1626 1727 1827 1925 2020 2067 2112 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -230,6 +242,8 @@
 		<table name="#mpConsume"> 3 5 7 9 12 14 17 18 18 19 20 20 </table>
 		<table name="#power"> 16 35 73 138 238 375 537 619 697 766 821 864 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -253,6 +267,8 @@
 		<table name="#mpConsume"> 46 76 104 139 179 220 258 275 288 298 305 309 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ultimate_buff" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
@@ -441,6 +457,8 @@
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -462,6 +480,8 @@
 		<table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -483,6 +503,8 @@
 		<table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -504,6 +526,8 @@
 		<table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -525,6 +549,8 @@
 		<table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -791,6 +817,8 @@
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -812,6 +840,8 @@
 		<table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -833,6 +863,8 @@
 		<table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -854,6 +886,8 @@
 		<table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -875,6 +909,8 @@
 		<table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1061,6 +1097,8 @@
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1081,6 +1119,8 @@
 		<table name="#power"> 138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1101,6 +1141,8 @@
 		<table name="#power"> 74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1121,6 +1163,8 @@
 		<table name="#power"> 69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1141,6 +1185,8 @@
 		<table name="#power"> 65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1236,6 +1282,8 @@
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1256,6 +1304,8 @@
 		<table name="#power"> 138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1276,6 +1326,8 @@
 		<table name="#power"> 74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1296,6 +1348,8 @@
 		<table name="#power"> 69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1316,6 +1370,8 @@
 		<table name="#power"> 65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
@@ -1508,6 +1564,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 118 202 322 473 667 833 919 958 974 968 951 940 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="11" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1529,6 +1587,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 99 171 272 400 563 703 776 809 826 833 832 827 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="11" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1550,6 +1610,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 53 91 145 214 301 375 414 431 439 444 443 440 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="11" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1571,6 +1633,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 50 86 136 200 282 352 388 405 413 417 416 414 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="11" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1592,6 +1656,8 @@
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<table name="#hot"> 47 80 127 187 263 329 363 379 387 390 389 388 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
+		<set name="abnormalLvl" val="11" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />

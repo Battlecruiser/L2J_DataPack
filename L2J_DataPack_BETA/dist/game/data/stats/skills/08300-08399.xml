@@ -126,6 +126,8 @@
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -145,6 +147,8 @@
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -251,6 +255,8 @@
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -325,6 +331,8 @@
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -344,6 +352,8 @@
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -363,6 +373,8 @@
 	</skill>
 	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -385,6 +397,8 @@
 		</for>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -638,6 +652,8 @@
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="operateType" val="A2" />
@@ -724,6 +740,8 @@
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -732,6 +750,8 @@
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -740,6 +760,8 @@
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -748,6 +770,8 @@
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -756,6 +780,8 @@
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -764,6 +790,8 @@
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -772,6 +800,8 @@
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

@@ -35,6 +35,8 @@
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 285 418 532 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY" />
@@ -70,6 +72,8 @@
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 285 379 457 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
@@ -105,6 +109,8 @@
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 379 457 532 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
@@ -140,6 +146,8 @@
 		<table name="#mpConsume"> 96 123 150 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 331 418 495 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
@@ -175,6 +183,8 @@
 		<table name="#mDef"> 1.15 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 204 379 495 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="md_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -210,6 +220,8 @@
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 162 243 418 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -245,6 +257,8 @@
 		<table name="#mDef"> 1.15 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 379 457 532 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="md_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -280,6 +294,8 @@
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 204 285 379 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -315,6 +331,8 @@
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 121 243 331 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -598,6 +616,8 @@
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#ench3abnormalLvl"> 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 </table>
 		<table name="#aggro"> 379 457 532 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="resist_bleeding" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
@@ -640,6 +660,8 @@
 		<table name="#poisonVuln"> 30 40 50 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#ench3abnormalLvl"> 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="resist_poison" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -709,6 +731,8 @@
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#aggro"> 243 379 457 532 </table>
 		<table name="#vuln"> 20 30 40 50 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="resist_derangement" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -749,6 +773,8 @@
 		<table name="#mDef"> 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#aggro"> 418 495 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="md_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -785,6 +811,8 @@
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 121 243 418 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -819,6 +847,8 @@
 		<table name="#ench1power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench2mpConsume"> 201 200 198 196 195 192 191 188 187 185 183 181 180 177 176 175 172 171 168 167 165 163 161 160 157 156 153 152 151 148 </table>
 		<table name="#ench3Attack"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -859,6 +889,8 @@
 		<table name="#ench2mpConsume"> 17 17 17 16 16 16 15 15 15 15 14 14 14 13 13 13 12 12 12 12 11 11 11 10 10 10 9 9 9 9 </table>
 		<table name="#ench2mpInitialConsume"> 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 </table>
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="mpInitialConsume" val="5" />
 		<set name="magicLvl" val="25" />
 		<set name="mpConsume" val="23" />
@@ -897,6 +929,8 @@
 		<table name="#rate"> 1.1 1.15 1.2 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 331 457 532 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="hp_regen_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -933,6 +967,8 @@
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 418 457 495 532 597 646 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -968,6 +1004,8 @@
 		<table name="#mpConsume"> 28 35 44 52 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#aggro"> 379 457 566 635 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="mp_regen_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="3031" />
@@ -1005,6 +1043,8 @@
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 418 457 495 532 582 635 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1035,6 +1075,8 @@
 		<table name="#mpInitialConsume"> 11 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
 		<table name="#mpConsume"> 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_passive" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1100,6 +1142,8 @@
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 243 418 495 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1143,6 +1187,8 @@
 		<table name="#mpConsume"> 24 38 </table>
 		<table name="#aggro"> 331 495 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="berserker" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1192,6 +1238,8 @@
 		<table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#ench1power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1230,6 +1278,8 @@
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 121 204 379 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1265,6 +1315,8 @@
 		<table name="#mpConsume"> 17 17 18 20 21 21 23 24 24 27 27 28 30 30 31 33 34 35 36 37 38 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 </table>
 		<table name="#magicLvl"> 23 24 25 28 29 30 33 34 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#ench1power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1304,6 +1356,8 @@
 		<table name="#ench1power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="armor_water" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -1355,6 +1409,8 @@
 		<table name="#mpInitialConsume"> 12 16 18 19 20 </table>
 		<table name="#mpConsume"> 47 61 69 74 78 </table>
 		<table name="#magicLvl"> 44 56 62 66 70 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1390,6 +1446,8 @@
 		<table name="#breath"> 5 7 </table>
 		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#aggro"> 121 417 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="max_breath_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
@@ -1426,6 +1484,8 @@
 		<table name="#ench1power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="armor_wind" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="2" /> <!-- Wind -->
@@ -1495,6 +1555,8 @@
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<table name="#aggro"> 243 418 495 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1531,6 +1593,8 @@
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 204 285 418 495 566 624 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1571,6 +1635,8 @@
 		<table name="#ench2time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#abnormalLvl"> 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="armor_fire" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1624,6 +1690,8 @@
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 204 331 457 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1660,6 +1728,8 @@
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 418 495 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1696,6 +1766,8 @@
 		<table name="#rEvas"> 2 3 4 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 243 418 495 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="avoid_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1749,6 +1821,8 @@
 		<table name="#ench1Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench2mpConsume"> 54 53 52 50 50 49 48 46 46 46 45 44 42 42 41 40 38 38 37 37 36 34 34 33 32 30 30 29 28 28 </table>
 		<table name="#ench2mpInitialConsume"> 13 13 13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
@@ -1780,6 +1854,8 @@
 		<table name="#magicLvl"> 7 14 20 40 52 </table>
 		<table name="#dot"> 33 48 72 123 150 </table>
 		<table name="#abnormalLvl"> 1 2 3 5 6 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="poison" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1812,6 +1888,8 @@
 		<table name="#ench1power"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 81 82 84 85 86 88 89 90 92 93 94 96 97 98 100 </table>
 		<table name="#ench2time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#abnormalLvl"> 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="hit_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1851,6 +1929,8 @@
 		<table name="#mpInitialConsume"> 2 3 4 5 6 6 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
 		<table name="#mpConsume"> 8 12 16 18 21 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
 		<table name="#magicLvl"> 7 14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1890,6 +1970,8 @@
 		<table name="#mpConsume"> 36 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
 		<table name="#magicLvl"> 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#abnormalLvl"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->

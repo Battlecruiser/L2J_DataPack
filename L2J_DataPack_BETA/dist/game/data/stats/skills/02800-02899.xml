@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2800" levels="1" name="Stone of Ease">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -14,6 +16,8 @@
 		</for>
 	</skill>
 	<skill id="2801" levels="1" name="Stone of Abundance">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -685,6 +689,8 @@
 		</for>
 	</skill>
 	<skill id="2839" levels="1" name="Sacred Light Fragment">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attribute_potion" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -998,6 +1004,8 @@
 	</skill>
 	<skill id="2856" levels="1" name="Santa's Buff Gift Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="itemConsumeCount" val="1" />
@@ -1028,6 +1036,8 @@
 	</skill>
 	<skill id="2857" levels="1" name="Christmas Event - Magic Use Enhancement Scroll">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="itemConsumeCount" val="1" />
@@ -1130,6 +1140,8 @@
 		</for>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1229,42 +1241,56 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2873" levels="1" name="Might">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2874" levels="1" name="Wind Walk">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2875" levels="1" name="Haste">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2876" levels="1" name="Vampiric Rage">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2877" levels="1" name="Berserker Spirit">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2878" levels="1" name="Empower">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2879" levels="1" name="Acumen">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1308,6 +1334,8 @@
 		</for>
 	</skill>
 	<skill id="2883" levels="1" name="Energy Replenishing Herb Tea">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1316,6 +1344,8 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2884" levels="1" name="Energy Replenishing Herb Tea">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1324,36 +1354,48 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2885" levels="1" name="Shield">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2886" levels="1" name="Focus">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2887" levels="1" name="Death Whisper">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2888" levels="1" name="Guidance">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="hit_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2889" levels="1" name="Clarity">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="cheap_magic" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2890" levels="1" name="Wild Magic">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1361,6 +1403,8 @@
 	</skill>
 	<skill id="2891" levels="6" name="Concentration">
 		<!-- This skill only has one level, 6. -->
+		<set name="abnormalLvl" val="7" />
+		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1373,6 +1417,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2893" levels="1" name="Solo Escape Petition">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1428,6 +1474,8 @@
 		</for>
 	</skill>
 	<skill id="2897" levels="1" name="Baguette's Herb">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="wp_change_event" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1443,6 +1491,8 @@
 		</for>
 	</skill>
 	<skill id="2898" levels="1" name="Fresh Cream Herb">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="wp_change_event" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1463,6 +1513,8 @@
 		</for>
 	</skill>
 	<skill id="2899" levels="1" name="Cheesecake Herb">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="wp_change_event" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />

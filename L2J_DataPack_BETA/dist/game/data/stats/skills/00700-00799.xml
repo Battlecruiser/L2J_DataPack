@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="700" levels="1" name="Divine Healer Group Heal">
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="400" />
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -61,6 +63,8 @@
 		</for>
 	</skill>
 	<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -90,6 +94,8 @@
 		</for>
 	</skill>
 	<skill id="705" levels="1" name="Divine Enchanter Fire Spirit">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -121,6 +127,8 @@
 		</for>
 	</skill>
 	<skill id="706" levels="1" name="Divine Enchanter Wind Spirit">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -151,6 +159,8 @@
 		</for>
 	</skill>
 	<skill id="707" levels="1" name="Divine Enchanter Hero Spirit">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -181,6 +191,8 @@
 		</for>
 	</skill>
 	<skill id="708" levels="1" name="Divine Enchanter Mass Binding">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="hitTime" val="4000" />
 		<set name="lvlDepend" val="2" />
 		<set name="isDebuff" val="true" />
@@ -200,6 +212,8 @@
 	</skill>
 	<skill id="709" levels="1" name="Sacrifice Enchanter">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -260,6 +274,8 @@
 		</for>
 	</skill>
 	<skill id="712" levels="1" name="Divine Summoner Final Servitor">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -308,6 +324,8 @@
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -355,6 +373,8 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 60 65 69 72 </table>
 		<table name="#magicLvl"> 65 70 75 80 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="95" />
@@ -410,6 +430,8 @@
 	</skill>
 	<skill id="719" levels="1" name="Zaken Vampiric Rage">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="mpInitialConsume" val="12" />
 		<set name="mpConsume" val="48" />
 		<set name="magicLvl" val="65" />
@@ -552,6 +574,8 @@
 	</skill>
 	<skill id="727" levels="1" name="Venom Disillusion">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="magicLvl" val="75" />
 		<set name="mpInitialConsume" val="7" />
 		<set name="mpConsume" val="28" />
@@ -599,6 +623,8 @@
 	</skill>
 	<skill id="730" levels="1" name="Gordon Press">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpInitialConsume" val="22" />
@@ -640,6 +666,8 @@
 	</skill>
 	<skill id="732" levels="1" name="Ranku Stun Attack">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="19" />
 		<set name="power" val="1479" />
@@ -708,6 +736,8 @@
 	</skill>
 	<skill id="736" levels="1" name="Devil Seed">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="9" />
+		<set name="abnormalType" val="dark_seed" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="1400" />
@@ -734,6 +764,8 @@
 	</skill>
 	<skill id="737" levels="1" name="Devil Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="10" />
 		<set name="target" val="TARGET_SELF" />
@@ -813,6 +845,8 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpInitialConsume"> 13 14 14 </table>
 		<table name="#mpConsume"> 52 54 56 </table>
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -939,6 +973,8 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#dmg"> 895 978 1059 </table>
 		<table name="#mpConsume"> 150 156 160 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -958,6 +994,8 @@
 	</skill>
 	<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="70" />
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="19" />
@@ -978,6 +1016,8 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#dmg"> 895 978 1059 </table>
 		<table name="#mpConsume"> 68 71 73 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -1001,6 +1041,8 @@
 	</skill>
 	<skill id="750" levels="1" name="Oel Mahum Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="10" />
 		<set name="target" val="TARGET_SELF" />
@@ -1042,6 +1084,8 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#power"> 1193 1303 1412 </table>
 		<table name="#mpConsume"> 71 74 77 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -1082,6 +1126,8 @@
 	</skill>
 	<skill id="754" levels="1" name="Doll Blader Clairvoyance">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="magicLvl" val="70" />
 		<set name="mpInitialConsume" val="13" />
 		<set name="mpConsume" val="52" />
@@ -1184,6 +1230,8 @@
 		</for>
 	</skill>
 	<skill id="760" levels="1" name="Anti Magic Armor">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="21" />
@@ -1199,6 +1247,8 @@
 	</skill>
 	<skill id="761" levels="1" name="Seed of Revenge">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="seed_of_knight" />
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1217,6 +1267,8 @@
 	</skill>
 	<skill id="762" levels="1" name="Insane Crusher">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="touch_of_death" />
 		<set name="baseCritRate" val="50" />
 		<set name="coolTime" val="700" />
 		<set name="hitTime" val="1300" />
@@ -1252,6 +1304,8 @@
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
@@ -1276,6 +1330,8 @@
 	<skill id="764" levels="1" name="Song of Wind Storm" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="song_of_windstorm" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="60" />
 		<set name="target" val="TARGET_PARTY" />
@@ -1303,6 +1359,8 @@
 	<skill id="765" levels="1" name="Dance of Blade Storm" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 </table>
 		<table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="dance_of_bladestorm" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="mpConsume" val="60" />
 		<set name="target" val="TARGET_PARTY" />
@@ -1352,6 +1410,8 @@
 		</for>
 	</skill>
 	<skill id="768" levels="1" name="Exciting Adventure">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="avoid_up_special" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="36" />
 		<set name="target" val="TARGET_SELF" />
@@ -1370,6 +1430,8 @@
 		</for>
 	</skill>
 	<skill id="769" levels="1" name="Wind Riding">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="avoid_up_special" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="36" />
 		<set name="target" val="TARGET_SELF" />
@@ -1388,6 +1450,8 @@
 		</for>
 	</skill>
 	<skill id="770" levels="1" name="Ghost Walking">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="avoid_up_special" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="36" />
 		<set name="target" val="TARGET_SELF" />
@@ -1476,6 +1540,8 @@
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -1498,6 +1564,8 @@
 		</for>
 	</skill>
 	<skill id="775" levels="1" name="Weapon Blockade">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
@@ -1524,6 +1592,8 @@
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
 		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="force_of_destruction" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1573,6 +1643,8 @@
 	</skill>
 	<skill id="778" levels="1" name="Golem Armor">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="44" />
@@ -1705,6 +1777,8 @@
 	</skill>
 	<skill id="784" levels="1" name="Spirit of Phoenix">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="seed_of_knight" />
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1723,6 +1797,8 @@
 	</skill>
 	<skill id="785" levels="1" name="Flame Icon">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="possession" />
 		<set name="aggroPoints" val="835" />
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
@@ -1756,6 +1832,8 @@
 	</skill>
 	<skill id="786" levels="1" name="Eva's Will">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="seed_of_knight" />
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1774,6 +1852,8 @@
 	</skill>
 	<skill id="787" levels="1" name="Touch of Eva">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="touch_of_life" />
 		<set name="aggroPoints" val="835" />
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
@@ -1803,6 +1883,8 @@
 	</skill>
 	<skill id="788" levels="1" name="Pain of Shilen">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="seed_of_knight" />
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1821,6 +1903,8 @@
 	</skill>
 	<skill id="789" levels="1" name="Spirit of Shilen">
 		<!-- Confirmed CT2.5 and Update to H5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="possession" />
 		<set name="aggroPoints" val="835" />
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
@@ -1872,6 +1956,8 @@
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="coolTime" val="720" />
 		<set name="hitTime" val="1080" />
 		<set name="isDebuff" val="true" />
@@ -1898,6 +1984,8 @@
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="betrayal_mark" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
@@ -1924,6 +2012,8 @@
 		<table name="#ench3Chance"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="800" />
@@ -1979,6 +2069,8 @@
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="disarm" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -2043,6 +2135,8 @@
 		<set name="skillScope" val="square;250;60" />
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />

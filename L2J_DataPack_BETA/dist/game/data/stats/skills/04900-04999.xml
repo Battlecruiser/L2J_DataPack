@@ -548,12 +548,16 @@
 	<skill id="4991" levels="1" name="Hot Spring Sulfur">
 		<!-- TODO -->
 		<!-- Decreases Atk. Spd. and Casting Spd. Effect 5. -->
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="all_speed_down" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="4992" levels="1" name="Stun">
 		<!-- TODO -->
 		<!-- Shocks and instantly Immobilizes. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
@@ -612,6 +616,8 @@
 	</skill>
 	<skill id="4997" levels="1" name="Lidia - Regen">
 		<!-- TODO: Needs to be done -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="hp_regen_up" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 	</skill>

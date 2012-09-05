@@ -15,6 +15,8 @@
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="5802" levels="1" name="Stun">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -79,6 +81,8 @@
 		<set name="hitTime" val="1700" />
 	</skill>
 	<skill id="5810" levels="1" name="Decrease Spd.">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -301,6 +305,8 @@
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="target_lock" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="lvlDepend" val="2" />
@@ -318,6 +324,8 @@
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_CLAN" />
@@ -336,6 +344,8 @@
 		</for>
 	</skill>
 	<skill id="5834" levels="1" name="Magic Barrier">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="md_up" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_CLAN" />
@@ -371,6 +381,8 @@
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="207" />
@@ -448,6 +460,8 @@
 	<skill id="5841" levels="1" name="Multi Defense">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="instinct" />
 		<set name="aggroPoints" val="694" />
 		<set name="hitTime" val="2120" />
 		<set name="magicLvl" val="85" />
@@ -482,6 +496,8 @@
 	<skill id="5843" levels="1" name="Terror">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="26720" />
 		<set name="isDebuff" val="true" />
@@ -522,6 +538,8 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5846" levels="12" name="Bleed">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -546,6 +564,8 @@
 	</skill>
 	<skill id="5849" levels="1" name="Decrease Speed">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="1" />
@@ -570,6 +590,8 @@
 	</skill>
 	<skill id="5851" levels="1" name="Shock">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
 		<set name="lvlDepend" val="1" />
@@ -609,12 +631,16 @@
 		<set name="effectRange" val="400" />
 	</skill>
 	<skill id="5854" levels="1" name="Decrease Speed">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5855" levels="1" name="Shock">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -624,30 +650,40 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5856" levels="1" name="Transform Tow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5857" levels="1" name="Transform Lure Tow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5858" levels="1" name="Transform Heavy Tow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5859" levels="1" name="Transform Wing Tow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5860" levels="1" name="Wrath of Valakas">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -656,6 +692,8 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5861" levels="1" name="Authority of Valakas">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -674,6 +712,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5864" levels="1" name="Decrease Valakas Defense">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -682,6 +722,8 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5865" levels="1" name="Wide-bodied Valakas">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -690,6 +732,8 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5866" levels="10" name="Soul Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -699,6 +743,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -709,6 +755,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -718,6 +766,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -727,6 +777,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5870" levels="10" name="Flash Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -735,6 +787,8 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -743,6 +797,8 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm">
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -751,6 +807,8 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5873" levels="5" name="Death Worm">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="deathworm" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -758,6 +816,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5874" levels="5" name="Death Worm">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="deathworm" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -765,6 +825,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="deathworm" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -772,6 +834,8 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5876" levels="1" name="Begrudged Haunting">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="death_clack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -786,6 +850,8 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5878" levels="1" name="Cruel Puncture">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="casting_time_up" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
@@ -806,6 +872,8 @@
 		</for>
 	</skill>
 	<skill id="5879" levels="1" name="Cruel Expunge">
+		<set name="abnormalLvl" val="9" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="165" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
@@ -825,6 +893,8 @@
 		</for>
 	</skill>
 	<skill id="5880" levels="2" name="Vicious Mutilation">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -834,6 +904,8 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5881" levels="2" name="Vicious Mutilation">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -844,6 +916,8 @@
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel">
 		<table name="#mpConsume"> 79 82 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="1" />
@@ -864,6 +938,8 @@
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury">
+		<set name="abnormalLvl" val="9" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="165" />
 		<set name="lvlDepend" val="2" />
@@ -883,6 +959,8 @@
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="disarm" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
@@ -901,6 +979,8 @@
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="lvlDepend" val="1" />
@@ -911,6 +991,8 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="165" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -932,6 +1014,8 @@
 		</for>
 	</skill>
 	<skill id="5887" levels="1" name="Howl from Beyond">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_debuff_c" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -942,6 +1026,8 @@
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
 		<table name="#mpConsume"> 82 83 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -961,6 +1047,8 @@
 		</for>
 	</skill>
 	<skill id="5889" levels="3" name="Tainted Shackle">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="target_lock" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -970,6 +1058,8 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5890" levels="3" name="Tainted Mass Shackle">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="target_lock" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -987,6 +1077,8 @@
 	</skill>
 	<skill id="5892" levels="2" name="Cunning Coercion">
 		<table name="#hitTime"> 1000 11470 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="70" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isDebuff" val="true" />
@@ -1013,6 +1105,8 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5894" levels="1" name="Mark of Despair">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_debuff_a" />
 		<set name="mpConsume" val="145" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -1044,6 +1138,8 @@
 		</for>
 	</skill>
 	<skill id="5895" levels="1" name="Mark of Cowardice">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_debuff_b" />
 		<set name="mpConsume" val="150" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -1071,6 +1167,8 @@
 	</skill>
 	<skill id="5896" levels="2" name="Soulless">
 		<table name="#hitTime"> 2000 22940 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1078,6 +1176,8 @@
 		<set name="hitTime" val="#hitTime" />
 	</skill>
 	<skill id="5897" levels="1" name="Spike of Anger">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="70" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="81" />
@@ -1103,6 +1203,8 @@
 	<skill id="5898" levels="2" name="Blast of Anger">
 		<table name="#hitTime"> 2000 22940 </table>
 		<table name="#mpConsume"> 140 150 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />

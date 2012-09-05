@@ -6,6 +6,8 @@
 		<table name="#power"> 36 39 42 49 53 57 66 71 77 88 94 101 115 123 131 </table>
 		<table name="#ench1Power"> 794 799 803 808 813 817 822 827 831 836 840 845 850 854 859 864 868 873 878 882 887 891 896 901 905 910 915 919 924 928 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -43,6 +45,8 @@
 		<table name="#ench2mpConsume"> 107 106 104 103 101 100 98 97 96 94 93 91 90 88 87 85 84 83 81 80 78 77 75 74 73 71 70 68 67 65 </table>
 		<table name="#ench2Power"> 2211 2231 2251 2270 2290 2310 2330 2349 2369 2389 2409 2428 2448 2468 2488 2507 2527 2547 2566 2586 2606 2626 2645 2665 2685 2705 2724 2744 2764 2784 </table>
 		<table name="#ench34pmDef"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.83 0.82 0.81 0.8 0.79 0.78 0.77 0.76 0.75 0.73 0.73 0.72 0.71 0.7 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
@@ -101,6 +105,8 @@
 		<table name="#runSpd"> 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#abnormalLvl"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#ench3abnormalLvl"> 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -141,6 +147,8 @@
 		<table name="#magicLvl"> 46 58 62 70 </table>
 		<table name="#mpConsume"> 22 28 29 33 </table>
 		<table name="#abnormalLvl"> 5 6 7 8 </table>
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="poison" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -163,6 +171,8 @@
 		</for>
 	</skill>
 	<skill id="104" levels="1" name="Detect Plant Weakness">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="detect_weakness" />
 		<set name="mpConsume" val="21" />
 		<set name="magicLvl" val="46" />
 		<set name="target" val="TARGET_SELF" />
@@ -188,6 +198,8 @@
 		<table name="#ench1Power"> 65 66 66 67 67 67 68 68 69 69 69 70 70 70 71 71 72 72 72 73 73 74 74 74 75 75 75 76 76 77 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#ench3Power"> 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -227,6 +239,8 @@
 	<skill id="106" levels="14" name="Veil">
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_passive" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
@@ -253,6 +267,8 @@
 		<table name="#ench3rCrit"> 0.1 0.11 0.12 0.12 0.13 0.14 0.14 0.15 0.16 0.16 0.17 0.18 0.18 0.19 0.2 0.2 0.21 0.22 0.22 0.23 0.24 0.24 0.25 0.26 0.26 0.27 0.28 0.28 0.29 0.3 </table>
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 40 42 43 45 46 48 49 50 51 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
@@ -284,6 +300,8 @@
 		</enchant3for>
 	</skill>
 	<skill id="109" levels="1" name="Ogre Spirit Totem">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="possession" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
 		<set name="target" val="TARGET_SELF" />
@@ -325,6 +343,8 @@
 		<table name="#aggro"> 204 438 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#enchabnormalLvl"> 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="900000" />
@@ -376,6 +396,8 @@
 		<table name="#pSkillEvas"> 25 40 </table>
 		<table name="#rEvas"> 20 25 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="avoid_up_special" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -413,6 +435,8 @@
 		<table name="#ench2sDef"> 1.01 1.01 1.01 1.02 1.02 1.02 1.03 1.03 1.03 1.04 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 1.07 1.07 1.07 1.08 1.08 1.08 1.09 1.09 1.09 1.1 </table>
 		<table name="#aggro"> 10 20 30 40 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_bow" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
@@ -466,6 +490,8 @@
 		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#abnormalLvl"> 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="pa_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -509,6 +535,8 @@
 		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 29 31 33 35 38 40 42 43 45 46 48 50 51 53 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -552,6 +580,8 @@
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 19 19 20 21 21 22 24 25 26 27 28 29 31 32 33 </table>
 		<table name="#power"> 42 46 49 57 62 67 77 83 89 103 110 117 134 143 152 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -588,6 +618,8 @@
 		<table name="#amount"> 10 15 20 25 30 35 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 268 379 467 549 597 635 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
@@ -620,6 +652,8 @@
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -666,6 +700,8 @@
 		<table name="#magicLvl"> 40 49 58 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 379 467 549 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="md_up" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -701,6 +737,8 @@
 		<table name="#mpConsume"> 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlDepend" val="2" />
@@ -735,6 +773,8 @@
 		<table name="#magicLvl"> 20 49 58 66 74 </table>
 		<table name="#dot"> 72 123 150 174 189 </table>
 		<table name="#abnormalLvl"> 3 5 6 7 8 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="poison" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -763,6 +803,8 @@
 		<table name="#ench1runSpd"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 438 523 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="thrill_fight" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
@@ -791,6 +833,8 @@
 		<table name="#magicLvl"> 40 49 58 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 379 467 549 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ab_hawk_eye" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
@@ -849,6 +893,8 @@
 		<table name="#mpConsume"> 16 19 24 </table>
 		<table name="#pDef"> 2 2.5 3 </table>
 		<table name="#abnormalLvl"> 1 2 3 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pinch" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1115,6 +1161,8 @@
 		<table name="#mpConsume"> 14 21 25 </table>
 		<table name="#swordblunt"> 1.2 1.3 1.4 </table>
 		<table name="#twohand"> 1.05 1.07 1.1 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pinch" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />

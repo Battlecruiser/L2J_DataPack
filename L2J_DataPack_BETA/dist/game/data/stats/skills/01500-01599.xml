@@ -2,6 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1500" levels="1" name="Improved Magic">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -27,6 +29,8 @@
 	</skill>
 	<skill id="1501" levels="1" name="Improved Condition">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_hp_mp_up" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -52,6 +56,8 @@
 	</skill>
 	<skill id="1502" levels="1" name="Improved Critical Attack">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -77,6 +83,8 @@
 	</skill>
 	<skill id="1503" levels="1" name="Improved Shield Defense">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_shield_rate_defence_up" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -102,6 +110,8 @@
 	</skill>
 	<skill id="1504" levels="1" name="Improved Movement">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_speed_avoid_up" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -127,6 +137,8 @@
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="invincibility" />
 		<set name="aggroPoints" val="668" />
 		<set name="hitTime" val="4000" />
 		<set name="hpConsume" val="4000" />
@@ -175,6 +187,8 @@
 		</for>
 	</skill>
 	<skill id="1507" levels="1" name="Lord of Vampire">
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="vampiric_attack_special" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="target" val="TARGET_ONE" />
@@ -194,6 +208,8 @@
 	</skill>
 	<skill id="1508" levels="1" name="Throne Root">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -218,6 +234,8 @@
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="limit" />
 		<set name="mpConsume" val="55" />
 		<set name="magicLvl" val="81" />
 		<set name="power" val="80" />
@@ -265,6 +283,8 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 39 48 57 66 75 84 93 102 111 120 129 138 147 156 165 174 183 192 201 210 219 228 237 246 255 264 273 282 291 300 </table>
 		<table name="#ench2Chance"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="curse_life_flow" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
@@ -298,6 +318,8 @@
 		<table name="#ench2mpConsume"> 64 62 60 58 56 53 51 49 47 45 42 40 38 36 33 </table>
 		<table name="#ench3effectPower"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
 		<table name="#ench4Duel"> 114 116 118 119 121 123 124 126 128 130 131 133 135 136 138 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_debuff_soul" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="mpConsume" val="68" />
 		<set name="magicLvl" val="77" />
@@ -377,6 +399,8 @@
 	<skill id="1514" levels="1" name="Soul Barrier" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1time"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 </table>
 		<table name="#ench2pDef"> 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_bow" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
@@ -415,6 +439,8 @@
 		<table name="#ench2mpConsume"> 35 33 32 31 30 28 27 26 25 25 23 22 21 20 18 </table>
 		<table name="#ench2Trigger"> 2 2 2 3 3 3 4 4 4 5 5 5 6 6 7 </table>
 		<table name="#ench3Trigger"> 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="elemental_armor" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="29" />
 		<set name="mpInitialConsume" val="8" />
@@ -464,6 +490,8 @@
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_pa_pd_up" />
 		<set name="aggroPoints" val="635" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -488,6 +516,8 @@
 	</skill>
 	<skill id="1518" levels="1" name="Chant of Critical Attack">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="aggroPoints" val="646" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -512,6 +542,8 @@
 	</skill>
 	<skill id="1519" levels="1" name="Chant of Blood Awakening">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_vampiric_haste" />
 		<set name="aggroPoints" val="655" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -536,6 +568,8 @@
 	</skill>
 	<skill id="1520" levels="1" name="Inquisitor">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="39" />
@@ -551,6 +585,8 @@
 	</skill>
 	<skill id="1521" levels="1" name="Inquisitor">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="39" />
@@ -566,6 +602,8 @@
 	</skill>
 	<skill id="1522" levels="1" name="Inquisitor">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="39" />
@@ -609,6 +647,8 @@
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60 </table>
 		<table name="#mpInitialConsume"> 8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="armor_holy" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="1500" />
@@ -638,6 +678,8 @@
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60 </table>
 		<table name="#mpInitialConsume"> 8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="heal_effect_down" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -717,6 +759,8 @@
 		<table name="#ench1mpConsume"> 66 65 63 62 61 60 60 58 57 56 55 53 52 51 50 48 47 47 46 45 43 42 41 40 38 37 36 36 35 33 </table>
 		<table name="#ench2Power"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 81 82 84 85 86 88 89 90 92 93 94 96 97 98 100 </table>
 		<table name="#ench3Time"> 68 76 84 92 100 108 116 124 132 140 148 156 164 172 180 188 196 204 212 220 228 236 244 252 260 268 276 284 292 300 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="15000" />
@@ -786,6 +830,8 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1triggeredLevel"> 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 </table>
 		<table name="#ench2time"> 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="bless_the_blood" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -814,6 +860,8 @@
 		</enchant2for>
 	</skill>
 	<skill id="1532" levels="1" name="Enlightenment">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="final_secret" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="73" />
 		<set name="target" val="TARGET_SELF" />
@@ -833,6 +881,8 @@
 		</for>
 	</skill>
 	<skill id="1533" levels="1" name="Enlightenment">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="final_secret" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="73" />
 		<set name="target" val="TARGET_SELF" />
@@ -854,6 +904,8 @@
 	</skill>
 	<skill id="1534" levels="1" name="Courage of Pa'agrio">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<!-- set name="affectLimit" = "50;50" / -->
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
@@ -874,6 +926,8 @@
 	</skill>
 	<skill id="1535" levels="1" name="Chant of Movement">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_speed_avoid_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -898,6 +952,8 @@
 	</skill>
 	<skill id="1536" levels="1" name="Combat of Pa'agrio">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_pa_pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -922,6 +978,8 @@
 	</skill>
 	<skill id="1537" levels="1" name="Critical of Pa'agrio">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -946,6 +1004,8 @@
 	</skill>
 	<skill id="1538" levels="1" name="Condition of Pa'agrio">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="improve_hp_mp_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -977,6 +1037,8 @@
 		<table name="#mpConsume"> 18 24 29 33 </table>
 		<table name="#vuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stigma_of_silen" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="hitTime" val="1500" />
@@ -1025,6 +1087,8 @@
 		</enchant1for>
 	</skill>
 	<skill id="1540" levels="1" name="Turn to Stone">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_stone" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="81" />
@@ -1037,6 +1101,8 @@
 	</skill>
 	<skill id="1541" levels="1" name="Curse of Desparion">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ultimate_debuff" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -1065,6 +1131,8 @@
 	<skill id="1542" levels="1" name="Counter Critical">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description in H5 Client is wrong -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="counter_critical" />
 		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1134,6 +1202,8 @@
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1162,6 +1232,8 @@
 		<table name="#mAtkSpd"> 1.01 1.03 1.05 </table>
 		<table name="#physicalSkillPower"> 1.05 1.07 1.1 </table>
 		<table name="#rCrit"> 0.05 0.07 0.1 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />

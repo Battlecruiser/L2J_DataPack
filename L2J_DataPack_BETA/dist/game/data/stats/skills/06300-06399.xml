@@ -23,6 +23,8 @@
 		<!-- Freya Skills -->
 		<table name="#mdot"> 300 150 </table>
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="force_meditation" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -41,6 +43,8 @@
 	<skill id="6302" levels="1" name="Cold Air">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6662 and 6698) -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -75,6 +79,8 @@
 	<skill id="6304" levels="1" name="Shock">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -115,6 +121,8 @@
 	<skill id="6306" levels="1" name="Solina Strike">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -257,6 +265,8 @@
 	<skill id="6313" levels="1" name="Solina Bless">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="5000" />
@@ -355,6 +365,8 @@
 	<skill id="6318" levels="1" name="Divine Shield Protection">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -375,6 +387,8 @@
 	<skill id="6319" levels="1" name="Sacred Magic Protection">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="md_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -395,6 +409,8 @@
 	<skill id="6320" levels="1" name="Summon Sacred Magic Force">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -593,6 +609,8 @@
 	<skill id="6331" levels="1" name="Camp Fire Tired">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -613,6 +631,8 @@
 	<skill id="6332" levels="1" name="Camp Fire Full">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -634,6 +654,8 @@
 	<skill id="6333" levels="1" name="Electric Bolt 1">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -658,6 +680,8 @@
 	<skill id="6334" levels="1" name="Shock">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -740,6 +764,8 @@
 	<skill id="6339" levels="1" name="Sacred Hammer Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
@@ -765,6 +791,8 @@
 	<skill id="6340" levels="1" name="Shock">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -813,6 +841,8 @@
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
 		<table name="#mAtk"> 1.08 1.15 </table>
 		<table name="#pAtk"> 1.02 1.03 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_b" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -835,6 +865,8 @@
 	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
 		<table name="#pmAtkSpd"> 1.04 1.08 </table>
 		<table name="#runSpd"> 5 10 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_b" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -859,6 +891,8 @@
 		<table name="#rCrit"> 0.04 0.08 </table>
 		<table name="#cAtk"> 1.05 1.1 </table>
 		<table name="#mCritRate"> 0.02 0.04 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_b" />
 		<set name=" target " val="TARGET_AREA" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -881,6 +915,8 @@
 		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="soa_buff1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -888,6 +924,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="soa_buff2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -895,6 +933,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="soa_buff3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -902,6 +942,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6370" levels="1" name="Thunderbolt">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="damage_amplify" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -911,12 +953,16 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="6371" levels="1" name="Invincibility">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 	</skill>
 	<skill id="6372" levels="10" name="Power Up">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_a" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -924,6 +970,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6373" levels="1" name="Thunderbolt">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="damage_amplify" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -947,12 +995,16 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="max_hp_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6377" levels="10" name="Assault Boost">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -960,6 +1012,8 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6378" levels="1" name="Earth Shift">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="vibration" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -967,6 +1021,8 @@
 	</skill>
 	<skill id="6379" levels="1" name="Blood Spurt">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
@@ -978,6 +1034,8 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6380" levels="1" name="Bistakon Roar">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -999,6 +1057,8 @@
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
 		<table name="#abnormalLvl"> 1 2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
@@ -1020,6 +1080,8 @@
 		</for>
 	</skill>
 	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
@@ -1041,6 +1103,8 @@
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -1075,6 +1139,8 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6385" levels="1" name="Bistakon Critical Claw">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
@@ -1097,6 +1163,8 @@
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
@@ -1149,6 +1217,8 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="isDebuff" val="true" />
@@ -1167,6 +1237,8 @@
 		</for>
 	</skill>
 	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_up" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1186,6 +1258,8 @@
 		</for>
 	</skill>
 	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
@@ -1207,6 +1281,8 @@
 	</skill>
 	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
 		<!-- Attack Speed is decreased by 50%. -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
@@ -1253,6 +1329,8 @@
 		<set name="skillRadius" val="300" />
 	</skill>
 	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
@@ -1275,6 +1353,8 @@
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
@@ -1296,6 +1376,8 @@
 		</for>
 	</skill>
 	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
@@ -1316,6 +1398,8 @@
 		</for>
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

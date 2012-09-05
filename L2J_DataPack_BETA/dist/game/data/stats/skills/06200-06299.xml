@@ -8,6 +8,8 @@
 	</skill>
 	<skill id="6201" levels="1" name="Transformation Condition - Frog">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -30,6 +32,8 @@
 	</skill>
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -52,6 +56,8 @@
 	</skill>
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -74,6 +80,8 @@
 	</skill>
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -100,6 +108,8 @@
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105 </table>
 		<table name="#power"> 1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
+		<set name="abnormalLvl" val="6" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
@@ -128,6 +138,8 @@
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -149,6 +161,8 @@
 	</skill>
 	<skill id="6207" levels="1" name="Strider Dash">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up_special" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="56" />
@@ -165,6 +179,8 @@
 	</skill>
 	<skill id="6208" levels="1" name="Blessed Guidance">
 		<!-- Blessed Guidance. For 10 seconds, increases accuracy by 2. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="hit_up" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -292,6 +308,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6235" levels="1" name="Blessed Focus">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="signal_b" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -303,6 +321,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="DEBUFF" />
@@ -319,6 +339,8 @@
 		</for>
 	</skill>
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="84" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
@@ -359,66 +381,88 @@
 		</cond>
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6250" levels="1" name="Severe Heatstroke">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_d" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -439,54 +483,72 @@
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -500,6 +562,8 @@
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6263" levels="1" name="EMP Shock">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -524,6 +588,8 @@
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -543,6 +609,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6269" levels="1" name="Poison Gas">
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -557,6 +625,8 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -564,6 +634,8 @@
 	</skill>
 	<skill id="6272" levels="1" name="Underbug Defense Up">
 		<!-- Increase each of P. Def. and M. Def. by 30%. -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -674,6 +746,8 @@
 	<skill id="6280" levels="1" name="Death Clack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="death_clack" />
 		<set name="castRange" val="1500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="1100" />
@@ -705,6 +779,8 @@
 	<skill id="6282" levels="1" name="Reflect Magic">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="reflect_magic_dd" />
 		<set name="aggroPoints" val="204" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
@@ -736,6 +812,8 @@
 	<skill id="6284" levels="1" name="Freya's Bless">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -754,6 +832,8 @@
 	<skill id="6285" levels="1" name="Rage of Ice">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -769,6 +849,8 @@
 	<skill id="6286" levels="1" name="Bless of Sword">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="650" />
 		<set name="effectRange" val="900" />
@@ -806,6 +888,8 @@
 	<skill id="6288" levels="1" name="Jinia's Prayer">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_a" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
@@ -823,6 +907,8 @@
 	<skill id="6289" levels="1" name="Kegor's Courage">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Kegor Skills -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_b" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
@@ -911,6 +997,8 @@
 	<skill id="6294" levels="1" name="Leader's Roar">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="34400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

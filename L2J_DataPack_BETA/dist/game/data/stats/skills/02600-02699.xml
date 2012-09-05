@@ -155,6 +155,8 @@
 		</cond>
 	</skill>
 	<skill id="2616" levels="1" name="Bond Sealant">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="invincibility" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -163,6 +165,8 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2617" levels="1" name="Stun Planter">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -171,6 +175,8 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2618" levels="1" name="Stun Land Mine">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -205,12 +211,16 @@
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="2623" levels="1" name="Alkaline Therapy">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_buff_a" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2624" levels="1" name="Life Aid Banding">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="resist_bleeding" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -235,6 +245,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2628" levels="1" name="Structure Scarab">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="resurrection_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
@@ -264,6 +276,8 @@
 		</cond>
 	</skill>
 	<skill id="2631" levels="1" name="Scroll of Transformation - Frog">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -277,6 +291,8 @@
 		</for>
 	</skill>
 	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -322,6 +338,8 @@
 		</cond>
 	</skill>
 	<skill id="2635" levels="1" name="Blessing of Fire">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -335,6 +353,8 @@
 		</for>
 	</skill>
 	<skill id="2636" levels="1" name="Blessing of Earth">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -896,6 +916,8 @@
 	</skill>
 	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
@@ -908,6 +930,8 @@
 	</skill>
 	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
@@ -919,6 +943,8 @@
 		</for>
 	</skill>
 	<skill id="2672" levels="1" name="Gludio Human Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -939,6 +965,8 @@
 		</for>
 	</skill>
 	<skill id="2673" levels="1" name="Gludio Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -959,6 +987,8 @@
 		</for>
 	</skill>
 	<skill id="2674" levels="1" name="Gludio Dark Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -979,6 +1009,8 @@
 		</for>
 	</skill>
 	<skill id="2675" levels="1" name="Gludio Orc Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -999,6 +1031,8 @@
 		</for>
 	</skill>
 	<skill id="2676" levels="1" name="Gludio Dwarf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1019,6 +1053,8 @@
 		</for>
 	</skill>
 	<skill id="2677" levels="1" name="Gludio Kamael Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1039,6 +1075,8 @@
 		</for>
 	</skill>
 	<skill id="2678" levels="1" name="Gludio Knight Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1059,6 +1097,8 @@
 		</for>
 	</skill>
 	<skill id="2679" levels="1" name="Gludio Archer Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1079,6 +1119,8 @@
 		</for>
 	</skill>
 	<skill id="2680" levels="1" name="Gludio Wizard Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1099,6 +1141,8 @@
 		</for>
 	</skill>
 	<skill id="2681" levels="1" name="Gludio Kamael Captain Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1119,6 +1163,8 @@
 		</for>
 	</skill>
 	<skill id="2682" levels="1" name="Gludio Knight Captain Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1139,6 +1185,8 @@
 		</for>
 	</skill>
 	<skill id="2683" levels="1" name="Gludio Commander Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1159,6 +1207,8 @@
 		</for>
 	</skill>
 	<skill id="2684" levels="1" name="Dion Human Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1179,6 +1229,8 @@
 		</for>
 	</skill>
 	<skill id="2685" levels="1" name="Dion Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1199,6 +1251,8 @@
 		</for>
 	</skill>
 	<skill id="2686" levels="1" name="Dion Dark Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1219,6 +1273,8 @@
 		</for>
 	</skill>
 	<skill id="2687" levels="1" name="Dion Orc Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1239,6 +1295,8 @@
 		</for>
 	</skill>
 	<skill id="2688" levels="1" name="Dion Dwarf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1259,6 +1317,8 @@
 		</for>
 	</skill>
 	<skill id="2689" levels="1" name="Dion Kamael Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1279,6 +1339,8 @@
 		</for>
 	</skill>
 	<skill id="2690" levels="1" name="Dion Knight Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1299,6 +1361,8 @@
 		</for>
 	</skill>
 	<skill id="2691" levels="1" name="Dion Archer Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1319,6 +1383,8 @@
 		</for>
 	</skill>
 	<skill id="2692" levels="1" name="Dion Wizard Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1339,6 +1405,8 @@
 		</for>
 	</skill>
 	<skill id="2693" levels="1" name="Dion Kamael Captain Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1359,6 +1427,8 @@
 		</for>
 	</skill>
 	<skill id="2694" levels="1" name="Dion Knight Captain Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1379,6 +1449,8 @@
 		</for>
 	</skill>
 	<skill id="2695" levels="1" name="Dion Commander Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1399,6 +1471,8 @@
 		</for>
 	</skill>
 	<skill id="2696" levels="1" name="Giran Human Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1419,6 +1493,8 @@
 		</for>
 	</skill>
 	<skill id="2697" levels="1" name="Giran Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1439,6 +1515,8 @@
 		</for>
 	</skill>
 	<skill id="2698" levels="1" name="Giran Dark Elf Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1459,6 +1537,8 @@
 		</for>
 	</skill>
 	<skill id="2699" levels="1" name="Giran Orc Mercenary">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2900" levels="1" name="Ancient Herb - Slayer">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_c" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -14,6 +16,8 @@
 		</for>
 	</skill>
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -27,6 +31,8 @@
 		</for>
 	</skill>
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -42,6 +48,8 @@
 		</for>
 	</skill>
 	<skill id="2903" levels="1" name="Ancient Herb - Guide">
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="speed_up_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -57,6 +65,8 @@
 		</for>
 	</skill>
 	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1679,6 +1689,8 @@
 		</for>
 	</skill>
 	<skill id="2993" levels="1" name="Ancient herb - Deceiver">
+		<set name="abnormalLvl" val="9" />
+		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1686,6 +1698,8 @@
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />

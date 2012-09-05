@@ -217,6 +217,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="26022" levels="1" name="High grade potion which improves attack speed">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -229,6 +231,8 @@
 		</for>
 	</skill>
 	<skill id="26023" levels="1" name="High grade potion which improves moving speed">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -251,6 +255,8 @@
 		</for>
 	</skill>
 	<skill id="26025" levels="1" name="Powerful Healing Potion">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -260,6 +266,8 @@
 		</for>
 	</skill>
 	<skill id="26026" levels="1" name="High-grade Healing Potion">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -324,6 +332,8 @@
 		</for>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -337,6 +347,8 @@
 		</for>
 	</skill>
 	<skill id="26032" levels="1" name="Haste Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -350,6 +362,8 @@
 		</for>
 	</skill>
 	<skill id="26033" levels="1" name="Might Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -363,6 +377,8 @@
 		</for>
 	</skill>
 	<skill id="26034" levels="1" name="Shield Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -376,6 +392,8 @@
 		</for>
 	</skill>
 	<skill id="26035" levels="1" name="Death Whisper Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -389,6 +407,8 @@
 		</for>
 	</skill>
 	<skill id="26036" levels="1" name="Guidance Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="hit_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -402,6 +422,8 @@
 		</for>
 	</skill>
 	<skill id="26037" levels="1" name="Empower Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -415,6 +437,8 @@
 		</for>
 	</skill>
 	<skill id="26038" levels="1" name="Greater Acumen Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -428,6 +452,8 @@
 		</for>
 	</skill>
 	<skill id="26039" levels="1" name="Vampiric Rage Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -441,6 +467,8 @@
 		</for>
 	</skill>
 	<skill id="26040" levels="1" name="Bless the Body Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -454,6 +482,8 @@
 		</for>
 	</skill>
 	<skill id="26041" levels="1" name="Berserker Spirit Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -474,6 +504,8 @@
 		</for>
 	</skill>
 	<skill id="26042" levels="1" name="Magic Barrier Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="md_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -487,6 +519,8 @@
 		</for>
 	</skill>
 	<skill id="26043" levels="1" name="Bless the Soul Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -500,6 +534,8 @@
 		</for>
 	</skill>
 	<skill id="26044" levels="1" name="Clarity Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="cheap_magic" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -515,6 +551,8 @@
 		</for>
 	</skill>
 	<skill id="26045" levels="1" name="Wild Magic Scroll">
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />

@@ -189,6 +189,8 @@
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="379" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -277,6 +279,8 @@
 		<set name="coolTime" val="720" />
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="NOTDONE" />
@@ -357,6 +361,8 @@
 	</skill>
 	<skill id="3335" levels="1" name="Transform Yeti">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
@@ -370,6 +376,8 @@
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
@@ -385,6 +393,8 @@
 	</skill>
 	<skill id="3337" levels="1" name="Transform Cutie Pig">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
@@ -601,6 +611,8 @@
 	</skill>
 	<skill id="3359" levels="1" name="Transform Native">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />

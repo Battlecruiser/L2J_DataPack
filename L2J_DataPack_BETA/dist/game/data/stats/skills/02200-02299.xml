@@ -616,6 +616,8 @@
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="valakas_item" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="1000" />
 		<set name="itemConsumeCount" val="1" />
@@ -632,6 +634,8 @@
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="valakas_item" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="1000" />
 		<set name="itemConsumeCount" val="1" />
@@ -662,6 +666,8 @@
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -751,6 +757,8 @@
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_stone" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -832,6 +840,8 @@
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pa_up_herb" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="40" />
@@ -855,6 +865,8 @@
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ma_up_herb" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="40" />
@@ -872,6 +884,8 @@
 		</for>
 	</skill>
 	<skill id="2248" levels="1" name="Bless of Fire">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -887,6 +901,8 @@
 		</for>
 	</skill>
 	<skill id="2249" levels="1" name="Bless of Water">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -902,6 +918,8 @@
 		</for>
 	</skill>
 	<skill id="2250" levels="1" name="Bless of Wind">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="2" /> <!-- Wind -->
@@ -917,6 +935,8 @@
 		</for>
 	</skill>
 	<skill id="2251" levels="1" name="Bless of Earth">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -932,6 +952,8 @@
 		</for>
 	</skill>
 	<skill id="2252" levels="1" name="Bless of Darkness">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -947,6 +969,8 @@
 		</for>
 	</skill>
 	<skill id="2253" levels="1" name="Bless of Sacredness">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="holy_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -1356,6 +1380,8 @@
 	<skill id="2274" levels="9" name="Fisherman's Potion">
 		<table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
 		<table name="#active_skill_id_lvl"> 1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25 1315,28 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="fishing_mastery_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
@@ -1447,6 +1473,8 @@
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="40" />
@@ -1465,6 +1493,8 @@
 	</skill>
 	<skill id="2281" levels="1" name="Herb of Magic">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="52" />
@@ -1483,6 +1513,8 @@
 	</skill>
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="52" />
@@ -1501,6 +1533,8 @@
 	</skill>
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="52" />
@@ -1519,6 +1553,8 @@
 	</skill>
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="52" />
@@ -1537,6 +1573,8 @@
 	</skill>
 	<skill id="2285" levels="1" name="Herb of Speed">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="52" />

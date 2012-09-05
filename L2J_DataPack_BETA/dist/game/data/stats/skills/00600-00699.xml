@@ -194,6 +194,8 @@
 		</for>
 	</skill>
 	<skill id="617" levels="1" name="Transform Onyx Beast">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -218,6 +220,8 @@
 		</for>
 	</skill>
 	<skill id="618" levels="1" name="Transform Death Blader">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -294,6 +298,8 @@
 		<table name="#rEvas"> 20 35 </table>
 		<table name="#runSpd"> 33 66 </table>
 		<table name="#pSkillEvas"> 0 25 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="avoid_up_special" />
 		<set name="mpConsume" val="38" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1500" />
@@ -386,6 +392,8 @@
 		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#magicLvl"> 40 41 42 43 44 44 45 46 47 48 49 50 51 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#ench4Chance"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -805,6 +813,8 @@
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -828,6 +838,8 @@
 	</skill>
 	<skill id="657" levels="3" name="Transform Divine Knight">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -851,6 +863,8 @@
 	</skill>
 	<skill id="658" levels="3" name="Transform Divine Rogue">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -874,6 +888,8 @@
 	</skill>
 	<skill id="659" levels="3" name="Transform Divine Wizard">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -897,6 +913,8 @@
 	</skill>
 	<skill id="660" levels="3" name="Transform Divine Summoner">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -920,6 +938,8 @@
 	</skill>
 	<skill id="661" levels="3" name="Transform Divine Healer">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -943,6 +963,8 @@
 	</skill>
 	<skill id="662" levels="3" name="Transform Divine Enchanter">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -965,6 +987,8 @@
 		</for>
 	</skill>
 	<skill id="663" levels="1" name="Transform Zaken">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -989,6 +1013,8 @@
 		</for>
 	</skill>
 	<skill id="664" levels="1" name="Transform Anakim">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1013,6 +1039,8 @@
 		</for>
 	</skill>
 	<skill id="665" levels="1" name="Transform Venom">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1037,6 +1065,8 @@
 		</for>
 	</skill>
 	<skill id="666" levels="1" name="Transform Gordon">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1061,6 +1091,8 @@
 		</for>
 	</skill>
 	<skill id="667" levels="1" name="Transform Ranku">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1085,6 +1117,8 @@
 		</for>
 	</skill>
 	<skill id="668" levels="1" name="Transform Kechi">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1109,6 +1143,8 @@
 		</for>
 	</skill>
 	<skill id="669" levels="1" name="Transform Demon Prince">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1133,6 +1169,8 @@
 		</for>
 	</skill>
 	<skill id="670" levels="1" name="Transform Heretic">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1157,6 +1195,8 @@
 		</for>
 	</skill>
 	<skill id="671" levels="1" name="Transform Vale Master">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1181,6 +1221,8 @@
 		</for>
 	</skill>
 	<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1205,6 +1247,8 @@
 		</for>
 	</skill>
 	<skill id="673" levels="1" name="Transform Oel Mahum">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1229,6 +1273,8 @@
 		</for>
 	</skill>
 	<skill id="674" levels="1" name="Transform Doll Blader">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform" />
 		<set name="mpConsume" val="31" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1297,6 +1343,8 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="678" levels="1" name="Divine Warrior War Cry">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="pa_up_special" />
 		<set name="aggroPoints" val="408" />
 		<set name="hitTime" val="1500" />
 		<set name="mpConsume" val="36" />
@@ -1312,6 +1360,8 @@
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1333,6 +1383,8 @@
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="target_lock" />
 		<set name="castRange" val="400" />
 		<set name="lvlDepend" val="2" />
 		<set name="effectRange" val="900" />
@@ -1352,6 +1404,8 @@
 		</for>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="target_lock" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
@@ -1369,6 +1423,8 @@
 		</for>
 	</skill>
 	<skill id="682" levels="1" name="Divine Knight Stun Attack">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
@@ -1391,6 +1447,8 @@
 		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="ignoreShld" val="true" />
@@ -1412,6 +1470,8 @@
 		</for>
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="pd_up_special" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="36" />
@@ -1429,6 +1489,8 @@
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1450,6 +1512,8 @@
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
@@ -1487,6 +1551,8 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
@@ -1526,6 +1592,8 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="avoid_up" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1544,6 +1612,8 @@
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1565,6 +1635,8 @@
 		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
+		<set name="abnormalLvl" val="0" />
+		<set name="abnormalType" val="ma_down" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
@@ -1615,6 +1687,8 @@
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
@@ -1635,6 +1709,8 @@
 		</for>
 	</skill>
 	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="armor_unholy" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="1500" />
@@ -1657,6 +1733,8 @@
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="transform_scrifice" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
