@@ -18,8 +18,8 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.ManorData;
 import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2Manor;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -109,9 +109,9 @@ public class Sow implements ISkillHandler
 	private boolean calcSuccess(L2Character activeChar, L2Character target, int seedId)
 	{
 		// TODO: check all the chances
-		int basicSuccess = (L2Manor.getInstance().isAlternative(seedId) ? 20 : 90);
-		final int minlevelSeed = L2Manor.getInstance().getSeedMinLevel(seedId);
-		final int maxlevelSeed = L2Manor.getInstance().getSeedMaxLevel(seedId);
+		int basicSuccess = (ManorData.getInstance().isAlternative(seedId) ? 20 : 90);
+		final int minlevelSeed = ManorData.getInstance().getSeedMinLevel(seedId);
+		final int maxlevelSeed = ManorData.getInstance().getSeedMaxLevel(seedId);
 		final int levelPlayer = activeChar.getLevel(); // Attacker Level
 		final int levelTarget = target.getLevel(); // target Level
 		
