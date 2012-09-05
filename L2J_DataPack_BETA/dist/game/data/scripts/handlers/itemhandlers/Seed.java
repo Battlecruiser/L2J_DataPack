@@ -14,10 +14,10 @@
  */
 package handlers.itemhandlers;
 
+import com.l2jserver.gameserver.datatables.ManorData;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
-import com.l2jserver.gameserver.model.L2Manor;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -104,6 +104,6 @@ public class Seed implements IItemHandler
 	 */
 	private boolean areaValid(int seedId, int castleId)
 	{
-		return (L2Manor.getInstance().getCastleIdForSeed(seedId) == castleId);
+		return (ManorData.getInstance().getCastleIdForSeed(seedId) == castleId);
 	}
 }
