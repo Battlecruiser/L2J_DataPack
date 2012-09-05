@@ -208,9 +208,13 @@
 		</for>
 	</skill>
 	<skill id="6127" levels="1" name="Anti-limit">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="-1" val="0" abnormalLvl="100" abnormalType="limit" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+		</for>
 	</skill>
 	<skill id="6128" levels="1" name="Presentation - Cow Rage">
 		<set name="target" val="TARGET_NONE" />

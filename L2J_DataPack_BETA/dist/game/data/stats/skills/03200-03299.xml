@@ -1229,7 +1229,7 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="silence_all,9" />
+		<set name="negateAbnormals" val="silence_all,9;silence_all_two,9" /> <!-- TODO: This ";silence_all_two,9" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="target" val="TARGET_SELF" />
