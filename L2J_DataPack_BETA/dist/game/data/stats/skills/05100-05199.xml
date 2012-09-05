@@ -1226,7 +1226,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" & abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		</for>
 	</skill>
 	<skill id="5178" levels="1" name="NPC Burn">

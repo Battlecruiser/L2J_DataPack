@@ -818,11 +818,11 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Mute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="60" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="60" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" & abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		</for>
 		<enchant2for>
 			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="#ench2Time" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" & abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		</enchant2for>
 	</skill>
 	<skill id="1337" levels="1" name="Curse of Abyss" enchantGroup1="6" enchantGroup2="6">
@@ -1726,141 +1726,167 @@
 		</enchant3for>
 	</skill>
 	<skill id="1358" levels="1" name="Block Shield" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench2mpInitialConsume"> 13 13 12 12 11 11 10 10 10 9 9 8 8 7 7 </table>
-		<table name="#ench2mpConsume"> 54 52 50 48 46 44 42 41 38 37 34 33 30 29 26 </table>
+		<table name="#ench2mpConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 27 </table>
+		<table name="#ench2mpInitialConsume"> 13 13 12 12 11 11 10 10 9 9 8 8 7 7 6 </table>
 		<table name="#ench2Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="56" />
-		<set name="magicLvl" val="77" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="4000" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="56" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="pd_up;improve_pa_pd_up" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="100" abnormalType="pd_up"> <!-- pd_up is here for remove pDef buffs on target -->
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="10" abnormalType="block_shield_up">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_pa_pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="100" abnormalType="pd_up"> <!-- pd_up is here for remove pDef buffs on target -->
+			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="10" abnormalType="block_shield_up">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_pa_pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="100" abnormalType="pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</enchant2for>
 	</skill>
 	<skill id="1359" levels="1" name="Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench2mpInitialConsume"> 13 13 12 12 11 11 10 10 10 9 9 8 8 7 7 </table>
-		<table name="#ench2mpConsume"> 54 52 50 48 46 44 42 41 38 37 34 33 30 29 26 </table>
+		<table name="#ench2mpConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 27 </table>
+		<table name="#ench2mpInitialConsume"> 13 13 12 12 11 11 10 10 9 9 8 8 7 7 6 </table>
 		<table name="#ench2Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="56" />
-		<set name="magicLvl" val="77" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="4000" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="56" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="improve_speed_avoid_up;speed_up" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="100" abnormalType="speed_up"> <!-- speed_up here is for remove speed buffs on target -->
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="10" abnormalType="block_speed_up">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_speed_avoid_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="speed_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="100" abnormalType="speed_up"> <!-- speed_up here is for remove speed buffs on target -->
+			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="10" abnormalType="block_speed_up">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_speed_avoid_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="100" abnormalType="speed_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</enchant2for>
 	</skill>
 	<skill id="1360" levels="1" name="Mass Block Shield" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 </table>
-		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
-		<table name="#ench2mpConsume"> 81 78 74 72 69 66 64 61 58 54 53 50 46 44 41 </table>
-		<set name="mpInitialConsume" val="21" />
-		<set name="mpConsume" val="84" />
-		<set name="magicLvl" val="77" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="reuseDelay" val="30000" />
+		<table name="#ench2mpConsume"> 81 78 75 72 69 67 64 61 58 55 53 50 47 44 41 </table>
+		<table name="#ench2mpInitialConsume"> 20 19 18 18 17 16 16 15 14 13 13 12 11 11 10 </table>
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="84" />
+		<set name="mpInitialConsume" val="21" />
+		<set name="negateAbnormals" val="improve_pa_pd_up;pd_up" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="100" abnormalType="pd_up"> <!-- pd_up is here for remove pDef buffs in target aura -->
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="10" abnormalType="block_shield_up">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_pa_pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1361" levels="1" name="Mass Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 </table>
-		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
-		<table name="#ench2mpConsume"> 81 78 74 72 69 66 64 61 58 54 53 50 46 44 41 </table>
-		<set name="mpInitialConsume" val="22" />
-		<set name="mpConsume" val="85" />
-		<set name="magicLvl" val="78" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="reuseDelay" val="30000" />
+		<table name="#ench2mpConsume"> 81 78 75 72 69 67 64 61 58 55 53 50 47 44 41 </table>
+		<table name="#ench2mpInitialConsume"> 20 19 18 18 17 16 16 15 14 13 13 12 11 11 10 </table>
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="85" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="negateAbnormals" val="improve_speed_avoid_up;speed_up" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="100" abnormalType="speed_up"> <!-- SpeedUp here is for remove speed buffs on target -->
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="10" abnormalType="block_speed_up">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="improve_speed_avoid_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Debuff" abnormalTime="120" noicon="1" val="0" abnormalLvl="100" abnormalType="speed_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1362" levels="1" name="Chant of Spirit" enchantGroup1="5" enchantGroup2="5">
@@ -1969,69 +1995,83 @@
 		</enchant3for>
 	</skill>
 	<skill id="1364" levels="1" name="Eye of Pa'agrio" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
-		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 45 43 41 39 37 35 33 31 30 28 </table>
-		<table name="#ench2mpConsume"> 216 209 201 194 186 178 170 164 156 149 141 134 126 118 112 </table>
-		<set name="mpInitialConsume" val="56" />
-		<set name="mpConsume" val="224" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
-		<set name="skillRadius" val="900" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="2500" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<table name="#ench2mpConsume"> 216 209 201 194 186 179 171 164 156 149 141 134 126 119 112 </table>
+		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 28 </table>
 		<set name="aggroPoints" val="666" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="224" />
+		<set name="mpInitialConsume" val="56" />
+		<set name="negateAbnormals" val="hit_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_CLAN" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="9" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="improve_hit_defence_crt_rate_up">
 				<add order="0x40" stat="accCombat" val="4" />
-			</effect>
-			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="90" abnormalType="critDamEvas">
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="100" abnormalType="hit_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 		<enchant1for>
-			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="9" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="improve_hit_defence_crt_rate_up">
 				<add order="0x40" stat="accCombat" val="4" />
-			</effect>
-			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="90" abnormalType="critDamEvas">
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="100" abnormalType="hit_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</enchant1for>
 	</skill>
 	<skill id="1365" levels="1" name="Soul of Pa'agrio" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
-		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 45 43 41 39 37 35 33 31 30 28 </table>
-		<table name="#ench2mpConsume"> 216 209 201 194 186 178 170 164 156 149 141 134 126 118 112 </table>
-		<set name="mpInitialConsume" val="56" />
-		<set name="mpConsume" val="224" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
-		<set name="skillRadius" val="900" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="2500" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<table name="#ench2mpConsume"> 216 209 201 194 186 179 171 164 156 149 141 134 126 119 112 </table>
+		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 28 </table>
 		<set name="aggroPoints" val="666" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="224" />
+		<set name="mpInitialConsume" val="56" />
+		<set name="negateAbnormals" val="ma_up,9;md_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_CLAN" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="9" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="improve_ma_md_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
-			</effect>
-			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="9" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="100" abnormalType="ma_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="1200" noicon="1" val="0" abnormalLvl="100" abnormalType="md_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 		<enchant1for>
-			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="9" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="improve_ma_md_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
-			</effect>
-			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="9" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="100" abnormalType="ma_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="#ench1Time" noicon="1" val="0" abnormalLvl="100" abnormalType="md_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</enchant1for>
 	</skill>
 	<skill id="1366" levels="1" name="Seal of Despair" enchantGroup1="5" enchantGroup2="5">

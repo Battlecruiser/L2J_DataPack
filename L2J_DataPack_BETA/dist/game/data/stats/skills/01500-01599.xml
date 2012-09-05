@@ -1,103 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1500" levels="1" name="Improved Magic">
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="22" />
+		<set name="mpInitialConsume" val="6" />
+		<set name="negateAbnormals" val="ma_up,9;md_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_ma_md_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="md_up" noicon="1">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="ma_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="md_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1501" levels="1" name="Improved Condition">
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="22" />
+		<set name="mpInitialConsume" val="6" />
+		<set name="negateAbnormals" val="max_hp_up,9;max_mp_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_hp_mp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="max_mp_up" noicon="1">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="max_hp_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="max_mp_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1502" levels="1" name="Improved Critical Attack">
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="22" />
+		<set name="mpInitialConsume" val="6" />
+		<set name="negateAbnormals" val="critical_prob_up,9;critical_dmg_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_crt_rate_dmg_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_dmg_up" noicon="1">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_prob_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_dmg_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1503" levels="1" name="Improved Shield Defense">
-		<set name="mpConsume" val="27" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="70" />
+		<set name="mpConsume" val="21" />
+		<set name="mpInitialConsume" val="6" />
+		<set name="negateAbnormals" val="shield_prob_up,9;shield_defence_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="shield_prob_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_shield_rate_defence_up">
 				<mul order="0x30" stat="rShld" val="1.3" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="shield_defence_up" noicon="1">
 				<mul order="0x30" stat="sDef" val="1.5" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="shield_prob_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="shield_defence_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1504" levels="1" name="Improved Movement">
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="22" />
+		<set name="mpInitialConsume" val="6" />
+		<set name="negateAbnormals" val="speed_up,9;avoid_up,9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_speed_avoid_up">
 				<add order="0x40" stat="runSpd" val="33" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="avoid_up" noicon="1">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="speed_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="avoid_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
@@ -438,63 +463,75 @@
 		<enchant2 name="pvpPower" val="#ench2Duel" />
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
-		<set name="mpConsume" val="65" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="635" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
+		<set name="mpConsume" val="52" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="negateAbnormals" val="pa_up,9;pd_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="pd_up" noicon="1">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="pa_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1518" levels="1" name="Chant of Critical Attack">
-		<set name="mpConsume" val="67" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="646" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="53" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="critical_prob_up,9;critical_dmg_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_crt_rate_dmg_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_dmg_up" noicon="1">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_prob_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_dmg_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1519" levels="1" name="Chant of Blood Awakening">
-		<set name="mpConsume" val="69" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="655" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="55" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="vampiric_attack,9;attack_time_down,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_vampiric_haste">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="attack_time_down" noicon="1">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="vampiric_attack" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="attack_time_down" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1520" levels="1" name="Inquisitor">
@@ -836,85 +873,99 @@
 		</for>
 	</skill>
 	<skill id="1535" levels="1" name="Chant of Movement">
-		<set name="mpConsume" val="69" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="55" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="speed_up,9;avoid_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_speed_avoid_up">
 				<add order="0x40" stat="runSpd" val="33" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="avoid_up" noicon="1">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="speed_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="avoid_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1536" levels="1" name="Combat of Pa'agrio">
-		<set name="mpConsume" val="272" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
+		<set name="mpConsume" val="217" />
+		<set name="mpInitialConsume" val="55" />
+		<set name="negateAbnormals" val="pa_up,9;pd_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="pd_up" noicon="1">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="pa_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="pd_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1537" levels="1" name="Critical of Pa'agrio">
-		<set name="mpConsume" val="272" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="217" />
+		<set name="mpInitialConsume" val="55" />
+		<set name="negateAbnormals" val="critical_prob_up,9;critical_dmg_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_crt_rate_dmg_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="critical_dmg_up" noicon="1">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_prob_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="critical_dmg_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1538" levels="1" name="Condition of Pa'agrio">
-		<set name="mpConsume" val="272" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="skillRadius" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="217" />
+		<set name="mpInitialConsume" val="55" />
+		<set name="negateAbnormals" val="max_hp_up,9;max_mp_up,9" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="655" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_hp_mp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
-			</effect>
-			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="9" abnormalType="max_mp_up" noicon="1">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
+			<effect name="Negate" noicon="1" val="0" />
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="max_hp_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
+			<effect name="Buff" abnormalTime="2400" noicon="1" val="0" abnormalLvl="100" abnormalType="max_mp_up" /> <!-- FIXME: Temp Fix until support for blockBuff by abnormalType is done -->
 		</for>
 	</skill>
 	<skill id="1539" levels="4" name="Stigma of Shilen" enchantGroup1="1">

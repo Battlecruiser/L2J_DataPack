@@ -1334,11 +1334,11 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="120" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="120" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" & abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		</for>
 		<enchant2for>
 			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="#ench2Time" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="#ench2Time" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" & abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" works like main skill attributes and not effect attributes -->
 		</enchant2for>
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
