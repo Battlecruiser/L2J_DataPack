@@ -970,36 +970,52 @@
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">
+		<!-- Confirmed CT2.5 -->
+		<table name="#power"> 2319 18664 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DISARM" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="STR" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="3" val="0" effectPower="70" effectType="DISARM" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
+		<!-- Confirmed CT2.5 -->
+		<!-- NOTE: lvl 2 has wrong Id in client -->
+		<table name="#power"> 2319 18664 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="A2" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="165" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
 		<set name="abnormalLvl" val="3" />
