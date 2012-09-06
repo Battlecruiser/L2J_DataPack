@@ -41639,9 +41639,7 @@ INSERT INTO `droplist` VALUES
 (25098, 952, 3, 9, 2, 580625.74422), -- Scroll: Enchant Armor (C-Grade)
 -- Rotting Tree Repiro
 (25099, 64, 1, 1, 0, 275300.088188), -- Composite Boots
-(25099, 608, 1, 1, 0, 275300.088188); -- Mithril Gauntlets
-
-INSERT INTO `droplist` VALUES
+(25099, 608, 1, 1, 0, 275300.088188), -- Mithril Gauntlets
 (25099, 2956, 192, 576, 0, 39810.45636), -- Composite Boots Part
 (25099, 1981, 53, 157, 0, 145593.367264), -- Mithril Gauntlets Design
 (25099, 75, 1, 1, 1, 7865.000948), -- Caliburs
@@ -42706,7 +42704,9 @@ INSERT INTO `droplist` VALUES
 (25281, 5318, 1, 1, 0, 54307.97645), -- Sealed Majestic Gauntlets
 (25281, 5319, 1, 1, 0, 54307.97645), -- Sealed Majestic Boots
 (25281, 5514, 60, 180, 0, 51784.493033), -- Sealed Gauntlets of Nightmare Design
-(25281, 5502, 116, 346, 0, 26900.823222), -- Sealed Boots of Nightmare Lining
+(25281, 5502, 116, 346, 0, 26900.823222); -- Sealed Boots of Nightmare Lining
+
+INSERT INTO `droplist` VALUES
 (25281, 5515, 16, 48, 0, 194191.377723), -- Sealed Majestic Gauntlets Design
 (25281, 5503, 23, 67, 0, 138092.400222), -- Sealed Majestic Boots Lining
 (25281, 236, 1, 1, 1, 21287.469632), -- Soul Separator
@@ -43796,9 +43796,7 @@ INSERT INTO `droplist` VALUES
 (25487, 2937, 378, 1134, 0, 6115.081753), -- Chain Boots Part
 (25487, 2938, 26, 78, 0, 88904.187394), -- Karmian Boots Fabric
 (25487, 2939, 35, 105, 0, 66043.361109), -- Plate Leather Boots Lining
-(25487, 2940, 45, 135, 0, 51367.324294); -- Dwarven Chain Boots Part
-
-INSERT INTO `droplist` VALUES
+(25487, 2940, 45, 135, 0, 51367.324294), -- Dwarven Chain Boots Part
 (25487, 2941, 56, 168, 0, 41277.001073), -- Boots of Seal Pattern
 (25487, 2942, 68, 204, 0, 33992.777533), -- Reinforced Mithril Gloves Design
 (25487, 2943, 81, 243, 0, 28537.579488), -- Chain Gloves Design
@@ -44878,7 +44876,9 @@ INSERT INTO `droplist` VALUES
 (25693, 9618, 1, 1, 1, 170082.547209), -- Dynasty Phantom Piece
 (25693, 959, 1, 1, 2, 15858.942784), -- Scroll: Enchant Weapon (S-Grade)
 (25693, 960, 1, 1, 2, 158589.782024), -- Scroll: Enchant Armor (S-Grade)
-(25693, 6577, 1, 1, 2, 2643.275192), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(25693, 6577, 1, 1, 2, 2643.275192); -- Blessed Scroll: Enchant Weapon (S-Grade)
+
+INSERT INTO `droplist` VALUES
 -- Aenkinel
 (25694, 9452, 1, 1, 0, 46794.620766), -- Sealed Dynasty Earring
 (25694, 9453, 1, 1, 0, 35096.086984), -- Sealed Dynasty Necklace
@@ -45019,6 +45019,96 @@ INSERT INTO `droplist` VALUES
 (25716, 10223, 1, 1, 1, 4963), -- Icarus Spitter
 (25716, 6578, 1, 1, 2, 55453.087404), -- Blessed Scroll: Enchant Armor (S-Grade)
 (25716, 6570, 1, 1, 2, 138632.912596), -- Blessed Scroll: Enchant Armor (A-Grade)
+-- Emerald Horn
+(25718, 14112, 1, 1, 0, 7899), -- Sealed Vesper Leather Leggings
+(25718, 13887, 1, 1, 0, 6269), -- Sealed Vesper Sigil
+(25718, 14105, 1, 1, 0, 4937), -- Sealed Vesper Breastplate
+(25718, 14108, 1, 1, 0, 2633), -- Sealed Vesper Gaiters
+(25718, 14106, 1, 1, 0, 1646), -- Sealed Vesper Leather Breastplate
+(25718, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25718, 959, 1, 1, 2, 44800), -- Scroll: Enchant Weapon (S-Grade)
+-- Dust Rider
+(25719, 13887, 1, 1, 0, 11520), -- Sealed Vesper Sigil
+(25719, 14112, 1, 1, 0, 6451), -- Sealed Vesper Leather Leggings
+(25719, 14108, 1, 1, 0, 4838), -- Sealed Vesper Gaiters
+(25719, 14106, 1, 1, 0, 4032), -- Sealed Vesper Leather Breastplate
+(25719, 14105, 1, 1, 0, 3024), -- Sealed Vesper Breastplate
+(25719, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25719, 6578, 1, 1, 3, 30489), -- Blessed Scroll: Enchant Armor (S-Grade)
+(25719, 959, 1, 1, 2, 27440), -- Scroll: Enchant Weapon (S-Grade)
+-- Bleeding Fly
+(25720, 14109, 1, 1, 0, 6788), -- Sealed Vesper Gauntlet
+(25720, 14113, 1, 1, 0, 6788), -- Sealed Vesper Leather Gloves
+(25720, 14116, 1, 1, 0, 6788), -- Sealed Vesper Gloves
+(25720, 14110, 1, 1, 0, 6788), -- Sealed Vesper Boots
+(25720, 14114, 1, 1, 0, 6788), -- Sealed Vesper Leather Boots
+(25720, 14117, 1, 1, 0, 6788), -- Sealed Vesper Shoes
+(25720, 14111, 1, 1, 0, 5172), -- Sealed Vesper Shield
+(25720, 13887, 1, 1, 0, 5172), -- Sealed Vesper Sigil
+(25720, 13143, 1, 1, 0, 3621), -- Sealed Vesper Helmet
+(25720, 13144, 1, 1, 0, 3621), -- Sealed Vesper Leather Helmet
+(25720, 13145, 1, 1, 0, 3621), -- Sealed Vesper Circlet
+(25720, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25720, 6578, 1, 1, 2, 34222), -- Blessed Scroll: Enchant Armor (S-Grade)
+(25720, 959, 1, 1, 2, 30800), -- Scroll: Enchant Weapon (S-Grade)
+-- Blackdagger Wing
+(25721, 14111, 1, 1, 0, 8464), -- Sealed Vesper Shield
+(25721, 13887, 1, 1, 0, 8464), -- Sealed Vesper Sigil
+(25721, 13143, 1, 1, 0, 5925), -- Sealed Vesper Helmet
+(25721, 13144, 1, 1, 0, 5925), -- Sealed Vesper Leather Helmet
+(25721, 13145, 1, 1, 0, 5925), -- Sealed Vesper Circlet
+(25721, 14109, 1, 1, 0, 4937), -- Sealed Vesper Gauntlet
+(25721, 14113, 1, 1, 0, 4937), -- Sealed Vesper Leather Gloves
+(25721, 14116, 1, 1, 0, 4937), -- Sealed Vesper Gloves
+(25721, 14110, 1, 1, 0, 4937), -- Sealed Vesper Boots
+(25721, 14114, 1, 1, 0, 4937), -- Sealed Vesper Leather Boots
+(25721, 14117, 1, 1, 0, 4937), -- Sealed Vesper Shoes
+(25721, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25721, 6578, 1, 1, 2, 37333), -- Blessed Scroll: Enchant Armor (S-Grade)
+(25721, 959, 1, 1, 2, 33600), -- Scroll: Enchant Weapon (S-Grade)
+-- Shadow Summoner
+(25722, 14109, 1, 1, 0, 8023), -- Sealed Vesper Gauntlet
+(25722, 14113, 1, 1, 0, 8023), -- Sealed Vesper Leather Gloves
+(25722, 14116, 1, 1, 0, 8023), -- Sealed Vesper Gloves
+(25722, 14110, 1, 1, 0, 8023), -- Sealed Vesper Boots
+(25722, 14114, 1, 1, 0, 8023), -- Sealed Vesper Leather Boots
+(25722, 14117, 1, 1, 0, 8023), -- Sealed Vesper Shoes
+(25722, 14111, 1, 1, 0, 6113), -- Sealed Vesper Shield
+(25722, 13887, 1, 1, 0, 6113), -- Sealed Vesper Sigil
+(25722, 13143, 1, 1, 0, 4279), -- Sealed Vesper Helmet
+(25722, 13144, 1, 1, 0, 4279), -- Sealed Vesper Leather Helmet
+(25722, 13145, 1, 1, 0, 4279), -- Sealed Vesper Circlet
+(25722, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25722, 959, 1, 1, 2, 36400), -- Scroll: Enchant Weapon (S-Grade)
+(25722, 6577, 1, 1, 2, 6067), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Spike Slasher
+(25723, 14111, 1, 1, 0, 9874), -- Sealed Vesper Shield
+(25723, 13887, 1, 1, 0, 9874), -- Sealed Vesper Sigil
+(25723, 13143, 1, 1, 0, 6912), -- Sealed Vesper Helmet
+(25723, 13144, 1, 1, 0, 6912), -- Sealed Vesper Leather Helmet
+(25723, 13145, 1, 1, 0, 6912), -- Sealed Vesper Circlet
+(25723, 14109, 1, 1, 0, 5760), -- Sealed Vesper Gauntlet
+(25723, 14113, 1, 1, 0, 5760), -- Sealed Vesper Leather Gloves
+(25723, 14116, 1, 1, 0, 5760), -- Sealed Vesper Gloves
+(25723, 14110, 1, 1, 0, 5760), -- Sealed Vesper Boots
+(25723, 14114, 1, 1, 0, 5760), -- Sealed Vesper Leather Boots
+(25723, 14117, 1, 1, 0, 5760), -- Sealed Vesper Shoes
+(25723, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25723, 959, 1, 1, 2, 39200), -- Scroll: Enchant Weapon (S-Grade)
+(25723, 6577, 1, 1, 2, 6533), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Muscle Bomber
+(25724, 13887, 1, 1, 0, 17632), -- Sealed Vesper Sigil
+(25724, 14115, 1, 1, 0, 9874), -- Sealed Vesper Stockings
+(25724, 14108, 1, 1, 0, 7405), -- Sealed Vesper Gaiters
+(25724, 14107, 1, 1, 0, 6171), -- Sealed Vesper Tunic
+(25724, 14105, 1, 1, 0, 4628), -- Sealed Vesper Breastplate
+(25724, 17267, 1, 1, 2, 1000), -- Sealed Blood Crystal
+(25724, 959, 1, 1, 2, 42000), -- Scroll: Enchant Weapon (S-Grade)
+(25724, 6577, 1, 1, 2, 7000), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Drake Lord
+(25725, 17266, 1, 1, 2, 2000), -- Will of Antharas
+-- Behemoth Leader
+(25726, 17266, 1, 1, 2, 2000), -- Will of Antharas
 -- Queen Ant
 (29001, 2499, 1, 1, 0, 60000), -- Elven Long Sword
 (29001, 70, 1, 1, 0, 60000), -- Claymore
@@ -45946,9 +46036,7 @@ INSERT INTO `droplist` VALUES
 (29163, 10223, 1, 1, 0, 65100), -- Icarus Spitter
 (29163, 13893, 1, 1, 1, 200000), -- Sealed Holy Spirit's Cloak
 (29163, 10550, 1, 1, 1, 400000), -- Forgotten Scroll - Protection of Elemental
-(29163, 10552, 1, 1, 1, 400000); -- Forgotten Scroll - Fighter's Will
-
-INSERT INTO `droplist` VALUES
+(29163, 10552, 1, 1, 1, 400000), -- Forgotten Scroll - Fighter's Will
 -- Tiat
 (29175, 7575, 1, 1, 0, 10599.273198), -- Draconic Bow
 (29175, 7579, 12, 36, 0, 206447.726802), -- Draconic Bow Shaft
