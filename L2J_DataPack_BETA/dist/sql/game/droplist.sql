@@ -40055,6 +40055,1064 @@ INSERT INTO `droplist` VALUES
 (22812, 4040, 1, 1, 2, 7942.512175), -- Mold Lubricant
 (22812, 4042, 1, 1, 2, 6618.736602), -- Enria
 (22812, 4043, 1, 1, 2, 13237.473204), -- Asofe
+-- Drakos
+(22815, 4039, 1, 1, -1, 171240), -- Mold Glue
+(22815, 9628, 1, 1, -1, 40292), -- Leonard
+(22815, 10403, 1, 1, -1, 2195), -- Icarus Hand Piece
+(22815, 15778, 1, 1, -1, 1526), -- Recipe - Sealed Moirai Breastplate (60%)
+(22815, 10218, 1, 1, -1, 7), -- Icarus Heavy Arms
+(22815, 57, 2710, 6322, 0, 700000), -- Adena
+(22815, 9442, 1, 1, 1, 1), -- Dynasty Sword
+(22815, 9443, 1, 1, 1, 1), -- Dynasty Blade
+(22815, 9444, 1, 1, 1, 1), -- Dynasty Phantom
+(22815, 9445, 1, 1, 1, 1), -- Dynasty Bow
+(22815, 9446, 1, 1, 1, 1), -- Dynasty Knife
+(22815, 9447, 1, 1, 1, 1), -- Dynasty Halberd
+(22815, 9448, 1, 1, 1, 1), -- Dynasty Cudgel
+(22815, 9449, 1, 1, 1, 1), -- Dynasty Mace
+(22815, 9450, 1, 1, 1, 1), -- Dynasty Bagh-Nakh
+(22815, 10252, 1, 1, 1, 1), -- Dynasty Staff
+(22815, 10253, 1, 1, 1, 1), -- Dynasty Crusher
+(22815, 9550, 1, 1, 2, 6749), -- Dark Stone
+(22815, 9573, 1, 1, 2, 5858), -- Life Stone - Level 80
+(22815, 6622, 1, 1, 2, 3374), -- Giant's Codex
+(22815, 9574, 1, 1, 2, 1465), -- Mid-Grade Life Stone - Level 80
+(22815, 9575, 1, 1, 2, 146), -- High-Grade Life Stone - Level 80
+-- Exploding Orc Ghost
+(22818, 4040, 1, 1, -1, 61669), -- Mold Lubricant
+(22818, 9630, 1, 1, -1, 16229), -- Orichalcum
+(22818, 15781, 1, 1, -1, 1465), -- Recipe - Sealed Moirai Gaiter (60%)
+(22818, 10402, 1, 1, -1, 1318), -- Icarus Hammer Piece
+(22818, 10219, 1, 1, -1, 4), -- Icarus Trident
+(22818, 57, 1624, 3794, 0, 700000), -- Adena
+(22818, 15703, 1, 1, 1, 15), -- Sealed Moirai Gauntlet
+(22818, 15704, 1, 1, 1, 15), -- Sealed Moirai Leather Gloves
+(22818, 15705, 1, 1, 1, 15), -- Sealed Moirai Gloves
+(22818, 15695, 1, 1, 1, 15), -- Sealed Moirai Leather Helmet
+(22818, 1879, 1, 1, 2, 42193), -- Cokes
+(22818, 1885, 1, 1, 2, 21097), -- High-Grade Suede
+(22818, 9628, 1, 1, 2, 1986), -- Leonard
+(22818, 9573, 1, 1, 2, 1758), -- Life Stone - Level 80
+(22818, 9630, 1, 1, 2, 1332), -- Orichalcum
+(22818, 9629, 1, 1, 2, 1101), -- Adamantine
+(22818, 9550, 1, 1, 2, 2025), -- Dark Stone
+(22818, 6622, 1, 1, 2, 1013), -- Giant's Codex
+(22818, 9574, 1, 1, 2, 440), -- Mid-Grade Life Stone - Level 80
+(22818, 9575, 1, 1, 2, 44), -- High-Grade Life Stone - Level 80
+-- Wrathful Orc Ghost
+(22819, 10403, 1, 1, -1, 2196), -- Icarus Hand Piece
+(22819, 15778, 1, 1, -1, 1526), -- Recipe - Sealed Moirai Breastplate (60%)
+(22819, 10218, 1, 1, -1, 7), -- Icarus Heavy Arms
+(22819, 57, 1624, 3794, 0, 700000), -- Adena
+(22819, 15706, 1, 1, 1, 15), -- Sealed Moirai Boots
+(22819, 15707, 1, 1, 1, 15), -- Sealed Moirai Leather Boots
+(22819, 15708, 1, 1, 1, 15), -- Sealed Moirai Shoes
+(22819, 15768, 1, 1, 1, 12), -- Sealed Moirai Necklace
+(22819, 1895, 1, 1, 2, 80368), -- Metallic Fiber
+(22819, 4040, 1, 1, 2, 5626), -- Mold Lubricant
+(22819, 9550, 1, 1, 2, 2250), -- Dark Stone
+(22819, 9628, 1, 1, 2, 2206), -- Leonard
+(22819, 9573, 1, 1, 2, 1953), -- Life Stone - Level 80
+(22819, 9630, 1, 1, 2, 1480), -- Orichalcum
+(22819, 6622, 1, 1, 2, 1125), -- Giant's Codex
+(22819, 9574, 1, 1, 2, 488), -- Mid-Grade Life Stone - Level 80
+(22819, 9575, 1, 1, 2, 49), -- High-Grade Life Stone - Level 80
+-- Mesmer Drake
+(22820, 4041, 1, 1, -1, 35561), -- Mold Hardener
+(22820, 9629, 1, 1, -1, 17780), -- Adamantine
+(22820, 10404, 1, 1, -1, 1748), -- Icarus Hall Piece
+(22820, 15780, 1, 1, -1, 1619), -- Recipe - Sealed Moirai Tunic (60%)
+(22820, 57, 1724, 4029, 0, 700000), -- Adena
+(22820, 15709, 1, 1, 1, 15), -- Sealed Moirai Sigil
+(22820, 15710, 1, 1, 1, 15), -- Sealed Moirai Shield
+(22820, 13893, 1, 1, 1, 5), -- Sealed Holy Spirit's Cloak
+(22820, 10215, 1, 1, 1, 1), -- Icarus Sawsword
+(22820, 1879, 1, 1, 2, 44767), -- Cokes
+(22820, 1885, 1, 1, 2, 22384), -- High-Grade Suede
+(22820, 9550, 1, 1, 2, 2149), -- Dark Stone
+(22820, 9628, 1, 1, 2, 2107), -- Leonard
+(22820, 9573, 1, 1, 2, 1865), -- Life Stone - Level 80
+(22820, 9630, 1, 1, 2, 1414), -- Orichalcum
+(22820, 9629, 1, 1, 2, 1168), -- Adamantine
+(22820, 6622, 1, 1, 2, 1074), -- Giant's Codex
+(22820, 9574, 1, 1, 2, 466), -- Mid-Grade Life Stone - Level 80
+(22820, 9575, 1, 1, 2, 47), -- High-Grade Life Stone - Level 80
+-- Immortal Necromancer
+(22821, 57, 1724, 4029, 0, 700000), -- Adena
+(22821, 15703, 1, 1, 1, 16), -- Sealed Moirai Gauntlet
+(22821, 15704, 1, 1, 1, 16), -- Sealed Moirai Leather Gloves
+(22821, 15705, 1, 1, 1, 16), -- Sealed Moirai Gloves
+(22821, 15695, 1, 1, 1, 11), -- Sealed Moirai Leather Helmet
+(22821, 1879, 1, 1, 2, 44767), -- Cokes
+(22821, 1885, 1, 1, 2, 22384), -- High-Grade Suede
+(22821, 9550, 1, 1, 2, 2149), -- Dark Stone
+(22821, 9628, 1, 1, 2, 2107), -- Leonard
+(22821, 9573, 1, 1, 2, 1865), -- Life Stone - Level 80
+(22821, 9630, 1, 1, 2, 1414), -- Orichalcum
+(22821, 9629, 1, 1, 2, 1168), -- Adamantine
+(22821, 6622, 1, 1, 2, 1074), -- Giant's Codex
+(22821, 9574, 1, 1, 2, 466), -- Mid-Grade Life Stone - Level 80
+(22821, 9575, 1, 1, 2, 47), -- High-Grade Life Stone - Level 80
+-- Drakos Warrior
+(22822, 4042, 1, 1, -1, 420375), -- Enria
+(22822, 9628, 1, 1, -1, 197823), -- Leonard
+(22822, 10397, 1, 1, -1, 10813), -- Icarus Sawsword Piece
+(22822, 10401, 1, 1, -1, 10779), -- Icarus Trident Piece
+(22822, 15780, 1, 1, -1, 9987), -- Recipe - Sealed Moirai Tunic (60%)
+(22822, 10373, 1, 1, -1, 1626), -- Recipe - Icarus Sawsword (60%)
+(22822, 15697, 1, 1, -1, 150), -- Sealed Moirai Breastplate
+(22822, 57, 18619, 43478, 0, 700000), -- Adena
+(22822, 15697, 1, 1, 1, 86), -- Sealed Moirai Breastplate
+(22822, 10221, 1, 1, 1, 19), -- Icarus Hand
+(22822, 1879, 1, 3, 2, 201329), -- Cokes
+(22822, 1885, 1, 1, 2, 201329), -- High-Grade Suede
+(22822, 9546, 1, 1, 2, 19328), -- Fire Stone
+(22822, 9628, 1, 1, 2, 18948), -- Leonard
+(22822, 10483, 1, 1, 2, 16778), -- Life Stone - Level 82
+(22822, 9630, 1, 1, 2, 12716), -- Orichalcum
+(22822, 9629, 1, 1, 2, 10504), -- Adamantine
+(22822, 6622, 1, 1, 2, 9664), -- Giant's Codex
+(22822, 10484, 1, 1, 2, 4194), -- Mid-Grade Life Stone - Level 82
+(22822, 17248, 1, 1, 2, 1421), -- Large Dragon Bone
+(22822, 9552, 1, 1, 2, 483), -- Fire Crystal
+(22822, 10485, 1, 1, 2, 420), -- High-Grade Life Stone - Level 82
+-- Drakos Assassin
+(22823, 4043, 1, 1, -1, 457741), -- Asofe
+(22823, 9630, 1, 1, -1, 72275), -- Orichalcum
+(22823, 15806, 1, 1, -1, 11770), -- Recipe - Sealed Vesper Shoes (60%)
+(22823, 15805, 1, 1, -1, 11770), -- Recipe - Sealed Vesper Leather Boots (60%)
+(22823, 15804, 1, 1, -1, 11770), -- Recipe - Sealed Vesper Boots (60%)
+(22823, 10402, 1, 1, -1, 5868), -- Icarus Hammer Piece
+(22823, 959, 1, 1, -1, 549), -- Scroll: Enchant Weapon (S-Grade)
+(22823, 10220, 1, 1, -1, 18), -- Icarus Hammer
+(22823, 10223, 1, 1, -1, 18), -- Icarus Spitter
+(22823, 57, 13033, 30434, 0, 700000), -- Adena
+(22823, 15706, 1, 1, 1, 161), -- Sealed Moirai Boots
+(22823, 15699, 1, 1, 1, 54), -- Sealed Moirai Tunic
+(22823, 10223, 1, 1, 1, 9), -- Icarus Spitter
+(22823, 1894, 1, 1, 2, 71207), -- Crafted Leather
+(22823, 4044, 1, 1, 2, 67646), -- Thons
+(22823, 4039, 1, 1, 2, 67646), -- Mold Glue
+(22823, 4041, 1, 1, 2, 17647), -- Mold Hardener
+(22823, 9546, 1, 1, 2, 16235), -- Fire Stone
+(22823, 10483, 1, 1, 2, 14093), -- Life Stone - Level 82
+(22823, 6622, 1, 1, 2, 8118), -- Giant's Codex
+(22823, 10484, 1, 1, 2, 3523), -- Mid-Grade Life Stone - Level 82
+(22823, 17248, 1, 1, 2, 1194), -- Large Dragon Bone
+(22823, 10485, 1, 1, 2, 352), -- High-Grade Life Stone - Level 82
+-- Drakos Guardian
+(22824, 4044, 1, 3, -1, 509098), -- Thons
+(22824, 9629, 1, 1, -1, 132808), -- Adamantine
+(22824, 15794, 1, 1, -1, 17455), -- Recipe - Sealed Vesper Circlet (60%)
+(22824, 15800, 1, 1, -1, 13963), -- Recipe - Sealed Vesper Stockings (60%)
+(22824, 10403, 1, 1, -1, 13054), -- Icarus Hand Piece
+(22824, 15778, 1, 1, -1, 9071), -- Recipe - Sealed Moirai Breastplate (60%)
+(22824, 15797, 1, 1, -1, 8727), -- Recipe - Sealed Vesper Tunic (60%)
+(22824, 10216, 1, 1, -1, 39), -- Icarus Disperser
+(22824, 57, 25780, 60169, 0, 700000), -- Adena
+(22824, 15697, 1, 1, 1, 119), -- Sealed Moirai Breastplate
+(22824, 10216, 1, 1, 1, 26), -- Icarus Disperser
+(22824, 1888, 1, 1, 2, 75996), -- Synthetic Cokes
+(22824, 1879, 3, 9, 2, 69663), -- Cokes
+(22824, 1885, 2, 6, 2, 52247), -- High-Grade Suede
+(22824, 1890, 1, 1, 2, 38288), -- Mithril Alloy
+(22824, 5550, 1, 1, 2, 33438), -- Durable Metal Plate
+(22824, 9546, 1, 1, 2, 20063), -- Fire Stone
+(22824, 9628, 1, 1, 2, 19670), -- Leonard
+(22824, 10483, 1, 1, 2, 17416), -- Life Stone - Level 82
+(22824, 9630, 1, 1, 2, 13199), -- Orichalcum
+(22824, 9629, 1, 1, 2, 10904), -- Adamantine
+(22824, 6622, 1, 1, 2, 10032), -- Giant's Codex
+(22824, 17248, 1, 1, 2, 1475), -- Large Dragon Bone
+(22824, 10484, 1, 1, 2, 4354), -- Mid-Grade Life Stone - Level 82
+(22824, 9552, 1, 1, 2, 502), -- Fire Crystal
+(22824, 10485, 1, 1, 2, 436), -- High-Grade Life Stone - Level 82
+(22824, 9627, 1, 1, 2, 167), -- Giant's Codex - Mastery
+-- Giant Noxious Scorpion
+(22825, 4039, 1, 3, -1, 555068), -- Mold Glue
+(22825, 9628, 1, 1, -1, 261209), -- Leonard
+(22825, 15801, 1, 1, -1, 28546), -- Recipe - Sealed Vesper Gauntlet (60%)
+(22825, 15802, 1, 1, -1, 28546), -- Recipe - Sealed Vesper Leather Gloves (60%)
+(22825, 15803, 1, 1, -1, 28546), -- Recipe - Sealed Vesper Gloves (60%)
+(22825, 10404, 1, 1, -1, 14233), -- Icarus Hall Piece
+(22825, 15780, 1, 1, -1, 13187), -- Recipe - Sealed Moirai Tunic (60%)
+(22825, 57, 24584, 57408, 0, 700000), -- Adena
+(22825, 15710, 1, 1, 1, 433), -- Sealed Moirai Shield
+(22825, 10215, 1, 1, 1, 25), -- Icarus Sawsword
+(22825, 1895, 3, 9, 2, 165717), -- Metallic Fiber
+(22825, 4043, 1, 1, 2, 116002), -- Asofe
+(22825, 4040, 1, 1, 2, 69601), -- Mold Lubricant
+(22825, 4042, 1, 1, 2, 58001), -- Enria
+(22825, 9549, 1, 1, 2, 27840), -- Wind Stone
+(22825, 10483, 1, 1, 2, 24167), -- Life Stone - Level 82
+(22825, 6622, 1, 1, 2, 13920), -- Giant's Codex
+(22825, 10484, 1, 1, 2, 6042), -- Mid-Grade Life Stone - Level 82
+(22825, 17248, 1, 1, 2, 2047), -- Large Dragon Bone
+(22825, 10485, 1, 1, 2, 604), -- High-Grade Life Stone - Level 82
+(22825, 959, 1, 1, 2, 139), -- Scroll: Enchant Weapon (S-Grade)
+-- Noxious Scorpion
+(22826, 4040, 1, 1, -1, 367895), -- Mold Lubricant
+(22826, 9630, 1, 1, -1, 96814), -- Orichalcum
+(22826, 10398, 1, 1, -1, 7886), -- Icarus Disperser Piece
+(22826, 10397, 1, 1, -1, 7886), -- Icarus Sawsword Piece
+(22826, 10399, 1, 1, -1, 7886), -- Icarus Spirit Piece
+(22826, 10402, 1, 1, -1, 7861), -- Icarus Hammer Piece
+(22826, 15778, 1, 1, -1, 5463), -- Recipe - Sealed Moirai Breastplate (60%)
+(22826, 57, 13579, 31708, 0, 700000), -- Adena
+(22826, 15703, 1, 1, 1, 251), -- Sealed Moirai Gauntlet
+(22826, 10216, 1, 1, 1, 14), -- Icarus Disperser
+(22826, 1895, 1, 3, 2, 274590), -- Metallic Fiber
+(22826, 4040, 1, 1, 2, 38433), -- Mold Lubricant
+(22826, 9549, 1, 1, 2, 15377), -- Wind Stone
+(22826, 9628, 1, 1, 2, 15076), -- Leonard
+(22826, 10483, 1, 1, 2, 13348), -- Life Stone - Level 82
+(22826, 9630, 1, 1, 2, 10116), -- Orichalcum
+(22826, 6622, 1, 1, 2, 7689), -- Giant's Codex
+(22826, 10484, 1, 1, 2, 3337), -- Mid-Grade Life Stone - Level 82
+(22826, 17248, 1, 1, 2, 1131), -- Large Dragon Bone
+(22826, 10485, 1, 1, 2, 334), -- High-Grade Life Stone - Level 82
+(22826, 959, 1, 1, 2, 77), -- Scroll: Enchant Weapon (S-Grade)
+-- Batwing Drake
+(22827, 9629, 1, 1, -1, 177959), -- Adamantine
+(22827, 10399, 1, 1, -1, 17548), -- Icarus Spirit Piece
+(22827, 10402, 1, 1, -1, 17492), -- Icarus Hammer Piece
+(22827, 15778, 1, 1, -1, 12155), -- Recipe - Sealed Moirai Breastplate (60%)
+(22827, 10216, 1, 1, -1, 53), -- Icarus Disperser
+(22827, 10215, 1, 1, -1, 53), -- Icarus Sawsword
+(22827, 57, 25908, 60468, 0, 700000), -- Adena
+(22827, 15709, 1, 1, 1, 456), -- Sealed Moirai Sigil
+(22827, 10217, 1, 1, 1, 26), -- Icarus Spirit
+(22827, 1879, 3, 9, 2, 101833), -- Cokes
+(22827, 1885, 2, 6, 2, 76374), -- High-Grade Suede
+(22827, 9548, 1, 1, 2, 29328), -- Earth Stone
+(22827, 9628, 1, 1, 2, 28753), -- Leonard
+(22827, 10483, 1, 1, 2, 25458), -- Life Stone - Level 82
+(22827, 9630, 1, 1, 2, 19295), -- Orichalcum
+(22827, 9629, 1, 1, 2, 15939), -- Adamantine
+(22827, 6622, 1, 1, 2, 14664), -- Giant's Codex
+(22827, 10484, 1, 1, 2, 6365), -- Mid-Grade Life Stone - Level 82
+(22827, 17248, 1, 1, 2, 2156), -- Large Dragon Bone
+(22827, 10485, 1, 1, 2, 636), -- High-Grade Life Stone - Level 82
+-- Parasitic Leech
+(22828, 4042, 1, 1, -1, 307717), -- Enria
+(22828, 9628, 1, 1, -1, 144808), -- Leonard
+(22828, 15781, 1, 1, -1, 8773), -- Recipe - Sealed Moirai Gaiter (60%)
+(22828, 10397, 1, 1, -1, 7916), -- Icarus Sawsword Piece
+(22828, 10401, 1, 1, -1, 7890), -- Icarus Trident Piece
+(22828, 13893, 1, 1, -1, 129), -- Sealed Holy Spirit's Cloak
+(22828, 10218, 1, 1, -1, 24), -- Icarus Heavy Arms
+(22828, 57, 13629, 31826, 0, 700000), -- Adena
+(22828, 15704, 1, 1, 1, 252), -- Sealed Moirai Leather Gloves
+(22828, 10218, 1, 1, 1, 14), -- Icarus Heavy Arms
+(22828, 1879, 1, 3, 2, 147374), -- Cokes
+(22828, 1885, 1, 1, 2, 147374), -- High-Grade Suede
+(22828, 9547, 1, 1, 2, 14148), -- Water Stone
+(22828, 9628, 1, 1, 2, 13870), -- Leonard
+(22828, 10483, 1, 1, 2, 12281), -- Life Stone - Level 82
+(22828, 9630, 1, 1, 2, 9308), -- Orichalcum
+(22828, 9629, 1, 1, 2, 7689), -- Adamantine
+(22828, 6622, 1, 1, 2, 7074), -- Giant's Codex
+(22828, 10484, 1, 1, 2, 3070), -- Mid-Grade Life Stone - Level 82
+(22828, 17248, 1, 1, 2, 1040), -- Large Dragon Bone
+(22828, 9553, 1, 1, 2, 354), -- Water Crystal
+(22828, 10485, 1, 1, 2, 307), -- High-Grade Life Stone - Level 82
+-- Emerald Drake
+(22829, 9630, 1, 1, -1, 257365), -- Orichalcum
+(22829, 10403, 1, 1, -1, 20897), -- Icarus Hand Piece
+(22829, 15780, 1, 1, -1, 19362), -- Recipe - Sealed Moirai Tunic (60%)
+(22829, 959, 1, 1, -1, 1956), -- Scroll: Enchant Weapon (S-Grade)
+(22829, 10217, 1, 1, -1, 63), -- Icarus Spirit
+(22829, 57, 25783, 60208, 0, 700000), -- Adena
+(22829, 15697, 1, 1, 1, 119), -- Sealed Moirai Breastplate
+(22829, 10219, 1, 1, 1, 26), -- Icarus Trident
+(22829, 1895, 3, 9, 2, 173798), -- Metallic Fiber
+(22829, 4040, 1, 1, 2, 72995), -- Mold Lubricant
+(22829, 9547, 1, 1, 2, 29198), -- Water Stone
+(22829, 9628, 1, 1, 2, 28625), -- Leonard
+(22829, 10483, 1, 1, 2, 25345), -- Life Stone - Level 82
+(22829, 9630, 1, 1, 2, 19209), -- Orichalcum
+(22829, 6622, 1, 1, 2, 14599), -- Giant's Codex
+(22829, 10484, 1, 1, 2, 6337), -- Mid-Grade Life Stone - Level 82
+(22829, 17248, 1, 1, 2, 2147), -- Large Dragon Bone
+(22829, 9555, 1, 1, 2, 730), -- Wind Crystal
+(22829, 10485, 1, 1, 2, 634), -- High-Grade Life Stone - Level 82
+-- Gem Dragon
+(22830, 4044, 1, 1, -1, 677865), -- Thons
+(22830, 9629, 1, 1, -1, 88417), -- Adamantine
+(22830, 15781, 1, 1, -1, 9663), -- Recipe - Sealed Moirai Gaiter (60%)
+(22830, 10397, 1, 1, -1, 8719), -- Icarus Sawsword Piece
+(22830, 10404, 1, 1, -1, 8691), -- Icarus Hall Piece
+(22830, 10215, 1, 1, -1, 26), -- Icarus Sawsword
+(22830, 57, 12867, 30047, 0, 700000), -- Adena
+(22830, 15703, 1, 1, 1, 238), -- Sealed Moirai Gauntlet
+(22830, 10220, 1, 1, 1, 13), -- Icarus Hammer
+(22830, 1879, 1, 1, 2, 222616), -- Cokes
+(22830, 1885, 1, 1, 2, 111308), -- High-Grade Suede
+(22830, 1888, 1, 1, 2, 40476), -- Synthetic Cokes
+(22830, 1890, 1, 1, 2, 20392), -- Mithril Alloy
+(22830, 5550, 1, 1, 2, 17809), -- Durable Metal Plate
+(22830, 9546, 1, 1, 2, 10686), -- Fire Stone
+(22830, 9628, 1, 1, 2, 10476), -- Leonard
+(22830, 10483, 1, 1, 2, 9275), -- Life Stone - Level 82
+(22830, 9630, 1, 1, 2, 7030), -- Orichalcum
+(22830, 9629, 1, 1, 2, 5807), -- Adamantine
+(22830, 6622, 1, 1, 2, 5343), -- Giant's Codex
+(22830, 10484, 1, 1, 2, 2319), -- Mid-Grade Life Stone - Level 82
+(22830, 17248, 1, 1, 2, 786), -- Large Dragon Bone
+(22830, 10485, 1, 1, 2, 232), -- High-Grade Life Stone - Level 82
+(22830, 959, 1, 1, 2, 53), -- Scroll: Enchant Weapon (S-Grade)
+-- Dragon Tracker of the Valley
+(22831, 14052, 1, 3, -1, 642917), -- Noble Enhancement Stone
+(22831, 10398, 1, 1, -1, 22051), -- Icarus Disperser Piece
+(22831, 10397, 1, 1, -1, 22051), -- Icarus Sawsword Piece
+(22831, 13893, 1, 1, -1, 359), -- Sealed Holy Spirit's Cloak
+(22831, 10218, 1, 1, -1, 66), -- Icarus Heavy Arms
+(22831, 57, 27119, 63328, 0, 700000), -- Adena
+(22831, 15699, 1, 1, 1, 112), -- Sealed Moirai Tunic
+(22831, 13893, 1, 1, 1, 98), -- Sealed Holy Spirit's Cloak
+(22831, 10221, 1, 1, 1, 18), -- Icarus Hand
+(22831, 1895, 3, 9, 2, 154680), -- Metallic Fiber
+(22831, 4040, 1, 1, 2, 64966), -- Mold Lubricant
+(22831, 9546, 1, 1, 2, 25986), -- Fire Stone
+(22831, 9628, 1, 1, 2, 25477), -- Leonard
+(22831, 10483, 1, 1, 2, 22558), -- Life Stone - Level 82
+(22831, 9630, 1, 1, 2, 17096), -- Orichalcum
+(22831, 6622, 1, 1, 2, 12993), -- Giant's Codex
+(22831, 10484, 1, 1, 2, 5639), -- Mid-Grade Life Stone - Level 82
+(22831, 17248, 1, 1, 2, 1911), -- Large Dragon Bone
+(22831, 9554, 1, 1, 2, 650), -- Earth Crystal
+(22831, 10384, 1, 1, 2, 609), -- Recipe - Icarus Shooter (60%)
+(22831, 10485, 1, 1, 2, 564), -- High-Grade Life Stone - Level 82
+(22831, 10383, 1, 1, 2, 209), -- Recipe - Icarus Wingblade (60%)
+-- Dragon Scout of the Valley
+(22832, 14052, 1, 3, -1, 631109), -- Noble Enhancement Stone
+(22832, 10399, 1, 1, -1, 21646), -- Icarus Spirit Piece
+(22832, 10401, 1, 1, -1, 21576), -- Icarus Trident Piece
+(22832, 15778, 1, 1, -1, 14994), -- Recipe - Sealed Moirai Breastplate (60%)
+(22832, 10217, 1, 1, -1, 65), -- Icarus Spirit
+(22832, 57, 26621, 62165, 0, 700000), -- Adena
+(22832, 15709, 1, 1, 1, 312), -- Sealed Moirai Sigil
+(22832, 15694, 1, 1, 1, 219), -- Sealed Moirai Helmet
+(22832, 10222, 1, 1, 1, 18), -- Icarus Hall
+(22832, 1885, 1, 1, 2, 215897), -- High-Grade Suede
+(22832, 1879, 3, 9, 2, 71965), -- Cokes
+(22832, 9546, 1, 1, 2, 20726), -- Fire Stone
+(22832, 9628, 1, 1, 2, 20320), -- Leonard
+(22832, 10483, 1, 1, 2, 17991), -- Life Stone - Level 82
+(22832, 9630, 1, 1, 2, 13636), -- Orichalcum
+(22832, 9629, 1, 1, 2, 11264), -- Adamantine
+(22832, 6622, 1, 1, 2, 10364), -- Giant's Codex
+(22832, 10484, 1, 1, 2, 4498), -- Mid-Grade Life Stone - Level 82
+(22832, 17248, 1, 1, 2, 1524), -- Large Dragon Bone
+(22832, 9554, 1, 1, 2, 518), -- Earth Crystal
+(22832, 10485, 1, 1, 2, 450), -- High-Grade Life Stone - Level 82
+(22832, 10374, 1, 1, 2, 167), -- Recipe - Icarus Disperser (60%)
+(22832, 10378, 1, 1, 2, 167), -- Recipe - Icarus Hammer (60%)
+(22832, 10373, 1, 1, 2, 167), -- Recipe - Icarus Sawsword (60%)
+(22832, 10377, 1, 1, 2, 167), -- Recipe - Icarus Trident (60%)
+-- Sand Drake Tracker
+(22833, 14052, 1, 1, -1, 839493), -- Noble Enhancement Stone
+(22833, 15792, 1, 1, -1, 19188), -- Recipe - Sealed Vesper Helmet (60%)
+(22833, 10402, 1, 1, -1, 14350), -- Icarus Hammer Piece
+(22833, 15780, 1, 1, -1, 13296), -- Recipe - Sealed Moirai Tunic (60%)
+(22833, 15798, 1, 1, -1, 11513), -- Recipe - Sealed Vesper Gaiter (60%)
+(22833, 15795, 1, 1, -1, 7195), -- Recipe - Sealed Vesper Breastplate (60%)
+(22833, 13893, 1, 1, -1, 234), -- Sealed Holy Spirit's Cloak
+(22833, 10219, 1, 1, -1, 43), -- Icarus Trident
+(22833, 57, 28329, 66153, 0, 700000), -- Adena
+(22833, 15706, 1, 1, 1, 262), -- Sealed Moirai Boots
+(22833, 15699, 1, 1, 1, 87), -- Sealed Moirai Tunic
+(22833, 13893, 1, 1, 1, 77), -- Sealed Holy Spirit's Cloak
+(22833, 10223, 1, 1, 1, 14), -- Icarus Spitter
+(22833, 1885, 1, 1, 2, 229747), -- High-Grade Suede
+(22833, 1879, 3, 9, 2, 76582), -- Cokes
+(22833, 9549, 1, 1, 2, 22056), -- Wind Stone
+(22833, 9628, 1, 1, 2, 21623), -- Leonard
+(22833, 10483, 1, 1, 2, 19146), -- Life Stone - Level 82
+(22833, 9630, 1, 1, 2, 14510), -- Orichalcum
+(22833, 9629, 1, 1, 2, 11987), -- Adamantine
+(22833, 6622, 1, 1, 2, 11029), -- Giant's Codex
+(22833, 10484, 1, 1, 2, 4786), -- Mid-Grade Life Stone - Level 82
+(22833, 17248, 1, 1, 2, 1622), -- Large Dragon Bone
+(22833, 9555, 1, 1, 2, 551), -- Wind Crystal
+(22833, 10485, 1, 1, 2, 479), -- High-Grade Life Stone - Level 82
+(22833, 10380, 1, 1, 2, 178), -- Recipe - Icarus Hall (60%)
+(22833, 10379, 1, 1, 2, 178), -- Recipe - Icarus Hand (60%)
+(22833, 10376, 1, 1, 2, 178), -- Recipe - Icarus Heavy Arms (60%)
+(22833, 10375, 1, 1, 2, 178), -- Recipe - Icarus Spirit (60%)
+-- Dust Dragon Tracker
+(22834, 14052, 1, 3, -1, 575321), -- Noble Enhancement Stone
+(22834, 15808, 1, 1, -1, 37572), -- Recipe - Sealed Vesper Shield (60%)
+(22834, 15807, 1, 1, -1, 37572), -- Recipe - Sealed Vesper Sigil (60%)
+(22834, 15781, 1, 1, -1, 21869), -- Recipe - Sealed Moirai Gaiter (60%)
+(22834, 10403, 1, 1, -1, 19669), -- Icarus Hand Piece
+(22834, 10217, 1, 1, -1, 59), -- Icarus Spirit
+(22834, 57, 29134, 67996, 0, 700000), -- Adena
+(22834, 15710, 1, 1, 1, 342), -- Sealed Moirai Shield
+(22834, 10218, 1, 1, 1, 19), -- Icarus Heavy Arms
+(22834, 10217, 1, 1, 1, 19), -- Icarus Spirit
+(22834, 1895, 3, 9, 2, 143954), -- Metallic Fiber
+(22834, 4040, 1, 1, 2, 60461), -- Mold Lubricant
+(22834, 9549, 1, 1, 2, 24184), -- Wind Stone
+(22834, 9628, 1, 1, 2, 23710), -- Leonard
+(22834, 10483, 1, 1, 2, 20993), -- Life Stone - Level 82
+(22834, 9630, 1, 1, 2, 15911), -- Orichalcum
+(22834, 6622, 1, 1, 2, 12092), -- Giant's Codex
+(22834, 10484, 1, 1, 2, 5248), -- Mid-Grade Life Stone - Level 82
+(22834, 17248, 1, 1, 2, 1778), -- Large Dragon Bone
+(22834, 9555, 1, 1, 2, 605), -- Wind Crystal
+(22834, 10485, 1, 1, 2, 525), -- High-Grade Life Stone - Level 82
+(22834, 10384, 1, 1, 2, 195), -- Recipe - Icarus Shooter (60%)
+(22834, 10381, 1, 1, 2, 195), -- Recipe - Icarus Spitter (60%)
+(22834, 10382, 1, 1, 2, 195), -- Recipe - Icarus Stinger (60%)
+(22834, 10383, 1, 1, 2, 195), -- Recipe - Icarus Wingblade (60%)
+-- Magma Drake Mother
+(22835, 6578, 1, 1, 1, 4298), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22835, 6578, 1, 1, 2, 4298), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22835, 6577, 1, 1, 1, 645), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22835, 6577, 1, 1, 2, 645), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Magma Drake Hatchling
+(22836, 6578, 1, 1, 1, 1611), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22836, 6578, 1, 1, 2, 1611), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22836, 6577, 1, 1, 1, 242), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22836, 6577, 1, 1, 2, 242), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Gem Dragon Hatchling
+(22837, 6578, 1, 1, 1, 2149), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22837, 6578, 1, 1, 2, 2149), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22837, 6577, 1, 1, 1, 322), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22837, 6577, 1, 1, 2, 322), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Maluk Leader
+(22838, 4039, 1, 3, -1, 652980), -- Mold Glue
+(22838, 9630, 1, 1, -1, 206204), -- Orichalcum
+(22838, 15634, 1, 1, -1, 23272), -- Vesper Cutter Piece
+(22838, 15636, 1, 1, -1, 23272), -- Vesper Buster Piece
+(22838, 15635, 1, 1, -1, 23231), -- Vesper Slasher Piece
+(22838, 15638, 1, 1, -1, 23073), -- Vesper Fighter Piece
+(22838, 57, 24809, 57874, 0, 700000), -- Adena
+(22838, 15669, 1, 1, 1, 17446), -- Sealed Vesper Verteidiger Piece
+(22838, 14113, 1, 1, 1, 132), -- Sealed Vesper Leather Gloves
+(22838, 14116, 1, 1, 1, 132), -- Sealed Vesper Gloves
+(22838, 14111, 1, 1, 1, 126), -- Sealed Vesper Shield
+(22838, 14105, 1, 1, 1, 33), -- Sealed Vesper Breastplate
+(22838, 13457, 1, 1, 1, 11), -- Vesper Cutter
+(22838, 1885, 1, 1, 2, 214443), -- High-Grade Suede
+(22838, 1879, 3, 9, 2, 71481), -- Cokes
+(22838, 9549, 1, 1, 2, 20587), -- Wind Stone
+(22838, 9628, 1, 1, 2, 20183), -- Leonard
+(22838, 9630, 1, 1, 2, 13544), -- Orichalcum
+(22838, 14166, 1, 1, 2, 12432), -- Life Stone - Level 84
+(22838, 9629, 1, 1, 2, 11189), -- Adamantine
+(22838, 14167, 1, 1, 2, 3104), -- Mid-Grade Life Stone - Level 84
+(22838, 9556, 1, 1, 2, 515), -- Dark Crystal
+(22838, 14168, 1, 1, 2, 310), -- High-Grade Life Stone - Level 84
+(22838, 9627, 1, 1, 2, 171), -- Giant's Codex - Mastery
+(22838, 6578, 1, 1, 2, 115), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22838, 14169, 1, 1, 2, 62), -- Top-Grade Life Stone - Level 84
+(22838, 6577, 1, 1, 2, 17), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Maluk Warlord
+(22839, 4040, 1, 1, -1, 757926), -- Mold Lubricant
+(22839, 9628, 1, 1, -1, 297226), -- Leonard
+(22839, 15669, 1, 1, -1, 256924), -- Sealed Vesper Verteidiger Piece
+(22839, 15640, 1, 1, -1, 22318), -- Vesper Avenger Piece
+(22839, 15642, 1, 1, -1, 22318), -- Vesper Caster Piece
+(22839, 15825, 1, 1, -1, 2644), -- Recipe - Vesper Thrower (60%)
+(22839, 57, 23997, 55980, 0, 700000), -- Adena
+(22839, 15669, 1, 1, 1, 13323), -- Sealed Vesper Verteidiger Piece
+(22839, 15691, 1, 1, 1, 13323), -- Sealed Vesper Sigil Piece
+(22839, 15660, 1, 1, 1, 9014), -- Sealed Vesper Helmet Piece
+(22839, 15661, 1, 1, 1, 9014), -- Sealed Vesper Leather Helmet Piece
+(22839, 15662, 1, 1, 1, 9014), -- Sealed Vesper Circlet Piece
+(22839, 14111, 1, 1, 1, 102), -- Sealed Vesper Shield
+(22839, 13887, 1, 1, 1, 102), -- Sealed Vesper Sigil
+(22839, 13143, 1, 1, 1, 71), -- Sealed Vesper Helmet
+(22839, 13144, 1, 1, 1, 71), -- Sealed Vesper Leather Helmet
+(22839, 13145, 1, 1, 1, 71), -- Sealed Vesper Circlet
+(22839, 13467, 1, 1, 1, 9), -- Vesper Thrower
+(22839, 1885, 1, 1, 2, 163755), -- High-Grade Suede
+(22839, 1888, 1, 1, 2, 59547), -- Synthetic Cokes
+(22839, 1879, 3, 9, 2, 54585), -- Cokes
+(22839, 1890, 1, 1, 2, 30001), -- Mithril Alloy
+(22839, 5550, 1, 1, 2, 26201), -- Durable Metal Plate
+(22839, 9549, 1, 1, 2, 15720), -- Wind Stone
+(22839, 9628, 1, 1, 2, 15412), -- Leonard
+(22839, 9630, 1, 1, 2, 10343), -- Orichalcum
+(22839, 14166, 1, 1, 2, 9493), -- Life Stone - Level 84
+(22839, 9629, 1, 1, 2, 8544), -- Adamantine
+(22839, 14167, 1, 1, 2, 2370), -- Mid-Grade Life Stone - Level 84
+(22839, 14168, 1, 1, 2, 237), -- High-Grade Life Stone - Level 84
+(22839, 9627, 1, 1, 2, 130), -- Giant's Codex - Mastery
+(22839, 959, 1, 1, 2, 79), -- Scroll: Enchant Weapon (S-Grade)
+-- Maluk Hunter
+(22840, 4041, 1, 1, -1, 101365), -- Mold Hardener
+(22840, 9628, 1, 1, -1, 91427), -- Leonard
+(22840, 15644, 1, 1, -1, 6953), -- Vesper Thrower Piece
+(22840, 15637, 1, 1, -1, 6924), -- Vesper Shaper Piece
+(22840, 15819, 1, 1, -1, 813), -- Recipe - Vesper Fighter (60%)
+(22840, 6578, 1, 1, -1, 518), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22840, 13458, 1, 1, -1, 16), -- Vesper Slasher
+(22840, 57, 8612, 20089, 0, 700000), -- Adena
+(22840, 15668, 1, 1, 1, 6417), -- Sealed Vesper Boots Piece
+(22840, 15667, 1, 1, 1, 6417), -- Sealed Vesper Gauntlet Piece
+(22840, 15674, 1, 1, 1, 6417), -- Sealed Vesper Gloves Piece
+(22840, 15672, 1, 1, 1, 6417), -- Sealed Vesper Leather Boots Piece
+(22840, 15671, 1, 1, 1, 6417), -- Sealed Vesper Leather Gloves Piece
+(22840, 15675, 1, 1, 1, 6417), -- Sealed Vesper Shoes Piece
+(22840, 14110, 1, 1, 1, 38), -- Sealed Vesper Boots
+(22840, 14109, 1, 1, 1, 38), -- Sealed Vesper Gauntlet
+(22840, 14116, 1, 1, 1, 38), -- Sealed Vesper Gloves
+(22840, 14114, 1, 1, 1, 38), -- Sealed Vesper Leather Boots
+(22840, 14113, 1, 1, 1, 38), -- Sealed Vesper Leather Gloves
+(22840, 14117, 1, 1, 1, 38), -- Sealed Vesper Shoes
+(22840, 1895, 1, 1, 2, 239265), -- Metallic Fiber
+(22840, 4040, 1, 1, 2, 16749), -- Mold Lubricant
+(22840, 9549, 1, 1, 2, 6700), -- Wind Stone
+(22840, 9628, 1, 1, 2, 6568), -- Leonard
+(22840, 9630, 1, 1, 2, 4407), -- Orichalcum
+(22840, 14166, 1, 1, 2, 4046); -- Life Stone - Level 84
+
+INSERT INTO `droplist` VALUES
+(22840, 14167, 1, 1, 2, 1010), -- Mid-Grade Life Stone - Level 84
+(22840, 14168, 1, 1, 2, 101), -- High-Grade Life Stone - Level 84
+(22840, 9627, 1, 1, 2, 56), -- Giant's Codex - Mastery
+(22840, 14169, 1, 1, 2, 20), -- Top-Grade Life Stone - Level 84
+-- Maluk Princess
+(22841, 4042, 1, 1, -1, 389273), -- Enria
+(22841, 9629, 1, 1, -1, 101550), -- Adamantine
+(22841, 15644, 1, 1, -1, 13932), -- Vesper Thrower Piece
+(22841, 15639, 1, 1, -1, 13915), -- Vesper Stormer Piece
+(22841, 15637, 1, 1, -1, 13874), -- Vesper Shaper Piece
+(22841, 13459, 1, 1, -1, 33), -- Vesper Buster
+(22841, 57, 14790, 34502, 0, 700000), -- Adena
+(22841, 15673, 1, 1, 1, 6010), -- Sealed Vesper Stockings Piece
+(22841, 15665, 1, 1, 1, 3899), -- Sealed Vesper Tunic Piece
+(22841, 14115, 1, 1, 1, 105), -- Sealed Vesper Stockings
+(22841, 14107, 1, 1, 1, 66), -- Sealed Vesper Tunic
+(22841, 1879, 1, 1, 2, 273943), -- Cokes
+(22841, 1885, 1, 1, 2, 136972), -- High-Grade Suede
+(22841, 9549, 1, 1, 2, 13149), -- Wind Stone
+(22841, 9628, 1, 1, 2, 12892), -- Leonard
+(22841, 9630, 1, 1, 2, 8651), -- Orichalcum
+(22841, 14166, 1, 1, 2, 7940), -- Life Stone - Level 84
+(22841, 9629, 1, 1, 2, 7147), -- Adamantine
+(22841, 14167, 1, 1, 2, 1983), -- Mid-Grade Life Stone - Level 84
+(22841, 14168, 1, 1, 2, 198), -- High-Grade Life Stone - Level 84
+(22841, 9627, 1, 1, 2, 109), -- Giant's Codex - Mastery
+(22841, 959, 1, 1, 2, 66), -- Scroll: Enchant Weapon (S-Grade)
+(22841, 14169, 1, 1, 2, 40), -- Top-Grade Life Stone - Level 84
+-- Maluk Banshee
+(22842, 4043, 1, 1, -1, 667326), -- Asofe
+(22842, 9629, 1, 1, -1, 87042), -- Adamantine
+(22842, 15642, 1, 1, -1, 11790), -- Vesper Caster Piece
+(22842, 15640, 1, 1, -1, 11790), -- Vesper Avenger Piece
+(22842, 959, 1, 1, -1, 801), -- Scroll: Enchant Weapon (S-Grade)
+(22842, 13459, 1, 1, -1, 28), -- Vesper Buster
+(22842, 13458, 1, 1, -1, 28), -- Vesper Slasher
+(22842, 57, 14790, 34502, 0, 700000), -- Adena
+(22842, 15670, 1, 1, 1, 6472), -- Sealed Vesper Leather Legging Piece
+(22842, 15664, 1, 1, 1, 4199), -- Sealed Vesper Leather Breastplate Piece
+(22842, 14112, 1, 1, 1, 105), -- Sealed Vesper Leather Leggings
+(22842, 14106, 1, 1, 1, 66), -- Sealed Vesper Leather Breastplate
+(22842, 1895, 1, 3, 2, 252871), -- Metallic Fiber
+(22842, 4040, 1, 1, 2, 35402), -- Mold Lubricant
+(22842, 9549, 1, 1, 2, 14161), -- Wind Stone
+(22842, 9628, 1, 1, 2, 13883), -- Leonard
+(22842, 9630, 1, 1, 2, 9316), -- Orichalcum
+(22842, 14166, 1, 1, 2, 8551), -- Life Stone - Level 84
+(22842, 14167, 1, 1, 2, 2135), -- Mid-Grade Life Stone - Level 84
+(22842, 9556, 1, 1, 2, 354), -- Dark Crystal
+(22842, 14168, 1, 1, 2, 213), -- High-Grade Life Stone - Level 84
+(22842, 9627, 1, 1, 2, 118), -- Giant's Codex - Mastery
+(22842, 14169, 1, 1, 2, 43), -- Top-Grade Life Stone - Level 84
+-- Maluk Sniper 
+(22843, 4044, 1, 1, -1, 444872), -- Thons
+(22843, 9630, 1, 1, -1, 70243), -- Orichalcum
+(22843, 15634, 1, 1, -1, 7928), -- Vesper Cutter Piece
+(22843, 15636, 1, 1, -1, 7928), -- Vesper Buster Piece
+(22843, 15635, 1, 1, -1, 7914), -- Vesper Slasher Piece
+(22843, 15638, 1, 1, -1, 786), -- Vesper Fighter Piece
+(22843, 57, 8451, 19715, 0, 700000), -- Adena
+(22843, 15666, 1, 1, 1, 2738), -- Sealed Vesper Gaiter Piece
+(22843, 15663, 1, 1, 1, 1700), -- Sealed Vesper Breastplate Piece
+(22843, 14160, 1, 1, 1, 77), -- Sealed Vesper Earring
+(22843, 14161, 1, 1, 1, 58), -- Sealed Vesper Necklace
+(22843, 14105, 1, 1, 1, 19), -- Sealed Vesper Breastplate
+(22843, 1895, 1, 1, 2, 268345), -- Metallic Fiber
+(22843, 4040, 1, 1, 2, 18784), -- Mold Lubricant
+(22843, 9549, 1, 1, 2, 7514), -- Wind Stone
+(22843, 9628, 1, 1, 2, 7366), -- Leonard
+(22843, 9630, 1, 1, 2, 4943), -- Orichalcum
+(22843, 14166, 1, 1, 2, 4537), -- Life Stone - Level 84
+(22843, 14167, 1, 1, 2, 1133), -- Mid-Grade Life Stone - Level 84
+(22843, 14168, 1, 1, 2, 113), -- High-Grade Life Stone - Level 84
+(22843, 9627, 1, 1, 2, 63), -- Giant's Codex - Mastery
+(22843, 6578, 1, 1, 2, 42), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22843, 959, 1, 1, 2, 37), -- Scroll: Enchant Weapon (S-Grade)
+(22843, 6577, 1, 1, 2, 6), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Dragon Knight
+(22844, 4039, 1, 3, -1, 690623), -- Mold Glue
+(22844, 9630, 1, 1, -1, 218092), -- Orichalcum
+(22844, 2134, 1, 1, -1, 82875), -- Gemstone S
+(22844, 6578, 1, 1, -1, 1842), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22844, 6577, 1, 1, -1, 276), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22844, 13457, 1, 1, -1, 58), -- Vesper Cutter
+(22844, 57, 26239, 61210, 0, 700000), -- Adena
+(22844, 15637, 1, 1, 1, 1617), -- Vesper Shaper Piece
+(22844, 15635, 1, 1, 1, 1614), -- Vesper Slasher Piece
+(22844, 14162, 1, 1, 1, 268), -- Sealed Vesper Ring
+(22844, 13893, 1, 1, 1, 71), -- Sealed Holy Spirit's Cloak
+(22844, 13462, 1, 1, 1, 14), -- Vesper Stormer
+(22844, 13461, 1, 1, 1, 14), -- Vesper Fighter
+(22844, 1885, 1, 1, 2, 226806), -- High-Grade Suede
+(22844, 1879, 3, 9, 2, 75602), -- Cokes
+(22844, 9548, 1, 1, 2, 21774), -- Earth Stone
+(22844, 9628, 1, 1, 2, 21346), -- Leonard
+(22844, 9630, 1, 1, 2, 14325), -- Orichalcum
+(22844, 14166, 1, 1, 2, 13148), -- Life Stone - Level 84
+(22844, 9629, 1, 1, 2, 11833), -- Adamantine
+(22844, 14167, 1, 1, 2, 3283), -- Mid-Grade Life Stone - Level 84
+(22844, 9625, 1, 1, 2, 545), -- Giant's Codex - Oblivion
+(22844, 9554, 1, 1, 2, 544), -- Earth Crystal
+(22844, 14168, 1, 1, 2, 328), -- High-Grade Life Stone - Level 84
+(22844, 959, 1, 1, 2, 109), -- Scroll: Enchant Weapon (S-Grade)
+(22844, 14169, 1, 1, 2, 66), -- Top-Grade Life Stone - Level 84
+-- Dragon Knight
+(22845, 4040, 1, 1, -1, 730488), -- Mold Lubricant
+(22845, 9628, 1, 1, -1, 286466), -- Leonard
+(22845, 2134, 1, 1, -1, 73049), -- Gemstone S
+(22845, 15818, 1, 1, -1, 2548), -- Recipe - Vesper Shaper (60%)
+(22845, 959, 1, 1, -1, 1461), -- Scroll: Enchant Weapon (S-Grade)
+(22845, 13467, 1, 1, -1, 51), -- Vesper Thrower
+(22845, 13457, 1, 1, -1, 51), -- Vesper Cutter
+(22845, 57, 26983, 62945, 0, 700000), -- Adena
+(22845, 15638, 1, 1, 1, 1648), -- Vesper Fighter Piece
+(22845, 14111, 1, 1, 1, 229), -- Sealed Vesper Shield
+(22845, 13458, 1, 1, 1, 20), -- Vesper Slasher
+(22845, 13467, 1, 1, 1, 20), -- Vesper Thrower
+(22845, 1894, 1, 1, 2, 98204), -- Crafted Leather
+(22845, 4039, 1, 1, 2, 93294), -- Mold Glue
+(22845, 4044, 1, 1, 2, 93294), -- Thons
+(22845, 14052, 1, 1, 2, 69971), -- Noble Enhancement Stone
+(22845, 4041, 1, 1, 2, 24337), -- Mold Hardener
+(22845, 9548, 1, 1, 2, 22390), -- Earth Stone
+(22845, 14166, 1, 1, 2, 13521), -- Life Stone - Level 84
+(22845, 2134, 1, 1, 2, 5598), -- Gemstone S
+(22845, 14167, 1, 1, 2, 3376), -- Mid-Grade Life Stone - Level 84
+(22845, 9625, 1, 1, 2, 561), -- Giant's Codex - Oblivion
+(22845, 9554, 1, 1, 2, 560), -- Earth Crystal
+(22845, 14168, 1, 1, 2, 338), -- High-Grade Life Stone - Level 84
+(22845, 6578, 1, 1, 2, 124), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22845, 6577, 1, 1, 2, 19), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Elite Dragon Knight
+(22846, 14052, 1, 3, -1, 604730), -- Noble Enhancement Stone
+(22846, 9628, 1, 1, -1, 379439), -- Leonard
+(22846, 2134, 1, 1, -1, 96757), -- Gemstone S
+(22846, 9554, 1, 1, -1, 9876), -- Earth Crystal
+(22846, 15820, 1, 1, -1, 3375), -- Recipe - Vesper Stormer (60%)
+(22846, 959, 1, 1, -1, 1935), -- Scroll: Enchant Weapon (S-Grade)
+(22846, 13893, 1, 1, -1, 337), -- Sealed Holy Spirit's Cloak
+(22846, 57, 35741, 83374, 0, 700000), -- Adena
+(22846, 15639, 1, 1, 1, 2366), -- Vesper Stormer Piece
+(22846, 15640, 1, 1, 1, 2339), -- Vesper Avenger Piece
+(22846, 13893, 1, 1, 1, 129), -- Sealed Holy Spirit's Cloak
+(22846, 13463, 1, 1, 1, 26), -- Vesper Avenger
+(22846, 13460, 1, 1, 1, 26), -- Vesper Shaper
+(22846, 1879, 3, 9, 2, 110332), -- Cokes
+(22846, 1885, 2, 6, 2, 82749), -- High-Grade Suede
+(22846, 9548, 1, 1, 2, 31776), -- Earth Stone
+(22846, 9628, 1, 1, 2, 31153), -- Leonard
+(22846, 9630, 1, 1, 2, 20905), -- Orichalcum
+(22846, 14166, 1, 1, 2, 19188), -- Life Stone - Level 84
+(22846, 9629, 1, 1, 2, 17269), -- Adamantine
+(22846, 14167, 1, 1, 2, 4791), -- Mid-Grade Life Stone - Level 84
+(22846, 9554, 1, 1, 2, 794), -- Earth Crystal
+(22846, 9625, 1, 1, 2, 794), -- Giant's Codex - Oblivion
+(22846, 14168, 1, 1, 2, 479), -- High-Grade Life Stone - Level 84
+(22846, 14169, 1, 1, 2, 96), -- Top-Grade Life Stone - Level 84
+-- Dragon Knight Warrior 
+(22847, 4044, 1, 1, -1, 697851), -- Thons
+(22847, 14052, 1, 1, -1, 523388), -- Noble Enhancement Stone
+(22847, 9630, 1, 1, -1, 110187), -- Orichalcum
+(22847, 15634, 1, 1, -1, 12436), -- Vesper Cutter Piece
+(22847, 9554, 1, 1, -1, 4187), -- Earth Crystal
+(22847, 6578, 1, 1, -1, 930), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22847, 6577, 1, 1, -1, 140), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22847, 13467, 1, 1, -1, 29), -- Vesper Thrower
+(22847, 57, 17676, 41234, 0, 700000), -- Adena
+(22847, 15669, 1, 1, 1, 12430), -- Sealed Vesper Verteidiger Piece
+(22847, 15634, 1, 1, 1, 1089), -- Vesper Cutter Piece
+(22847, 14111, 1, 1, 1, 225), -- Sealed Vesper Shield
+(22847, 13467, 1, 1, 1, 19), -- Vesper Thrower
+(22847, 1895, 1, 3, 2, 261919), -- Metallic Fiber
+(22847, 4040, 1, 1, 2, 36669), -- Mold Lubricant
+(22847, 9548, 1, 1, 2, 14667), -- Earth Stone
+(22847, 9628, 1, 1, 2, 14380), -- Leonard
+(22847, 9630, 1, 1, 2, 9650), -- Orichalcum
+(22847, 14166, 1, 1, 2, 8857), -- Life Stone - Level 84
+(22847, 14167, 1, 1, 2, 2212), -- Mid-Grade Life Stone - Level 84
+(22847, 9554, 1, 1, 2, 367), -- Earth Crystal
+(22847, 9625, 1, 1, 2, 367), -- Giant's Codex - Oblivion
+(22847, 14168, 1, 1, 2, 221), -- High-Grade Life Stone - Level 84
+(22847, 6578, 1, 1, 2, 82), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22847, 14169, 1, 1, 2, 44), -- Top-Grade Life Stone - Level 84
+(22847, 6577, 1, 1, 2, 12), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Drake Leader
+(22848, 9629, 1, 1, -1, 254558), -- Adamantine
+(22848, 2134, 1, 1, -1, 117097), -- Gemstone S
+(22848, 15642, 1, 1, -1, 34481), -- Vesper Caster Piece
+(22848, 13893, 1, 1, -1, 408), -- Sealed Holy Spirit's Cloak
+(22848, 13459, 1, 1, -1, 82), -- Vesper Buster
+(22848, 57, 30896, 72072, 0, 700000), -- Adena
+(22848, 15644, 1, 1, 1, 2048), -- Vesper Thrower Piece
+(22848, 15642, 1, 1, 1, 2022), -- Vesper Caster Piece
+(22848, 13893, 1, 1, 1, 168), -- Sealed Holy Spirit's Cloak
+(22848, 13459, 1, 1, 1, 33), -- Vesper Buster
+(22848, 1895, 3, 9, 2, 163501), -- Metallic Fiber
+(22848, 4040, 1, 1, 2, 68670), -- Mold Lubricant
+(22848, 9548, 1, 1, 2, 27468), -- Earth Stone
+(22848, 9628, 1, 1, 2, 26929), -- Leonard
+(22848, 9630, 1, 1, 2, 18071), -- Orichalcum
+(22848, 14166, 1, 1, 2, 16587), -- Life Stone - Level 84
+(22848, 14167, 1, 1, 2, 4142), -- Mid-Grade Life Stone - Level 84
+(22848, 9554, 1, 1, 2, 687), -- Earth Crystal
+(22848, 9625, 1, 1, 2, 687), -- Giant's Codex - Oblivion
+(22848, 14168, 1, 1, 2, 414), -- High-Grade Life Stone - Level 84
+(22848, 6578, 1, 1, 2, 152), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22848, 6577, 1, 1, 2, 23), -- Blessed Scroll: Enchant Weapon (S-Grade)
+-- Drake Warrior
+(22849, 14052, 1, 1, -1, 600050), -- Noble Enhancement Stone
+(22849, 4042, 1, 1, -1, 400033), -- Enria
+(22849, 15669, 1, 1, -1, 162725), -- Sealed Vesper Verteidiger Piece
+(22849, 9629, 1, 1, -1, 104356), -- Adamantine
+(22849, 15817, 1, 1, -1, 1674), -- Recipe - Vesper Buster (60%)
+(22849, 959, 1, 1, -1, 960), -- Scroll: Enchant Weapon (S-Grade)
+(22849, 13457, 1, 1, -1, 33), -- Vesper Cutter
+(22849, 57, 17732, 41364, 0, 700000), -- Adena
+(22849, 15644, 1, 1, 1, 1266), -- Vesper Thrower Piece
+(22849, 15642, 1, 1, 1, 1250), -- Vesper Caster Piece
+(22849, 13465, 1, 1, 1, 13), -- Vesper Caster
+(22849, 13457, 1, 1, 1, 13), -- Vesper Cutter
+(22849, 13461, 1, 1, 1, 13), -- Vesper Fighter
+(22849, 1895, 1, 3, 2, 303170), -- Metallic Fiber
+(22849, 4040, 1, 1, 2, 42444), -- Mold Lubricant
+(22849, 9548, 1, 1, 2, 16978), -- Earth Stone
+(22849, 9628, 1, 1, 2, 16644), -- Leonard
+(22849, 9630, 1, 1, 2, 11169), -- Orichalcum
+(22849, 14166, 1, 1, 2, 10252), -- Life Stone - Level 84
+(22849, 14167, 1, 1, 2, 2560), -- Mid-Grade Life Stone - Level 84
+(22849, 9626, 1, 1, 2, 283), -- Giant's Codex - Discipline
+(22849, 14168, 1, 1, 2, 256), -- High-Grade Life Stone - Level 84
+(22849, 959, 1, 1, 2, 85), -- Scroll: Enchant Weapon (S-Grade)
+(22849, 14169, 1, 1, 2, 51), -- Top-Grade Life Stone - Level 84
+-- Drake Scout
+(22850, 4041, 1, 1, -1, 98412), -- Mold Hardener
+(22850, 9628, 1, 1, -1, 88764), -- Leonard
+(22850, 2134, 1, 1, -1, 22635), -- Gemstone S
+(22850, 9554, 1, 1, -1, 2263), -- Earth Crystal
+(22850, 6578, 1, 1, -1, 503), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22850, 6577, 1, 1, -1, 75), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22850, 13459, 1, 1, -1, 16), -- Vesper Buster
+(22850, 57, 8361, 19504, 0, 700000), -- Adena
+(22850, 15638, 1, 1, 1, 511), -- Vesper Fighter Piece
+(22850, 13458, 1, 1, 1, 9), -- Vesper Slasher
+(22850, 13467, 1, 1, 1, 9), -- Vesper Thrower
+(22850, 1879, 1, 1, 2, 144538), -- Cokes
+(22850, 1885, 1, 1, 2, 72269), -- High-Grade Suede
+(22850, 14052, 1, 1, 2, 21681), -- Noble Enhancement Stone
+(22850, 9548, 1, 1, 2, 6938), -- Earth Stone
+(22850, 9628, 1, 1, 2, 6802), -- Leonard
+(22850, 9630, 1, 1, 2, 4564), -- Orichalcum
+(22850, 14166, 1, 1, 2, 4190), -- Life Stone - Level 84
+(22850, 9629, 1, 1, 2, 3770), -- Adamantine
+(22850, 2134, 1, 1, 2, 1735), -- Gemstone S
+(22850, 14167, 1, 1, 2, 1046), -- Mid-Grade Life Stone - Level 84
+(22850, 9554, 1, 1, 2, 173), -- Earth Crystal
+(22850, 9626, 1, 1, 2, 115), -- Giant's Codex - Discipline
+(22850, 14168, 1, 1, 2, 105), -- High-Grade Life Stone - Level 84
+(22850, 14169, 1, 1, 2, 21), -- Top-Grade Life Stone - Level 84
+-- Drake Mage
+(22851, 4042, 1, 1, -1, 575431), -- Enria
+(22851, 9629, 1, 1, -1, 150112), -- Adamantine
+(22851, 15815, 1, 1, -1, 2408), -- Recipe - Sealed Vesper Cutter (60%)
+(22851, 959, 1, 1, -1, 1381), -- Scroll: Enchant Weapon (S-Grade)
+(22851, 13458, 1, 1, -1, 48), -- Vesper Slasher
+(22851, 57, 18219, 42501, 0, 700000), -- Adena
+(22851, 15644, 1, 1, 1, 1409), -- Vesper Thrower Piece
+(22851, 15642, 1, 1, 1, 1391), -- Vesper Caster Piece
+(22851, 13465, 1, 1, 1, 13), -- Vesper Caster
+(22851, 13457, 1, 1, 1, 13), -- Vesper Cutter
+(22851, 13461, 1, 1, 1, 13), -- Vesper Fighter
+(22851, 1895, 1, 3, 2, 337457), -- Metallic Fiber
+(22851, 4040, 1, 1, 2, 47244), -- Mold Lubricant
+(22851, 9548, 1, 1, 2, 18897), -- Earth Stone
+(22851, 9628, 1, 1, 2, 18527), -- Leonard
+(22851, 9630, 1, 1, 2, 12433), -- Orichalcum
+(22851, 14166, 1, 1, 2, 11411), -- Life Stone - Level 84
+(22851, 14167, 1, 1, 2, 2849), -- Mid-Grade Life Stone - Level 84
+(22851, 9626, 1, 1, 2, 316), -- Giant's Codex - Discipline
+(22851, 14168, 1, 1, 2, 285), -- High-Grade Life Stone - Level 84
+(22851, 14169, 1, 1, 2, 57), -- Top-Grade Life Stone - Level 84
+-- Dragon Guard
+(22852, 9628, 1, 1, -1, 841937), -- Leonard
+(22852, 15669, 1, 1, -1, 727776), -- Sealed Vesper Verteidiger Piece
+(22852, 2134, 1, 1, -1, 214694), -- Gemstone S
+(22852, 13459, 1, 1, -1, 150), -- Vesper Buster
+(22852, 57, 45317, 105714, 0, 700000), -- Adena
+(22852, 15644, 1, 1, 1, 3235), -- Vesper Thrower Piece
+(22852, 15642, 1, 1, 1, 3194), -- Vesper Caster Piece
+(22852, 13893, 1, 1, 1, 123), -- Sealed Holy Spirit's Cloak
+(22852, 14108, 1, 1, 1, 121), -- Sealed Vesper Gaiters
+(22852, 13461, 1, 1, 1, 25), -- Vesper Fighter
+(22852, 13462, 1, 1, 1, 25), -- Vesper Stormer
+(22852, 1879, 3, 9, 2, 150656), -- Cokes
+(22852, 1885, 2, 6, 2, 112992), -- High-Grade Suede
+(22852, 9548, 1, 1, 2, 43389), -- Earth Stone
+(22852, 9628, 1, 1, 2, 42538), -- Leonard
+(22852, 9630, 1, 1, 2, 28546), -- Orichalcum
+(22852, 14166, 1, 1, 2, 26201), -- Life Stone - Level 84
+(22852, 9629, 1, 1, 2, 23581), -- Adamantine
+(22852, 14167, 1, 1, 2, 6542), -- Mid-Grade Life Stone - Level 84
+(22852, 9554, 1, 1, 2, 1085), -- Earth Crystal
+(22852, 9626, 1, 1, 2, 723), -- Giant's Codex - Discipline
+(22852, 14168, 1, 1, 2, 654), -- High-Grade Life Stone - Level 84
+-- Dragon Mage
+(22853, 4044, 1, 3, -1, 773710), -- Thons
+(22853, 9630, 1, 1, -1, 244330), -- Orichalcum
+(22853, 15816, 1, 1, -1, 3238), -- Recipe - Sealed Vesper Slasher (60%)
+(22853, 6578, 1, 1, -1, 2063), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22853, 13460, 1, 1, -1, 65), -- Vesper Shaper
+(22853, 57, 24497, 57145, 0, 700000), -- Adena
+(22853, 15636, 1, 1, 1, 1741), -- Vesper Buster Piece
+(22853, 15637, 1, 1, 1, 1741), -- Vesper Shaper Piece
+(22853, 14111, 1, 1, 1, 208), -- Sealed Vesper Shield
+(22853, 13463, 1, 1, 1, 18), -- Vesper Avenger
+(22853, 13460, 1, 1, 1, 18), -- Vesper Shaper
+(22853, 1895, 3, 9, 2, 139611), -- Metallic Fiber
+(22853, 4040, 1, 1, 2, 58637), -- Mold Lubricant
+(22853, 9548, 1, 1, 2, 23455), -- Earth Stone
+(22853, 9628, 1, 1, 2, 22995), -- Leonard
+(22853, 9630, 1, 1, 2, 15431), -- Orichalcum
+(22853, 14166, 1, 1, 2, 14164), -- Life Stone - Level 84
+(22853, 14167, 1, 1, 2, 3537), -- Mid-Grade Life Stone - Level 84
+(22853, 9626, 1, 1, 2, 391), -- Giant's Codex - Discipline
+(22853, 14168, 1, 1, 2, 354), -- High-Grade Life Stone - Level 84
+(22853, 959, 1, 1, 2, 117), -- Scroll: Enchant Weapon (S-Grade)
+(22853, 14169, 1, 1, 2, 71), -- Top-Grade Life Stone - Level 84
+-- Bloody Karik
+(22854, 9630, 1, 3, -1, 574512), -- Orichalcum
+(22854, 14166, 1, 3, -1, 527329), -- Life Stone - Level 84
+(22854, 14167, 1, 1, -1, 263347), -- Mid-Grade Life Stone - Level 84
+(22854, 14168, 1, 1, -1, 26335), -- High-Grade Life Stone - Level 84
+(22854, 14169, 1, 1, -1, 5266), -- Top-Grade Life Stone - Level 84
+(22854, 57, 115052, 268713, 0, 700000), -- Adena
+(22854, 15764, 1, 1, 1, 648), -- Sealed Vorpal Earring
+(22854, 15755, 1, 1, 1, 428), -- Sealed Vorpal Boots
+(22854, 15743, 1, 1, 1, 285), -- Sealed Vorpal Helmet
+(22854, 15745, 1, 1, 1, 285), -- Sealed Vorpal Circlet
+(22854, 15751, 1, 1, 1, 228), -- Sealed Vorpal Stockings
+(22854, 15750, 1, 1, 1, 228), -- Sealed Vorpal Leather Legging
+(22854, 9630, 1, 1, 2, 117922), -- Orichalcum
+(22854, 14166, 1, 1, 2, 108237), -- Life Stone - Level 84
+(22854, 4040, 2, 6, 2, 89620), -- Mold Lubricant
+(22854, 1895, 72, 216, 2, 44454), -- Metallic Fiber
+(22854, 14167, 1, 1, 2, 27027), -- Mid-Grade Life Stone - Level 84
+(22854, 9549, 3, 9, 2, 25606), -- Wind Stone
+(22854, 9628, 4, 12, 2, 21966), -- Leonard
+(22854, 14168, 1, 1, 2, 2703), -- High-Grade Life Stone - Level 84
+-- Bloody Berserker
+(22855, 14166, 1, 1, -1, 599284), -- Life Stone - Level 84
+(22855, 9628, 1, 3, -1, 486477), -- Leonard
+(22855, 14167, 1, 1, -1, 149640), -- Mid-Grade Life Stone - Level 84
+(22855, 14168, 1, 1, -1, 14964), -- High-Grade Life Stone - Level 84
+(22855, 14169, 1, 1, -1, 2992), -- Top-Grade Life Stone - Level 84
+(22855, 57, 65375, 152689, 0, 700000), -- Adena
+(22855, 15763, 1, 1, 1, 552), -- Sealed Vorpal Ring
+(22855, 15765, 1, 1, 1, 276), -- Sealed Vorpal Necklace
+(22855, 15753, 1, 1, 1, 243), -- Sealed Vorpal Leather Gloves
+(22855, 15754, 1, 1, 1, 243), -- Sealed Vorpal Gloves
+(22855, 15748, 1, 1, 1, 81), -- Sealed Vorpal Tunic
+(22855, 15746, 1, 1, 1, 61), -- Sealed Vorpal Breastplate
+(22855, 1895, 12, 36, 2, 121248), -- Metallic Fiber
+(22855, 9549, 1, 1, 2, 81479), -- Wind Stone
+(22855, 9628, 1, 1, 2, 79881), -- Leonard
+(22855, 9630, 1, 1, 2, 53604), -- Orichalcum
+(22855, 14166, 1, 1, 2, 49202), -- Life Stone - Level 84
+(22855, 4040, 2, 6, 2, 40739), -- Mold Lubricant
+(22855, 14167, 1, 1, 2, 12286), -- Mid-Grade Life Stone - Level 84
+(22855, 14168, 1, 1, 2, 1228), -- High-Grade Life Stone - Level 84
+(22855, 959, 1, 1, 2, 407), -- Scroll: Enchant Weapon (S-Grade)
+(22855, 14169, 1, 1, 2, 246), -- Top-Grade Life Stone - Level 84
+-- Bloody Karinness
+(22856, 14166, 1, 1, -1, 599284), -- Life Stone - Level 84
+(22856, 9629, 1, 1, -1, 539355), -- Adamantine
+(22856, 14167, 1, 1, -1, 149640), -- Mid-Grade Life Stone - Level 84
+(22856, 14168, 1, 1, -1, 14964), -- High-Grade Life Stone - Level 84
+(22856, 14169, 1, 1, -1, 2992), -- Top-Grade Life Stone - Level 84
+(22856, 57, 65375, 152689, 0, 700000), -- Adena
+(22856, 15756, 1, 1, 1, 182), -- Sealed Vorpal Leather Boots
+(22856, 15752, 1, 1, 1, 182), -- Sealed Vorpal Gauntlet
+(22856, 15759, 1, 1, 1, 174), -- Sealed Vorpal Sigil
+(22856, 15758, 1, 1, 1, 174), -- Sealed Vorpal Shield
+(22856, 15744, 1, 1, 1, 122), -- Sealed Vorpal Leather Helmet
+(22856, 13893, 1, 1, 1, 89), -- Sealed Holy Spirit's Cloak
+(22856, 15749, 1, 1, 1, 73), -- Sealed Vorpal Gaiter
+(22856, 15747, 1, 1, 1, 61), -- Sealed Vorpal Leather Breastplate
+(22856, 9549, 1, 1, 2, 74071), -- Wind Stone
+(22856, 9628, 1, 1, 2, 72620), -- Leonard
+(22856, 1879, 15, 45, 2, 51439), -- Cokes
+(22856, 9630, 1, 1, 2, 48732), -- Orichalcum
+(22856, 14166, 1, 1, 2, 44730), -- Life Stone - Level 84
+(22856, 9629, 1, 1, 2, 40256), -- Adamantine
+(22856, 1885, 12, 36, 2, 32149), -- High-Grade Suede
+(22856, 14167, 1, 1, 2, 11169), -- Mid-Grade Life Stone - Level 84
+(22856, 14168, 1, 1, 2, 1117), -- High-Grade Life Stone - Level 84
+(22856, 959, 1, 1, 2, 370), -- Scroll: Enchant Weapon (S-Grade)
+(22856, 14169, 1, 1, 2, 223), -- Top-Grade Life Stone - Level 84
+-- Knoriks
+(22857, 2134, 1, 1, -1, 927842), -- Gemstone S
+(22857, 14052, 1, 25, -1, 892155), -- Noble Enhancement Stone
+(22857, 6578, 1, 1, -1, 20619), -- Blessed Scroll: Enchant Armor (S-Grade)
+(22857, 6577, 1, 1, -1, 3093), -- Blessed Scroll: Enchant Weapon (S-Grade)
+(22857, 57, 195846, 456862, 0, 700000), -- Adena
+(22857, 13893, 1, 1, 1, 142), -- Sealed Holy Spirit's Cloak
+(22857, 15558, 1, 1, 1, 24), -- Periel Sword
+(22857, 15567, 1, 1, 1, 24), -- Veniplant Sword
+(22857, 15562, 1, 1, 1, 24), -- Feather Eye Blade
+(22857, 15559, 1, 1, 1, 24), -- Skull Edge
+(22857, 15570, 1, 1, 1, 24), -- Finale Blade
+(22857, 15563, 1, 1, 1, 24), -- Octo Claw
+(22857, 15566, 1, 1, 1, 24), -- Black Visage
+(22857, 15568, 1, 1, 1, 24), -- Skull Carnium Bow
+(22857, 15564, 1, 1, 1, 24), -- Doubletop Spear
+(22857, 15560, 1, 1, 1, 24), -- Vigwik Axe
+(22857, 15569, 1, 1, 1, 24), -- Gemtail Rapier
+(22857, 15565, 1, 1, 1, 24), -- Rising Star
+(22857, 15561, 1, 1, 1, 24), -- Devilish Maul
+(22857, 15571, 1, 1, 1, 24), -- Dominion Crossbow
+(22857, 14052, 3, 9, 2, 105803), -- Noble Enhancement Stone
+(22857, 4040, 3, 9, 2, 72550), -- Mold Lubricant
+(22857, 4042, 4, 12, 2, 52901), -- Enria
+(22857, 2134, 1, 1, 2, 50785), -- Gemstone S
+(22857, 1895, 108, 324, 2, 33588), -- Metallic Fiber
+(22857, 14167, 1, 1, 2, 30630), -- Mid-Grade Life Stone - Level 84
+(22857, 9549, 5, 15, 2, 20314), -- Wind Stone
+(22857, 4043, 27, 81, 2, 15390), -- Asofe
+(22857, 14166, 6, 18, 2, 10222), -- Life Stone - Level 84
+(22857, 14168, 1, 1, 2, 3063), -- High-Grade Life Stone - Level 84
+(22857, 959, 1, 1, 2, 1016), -- Scroll: Enchant Weapon (S-Grade)
+(22857, 14169, 1, 1, 2, 612), -- Top-Grade Life Stone - Level 84
+-- Necromancer of the Valley
+(22858, 4039, 1, 1, -1, 135339), -- Mold Glue
+(22858, 9628, 1, 1, -1, 31844), -- Leonard
+(22858, 10404, 1, 1, -1, 1735), -- Icarus Hall Piece
+(22858, 15780, 1, 1, -1, 1608), -- Recipe - Sealed Moirai Tunic (60%)
+(22858, 57, 1712, 4000, 0, 700000), -- Adena
+(22858, 15767, 1, 1, 1, 22), -- Sealed Moirai Earring
+(22858, 15696, 1, 1, 1, 14), -- Sealed Moirai Circlet
+(22858, 15697, 1, 1, 1, 5), -- Sealed Moirai Breastplate
+(22858, 1895, 1, 1, 2, 95242), -- Metallic Fiber
+(22858, 4040, 1, 1, 2, 6667), -- Mold Lubricant
+(22858, 9549, 1, 1, 2, 2667), -- Wind Stone
+(22858, 9628, 1, 1, 2, 2614), -- Leonard
+(22858, 14166, 1, 1, 2, 2315), -- Life Stone - Level 84
+(22858, 9630, 1, 1, 2, 1754), -- Orichalcum
+(22858, 14167, 1, 1, 2, 579), -- Mid-Grade Life Stone - Level 84
+(22858, 14168, 1, 1, 2, 58), -- High-Grade Life Stone - Level 84
+-- Howl
+(22859, 4042, 1, 1, -1, 70373), -- Enria
+(22859, 9628, 1, 1, -1, 33117), -- Leonard
+(22859, 10398, 1, 1, -1, 1810), -- Icarus Disperser Piece
+(22859, 959, 1, 1, -1, 169), -- Scroll: Enchant Weapon (S-Grade)
+(22859, 57, 1780, 4157, 0, 700000), -- Adena
+(22859, 15766, 1, 1, 1, 25), -- Sealed Moirai Ring
+(22859, 15709, 1, 1, 1, 16), -- Sealed Moirai Sigil
+(22859, 15710, 1, 1, 1, 16), -- Sealed Moirai Shield
+(22859, 10215, 1, 1, 1, 1), -- Icarus Sawsword
+(22859, 1895, 1, 1, 2, 99047), -- Metallic Fiber
+(22859, 4043, 1, 1, 2, 11555), -- Asofe
+(22859, 4040, 1, 1, 2, 6933), -- Mold Lubricant
+(22859, 4042, 1, 1, 2, 5778), -- Enria
+(22859, 9549, 1, 1, 2, 2773), -- Wind Stone
+(22859, 9573, 1, 1, 2, 2407), -- Life Stone - Level 80
+(22859, 9574, 1, 1, 2, 602), -- Mid-Grade Life Stone - Level 80
+(22859, 9575, 1, 1, 2, 60), -- High-Grade Life Stone - Level 80
+-- Hungry Parasitic Leech
+(22860, 4044, 1, 1, -1, 610646), -- Thons
+(22860, 9629, 1, 1, -1, 79649), -- Adamantine
+(22860, 15794, 1, 1, -1, 10468), -- Recipe - Sealed Vesper Circlet (60%)
+(22860, 15800, 1, 1, -1, 8374), -- Recipe - Sealed Vesper Stockings (60%)
+(22860, 10401, 1, 1, -1, 7829), -- Icarus Trident Piece
+(22860, 15778, 1, 1, -1, 5440), -- Recipe - Sealed Moirai Breastplate (60%)
+(22860, 15797, 1, 1, -1, 5234), -- Recipe - Sealed Vesper Tunic (60%)
+(22860, 57, 13523, 31578, 0, 700000), -- Adena
+(22860, 15706, 1, 1, 1, 72), -- Sealed Moirai Boots
+(22860, 15703, 1, 1, 1, 72), -- Sealed Moirai Gauntlet
+(22860, 15705, 1, 1, 1, 72), -- Sealed Moirai Gloves
+(22860, 15707, 1, 1, 1, 72), -- Sealed Moirai Leather Boots
+(22860, 15704, 1, 1, 1, 72), -- Sealed Moirai Leather Gloves
+(22860, 15708, 1, 1, 1, 72), -- Sealed Moirai Shoes
+(22860, 15768, 1, 1, 1, 55), -- Sealed Moirai Necklace
+(22860, 1879, 1, 3, 2, 125338), -- Cokes
+(22860, 1885, 1, 1, 2, 125338), -- High-Grade Suede
+(22860, 1888, 1, 1, 2, 45577), -- Synthetic Cokes
+(22860, 1890, 1, 1, 2, 22963), -- Mithril Alloy
+(22860, 5550, 1, 1, 2, 20054), -- Durable Metal Plate
+(22860, 9549, 1, 1, 2, 12032), -- Wind Stone
+(22860, 9628, 1, 1, 2, 11796), -- Leonard
+(22860, 10483, 1, 1, 2, 10445), -- Life Stone - Level 82
+(22860, 9630, 1, 1, 2, 7916), -- Orichalcum
+(22860, 9629, 1, 1, 2, 6539), -- Adamantine
+(22860, 10484, 1, 1, 2, 2611), -- Mid-Grade Life Stone - Level 82
+(22860, 17248, 1, 1, 2, 886), -- Large Dragon Bone
+(22860, 10485, 1, 1, 2, 261), -- High-Grade Life Stone - Level 82
+(22860, 959, 1, 1, 2, 60), -- Scroll: Enchant Weapon (S-Grade)
+-- Hard Noxious Scorpion
+(22861, 4040, 1, 1, -1, 602703), -- Mold Lubricant
+(22861, 9630, 1, 1, -1, 158606), -- Orichalcum
+(22861, 15793, 1, 1, -1, 17220), -- Recipe - Sealed Vesper Leather Helmet (60%)
+(22861, 15799, 1, 1, -1, 13775), -- Recipe - Sealed Vesper Leather Legging (60%)
+(22861, 10402, 1, 1, -1, 12878), -- Icarus Hammer Piece
+(22861, 15796, 1, 1, -1, 8610), -- Recipe - Sealed Vesper Leather Breastplate (60%)
+(22861, 959, 1, 1, -1, 1205), -- Scroll: Enchant Weapon (S-Grade)
+(22861, 57, 22245, 51946, 0, 700000), -- Adena
+(22861, 15766, 1, 1, 1, 180), -- Sealed Moirai Ring
+(22861, 15710, 1, 1, 1, 112), -- Sealed Moirai Shield
+(22861, 15709, 1, 1, 1, 112), -- Sealed Moirai Sigil
+(22861, 15701, 1, 1, 1, 63), -- Sealed Moirai Leather Legging
+(22861, 15702, 1, 1, 1, 63), -- Sealed Moirai Stockings
+(22861, 15699, 1, 1, 1, 39), -- Sealed Moirai Tunic
+(22861, 10215, 1, 1, 1, 6), -- Icarus Sawsword
+(22861, 1895, 3, 9, 2, 164943), -- Metallic Fiber
+(22861, 4040, 1, 1, 2, 69276), -- Mold Lubricant
+(22861, 9546, 1, 1, 2, 27710), -- Fire Stone
+(22861, 9628, 1, 1, 2, 27167), -- Leonard
+(22861, 10483, 1, 1, 2, 24054), -- Life Stone - Level 82
+(22861, 9630, 1, 1, 2, 18231), -- Orichalcum
+(22861, 10484, 1, 1, 2, 6013), -- Mid-Grade Life Stone - Level 82
+(22861, 17248, 1, 1, 2, 2038), -- Large Dragon Bone
+(22861, 9552, 1, 1, 2, 693), -- Fire Crystal
+(22861, 10485, 1, 1, 2, 601), -- High-Grade Life Stone - Level 82
+-- Drakos Hunter
+(22862, 4043, 1, 1, -1, 751200), -- Asofe
+(22862, 9630, 1, 1, -1, 114500), -- Orichalcum
+(22862, 10403, 1, 1, -1, 7633), -- Icarus Hand Piece
+(22862, 15778, 1, 1, -1, 4000), -- Recipe - Sealed Moirai Breastplate (60%)
+(22862, 15792, 1, 1, -1, 1652), -- Recipe - Sealed Vesper Helmet (60%)
+(22862, 15795, 1, 1, -1, 625), -- Recipe - Sealed Vesper Breastplate (60%)
+(22862, 15798, 1, 1, -1, 625), -- Recipe - Sealed Vesper Gaiter (60%)
+(22862, 57, 18307, 42751, 0, 700000), -- Adena
+(22862, 15706, 1, 1, 1, 25), -- Sealed Moirai Boots
+(22862, 15707, 1, 1, 1, 25), -- Sealed Moirai Leather Boots
+(22862, 15768, 1, 1, 1, 25), -- Sealed Moirai Necklace
+(22862, 15708, 1, 1, 1, 25), -- Sealed Moirai Shoes
+(22862, 13893, 1, 1, 1, 10), -- Sealed Holy Spirit's Cloak
+(22862, 1885, 1, 1, 2, 187499), -- High-Grade Suede
+(22862, 1879, 3, 9, 2, 66666), -- Cokes
+(22862, 9628, 1, 1, 2, 18868), -- Leonard
+(22862, 9630, 1, 1, 2, 12820), -- Orichalcum
+(22862, 9629, 1, 1, 2, 9524), -- Adamantine
+(22862, 9549, 1, 1, 2, 5000), -- Wind Stone
+(22862, 9555, 1, 1, 2, 500), -- Wind Crystal
+(22862, 17248, 1, 1, 2, 133), -- Large Dragon Bone
 -- Greyclaw Kutus
 (25001, 348, 1, 1, 0, 272693.767227), -- Scale Mail
 (25001, 377, 4, 12, 0, 54506.950827), -- Scale Gaiters

@@ -4900,54 +4900,54 @@ INSERT INTO `npcaidata` VALUES
 (22812, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "golem_p_clan", 300, "null", 0, 0, "fighter"), -- Boom Golem
 (22813, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Demon's Banquet
 (22814, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Demon's Banquet
-(22815, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drakos
-(22816, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Maiden of the Valley
-(22817, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Summoner of the Valley
-(22818, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Exploding Orc Ghost
-(22819, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Wrathful Orc Ghost
-(22820, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Mesmer Drake
-(22821, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Immortal Necromancer
-(22822, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drakos Warrior
-(22823, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drakos Assassin
-(22824, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drakos Guardian
-(22825, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Giant Noxious Scorpion
-(22826, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Noxious Scorpion
-(22827, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Batwing Drake
-(22828, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Parasitic Leech
-(22829, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Emerald Drake
-(22830, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Gem Dragon
-(22831, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Tracker of the Valley
-(22832, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Scout of the Valley
-(22833, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Sand Drake Tracker
-(22834, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dust Dragon Tracker
-(22835, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Magma Drake Mother
-(22836, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Magma Drake Hatchling
-(22837, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Gem Dragon Hatchling
-(22838, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Leader
-(22839, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Warlord
-(22840, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Hunter
-(22841, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Princess
-(22842, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Banshee
-(22843, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Maluk Sniper 
-(22844, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Knight
-(22845, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Knight
-(22846, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Elite Dragon Knight
-(22847, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Knight Warrior 
-(22848, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Leader
-(22849, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Warrior
-(22850, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Scout
-(22851, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Mage
-(22852, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Guard
-(22853, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Mage
-(22854, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Bloody Karik
-(22855, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Bloody Berserker
-(22856, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Bloody Karinness
-(22857, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Knoriks
-(22858, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Necromancer of the Valley
-(22859, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Howl
-(22860, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Hungry Parasitic Leech
-(22861, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Hard Noxious Scorpion
-(22862, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drakos Hunter
+(22815, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drakos
+(22816, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Maiden of the Valley
+(22817, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Summoner of the Valley
+(22818, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Exploding Orc Ghost
+(22819, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Wrathful Orc Ghost
+(22820, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Mesmer Drake
+(22821, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Immortal Necromancer
+(22822, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drakos Warrior
+(22823, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drakos Assassin
+(22824, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drakos Guardian
+(22825, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Giant Noxious Scorpion
+(22826, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Noxious Scorpion
+(22827, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Batwing Drake
+(22828, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Parasitic Leech
+(22829, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Emerald Drake
+(22830, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Gem Dragon
+(22831, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Tracker of the Valley
+(22832, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Scout of the Valley
+(22833, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Sand Drake Tracker
+(22834, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dust Dragon Tracker
+(22835, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Magma Drake Mother
+(22836, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Magma Drake Hatchling
+(22837, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Gem Dragon Hatchling
+(22838, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Leader
+(22839, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Warlord
+(22840, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Hunter
+(22841, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Princess
+(22842, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Banshee
+(22843, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Maluk Sniper 
+(22844, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Knight
+(22845, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Knight
+(22846, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Elite Dragon Knight
+(22847, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Knight Warrior 
+(22848, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drake Leader
+(22849, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drake Warrior
+(22850, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drake Scout
+(22851, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drake Mage
+(22852, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Guard
+(22853, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Dragon Mage
+(22854, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Bloody Karik
+(22855, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Bloody Berserker
+(22856, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Bloody Karinness
+(22857, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Knoriks
+(22858, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "mage"), -- Necromancer of the Valley
+(22859, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Howl
+(22860, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Hungry Parasitic Leech
+(22861, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Hard Noxious Scorpion
+(22862, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "balanced"), -- Drakos Hunter
 (25001, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Greyclaw Kutus
 (25002, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guard of Kutus
 (25003, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Pawn of Kutus
@@ -5660,9 +5660,9 @@ INSERT INTO `npcaidata` VALUES
 (25722, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Shadow Summoner
 (25723, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Spike Slasher
 (25724, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Muscle Bomber
-(25725, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Lord
-(25726, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Behemoth Leader
-(25727, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Beast
+(25725, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "fighter"), -- Drake Lord
+(25726, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "fighter"), -- Behemoth Leader
+(25727, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 400, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Beast
 (25728, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Death Knight
 (25729, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Death Knight
 (25730, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Demon's Banquet
@@ -8887,7 +8887,7 @@ INSERT INTO `npcaidata` VALUES
 (32868, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Separated Soul
 (32869, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Separated Soul
 (32870, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Separated Soul
-(32871, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Vortex
+(32871, 7, 15, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Dragon Vortex
 (32872, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Tightly Shut Door
 (32873, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Cracked Wall
 (32874, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Lyann
