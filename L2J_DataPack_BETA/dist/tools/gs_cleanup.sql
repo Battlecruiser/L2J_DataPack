@@ -1,11 +1,3 @@
--- These queries are meant to delete any gameserver table you may have from
--- previous L2J installations.
---
--- Queries that create these tables and/or populate them apropiately are
--- available in the ../sql/ folder. See the documentation.txt file
--- for more details.
-
-DROP TABLE IF EXISTS
 account_gsdata,
 airships,
 auction,
@@ -15,7 +7,6 @@ auto_announcements,
 auto_chat_text,
 auto_chat,
 castle,
-castle_door,
 castle_doorupgrade,
 castle_functions,
 castle_manor_procure,
@@ -66,7 +57,6 @@ fort_doorupgrade,
 fort_functions,
 fort_siege_guards,
 fort_spawnlist,
-fort_staticobjects,
 fortsiege_clans,
 forums,
 four_sepulchers_spawnlist,
