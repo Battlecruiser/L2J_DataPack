@@ -20,7 +20,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.Collection;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -30,12 +29,10 @@ import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2SummonItem;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2XmassTreeInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -44,7 +41,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 /**
  * UnAfraid: TODO: Rewrite me :D
@@ -117,18 +113,6 @@ public class SummonItems implements IItemHandler
 			case 0: // static summons (like Christmas tree)
 				try
 				{
-					Collection<L2Character> characters = activeChar.getKnownList().getKnownCharactersInRadius(1200);
-					for (L2Character ch : characters)
-					{
-						if (ch instanceof L2XmassTreeInstance && npcTemplate.isSpecialTree())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SUMMON_S1_AGAIN);
-							sm.addCharName(ch);
-							activeChar.sendPacket(sm);
-							return false;
-						}
-					}
-					
 					if (activeChar.destroyItem("Summon", item.getObjectId(), 1, null, false))
 					{
 						final L2Spawn spawn = new L2Spawn(npcTemplate);

@@ -24,18 +24,17 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * @author UnAfraid
+ * @author Drunkard Zabb0x
  */
-public class BirthdayCake extends AbstractNpcAI
+public class ChristmasTree extends AbstractNpcAI
 {
-	private static final int BIRTHDAY_CAKE_24 = 106;
-	private static final int BIRTHDAY_CAKE = 139;
+	private static final int CHRISTMAS_TREE = 13007;
 	
-	protected BirthdayCake(String name, String descr)
+	protected ChristmasTree(String name, String descr)
 	{
 		super(name, descr);
-		addFirstTalkId(BIRTHDAY_CAKE, BIRTHDAY_CAKE_24);
-		addSpawnId(BIRTHDAY_CAKE, BIRTHDAY_CAKE_24);
+		addFirstTalkId(CHRISTMAS_TREE);
+		addSpawnId(CHRISTMAS_TREE);
 	}
 	
 	@Override
@@ -53,34 +52,16 @@ public class BirthdayCake extends AbstractNpcAI
 	
 	private void addTask(L2Npc npc)
 	{
-		final SkillHolder holder;
-		switch (npc.getNpcId())
-		{
-			case BIRTHDAY_CAKE:
-			{
-				holder = new SkillHolder(22035, 1);
-				break;
-			}
-			case BIRTHDAY_CAKE_24:
-			{
-				holder = new SkillHolder(22250, 1);
-				break;
-			}
-			default:
-			{
-				return;
-			}
-		}
-		
-		ThreadPoolManager.getInstance().scheduleGeneral(new BirthdayCakeAI(npc, holder), 1000);
+		final SkillHolder holder = new SkillHolder(2139, 1);
+		ThreadPoolManager.getInstance().scheduleGeneral(new ChristmasTreeAI(npc, holder), 1000);
 	}
 	
-	protected class BirthdayCakeAI implements Runnable
+	protected class ChristmasTreeAI implements Runnable
 	{
 		private final L2Npc _npc;
 		private final SkillHolder _holder;
 		
-		protected BirthdayCakeAI(L2Npc npc, SkillHolder holder)
+		protected ChristmasTreeAI(L2Npc npc, SkillHolder holder)
 		{
 			_npc = npc;
 			_holder = holder;
@@ -97,43 +78,29 @@ public class BirthdayCake extends AbstractNpcAI
 			if (!_npc.isInsideZone(L2Character.ZONE_PEACE))
 			{
 				L2Skill skill = _holder.getSkill();
-				switch (_npc.getNpcId())
+				
+				final L2PcInstance player = _npc.getSummoner().getActingPlayer();
+				if (player == null)
 				{
-					case BIRTHDAY_CAKE:
+					ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
+					return;
+				}
+				
+				if (!player.isInParty())
+				{
+					if (player.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
 					{
-						for (L2PcInstance player : _npc.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
-						{
-							skill.getEffects(_npc, player);
-						}
-						break;
+						skill.getEffects(_npc, player);
 					}
-					case BIRTHDAY_CAKE_24:
+				}
+				else
+				{
+					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						final L2PcInstance player = _npc.getSummoner().getActingPlayer();
-						if (player == null)
+						if ((member != null) && member.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
 						{
-							ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
-							return;
+							skill.getEffects(_npc, member);
 						}
-						
-						if (!player.isInParty())
-						{
-							if (player.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
-							{
-								skill.getEffects(_npc, player);
-							}
-						}
-						else
-						{
-							for (L2PcInstance member : player.getParty().getMembers())
-							{
-								if ((member != null) && member.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
-								{
-									skill.getEffects(_npc, member);
-								}
-							}
-						}
-						break;
 					}
 				}
 			}
@@ -143,6 +110,6 @@ public class BirthdayCake extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new BirthdayCake(BirthdayCake.class.getSimpleName(), "ai/npc");
+		new ChristmasTree(ChristmasTree.class.getSimpleName(), "ai/npc");
 	}
 }
