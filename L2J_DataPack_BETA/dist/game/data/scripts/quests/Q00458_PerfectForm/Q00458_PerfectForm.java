@@ -14,11 +14,9 @@
  */
 package quests.Q00458_PerfectForm;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
@@ -26,159 +24,54 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Perfect Form (458)
- * @author centrio, Zoey76
+ * Perfect Form (458).<br>
+ * @author jurchiks
  */
 public class Q00458_PerfectForm extends Quest
 {
-	// NPCs
-	private static final int _Kelleyia = 32768;
+	private static final int KELLEYIA = 32768;
 	
-	// Mobs
-	private static final int[] _mobs1 =
+	// level 4 (full grown) feedable beasts
+	private static final int[] KOOKABURRAS =
 	{
 		18878,
 		18879
 	};
-	private static final int[] _mobs2 =
+	private static final int[] COUGARS =
 	{
 		18885,
 		18886
 	};
-	private static final int[] _mobs3 =
+	private static final int[] BUFFALOS =
 	{
 		18892,
 		18893
 	};
-	private static final int[] _mobs4 =
+	private static final int[] GRENDELS =
 	{
 		18899,
 		18900
 	};
 	
-	private final int[][] _mobs =
+	private static final int[][] ALL_MOBS =
 	{
-		_mobs1,
-		_mobs2,
-		_mobs3,
-		_mobs4
+		KOOKABURRAS,
+		COUGARS,
+		BUFFALOS,
+		GRENDELS
+	};
+	// 60% icarus weapon recipes (except kamael weapons)
+	// @formatter:off
+	private static final int[] ICARUS_WEAPON_RECIPES =
+	{
+		10373, 10374, 10375, 10376, 10377, 10378, 10379, 10380, 10381
 	};
 	
-	private static final ItemHolder[] _rewards1 =
+	private static final int[] ICARUS_WEAPON_PIECES =
 	{
-		new ItemHolder(10397, 2),
-		new ItemHolder(10398, 2),
-		new ItemHolder(10399, 2),
-		new ItemHolder(10400, 2),
-		new ItemHolder(10401, 2),
-		new ItemHolder(10402, 2),
-		new ItemHolder(10403, 2),
-		new ItemHolder(10404, 2),
-		new ItemHolder(10405, 2)
+		10397, 10398, 10399, 10400, 10401, 10402, 10403, 10404, 10405
 	};
-	
-	private static final ItemHolder[] _rewards2 =
-	{
-		new ItemHolder(10397, 5),
-		new ItemHolder(10398, 5),
-		new ItemHolder(10399, 5),
-		new ItemHolder(10400, 5),
-		new ItemHolder(10401, 5),
-		new ItemHolder(10402, 5),
-		new ItemHolder(10403, 5),
-		new ItemHolder(10404, 5),
-		new ItemHolder(10405, 5)
-	};
-	
-	private static final ItemHolder[] _rewards3 =
-	{
-		new ItemHolder(10373, 1),
-		new ItemHolder(10374, 1),
-		new ItemHolder(10375, 1),
-		new ItemHolder(10376, 1),
-		new ItemHolder(10377, 1),
-		new ItemHolder(10378, 1),
-		new ItemHolder(10379, 1),
-		new ItemHolder(10380, 1),
-		new ItemHolder(10381, 1)
-	};
-	
-	public Q00458_PerfectForm(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(_Kelleyia);
-		addTalkId(_Kelleyia);
-		
-		addKillId(_mobs1);
-		addKillId(_mobs2);
-		addKillId(_mobs3);
-		addKillId(_mobs4);
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (npc.getNpcId() == _Kelleyia)
-		{
-			final int overHits = st.getInt("overHits");
-			if (event.equalsIgnoreCase("32768-12.html"))
-			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
-			}
-			else if (event.equalsIgnoreCase("32768-16.html"))
-			{
-				if ((overHits >= 0) && (overHits <= 6))
-				{
-					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16c.html");
-					htmltext = htmltext.replace("%overhits%", "" + overHits);
-				}
-				else if ((overHits >= 7) && (overHits <= 19))
-				{
-					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16b.html");
-					htmltext = htmltext.replace("%overhits%", "" + overHits);
-				}
-				else if (overHits >= 20)
-				{
-					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16a.html");
-					htmltext = htmltext.replace("%overhits%", "" + overHits);
-				}
-			}
-			else if (event.equalsIgnoreCase("32768-17.html"))
-			{
-				if ((overHits >= 0) && (overHits <= 6))
-				{
-					final int rnd = getRandom(_rewards1.length);
-					st.giveItems(_rewards1[rnd].getId(), _rewards1[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
-				}
-				else if ((overHits >= 7) && (overHits <= 19))
-				{
-					final int rnd = getRandom(_rewards2.length);
-					st.giveItems(_rewards2[rnd].getId(), _rewards2[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
-				}
-				else if (overHits >= 20)
-				{
-					final int rnd = getRandom(_rewards3.length);
-					st.giveItems(_rewards3[rnd].getId(), _rewards3[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
-				}
-				
-				st.giveItems(15482, (int) Config.RATE_QUEST_REWARD);
-				st.giveItems(15483, (int) Config.RATE_QUEST_REWARD);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
-			}
-		}
-		return htmltext;
-	}
+	// @formatter:on
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -190,43 +83,173 @@ public class Q00458_PerfectForm extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _Kelleyia)
+		switch (st.getState())
 		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					htmltext = (player.getLevel() >= 82) ? "32768-01.htm" : "32768-03.html";
+			case State.COMPLETED:
+				if (!st.isNowAvailable())
+				{
+					htmltext = "32768-18.htm";
 					break;
-				case State.STARTED:
-					final int cond = st.getInt("cond");
-					if (cond == 1)
-					{
-						if ((st.getInt("mobs1") == 0) && (st.getInt("mobs2") == 0) && (st.getInt("mobs3") == 0) && (st.getInt("mobs4") == 0))
+				}
+				st.setState(State.CREATED);
+				//$FALL-THROUGH$
+			case State.CREATED:
+				htmltext = (player.getLevel() > 81) ? "32768-01.htm" : "32768-00.htm";
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
+						if (st.get("18879").equals("0") && st.get("18886").equals("0") && st.get("18893").equals("0") && st.get("18900").equals("0"))
 						{
-							htmltext = "32768-13.html";
+							htmltext = "32768-11.html";
 						}
 						else
 						{
-							htmltext = "32768-14.html";
+							htmltext = "32768-12.html";
 						}
-					}
-					else if (cond == 2)
+						break;
+					case 2:
+						htmltext = "32768-13.html";
+						break;
+				}
+				break;
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		String noQuest = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return noQuest;
+		}
+		
+		String htmltext = event;
+		int overHits = 0;
+		boolean overHitHtml = false;
+		
+		switch (event)
+		{
+			case "32768-10.htm":
+				st.startQuest();
+				// to avoid NULL values
+				st.set("18879", "0");
+				st.set("18886", "0");
+				st.set("18893", "0");
+				st.set("18900", "0");
+				st.set("overhitsConsecutive", "0");
+				break;
+			case "results1":
+				if (st.isCond(2))
+				{
+					final int overhitsTotal = st.getInt("overhitsTotal");
+					if (overhitsTotal >= 35)
 					{
-						htmltext = "32768-15.html";
+						htmltext = "32768-14a.html";
 					}
-					break;
-				case State.COMPLETED:
-					if (st.isNowAvailable())
+					else if (overhitsTotal >= 10)
 					{
-						st.setState(State.CREATED);
-						htmltext = (player.getLevel() >= 82) ? "32768-01.htm" : "32768-03.html";
+						htmltext = "32768-14b.html";
 					}
 					else
 					{
-						htmltext = "32768-02.html";
+						htmltext = "32768-14c.html";
 					}
-					break;
-			}
+					overHits = overhitsTotal;
+					overHitHtml = true;
+				}
+				else
+				{
+					htmltext = noQuest;
+				}
+				break;
+			case "results2":
+				if (st.isCond(2))
+				{
+					final int overhitsCritical = st.getInt("overhitsCritical");
+					if (overhitsCritical >= 30)
+					{
+						htmltext = "32768-15a.html";
+					}
+					else if (overhitsCritical >= 5)
+					{
+						htmltext = "32768-15b.html";
+					}
+					else
+					{
+						htmltext = "32768-15c.html";
+					}
+					overHits = overhitsCritical;
+					overHitHtml = true;
+				}
+				else
+				{
+					htmltext = noQuest;
+				}
+				break;
+			case "results3":
+				if (st.isCond(2))
+				{
+					final int overhitsConsecutive = st.getInt("overhitsConsecutive");
+					if (overhitsConsecutive >= 20)
+					{
+						htmltext = "32768-16a.html";
+					}
+					else if (overhitsConsecutive >= 7)
+					{
+						htmltext = "32768-16b.html";
+					}
+					else
+					{
+						htmltext = "32768-16c.html";
+					}
+					overHits = overhitsConsecutive;
+					overHitHtml = true;
+				}
+				else
+				{
+					htmltext = noQuest;
+				}
+				break;
+			case "32768-17.html":
+				if (st.isCond(2))
+				{
+					int overhitsConsecutive = st.getInt("overhitsConsecutive");
+					if (overhitsConsecutive >= 20)
+					{
+						int rnd = getRandom(ICARUS_WEAPON_RECIPES.length);
+						st.rewardItems(ICARUS_WEAPON_RECIPES[rnd], 1);
+					}
+					else if (overhitsConsecutive >= 7)
+					{
+						int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
+						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 5);
+					}
+					else
+					{
+						int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
+						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 2);
+						// not sure if this should use rewardItems
+						st.giveItems(15482, 10); // Golden Spice Crate
+						st.giveItems(15483, 10); // Crystal Spice Crate
+					}
+					st.exitQuest(QuestType.DAILY, true);
+				}
+				else
+				{
+					htmltext = noQuest;
+				}
+				break;
+		}
+		
+		if (overHitHtml)
+		{
+			htmltext = getHtm(player.getHtmlPrefix(), htmltext);
+			htmltext = htmltext.replace("<?number?>", "" + overHits);
 		}
 		return htmltext;
 	}
@@ -235,27 +258,56 @@ public class Q00458_PerfectForm extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if (st.getInt("cond") == 1)
+		if ((st != null) && st.isCond(1))
 		{
 			final int npcId = npc.getNpcId();
-			for (int m = 0; m < _mobs.length; m++)
+			
+			for (int[] mobs : ALL_MOBS)
 			{
-				if (Util.contains(_mobs[m], npcId))
+				if (Util.contains(mobs, npcId))
 				{
-					st.set("mobs" + (m + 1), String.valueOf(st.getInt("mobs" + (m + 1)) + 1));
-					if (((L2Attackable) npc).isOverhit())
+					String variable = String.valueOf(mobs[1]); // i3
+					int currentValue = st.getInt(variable);
+					if (currentValue < 10)
 					{
-						st.set("overHits", String.valueOf(st.getInt("overHits") + 1));
-					}
-					
-					if ((st.getInt("mobs1") >= 10) && (st.getInt("mobs2") >= 10) && (st.getInt("mobs3") >= 10) && (st.getInt("mobs4") >= 10))
-					{
-						st.set("cond", "2");
+						st.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
+						
+						L2Attackable mob = (L2Attackable) npc;
+						if (mob.isOverhit())
+						{
+							st.set("overhitsTotal", String.valueOf(st.getInt("overhitsTotal") + 1)); // memoStateEx 1
+							int maxHp = mob.getMaxHp();
+							// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
+							double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
+							if (overhitPercentage >= 1.2)
+							{
+								st.set("overhitsCritical", String.valueOf(st.getInt("overhitsCritical") + 1)); // memoStateEx 2
+							}
+							int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
+							st.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
+							/*
+							 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }
+							 */
+						}
+						else
+						{
+							// st.set("overhitsConsecutive", String.valueOf((st.getInt("overhitsConsecutive") % 100) * 100));
+							if (!st.get("overhitsConsecutive").equals("0"))
+							{
+								// avoid writing to database if variable is already zero
+								st.set("overhitsConsecutive", "0");
+							}
+						}
+						
+						if (st.get("18879").equals("10") && st.get("18886").equals("10") && st.get("18893").equals("10") && st.get("18900").equals("10"))
+						{
+							st.setCond(2, true);
+							// st.set("overhitsConsecutive", String.valueOf(st.getInt("overhitsConsecutive") % 100));
+						}
+						else
+						{
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
 					}
 					break;
 				}
@@ -264,8 +316,19 @@ public class Q00458_PerfectForm extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
+	public Q00458_PerfectForm()
+	{
+		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
+		addStartNpc(KELLEYIA);
+		addTalkId(KELLEYIA);
+		addKillId(KOOKABURRAS);
+		addKillId(COUGARS);
+		addKillId(BUFFALOS);
+		addKillId(GRENDELS);
+	}
+	
 	public static void main(String[] args)
 	{
-		new Q00458_PerfectForm(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
+		new Q00458_PerfectForm();
 	}
 }
