@@ -36,7 +36,7 @@ public class TakeFort implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!activeChar.isPlayer())
+		if (!activeChar.isPlayer() || targets.length == 0)
 			return;
 		
 		L2PcInstance player = activeChar.getActingPlayer();
@@ -44,7 +44,7 @@ public class TakeFort implements ISkillHandler
 			return;
 		
 		Fort fort = FortManager.getInstance().getFort(player);
-		if (fort == null || !player.checkIfOkToCastFlagDisplay(fort, true, skill))
+		if (fort == null || !player.checkIfOkToCastFlagDisplay(fort, true, skill, targets[0]))
 			return;
 		
 		try
