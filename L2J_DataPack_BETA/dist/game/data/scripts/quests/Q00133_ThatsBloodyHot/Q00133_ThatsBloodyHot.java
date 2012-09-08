@@ -37,6 +37,14 @@ public class Q00133_ThatsBloodyHot extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
+	public Q00133_ThatsBloodyHot(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KANIS);
+		addTalkId(KANIS, GALATE);
+		registerQuestItems(REFINED_CRYSTAL_SAMPLE);
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -202,14 +210,6 @@ public class Q00133_ThatsBloodyHot extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00133_ThatsBloodyHot(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KANIS);
-		addTalkId(KANIS, GALATE);
-		registerQuestItems(REFINED_CRYSTAL_SAMPLE);
 	}
 	
 	public static void main(String[] args)

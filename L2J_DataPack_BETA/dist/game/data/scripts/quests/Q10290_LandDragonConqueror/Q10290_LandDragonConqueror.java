@@ -31,13 +31,13 @@ public class Q10290_LandDragonConqueror extends Quest
 	// NPC
 	private static final int THEODRIC = 30755;
 	
-	// @formatter:off
-            private static final int[] ANTHARAS =
-            {
-                    // Old, Weak, Normal, Strong
-                    29019, 29066, 29067, 29068
-            };
-            //@formatter:on
+	private static final int[] ANTHARAS =
+	{
+		29019, // Old
+		29066, // Weak
+		29067, // Normal
+		29068 //Strong
+	};
 	
 	// Items
 	private static final int PORTAL_STONE = 3865;

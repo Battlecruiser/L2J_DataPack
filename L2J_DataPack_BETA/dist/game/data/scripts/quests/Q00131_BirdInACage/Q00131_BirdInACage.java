@@ -39,6 +39,14 @@ public class Q00131_BirdInACage extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 78;
 	
+	public Q00131_BirdInACage(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KANIS);
+		addTalkId(KANIS, PARME);
+		registerQuestItems(ECHO_CRYSTAL_OF_FREE_THOUGHT, PARMES_LETTER);
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -224,14 +232,6 @@ public class Q00131_BirdInACage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00131_BirdInACage(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KANIS);
-		addTalkId(KANIS, PARME);
-		registerQuestItems(ECHO_CRYSTAL_OF_FREE_THOUGHT, PARMES_LETTER);
 	}
 	
 	public static void main(String[] args)
