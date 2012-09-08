@@ -24,14 +24,15 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Perfect Form (458).<br>
+ * Perfect Form (458)
  * @author jurchiks
  */
 public class Q00458_PerfectForm extends Quest
 {
+	// NPCs
 	private static final int KELLEYIA = 32768;
-	
-	// level 4 (full grown) feedable beasts
+	// Monsters
+	// Level 4 (full grown) feedable beasts
 	private static final int[] KOOKABURRAS =
 	{
 		18878,
@@ -60,7 +61,8 @@ public class Q00458_PerfectForm extends Quest
 		BUFFALOS,
 		GRENDELS
 	};
-	// 60% icarus weapon recipes (except kamael weapons)
+	// Rewards
+	// 60% Icarus weapon recipes (except kamael weapons)
 	// @formatter:off
 	private static final int[] ICARUS_WEAPON_RECIPES =
 	{
@@ -72,6 +74,17 @@ public class Q00458_PerfectForm extends Quest
 		10397, 10398, 10399, 10400, 10401, 10402, 10403, 10404, 10405
 	};
 	// @formatter:on
+	
+	private Q00458_PerfectForm()
+	{
+		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
+		addStartNpc(KELLEYIA);
+		addTalkId(KELLEYIA);
+		addKillId(KOOKABURRAS);
+		addKillId(COUGARS);
+		addKillId(BUFFALOS);
+		addKillId(GRENDELS);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -249,7 +262,7 @@ public class Q00458_PerfectForm extends Quest
 		if (overHitHtml)
 		{
 			htmltext = getHtm(player.getHtmlPrefix(), htmltext);
-			htmltext = htmltext.replace("<?number?>", "" + overHits);
+			htmltext = htmltext.replace("<?number?>", String.valueOf(overHits));
 		}
 		return htmltext;
 	}
@@ -314,17 +327,6 @@ public class Q00458_PerfectForm extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00458_PerfectForm()
-	{
-		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
-		addStartNpc(KELLEYIA);
-		addTalkId(KELLEYIA);
-		addKillId(KOOKABURRAS);
-		addKillId(COUGARS);
-		addKillId(BUFFALOS);
-		addKillId(GRENDELS);
 	}
 	
 	public static void main(String[] args)
