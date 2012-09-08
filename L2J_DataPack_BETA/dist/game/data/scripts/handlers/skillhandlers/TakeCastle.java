@@ -36,7 +36,7 @@ public class TakeCastle implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!activeChar.isPlayer())
+		if (!activeChar.isPlayer() || targets.length == 0)
 			return;
 		
 		L2PcInstance player = activeChar.getActingPlayer();
@@ -45,7 +45,7 @@ public class TakeCastle implements ISkillHandler
 			return;
 		
 		Castle castle = CastleManager.getInstance().getCastle(player);
-		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill))
+		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill, targets[0]))
 			return;
 		
 		try
