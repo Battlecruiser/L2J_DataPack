@@ -616,8 +616,6 @@ INSERT INTO `teleport` VALUES
 ('Dwarven Village -> Kamael Village',12056,-117251,46771,360,32000,0,57),
 ('Soul Harbor -> Nornil\'s Garden',12057,-119534,87176,-12593,0,0,57),
 ('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0,57),
-('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0,57),
-('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0,57),
 ('Fantasy Isle -> Krateis Cube',12108,-70293,-71029,-1416,0,0,57),
 ('Krateis Cube -> Fantasy Isle',12109,-59224,-56837,-2032,0,0,57),
 ('Gludio -> Airship dock',12118,-149406,255247,-80,0,0,57),
