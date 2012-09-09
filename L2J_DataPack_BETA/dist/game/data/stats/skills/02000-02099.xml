@@ -596,7 +596,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="fatal_poison,1;fatal_poison_two,1" /> <!-- TODO: This ";fatal_poison_two,1" is a TEMP FIX, should be removed when "abnormalType & abnormalLvl" in skill 4082 works like main skill attributes and not effect attributes -->
+		<set name="negateAbnormals" val="fatal_poison,1;fatal_poison_two,1" /> <!-- TODO: This ";fatal_poison_two,1" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" in skill 4082 works like main skill attributes and not effect attributes -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
