@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22800" templateId="22800" clientName="Divinity Magus" serverName="n_divine_magician" level="84" type="warrior">
-		<acquire exp="349399.89240000036"  exp_rate="49.5181253401361" sp="35497.0" />
+		<acquire exp="349400"  exp_rate="49.5181253401361" sp="35497" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="11913" max="24348" chance="100" /> <!-- Adena-->
@@ -73,7 +73,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5837.38675800657" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3986.17843618672" pDef="572.587568" mDef="628.492104" />
+		<base pAtk="5837.38675800657" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3986.17843618672" pDef="572.587568" mDef="628.492104" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -89,7 +89,6 @@
 			<ai_skill name="Skill03_ID" id="6320" level="1" /> <!-- Summon Sacred Magic Force -->
 		</npc_ai>
 		<org hp="32744.8265190398" hp_regen="110.577296732991" mp="1812" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -119,7 +118,7 @@
 		</custom>
 	</npc>
 	<npc id="22801" templateId="22801" clientName="Cruel Pincer Golem" serverName="golem_cannon1_p" level="72" type="warrior">
-		<acquire exp="10108.8"  exp_rate="1.95" sp="1027.0" />
+		<acquire exp="10109"  exp_rate="1.95" sp="1027" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1294" max="2643" chance="100" /> <!-- Adena-->
@@ -188,7 +187,7 @@
 			<walk ground="130" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -205,7 +204,6 @@
 			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -231,7 +229,7 @@
 		</custom>
 	</npc>
 	<npc id="22802" templateId="22802" clientName="Cruel Pincer Golem" serverName="golem_cannon2_p" level="72" type="warrior">
-		<acquire exp="7216.128"  exp_rate="1.392" sp="733.0" />
+		<acquire exp="7216"  exp_rate="1.392" sp="733" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="894" max="1826" chance="100" /> <!-- Adena-->
@@ -301,7 +299,7 @@
 			<walk ground="130" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -314,7 +312,6 @@
 			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -341,7 +338,7 @@
 		</custom>
 	</npc>
 	<npc id="22803" templateId="22803" clientName="Cruel Pincer Golem" serverName="golem_cannon3_p" level="72" type="warrior">
-		<acquire exp="9268.992"  exp_rate="1.788" sp="941.0" />
+		<acquire exp="9269"  exp_rate="1.788" sp="941" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1178" max="2406" chance="100" /> <!-- Adena-->
@@ -409,7 +406,7 @@
 			<walk ground="130" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -422,7 +419,6 @@
 			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -447,7 +443,7 @@
 		</custom>
 	</npc>
 	<npc id="22804" templateId="22804" clientName="Horrifying Jackhammer Golem" serverName="golem_prop1_p" level="73" type="warrior">
-		<acquire exp="10391.55"  exp_rate="1.95" sp="1069.0" />
+		<acquire exp="10392"  exp_rate="1.95" sp="1069" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1336" max="2721" chance="100" /> <!-- Adena-->
@@ -515,7 +511,7 @@
 			<walk ground="72" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -532,7 +528,6 @@
 			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -558,7 +553,7 @@
 		</custom>
 	</npc>
 	<npc id="22805" templateId="22805" clientName="Horrifying Jackhammer Golem" serverName="golem_prop2_p" level="73" type="warrior">
-		<acquire exp="7417.968"  exp_rate="1.392" sp="763.0" />
+		<acquire exp="7418"  exp_rate="1.392" sp="763" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="924" max="1880" chance="100" /> <!-- Adena-->
@@ -626,7 +621,7 @@
 			<walk ground="72" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -639,7 +634,6 @@
 			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -666,7 +660,7 @@
 		</custom>
 	</npc>
 	<npc id="22806" templateId="22806" clientName="Horrifying Jackhammer Golem" serverName="golem_prop3_p" level="73" type="warrior">
-		<acquire exp="9528.252"  exp_rate="1.788" sp="980.0" />
+		<acquire exp="9528"  exp_rate="1.788" sp="980" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1217" max="2477" chance="100" /> <!-- Adena-->
@@ -735,7 +729,7 @@
 			<walk ground="72" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -748,7 +742,6 @@
 			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -773,7 +766,7 @@
 		</custom>
 	</npc>
 	<npc id="22807" templateId="22807" clientName="Scout-type Golem No. 28" serverName="golem_carrier_p" level="72" type="warrior">
-		<acquire exp="9903.5136"  exp_rate="1.9104" sp="1006.0" />
+		<acquire exp="9904"  exp_rate="1.9104" sp="1006" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1266" max="2585" chance="100" /> <!-- Adena-->
@@ -841,7 +834,7 @@
 			<walk ground="72" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -855,7 +848,6 @@
 			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -881,7 +873,7 @@
 		</custom>
 	</npc>
 	<npc id="22808" templateId="22808" clientName="Scout-type Golem No. 2" serverName="golem_mechanic_p" level="72" type="warrior">
-		<acquire exp="5922.2016"  exp_rate="1.1424" sp="601.0" />
+		<acquire exp="5922"  exp_rate="1.1424" sp="601" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="716" max="1461" chance="100" /> <!-- Adena-->
@@ -951,7 +943,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -966,7 +958,6 @@
 			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -992,7 +983,7 @@
 		</custom>
 	</npc>
 	<npc id="22809" templateId="22809" clientName="Guard Golem" serverName="golem_guardian_p" level="73" type="warrior">
-		<acquire exp="20936.5752"  exp_rate="3.9288" sp="2066.0" />
+		<acquire exp="20937"  exp_rate="3.9288" sp="2066" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2675" max="5446" chance="100" /> <!-- Adena-->
@@ -1030,7 +1021,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1045,7 +1036,6 @@
 			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1071,7 +1061,7 @@
 		</custom>
 	</npc>
 	<npc id="22810" templateId="22810" clientName="Micro Scout Golem" serverName="golem_micro_p" level="72" type="warrior">
-		<acquire exp="17331.1488"  exp_rate="3.3432" sp="1676.0" />
+		<acquire exp="17331"  exp_rate="3.3432" sp="1676" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2171" max="4432" chance="100" /> <!-- Adena-->
@@ -1109,7 +1099,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1124,7 +1114,6 @@
 			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1150,7 +1139,7 @@
 		</custom>
 	</npc>
 	<npc id="22811" templateId="22811" clientName="Great Chaos Golem" serverName="golem_steel_p" level="73" type="warrior">
-		<acquire exp="30036.3756"  exp_rate="5.6364" sp="2962.0" />
+		<acquire exp="30036"  exp_rate="5.6364" sp="2962" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3802" max="7740" chance="100" /> <!-- Adena-->
@@ -1193,7 +1182,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1207,7 +1196,6 @@
 			<ai_skill name="Skill01_ID" id="6262" level="1" /> <!-- EMP Power -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1233,7 +1221,7 @@
 		</custom>
 	</npc>
 	<npc id="22812" templateId="22812" clientName="Boom Golem" serverName="golem_boom1_p" level="72" type="warrior">
-		<acquire exp="17281.382400000002"  exp_rate="3.3336" sp="1671.0" />
+		<acquire exp="17281"  exp_rate="3.3336" sp="1671" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2164" max="4418" chance="100" /> <!-- Adena-->
@@ -1273,7 +1261,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1286,7 +1274,6 @@
 			<ai_skill name="Skill01_ID" id="6264" level="1" /> <!-- Golem Boom -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

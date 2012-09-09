@@ -14,7 +14,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="321.13207" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="219.29157" pDef="204.85194" mDef="149.90176" />
+		<base pAtk="321.13207" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="219.29157" pDef="204.85194" mDef="149.90176" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -30,7 +30,6 @@
 			<ai_skill name="Skill02_ID" id="5976" level="1" /> <!-- Dark Storm -->
 		</npc_ai>
 		<org hp="1470.41596" hp_regen="6.5" mp="775.8" mp_regen="2.4" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -69,7 +68,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="501.08068" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="342.17315" pDef="252.49346" mDef="184.76376" />
+		<base pAtk="501.08068" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="342.17315" pDef="252.49346" mDef="184.76376" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -85,7 +84,6 @@
 			<ai_skill name="Skill02_ID" id="5976" level="2" /> <!-- Dark Storm -->
 		</npc_ai>
 		<org hp="1985.55926" hp_regen="7.5" mp="1066.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -124,7 +122,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -143,7 +141,6 @@
 			<ai_skill name="Skill02_ID" id="5976" level="3" /> <!-- Dark Storm -->
 		</npc_ai>
 		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

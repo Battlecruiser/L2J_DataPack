@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21800" templateId="21800" clientName="Vassal Ghost" serverName="guard_undead" level="77" type="warrior">
-		<acquire exp="13233.528101778043"  exp_rate="2.23200001716614" sp="1432.0" />
+		<acquire exp="13234"  exp_rate="2.23200001716614" sp="1432" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1853" max="3785" chance="100" /> <!-- Adena-->
@@ -45,7 +45,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -61,7 +61,6 @@
 			<ai_skill name="DDMagicSlow" id="4567" level="8" /> <!-- Rain of Fire -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -88,7 +87,7 @@
 		</custom>
 	</npc>
 	<npc id="21801" templateId="21801" clientName="Treasure Chest" serverName="mimic_21" level="21" type="treasure">
-		<acquire exp="630.63"  exp_rate="1.43" sp="29.0" />
+		<acquire exp="631"  exp_rate="1.43" sp="29" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="107" max="191" chance="100" /> <!-- Adena-->
@@ -124,7 +123,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="47.91924" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="32.72263" pDef="89.73059" mDef="59.7436374813816" />
+		<base pAtk="47.91924" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="32.72263" pDef="89.73059" mDef="59.7436374813816" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -136,7 +135,6 @@
 			<ai>mimic_21</ai>
 		</npc_ai>
 		<org hp="364.30351" hp_regen="3.5" mp="205.2" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -162,7 +160,7 @@
 		</custom>
 	</npc>
 	<npc id="21802" templateId="21802" clientName="Treasure Chest" serverName="mimic_24" level="24" type="treasure">
-		<acquire exp="771.84"  exp_rate="1.34" sp="38.0" />
+		<acquire exp="772"  exp_rate="1.34" sp="38" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="122" max="225" chance="100" /> <!-- Adena-->
@@ -197,7 +195,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="60.19687" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="41.10666" pDef="98.70919" mDef="65.7216907961494" />
+		<base pAtk="60.19687" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="41.10666" pDef="98.70919" mDef="65.7216907961494" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -209,7 +207,6 @@
 			<ai>mimic_24</ai>
 		</npc_ai>
 		<org hp="435.34437" hp_regen="3.5" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -235,7 +232,7 @@
 		</custom>
 	</npc>
 	<npc id="21803" templateId="21803" clientName="Treasure Chest" serverName="mimic_27" level="27" type="treasure">
-		<acquire exp="918.54"  exp_rate="1.26" sp="47.0" />
+		<acquire exp="919"  exp_rate="1.26" sp="47" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="137" max="264" chance="100" /> <!-- Adena-->
@@ -273,7 +270,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="74.99121" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" />
+		<base pAtk="74.99121" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -285,7 +282,6 @@
 			<ai>mimic_27</ai>
 		</npc_ai>
 		<org hp="515.17856" hp_regen="3.5" mp="286.92" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -311,7 +307,7 @@
 		</custom>
 	</npc>
 	<npc id="21804" templateId="21804" clientName="Treasure Chest" serverName="mimic_30" level="30" type="treasure">
-		<acquire exp="1080.0"  exp_rate="1.2" sp="59.0" />
+		<acquire exp="1080"  exp_rate="1.2" sp="59" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="154" max="308" chance="100" /> <!-- Adena-->
@@ -346,7 +342,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="92.64226" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" />
+		<base pAtk="92.64226" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -358,7 +354,6 @@
 			<ai>mimic_30</ai>
 		</npc_ai>
 		<org hp="604.08419" hp_regen="3.5" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -384,7 +379,7 @@
 		</custom>
 	</npc>
 	<npc id="21805" templateId="21805" clientName="Treasure Chest" serverName="mimic_33" level="33" type="treasure">
-		<acquire exp="1306.8"  exp_rate="1.2" sp="75.0" />
+		<acquire exp="1307"  exp_rate="1.2" sp="75" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="184" max="368" chance="100" /> <!-- Adena-->
@@ -424,7 +419,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="113.49065" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="77.49941" pDef="129.23095" mDef="86.043423444366" />
+		<base pAtk="113.49065" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="77.49941" pDef="129.23095" mDef="86.043423444366" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -436,7 +431,6 @@
 			<ai>mimic_33</ai>
 		</npc_ai>
 		<org hp="702.20463" hp_regen="4.5" mp="372.96" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -462,7 +456,7 @@
 		</custom>
 	</npc>
 	<npc id="21806" templateId="21806" clientName="Treasure Chest" serverName="mimic_36" level="36" type="treasure">
-		<acquire exp="1555.2"  exp_rate="1.2" sp="94.0" />
+		<acquire exp="1555"  exp_rate="1.2" sp="94" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="216" max="433" chance="100" /> <!-- Adena-->
@@ -498,7 +492,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="137.86467" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" />
+		<base pAtk="137.86467" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -510,7 +504,6 @@
 			<ai>mimic_36</ai>
 		</npc_ai>
 		<org hp="809.52639" hp_regen="4.5" mp="417.6" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -536,7 +529,7 @@
 		</custom>
 	</npc>
 	<npc id="21807" templateId="21807" clientName="Treasure Chest" serverName="mimic_39" level="39" type="treasure">
-		<acquire exp="1825.2"  exp_rate="1.2" sp="116.0" />
+		<acquire exp="1825"  exp_rate="1.2" sp="116" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="253" max="504" chance="100" /> <!-- Adena-->
@@ -583,7 +576,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="166.06476" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="113.4007" pDef="152.46752" mDef="101.514599764346" />
+		<base pAtk="166.06476" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="113.4007" pDef="152.46752" mDef="101.514599764346" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -595,7 +588,6 @@
 			<ai>mimic_39</ai>
 		</npc_ai>
 		<org hp="925.85879" hp_regen="4.5" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -621,7 +613,7 @@
 		</custom>
 	</npc>
 	<npc id="21808" templateId="21808" clientName="Treasure Chest" serverName="mimic_42" level="42" type="treasure">
-		<acquire exp="2116.7999999999997"  exp_rate="1.2" sp="141.0" />
+		<acquire exp="2117"  exp_rate="1.2" sp="141" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="282" max="570" chance="100" /> <!-- Adena-->
@@ -659,7 +651,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="198.34591" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" />
+		<base pAtk="198.34591" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -671,7 +663,6 @@
 			<ai>mimic_42</ai>
 		</npc_ai>
 		<org hp="1050.81652" hp_regen="5.5" mp="531" mp_regen="2.1" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -697,7 +688,7 @@
 		</custom>
 	</npc>
 	<npc id="21809" templateId="21809" clientName="Treasure Chest" serverName="mimic_45" level="45" type="treasure">
-		<acquire exp="2430.0"  exp_rate="1.2" sp="169.0" />
+		<acquire exp="2430"  exp_rate="1.2" sp="169" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="320" max="650" chance="100" /> <!-- Adena-->
@@ -754,7 +745,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="234.89829" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" />
+		<base pAtk="234.89829" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -766,7 +757,6 @@
 			<ai>mimic_45</ai>
 		</npc_ai>
 		<org hp="1183.80594" hp_regen="5.5" mp="610.8" mp_regen="2.1" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -792,7 +782,7 @@
 		</custom>
 	</npc>
 	<npc id="21810" templateId="21810" clientName="Treasure Chest" serverName="mimic_48" level="48" type="treasure">
-		<acquire exp="2764.7999999999997"  exp_rate="1.2" sp="202.0" />
+		<acquire exp="2765"  exp_rate="1.2" sp="202" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="364" max="740" chance="100" /> <!-- Adena-->
@@ -837,7 +827,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="275.82705" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="188.35412" pDef="191.12803" mDef="127.255200286259" />
+		<base pAtk="275.82705" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="188.35412" pDef="191.12803" mDef="127.255200286259" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -849,7 +839,6 @@
 			<ai>mimic_48</ai>
 		</npc_ai>
 		<org hp="1324.01623" hp_regen="5.5" mp="692.4" mp_regen="2.1" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -875,7 +864,7 @@
 		</custom>
 	</npc>
 	<npc id="21811" templateId="21811" clientName="Treasure Chest" serverName="mimic_51" level="51" type="treasure">
-		<acquire exp="3121.2"  exp_rate="1.2" sp="238.0" />
+		<acquire exp="3121"  exp_rate="1.2" sp="238" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="413" max="839" chance="100" /> <!-- Adena-->
@@ -918,7 +907,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="321.13207" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="219.29157" pDef="204.85194" mDef="136.392732777413" />
+		<base pAtk="321.13207" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="219.29157" pDef="204.85194" mDef="136.392732777413" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -930,7 +919,6 @@
 			<ai>mimic_51</ai>
 		</npc_ai>
 		<org hp="1470.41596" hp_regen="6.5" mp="775.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -956,7 +944,7 @@
 		</custom>
 	</npc>
 	<npc id="21812" templateId="21812" clientName="Treasure Chest" serverName="mimic_54" level="54" type="treasure">
-		<acquire exp="3499.2"  exp_rate="1.2" sp="279.0" />
+		<acquire exp="3499"  exp_rate="1.2" sp="279" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="464" max="945" chance="100" /> <!-- Adena-->
@@ -999,7 +987,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="370.68904" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="253.13256" pDef="218.89589" mDef="145.743350252286" />
+		<base pAtk="370.68904" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="253.13256" pDef="218.89589" mDef="145.743350252286" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1011,7 +999,6 @@
 			<ai>mimic_54</ai>
 		</npc_ai>
 		<org hp="1621.75618" hp_regen="6.5" mp="861" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1037,7 +1024,7 @@
 		</custom>
 	</npc>
 	<npc id="21813" templateId="21813" clientName="Treasure Chest" serverName="mimic_57" level="57" type="treasure">
-		<acquire exp="3898.7999999999997"  exp_rate="1.2" sp="324.0" />
+		<acquire exp="3899"  exp_rate="1.2" sp="324" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="519" max="1060" chance="100" /> <!-- Adena-->
@@ -1080,7 +1067,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="424.23295" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" />
+		<base pAtk="424.23295" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1092,7 +1079,6 @@
 			<ai>mimic_57</ai>
 		</npc_ai>
 		<org hp="1776.58018" hp_regen="6.5" mp="948" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1118,7 +1104,7 @@
 		</custom>
 	</npc>
 	<npc id="21814" templateId="21814" clientName="Treasure Chest" serverName="mimic_60" level="60" type="treasure">
-		<acquire exp="4320.0"  exp_rate="1.2" sp="375.0" />
+		<acquire exp="4320"  exp_rate="1.2" sp="375" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="580" max="1179" chance="100" /> <!-- Adena-->
@@ -1161,7 +1147,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="481.34551" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" />
+		<base pAtk="481.34551" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1173,7 +1159,6 @@
 			<ai>mimic_60</ai>
 		</npc_ai>
 		<org hp="1933.24044" hp_regen="6.5" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1199,7 +1184,7 @@
 		</custom>
 	</npc>
 	<npc id="21815" templateId="21815" clientName="Treasure Chest" serverName="mimic_63" level="63" type="treasure">
-		<acquire exp="4762.8"  exp_rate="1.2" sp="430.0" />
+		<acquire exp="4763"  exp_rate="1.2" sp="430" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="646" max="1308" chance="100" /> <!-- Adena-->
@@ -1242,7 +1227,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="541.44774" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="369.73862" pDef="262.19426" mDef="174.571895122369" />
+		<base pAtk="541.44774" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="369.73862" pDef="262.19426" mDef="174.571895122369" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1254,7 +1239,6 @@
 			<ai>mimic_63</ai>
 		</npc_ai>
 		<org hp="2089.92274" hp_regen="7.5" mp="1127.4" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1280,7 +1264,7 @@
 		</custom>
 	</npc>
 	<npc id="21816" templateId="21816" clientName="Treasure Chest" serverName="mimic_66" level="66" type="treasure">
-		<acquire exp="5227.2"  exp_rate="1.2" sp="492.0" />
+		<acquire exp="5227"  exp_rate="1.2" sp="492" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="714" max="1448" chance="100" /> <!-- Adena-->
@@ -1323,7 +1307,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="603.79903" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="412.31647" pDef="276.72752" mDef="184.248304515217" />
+		<base pAtk="603.79903" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="412.31647" pDef="276.72752" mDef="184.248304515217" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1335,7 +1319,6 @@
 			<ai>mimic_66</ai>
 		</npc_ai>
 		<org hp="2244.67715" hp_regen="7.5" mp="1219.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1361,7 +1344,7 @@
 		</custom>
 	</npc>
 	<npc id="21817" templateId="21817" clientName="Treasure Chest" serverName="mimic_69" level="69" type="treasure">
-		<acquire exp="5713.2"  exp_rate="1.2" sp="559.0" />
+		<acquire exp="5713"  exp_rate="1.2" sp="559" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="786" max="1596" chance="100" /> <!-- Adena-->
@@ -1408,7 +1391,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" />
+		<base pAtk="667.50361" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1420,7 +1403,6 @@
 			<ai>mimic_69</ai>
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1446,7 +1428,7 @@
 		</custom>
 	</npc>
 	<npc id="21818" templateId="21818" clientName="Treasure Chest" serverName="mimic_72" level="72" type="treasure">
-		<acquire exp="6220.8"  exp_rate="1.2" sp="632.0" />
+		<acquire exp="6221"  exp_rate="1.2" sp="632" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="860" max="1756" chance="100" /> <!-- Adena-->
@@ -1491,7 +1473,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1503,7 +1485,6 @@
 			<ai>mimic_72</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1530,7 +1511,7 @@
 		</custom>
 	</npc>
 	<npc id="21819" templateId="21819" clientName="Treasure Chest" serverName="mimic_75" level="75" type="treasure">
-		<acquire exp="6750.0"  exp_rate="1.2" sp="712.0" />
+		<acquire exp="6750"  exp_rate="1.2" sp="712" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="941" max="1920" chance="100" /> <!-- Adena-->
@@ -1577,7 +1558,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1589,7 +1570,6 @@
 			<ai>mimic_75</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1616,7 +1596,7 @@
 		</custom>
 	</npc>
 	<npc id="21820" templateId="21820" clientName="Treasure Chest" serverName="mimic_78" level="78" type="treasure">
-		<acquire exp="7300.8"  exp_rate="1.2" sp="799.0" />
+		<acquire exp="7301"  exp_rate="1.2" sp="799" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1025" max="2092" chance="100" /> <!-- Adena-->
@@ -1661,7 +1641,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1673,7 +1653,6 @@
 			<ai>mimic_78</ai>
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1700,7 +1679,7 @@
 		</custom>
 	</npc>
 	<npc id="21821" templateId="21821" clientName="Treasure Chest" serverName="mimic_81" level="78" type="treasure">
-		<acquire exp="7873.200000000022"  exp_rate="1.29408284023669" sp="894.0" />
+		<acquire exp="7873"  exp_rate="1.29408284023669" sp="894" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1110" max="2273" chance="100" /> <!-- Adena-->
@@ -1745,7 +1724,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="940.9565" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="661.831856" pDef="355.9783" mDef="237.312" />
+		<base pAtk="940.9565" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="661.831856" pDef="355.9783" mDef="237.312" accuracy="12" evasion="4" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1757,7 +1736,6 @@
 			<ai>mimic_81</ai>
 		</npc_ai>
 		<org hp="3004.4059082" hp_regen="8.755" mp="1760.064" mp_regen="3.09" />
-		<physical hitModify="12" avoidModify="4" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1784,7 +1762,7 @@
 		</custom>
 	</npc>
 	<npc id="21822" templateId="21822" clientName="Treasure Chest" serverName="mimic_84" level="80" type="treasure">
-		<acquire exp="8467.199999999999"  exp_rate="1.323" sp="996.0" />
+		<acquire exp="8467"  exp_rate="1.323" sp="996" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1200" max="2449" chance="100" /> <!-- Adena-->
@@ -1827,7 +1805,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="1005.2800576" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="713.935000064" pDef="372.1819192" mDef="247.802921663855" />
+		<base pAtk="1005.2800576" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="713.935000064" pDef="372.1819192" mDef="247.802921663855" accuracy="17" evasion="4" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1839,7 +1817,6 @@
 			<ai>mimic_84</ai>
 		</npc_ai>
 		<org hp="3137.4936216" hp_regen="8.84" mp="1884.48" mp_regen="3.12" />
-		<physical hitModify="17" avoidModify="4" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1866,7 +1843,7 @@
 		</custom>
 	</npc>
 	<npc id="21823" templateId="21823" clientName="Executor of Offerings" serverName="sacrifice_executer" level="78" type="warrior">
-		<acquire exp="72252.26712597656"  exp_rate="11.8757835512782" sp="8110.0" />
+		<acquire exp="72252"  exp_rate="11.8757835512782" sp="8110" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="10189" max="20801" chance="100" /> <!-- Adena-->
@@ -1908,7 +1885,7 @@
 			<walk ground="39" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1926,7 +1903,6 @@
 			<ai_skill name="MagicHeal" id="4613" level="9" /> <!-- Clan Heal -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1958,7 +1934,7 @@
 		</custom>
 	</npc>
 	<npc id="21824" templateId="21824" clientName="Alpine Kookaburra" serverName="alpine_kukaburo_4_war_i1" level="65" type="warrior">
-		<acquire exp="30996.716917141548"  exp_rate="7.33650104547729" sp="2880.0" />
+		<acquire exp="30997"  exp_rate="7.33650104547729" sp="2880" />
 		<additional_make_multi_list>
 			<category chance="0.6835">
 				<item id="175" min="1" max="1" chance="0.0913" /> <!-- Art of Battle Axe-->
@@ -2004,7 +1980,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" />
+		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2028,7 +2004,6 @@
 			<ai_skill name="SelfBuff" id="4318" level="1" /> <!-- Ultimate Buff -->
 		</npc_ai>
 		<org hp="2193.43142" hp_regen="7.5" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2054,7 +2029,7 @@
 		</custom>
 	</npc>
 	<npc id="21825" templateId="21825" clientName="Alpine Kookaburra" serverName="alpine_kukaburo_4_wiz_i1" level="65" type="warrior">
-		<acquire exp="29567.672496370247"  exp_rate="6.99826567961426" sp="2747.0" />
+		<acquire exp="29568"  exp_rate="6.99826567961426" sp="2747" />
 		<additional_make_multi_list>
 			<category chance="2.2676">
 				<item id="2381" min="1" max="1" chance="0.1098" /> <!-- Doom Plate Armor-->
@@ -2096,7 +2071,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" />
+		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2121,7 +2096,6 @@
 			<ai_skill name="HoldMagic" id="4657" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2193.43142" hp_regen="7.5" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2147,7 +2121,7 @@
 		</custom>
 	</npc>
 	<npc id="21826" templateId="21826" clientName="Alpine Buffalo" serverName="alpine_buffalo_4_war_i1" level="67" type="warrior">
-		<acquire exp="32933.553193147556"  exp_rate="7.33650104547729" sp="3137.0" />
+		<acquire exp="32934"  exp_rate="7.33650104547729" sp="3137" />
 		<additional_make_multi_list>
 			<category chance="2.5383">
 				<item id="2381" min="1" max="1" chance="0.1098" /> <!-- Doom Plate Armor-->
@@ -2188,7 +2162,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2212,7 +2186,6 @@
 			<ai_skill name="SelfBuff" id="4318" level="1" /> <!-- Ultimate Buff -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2238,7 +2211,7 @@
 		</custom>
 	</npc>
 	<npc id="21827" templateId="21827" clientName="Alpine Buffalo" serverName="alpine_buffalo_4_wiz_i1" level="67" type="warrior">
-		<acquire exp="31415.214635788412"  exp_rate="6.99826567961426" sp="2992.0" />
+		<acquire exp="31415"  exp_rate="6.99826567961426" sp="2992" />
 		<additional_make_multi_list>
 			<category chance="0.7049">
 				<item id="79" min="1" max="1" chance="0.1503" /> <!-- Sword of Damascus-->
@@ -2283,7 +2256,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2308,7 +2281,6 @@
 			<ai_skill name="HoldMagic" id="4657" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2334,7 +2306,7 @@
 		</custom>
 	</npc>
 	<npc id="21828" templateId="21828" clientName="Alpine Cougar" serverName="alpine_cougar_4_war_i1" level="69" type="warrior">
-		<acquire exp="34929.08147751738"  exp_rate="7.33650104547729" sp="3418.0" />
+		<acquire exp="34929"  exp_rate="7.33650104547729" sp="3418" />
 		<additional_make_multi_list>
 			<category chance="0.6086">
 				<item id="2504" min="1" max="1" chance="0.1045" /> <!-- Meteor Shower-->
@@ -2379,7 +2351,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2403,7 +2375,6 @@
 			<ai_skill name="SelfBuff" id="4318" level="1" /> <!-- Ultimate Buff -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2429,7 +2400,7 @@
 		</custom>
 	</npc>
 	<npc id="21829" templateId="21829" clientName="Alpine Cougar" serverName="alpine_cougar_4_wiz_i1" level="69" type="warrior">
-		<acquire exp="33318.74290064349"  exp_rate="6.99826567961426" sp="3260.0" />
+		<acquire exp="33319"  exp_rate="6.99826567961426" sp="3260" />
 		<additional_make_multi_list>
 			<category chance="1.5829">
 				<item id="5304" min="1" max="1" chance="0.2697" /> <!-- Sealed Tallum Tunic-->
@@ -2475,7 +2446,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2500,7 +2471,6 @@
 			<ai_skill name="HoldMagic" id="4657" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

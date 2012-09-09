@@ -14,7 +14,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="583.088791057736" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="119.062093508884" pDef="253.701255" mDef="247.54" />
+		<base pAtk="583.088791057736" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="119.062093508884" pDef="253.701255" mDef="247.54" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -28,7 +28,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4213" level="4" /> <!-- Haste -->
 		</npc_ai>
 		<org hp="17401.6211869652" hp_regen="39.4112754681274" mp="557.4" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -68,7 +67,7 @@
 			<walk ground="55" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.61" skill_factor="-1" />
-		<base pAtk="583.088791057736" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="119.062093508884" pDef="253.701255" mDef="247.54" />
+		<base pAtk="583.088791057736" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="119.062093508884" pDef="253.701255" mDef="247.54" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -80,7 +79,6 @@
 			<ai>rot_fighter</ai>
 		</npc_ai>
 		<org hp="8700.81059348262" hp_regen="39.4112754681274" mp="557.4" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -106,7 +104,7 @@
 		</custom>
 	</npc>
 	<npc id="25102" templateId="25102" clientName="Shacram" serverName="shacram" level="45" type="boss">
-		<acquire exp="2085509.6688233765"  exp_rate="1029.88131793747" sp="229987.0" rp="764.0" />
+		<acquire exp="2085510"  exp_rate="1029.88131793747" sp="229987" rp="764" />
 		<additional_make_list>
 			<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone-->
@@ -143,7 +141,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.59" skill_factor="-1" />
-		<base pAtk="667.348949019213" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="142.928040387499" pDef="533.36238" mDef="260.2" />
+		<base pAtk="667.348949019213" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="142.928040387499" pDef="533.36238" mDef="260.2" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -160,7 +158,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="242366.202507064" hp_regen="108.35639820142" mp="610.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -191,7 +188,7 @@
 		</custom>
 	</npc>
 	<npc id="25103" templateId="25103" clientName="Sorcerer Isirr" serverName="sorcery_isirr" level="55" type="boss">
-		<acquire exp="2477106.815023407"  exp_rate="818.878285958151" sp="327038.0" rp="1068.0" />
+		<acquire exp="2477107"  exp_rate="818.878285958151" sp="327038" rp="1068" />
 		<additional_make_list>
 			<item id="9816" min="2" max="3" chance="75" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone-->
@@ -226,7 +223,7 @@
 			<walk ground="53" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="610.439011291351" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" />
+		<base pAtk="610.439011291351" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -247,7 +244,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4185" level="5" /> <!-- Sleep -->
 		</npc_ai>
 		<org hp="189660.129360453" hp_regen="64.1713408913048" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -292,7 +288,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="2312.08069139469" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" />
+		<base pAtk="2312.08069139469" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" accuracy="0" evasion="-18" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -305,7 +301,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4722" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="29260.9404249556" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -348,7 +343,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.28" skill_factor="-1" />
-		<base pAtk="1156.04034569734" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="348.461698676962" pDef="328.343835" mDef="320.36" />
+		<base pAtk="1156.04034569734" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="348.461698676962" pDef="328.343835" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -360,7 +355,6 @@
 			<ai>isirr_s_fighter</ai>
 		</npc_ai>
 		<org hp="14630.4702124778" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -389,7 +383,7 @@
 		</custom>
 	</npc>
 	<npc id="25106" templateId="25106" clientName="Ghost of the Well Lidia" serverName="manes_lidia" level="60" type="boss">
-		<acquire exp="2735032.768720899"  exp_rate="759.731324644694" sp="394692.0" rp="1240.0" />
+		<acquire exp="2735033"  exp_rate="759.731324644694" sp="394692" rp="1240" />
 		<additional_make_list>
 			<item id="9814" min="1" max="4" chance="84" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="2" chance="72" /> <!-- Destruction Tombstone-->
@@ -428,7 +422,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="785.177450040489" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="133.511957686818" pDef="742.95024" mDef="362.44" />
+		<base pAtk="785.177450040489" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="133.511957686818" pDef="742.95024" mDef="362.44" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -447,7 +441,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4741" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="221100.02497493" hp_regen="72.9643823396131" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -489,7 +482,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.8" skill_factor="-1" />
-		<base pAtk="1497.55052117409" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="490.541905286893" pDef="364.223895" mDef="355.36" />
+		<base pAtk="1497.55052117409" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="490.541905286893" pDef="364.223895" mDef="355.36" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -502,7 +495,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4761" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="23070.2557526169" hp_regen="71.371053660127" mp="1007" mp_regen="2.4" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -545,7 +537,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="1497.55052117409" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="490.541905286893" pDef="364.223895" mDef="355.36" />
+		<base pAtk="1497.55052117409" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="490.541905286893" pDef="364.223895" mDef="355.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -557,7 +549,6 @@
 			<ai>lidia_s_fighter</ai>
 		</npc_ai>
 		<org hp="17216.6087706096" hp_regen="71.371053660127" mp="1007" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -586,7 +577,7 @@
 		</custom>
 	</npc>
 	<npc id="25109" templateId="25109" clientName="Antharas Priest Cloe" serverName="antaras_cloe" level="74" type="boss">
-		<acquire exp="5199406.686841608"  exp_rate="949.489898984954" sp="852059.0" rp="3112.0" />
+		<acquire exp="5199407"  exp_rate="949.489898984954" sp="852059" rp="3112" />
 		<additional_make_list>
 			<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
 			<item id="9814" min="3" max="7" chance="82" /> <!-- Memento Mori-->
@@ -622,7 +613,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="2396.99018807273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="851.89721101842" pDef="943.97961" mDef="460.5" />
+		<base pAtk="2396.99018807273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="851.89721101842" pDef="943.97961" mDef="460.5" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -640,7 +631,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="7" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="392895.926408634" hp_regen="122.142751323234" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -682,7 +672,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="6239.97653157886" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5934.25589445268" pDef="465.044385" mDef="453.74" />
+		<base pAtk="6239.97653157886" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5934.25589445268" pDef="465.044385" mDef="453.74" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -696,7 +686,6 @@
 			<ai_skill name="Debuff_a" id="4200" level="7" /> <!-- Decrease Atk. Spd. -->
 		</npc_ai>
 		<org hp="41619.8566765128" hp_regen="121.063992487928" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -736,7 +725,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="9360.19880233835" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="13352.659941391" pDef="465.044385" mDef="453.74" />
+		<base pAtk="9360.19880233835" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="13352.659941391" pDef="465.044385" mDef="453.74" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -749,7 +738,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4170" level="7" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="62119.189069422" hp_regen="121.063992487928" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -775,7 +763,7 @@
 		</custom>
 	</npc>
 	<npc id="25112" templateId="25112" clientName="Beleth's Agent, Meana" serverName="meana_agent_of_beres" level="30" type="boss">
-		<acquire exp="2308288.1107558142"  exp_rate="2564.76456750646" sp="111484.0" rp="416.0" />
+		<acquire exp="2308288"  exp_rate="2564.76456750646" sp="111484" rp="416" />
 		<additional_make_multi_list>
 			<category chance="65.7659">
 				<item id="850" min="6" max="18" chance="4.031" /> <!-- Elven Earring-->
@@ -809,7 +797,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="111.218777383212" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7.21487767094488" pDef="355.39281" mDef="173.38" />
+		<base pAtk="111.218777383212" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7.21487767094488" pDef="355.39281" mDef="173.38" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -827,7 +815,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="53690.0336885106" hp_regen="21.714038575401" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -869,7 +856,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="273.913941778549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="46.6211618728441" pDef="172.50897" mDef="168.32" />
+		<base pAtk="273.913941778549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="46.6211618728441" pDef="172.50897" mDef="168.32" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -883,7 +870,6 @@
 			<ai_skill name="Debuff_a" id="4199" level="2" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="5492.48177132919" hp_regen="20.9291966395288" mp="315.12" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -923,7 +909,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.67" skill_factor="-1" />
-		<base pAtk="410.881184697441" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="104.90220368531" pDef="172.50897" mDef="168.32" />
+		<base pAtk="410.881184697441" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="104.90220368531" pDef="172.50897" mDef="168.32" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -936,7 +922,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4726" level="2" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="8197.73398705849" hp_regen="20.9291966395288" mp="315.12" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -962,7 +947,7 @@
 		</custom>
 	</npc>
 	<npc id="25115" templateId="25115" clientName="Icarus Sample 1" serverName="icarus_sample_21" level="40" type="boss">
-		<acquire exp="2741413.52591528"  exp_rate="1713.38345369705" sp="271385.0" rp="1200.0" />
+		<acquire exp="2741414"  exp_rate="1713.38345369705" sp="271385" rp="1200" />
 		<additional_make_list>
 			<item id="9817" min="1" max="4" chance="81" /> <!-- Nonliving Nucleus-->
 			<item id="8176" min="1" max="2" chance="68" /> <!-- Destruction Tombstone-->
@@ -1013,7 +998,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="441.882498831282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="64.6856142899034" pDef="469.65105" mDef="229.12" />
+		<base pAtk="441.882498831282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="64.6856142899034" pDef="469.65105" mDef="229.12" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1032,7 +1017,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4740" level="4" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="123885.15069835" hp_regen="45.7692657718863" mp="478.8" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1074,7 +1058,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.8" skill_factor="-1" />
-		<base pAtk="822.67619300665" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="239.880400057452" pDef="228.70128" mDef="223.14" />
+		<base pAtk="822.67619300665" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="239.880400057452" pDef="228.70128" mDef="223.14" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1087,7 +1071,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4755" level="3" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="12518.7694823552" hp_regen="43.4767816366365" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1130,7 +1113,7 @@
 			<walk ground="90" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="822.67619300665" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="239.880400057452" pDef="228.70128" mDef="223.14" />
+		<base pAtk="822.67619300665" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="239.880400057452" pDef="228.70128" mDef="223.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1142,7 +1125,6 @@
 			<ai>icarus_sample_08</ai>
 		</npc_ai>
 		<org hp="9342.36528533969" hp_regen="43.4767816366365" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1168,7 +1150,7 @@
 		</custom>
 	</npc>
 	<npc id="25118" templateId="25118" clientName="Guillotine, Warden of the Execution Grounds" serverName="warden_guillotine" level="35" type="boss">
-		<acquire exp="1912394.6175967064"  exp_rate="1561.13846334425" sp="144137.0" rp="520.0" />
+		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="62.272">
 				<item id="353" min="1" max="1" chance="21.5211" /> <!-- Half Plate Armor-->
@@ -1209,7 +1191,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.21" skill_factor="-1" />
-		<base pAtk="327.391297293902" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.7199871013021" pDef="410.18844" mDef="200.1" />
+		<base pAtk="327.391297293902" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.7199871013021" pDef="410.18844" mDef="200.1" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1226,7 +1208,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4736" level="4" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="138899.136909231" hp_regen="66.9859801832901" mp="402.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1257,7 +1238,7 @@
 		</custom>
 	</npc>
 	<npc id="25119" templateId="25119" clientName="Messenger of Fairy Queen Berun" serverName="obern_mgr_of_fairyqueen" level="50" type="boss">
-		<acquire exp="3551193.0567899747"  exp_rate="1420.47722271599" sp="422350.0" rp="1700.0" />
+		<acquire exp="3551193"  exp_rate="1420.47722271599" sp="422350" rp="1700" />
 		<additional_make_list>
 			<item id="9818" min="2" max="5" chance="77" /> <!-- Angelic Essence-->
 			<item id="8176" min="1" max="2" chance="90" /> <!-- Destruction Tombstone-->
@@ -1298,7 +1279,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="857.796934516553" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="196.056732211217" pDef="600.71532" mDef="293.06" />
+		<base pAtk="857.796934516553" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="196.056732211217" pDef="600.71532" mDef="293.06" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1316,7 +1297,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="5" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="213145.164737758" hp_regen="73.9338965895966" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1361,7 +1341,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="2151.29691858599" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1280.42760048861" pDef="293.49453" mDef="286.36" />
+		<base pAtk="2151.29691858599" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1280.42760048861" pDef="293.49453" mDef="286.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1375,7 +1355,6 @@
 			<ai_skill name="Debuff_a" id="4199" level="4" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="21787.806115718" hp_regen="70.8842869727447" mp="720" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1418,7 +1397,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="3227.02605353032" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2881.08814870588" pDef="293.49453" mDef="286.36" />
+		<base pAtk="3227.02605353032" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2881.08814870588" pDef="293.49453" mDef="286.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1431,7 +1410,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4170" level="4" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="32519.1136055492" hp_regen="70.8842869727447" mp="720" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1457,7 +1435,7 @@
 		</custom>
 	</npc>
 	<npc id="25122" templateId="25122" clientName="Refugee Applicant Leo" serverName="refuge_hoper_leo" level="56" type="boss">
-		<acquire exp="2529799.0507387565"  exp_rate="806.696125873328" sp="340561.0" rp="1104.0" />
+		<acquire exp="2529799"  exp_rate="806.696125873328" sp="340561" rp="1104" />
 		<additional_make_list>
 			<item id="9816" min="1" max="4" chance="77" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="2" chance="65" /> <!-- Destruction Tombstone-->
@@ -1492,7 +1470,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.26" skill_factor="-1" />
-		<base pAtk="643.78480571784" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="100.162908399054" pDef="685.20405" mDef="334.26" />
+		<base pAtk="643.78480571784" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="100.162908399054" pDef="685.20405" mDef="334.26" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1513,7 +1491,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4190" level="5" /> <!-- Decrease MP -->
 		</npc_ai>
 		<org hp="196306.513055728" hp_regen="66.0848830657008" mp="918.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1558,7 +1535,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="2441.7560451654" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="1496.29838908629" pDef="335.4543" mDef="327.3" />
+		<base pAtk="2441.7560451654" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="1496.29838908629" pDef="335.4543" mDef="327.3" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1571,7 +1548,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4727" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="30345.6206976724" hp_regen="64.1713408913048" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1614,7 +1590,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="1220.8780225827" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="374.074597271571" pDef="335.4543" mDef="327.3" />
+		<base pAtk="1220.8780225827" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="374.074597271571" pDef="335.4543" mDef="327.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1626,7 +1602,6 @@
 			<ai>leo_steward</ai>
 		</npc_ai>
 		<org hp="15172.8103488362" hp_regen="64.1713408913048" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1655,7 +1630,7 @@
 		</custom>
 	</npc>
 	<npc id="25125" templateId="25125" clientName="Fierce Tiger King Angel" serverName="fiercetiger_king_angel" level="65" type="boss">
-		<acquire exp="4489692.747877431"  exp_rate="1062.64917109525" sp="746626.0" rp="2592.0" />
+		<acquire exp="4489693"  exp_rate="1062.64917109525" sp="746626" rp="2592" />
 		<additional_make_list>
 			<item id="9816" min="3" max="7" chance="80" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone-->
@@ -1692,7 +1667,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="3631.01519545517" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2425.23781026179" pDef="815.67099" mDef="397.92" />
+		<base pAtk="3631.01519545517" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2425.23781026179" pDef="815.67099" mDef="397.92" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1709,7 +1684,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4171" level="6" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="688201.003654661" hp_regen="277.057601433902" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1737,7 +1711,7 @@
 		</custom>
 	</npc>
 	<npc id="25126" templateId="25126" clientName="Longhorn Golkonda" serverName="golkonda_longhorn" level="79" type="boss">
-		<acquire exp="5390002.558517777"  exp_rate="863.644056804643" sp="1205333.0" rp="3404.0" />
+		<acquire exp="5390003"  exp_rate="863.644056804643" sp="1205333" rp="3404" />
 		<additional_make_multi_list>
 			<category chance="61.0341">
 				<item id="6678" min="1" max="1" chance="4.9387" /> <!-- Sealed Imperial Crusader Shield-->
@@ -1778,7 +1752,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.59" skill_factor="-1" />
-		<base pAtk="5267.04651101713" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3790.2949006429" pDef="1011.21024" mDef="493.3" />
+		<base pAtk="5267.04651101713" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3790.2949006429" pDef="1011.21024" mDef="493.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1795,7 +1769,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="829806.78327062" hp_regen="319.229319897932" mp="1641" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1826,7 +1799,7 @@
 		</custom>
 	</npc>
 	<npc id="25127" templateId="25127" clientName="Langk Matriarch Rashkos" serverName="langk_matriarch_rashkos" level="24" type="boss">
-		<acquire exp="2584114.117440388"  exp_rate="4486.30923166734" sp="74037.0" rp="300.0" />
+		<acquire exp="2584114"  exp_rate="4486.30923166734" sp="74037" rp="300" />
 		<additional_make_multi_list>
 			<category chance="76.0957">
 				<item id="46" min="2" max="4" chance="65.1332" /> <!-- Bronze Helmet-->
@@ -1855,7 +1828,7 @@
 			<walk ground="56" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.65" skill_factor="-1" />
-		<base pAtk="136.640905723798" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="17.2030105157932" pDef="296.12757" mDef="144.46" />
+		<base pAtk="136.640905723798" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="17.2030105157932" pDef="296.12757" mDef="144.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1872,7 +1845,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="83501.9913811124" hp_regen="44.9019254294477" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1903,7 +1875,7 @@
 		</custom>
 	</npc>
 	<npc id="25128" templateId="25128" clientName="Vuku Grand Priest Gharmash" serverName="vuku_witchdr_gharmash" level="33" type="boss">
-		<acquire exp="1932559.8315290338"  exp_rate="1774.61876173465" sp="127255.0" rp="476.0" />
+		<acquire exp="1932560"  exp_rate="1774.61876173465" sp="127255" rp="476" />
 		<additional_make_multi_list>
 			<category chance="57.4167">
 				<item id="882" min="5" max="15" chance="6.9113" /> <!-- Mithril Ring-->
@@ -1943,7 +1915,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="140.55752969624" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="11.194506287274" pDef="387.69285" mDef="189.14" />
+		<base pAtk="140.55752969624" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="11.194506287274" pDef="387.69285" mDef="189.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1961,7 +1933,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="62398.1465210939" hp_regen="24.5170941308607" mp="372.96" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2006,7 +1977,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.26" skill_factor="-1" />
-		<base pAtk="346.926261181684" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="73.9971654034987" pDef="188.365905" mDef="183.78" />
+		<base pAtk="346.926261181684" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="73.9971654034987" pDef="188.365905" mDef="183.78" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2020,7 +1991,6 @@
 			<ai_skill name="Debuff_a" id="4203" level="3" /> <!-- Decrease Speed -->
 		</npc_ai>
 		<org hp="6352.47741032537" hp_regen="23.5043088957683" mp="358.32" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2063,7 +2033,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.65" skill_factor="-1" />
-		<base pAtk="520.402401832572" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="166.500906572535" pDef="188.365905" mDef="183.78" />
+		<base pAtk="520.402401832572" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="166.500906572535" pDef="188.365905" mDef="183.78" accuracy="5" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2076,7 +2046,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4722" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="9481.3095676498" hp_regen="23.5043088957683" mp="358.32" mp_regen="1.8" />
-		<physical hitModify="5" avoidModify="-18" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2102,7 +2071,7 @@
 		</custom>
 	</npc>
 	<npc id="25131" templateId="25131" clientName="Carnage Lord Gato" serverName="carnage_lord_gato" level="50" type="boss">
-		<acquire exp="2389767.32376402"  exp_rate="955.906929505608" sp="281312.0" rp="908.0" />
+		<acquire exp="2389767"  exp_rate="955.906929505608" sp="281312" rp="908" />
 		<additional_make_list>
 			<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone-->
@@ -2141,7 +2110,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="458.480434603136" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="56.5276785347001" pDef="600.71532" mDef="293.06" />
+		<base pAtk="458.480434603136" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="56.5276785347001" pDef="600.71532" mDef="293.06" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2160,7 +2129,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4741" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="155046.064475059" hp_regen="53.8546339421093" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2205,7 +2173,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="862.566718997186" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="207.710393090758" pDef="293.49453" mDef="286.36" />
+		<base pAtk="862.566718997186" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="207.710393090758" pDef="293.49453" mDef="286.36" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2218,7 +2186,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4761" level="4" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="15873.7572796787" hp_regen="51.7193112926872" mp="720" mp_regen="2.1" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2261,7 +2228,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="862.566718997186" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="207.710393090758" pDef="293.49453" mDef="286.36" />
+		<base pAtk="862.566718997186" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="207.710393090758" pDef="293.49453" mDef="286.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2273,7 +2240,6 @@
 			<ai>gatos_champion</ai>
 		</npc_ai>
 		<org hp="11846.0875221483" hp_regen="51.7193112926872" mp="720" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2302,7 +2268,7 @@
 		</custom>
 	</npc>
 	<npc id="25134" templateId="25134" clientName="Leto Chief Talkin" serverName="leto_chief_talkin" level="40" type="boss">
-		<acquire exp="2030965.178975904"  exp_rate="1269.35323685994" sp="181264.0" rp="632.0" />
+		<acquire exp="2030965"  exp_rate="1269.35323685994" sp="181264" rp="632" />
 		<additional_make_list>
 			<item id="9816" min="1" max="2" chance="85" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="1" chance="65" /> <!-- Destruction Tombstone-->
@@ -2341,7 +2307,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="236.34363334721" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="18.6629186045602" pDef="469.65105" mDef="229.12" />
+		<base pAtk="236.34363334721" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="18.6629186045602" pDef="469.65105" mDef="229.12" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2359,7 +2325,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="4" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="91937.3861400206" hp_regen="34.0387779378852" mp="478.8" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2401,7 +2366,7 @@
 			<walk ground="43" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="439.938707656487" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="69.1975609087206" pDef="228.70128" mDef="223.14" />
+		<base pAtk="439.938707656487" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="69.1975609087206" pDef="228.70128" mDef="223.14" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2415,7 +2380,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4211" level="4" /> <!-- Might -->
 		</npc_ai>
 		<org hp="13899.4158866737" hp_regen="32.4117473308651" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2458,7 +2422,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="439.938707656487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="69.1975609087206" pDef="228.70128" mDef="223.14" />
+		<base pAtk="439.938707656487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="69.1975609087206" pDef="228.70128" mDef="223.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2470,7 +2434,6 @@
 			<ai>talkins_bodyguard</ai>
 		</npc_ai>
 		<org hp="6949.70794333687" hp_regen="32.4117473308651" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2499,7 +2462,7 @@
 		</custom>
 	</npc>
 	<npc id="25137" templateId="25137" clientName="Beleth's Seer, Sephia" serverName="bereths_seer_sephia" level="55" type="boss">
-		<acquire exp="2477106.815023407"  exp_rate="818.878285958151" sp="327038.0" rp="1068.0" />
+		<acquire exp="2477107"  exp_rate="818.878285958151" sp="327038" rp="1068" />
 		<additional_make_list>
 			<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="4" chance="75" /> <!-- Destruction Tombstone-->
@@ -2536,7 +2499,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="610.439011291351" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" />
+		<base pAtk="610.439011291351" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2554,7 +2517,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="5" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="189660.129360453" hp_regen="64.1713408913048" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2596,7 +2558,7 @@
 			<walk ground="90" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="1541.34859291827" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="619.460361738035" pDef="328.343835" mDef="320.36" />
+		<base pAtk="1541.34859291827" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="619.460361738035" pDef="328.343835" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2610,7 +2572,6 @@
 			<ai_skill name="Debuff_a" id="4205" level="5" /> <!-- Paralysis -->
 		</npc_ai>
 		<org hp="19604.8300847202" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2650,7 +2611,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="2312.08069139469" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" />
+		<base pAtk="2312.08069139469" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2663,7 +2624,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4731" level="5" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="29260.9404249556" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2689,7 +2649,7 @@
 		</custom>
 	</npc>
 	<npc id="25140" templateId="25140" clientName="Hekaton Prime" serverName="hekaton_prime" level="65" type="boss">
-		<acquire exp="4489692.747877431"  exp_rate="1062.64917109525" sp="746626.0" rp="2592.0" />
+		<acquire exp="4489693"  exp_rate="1062.64917109525" sp="746626" rp="2592" />
 		<additional_make_list>
 			<item id="9817" min="3" max="7" chance="80" /> <!-- Nonliving Nucleus-->
 			<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone-->
@@ -2721,7 +2681,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="1815.50759772758" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="606.309452565447" pDef="815.67099" mDef="397.92" />
+		<base pAtk="1815.50759772758" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="606.309452565447" pDef="815.67099" mDef="397.92" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2742,7 +2702,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4189" level="6" /> <!-- Paralysis -->
 		</npc_ai>
 		<org hp="344100.501827331" hp_regen="110.823040573561" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2784,7 +2743,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="6982.68629353156" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="9405.35311800509" pDef="400.56702" mDef="390.82" />
+		<base pAtk="6982.68629353156" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="9405.35311800509" pDef="400.56702" mDef="390.82" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2797,7 +2756,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4720" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="53978.8912220944" hp_regen="109.161965526679" mp="1158" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2837,7 +2795,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="3491.34314676578" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2351.33827950127" pDef="400.56702" mDef="390.82" />
+		<base pAtk="3491.34314676578" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2351.33827950127" pDef="400.56702" mDef="390.82" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2849,7 +2807,6 @@
 			<ai>hekaton_chires</ai>
 		</npc_ai>
 		<org hp="26989.4456110472" hp_regen="109.161965526679" mp="1158" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2878,7 +2835,7 @@
 		</custom>
 	</npc>
 	<npc id="25143" templateId="25143" clientName="Fire of Wrath Shuriel" serverName="shuriel_fire_of_wrath" level="78" type="boss">
-		<acquire exp="5346496.302011296"  exp_rate="878.779799804618" sp="1193017.0" rp="3344.0" />
+		<acquire exp="5346496"  exp_rate="878.779799804618" sp="1193017" rp="3344" />
 		<additional_make_multi_list>
 			<category chance="45.6035">
 				<item id="6680" min="1" max="1" chance="5.855" /> <!-- Sealed Draconic Leather Armor-->
@@ -2908,7 +2865,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="2592.71886885803" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="929.620860138406" pDef="998.10183" mDef="486.92" />
+		<base pAtk="2592.71886885803" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="929.620860138406" pDef="998.10183" mDef="486.92" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2926,7 +2883,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="8" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="410600.548543185" hp_regen="126.536105676163" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2971,7 +2927,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.26" skill_factor="-1" />
-		<base pAtk="5185.43773771605" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="3718.48344055363" pDef="499.050915" mDef="486.92" />
+		<base pAtk="5185.43773771605" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="3718.48344055363" pDef="499.050915" mDef="486.92" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2985,7 +2941,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4214" level="7" /> <!-- Reflect Damage -->
 		</npc_ai>
 		<org hp="65696.0877669096" hp_regen="126.536105676163" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3028,7 +2983,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="5185.43773771605" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3718.48344055363" pDef="499.050915" mDef="486.92" />
+		<base pAtk="5185.43773771605" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3718.48344055363" pDef="499.050915" mDef="486.92" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3040,7 +2995,6 @@
 			<ai>shuriels_paladin</ai>
 		</npc_ai>
 		<org hp="32848.0438834548" hp_regen="126.536105676163" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3069,7 +3023,7 @@
 		</custom>
 	</npc>
 	<npc id="25146" templateId="25146" clientName="Serpent Demon Bifrons" serverName="serpent_demon_bifrons" level="21" type="boss">
-		<acquire exp="2646357.445934528"  exp_rate="6000.81053499893" sp="60367.0" rp="248.0" />
+		<acquire exp="2646357"  exp_rate="6000.81053499893" sp="60367" rp="248" />
 		<additional_make_multi_list>
 			<category chance="53.525">
 				<item id="848" min="3" max="9" chance="24.9403" /> <!-- Enchanted Earring-->
@@ -3101,7 +3055,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="53.1275788089434" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3.16860505219161" pDef="269.19177" mDef="131.32" />
+		<base pAtk="53.1275788089434" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3.16860505219161" pDef="269.19177" mDef="131.32" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3120,7 +3074,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4743" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="37886.4853669374" hp_regen="16.8269664693931" mp="205.2" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3165,7 +3118,7 @@
 			<walk ground="43" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="97.6503288577427" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="9.52955003556756" pDef="130.305735" mDef="127.14" />
+		<base pAtk="97.6503288577427" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="9.52955003556756" pDef="130.305735" mDef="127.14" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3178,7 +3131,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4778" level="2" /> <!-- Spear Attack -->
 		</npc_ai>
 		<org hp="3950.01834728225" hp_regen="16.5400323223535" mp="192" mp_regen="1.2" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3221,7 +3173,7 @@
 			<walk ground="52" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.59" skill_factor="-1" />
-		<base pAtk="97.6503288577427" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="9.52955003556756" pDef="130.305735" mDef="127.14" />
+		<base pAtk="97.6503288577427" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="9.52955003556756" pDef="130.305735" mDef="127.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3233,7 +3185,6 @@
 			<ai>butcher_of_bifrons</ai>
 		</npc_ai>
 		<org hp="2947.77488603153" hp_regen="16.5400323223535" mp="192" mp_regen="1.2" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3262,7 +3213,7 @@
 		</custom>
 	</npc>
 	<npc id="25149" templateId="25149" clientName="Zombie Lord Crowl" serverName="zombie_lord_crowl" level="25" type="boss">
-		<acquire exp="2541012.480560869"  exp_rate="4065.61996889739" sp="79280.0" rp="320.0" />
+		<acquire exp="2541012"  exp_rate="4065.61996889739" sp="79280" rp="320" />
 		<additional_make_multi_list>
 			<category chance="56.8719">
 				<item id="436" min="2" max="4" chance="29.4331" /> <!-- Tunic of Knowledge-->
@@ -3292,7 +3243,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="74.2223188804512" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="4.67967242276365" pDef="305.50599" mDef="149.04" />
+		<base pAtk="74.2223188804512" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="4.67967242276365" pDef="305.50599" mDef="149.04" accuracy="4.75" evasion="-18" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3311,7 +3262,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4741" level="2" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="43316.3085364372" hp_regen="18.4385313667577" mp="259.2" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3353,7 +3303,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.8" skill_factor="-1" />
-		<base pAtk="136.640905723798" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="17.2030105157932" pDef="148.063785" mDef="144.46" />
+		<base pAtk="136.640905723798" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="17.2030105157932" pDef="148.063785" mDef="144.46" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3366,7 +3316,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4756" level="2" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="4475.70673802763" hp_regen="17.9607701717791" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3409,7 +3358,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="136.640905723798" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="17.2030105157932" pDef="148.063785" mDef="144.46" />
+		<base pAtk="136.640905723798" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="17.2030105157932" pDef="148.063785" mDef="144.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3421,7 +3370,6 @@
 			<ai>evil_soul_warrior</ai>
 		</npc_ai>
 		<org hp="3340.0796552445" hp_regen="17.9607701717791" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3450,7 +3398,7 @@
 		</custom>
 	</npc>
 	<npc id="25152" templateId="25152" clientName="Flame Lord Shadar" serverName="flamelord_shadar" level="35" type="boss">
-		<acquire exp="1912394.6175967064"  exp_rate="1561.13846334425" sp="144137.0" rp="520.0" />
+		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="75.7935">
 			</category>
@@ -3479,7 +3427,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.35" skill_factor="-1" />
-		<base pAtk="163.695648646951" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="12.9299967753255" pDef="410.18844" mDef="200.1" />
+		<base pAtk="163.695648646951" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="12.9299967753255" pDef="410.18844" mDef="200.1" accuracy="4.75" evasion="-18" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3500,7 +3448,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4186" level="3" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="69449.5684546156" hp_regen="26.794392073316" mp="402.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3542,7 +3489,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="606.971204239169" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="192.649791042096" pDef="199.4229" mDef="194.58" />
+		<base pAtk="606.971204239169" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="192.649791042096" pDef="199.4229" mDef="194.58" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3555,7 +3502,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4731" level="3" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="10526.6678685797" hp_regen="25.6128307622386" mp="387.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3595,7 +3541,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="303.485602119585" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" />
+		<base pAtk="303.485602119585" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3607,7 +3553,6 @@
 			<ai>whip_of_shadar</ai>
 		</npc_ai>
 		<org hp="5263.33393428986" hp_regen="25.6128307622386" mp="387.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3633,7 +3578,7 @@
 		</custom>
 	</npc>
 	<npc id="25155" templateId="25155" clientName="Shaman King Selu" serverName="shaman_king_selu" level="40" type="boss">
-		<acquire exp="2741413.52591528"  exp_rate="1713.38345369705" sp="271385.0" rp="1200.0" />
+		<acquire exp="2741414"  exp_rate="1713.38345369705" sp="271385" rp="1200" />
 		<additional_make_list>
 			<item id="9814" min="1" max="4" chance="81" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="2" chance="68" /> <!-- Destruction Tombstone-->
@@ -3670,7 +3615,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.28" skill_factor="-1" />
-		<base pAtk="441.882498831282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="64.6856142899034" pDef="469.65105" mDef="229.12" />
+		<base pAtk="441.882498831282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="64.6856142899034" pDef="469.65105" mDef="229.12" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3688,7 +3633,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="4" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="123885.15069835" hp_regen="45.7692657718863" mp="478.8" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3733,7 +3677,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="1096.87416813577" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.435387182133" pDef="228.70128" mDef="223.14" />
+		<base pAtk="1096.87416813577" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.435387182133" pDef="228.70128" mDef="223.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3747,7 +3691,6 @@
 			<ai_skill name="Debuff_a" id="4199" level="3" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="12518.7694823552" hp_regen="43.4767816366365" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3791,7 +3734,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="1645.3523860133" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="959.521600229809" pDef="228.70128" mDef="223.14" />
+		<base pAtk="1645.3523860133" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="959.521600229809" pDef="228.70128" mDef="223.14" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3804,7 +3747,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4719" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="18684.7305706794" hp_regen="43.4767816366365" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3833,7 +3775,7 @@
 		</custom>
 	</npc>
 	<npc id="25158" templateId="25158" clientName="King Tarlk" serverName="king_tarlk" level="48" type="boss">
-		<acquire exp="3443211.43578356"  exp_rate="1494.44940789217" sp="354989.0" rp="1592.0" />
+		<acquire exp="3443211"  exp_rate="1494.44940789217" sp="354989" rp="1592" />
 		<additional_make_list>
 			<item id="9817" min="2" max="4" chance="76" /> <!-- Nonliving Nucleus-->
 			<item id="8176" min="1" max="2" chance="77" /> <!-- Destruction Tombstone-->
@@ -3874,7 +3816,7 @@
 			<walk ground="55" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.28" skill_factor="-1" />
-		<base pAtk="1515.63786852925" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="663.49811656612" pDef="573.38409" mDef="279.72" />
+		<base pAtk="1515.63786852925" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="663.49811656612" pDef="573.38409" mDef="279.72" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3891,7 +3833,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4735" level="5" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="386886.590885451" hp_regen="169.608687032915" mp="692.4" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3922,7 +3863,7 @@
 		</custom>
 	</npc>
 	<npc id="25159" templateId="25159" clientName="Paniel the Unicorn" serverName="unicorn_paniel" level="54" type="boss">
-		<acquire exp="2422282.7180915656"  exp_rate="830.686803186408" sp="313577.0" rp="1036.0" />
+		<acquire exp="2422283"  exp_rate="830.686803186408" sp="313577" rp="1036" />
 		<additional_make_list>
 			<item id="9818" min="1" max="3" chance="90" /> <!-- Angelic Essence-->
 			<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone-->
@@ -3959,7 +3900,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="578.020172848672" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="87.1154246692405" pDef="656.68767" mDef="320.36" />
+		<base pAtk="578.020172848672" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="87.1154246692405" pDef="656.68767" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3977,7 +3918,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="5" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="182880.877655972" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4019,7 +3959,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="1093.15424907494" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="322.489091733196" pDef="321.27489" mDef="313.46" />
+		<base pAtk="1093.15424907494" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="322.489091733196" pDef="321.27489" mDef="313.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4033,7 +3973,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4213" level="5" /> <!-- Haste -->
 		</npc_ai>
 		<org hp="28159.6165299449" hp_regen="60.1633937196702" mp="832.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4073,7 +4012,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.69" skill_factor="-1" />
-		<base pAtk="1093.15424907494" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="322.489091733196" pDef="321.27489" mDef="313.46" />
+		<base pAtk="1093.15424907494" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="322.489091733196" pDef="321.27489" mDef="313.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4085,7 +4024,6 @@
 			<ai>unicorn_ririf</ai>
 		</npc_ai>
 		<org hp="14079.8082649724" hp_regen="60.1633937196702" mp="832.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4111,7 +4049,7 @@
 		</custom>
 	</npc>
 	<npc id="25162" templateId="25162" clientName="Giant Marpanak" serverName="giant_marpanak" level="60" type="boss">
-		<acquire exp="4154684.046241932"  exp_rate="1154.07890173387" sp="587467.0" rp="2288.0" />
+		<acquire exp="4154684"  exp_rate="1154.07890173387" sp="587467" rp="2288" />
 		<additional_make_list>
 			<item id="9817" min="2" max="6" chance="83" /> <!-- Nonliving Nucleus-->
 			<item id="8176" min="1" max="3" chance="83" /> <!-- Destruction Tombstone-->
@@ -4148,7 +4086,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="2937.05045117962" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1851.60109271048" pDef="742.95024" mDef="362.44" />
+		<base pAtk="2937.05045117962" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1851.60109271048" pDef="742.95024" mDef="362.44" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4165,7 +4103,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4735" level="6" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="614249.151468482" hp_regen="253.244358973511" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4196,7 +4133,7 @@
 		</custom>
 	</npc>
 	<npc id="25163" templateId="25163" clientName="Roaring Skylancer" serverName="roar_skylancer" level="70" type="boss">
-		<acquire exp="4596479.21101843"  exp_rate="938.056981840496" sp="802604.0" rp="2884.0" />
+		<acquire exp="4596479"  exp_rate="938.056981840496" sp="802604" rp="2884" />
 		<additional_make_list>
 			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
 			<item id="9815" min="3" max="7" chance="81" /> <!-- Dragon Heart-->
@@ -4235,7 +4172,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="4309.76223426093" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2869.61548504493" pDef="887.74791" mDef="433.08" />
+		<base pAtk="4309.76223426093" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2869.61548504493" pDef="887.74791" mDef="433.08" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4252,7 +4189,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4735" level="7" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="746772.142484831" hp_regen="294.21090607215" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DRAGON</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4280,7 +4216,7 @@
 		</custom>
 	</npc>
 	<npc id="25166" templateId="25166" clientName="Ikuntai" serverName="ikuntai" level="25" type="boss">
-		<acquire exp="1589295.5850709563"  exp_rate="2542.87293611353" sp="122871.0" rp="616.0" />
+		<acquire exp="1589296"  exp_rate="2542.87293611353" sp="122871" rp="616" />
 		<additional_make_multi_list>
 			<category chance="71.936">
 				<item id="880" min="3" max="7" chance="38.7379" /> <!-- Black Pearl Ring-->
@@ -4309,7 +4245,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="138.03739078453" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="16.1331725262125" pDef="305.50599" mDef="149.04" />
+		<base pAtk="138.03739078453" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="16.1331725262125" pDef="305.50599" mDef="149.04" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4327,7 +4263,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="2" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="56644.1399290069" hp_regen="24.0862326352072" mp="259.2" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4372,7 +4307,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="253.592373602383" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="59.1834627128382" pDef="148.063785" mDef="144.46" />
+		<base pAtk="253.592373602383" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="59.1834627128382" pDef="148.063785" mDef="144.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4386,7 +4321,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4214" level="2" /> <!-- Reflect Damage -->
 		</npc_ai>
 		<org hp="8725.56298050835" hp_regen="23.4374674791976" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4426,7 +4360,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.21" skill_factor="-1" />
-		<base pAtk="253.592373602383" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="59.1834627128382" pDef="148.063785" mDef="144.46" />
+		<base pAtk="253.592373602383" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="59.1834627128382" pDef="148.063785" mDef="144.46" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4438,7 +4372,6 @@
 			<ai>pawn_of_ikuntai</ai>
 		</npc_ai>
 		<org hp="4362.78149025418" hp_regen="23.4374674791976" mp="245.52" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4467,7 +4400,7 @@
 		</custom>
 	</npc>
 	<npc id="25169" templateId="25169" clientName="Ragraman" serverName="ragraman" level="30" type="boss">
-		<acquire exp="1868578.8785250299"  exp_rate="2076.1987539167" sp="150667.0" rp="792.0" />
+		<acquire exp="1868579"  exp_rate="2076.1987539167" sp="150667" rp="792" />
 		<additional_make_multi_list>
 			<category chance="71.3663">
 				<item id="606" min="10" max="30" chance="1.5126" /> <!-- Rip Gauntlets-->
@@ -4512,7 +4445,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.28" skill_factor="-1" />
-		<base pAtk="416.072961376921" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.070888819998" pDef="355.39281" mDef="173.38" />
+		<base pAtk="416.072961376921" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.070888819998" pDef="355.39281" mDef="173.38" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4529,7 +4462,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="141484.138003554" hp_regen="71.4116064656513" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4560,7 +4492,7 @@
 		</custom>
 	</npc>
 	<npc id="25170" templateId="25170" clientName="Lizardmen Leader Hellion" serverName="lizardman_leader_hellion" level="38" type="boss">
-		<acquire exp="1957607.9318136764"  exp_rate="1355.68416330587" sp="163199.0" rp="588.0" />
+		<acquire exp="1957608"  exp_rate="1355.68416330587" sp="163199" rp="588" />
 		<additional_make_multi_list>
 			<category chance="76.0425">
 				<item id="631" min="6" max="16" chance="3.3742" /> <!-- Eldarake-->
@@ -4594,7 +4526,7 @@
 			<walk ground="53" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="204.554218646784" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="16.1476898312799" pDef="445.32861" mDef="217.24" />
+		<base pAtk="204.554218646784" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="16.1476898312799" pDef="445.32861" mDef="217.24" accuracy="0" evasion="-18" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4613,7 +4545,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4752" level="3" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="82089.0524454172" hp_regen="30.8726873073006" mp="447.96" mp_regen="1.8" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4658,7 +4589,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="380.124427536806" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="60.2732663328511" pDef="216.71637" mDef="211.44" />
+		<base pAtk="380.124427536806" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="60.2732663328511" pDef="216.71637" mDef="211.44" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4671,7 +4602,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4757" level="3" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="8317.93283689914" hp_regen="29.4232868171158" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4714,7 +4644,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="380.124427536806" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="60.2732663328511" pDef="216.71637" mDef="211.44" />
+		<base pAtk="380.124427536806" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="60.2732663328511" pDef="216.71637" mDef="211.44" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4726,7 +4656,6 @@
 			<ai>guard_of_hellion</ai>
 		</npc_ai>
 		<org hp="6207.41256485011" hp_regen="29.4232868171158" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4755,7 +4684,7 @@
 		</custom>
 	</npc>
 	<npc id="25173" templateId="25173" clientName="Tiger King Karuta" serverName="king_tiger_karuta" level="45" type="boss">
-		<acquire exp="2085509.6688233765"  exp_rate="1029.88131793747" sp="229987.0" rp="764.0" />
+		<acquire exp="2085510"  exp_rate="1029.88131793747" sp="229987" rp="764" />
 		<additional_make_list>
 			<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone-->
@@ -4790,7 +4719,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="333.674474509607" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="35.7320100968747" pDef="533.36238" mDef="260.2" />
+		<base pAtk="333.674474509607" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="35.7320100968747" pDef="533.36238" mDef="260.2" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4808,7 +4737,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="4" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="121183.101253532" hp_regen="43.342559280568" mp="610.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4850,7 +4778,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="624.124257296051" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="130.530898435504" pDef="260.15328" mDef="253.82" />
+		<base pAtk="624.124257296051" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="130.530898435504" pDef="260.15328" mDef="253.82" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4864,7 +4792,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4214" level="4" /> <!-- Reflect Damage -->
 		</npc_ai>
 		<org hp="18378.2066200427" hp_regen="41.3470424277186" mp="584" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4907,7 +4834,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="624.124257296051" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="130.530898435504" pDef="260.15328" mDef="253.82" />
+		<base pAtk="624.124257296051" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="130.530898435504" pDef="260.15328" mDef="253.82" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4919,7 +4846,6 @@
 			<ai>men_under_karuta</ai>
 		</npc_ai>
 		<org hp="9189.10331002134" hp_regen="41.3470424277186" mp="584" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4945,7 +4871,7 @@
 		</custom>
 	</npc>
 	<npc id="25176" templateId="25176" clientName="Black Lily" serverName="witch_wimere" level="55" type="boss">
-		<acquire exp="2477106.815023407"  exp_rate="818.878285958151" sp="327038.0" rp="1068.0" />
+		<acquire exp="2477107"  exp_rate="818.878285958151" sp="327038" rp="1068" />
 		<additional_make_list>
 			<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone-->
@@ -4980,7 +4906,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="610.439011291351" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" />
+		<base pAtk="610.439011291351" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="93.5186493178929" pDef="670.9086" mDef="327.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5001,7 +4927,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4188" level="5" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="189660.129360453" hp_regen="64.1713408913048" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5043,7 +4968,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="2312.08069139469" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" />
+		<base pAtk="2312.08069139469" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1393.84679470785" pDef="328.343835" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5056,7 +4981,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4727" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="29260.9404249556" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5099,7 +5023,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="1156.04034569734" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="348.461698676962" pDef="328.343835" mDef="320.36" />
+		<base pAtk="1156.04034569734" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="348.461698676962" pDef="328.343835" mDef="320.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5111,7 +5035,6 @@
 			<ai>summon_of_wimere</ai>
 		</npc_ai>
 		<org hp="14630.4702124778" hp_regen="62.194388632129" mp="861" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5137,7 +5060,7 @@
 		</custom>
 	</npc>
 	<npc id="25179" templateId="25179" clientName="Guardian of the Statue of Giant Karum" serverName="hatos" level="60" type="boss">
-		<acquire exp="2735032.768720899"  exp_rate="759.731324644694" sp="394692.0" rp="1240.0" />
+		<acquire exp="2735033"  exp_rate="759.731324644694" sp="394692" rp="1240" />
 		<additional_make_list>
 			<item id="9817" min="1" max="4" chance="85" /> <!-- Nonliving Nucleus-->
 			<item id="8176" min="1" max="1" chance="95" /> <!-- Destruction Tombstone-->
@@ -5169,7 +5092,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="785.177450040489" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="133.511957686818" pDef="742.95024" mDef="362.44" />
+		<base pAtk="785.177450040489" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="133.511957686818" pDef="742.95024" mDef="362.44" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -5187,7 +5110,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="221100.02497493" hp_regen="72.9643823396131" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5232,7 +5154,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="1996.68410988141" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="872.03634502851" pDef="364.223895" mDef="355.36" />
+		<base pAtk="1996.68410988141" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="872.03634502851" pDef="364.223895" mDef="355.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5246,7 +5168,6 @@
 			<ai_skill name="Debuff_a" id="4198" level="5" /> <!-- Poison -->
 		</npc_ai>
 		<org hp="23070.2557526169" hp_regen="71.371053660127" mp="1007" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5289,7 +5210,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="2995.10104234817" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1962.16762114757" pDef="364.223895" mDef="355.36" />
+		<base pAtk="2995.10104234817" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1962.16762114757" pDef="364.223895" mDef="355.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5302,7 +5223,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4721" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="34433.2175412192" hp_regen="71.371053660127" mp="1007" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5328,7 +5248,7 @@
 		</custom>
 	</npc>
 	<npc id="25182" templateId="25182" clientName="Demon Kuri" serverName="kurikups" level="59" type="boss">
-		<acquire exp="2684275.294180784"  exp_rate="771.121888589711" sp="381459.0" rp="1208.0" />
+		<acquire exp="2684275"  exp_rate="771.121888589711" sp="381459" rp="1208" />
 		<additional_make_list>
 			<item id="9814" min="1" max="4" chance="83" /> <!-- Memento Mori-->
 			<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone-->
@@ -5369,7 +5289,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="748.775260587043" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="122.635476321723" pDef="728.44779" mDef="355.36" />
+		<base pAtk="748.775260587043" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="122.635476321723" pDef="728.44779" mDef="355.36" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5387,7 +5307,6 @@
 			<ai_skill name="RangeDDMagic_a" id="4178" level="5" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="215207.60963262" hp_regen="71.371053660127" mp="1007" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5429,7 +5348,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="1426.0444120344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="460.012771989048" pDef="356.991435" mDef="348.3" />
+		<base pAtk="1426.0444120344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="460.012771989048" pDef="356.991435" mDef="348.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5443,7 +5362,6 @@
 			<ai_skill name="SelfRangeBuff_a" id="4213" level="5" /> <!-- Haste -->
 		</npc_ai>
 		<org hp="33456.1241342261" hp_regen="69.6906910362243" mp="977.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5483,7 +5401,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="1426.0444120344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="460.012771989048" pDef="356.991435" mDef="348.3" />
+		<base pAtk="1426.0444120344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="460.012771989048" pDef="356.991435" mDef="348.3" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5495,7 +5413,6 @@
 			<ai>devil_blader</ai>
 		</npc_ai>
 		<org hp="16728.062067113" hp_regen="69.6906910362243" mp="977.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5524,7 +5441,7 @@
 		</custom>
 	</npc>
 	<npc id="25185" templateId="25185" clientName="Tasaba Patriarch Hellena" serverName="tasaba_patriarch_hellena" level="35" type="boss">
-		<acquire exp="1912394.6175967064"  exp_rate="1561.13846334425" sp="144137.0" rp="520.0" />
+		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="62.5165">
 				<item id="882" min="5" max="15" chance="6.9113" /> <!-- Mithril Ring-->
@@ -5557,7 +5474,7 @@
 			<walk ground="53" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="163.695648646951" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="12.9299967753255" pDef="410.18844" mDef="200.1" />
+		<base pAtk="163.695648646951" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="12.9299967753255" pDef="410.18844" mDef="200.1" accuracy="0" evasion="-18" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5576,7 +5493,6 @@
 			<ai_skill name="PhysicalSpecial_b" id="4751" level="3" /> <!-- Mortal Blow -->
 		</npc_ai>
 		<org hp="69449.5684546156" hp_regen="26.794392073316" mp="402.6" mp_regen="1.8" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5621,7 +5537,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="303.485602119585" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" />
+		<base pAtk="303.485602119585" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -5634,7 +5550,6 @@
 			<ai_skill name="LongRangePhysicalSpecial_a" id="4761" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="7052.86747194841" hp_regen="25.6128307622386" mp="387.72" mp_regen="1.8" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5677,7 +5592,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="303.485602119585" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" />
+		<base pAtk="303.485602119585" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="48.1624477605241" pDef="199.4229" mDef="194.58" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5689,7 +5604,6 @@
 			<ai>hellenas_grunt</ai>
 		</npc_ai>
 		<org hp="5263.33393428986" hp_regen="25.6128307622386" mp="387.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5718,7 +5632,7 @@
 		</custom>
 	</npc>
 	<npc id="25188" templateId="25188" clientName="Apepi" serverName="apepi" level="30" type="boss">
-		<acquire exp="2308288.1107558142"  exp_rate="2564.76456750646" sp="111484.0" rp="416.0" />
+		<acquire exp="2308288"  exp_rate="2564.76456750646" sp="111484" rp="416" />
 		<additional_make_multi_list>
 			<category chance="58.137">
 				<item id="629" min="5" max="15" chance="6.5246" /> <!-- Kite Shield-->
@@ -5761,7 +5675,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="222.437554766423" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="28.8595106837795" pDef="355.39281" mDef="173.38" />
+		<base pAtk="222.437554766423" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="28.8595106837795" pDef="355.39281" mDef="173.38" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5778,7 +5692,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="107380.067377021" hp_regen="54.2850964385025" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5806,7 +5719,7 @@
 		</custom>
 	</npc>
 	<npc id="25189" templateId="25189" clientName="Cronos' Servitor Mumu" serverName="cronoss_summons_mumu" level="34" type="boss">
-		<acquire exp="1918616.9915933232"  exp_rate="1659.70327992502" sp="135504.0" rp="496.0" />
+		<acquire exp="1918617"  exp_rate="1659.70327992502" sp="135504" rp="496" />
 		<additional_make_multi_list>
 			<category chance="72.5609">
 			</category>
@@ -5832,7 +5745,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="151.742801059792" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="12.040611940131" pDef="398.8458" mDef="194.58" />
+		<base pAtk="151.742801059792" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="12.040611940131" pDef="398.8458" mDef="194.58" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5850,7 +5763,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="3" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="65791.6741786232" hp_regen="25.6128307622386" mp="387.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5892,7 +5804,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="374.810708687992" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="79.6018953075482" pDef="193.846425" mDef="189.14" />
+		<base pAtk="374.810708687992" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="79.6018953075482" pDef="193.846425" mDef="189.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5906,7 +5818,6 @@
 			<ai_skill name="Debuff_a" id="4202" level="3" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="6689.08130706126" hp_regen="24.5170941308607" mp="372.96" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5946,7 +5857,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.61" skill_factor="-1" />
-		<base pAtk="562.230118784958" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="179.112100596385" pDef="193.846425" mDef="189.14" />
+		<base pAtk="562.230118784958" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="179.112100596385" pDef="193.846425" mDef="189.14" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5959,7 +5870,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4722" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="9983.70344337502" hp_regen="24.5170941308607" mp="372.96" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5985,7 +5895,7 @@
 		</custom>
 	</npc>
 	<npc id="25192" templateId="25192" clientName="Earth Protector Panathen" serverName="earth_protecter_panathen" level="43" type="boss">
-		<acquire exp="1976893.150145561"  exp_rate="1069.16882106304" sp="206038.0" rp="708.0" />
+		<acquire exp="1976893"  exp_rate="1069.16882106304" sp="206038" rp="708" />
 		<additional_make_list>
 			<item id="9816" min="1" max="2" chance="89" /> <!-- Earth Egg-->
 			<item id="8176" min="1" max="1" chance="70" /> <!-- Destruction Tombstone-->
@@ -6017,7 +5927,7 @@
 			<walk ground="15" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="291.544395528868" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="29.765523377221" pDef="507.40251" mDef="247.54" />
+		<base pAtk="291.544395528868" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="29.765523377221" pDef="507.40251" mDef="247.54" accuracy="9" evasion="-18" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6038,7 +5948,6 @@
 			<ai_skill name="SelfRangeDebuffAnother_a" id="4189" level="4" /> <!-- Paralysis -->
 		</npc_ai>
 		<org hp="108760.132418533" hp_regen="39.4112754681274" mp="557.4" mp_regen="2.1" />
-		<physical hitModify="9" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6083,7 +5992,7 @@
 			<walk ground="18" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.78" skill_factor="-1" />
-		<base pAtk="1088.40749417475" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="433.045867285342" pDef="247.327695" mDef="241.32" />
+		<base pAtk="1088.40749417475" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="433.045867285342" pDef="247.327695" mDef="241.32" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6096,7 +6005,6 @@
 			<ai_skill name="PhysicalSpecial_a" id="4721" level="4" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="16462.9527852879" hp_regen="37.543530210746" mp="531" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6139,7 +6047,7 @@
 			<walk ground="18" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.91" skill_factor="-1" />
-		<base pAtk="544.203747087374" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="108.261466821336" pDef="247.327695" mDef="241.32" />
+		<base pAtk="544.203747087374" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="108.261466821336" pDef="247.327695" mDef="241.32" accuracy="0" evasion="-18" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -6151,7 +6059,6 @@
 			<ai>panathens_protecters</ai>
 		</npc_ai>
 		<org hp="8231.47639264397" hp_regen="37.543530210746" mp="531" mp_regen="2.1" />
-		<physical hitModify="0" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6180,7 +6087,7 @@
 		</custom>
 	</npc>
 	<npc id="25198" templateId="25198" clientName="Fafurion's Herald Lokness" serverName="faf_herald_lokness" level="70" type="boss">
-		<acquire exp="4596479.21101843"  exp_rate="938.056981840496" sp="802604.0" rp="2884.0" />
+		<acquire exp="4596479"  exp_rate="938.056981840496" sp="802604" rp="2884" />
 		<additional_make_list>
 			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
 			<item id="9815" min="3" max="7" chance="82" /> <!-- Dragon Heart-->
@@ -6216,7 +6123,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="4309.76223426093" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2869.61548504493" pDef="887.74791" mDef="433.08" />
+		<base pAtk="4309.76223426093" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2869.61548504493" pDef="887.74791" mDef="433.08" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6233,7 +6140,6 @@
 			<ai_skill name="SelfRangePhysicalSpecial_a" id="4172" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="746772.142484831" hp_regen="294.21090607215" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>DRAGON</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6261,7 +6167,7 @@
 		</custom>
 	</npc>
 	<npc id="25199" templateId="25199" clientName="Water Dragon Priest Sheshark" serverName="wdragon_priest_sheshark" level="72" type="boss">
-		<acquire exp="5140646.601493759"  exp_rate="991.637075905432" sp="827123.0" rp="3000.0" />
+		<acquire exp="5140647"  exp_rate="991.637075905432" sp="827123" rp="3000" />
 		<additional_make_list>
 			<item id="8619" min="1" max="1" chance="54" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
 			<item id="9816" min="3" max="7" chance="82" /> <!-- Earth Egg-->
@@ -6299,7 +6205,7 @@
 			<walk ground="43" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="2280.56634336123" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="813.637215287937" pDef="916.07841" mDef="446.9" />
+		<base pAtk="2280.56634336123" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="813.637215287937" pDef="916.07841" mDef="446.9" accuracy="4.75" evasion="-18" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6317,7 +6223,6 @@
 			<ai_skill name="RangeHold_a" id="4197" level="7" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="383459.920989612" hp_regen="119.969286557872" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="-18" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

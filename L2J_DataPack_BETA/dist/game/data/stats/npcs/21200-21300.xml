@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21200" templateId="21200" clientName="Nephilim Bishop" serverName="nephilim_bishop" level="60" type="warrior">
-		<acquire exp="18777.384"  exp_rate="5.21594" sp="1630.0" />
+		<acquire exp="18777"  exp_rate="5.21594" sp="1630" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone-->
@@ -62,7 +62,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="481.34551" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" />
+		<base pAtk="481.34551" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -87,7 +87,6 @@
 			<ai_skill name="Buff" id="4030" level="3" /> <!-- Might -->
 		</npc_ai>
 		<org hp="1933.24044" hp_regen="6.5" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -113,7 +112,7 @@
 		</custom>
 	</npc>
 	<npc id="21201" templateId="21201" clientName="Nephilim Centurion" serverName="nephilim_centurion" level="63" type="warrior">
-		<acquire exp="25957.275876"  exp_rate="6.540004" sp="2344.0" />
+		<acquire exp="25957"  exp_rate="6.540004" sp="2344" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone-->
@@ -173,7 +172,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="541.44774" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="369.73862" pDef="262.19426" mDef="174.571895122369" />
+		<base pAtk="541.44774" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="369.73862" pDef="262.19426" mDef="174.571895122369" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -196,7 +195,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2089.92274" hp_regen="7.5" mp="1127.4" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -223,7 +221,7 @@
 		</custom>
 	</npc>
 	<npc id="21202" templateId="21202" clientName="Nephilim Scout" serverName="nephilim_scout" level="66" type="warrior">
-		<acquire exp="27475.221708"  exp_rate="6.307443" sp="2586.0" />
+		<acquire exp="27475"  exp_rate="6.307443" sp="2586" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone-->
@@ -284,7 +282,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="603.79903" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="412.31647" pDef="276.72752" mDef="184.248304515217" />
+		<base pAtk="603.79903" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="412.31647" pDef="276.72752" mDef="184.248304515217" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -305,7 +303,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2244.67715" hp_regen="7.5" mp="1219.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -331,7 +328,7 @@
 		</custom>
 	</npc>
 	<npc id="21203" templateId="21203" clientName="Nephilim Archbishop" serverName="nephilim_highpriest" level="69" type="warrior">
-		<acquire exp="24833.09034"  exp_rate="5.21594" sp="2430.0" />
+		<acquire exp="24833"  exp_rate="5.21594" sp="2430" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone-->
@@ -395,7 +392,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="667.50361" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" />
+		<base pAtk="667.50361" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -420,7 +417,6 @@
 			<ai_skill name="Buff" id="4030" level="3" /> <!-- Might -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -446,7 +442,7 @@
 		</custom>
 	</npc>
 	<npc id="21204" templateId="21204" clientName="Nephilim Praetorian" serverName="nephilim_praetorian" level="72" type="warrior">
-		<acquire exp="33903.380736"  exp_rate="6.540004" sp="3444.0" />
+		<acquire exp="33903"  exp_rate="6.540004" sp="3444" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone-->
@@ -506,7 +502,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -529,7 +525,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="7" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -556,7 +551,7 @@
 		</custom>
 	</npc>
 	<npc id="21205" templateId="21205" clientName="Nephilim Royal Guard" serverName="nephilim_highguard" level="75" type="warrior">
-		<acquire exp="35479.366875"  exp_rate="6.307443" sp="3742.0" />
+		<acquire exp="35479"  exp_rate="6.307443" sp="3742" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="14" max="27" chance="100" /> <!-- Red Seal Stone-->
@@ -616,7 +611,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -637,7 +632,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="8" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -663,7 +657,7 @@
 		</custom>
 	</npc>
 	<npc id="21206" templateId="21206" clientName="Nephilim Cardinal" serverName="nephilim_cardinal" level="78" type="warrior">
-		<acquire exp="31733.77896"  exp_rate="5.21594" sp="3473.0" />
+		<acquire exp="31734"  exp_rate="5.21594" sp="3473" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="12" max="24" chance="100" /> <!-- Red Seal Stone-->
@@ -728,7 +722,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="855.81387" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -748,7 +742,6 @@
 			<ai_skill name="Buff" id="4030" level="3" /> <!-- Might -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -774,7 +767,7 @@
 		</custom>
 	</npc>
 	<npc id="21207" templateId="21207" clientName="Nephilim Commander" serverName="nephilim_commander" level="78" type="warrior">
-		<acquire exp="41856.0256"  exp_rate="6.87968862590401" sp="4698.0" />
+		<acquire exp="41856"  exp_rate="6.87968862590401" sp="4698" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone-->
@@ -835,7 +828,7 @@
 			<ignore_clan>lilim_archmage</ignore_clan>
 			<ignore_clan>lilim_knight_guardian</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -853,7 +846,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="9" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -880,7 +872,7 @@
 		</custom>
 	</npc>
 	<npc id="21208" templateId="21208" clientName="Hallowed Watchman" serverName="martyrium_guardian" level="20" type="warrior">
-		<acquire exp="2084.5188"  exp_rate="5.211297" sp="92.0" />
+		<acquire exp="2085"  exp_rate="5.211297" sp="92" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="365" max="635" chance="100" /> <!-- Adena-->
@@ -918,7 +910,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="57.8393570613084" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="57.8393570613084" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -935,7 +927,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -965,7 +956,7 @@
 		</custom>
 	</npc>
 	<npc id="21209" templateId="21209" clientName="Hallowed Seer" serverName="martyrium_seer" level="22" type="warrior">
-		<acquire exp="2450.203052"  exp_rate="5.062403" sp="116.0" />
+		<acquire exp="2450"  exp_rate="5.062403" sp="116" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="409" max="734" chance="100" /> <!-- Adena-->
@@ -1002,7 +993,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="51.75278" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="35.34044" pDef="92.65694" mDef="61.6920289224665" />
+		<base pAtk="51.75278" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="35.34044" pDef="92.65694" mDef="61.6920289224665" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1023,7 +1014,6 @@
 			<ai_skill name="Buff" id="4099" level="1" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="387.02878" hp_regen="3.5" mp="218.52" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1048,7 +1038,7 @@
 		</custom>
 	</npc>
 	<npc id="21210" templateId="21210" clientName="Vault Guardian" serverName="vault_guardian" level="25" type="warrior">
-		<acquire exp="3120.861875"  exp_rate="4.993379" sp="156.0" />
+		<acquire exp="3121"  exp_rate="4.993379" sp="156" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="484" max="907" chance="100" /> <!-- Adena-->
@@ -1088,7 +1078,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="64.83203" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="44.27187" pDef="101.83533" mDef="67.8031159084826" />
+		<base pAtk="64.83203" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="44.27187" pDef="101.83533" mDef="67.8031159084826" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1109,7 +1099,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="2" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="460.96247" hp_regen="3.5" mp="259.2" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1134,7 +1123,7 @@
 		</custom>
 	</npc>
 	<npc id="21211" templateId="21211" clientName="Vault Seer" serverName="vault_seer" level="27" type="warrior">
-		<acquire exp="3321.442827"  exp_rate="4.556163" sp="170.0" />
+		<acquire exp="3321"  exp_rate="4.556163" sp="170" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="495" max="955" chance="100" /> <!-- Adena-->
@@ -1174,7 +1163,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="74.99121" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" />
+		<base pAtk="74.99121" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1195,7 +1184,6 @@
 			<ai_skill name="DDMagic" id="4002" level="2" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="515.17856" hp_regen="3.5" mp="286.92" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1220,7 +1208,7 @@
 		</custom>
 	</npc>
 	<npc id="21212" templateId="21212" clientName="Hallowed Sentinel" serverName="martyrium_sentinel" level="30" type="warrior">
-		<acquire exp="3828.7080000000005"  exp_rate="4.25412" sp="209.0" />
+		<acquire exp="3829"  exp_rate="4.25412" sp="209" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -1238,7 +1226,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="92.64226" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" />
+		<base pAtk="92.64226" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1260,7 +1248,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="604.08419" hp_regen="3.5" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1290,7 +1277,7 @@
 		</custom>
 	</npc>
 	<npc id="21213" templateId="21213" clientName="Hallowed Monk" serverName="martyrium_monk" level="32" type="warrior">
-		<acquire exp="4443.342848"  exp_rate="4.339202" sp="250.0" />
+		<acquire exp="4443"  exp_rate="4.339202" sp="250" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="626" max="1255" chance="100" /> <!-- Adena-->
@@ -1328,7 +1315,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="106.16525" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="72.49711" pDef="125.57727" mDef="83.6107570481808" />
+		<base pAtk="106.16525" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="72.49711" pDef="125.57727" mDef="83.6107570481808" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1349,7 +1336,6 @@
 			<ai_skill name="Buff" id="4099" level="1" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="668.47132" hp_regen="4.5" mp="358.32" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1374,7 +1360,7 @@
 		</custom>
 	</npc>
 	<npc id="21214" templateId="21214" clientName="Vault Sentinel" serverName="vault_sentinel" level="35" type="warrior">
-		<acquire exp="5603.257799999999"  exp_rate="4.574088" sp="332.0" />
+		<acquire exp="5603"  exp_rate="4.574088" sp="332" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="781" max="1559" chance="100" /> <!-- Adena-->
@@ -1413,7 +1399,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="129.32896" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="88.31491" pDef="136.72948" mDef="91.0360303625432" />
+		<base pAtk="129.32896" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="88.31491" pDef="136.72948" mDef="91.0360303625432" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1434,7 +1420,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="772.73802" hp_regen="4.5" mp="402.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1459,7 +1444,7 @@
 		</custom>
 	</npc>
 	<npc id="21215" templateId="21215" clientName="Vault Monk" serverName="vault_monk" level="37" type="warrior">
-		<acquire exp="5940.367538"  exp_rate="4.339202" sp="365.0" />
+		<acquire exp="5940"  exp_rate="4.339202" sp="365" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="824" max="1645" chance="100" /> <!-- Adena-->
@@ -1499,7 +1484,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" />
+		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1520,7 +1505,6 @@
 			<ai_skill name="DDMagic" id="4002" level="3" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="847.31754" hp_regen="4.5" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1545,7 +1529,7 @@
 		</custom>
 	</npc>
 	<npc id="21216" templateId="21216" clientName="Overlord of the Holy Lands" serverName="martyrium_warlord" level="40" type="warrior">
-		<acquire exp="6806.592000000001"  exp_rate="4.25412" sp="440.0" />
+		<acquire exp="6807"  exp_rate="4.25412" sp="440" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -1563,7 +1547,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="176.36077" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="120.43155" pDef="156.55035" mDef="104.232986928232" />
+		<base pAtk="176.36077" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="120.43155" pDef="156.55035" mDef="104.232986928232" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1585,7 +1569,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="966.57792" hp_regen="4.5" mp="478.8" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1615,7 +1598,7 @@
 		</custom>
 	</npc>
 	<npc id="21217" templateId="21217" clientName="Hallowed Priest" serverName="martyrium_priest" level="42" type="warrior">
-		<acquire exp="7654.352328000001"  exp_rate="4.339202" sp="510.0" />
+		<acquire exp="7654"  exp_rate="4.339202" sp="510" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1020" max="2061" chance="100" /> <!-- Adena-->
@@ -1654,7 +1637,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="198.34591" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" />
+		<base pAtk="198.34591" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1675,7 +1658,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="1050.81652" hp_regen="5.5" mp="531" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1700,7 +1682,7 @@
 		</custom>
 	</npc>
 	<npc id="21218" templateId="21218" clientName="Vault Overlord" serverName="vault_warlord" level="45" type="warrior">
-		<acquire exp="9262.528199999999"  exp_rate="4.574088" sp="644.0" />
+		<acquire exp="9263"  exp_rate="4.574088" sp="644" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1220" max="2478" chance="100" /> <!-- Adena-->
@@ -1746,7 +1728,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="234.89829" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" />
+		<base pAtk="234.89829" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1767,7 +1749,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="4" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1183.80594" hp_regen="5.5" mp="610.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1795,7 +1776,7 @@
 		</custom>
 	</npc>
 	<npc id="21219" templateId="21219" clientName="Vault Priest" serverName="vault_priest" level="47" type="warrior">
-		<acquire exp="9585.297218"  exp_rate="4.339202" sp="687.0" />
+		<acquire exp="9585"  exp_rate="4.339202" sp="687" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1258" max="2567" chance="100" /> <!-- Adena-->
@@ -1835,7 +1816,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="261.69549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="178.7041" pDef="186.63569" mDef="124.264149144103" />
+		<base pAtk="261.69549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="178.7041" pDef="186.63569" mDef="124.264149144103" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1856,7 +1837,6 @@
 			<ai_skill name="DDMagic" id="4002" level="4" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="1276.53628" hp_regen="5.5" mp="665" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1881,7 +1861,7 @@
 		</custom>
 	</npc>
 	<npc id="21220" templateId="21220" clientName="Sepulcher Archon" serverName="mausoleum_archon" level="50" type="warrior">
-		<acquire exp="10635.300000000001"  exp_rate="4.25412" sp="801.0" />
+		<acquire exp="10635"  exp_rate="4.25412" sp="801" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -1899,7 +1879,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" />
+		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1921,7 +1901,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="1421.00103" hp_regen="5.5" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1951,7 +1930,7 @@
 		</custom>
 	</npc>
 	<npc id="21221" templateId="21221" clientName="Sepulcher Inquisitor" serverName="mausoleum_inquisitor" level="52" type="warrior">
-		<acquire exp="11733.202208"  exp_rate="4.339202" sp="908.0" />
+		<acquire exp="11733"  exp_rate="4.339202" sp="908" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1558" max="3150" chance="100" /> <!-- Adena-->
@@ -2001,7 +1980,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="337.18867" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="230.25615" pDef="209.50106" mDef="139.488165444537" />
+		<base pAtk="337.18867" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="230.25615" pDef="209.50106" mDef="139.488165444537" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2022,7 +2001,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="1520.38155" hp_regen="6.5" mp="804" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2047,7 +2025,7 @@
 		</custom>
 	</npc>
 	<npc id="21222" templateId="21222" clientName="Sepulcher Archon" serverName="sepulcher_archon" level="55" type="warrior">
-		<acquire exp="13836.616199999999"  exp_rate="4.574088" sp="1117.0" />
+		<acquire exp="13837"  exp_rate="4.574088" sp="1117" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1837" max="3743" chance="100" /> <!-- Adena-->
@@ -2094,7 +2072,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="148.899508363765" />
+		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="148.899508363765" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2115,7 +2093,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2143,7 +2120,7 @@
 		</custom>
 	</npc>
 	<npc id="21223" templateId="21223" clientName="Sepulcher Inquisitor" serverName="sepulcher_inquisitor" level="57" type="warrior">
-		<acquire exp="14098.067298"  exp_rate="4.339202" sp="1172.0" />
+		<acquire exp="14098"  exp_rate="4.339202" sp="1172" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1877" max="3833" chance="100" /> <!-- Adena-->
@@ -2192,7 +2169,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="424.23295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" />
+		<base pAtk="424.23295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2213,7 +2190,6 @@
 			<ai_skill name="DDMagic" id="4002" level="5" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="1776.58018" hp_regen="6.5" mp="948" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2238,7 +2214,7 @@
 		</custom>
 	</npc>
 	<npc id="21224" templateId="21224" clientName="Sepulcher Guardian" serverName="mausoleum_defender" level="60" type="warrior">
-		<acquire exp="15314.832000000002"  exp_rate="4.25412" sp="1329.0" />
+		<acquire exp="15315"  exp_rate="4.25412" sp="1329" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2056" max="4180" chance="100" /> <!-- Adena-->
@@ -2282,7 +2258,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="481.34551" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" />
+		<base pAtk="481.34551" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" accuracy="0" evasion="0" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2304,7 +2280,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="1933.24044" hp_regen="6.5" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2335,7 +2310,7 @@
 		</custom>
 	</npc>
 	<npc id="21225" templateId="21225" clientName="Sepulcher Sage" serverName="mausoleum_sage" level="62" type="warrior">
-		<acquire exp="16679.892488"  exp_rate="4.339202" sp="1486.0" />
+		<acquire exp="16680"  exp_rate="4.339202" sp="1486" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2256" max="4571" chance="100" /> <!-- Adena-->
@@ -2375,7 +2350,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="521.12391" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="355.86007" pDef="257.34267" mDef="171.341654516443" />
+		<base pAtk="521.12391" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="355.86007" pDef="257.34267" mDef="171.341654516443" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2396,7 +2371,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="2037.81082" hp_regen="7.5" mp="1097" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2424,7 +2398,7 @@
 		</custom>
 	</npc>
 	<npc id="21226" templateId="21226" clientName="Sepulcher Guardian" serverName="sepulcher_defender" level="65" type="warrior">
-		<acquire exp="19325.5218"  exp_rate="4.574088" sp="1795.0" />
+		<acquire exp="19326"  exp_rate="4.574088" sp="1795" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2634" max="5340" chance="100" /> <!-- Adena-->
@@ -2473,7 +2447,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" />
+		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2494,7 +2468,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2193.43142" hp_regen="7.5" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2519,7 +2492,7 @@
 		</custom>
 	</npc>
 	<npc id="21227" templateId="21227" clientName="Sepulcher Sage" serverName="sepulcher_sage" level="67" type="warrior">
-		<acquire exp="21777.162492"  exp_rate="4.851228" sp="2074.0" />
+		<acquire exp="21777"  exp_rate="4.851228" sp="2074" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2811" max="5744" chance="100" /> <!-- Adena-->
@@ -2564,7 +2537,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2585,7 +2558,6 @@
 			<ai_skill name="DDMagic" id="4002" level="6" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2611,7 +2583,7 @@
 		</custom>
 	</npc>
 	<npc id="21228" templateId="21228" clientName="Sepulcher Guard " serverName="mausoleum_highguard" level="70" type="warrior">
-		<acquire exp="20845.188000000002"  exp_rate="4.25412" sp="2067.0" />
+		<acquire exp="20845"  exp_rate="4.25412" sp="2067" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2875" max="5849" chance="100" /> <!-- Adena-->
@@ -2659,7 +2631,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" />
+		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" accuracy="0" evasion="0" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2681,7 +2653,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2712,7 +2683,7 @@
 		</custom>
 	</npc>
 	<npc id="21229" templateId="21229" clientName="Sepulcher Preacher" serverName="mausoleum_oracle" level="72" type="warrior">
-		<acquire exp="22494.423168"  exp_rate="4.339202" sp="2285.0" />
+		<acquire exp="22494"  exp_rate="4.339202" sp="2285" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3110" max="6350" chance="100" /> <!-- Adena-->
@@ -2753,7 +2724,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2774,7 +2745,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2802,7 +2772,7 @@
 		</custom>
 	</npc>
 	<npc id="21230" templateId="21230" clientName="Sepulcher Guard" serverName="sepulcher_highguard" level="75" type="warrior">
-		<acquire exp="25729.245"  exp_rate="4.574088" sp="2714.0" />
+		<acquire exp="25729"  exp_rate="4.574088" sp="2714" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3587" max="7319" chance="100" /> <!-- Adena-->
@@ -2849,7 +2819,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2870,7 +2840,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="8" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2895,7 +2864,7 @@
 		</custom>
 	</npc>
 	<npc id="21231" templateId="21231" clientName="Sepulcher Preacher" serverName="sepulcher_oracle" level="77" type="warrior">
-		<acquire exp="25727.128658"  exp_rate="4.339202" sp="2784.0" />
+		<acquire exp="25727"  exp_rate="4.339202" sp="2784" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3602" max="7359" chance="100" /> <!-- Adena-->
@@ -2942,7 +2911,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2958,7 +2927,6 @@
 			<ai_skill name="DDMagic" id="4002" level="8" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2984,7 +2952,7 @@
 		</custom>
 	</npc>
 	<npc id="21232" templateId="21232" clientName="Barrow Guardian" serverName="barrow_guardian" level="20" type="warrior">
-		<acquire exp="2084.5188"  exp_rate="5.211297" sp="92.0" />
+		<acquire exp="2085"  exp_rate="5.211297" sp="92" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -3002,7 +2970,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="57.8393570613084" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="57.8393570613084" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3019,7 +2987,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3048,7 +3015,7 @@
 		</custom>
 	</npc>
 	<npc id="21233" templateId="21233" clientName="Barrow Seer" serverName="barrow_seer" level="22" type="warrior">
-		<acquire exp="2450.203052"  exp_rate="5.062403" sp="116.0" />
+		<acquire exp="2450"  exp_rate="5.062403" sp="116" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -3066,7 +3033,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="51.75278" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="35.34044" pDef="92.65694" mDef="61.6920289224665" />
+		<base pAtk="51.75278" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="35.34044" pDef="92.65694" mDef="61.6920289224665" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3087,7 +3054,6 @@
 			<ai_skill name="Buff" id="4099" level="1" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="387.02878" hp_regen="3.5" mp="218.52" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3112,7 +3078,7 @@
 		</custom>
 	</npc>
 	<npc id="21234" templateId="21234" clientName="Grave Guardian" serverName="grave_guardian" level="25" type="warrior">
-		<acquire exp="3120.861875"  exp_rate="4.993379" sp="156.0" />
+		<acquire exp="3121"  exp_rate="4.993379" sp="156" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -3130,7 +3096,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="64.83203" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="44.27187" pDef="101.83533" mDef="67.8031159084826" />
+		<base pAtk="64.83203" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="44.27187" pDef="101.83533" mDef="67.8031159084826" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3151,7 +3117,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="2" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="460.96247" hp_regen="3.5" mp="259.2" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3176,7 +3141,7 @@
 		</custom>
 	</npc>
 	<npc id="21235" templateId="21235" clientName="Grave Seer" serverName="grave_seer" level="27" type="warrior">
-		<acquire exp="3321.442827"  exp_rate="4.556163" sp="170.0" />
+		<acquire exp="3321"  exp_rate="4.556163" sp="170" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>c_dungeon_clan</clan>
@@ -3194,7 +3159,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="74.99121" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" />
+		<base pAtk="74.99121" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="51.20928" pDef="108.28767" mDef="72.0991544841329" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3215,7 +3180,6 @@
 			<ai_skill name="DDMagic" id="4002" level="2" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="515.17856" hp_regen="3.5" mp="286.92" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3240,7 +3204,7 @@
 		</custom>
 	</npc>
 	<npc id="21236" templateId="21236" clientName="Barrow Sentinel" serverName="barrow_sentinel" level="30" type="warrior">
-		<acquire exp="3828.7080000000005"  exp_rate="4.25412" sp="209.0" />
+		<acquire exp="3829"  exp_rate="4.25412" sp="209" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="546" max="1092" chance="100" /> <!-- Adena-->
@@ -3278,7 +3242,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="92.64226" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" />
+		<base pAtk="92.64226" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="63.26266" pDef="118.46427" mDef="78.8748547991048" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3300,7 +3264,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="604.08419" hp_regen="3.5" mp="329.4" mp_regen="1.5" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3329,7 +3292,7 @@
 		</custom>
 	</npc>
 	<npc id="21237" templateId="21237" clientName="Barrow Monk" serverName="barrow_monk" level="32" type="warrior">
-		<acquire exp="4443.342848"  exp_rate="4.339202" sp="250.0" />
+		<acquire exp="4443"  exp_rate="4.339202" sp="250" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="626" max="1255" chance="100" /> <!-- Adena-->
@@ -3377,7 +3340,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="106.16525" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="72.49711" pDef="125.57727" mDef="83.6107570481808" />
+		<base pAtk="106.16525" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="72.49711" pDef="125.57727" mDef="83.6107570481808" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3398,7 +3361,6 @@
 			<ai_skill name="Buff" id="4099" level="1" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="668.47132" hp_regen="4.5" mp="358.32" mp_regen="1.8" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3423,7 +3385,7 @@
 		</custom>
 	</npc>
 	<npc id="21238" templateId="21238" clientName="Grave Sentinel" serverName="grave_sentinel" level="35" type="warrior">
-		<acquire exp="5603.257799999999"  exp_rate="4.574088" sp="332.0" />
+		<acquire exp="5603"  exp_rate="4.574088" sp="332" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="781" max="1559" chance="100" /> <!-- Adena-->
@@ -3461,7 +3423,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="129.32896" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="88.31491" pDef="136.72948" mDef="91.0360303625432" />
+		<base pAtk="129.32896" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="88.31491" pDef="136.72948" mDef="91.0360303625432" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3482,7 +3444,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="772.73802" hp_regen="4.5" mp="402.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3507,7 +3468,7 @@
 		</custom>
 	</npc>
 	<npc id="21239" templateId="21239" clientName="Grave Monk" serverName="grave_monk" level="37" type="warrior">
-		<acquire exp="5940.367538"  exp_rate="4.339202" sp="365.0" />
+		<acquire exp="5940"  exp_rate="4.339202" sp="365" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="824" max="1645" chance="100" /> <!-- Adena-->
@@ -3547,7 +3508,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.84" skill_factor="-1" />
-		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" />
+		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3568,7 +3529,6 @@
 			<ai_skill name="DDMagic" id="4002" level="3" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="847.31754" hp_regen="4.5" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3593,7 +3553,7 @@
 		</custom>
 	</npc>
 	<npc id="21240" templateId="21240" clientName="Barrow Overlord" serverName="barrow_warlord" level="40" type="warrior">
-		<acquire exp="6806.592000000001"  exp_rate="4.25412" sp="440.0" />
+		<acquire exp="6807"  exp_rate="4.25412" sp="440" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="932" max="1861" chance="100" /> <!-- Adena-->
@@ -3633,7 +3593,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="176.36077" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="120.43155" pDef="156.55035" mDef="104.232986928232" />
+		<base pAtk="176.36077" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="120.43155" pDef="156.55035" mDef="104.232986928232" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3655,7 +3615,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="966.57792" hp_regen="4.5" mp="478.8" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3684,7 +3643,7 @@
 		</custom>
 	</npc>
 	<npc id="21241" templateId="21241" clientName="Barrow Priest" serverName="barrow_priest" level="42" type="warrior">
-		<acquire exp="7654.352328000001"  exp_rate="4.339202" sp="510.0" />
+		<acquire exp="7654"  exp_rate="4.339202" sp="510" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1020" max="2061" chance="100" /> <!-- Adena-->
@@ -3724,7 +3683,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="198.34591" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" />
+		<base pAtk="198.34591" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="135.44454" pDef="164.88513" mDef="109.782377202178" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3745,7 +3704,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="1050.81652" hp_regen="5.5" mp="531" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3770,7 +3728,7 @@
 		</custom>
 	</npc>
 	<npc id="21242" templateId="21242" clientName="Grave Overlord" serverName="grave_warlord" level="45" type="warrior">
-		<acquire exp="9262.528199999999"  exp_rate="4.574088" sp="644.0" />
+		<acquire exp="9263"  exp_rate="4.574088" sp="644" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1220" max="2478" chance="100" /> <!-- Adena-->
@@ -3818,7 +3776,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="234.89829" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" />
+		<base pAtk="234.89829" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="160.40508" pDef="177.78746" mDef="118.372898457316" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3839,7 +3797,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="4" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1183.80594" hp_regen="5.5" mp="610.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3867,7 +3824,7 @@
 		</custom>
 	</npc>
 	<npc id="21243" templateId="21243" clientName="Grave Priest" serverName="grave_priest" level="47" type="warrior">
-		<acquire exp="9585.297218"  exp_rate="4.339202" sp="687.0" />
+		<acquire exp="9585"  exp_rate="4.339202" sp="687" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1258" max="2567" chance="100" /> <!-- Adena-->
@@ -3917,7 +3874,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="261.69549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="178.7041" pDef="186.63569" mDef="124.264149144103" />
+		<base pAtk="261.69549" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="178.7041" pDef="186.63569" mDef="124.264149144103" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3938,7 +3895,6 @@
 			<ai_skill name="DDMagic" id="4002" level="4" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="1276.53628" hp_regen="5.5" mp="665" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3963,7 +3919,7 @@
 		</custom>
 	</npc>
 	<npc id="21244" templateId="21244" clientName="Crypt Archon" serverName="crypt_archon" level="50" type="warrior">
-		<acquire exp="10635.300000000001"  exp_rate="4.25412" sp="801.0" />
+		<acquire exp="10635"  exp_rate="4.25412" sp="801" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1404" max="2854" chance="100" /> <!-- Adena-->
@@ -4007,7 +3963,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" />
+		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4029,7 +3985,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="1421.00103" hp_regen="5.5" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4058,7 +4013,7 @@
 		</custom>
 	</npc>
 	<npc id="21245" templateId="21245" clientName="Crypt Inquisitor" serverName="crypt_inquisitor" level="52" type="warrior">
-		<acquire exp="11733.202208"  exp_rate="4.339202" sp="908.0" />
+		<acquire exp="11733"  exp_rate="4.339202" sp="908" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1558" max="3150" chance="100" /> <!-- Adena-->
@@ -4103,7 +4058,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="337.18867" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="230.25615" pDef="209.50106" mDef="139.488165444537" />
+		<base pAtk="337.18867" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="230.25615" pDef="209.50106" mDef="139.488165444537" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4124,7 +4079,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="1520.38155" hp_regen="6.5" mp="804" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4149,7 +4103,7 @@
 		</custom>
 	</npc>
 	<npc id="21246" templateId="21246" clientName="Tomb Archon" serverName="tomb_archon" level="55" type="warrior">
-		<acquire exp="13836.616199999999"  exp_rate="4.574088" sp="1117.0" />
+		<acquire exp="13837"  exp_rate="4.574088" sp="1117" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1837" max="3743" chance="100" /> <!-- Adena-->
@@ -4195,7 +4149,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="148.899508363765" />
+		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="148.899508363765" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4216,7 +4170,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4244,7 +4197,7 @@
 		</custom>
 	</npc>
 	<npc id="21247" templateId="21247" clientName="Tomb Inquisitor" serverName="tomb_inquisitor" level="57" type="warrior">
-		<acquire exp="14098.067298"  exp_rate="4.339202" sp="1172.0" />
+		<acquire exp="14098"  exp_rate="4.339202" sp="1172" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1877" max="3833" chance="100" /> <!-- Adena-->
@@ -4290,7 +4243,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="424.23295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" />
+		<base pAtk="424.23295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="289.69611" pDef="233.18839" mDef="155.259456846417" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4311,7 +4264,6 @@
 			<ai_skill name="DDMagic" id="4002" level="5" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="1776.58018" hp_regen="6.5" mp="948" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4336,7 +4288,7 @@
 		</custom>
 	</npc>
 	<npc id="21248" templateId="21248" clientName="Crypt Guardian" serverName="crypt_defender" level="60" type="warrior">
-		<acquire exp="15314.832000000002"  exp_rate="4.25412" sp="1329.0" />
+		<acquire exp="15315"  exp_rate="4.25412" sp="1329" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2056" max="4180" chance="100" /> <!-- Adena-->
@@ -4382,7 +4334,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="481.34551" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" />
+		<base pAtk="481.34551" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="328.69659" pDef="247.65008" mDef="164.888215781956" accuracy="0" evasion="0" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4404,7 +4356,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="1933.24044" hp_regen="6.5" mp="1036.8" mp_regen="2.4" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4435,7 +4386,7 @@
 		</custom>
 	</npc>
 	<npc id="21249" templateId="21249" clientName="Crypt Sage" serverName="crypt_sage" level="62" type="warrior">
-		<acquire exp="16679.892488"  exp_rate="4.339202" sp="1486.0" />
+		<acquire exp="16680"  exp_rate="4.339202" sp="1486" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2256" max="4571" chance="100" /> <!-- Adena-->
@@ -4479,7 +4430,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="521.12391" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="355.86007" pDef="257.34267" mDef="171.341654516443" />
+		<base pAtk="521.12391" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="355.86007" pDef="257.34267" mDef="171.341654516443" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4500,7 +4451,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="2037.81082" hp_regen="7.5" mp="1097" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4528,7 +4478,7 @@
 		</custom>
 	</npc>
 	<npc id="21250" templateId="21250" clientName="Tomb Guardian" serverName="tomb_defender" level="65" type="warrior">
-		<acquire exp="19325.5218"  exp_rate="4.574088" sp="1795.0" />
+		<acquire exp="19326"  exp_rate="4.574088" sp="1795" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2634" max="5340" chance="100" /> <!-- Adena-->
@@ -4575,7 +4525,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" />
+		<base pAtk="582.81759" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="397.98887" pDef="271.89033" mDef="181.027644954078" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4596,7 +4546,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2193.43142" hp_regen="7.5" mp="1188.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4621,7 +4570,7 @@
 		</custom>
 	</npc>
 	<npc id="21251" templateId="21251" clientName="Tomb Sage" serverName="tomb_sage" level="67" type="warrior">
-		<acquire exp="21777.162492"  exp_rate="4.851228" sp="2074.0" />
+		<acquire exp="21777"  exp_rate="4.851228" sp="2074" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2811" max="5744" chance="100" /> <!-- Adena-->
@@ -4668,7 +4617,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="187.460838840844" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4689,7 +4638,6 @@
 			<ai_skill name="DDMagic" id="4002" level="6" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4715,7 +4663,7 @@
 		</custom>
 	</npc>
 	<npc id="21252" templateId="21252" clientName="Crypt Guard " serverName="crypt_highguard" level="70" type="warrior">
-		<acquire exp="20845.188000000002"  exp_rate="4.25412" sp="2067.0" />
+		<acquire exp="20845"  exp_rate="4.25412" sp="2067" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2875" max="5849" chance="100" /> <!-- Adena-->
@@ -4757,7 +4705,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" />
+		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" accuracy="0" evasion="0" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4779,7 +4727,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4810,7 +4757,7 @@
 		</custom>
 	</npc>
 	<npc id="21253" templateId="21253" clientName="Crypt Preacher" serverName="crypt_oracle" level="72" type="warrior">
-		<acquire exp="22494.423168"  exp_rate="4.339202" sp="2285.0" />
+		<acquire exp="22494"  exp_rate="4.339202" sp="2285" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3110" max="6350" chance="100" /> <!-- Adena-->
@@ -4852,7 +4799,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4873,7 +4820,6 @@
 			<ai_skill name="Buff" id="4099" level="2" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4901,7 +4847,7 @@
 		</custom>
 	</npc>
 	<npc id="21254" templateId="21254" clientName="Tomb Guard" serverName="tomb_highguard" level="75" type="warrior">
-		<acquire exp="25729.245"  exp_rate="4.574088" sp="2714.0" />
+		<acquire exp="25729"  exp_rate="4.574088" sp="2714" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3587" max="7319" chance="100" /> <!-- Adena-->
@@ -4934,7 +4880,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4955,7 +4901,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="8" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4983,7 +4928,7 @@
 		</custom>
 	</npc>
 	<npc id="21255" templateId="21255" clientName="Tomb Preacher" serverName="tomb_oracle" level="77" type="warrior">
-		<acquire exp="28762.930812"  exp_rate="4.851228" sp="3113.0" />
+		<acquire exp="28763"  exp_rate="4.851228" sp="3113" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3814" max="7793" chance="100" /> <!-- Adena-->
@@ -5031,7 +4976,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5047,7 +4992,6 @@
 			<ai_skill name="DDMagic" id="4002" level="8" /> <!-- HP Drain -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5073,7 +5017,7 @@
 		</custom>
 	</npc>
 	<npc id="21256" templateId="21256" clientName="Underground Werewolf" serverName="underground_werewolf" level="23" type="warrior">
-		<acquire exp="904.8109104"  exp_rate="1.7104176" sp="43.0" />
+		<acquire exp="905"  exp_rate="1.7104176" sp="43" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="149" max="262" chance="100" /> <!-- Adena-->
@@ -5115,7 +5059,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="55.84125" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="38.13234" pDef="95.64976" mDef="63.6846860642986" />
+		<base pAtk="55.84125" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="38.13234" pDef="95.64976" mDef="63.6846860642986" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5135,7 +5079,6 @@
 			<ai_param name="LongRangeGuardRate" val="5" />
 		</npc_ai>
 		<org hp="410.70422" hp_regen="3.5" mp="231.96" mp_regen="1.5" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5160,7 +5103,7 @@
 		</custom>
 	</npc>
 	<npc id="21257" templateId="21257" clientName="Evil Eye Seer" serverName="evil_eye_seer" level="18" type="warrior">
-		<acquire exp="646.41888"  exp_rate="1.99512" sp="28.0" />
+		<acquire exp="646"  exp_rate="1.99512" sp="28" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="122" max="202" chance="100" /> <!-- Adena-->
@@ -5230,7 +5173,7 @@
 			<walk ground="90" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="37.82932" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="25.83252" pDef="81.34791" mDef="54.1623558855199" />
+		<base pAtk="37.82932" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="25.83252" pDef="81.34791" mDef="54.1623558855199" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5247,7 +5190,6 @@
 			<ai_skill name="W_ShortRangeDDMagic" id="4160" level="1" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="301.66622" hp_regen="2.5" mp="174.64" mp_regen="1.2" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5320,7 +5262,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="442.8992" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="302.44274" pDef="237.99429" mDef="158.459289236126" />
+		<base pAtk="442.8992" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="302.44274" pDef="237.99429" mDef="158.459289236126" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5342,7 +5284,6 @@
 			<ai_param name="LongRangeGuardRate" val="10" />
 		</npc_ai>
 		<org hp="1828.68266" hp_regen="6.5" mp="977.4" mp_regen="2.4" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5371,7 +5312,7 @@
 		</custom>
 	</npc>
 	<npc id="21259" templateId="21259" clientName="Fallen Orc Shaman" serverName="sharp_talon_tiger_trans" level="59" type="warrior">
-		<acquire exp="15579.936763200001"  exp_rate="4.4757072" sp="1332.0" />
+		<acquire exp="15580"  exp_rate="4.4757072" sp="1332" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2085" max="4248" chance="100" /> <!-- Adena-->
@@ -5450,7 +5391,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="461.94387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="315.44778" pDef="242.81593" mDef="161.669585254993" />
+		<base pAtk="461.94387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="315.44778" pDef="242.81593" mDef="161.669585254993" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5471,7 +5412,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="1880.92519" hp_regen="6.5" mp="1007" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5498,7 +5438,7 @@
 		</custom>
 	</npc>
 	<npc id="21260" templateId="21260" clientName="Betrayer Orc Hero" serverName="betrayer_orc_hero" level="50" type="warrior">
-		<acquire exp="4429.44"  exp_rate="1.771776" sp="334.0" />
+		<acquire exp="4429"  exp_rate="1.771776" sp="334" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>1000</clan_help_range>
 		<collision>
@@ -5513,7 +5453,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" />
+		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="133.321011603844" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5534,7 +5474,6 @@
 			<ai_skill name="HeroSkill" id="4073" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="1421.00103" hp_regen="5.5" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5564,7 +5503,7 @@
 		</custom>
 	</npc>
 	<npc id="21261" templateId="21261" clientName="Ol Mahum Transcender" serverName="ol_mahum_transcend_0" level="50" type="warrior">
-		<acquire exp="4953.6"  exp_rate="1.98144" sp="372.0" />
+		<acquire exp="4954"  exp_rate="1.98144" sp="372" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="654" max="1329" chance="100" /> <!-- Adena-->
@@ -5640,7 +5579,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="146.5258" />
+		<base pAtk="305.54906" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="208.6504" pDef="200.23844" mDef="146.5258" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5665,7 +5604,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1421.00103" hp_regen="5.5" mp="747.8" mp_regen="2.1" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5695,7 +5633,7 @@
 		</custom>
 	</npc>
 	<npc id="21262" templateId="21262" clientName="Ol Mahum Transcender" serverName="ol_mahum_transcend_1" level="53" type="warrior">
-		<acquire exp="6630.800455680001"  exp_rate="2.36055552" sp="496.0" />
+		<acquire exp="6631"  exp_rate="2.36055552" sp="496" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="879" max="1786" chance="100" /> <!-- Adena-->
@@ -5769,7 +5707,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="353.71092" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="241.5387" pDef="214.18326" mDef="156.73001" />
+		<base pAtk="353.71092" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="241.5387" pDef="214.18326" mDef="156.73001" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5794,7 +5732,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1570.8463" hp_regen="6.5" mp="832.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5825,7 +5762,7 @@
 		</custom>
 	</npc>
 	<npc id="21263" templateId="21263" clientName="Ol Mahum Transcender" serverName="ol_mahum_transcend_2" level="55" type="warrior">
-		<acquire exp="9634.124544"  exp_rate="3.18483456" sp="691.0" />
+		<acquire exp="9634"  exp_rate="3.18483456" sp="691" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1233" max="2512" chance="100" /> <!-- Adena-->
@@ -5899,7 +5836,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" />
+		<base pAtk="388.11142" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5924,7 +5861,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5954,7 +5890,7 @@
 		</custom>
 	</npc>
 	<npc id="21264" templateId="21264" clientName="Ol Mahum Transcender" serverName="ol_mahum_transcend_3" level="58" type="warrior">
-		<acquire exp="13535.0997504"  exp_rate="4.0235136" sp="933.0" />
+		<acquire exp="13535"  exp_rate="4.0235136" sp="933" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1704" max="3471" chance="100" /> <!-- Adena-->
@@ -6030,7 +5966,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="442.8992" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="302.44274" pDef="237.99429" mDef="174.1539" />
+		<base pAtk="442.8992" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="302.44274" pDef="237.99429" mDef="174.1539" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6055,7 +5991,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="1828.68266" hp_regen="6.5" mp="977.4" mp_regen="2.4" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6086,7 +6021,7 @@
 		</custom>
 	</npc>
 	<npc id="21265" templateId="21265" clientName="Cave Ant Larva" serverName="cave_ant_lava_4" level="36" type="warrior">
-		<acquire exp="1903.5648"  exp_rate="1.4688" sp="115.0" />
+		<acquire exp="1904"  exp_rate="1.4688" sp="115" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="264" max="530" chance="100" /> <!-- Adena-->
@@ -6170,7 +6105,7 @@
 			<ignore_clan>cave_recruit_4</ignore_clan>
 			<ignore_clan>cave_noble_ant_4</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" />
+		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6194,7 +6129,6 @@
 			<ai_param name="LongRangeGuardRate" val="10" />
 		</npc_ai>
 		<org hp="809.52639" hp_regen="4.5" mp="417.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6280,7 +6214,7 @@
 			<ignore_clan>cave_recruit_4</ignore_clan>
 			<ignore_clan>cave_noble_ant_4</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" />
+		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6302,7 +6236,6 @@
 			<ai_param name="LongRangeGuardRate" val="10" />
 		</npc_ai>
 		<org hp="809.52639" hp_regen="4.5" mp="417.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6388,7 +6321,7 @@
 			<ignore_clan>cave_recruit_4</ignore_clan>
 			<ignore_clan>cave_noble_ant_4</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" />
+		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6410,7 +6343,6 @@
 			<ai_param name="LongRangeGuardRate" val="10" />
 		</npc_ai>
 		<org hp="809.52639" hp_regen="4.5" mp="417.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6435,7 +6367,7 @@
 		</custom>
 	</npc>
 	<npc id="21268" templateId="21268" clientName="Cave Ant Larva" serverName="cave_ant_lava_2d" level="36" type="warrior">
-		<acquire exp="3540.630528"  exp_rate="2.731968" sp="214.0" />
+		<acquire exp="3541"  exp_rate="2.731968" sp="214" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="492" max="986" chance="100" /> <!-- Adena-->
@@ -6519,7 +6451,7 @@
 			<ignore_clan>cave_recruit_4</ignore_clan>
 			<ignore_clan>cave_noble_ant_4</ignore_clan>
 		</ignore_clan_lists>
-		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" />
+		<base pAtk="137.86467" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="94.1437" pDef="140.57278" mDef="93.5949427192352" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6540,7 +6472,6 @@
 			<ai_skill name="W_ShortRangeDDMagic" id="4160" level="3" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="809.52639" hp_regen="4.5" mp="417.6" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6565,7 +6496,7 @@
 		</custom>
 	</npc>
 	<npc id="21269" templateId="21269" clientName="Cave Ant" serverName="cave_ant_2a" level="37" type="warrior">
-		<acquire exp="4041.6822719999996"  exp_rate="2.952288" sp="248.0" />
+		<acquire exp="4042"  exp_rate="2.952288" sp="248" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="561" max="1119" chance="100" /> <!-- Adena-->
@@ -6637,7 +6568,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.26" skill_factor="-1" />
-		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" />
+		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6659,7 +6590,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="847.31754" hp_regen="4.5" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6684,7 +6614,7 @@
 		</custom>
 	</npc>
 	<npc id="21270" templateId="21270" clientName="Cave Ant Soldier" serverName="cave_recruit_2b" level="38" type="warrior">
-		<acquire exp="4670.1143328"  exp_rate="3.2341512" sp="292.0" />
+		<acquire exp="4670"  exp_rate="3.2341512" sp="292" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="647" max="1291" chance="100" /> <!-- Adena-->
@@ -6764,7 +6694,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.61" skill_factor="-1" />
-		<base pAtk="156.22273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="106.67987" pDef="148.44287" mDef="98.8349371271581" />
+		<base pAtk="156.22273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="106.67987" pDef="148.44287" mDef="98.8349371271581" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6785,7 +6715,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="886.09975" hp_regen="4.5" mp="447.96" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6810,7 +6739,7 @@
 		</custom>
 	</npc>
 	<npc id="21271" templateId="21271" clientName="Cave Ant" serverName="cave_ant_4" level="37" type="warrior">
-		<acquire exp="2757.9556392"  exp_rate="2.0145768" sp="169.0" />
+		<acquire exp="2758"  exp_rate="2.0145768" sp="169" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="383" max="764" chance="100" /> <!-- Adena-->
@@ -6881,7 +6810,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.26" skill_factor="-1" />
-		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" />
+		<base pAtk="146.82587" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="100.26304" pDef="144.47758" mDef="96.1948088105753" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6907,7 +6836,6 @@
 			<ai_skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</npc_ai>
 		<org hp="847.31754" hp_regen="4.5" mp="432.72" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6932,7 +6860,7 @@
 		</custom>
 	</npc>
 	<npc id="21272" templateId="21272" clientName="Cave Ant Soldier" serverName="cave_recruit_4" level="38" type="warrior">
-		<acquire exp="4902.04788"  exp_rate="3.39477" sp="306.0" />
+		<acquire exp="4902"  exp_rate="3.39477" sp="306" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="679" max="1355" chance="100" /> <!-- Adena-->
@@ -7003,7 +6931,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.61" skill_factor="-1" />
-		<base pAtk="156.22273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="106.67987" pDef="148.44287" mDef="98.8349371271581" />
+		<base pAtk="156.22273" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="106.67987" pDef="148.44287" mDef="98.8349371271581" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7028,7 +6956,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="886.09975" hp_regen="4.5" mp="447.96" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7053,7 +6980,7 @@
 		</custom>
 	</npc>
 	<npc id="21273" templateId="21273" clientName="Cave Noble Ant" serverName="cave_noble_ant_4" level="39" type="warrior">
-		<acquire exp="14203.666245600001"  exp_rate="9.3383736" sp="902.0" />
+		<acquire exp="14204"  exp_rate="9.3383736" sp="902" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1969" max="3922" chance="100" /> <!-- Adena-->
@@ -7124,7 +7051,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="166.06476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="113.4007" pDef="152.46752" mDef="101.514599764346" />
+		<base pAtk="166.06476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="113.4007" pDef="152.46752" mDef="101.514599764346" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7151,7 +7078,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="925.85879" hp_regen="4.5" mp="463.32" mp_regen="1.8" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7178,7 +7104,7 @@
 		</custom>
 	</npc>
 	<npc id="21274" templateId="21274" clientName="Kookaburra" serverName="kukaburo" level="67" type="warrior">
-		<acquire exp="8972.25408"  exp_rate="1.99872" sp="854.0" />
+		<acquire exp="8972"  exp_rate="1.99872" sp="854" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1223" max="2498" chance="100" /> <!-- Adena-->
@@ -7258,7 +7184,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7279,7 +7205,6 @@
 			<ai_skill name="PhysicalSpecial" id="4067" level="6" /> <!-- Blow -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7305,7 +7230,7 @@
 		</custom>
 	</npc>
 	<npc id="21275" templateId="21275" clientName="Kookaburra" serverName="kukaburo_a" level="67" type="warrior">
-		<acquire exp="9030.43152"  exp_rate="2.01168" sp="859.0" />
+		<acquire exp="9030"  exp_rate="2.01168" sp="859" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1230" max="2515" chance="100" /> <!-- Adena-->
@@ -7385,7 +7310,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7406,7 +7331,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7432,7 +7356,7 @@
 		</custom>
 	</npc>
 	<npc id="21276" templateId="21276" clientName="Kookaburra" serverName="kukaburo_b" level="67" type="warrior">
-		<acquire exp="8920.5408"  exp_rate="1.9872" sp="848.0" />
+		<acquire exp="8921"  exp_rate="1.9872" sp="848" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1216" max="2484" chance="100" /> <!-- Adena-->
@@ -7512,7 +7436,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7533,7 +7457,6 @@
 			<ai_skill name="PhysicalSpecial" id="4244" level="6" /> <!-- Wild Sweep -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7559,7 +7482,7 @@
 		</custom>
 	</npc>
 	<npc id="21278" templateId="21278" clientName="Antelope" serverName="antelope" level="68" type="warrior">
-		<acquire exp="9242.08128"  exp_rate="1.99872" sp="892.0" />
+		<acquire exp="9242"  exp_rate="1.99872" sp="892" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1268" max="2577" chance="100" /> <!-- Adena-->
@@ -7640,7 +7563,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7661,7 +7584,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7687,7 +7609,7 @@
 		</custom>
 	</npc>
 	<npc id="21279" templateId="21279" clientName="Antelope" serverName="antelope_a" level="68" type="warrior">
-		<acquire exp="9188.8128"  exp_rate="1.9872" sp="887.0" />
+		<acquire exp="9189"  exp_rate="1.9872" sp="887" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1260" max="2562" chance="100" /> <!-- Adena-->
@@ -7768,7 +7690,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7789,7 +7711,6 @@
 			<ai_skill name="PhysicalSpecial" id="4067" level="6" /> <!-- Blow -->
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7815,7 +7736,7 @@
 		</custom>
 	</npc>
 	<npc id="21280" templateId="21280" clientName="Antelope" serverName="antelope_b" level="68" type="warrior">
-		<acquire exp="9302.00832"  exp_rate="2.01168" sp="898.0" />
+		<acquire exp="9302"  exp_rate="2.01168" sp="898" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1276" max="2593" chance="100" /> <!-- Adena-->
@@ -7896,7 +7817,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7917,7 +7838,6 @@
 			<ai_skill name="PhysicalSpecial" id="4232" level="6" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7943,7 +7863,7 @@
 		</custom>
 	</npc>
 	<npc id="21282" templateId="21282" clientName="Bandersnatch" serverName="bandersnatch" level="69" type="warrior">
-		<acquire exp="9515.905920000001"  exp_rate="1.99872" sp="930.0" />
+		<acquire exp="9516"  exp_rate="1.99872" sp="930" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1309" max="2658" chance="100" /> <!-- Adena-->
@@ -8024,7 +7944,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8045,7 +7965,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8071,7 +7990,7 @@
 		</custom>
 	</npc>
 	<npc id="21283" templateId="21283" clientName="Bandersnatch" serverName="bandersnatch_a" level="69" type="warrior">
-		<acquire exp="9577.60848"  exp_rate="2.01168" sp="936.0" />
+		<acquire exp="9578"  exp_rate="2.01168" sp="936" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1318" max="2676" chance="100" /> <!-- Adena-->
@@ -8152,7 +8071,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8173,7 +8092,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8199,7 +8117,7 @@
 		</custom>
 	</npc>
 	<npc id="21284" templateId="21284" clientName="Bandersnatch" serverName="bandersnatch_b" level="69" type="warrior">
-		<acquire exp="9461.0592"  exp_rate="1.9872" sp="925.0" />
+		<acquire exp="9461"  exp_rate="1.9872" sp="925" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1302" max="2643" chance="100" /> <!-- Adena-->
@@ -8280,7 +8198,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="213.05139" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8301,7 +8219,6 @@
 			<ai_skill name="SelfRangeDDMagic" id="4072" level="6" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8327,7 +8244,7 @@
 		</custom>
 	</npc>
 	<npc id="21286" templateId="21286" clientName="Buffalo" serverName="buffalo" level="70" type="warrior">
-		<acquire exp="9793.728000000001"  exp_rate="1.99872" sp="971.0" />
+		<acquire exp="9794"  exp_rate="1.99872" sp="971" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1351" max="2748" chance="100" /> <!-- Adena-->
@@ -8409,7 +8326,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8430,7 +8347,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="7" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8456,7 +8372,7 @@
 		</custom>
 	</npc>
 	<npc id="21287" templateId="21287" clientName="Buffalo" serverName="buffalo_a" level="70" type="warrior">
-		<acquire exp="9737.28"  exp_rate="1.9872" sp="965.0" />
+		<acquire exp="9737"  exp_rate="1.9872" sp="965" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1343" max="2732" chance="100" /> <!-- Adena-->
@@ -8538,7 +8454,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8559,7 +8475,6 @@
 			<ai_skill name="SelfRangeDDMagic" id="4072" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8585,7 +8500,7 @@
 		</custom>
 	</npc>
 	<npc id="21288" templateId="21288" clientName="Buffalo" serverName="buffalo_b" level="70" type="warrior">
-		<acquire exp="9857.232"  exp_rate="2.01168" sp="977.0" />
+		<acquire exp="9857"  exp_rate="2.01168" sp="977" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1360" max="2766" chance="100" /> <!-- Adena-->
@@ -8667,7 +8582,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8688,7 +8603,6 @@
 			<ai_skill name="PhysicalSpecial" id="4244" level="7" /> <!-- Wild Sweep -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8714,7 +8628,7 @@
 		</custom>
 	</npc>
 	<npc id="21290" templateId="21290" clientName="Grendel" serverName="grendel" level="71" type="warrior">
-		<acquire exp="10075.54752"  exp_rate="1.99872" sp="1010.0" />
+		<acquire exp="10076"  exp_rate="1.99872" sp="1010" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1391" max="2835" chance="100" /> <!-- Adena-->
@@ -8795,7 +8709,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" />
+		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8816,7 +8730,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="7" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2492.727" hp_regen="8.5" mp="1377.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8843,7 +8756,7 @@
 		</custom>
 	</npc>
 	<npc id="21291" templateId="21291" clientName="Grendel" serverName="grendel_a" level="71" type="warrior">
-		<acquire exp="10017.4752"  exp_rate="1.9872" sp="1004.0" />
+		<acquire exp="10017"  exp_rate="1.9872" sp="1004" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1383" max="2819" chance="100" /> <!-- Adena-->
@@ -8924,7 +8837,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" />
+		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8945,7 +8858,6 @@
 			<ai_skill name="SelfRangeDDMagic" id="4072" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2492.727" hp_regen="8.5" mp="1377.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8972,7 +8884,7 @@
 		</custom>
 	</npc>
 	<npc id="21292" templateId="21292" clientName="Grendel" serverName="grendel_b" level="71" type="warrior">
-		<acquire exp="10140.87888"  exp_rate="2.01168" sp="1016.0" />
+		<acquire exp="10141"  exp_rate="2.01168" sp="1016" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1400" max="2853" chance="100" /> <!-- Adena-->
@@ -9053,7 +8965,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" />
+		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="220.00525" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9074,7 +8986,6 @@
 			<ai_skill name="PhysicalSpecial" id="4232" level="7" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="2492.727" hp_regen="8.5" mp="1377.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9101,7 +9012,7 @@
 		</custom>
 	</npc>
 	<npc id="21294" templateId="21294" clientName="Canyon Antelope" serverName="valley_antelope" level="68" type="warrior">
-		<acquire exp="16543.858176"  exp_rate="3.577824" sp="1598.0" />
+		<acquire exp="16544"  exp_rate="3.577824" sp="1598" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2269" max="4612" chance="100" /> <!-- Adena-->
@@ -9149,7 +9060,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="190.662718462344" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="190.662718462344" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9170,7 +9081,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9195,7 +9105,7 @@
 		</custom>
 	</npc>
 	<npc id="21295" templateId="21295" clientName="Canyon Antelope Slave" serverName="antelope_slave" level="69" type="warrior">
-		<acquire exp="17546.7283452"  exp_rate="3.6855132" sp="1717.0" />
+		<acquire exp="17547"  exp_rate="3.6855132" sp="1717" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2414" max="4902" chance="100" /> <!-- Adena-->
@@ -9239,7 +9149,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" />
+		<base pAtk="667.50361" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="455.81844" pDef="291.15063" mDef="193.851368417065" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9263,7 +9173,6 @@
 			<ai_skill name="SelfBuff" id="4092" level="1" /> <!-- Spirit Puma -->
 		</npc_ai>
 		<org hp="2395.45533" hp_regen="7.5" mp="1314" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9288,7 +9197,7 @@
 		</custom>
 	</npc>
 	<npc id="21296" templateId="21296" clientName="Canyon Bandersnatch " serverName="valley_bandersnatch" level="70" type="warrior">
-		<acquire exp="26081.49852"  exp_rate="5.3227548" sp="2586.0" />
+		<acquire exp="26081"  exp_rate="5.3227548" sp="2586" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3597" max="7319" chance="100" /> <!-- Adena-->
@@ -9328,7 +9237,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="197.024195544734" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9350,7 +9259,6 @@
 			<ai_skill name="PhysicalSpecial" id="4579" level="7" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9375,7 +9283,7 @@
 		</custom>
 	</npc>
 	<npc id="21297" templateId="21297" clientName="Canyon Bandersnatch Slave" serverName="bandersnatch_slave" level="71" type="warrior">
-		<acquire exp="26191.3966668"  exp_rate="5.1956748" sp="2628.0" />
+		<acquire exp="26191"  exp_rate="5.1956748" sp="2628" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3615" max="7369" chance="100" /> <!-- Adena-->
@@ -9414,7 +9322,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="200.178552092236" />
+		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="200.178552092236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9438,7 +9346,6 @@
 			<ai_skill name="SelfBuff" id="4090" level="1" /> <!-- Spirit Wolf -->
 		</npc_ai>
 		<org hp="2492.727" hp_regen="8.5" mp="1377.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9464,7 +9371,7 @@
 		</custom>
 	</npc>
 	<npc id="21298" templateId="21298" clientName="Eye of Restrainer " serverName="binding_eye" level="71" type="warrior">
-		<acquire exp="16856.743064399998"  exp_rate="3.3439284" sp="1692.0" />
+		<acquire exp="16857"  exp_rate="3.3439284" sp="1692" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2327" max="4743" chance="100" /> <!-- Adena-->
@@ -9516,7 +9423,7 @@
 			<walk ground="90" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="200.178552092236" />
+		<base pAtk="710.2185" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="484.98717" pDef="300.65359" mDef="200.178552092236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9537,7 +9444,6 @@
 			<ai_skill name="DeBuff" id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 		</npc_ai>
 		<org hp="2492.727" hp_regen="8.5" mp="1377.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9564,7 +9470,7 @@
 		</custom>
 	</npc>
 	<npc id="21299" templateId="21299" clientName="Buffalo Slave" serverName="buffalo_slave" level="72" type="warrior">
-		<acquire exp="26934.3781632"  exp_rate="5.1956748" sp="2736.0" />
+		<acquire exp="26934"  exp_rate="5.1956748" sp="2736" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3724" max="7603" chance="100" /> <!-- Adena-->
@@ -9614,7 +9520,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9638,7 +9544,6 @@
 			<ai_skill name="SelfBuff" id="4091" level="1" /> <!-- Spirit Ogre -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

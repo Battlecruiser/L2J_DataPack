@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35300" templateId="35300" clientName="Guard" serverName="innadrile_sw_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -19,7 +19,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -31,7 +31,6 @@
 			<ai>innadrile_sw_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -60,7 +59,7 @@
 		</custom>
 	</npc>
 	<npc id="35301" templateId="35301" clientName="Guard" serverName="innadrile_bow_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -79,7 +78,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -91,7 +90,6 @@
 			<ai>innadrile_bow_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -120,7 +118,7 @@
 		</custom>
 	</npc>
 	<npc id="35302" templateId="35302" clientName="Guard" serverName="innadrile_sp_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -139,7 +137,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -151,7 +149,6 @@
 			<ai>innadrile_sp_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -180,7 +177,7 @@
 		</custom>
 	</npc>
 	<npc id="35303" templateId="35303" clientName="Guard" serverName="innadrile_sw_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -199,7 +196,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -211,7 +208,6 @@
 			<ai>innadrile_sw_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -240,7 +236,7 @@
 		</custom>
 	</npc>
 	<npc id="35304" templateId="35304" clientName="Guard" serverName="innadrile_bow_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -259,7 +255,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -271,7 +267,6 @@
 			<ai>innadrile_bow_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -300,7 +295,7 @@
 		</custom>
 	</npc>
 	<npc id="35305" templateId="35305" clientName="Guard" serverName="innadrile_sp_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -319,7 +314,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -331,7 +326,6 @@
 			<ai>innadrile_sp_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -360,7 +354,7 @@
 		</custom>
 	</npc>
 	<npc id="35306" templateId="35306" clientName="Guard" serverName="innadrile_sw_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -379,7 +373,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -391,7 +385,6 @@
 			<ai>innadrile_sw_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -420,7 +413,7 @@
 		</custom>
 	</npc>
 	<npc id="35307" templateId="35307" clientName="Guard" serverName="innadrile_bow_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -439,7 +432,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -451,7 +444,6 @@
 			<ai>innadrile_bow_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -480,7 +472,7 @@
 		</custom>
 	</npc>
 	<npc id="35308" templateId="35308" clientName="Gatekeeper" serverName="innadrile_df_teleporter1" level="75" type="citizen">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -499,7 +491,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -533,7 +525,6 @@
 			<ai_param name="pos_z13" val="-846" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -559,7 +550,7 @@
 		</custom>
 	</npc>
 	<npc id="35309" templateId="35309" clientName="Gatekeeper" serverName="innadrile_df_teleporter2" level="75" type="citizen">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -578,7 +569,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -612,7 +603,6 @@
 			<ai_param name="pos_z13" val="-846" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -638,7 +628,7 @@
 		</custom>
 	</npc>
 	<npc id="35310" templateId="35310" clientName="Gatekeeper" serverName="innadrile_df_teleporter3" level="75" type="citizen">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -657,7 +647,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -691,7 +681,6 @@
 			<ai_param name="pos_z23" val="-1014" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -717,7 +706,7 @@
 		</custom>
 	</npc>
 	<npc id="35311" templateId="35311" clientName="Mass Gatekeeper" serverName="innadrile_m_teleporter" level="75" type="citizen">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>0</clan_help_range>
 		<collision>
@@ -732,7 +721,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -751,7 +740,6 @@
 			<ai_param name="pos_z1" val="-765" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -777,7 +765,7 @@
 		</custom>
 	</npc>
 	<npc id="35312" templateId="35312" clientName="Outer Doorman" serverName="innadrile_outter_doorman" level="75" type="teleporter">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -792,7 +780,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -818,7 +806,6 @@
 			<ai_param name="dominion_id" val="86" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -844,7 +831,7 @@
 		</custom>
 	</npc>
 	<npc id="35313" templateId="35313" clientName="Inner Doorman" serverName="innadrile_inner_doorman" level="75" type="teleporter">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -859,7 +846,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -885,7 +872,6 @@
 			<ai_param name="dominion_id" val="86" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -925,7 +911,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -940,7 +926,6 @@
 			<ai_param name="MoveAroundSocial1" val="93" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -983,7 +968,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1007,7 +992,6 @@
 			<ai_param name="MoveAroundSocial1" val="150" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1033,7 +1017,7 @@
 		</custom>
 	</npc>
 	<npc id="35316" templateId="35316" clientName="Neurath" serverName="chamberlain_neurath" level="75" type="teleporter">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -1048,7 +1032,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1101,7 +1085,6 @@
 			<ai_param name="dominion_id" val="86" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1141,7 +1124,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1156,7 +1139,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1182,7 +1164,7 @@
 		</custom>
 	</npc>
 	<npc id="35318" templateId="35318" clientName="Solinus" serverName="solinus" level="75" type="citizen">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -1197,7 +1179,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1211,7 +1193,6 @@
 			<ai_param name="MoveAroundSocial1" val="120" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1251,7 +1232,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1266,7 +1247,6 @@
 			<ai_param name="manor_id" val="6" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1292,7 +1272,7 @@
 		</custom>
 	</npc>
 	<npc id="35320" templateId="35320" clientName="Raybell" serverName="sir_raybell" level="75" type="guard">
-		<acquire exp="562.5"  exp_rate="0.1" sp="10.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -1307,7 +1287,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1325,7 +1305,6 @@
 			<ai_param name="MoveAroundSocial1" val="92" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1368,7 +1347,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1380,7 +1359,6 @@
 			<ai>godad_holything_r</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1421,7 +1399,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1433,7 +1411,6 @@
 			<ai>godad_holything_l</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1460,7 +1437,7 @@
 		</custom>
 	</npc>
 	<npc id="35324" templateId="35324" clientName="Heinz" serverName="sir_haenz" level="81" type="warrior">
-		<acquire exp="656.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="656"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1479,7 +1456,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="3036.96805390282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="691.285164307598" pDef="345.61127" mDef="252.90333" />
+		<base pAtk="3036.96805390282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="691.285164307598" pDef="345.61127" mDef="252.90333" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1491,7 +1468,6 @@
 			<ai>sir_haenz</ai>
 		</npc_ai>
 		<org hp="34617.7253215841" hp_regen="8.5" mp="5126.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1520,7 +1496,7 @@
 		</custom>
 	</npc>
 	<npc id="35325" templateId="35325" clientName="Duke Mora Ken Abygail" serverName="duke_morah_ken_abigail" level="83" type="warrior">
-		<acquire exp="688.9000000000001"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="689"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1539,7 +1515,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="3298.27085008098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" />
+		<base pAtk="3298.27085008098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1551,7 +1527,6 @@
 			<ai>duke_morah_ken_abigail</ai>
 		</npc_ai>
 		<org hp="38355.9060587002" hp_regen="8.5" mp="5332.2" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1580,7 +1555,7 @@
 		</custom>
 	</npc>
 	<npc id="35326" templateId="35326" clientName="Royal Knight" serverName="godad_knight" level="79" type="warrior">
-		<acquire exp="624.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="624"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1599,7 +1574,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1611,7 +1586,6 @@
 			<ai>godad_knight</ai>
 		</npc_ai>
 		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1641,7 +1615,7 @@
 		</custom>
 	</npc>
 	<npc id="35327" templateId="35327" clientName="Court Sorcerer" serverName="godad_wizard" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1660,7 +1634,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1673,7 +1647,6 @@
 			<ai_skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1702,7 +1675,7 @@
 		</custom>
 	</npc>
 	<npc id="35328" templateId="35328" clientName="Court Sorcerer" serverName="godad_cleric" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1721,7 +1694,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1734,7 +1707,6 @@
 			<ai_skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1763,7 +1735,7 @@
 		</custom>
 	</npc>
 	<npc id="35329" templateId="35329" clientName="Court Guard" serverName="godad_court_guard" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1782,7 +1754,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1794,7 +1766,6 @@
 			<ai>godad_court_guard</ai>
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1823,7 +1794,7 @@
 		</custom>
 	</npc>
 	<npc id="35330" templateId="35330" clientName="Guard" serverName="godad_spear_guard_dw" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1842,7 +1813,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1854,7 +1825,6 @@
 			<ai>godad_spear_guard_dw</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1883,7 +1853,7 @@
 		</custom>
 	</npc>
 	<npc id="35331" templateId="35331" clientName="Guard" serverName="godad_sword_guard_dw" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1902,7 +1872,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1914,7 +1884,6 @@
 			<ai>godad_sword_guard_dw</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1943,7 +1912,7 @@
 		</custom>
 	</npc>
 	<npc id="35332" templateId="35332" clientName="Guard" serverName="godad_bow_guard_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1962,7 +1931,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1974,7 +1943,6 @@
 			<ai>godad_bow_guard_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2003,7 +1971,7 @@
 		</custom>
 	</npc>
 	<npc id="35333" templateId="35333" clientName="Guard" serverName="godad_spear_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2022,7 +1990,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2034,7 +2002,6 @@
 			<ai>godad_spear_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2063,7 +2030,7 @@
 		</custom>
 	</npc>
 	<npc id="35334" templateId="35334" clientName="Guard" serverName="godad_sword_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2082,7 +2049,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2094,7 +2061,6 @@
 			<ai>godad_sword_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2123,7 +2089,7 @@
 		</custom>
 	</npc>
 	<npc id="35335" templateId="35335" clientName="Guard" serverName="godad_bow_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2142,7 +2108,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2154,7 +2120,6 @@
 			<ai>godad_bow_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2183,7 +2148,7 @@
 		</custom>
 	</npc>
 	<npc id="35336" templateId="35336" clientName="Guard" serverName="godad_spear_guard_or" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2202,7 +2167,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2214,7 +2179,6 @@
 			<ai>godad_spear_guard_or</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2243,7 +2207,7 @@
 		</custom>
 	</npc>
 	<npc id="35337" templateId="35337" clientName="Guard" serverName="godad_sword_guard_or" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2262,7 +2226,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2274,7 +2238,6 @@
 			<ai>godad_sword_guard_or</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2303,7 +2266,7 @@
 		</custom>
 	</npc>
 	<npc id="35338" templateId="35338" clientName="Guard" serverName="godad_bow_guard_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2322,7 +2285,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2334,7 +2297,6 @@
 			<ai>godad_bow_guard_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2363,7 +2325,7 @@
 		</custom>
 	</npc>
 	<npc id="35339" templateId="35339" clientName="Royal Knight" serverName="godad_knight_s" level="79" type="warrior">
-		<acquire exp="624.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="624"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2382,7 +2344,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2394,7 +2356,6 @@
 			<ai>godad_knight_s</ai>
 		</npc_ai>
 		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2424,7 +2385,7 @@
 		</custom>
 	</npc>
 	<npc id="35340" templateId="35340" clientName="Court Sorcerer" serverName="godad_wizard_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2443,7 +2404,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2456,7 +2417,6 @@
 			<ai_skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2485,7 +2445,7 @@
 		</custom>
 	</npc>
 	<npc id="35341" templateId="35341" clientName="Court Sorcerer" serverName="godad_cleric_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2504,7 +2464,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2517,7 +2477,6 @@
 			<ai_skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2546,7 +2505,7 @@
 		</custom>
 	</npc>
 	<npc id="35342" templateId="35342" clientName="Court Guard" serverName="godad_court_guard_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2565,7 +2524,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2577,7 +2536,6 @@
 			<ai>godad_court_guard_s</ai>
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2606,7 +2564,7 @@
 		</custom>
 	</npc>
 	<npc id="35343" templateId="35343" clientName="Guard" serverName="godad_sp_guard_s_dw" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2625,7 +2583,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2637,7 +2595,6 @@
 			<ai>godad_sp_guard_s_dw</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2666,7 +2623,7 @@
 		</custom>
 	</npc>
 	<npc id="35344" templateId="35344" clientName="Guard" serverName="godad_sw_guard_s_dw" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2685,7 +2642,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2697,7 +2654,6 @@
 			<ai>godad_sw_guard_s_dw</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2726,7 +2682,7 @@
 		</custom>
 	</npc>
 	<npc id="35345" templateId="35345" clientName="Guard" serverName="godad_bow_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2745,7 +2701,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2757,7 +2713,6 @@
 			<ai>godad_bow_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2786,7 +2741,7 @@
 		</custom>
 	</npc>
 	<npc id="35346" templateId="35346" clientName="Guard" serverName="godad_sp_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2805,7 +2760,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2817,7 +2772,6 @@
 			<ai>godad_sp_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2846,7 +2800,7 @@
 		</custom>
 	</npc>
 	<npc id="35347" templateId="35347" clientName="Guard" serverName="godad_sw_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2865,7 +2819,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2877,7 +2831,6 @@
 			<ai>godad_sw_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2906,7 +2859,7 @@
 		</custom>
 	</npc>
 	<npc id="35348" templateId="35348" clientName="Guard" serverName="godad_bow_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2925,7 +2878,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2937,7 +2890,6 @@
 			<ai>godad_bow_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2966,7 +2918,7 @@
 		</custom>
 	</npc>
 	<npc id="35349" templateId="35349" clientName="Guard" serverName="godad_sp_guard_s_or" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2985,7 +2937,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2997,7 +2949,6 @@
 			<ai>godad_sp_guard_s_or</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3026,7 +2977,7 @@
 		</custom>
 	</npc>
 	<npc id="35350" templateId="35350" clientName="Guard" serverName="godad_sw_guard_s_or" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3045,7 +2996,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3057,7 +3008,6 @@
 			<ai>godad_sw_guard_s_or</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3086,7 +3036,7 @@
 		</custom>
 	</npc>
 	<npc id="35351" templateId="35351" clientName="Guard" serverName="godad_bow_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3105,7 +3055,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3117,7 +3067,6 @@
 			<ai>godad_bow_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3164,7 +3113,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3198,7 +3147,6 @@
 			<ai_param name="pos_z13" val="-1344" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3242,7 +3190,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3276,7 +3224,6 @@
 			<ai_param name="pos_z13" val="-1344" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3320,7 +3267,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3354,7 +3301,6 @@
 			<ai_param name="pos_z23" val="-2080" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3394,7 +3340,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3413,7 +3359,6 @@
 			<ai_param name="pos_z1" val="-2272" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3453,7 +3398,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3479,7 +3424,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3519,7 +3463,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3544,7 +3488,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3584,7 +3527,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3609,7 +3552,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3649,7 +3591,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3674,7 +3616,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3714,7 +3655,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3739,7 +3680,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3779,7 +3719,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3794,7 +3734,6 @@
 			<ai_param name="MoveAroundSocial1" val="93" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3837,7 +3776,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3861,7 +3800,6 @@
 			<ai_param name="MoveAroundSocial1" val="150" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3901,7 +3839,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3958,7 +3896,6 @@
 			<ai_param name="dominion_id" val="87" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3998,7 +3935,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4013,7 +3950,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4053,7 +3989,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4067,7 +4003,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4107,7 +4042,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4122,7 +4057,6 @@
 			<ai_param name="manor_id" val="7" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4162,7 +4096,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4180,7 +4114,6 @@
 			<ai_param name="MoveAroundSocial1" val="92" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4209,7 +4142,7 @@
 		</custom>
 	</npc>
 	<npc id="35368" templateId="35368" clientName="Bloody Lord Nurka" serverName="bloody_lord_nurka1" level="73" type="warrior">
-		<acquire exp="2664.5"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2665"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4227,7 +4160,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4239,7 +4172,6 @@
 			<ai>bloody_lord_nurka1</ai>
 		</npc_ai>
 		<org hp="1150000" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4268,7 +4200,7 @@
 		</custom>
 	</npc>
 	<npc id="35369" templateId="35369" clientName="Partisan Healer" serverName="partisan_healer1" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4286,7 +4218,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4298,7 +4230,6 @@
 			<ai>partisan_healer1</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4327,7 +4258,7 @@
 		</custom>
 	</npc>
 	<npc id="35370" templateId="35370" clientName="Partisan Court Guard" serverName="partisan_guard_sword1" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4345,7 +4276,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4357,7 +4288,6 @@
 			<ai>partisan_guard_sword1</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4386,7 +4316,7 @@
 		</custom>
 	</npc>
 	<npc id="35371" templateId="35371" clientName="Partisan Court Guard" serverName="partisan_guard_bow1" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4404,7 +4334,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4416,7 +4346,6 @@
 			<ai>partisan_guard_bow1</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4445,7 +4374,7 @@
 		</custom>
 	</npc>
 	<npc id="35372" templateId="35372" clientName="Partisan Soldier" serverName="partisan_soldier1" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4463,7 +4392,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4475,7 +4404,6 @@
 			<ai>partisan_soldier1</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4504,7 +4432,7 @@
 		</custom>
 	</npc>
 	<npc id="35373" templateId="35373" clientName="Partisan Sorcerer" serverName="partisan_socerer1" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4522,7 +4450,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4534,7 +4462,6 @@
 			<ai>partisan_socerer1</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4563,7 +4490,7 @@
 		</custom>
 	</npc>
 	<npc id="35374" templateId="35374" clientName="Partisan Archer" serverName="partisan_archer1" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4581,7 +4508,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4593,7 +4520,6 @@
 			<ai>partisan_archer1</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4622,7 +4548,7 @@
 		</custom>
 	</npc>
 	<npc id="35375" templateId="35375" clientName="Bloody Lord Nurka" serverName="bloody_lord_nurka2" level="73" type="warrior">
-		<acquire exp="2664.5"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2665"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4640,7 +4566,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4652,7 +4578,6 @@
 			<ai>bloody_lord_nurka2</ai>
 		</npc_ai>
 		<org hp="1150000" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4681,7 +4606,7 @@
 		</custom>
 	</npc>
 	<npc id="35376" templateId="35376" clientName="Partisan Healer" serverName="partisan_healer2" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4699,7 +4624,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4711,7 +4636,6 @@
 			<ai>partisan_healer2</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4740,7 +4664,7 @@
 		</custom>
 	</npc>
 	<npc id="35377" templateId="35377" clientName="Partisan Court Guard" serverName="partisan_guard_sword2" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4758,7 +4682,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4770,7 +4694,6 @@
 			<ai>partisan_guard_sword2</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4799,7 +4722,7 @@
 		</custom>
 	</npc>
 	<npc id="35378" templateId="35378" clientName="Partisan Court Guard" serverName="partisan_guard_bow2" level="70" type="warrior">
-		<acquire exp="2450.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2450"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4817,7 +4740,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4829,7 +4752,6 @@
 			<ai>partisan_guard_bow2</ai>
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4858,7 +4780,7 @@
 		</custom>
 	</npc>
 	<npc id="35379" templateId="35379" clientName="Partisan Soldier" serverName="partisan_soldier2" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4876,7 +4798,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4888,7 +4810,6 @@
 			<ai>partisan_soldier2</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4917,7 +4838,7 @@
 		</custom>
 	</npc>
 	<npc id="35380" templateId="35380" clientName="Partisan Sorcerer" serverName="partisan_socerer2" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4935,7 +4856,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.3" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4947,7 +4868,6 @@
 			<ai>partisan_socerer2</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4976,7 +4896,7 @@
 		</custom>
 	</npc>
 	<npc id="35381" templateId="35381" clientName="Partisan Archer" serverName="partisan_archer2" level="68" type="warrior">
-		<acquire exp="2312.0"  exp_rate="0.5" sp="1.0" />
+		<acquire exp="2312"  exp_rate="0.5" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>partisan_clan</clan>
@@ -4994,7 +4914,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.93" skill_factor="-1" />
-		<base pAtk="646.17968" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="441.25696" pDef="286.3615" mDef="209.54692" />
+		<base pAtk="646.17968" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="441.25696" pDef="286.3615" mDef="209.54692" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -5006,7 +4926,6 @@
 			<ai>partisan_archer2</ai>
 		</npc_ai>
 		<org hp="2345.76698" hp_regen="7.5" mp="1282.4" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5049,7 +4968,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5064,7 +4983,6 @@
 			<ai_param name="MoveAroundSocial1" val="90" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5104,7 +5022,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.63" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5120,7 +5038,6 @@
 			<ai_param name="MoveAroundSocial1" val="90" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5160,7 +5077,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5186,7 +5103,6 @@
 			<ai_param name="cus_z3" val="-3116" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5226,7 +5142,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5240,7 +5156,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5280,7 +5195,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5306,7 +5221,6 @@
 			<ai_param name="cus_z3" val="-3142" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5346,7 +5260,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5360,7 +5274,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5400,7 +5313,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5426,7 +5339,6 @@
 			<ai_param name="cus_z3" val="-3139" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5466,7 +5378,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5480,7 +5392,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5520,7 +5431,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5546,7 +5457,6 @@
 			<ai_param name="cus_z3" val="-3115" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5586,7 +5496,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5600,7 +5510,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5640,7 +5549,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5666,7 +5575,6 @@
 			<ai_param name="cus_z3" val="-3127" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5706,7 +5614,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5720,7 +5628,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5760,7 +5667,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5786,7 +5693,6 @@
 			<ai_param name="cus_z3" val="-3176" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5826,7 +5732,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5840,7 +5746,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5880,7 +5785,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5906,7 +5811,6 @@
 			<ai_param name="cus_z3" val="-3176" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5946,7 +5850,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5960,7 +5864,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6000,7 +5903,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6026,7 +5929,6 @@
 			<ai_param name="cus_z3" val="-3042" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6066,7 +5968,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6080,7 +5982,6 @@
 			<ai_param name="MoveAroundSocial1" val="110" />
 		</npc_ai>
 		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

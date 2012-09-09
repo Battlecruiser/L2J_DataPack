@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36100" templateId="36100" clientName="Wizard" serverName="glu_ore_fort_witch" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="77.574">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -24,7 +24,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -50,7 +50,6 @@
 			<ai_skill name="Skill02_ID" id="4077" level="6" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -79,7 +78,7 @@
 		</custom>
 	</npc>
 	<npc id="36101" templateId="36101" clientName="Healer" serverName="glu_ore_fort_healer" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="82.382">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -103,7 +102,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -128,7 +127,6 @@
 			<ai_skill name="Skill04_ID" id="5114" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>7</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -157,7 +155,7 @@
 		</custom>
 	</npc>
 	<npc id="36102" templateId="36102" clientName="Archer Captain" serverName="glu_ore_fort_archer" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.2235">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -181,7 +179,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -206,7 +204,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -235,7 +232,7 @@
 		</custom>
 	</npc>
 	<npc id="36103" templateId="36103" clientName="Archer" serverName="glu_ore_fort_archer_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -259,7 +256,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -280,7 +277,6 @@
 			<ai_skill name="Skill01_ID" id="5046" level="6" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -309,7 +305,7 @@
 		</custom>
 	</npc>
 	<npc id="36104" templateId="36104" clientName="General" serverName="glu_ore_fort_officer_de" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="70.4766">
 				<item id="9912" min="40" max="154" chance="100" /> <!-- Knight's Epaulette-->
@@ -333,7 +329,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="DUAL" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -358,7 +354,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -388,7 +383,7 @@
 		</custom>
 	</npc>
 	<npc id="36105" templateId="36105" clientName="Minister" serverName="glu_ore_fort_officer_or" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="70.4766">
 				<item id="9912" min="40" max="154" chance="100" /> <!-- Knight's Epaulette-->
@@ -412,7 +407,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -435,7 +430,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -478,7 +472,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -494,7 +488,6 @@
 			<ai_skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -537,7 +530,7 @@
 			<walk ground="36.48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -591,7 +584,6 @@
 			<ai_param name="z9" val="-2824" />
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -638,7 +630,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -655,7 +647,6 @@
 			<ai_param name="PrivateFollowBoss" val="1" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -698,7 +689,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -710,7 +701,6 @@
 			<ai>di_gi_fort_flagpole</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -750,7 +740,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -797,7 +787,6 @@
 			<ai_param name="ppManage" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -837,7 +826,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -876,7 +865,6 @@
 			<ai_param name="castle_id2" val="3" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -916,7 +904,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -944,7 +932,6 @@
 			<ai_param name="hasPledgePower" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -988,7 +975,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1003,7 +990,6 @@
 			<ai_param name="MoveAroundSocial1" val="105" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ELF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1043,7 +1029,7 @@
 			<walk ground="28" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1058,7 +1044,6 @@
 			<ai_param name="MoveAroundSocial1" val="90" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1098,7 +1083,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1113,7 +1098,6 @@
 			<ai_param name="MoveAroundSocial1" val="144" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1153,7 +1137,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1204,7 +1188,6 @@
 			<ai_item name="item_medal" id="9910" /> <!-- Blood Oath -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1244,7 +1227,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1256,7 +1239,6 @@
 			<ai>di_gi_fort_supply</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1296,7 +1278,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1324,7 +1306,6 @@
 			<ai_param name="zone_type1" val="102" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1364,7 +1345,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1385,7 +1366,6 @@
 			<ai_param name="pos_z01" val="-856" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1425,7 +1405,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1446,7 +1426,6 @@
 			<ai_param name="pos_z01" val="-856" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1486,7 +1465,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1510,7 +1489,6 @@
 			<ai_param name="pos_z01" val="-856" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1536,7 +1514,7 @@
 		</custom>
 	</npc>
 	<npc id="36122" templateId="36122" clientName="Rebel Commander" serverName="di_gi_fort_rebel" level="80" type="warrior">
-		<acquire exp="3200.0"  exp_rate="0.5" />
+		<acquire exp="3200"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="13.78">
 				<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt-->
@@ -1564,7 +1542,7 @@
 			<walk ground="29.8" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1590,7 +1568,6 @@
 			<ai_skill name="Skill02_ID" id="4178" level="7" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DARKELF</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1620,7 +1597,7 @@
 		</custom>
 	</npc>
 	<npc id="36123" templateId="36123" clientName="Decorated Rebel Soldier" serverName="di_gi_fort_rebel_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="78.165">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -1644,7 +1621,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1666,7 +1643,6 @@
 			<ai_skill name="Skill01_ID" id="5065" level="7" /> <!-- Unholy Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1692,7 +1668,7 @@
 		</custom>
 	</npc>
 	<npc id="36124" templateId="36124" clientName="Rebel Private" serverName="di_gi_fort_rebel_zz" level="75" type="warrior">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71.857">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -1716,7 +1692,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1734,7 +1710,6 @@
 			<ai_param name="MoveArounding" val="0" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1763,7 +1738,7 @@
 		</custom>
 	</npc>
 	<npc id="36125" templateId="36125" clientName="Court Guard" serverName="di_gi_fort_guard" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="66.28">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -1787,7 +1762,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1807,7 +1782,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1836,7 +1810,7 @@
 		</custom>
 	</npc>
 	<npc id="36126" templateId="36126" clientName="Guard" serverName="di_gi_fort_guard_e" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="67.211">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -1860,7 +1834,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1880,7 +1854,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1927,7 +1900,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1942,7 +1915,6 @@
 			<ai_param name="fnHi3" val="fortress_inner_controller003.htm" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1968,7 +1940,7 @@
 		</custom>
 	</npc>
 	<npc id="36128" templateId="36128" clientName="Dwarven Gunnery Sergeant" serverName="di_gi_fort_gunner" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="61.737">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -1992,7 +1964,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2013,7 +1985,6 @@
 			<ai_skill name="Skill02_ID" id="5468" level="6" /> <!-- Fire Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2039,7 +2010,7 @@
 		</custom>
 	</npc>
 	<npc id="36129" templateId="36129" clientName="Guard Captain" serverName="di_gi_fort_garrison" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.137">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -2063,7 +2034,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2094,7 +2065,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2127,7 +2097,7 @@
 		</custom>
 	</npc>
 	<npc id="36130" templateId="36130" clientName="Guard" serverName="di_gi_fort_garrison_a" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2146,7 +2116,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2168,7 +2138,6 @@
 			<ai_skill name="Skill01_ID" id="5112" level="6" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2197,7 +2166,7 @@
 		</custom>
 	</npc>
 	<npc id="36131" templateId="36131" clientName="Guard" serverName="di_gi_fort_garrison_b" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="73.01">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -2221,7 +2190,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2241,7 +2210,6 @@
 			<ai_skill name="Skill01_ID" id="5045" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2270,7 +2238,7 @@
 		</custom>
 	</npc>
 	<npc id="36132" templateId="36132" clientName="Support Unit Captain" serverName="di_gi_fort_wizard" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.1571">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -2294,7 +2262,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2327,7 +2295,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2353,7 +2320,7 @@
 		</custom>
 	</npc>
 	<npc id="36133" templateId="36133" clientName="Wizard" serverName="di_gi_fort_witch" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="77.574">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -2377,7 +2344,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2403,7 +2370,6 @@
 			<ai_skill name="Skill02_ID" id="4077" level="6" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2432,7 +2398,7 @@
 		</custom>
 	</npc>
 	<npc id="36134" templateId="36134" clientName="Healer" serverName="di_gi_fort_healer" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="82.382">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -2456,7 +2422,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2481,7 +2447,6 @@
 			<ai_skill name="Skill04_ID" id="5114" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>7</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2510,7 +2475,7 @@
 		</custom>
 	</npc>
 	<npc id="36135" templateId="36135" clientName="Archer Captain" serverName="di_gi_fort_archer" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.2235">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -2534,7 +2499,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2559,7 +2524,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2588,7 +2552,7 @@
 		</custom>
 	</npc>
 	<npc id="36136" templateId="36136" clientName="Archer" serverName="di_gi_fort_archer_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -2612,7 +2576,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2633,7 +2597,6 @@
 			<ai_skill name="Skill01_ID" id="5046" level="6" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2676,7 +2639,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2692,7 +2655,6 @@
 			<ai_skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2735,7 +2697,7 @@
 			<walk ground="36.48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2789,7 +2751,6 @@
 			<ai_param name="z9" val="-1752" />
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2836,7 +2797,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2853,7 +2814,6 @@
 			<ai_param name="PrivateFollowBoss" val="1" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2896,7 +2856,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2908,7 +2868,6 @@
 			<ai>di_ore_fort_flagpole</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2948,7 +2907,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2995,7 +2954,6 @@
 			<ai_param name="ppManage" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3035,7 +2993,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3074,7 +3032,6 @@
 			<ai_param name="castle_id2" val="4" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3114,7 +3071,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3142,7 +3099,6 @@
 			<ai_param name="hasPledgePower" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3186,7 +3142,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3201,7 +3157,6 @@
 			<ai_param name="MoveAroundSocial1" val="105" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ELF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3241,7 +3196,7 @@
 			<walk ground="28" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3256,7 +3211,6 @@
 			<ai_param name="MoveAroundSocial1" val="90" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3296,7 +3250,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3311,7 +3265,6 @@
 			<ai_param name="MoveAroundSocial1" val="144" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3351,7 +3304,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3402,7 +3355,6 @@
 			<ai_item name="item_medal" id="9910" /> <!-- Blood Oath -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3442,7 +3394,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3454,7 +3406,6 @@
 			<ai>di_ore_fort_supply</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3494,7 +3445,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3522,7 +3473,6 @@
 			<ai_param name="zone_type1" val="103" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3562,7 +3512,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3583,7 +3533,6 @@
 			<ai_param name="pos_z01" val="-2528" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3623,7 +3572,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3644,7 +3593,6 @@
 			<ai_param name="pos_z01" val="-2528" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3684,7 +3632,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3708,7 +3656,6 @@
 			<ai_param name="pos_z01" val="-2528" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3734,7 +3681,7 @@
 		</custom>
 	</npc>
 	<npc id="36153" templateId="36153" clientName="Rebel Commander" serverName="di_ore_fort_rebel" level="80" type="warrior">
-		<acquire exp="3200.0"  exp_rate="0.5" />
+		<acquire exp="3200"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="13.78">
 				<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt-->
@@ -3762,7 +3709,7 @@
 			<walk ground="29.8" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3788,7 +3735,6 @@
 			<ai_skill name="Skill02_ID" id="4178" level="7" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DARKELF</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3818,7 +3764,7 @@
 		</custom>
 	</npc>
 	<npc id="36154" templateId="36154" clientName="Decorated Rebel Soldier" serverName="di_ore_fort_rebel_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="78.165">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -3842,7 +3788,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3864,7 +3810,6 @@
 			<ai_skill name="Skill01_ID" id="5065" level="7" /> <!-- Unholy Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3890,7 +3835,7 @@
 		</custom>
 	</npc>
 	<npc id="36155" templateId="36155" clientName="Rebel Private" serverName="di_ore_fort_rebel_zz" level="75" type="warrior">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71.857">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -3914,7 +3859,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3932,7 +3877,6 @@
 			<ai_param name="MoveArounding" val="0" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3961,7 +3905,7 @@
 		</custom>
 	</npc>
 	<npc id="36156" templateId="36156" clientName="Court Guard" serverName="di_ore_fort_guard" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="66.28">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -3985,7 +3929,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4005,7 +3949,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4034,7 +3977,7 @@
 		</custom>
 	</npc>
 	<npc id="36157" templateId="36157" clientName="Guard" serverName="di_ore_fort_guard_e" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="67.211">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -4058,7 +4001,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4078,7 +4021,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4125,7 +4067,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4140,7 +4082,6 @@
 			<ai_param name="fnHi3" val="fortress_inner_controller003.htm" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4166,7 +4107,7 @@
 		</custom>
 	</npc>
 	<npc id="36159" templateId="36159" clientName="Dwarven Gunnery Sergeant" serverName="di_ore_fort_gunner" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="61.737">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -4190,7 +4131,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4211,7 +4152,6 @@
 			<ai_skill name="Skill02_ID" id="5468" level="6" /> <!-- Fire Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4237,7 +4177,7 @@
 		</custom>
 	</npc>
 	<npc id="36160" templateId="36160" clientName="Guard Captain" serverName="di_ore_fort_garrison" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.137">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -4261,7 +4201,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4292,7 +4232,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4325,7 +4264,7 @@
 		</custom>
 	</npc>
 	<npc id="36161" templateId="36161" clientName="Guard" serverName="di_ore_fort_garrison_a" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4344,7 +4283,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4366,7 +4305,6 @@
 			<ai_skill name="Skill01_ID" id="5112" level="6" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4395,7 +4333,7 @@
 		</custom>
 	</npc>
 	<npc id="36162" templateId="36162" clientName="Guard" serverName="di_ore_fort_garrison_b" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="73.01">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -4419,7 +4357,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4439,7 +4377,6 @@
 			<ai_skill name="Skill01_ID" id="5045" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4468,7 +4405,7 @@
 		</custom>
 	</npc>
 	<npc id="36163" templateId="36163" clientName="Support Unit Captain" serverName="di_ore_fort_wizard" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.1571">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -4492,7 +4429,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4525,7 +4462,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4551,7 +4487,7 @@
 		</custom>
 	</npc>
 	<npc id="36164" templateId="36164" clientName="Wizard" serverName="di_ore_fort_witch" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="77.574">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -4575,7 +4511,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4601,7 +4537,6 @@
 			<ai_skill name="Skill02_ID" id="4077" level="6" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4630,7 +4565,7 @@
 		</custom>
 	</npc>
 	<npc id="36165" templateId="36165" clientName="Healer" serverName="di_ore_fort_healer" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="82.382">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -4654,7 +4589,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4679,7 +4614,6 @@
 			<ai_skill name="Skill04_ID" id="5114" level="6" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>7</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4708,7 +4642,7 @@
 		</custom>
 	</npc>
 	<npc id="36166" templateId="36166" clientName="Archer Captain" serverName="di_ore_fort_archer" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.2235">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -4732,7 +4666,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4757,7 +4691,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4786,7 +4719,7 @@
 		</custom>
 	</npc>
 	<npc id="36167" templateId="36167" clientName="Archer" serverName="di_ore_fort_archer_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -4810,7 +4743,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4831,7 +4764,6 @@
 			<ai_skill name="Skill01_ID" id="5046" level="6" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4874,7 +4806,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4890,7 +4822,6 @@
 			<ai_skill name="Bomb" id="2342" level="1" /> <!-- Ballista Bomb -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4933,7 +4864,7 @@
 			<walk ground="36.48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4987,7 +4918,6 @@
 			<ai_param name="z9" val="-3424" />
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5034,7 +4964,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5051,7 +4981,6 @@
 			<ai_param name="PrivateFollowBoss" val="1" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5094,7 +5023,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5106,7 +5035,6 @@
 			<ai>ore_gi_fort_flagpole</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5146,7 +5074,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5193,7 +5121,6 @@
 			<ai_param name="ppManage" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5233,7 +5160,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5272,7 +5199,6 @@
 			<ai_param name="castle_id2" val="3" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ORC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5312,7 +5238,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5340,7 +5266,6 @@
 			<ai_param name="hasPledgePower" val="PP_CONTROL_CASTLE_FUNC" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5384,7 +5309,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -5399,7 +5324,6 @@
 			<ai_param name="MoveAroundSocial1" val="105" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>ELF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5439,7 +5363,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="DUAL" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5454,7 +5378,6 @@
 			<ai_param name="MoveAroundSocial1" val="140" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5498,7 +5421,7 @@
 			<walk ground="28" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5513,7 +5436,6 @@
 			<ai_param name="MoveAroundSocial1" val="90" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5553,7 +5475,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5568,7 +5490,6 @@
 			<ai_param name="MoveAroundSocial1" val="144" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5608,7 +5529,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5659,7 +5580,6 @@
 			<ai_item name="item_medal" id="9910" /> <!-- Blood Oath -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5699,7 +5619,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5711,7 +5631,6 @@
 			<ai>ore_gi_fort_supply</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5751,7 +5670,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5779,7 +5698,6 @@
 			<ai_param name="zone_type1" val="104" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5819,7 +5737,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5840,7 +5758,6 @@
 			<ai_param name="pos_z01" val="-1992" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5880,7 +5797,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5901,7 +5818,6 @@
 			<ai_param name="pos_z01" val="-1992" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5941,7 +5857,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5965,7 +5881,6 @@
 			<ai_param name="pos_z01" val="-1992" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5991,7 +5906,7 @@
 		</custom>
 	</npc>
 	<npc id="36185" templateId="36185" clientName="Rebel Commander" serverName="ore_gi_fort_rebel" level="80" type="warrior">
-		<acquire exp="3200.0"  exp_rate="0.5" />
+		<acquire exp="3200"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="13.78">
 				<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt-->
@@ -6019,7 +5934,7 @@
 			<walk ground="29.8" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" />
+		<base pAtk="7476.5080117304" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5105.4857482389" pDef="546.2" mDef="599.528184" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6045,7 +5960,6 @@
 			<ai_skill name="Skill02_ID" id="4178" level="7" /> <!-- Flame Strike -->
 		</npc_ai>
 		<org hp="679374.315371996" hp_regen="391.417777464402" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DARKELF</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6075,7 +5989,7 @@
 		</custom>
 	</npc>
 	<npc id="36186" templateId="36186" clientName="Decorated Rebel Soldier" serverName="ore_gi_fort_rebel_z" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="78.005">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -6099,7 +6013,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6121,7 +6035,6 @@
 			<ai_skill name="Skill01_ID" id="5065" level="7" /> <!-- Unholy Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6147,7 +6060,7 @@
 		</custom>
 	</npc>
 	<npc id="36187" templateId="36187" clientName="Rebel Private" serverName="ore_gi_fort_rebel_zz" level="75" type="warrior">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="71.957">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -6171,7 +6084,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6189,7 +6102,6 @@
 			<ai_param name="MoveArounding" val="0" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6218,7 +6130,7 @@
 		</custom>
 	</npc>
 	<npc id="36188" templateId="36188" clientName="Court Guard" serverName="ore_gi_fort_guard" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="66.28">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -6242,7 +6154,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6262,7 +6174,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6291,7 +6202,7 @@
 		</custom>
 	</npc>
 	<npc id="36189" templateId="36189" clientName="Guard" serverName="ore_gi_fort_guard_e" level="72" type="warrior">
-		<acquire exp="2592.0"  exp_rate="0.5" />
+		<acquire exp="2592"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="66.211">
 				<item id="9912" min="4" max="12" chance="100" /> <!-- Knight's Epaulette-->
@@ -6315,7 +6226,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -6335,7 +6246,6 @@
 			<ai_skill name="toggle_buff" id="5432" level="1" /> <!-- Weapon Supply -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6364,7 +6274,7 @@
 		</custom>
 	</npc>
 	<npc id="36190" templateId="36190" clientName="Main Machine" serverName="ore_gi_fort_machine" level="75" type="citizen">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -6383,7 +6293,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6403,7 +6313,6 @@
 			<ai_param name="msg_broken3" val="1300011" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6429,7 +6338,7 @@
 		</custom>
 	</npc>
 	<npc id="36191" templateId="36191" clientName="Backup Power Unit" serverName="ore_gi_fort_machine_s" level="75" type="citizen">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -6448,7 +6357,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6464,7 +6373,6 @@
 			<ai_param name="broadcast_range" val="2000" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6490,7 +6398,7 @@
 		</custom>
 	</npc>
 	<npc id="36192" templateId="36192" clientName="Control Unit" serverName="ore_gi_fort_controller" level="75" type="citizen">
-		<acquire exp="2812.5"  exp_rate="0.5" />
+		<acquire exp="2813"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -6509,7 +6417,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6529,7 +6437,6 @@
 			<ai_item name="DoorKey" id="10014" /> <!-- Control Room Card -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6573,7 +6480,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6588,7 +6495,6 @@
 			<ai_param name="fnHi3" val="fortress_inner_controller003.htm" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6614,7 +6520,7 @@
 		</custom>
 	</npc>
 	<npc id="36194" templateId="36194" clientName="Dwarven Gunnery Sergeant" serverName="ore_gi_fort_gunner" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="48.2776">
 				<item id="9912" min="24" max="72" chance="4" /> <!-- Knight's Epaulette-->
@@ -6639,7 +6545,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -6660,7 +6566,6 @@
 			<ai_skill name="Skill02_ID" id="5468" level="6" /> <!-- Fire Shot -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6686,7 +6591,7 @@
 		</custom>
 	</npc>
 	<npc id="36195" templateId="36195" clientName="Scout Golem" serverName="ore_gi_fort_golem" level="74" type="warrior">
-		<acquire exp="2738.0"  exp_rate="0.5" />
+		<acquire exp="2738"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="46">
 				<item id="9912" min="4" max="6" chance="100" /> <!-- Knight's Epaulette-->
@@ -6710,7 +6615,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="230.25444" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="230.25444" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6728,7 +6633,6 @@
 			<ai_param name="MovingAttack" val="0" />
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6754,7 +6658,7 @@
 		</custom>
 	</npc>
 	<npc id="36196" templateId="36196" clientName="Guard Captain" serverName="ore_gi_fort_garrison" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.1571">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -6778,7 +6682,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6809,7 +6713,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6842,7 +6745,7 @@
 		</custom>
 	</npc>
 	<npc id="36197" templateId="36197" clientName="Guard" serverName="ore_gi_fort_garrison_a" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -6861,7 +6764,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6883,7 +6786,6 @@
 			<ai_skill name="Skill01_ID" id="5112" level="6" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6912,7 +6814,7 @@
 		</custom>
 	</npc>
 	<npc id="36198" templateId="36198" clientName="Guard" serverName="ore_gi_fort_garrison_b" level="76" type="warrior">
-		<acquire exp="2888.0"  exp_rate="0.5" />
+		<acquire exp="2888"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="73.01">
 				<item id="9912" min="4" max="16" chance="100" /> <!-- Knight's Epaulette-->
@@ -6936,7 +6838,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6956,7 +6858,6 @@
 			<ai_skill name="Skill01_ID" id="5045" level="6" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6985,7 +6886,7 @@
 		</custom>
 	</npc>
 	<npc id="36199" templateId="36199" clientName="Support Unit Captain" serverName="ore_gi_fort_wizard" level="78" type="warrior">
-		<acquire exp="3042.0"  exp_rate="0.5" />
+		<acquire exp="3042"  exp_rate="0.5" />
 		<additional_make_multi_list>
 			<category chance="84.1571">
 				<item id="9912" min="140" max="300" chance="100" /> <!-- Knight's Epaulette-->
@@ -7009,7 +6910,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" />
+		<base pAtk="7149.40063947237" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4882.11390959346" pDef="532.320976" mDef="584.294088" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7042,7 +6943,6 @@
 			<ai_skill name="selfheal_skill" id="5457" level="1" /> <!-- Complete Recovery -->
 		</npc_ai>
 		<org hp="681761.551881449" hp_regen="397.49728048556" mp="1607.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

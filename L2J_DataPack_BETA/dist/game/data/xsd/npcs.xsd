@@ -200,6 +200,8 @@
 											<xs:attribute type="xs:float" name="mAtk" use="optional" />
 											<xs:attribute type="xs:float" name="pDef" use="optional" />
 											<xs:attribute type="xs:float" name="mDef" use="optional" />
+											<xs:attribute type="xs:float" name="accuracy" use="optional" />
+											<xs:attribute type="xs:float" name="evasion" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -320,16 +322,6 @@
 											<xs:attribute type="xs:float" name="hp_regen" use="optional" />
 											<xs:attribute type="xs:float" name="mp" use="optional" />
 											<xs:attribute type="xs:float" name="mp_regen" use="optional" />
-										</xs:extension>
-									</xs:simpleContent>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="physical">
-								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="hitModify" use="optional" />
-											<xs:attribute type="xs:byte" name="avoidModify" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
