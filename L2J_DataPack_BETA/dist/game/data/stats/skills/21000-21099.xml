@@ -70,14 +70,18 @@
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
+	    <!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="ETC" />
+		<for>
+			<effect name="BigHead" abnormalTime="600" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
+		</for>
 	</skill>
 	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
