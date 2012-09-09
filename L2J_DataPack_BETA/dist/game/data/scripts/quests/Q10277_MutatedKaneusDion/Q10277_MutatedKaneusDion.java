@@ -30,16 +30,23 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10277_MutatedKaneusDion extends Quest
 {
-	
 	// NPCs
 	private static final int LUKAS = 30071;
 	private static final int MIRIEN = 30461;
 	private static final int CRIMSON_HATU = 18558;
 	private static final int SEER_FLOUROS = 18559;
-	
 	// Items
 	private static final int TISSUE_CH = 13832;
 	private static final int TISSUE_SF = 13833;
+	
+	public Q10277_MutatedKaneusDion(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LUKAS);
+		addTalkId(LUKAS, MIRIEN);
+		addKillId(CRIMSON_HATU, SEER_FLOUROS);
+		registerQuestItems(TISSUE_CH, TISSUE_SF);
+	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -57,13 +64,13 @@ public class Q10277_MutatedKaneusDion extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getLevel() > 27) ? "30071-01.htm" : "30371-00.htm";
+						htmltext = (player.getLevel() > 27) ? "30071-01.htm" : "30071-00.html";
 						break;
 					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30371-05.htm" : "30371-04.htm";
+						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30071-05.html" : "30071-04.html";
 						break;
 					case State.COMPLETED:
-						htmltext = "30071-06.htm";
+						htmltext = "30071-06.html";
 						break;
 				}
 				break;
@@ -71,7 +78,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 				switch (st.getState())
 				{
 					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30461-02.htm" : "30461-01.htm";
+						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30461-02.html" : "30461-01.html";
 						break;
 					case State.COMPLETED:
 						htmltext = getAlreadyCompletedMsg(player);
@@ -95,10 +102,10 @@ public class Q10277_MutatedKaneusDion extends Quest
 		
 		switch (event)
 		{
-			case "30071-03.htm":
+			case "30071-03.html":
 				st.startQuest();
 				break;
-			case "30461-03.htm":
+			case "30461-03.html":
 				st.giveAdena(20000, true);
 				st.exitQuest(false, true);
 				break;
@@ -112,7 +119,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 		QuestState st = killer.getQuestState(getName());
 		if (st == null)
 		{
-			return null;
+			return super.onKill(npc, killer, isPet);
 		}
 		
 		final int npcId = npc.getNpcId();
@@ -137,7 +144,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 		{
 			rewardItem(npcId, st);
 		}
-		return null;
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	/**
@@ -156,19 +163,6 @@ public class Q10277_MutatedKaneusDion extends Quest
 			st.giveItems(TISSUE_SF, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
-	}
-	
-	public Q10277_MutatedKaneusDion(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LUKAS);
-		addTalkId(LUKAS, MIRIEN);
-		addKillId(CRIMSON_HATU, SEER_FLOUROS);
-		questItemIds = new int[]
-		{
-			TISSUE_CH,
-			TISSUE_SF
-		};
 	}
 	
 	public static void main(String[] args)
