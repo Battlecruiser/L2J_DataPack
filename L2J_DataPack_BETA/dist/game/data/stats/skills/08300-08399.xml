@@ -120,9 +120,13 @@
 		</for>
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
+		</for>
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
 		<!-- Confirmed CT2.5 -->
