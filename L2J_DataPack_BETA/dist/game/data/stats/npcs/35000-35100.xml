@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35010" templateId="35010" clientName="Mercenary" serverName="mercenary_sword_fix" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -19,7 +19,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -31,7 +31,6 @@
 			<ai>mercenary_sword_fix</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -61,7 +60,7 @@
 		</custom>
 	</npc>
 	<npc id="35011" templateId="35011" clientName="Mercenary" serverName="mercenary_pole_fix" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -80,7 +79,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -92,7 +91,6 @@
 			<ai>mercenary_pole_fix</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -121,7 +119,7 @@
 		</custom>
 	</npc>
 	<npc id="35012" templateId="35012" clientName="Mercenary" serverName="mercenary_bow_fix" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -140,7 +138,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -152,7 +150,6 @@
 			<ai>mercenary_bow_fix</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -181,7 +178,7 @@
 		</custom>
 	</npc>
 	<npc id="35013" templateId="35013" clientName="Mercenary" serverName="mercenary_cleric_fix" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -200,7 +197,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -213,7 +210,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -242,7 +238,7 @@
 		</custom>
 	</npc>
 	<npc id="35014" templateId="35014" clientName="Mercenary" serverName="mercenary_wizard_fix" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -261,7 +257,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -274,7 +270,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -303,7 +298,7 @@
 		</custom>
 	</npc>
 	<npc id="35015" templateId="35015" clientName="Mercenary" serverName="mercenary_sword_move" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -322,7 +317,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -334,7 +329,6 @@
 			<ai>mercenary_sword_move</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -364,7 +358,7 @@
 		</custom>
 	</npc>
 	<npc id="35016" templateId="35016" clientName="Mercenary" serverName="mercenary_pole_move" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -383,7 +377,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -395,7 +389,6 @@
 			<ai>mercenary_pole_move</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -424,7 +417,7 @@
 		</custom>
 	</npc>
 	<npc id="35017" templateId="35017" clientName="Mercenary" serverName="mercenary_bow_move" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -443,7 +436,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -455,7 +448,6 @@
 			<ai>mercenary_bow_move</ai>
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -484,7 +476,7 @@
 		</custom>
 	</npc>
 	<npc id="35018" templateId="35018" clientName="Mercenary" serverName="mercenary_cleric_move" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -503,7 +495,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -516,7 +508,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -545,7 +536,7 @@
 		</custom>
 	</npc>
 	<npc id="35019" templateId="35019" clientName="Mercenary" serverName="mercenary_wizard_move" level="67" type="warrior">
-		<acquire exp="448.90000000000003"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="449"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -564,7 +555,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" />
+		<base pAtk="624.93199" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="426.74754" pDef="281.55251" mDef="206.02791" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -577,7 +568,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2295.48154" hp_regen="7.5" mp="1251" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -606,7 +596,7 @@
 		</custom>
 	</npc>
 	<npc id="35020" templateId="35020" clientName="Mercenary of Dawn" serverName="dawn_merc_sword_fix" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -625,7 +615,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -637,7 +627,6 @@
 			<ai>dawn_merc_sword_fix</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -666,7 +655,7 @@
 		</custom>
 	</npc>
 	<npc id="35021" templateId="35021" clientName="Mercenary of Dawn" serverName="dawn_merc_pole_fix" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -685,7 +674,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -697,7 +686,6 @@
 			<ai>dawn_merc_pole_fix</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -726,7 +714,7 @@
 		</custom>
 	</npc>
 	<npc id="35022" templateId="35022" clientName="Mercenary of Dawn" serverName="dawn_merc_bow_fix" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -745,7 +733,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -757,7 +745,6 @@
 			<ai>dawn_merc_bow_fix</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -786,7 +773,7 @@
 		</custom>
 	</npc>
 	<npc id="35023" templateId="35023" clientName="Mercenary of Dawn" serverName="dawn_merc_cleric_fix" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -805,7 +792,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -818,7 +805,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -847,7 +833,7 @@
 		</custom>
 	</npc>
 	<npc id="35024" templateId="35024" clientName="Mercenary of Dawn" serverName="dawn_merc_wizard_fix" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -866,7 +852,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -879,7 +865,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -908,7 +893,7 @@
 		</custom>
 	</npc>
 	<npc id="35025" templateId="35025" clientName="Mercenary of Dawn" serverName="dawn_merc_sword_move" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -927,7 +912,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -939,7 +924,6 @@
 			<ai>dawn_merc_sword_move</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -968,7 +952,7 @@
 		</custom>
 	</npc>
 	<npc id="35026" templateId="35026" clientName="Mercenary of Dawn" serverName="dawn_merc_pole_move" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -987,7 +971,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -999,7 +983,6 @@
 			<ai>dawn_merc_pole_move</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1028,7 +1011,7 @@
 		</custom>
 	</npc>
 	<npc id="35027" templateId="35027" clientName="Mercenary of Dawn" serverName="dawn_merc_bow_move" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1047,7 +1030,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1059,7 +1042,6 @@
 			<ai>dawn_merc_bow_move</ai>
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1088,7 +1070,7 @@
 		</custom>
 	</npc>
 	<npc id="35028" templateId="35028" clientName="Mercenary of Dawn" serverName="dawn_merc_cleric_move" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1107,7 +1089,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1120,7 +1102,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1149,7 +1130,7 @@
 		</custom>
 	</npc>
 	<npc id="35029" templateId="35029" clientName="Mercenary of Dawn" serverName="dawn_merc_wizard_move" level="80" type="warrior">
-		<acquire exp="640.0"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="640"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1168,7 +1149,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" />
+		<base pAtk="970.537548504614" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1181,7 +1162,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1210,7 +1190,7 @@
 		</custom>
 	</npc>
 	<npc id="35030" templateId="35030" clientName="Elite Mercenary Guild Member" serverName="elite_merc_sword_fix" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1229,7 +1209,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1241,7 +1221,6 @@
 			<ai>elite_merc_sword_fix</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1270,7 +1249,7 @@
 		</custom>
 	</npc>
 	<npc id="35031" templateId="35031" clientName="Elite Mercenary Guild Member" serverName="elite_merc_pole_fix" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1289,7 +1268,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1301,7 +1280,6 @@
 			<ai>elite_merc_pole_fix</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1330,7 +1308,7 @@
 		</custom>
 	</npc>
 	<npc id="35032" templateId="35032" clientName="Elite Mercenary Guild Member" serverName="elite_merc_bow_fix" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1349,7 +1327,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1361,7 +1339,6 @@
 			<ai>elite_merc_bow_fix</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1390,7 +1367,7 @@
 		</custom>
 	</npc>
 	<npc id="35033" templateId="35033" clientName="Elite Mercenary Guild Member" serverName="elite_merc_cleric_fix" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1409,7 +1386,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1422,7 +1399,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1451,7 +1427,7 @@
 		</custom>
 	</npc>
 	<npc id="35034" templateId="35034" clientName="Elite Mercenary Guild Member" serverName="elite_merc_wizard_fix" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1470,7 +1446,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1483,7 +1459,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1512,7 +1487,7 @@
 		</custom>
 	</npc>
 	<npc id="35035" templateId="35035" clientName="Elite Mercenary Guild Member" serverName="elite_merc_sword_move" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1531,7 +1506,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1543,7 +1518,6 @@
 			<ai>elite_merc_sword_move</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1572,7 +1546,7 @@
 		</custom>
 	</npc>
 	<npc id="35036" templateId="35036" clientName="Elite Mercenary Guild Member" serverName="elite_merc_pole_move" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1591,7 +1565,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1603,7 +1577,6 @@
 			<ai>elite_merc_pole_move</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1632,7 +1605,7 @@
 		</custom>
 	</npc>
 	<npc id="35037" templateId="35037" clientName="Elite Mercenary Guild Member" serverName="elite_merc_bow_move" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1651,7 +1624,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1663,7 +1636,6 @@
 			<ai>elite_merc_bow_move</ai>
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1692,7 +1664,7 @@
 		</custom>
 	</npc>
 	<npc id="35038" templateId="35038" clientName="Elite Mercenary Guild Member" serverName="elite_merc_cleric_move" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1711,7 +1683,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1724,7 +1696,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1753,7 +1724,7 @@
 		</custom>
 	</npc>
 	<npc id="35039" templateId="35039" clientName="Elite Mercenary Guild Member" serverName="elite_merc_wizard_move" level="76" type="warrior">
-		<acquire exp="577.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="578"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1772,7 +1743,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" />
+		<base pAtk="824.422073095" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="562.9734023" pDef="323.78455" mDef="236.93149" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1785,7 +1756,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2758.05923328" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1814,7 +1784,7 @@
 		</custom>
 	</npc>
 	<npc id="35040" templateId="35040" clientName="Greater Recruit" serverName="dusk_merc_sword_fix" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1833,7 +1803,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1845,7 +1815,6 @@
 			<ai>dusk_merc_sword_fix</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1875,7 +1844,7 @@
 		</custom>
 	</npc>
 	<npc id="35041" templateId="35041" clientName="Greater Recruit" serverName="dusk_merc_pole_fix" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1894,7 +1863,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1906,7 +1875,6 @@
 			<ai>dusk_merc_pole_fix</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1935,7 +1903,7 @@
 		</custom>
 	</npc>
 	<npc id="35042" templateId="35042" clientName="Greater Recruit" serverName="dusk_merc_bow_fix" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -1954,7 +1922,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -1966,7 +1934,6 @@
 			<ai>dusk_merc_bow_fix</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1995,7 +1962,7 @@
 		</custom>
 	</npc>
 	<npc id="35043" templateId="35043" clientName="Greater Recruit" serverName="dusk_merc_cleric_fix" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2014,7 +1981,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2027,7 +1994,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2056,7 +2022,7 @@
 		</custom>
 	</npc>
 	<npc id="35044" templateId="35044" clientName="Greater Recruit" serverName="dusk_merc_wizard_fix" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2075,7 +2041,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2088,7 +2054,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2117,7 +2082,7 @@
 		</custom>
 	</npc>
 	<npc id="35045" templateId="35045" clientName="Greater Recruit" serverName="dusk_merc_sword_move" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2136,7 +2101,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2148,7 +2113,6 @@
 			<ai>dusk_merc_sword_move</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2178,7 +2142,7 @@
 		</custom>
 	</npc>
 	<npc id="35046" templateId="35046" clientName="Greater Recruit" serverName="dusk_merc_pole_move" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2197,7 +2161,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2209,7 +2173,6 @@
 			<ai>dusk_merc_pole_move</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2238,7 +2201,7 @@
 		</custom>
 	</npc>
 	<npc id="35047" templateId="35047" clientName="Greater Recruit" serverName="dusk_merc_bow_move" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2257,7 +2220,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2269,7 +2232,6 @@
 			<ai>dusk_merc_bow_move</ai>
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2298,7 +2260,7 @@
 		</custom>
 	</npc>
 	<npc id="35048" templateId="35048" clientName="Greater Recruit" serverName="dusk_merc_cleric_move" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2317,7 +2279,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2330,7 +2292,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2359,7 +2320,7 @@
 		</custom>
 	</npc>
 	<npc id="35049" templateId="35049" clientName="Greater Recruit" serverName="dusk_merc_wizard_move" level="72" type="warrior">
-		<acquire exp="518.4"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="518"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2378,7 +2339,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" />
+		<base pAtk="731.52506" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2391,7 +2352,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2420,7 +2380,7 @@
 		</custom>
 	</npc>
 	<npc id="35050" templateId="35050" clientName="Recruit" serverName="undead_merc_sword_fix" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2439,7 +2399,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2451,7 +2411,6 @@
 			<ai>undead_merc_sword_fix</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2480,7 +2439,7 @@
 		</custom>
 	</npc>
 	<npc id="35051" templateId="35051" clientName="Recruit" serverName="undead_merc_pole_fix" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2499,7 +2458,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2511,7 +2470,6 @@
 			<ai>undead_merc_pole_fix</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2540,7 +2498,7 @@
 		</custom>
 	</npc>
 	<npc id="35052" templateId="35052" clientName="Recruit" serverName="undead_merc_bow_fix" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2559,7 +2517,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2571,7 +2529,6 @@
 			<ai>undead_merc_bow_fix</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2600,7 +2557,7 @@
 		</custom>
 	</npc>
 	<npc id="35053" templateId="35053" clientName="Recruit" serverName="undead_merc_cleric_fix" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2619,7 +2576,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2632,7 +2589,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2661,7 +2617,7 @@
 		</custom>
 	</npc>
 	<npc id="35054" templateId="35054" clientName="Recruit" serverName="undead_merc_wizard_fix" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2680,7 +2636,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2693,7 +2649,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2722,7 +2677,7 @@
 		</custom>
 	</npc>
 	<npc id="35055" templateId="35055" clientName="Recruit" serverName="undead_merc_sword_move" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2741,7 +2696,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2753,7 +2708,6 @@
 			<ai>undead_merc_sword_move</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2782,7 +2736,7 @@
 		</custom>
 	</npc>
 	<npc id="35056" templateId="35056" clientName="Recruit" serverName="undead_merc_pole_move" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2801,7 +2755,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2813,7 +2767,6 @@
 			<ai>undead_merc_pole_move</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2842,7 +2795,7 @@
 		</custom>
 	</npc>
 	<npc id="35057" templateId="35057" clientName="Recruit" serverName="undead_merc_bow_move" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2861,7 +2814,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -2873,7 +2826,6 @@
 			<ai>undead_merc_bow_move</ai>
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2902,7 +2854,7 @@
 		</custom>
 	</npc>
 	<npc id="35058" templateId="35058" clientName="Recruit" serverName="undead_merc_cleric_move" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2921,7 +2873,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2934,7 +2886,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2963,7 +2914,7 @@
 		</custom>
 	</npc>
 	<npc id="35059" templateId="35059" clientName="Recruit" serverName="undead_merc_wizard_move" level="64" type="warrior">
-		<acquire exp="409.6"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="410"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -2982,7 +2933,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" />
+		<base pAtk="562.02275" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="383.78868" pDef="267.04468" mDef="195.41171" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2995,7 +2946,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2141.82127" hp_regen="7.5" mp="1158" mp_regen="2.7" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3024,7 +2974,7 @@
 		</custom>
 	</npc>
 	<npc id="35060" templateId="35060" clientName="Nephilim Mercenary" serverName="dawn_hero_sword_move" level="85" type="warrior">
-		<acquire exp="722.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="723"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3043,7 +2993,7 @@
 			<walk ground="36.48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="2920.46741860649" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5982.90187463237" pDef="361.78814" mDef="264.74086" />
+		<base pAtk="2920.46741860649" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5982.90187463237" pDef="361.78814" mDef="264.74086" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3057,7 +3007,6 @@
 			<ai_skill name="Dispel" id="5113" level="7" /> <!-- Buff Dispell -->
 		</npc_ai>
 		<org hp="596964.367482148" hp_regen="981" mp="1662.64929543826" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3088,7 +3037,7 @@
 		</custom>
 	</npc>
 	<npc id="35061" templateId="35061" clientName="Nephilim Mercenary" serverName="dawn_hero_wizard_move" level="82" type="warrior">
-		<acquire exp="672.4000000000001"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="672"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3107,7 +3056,7 @@
 			<walk ground="33" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="2704.10327154869" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5539.65578417714" pDef="349.77477" mDef="255.95" />
+		<base pAtk="2704.10327154869" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="5539.65578417714" pDef="349.77477" mDef="255.95" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3121,7 +3070,6 @@
 			<ai_skill name="Hold" id="5114" level="7" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="585703.507797897" hp_regen="989" mp="1561.39135959339" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3165,7 +3113,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3180,7 +3128,6 @@
 			<ai_param name="MoveAroundSocial1" val="0" />
 		</npc_ai>
 		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3221,7 +3168,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" />
+		<base pAtk="44.32863" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="30.2707" pDef="86.87049" mDef="63.56806" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3233,7 +3180,6 @@
 			<ai>gludio_holything</ai>
 		</npc_ai>
 		<org hp="342.5127" hp_regen="2.5" mp="192" mp_regen="1.2" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ETC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3260,7 +3206,7 @@
 		</custom>
 	</npc>
 	<npc id="35064" templateId="35064" clientName="Baron Lewin Waldner" serverName="duke_lewin_waldner" level="83" type="warrior">
-		<acquire exp="688.9000000000001"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="689"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3279,7 +3225,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="3298.27085008098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" />
+		<base pAtk="3298.27085008098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3291,7 +3237,6 @@
 			<ai>duke_lewin_waldner</ai>
 		</npc_ai>
 		<org hp="38355.9060587002" hp_regen="8.5" mp="5332.2" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3320,7 +3265,7 @@
 		</custom>
 	</npc>
 	<npc id="35065" templateId="35065" clientName="Cronenberg" serverName="sir_cronenberg" level="81" type="warrior">
-		<acquire exp="656.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="656"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3339,7 +3284,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="3036.96805390282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="691.285164307598" pDef="345.61127" mDef="252.90333" />
+		<base pAtk="3036.96805390282" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="691.285164307598" pDef="345.61127" mDef="252.90333" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3351,7 +3296,6 @@
 			<ai>sir_cronenberg</ai>
 		</npc_ai>
 		<org hp="34617.7253215841" hp_regen="8.5" mp="5126.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3380,7 +3324,7 @@
 		</custom>
 	</npc>
 	<npc id="35066" templateId="35066" clientName="Royal Knight" serverName="gludio_knight" level="79" type="warrior">
-		<acquire exp="624.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="624"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3399,7 +3343,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3411,7 +3355,6 @@
 			<ai>gludio_knight</ai>
 		</npc_ai>
 		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3441,7 +3384,7 @@
 		</custom>
 	</npc>
 	<npc id="35067" templateId="35067" clientName="Court Sorcerer" serverName="gludio_wizard" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3460,7 +3403,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3473,7 +3416,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3502,7 +3444,7 @@
 		</custom>
 	</npc>
 	<npc id="35068" templateId="35068" clientName="Court Sorcerer" serverName="gludio_cleric" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3521,7 +3463,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3534,7 +3476,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3563,7 +3504,7 @@
 		</custom>
 	</npc>
 	<npc id="35069" templateId="35069" clientName="Court Guard" serverName="gludio_court_guard" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3582,7 +3523,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3594,7 +3535,6 @@
 			<ai>gludio_court_guard</ai>
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3623,7 +3563,7 @@
 		</custom>
 	</npc>
 	<npc id="35070" templateId="35070" clientName="Guard" serverName="gludio_spear_guard_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3642,7 +3582,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3654,7 +3594,6 @@
 			<ai>gludio_spear_guard_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3683,7 +3622,7 @@
 		</custom>
 	</npc>
 	<npc id="35071" templateId="35071" clientName="Guard" serverName="gludio_sword_guard_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3702,7 +3641,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3714,7 +3653,6 @@
 			<ai>gludio_sword_guard_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3743,7 +3681,7 @@
 		</custom>
 	</npc>
 	<npc id="35072" templateId="35072" clientName="Guard" serverName="gludio_bow_guard_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3762,7 +3700,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3774,7 +3712,6 @@
 			<ai>gludio_bow_guard_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3803,7 +3740,7 @@
 		</custom>
 	</npc>
 	<npc id="35073" templateId="35073" clientName="Guard" serverName="gludio_spear_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3822,7 +3759,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3834,7 +3771,6 @@
 			<ai>gludio_spear_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3863,7 +3799,7 @@
 		</custom>
 	</npc>
 	<npc id="35074" templateId="35074" clientName="Guard" serverName="gludio_sword_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3882,7 +3818,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3894,7 +3830,6 @@
 			<ai>gludio_sword_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3923,7 +3858,7 @@
 		</custom>
 	</npc>
 	<npc id="35075" templateId="35075" clientName="Guard" serverName="gludio_bow_guard_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -3942,7 +3877,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3954,7 +3889,6 @@
 			<ai>gludio_bow_guard_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3983,7 +3917,7 @@
 		</custom>
 	</npc>
 	<npc id="35076" templateId="35076" clientName="Guard" serverName="gludio_spear_guard_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4002,7 +3936,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4014,7 +3948,6 @@
 			<ai>gludio_spear_guard_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4043,7 +3976,7 @@
 		</custom>
 	</npc>
 	<npc id="35077" templateId="35077" clientName="Guard" serverName="gludio_sword_guard_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4062,7 +3995,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4074,7 +4007,6 @@
 			<ai>gludio_sword_guard_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4103,7 +4035,7 @@
 		</custom>
 	</npc>
 	<npc id="35078" templateId="35078" clientName="Guard" serverName="gludio_bow_guard_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4122,7 +4054,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4134,7 +4066,6 @@
 			<ai>gludio_bow_guard_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4163,7 +4094,7 @@
 		</custom>
 	</npc>
 	<npc id="35079" templateId="35079" clientName="Royal Knight" serverName="gludio_knight_s" level="79" type="warrior">
-		<acquire exp="624.1"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="624"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4182,7 +4113,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" />
+		<base pAtk="929.930814318487" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.022195830619" pDef="337.07008" mDef="246.65326" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4194,7 +4125,6 @@
 			<ai>gludio_knight_s</ai>
 		</npc_ai>
 		<org hp="3127.82459333517" hp_regen="8.5" mp="1641" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4224,7 +4154,7 @@
 		</custom>
 	</npc>
 	<npc id="35080" templateId="35080" clientName="Court Sorcerer" serverName="gludio_wizard_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4243,7 +4173,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4256,7 +4186,6 @@
 			<ai_skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4285,7 +4214,7 @@
 		</custom>
 	</npc>
 	<npc id="35081" templateId="35081" clientName="Court Sorcerer" serverName="gludio_cleric_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4304,7 +4233,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="27" int="41" dex="21" wit="20" con="27" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4317,7 +4246,6 @@
 			<ai_skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4346,7 +4274,7 @@
 		</custom>
 	</npc>
 	<npc id="35082" templateId="35082" clientName="Court Guard" serverName="gludio_court_guard_s" level="77" type="warrior">
-		<acquire exp="592.9"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="593"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4365,7 +4293,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4377,7 +4305,6 @@
 			<ai>gludio_court_guard_s</ai>
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4406,7 +4333,7 @@
 		</custom>
 	</npc>
 	<npc id="35083" templateId="35083" clientName="Guard" serverName="gludio_spear_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4425,7 +4352,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4437,7 +4364,6 @@
 			<ai>gludio_spear_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4466,7 +4392,7 @@
 		</custom>
 	</npc>
 	<npc id="35084" templateId="35084" clientName="Guard" serverName="gludio_sword_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4485,7 +4411,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4497,7 +4423,6 @@
 			<ai>gludio_sword_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4526,7 +4451,7 @@
 		</custom>
 	</npc>
 	<npc id="35085" templateId="35085" clientName="Guard" serverName="gludio_bow_guard_s_e" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4545,7 +4470,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4557,7 +4482,6 @@
 			<ai>gludio_bow_guard_s_e</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4586,7 +4510,7 @@
 		</custom>
 	</npc>
 	<npc id="35086" templateId="35086" clientName="Guard" serverName="gludio_spear_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4605,7 +4529,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4617,7 +4541,6 @@
 			<ai>gludio_spear_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4646,7 +4569,7 @@
 		</custom>
 	</npc>
 	<npc id="35087" templateId="35087" clientName="Guard" serverName="gludio_sword_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4665,7 +4588,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4677,7 +4600,6 @@
 			<ai>gludio_sword_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4706,7 +4628,7 @@
 		</custom>
 	</npc>
 	<npc id="35088" templateId="35088" clientName="Guard" serverName="gludio_bow_guard_s_de" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4725,7 +4647,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4737,7 +4659,6 @@
 			<ai>gludio_bow_guard_s_de</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4766,7 +4687,7 @@
 		</custom>
 	</npc>
 	<npc id="35089" templateId="35089" clientName="Guard" serverName="gludio_spear_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4785,7 +4706,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4797,7 +4718,6 @@
 			<ai>gludio_spear_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4826,7 +4746,7 @@
 		</custom>
 	</npc>
 	<npc id="35090" templateId="35090" clientName="Guard" serverName="gludio_sword_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4845,7 +4765,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4857,7 +4777,6 @@
 			<ai>gludio_sword_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4886,7 +4805,7 @@
 		</custom>
 	</npc>
 	<npc id="35091" templateId="35091" clientName="Guard" serverName="gludio_bow_guard_s_hu" level="75" type="warrior">
-		<acquire exp="562.5"  exp_rate="0.1" sp="1.0" />
+		<acquire exp="563"  exp_rate="0.1" sp="1" />
 		<agro_range>1000</agro_range>
 		<clans>
 			<clan>door_clan</clan>
@@ -4905,7 +4824,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -4917,7 +4836,6 @@
 			<ai>gludio_bow_guard_s_hu</ai>
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>CASTLE_GUARD</race>
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4964,7 +4882,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4998,7 +4916,6 @@
 			<ai_param name="pos_z13" val="-2556" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5042,7 +4959,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5076,7 +4993,6 @@
 			<ai_param name="pos_z13" val="-2556" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5120,7 +5036,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5154,7 +5070,6 @@
 			<ai_param name="pos_z03" val="-2492" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>MERCENARY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5194,7 +5109,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5213,7 +5128,6 @@
 			<ai_param name="pos_z1" val="-2475" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5253,7 +5167,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5279,7 +5193,6 @@
 			<ai_param name="dominion_id" val="81" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5319,7 +5232,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5345,7 +5258,6 @@
 			<ai_param name="dominion_id" val="81" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5385,7 +5297,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5400,7 +5312,6 @@
 			<ai_param name="MoveAroundSocial1" val="93" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5443,7 +5354,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="233.61053" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5467,7 +5378,6 @@
 			<ai_param name="MoveAroundSocial1" val="150" />
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DWARF</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

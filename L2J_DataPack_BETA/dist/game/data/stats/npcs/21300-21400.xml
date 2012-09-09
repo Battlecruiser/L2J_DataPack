@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21300" templateId="21300" clientName="Eye of Guide" serverName="guiding_eye" level="72" type="warrior">
-		<acquire exp="26497.622016"  exp_rate="5.111424" sp="2692.0" />
+		<acquire exp="26498"  exp_rate="5.111424" sp="2692" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3663" max="7480" chance="100" /> <!-- Adena-->
@@ -47,7 +47,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -71,7 +71,6 @@
 			<ai_skill name="Heal" id="4613" level="7" /> <!-- Clan Heal -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -98,7 +97,7 @@
 		</custom>
 	</npc>
 	<npc id="21301" templateId="21301" clientName="Gaze of Nightmare" serverName="eye_of_nightmare" level="72" type="warrior">
-		<acquire exp="31797.1464192"  exp_rate="6.1337088" sp="3230.0" />
+		<acquire exp="31797"  exp_rate="6.1337088" sp="3230" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4396" max="8976" chance="100" /> <!-- Adena-->
@@ -144,7 +143,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.41" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -172,7 +171,6 @@
 			<ai_skill name="DeBuffCancel" id="4650" level="1" /> <!-- Hold Dispell -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -198,7 +196,7 @@
 		</custom>
 	</npc>
 	<npc id="21302" templateId="21302" clientName="Eye of Watchman" serverName="watching_eye" level="73" type="warrior">
-		<acquire exp="25580.031324000003"  exp_rate="4.800156" sp="2632.0" />
+		<acquire exp="25580"  exp_rate="4.800156" sp="2632" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3552" max="7232" chance="100" /> <!-- Adena-->
@@ -247,7 +245,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -274,7 +272,6 @@
 			<ai_skill name="DeBuffCancel" id="4650" level="1" /> <!-- Hold Dispell -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -301,7 +298,7 @@
 		</custom>
 	</npc>
 	<npc id="21303" templateId="21303" clientName="Homunculus" serverName="homunculus" level="73" type="warrior">
-		<acquire exp="25867.445610000002"  exp_rate="4.85409" sp="2662.0" />
+		<acquire exp="25867"  exp_rate="4.85409" sp="2662" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3592" max="7313" chance="100" /> <!-- Adena-->
@@ -351,7 +348,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -373,7 +370,6 @@
 			<ai_skill name="W_ShortRangeDDMagic" id="4561" level="7" /> <!-- Fire Burn -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -400,7 +396,7 @@
 		</custom>
 	</npc>
 	<npc id="21304" templateId="21304" clientName="Grendel Slave" serverName="grendel_slave" level="74" type="warrior">
-		<acquire exp="38010.8304096"  exp_rate="6.9413496" sp="3962.0" />
+		<acquire exp="38011"  exp_rate="6.9413496" sp="3962" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5287" max="10776" chance="100" /> <!-- Adena-->
@@ -447,7 +443,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -474,7 +470,6 @@
 			<ai_skill name="SelfBuff4" id="4091" level="1" /> <!-- Spirit Ogre -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -500,7 +495,7 @@
 		</custom>
 	</npc>
 	<npc id="21305" templateId="21305" clientName="Eye of Pilgrim" serverName="protecting_eye" level="74" type="warrior">
-		<acquire exp="27990.157824"  exp_rate="5.111424" sp="2917.0" />
+		<acquire exp="27990"  exp_rate="5.111424" sp="2917" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3893" max="7935" chance="100" /> <!-- Adena-->
@@ -548,7 +543,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -572,7 +567,6 @@
 			<ai_skill name="Heal" id="4613" level="7" /> <!-- Clan Heal -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -599,7 +593,7 @@
 		</custom>
 	</npc>
 	<npc id="21306" templateId="21306" clientName="Disciples of Protection" serverName="apostle_defender" level="74" type="warrior">
-		<acquire exp="50649.38364960001"  exp_rate="9.2493396" sp="5280.0" />
+		<acquire exp="50649"  exp_rate="9.2493396" sp="5280" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7045" max="14360" chance="100" /> <!-- Adena-->
@@ -644,7 +638,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -666,7 +660,6 @@
 			<ai_skill name="Buff" id="4585" level="3" /> <!-- Berserker Spirit -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -697,7 +690,7 @@
 		</custom>
 	</npc>
 	<npc id="21307" templateId="21307" clientName="Elder Homunculus" serverName="elder_homunculus" level="75" type="warrior">
-		<acquire exp="35495.5365"  exp_rate="6.3103176" sp="3744.0" />
+		<acquire exp="35496"  exp_rate="6.3103176" sp="3744" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4948" max="10097" chance="100" /> <!-- Adena-->
@@ -745,7 +738,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -768,7 +761,6 @@
 			<ai_skill name="DeBuff" id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -795,7 +787,7 @@
 		</custom>
 	</npc>
 	<npc id="21308" templateId="21308" clientName="Disciples of Punishment" serverName="apostle_avenger" level="75" type="warrior">
-		<acquire exp="47162.7495"  exp_rate="8.3844888" sp="4975.0" />
+		<acquire exp="47163"  exp_rate="8.3844888" sp="4975" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="6575" max="13415" chance="100" /> <!-- Adena-->
@@ -844,7 +836,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -865,7 +857,6 @@
 			<ai_skill name="PhysicalSpecialRange" id="4599" level="8" /> <!-- Decrease Speed -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -896,7 +887,7 @@
 		</custom>
 	</npc>
 	<npc id="21309" templateId="21309" clientName="Disciples of Punishment" serverName="apostle_avenger_a" level="75" type="warrior">
-		<acquire exp="49154.9445"  exp_rate="8.7386568" sp="5185.0" />
+		<acquire exp="49155"  exp_rate="8.7386568" sp="5185" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="6853" max="13982" chance="100" /> <!-- Adena-->
@@ -945,7 +936,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -969,7 +960,6 @@
 			<ai_skill name="PhysicalSpecial" id="4580" level="8" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1000,7 +990,7 @@
 		</custom>
 	</npc>
 	<npc id="21310" templateId="21310" clientName="Disciples of Authority" serverName="apostle_magistrate" level="76" type="warrior">
-		<acquire exp="40357.339424"  exp_rate="6.987074" sp="4315.0" />
+		<acquire exp="40357"  exp_rate="6.987074" sp="4315" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5625" max="11517" chance="100" /> <!-- Adena-->
@@ -1047,7 +1037,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="815.37145" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" />
+		<base pAtk="815.37145" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1069,7 +1059,6 @@
 			<ai_skill name="SelfRangeDDMagic" id="4599" level="8" /> <!-- Decrease Speed -->
 		</npc_ai>
 		<org hp="2719.97952" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1100,7 +1089,7 @@
 		</custom>
 	</npc>
 	<npc id="21311" templateId="21311" clientName="Disciples of Authority" serverName="apostle_magistrate_a" level="76" type="warrior">
-		<acquire exp="37209.898832"  exp_rate="6.442157" sp="3978.0" />
+		<acquire exp="37210"  exp_rate="6.442157" sp="3978" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5186" max="10619" chance="100" /> <!-- Adena-->
@@ -1147,7 +1136,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="815.37145" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" />
+		<base pAtk="815.37145" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1168,7 +1157,6 @@
 			<ai_skill name="W_ShortRangeDDMagic" id="4160" level="8" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="2719.97952" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DIVINE</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1197,7 +1185,7 @@
 		</custom>
 	</npc>
 	<npc id="21312" templateId="21312" clientName="Eye of Ruler" serverName="dominating_eye" level="74" type="warrior">
-		<acquire exp="38708.8232736"  exp_rate="7.0688136" sp="4036.0" />
+		<acquire exp="38709"  exp_rate="7.0688136" sp="4036" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5384" max="10974" chance="100" /> <!-- Adena-->
@@ -1240,7 +1228,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1267,7 +1255,6 @@
 			<ai_skill name="RangeDD" id="4571" level="7" /> <!-- Blazing Circle -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1294,7 +1281,7 @@
 		</custom>
 	</npc>
 	<npc id="21313" templateId="21313" clientName="Sly Hound Dog" serverName="cunning_hound" level="72" type="warrior">
-		<acquire exp="37061.4051072"  exp_rate="7.1491908" sp="3766.0" />
+		<acquire exp="37061"  exp_rate="7.1491908" sp="3766" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5124" max="10462" chance="100" /> <!-- Adena-->
@@ -1339,7 +1326,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="203.311781207645" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1362,7 +1349,6 @@
 			<ai_skill name="PhysicalSpecial" id="4579" level="7" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1388,7 +1374,7 @@
 		</custom>
 	</npc>
 	<npc id="21314" templateId="21314" clientName="Hot Springs Bandersnatchling" serverName="thermal_bandersnatchling" level="73" type="warrior">
-		<acquire exp="20661.9313296"  exp_rate="3.8772624" sp="2126.0" />
+		<acquire exp="20662"  exp_rate="3.8772624" sp="2126" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2869" max="5842" chance="100" /> <!-- Adena-->
@@ -1463,7 +1449,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1489,7 +1475,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1518,7 +1503,7 @@
 		</custom>
 	</npc>
 	<npc id="21315" templateId="21315" clientName="Hot Springs Buffalo" serverName="thermal_buffalo" level="73" type="warrior">
-		<acquire exp="21532.225240800002"  exp_rate="4.0405752" sp="2215.0" />
+		<acquire exp="21532"  exp_rate="4.0405752" sp="2215" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2990" max="6088" chance="100" /> <!-- Adena-->
@@ -1595,7 +1580,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="752.73928" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" />
+		<base pAtk="752.73928" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="206.421198742611" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1618,7 +1603,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1648,7 +1632,7 @@
 		</custom>
 	</npc>
 	<npc id="21316" templateId="21316" clientName="Hot Springs Flava" serverName="thermal_flava" level="74" type="warrior">
-		<acquire exp="25336.017288"  exp_rate="4.626738" sp="2641.0" />
+		<acquire exp="25336"  exp_rate="4.626738" sp="2641" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3124" max="6369" chance="100" /> <!-- Adena-->
@@ -1725,7 +1709,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1750,7 +1734,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>PLANT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1780,7 +1763,7 @@
 		</custom>
 	</npc>
 	<npc id="21317" templateId="21317" clientName="Hot Springs Atroxspawn" serverName="thermal_atroxspawn" level="74" type="warrior">
-		<acquire exp="21231.888902400002"  exp_rate="3.8772624" sp="2213.0" />
+		<acquire exp="21232"  exp_rate="3.8772624" sp="2213" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2953" max="6019" chance="100" /> <!-- Adena-->
@@ -1856,7 +1839,7 @@
 			<walk ground="105" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1882,7 +1865,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1911,7 +1893,7 @@
 		</custom>
 	</npc>
 	<npc id="21318" templateId="21318" clientName="Hot Springs Antelope" serverName="thermal_antelope" level="74" type="warrior">
-		<acquire exp="22193.0846112"  exp_rate="4.0527912" sp="2314.0" />
+		<acquire exp="22193"  exp_rate="4.0527912" sp="2314" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3087" max="6292" chance="100" /> <!-- Adena-->
@@ -1995,7 +1977,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="209.50409325236" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2018,7 +2000,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2048,7 +2029,7 @@
 		</custom>
 	</npc>
 	<npc id="21319" templateId="21319" clientName="Hot Springs Nepenthes" serverName="thermal_nepenthes" level="75" type="warrior">
-		<acquire exp="27927.9765"  exp_rate="4.9649736" sp="2946.0" />
+		<acquire exp="27928"  exp_rate="4.9649736" sp="2946" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3482" max="7105" chance="100" /> <!-- Adena-->
@@ -2126,7 +2107,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2152,7 +2133,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>PLANT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2182,7 +2162,7 @@
 		</custom>
 	</npc>
 	<npc id="21320" templateId="21320" clientName="Hot Springs Yeti" serverName="thermal_yeti" level="75" type="warrior">
-		<acquire exp="22728.235500000003"  exp_rate="4.0405752" sp="2398.0" />
+		<acquire exp="22728"  exp_rate="4.0405752" sp="2398" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3168" max="6465" chance="100" /> <!-- Adena-->
@@ -2259,7 +2239,7 @@
 			<walk ground="16" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" />
+		<base pAtk="794.70901" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="542.68324" pDef="319.24623" mDef="212.557735094503" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2282,7 +2262,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="8" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2676.65854" hp_regen="8.5" mp="1507.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2312,7 +2291,7 @@
 		</custom>
 	</npc>
 	<npc id="21321" templateId="21321" clientName="Hot Springs Atrox" serverName="thermal_atrox" level="76" type="warrior">
-		<acquire exp="22270.03224"  exp_rate="3.855615" sp="2381.0" />
+		<acquire exp="22270"  exp_rate="3.855615" sp="2381" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2752" max="5635" chance="100" /> <!-- Adena-->
@@ -2388,7 +2367,7 @@
 			<walk ground="105" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" />
+		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2409,7 +2388,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2719.97952" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2438,7 +2416,7 @@
 		</custom>
 	</npc>
 	<npc id="21322" templateId="21322" clientName="Hot Springs Bandersnatch" serverName="thermal_bandersnatch" level="76" type="warrior">
-		<acquire exp="22270.03224"  exp_rate="3.855615" sp="2381.0" />
+		<acquire exp="22270"  exp_rate="3.855615" sp="2381" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2752" max="5635" chance="100" /> <!-- Adena-->
@@ -2515,7 +2493,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" />
+		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2536,7 +2514,6 @@
 			<ai_skill name="DeBuff1" id="4554" level="1" /> <!-- Hot Spring Malaria -->
 		</npc_ai>
 		<org hp="2719.97952" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2565,7 +2542,7 @@
 		</custom>
 	</npc>
 	<npc id="21323" templateId="21323" clientName="Hot Springs Grendel" serverName="thermal_grendel" level="76" type="warrior">
-		<acquire exp="19507.434976"  exp_rate="3.377326" sp="2085.0" />
+		<acquire exp="19507"  exp_rate="3.377326" sp="2085" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2719" max="5567" chance="100" /> <!-- Adena-->
@@ -2641,7 +2618,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" />
+		<base pAtk="815.37145" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="556.793" pDef="323.78455" mDef="215.579412824268" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2659,7 +2636,6 @@
 			<ai_skill name="PhysicalSpecial" id="4073" level="8" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="2719.97952" hp_regen="8.5" mp="1540.8" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2689,7 +2665,7 @@
 		</custom>
 	</npc>
 	<npc id="21324" templateId="21324" clientName="Ketra Orc Footman" serverName="ketra_orc_footman" level="77" type="warrior">
-		<acquire exp="18646.669426"  exp_rate="3.144994" sp="2018.0" />
+		<acquire exp="18647"  exp_rate="3.144994" sp="2018" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2610" max="5333" chance="100" /> <!-- Adena-->
@@ -2770,7 +2746,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2796,7 +2772,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2825,7 +2800,7 @@
 		</custom>
 	</npc>
 	<npc id="21325" templateId="21325" clientName="Ketra's War Hound" serverName="ketra_war_hound" level="77" type="warrior">
-		<acquire exp="18030.97835"  exp_rate="3.04115" sp="1951.0" />
+		<acquire exp="18031"  exp_rate="3.04115" sp="1951" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2524" max="5157" chance="100" /> <!-- Adena-->
@@ -2904,7 +2879,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2926,7 +2901,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2952,7 +2926,7 @@
 		</custom>
 	</npc>
 	<npc id="21326" templateId="21326" clientName="Grazing Kookaburra" serverName="grazing_kukaburo" level="77" type="warrior">
-		<acquire exp="18030.97835"  exp_rate="3.04115" sp="1951.0" />
+		<acquire exp="18031"  exp_rate="3.04115" sp="1951" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2524" max="5157" chance="100" /> <!-- Adena-->
@@ -3029,7 +3003,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" />
+		<base pAtk="835.75573" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="570.71283" pDef="328.27073" mDef="218.566351305224" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3050,7 +3024,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2762.08447" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3076,7 +3049,7 @@
 		</custom>
 	</npc>
 	<npc id="21327" templateId="21327" clientName="Ketra Orc Raider" serverName="ketra_orc_trooper" level="78" type="warrior">
-		<acquire exp="20480.252832000002"  exp_rate="3.366248" sp="2241.0" />
+		<acquire exp="20480"  exp_rate="3.366248" sp="2241" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2875" max="5868" chance="100" /> <!-- Adena-->
@@ -3155,7 +3128,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3183,7 +3156,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3215,7 +3187,7 @@
 		</custom>
 	</npc>
 	<npc id="21328" templateId="21328" clientName="Ketra Orc Scout" serverName="ketra_orc_scout" level="78" type="warrior">
-		<acquire exp="19633.79808"  exp_rate="3.22712" sp="2149.0" />
+		<acquire exp="19634"  exp_rate="3.22712" sp="2149" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2756" max="5626" chance="100" /> <!-- Adena-->
@@ -3297,7 +3269,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.91" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -3321,7 +3293,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3350,7 +3321,7 @@
 		</custom>
 	</npc>
 	<npc id="21329" templateId="21329" clientName="Ketra Orc Shaman" serverName="ketra_orc_shaman" level="78" type="warrior">
-		<acquire exp="19911.679582999986"  exp_rate="3.27279414579224" sp="2207.0" />
+		<acquire exp="19912"  exp_rate="3.27279414579224" sp="2207" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2802" max="5719" chance="100" /> <!-- Adena-->
@@ -3428,7 +3399,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="10" evasion="1" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3458,7 +3429,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="10" avoidModify="1" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3487,7 +3457,7 @@
 		</custom>
 	</npc>
 	<npc id="21330" templateId="21330" clientName="Grazing Buffalo" serverName="grazing_buffalo" level="78" type="warrior">
-		<acquire exp="18979.81715000001"  exp_rate="3.11962806541749" sp="2103.0" />
+		<acquire exp="18980"  exp_rate="3.11962806541749" sp="2103" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2671" max="5451" chance="100" /> <!-- Adena-->
@@ -3568,7 +3538,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="10" evasion="1" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3589,7 +3559,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="10" avoidModify="1" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3615,7 +3584,7 @@
 		</custom>
 	</npc>
 	<npc id="21331" templateId="21331" clientName="Ketra Orc Warrior" serverName="ketra_orc_warrior" level="78" type="warrior">
-		<acquire exp="18608.873834179656"  exp_rate="3.05865776367187" sp="2089.0" />
+		<acquire exp="18609"  exp_rate="3.05865776367187" sp="2089" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2624" max="5357" chance="100" /> <!-- Adena-->
@@ -3694,7 +3663,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3720,7 +3689,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3750,7 +3718,7 @@
 		</custom>
 	</npc>
 	<npc id="21332" templateId="21332" clientName="Ketra Orc Lieutenant" serverName="ketra_orc_captain" level="78" type="warrior">
-		<acquire exp="20841.406018505866"  exp_rate="3.42560914176625" sp="2339.0" />
+		<acquire exp="20841"  exp_rate="3.42560914176625" sp="2339" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2939" max="6000" chance="100" /> <!-- Adena-->
@@ -3829,7 +3797,7 @@
 			<walk ground="24" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.51" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="11" evasion="2" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3857,7 +3825,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="11" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3888,7 +3855,7 @@
 		</custom>
 	</npc>
 	<npc id="21333" templateId="21333" clientName="Grazing Windsus" serverName="grazing_windsus" level="78" type="warrior">
-		<acquire exp="19952.987310286546"  exp_rate="3.27958371306485" sp="2266.0" />
+		<acquire exp="19953"  exp_rate="3.27958371306485" sp="2266" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2813" max="5760" chance="100" /> <!-- Adena-->
@@ -3968,7 +3935,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="12" evasion="3" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3989,7 +3956,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="12" avoidModify="3" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4015,7 +3981,7 @@
 		</custom>
 	</npc>
 	<npc id="21334" templateId="21334" clientName="Ketra Orc Medium" serverName="ketra_orc_medium" level="78" type="warrior">
-		<acquire exp="29866.800492000017"  exp_rate="4.9090730591716" sp="3391.0" />
+		<acquire exp="29867"  exp_rate="4.9090730591716" sp="3391" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3806" max="7794" chance="100" /> <!-- Adena-->
@@ -4093,7 +4059,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="12" evasion="3" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4124,7 +4090,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="12" avoidModify="3" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4153,7 +4118,7 @@
 		</custom>
 	</npc>
 	<npc id="21335" templateId="21335" clientName="Ketra Orc Elite Soldier" serverName="ketra_orc_elite" level="78" type="warrior">
-		<acquire exp="19251.69915806128"  exp_rate="3.16431610093052" sp="2212.0" />
+		<acquire exp="19252"  exp_rate="3.16431610093052" sp="2212" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2718" max="5566" chance="100" /> <!-- Adena-->
@@ -4229,7 +4194,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" />
+		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" accuracy="8.75" evasion="4" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4255,7 +4220,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3010.8929976" hp_regen="8.772" mp="1777.86" mp_regen="3.1008" />
-		<physical hitModify="8.75" avoidModify="4" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4284,7 +4248,7 @@
 		</custom>
 	</npc>
 	<npc id="21336" templateId="21336" clientName="Ketra Orc White Captain" serverName="ketra_orc_centurion" level="78" type="warrior">
-		<acquire exp="22634.651421903087"  exp_rate="3.72035690695317" sp="2600.0" />
+		<acquire exp="22635"  exp_rate="3.72035690695317" sp="2600" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3195" max="6545" chance="100" /> <!-- Adena-->
@@ -4363,7 +4327,7 @@
 			<walk ground="33" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" />
+		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" accuracy="8.75" evasion="4" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4391,7 +4355,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3010.8929976" hp_regen="8.772" mp="1777.86" mp_regen="3.1008" />
-		<physical hitModify="8.75" avoidModify="4" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4422,7 +4385,7 @@
 		</custom>
 	</npc>
 	<npc id="21337" templateId="21337" clientName="Grazing Elder Buffalo" serverName="grazing_elder_buffalo" level="78" type="warrior">
-		<acquire exp="20950.484618284398"  exp_rate="3.44353790570092" sp="2435.0" />
+		<acquire exp="20950"  exp_rate="3.44353790570092" sp="2435" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2968" max="6057" chance="100" /> <!-- Adena-->
@@ -4500,7 +4463,7 @@
 			<walk ground="20" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="985.66600746" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" />
+		<base pAtk="985.66600746" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" accuracy="14" evasion="5" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4521,7 +4484,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3044.88717" hp_regen="8.823" mp="1812.948" mp_regen="3.111" />
-		<physical hitModify="14" avoidModify="5" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4547,7 +4509,7 @@
 		</custom>
 	</npc>
 	<npc id="21338" templateId="21338" clientName="Ketra Orc Priest" serverName="ketra_orc_seer" level="78" type="warrior">
-		<acquire exp="27567.67004058105"  exp_rate="4.53117522034534" sp="3205.0" />
+		<acquire exp="27568"  exp_rate="4.53117522034534" sp="3205" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3905" max="7970" chance="100" /> <!-- Adena-->
@@ -4628,7 +4590,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" />
+		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" accuracy="9.75" evasion="5" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4658,7 +4620,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3044.88717" hp_regen="8.823" mp="1812.948" mp_regen="3.111" />
-		<physical hitModify="9.75" avoidModify="5" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4687,7 +4648,7 @@
 		</custom>
 	</npc>
 	<npc id="21339" templateId="21339" clientName="Ketra Orc General" serverName="ketra_orc_officer" level="78" type="warrior">
-		<acquire exp="20988.826184128047"  exp_rate="3.4498399382196" sp="2469.0" />
+		<acquire exp="20989"  exp_rate="3.4498399382196" sp="2469" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2975" max="6071" chance="100" /> <!-- Adena-->
@@ -4764,7 +4725,7 @@
 			<walk ground="24" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.51" skill_factor="-1" />
-		<base pAtk="1009.3950039" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" />
+		<base pAtk="1009.3950039" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" accuracy="15" evasion="2" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4792,7 +4753,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3077.1572058" hp_regen="8.874" mp="1848.24" mp_regen="3.1314" />
-		<physical hitModify="15" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4823,7 +4783,7 @@
 		</custom>
 	</npc>
 	<npc id="21340" templateId="21340" clientName="Ketra Orc Battalion Commander" serverName="ketra_orc_praefect" level="78" type="warrior">
-		<acquire exp="20988.826184128047"  exp_rate="3.4498399382196" sp="2469.0" />
+		<acquire exp="20989"  exp_rate="3.4498399382196" sp="2469" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2975" max="6071" chance="100" /> <!-- Adena-->
@@ -4904,7 +4864,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" />
+		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" accuracy="10.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4932,7 +4892,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3077.1572058" hp_regen="8.874" mp="1848.24" mp_regen="3.1314" />
-		<physical hitModify="10.75" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4964,7 +4923,7 @@
 		</custom>
 	</npc>
 	<npc id="21341" templateId="21341" clientName="Grazing Elder Kookaburra" serverName="grazing_elder_kukaburo" level="78" type="warrior">
-		<acquire exp="21972.311128916335"  exp_rate="3.61149098108421" sp="2615.0" />
+		<acquire exp="21972"  exp_rate="3.61149098108421" sp="2615" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3115" max="6359" chance="100" /> <!-- Adena-->
@@ -5042,7 +5001,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="1033.1240034" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" />
+		<base pAtk="1033.1240034" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" accuracy="11.75" evasion="7" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5063,7 +5022,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3107.6436594" hp_regen="8.925" mp="1883.736" mp_regen="3.1518" />
-		<physical hitModify="11.75" avoidModify="7" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5089,7 +5047,7 @@
 		</custom>
 	</npc>
 	<npc id="21342" templateId="21342" clientName="Ketra Orc Grand Priest" serverName="ketra_orc_overseer" level="78" type="warrior">
-		<acquire exp="28912.239228218637"  exp_rate="4.75217607301424" sp="3441.0" />
+		<acquire exp="28912"  exp_rate="4.75217607301424" sp="3441" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4098" max="8367" chance="100" /> <!-- Adena-->
@@ -5170,7 +5128,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="1033.1240034" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" />
+		<base pAtk="1033.1240034" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" accuracy="16" evasion="7" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5201,7 +5159,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3107.6436594" hp_regen="8.925" mp="1883.736" mp_regen="3.1518" />
-		<physical hitModify="16" avoidModify="7" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5230,7 +5187,7 @@
 		</custom>
 	</npc>
 	<npc id="21343" templateId="21343" clientName="Ketra Commander" serverName="ketra_orc_legatus" level="78" type="warrior">
-		<acquire exp="32800.75988444381"  exp_rate="5.39131490539839" sp="3725.0" />
+		<acquire exp="32801"  exp_rate="5.39131490539839" sp="3725" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4624" max="9470" chance="100" /> <!-- Adena-->
@@ -5272,7 +5229,7 @@
 			<walk ground="27" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="3" evasion="3" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5300,7 +5257,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="3" avoidModify="3" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5332,7 +5288,7 @@
 		</custom>
 	</npc>
 	<npc id="21344" templateId="21344" clientName="Ketra Elite Guard" serverName="ketra_elite_guard" level="78" type="warrior">
-		<acquire exp="22276.28928251953"  exp_rate="3.66145451717941" sp="2500.0" />
+		<acquire exp="22276"  exp_rate="3.66145451717941" sp="2500" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3141" max="6413" chance="100" /> <!-- Adena-->
@@ -5376,7 +5332,7 @@
 			<walk ground="33" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5400,7 +5356,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5429,7 +5384,7 @@
 		</custom>
 	</npc>
 	<npc id="21345" templateId="21345" clientName="Ketra's Head Shaman" serverName="ketra_high_shaman" level="78" type="warrior">
-		<acquire exp="24720.45851524312"  exp_rate="4.06319173491833" sp="2943.0" />
+		<acquire exp="24720"  exp_rate="4.06319173491833" sp="2943" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3504" max="7154" chance="100" /> <!-- Adena-->
@@ -5472,7 +5427,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="1033.1240034" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" />
+		<base pAtk="1033.1240034" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" accuracy="16" evasion="7" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5500,7 +5455,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3107.6436594" hp_regen="8.925" mp="1883.736" mp_regen="3.1518" />
-		<physical hitModify="16" avoidModify="7" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5529,7 +5483,7 @@
 		</custom>
 	</npc>
 	<npc id="21346" templateId="21346" clientName="Ketra's Head Guard" serverName="ketra_high_guard" level="78" type="warrior">
-		<acquire exp="24559.608933977783"  exp_rate="4.0367536051903" sp="2889.0" />
+		<acquire exp="24560"  exp_rate="4.0367536051903" sp="2889" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3481" max="7103" chance="100" /> <!-- Adena-->
@@ -5573,7 +5527,7 @@
 			<walk ground="24" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.51" skill_factor="-1" />
-		<base pAtk="1009.3950039" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" />
+		<base pAtk="1009.3950039" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" accuracy="15" evasion="2" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5597,7 +5551,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3077.1572058" hp_regen="8.874" mp="1848.24" mp_regen="3.1314" />
-		<physical hitModify="15" avoidModify="2" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5626,7 +5579,7 @@
 		</custom>
 	</npc>
 	<npc id="21347" templateId="21347" clientName="Ketra Prophet" serverName="ketra_soothsayer" level="78" type="warrior">
-		<acquire exp="37558.13924024912"  exp_rate="6.17326417492589" sp="4578.0" />
+		<acquire exp="37558"  exp_rate="6.17326417492589" sp="4578" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5309" max="10884" chance="100" /> <!-- Adena-->
@@ -5671,7 +5624,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="1076.9313816" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="781.2613576908" pDef="410.87895" mDef="295.9938" />
+		<base pAtk="1076.9313816" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="781.2613576908" pDef="410.87895" mDef="295.9938" accuracy="18" evasion="9" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5703,7 +5656,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3163.0432152" hp_regen="9.027" mp="1955.34" mp_regen="3.1824" />
-		<physical hitModify="18" avoidModify="9" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5732,7 +5684,7 @@
 		</custom>
 	</npc>
 	<npc id="21348" templateId="21348" clientName="Prophet's Guard" serverName="soothsayers_guard" level="78" type="warrior">
-		<acquire exp="25743.036802111656"  exp_rate="4.23126837641546" sp="3101.0" />
+		<acquire exp="25743"  exp_rate="4.23126837641546" sp="3101" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3643" max="7457" chance="100" /> <!-- Adena-->
@@ -5775,7 +5727,7 @@
 			<walk ground="24" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.51" skill_factor="-1" />
-		<base pAtk="1055.0276874" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="760.9193205984" pDef="386.504775" mDef="275.616036" />
+		<base pAtk="1055.0276874" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="760.9193205984" pDef="386.504775" mDef="275.616036" accuracy="17" evasion="8" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5799,7 +5751,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3136.2900942" hp_regen="8.976" mp="1919.436" mp_regen="3.16812" />
-		<physical hitModify="17" avoidModify="8" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5828,7 +5779,7 @@
 		</custom>
 	</npc>
 	<npc id="21349" templateId="21349" clientName="Prophet's Aide" serverName="soothsayers_aide" level="78" type="warrior">
-		<acquire exp="26143.18723777807"  exp_rate="4.29703932244873" sp="3149.0" />
+		<acquire exp="26143"  exp_rate="4.29703932244873" sp="3149" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3700" max="7573" chance="100" /> <!-- Adena-->
@@ -5871,7 +5822,7 @@
 			<walk ground="10" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.34" skill_factor="-1" />
-		<base pAtk="1055.0276874" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="760.9193205984" pDef="386.504775" mDef="275.616036" />
+		<base pAtk="1055.0276874" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="760.9193205984" pDef="386.504775" mDef="275.616036" accuracy="17" evasion="8" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5898,7 +5849,6 @@
 			<ai_item name="FriendShip5" id="7215" /> <!-- Mark of Ketra's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="3136.2900942" hp_regen="8.976" mp="1919.436" mp_regen="3.16812" />
-		<physical hitModify="17" avoidModify="8" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5927,7 +5877,7 @@
 		</custom>
 	</npc>
 	<npc id="21350" templateId="21350" clientName="Varka Silenos Recruit" serverName="varka_silenos_grunt" level="77" type="warrior">
-		<acquire exp="21105.34272"  exp_rate="3.55968" sp="2186.0" />
+		<acquire exp="21105"  exp_rate="3.55968" sp="2186" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2914" max="5954" chance="100" /> <!-- Adena-->
@@ -6003,7 +5953,7 @@
 			<walk ground="44" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6030,7 +5980,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6061,7 +6010,7 @@
 		</custom>
 	</npc>
 	<npc id="21351" templateId="21351" clientName="Varka Silenos Footman" serverName="varka_silenos_footman" level="77" type="warrior">
-		<acquire exp="18501.32592"  exp_rate="3.12048" sp="1904.0" />
+		<acquire exp="18501"  exp_rate="3.12048" sp="1904" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2549" max="5209" chance="100" /> <!-- Adena-->
@@ -6138,7 +6087,7 @@
 			<walk ground="34" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6163,7 +6112,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6194,7 +6142,7 @@
 		</custom>
 	</npc>
 	<npc id="21352" templateId="21352" clientName="Grazing Antelope" serverName="grazing_antelope" level="77" type="warrior">
-		<acquire exp="11090.55024"  exp_rate="1.87056" sp="1200.0" />
+		<acquire exp="11091"  exp_rate="1.87056" sp="1200" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1553" max="3172" chance="100" /> <!-- Adena-->
@@ -6274,7 +6222,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" />
+		<base pAtk="856.44055895414" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.837886935576" pDef="328.27073" mDef="240.21427" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6297,7 +6245,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2856.7687256316" hp_regen="8.5" mp="1574" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6324,7 +6271,7 @@
 		</custom>
 	</npc>
 	<npc id="21353" templateId="21353" clientName="Varka Silenos Scout" serverName="varka_silenos_scout" level="78" type="warrior">
-		<acquire exp="25065.10656"  exp_rate="4.11984" sp="2642.0" />
+		<acquire exp="25065"  exp_rate="4.11984" sp="2642" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3477" max="7097" chance="100" /> <!-- Adena-->
@@ -6400,7 +6347,7 @@
 			<walk ground="44" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6428,7 +6375,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6461,7 +6407,7 @@
 		</custom>
 	</npc>
 	<npc id="21354" templateId="21354" clientName="Varka Silenos Hunter" serverName="varka_silenos_hunter" level="78" type="warrior">
-		<acquire exp="24846.082560000003"  exp_rate="4.08384" sp="2618.0" />
+		<acquire exp="24846"  exp_rate="4.08384" sp="2618" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3446" max="7034" chance="100" /> <!-- Adena-->
@@ -6539,7 +6485,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.59" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="0" evasion="0" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -6564,7 +6510,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6594,7 +6539,7 @@
 		</custom>
 	</npc>
 	<npc id="21355" templateId="21355" clientName="Varka Silenos Shaman" serverName="varka_silenos_shaman" level="78" type="warrior">
-		<acquire exp="24583.25376"  exp_rate="4.04064" sp="2580.0" />
+		<acquire exp="24583"  exp_rate="4.04064" sp="2580" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3502" max="7147" chance="100" /> <!-- Adena-->
@@ -6670,7 +6615,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6699,7 +6644,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6729,7 +6673,7 @@
 		</custom>
 	</npc>
 	<npc id="21356" templateId="21356" clientName="Grazing Nepenthes" serverName="grazing_nephentes" level="78" type="warrior">
-		<acquire exp="15612.030719999999"  exp_rate="2.56608" sp="1708.0" />
+		<acquire exp="15612"  exp_rate="2.56608" sp="1708" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2254" max="4600" chance="100" /> <!-- Adena-->
@@ -6806,7 +6750,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6829,7 +6773,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>PLANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6857,7 +6800,7 @@
 		</custom>
 	</npc>
 	<npc id="21357" templateId="21357" clientName="Varka Silenos Priest" serverName="varka_silenos_priest" level="78" type="warrior">
-		<acquire exp="25424.305920000003"  exp_rate="4.17888" sp="2681.0" />
+		<acquire exp="25424"  exp_rate="4.17888" sp="2681" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3727" max="7609" chance="100" /> <!-- Adena-->
@@ -6933,7 +6876,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6960,7 +6903,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6990,7 +6932,7 @@
 		</custom>
 	</npc>
 	<npc id="21358" templateId="21358" clientName="Varka Silenos Warrior" serverName="varka_silenos_warrior" level="78" type="warrior">
-		<acquire exp="25564.481280000004"  exp_rate="4.20192" sp="2696.0" />
+		<acquire exp="25564"  exp_rate="4.20192" sp="2696" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3748" max="7652" chance="100" /> <!-- Adena-->
@@ -7067,7 +7009,7 @@
 			<walk ground="34" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7095,7 +7037,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7128,7 +7069,7 @@
 		</custom>
 	</npc>
 	<npc id="21359" templateId="21359" clientName="Grazing Bandersnatch" serverName="grazing_bandersnatch" level="78" type="warrior">
-		<acquire exp="15760.96704"  exp_rate="2.59056" sp="1724.0" />
+		<acquire exp="15761"  exp_rate="2.59056" sp="1724" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2396" max="4907" chance="100" /> <!-- Adena-->
@@ -7205,7 +7146,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7228,7 +7169,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7255,7 +7195,7 @@
 		</custom>
 	</npc>
 	<npc id="21360" templateId="21360" clientName="Varka Silenos Medium" serverName="varka_silenos_medium" level="78" type="warrior">
-		<acquire exp="33107.66784"  exp_rate="5.44176" sp="3490.0" />
+		<acquire exp="33108"  exp_rate="5.44176" sp="3490" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4974" max="10185" chance="100" /> <!-- Adena-->
@@ -7331,7 +7271,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7361,7 +7301,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7391,7 +7330,7 @@
 		</custom>
 	</npc>
 	<npc id="21361" templateId="21361" clientName="Varka Silenos Magus" serverName="varka_silenos_mage" level="78" type="warrior">
-		<acquire exp="23321.675519999997"  exp_rate="3.83328" sp="2452.0" />
+		<acquire exp="23322"  exp_rate="3.83328" sp="2452" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3592" max="7357" chance="100" /> <!-- Adena-->
@@ -7470,7 +7409,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7497,7 +7436,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7527,7 +7465,7 @@
 		</custom>
 	</npc>
 	<npc id="21362" templateId="21362" clientName="Varka Silenos Officer" serverName="varka_silenos_sergeant" level="78" type="warrior">
-		<acquire exp="25564.481280000004"  exp_rate="4.20192" sp="2696.0" />
+		<acquire exp="25564"  exp_rate="4.20192" sp="2696" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3942" max="8074" chance="100" /> <!-- Adena-->
@@ -7605,7 +7543,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7633,7 +7571,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7665,7 +7602,7 @@
 		</custom>
 	</npc>
 	<npc id="21363" templateId="21363" clientName="Grazing Flava" serverName="grazing_flava" level="78" type="warrior">
-		<acquire exp="23952.46464"  exp_rate="3.93696" sp="2522.0" />
+		<acquire exp="23952"  exp_rate="3.93696" sp="2522" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3795" max="7746" chance="100" /> <!-- Adena-->
@@ -7747,7 +7684,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7770,7 +7707,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>PLANT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7798,7 +7734,7 @@
 		</custom>
 	</npc>
 	<npc id="21364" templateId="21364" clientName="Varka Silenos Priest" serverName="varka_silenos_seer" level="78" type="warrior">
-		<acquire exp="18178.992"  exp_rate="2.988" sp="1988.0" />
+		<acquire exp="18179"  exp_rate="2.988" sp="1988" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2916" max="5951" chance="100" /> <!-- Adena-->
@@ -7879,7 +7815,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7908,7 +7844,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7938,7 +7873,7 @@
 		</custom>
 	</npc>
 	<npc id="21365" templateId="21365" clientName="Varka Silenos Great Magus" serverName="varka_silenos_archmage" level="78" type="warrior">
-		<acquire exp="25065.10656"  exp_rate="4.11984" sp="2642.0" />
+		<acquire exp="25065"  exp_rate="4.11984" sp="2642" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4071" max="8308" chance="100" /> <!-- Adena-->
@@ -8016,7 +7951,7 @@
 			<walk ground="34" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8044,7 +7979,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8076,7 +8010,7 @@
 		</custom>
 	</npc>
 	<npc id="21366" templateId="21366" clientName="Varka Silenos General" serverName="varka_silenos_officer" level="78" type="warrior">
-		<acquire exp="27045.083520000004"  exp_rate="4.44528" sp="2858.0" />
+		<acquire exp="27045"  exp_rate="4.44528" sp="2858" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4396" max="8972" chance="100" /> <!-- Adena-->
@@ -8153,7 +8087,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8181,7 +8115,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8213,7 +8146,7 @@
 		</custom>
 	</npc>
 	<npc id="21367" templateId="21367" clientName="Grazing Elder Antelope" serverName="grazing_elder_antelope" level="78" type="warrior">
-		<acquire exp="15760.96704"  exp_rate="2.59056" sp="1724.0" />
+		<acquire exp="15761"  exp_rate="2.59056" sp="1724" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2653" max="5416" chance="100" /> <!-- Adena-->
@@ -8289,7 +8222,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8312,7 +8245,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>ANIMAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8339,7 +8271,7 @@
 		</custom>
 	</npc>
 	<npc id="21368" templateId="21368" clientName="Varka Silenos Grand Priest" serverName="varka_silenos_overseer" level="78" type="warrior">
-		<acquire exp="32231.57184"  exp_rate="5.29776" sp="3394.0" />
+		<acquire exp="32232"  exp_rate="5.29776" sp="3394" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5359" max="10941" chance="100" /> <!-- Adena-->
@@ -8416,7 +8348,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8446,7 +8378,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8476,7 +8407,7 @@
 		</custom>
 	</npc>
 	<npc id="21369" templateId="21369" clientName="Varka's Commander" serverName="varka_silenos_general" level="78" type="warrior">
-		<acquire exp="31469.36832"  exp_rate="5.17248" sp="3310.0" />
+		<acquire exp="31469"  exp_rate="5.17248" sp="3310" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4725" max="9675" chance="100" /> <!-- Adena-->
@@ -8520,7 +8451,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8547,7 +8478,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8579,7 +8509,7 @@
 		</custom>
 	</npc>
 	<npc id="21370" templateId="21370" clientName="Varka's Elite Guard" serverName="varka_elite_guard" level="78" type="warrior">
-		<acquire exp="26151.4656"  exp_rate="4.2984" sp="2761.0" />
+		<acquire exp="26151"  exp_rate="4.2984" sp="2761" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3835" max="7830" chance="100" /> <!-- Adena-->
@@ -8624,7 +8554,7 @@
 			<walk ground="34" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8648,7 +8578,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8679,7 +8608,7 @@
 		</custom>
 	</npc>
 	<npc id="21371" templateId="21371" clientName="Varka's Head Magus" serverName="varka_high_magus" level="78" type="warrior">
-		<acquire exp="24846.082560000003"  exp_rate="4.08384" sp="2618.0" />
+		<acquire exp="24846"  exp_rate="4.08384" sp="2618" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4132" max="8436" chance="100" /> <!-- Adena-->
@@ -8722,7 +8651,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8747,7 +8676,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8777,7 +8705,7 @@
 		</custom>
 	</npc>
 	<npc id="21372" templateId="21372" clientName="Varka's Head Guard" serverName="varka_high_guard" level="78" type="warrior">
-		<acquire exp="16812.28224"  exp_rate="2.76336" sp="1840.0" />
+		<acquire exp="16812"  exp_rate="2.76336" sp="1840" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2763" max="5640" chance="100" /> <!-- Adena-->
@@ -8822,7 +8750,7 @@
 			<walk ground="44" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8846,7 +8774,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8877,7 +8804,7 @@
 		</custom>
 	</npc>
 	<npc id="21373" templateId="21373" clientName="Varka's Prophet" serverName="varka_soothsayer" level="78" type="warrior">
-		<acquire exp="32073.87456"  exp_rate="5.27184" sp="3370.0" />
+		<acquire exp="32074"  exp_rate="5.27184" sp="3370" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5568" max="11414" chance="100" /> <!-- Adena-->
@@ -8921,7 +8848,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8949,7 +8876,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8979,7 +8905,7 @@
 		</custom>
 	</npc>
 	<npc id="21374" templateId="21374" clientName="Prophet's Guard" serverName="soothsayers_escort" level="78" type="warrior">
-		<acquire exp="16952.4576"  exp_rate="2.7864" sp="1855.0" />
+		<acquire exp="16952"  exp_rate="2.7864" sp="1855" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2916" max="5970" chance="100" /> <!-- Adena-->
@@ -9022,7 +8948,7 @@
 			<walk ground="34" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9046,7 +8972,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9077,7 +9002,7 @@
 		</custom>
 	</npc>
 	<npc id="21375" templateId="21375" clientName="Disciple of Prophet" serverName="soothsayers_apostle" level="78" type="warrior">
-		<acquire exp="16339.1904"  exp_rate="2.6856" sp="1788.0" />
+		<acquire exp="16339"  exp_rate="2.6856" sp="1788" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2811" max="5754" chance="100" /> <!-- Adena-->
@@ -9122,7 +9047,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" />
+		<base pAtk="890.50085998804" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="608.096657928153" pDef="332.70061" mDef="243.45587" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9147,7 +9072,6 @@
 			<ai_item name="FriendShip5" id="7225" /> <!-- Mark of Varka's Alliance - Level 5 -->
 		</npc_ai>
 		<org hp="2974.35686398316" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9177,7 +9101,7 @@
 		</custom>
 	</npc>
 	<npc id="21376" templateId="21376" clientName="Scarlet Stakato Worker" serverName="scarlet_stakato_worker" level="78" type="warrior">
-		<acquire exp="35274.82314077133"  exp_rate="5.79796567073822" sp="3860.0" />
+		<acquire exp="35275"  exp_rate="5.79796567073822" sp="3860" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4952" max="10108" chance="100" /> <!-- Adena-->
@@ -9219,7 +9143,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.76" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9238,7 +9162,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="8" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9268,7 +9191,7 @@
 		</custom>
 	</npc>
 	<npc id="21377" templateId="21377" clientName="Scarlet Stakato Soldier" serverName="scarlet_stakato_soldier" level="78" type="warrior">
-		<acquire exp="34522.69544205686"  exp_rate="5.67434178863525" sp="3778.0" />
+		<acquire exp="34523"  exp_rate="5.67434178863525" sp="3778" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4847" max="9892" chance="100" /> <!-- Adena-->
@@ -9315,7 +9238,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9334,7 +9257,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="8" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9364,7 +9286,7 @@
 		</custom>
 	</npc>
 	<npc id="21378" templateId="21378" clientName="Scarlet Stakato Noble" serverName="scarlet_stakato_noble" level="78" type="warrior">
-		<acquire exp="49148.474136000026"  exp_rate="8.07831593293886" sp="5447.0" />
+		<acquire exp="49148"  exp_rate="8.07831593293886" sp="5447" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5950" max="12144" chance="100" /> <!-- Adena-->
@@ -9407,7 +9329,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="5.75" evasion="1" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9428,7 +9350,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="8" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="5.75" avoidModify="1" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9457,7 +9378,7 @@
 		</custom>
 	</npc>
 	<npc id="21379" templateId="21379" clientName="Tepra Scorpion" serverName="tephra_scorpion" level="78" type="warrior">
-		<acquire exp="35490.718928204595"  exp_rate="5.83345150036236" sp="3933.0" />
+		<acquire exp="35491"  exp_rate="5.83345150036236" sp="3933" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4995" max="10193" chance="100" /> <!-- Adena-->
@@ -9503,7 +9424,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="10" crit="8" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="1" evasion="1" />
 		<base_attack type="DAGGER" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9523,7 +9444,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="8" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="1" avoidModify="1" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9551,7 +9471,7 @@
 		</custom>
 	</npc>
 	<npc id="21380" templateId="21380" clientName="Tepra Scarab" serverName="tephra_scarab" level="78" type="warrior">
-		<acquire exp="36185.10375107724"  exp_rate="5.94758444297785" sp="4010.0" />
+		<acquire exp="36185"  exp_rate="5.94758444297785" sp="4010" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5093" max="10393" chance="100" /> <!-- Adena-->
@@ -9598,7 +9518,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="10" evasion="1" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9618,7 +9538,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="8" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="10" avoidModify="1" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9646,7 +9565,7 @@
 		</custom>
 	</npc>
 	<npc id="21381" templateId="21381" clientName="Assassin Beetle" serverName="assassin_beetle" level="78" type="warrior">
-		<acquire exp="42074.886400000025"  exp_rate="6.91566180144642" sp="4722.0" />
+		<acquire exp="42075"  exp_rate="6.91566180144642" sp="4722" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5566" max="11364" chance="100" /> <!-- Adena-->
@@ -9690,7 +9609,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.59" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9713,7 +9632,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9741,7 +9659,7 @@
 		</custom>
 	</npc>
 	<npc id="21382" templateId="21382" clientName="Mercenary of Destruction" serverName="destroyer_mercenary" level="78" type="warrior">
-		<acquire exp="51903.88479999996"  exp_rate="8.53121051939513" sp="5826.0" />
+		<acquire exp="51904"  exp_rate="8.53121051939513" sp="5826" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5929" max="12104" chance="100" /> <!-- Adena-->
@@ -9786,7 +9704,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9809,7 +9727,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9841,7 +9758,7 @@
 		</custom>
 	</npc>
 	<npc id="21383" templateId="21383" clientName="Knight of Destruction" serverName="destroyer_knight" level="78" type="warrior">
-		<acquire exp="51983.001599999996"  exp_rate="8.54421459566075" sp="5835.0" />
+		<acquire exp="51983"  exp_rate="8.54421459566075" sp="5835" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="6337" max="12938" chance="100" /> <!-- Adena-->
@@ -9887,7 +9804,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" />
+		<base pAtk="912.6537108" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="635.688655236" pDef="348.2025" mDef="231.837152158566" accuracy="6.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9909,7 +9826,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2937.9838056" hp_regen="8.67" mp="1708.296" mp_regen="3.06" />
-		<physical hitModify="6.75" avoidModify="2" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9940,7 +9856,7 @@
 		</custom>
 	</npc>
 	<npc id="21384" templateId="21384" clientName="Necromancer of Destruction" serverName="destroyer_savant" level="78" type="warrior">
-		<acquire exp="44576.22788099998"  exp_rate="7.32679616715976" sp="5062.0" />
+		<acquire exp="44576"  exp_rate="7.32679616715976" sp="5062" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5890" max="12060" chance="100" /> <!-- Adena-->
@@ -9985,7 +9901,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="12" evasion="3" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10006,7 +9922,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="12" avoidModify="3" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10032,7 +9947,7 @@
 		</custom>
 	</npc>
 	<npc id="21385" templateId="21385" clientName="Lavastone Golem" serverName="lavastone_golem" level="78" type="warrior">
-		<acquire exp="42929.75149199998"  exp_rate="7.05617217159763" sp="4875.0" />
+		<acquire exp="42930"  exp_rate="7.05617217159763" sp="4875" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5571" max="11407" chance="100" /> <!-- Adena-->
@@ -10078,7 +9993,7 @@
 			<walk ground="23" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.41" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="12" evasion="3" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10097,7 +10012,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="12" avoidModify="3" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10124,7 +10038,7 @@
 		</custom>
 	</npc>
 	<npc id="21386" templateId="21386" clientName="Magma Golem" serverName="magma_golem" level="78" type="warrior">
-		<acquire exp="45872.412480000006"  exp_rate="7.53984426035503" sp="5209.0" />
+		<acquire exp="45872"  exp_rate="7.53984426035503" sp="5209" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5749" max="11773" chance="100" /> <!-- Adena-->
@@ -10169,7 +10083,7 @@
 			<walk ground="13" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" />
+		<base pAtk="938.20801458" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="656.66638089" pDef="354.8183475" mDef="239.180922" accuracy="12" evasion="3" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10192,7 +10106,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="2975.2369188" hp_regen="8.721" mp="1742.976" mp_regen="3.0804" />
-		<physical hitModify="12" avoidModify="3" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10219,7 +10132,7 @@
 		</custom>
 	</npc>
 	<npc id="21387" templateId="21387" clientName="Arimanes of Destruction" serverName="destroyer_ahrimanes" level="78" type="warrior">
-		<acquire exp="36574.90214400003"  exp_rate="6.01165386982249" sp="4202.0" />
+		<acquire exp="36575"  exp_rate="6.01165386982249" sp="4202" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5163" max="10575" chance="100" /> <!-- Adena-->
@@ -10266,7 +10179,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" />
+		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" accuracy="8.75" evasion="4" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10288,7 +10201,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3010.8929976" hp_regen="8.772" mp="1777.86" mp_regen="3.1008" />
-		<physical hitModify="8.75" avoidModify="4" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10317,7 +10229,7 @@
 		</custom>
 	</npc>
 	<npc id="21388" templateId="21388" clientName="Iblis of Destruction" serverName="destroyer_iblis" level="78" type="warrior">
-		<acquire exp="55327.190059999986"  exp_rate="9.09388396778435" sp="6356.0" />
+		<acquire exp="55327"  exp_rate="9.09388396778435" sp="6356" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7810" max="15997" chance="100" /> <!-- Adena-->
@@ -10367,7 +10279,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.76" skill_factor="-1" />
-		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" />
+		<base pAtk="961.93701102" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="677.644106544" pDef="361.0859925" mDef="246.330714" accuracy="8.75" evasion="4" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10387,7 +10299,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3010.8929976" hp_regen="8.772" mp="1777.86" mp_regen="3.1008" />
-		<physical hitModify="8.75" avoidModify="4" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10415,7 +10326,7 @@
 		</custom>
 	</npc>
 	<npc id="21389" templateId="21389" clientName="Balor of Destruction" serverName="destroyer_balor" level="78" type="warrior">
-		<acquire exp="59328.03355500004"  exp_rate="9.75148480522683" sp="6897.0" />
+		<acquire exp="59328"  exp_rate="9.75148480522683" sp="6897" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7149" max="14591" chance="100" /> <!-- Adena-->
@@ -10460,7 +10371,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" />
+		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" accuracy="9.75" evasion="5" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10482,7 +10393,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3044.88717" hp_regen="8.823" mp="1812.948" mp_regen="3.111" />
-		<physical hitModify="9.75" avoidModify="5" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10508,7 +10418,7 @@
 		</custom>
 	</npc>
 	<npc id="21390" templateId="21390" clientName="Ashuras of Destruction" serverName="destroyer_ashuras" level="78" type="warrior">
-		<acquire exp="68449.74796800021"  exp_rate="11.2507804023669" sp="8052.0" />
+		<acquire exp="68450"  exp_rate="11.2507804023669" sp="8052" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="8333" max="17007" chance="100" /> <!-- Adena-->
@@ -10556,7 +10466,7 @@
 			<walk ground="41" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" />
+		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" accuracy="10.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10578,7 +10488,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3077.1572058" hp_regen="8.874" mp="1848.24" mp_regen="3.1314" />
-		<physical hitModify="10.75" avoidModify="2" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10604,7 +10513,7 @@
 		</custom>
 	</npc>
 	<npc id="21391" templateId="21391" clientName="Lavasillisk" serverName="lavasilisk" level="78" type="warrior">
-		<acquire exp="47321.52612700002"  exp_rate="7.77802862047995" sp="5501.0" />
+		<acquire exp="47322"  exp_rate="7.77802862047995" sp="5501" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="6703" max="13681" chance="100" /> <!-- Adena-->
@@ -10652,7 +10561,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" />
+		<base pAtk="985.66600746" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" accuracy="9.75" evasion="5" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10672,7 +10581,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3044.88717" hp_regen="8.823" mp="1812.948" mp_regen="3.111" />
-		<physical hitModify="9.75" avoidModify="5" />
 		<race>BEAST</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10698,7 +10606,7 @@
 		</custom>
 	</npc>
 	<npc id="21392" templateId="21392" clientName="Blazing Ifrit" serverName="blazing_ifrit" level="78" type="warrior">
-		<acquire exp="67508.86564799995"  exp_rate="11.0961317633136" sp="7941.0" />
+		<acquire exp="67509"  exp_rate="11.0961317633136" sp="7941" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="8265" max="16868" chance="100" /> <!-- Adena-->
@@ -10745,7 +10653,7 @@
 			<walk ground="38" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" />
+		<base pAtk="1009.3950039" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="719.599557852" pDef="373.969485" mDef="261.022284" accuracy="10.75" evasion="2" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10769,7 +10677,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3077.1572058" hp_regen="8.874" mp="1848.24" mp_regen="3.1314" />
-		<physical hitModify="10.75" avoidModify="2" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10795,7 +10702,7 @@
 		</custom>
 	</npc>
 	<npc id="21393" templateId="21393" clientName="Magma Drake" serverName="magma_drake" level="78" type="warrior">
-		<acquire exp="56964.02415000001"  exp_rate="9.36292310157791" sp="6780.0" />
+		<acquire exp="56964"  exp_rate="9.36292310157791" sp="6780" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7443" max="15195" chance="100" /> <!-- Adena-->
@@ -10838,7 +10745,7 @@
 			<walk ground="57" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="1033.1240034" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" />
+		<base pAtk="1033.1240034" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="740.577283506" pDef="380.23713" mDef="268.304676" accuracy="11.75" evasion="7" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -10862,7 +10769,6 @@
 			<ai_skill name="SelfExplosion" id="4614" level="10" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3107.6436594" hp_regen="8.925" mp="1883.736" mp_regen="3.1518" />
-		<physical hitModify="11.75" avoidModify="7" />
 		<race>DRAGON</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10888,7 +10794,7 @@
 		</custom>
 	</npc>
 	<npc id="21394" templateId="21394" clientName="Lavasaurus" serverName="lavasaurus" level="78" type="warrior">
-		<acquire exp="44944.124630000006"  exp_rate="7.38726571827745" sp="4981.0" />
+		<acquire exp="44944"  exp_rate="7.38726571827745" sp="4981" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5623" max="11476" chance="100" /> <!-- Adena-->
@@ -10931,7 +10837,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="884.2525659" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" />
+		<base pAtk="884.2525659" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="609.868172336" pDef="340.4407808" mDef="226.669315301277" accuracy="1" evasion="1" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -10948,7 +10854,6 @@
 			<ai_skill name="Skill01_ID" id="4607" level="1" /> <!-- Magma Attack -->
 		</npc_ai>
 		<org hp="2870.7774087" hp_regen="8.585" mp="1657.41" mp_regen="3.03" />
-		<physical hitModify="1" avoidModify="1" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -10976,7 +10881,7 @@
 		</custom>
 	</npc>
 	<npc id="21395" templateId="21395" clientName="Elder Lavasaurus" serverName="elder_lavasaurus" level="78" type="warrior">
-		<acquire exp="58564.00900999999"  exp_rate="9.62590549145299" sp="6808.0" />
+		<acquire exp="58564"  exp_rate="9.62590549145299" sp="6808" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7372" max="15047" chance="100" /> <!-- Adena-->
@@ -11021,7 +10926,7 @@
 			<walk ground="1" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="985.66600746" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" />
+		<base pAtk="985.66600746" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="699.2575207596" pDef="367.3536375" mDef="253.534464" accuracy="5" evasion="5" />
 		<base_attack type="BOW" range="1100" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
@@ -11038,7 +10943,6 @@
 			<ai_skill name="Skill01_ID" id="4607" level="1" /> <!-- Magma Attack -->
 		</npc_ai>
 		<org hp="3044.88717" hp_regen="8.823" mp="1812.948" mp_regen="3.111" />
-		<physical hitModify="5" avoidModify="5" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -11066,7 +10970,7 @@
 		</custom>
 	</npc>
 	<npc id="21396" templateId="21396" clientName="Carrion Scarab" serverName="carrion_scarab" level="78" type="warrior">
-		<acquire exp="24548.879159999997"  exp_rate="4.03499" sp="2687.0" />
+		<acquire exp="24549"  exp_rate="4.03499" sp="2687" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3069" max="6264" chance="100" /> <!-- Adena-->
@@ -11113,7 +11017,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -11135,7 +11039,6 @@
 			<ai_skill name="DeBuff" id="4047" level="8" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -11165,7 +11068,7 @@
 		</custom>
 	</npc>
 	<npc id="21397" templateId="21397" clientName="Carrion Scarab" serverName="carrion_scarab_a" level="78" type="warrior">
-		<acquire exp="21310.305893543245"  exp_rate="3.50268012714386" sp="2332.0" />
+		<acquire exp="21310"  exp_rate="3.50268012714386" sp="2332" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="2992" max="6106" chance="100" /> <!-- Adena-->
@@ -11212,7 +11115,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -11228,7 +11131,6 @@
 			<ai_skill name="PhysicalSpecial" id="4032" level="8" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -11258,7 +11160,7 @@
 		</custom>
 	</npc>
 	<npc id="21398" templateId="21398" clientName="Soldier Scarab" serverName="soldier_scarab" level="78" type="warrior">
-		<acquire exp="40464.50964154266"  exp_rate="6.65097134147644" sp="4428.0" />
+		<acquire exp="40465"  exp_rate="6.65097134147644" sp="4428" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5681" max="11595" chance="100" /> <!-- Adena-->
@@ -11300,7 +11202,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -11316,7 +11218,6 @@
 			<ai_skill name="PhysicalSpecial" id="4579" level="8" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -11345,7 +11246,7 @@
 		</custom>
 	</npc>
 	<npc id="21399" templateId="21399" clientName="Soldier Scarab" serverName="soldier_scarab_a" level="78" type="warrior">
-		<acquire exp="38680.45974"  exp_rate="6.357735" sp="4233.0" />
+		<acquire exp="38680"  exp_rate="6.357735" sp="4233" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4986" max="10175" chance="100" /> <!-- Adena-->
@@ -11387,7 +11288,7 @@
 			<walk ground="45" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" />
+		<base pAtk="855.81387" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="584.40994" pDef="332.70061" mDef="221.515820894982" accuracy="4.75" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -11404,7 +11305,6 @@
 			<ai_skill name="W_ShortRangeDDMagic" id="4160" level="8" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="2802.89989" hp_regen="8.5" mp="1607.4" mp_regen="3" />
-		<physical hitModify="4.75" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>

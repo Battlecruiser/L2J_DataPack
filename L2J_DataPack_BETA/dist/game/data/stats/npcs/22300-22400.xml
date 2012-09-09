@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22300" templateId="22300" clientName="Dolph's Minion" serverName="named_a2_private" level="82" type="warrior">
-		<acquire exp="34450.531466666645"  exp_rate="5.12351746976006" sp="3767.0" />
+		<acquire exp="34451"  exp_rate="5.12351746976006" sp="3767" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5597" max="11465" chance="100" /> <!-- Adena-->
@@ -44,7 +44,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" />
+		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -63,7 +63,6 @@
 			<ai_skill name="Skill01_ID" id="5303" level="4" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="10982.0141560175" hp_regen="112.558039826218" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -88,7 +87,7 @@
 		</custom>
 	</npc>
 	<npc id="22301" templateId="22301" clientName="Terod" serverName="named_for_a3" level="82" type="warrior">
-		<acquire exp="190311.4036666665"  exp_rate="28.3033021514971" sp="20810.0" />
+		<acquire exp="190311"  exp_rate="28.3033021514971" sp="20810" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="29719" max="60872" chance="100" /> <!-- Adena-->
@@ -131,7 +130,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="5571.87244121247" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3804.86656104545" pDef="559.639632" mDef="614.28" />
+		<base pAtk="5571.87244121247" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3804.86656104545" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -149,7 +148,6 @@
 			<ai_skill name="debuff" id="5203" level="10" /> <!-- Fear -->
 		</npc_ai>
 		<org hp="65802.611803692" hp_regen="112.40520021868" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -175,7 +173,7 @@
 		</custom>
 	</npc>
 	<npc id="22302" templateId="22302" clientName="Darnel's Guardian" serverName="key_for_raid1" level="82" type="warrior">
-		<acquire exp="182298.29193333312"  exp_rate="27.1115841661709" sp="19934.0" />
+		<acquire exp="182298"  exp_rate="27.1115841661709" sp="19934" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="17859" max="36581" chance="100" /> <!-- Adena-->
@@ -218,7 +216,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.72" skill_factor="-1" />
-		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" />
+		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -246,7 +244,6 @@
 			<ai_skill name="Skill03_ID" id="4666" level="10" /> <!-- Drain Health -->
 		</npc_ai>
 		<org hp="56403.1943232691" hp_regen="192.697893809876" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>FAIRY</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -272,7 +269,7 @@
 		</custom>
 	</npc>
 	<npc id="22303" templateId="22303" clientName="Guardian of the Square" serverName="key_for_raid2" level="82" type="warrior">
-		<acquire exp="190115.82817499992"  exp_rate="28.2742159689173" sp="20789.0" />
+		<acquire exp="190116"  exp_rate="28.2742159689173" sp="20789" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="18630" max="38159" chance="100" /> <!-- Adena-->
@@ -312,7 +309,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" />
+		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -332,7 +329,6 @@
 			<ai_skill name="Skill02_ID" id="5359" level="4" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="56403.1943232691" hp_regen="192.697893809876" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -358,7 +354,7 @@
 		</custom>
 	</npc>
 	<npc id="22304" templateId="22304" clientName="Guardian of the Emerald" serverName="key_for_raid3" level="82" type="warrior">
-		<acquire exp="190921.89165000018"  exp_rate="28.3940945345033" sp="20877.0" />
+		<acquire exp="190922"  exp_rate="28.3940945345033" sp="20877" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="18705" max="38313" chance="100" /> <!-- Adena-->
@@ -400,7 +396,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.71" skill_factor="-1" />
-		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" />
+		<base pAtk="9266.3177391536" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6327.69376573446" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -420,7 +416,6 @@
 			<ai_skill name="Skill02_ID" id="5393" level="4" /> <!-- Mana Burn -->
 		</npc_ai>
 		<org hp="56403.1943232691" hp_regen="192.697893809876" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -446,7 +441,7 @@
 		</custom>
 	</npc>
 	<npc id="22305" templateId="22305" clientName="Kechi's Captain" serverName="fireroad_partyleader01" level="82" type="warrior">
-		<acquire exp="34650.37184444444"  exp_rate="5.15323793046467" sp="3789.0" />
+		<acquire exp="34650"  exp_rate="5.15323793046467" sp="3789" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="4339" max="8887" chance="100" /> <!-- Adena-->
@@ -486,7 +481,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.41" skill_factor="-1" />
-		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" />
+		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -508,7 +503,6 @@
 			<ai_skill name="Skill01_ID" id="5273" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="10982.0141560175" hp_regen="112.558039826218" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -534,7 +528,7 @@
 		</custom>
 	</npc>
 	<npc id="22306" templateId="22306" clientName="Kechi's Captain" serverName="fireroad_partyleader02" level="82" type="warrior">
-		<acquire exp="88071.11673333355"  exp_rate="13.098024499306" sp="9156.0" />
+		<acquire exp="88071"  exp_rate="13.098024499306" sp="9156" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="9969" max="20420" chance="100" /> <!-- Adena-->
@@ -574,7 +568,7 @@
 			<walk ground="13" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" />
+		<base pAtk="6734.49667710476" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4598.788195986" pDef="559.639632" mDef="614.28" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -605,7 +599,6 @@
 			<ai_skill name="Skill02_ID" id="5314" level="4" /> <!-- Blazing Circle -->
 		</npc_ai>
 		<org hp="10982.0141560175" hp_regen="112.558039826218" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -631,7 +624,7 @@
 		</custom>
 	</npc>
 	<npc id="22307" templateId="22307" clientName="Kechi's Captain" serverName="fireroad_partyleader03" level="82" type="warrior">
-		<acquire exp="190925.5472666668"  exp_rate="28.3946382014674" sp="19906.0" />
+		<acquire exp="190926"  exp_rate="28.3946382014674" sp="19906" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="24123" max="49411" chance="100" /> <!-- Adena-->
@@ -676,7 +669,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5793.32235492338" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="3956.08814418738" pDef="559.639632" mDef="614.28" />
+		<base pAtk="5793.32235492338" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="3956.08814418738" pDef="559.639632" mDef="614.28" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -702,7 +695,6 @@
 			<ai_skill name="Skill01_ID" id="5340" level="3" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="32946.0424680524" hp_regen="112.558039826218" mp="1743" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -729,7 +721,7 @@
 		</custom>
 	</npc>
 	<npc id="22308" templateId="22308" clientName="Kechi's Guard" serverName="fireroad_privates01" level="82" type="warrior">
-		<acquire exp="30391.059555"  exp_rate="4.51978875" sp="3173.0" />
+		<acquire exp="30391"  exp_rate="4.51978875" sp="3173" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3967" max="8126" chance="100" /> <!-- Adena-->
@@ -770,7 +762,7 @@
 			<walk ground="90" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" />
+		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -794,7 +786,6 @@
 			<ai_skill name="Skill01_ID" id="4614" level="10" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3643.38976668326" hp_regen="8.5" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -820,7 +811,7 @@
 		</custom>
 	</npc>
 	<npc id="22309" templateId="22309" clientName="Kechi's Guard" serverName="fireroad_privates02" level="82" type="warrior">
-		<acquire exp="42318.596736"  exp_rate="6.293664" sp="4434.0" />
+		<acquire exp="42319"  exp_rate="6.293664" sp="4434" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5443" max="11149" chance="100" /> <!-- Adena-->
@@ -862,7 +853,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" />
+		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -883,7 +874,6 @@
 			<ai_skill name="Skill02_ID" id="5301" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="3643.38976668326" hp_regen="8.5" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -913,7 +903,7 @@
 		</custom>
 	</npc>
 	<npc id="22310" templateId="22310" clientName="Kechi's Guard" serverName="fireroad_privates03" level="82" type="warrior">
-		<acquire exp="39902.571080999995"  exp_rate="5.93435025" sp="4170.0" />
+		<acquire exp="39903"  exp_rate="5.93435025" sp="4170" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5119" max="10485" chance="100" /> <!-- Adena-->
@@ -956,7 +946,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" />
+		<base pAtk="1055.28566004965" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="720.623302603812" pDef="349.77477" mDef="255.95" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -983,7 +973,6 @@
 			<ai_skill name="Skill02_ID" id="4561" level="10" /> <!-- Fire Burn -->
 		</npc_ai>
 		<org hp="3643.38976668326" hp_regen="8.5" mp="1743" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1012,7 +1001,7 @@
 		</custom>
 	</npc>
 	<npc id="22311" templateId="22311" clientName="Parme's Guardian" serverName="coralgdn_keymonster" level="83" type="warrior">
-		<acquire exp="180237.12120000008"  exp_rate="26.1630310930469" sp="18511.0" />
+		<acquire exp="180237"  exp_rate="26.1630310930469" sp="18511" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="15512" max="31115" chance="100" /> <!-- Adena-->
@@ -1061,7 +1050,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1090,7 +1079,6 @@
 			<ai_skill name="Skill02_ID" id="5318" level="4" /> <!-- Frost Wall -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1116,7 +1104,7 @@
 		</custom>
 	</npc>
 	<npc id="22312" templateId="22312" clientName="Fafurion's Henchman" serverName="coralgdn_pleader01" level="83" type="warrior">
-		<acquire exp="190928.21200000032"  exp_rate="27.7149385977646" sp="20619.0" />
+		<acquire exp="190928"  exp_rate="27.7149385977646" sp="20619" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="19156" max="38424" chance="100" /> <!-- Adena-->
@@ -1162,7 +1150,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="5589.57218651355" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3816.95321518099" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="5589.57218651355" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3816.95321518099" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1184,7 +1172,6 @@
 			<ai_skill name="Skill02_ID" id="5283" level="4" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="65569.2570829001" hp_regen="111.355378460862" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1210,7 +1197,7 @@
 		</custom>
 	</npc>
 	<npc id="22313" templateId="22313" clientName="Garden Stakato" serverName="coralgdn_pleader02" level="83" type="warrior">
-		<acquire exp="60928.598088888895"  exp_rate="8.84433126562475" sp="6262.0" />
+		<acquire exp="60929"  exp_rate="8.84433126562475" sp="6262" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5245" max="10520" chance="100" /> <!-- Adena-->
@@ -1256,7 +1243,7 @@
 			<walk ground="25" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1281,7 +1268,6 @@
 			<ai_skill name="Skill02_ID" id="5282" level="4" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="10943.0943982571" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1311,7 +1297,7 @@
 		</custom>
 	</npc>
 	<npc id="22314" templateId="22314" clientName="Garden Poison Moth" serverName="coralgdn_pleader03" level="83" type="warrior">
-		<acquire exp="59614.74724444439"  exp_rate="8.65361405783777" sp="6120.0" />
+		<acquire exp="59615"  exp_rate="8.65361405783777" sp="6120" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="5131" max="10293" chance="100" /> <!-- Adena-->
@@ -1355,7 +1341,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="6774.50811945968" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="6774.50811945968" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1377,7 +1363,6 @@
 			<ai_skill name="Skill02_ID" id="5310" level="4" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="10943.0943982571" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1403,7 +1388,7 @@
 		</custom>
 	</npc>
 	<npc id="22315" templateId="22315" clientName="Garden Guard " serverName="coralgdn_privates01" level="83" type="warrior">
-		<acquire exp="34896.075999999994"  exp_rate="5.06547771810132" sp="3768.0" />
+		<acquire exp="34896"  exp_rate="5.06547771810132" sp="3768" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="3052" max="6121" chance="100" /> <!-- Adena-->
@@ -1448,7 +1433,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1468,7 +1453,6 @@
 			<ai_skill name="Skill02_ID" id="5309" level="4" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="10943.0943982571" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>GIANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1497,7 +1481,7 @@
 		</custom>
 	</npc>
 	<npc id="22316" templateId="22316" clientName="Garden Guardian Tree" serverName="coralgdn_privates02" level="83" type="warrior">
-		<acquire exp="100983.76133333331"  exp_rate="14.6586966661828" sp="10905.0" />
+		<acquire exp="100984"  exp_rate="14.6586966661828" sp="10905" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="8835" max="17721" chance="100" /> <!-- Adena-->
@@ -1537,7 +1521,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1558,7 +1542,6 @@
 			<ai_skill name="Skill02_ID" id="4463" level="3" /> <!-- Surrender To Water -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>PLANT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1584,7 +1567,7 @@
 		</custom>
 	</npc>
 	<npc id="22317" templateId="22317" clientName="Garden Castalia" serverName="coralgdn_privates03" level="83" type="warrior">
-		<acquire exp="14993.211422222208"  exp_rate="2.17639881292237" sp="1556.0" />
+		<acquire exp="14993"  exp_rate="2.17639881292237" sp="1556" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="1260" max="2528" chance="100" /> <!-- Adena-->
@@ -1634,7 +1617,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="6774.50811945968" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4626.11085160169" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1669,7 +1652,6 @@
 			<ai_skill name="Skill03_ID" id="4613" level="10" /> <!-- Clan Heal -->
 		</npc_ai>
 		<org hp="10943.0943982571" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1699,7 +1681,7 @@
 		</custom>
 	</npc>
 	<npc id="22320" templateId="22320" clientName="Junior Watchman" serverName="lower_keeper" level="81" type="warrior">
-		<acquire exp="163196.57453333304"  exp_rate="24.8737348778133" sp="17624.0" />
+		<acquire exp="163197"  exp_rate="24.8737348778133" sp="17624" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="72.1" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -1745,7 +1727,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="5883.7041177888" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4065.07551523469" pDef="572.839225223529" mDef="628.768339764706" />
+		<base pAtk="5883.7041177888" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4065.07551523469" pDef="572.839225223529" mDef="628.768339764706" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1774,7 +1756,6 @@
 			<ai_skill name="Skill03_ID" id="5334" level="4" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1800,7 +1781,7 @@
 		</custom>
 	</npc>
 	<npc id="22321" templateId="22321" clientName="Junior Summoner" serverName="lower_summoner" level="81" type="warrior">
-		<acquire exp="155632.05360000028"  exp_rate="23.720782441701" sp="16807.0" />
+		<acquire exp="155632"  exp_rate="23.720782441701" sp="16807" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="72.1" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -1847,7 +1828,7 @@
 			<walk ground="64" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="5883.7041177888" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4065.07551523469" pDef="572.839225223529" mDef="628.768339764706" />
+		<base pAtk="5883.7041177888" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4065.07551523469" pDef="572.839225223529" mDef="628.768339764706" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1887,7 +1868,6 @@
 			<ai_skill name="Skill04_ID" id="5332" level="3" /> <!-- Mana Burn -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -1916,7 +1896,7 @@
 		</custom>
 	</npc>
 	<npc id="22322" templateId="22322" clientName="Subjugated Native" serverName="controled_native" level="81" type="warrior">
-		<acquire exp="11381.098604812512"  exp_rate="1.73465913806013" sp="1207.0" />
+		<acquire exp="11381"  exp_rate="1.73465913806013" sp="1207" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="11.25" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -1964,7 +1944,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" />
+		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -1992,7 +1972,6 @@
 			<ai_skill name="Skill01_ID" id="4614" level="9" /> <!-- Death Bomb -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2021,7 +2000,7 @@
 		</custom>
 	</npc>
 	<npc id="22323" templateId="22323" clientName="Charmed Native" serverName="bedazzled_native" level="81" type="warrior">
-		<acquire exp="11745.934447500018"  exp_rate="1.79026588134431" sp="1247.0" />
+		<acquire exp="11746"  exp_rate="1.79026588134431" sp="1247" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="11.61" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2071,7 +2050,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="1112.35801218417" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" />
+		<base pAtk="1112.35801218417" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2099,7 +2078,6 @@
 			<ai_skill name="Skill03_ID" id="4065" level="9" /> <!-- Heal -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMAN</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2128,7 +2106,7 @@
 		</custom>
 	</npc>
 	<npc id="22324" templateId="22324" clientName="Blind Huntsman" serverName="eyeless_huntsman" level="81" type="warrior">
-		<acquire exp="28644.062868562494"  exp_rate="4.36580747882373" sp="2983.0" />
+		<acquire exp="28644"  exp_rate="4.36580747882373" sp="2983" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="28.49" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2177,7 +2155,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" />
+		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2202,7 +2180,6 @@
 			<ai_skill name="Skill02_ID" id="4088" level="9" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2228,7 +2205,7 @@
 		</custom>
 	</npc>
 	<npc id="22325" templateId="22325" clientName="Blind Watchman" serverName="eyeless_observer" level="81" type="warrior">
-		<acquire exp="25716.47769187503"  exp_rate="3.91959727051898" sp="2667.0" />
+		<acquire exp="25716"  exp_rate="3.91959727051898" sp="2667" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="25.54" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2277,7 +2254,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" />
+		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2313,7 +2290,6 @@
 			<ai_skill name="Skill04_ID" id="5332" level="3" /> <!-- Mana Burn -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2339,7 +2315,7 @@
 		</custom>
 	</npc>
 	<npc id="22326" templateId="22326" clientName="Hellinark" serverName="hellinark" level="81" type="warrior">
-		<acquire exp="2629657.7599499994"  exp_rate="400.80136563786" sp="267913.0" />
+		<acquire exp="2629658"  exp_rate="400.80136563786" sp="267913" />
 		<additional_make_list>
 			<item id="9599" min="14" max="44" chance="86.96" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2384,7 +2360,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="7957.47325738098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5529.81543471775" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="7957.47325738098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5529.81543471775" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2408,7 +2384,6 @@
 			<ai_skill name="Skill02_ID" id="5335" level="4" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="338766.60216791" hp_regen="194.030406814438" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2434,7 +2409,7 @@
 		</custom>
 	</npc>
 	<npc id="22327" templateId="22327" clientName="Arcane Scout" serverName="circle_warrior" level="81" type="warrior">
-		<acquire exp="320391.91306666686"  exp_rate="48.8327866280547" sp="34601.0" />
+		<acquire exp="320392"  exp_rate="48.8327866280547" sp="34601" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="70.54" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2483,7 +2458,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="5655.33185929606" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" />
+		<base pAtk="5655.33185929606" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2508,7 +2483,6 @@
 			<ai_skill name="Skill02_ID" id="4047" level="10" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2537,7 +2511,7 @@
 		</custom>
 	</npc>
 	<npc id="22328" templateId="22328" clientName="Arcane Guardian" serverName="circle_magician" level="81" type="warrior">
-		<acquire exp="134975.94746666693"  exp_rate="20.5724657013667" sp="13992.0" />
+		<acquire exp="134976"  exp_rate="20.5724657013667" sp="13992" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="57.01" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2586,7 +2560,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5655.33185929606" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" />
+		<base pAtk="5655.33185929606" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2618,7 +2592,6 @@
 			<ai_skill name="Skill02_ID" id="5311" level="4" /> <!-- Aura Flare -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2644,7 +2617,7 @@
 		</custom>
 	</npc>
 	<npc id="22329" templateId="22329" clientName="Arcane Watchman" serverName="circle_magicswordman" level="81" type="warrior">
-		<acquire exp="331001.50560000027"  exp_rate="50.4498560585277" sp="35747.0" />
+		<acquire exp="331002"  exp_rate="50.4498560585277" sp="35747" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="72.84" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2689,7 +2662,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5655.33185929606" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" />
+		<base pAtk="5655.33185929606" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3907.29217709046" pDef="572.839225223529" mDef="628.768339764706" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2713,7 +2686,6 @@
 			<ai_skill name="Skill02_ID" id="5328" level="4" /> <!-- Unholy Strike -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2739,7 +2711,7 @@
 		</custom>
 	</npc>
 	<npc id="22330" templateId="22330" clientName="Remnant Wraith" serverName="ghost_in_ruins" level="81" type="warrior">
-		<acquire exp="17814.66724537498"  exp_rate="2.71523658670553" sp="1923.0" />
+		<acquire exp="17815"  exp_rate="2.71523658670553" sp="1923" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="17.92" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2786,7 +2758,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" />
+		<base pAtk="1112.35801218417" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="768.532752324125" pDef="358.024515764706" mDef="261.986808235294" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2805,7 +2777,6 @@
 			<ai_skill name="Skill01_ID" id="4579" level="10" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2834,7 +2805,7 @@
 		</custom>
 	</npc>
 	<npc id="22334" templateId="22334" clientName="Sand Scorpion" serverName="sand_scorpion" level="81" type="warrior">
-		<acquire exp="147903.90940000027"  exp_rate="22.5428912360921" sp="15780.0" />
+		<acquire exp="147904"  exp_rate="22.5428912360921" sp="15780" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="56.02" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2886,7 +2857,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -2907,7 +2878,6 @@
 			<ai_skill name="Skill02_ID" id="5251" level="10" /> <!-- Poison -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -2933,7 +2903,7 @@
 		</custom>
 	</npc>
 	<npc id="22335" templateId="22335" clientName="Desert Scorpion" serverName="desert_scorpion" level="81" type="warrior">
-		<acquire exp="151636.42909999986"  exp_rate="23.1117861758878" sp="16178.0" />
+		<acquire exp="151636"  exp_rate="23.1117861758878" sp="16178" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="57.43" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -2980,7 +2950,7 @@
 			<walk ground="37" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3001,7 +2971,6 @@
 			<ai_skill name="Skill02_ID" id="5253" level="9" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>BUG</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3027,7 +2996,7 @@
 		</custom>
 	</npc>
 	<npc id="22336" templateId="22336" clientName="Sand Devil" serverName="mysterious_gust" level="81" type="warrior">
-		<acquire exp="50320.1733666667"  exp_rate="7.66958899049942" sp="5368.0" />
+		<acquire exp="50320"  exp_rate="7.66958899049942" sp="5368" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="38.11" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3080,7 +3049,7 @@
 			<walk ground="39" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="6935.07781353704" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="6935.07781353704" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3102,7 +3071,6 @@
 			<ai_skill name="Skill02_ID" id="4587" level="9" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="11001.327600381" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3128,7 +3096,7 @@
 		</custom>
 	</npc>
 	<npc id="22337" templateId="22337" clientName="Desiccator" serverName="gust_warrior" level="81" type="warrior">
-		<acquire exp="47148.40780000003"  exp_rate="7.18616183508612" sp="5030.0" />
+		<acquire exp="47148"  exp_rate="7.18616183508612" sp="5030" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="35.72" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3178,7 +3146,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.17" skill_factor="-1" />
-		<base pAtk="6935.07781353704" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="6935.07781353704" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3212,7 +3180,6 @@
 			<ai_skill name="Skill04_ID" id="5332" level="3" /> <!-- Mana Burn -->
 		</npc_ai>
 		<org hp="11001.327600381" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3238,7 +3205,7 @@
 		</custom>
 	</npc>
 	<npc id="22339" templateId="22339" clientName="Wandering Caravan" serverName="dispossessed_caravan" level="81" type="warrior">
-		<acquire exp="18810.202319999986"  exp_rate="2.86697185185185" sp="2006.0" />
+		<acquire exp="18810"  exp_rate="2.86697185185185" sp="2006" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="18.49" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3282,7 +3249,7 @@
 			<walk ground="56" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.39" skill_factor="-1" />
-		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" />
+		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3304,7 +3271,6 @@
 			<ai_skill name="Skill02_ID" id="4587" level="9" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3329,7 +3295,7 @@
 		</custom>
 	</npc>
 	<npc id="22340" templateId="22340" clientName="Sandstorm" serverName="sand_gale" level="81" type="warrior">
-		<acquire exp="146852.49539999972"  exp_rate="22.3826391403749" sp="15668.0" />
+		<acquire exp="146852"  exp_rate="22.3826391403749" sp="15668" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="55.64" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3376,7 +3342,7 @@
 			<walk ground="180" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.21" skill_factor="-1" />
-		<base pAtk="5940.3994655008" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5940.3994655008" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3404,7 +3370,6 @@
 			<ai_skill name="Skill02_ID" id="5382" level="4" /> <!-- Tempest -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>ELEMENTAL</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3430,7 +3395,7 @@
 		</custom>
 	</npc>
 	<npc id="22341" templateId="22341" clientName="Keltas" serverName="keltas" level="81" type="warrior">
-		<acquire exp="449479.48499999987"  exp_rate="68.5077709190672" sp="47956.0" />
+		<acquire exp="449479"  exp_rate="68.5077709190672" sp="47956" />
 		<additional_make_list>
 			<item id="9599" min="4" max="12" chance="70.8" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3479,7 +3444,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="4590.3720965471" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3189.94606070952" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="4590.3720965471" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3189.94606070952" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3503,7 +3468,6 @@
 			<ai_skill name="Skill02_ID" id="5328" level="4" /> <!-- Unholy Strike -->
 		</npc_ai>
 		<org hp="197755.336867056" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3532,7 +3496,7 @@
 		</custom>
 	</npc>
 	<npc id="22342" templateId="22342" clientName="Darion's Enforcer" serverName="bailiff_of_darion" level="81" type="warrior">
-		<acquire exp="12425.00212800001"  exp_rate="1.89376651851852" sp="1325.0" />
+		<acquire exp="12425"  exp_rate="1.89376651851852" sp="1325" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="12.21" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3577,7 +3541,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" />
+		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3601,7 +3565,6 @@
 			<ai_skill name="Skill02_ID" id="4580" level="10" /> <!-- Decrease P. Atk. -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3627,7 +3590,7 @@
 		</custom>
 	</npc>
 	<npc id="22343" templateId="22343" clientName="Darion's Executioner" serverName="excuter_of_darion" level="81" type="warrior">
-		<acquire exp="9997.879248000021"  exp_rate="1.52383466666667" sp="1066.0" />
+		<acquire exp="9998"  exp_rate="1.52383466666667" sp="1066" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="9.83" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3672,7 +3635,7 @@
 			<walk ground="48" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.61" skill_factor="-1" />
-		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" />
+		<base pAtk="1164.93244173344" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="809.536040944386" pDef="364.182534058824" mDef="266.492975470588" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3699,7 +3662,6 @@
 			<ai_skill name="Skill02_ID" id="5265" level="10" /> <!-- Soul Emission -->
 		</npc_ai>
 		<org hp="3461.77253215841" hp_regen="8.5" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3725,7 +3687,7 @@
 		</custom>
 	</npc>
 	<npc id="22344" templateId="22344" clientName="Quarry Supervisor" serverName="director_of_quarry" level="81" type="warrior">
-		<acquire exp="70970.44499999967"  exp_rate="10.8170164609053" sp="7317.0" />
+		<acquire exp="70970"  exp_rate="10.8170164609053" sp="7317" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="51.88" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3773,7 +3735,7 @@
 			<walk ground="43" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3796,7 +3758,6 @@
 			<ai_skill name="Skill01_ID" id="5273" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3825,7 +3786,7 @@
 		</custom>
 	</npc>
 	<npc id="22345" templateId="22345" clientName="Quarry Bowman" serverName="bowman_of_quarry" level="81" type="warrior">
-		<acquire exp="22390.111466666687"  exp_rate="3.41260653355688" sp="2303.0" />
+		<acquire exp="22390"  exp_rate="3.41260653355688" sp="2303" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="16.33" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3871,7 +3832,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="6935.07781353704" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="6935.07781353704" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4819.33134977166" pDef="582.692054494118" mDef="639.583141129412" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -3903,7 +3864,6 @@
 			<ai_skill name="Skill02_ID" id="5330" level="4" /> <!-- Unholy Circle -->
 		</npc_ai>
 		<org hp="11001.327600381" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -3932,7 +3892,7 @@
 		</custom>
 	</npc>
 	<npc id="22346" templateId="22346" clientName="Quarry Foreman" serverName="ptleader_of_quarry" level="81" type="warrior">
-		<acquire exp="274809.57920000004"  exp_rate="41.885319189148" sp="29320.0" />
+		<acquire exp="274810"  exp_rate="41.885319189148" sp="29320" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="59.77" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -3982,7 +3942,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4009,7 +3969,6 @@
 			<ai_skill name="Skill02_ID" id="4047" level="10" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4038,7 +3997,7 @@
 		</custom>
 	</npc>
 	<npc id="22347" templateId="22347" clientName="Quarry Patrolman" serverName="patrol_of_quarry" level="81" type="warrior">
-		<acquire exp="150397.26259999975"  exp_rate="22.9229176345069" sp="16046.0" />
+		<acquire exp="150397"  exp_rate="22.9229176345069" sp="16046" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="56.96" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4084,7 +4043,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5940.3994655008" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4128.10845732292" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4109,7 +4068,6 @@
 			<ai_skill name="Skill01_ID" id="4574" level="10" /> <!-- Sonic Storm -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4135,7 +4093,7 @@
 		</custom>
 	</npc>
 	<npc id="22349" templateId="22349" clientName="Chimera of Earth" serverName="kimera_warrior" level="81" type="warrior">
-		<acquire exp="282094.3762"  exp_rate="42.9956372809023" sp="30097.0" />
+		<acquire exp="282094"  exp_rate="42.9956372809023" sp="30097" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="61.3" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4181,7 +4139,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4206,7 +4164,6 @@
 			<ai_item name="GiveItem2" id="9681" /> <!-- Life Force -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4233,7 +4190,7 @@
 		</custom>
 	</npc>
 	<npc id="22350" templateId="22350" clientName="Chimera of Darkness" serverName="chimera_magicwarrior" level="81" type="warrior">
-		<acquire exp="293014.06159999996"  exp_rate="44.6599697607072" sp="31262.0" />
+		<acquire exp="293014"  exp_rate="44.6599697607072" sp="31262" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="63.73" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4279,7 +4236,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4307,7 +4264,6 @@
 			<ai_item name="GiveItem2" id="9681" /> <!-- Life Force -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4334,7 +4290,7 @@
 		</custom>
 	</npc>
 	<npc id="22351" templateId="22351" clientName="Chimera of Wind" serverName="chimera_warrior" level="81" type="warrior">
-		<acquire exp="293014.06159999996"  exp_rate="44.6599697607072" sp="31262.0" />
+		<acquire exp="293014"  exp_rate="44.6599697607072" sp="31262" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="63.73" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4384,7 +4340,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4412,7 +4368,6 @@
 			<ai_item name="GiveItem2" id="9681" /> <!-- Life Force -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4439,7 +4394,7 @@
 		</custom>
 	</npc>
 	<npc id="22352" templateId="22352" clientName="Chimera of Fire" serverName="chimera_magician" level="81" type="warrior">
-		<acquire exp="283130.7699999999"  exp_rate="43.1536000609663" sp="30208.0" />
+		<acquire exp="283131"  exp_rate="43.1536000609663" sp="30208" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="61.56" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4485,7 +4440,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="5706.31759667062" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3965.44004621088" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4512,7 +4467,6 @@
 			<ai_item name="GiveItem2" id="9681" /> <!-- Life Force -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4539,7 +4493,7 @@
 		</custom>
 	</npc>
 	<npc id="22353" templateId="22353" clientName="Celtus" serverName="celtus" level="81" type="warrior">
-		<acquire exp="1089801.8761500008"  exp_rate="166.103014197531" sp="116275.0" />
+		<acquire exp="1089802"  exp_rate="166.103014197531" sp="116275" />
 		<additional_make_list>
 			<item id="9599" min="6" max="18" chance="88.42" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4583,7 +4537,7 @@
 			<walk ground="36" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="7957.47325738098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5529.81543471775" pDef="582.692054494118" mDef="639.583141129412" />
+		<base pAtk="7957.47325738098" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5529.81543471775" pDef="582.692054494118" mDef="639.583141129412" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4611,7 +4565,6 @@
 			<ai_item name="GiveItem2" id="9682" /> <!-- Contained Life Force -->
 		</npc_ai>
 		<org hp="338766.60216791" hp_regen="194.030406814438" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4638,7 +4591,7 @@
 		</custom>
 	</npc>
 	<npc id="22355" templateId="22355" clientName="Enceinte Defender" serverName="outcastle_resister" level="81" type="warrior">
-		<acquire exp="81905.42336666654"  exp_rate="12.4836798303104" sp="8636.0" />
+		<acquire exp="81905"  exp_rate="12.4836798303104" sp="8636" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="59.25" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4686,7 +4639,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="10570.6861102648" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7388.25320204968" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="10570.6861102648" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7388.25320204968" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4706,7 +4659,6 @@
 			<ai_skill name="Skill02_ID" id="5310" level="4" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="18835.2867837617" hp_regen="194.184225975005" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4749,7 +4701,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="9311.83314853711" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6508.39315054715" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="9311.83314853711" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6508.39315054715" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4772,7 +4724,6 @@
 			<ai_skill name="Skill01_ID" id="5360" level="4" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="112922.200722637" hp_regen="194.030406814438" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4815,7 +4766,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="5756.1195067038" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4023.17010770831" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="5756.1195067038" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4023.17010770831" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4836,7 +4787,6 @@
 			<ai_skill name="Skill01_ID" id="5298" level="4" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="65918.4456223521" hp_regen="113.26544062045" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4879,7 +4829,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="9551.66561529499" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6676.02115236235" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="9551.66561529499" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6676.02115236235" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -4907,7 +4857,6 @@
 			<ai_skill name="Skill02_ID" id="5372" level="3" /> <!-- Aura Flare -->
 		</npc_ai>
 		<org hp="56505.8603512852" hp_regen="194.184225975005" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -4933,7 +4882,7 @@
 		</custom>
 	</npc>
 	<npc id="22359" templateId="22359" clientName="Town Guard" serverName="castletownguard" level="81" type="warrior">
-		<acquire exp="49498.73826666663"  exp_rate="7.54438931057257" sp="5219.0" />
+		<acquire exp="49499"  exp_rate="7.54438931057257" sp="5219" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="37.02" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -4976,7 +4925,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="7014.97246843154" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4903.03015921084" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="7014.97246843154" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4903.03015921084" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5001,7 +4950,6 @@
 			<ai_skill name="Skill02_ID" id="4073" level="10" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="11001.327600381" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5027,7 +4975,7 @@
 		</custom>
 	</npc>
 	<npc id="22360" templateId="22360" clientName="Town Patrolman" serverName="castletownpatrol" level="81" type="warrior">
-		<acquire exp="143957.7940000002"  exp_rate="21.9414409388813" sp="15178.0" />
+		<acquire exp="143958"  exp_rate="21.9414409388813" sp="15178" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="53.83" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -5076,7 +5024,7 @@
 			<walk ground="50" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.52" skill_factor="-1" />
-		<base pAtk="5995.95197346168" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4190.79810952351" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="5995.95197346168" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4190.79810952351" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5104,7 +5052,6 @@
 			<ai_skill name="Skill01_ID" id="5299" level="4" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="33003.982801143" hp_regen="113.419259781018" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5133,7 +5080,7 @@
 		</custom>
 	</npc>
 	<npc id="22361" templateId="22361" clientName="Steel Citadel Keymaster" serverName="town_latchkey_mob" level="81" type="warrior">
-		<acquire exp="552529.8880000002"  exp_rate="84.2142795305594" sp="58258.0" />
+		<acquire exp="552530"  exp_rate="84.2142795305594" sp="58258" />
 		<additional_make_list>
 			<item id="9599" min="3" max="9" chance="67.86" /> <!-- Ancient Tome of the Demon-->
 			<item id="9714" min="1" max="1" chance="50" /> <!-- Key of the Evil Eye-->
@@ -5180,7 +5127,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="9311.83314853711" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6508.39315054715" pDef="592.481283388235" mDef="650.328136094118" />
+		<base pAtk="9311.83314853711" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6508.39315054715" pDef="592.481283388235" mDef="650.328136094118" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5208,7 +5155,6 @@
 			<ai_skill name="Skill02_ID" id="5298" level="4" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="112922.200722637" hp_regen="194.030406814438" mp="1708.8" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5234,7 +5180,7 @@
 		</custom>
 	</npc>
 	<npc id="22362" templateId="22362" clientName="Guzen" serverName="guzzen" level="83" type="warrior">
-		<acquire exp="1086079.8870000031"  exp_rate="157.654214980404" sp="114515.0" />
+		<acquire exp="1086080"  exp_rate="157.654214980404" sp="114515" />
 		<additional_make_list>
 			<item id="9599" min="6" max="20" chance="80.31" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -5284,7 +5230,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.55" skill_factor="-1" />
-		<base pAtk="7996.03660225228" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5523.74780111493" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="7996.03660225228" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5523.74780111493" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5311,7 +5257,6 @@
 			<ai_skill name="Skill01_ID" id="5360" level="4" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="336949.124088359" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5337,7 +5282,7 @@
 		</custom>
 	</npc>
 	<npc id="22363" templateId="22363" clientName="Body Destroyer" serverName="body_destroy" level="83" type="warrior">
-		<acquire exp="314158.0925000004"  exp_rate="45.6028585426042" sp="33124.0" />
+		<acquire exp="314158"  exp_rate="45.6028585426042" sp="33124" />
 		<additional_make_list>
 			<item id="9685" min="1" max="1" chance="20.0" /> <!-- Gate Key: Darkness-->
 		</additional_make_list>
@@ -5384,7 +5329,7 @@
 			<walk ground="51" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5412,7 +5357,6 @@
 			<ai_skill name="Real_Death_Word" id="5257" level="1" /> <!-- Death -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5438,7 +5382,7 @@
 		</custom>
 	</npc>
 	<npc id="22364" templateId="22364" clientName="Soul Dominator" serverName="soul_invader" level="83" type="warrior">
-		<acquire exp="106371.7757666664"  exp_rate="15.4408151787874" sp="11215.0" />
+		<acquire exp="106372"  exp_rate="15.4408151787874" sp="11215" />
 		<additional_make_list>
 			<item id="9685" min="1" max="1" chance="3.0" /> <!-- Gate Key: Darkness-->
 		</additional_make_list>
@@ -5487,7 +5431,7 @@
 			<walk ground="100" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5521,7 +5465,6 @@
 			<ai_skill name="Skill03_ID" id="5529" level="10" /> <!-- Surrender to the Unholy -->
 		</npc_ai>
 		<org hp="18734.280667127" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5550,7 +5493,7 @@
 		</custom>
 	</npc>
 	<npc id="22365" templateId="22365" clientName="Labyrinth Watchman" serverName="guard_of_maze" level="83" type="warrior">
-		<acquire exp="258122.68300000002"  exp_rate="37.4688173900421" sp="27216.0" />
+		<acquire exp="258123"  exp_rate="37.4688173900421" sp="27216" />
 		<additional_make_list>
 			<item id="9685" min="1" max="1" chance="10.0" /> <!-- Gate Key: Darkness-->
 		</additional_make_list>
@@ -5597,7 +5540,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5620,7 +5563,6 @@
 			<ai_skill name="Skill01_ID" id="5358" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5646,7 +5588,7 @@
 		</custom>
 	</npc>
 	<npc id="22366" templateId="22366" clientName="Labyrinth Watchman" serverName="guard_of_maze_1" level="83" type="warrior">
-		<acquire exp="258122.68300000002"  exp_rate="37.4688173900421" sp="27216.0" />
+		<acquire exp="258123"  exp_rate="37.4688173900421" sp="27216" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="21314" max="42688" chance="100" /> <!-- Adena-->
@@ -5690,7 +5632,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.49" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5713,7 +5655,6 @@
 			<ai_skill name="Skill01_ID" id="5358" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5739,7 +5680,7 @@
 		</custom>
 	</npc>
 	<npc id="22367" templateId="22367" clientName="Labyrinth Mystic" serverName="mage_of_maze" level="83" type="warrior">
-		<acquire exp="87693.30593333319"  exp_rate="12.7294681279334" sp="9246.0" />
+		<acquire exp="87693"  exp_rate="12.7294681279334" sp="9246" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="7242" max="14504" chance="100" /> <!-- Adena-->
@@ -5788,7 +5729,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.74" skill_factor="-1" />
-		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5817,7 +5758,6 @@
 			<ai_skill name="Skill02_ID" id="5371" level="4" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="18734.280667127" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5845,7 +5785,7 @@
 		</custom>
 	</npc>
 	<npc id="22368" templateId="22368" clientName="Labyrinth Captain" serverName="guardcap_of_maze" level="83" type="warrior">
-		<acquire exp="978684.5551999969"  exp_rate="142.064821483524" sp="98149.0" />
+		<acquire exp="978685"  exp_rate="142.064821483524" sp="98149" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="81028" max="162283" chance="100" /> <!-- Adena-->
@@ -5892,7 +5832,7 @@
 			<walk ground="40" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="9203.55601890295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6357.91515855911" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9203.55601890295" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6357.91515855911" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -5921,7 +5861,6 @@
 			<ai_skill name="Skill02_ID" id="5359" level="5" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -5950,7 +5889,7 @@
 		</custom>
 	</npc>
 	<npc id="22369" templateId="22369" clientName="Labyrinth Priest" serverName="bishop_of_maze" level="83" type="warrior">
-		<acquire exp="102129.69759999993"  exp_rate="14.8250395703295" sp="10259.0" />
+		<acquire exp="102130"  exp_rate="14.8250395703295" sp="10259" />
 		<additional_make_list>
 			<item id="9687" min="1" max="1" chance="50.0" /> <!-- Gate Key: Blood-->
 		</additional_make_list>
@@ -5999,7 +5938,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6032,7 +5971,6 @@
 			<ai_skill name="Skill03_ID" id="4047" level="10" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6061,7 +5999,7 @@
 		</custom>
 	</npc>
 	<npc id="22370" templateId="22370" clientName="Passageway Captain" serverName="guardcap_of_pathway" level="83" type="warrior">
-		<acquire exp="271142.08729999966"  exp_rate="39.3587004354768" sp="28589.0" />
+		<acquire exp="271142"  exp_rate="39.3587004354768" sp="28589" />
 		<additional_make_list>
 			<item id="9849" min="1" max="1" chance="100.0" /> <!-- Fiery Demon Blood-->
 		</additional_make_list>
@@ -6115,7 +6053,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.54" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6140,7 +6078,6 @@
 			<ai_skill name="Skill01_ID" id="5362" level="5" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6167,7 +6104,7 @@
 		</custom>
 	</npc>
 	<npc id="22371" templateId="22371" clientName="Passageway Guards" serverName="guard_of_pathway" level="83" type="warrior">
-		<acquire exp="88217.45799999984"  exp_rate="12.8055534910727" sp="9301.0" />
+		<acquire exp="88217"  exp_rate="12.8055534910727" sp="9301" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="9801" max="19630" chance="100" /> <!-- Adena-->
@@ -6215,7 +6152,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.45" skill_factor="-1" />
-		<base pAtk="10447.7711554943" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="10447.7711554943" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6238,7 +6175,6 @@
 			<ai_skill name="Skill01_ID" id="5358" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="18734.280667127" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6268,7 +6204,7 @@
 		</custom>
 	</npc>
 	<npc id="22372" templateId="22372" clientName="Passageway Mystic" serverName="mage_of_pathway" level="83" type="warrior">
-		<acquire exp="257789.53549999982"  exp_rate="37.4204580490637" sp="27181.0" />
+		<acquire exp="257790"  exp_rate="37.4204580490637" sp="27181" />
 		<additional_make_list>
 			<item id="9849" min="1" max="1" chance="100.0" /> <!-- Fiery Demon Blood-->
 		</additional_make_list>
@@ -6315,7 +6251,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6347,7 +6283,6 @@
 			<ai_skill name="Skill03_ID" id="4657" level="10" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6376,7 +6311,7 @@
 		</custom>
 	</npc>
 	<npc id="22373" templateId="22373" clientName="Cosmic Scout" serverName="guard_of_space" level="83" type="warrior">
-		<acquire exp="91939.8260666667"  exp_rate="13.3458885276044" sp="9694.0" />
+		<acquire exp="91940"  exp_rate="13.3458885276044" sp="9694" />
 		<additional_make_list>
 			<item id="9599" min="1" max="2" chance="44.35" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6435,7 +6370,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.67" skill_factor="-1" />
-		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="10447.7711554943" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="7217.43231271078" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6462,7 +6397,6 @@
 			<ai_skill name="Skill02_ID" id="5360" level="3" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="18734.280667127" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6488,7 +6422,7 @@
 		</custom>
 	</npc>
 	<npc id="22374" templateId="22374" clientName="Cosmic Watcher" serverName="beholder_of_space" level="83" type="warrior">
-		<acquire exp="256950.00379999977"  exp_rate="37.2985925097982" sp="27092.0" />
+		<acquire exp="256950"  exp_rate="37.2985925097982" sp="27092" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="46.46" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6547,7 +6481,7 @@
 			<walk ground="38" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9440.59973604737" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9440.59973604737" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6521.66749943455" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6579,7 +6513,6 @@
 			<ai_skill name="Skill03_ID" id="4657" level="9" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6605,7 +6538,7 @@
 		</custom>
 	</npc>
 	<npc id="22375" templateId="22375" clientName="Cosmic Priest" serverName="priest_of_space" level="83" type="warrior">
-		<acquire exp="533949.776"  exp_rate="77.5075883292205" sp="56299.0" />
+		<acquire exp="533950"  exp_rate="77.5075883292205" sp="56299" />
 		<additional_make_list>
 			<item id="9599" min="3" max="9" chance="65.57" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6657,7 +6590,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.46" skill_factor="-1" />
-		<base pAtk="9203.55601890295" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6357.91515855911" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="9203.55601890295" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6357.91515855911" pDef="585.591966139535" mDef="642.766181023256" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6690,7 +6623,6 @@
 			<ai_skill name="Skill03_ID" id="5529" level="9" /> <!-- Surrender to the Unholy -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6719,7 +6651,7 @@
 		</custom>
 	</npc>
 	<npc id="22376" templateId="22376" clientName="Cosmic Lord" serverName="ruler_of_space" level="83" type="warrior">
-		<acquire exp="1086079.8870000031"  exp_rate="157.654214980404" sp="114515.0" />
+		<acquire exp="1086080"  exp_rate="157.654214980404" sp="114515" />
 		<additional_make_list>
 			<item id="9599" min="7" max="21" chance="74.58" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6769,7 +6701,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.55" skill_factor="-1" />
-		<base pAtk="7996.03660225228" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5523.74780111493" pDef="585.591966139535" mDef="642.766181023256" />
+		<base pAtk="7996.03660225228" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5523.74780111493" pDef="585.591966139535" mDef="642.766181023256" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6798,7 +6730,6 @@
 			<ai_skill name="Skill02_ID" id="5359" level="3" /> <!-- Power Shot -->
 		</npc_ai>
 		<org hp="336949.124088359" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6824,7 +6755,7 @@
 		</custom>
 	</npc>
 	<npc id="22377" templateId="22377" clientName="Master Zelos" serverName="master_zeros" level="83" type="warrior">
-		<acquire exp="1410901.801200001"  exp_rate="204.805022673828" sp="147054.0" />
+		<acquire exp="1410902"  exp_rate="204.805022673828" sp="147054" />
 		<additional_make_list>
 			<item id="9599" min="9" max="25" chance="89.97" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6867,7 +6798,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.55" skill_factor="-1" />
-		<base pAtk="8128.04753400089" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5647.21214385793" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="8128.04753400089" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5647.21214385793" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6890,7 +6821,6 @@
 			<ai_skill name="Skill02_ID" id="5362" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="336949.124088359" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -6916,7 +6846,7 @@
 		</custom>
 	</npc>
 	<npc id="22378" templateId="22378" clientName="Master's Minion" serverName="zeros_privates_war" level="83" type="warrior">
-		<acquire exp="312776.8534666664"  exp_rate="45.4023593361397" sp="32599.0" />
+		<acquire exp="312777"  exp_rate="45.4023593361397" sp="32599" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="75.76" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -6967,7 +6897,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="5738.72922428878" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3987.15942914322" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5738.72922428878" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3987.15942914322" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -6986,7 +6916,6 @@
 			<ai_skill name="Skill01_ID" id="5301" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="65569.2570829001" hp_regen="111.355378460862" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7012,7 +6941,7 @@
 		</custom>
 	</npc>
 	<npc id="22379" templateId="22379" clientName="Master's Minion" serverName="zeros_privates_wiz" level="83" type="warrior">
-		<acquire exp="163810.48599999968"  exp_rate="23.7785579910001" sp="17073.0" />
+		<acquire exp="163810"  exp_rate="23.7785579910001" sp="17073" />
 		<additional_make_list>
 			<item id="9599" min="1" max="4" chance="56.05" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7070,7 +6999,7 @@
 			<walk ground="64" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="5981.54451308138" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5981.54451308138" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7097,7 +7026,6 @@
 			<ai_skill name="Skill02_ID" id="5311" level="3" /> <!-- Aura Flare -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7126,7 +7054,7 @@
 		</custom>
 	</npc>
 	<npc id="22380" templateId="22380" clientName="Master Festina" serverName="master_pestina" level="83" type="warrior">
-		<acquire exp="1317481.1676000026"  exp_rate="191.244181680941" sp="137317.0" />
+		<acquire exp="1317481"  exp_rate="191.244181680941" sp="137317" />
 		<additional_make_list>
 			<item id="9599" min="9" max="27" chance="80.02" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7178,7 +7106,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.58" skill_factor="-1" />
-		<base pAtk="8128.04753400089" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="5647.21214385793" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="8128.04753400089" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="5647.21214385793" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7207,7 +7135,6 @@
 			<ai_skill name="Skill03_ID" id="4098" level="9" /> <!-- Silence -->
 		</npc_ai>
 		<org hp="336949.124088359" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7233,7 +7160,7 @@
 		</custom>
 	</npc>
 	<npc id="22381" templateId="22381" clientName="Master's Guard" serverName="pestina_guard_war" level="83" type="warrior">
-		<acquire exp="297386.31381666695"  exp_rate="43.1682847752456" sp="30995.0" />
+		<acquire exp="297386"  exp_rate="43.1682847752456" sp="30995" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="61.22" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7277,7 +7204,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7299,7 +7226,6 @@
 			<ai_skill name="Skill02_ID" id="5371" level="3" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7325,7 +7251,7 @@
 		</custom>
 	</npc>
 	<npc id="22382" templateId="22382" clientName="Master's Guard" serverName="pestina_guard_wiz" level="83" type="warrior">
-		<acquire exp="292520.6558166668"  exp_rate="42.4619909735327" sp="30488.0" />
+		<acquire exp="292521"  exp_rate="42.4619909735327" sp="30488" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="60.35" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7388,7 +7314,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7410,7 +7336,6 @@
 			<ai_skill name="Skill02_ID" id="5310" level="3" /> <!-- Aura Burn -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7436,7 +7361,7 @@
 		</custom>
 	</npc>
 	<npc id="22383" templateId="22383" clientName="Tully's Toy" serverName="toy_of_tolles" level="83" type="warrior">
-		<acquire exp="67470.45760000001"  exp_rate="9.79394071708521" sp="6768.0" />
+		<acquire exp="67470"  exp_rate="9.79394071708521" sp="6768" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="46.2" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7487,7 +7412,7 @@
 			<walk ground="72" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7510,7 +7435,6 @@
 			<ai_skill name="Skill01_ID" id="5336" level="3" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7537,7 +7461,7 @@
 		</custom>
 	</npc>
 	<npc id="22384" templateId="22384" clientName="Mystic's Toy" serverName="toy_of_mage" level="83" type="warrior">
-		<acquire exp="50927.22039999999"  exp_rate="7.39254179126143" sp="5124.0" />
+		<acquire exp="50927"  exp_rate="7.39254179126143" sp="5124" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="48.51" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7584,7 +7508,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7607,7 +7531,6 @@
 			<ai_skill name="Skill01_ID" id="5336" level="3" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7634,7 +7557,7 @@
 		</custom>
 	</npc>
 	<npc id="22385" templateId="22385" clientName="Tully's Golem Guard" serverName="tolles_golem_guard" level="83" type="warrior">
-		<acquire exp="476710.911733333"  exp_rate="69.1988549475008" sp="49686.0" />
+		<acquire exp="476711"  exp_rate="69.1988549475008" sp="49686" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="86.7" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7683,7 +7606,7 @@
 			<walk ground="53" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="9273.2997736354" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9273.2997736354" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7704,7 +7627,6 @@
 			<ai_skill name="Skill02_ID" id="5362" level="3" /> <!-- Stun -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>CONSTRUCT</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7732,7 +7654,7 @@
 		</custom>
 	</npc>
 	<npc id="22386" templateId="22386" clientName="Foundry Mystic" serverName="workshop_mage" level="83" type="warrior">
-		<acquire exp="291223.1470166668"  exp_rate="42.2736459597426" sp="30353.0" />
+		<acquire exp="291223"  exp_rate="42.2736459597426" sp="30353" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="55.39" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7780,7 +7702,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7808,7 +7730,6 @@
 			<ai_skill name="Skill03_ID" id="4657" level="9" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7834,7 +7755,7 @@
 		</custom>
 	</npc>
 	<npc id="22387" templateId="22387" clientName="Foundry Mystic" serverName="workshop_mage_ag" level="83" type="warrior">
-		<acquire exp="291223.1470166668"  exp_rate="42.2736459597426" sp="30353.0" />
+		<acquire exp="291223"  exp_rate="42.2736459597426" sp="30353" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="55.39" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -7883,7 +7804,7 @@
 			<walk ground="80" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.56" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -7913,7 +7834,6 @@
 			<ai_skill name="Skill03_ID" id="4657" level="9" /> <!-- Hold -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -7939,7 +7859,7 @@
 		</custom>
 	</npc>
 	<npc id="22388" templateId="22388" clientName="Foundry Spirit Guard" serverName="workshop_malignant_gd" level="83" type="warrior">
-		<acquire exp="640011.6621333332"  exp_rate="92.903420254512" sp="66706.0" />
+		<acquire exp="640012"  exp_rate="92.903420254512" sp="66706" />
 		<additional_make_list>
 			<item id="9599" min="3" max="9" chance="77.59" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8006,7 +7926,7 @@
 			<walk ground="51" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="9273.2997736354" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9273.2997736354" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8029,7 +7949,6 @@
 			<ai_skill name="Skill02_ID" id="5364" level="3" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8055,7 +7974,7 @@
 		</custom>
 	</npc>
 	<npc id="22389" templateId="22389" clientName="Foundry Spirit Guard" serverName="workshop_malignant_gd_ag" level="83" type="warrior">
-		<acquire exp="640011.6621333332"  exp_rate="92.903420254512" sp="66706.0" />
+		<acquire exp="640012"  exp_rate="92.903420254512" sp="66706" />
 		<additional_make_list>
 			<item id="9599" min="3" max="9" chance="77.59" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8114,7 +8033,7 @@
 			<walk ground="51" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="9273.2997736354" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9273.2997736354" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="6442.91152041669" pDef="595.195674418605" mDef="653.307558139535" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8139,7 +8058,6 @@
 			<ai_skill name="Skill02_ID" id="5364" level="3" /> <!-- Bleed -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8165,7 +8083,7 @@
 		</custom>
 	</npc>
 	<npc id="22390" templateId="22390" clientName="Foundry Foreman" serverName="workshop_overseer" level="83" type="warrior">
-		<acquire exp="609073.5914666664"  exp_rate="88.4124824309285" sp="65777.0" />
+		<acquire exp="609074"  exp_rate="88.4124824309285" sp="65777" />
 		<additional_make_list>
 			<item id="9599" min="9" max="27" chance="79.08" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8216,7 +8134,7 @@
 			<walk ground="35" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.48" skill_factor="-1" />
-		<base pAtk="9063.04944399325" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6188.88790774729" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="9063.04944399325" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6188.88790774729" pDef="566.178304" mDef="621.45708" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8242,7 +8160,6 @@
 			<ai_skill name="Skill02_ID" id="4117" level="9" /> <!-- Paralysis -->
 		</npc_ai>
 		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8268,7 +8185,7 @@
 		</custom>
 	</npc>
 	<npc id="22391" templateId="22391" clientName="Foundry Assistant Overseer" serverName="workshop_overseer_assist" level="83" type="warrior">
-		<acquire exp="286740.53786666656"  exp_rate="41.6229551265302" sp="29436.0" />
+		<acquire exp="286741"  exp_rate="41.6229551265302" sp="29436" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="79.38" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8315,7 +8232,7 @@
 			<walk ground="41" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.5" skill_factor="-1" />
-		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" />
+		<base pAtk="5815.28895362847" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3971.08850697278" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8334,7 +8251,6 @@
 			<ai_skill name="Skill01_ID" id="5297" level="3" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8361,7 +8277,7 @@
 		</custom>
 	</npc>
 	<npc id="22392" templateId="22392" clientName="Failed Experimental Timetwister Golem" serverName="failed_timetwister" level="83" type="warrior">
-		<acquire exp="45682.01896199999"  exp_rate="6.63115386296995" sp="4530.0" />
+		<acquire exp="45682"  exp_rate="6.63115386296995" sp="4530" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="41.78" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8409,7 +8325,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.51" skill_factor="-1" />
-		<base pAtk="1255.50807901857" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="872.303027373591" pDef="371.997296511628" mDef="272.21148255814" />
+		<base pAtk="1255.50807901857" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="872.303027373591" pDef="371.997296511628" mDef="272.21148255814" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8421,7 +8337,6 @@
 			<ai>failed_timetwister</ai>
 		</npc_ai>
 		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8451,7 +8366,7 @@
 		</custom>
 	</npc>
 	<npc id="22393" templateId="22393" clientName="Beleth's Follower" serverName="beres_devotee" level="83" type="warrior">
-		<acquire exp="358096.9822666665"  exp_rate="51.9809816035225" sp="37323.0" />
+		<acquire exp="358097"  exp_rate="51.9809816035225" sp="37323" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="75.89" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8496,7 +8411,7 @@
 			<walk ground="33" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="5738.72922428878" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3987.15942914322" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5738.72922428878" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3987.15942914322" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8515,7 +8430,6 @@
 			<ai_skill name="Skill01_ID" id="5273" level="5" /> <!-- Power Strike -->
 		</npc_ai>
 		<org hp="65569.2570829001" hp_regen="111.355378460862" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8545,7 +8459,7 @@
 		</custom>
 	</npc>
 	<npc id="22394" templateId="22394" clientName="Beleth's Devotee" serverName="beres_believer" level="83" type="warrior">
-		<acquire exp="304451.1719999998"  exp_rate="44.1938121643199" sp="30461.0" />
+		<acquire exp="304451"  exp_rate="44.1938121643199" sp="30461" />
 		<additional_make_list>
 			<item id="9599" min="2" max="6" chance="89.68" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8589,7 +8503,7 @@
 			<walk ground="30" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="4701.60425641401" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3266.58481527925" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="4701.60425641401" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3266.58481527925" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="FIST" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8620,7 +8534,6 @@
 			<ai_skill name="Teleport_Visual" id="5218" level="1" /> <!-- Teleport -->
 		</npc_ai>
 		<org hp="196707.771248701" hp_regen="111.355378460862" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8647,7 +8560,7 @@
 		</custom>
 	</npc>
 	<npc id="22395" templateId="22395" clientName="Beleth's Projection" serverName="fighter_tower_c" level="83" type="warrior">
-		<acquire exp="652376.6120666668"  exp_rate="94.6983033918808" sp="64757.0" />
+		<acquire exp="652377"  exp_rate="94.6983033918808" sp="64757" />
 		<additional_make_list>
 			<item id="9599" min="3" max="9" chance="76.47" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8695,7 +8608,7 @@
 			<walk ground="70" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.47" skill_factor="-1" />
-		<base pAtk="9516.11506242799" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="9516.11506242799" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6611.6149441907" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="DUAL" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8723,7 +8636,6 @@
 			<ai_skill name="AngerSkill_id" id="4091" level="3" /> <!-- Spirit Ogre -->
 		</npc_ai>
 		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8757,7 +8669,7 @@
 		</custom>
 	</npc>
 	<npc id="22396" templateId="22396" clientName="Foundry Laborer" serverName="malignant_worker" level="83" type="warrior">
-		<acquire exp="11271.786896999976"  exp_rate="1.63620073987516" sp="1174.0" />
+		<acquire exp="11272"  exp_rate="1.63620073987516" sp="1174" />
 		<additional_make_list>
 			<item id="9599" min="1" max="1" chance="10.58" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8801,7 +8713,7 @@
 			<walk ground="46" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.6" skill_factor="-1" />
-		<base pAtk="1255.50807901857" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="872.303027373591" pDef="371.997296511628" mDef="272.21148255814" />
+		<base pAtk="1255.50807901857" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="872.303027373591" pDef="371.997296511628" mDef="272.21148255814" accuracy="9" evasion="0" />
 		<base_attack type="BLUNT" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8813,7 +8725,6 @@
 			<ai>malignant_worker</ai>
 		</npc_ai>
 		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
-		<physical hitModify="9" avoidModify="0" />
 		<race>HUMANOID</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8839,7 +8750,7 @@
 		</custom>
 	</npc>
 	<npc id="22397" templateId="22397" clientName="Foundry Foreman  " serverName="malignant_overseer" level="83" type="warrior">
-		<acquire exp="145668.53259999983"  exp_rate="21.1450911017564" sp="15182.0" />
+		<acquire exp="145669"  exp_rate="21.1450911017564" sp="15182" />
 		<additional_make_list>
 			<item id="9599" min="1" max="3" chance="53.77" /> <!-- Ancient Tome of the Demon-->
 		</additional_make_list>
@@ -8883,7 +8794,7 @@
 			<walk ground="60" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.55" skill_factor="-1" />
-		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" accuracy="5" evasion="0" />
 		<base_attack type="SWORD" range="40" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -8910,7 +8821,6 @@
 			<ai_skill name="Skill01_ID" id="5360" level="9" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="5" avoidModify="0" />
 		<race>DEMONIC</race>
 		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -8936,7 +8846,7 @@
 		</custom>
 	</npc>
 	<npc id="22398" templateId="22398" clientName="Lesser Evil" serverName="malignant_lower" level="83" type="warrior">
-		<acquire exp="268445.30279999966"  exp_rate="38.9672380316446" sp="26626.0" />
+		<acquire exp="268445"  exp_rate="38.9672380316446" sp="26626" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="22284" max="44629" chance="100" /> <!-- Adena-->
@@ -8982,7 +8892,7 @@
 			<walk ground="33" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9009,7 +8919,6 @@
 			<ai_skill name="Skill01_ID" id="5360" level="9" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
@@ -9038,7 +8947,7 @@
 		</custom>
 	</npc>
 	<npc id="22399" templateId="22399" clientName="Greater Evil" serverName="malignant_upper" level="83" type="warrior">
-		<acquire exp="385754.0001999999"  exp_rate="55.9956452605603" sp="38241.0" />
+		<acquire exp="385754"  exp_rate="55.9956452605603" sp="38241" />
 		<additional_make_multi_list>
 			<category chance="70">
 				<item id="57" min="31702" max="63490" chance="100" /> <!-- Adena-->
@@ -9085,7 +8994,7 @@
 			<walk ground="43" underWater="0" flying="0" />
 		</speed>
 		<hit_time factor="0.43" skill_factor="-1" />
-		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" />
+		<base pAtk="5981.54451308138" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="4155.86285291724" pDef="595.195674418605" mDef="653.307558139535" accuracy="0" evasion="0" />
 		<base_attack type="POLE" range="80" />
 		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
 		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
@@ -9112,7 +9021,6 @@
 			<ai_skill name="Skill01_ID" id="5360" level="9" /> <!-- Whirlwind -->
 		</npc_ai>
 		<org hp="32829.2831947712" hp_regen="111.50705124295" mp="1777.4" mp_regen="3" />
-		<physical hitModify="0" avoidModify="0" />
 		<race>UNDEAD</race>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<safe_height>100</safe_height>
