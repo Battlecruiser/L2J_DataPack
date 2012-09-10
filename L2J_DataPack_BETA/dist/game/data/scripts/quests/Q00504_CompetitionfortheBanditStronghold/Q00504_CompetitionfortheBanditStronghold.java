@@ -154,15 +154,13 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 			st.giveItems(TARLK_AMULET, 1);
 			if (st.getQuestItemsCount(TARLK_AMULET) < 30)
 			{
-				st.playSound("Itemsound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
 			{
-				st.playSound("Itemsound.quest_middle");
-				st.set("cond", "2");
+				st.setCond(2, true);
 			}
 		}
-		
 		return null;
 	}
 	

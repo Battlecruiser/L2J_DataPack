@@ -106,7 +106,7 @@ public class TheValentineEvent extends Quest
 			else
 			{
 				st.giveItems(_recipe, 1);
-				st.playSound("Itemsound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				st.setState(State.COMPLETED);
 			}
 		}

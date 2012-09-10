@@ -287,11 +287,11 @@ class Quest (JQuest) :
     if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(PINTERS_INSTRUCTIONS_ID) == 1 :
      if st.getQuestItemsCount(AMBER_BEAD_ID) < 70 :
         st.giveItems(AMBER_BEAD_ID,5)
-        st.playSound("Itemsound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
         if st.getQuestItemsCount(AMBER_BEAD_ID) >= 70 :
           st.playSound("ItemSound.quest_middle")
         else:
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
 
    return
 
