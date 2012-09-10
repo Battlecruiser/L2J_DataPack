@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/adminCommands.xsd">
+	<!-- ADMIN COND EXCEPTIONS -->
+	<admin command="admin_exceptions" accessLevel="7" />
+	<admin command="admin_set_exception" accessLevel="7" confirmDlg="true" />
+	
 	<!-- ADMIN ADMIN -->
 	<admin command="admin_admin" accessLevel="7" />
 	<admin command="admin_admin1" accessLevel="7" />

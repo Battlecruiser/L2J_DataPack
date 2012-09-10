@@ -18,6 +18,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -46,7 +47,7 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.isGM())
+		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_PROHIBITED);
 			return;
@@ -63,7 +64,7 @@ public class ChatTell implements IChatHandler
 		
 		if (receiver != null && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
-			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM())
+			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
 				activeChar.sendMessage("Player is in jail.");
 				return;

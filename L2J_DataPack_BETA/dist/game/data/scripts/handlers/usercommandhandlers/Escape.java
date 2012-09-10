@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -69,7 +70,7 @@ public class Escape implements IUserCommandHandler
 			return false;
 		}
 		
-		if (GrandBossManager.getInstance().getZone(activeChar) != null && !activeChar.isGM())
+		if (GrandBossManager.getInstance().getZone(activeChar) != null && !activeChar.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
 		{
 			activeChar.sendMessage("You may not use an escape command in a Boss Zone.");
 			return false;
