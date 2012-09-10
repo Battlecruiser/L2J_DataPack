@@ -18,6 +18,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -93,7 +94,7 @@ public final class SkillTransferValidator extends L2Script
 					}
 				}
 				
-				if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
+				if (Config.SKILL_CHECK_ENABLE && (!player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM))
 				{
 					long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
 					for (L2Skill sk : player.getAllSkills())

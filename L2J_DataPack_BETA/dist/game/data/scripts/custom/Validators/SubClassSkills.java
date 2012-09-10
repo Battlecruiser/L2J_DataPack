@@ -20,6 +20,7 @@ import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -73,7 +74,7 @@ public final class SubClassSkills extends Quest
 		if (!Config.SKILL_CHECK_ENABLE)
 			return null;
 		
-		if (player.isGM() && !Config.SKILL_CHECK_GM)
+		if (player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.SKILL_CHECK_GM)
 			return null;
 		
 		final L2Skill[] certSkills = getCertSkills(player);

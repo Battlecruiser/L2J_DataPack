@@ -20,6 +20,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -62,11 +63,7 @@ public class Warpgate extends AbstractNpcAI
 			}
 		}
 		st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
-		if ((st != null) && st.isCompleted())
-		{
-			return true;
-		}
-		return false;
+		return ((st != null) && st.isCompleted());
 	}
 	
 	@Override
@@ -100,7 +97,7 @@ public class Warpgate extends AbstractNpcAI
 	{
 		if (character.isPlayer())
 		{
-			if (!canEnter(character.getActingPlayer()) && !character.isGM())
+			if (!canEnter(character.getActingPlayer()) && !character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character), 1000);
 			}

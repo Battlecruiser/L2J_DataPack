@@ -45,6 +45,7 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -413,7 +414,7 @@ public class FinalEmperialTomb extends Quest
 	
 	private boolean checkConditions(L2PcInstance player)
 	{
-		if (debug || player.isGM())
+		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 			return true;
 		L2Party party = player.getParty();
 		if (party == null)
@@ -498,7 +499,7 @@ public class FinalEmperialTomb extends Quest
 		//New instance
 		if (!checkConditions(player))
 			return 0;
-		if (!player.isGM() && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
+		if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS) && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
 			return 0;
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		//Instance ins = InstanceManager.getInstance().getInstance(instanceId);

@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
@@ -54,7 +55,7 @@ public class Fishing implements ISkillHandler
 		 * If fishing is disabled, there isn't much point in doing anything
 		 * else, unless you are GM. so this got moved up here, before anything else.
 		 */
-		if (!Config.ALLOWFISHING && !player.isGM())
+		if (!Config.ALLOWFISHING && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
 		{
 			player.sendMessage("Fishing server is currently offline");
 			return;

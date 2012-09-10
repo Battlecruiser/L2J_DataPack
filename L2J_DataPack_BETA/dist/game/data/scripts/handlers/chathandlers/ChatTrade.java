@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -51,7 +52,7 @@ public class ChatTrade implements IChatHandler
 		
 		L2PcInstance[] pls = L2World.getInstance().getAllPlayersArray();
 		
-		if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("gm") && activeChar.isGM()))
+		if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)))
 		{
 			int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
 			for (L2PcInstance player : pls)
@@ -62,7 +63,7 @@ public class ChatTrade implements IChatHandler
 		}
 		else if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("global"))
 		{
-			if (!activeChar.isGM() && !activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
+			if (!activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS) && !activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
 			{
 				activeChar.sendMessage("Do not spam trade channel.");
 				return;
