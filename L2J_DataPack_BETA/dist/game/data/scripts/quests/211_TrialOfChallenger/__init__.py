@@ -44,11 +44,11 @@ class Quest (JQuest) :
           htmltext = "30645-02.htm"
           st.takeItems(LETTER_OF_KASH,1)
           st.set("cond","4")
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30647_1" :
           if st.getQuestItemsCount(BROKEN_KEY) == 1 :
              st.giveItems(SCROLL_OF_SHYSLASSY,1)
-             st.playSound("Itemsound.quest_middle")
+             st.playSound("ItemSound.quest_middle")
              if self.getRandom(10) < 2 :
               htmltext = "30647-03.htm"
               st.takeItems(BROKEN_KEY,1)
@@ -60,23 +60,23 @@ class Quest (JQuest) :
                  st.giveItems(MANTICOR_SKIN_GAITERS_PATTERN,1)
                  st.giveItems(GAUNTLET_OF_REPOSE_OF_THE_SOUL_PATTERN,1)
                  st.giveItems(IRON_BOOTS_DESIGN,1)
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
               elif n > 70 :
                  st.giveItems(TOME_OF_BLOOD_PAGE,1)
                  st.giveItems(ELVEN_NECKLACE_BEADS,1)
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
               elif n > 40 :
                  st.giveItems(WHITE_TUNIC_PATTERN,1)
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
               else:
                  st.giveItems(IRON_BOOTS_DESIGN,1)
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
              else:
               htmltext = "30647-02.htm"
               n = self.getRandom(1000)+1
               st.takeItems(BROKEN_KEY,1)
               st.giveItems(ADENA,n)
-              st.playSound("Itemsound.quest_middle")
+              st.playSound("ItemSound.quest_middle")
           else:
             htmltext = "30647-04.htm"
             st.takeItems(BROKEN_KEY,1)
@@ -124,7 +124,7 @@ class Quest (JQuest) :
       st.takeItems(SCROLL_OF_SHYSLASSY,1)
       st.giveItems(LETTER_OF_KASH,1)
       st.set("cond","3")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30644 and cond == 1 and st.getQuestItemsCount(LETTER_OF_KASH) == 1 :
       htmltext = "30644-08.htm"
    elif npcId == 30644 and cond >= 7 :
@@ -137,7 +137,7 @@ class Quest (JQuest) :
       htmltext = "30645-04.htm"
       st.takeItems(WATCHERS_EYE1,1)
       st.set("cond","6")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30645 and cond == 6 :
       htmltext = "30645-05.htm"
    elif npcId == 30645 and cond >= 7 :
@@ -163,14 +163,14 @@ class Quest (JQuest) :
         htmltext = "30535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")
-        st.playSound("Itemsound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
       else:
         htmltext = "30535-03.htm"
    elif npcId == 30535 and cond == 8 :
       htmltext = "30535-02.htm"
       st.addRadar(176560,-184969,-3729);
       st.set("cond","9")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
    return htmltext
 
  def onKill(self,npc,player,isPet):

@@ -154,13 +154,13 @@ class Quest (JQuest) :
               htmltext = "30501-09.htm"
               st.giveItems(KASMANS_LETTER3,1)
     elif event == "30615-04.htm" :                           # Chief of Breka Orcs
-          st.playSound("Itemsound.quest_before_battle")
+          st.playSound("ItemSound.quest_before_battle")
           st.addSpawn(27080,80117,120039,-2259)
           st.addSpawn(27081,80058,120038,-2259)
           st.giveItems(GLOVE_OF_VOLTAR,1)
           st.takeItems(MANAKIAS_LETTER1,1)
     elif event == "30616-04.htm" :                           # Chief of Enku Orcs
-          st.playSound("Itemsound.quest_before_battle")
+          st.playSound("ItemSound.quest_before_battle")
           st.addSpawn(27082,19456,192245,-3730)
           st.addSpawn(27082,19539,192343,-3728)
           st.addSpawn(27082,19500,192449,-3729)
@@ -168,7 +168,7 @@ class Quest (JQuest) :
           st.giveItems(GLOVE_OF_KEPRA,1)
           st.takeItems(MANAKIAS_LETTER2,1)
     elif event == "30617-04.htm" :                           # Chief of Turek Orcs
-          st.playSound("Itemsound.quest_before_battle")
+          st.playSound("ItemSound.quest_before_battle")
           st.addSpawn(27083,-94292,110781,-3701)
           st.addSpawn(27083,-94293,110861,-3701)
           st.giveItems(GLOVE_OF_BURAI,1)
@@ -291,7 +291,7 @@ class Quest (JQuest) :
                htmltext = "30615-02.htm"
            elif st.getQuestItemsCount(GLOVE_OF_VOLTAR) :
                htmltext = "30615-05.htm"
-               st.playSound("Itemsound.quest_before_battle")
+               st.playSound("ItemSound.quest_before_battle")
                st.addSpawn(27080,80117,120039,-2259)
                st.addSpawn(27081,80058,120038,-2259)
            elif st.getQuestItemsCount(PASHIKAS_HEAD) and st.getQuestItemsCount(VULTUS_HEAD) :
@@ -301,9 +301,9 @@ class Quest (JQuest) :
                st.takeItems(VULTUS_HEAD,1)
                if st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_ENKU) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) :
                  st.set("cond","5")
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
                else :
-                 st.playSound("Itemsound.quest_itemget")
+                 st.playSound("ItemSound.quest_itemget")
            elif st.getQuestItemsCount(SCEPTER_OF_BREKA) :
                htmltext = "30615-07.htm"
            else :
@@ -313,7 +313,7 @@ class Quest (JQuest) :
                htmltext = "30616-02.htm"
            elif st.getQuestItemsCount(GLOVE_OF_KEPRA) :
                htmltext = "30616-05.htm"
-               st.playSound("Itemsound.quest_before_battle")
+               st.playSound("ItemSound.quest_before_battle")
                st.addSpawn(27082,17710,189813,-3581)
                st.addSpawn(27082,17674,189798,-3581)
                st.addSpawn(27082,17770,189852,-3581)
@@ -324,9 +324,9 @@ class Quest (JQuest) :
                st.takeItems(ENKU_OVERLORD_HEAD,4)
                if st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_ENKU) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) :
                  st.set("cond","5")
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
                else :
-                 st.playSound("Itemsound.quest_itemget")
+                 st.playSound("ItemSound.quest_itemget")
            elif st.getQuestItemsCount(SCEPTER_OF_ENKU) :
                htmltext = "30616-07.htm"
            else :
@@ -336,7 +336,7 @@ class Quest (JQuest) :
                htmltext = "30617-02.htm"
            elif st.getQuestItemsCount(GLOVE_OF_BURAI) :
                htmltext = "30617-05.htm"
-               st.playSound("Itemsound.quest_before_battle")
+               st.playSound("ItemSound.quest_before_battle")
                st.addSpawn(27083,-94292,110781,-3701)
                st.addSpawn(27083,-94293,110861,-3701)
            elif st.getQuestItemsCount(MAKUM_BUGBEAR_HEAD) == 2 :
@@ -345,9 +345,9 @@ class Quest (JQuest) :
                st.takeItems(MAKUM_BUGBEAR_HEAD,2)
                if st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_ENKU) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) :
                  st.set("cond","5")
-                 st.playSound("Itemsound.quest_middle")
+                 st.playSound("ItemSound.quest_middle")
                else :
-                 st.playSound("Itemsound.quest_itemget")
+                 st.playSound("ItemSound.quest_itemget")
            elif st.getQuestItemsCount(SCEPTER_OF_TUREK) :
                htmltext = "30617-07.htm"
            else :
@@ -370,9 +370,9 @@ class Quest (JQuest) :
                  st.takeItems(DRIKOS_CONTRACT,1)
                  if st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_ENKU) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) :
                    st.set("cond","5")
-                   st.playSound("Itemsound.quest_middle")
+                   st.playSound("ItemSound.quest_middle")
                  else :
-                   st.playSound("Itemsound.quest_itemget")
+                   st.playSound("ItemSound.quest_itemget")
              else :
                  htmltext = "30619-04.htm"
            elif st.getQuestItemsCount(SCEPTER_OF_VUKU) :
@@ -453,11 +453,11 @@ class Quest (JQuest) :
        if count+1 == maxquanty :                            # Check if got enough number of items
          if st.getQuestItemsCount(MANASHEN_SHARD) == maxquanty and st.getQuestItemsCount(TYRANT_TALON) == maxquanty and st.getQuestItemsCount(GUARDIAN_BASILISK_FANG) == maxquanty :
            st.set("cond","2")
-           st.playSound("Itemsound.quest_middle")
+           st.playSound("ItemSound.quest_middle")
          else :
-           st.playSound("Itemsound.quest_itemget")
+           st.playSound("ItemSound.quest_itemget")
        else :
-         st.playSound("Itemsound.quest_itemget")
+         st.playSound("ItemSound.quest_itemget")
    elif cond == 4 and npcId in DROPLIST_COND_4.keys():
      required,item,maxquanty=DROPLIST_COND_4[npcId]
      count = st.getQuestItemsCount(item)
@@ -465,23 +465,23 @@ class Quest (JQuest) :
        if npcId == 20234 :
            st.giveItems(item,1)
            if count+1 == maxquanty :                        # Check if got enough number of items
-             st.playSound("Itemsound.quest_middle")
+             st.playSound("ItemSound.quest_middle")
            else :
-             st.playSound("Itemsound.quest_itemget")
+             st.playSound("ItemSound.quest_itemget")
        else :
          st.giveItems(item,1)
          if count+1 == maxquanty :                          # Check if got enough number of items
            if npcId in [ 27080, 27081 ] :
              if st.getQuestItemsCount(PASHIKAS_HEAD) and st.getQuestItemsCount(VULTUS_HEAD) :
                st.takeItems(required,1)
-               st.playSound("Itemsound.quest_middle")
+               st.playSound("ItemSound.quest_middle")
              else :
-               st.playSound("Itemsound.quest_itemget")
+               st.playSound("ItemSound.quest_itemget")
            else :
              st.takeItems(required,1)
-             st.playSound("Itemsound.quest_middle")
+             st.playSound("ItemSound.quest_middle")
          else :
-           st.playSound("Itemsound.quest_itemget")
+           st.playSound("ItemSound.quest_itemget")
    elif cond == 6 and npcId in DROPLIST_COND_6.keys():
      required,item,maxquanty,chance=DROPLIST_COND_6[npcId]
      count = st.getQuestItemsCount(item)
@@ -491,14 +491,14 @@ class Quest (JQuest) :
          if count+1 == maxquanty :                          # Check if got enough number of items
            if st.getQuestItemsCount(TIMAK_ORC_HEAD) == maxquanty and st.getQuestItemsCount(TAMLIN_ORC_SKULL) == maxquanty :
              st.set("cond","7")
-             st.playSound("Itemsound.quest_middle")
+             st.playSound("ItemSound.quest_middle")
            else :
-             st.playSound("Itemsound.quest_itemget")
+             st.playSound("ItemSound.quest_itemget")
          else :
-           st.playSound("Itemsound.quest_itemget")
+           st.playSound("ItemSound.quest_itemget")
    elif cond == 9 and st.getQuestItemsCount(TANAPIS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_TANTOS) == 0 :
      if npcId in [ 20778, 20779 ] :
-       #                    st.playSound("Itemsound.quest_before_battle")
+       #                    st.playSound("ItemSound.quest_before_battle")
        st.addSpawn(27086)
        #st.addSpawn(27086, 11839,-106261,-3550,300000)
        return "Revenant of Tantos Chief has spawned at X=11839 Y=-106261 Z=-3550"
@@ -507,7 +507,7 @@ class Quest (JQuest) :
      elif npcId == 27086 :
        st.giveItems(SCEPTER_OF_TANTOS,1)
        st.set("cond","10")
-       st.playSound("Itemsound.quest_middle")
+       st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(220,qn,"Testimony Of Glory")

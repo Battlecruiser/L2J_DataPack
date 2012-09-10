@@ -268,7 +268,7 @@ class Quest (JQuest) :
         if npcId ==NPC[8] and st.getQuestItemsCount(REIRIAS_SOUL_ORB)==0 :
           htmltext = "31027-01.htm"
           st.giveItems(REIRIAS_SOUL_ORB,1)
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
       elif cond==2 :
         # Kernon's Chest
         if npcId == NPC[5] and st.getQuestItemsCount(KERMONS_INFERNIUM_SCEPTER)==0 :
@@ -297,7 +297,7 @@ class Quest (JQuest) :
       if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0:
         st.giveItems(RED_PIPETTE_KNIFE,1)
         st.takeItems(PIPETTE_KNIFE,1)
-        st.playSound("Itemsound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
     return
 
   def onKill(self,npc,player,isPet):
@@ -321,7 +321,7 @@ class Quest (JQuest) :
         stw = PartyQuestMembers[Rnd.get(len(PartyQuestMembers))]
         stw.giveItems(dropId,1)
         stw.takeItems(WHITE_CLOTH,1)
-        stw.playSound("Itemsound.quest_itemget")
+        stw.playSound("ItemSound.quest_itemget")
         if stw.getQuestItemsCount(dropId) >= 30:
           stw.set("cond","9")
       else:
@@ -333,7 +333,7 @@ class Quest (JQuest) :
             if value == 8 and st.getQuestItemsCount(dropId) < 30:
               st.giveItems(dropId,1)
               st.takeItems(WHITE_CLOTH,1)
-              st.playSound("Itemsound.quest_itemget")
+              st.playSound("ItemSound.quest_itemget")
               if st.getQuestItemsCount(dropId) >= 30:
                  st.set("cond","9")
     return

@@ -324,7 +324,7 @@ class Quest (JQuest) :
                st.set(var,"3")
                st.giveItems(progress,1)
                st.takeItems(start,1)
-               st.playSound("Itemsound.quest_itemget")
+               st.playSound("ItemSound.quest_itemget")
                self.inProgressDuelMobs[npcId] = [player, player.getPet(), False] #mark the attack
       return
 
@@ -341,9 +341,9 @@ class Quest (JQuest) :
          if st.getInt(var) == value and count < 30 and random < chance:
             st.giveItems(item,1)
             if count == 29:
-               st.playSound("Itemsound.quest_middle")
+               st.playSound("ItemSound.quest_middle")
             else:
-               st.playSound("Itemsound.quest_itemget")
+               st.playSound("ItemSound.quest_itemget")
       # Part for npc summon death (duels part).  Some of this must run for all players.
       else :  # if npcId in DROPLIST_SUMMON.keys():
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
@@ -375,7 +375,7 @@ class Quest (JQuest) :
                   st.set(var,"6")
                   st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
                   st.getPlayer().removeNotifyQuestOfDeath(st)
-                  st.playSound("Itemsound.quest_middle")
+                  st.playSound("ItemSound.quest_middle")
             # if a foul has occured, find the player who had the duel in progress and give a foul crystal
             else :
                foulPlayer = self.inProgressDuelMobs[npcId][0]

@@ -277,142 +277,142 @@ class Quest (JQuest) :
         st.giveItems(KASANDRAS_REMAINS_ID,1)
         st.takeItems(METHEUS_FUNERAL_JAR_ID,1)
         st.set("cond","3")
-        st.playSound("Itemsound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 20158 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(MEDUSA_ICHOR_ID) < 10 :
         if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(MEDUSA_ICHOR_ID) == 9 :
             st.giveItems(MEDUSA_ICHOR_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(MEDUSA_ICHOR_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20233 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID) < 10 :
         if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(M_SPIDER_FLUIDS_ID) == 9 :
             st.giveItems(M_SPIDER_FLUIDS_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(M_SPIDER_FLUIDS_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20202 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID) < 10 :
         if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID) == 9 :
             st.giveItems(DEAD_SEEKER_DUNG_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(DEAD_SEEKER_DUNG_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20192 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(TYRANTS_BLOOD_ID) < 10 :
         if self.getRandom(2) == 1 :
           if st.getQuestItemsCount(TYRANTS_BLOOD_ID) == 9 :
             st.giveItems(TYRANTS_BLOOD_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(TYRANTS_BLOOD_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20193 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(TYRANTS_BLOOD_ID) < 10 :
         if self.getRandom(10) < 6 :
           if st.getQuestItemsCount(TYRANTS_BLOOD_ID) == 9 :
             st.giveItems(TYRANTS_BLOOD_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(TYRANTS_BLOOD_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20230 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
         if self.getRandom(10) < 3 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20157 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
         if self.getRandom(10) < 4 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20232 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
         if self.getRandom(10) < 5 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 20234 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(IXIAS_LIST_ID) and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) < 10 :
         if self.getRandom(10) < 6 :
           if st.getQuestItemsCount(NIGHTSHADE_ROOT_ID) == 9 :
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
             if st.getQuestItemsCount(MEDUSA_ICHOR_ID)>=10 and st.getQuestItemsCount(M_SPIDER_FLUIDS_ID)>=10 and st.getQuestItemsCount(DEAD_SEEKER_DUNG_ID)>=10 and st.getQuestItemsCount(TYRANTS_BLOOD_ID)>=10 and st.getQuestItemsCount(NIGHTSHADE_ROOT_ID)>=10 :
                st.set("cond","7")
           else:
             st.giveItems(NIGHTSHADE_ROOT_ID,1)
-            st.playSound("Itemsound.quest_itemget")
+            st.playSound("ItemSound.quest_itemget")
    elif npcId == 27079 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) and st.getQuestItemsCount(TIMIRIRAN_SAP_ID) == 0 and st.getQuestItemsCount(TIMIRIRAN_SEED_ID) and st.getQuestItemsCount(BLACK_WILLOW_LEAF_ID) == 0 :
         st.giveItems(BLACK_WILLOW_LEAF_ID,1)
-        st.playSound("Itemsound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 20554 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) and st.getQuestItemsCount(RED_FAIRY_DUST_ID) == 0 and st.getQuestItemsCount(PIXY_GARNET_ID) and st.getQuestItemsCount(GRANDIS_SKULL_ID) < 10 :
         if st.getQuestItemsCount(GRANDIS_SKULL_ID) == 9 :
           st.giveItems(GRANDIS_SKULL_ID,1)
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
         else:
           st.giveItems(GRANDIS_SKULL_ID,1)
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    elif npcId == 20600 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) and st.getQuestItemsCount(RED_FAIRY_DUST_ID) == 0 and st.getQuestItemsCount(PIXY_GARNET_ID) and st.getQuestItemsCount(KARUL_BUGBEAR_SKULL_ID) < 10 :
         if st.getQuestItemsCount(KARUL_BUGBEAR_SKULL_ID) == 9 :
           st.giveItems(KARUL_BUGBEAR_SKULL_ID,1)
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
         else:
           st.giveItems(KARUL_BUGBEAR_SKULL_ID,1)
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    elif npcId == 20270 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) and st.getQuestItemsCount(RED_FAIRY_DUST_ID) == 0 and st.getQuestItemsCount(PIXY_GARNET_ID) and st.getQuestItemsCount(BREKA_OVERLORD_SKULL_ID) < 10 :
         if st.getQuestItemsCount(BREKA_OVERLORD_SKULL_ID) == 9 :
           st.giveItems(BREKA_OVERLORD_SKULL_ID,1)
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
         else:
           st.giveItems(BREKA_OVERLORD_SKULL_ID,1)
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    elif npcId == 20582 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(PALUS_CHARM_ID) and st.getQuestItemsCount(ARKENIAS_NOTE_ID) and st.getQuestItemsCount(RED_FAIRY_DUST_ID) == 0 and st.getQuestItemsCount(PIXY_GARNET_ID) and st.getQuestItemsCount(LETO_OVERLORD_SKULL_ID) < 10 :
         if st.getQuestItemsCount(LETO_OVERLORD_SKULL_ID) == 9 :
           st.giveItems(LETO_OVERLORD_SKULL_ID,1)
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
         else:
           st.giveItems(LETO_OVERLORD_SKULL_ID,1)
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(219,qn,"Testimony Of Fate")

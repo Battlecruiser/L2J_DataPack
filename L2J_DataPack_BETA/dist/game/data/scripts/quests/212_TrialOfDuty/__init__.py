@@ -193,7 +193,7 @@ class Quest (JQuest) :
       if cond == 2 :
         if self.getRandom(50)<2 :
           st.addSpawn(27119,npc,True,0)
-          st.playSound("Itemsound.quest_before_battle")
+          st.playSound("ItemSound.quest_before_battle")
    elif npcId == 27119 :
       if cond == 2 and st.getQuestItemsCount(OLD_KNIGHT_SWORD) > 0 :
         st.giveItems(KNIGHTS_TEAR,1)
@@ -225,7 +225,7 @@ class Quest (JQuest) :
       if cond == 7 :
         if self.getRandom(100)<33 :
            st.addSpawn(30656,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
-           st.playSound("Itemsound.quest_middle")
+           st.playSound("ItemSound.quest_middle")
            st.set("cond","8")
    elif npcId == 20577 :
       if cond == 11 and st.getQuestItemsCount(MILITAS_ARTICLE) < 20 :
