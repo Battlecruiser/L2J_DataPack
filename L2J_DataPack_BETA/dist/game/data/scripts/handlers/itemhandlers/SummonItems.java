@@ -122,6 +122,7 @@ public class SummonItems implements IItemHandler
 						spawn.setInstanceId(activeChar.getInstanceId());
 						spawn.stopRespawn();
 						final L2Npc npc = spawn.spawnOne(true);
+						npc.setSummoner(activeChar);
 						npc.setTitle(activeChar.getName());
 						npc.setIsRunning(false); // broadcast info
 						if (sitem.getDespawnDelay() > 0)
