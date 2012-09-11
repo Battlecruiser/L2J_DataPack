@@ -163,25 +163,25 @@ class Quest (JQuest) :
                     st.onTutorialClientEvent(0)
                 else :
                     return
-            elif playerLevel == 18 and not player.getQuestState("10276_MutatedKaneusGludio") :
+            elif playerLevel == 18 and not player.getQuestState("Q10276_MutatedKaneusGludio") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 28 and not player.getQuestState("10277_MutatedKaneusDion") :
+            elif playerLevel == 28 and not player.getQuestState("Q10277_MutatedKaneusDion") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 28 and not player.getQuestState("10278_MutatedKaneusHeine") :
+            elif playerLevel == 28 and not player.getQuestState("Q10278_MutatedKaneusHeine") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 28 and not player.getQuestState("10279_MutatedKaneusOren") :
+            elif playerLevel == 28 and not player.getQuestState("Q10279_MutatedKaneusOren") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 28 and not player.getQuestState("10280_MutatedKaneusSchuttgart") :
+            elif playerLevel == 28 and not player.getQuestState("Q10280_MutatedKaneusSchuttgart") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 28 and not player.getQuestState("10281_MutatedKaneusRune") :
+            elif playerLevel == 28 and not player.getQuestState("Q10281_MutatedKaneusRune") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 79 and not player.getQuestState("192_SevenSignSeriesOfDoubt") :
+            elif playerLevel == 79 and not player.getQuestState("Q00192_SevenSignSeriesOfDoubt") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
         # QUEST TIMER #
