@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
@@ -62,7 +63,8 @@ public class ChristmasTree implements IItemHandler
 			spawn.setLocy(target.getY());
 			spawn.setLocz(target.getZ());
 			spawn.setInstanceId(activeChar.getInstanceId());
-			spawn.spawnOne(false);
+			L2Npc npc = spawn.spawnOne(false);
+			npc.setSummoner(activeChar);
 			
 			activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
