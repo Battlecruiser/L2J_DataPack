@@ -81,7 +81,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if npcId == HOLLINT :
-			first = player.getQuestState("192_SevenSignSeriesOfDoubt")
+			first = player.getQuestState("Q00192_SevenSignSeriesOfDoubt")
 			if st.getState() == State.COMPLETED :
 				htmltext = Quest.getAlreadyCompletedMsg(player)
 			elif first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 79 :
