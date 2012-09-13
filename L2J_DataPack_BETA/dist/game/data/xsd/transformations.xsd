@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="transform">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Male">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="collision" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="radius" />
+														<xs:attribute type="xs:float" name="height" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="moving" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="walk" />
+														<xs:attribute type="xs:float" name="run" />
+														<xs:attribute type="xs:float" name="waterWalk" />
+														<xs:attribute type="xs:float" name="waterRun" />
+														<xs:attribute type="xs:float" name="flyWalk" />
+														<xs:attribute type="xs:float" name="flyRun" />
+														<xs:attribute type="xs:float" name="unknownWalk" />
+														<xs:attribute type="xs:float" name="unknownRun" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="skills" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:short" name="id" use="optional" />
+																	<xs:attribute type="xs:byte" name="level" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="additional_skills" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:short" name="id" use="optional" />
+																	<xs:attribute type="xs:byte" name="level" use="optional" />
+																	<xs:attribute type="xs:byte" name="minLevel" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element type="xs:string" name="actions" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:string" name="base_attack_type" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="base_attack_range" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_random_damage" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:short" name="base_attack_speed" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_critical_prob" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_physical_attack" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_magical_attack" minOccurs="0" maxOccurs="1" />
+										<xs:element name="items" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="item" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:integer" name="id" />
+																	<xs:attribute type="xs:boolean" name="allowed" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="basic_stat" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="str" />
+														<xs:attribute type="xs:byte" name="int" />
+														<xs:attribute type="xs:byte" name="con" />
+														<xs:attribute type="xs:byte" name="dex" />
+														<xs:attribute type="xs:byte" name="wit" />
+														<xs:attribute type="xs:byte" name="men" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="base_defend" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="chest" />
+														<xs:attribute type="xs:byte" name="legs" />
+														<xs:attribute type="xs:byte" name="head" />
+														<xs:attribute type="xs:byte" name="feet" />
+														<xs:attribute type="xs:byte" name="gloves" />
+														<xs:attribute type="xs:byte" name="underwear" />
+														<xs:attribute type="xs:byte" name="cloak" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="base_magic_defend" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="rear" />
+														<xs:attribute type="xs:byte" name="lear" />
+														<xs:attribute type="xs:byte" name="rfinger" />
+														<xs:attribute type="xs:byte" name="lfinger" />
+														<xs:attribute type="xs:byte" name="neck" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="levels" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="level" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:byte" name="val" use="optional" />
+																	<xs:attribute type="xs:float" name="bonus" use="optional" />
+																	<xs:attribute type="xs:float" name="hp_regen" use="optional" />
+																	<xs:attribute type="xs:float" name="mp_regen" use="optional" />
+																	<xs:attribute type="xs:float" name="cp_regen" use="optional" />
+																	<xs:attribute type="xs:short" name="str" use="optional" />
+																	<xs:attribute type="xs:short" name="int" use="optional" />
+																	<xs:attribute type="xs:short" name="con" use="optional" />
+																	<xs:attribute type="xs:byte" name="dex" use="optional" />
+																	<xs:attribute type="xs:short" name="wit" use="optional" />
+																	<xs:attribute type="xs:short" name="men" use="optional" />
+																	<xs:attribute type="xs:float" name="hp" use="optional" />
+																	<xs:attribute type="xs:float" name="mp" use="optional" />
+																	<xs:attribute type="xs:float" name="cp" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Female">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="collision" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="radius" />
+														<xs:attribute type="xs:float" name="height" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="moving" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:float" name="walk" />
+														<xs:attribute type="xs:float" name="run" />
+														<xs:attribute type="xs:float" name="waterWalk" />
+														<xs:attribute type="xs:float" name="waterRun" />
+														<xs:attribute type="xs:float" name="flyWalk" />
+														<xs:attribute type="xs:float" name="flyRun" />
+														<xs:attribute type="xs:float" name="unknownWalk" />
+														<xs:attribute type="xs:float" name="unknownRun" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="skills" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:short" name="id" use="optional" />
+																	<xs:attribute type="xs:byte" name="level" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="additional_skills" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="skill" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:short" name="id" use="optional" />
+																	<xs:attribute type="xs:byte" name="level" use="optional" />
+																	<xs:attribute type="xs:byte" name="minLevel" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element type="xs:string" name="actions" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:string" name="base_attack_type" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:integer" name="base_attack_range" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_random_damage" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:short" name="base_attack_speed" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_critical_prob" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_physical_attack" minOccurs="0" maxOccurs="1" />
+										<xs:element type="xs:byte" name="base_magical_attack" minOccurs="0" maxOccurs="1" />
+										<xs:element name="items" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="item" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:integer" name="id" />
+																	<xs:attribute type="xs:boolean" name="allowed" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="basic_stat" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="str" />
+														<xs:attribute type="xs:byte" name="int" />
+														<xs:attribute type="xs:byte" name="con" />
+														<xs:attribute type="xs:byte" name="dex" />
+														<xs:attribute type="xs:byte" name="wit" />
+														<xs:attribute type="xs:byte" name="men" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="base_defend" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="chest" />
+														<xs:attribute type="xs:byte" name="legs" />
+														<xs:attribute type="xs:byte" name="head" />
+														<xs:attribute type="xs:byte" name="feet" />
+														<xs:attribute type="xs:byte" name="gloves" />
+														<xs:attribute type="xs:byte" name="underwear" />
+														<xs:attribute type="xs:byte" name="cloak" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="base_magic_defend" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:byte" name="rear" />
+														<xs:attribute type="xs:byte" name="lear" />
+														<xs:attribute type="xs:byte" name="rfinger" />
+														<xs:attribute type="xs:byte" name="lfinger" />
+														<xs:attribute type="xs:byte" name="neck" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="levels" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="level" maxOccurs="unbounded" minOccurs="0">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute type="xs:byte" name="val" use="optional" />
+																	<xs:attribute type="xs:float" name="bonus" use="optional" />
+																	<xs:attribute type="xs:float" name="hp_regen" use="optional" />
+																	<xs:attribute type="xs:float" name="mp_regen" use="optional" />
+																	<xs:attribute type="xs:float" name="cp_regen" use="optional" />
+																	<xs:attribute type="xs:short" name="str" use="optional" />
+																	<xs:attribute type="xs:short" name="int" use="optional" />
+																	<xs:attribute type="xs:short" name="con" use="optional" />
+																	<xs:attribute type="xs:byte" name="dex" use="optional" />
+																	<xs:attribute type="xs:short" name="wit" use="optional" />
+																	<xs:attribute type="xs:short" name="men" use="optional" />
+																	<xs:attribute type="xs:float" name="hp" use="optional" />
+																	<xs:attribute type="xs:float" name="mp" use="optional" />
+																	<xs:attribute type="xs:float" name="cp" use="optional" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:short" name="id" />
+						<xs:attribute type="xs:string" name="type" />
+						<xs:attribute type="xs:byte" name="can_swim" />
+						<xs:attribute type="xs:short" name="spawn_height" use="optional" />
+						<xs:attribute type="xs:byte" name="normal_attackable" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
