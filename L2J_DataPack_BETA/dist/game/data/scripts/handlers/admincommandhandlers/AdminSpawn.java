@@ -235,7 +235,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// now respawn all
 			NpcTable.getInstance().reloadAllNpc();
 			SpawnTable.getInstance().reloadAll();
-			RaidBossSpawnManager.getInstance().reloadBosses();
+			RaidBossSpawnManager.getInstance().load();
 			AutoSpawnHandler.getInstance().reload();
 			AutoChatHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
