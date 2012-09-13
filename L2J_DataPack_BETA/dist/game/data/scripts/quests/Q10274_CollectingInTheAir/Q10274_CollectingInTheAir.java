@@ -139,7 +139,7 @@ public class Q10274_CollectingInTheAir extends Quest
 				case 18690:
 				case 18691:
 				case 18692:
-					st.giveItems(BLUE, 1);
+					st.giveItems(GREEN, 1);
 					break;
 			}
 			st.playSound("ItemSound.quest_itemget");
