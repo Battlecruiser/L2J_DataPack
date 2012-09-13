@@ -362,41 +362,59 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="21252" levels="1" name="Caladbolg">
-		<!-- "When attacking, has a chance of inflicting Critical Damage and bleed on the target." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="21252" levels="1" name="Hellblade">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23319" />
+		</for>
 	</skill>
-	<skill id="21253" levels="1" name="Habu">
-		<!-- "When attacking, has a chance of inflicting bleed on the target." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="21253" levels="1" name="Butcher Blades">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23320" />
+		</for>
 	</skill>
-	<skill id="21254" levels="1" name="Tiatenon">
-		<!-- "During a PvP attack, has a chance of inflicting fear on the target and causing them to flee." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="21254" levels="1" name="Claw of Destruction">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23321" />
+		</for>
 	</skill>
-	<skill id="21255" levels="1" name="Astaroth">
-		<!-- Has a chance of decreasing the target's P. Def. when attacking. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="21255" levels="1" name="Blades of Delusion">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23322" triggeredLevel="10" />
+		</for>
 	</skill>
-	<skill id="21256" levels="1" name="Tyrbing">
-		<!-- Has a chance of decreasing the target's P. Def. and inflicting shock. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+	<skill id="21256" levels="1" name="Blood Brother">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23323" triggeredLevel="10" />
+		</for>
 	</skill>
 	<skill id="21257" levels="1" name="Mardil">
-		<!-- Has a chance of increasing Casting Spd. and wind attribute attack power when attacked. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_ATTACKED" triggeredId="23324" />
+		</for>
 	</skill>
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
 		<!-- High Five Skill -->

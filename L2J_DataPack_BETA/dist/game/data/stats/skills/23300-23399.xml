@@ -150,42 +150,143 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23319" levels="1" name="Blood Seeker">
-		<!-- HP is decreased momentarily from bleeding. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="reuseDelay" val="10000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
+		<for>
+			<effect count="3" name="DamOverTime" abnormalTime="6" val="170" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
-		<!-- HP is decreased momentarily from bleeding. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="bleeding" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="reuseDelay" val="10000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="BLEED" />
+		<for>
+			<effect count="4" name="DamOverTime" abnormalTime="3" val="230" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">
-		<!-- Temporarily inflicted with fear and moves regardless of your own volition. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="reuseDelay" val="10000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="FEAR" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect count="4" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+		</for>
 	</skill>
 	<skill id="23322" levels="10" name="Demonic Desire">
-		<!-- P. Def. is temporarily decreased. -->
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="reuseDelay" val="10000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pd_down">
+				<mul order="0x30" stat="pDef" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23323" levels="10" name="Fury of Darkness">
-		<!-- "Temporarily, P. Def. is decreased and you cannot move due to shock." -->
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="reuseDelay" val="10000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
+				<mul order="0x30" stat="pDef" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23324" levels="1" name="Jet Black Typhoon">
-		<!-- "Temporarily, Casting Spd. and wind type attack power are increased." -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="raid_weapon" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="67" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="raid_weapon">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<add order="0x40" stat="windPower" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23325" levels="1" name="Enlarge - Luckpy">
 		<set name="target" val="TARGET_NONE" />

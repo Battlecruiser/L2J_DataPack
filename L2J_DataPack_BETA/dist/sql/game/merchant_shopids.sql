@@ -439,7 +439,7 @@ INSERT INTO `merchant_shopids` VALUES
 (300510,'gm'),
 (9157,'gm'),
 
--- Castle 
+-- Castle
 (335103, '35103'),
 (335145, '35145'),
 (335187, '35187'),
@@ -634,7 +634,7 @@ INSERT INTO `merchant_shopids` VALUES
 ('9940', 'gm'), -- S grade Parts
 ('9941', 'gm'), -- S grade Recipes
 ('9942', 'gm'), -- A Grade Recipes
-('9943', 'gm'), -- A Grade Parts 
+('9943', 'gm'), -- A Grade Parts
 ('9944', 'gm'), -- Other Circlets
 ('9945', 'gm'), -- Buff Scrolls (event)
 ('9946', 'gm'), -- B Grade Recipes
@@ -697,7 +697,8 @@ INSERT INTO `merchant_shopids` VALUES
 ('10003', 'gm'), -- Masterwork Armor S80
 ('10004', 'gm'), -- Agathions
 ('10005', 'gm'), -- Mounts
-('10006', 'gm'); -- Event Masks
+('10006', 'gm'), -- Event Masks
+('10007', 'gm'); -- Raid Boss Weapons
 
 -- Test Server Helpers Shops
 INSERT INTO `merchant_shopids` VALUES

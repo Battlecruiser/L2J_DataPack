@@ -43591,6 +43591,7 @@ INSERT INTO `droplist` VALUES
 (25447, 8619, 1, 1, 2, 520000), -- Ancient Book: Divine Inspiration (Original Language Version)
 (25447, 9814, 2, 4, 2, 840000), -- Memento Mori
 (25447, 8176, 1, 2, 2, 850000), -- Destruction Tombstone
+(25447, 21973, 1, 1, 1, 3566), -- Mardil's Fan
 -- Cherub Galaxia
 (25450, 6676, 1, 1, 0, 20516.891566), -- Sealed Imperial Crusader Gauntlet
 (25450, 6677, 1, 1, 0, 20516.891566), -- Sealed Imperial Crusader Boots
@@ -44368,6 +44369,7 @@ INSERT INTO `droplist` VALUES
 (25603, 6691, 3, 9, 0, 581961.160611), -- Angel Slayer Blade
 (25603, 6680, 1, 1, 1, 31111.53785), -- Sealed Draconic Leather Armor
 (25603, 6707, 12, 36, 1, 500255.46215), -- Sealed Draconic Leather Armor Part
+(25603, 21919, 1, 1, 1, 2254), -- Hellblade
 -- Epidos
 (25609, 7575, 1, 1, 0, 19749.69045), -- Draconic Bow
 (25609, 7579, 12, 36, 0, 384675.30955), -- Draconic Bow Shaft
@@ -44725,6 +44727,7 @@ INSERT INTO `droplist` VALUES
 (25666, 6697, 3, 7, 1, 300476.1785), -- Arcana Mace Head
 (25666, 6578, 1, 1, 2, 81633.144203), -- Blessed Scroll: Enchant Armor (S-Grade)
 (25666, 3936, 1, 3, 2, 459187.855797), -- Blessed Scroll of Resurrection
+(25666, 21959, 1, 1, 1, 1890), -- Blood Brother
 -- Queen Shyeed
 (25671, 9524, 1, 1, 0, 4066.114473), -- Sealed Dynasty Tunic
 (25671, 9525, 1, 1, 0, 6506.099217), -- Sealed Dynasty Stockings
@@ -44873,12 +44876,12 @@ INSERT INTO `droplist` VALUES
 (25693, 9444, 1, 1, 1, 544.127377), -- Dynasty Phantom
 (25693, 9616, 1, 1, 1, 170082.03533), -- Dynasty Sword Piece
 (25693, 9617, 1, 1, 1, 170082.03533), -- Dynasty Blade Piece
-(25693, 9618, 1, 1, 1, 170082.547209), -- Dynasty Phantom Piece
-(25693, 959, 1, 1, 2, 15858.942784), -- Scroll: Enchant Weapon (S-Grade)
-(25693, 960, 1, 1, 2, 158589.782024), -- Scroll: Enchant Armor (S-Grade)
-(25693, 6577, 1, 1, 2, 2643.275192); -- Blessed Scroll: Enchant Weapon (S-Grade)
+(25693, 9618, 1, 1, 1, 170082.547209); -- Dynasty Phantom Piece
 
 INSERT INTO `droplist` VALUES
+(25693, 959, 1, 1, 2, 15858.942784), -- Scroll: Enchant Weapon (S-Grade)
+(25693, 960, 1, 1, 2, 158589.782024), -- Scroll: Enchant Armor (S-Grade)
+(25693, 6577, 1, 1, 2, 2643.275192), -- Blessed Scroll: Enchant Weapon (S-Grade)
 -- Aenkinel
 (25694, 9452, 1, 1, 0, 46794.620766), -- Sealed Dynasty Earring
 (25694, 9453, 1, 1, 0, 35096.086984), -- Sealed Dynasty Necklace
@@ -44896,6 +44899,7 @@ INSERT INTO `droplist` VALUES
 (25694, 960, 1, 3, 2, 550305.53381), -- Scroll: Enchant Armor (S-Grade)
 (25694, 6577, 1, 1, 2, 18343.49517), -- Blessed Scroll: Enchant Weapon (S-Grade)
 (25694, 15341, 1, 3, 2, 1000000), -- Guiding Tea Leaves
+(25694, 21955, 1, 1, 1, 3776), -- Blades of Delusion
 -- Aenkinel
 (25695, 9452, 1, 1, 0, 54884.079987), -- Sealed Dynasty Earring
 (25695, 9453, 1, 1, 0, 41163.202388), -- Sealed Dynasty Necklace
@@ -46037,6 +46041,7 @@ INSERT INTO `droplist` VALUES
 (29163, 13893, 1, 1, 1, 200000), -- Sealed Holy Spirit's Cloak
 (29163, 10550, 1, 1, 1, 400000), -- Forgotten Scroll - Protection of Elemental
 (29163, 10552, 1, 1, 1, 400000), -- Forgotten Scroll - Fighter's Will
+(29163, 21939, 1, 1, 1, 37700), -- Claw of Destruction
 -- Tiat
 (29175, 7575, 1, 1, 0, 10599.273198), -- Draconic Bow
 (29175, 7579, 12, 36, 0, 206447.726802), -- Draconic Bow Shaft
@@ -46182,6 +46187,7 @@ INSERT INTO `droplist` VALUES
 (29181, 16162, 2, 4, 6, 600000), -- High-Grade Life Stone - Level 85
 (29181, 16166, 2, 4, 6, 400000), -- High-Grade Life Stone - Level 86
 (29181, 6659, 1, 1, 7, 900), -- Earring of Zaken
+(29181, 21935, 1, 1, 8, 900), -- Butcher Blades
 -- Baylor
 (29186, 13143, 1, 1, 0, 83700), -- Sealed Vesper Helmet
 (29186, 13144, 1, 1, 0, 83300), -- Sealed Vesper Leather Helmet
