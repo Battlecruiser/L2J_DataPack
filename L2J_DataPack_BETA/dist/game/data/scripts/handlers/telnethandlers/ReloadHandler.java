@@ -107,7 +107,7 @@ public class ReloadHandler implements ITelnetHandler
 					L2World.getInstance().deleteVisibleNpcSpawns();
 					NpcTable.getInstance().reloadAllNpc();
 					SpawnTable.getInstance().reloadAll();
-					RaidBossSpawnManager.getInstance().reloadBosses();
+					RaidBossSpawnManager.getInstance().load();
 					_print.println("done\n");
 				}
 				else if (type.equalsIgnoreCase("script"))
