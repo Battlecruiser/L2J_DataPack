@@ -15,8 +15,11 @@
 package handlers.targethandlers;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
+import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
@@ -28,7 +31,18 @@ public class TargetFlagPole implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		return new L2Character[] { activeChar };
+		if (!activeChar.isPlayer())
+			return _emptyTargetList;
+		
+		final L2PcInstance player = activeChar.getActingPlayer();
+		final Fort fort = FortManager.getInstance().getFort(player);
+		if (player.getClan() == null || fort == null || !player.checkIfOkToCastFlagDisplay(fort, true, skill, activeChar.getTarget()))
+			return _emptyTargetList;
+		
+		return new L2Object[]
+		{
+			activeChar.getTarget()
+		};
 	}
 	
 	@Override
