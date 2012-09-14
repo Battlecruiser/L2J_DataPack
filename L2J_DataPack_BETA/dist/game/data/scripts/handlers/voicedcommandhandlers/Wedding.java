@@ -32,12 +32,12 @@ import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.AbnormalEffect;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
@@ -338,7 +338,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
+		if (activeChar.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 		{
 			activeChar.sendMessage("You are in area which blocks summoning.");
 			return false;
@@ -447,7 +447,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (partner.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
+		if (partner.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 		{
 			activeChar.sendMessage("Your partner is in area which blocks summoning.");
 			return false;

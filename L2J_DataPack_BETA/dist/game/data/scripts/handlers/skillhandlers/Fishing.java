@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.items.type.L2WeaponType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.L2FishingZone;
 import com.l2jserver.gameserver.model.zone.type.L2WaterZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -108,14 +109,14 @@ public class Fishing implements ISkillHandler
 				return;
 			}
 			
-			if (player.isInsideZone(L2Character.ZONE_WATER))
+			if (player.isInsideZone(ZoneId.WATER))
 			{
 				// You can't fish in water
 				player.sendPacket(SystemMessageId.CANNOT_FISH_UNDER_WATER);
 				return;
 			}
 			
-			if (player.isInsideZone(L2Character.ZONE_PEACE))
+			if (player.isInsideZone(ZoneId.PEACE))
 			{
 				// You can't fish here.
 				player.sendPacket(SystemMessageId.CANNOT_FISH_HERE);

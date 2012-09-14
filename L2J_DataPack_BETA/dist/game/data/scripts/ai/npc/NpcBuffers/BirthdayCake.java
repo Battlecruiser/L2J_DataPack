@@ -17,11 +17,11 @@ package ai.npc.NpcBuffers;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
  * @author UnAfraid
@@ -94,7 +94,7 @@ public class BirthdayCake extends AbstractNpcAI
 				return;
 			}
 			
-			if (!_npc.isInsideZone(L2Character.ZONE_PEACE))
+			if (!_npc.isInsideZone(ZoneId.PEACE))
 			{
 				L2Skill skill = _holder.getSkill();
 				switch (_npc.getNpcId())

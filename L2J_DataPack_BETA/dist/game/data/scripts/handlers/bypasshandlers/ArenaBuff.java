@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
  * @author Xaras2
@@ -81,7 +82,7 @@ public class ArenaBuff implements IBypassHandler
 			}
 			else if (cmd.equalsIgnoreCase(COMMANDS[1]))
 			{
-				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
+				if (activeChar.isInsideZone(ZoneId.PVP)) // Cannot be used while inside the pvp zone
 				{
 					return false;
 				}
@@ -100,7 +101,7 @@ public class ArenaBuff implements IBypassHandler
 			}
 			else if (cmd.equalsIgnoreCase(COMMANDS[2]))
 			{
-				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
+				if (activeChar.isInsideZone(ZoneId.PVP)) // Cannot be used while inside the pvp zone
 				{
 					return false;
 				}

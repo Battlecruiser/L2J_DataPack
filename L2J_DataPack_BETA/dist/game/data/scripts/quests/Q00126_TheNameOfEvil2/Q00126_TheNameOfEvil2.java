@@ -77,7 +77,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 			case "32119-4a.html":
 			case "32119-5b.html":
-				st.playSound("EtcSound.elcroki_song_1st");
+				st.playSound(QuestSound.ETCSOUND_ELROKI_SOUND_1ST);
 				break;
 			case "32119-5.html":
 				if (st.isCond(4))
@@ -99,7 +99,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 			case "32120-4a.html":
 			case "32120-5b.html":
-				st.playSound("EtcSound.elcroki_song_2nd");
+				st.playSound(QuestSound.ETCSOUND_ELROKI_SOUND_2ND);
 				break;
 			case "32120-5.html":
 				if (st.isCond(7))
@@ -121,7 +121,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 			case "32121-4a.html":
 			case "32121-5b.html":
-				st.playSound("EtcSound.elcroki_song_3rd");
+				st.playSound(QuestSound.ETCSOUND_ELROKI_SOUND_3RD);
 				break;
 			case "32121-5.html":
 				if (st.isCond(10))
@@ -270,7 +270,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 			case "32122-7.html":
 				st.giveItems(BONE_POWDER, 1);
-				st.playSound("EtcSound.elcroki_song_full");
+				st.playSound(QuestSound.ETCSOUND_ELROKI_SOUND_FULL);
 				npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
 				break;
 			case "32122-8.html":
