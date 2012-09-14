@@ -34,6 +34,7 @@ import handlers.effecthandlers.CpDamPercent;
 import handlers.effecthandlers.CpHeal;
 import handlers.effecthandlers.CpHealOverTime;
 import handlers.effecthandlers.CpHealPercent;
+import handlers.effecthandlers.CrystalGradeModify;
 import handlers.effecthandlers.DamOverTime;
 import handlers.effecthandlers.Debuff;
 import handlers.effecthandlers.Disarm;
@@ -124,6 +125,7 @@ public final class EffectMasterHandler
 		CpHeal.class,
 		CpHealOverTime.class,
 		CpHealPercent.class,
+		CrystalGradeModify.class,
 		CpDamPercent.class,
 		DamOverTime.class,
 		Debuff.class,
