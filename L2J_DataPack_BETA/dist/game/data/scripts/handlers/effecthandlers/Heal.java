@@ -14,6 +14,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -54,8 +55,8 @@ public class Heal extends L2Effect
 		double amount = calc();
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
-		boolean sps = activeChar.isSpiritshotCharged(getSkill());
-		boolean bss = activeChar.isBlessedSpiritshotCharged(getSkill());
+		boolean sps = getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if ((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
 		{
@@ -148,7 +149,7 @@ public class Heal extends L2Effect
 				}
 			}
 		}
-		
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		return true;
 	}
 	

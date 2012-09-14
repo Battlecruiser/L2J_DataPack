@@ -19,8 +19,8 @@ import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -38,12 +38,7 @@ public class StealBuffs implements ISkillHandler
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (activeChar.isNpc())
-		{
-			((L2Npc) activeChar)._spiritshotcharged = false;
-		}
-		
+	{	
 		L2Character target;
 		L2Effect effect;
 		
@@ -193,7 +188,7 @@ public class StealBuffs implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

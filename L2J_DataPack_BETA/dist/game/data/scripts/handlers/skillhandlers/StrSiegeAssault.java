@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
@@ -71,7 +72,7 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			// damage calculation
 			int damage = 0;
-			boolean soul = activeChar.isSoulshotCharged(skill);
+			boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 			
 			for (L2Character target: (L2Character[]) targets)
 			{
@@ -89,7 +90,7 @@ public class StrSiegeAssault implements ISkillHandler
 				if (!crit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
 					damage = 0;
 				else
-					damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcPhysDam(activeChar, target, skill, shld, crit, dual, soul);
+					damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcPhysDam(activeChar, target, skill, shld, crit, dual, ss);
 				
 				if (damage > 0)
 				{
@@ -102,7 +103,7 @@ public class StrSiegeAssault implements ISkillHandler
 					activeChar.sendMessage(skill.getName() + " failed.");
 			}
 			
-			activeChar.ssUncharge(skill);
+			activeChar.setChargedShot(ShotType.SOULSHOTS, false);
 		}
 		catch (Exception e)
 		{

@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.datatables.FishingRodsData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.fishing.L2Fishing;
@@ -71,7 +72,7 @@ public class FishingSkill implements ISkillHandler
 		}
 		int SS = 1;
 		int pen = 0;
-		if (weaponInst.getChargedFishshot())
+		if (activeChar.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
 			SS = 2;
 		}
@@ -88,7 +89,7 @@ public class FishingSkill implements ISkillHandler
 		}
 		if (SS > 1)
 		{
-			weaponInst.setChargedFishshot(false);
+			weaponInst.setChargedShot(ShotType.FISH_SOULSHOTS, false);
 		}
 		if (skill.getSkillType() == L2SkillType.REELING)
 		{

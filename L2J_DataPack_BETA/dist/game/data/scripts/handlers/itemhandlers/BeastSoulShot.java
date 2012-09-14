@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -42,12 +43,6 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		L2PcInstance activeOwner = playable.getActingPlayer();
-		if (!playable.isPlayer())
-		{
-			playable.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
-			return false;
-		}
-		
 		L2Summon activePet = activeOwner.getPet();
 		
 		if (activePet == null)
@@ -73,44 +68,35 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		if (!(shotCount > shotConsumption))
+		if (shotCount < shotConsumption)
 		{
 			// Not enough Soulshots to use.
 			if (!activeOwner.disableAutoShot(itemId))
+			{
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET);
+			}
 			return false;
 		}
 		
-		L2ItemInstance weaponInst = activePet.getActiveWeaponInstance();
-		
-		if (weaponInst == null)
+		if (activePet.isChargedShot(ShotType.SOULSHOTS))
 		{
-			if (activePet.getChargedSoulShot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
-			{
-				return false;
-			}
-			
-			activePet.setChargedSoulShot(L2ItemInstance.CHARGED_SOULSHOT);
-		}
-		else
-		{
-			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
-			{	
-				return false;
-			}
-			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
+			// SoulShots are already active.
+			return false;
 		}
 		
 		// If the player doesn't have enough beast soulshot remaining, remove any auto soulshot task.
 		if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
 			if (!activeOwner.disableAutoShot(itemId))
+			{
 				activeOwner.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET);
+			}
 			return false;
 		}
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.PET_USE_SPIRITSHOT);
+		activePet.setChargedShot(ShotType.SOULSHOTS, true);
 		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;

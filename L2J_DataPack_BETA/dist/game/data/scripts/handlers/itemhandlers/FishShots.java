@@ -18,6 +18,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -47,11 +48,15 @@ public class FishShots implements IItemHandler
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
-		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.FISHINGROD)
+		if ((weaponInst == null) || (weaponItem.getItemType() != L2WeaponType.FISHINGROD))
+		{
 			return false;
+		}
 		
-		if (weaponInst.getChargedFishshot()) // spirit shot is already active
+		if (activeChar.isChargedShot(ShotType.FISH_SOULSHOTS))
+		{
 			return false;
+		}
 		
 		final long count = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();
@@ -62,7 +67,7 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.fishingshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.fishingshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{
@@ -71,9 +76,11 @@ public class FishShots implements IItemHandler
 		}
 		
 		if (count < 1)
+		{
 			return false;
+		}
 		
-		weaponInst.setChargedFishshot(true);
+		activeChar.setChargedShot(ShotType.FISH_SOULSHOTS, true);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);

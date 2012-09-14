@@ -16,6 +16,7 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -134,7 +135,7 @@ public class ManaHeal implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -62,7 +63,7 @@ public class SoulShots implements IItemHandler
 			return false;
 		}
 		
-		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.soulshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.soulshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{
@@ -77,14 +78,14 @@ public class SoulShots implements IItemHandler
 		try
 		{
 			// Check if Soul shot is already active
-			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
+			if (activeChar.isChargedShot(ShotType.SOULSHOTS))
 			{
 				return false;
 			}
 			
 			// Consume Soul shots if player has enough of them
 			int SSCount = weaponItem.getSoulShotCount();
-			if (weaponItem.getReducedSoulShot() > 0 && Rnd.get(100) < weaponItem.getReducedSoulShotChance())
+			if ((weaponItem.getReducedSoulShot() > 0) && (Rnd.get(100) < weaponItem.getReducedSoulShotChance()))
 			{
 				SSCount = weaponItem.getReducedSoulShot();
 			}
@@ -98,7 +99,7 @@ public class SoulShots implements IItemHandler
 				return false;
 			}
 			// Charge soul shot
-			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
+			weaponInst.setChargedShot(ShotType.SOULSHOTS, true);
 		}
 		finally
 		{

@@ -17,6 +17,7 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -47,8 +48,8 @@ public class Heal implements ISkillHandler
 			handler.useSkill(activeChar, skill, targets);
 		
 		double power = skill.getPower();
-		boolean sps = activeChar.isSpiritshotCharged(skill);
-		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		switch (skill.getSkillType())
 		{
@@ -99,7 +100,7 @@ public class Heal implements ISkillHandler
 				}
 				
 				power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
-				activeChar.spsUncharge(skill);
+				activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		}
 		
 		double hp;

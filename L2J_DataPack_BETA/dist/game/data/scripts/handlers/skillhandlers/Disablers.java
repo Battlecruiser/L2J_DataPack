@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -74,9 +75,9 @@ public class Disablers implements ISkillHandler
 		L2SkillType type = skill.getSkillType();
 		
 		byte shld = 0;
-		boolean ss = activeChar.isSoulshotCharged(skill);
-		boolean sps = activeChar.isSpiritshotCharged(skill);
-		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		for (L2Object obj: targets)
 		{
@@ -554,8 +555,8 @@ public class Disablers implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
-	} //end void
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+	}
 	
 	/**
 	 * 

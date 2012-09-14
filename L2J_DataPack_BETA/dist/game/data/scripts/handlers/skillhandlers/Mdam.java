@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -49,6 +50,10 @@ public class Mdam implements ISkillHandler
 			return;
 		}
 		
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if (activeChar.isPlayer() && target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -64,7 +69,7 @@ public class Mdam implements ISkillHandler
 			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
-			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill), mcrit);
+			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, sps, bss, mcrit);
 			
 			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff() != 0)
 			{
@@ -134,9 +139,9 @@ public class Mdam implements ISkillHandler
 					{
 						// activate attacked effects, if any
 						target.stopSkillEffects(skill.getId());
-						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill)))
+						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							skill.getEffects(activeChar, target, new Env(shld, activeChar.isSpiritshotCharged(skill), false, activeChar.isBlessedSpiritshotCharged(skill)));
+							skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 						}
 						else
 						{
@@ -179,12 +184,12 @@ public class Mdam implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		
 		if (skill.isSuicideAttack())
 		{
 			activeChar.doDie(activeChar);
 		}
-		
-		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

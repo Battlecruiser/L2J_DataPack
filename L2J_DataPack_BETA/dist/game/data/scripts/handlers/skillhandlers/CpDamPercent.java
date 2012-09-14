@@ -16,6 +16,7 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -35,9 +36,10 @@ public class CpDamPercent implements ISkillHandler
 		if (activeChar.isAlikeDead())
 			return;
 		
-		boolean ss = activeChar.isSoulshotCharged(skill);
-		boolean sps = activeChar.isSpiritshotCharged(skill);
-		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (activeChar.isPlayer() && target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -64,7 +66,7 @@ public class CpDamPercent implements ISkillHandler
 			target.setCurrentCp(target.getCurrentCp() - damage);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override
