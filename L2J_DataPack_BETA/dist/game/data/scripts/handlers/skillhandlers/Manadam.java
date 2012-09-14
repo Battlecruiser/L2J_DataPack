@@ -16,6 +16,7 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -45,6 +46,10 @@ public class Manadam implements ISkillHandler
 			return;
 		}
 		
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
@@ -63,9 +68,9 @@ public class Manadam implements ISkillHandler
 				{
 					byte shld = Formulas.calcShldUse(activeChar, target, skill);
 					target.stopSkillEffects(skill.getId());
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill)))
+					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, new Env(shld, activeChar.isSpiritshotCharged(skill), false, activeChar.isBlessedSpiritshotCharged(skill)));
+						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					}
 					else
 					{
@@ -76,7 +81,7 @@ public class Manadam implements ISkillHandler
 					}
 				}
 				
-				double damage = skill.isStaticDamage() ? skill.getPower() : Formulas.calcManaDam(activeChar, target, skill, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill));
+				double damage = skill.isStaticDamage() ? skill.getPower() : Formulas.calcManaDam(activeChar, target, skill, ss, bss);
 				
 				if (!skill.isStaticDamage() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				{
@@ -126,7 +131,7 @@ public class Manadam implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

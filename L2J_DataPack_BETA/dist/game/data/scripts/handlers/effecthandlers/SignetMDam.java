@@ -23,6 +23,7 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -97,16 +98,16 @@ public class SignetMDam extends L2Effect
 			return true; // do nothing first 2 times
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = getEffector().getActingPlayer();
+		L2PcInstance activeChar = getEffector().getActingPlayer();
 		
-		boolean sps = caster.isSpiritshotCharged(getSkill());
-		boolean bss = caster.isBlessedSpiritshotCharged(getSkill());
-		
+		boolean sps = getSkill().isMagic() && getEffector().isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = getSkill().isMagic() && getEffector().isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+
 		FastList<L2Character> targets = new FastList<>();
 		
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
-			if (cha == null || cha == caster)
+			if (cha == null || cha == activeChar)
 				continue;
 			
 			if (cha.isL2Attackable() || cha.isPlayable())
@@ -114,19 +115,19 @@ public class SignetMDam extends L2Effect
 				if (cha.isAlikeDead())
 					continue;
 				
-				if (mpConsume > caster.getCurrentMp())
+				if (mpConsume > activeChar.getCurrentMp())
 				{
-					caster.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+					activeChar.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 					return false;
 				}
 				
-				caster.reduceCurrentMp(mpConsume);
+				activeChar.reduceCurrentMp(mpConsume);
 				if (cha.isPlayable())
 				{
-					if (caster.canAttackCharacter(cha))
+					if (activeChar.canAttackCharacter(cha))
 					{
 						targets.add(cha);
-						caster.updatePvPStatus(cha);
+						activeChar.updatePvPStatus(cha);
 					}
 				}
 				else
@@ -136,12 +137,12 @@ public class SignetMDam extends L2Effect
 		
 		if (!targets.isEmpty())
 		{
-			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getId(), getSkill().getLevel(), targets.toArray(new L2Character[targets.size()])));
+			activeChar.broadcastPacket(new MagicSkillLaunched(activeChar, getSkill().getId(), getSkill().getLevel(), targets.toArray(new L2Character[targets.size()])));
 			for (L2Character target : targets)
 			{
-				boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
-				byte shld = Formulas.calcShldUse(caster, target, getSkill());
-				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, sps, bss, mcrit);
+				boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
+				byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
+				int mdam = (int) Formulas.calcMagicDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
 				
 				if (target.isSummon())
 					target.broadcastStatusUpdate();
@@ -154,12 +155,13 @@ public class SignetMDam extends L2Effect
 						target.breakAttack();
 						target.breakCast();
 					}
-					caster.sendDamageMessage(target, mdam, mcrit, false, false);
-					target.reduceCurrentHp(mdam, caster, getSkill());
+					activeChar.sendDamageMessage(target, mdam, mcrit, false, false);
+					target.reduceCurrentHp(mdam, activeChar, getSkill());
 				}
-				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
+				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
 			}
 		}
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		return true;
 	}
 	

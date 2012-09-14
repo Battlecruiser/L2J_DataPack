@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -52,23 +53,29 @@ public class SpiritShot implements IItemHandler
 		}
 		
 		// Check if Spirit shot can be used
-		if (weaponInst == null || weaponItem.getSpiritShotCount() == 0)
+		if ((weaponInst == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+			}
 			return false;
 		}
 		
 		// Check if Spirit shot is already active
-		if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+		if (activeChar.isChargedShot(ShotType.SPIRITSHOTS))
+		{
 			return false;
+		}
 		
-		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.spiritshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.spiritshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+			}
 			
 			return false;
 		}
@@ -77,12 +84,14 @@ public class SpiritShot implements IItemHandler
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!activeChar.disableAutoShot(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			}
 			return false;
 		}
 		
 		// Charge Spirit shot
-		weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_SPIRITSHOT);
+		activeChar.setChargedShot(ShotType.SPIRITSHOTS, true);
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);

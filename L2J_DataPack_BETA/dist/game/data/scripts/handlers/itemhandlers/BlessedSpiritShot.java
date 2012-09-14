@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -52,24 +53,30 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Check if Blessed SpiritShot can be used
-		if (weaponInst == null || weaponItem == null || weaponItem.getSpiritShotCount() == 0)
+		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SPIRITSHOTS);
+			}
 			return false;
 		}
 		
 		// Check if Blessed SpiritShot is already active (it can be charged over SpiritShot)
-		if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE) // SoulShots are already active.
+		if (activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS))
+		{
 			return false;
+		}
 		
 		// Check for correct grade
-		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.spiritshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.spiritshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+			}
 			
 			return false;
 		}
@@ -78,15 +85,16 @@ public class BlessedSpiritShot implements IItemHandler
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!activeChar.disableAutoShot(itemId))
+			{
 				activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS);
+			}
 			return false;
 		}
 		
-		// Charge Blessed SpiritShot
-		weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
-		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.ENABLED_SPIRITSHOT);
+		activeChar.setChargedShot(ShotType.BLESSED_SPIRITSHOTS, true);
+		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;
 	}

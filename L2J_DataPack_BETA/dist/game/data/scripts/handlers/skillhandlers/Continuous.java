@@ -20,6 +20,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
@@ -71,10 +72,10 @@ public class Continuous implements ISkillHandler
 				skill = sk;
 		}
 		
-		boolean ss = activeChar.isSoulshotCharged(skill);
-		boolean sps = activeChar.isSpiritshotCharged(skill);
-		boolean bss = activeChar.isBlessedSpiritshotCharged(skill);
-		
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+				
 		for (L2Character target: (L2Character[]) targets)
 		{
 			byte shld = 0;
@@ -194,7 +195,7 @@ public class Continuous implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

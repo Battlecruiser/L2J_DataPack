@@ -16,6 +16,7 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -36,6 +37,10 @@ public class CpDam implements ISkillHandler
 		{
 			return;
 		}
+		
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		for (L2Character target : (L2Character[]) targets)
 		{
@@ -58,13 +63,12 @@ public class CpDam implements ISkillHandler
 				target.breakAttack();
 				target.breakCast();
 			}
-			skill.getEffects(activeChar, target, new Env(shld, activeChar.isSoulshotCharged(skill), activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill)));
+					
+			skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 			activeChar.sendDamageMessage(target, damage, false, false, false);
 			target.setCurrentCp(target.getCurrentCp() - damage);
 		}
-		
-		activeChar.spsUncharge(skill);
-		
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -51,6 +52,10 @@ public class Blow implements ISkillHandler
 		if (activeChar.isAlikeDead())
 			return;
 		
+		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (target.isAlikeDead())
@@ -77,9 +82,9 @@ public class Blow implements ISkillHandler
 					{
 						final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 						target.stopSkillEffects(skill.getId());
-						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, true))
+						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							skill.getEffects(activeChar, target, new Env(shld, false, false, false));
+							skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(skill);
 							target.sendPacket(sm);
@@ -94,10 +99,9 @@ public class Blow implements ISkillHandler
 					}
 				}
 				
-				boolean soul = activeChar.isSoulshotCharged(skill);
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
-				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
+				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, ss);
 				if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
 				{
 					switch (activeChar.getActingPlayer().getSouls())
@@ -203,7 +207,7 @@ public class Blow implements ISkillHandler
 				skill.getEffectsSelf(activeChar);
 			}
 			
-			activeChar.ssUncharge(skill);
+			activeChar.setChargedShot(ShotType.SOULSHOTS, false);
 		}
 	}
 	
