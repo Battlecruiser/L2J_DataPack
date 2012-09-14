@@ -27,11 +27,11 @@ import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.scripting.scriptengine.events.SiegeEvent;
@@ -188,7 +188,7 @@ public final class Venom extends AbstractNpcAI
 				}
 				break;
 			case "raid_check":
-				if (!npc.isInsideZone(L2Character.ZONE_SIEGE) && !npc.isTeleporting())
+				if (!npc.isInsideZone(ZoneId.SIEGE) && !npc.isTeleporting())
 				{
 					npc.teleToLocation(new Location(_venomX, _venomY, _venomZ), false);
 				}

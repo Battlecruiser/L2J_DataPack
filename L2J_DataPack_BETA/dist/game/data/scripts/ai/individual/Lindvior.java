@@ -71,11 +71,14 @@ public class Lindvior extends AbstractNpcAI
 				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.BE_CAREFUL_SOMETHINGS_COMING);
 				break;
 			case "lindvior_scene":
-				for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(4000))
+				if (npc != null)
 				{
-					if ((pl.getZ() >= 1100) && (pl.getZ() <= 3100))
+					for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(4000))
 					{
-						pl.showQuestMovie(LINDVIOR_SCENE_ID);
+						if ((pl.getZ() >= 1100) && (pl.getZ() <= 3100))
+						{
+							pl.showQuestMovie(LINDVIOR_SCENE_ID);
+						}
 					}
 				}
 				break;

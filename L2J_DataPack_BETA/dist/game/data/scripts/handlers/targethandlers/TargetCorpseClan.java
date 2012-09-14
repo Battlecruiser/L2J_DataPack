@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
+import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -92,7 +93,7 @@ public class TargetCorpseClan implements ITargetTypeHandler
 					if (skill.getSkillType() == L2SkillType.RESURRECT)
 					{
 						// check target is not in a active siege zone
-						if (obj.isInsideZone(L2Character.ZONE_SIEGE) && !obj.isInSiege())
+						if (obj.isInsideZone(ZoneId.SIEGE) && !obj.isInSiege())
 							continue;
 					}
 					

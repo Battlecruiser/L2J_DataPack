@@ -162,8 +162,10 @@ public class Disablers implements ISkillHandler
 						L2Effect[] effects = target.getAllEffects();
 						for (L2Effect e : effects)
 						{
-							if (e.getSkill().getSkillType() == type)
+							if ((e != null) && (e.getSkill() != null) && (e.getSkill().getSkillType() == type))
+							{
 								e.exit();
+							}
 						}
 						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					}
