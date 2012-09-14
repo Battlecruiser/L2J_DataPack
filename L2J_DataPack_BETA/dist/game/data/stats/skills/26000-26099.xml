@@ -570,7 +570,6 @@
 		<table name="#bonusExp"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusExp" val="#bonusExp" />
@@ -581,7 +580,6 @@
 		<table name="#bonusSp"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusSp" val="#bonusSp" />
@@ -592,7 +590,6 @@
 		<table name="#bonus"> 1 2 3 4 5 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="CrystalGradeModify" abnormalTime="-1" val="#bonus" />
