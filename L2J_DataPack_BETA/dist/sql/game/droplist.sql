@@ -45500,6 +45500,7 @@ INSERT INTO `droplist` VALUES
 (29047, 8191, 1, 1, 8, 300000), -- Necklace of Frintezza
 (29047, 8620, 5, 25, 9, 600000), -- Ancient Book: Divine Inspiration (Manuscript)
 (29047, 13893, 1, 1, 9, 400000), -- Sealed Holy Spirit's Cloak
+(29047, 21893, 1, 1, 10, 100000), -- Halisha's Helmet
 -- Benom
 (29054, 6674, 1, 1, 0, 17879.70348), -- Sealed Imperial Crusader Breastplate
 (29054, 6675, 1, 1, 0, 28535.160216), -- Sealed Imperial Crusader Gaiters
@@ -46107,6 +46108,7 @@ INSERT INTO `droplist` VALUES
 (29179, 16164, 2, 4, 5, 600000), -- Life Stone - Level 86
 (29179, 16165, 2, 4, 5, 400000), -- Mid-Grade Life Stone - Level 86
 (29179, 16025, 1, 1, 6, 250000), -- Necklace of Freya
+(29179, 21894, 1, 1, 7, 30000), -- Ice Queen's Tiara
 -- Freya
 (29180, 15560, 1, 1, 0, 27300), -- Vigwik Axe
 (29180, 15561, 1, 1, 0, 27270), -- Devilish Maul
@@ -46143,6 +46145,7 @@ INSERT INTO `droplist` VALUES
 (29180, 6578, 1, 1, 4, 35718.25194), -- Blessed Scroll: Enchant Armor (S-Grade)
 (29180, 16026, 1, 1, 5, 300000), -- Blessed Necklace of Freya
 (29180, 16027, 1, 1, 6, 500000), -- Bottle of Freya's Soul
+(29180, 21894, 1, 1, 7, 30000), -- Ice Queen's Tiara
 -- Zaken
 (29181, 13143, 1, 1, 0, 17760), -- Sealed Vesper Helmet
 (29181, 13144, 1, 1, 0, 17640), -- Sealed Vesper Leather Helmet
@@ -46188,6 +46191,7 @@ INSERT INTO `droplist` VALUES
 (29181, 16166, 2, 4, 6, 400000), -- High-Grade Life Stone - Level 86
 (29181, 6659, 1, 1, 7, 900), -- Earring of Zaken
 (29181, 21935, 1, 1, 8, 900), -- Butcher Blades
+(29181, 21892, 1, 1, 9, 30000), -- Pirate King Hat
 -- Baylor
 (29186, 13143, 1, 1, 0, 83700), -- Sealed Vesper Helmet
 (29186, 13144, 1, 1, 0, 83300), -- Sealed Vesper Leather Helmet
