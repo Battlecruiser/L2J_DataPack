@@ -629,19 +629,37 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="22039" levels="2" name="Rune of Experience Points">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#bonusExp"> 30 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="bonusExp" val="#bonusExp" />
+		</for>
 	</skill>
 	<skill id="22040" levels="2" name="Rune of SP">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#bonusSp"> 30 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="bonusSp" val="#bonusSp" />
+		</for>
 	</skill>
 	<skill id="22041" levels="2" name="Rune of Crystal Form Level">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#bonus"> 3 5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="CrystalGradeModify" abnormalTime="-1" val="#bonus" />
+		</for>
 	</skill>
 	<skill id="22042" levels="1" name="High Grade Potion of Will">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
