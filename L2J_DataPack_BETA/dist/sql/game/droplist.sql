@@ -41092,27 +41092,30 @@ INSERT INTO `droplist` VALUES
 (22861, 9552, 1, 1, 2, 693), -- Fire Crystal
 (22861, 10485, 1, 1, 2, 601), -- High-Grade Life Stone - Level 82
 -- Drakos Hunter
-(22862, 4043, 1, 1, -1, 751200), -- Asofe
-(22862, 9630, 1, 1, -1, 114500), -- Orichalcum
-(22862, 10403, 1, 1, -1, 7633), -- Icarus Hand Piece
-(22862, 15778, 1, 1, -1, 4000), -- Recipe - Sealed Moirai Breastplate (60%)
-(22862, 15792, 1, 1, -1, 1652), -- Recipe - Sealed Vesper Helmet (60%)
-(22862, 15795, 1, 1, -1, 625), -- Recipe - Sealed Vesper Breastplate (60%)
-(22862, 15798, 1, 1, -1, 625), -- Recipe - Sealed Vesper Gaiter (60%)
+(22862, 4043, 1, 1, -1, 826692), -- Asofe
+(22862, 9630, 1, 1, -1, 130530), -- Orichalcum
+(22862, 15792, 1, 1, -1, 14172), -- Recipe - Sealed Vesper Helmet (60%)
+(22862, 10403, 1, 1, -1, 10599), -- Icarus Hand Piece
+(22862, 15798, 1, 1, -1, 8503), -- Recipe - Sealed Vesper Gaiter (60%)
+(22862, 15778, 1, 1, -1, 7365), -- Recipe - Sealed Moirai Breastplate (60%)
+(22862, 15795, 1, 1, -1, 5314), -- Recipe - Sealed Vesper Breastplate (60%)
 (22862, 57, 18307, 42751, 0, 700000), -- Adena
-(22862, 15706, 1, 1, 1, 25), -- Sealed Moirai Boots
-(22862, 15707, 1, 1, 1, 25), -- Sealed Moirai Leather Boots
-(22862, 15768, 1, 1, 1, 25), -- Sealed Moirai Necklace
-(22862, 15708, 1, 1, 1, 25), -- Sealed Moirai Shoes
-(22862, 13893, 1, 1, 1, 10), -- Sealed Holy Spirit's Cloak
-(22862, 1885, 1, 1, 2, 187499), -- High-Grade Suede
-(22862, 1879, 3, 9, 2, 66666), -- Cokes
-(22862, 9628, 1, 1, 2, 18868), -- Leonard
-(22862, 9630, 1, 1, 2, 12820), -- Orichalcum
-(22862, 9629, 1, 1, 2, 9524), -- Adamantine
-(22862, 9549, 1, 1, 2, 5000), -- Wind Stone
-(22862, 9555, 1, 1, 2, 500), -- Wind Crystal
-(22862, 17248, 1, 1, 2, 133), -- Large Dragon Bone
+(22862, 1885, 1, 1, 2, 215959), -- High-Grade Suede
+(22862, 1879, 3, 9, 2, 71986), -- Cokes
+(22862, 9549, 1, 1, 2, 20732), -- Wind Stone
+(22862, 9628, 1, 1, 2, 20326), -- Leonard
+(22862, 10483, 1, 1, 2, 17997), -- Life Stone - Level 82
+(22862, 9630, 1, 1, 2, 13640), -- Orichalcum
+(22862, 9629, 1, 1, 2, 11267), -- Adamantine
+(22862, 10484, 1, 1, 2, 4499), -- Mid-Grade Life Stone - Level 82
+(22862, 17248, 1, 1, 2, 1524), -- Large Dragon Bone
+(22862, 9555, 1, 1, 2, 518), -- Wind Crystal
+(22862, 10485, 1, 1, 2, 450), -- High-Grade Life Stone - Level 82
+(22862, 15706, 1, 1, 1, 135), -- Sealed Moirai Boots
+(22862, 15707, 1, 1, 1, 135), -- Sealed Moirai Leather Boots
+(22862, 15708, 1, 1, 1, 135), -- Sealed Moirai Shoes
+(22862, 15768, 1, 1, 1, 104), -- Sealed Moirai Necklace
+(22862, 13893, 1, 1, 1, 40), -- Sealed Holy Spirit's Cloak
 -- Greyclaw Kutus
 (25001, 348, 1, 1, 0, 272693.767227), -- Scale Mail
 (25001, 377, 4, 12, 0, 54506.950827), -- Scale Gaiters
@@ -42701,12 +42704,12 @@ INSERT INTO `droplist` VALUES
 -- Anakim's Nemesis Zakaron
 (25281, 5313, 1, 1, 0, 54307.97645), -- Sealed Gauntlets of Nightmare
 (25281, 5314, 1, 1, 0, 54307.97645), -- Sealed Boots of Nightmare
-(25281, 5318, 1, 1, 0, 54307.97645), -- Sealed Majestic Gauntlets
-(25281, 5319, 1, 1, 0, 54307.97645), -- Sealed Majestic Boots
-(25281, 5514, 60, 180, 0, 51784.493033), -- Sealed Gauntlets of Nightmare Design
-(25281, 5502, 116, 346, 0, 26900.823222); -- Sealed Boots of Nightmare Lining
+(25281, 5318, 1, 1, 0, 54307.97645); -- Sealed Majestic Gauntlets
 
 INSERT INTO `droplist` VALUES
+(25281, 5319, 1, 1, 0, 54307.97645), -- Sealed Majestic Boots
+(25281, 5514, 60, 180, 0, 51784.493033), -- Sealed Gauntlets of Nightmare Design
+(25281, 5502, 116, 346, 0, 26900.823222), -- Sealed Boots of Nightmare Lining
 (25281, 5515, 16, 48, 0, 194191.377723), -- Sealed Majestic Gauntlets Design
 (25281, 5503, 23, 67, 0, 138092.400222), -- Sealed Majestic Boots Lining
 (25281, 236, 1, 1, 1, 21287.469632), -- Soul Separator
@@ -44873,12 +44876,12 @@ INSERT INTO `droplist` VALUES
 (25693, 9993, 1, 3, 0, 335934.158864), -- Sealed Dynasty Ring Gemstone
 (25693, 9442, 1, 1, 1, 544.127377), -- Dynasty Sword
 (25693, 9443, 1, 1, 1, 544.127377), -- Dynasty Blade
-(25693, 9444, 1, 1, 1, 544.127377), -- Dynasty Phantom
-(25693, 9616, 1, 1, 1, 170082.03533), -- Dynasty Sword Piece
-(25693, 9617, 1, 1, 1, 170082.03533), -- Dynasty Blade Piece
-(25693, 9618, 1, 1, 1, 170082.547209); -- Dynasty Phantom Piece
+(25693, 9444, 1, 1, 1, 544.127377); -- Dynasty Phantom
 
 INSERT INTO `droplist` VALUES
+(25693, 9616, 1, 1, 1, 170082.03533), -- Dynasty Sword Piece
+(25693, 9617, 1, 1, 1, 170082.03533), -- Dynasty Blade Piece
+(25693, 9618, 1, 1, 1, 170082.547209), -- Dynasty Phantom Piece
 (25693, 959, 1, 1, 2, 15858.942784), -- Scroll: Enchant Weapon (S-Grade)
 (25693, 960, 1, 1, 2, 158589.782024), -- Scroll: Enchant Armor (S-Grade)
 (25693, 6577, 1, 1, 2, 2643.275192), -- Blessed Scroll: Enchant Weapon (S-Grade)
