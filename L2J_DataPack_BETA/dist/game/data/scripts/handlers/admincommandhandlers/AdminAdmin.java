@@ -87,7 +87,6 @@ public class AdminAdmin implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		
 		if (command.startsWith("admin_admin"))
 		{
 			showMainPage(activeChar, command);
@@ -137,22 +136,18 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				_log.warning("An error occured while ending olympiad: " + e);
 			}
-			activeChar.sendMessage("Heroes formed");
+			activeChar.sendMessage("Heroes formed.");
 		}
 		else if (command.startsWith("admin_manualhero") || command.startsWith("admin_sethero"))
 		{
-			L2PcInstance target = null;
+			if (activeChar.getTarget() == null)
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
 			
-			if (activeChar.getTarget().isPlayer())
-			{
-				target = activeChar.getTarget().getActingPlayer();
-				target.setHero(target.isHero() ? false : true);
-			}
-			else
-			{
-				target = activeChar;
-				target.setHero(target.isHero() ? false : true);
-			}
+			final L2PcInstance target = activeChar.getTarget().isPlayer() ?  activeChar.getTarget().getActingPlayer() : activeChar;
+			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
 		else if (command.startsWith("admin_diet"))
