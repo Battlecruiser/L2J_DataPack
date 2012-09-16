@@ -284,7 +284,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 -- (25668,0,0,0,0,43200,129600,9999,9999), -- Cannibalistic Stakato Chief (82) (stats to be done)
 -- (25669,0,0,0,0,43200,129600,9999,9999), -- Cannibalistic Stakato Chief (82) (stats to be done)
 -- (25670,0,0,0,0,43200,129600,9999,9999), -- Cannibalistic Stakato Chief (82) (stats to be done)
-(25671,79634,-55428,-6104,0,43200,86400,743801,4022), -- Queen Shyeed (84)
+-- (25671,79634,-55428,-6104,0,43200,86400,743801,4022), -- Queen Shyeed (84) (Spawn by AI)
 (25674,86534,216888,-3176,0,43200,129600,736436,3945), -- Gwindorr (83)
 (25677,83056,183232,-3616,0,43200,129600,743801,4022), -- Water Spirit Lian (84)
 (25680,193902,54135,-4184,0,0,21600,2035459,3869), -- Giant Marpanak (82)
