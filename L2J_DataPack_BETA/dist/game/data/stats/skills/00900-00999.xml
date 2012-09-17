@@ -1897,6 +1897,8 @@
 	</skill>
 	<skill id="995" levels="1" name="Rush Impact">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="800" />
@@ -1907,7 +1909,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="82" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="DA2" />
 		<set name="power" val="4224" />
 		<set name="reuseDelay" val="20000" />
 		<set name="saveVs" val="CON" />
