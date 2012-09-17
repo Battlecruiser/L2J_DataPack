@@ -2411,16 +2411,16 @@
 		</enchant2for>
 	</skill>
 	<skill id="484" levels="1" name="Rush">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="600" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
 		<set name="magicLvl" val="32" />
-		<set name="mpInitialConsume" val="6" />
-		<set name="mpConsume" val="14" />
-		<set name="offensive" val="true" />
+		<set name="mpConsume" val="20" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
