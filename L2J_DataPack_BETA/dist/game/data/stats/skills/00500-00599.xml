@@ -1859,7 +1859,7 @@
 		<set name="coolTime" val="720" />
 		<set name="reuseDelay" val="3000" />
 		<set name="nextActionAttack" val="true" />
-		<set name="numCharges" val="2" />
+		<set name="chargeConsume" val="2" />
 		<cond msgId="113" addName="1">
 			<player Charges="2" />
 		</cond>
@@ -1881,7 +1881,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="150" />
-		<set name="numCharges" val="3" />
+		<set name="chargeConsume" val="3" />
 		<cond msgId="113" addName="1">
 			<player Charges="3" />
 		</cond>
