@@ -1153,6 +1153,8 @@ INSERT INTO `droplist` VALUES
 (18874, 9574, 1, 1, 2, 652.683528), -- Mid-Grade Life Stone - Level 80
 (18874, 9575, 1, 1, 2, 65.243686), -- High-Grade Life Stone - Level 80
 (18874, 960, 1, 1, 2, 150.220812), -- Scroll: Enchant Armor (S-Grade)
+(18874, 10550, 1, 1, 2, 501), -- Forgotten Scroll - Protection of Elemental
+(18874, 6622, 1, 1, 2, 1203), -- Giant's Codex
 -- Adult Kookaburra
 (18876, 15649, 1, 1, -1, 55084), -- Sealed Moirai Leather Breastplate Piece
 (18876, 1894, 1, 1, -1, 602057), -- Crafted Leather
@@ -1174,6 +1176,8 @@ INSERT INTO `droplist` VALUES
 (18876, 10484, 1, 1, 2, 1048.09), -- Mid-Grade Life Stone - Level 82
 (18876, 10485, 1, 1, 2, 104.7275), -- High-Grade Life Stone - Level 82
 (18876, 15779, 1, 1, 2, 238.99875), -- Recipe - Sealed Moirai Leather Breastplate (60%)
+(18876, 10549, 1, 1, 2, 9392), -- Forgotten Scroll - Protection of Rune
+(18876, 6622, 1, 1, 2, 2254), -- Giant's Codex
 -- Full Grown Kookaburra
 (18878, 10397, 1, 1, -1, 2321), -- Icarus Sawsword Piece
 (18878, 10399, 1, 1, -1, 2321), -- Icarus Spirit Piece
@@ -1256,6 +1260,8 @@ INSERT INTO `droplist` VALUES
 (18881, 9574, 1, 1, 2, 652.683528), -- Mid-Grade Life Stone - Level 80
 (18881, 9575, 1, 1, 2, 65.243686), -- High-Grade Life Stone - Level 80
 (18881, 960, 1, 1, 2, 150.220812), -- Scroll: Enchant Armor (S-Grade)
+(18881, 10550, 1, 1, 2, 501), -- Forgotten Scroll - Protection of Elemental
+(18881, 6622, 1, 1, 2, 1203), -- Giant's Codex
 -- Adult Cougar
 (18883, 15648, 1, 1, -1, 20354), -- Sealed Moirai Breastplate Piece
 (18883, 15651, 1, 1, -1, 34113), -- Sealed Moirai Gaiter Piece
@@ -1280,6 +1286,8 @@ INSERT INTO `droplist` VALUES
 (18883, 10484, 1, 1, 2, 1048.193886), -- Mid-Grade Life Stone - Level 82
 (18883, 10485, 1, 1, 2, 104.900865), -- High-Grade Life Stone - Level 82
 (18883, 15778, 1, 1, 2, 179.044389), -- Recipe - Sealed Moirai Breastplate (60%)
+(18883, 10549, 1, 1, 2, 9392), -- Forgotten Scroll - Protection of Rune
+(18883, 6622, 1, 1, 2, 2254), -- Giant's Codex
 -- Full Grown Cougar
 (18885, 10404, 1, 1, -1, 2892), -- Icarus Hall Piece
 (18885, 10402, 1, 1, -1, 2892), -- Icarus Hammer Piece
@@ -1365,6 +1373,8 @@ INSERT INTO `droplist` VALUES
 (18888, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%)
 (18888, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%)
 (18888, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%)
+(18888, 10552, 1, 1, 2, 357), -- Forgotten Scroll - Fighter's Will
+(18888, 6622, 1, 1, 2, 858), -- Giant's Codex
 -- Adult Buffalo
 (18890, 15653, 1, 1, -1, 95975), -- Sealed Moirai Stockings Piece
 (18890, 959, 1, 1, -1, 737), -- Scroll: Enchant Weapon (S-Grade)
@@ -1386,6 +1396,8 @@ INSERT INTO `droplist` VALUES
 (18890, 10484, 1, 1, 2, 1125.579216), -- Mid-Grade Life Stone - Level 82
 (18890, 10485, 1, 1, 2, 112.470396), -- High-Grade Life Stone - Level 82
 (18890, 15780, 1, 1, 2, 256.668822), -- Recipe - Sealed Moirai Tunic (60%)
+(18890, 10552, 1, 1, 2, 10086), -- Forgotten Scroll - Fighter's Will
+(18890, 6622, 1, 1, 2, 2421), -- Giant's Codex
 -- Full Grown Buffalo
 (18892, 10403, 1, 1, -1, 6197), -- Icarus Hand Piece
 (18892, 1894, 1, 1, -1, 508785), -- Crafted Leather
@@ -1463,6 +1475,8 @@ INSERT INTO `droplist` VALUES
 (18895, 15787, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Boots (60%)
 (18895, 15788, 1, 1, 2, 293.89858), -- Recipe - Sealed Moirai Leather Boots (60%)
 (18895, 15789, 1, 1, 2, 293.981415), -- Recipe - Sealed Moirai Shoes (60%)
+(18895, 10552, 1, 1, 2, 357), -- Forgotten Scroll - Fighter's Will
+(18895, 6622, 1, 1, 2, 858), -- Giant's Codex
 -- Adult Grendel
 (18897, 10398, 1, 1, -1, 7900), -- Icarus Disperser Piece
 (18897, 959, 1, 1, -1, 737), -- Scroll: Enchant Weapon (S-Grade)
@@ -1484,6 +1498,8 @@ INSERT INTO `droplist` VALUES
 (18897, 10484, 1, 1, 2, 1125.566251), -- Mid-Grade Life Stone - Level 82
 (18897, 10485, 1, 1, 2, 112.578485), -- High-Grade Life Stone - Level 82
 (18897, 10374, 1, 1, 2, 41.752409), -- Recipe - Icarus Disperser (60%)
+(18897, 10552, 1, 1, 2, 10086), -- Forgotten Scroll - Fighter's Will
+(18897, 6622, 1, 1, 2, 2421), -- Giant's Codex
 -- Full Grown Grendel
 (18899, 10405, 1, 1, -1, 4957), -- Icarus Spitter Piece
 (18899, 1894, 1, 1, -1, 407028), -- Crafted Leather
@@ -1542,6 +1558,7 @@ INSERT INTO `droplist` VALUES
 (18906, 10483, 1, 1, 2, 1209.022965), -- Life Stone - Level 82
 (18906, 10484, 1, 1, 2, 302.243715), -- Mid-Grade Life Stone - Level 82
 (18906, 10485, 1, 1, 2, 30.30615), -- High-Grade Life Stone - Level 82
+(18906, 6622, 1, 1, 2, 619), -- Giant's Codex
 -- Beast Devourer
 (18907, 15645, 1, 1, -1, 5317), -- Sealed Moirai Helmet Piece
 (18907, 15646, 1, 1, -1, 5317), -- Sealed Moirai Leather Helmet Piece
@@ -1572,6 +1589,7 @@ INSERT INTO `droplist` VALUES
 (18907, 10483, 1, 1, 2, 1277.083129), -- Life Stone - Level 82
 (18907, 10484, 1, 1, 2, 319.258079), -- Mid-Grade Life Stone - Level 82
 (18907, 10485, 1, 1, 2, 32.01219), -- High-Grade Life Stone - Level 82
+(18907, 6622, 1, 1, 2, 654), -- Giant's Codex
 -- Sel Mahum Chef
 (18908, 15492, 1, 2, 0, 250000), -- Sel Mahum Salmon Porridge
 -- Solina Knights
@@ -2298,7 +2316,9 @@ INSERT INTO `droplist` VALUES
 (20059, 1870, 1, 1, 2, 53483.147405), -- Coal
 (20059, 1865, 1, 1, 2, 53483.147405), -- Varnish
 (20059, 3032, 1, 1, 2, 2139.352595), -- Recipe: Spiritshot D
-(20059, 5158, 1, 1, 2, 2139.352595), -- Recipe: Spiritshot (D) Compressed Package (100%)
+(20059, 5158, 1, 1, 2, 2139.352595); -- Recipe: Spiritshot (D) Compressed Package (100%)
+
+INSERT INTO `droplist` VALUES
 -- Raging Spartoi
 (20060, 1869, 1, 1, -1, 369368), -- Iron Ore
 (20060, 1928, 1, 1, -1, 53805), -- Piece Bone Gaiters Fragment
@@ -2318,9 +2338,7 @@ INSERT INTO `droplist` VALUES
 (20061, 2176, 1, 1, -1, 184549), -- Recipe: Leather Boots
 (20061, 57, 177, 312, 0, 700000), -- Adena
 (20061, 273, 1, 1, 1, 121.177056), -- Composite Bow
-(20061, 2016, 1, 1, 1, 1334.822944); -- Composite Bow Shaft
-
-INSERT INTO `droplist` VALUES
+(20061, 2016, 1, 1, 1, 1334.822944), -- Composite Bow Shaft
 (20061, 1866, 1, 1, 2, 30381.9065), -- Suede
 (20061, 1871, 1, 1, 2, 45572.984215), -- Charcoal
 (20061, 2257, 1, 1, 2, 1114.21068), -- Recipe: Trident
@@ -4438,7 +4456,9 @@ INSERT INTO `droplist` VALUES
 -- Skeleton Axeman
 (20254, 2181, 1, 1, -1, 49538), -- Recipe: White Tunic
 (20254, 2262, 1, 1, -1, 7685), -- Recipe: Elven Bow
-(20254, 1899, 1, 1, -1, 77326), -- Necklace of Devotion Chain
+(20254, 1899, 1, 1, -1, 77326); -- Necklace of Devotion Chain
+
+INSERT INTO `droplist` VALUES
 (20254, 57, 212, 415, 0, 700000), -- Adena
 (20254, 291, 1, 1, 1, 88.181775), -- Trident
 (20254, 2019, 1, 1, 1, 2986.818225), -- Trident Edge
@@ -4457,9 +4477,7 @@ INSERT INTO `droplist` VALUES
 (20265, 2015, 1, 1, 1, 2426.34007), -- Sword Breaker Edge
 (20265, 1867, 1, 1, 2, 106110.762776), -- Animal Skin
 (20265, 1872, 1, 1, 2, 106110.762776), -- Animal Bone
-(20265, 1882, 1, 1, 2, 17685.048784); -- Leather
-
-INSERT INTO `droplist` VALUES
+(20265, 1882, 1, 1, 2, 17685.048784), -- Leather
 (20265, 5158, 1, 1, 2, 3183.327584), -- Recipe: Spiritshot (D) Compressed Package (100%)
 (20265, 8294, 1, 1, 2, 1946.09808), -- Recipe: Steel Sword (100%)
 -- Monster Eye Gazer
@@ -6629,7 +6647,9 @@ INSERT INTO `droplist` VALUES
 (20547, 1930, 1, 1, 1, 19093.621779), -- Boot Lining
 (20547, 51, 1, 1, 1, 1567.700225), -- Bracer
 (20547, 1870, 1, 1, 2, 44679.094416), -- Coal
-(20547, 1865, 1, 1, 2, 44679.094416), -- Varnish
+(20547, 1865, 1, 1, 2, 44679.094416); -- Varnish
+
+INSERT INTO `droplist` VALUES
 (20547, 5163, 1, 1, 2, 1787.147716), -- Recipe: Blessed Spiritshot (D) Compressed Package (100%)
 (20547, 5268, 1, 1, 2, 1787.147716), -- Recipe: Greater Soulshot (D) Compressed Package (100%)
 (20547, 734, 1, 1, 2, 7446.515736), -- Haste Potion
@@ -6649,9 +6669,7 @@ INSERT INTO `droplist` VALUES
 (20549, 1938, 1, 1, -1, 94230), -- Mithril Banded Mail Material
 (20549, 1901, 1, 1, -1, 193601), -- Tiger's Eye Earring Stone
 (20549, 57, 592, 1181, 0, 700000), -- Adena
-(20549, 83, 1, 1, 1, 45.0906); -- Sword of Magic
-
-INSERT INTO `droplist` VALUES
+(20549, 83, 1, 1, 1, 45.0906), -- Sword of Magic
 (20549, 144, 1, 1, 1, 45.0906), -- Sword of Occult
 (20549, 124, 1, 1, 1, 33.40344), -- Two-Handed Sword
 (20549, 2026, 1, 1, 1, 1494.606795), -- Two-Handed Sword Edge
@@ -8739,7 +8757,9 @@ INSERT INTO `droplist` VALUES
 (20654, 4624, 1, 1, 2, 243.612504), -- Greater Dye of WIT (Wit+4 Men-4)
 (20654, 5276, 1, 1, 2, 235.494976), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20654, 8729, 1, 1, 2, 2354.891984), -- Life Stone - Level 64
-(20654, 8739, 1, 1, 2, 588.73744), -- Mid-Grade Life Stone - Level 64
+(20654, 8739, 1, 1, 2, 588.73744); -- Mid-Grade Life Stone - Level 64
+
+INSERT INTO `droplist` VALUES
 (20654, 8749, 1, 1, 2, 58.873744), -- High-Grade Life Stone - Level 64
 (20654, 8759, 1, 1, 2, 11.786304), -- Top-Grade Life Stone - Level 64
 (20654, 6036, 1, 1, 2, 5887.22996), -- Greater Magic Haste Potion
@@ -8758,9 +8778,7 @@ INSERT INTO `droplist` VALUES
 (20655, 1865, 1, 1, 2, 134746.353792), -- Varnish
 (20655, 1874, 1, 1, 2, 8983.17216), -- Oriharukon Ore
 (20655, 4043, 1, 1, 2, 4491.381312), -- Asofe
-(20655, 4039, 1, 1, 2, 4491.381312); -- Mold Glue
-
-INSERT INTO `droplist` VALUES
+(20655, 4039, 1, 1, 2, 4491.381312), -- Mold Glue
 (20655, 4989, 1, 1, 2, 892.378944), -- Recipe: Stockings of Doom (60%)
 (20655, 5276, 1, 1, 2, 179.786304), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20655, 6670, 1, 1, 2, 22457.725632), -- Deluxe Chest Key - Grade 6
@@ -10850,7 +10868,9 @@ INSERT INTO `droplist` VALUES
 (20819, 1889, 1, 1, 2, 9934.89608), -- Compound Braid
 (20819, 5220, 1, 1, 2, 5960.937648), -- Metal Hardener
 (20819, 4159, 1, 1, 2, 422.093168), -- Recipe: Blue Wolf Leather Armor (100%)
-(20819, 4402, 1, 1, 2, 298.064936), -- Blue Dimensional Stone
+(20819, 4402, 1, 1, 2, 298.064936); -- Blue Dimensional Stone
+
+INSERT INTO `droplist` VALUES
 (20819, 730, 1, 1, 2, 124.208768), -- Scroll: Enchant Armor (A-Grade)
 (20819, 8729, 1, 1, 2, 1986.979216), -- Life Stone - Level 64
 (20819, 8739, 1, 1, 2, 496.835072), -- Mid-Grade Life Stone - Level 64
@@ -10869,9 +10889,7 @@ INSERT INTO `droplist` VALUES
 (20820, 4053, 1, 1, 1, 21992.451102), -- Ring of Black Ore Gemstone
 (20820, 1867, 1, 3, 2, 171038.026143), -- Animal Skin
 (20820, 1872, 1, 3, 2, 114025.350762), -- Animal Bone
-(20820, 1882, 1, 1, 2, 57012.675381); -- Leather
-
-INSERT INTO `droplist` VALUES
+(20820, 1882, 1, 1, 2, 57012.675381), -- Leather
 (20820, 1894, 1, 1, 2, 9002.077521), -- Crafted Leather
 (20820, 4042, 1, 1, 2, 4275.887358), -- Enria
 (20820, 4160, 1, 1, 2, 726.633201), -- Recipe: Leather Armor of Doom (100%)
@@ -12960,7 +12978,9 @@ INSERT INTO `droplist` VALUES
 -- Garden Guard
 (20995, 1911, 1, 1, -1, 250980), -- Earring of Protection Gemstone
 (20995, 2166, 1, 1, -1, 114387), -- Recipe: Earrings of Binding (100%)
-(20995, 1966, 1, 1, -1, 123199), -- Plated Leather Fragment
+(20995, 1966, 1, 1, -1, 123199); -- Plated Leather Fragment
+
+INSERT INTO `droplist` VALUES
 (20995, 57, 1334, 2712, 0, 700000), -- Adena
 (20995, 2496, 1, 1, 1, 414.964881), -- Dwarven Chain Shield
 (20995, 2947, 1, 1, 1, 17798.409681), -- Dwarven Chain Shield Fragment
@@ -12978,9 +12998,7 @@ INSERT INTO `droplist` VALUES
 (20995, 8734, 1, 1, 2, 1132.751188), -- Mid-Grade Life Stone - Level 49
 (20995, 8744, 1, 1, 2, 113.405846), -- High-Grade Life Stone - Level 49
 (20995, 8754, 1, 1, 2, 22.550442), -- Top-Grade Life Stone - Level 49
-(20995, 1539, 1, 1, 2, 30204.51956); -- Greater Healing Potion
-
-INSERT INTO `droplist` VALUES
+(20995, 1539, 1, 1, 2, 30204.51956), -- Greater Healing Potion
 -- Spiteful Ghost of Ruins
 (20996, 1914, 1, 1, -1, 95679), -- Earring of Seal Gemstone
 (20996, 1864, 1, 7, -1, 851546), -- Stem
@@ -15080,7 +15098,9 @@ INSERT INTO `droplist` VALUES
 (21138, 57, 194, 388, 0, 700000), -- Adena
 (21138, 292, 1, 1, 1, 102), -- Pike
 (21138, 1869, 1, 1, 2, 41911.791592), -- Iron Ore
-(21138, 1864, 1, 1, 2, 83823.870141), -- Stem
+(21138, 1864, 1, 1, 2, 83823.870141); -- Stem
+
+INSERT INTO `droplist` VALUES
 (21138, 1880, 1, 1, 2, 4191.293942), -- Steel
 (21138, 5550, 1, 1, 2, 558.705279), -- Durable Metal Plate
 (21138, 1829, 1, 1, 2, 16764.888811), -- Scroll of Escape: Clan Hall
@@ -15100,9 +15120,7 @@ INSERT INTO `droplist` VALUES
 -- Catacomb Wisp
 (21140, 2152, 1, 1, -1, 193505), -- Recipe: Enchanted Necklace
 (21140, 1899, 1, 1, -1, 171735), -- Necklace of Devotion Chain
-(21140, 1871, 1, 3, -1, 549553); -- Charcoal
-
-INSERT INTO `droplist` VALUES
+(21140, 1871, 1, 3, -1, 549553), -- Charcoal
 (21140, 57, 477, 911, 0, 700000), -- Adena
 (21140, 347, 1, 1, 1, 960.693069), -- Ring Mail Breastplate
 (21140, 376, 1, 1, 1, 1538.306931), -- Iron Plate Gaiters
@@ -17202,7 +17220,9 @@ INSERT INTO `droplist` VALUES
 (21265, 127, 1, 1, 1, 14.947296), -- Crimson Sword
 (21265, 130, 1, 1, 1, 14.94805), -- Elven Sword
 (21265, 1864, 1, 1, 2, 133390.472304), -- Stem
-(21265, 1869, 1, 1, 2, 66695.236152), -- Iron Ore
+(21265, 1869, 1, 1, 2, 66695.236152); -- Iron Ore
+
+INSERT INTO `droplist` VALUES
 (21265, 1878, 1, 1, 2, 26678.20444), -- Braided Hemp
 (21265, 1884, 1, 1, 2, 41043.137648), -- Cord
 (21265, 2154, 1, 1, 2, 7140.949456), -- Recipe: Elven Earring
@@ -17222,9 +17242,7 @@ INSERT INTO `droplist` VALUES
 (21268, 1341, 20, 60, 2, 147682.497165), -- Bone Arrow
 -- Cave Ant
 (21269, 1825, 1, 1, -1, 94807), -- Recipe: Oriharukon
-(21269, 1902, 1, 1, -1, 134478); -- Elven Earring Beads
-
-INSERT INTO `droplist` VALUES
+(21269, 1902, 1, 1, -1, 134478), -- Elven Earring Beads
 (21269, 2145, 1, 1, -1, 94807), -- Recipe: Mithril Alloy
 (21269, 57, 561, 1119, 0, 700000), -- Adena
 (21269, 129, 1, 1, 1, 63.87616), -- Sword of Revolution
@@ -19319,7 +19337,9 @@ INSERT INTO `droplist` VALUES
 -- Lavastone Golem
 (21385, 5272, 1, 1, -1, 5032), -- Recipe: Greater Soulshot (S) Compressed Package(100%)
 (21385, 5534, 1, 1, -1, 31083), -- Soul Bow Stave
-(21385, 5277, 1, 1, -1, 5032), -- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(21385, 5277, 1, 1, -1, 5032); -- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+
+INSERT INTO `droplist` VALUES
 (21385, 57, 5571, 11407, 0, 700000), -- Adena
 (21385, 12263, 1, 1, 1, 438.213945), -- Common Item - Sealed Armor of Nightmare
 (21385, 5522, 1, 1, 1, 3559.286055), -- Sealed Armor of Nightmare Pattern
@@ -19338,9 +19358,7 @@ INSERT INTO `droplist` VALUES
 -- Magma Golem
 (21386, 5537, 1, 1, -1, 32059), -- Soul Separator Head
 (21386, 1877, 1, 1, -1, 467422), -- Adamantite Nugget
-(21386, 4041, 1, 1, -1, 101613); -- Mold Hardener
-
-INSERT INTO `droplist` VALUES
+(21386, 4041, 1, 1, -1, 101613), -- Mold Hardener
 (21386, 57, 5749, 11773, 0, 700000), -- Adena
 (21386, 12266, 1, 1, 1, 602.60928), -- Common Item - Sealed Robe of Nightmare
 (21386, 5487, 1, 1, 1, 4857.39072), -- Sealed Robe of Nightmare Fabric
@@ -21454,7 +21472,9 @@ INSERT INTO `droplist` VALUES
 (21516, 1873, 1, 1, 2, 56636.885492), -- Silver Nugget
 (21516, 1868, 1, 1, 2, 283185.252854), -- Thread
 (21516, 1876, 1, 1, 2, 28318.442746), -- Mithril Ore
-(21516, 1895, 1, 1, 2, 40455.036122), -- Metallic Fiber
+(21516, 1895, 1, 1, 2, 40455.036122); -- Metallic Fiber
+
+INSERT INTO `droplist` VALUES
 (21516, 4042, 1, 1, 2, 2359.801446), -- Enria
 (21516, 5282, 1, 1, 2, 62.729944), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (21516, 8731, 1, 1, 2, 1311.138369), -- Life Stone - Level 70
@@ -21473,9 +21493,7 @@ INSERT INTO `droplist` VALUES
 (21517, 12228, 1, 1, 1, 683.540879), -- Common Item - Sealed Dark Crystal Leggings
 (21517, 5482, 1, 1, 1, 3879.366313), -- Sealed Dark Crystal Leggings Design
 (21517, 1864, 4, 12, 2, 44088.436778), -- Stem
-(21517, 1865, 2, 6, 2, 35270.59454); -- Varnish
-
-INSERT INTO `droplist` VALUES
+(21517, 1865, 2, 6, 2, 35270.59454), -- Varnish
 (21517, 1866, 1, 1, 2, 117568.519398), -- Suede
 (21517, 1873, 1, 1, 2, 70541.18908), -- Silver Nugget
 (21517, 1868, 1, 3, 2, 117568.519398), -- Thread
@@ -23562,7 +23580,9 @@ INSERT INTO `droplist` VALUES
 (21620, 1865, 1, 1, 2, 70028.1594), -- Varnish
 (21620, 1874, 1, 1, 2, 4668.595065), -- Oriharukon Ore
 (21620, 4043, 1, 1, 2, 2334.220875), -- Asofe
-(21620, 4039, 1, 1, 2, 2334.220875), -- Mold Glue
+(21620, 4039, 1, 1, 2, 2334.220875); -- Mold Glue
+
+INSERT INTO `droplist` VALUES
 (21620, 952, 1, 1, 2, 933.68835), -- Scroll: Enchant Armor (C-Grade)
 (21620, 8724, 1, 1, 2, 2334.220875), -- Life Stone - Level 49
 (21620, 8734, 1, 1, 2, 583.51689), -- Mid-Grade Life Stone - Level 49
@@ -23581,9 +23601,7 @@ INSERT INTO `droplist` VALUES
 (21621, 1912, 1, 1, 1, 17810.873676), -- Ring of Protection Gemstone
 (21621, 1870, 1, 1, 2, 99163.96628), -- Coal
 (21621, 1865, 1, 1, 2, 99163.96628), -- Varnish
-(21621, 1874, 1, 1, 2, 6611.003453); -- Oriharukon Ore
-
-INSERT INTO `droplist` VALUES
+(21621, 1874, 1, 1, 2, 6611.003453), -- Oriharukon Ore
 (21621, 4043, 1, 1, 2, 3305.393175), -- Asofe
 (21621, 4039, 1, 1, 2, 3305.393175), -- Mold Glue
 (21621, 952, 1, 1, 2, 1322.15727), -- Scroll: Enchant Armor (C-Grade)
@@ -25682,7 +25700,9 @@ INSERT INTO `droplist` VALUES
 (21738, 4040, 1, 1, 2, 2562.179106), -- Mold Lubricant
 (21738, 5452, 1, 1, 2, 70.144748), -- Recipe: Blood Tornado(60%)
 (21738, 8729, 1, 1, 2, 1708.119404), -- Life Stone - Level 64
-(21738, 8739, 1, 1, 2, 427.029851), -- Mid-Grade Life Stone - Level 64
+(21738, 8739, 1, 1, 2, 427.029851); -- Mid-Grade Life Stone - Level 64
+
+INSERT INTO `droplist` VALUES
 (21738, 8749, 1, 1, 2, 42.65559), -- High-Grade Life Stone - Level 64
 (21738, 8759, 1, 1, 2, 8.531118), -- Top-Grade Life Stone - Level 64
 (21738, 1343, 10, 30, 2, 183017.126552), -- Silver Arrow
@@ -25701,9 +25721,7 @@ INSERT INTO `droplist` VALUES
 (21739, 1871, 1, 1, 2, 145194.280029), -- Charcoal
 (21739, 5220, 1, 1, 2, 5807.752354), -- Metal Hardener
 (21739, 1885, 1, 1, 2, 12099.405541), -- High-Grade Suede
-(21739, 4041, 1, 1, 2, 1262.75972); -- Mold Hardener
-
-INSERT INTO `droplist` VALUES
+(21739, 4041, 1, 1, 2, 1262.75972), -- Mold Hardener
 (21739, 730, 1, 1, 2, 121.093003), -- Scroll: Enchant Armor (A-Grade)
 (21739, 8729, 1, 1, 2, 1936.074511), -- Life Stone - Level 64
 (21739, 8739, 1, 1, 2, 483.900833), -- Mid-Grade Life Stone - Level 64
@@ -27806,7 +27824,9 @@ INSERT INTO `droplist` VALUES
 (22029, 2037, 1, 1, 1, 444.074651), -- Heavy Bone Club Head
 (22029, 7890, 1, 1, 1, 8.167724), -- Priest Mace
 (22029, 8337, 1, 1, 1, 444.074651), -- Priest Mace Head
-(22029, 7896, 1, 1, 1, 8.167724), -- Titan Hammer
+(22029, 7896, 1, 1, 1, 8.167724); -- Titan Hammer
+
+INSERT INTO `droplist` VALUES
 (22029, 8343, 1, 1, 1, 444.077778), -- Titan Hammer Piece
 (22029, 1868, 1, 1, 2, 245637.916984), -- Thread
 (22029, 1873, 1, 1, 2, 49127.713), -- Silver Nugget
@@ -27826,9 +27846,7 @@ INSERT INTO `droplist` VALUES
 (22030, 1895, 1, 1, 2, 35906.467408), -- Metallic Fiber
 (22030, 1805, 1, 1, 2, 418.623169), -- Recipe: Soulshot (C-Grade)
 -- Ragna Orc Archer
-(22031, 1906, 1, 1, -1, 160045); -- Mithril Ring Wire
-
-INSERT INTO `droplist` VALUES
+(22031, 1906, 1, 1, -1, 160045), -- Mithril Ring Wire
 (22031, 1873, 1, 1, -1, 465732), -- Silver Nugget
 (22031, 1868, 1, 5, -1, 776220), -- Thread
 (22031, 57, 460, 935, 0, 700000), -- Adena
@@ -29907,7 +29925,9 @@ INSERT INTO `droplist` VALUES
 (22126, 57, 4672, 9570, 0, 700000), -- Adena
 (22126, 5311, 1, 1, 1, 19.914443), -- Sealed Armor of Nightmare
 (22126, 5522, 1, 1, 1, 2985.585557), -- Sealed Armor of Nightmare Pattern
-(22126, 5316, 1, 1, 1, 19.914443), -- Sealed Majestic Plate Armor
+(22126, 5316, 1, 1, 1, 19.914443); -- Sealed Majestic Plate Armor
+
+INSERT INTO `droplist` VALUES
 (22126, 5523, 1, 1, 1, 2985.585557), -- Sealed Majestic Plate Armor Pattern
 (22126, 1868, 3, 9, 2, 129877.243314), -- Thread
 (22126, 1873, 1, 1, 2, 155852.765614), -- Silver Nugget
@@ -29926,9 +29946,7 @@ INSERT INTO `droplist` VALUES
 (22127, 164, 1, 1, 1, 4.231956), -- Elysian
 (22127, 5533, 1, 1, 1, 1203.875538), -- Elysian Head
 (22127, 213, 1, 1, 1, 4.231956), -- Branch of the Mother Tree
-(22127, 5544, 1, 1, 1, 1202.687112); -- Branch of the Mother Tree Head
-
-INSERT INTO `droplist` VALUES
+(22127, 5544, 1, 1, 1, 1202.687112), -- Branch of the Mother Tree Head
 (22127, 7895, 1, 1, 1, 4.231956), -- Flaming Dragon Skull
 (22127, 8342, 1, 1, 1, 1203.875538), -- Flaming Dragon Skull Piece
 (22127, 7902, 1, 1, 1, 4.231956), -- Doom Crusher
@@ -32047,7 +32065,9 @@ INSERT INTO `droplist` VALUES
 (22277, 5528, 1, 1, -1, 220493), -- Sealed Majestic Circlet Design
 (22277, 4042, 1, 1, -1, 307367), -- Enria
 (22277, 57, 12348, 25286, 0, 700000), -- Adena
-(22277, 289, 1, 1, 1, 43.8025), -- Soul Bow
+(22277, 289, 1, 1, 1, 43.8025); -- Soul Bow
+
+INSERT INTO `droplist` VALUES
 (22277, 5534, 1, 1, 1, 12471.1975), -- Soul Bow Stave
 (22277, 1873, 2, 6, 2, 129781.89308), -- Silver Nugget
 (22277, 1868, 15, 45, 2, 86521.377959), -- Thread
@@ -32066,9 +32086,7 @@ INSERT INTO `droplist` VALUES
 (22278, 1894, 1, 1, 2, 13966.814088), -- Crafted Leather
 (22278, 4039, 1, 1, 2, 13268.651184), -- Mold Glue
 (22278, 4041, 1, 1, 2, 3461.477454), -- Mold Hardener
-(22278, 4044, 1, 1, 2, 13268.651184); -- Thons
-
-INSERT INTO `droplist` VALUES
+(22278, 4044, 1, 1, 2, 13268.651184), -- Thons
 (22278, 6901, 1, 1, 2, 397.976562), -- Recipe: Shining Arrow (100%)
 (22278, 9547, 1, 1, 2, 3184.405164), -- Water Stone
 (22278, 1344, 20, 60, 2, 248786.024364), -- Mithril Arrow
@@ -34162,7 +34180,9 @@ INSERT INTO `droplist` VALUES
 -- Greater Evil
 (22399, 6708, 1, 1, -1, 770235), -- Sealed Draconic Leather Gloves Fabric
 (22399, 959, 1, 1, -1, 2164), -- Scroll: Enchant Weapon (S-Grade)
-(22399, 1885, 1, 9, -1, 901624), -- High-Grade Suede
+(22399, 1885, 1, 9, -1, 901624); -- High-Grade Suede
+
+INSERT INTO `droplist` VALUES
 (22399, 57, 31702, 63490, 0, 700000), -- Adena
 (22399, 164, 1, 1, 1, 32.121168), -- Elysian
 (22399, 5533, 1, 1, 1, 9137.592264), -- Elysian Head
@@ -34180,9 +34200,7 @@ INSERT INTO `droplist` VALUES
 (22399, 6901, 1, 1, 2, 2961.137924), -- Recipe: Shining Arrow (100%)
 (22399, 6857, 1, 1, 2, 5513.95844), -- Recipe: Sealed Imperial Crusader Gauntlets (60%)
 (22399, 6877, 1, 1, 2, 5513.95844), -- Recipe: Sealed Major Arcana Boots (60%)
-(22399, 9551, 1, 1, 2, 23687.848318); -- Holy Stone
-
-INSERT INTO `droplist` VALUES
+(22399, 9551, 1, 1, 2, 23687.848318), -- Holy Stone
 -- Parme's Healer
 (22400, 4040, 1, 1, -1, 35693), -- Mold Lubricant
 (22400, 5480, 1, 1, -1, 8008), -- Sealed Leather Armor of Nightmare Fabric
@@ -36321,7 +36339,9 @@ INSERT INTO `droplist` VALUES
 (22595, 4040, 1, 1, 2, 88640.336531), -- Mold Lubricant
 (22595, 9628, 1, 1, 2, 34760.812973), -- Leonard
 (22595, 9630, 1, 1, 2, 23326.469601), -- Orichalcum
-(22595, 6849, 1, 1, 2, 11962.172895), -- Recipe: Sealed Tateossian Ring(70%)
+(22595, 6849, 1, 1, 2, 11962.172895); -- Recipe: Sealed Tateossian Ring(70%)
+
+INSERT INTO `droplist` VALUES
 (22595, 1345, 300, 900, 2, 98489.021747), -- Shining Arrow
 -- White Dragon Leader
 (22596, 1894, 1, 1, -1, 453485), -- Crafted Leather
@@ -36341,9 +36361,7 @@ INSERT INTO `droplist` VALUES
 (22597, 57, 8894, 18157, 0, 700000), -- Adena
 (22597, 289, 1, 1, 1, 31.486), -- Soul Bow
 (22597, 5534, 1, 1, 1, 8964.514), -- Soul Bow Stave
-(22597, 1895, 1, 1, 2, 310966.945044); -- Metallic Fiber
-
-INSERT INTO `droplist` VALUES
+(22597, 1895, 1, 1, 2, 310966.945044), -- Metallic Fiber
 (22597, 4040, 1, 1, 2, 21767.845422), -- Mold Lubricant
 (22597, 9628, 1, 1, 2, 8536.345674), -- Leonard
 (22597, 9630, 1, 1, 2, 5728.528302), -- Orichalcum
@@ -36885,175 +36903,153 @@ INSERT INTO `droplist` VALUES
 (22649, 4043, 1, 1, 2, 35083.054305), -- Asofe
 (22649, 5157, 1, 1, 2, 467.444185), -- Recipe: Soulshot (S) Compressed Package (100%)
 -- Mucrokian Fanatic
-(22650, 959, 1, 1, -1, 241), -- Scroll: Enchant Weapon (S-Grade)
 (22650, 3036, 1, 1, -1, 2680), -- Recipe: Spiritshot S
 (22650, 10397, 1, 1, -1, 2585), -- Icarus Sawsword Piece
-(22650, 57, 1476, 2979, 0, 700000), -- Adena
-(22650, 9442, 1, 1, 1, 0.881227), -- Dynasty Sword
-(22650, 9443, 1, 1, 1, 0.881227), -- Dynasty Blade
-(22650, 9444, 1, 1, 1, 0.881227), -- Dynasty Phantom
-(22650, 9616, 1, 1, 1, 275.45183), -- Dynasty Sword Piece
-(22650, 9617, 1, 1, 1, 275.45183), -- Dynasty Blade Piece
-(22650, 9618, 1, 1, 1, 275.452659), -- Dynasty Phantom Piece
-(22650, 1895, 1, 1, 2, 169743.034334), -- Metallic Fiber
-(22650, 4040, 1, 1, 2, 11882.06107), -- Mold Lubricant
-(22650, 4042, 1, 1, 2, 9901.752824), -- Enria
-(22650, 4043, 1, 1, 2, 19803.294054), -- Asofe
-(22650, 5162, 1, 1, 2, 263.857718), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22650, 959, 1, 1, -1, 241), -- Scroll: Enchant Weapon (S-Grade)
+(22650, 57, 1422, 3320, 0, 700000), -- Adena
+(22650, 9573, 1, 1, 2, 3075), -- Life Stone - Level 80
+(22650, 6622, 1, 1, 2, 1771), -- Giant's Codex
+(22650, 9574, 1, 1, 2, 769), -- Mid-Grade Life Stone - Level 80
+(22650, 10549, 1, 1, 2, 738), -- Forgotten Scroll - Protection of Rune
+(22650, 10398, 1, 1, 1, 475), -- Icarus Disperser Piece
+(22650, 9575, 1, 1, 2, 77), -- High-Grade Life Stone - Level 80
+(22650, 10216, 1, 1, 1, 1), -- Icarus Disperser
 -- Mucrokian Ascetic
-(22651, 10405, 1, 1, -1, 2666), -- Icarus Spitter Piece
 (22651, 9630, 1, 1, -1, 32839), -- Orichalcum
+(22651, 10405, 1, 1, -1, 2666), -- Icarus Spitter Piece
 (22651, 959, 1, 1, -1, 250), -- Scroll: Enchant Weapon (S-Grade)
-(22651, 57, 1527, 3083, 0, 700000), -- Adena
-(22651, 9448, 1, 1, 1, 0.683605), -- Dynasty Cudgel
-(22651, 9449, 1, 1, 1, 0.683605), -- Dynasty Mace
-(22651, 10252, 1, 1, 1, 0.683605), -- Dynasty Staff
-(22651, 10253, 1, 1, 1, 0.683605), -- Dynasty Crusher
-(22651, 9622, 1, 1, 1, 206.802765), -- Dynasty Cudgel Piece
-(22651, 9623, 1, 1, 1, 206.802765), -- Dynasty Mace Piece
-(22651, 10546, 1, 1, 1, 214.33087), -- Dynasty Staff Fragment
-(22651, 10547, 1, 1, 1, 214.32918), -- Dynasty Crusher Fragment
-(22651, 1879, 1, 1, 2, 85378.705862), -- Cokes
-(22651, 1885, 1, 1, 2, 42689.352931), -- High-Grade Suede
-(22651, 9628, 1, 1, 2, 4017.887649), -- Leonard
-(22651, 9630, 1, 1, 2, 2696.158102), -- Orichalcum
-(22651, 9629, 1, 1, 2, 2227.219273), -- Adamantine
-(22651, 5167, 1, 1, 2, 227.676183), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+(22651, 57, 1477, 3449, 0, 700000), -- Adena
+(22651, 9573, 1, 1, 2, 2662), -- Life Stone - Level 80
+(22651, 9630, 1, 1, 2, 2018), -- Orichalcum
+(22651, 6622, 1, 1, 2, 1533), -- Giant's Codex
+(22651, 9574, 1, 1, 2, 666), -- Mid-Grade Life Stone - Level 80
+(22651, 10550, 1, 1, 2, 639), -- Forgotten Scroll - Protection of Elemental
+(22651, 10397, 1, 1, 1, 164), -- Icarus Sawsword Piece
+(22651, 10399, 1, 1, 1, 164), -- Icarus Spirit Piece
+(22651, 10400, 1, 1, 1, 164), -- Icarus Heavy Arms Piece
+(22651, 10215, 1, 1, 1, 1), -- Icarus Sawsword
+(22651, 10217, 1, 1, 1, 1), -- Icarus Spirit
+(22651, 10218, 1, 1, 1, 1), -- Icarus Heavy Arms
+(22651, 9575, 1, 1, 2, 67), -- High-Grade Life Stone - Level 80
 -- Mucrokian Savior
 (22652, 9532, 1, 1, -1, 22224), -- Sealed Dynasty Helmet Piece
 (22652, 9630, 1, 1, -1, 32529), -- Orichalcum
 (22652, 10402, 1, 1, -1, 2641), -- Icarus Hammer Piece
-(22652, 57, 1500, 3065, 0, 700000), -- Adena
-(22652, 10221, 1, 1, 1, 1.963571), -- Icarus Hand
-(22652, 10403, 1, 1, 1, 651.036429), -- Icarus Hand Piece
-(22652, 1894, 1, 1, 2, 13353.42828), -- Crafted Leather
-(22652, 4039, 1, 1, 2, 12685.7364), -- Mold Glue
-(22652, 4041, 1, 1, 2, 3309.30672), -- Mold Hardener
-(22652, 4044, 1, 1, 2, 12685.7364), -- Thons
-(22652, 9573, 1, 1, 2, 2642.8428), -- Life Stone - Level 80
-(22652, 9574, 1, 1, 2, 660.73344), -- Mid-Grade Life Stone - Level 80
-(22652, 9575, 1, 1, 2, 66.08244), -- High-Grade Life Stone - Level 80
-(22652, 9625, 1, 1, 2, 76.13352), -- Giant's Codex - Oblivion
+(22652, 57, 1458, 3403, 0, 700000), -- Adena
+(22652, 15645, 1, 1, 1, 2245), -- Sealed Moirai Helmet Piece
+(22652, 15646, 1, 1, 1, 2245), -- Sealed Moirai Leather Helmet Piece
+(22652, 15647, 1, 1, 1, 2245), -- Sealed Moirai Circlet Piece
+(22652, 15694, 1, 1, 1, 6), -- Sealed Moirai Helmet
+(22652, 15695, 1, 1, 1, 6), -- Sealed Moirai Leather Helmet
+(22652, 15696, 1, 1, 1, 6), -- Sealed Moirai Circlet
+(22652, 9630, 1, 1, 2, 1991), -- Orichalcum
+(22652, 6622, 1, 1, 2, 1513), -- Giant's Codex
+(22652, 14219, 1, 1, 2, 630), -- Forgotten Scroll - Magician's Will
+(22652, 9573, 1, 1, 2, 2627), -- Life Stone - Level 80
+(22652, 9574, 1, 1, 2, 657), -- Mid-Grade Life Stone - Level 80
+(22652, 9575, 1, 1, 2, 63), -- High-Grade Life Stone - Level 80
 -- Mucrokian Preacher
 (22653, 10397, 1, 1, -1, 2742), -- Icarus Sawsword Piece
 (22653, 10403, 1, 1, -1, 2733), -- Icarus Hand Piece
 (22653, 10400, 1, 1, -1, 2733), -- Icarus Heavy Arms Piece
-(22653, 57, 1552, 3172, 0, 700000), -- Adena
-(22653, 10223, 1, 1, 1, 2.029725), -- Icarus Spitter
-(22653, 10405, 1, 1, 1, 672.970275), -- Icarus Spitter Piece
-(22653, 1894, 1, 1, 2, 13817.119575), -- Crafted Leather
-(22653, 4039, 1, 1, 2, 13126.251838), -- Mold Glue
-(22653, 4041, 1, 1, 2, 3424.237565), -- Mold Hardener
-(22653, 4044, 1, 1, 2, 13126.251838), -- Thons
-(22653, 9573, 1, 1, 2, 2734.639719), -- Life Stone - Level 80
-(22653, 9574, 1, 1, 2, 683.671688), -- Mid-Grade Life Stone - Level 80
-(22653, 9575, 1, 1, 2, 68.385982), -- High-Grade Life Stone - Level 80
-(22653, 9626, 1, 1, 2, 52.441795), -- Giant's Codex - Discipline
+(22653, 57, 1515, 3535, 0, 700000), -- Adena
+(22653, 10404, 1, 1, 1, 252), -- Icarus Hall Piece
+(22653, 10402, 1, 1, 1, 252), -- Icarus Hammer Piece
+(22653, 10222, 1, 1, 1, 1), -- Icarus Hall
+(22653, 10220, 1, 1, 1, 1), -- Icarus Hammer
+(22653, 9573, 1, 1, 2, 3274), -- Life Stone - Level 80
+(22653, 9574, 1, 1, 2, 819), -- Mid-Grade Life Stone - Level 80
+(22653, 9575, 1, 1, 2, 82), -- High-Grade Life Stone - Level 80
+(22653, 14219, 1, 1, 2, 786), -- Forgotten Scroll - Magician's Will
+(22653, 6622, 1, 1, 2, 1886), -- Giant's Codex
 -- Contaminated Mucrokian
 (22654, 9542, 1, 1, -1, 7860), -- Sealed Dynasty Circlet Piece
 (22654, 9630, 1, 1, -1, 11505), -- Orichalcum
 (22654, 9991, 1, 1, -1, 5125), -- Sealed Dynasty Earring Gemstone
-(22654, 57, 535, 1080, 0, 700000), -- Adena
-(22654, 9446, 1, 1, 1, 0.9576), -- Dynasty Knife
-(22654, 9620, 1, 1, 1, 299.0424), -- Dynasty Knife Piece
-(22654, 1879, 1, 1, 2, 17946.696859), -- Cokes
-(22654, 1885, 1, 1, 2, 8973.297229), -- High-Grade Suede
-(22654, 9628, 1, 1, 2, 844.501047), -- Leonard
-(22654, 9630, 1, 1, 2, 566.687134), -- Orichalcum
-(22654, 9629, 1, 1, 2, 468.177372), -- Adamantine
-(22654, 9573, 1, 1, 2, 747.732102), -- Life Stone - Level 80
-(22654, 9574, 1, 1, 2, 186.984226), -- Mid-Grade Life Stone - Level 80
-(22654, 9575, 1, 1, 2, 18.739383), -- High-Grade Life Stone - Level 80
-(22654, 9546, 1, 1, 2, 861.397212), -- Fire Stone
-(22654, 1345, 10, 30, 2, 71786.787436), -- Shining Arrow
+(22654, 57, 427, 998, 0, 700000), -- Adena
+(22654, 10405, 1, 1, 1, 143), -- Icarus Spitter Piece
+(22654, 10223, 1, 1, 1, 1), -- Icarus Spitter
+(22654, 9630, 1, 1, 2, 584), -- Orichalcum
+(22654, 9573, 1, 1, 2, 770), -- Life Stone - Level 80
+(22654, 9574, 1, 1, 2, 193), -- Mid-Grade Life Stone - Level 80
+(22654, 9575, 1, 1, 2, 19), -- High-Grade Life Stone - Level 80
+(22654, 10551, 1, 1, 2, 185), -- Forgotten Scroll - Protection of Alignment
+(22654, 6622, 1, 1, 2, 444), -- Giant's Codex
 -- Awakened Mucrokian
 (22655, 9542, 1, 1, -1, 40033), -- Sealed Dynasty Circlet Piece
 (22655, 1808, 1, 1, -1, 4948), -- Recipe: Soulshot (S-Grade)
 (22655, 9530, 1, 1, -1, 16215), -- Sealed Dynasty Breast Plate Piece
-(22655, 57, 2702, 5522, 0, 700000), -- Adena
-(22655, 9447, 1, 1, 1, 4.879975), -- Dynasty Halberd
-(22655, 9621, 1, 1, 1, 1532.120025), -- Dynasty Halberd Piece
-(22655, 1894, 1, 1, 2, 24054.822775), -- Crafted Leather
-(22655, 4039, 1, 1, 2, 22852.086), -- Mold Glue
-(22655, 4041, 1, 1, 2, 5961.40615), -- Mold Hardener
-(22655, 4044, 1, 1, 2, 22852.086), -- Thons
-(22655, 9573, 1, 1, 2, 4760.85125), -- Life Stone - Level 80
-(22655, 9574, 1, 1, 2, 1190.25645), -- Mid-Grade Life Stone - Level 80
-(22655, 9575, 1, 1, 2, 119.0431), -- High-Grade Life Stone - Level 80
-(22655, 9547, 1, 1, 2, 5484.448275), -- Water Stone
+(22655, 57, 2479, 5786, 0, 700000), -- Adena
+(22655, 15654, 1, 1, 1, 5740), -- Sealed Moirai Gauntlet Piece
+(22655, 15655, 1, 1, 1, 5740), -- Sealed Moirai Leather Gloves Piece
+(22655, 15656, 1, 1, 1, 5740), -- Sealed Moirai Gloves Piece
+(22655, 15703, 1, 1, 1, 15), -- Sealed Moirai Gauntlet
+(22655, 15704, 1, 1, 1, 15), -- Sealed Moirai Leather Gloves
+(22655, 15705, 1, 1, 1, 15), -- Sealed Moirai Gloves
+(22655, 9573, 1, 1, 2, 5359), -- Life Stone - Level 80
+(22655, 9574, 1, 1, 2, 1340), -- Mid-Grade Life Stone - Level 80
+(22655, 9575, 1, 1, 2, 134), -- High-Grade Life Stone - Level 80
+(22655, 14219, 1, 1, 2, 1286), -- Forgotten Scroll - Magician's Will
+(22655, 6622, 1, 1, 2, 3087), -- Giant's Codex
 -- Suppressor
 (22656, 6901, 1, 1, -1, 6030), -- Recipe: Shining Arrow (100%)
 (22656, 10114, 1, 1, -1, 14951), -- Sealed Dynasty Sigil Piece
 (22656, 960, 1, 1, -1, 2412), -- Scroll: Enchant Armor (S-Grade)
-(22656, 57, 1476, 2979, 0, 700000), -- Adena
-(22656, 9514, 1, 1, 1, 4.05834), -- Sealed Dynasty Breast Plate
-(22656, 9515, 1, 1, 1, 6.49077), -- Sealed Dynasty Gaiter
-(22656, 9530, 1, 1, 1, 1081.23444), -- Sealed Dynasty Breast Plate Piece
-(22656, 9531, 1, 1, 1, 3198.21645), -- Sealed Dynasty Gaiters Piece
-(22656, 1879, 1, 1, 2, 55009.524684), -- Cokes
-(22656, 1885, 1, 1, 2, 27504.762342), -- High-Grade Suede
-(22656, 9628, 1, 1, 2, 2588.708906), -- Leonard
-(22656, 9630, 1, 1, 2, 1737.129056), -- Orichalcum
-(22656, 9629, 1, 1, 2, 1435.064534), -- Adamantine
-(22656, 9573, 1, 1, 2, 2292.086988), -- Life Stone - Level 80
-(22656, 9574, 1, 1, 2, 572.974828), -- Mid-Grade Life Stone - Level 80
-(22656, 9575, 1, 1, 2, 57.335018), -- High-Grade Life Stone - Level 80
-(22656, 9548, 1, 1, 2, 2640.413644), -- Earth Stone
+(22656, 57, 1317, 3076, 0, 700000), -- Adena
+(22656, 15653, 1, 1, 1, 2672), -- Sealed Moirai Stockings Piece
+(22656, 15650, 1, 1, 1, 1647), -- Sealed Moirai Tunic Piece
+(22656, 15702, 1, 1, 1, 6), -- Sealed Moirai Stockings
+(22656, 15699, 1, 1, 1, 4), -- Sealed Moirai Tunic
+(22656, 9573, 1, 1, 2, 2848), -- Life Stone - Level 80
+(22656, 9574, 1, 1, 2, 712), -- Mid-Grade Life Stone - Level 80
+(22656, 9575, 1, 1, 2, 71), -- High-Grade Life Stone - Level 80
+(22656, 10549, 1, 1, 2, 684), -- Forgotten Scroll - Protection of Rune
+(22656, 6622, 1, 1, 2, 1641), -- Giant's Codex
 -- Executioner
 (22657, 9532, 1, 1, -1, 22224), -- Sealed Dynasty Helmet Piece
 (22657, 10399, 1, 1, -1, 2650), -- Icarus Spirit Piece
 (22657, 10401, 1, 1, -1, 2641), -- Icarus Trident Piece
-(22657, 57, 1500, 3065, 0, 700000), -- Adena
-(22657, 9519, 1, 1, 1, 5.546676), -- Sealed Dynasty Leather Armor
-(22657, 9520, 1, 1, 1, 8.874006), -- Sealed Dynasty Leather Leggings
-(22657, 9535, 1, 1, 1, 1361.803542), -- Sealed Dynasty Leather Armor Piece
-(22657, 9536, 1, 1, 1, 2001.775776), -- Sealed Dynasty Leather Leggings Piece
-(22657, 1879, 1, 1, 2, 56381.274804), -- Cokes
-(22657, 1885, 1, 1, 2, 28190.637402), -- High-Grade Suede
-(22657, 9628, 1, 1, 2, 2653.262486), -- Leonard
-(22657, 9630, 1, 1, 2, 1780.447136), -- Orichalcum
-(22657, 9629, 1, 1, 2, 1470.850154), -- Adamantine
-(22657, 9573, 1, 1, 2, 2349.243828), -- Life Stone - Level 80
-(22657, 9574, 1, 1, 2, 587.262868), -- Mid-Grade Life Stone - Level 80
-(22657, 9575, 1, 1, 2, 58.764758), -- High-Grade Life Stone - Level 80
-(22657, 9549, 1, 1, 2, 2706.256564), -- Wind Stone
+(22657, 57, 1350, 3152, 0, 700000), -- Adena
+(22657, 15657, 1, 1, 1, 3127), -- Sealed Moirai Boots Piece
+(22657, 15658, 1, 1, 1, 3127), -- Sealed Moirai Leather Boots Piece
+(22657, 15659, 1, 1, 1, 3127), -- Sealed Moirai Shoes Piece
+(22657, 15706, 1, 1, 1, 8), -- Sealed Moirai Boots
+(22657, 15707, 1, 1, 1, 8), -- Sealed Moirai Leather Boots
+(22657, 15708, 1, 1, 1, 8), -- Sealed Moirai Shoes
+(22657, 9573, 1, 1, 2, 2919), -- Life Stone - Level 80
+(22657, 9574, 1, 1, 2, 730), -- Mid-Grade Life Stone - Level 80
+(22657, 9575, 1, 1, 2, 73), -- High-Grade Life Stone - Level 80
+(22657, 10551, 1, 1, 2, 701), -- Forgotten Scroll - Protection of Alignment
+(22657, 6622, 1, 1, 2, 1681), -- Giant's Codex
 -- Sentinel Waterspirit
 (22658, 10399, 1, 1, -1, 2675), -- Icarus Spirit Piece
 (22658, 10398, 1, 1, -1, 2675), -- Icarus Disperser Piece
 (22658, 10404, 1, 1, -1, 2666), -- Icarus Hall Piece
-(22658, 57, 1527, 3083, 0, 700000), -- Adena
-(22658, 9524, 1, 1, 1, 5.59922), -- Sealed Dynasty Tunic
-(22658, 9525, 1, 1, 1, 8.95807), -- Sealed Dynasty Stockings
-(22658, 9540, 1, 1, 1, 1374.70399), -- Sealed Dynasty Tunic Piece
-(22658, 9541, 1, 1, 1, 2020.73872), -- Sealed Dynasty Stocking Piece
-(22658, 1894, 1, 1, 2, 13480.898731), -- Crafted Leather
-(22658, 4039, 1, 1, 2, 12806.85624), -- Mold Glue
-(22658, 4041, 1, 1, 2, 3340.914766), -- Mold Hardener
-(22658, 4044, 1, 1, 2, 12806.85624), -- Thons
-(22658, 9573, 1, 1, 2, 2668.09505), -- Life Stone - Level 80
-(22658, 9574, 1, 1, 2, 667.048218), -- Mid-Grade Life Stone - Level 80
-(22658, 9575, 1, 1, 2, 66.714604), -- High-Grade Life Stone - Level 80
-(22658, 9550, 1, 1, 2, 3073.616151), -- Dark Stone
+(22658, 57, 1372, 3204, 0, 700000), -- Adena
+(22658, 15693, 1, 1, 1, 5684), -- Sealed Moirai Shield Piece
+(22658, 15692, 1, 1, 1, 5684), -- Sealed Moirai Sigil Piece
+(22658, 15710, 1, 1, 1, 12), -- Sealed Moirai Shield
+(22658, 15709, 1, 1, 1, 12), -- Sealed Moirai Sigil
+(22658, 9573, 1, 1, 2, 2968), -- Life Stone - Level 80
+(22658, 9574, 1, 1, 2, 742), -- Mid-Grade Life Stone - Level 80
+(22658, 9575, 1, 1, 2, 74), -- High-Grade Life Stone - Level 80
+(22658, 10550, 1, 1, 2, 712), -- Forgotten Scroll - Protection of Elemental
+(22658, 6622, 1, 1, 2, 1710), -- Giant's Codex
 -- Guardian Waterspirit
 (22659, 9630, 1, 1, -1, 33659), -- Orichalcum
 (22659, 959, 1, 1, -1, 256), -- Scroll: Enchant Weapon (S-Grade)
 (22659, 9991, 1, 1, -1, 14995), -- Sealed Dynasty Earring Gemstone
-(22659, 57, 1552, 3172, 0, 700000), -- Adena
-(22659, 9452, 1, 1, 1, 17.361484), -- Sealed Dynasty Earring
-(22659, 9453, 1, 1, 1, 13.019132), -- Sealed Dynasty Necklace
-(22659, 9454, 1, 1, 1, 26.042226), -- Sealed Dynasty Ring
-(22659, 9991, 1, 1, 1, 1230.945856), -- Sealed Dynasty Earring Gemstone
-(22659, 9992, 1, 1, 1, 944.71909), -- Sealed Dynasty Necklace Gemstone
-(22659, 9993, 1, 1, 1, 1729.912212), -- Sealed Dynasty Ring Gemstone
-(22659, 1879, 1, 1, 2, 58339.242924), -- Cokes
-(22659, 1885, 1, 1, 2, 29169.621462), -- High-Grade Suede
-(22659, 9628, 1, 1, 2, 2745.403066), -- Leonard
-(22659, 9630, 1, 1, 2, 1842.277216), -- Orichalcum
-(22659, 9629, 1, 1, 2, 1521.928774), -- Adamantine
-(22659, 9573, 1, 1, 2, 2430.826668), -- Life Stone - Level 80
-(22659, 9574, 1, 1, 2, 607.656908), -- Mid-Grade Life Stone - Level 80
-(22659, 9575, 1, 1, 2, 60.805498), -- High-Grade Life Stone - Level 80
-(22659, 9551, 1, 1, 2, 2800.237484), -- Holy Stone
+(22659, 57, 1407, 3284, 0, 700000), -- Adena
+(22659, 15653, 1, 1, 1, 2853), -- Sealed Moirai Stockings Piece
+(22659, 15650, 1, 1, 1, 1759), -- Sealed Moirai Tunic Piece
+(22659, 15702, 1, 1, 1, 7), -- Sealed Moirai Stockings
+(22659, 15699, 1, 1, 1, 4), -- Sealed Moirai Tunic
+(22659, 9630, 1, 1, 2, 1921), -- Orichalcum
+(22659, 9573, 1, 1, 2, 2535), -- Life Stone - Level 80
+(22659, 9574, 1, 1, 2, 634), -- Mid-Grade Life Stone - Level 80
+(22659, 9575, 1, 1, 2, 63), -- High-Grade Life Stone - Level 80
+(22659, 14219, 1, 1, 2, 608), -- Forgotten Scroll - Magician's Will
+(22659, 6622, 1, 1, 2, 1460), -- Giant's Codex
 -- Lesser Giant
 (22660, 9630, 1, 1, -1, 263370), -- Orichalcum
 (22660, 9991, 1, 1, -1, 117329), -- Sealed Dynasty Earring Gemstone
@@ -37080,6 +37076,8 @@ INSERT INTO `droplist` VALUES
 (22660, 9574, 1, 1, 2, 4755.09396), -- Mid-Grade Life Stone - Level 80
 (22660, 9575, 1, 1, 2, 475.509396), -- High-Grade Life Stone - Level 80
 (22660, 959, 1, 1, 2, 109.18268), -- Scroll: Enchant Weapon (S-Grade)
+(22660, 9627, 1, 1, 2, 150), -- Giant's Codex - Mastery
+(22660, 9546, 1, 1, 2, 17928), -- Fire Stone
 -- Lesser Giant Soldier
 (22661, 9541, 1, 1, -1, 134861), -- Sealed Dynasty Stocking Piece
 (22661, 1808, 1, 1, -1, 22792), -- Recipe: Soulshot (S-Grade)
@@ -37104,6 +37102,8 @@ INSERT INTO `droplist` VALUES
 (22661, 9574, 1, 1, 2, 4873.187241), -- Mid-Grade Life Stone - Level 80
 (22661, 9575, 1, 1, 2, 487.43478), -- High-Grade Life Stone - Level 80
 (22661, 960, 1, 1, 2, 1122.647406), -- Scroll: Enchant Armor (S-Grade)
+(22661, 9627, 1, 1, 2, 153), -- Giant's Codex - Mastery
+(22661, 9546, 1, 1, 2, 18373), -- Fire Stone
 -- Lesser Giant Shooter
 (22662, 960, 1, 1, -1, 19489), -- Scroll: Enchant Armor (S-Grade)
 (22662, 1894, 1, 3, -1, 854794), -- Crafted Leather
@@ -37124,6 +37124,8 @@ INSERT INTO `droplist` VALUES
 (22662, 9574, 1, 1, 2, 4629.954973), -- Mid-Grade Life Stone - Level 80
 (22662, 9575, 1, 1, 2, 462.885199), -- High-Grade Life Stone - Level 80
 (22662, 5272, 1, 1, 2, 1185.706725), -- Recipe: Greater Soulshot (S) Compressed Package(100%)
+(22662, 9627, 1, 1, 2, 145), -- Giant's Codex - Mastery
+(22662, 9546, 1, 1, 2, 17456), -- Fire Stone
 -- Lesser Giant Scout
 (22663, 9992, 1, 1, -1, 87677), -- Sealed Dynasty Necklace Gemstone
 (22663, 9624, 1, 1, -1, 26227), -- Dynasty Bagh-Nakh Piece
@@ -37146,6 +37148,8 @@ INSERT INTO `droplist` VALUES
 (22663, 9574, 1, 1, 2, 4629.954973), -- Mid-Grade Life Stone - Level 80
 (22663, 9575, 1, 1, 2, 462.885199), -- High-Grade Life Stone - Level 80
 (22663, 5277, 1, 1, 2, 1185.706725), -- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22663, 9627, 1, 1, 2, 145), -- Giant's Codex - Mastery
+(22663, 9546, 1, 1, 2, 17456), -- Fire Stone
 -- Lesser Giant Mage
 (22664, 9630, 1, 1, -1, 262026), -- Orichalcum
 (22664, 9617, 1, 1, -1, 27681), -- Dynasty Blade Piece
@@ -37161,6 +37165,8 @@ INSERT INTO `droplist` VALUES
 (22664, 9574, 1, 1, 2, 5322.177875), -- Mid-Grade Life Stone - Level 80
 (22664, 9575, 1, 1, 2, 532.0798), -- High-Grade Life Stone - Level 80
 (22664, 5282, 1, 1, 2, 1362.488575), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+(22664, 9627, 1, 1, 2, 164), -- Giant's Codex - Mastery
+(22664, 9546, 1, 1, 2, 19620), -- Fire Stone
 -- Lesser Giant Elder
 (22665, 1808, 1, 1, -1, 21861), -- Recipe: Soulshot (S-Grade)
 (22665, 9623, 1, 1, -1, 26477), -- Dynasty Mace Piece
@@ -37176,6 +37182,8 @@ INSERT INTO `droplist` VALUES
 (22665, 9574, 1, 1, 2, 5258.428116), -- Mid-Grade Life Stone - Level 80
 (22665, 9575, 1, 1, 2, 525.925116), -- High-Grade Life Stone - Level 80
 (22665, 6901, 1, 1, 2, 3029.076268), -- Recipe: Shining Arrow (100%)
+(22665, 9627, 1, 1, 2, 162), -- Giant's Codex - Mastery
+(22665, 9546, 1, 1, 2, 19384), -- Fire Stone
 -- Barif
 (22666, 9624, 1, 1, -1, 3146), -- Dynasty Bagh-Nakh Piece
 (22666, 9630, 1, 1, -1, 30758), -- Orichalcum
@@ -37192,6 +37200,7 @@ INSERT INTO `droplist` VALUES
 (22666, 9574, 1, 1, 2, 555.311052), -- Mid-Grade Life Stone - Level 80
 (22666, 9575, 1, 1, 2, 55.504548), -- High-Grade Life Stone - Level 80
 (22666, 5157, 1, 1, 2, 142.169544), -- Recipe: Soulshot (S) Compressed Package (100%)
+(22666, 9625, 1, 1, 2, 58), -- Giant's Codex - Oblivion
 -- Barif's Pet
 (22667, 9992, 1, 1, -1, 10850), -- Sealed Dynasty Necklace Gemstone
 (22667, 3957, 1, 1, -1, 2680), -- Recipe: Blessed Spiritshot S
@@ -37207,6 +37216,7 @@ INSERT INTO `droplist` VALUES
 (22667, 9574, 1, 1, 2, 644.566582), -- Mid-Grade Life Stone - Level 80
 (22667, 9575, 1, 1, 2, 64.46555), -- High-Grade Life Stone - Level 80
 (22667, 5162, 1, 1, 2, 164.987349), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22667, 9625, 1, 1, 2, 66), -- Giant's Codex - Oblivion
 -- Gamlin
 (22668, 5157, 1, 1, -1, 2259), -- Recipe: Soulshot (S) Compressed Package (100%)
 (22668, 9622, 1, 1, -1, 2736), -- Dynasty Cudgel Piece
@@ -37225,6 +37235,7 @@ INSERT INTO `droplist` VALUES
 (22668, 9574, 1, 1, 2, 482.977089), -- Mid-Grade Life Stone - Level 80
 (22668, 9575, 1, 1, 2, 48.274611), -- High-Grade Life Stone - Level 80
 (22668, 5167, 1, 1, 2, 123.650758), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+(22668, 9625, 1, 1, 2, 50), -- Giant's Codex - Oblivion
 -- Leogul
 (22669, 9628, 1, 1, -1, 39865), -- Leonard
 (22669, 9993, 1, 1, -1, 16748), -- Sealed Dynasty Ring Gemstone
@@ -37242,6 +37253,7 @@ INSERT INTO `droplist` VALUES
 (22669, 9574, 1, 1, 2, 543.376256), -- Mid-Grade Life Stone - Level 80
 (22669, 9575, 1, 1, 2, 54.345106), -- High-Grade Life Stone - Level 80
 (22669, 9625, 1, 1, 2, 62.610948), -- Giant's Codex - Oblivion
+(22669, 9626, 1, 1, 2, 46), -- Giant's Codex - Discipline
 -- Cursed Lord
 (22670, 959, 1, 1, -1, 251), -- Scroll: Enchant Weapon (S-Grade)
 (22670, 1894, 1, 1, -1, 220275), -- Crafted Leather
@@ -37277,6 +37289,7 @@ INSERT INTO `droplist` VALUES
 (22671, 4044, 1, 1, 2, 16385.769666), -- Thons
 (22671, 9546, 1, 1, 2, 3932.70822), -- Fire Stone
 (22671, 1345, 10, 30, 2, 327711.148002), -- Shining Arrow
+(22671, 9626, 1, 1, 2, 66), -- Giant's Codex - Discipline
 -- Cursed Seer
 (22672, 3036, 1, 1, -1, 2652), -- Recipe: Spiritshot S
 (22672, 9992, 1, 1, -1, 10739), -- Sealed Dynasty Necklace Gemstone
@@ -37300,6 +37313,7 @@ INSERT INTO `droplist` VALUES
 (22672, 9630, 1, 1, 2, 2578.795362), -- Orichalcum
 (22672, 9629, 1, 1, 2, 2130.303344), -- Adamantine
 (22672, 9547, 1, 1, 2, 3919.952504), -- Water Stone
+(22672, 9626, 1, 1, 2, 56), -- Giant's Codex - Discipline
 -- Hirokai
 (22673, 1894, 1, 1, -1, 180004), -- Crafted Leather
 (22673, 9535, 1, 1, -1, 9178), -- Sealed Dynasty Leather Armor Piece
@@ -37320,6 +37334,7 @@ INSERT INTO `droplist` VALUES
 (22673, 9630, 1, 1, 2, 2216.775033), -- Orichalcum
 (22673, 9629, 1, 1, 2, 1831.243896), -- Adamantine
 (22673, 9548, 1, 1, 2, 3369.655836), -- Earth Stone
+(22673, 9626, 1, 1, 2, 48), -- Giant's Codex - Discipline
 -- Imagro
 (22674, 9992, 1, 1, -1, 8941), -- Sealed Dynasty Necklace Gemstone
 (22674, 5157, 1, 1, -1, 2208), -- Recipe: Soulshot (S) Compressed Package (100%)
@@ -37336,6 +37351,7 @@ INSERT INTO `droplist` VALUES
 (22674, 4042, 1, 1, 2, 8158.825728), -- Enria
 (22674, 4043, 1, 1, 2, 16317.473409), -- Asofe
 (22674, 9549, 1, 1, 2, 3916.143765), -- Wind Stone
+(22674, 9625, 1, 1, 2, 82), -- Giant's Codex - Oblivion
 -- Palit
 (22675, 1894, 1, 1, -1, 183232), -- Crafted Leather
 (22675, 9628, 1, 1, -1, 40958), -- Leonard
@@ -37354,6 +37370,7 @@ INSERT INTO `droplist` VALUES
 (22675, 4041, 1, 1, 2, 4473.874104), -- Mold Hardener
 (22675, 4044, 1, 1, 2, 17149.871046), -- Thons
 (22675, 9550, 1, 1, 2, 4115.900796), -- Dark Stone
+(22675, 9625, 1, 1, 2, 86), -- Giant's Codex - Oblivion
 -- Hamlet
 (22676, 5162, 1, 1, -1, 2280), -- Recipe: Spiritshot (S) Compressed Package (100%)
 (22676, 9622, 1, 1, -1, 2761), -- Dynasty Cudgel Piece
@@ -37367,6 +37384,7 @@ INSERT INTO `droplist` VALUES
 (22676, 9630, 1, 1, 2, 2216.775033), -- Orichalcum
 (22676, 9629, 1, 1, 2, 1831.243896), -- Adamantine
 (22676, 9551, 1, 1, 2, 3369.655836), -- Holy Stone
+(22676, 9626, 1, 1, 2, 48), -- Giant's Codex - Discipline
 -- Klennot
 (22677, 1894, 1, 1, -1, 185045), -- Crafted Leather
 (22677, 9993, 1, 1, -1, 17378), -- Sealed Dynasty Ring Gemstone
@@ -37380,6 +37398,7 @@ INSERT INTO `droplist` VALUES
 (22677, 9630, 1, 1, 2, 2278.893996), -- Orichalcum
 (22677, 9629, 1, 1, 2, 1882.554534), -- Adamantine
 (22677, 959, 1, 1, 2, 17.257329), -- Scroll: Enchant Weapon (S-Grade)
+(22677, 9626, 1, 1, 2, 50), -- Giant's Codex - Discipline
 -- Grave Robber Summoner
 (22678, 9992, 1, 1, -1, 5104), -- Sealed Dynasty Necklace Gemstone
 (22678, 5167, 1, 1, -1, 1261), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
@@ -38450,7 +38469,9 @@ INSERT INTO `droplist` VALUES
 (22740, 1345, 300, 900, 2, 100734.92114), -- Shining Arrow
 -- Grave Robber Warrior
 (22741, 9991, 1, 1, -1, 6526), -- Sealed Dynasty Earring Gemstone
-(22741, 1808, 1, 1, -1, 1237), -- Recipe: Soulshot (S-Grade)
+(22741, 1808, 1, 1, -1, 1237); -- Recipe: Soulshot (S-Grade)
+
+INSERT INTO `droplist` VALUES
 (22741, 9630, 1, 1, -1, 14650), -- Orichalcum
 (22741, 57, 682, 1375, 0, 700000), -- Adena
 (22741, 9519, 1, 1, 1, 2.497482), -- Sealed Dynasty Leather Armor
@@ -38470,9 +38491,7 @@ INSERT INTO `droplist` VALUES
 (22742, 9536, 1, 1, -1, 4245), -- Sealed Dynasty Leather Leggings Piece
 (22742, 9531, 1, 1, -1, 6954), -- Sealed Dynasty Gaiters Piece
 (22742, 960, 1, 1, -1, 646), -- Scroll: Enchant Armor (S-Grade)
-(22742, 57, 395, 797, 0, 700000); -- Adena
-
-INSERT INTO `droplist` VALUES
+(22742, 57, 395, 797, 0, 700000), -- Adena
 (22742, 9448, 1, 1, 1, 0.177171), -- Dynasty Cudgel
 (22742, 9449, 1, 1, 1, 0.177171), -- Dynasty Mace
 (22742, 10252, 1, 1, 1, 0.177171), -- Dynasty Staff
@@ -38566,6 +38585,7 @@ INSERT INTO `droplist` VALUES
 (22746, 14168, 1, 1, 2, 959.72072), -- High-Grade Life Stone - Level 84
 (22746, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment
 (22746, 1345, 2400, 7200, 2, 22103.81986), -- Shining Arrow
+(22746, 9547, 1, 1, 2, 57872), -- Water Stone
 -- Brakian
 (22747, 15664, 1, 1, -1, 229943), -- Sealed Vesper Leather Breastplate Piece
 (22747, 15670, 1, 1, -1, 354373), -- Sealed Vesper Leather Legging Piece
@@ -38586,6 +38606,7 @@ INSERT INTO `droplist` VALUES
 (22747, 14167, 1, 1, 2, 10665.477436), -- Mid-Grade Life Stone - Level 84
 (22747, 14168, 1, 1, 2, 1066.740296), -- High-Grade Life Stone - Level 84
 (22747, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment
+(22747, 9547, 1, 1, 2, 63660), -- Water Stone
 -- Groikan
 (22748, 15665, 1, 1, -1, 229983), -- Sealed Vesper Tunic Piece
 (22748, 15673, 1, 1, -1, 354435), -- Sealed Vesper Stockings Piece
@@ -38608,6 +38629,7 @@ INSERT INTO `droplist` VALUES
 (22748, 959, 1, 1, 2, 289.51566), -- Scroll: Enchant Weapon (S-Grade)
 (22748, 15486, 1, 1, 2, 32156.7869), -- Spirit Stone Fragment
 (22748, 1345, 2400, 7200, 2, 20098.03768), -- Shining Arrow
+(22748, 9547, 1, 1, 2, 53058), -- Water Stone
 -- Treykan
 (22749, 15667, 1, 1, -1, 287295), -- Sealed Vesper Gauntlet Piece
 (22749, 15671, 1, 1, -1, 287295), -- Sealed Vesper Leather Gloves Piece
@@ -38645,6 +38667,7 @@ INSERT INTO `droplist` VALUES
 (22749, 14168, 1, 1, 2, 965.224662), -- High-Grade Life Stone - Level 84
 (22749, 960, 1, 1, 2, 3201.174834), -- Scroll: Enchant Armor (S-Grade)
 (22749, 15486, 1, 1, 2, 35569.779768), -- Spirit Stone Fragment
+(22749, 9547, 1, 1, 2, 58205), -- Water Stone
 -- Elite Bgurent
 (22750, 15634, 1, 1, -1, 87220), -- Vesper Cutter Piece
 (22750, 15635, 1, 1, -1, 87064), -- Vesper Slasher Piece
@@ -38671,6 +38694,8 @@ INSERT INTO `droplist` VALUES
 (22750, 15816, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Slasher (60%)
 (22750, 15817, 1, 1, 2, 1070.436289), -- Recipe - Vesper Buster (60%)
 (22750, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment
+(22750, 9627, 1, 1, 2, 803), -- Giant's Codex - Mastery
+(22750, 9548, 1, 1, 2, 96443), -- Earth Stone
 -- Elite Brakian
 (22751, 15640, 1, 1, -1, 75665), -- Vesper Avenger Piece
 (22751, 15641, 1, 1, -1, 76544), -- Vesper Retributer Piece
@@ -38701,6 +38726,8 @@ INSERT INTO `droplist` VALUES
 (22751, 15823, 1, 1, 2, 980.986897), -- Recipe - Vesper Caster (60%)
 (22751, 15824, 1, 1, 2, 980.986897), -- Recipe - Vesper Singer (60%)
 (22751, 15486, 1, 1, 2, 62510.124986), -- Spirit Stone Fragment
+(22751, 9627, 1, 1, 2, 750), -- Giant's Codex - Mastery
+(22751, 9548, 1, 1, 2, 90014), -- Earth Stone
 -- Elite Groikan
 (22752, 15638, 1, 1, -1, 151155), -- Vesper Fighter Piece
 (22752, 959, 1, 1, -1, 10266), -- Scroll: Enchant Weapon (S-Grade)
@@ -38718,6 +38745,8 @@ INSERT INTO `droplist` VALUES
 (22752, 9554, 1, 1, 2, 3746.246342), -- Earth Crystal
 (22752, 15819, 1, 1, 2, 1306.487714), -- Recipe - Vesper Fighter (60%)
 (22752, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment
+(22752, 9627, 1, 1, 2, 167), -- Giant's Codex - Mastery
+(22752, 9548, 3, 9, 2, 16055), -- Earth Stone
 -- Elite Treykan
 (22753, 15644, 1, 1, -1, 204362), -- Vesper Thrower Piece
 (22753, 959, 1, 1, -1, 13705), -- Scroll: Enchant Weapon (S-Grade)
@@ -38733,6 +38762,8 @@ INSERT INTO `droplist` VALUES
 (22753, 16161, 1, 1, 2, 25448.677272), -- Mid-Grade Life Stone - Level 85
 (22753, 15825, 1, 1, 2, 1471.837924), -- Recipe - Vesper Thrower (60%)
 (22753, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment
+(22753, 9627, 1, 1, 2, 1023), -- Giant's Codex - Mastery
+(22753, 9547, 3, 9, 2, 17535), -- Water Stone
 -- Turtlelian
 (22754, 15667, 1, 1, -1, 309454), -- Sealed Vesper Gauntlet Piece
 (22754, 15671, 1, 1, -1, 309454), -- Sealed Vesper Leather Gloves Piece
@@ -38769,6 +38800,7 @@ INSERT INTO `droplist` VALUES
 (22754, 14168, 1, 1, 2, 959.72072), -- High-Grade Life Stone - Level 84
 (22754, 15486, 1, 1, 2, 35366.111776), -- Spirit Stone Fragment
 (22754, 1345, 2400, 7200, 2, 22103.81986), -- Shining Arrow
+(22754, 9547, 1, 1, 2, 57872), -- Water Stone
 -- Krajian
 (22755, 15660, 1, 1, -1, 222296), -- Sealed Vesper Helmet Piece
 (22755, 15661, 1, 1, -1, 222296), -- Sealed Vesper Leather Helmet Piece
@@ -38800,6 +38832,7 @@ INSERT INTO `droplist` VALUES
 (22755, 14167, 1, 1, 2, 10665.477436), -- Mid-Grade Life Stone - Level 84
 (22755, 14168, 1, 1, 2, 1066.740296), -- High-Grade Life Stone - Level 84
 (22755, 15486, 1, 1, 2, 39295.612411), -- Spirit Stone Fragment
+(22755, 9547, 1, 1, 2, 63660), -- Water Stone
 -- Tardyon
 (22756, 15770, 1, 1, -1, 435480), -- Sealed Vesper Earring Gem
 (22756, 15771, 1, 1, -1, 313309), -- Sealed Vesper Necklace Gem
@@ -38829,6 +38862,7 @@ INSERT INTO `droplist` VALUES
 (22756, 15811, 1, 1, 2, 3741.78393), -- Recipe - Sealed Vesper Necklace (70%)
 (22756, 15486, 1, 1, 2, 25266.069126), -- Spirit Stone Fragment
 (22756, 1345, 300, 900, 2, 126329.100444), -- Shining Arrow
+(22756, 9547, 1, 1, 2, 42447), -- Water Stone
 -- Elite Turtlelian
 (22757, 15637, 1, 1, -1, 203512), -- Vesper Shaper Piece
 (22757, 9630, 1, 3, -1, 901613), -- Orichalcum
@@ -38845,6 +38879,8 @@ INSERT INTO `droplist` VALUES
 (22757, 9554, 1, 1, 2, 3750.615097), -- Earth Crystal
 (22757, 15818, 1, 1, 2, 1308.011299), -- Recipe - Vesper Shaper (60%)
 (22757, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment
+(22757, 9627, 1, 1, 2, 938), -- Giant's Codex - Mastery
+(22757, 9548, 3, 9, 2, 16074), -- Earth Stone
 -- Elite Krajian
 (22758, 15639, 1, 1, -1, 203881), -- Vesper Stormer Piece
 (22758, 9630, 1, 3, -1, 900563), -- Orichalcum
@@ -38861,6 +38897,8 @@ INSERT INTO `droplist` VALUES
 (22758, 9554, 1, 1, 2, 3746.246342), -- Earth Crystal
 (22758, 15820, 1, 1, 2, 1306.487714), -- Recipe - Vesper Stormer (60%)
 (22758, 15486, 1, 1, 2, 83248.427122), -- Spirit Stone Fragment
+(22758, 9627, 1, 1, 2, 937), -- Giant's Codex - Mastery
+(22758, 9548, 3, 9, 2, 16055), -- Earth Stone
 -- Elite Tardyon
 (22759, 15638, 1, 1, -1, 201775), -- Vesper Fighter Piece
 (22759, 1894, 1, 25, -1, 924732), -- Crafted Leather
@@ -38877,6 +38915,8 @@ INSERT INTO `droplist` VALUES
 (22759, 9554, 1, 1, 2, 3750.615097), -- Earth Crystal
 (22759, 15819, 1, 1, 2, 1308.011299), -- Recipe - Vesper Fighter (60%)
 (22759, 15486, 1, 1, 2, 83345.508827), -- Spirit Stone Fragment
+(22759, 9627, 1, 1, 2, 938), -- Giant's Codex - Mastery
+(22759, 9548, 3, 9, 2, 16074), -- Earth Stone
 -- Kanibi
 (22760, 15667, 1, 1, -1, 309454), -- Sealed Vesper Gauntlet Piece
 (22760, 15671, 1, 1, -1, 309454), -- Sealed Vesper Leather Gloves Piece
@@ -38913,6 +38953,7 @@ INSERT INTO `droplist` VALUES
 (22760, 14168, 1, 1, 2, 959.698575), -- High-Grade Life Stone - Level 84
 (22760, 960, 1, 1, 2, 3182.847525), -- Scroll: Enchant Armor (S-Grade)
 (22760, 15486, 1, 1, 2, 35366.1363), -- Spirit Stone Fragment
+(22760, 9547, 1, 1, 2, 57872), -- Water Stone
 -- Kiriona
 (22761, 15660, 1, 1, -1, 222296), -- Sealed Vesper Helmet Piece
 (22761, 15661, 1, 1, -1, 222296), -- Sealed Vesper Leather Helmet Piece
@@ -38946,6 +38987,7 @@ INSERT INTO `droplist` VALUES
 (22761, 959, 1, 1, 2, 289.465164), -- Scroll: Enchant Weapon (S-Grade)
 (22761, 15486, 1, 1, 2, 32151.17826), -- Spirit Stone Fragment
 (22761, 1345, 2400, 7200, 2, 20094.532272), -- Shining Arrow
+(22761, 9547, 1, 1, 2, 53049), -- Water Stone
 -- Kaiona
 (22762, 15770, 1, 1, -1, 435480), -- Sealed Vesper Earring Gem
 (22762, 15771, 1, 1, -1, 313309), -- Sealed Vesper Necklace Gem
@@ -38974,6 +39016,7 @@ INSERT INTO `droplist` VALUES
 (22762, 15810, 1, 1, 2, 5373.283942), -- Recipe - Sealed Vesper Earring (70%)
 (22762, 15811, 1, 1, 2, 4029.718316), -- Recipe - Sealed Vesper Necklace (70%)
 (22762, 15486, 1, 1, 2, 27209.405691), -- Spirit Stone Fragment
+(22762, 9547, 1, 1, 2, 45479), -- Water Stone
 -- Elite Kanibi
 (22763, 15634, 1, 1, -1, 87220), -- Vesper Cutter Piece
 (22763, 15635, 1, 1, -1, 87064), -- Vesper Slasher Piece
@@ -39000,6 +39043,8 @@ INSERT INTO `droplist` VALUES
 (22763, 15816, 1, 1, 2, 1070.436289), -- Recipe - Sealed Vesper Slasher (60%)
 (22763, 15817, 1, 1, 2, 1070.436289), -- Recipe - Vesper Buster (60%)
 (22763, 15486, 1, 1, 2, 68190.977673), -- Spirit Stone Fragment
+(22763, 9627, 1, 1, 2, 803), -- Giant's Codex - Mastery
+(22763, 9548, 1, 1, 2, 96443), -- Earth Stone
 -- Elite Kiriona
 (22764, 15640, 1, 1, -1, 67180), -- Vesper Avenger Piece
 (22764, 15641, 1, 1, -1, 67960), -- Vesper Retributer Piece
@@ -39031,6 +39076,8 @@ INSERT INTO `droplist` VALUES
 (22764, 15823, 1, 1, 2, 979.842644), -- Recipe - Vesper Caster (60%)
 (22764, 15824, 1, 1, 2, 979.842644), -- Recipe - Vesper Singer (60%)
 (22764, 15486, 1, 1, 2, 62437.211272), -- Spirit Stone Fragment
+(22764, 9627, 1, 1, 2, 749), -- Giant's Codex - Mastery
+(22764, 9548, 1, 1, 2, 89909), -- Earth Stone
 -- Elite Kaiona
 (22765, 15644, 1, 1, -1, 153272), -- Vesper Thrower Piece
 (22765, 959, 1, 1, -1, 10278), -- Scroll: Enchant Weapon (S-Grade)
@@ -39047,6 +39094,8 @@ INSERT INTO `droplist` VALUES
 (22765, 16161, 1, 1, 2, 25448.677272), -- Mid-Grade Life Stone - Level 85
 (22765, 15825, 1, 1, 2, 1471.837924), -- Recipe - Vesper Thrower (60%)
 (22765, 15486, 1, 1, 2, 93763.425278), -- Spirit Stone Fragment
+(22765, 9627, 1, 1, 2, 1023), -- Giant's Codex - Mastery
+(22765, 9548, 3, 9, 2, 17535), -- Earth Stone
 -- Mithril Millipede
 (22766, 57, 203, 419, 0, 700000), -- Adena
 (22766, 1894, 1, 1, 1, 18206.2408), -- Crafted Leather
@@ -39104,6 +39153,8 @@ INSERT INTO `droplist` VALUES
 (22769, 10484, 1, 1, 2, 386.50122), -- Mid-Grade Life Stone - Level 82
 (22769, 10485, 1, 1, 2, 38.635515), -- High-Grade Life Stone - Level 82
 (22769, 960, 1, 1, 2, 88.95663), -- Scroll: Enchant Armor (S-Grade)
+(22769, 10550, 1, 1, 2, 297), -- Forgotten Scroll - Protection of Elemental
+(22769, 6622, 1, 1, 2, 712), -- Giant's Codex
 -- Tanta Lizardman Soldier
 (22770, 15645, 1, 1, -1, 10600), -- Sealed Moirai Helmet Piece
 (22770, 15646, 1, 1, -1, 10600), -- Sealed Moirai Leather Helmet Piece
@@ -39140,6 +39191,8 @@ INSERT INTO `droplist` VALUES
 (22770, 15777, 1, 1, 2, 165.907215), -- Recipe - Sealed Moirai Circlet (60%)
 (22770, 15791, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Shield (60%)
 (22770, 15790, 1, 1, 2, 236.99348), -- Recipe - Sealed Moirai Sigil (60%)
+(22770, 10553, 1, 1, 2, 306), -- Forgotten Scroll - Archer's Will
+(22770, 6622, 1, 1, 2, 733), -- Giant's Codex
 -- Tanta Lizardman Berserker
 (22771, 10404, 1, 1, -1, 1572), -- Icarus Hall Piece
 (22771, 10402, 1, 1, -1, 1572), -- Icarus Hammer Piece
@@ -39237,6 +39290,8 @@ INSERT INTO `droplist` VALUES
 (22773, 15788, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Leather Boots (60%)
 (22773, 15789, 1, 1, 2, 160.299568), -- Recipe - Sealed Moirai Shoes (60%)
 (22773, 1345, 10, 30, 2, 89963.508514), -- Shining Arrow
+(22773, 10553, 1, 1, 2, 197), -- Forgotten Scroll - Archer's Will
+(22773, 6622, 1, 1, 2, 472), -- Giant's Codex
 -- Tanta Lizardman Summoner
 (22774, 15649, 1, 1, -1, 9227), -- Sealed Moirai Leather Breastplate Piece
 (22774, 15652, 1, 1, -1, 14969), -- Sealed Moirai Leather Legging Piece
@@ -39287,6 +39342,8 @@ INSERT INTO `droplist` VALUES
 (22775, 959, 1, 1, 2, 8.370786), -- Scroll: Enchant Weapon (S-Grade)
 (22775, 15778, 1, 1, 2, 62.026152), -- Recipe - Sealed Moirai Breastplate (60%)
 (22775, 15781, 1, 1, 2, 99.214398), -- Recipe - Sealed Moirai Gaiter (60%)
+(22775, 10552, 1, 1, 2, 290), -- Forgotten Scroll - Fighter's Will
+(22775, 6622, 1, 1, 2, 696), -- Giant's Codex
 -- Sel Mahum Training Officer
 (22776, 15649, 1, 1, -1, 12239), -- Sealed Moirai Leather Breastplate Piece
 (22776, 15652, 1, 1, -1, 19856), -- Sealed Moirai Leather Legging Piece
@@ -39309,6 +39366,8 @@ INSERT INTO `droplist` VALUES
 (22776, 959, 1, 1, 2, 11.419322), -- Scroll: Enchant Weapon (S-Grade)
 (22776, 15779, 1, 1, 2, 112.695604), -- Recipe - Sealed Moirai Leather Breastplate (60%)
 (22776, 15782, 1, 1, 2, 180.181925), -- Recipe - Sealed Moirai Leather Legging (60%)
+(22776, 10552, 1, 1, 2, 401), -- Forgotten Scroll - Fighter's Will
+(22776, 6622, 1, 1, 2, 963), -- Giant's Codex
 -- Sel Mahum Drill Sergeant
 (22777, 15650, 1, 1, -1, 8167), -- Sealed Moirai Tunic Piece
 (22777, 15653, 1, 1, -1, 13251), -- Sealed Moirai Stockings Piece
@@ -39330,6 +39389,8 @@ INSERT INTO `droplist` VALUES
 (22777, 9552, 1, 1, 2, 41.7696), -- Fire Crystal
 (22777, 15780, 1, 1, 2, 82.7148), -- Recipe - Sealed Moirai Tunic (60%)
 (22777, 15783, 1, 1, 2, 132.3849), -- Recipe - Sealed Moirai Stockings (60%)
+(22777, 10552, 1, 1, 2, 290), -- Forgotten Scroll - Fighter's Will
+(22777, 6622, 1, 1, 2, 696), -- Giant's Codex
 -- Sel Mahum Drill Sergeant
 (22778, 15772, 1, 1, -1, 29243), -- Sealed Moirai Ring Gem
 (22778, 15773, 1, 1, -1, 16435), -- Sealed Moirai Earring Gem
@@ -39355,6 +39416,8 @@ INSERT INTO `droplist` VALUES
 (22778, 15812, 1, 1, 2, 346.511808), -- Recipe - Sealed Moirai Ring (70%)
 (22778, 15813, 1, 1, 2, 231.007872), -- Recipe - Sealed Moirai Earring (70%)
 (22778, 15814, 1, 1, 2, 173.129808), -- Recipe - Sealed Moirai Necklace (70%)
+(22778, 10552, 1, 1, 2, 268), -- Forgotten Scroll - Fighter's Will
+(22778, 6622, 1, 1, 2, 643), -- Giant's Codex
 -- Sel Mahum Escort Guard
 (22779, 15654, 1, 1, -1, 9273), -- Sealed Moirai Gauntlet Piece
 (22779, 15655, 1, 1, -1, 9273), -- Sealed Moirai Leather Gloves Piece
@@ -39395,6 +39458,8 @@ INSERT INTO `droplist` VALUES
 (22779, 15787, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Boots (60%)
 (22779, 15788, 1, 1, 2, 173.652456), -- Recipe - Sealed Moirai Leather Boots (60%)
 (22779, 15789, 1, 1, 2, 173.701455), -- Recipe - Sealed Moirai Shoes (60%)
+(22779, 10552, 1, 1, 2, 213), -- Forgotten Scroll - Fighter's Will
+(22779, 6622, 1, 1, 2, 512), -- Giant's Codex
 -- Sel Mahum Recruit
 (22780, 15645, 1, 1, -1, 2290), -- Sealed Moirai Helmet Piece
 (22780, 15646, 1, 1, -1, 2290), -- Sealed Moirai Leather Helmet Piece
@@ -39430,6 +39495,8 @@ INSERT INTO `droplist` VALUES
 (22780, 15777, 1, 1, 2, 46.008), -- Recipe - Sealed Moirai Circlet (60%)
 (22780, 15791, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Shield (60%)
 (22780, 15790, 1, 1, 2, 65.7216), -- Recipe - Sealed Moirai Sigil (60%)
+(22780, 10550, 1, 1, 2, 83), -- Forgotten Scroll - Protection of Elemental
+(22780, 6622, 1, 1, 2, 199), -- Giant's Codex
 -- Sel Mahum Soldier
 (22781, 10397, 1, 1, -1, 346), -- Icarus Sawsword Piece
 (22781, 10399, 1, 1, -1, 346), -- Icarus Spirit Piece
@@ -39453,6 +39520,8 @@ INSERT INTO `droplist` VALUES
 (22781, 10483, 1, 1, 2, 804.482197), -- Life Stone - Level 82
 (22781, 10484, 1, 1, 2, 201.112547), -- Mid-Grade Life Stone - Level 82
 (22781, 10485, 1, 1, 2, 20.16567), -- High-Grade Life Stone - Level 82
+(22781, 10549, 1, 1, 2, 154), -- Forgotten Scroll - Protection of Rune
+(22781, 6622, 1, 1, 2, 371), -- Giant's Codex
 -- Sel Mahum Recruit
 (22782, 10404, 1, 1, -1, 363), -- Icarus Hall Piece
 (22782, 10402, 1, 1, -1, 363), -- Icarus Hammer Piece
@@ -39471,6 +39540,8 @@ INSERT INTO `droplist` VALUES
 (22782, 10483, 1, 1, 2, 691.51104), -- Life Stone - Level 82
 (22782, 10484, 1, 1, 2, 172.87776), -- Mid-Grade Life Stone - Level 82
 (22782, 10485, 1, 1, 2, 17.2854), -- High-Grade Life Stone - Level 82
+(22782, 10550, 1, 1, 2, 129), -- Forgotten Scroll - Protection of Elemental
+(22782, 6622, 1, 1, 2, 310), -- Giant's Codex
 -- Sel Mahum Soldier
 (22783, 10403, 1, 1, -1, 440), -- Icarus Hand Piece
 (22783, 959, 1, 1, -1, 41), -- Scroll: Enchant Weapon (S-Grade)
@@ -39487,6 +39558,8 @@ INSERT INTO `droplist` VALUES
 (22783, 10483, 1, 1, 2, 586.553954), -- Life Stone - Level 82
 (22783, 10484, 1, 1, 2, 146.632654), -- Mid-Grade Life Stone - Level 82
 (22783, 10485, 1, 1, 2, 14.70294), -- High-Grade Life Stone - Level 82
+(22783, 10549, 1, 1, 2, 113), -- Forgotten Scroll - Protection of Rune
+(22783, 6622, 1, 1, 2, 270), -- Giant's Codex
 -- Sel Mahum Recruit
 (22784, 10405, 1, 1, -1, 454), -- Icarus Spitter Piece
 (22784, 1894, 1, 1, -1, 37238), -- Crafted Leather
@@ -39502,6 +39575,8 @@ INSERT INTO `droplist` VALUES
 (22784, 10483, 1, 1, 2, 691.51104), -- Life Stone - Level 82
 (22784, 10484, 1, 1, 2, 172.87776), -- Mid-Grade Life Stone - Level 82
 (22784, 10485, 1, 1, 2, 17.2854), -- High-Grade Life Stone - Level 82
+(22784, 10551, 1, 1, 2, 129), -- Forgotten Scroll - Protection of Alignment
+(22784, 6622, 1, 1, 2, 310), -- Giant's Codex
 -- Sel Mahum Soldier
 (22785, 10398, 1, 1, -1, 282), -- Icarus Disperser Piece
 (22785, 1894, 1, 1, -1, 23092), -- Crafted Leather
@@ -39516,6 +39591,7 @@ INSERT INTO `droplist` VALUES
 (22785, 10483, 1, 1, 2, 321.5992), -- Life Stone - Level 82
 (22785, 10484, 1, 1, 2, 80.3998), -- Mid-Grade Life Stone - Level 82
 (22785, 10485, 1, 1, 2, 8.038875), -- High-Grade Life Stone - Level 82
+(22785, 6622, 1, 1, 2, 162), -- Giant's Codex
 -- Sel Mahum Squad Leader
 (22786, 10401, 1, 1, -1, 1455), -- Icarus Trident Piece
 (22786, 1894, 1, 1, -1, 119474), -- Crafted Leather
@@ -39530,6 +39606,7 @@ INSERT INTO `droplist` VALUES
 (22786, 10483, 1, 1, 2, 1664.031974), -- Life Stone - Level 82
 (22786, 10484, 1, 1, 2, 415.988364), -- Mid-Grade Life Stone - Level 82
 (22786, 10485, 1, 1, 2, 41.61454), -- High-Grade Life Stone - Level 82
+(22786, 6622, 1, 1, 2, 839), -- Giant's Codex
 -- Sel Mahum Squad Leader
 (22787, 15654, 1, 1, -1, 7016), -- Sealed Moirai Gauntlet Piece
 (22787, 15655, 1, 1, -1, 7016), -- Sealed Moirai Leather Gloves Piece
@@ -39570,6 +39647,7 @@ INSERT INTO `droplist` VALUES
 (22787, 15787, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Boots (60%)
 (22787, 15788, 1, 1, 2, 153.266504), -- Recipe - Sealed Moirai Leather Boots (60%)
 (22787, 15789, 1, 1, 2, 153.309702), -- Recipe - Sealed Moirai Shoes (60%)
+(22787, 6622, 1, 1, 2, 479), -- Giant's Codex
 -- Sel Mahum Squad Leader
 (22788, 15645, 1, 1, -1, 5511), -- Sealed Moirai Helmet Piece
 (22788, 15646, 1, 1, -1, 5511), -- Sealed Moirai Leather Helmet Piece
@@ -39605,6 +39683,7 @@ INSERT INTO `droplist` VALUES
 (22788, 15777, 1, 1, 2, 110.69035), -- Recipe - Sealed Moirai Circlet (60%)
 (22788, 15791, 1, 1, 2, 158.1158), -- Recipe - Sealed Moirai Shield (60%)
 (22788, 15790, 1, 1, 2, 158.2087), -- Recipe - Sealed Moirai Sigil (60%)
+(22788, 6622, 1, 1, 2, 516), -- Giant's Codex
 -- Guide Solina
 (22789, 15634, 1, 1, -1, 987), -- Vesper Cutter Piece
 (22789, 15635, 1, 1, -1, 986), -- Vesper Slasher Piece
@@ -39630,6 +39709,8 @@ INSERT INTO `droplist` VALUES
 (22789, 9557, 1, 1, 2, 47.763975), -- Holy Crystal
 (22789, 15690, 1, 1, 3, 1000), -- Secret Key
 (22789, 15540, 1, 1, 3, 1000), -- Unlit Torchlight
+(22789, 14207, 1, 1, 2, 164), -- Forgotten Scroll - Deflect Magic
+(22789, 9551, 1, 1, 2, 787), -- Holy Stone
 -- Seeker Solina
 (22790, 15640, 1, 1, -1, 945), -- Vesper Avenger Piece
 (22790, 15641, 1, 1, -1, 956), -- Vesper Retributer Piece
@@ -39658,6 +39739,8 @@ INSERT INTO `droplist` VALUES
 (22790, 9557, 1, 1, 2, 52.68459), -- Holy Crystal
 (22790, 15690, 1, 1, 3, 1000), -- Secret Key
 (22790, 15540, 1, 1, 3, 1000), -- Unlit Torchlight
+(22790, 14209, 1, 1, 2, 209), -- Forgotten Scroll - Hide
+(22790, 9551, 1, 1, 2, 1001), -- Holy Stone
 -- Savior Solina
 (22791, 15638, 1, 1, -1, 1843), -- Vesper Fighter Piece
 (22791, 959, 1, 1, -1, 125), -- Scroll: Enchant Weapon (S-Grade)
@@ -39676,6 +39759,8 @@ INSERT INTO `droplist` VALUES
 (22791, 959, 1, 1, 2, 10.32411), -- Scroll: Enchant Weapon (S-Grade)
 (22791, 15690, 1, 1, 3, 1000), -- Secret Key
 (22791, 15540, 1, 1, 3, 1000), -- Unlit Torchlight
+(22791, 14210, 1, 1, 2, 226), -- Forgotten Scroll - Dual Dagger Mastery
+(22791, 9551, 1, 1, 2, 1083), -- Holy Stone
 -- Disciple Solina
 (22792, 15644, 1, 1, -1, 2519), -- Vesper Thrower Piece
 (22792, 9628, 1, 1, -1, 33117), -- Leonard
@@ -39693,6 +39778,8 @@ INSERT INTO `droplist` VALUES
 (22792, 959, 1, 1, 2, 10.444989), -- Scroll: Enchant Weapon (S-Grade)
 (22792, 15690, 1, 1, 3, 1000), -- Secret Key
 (22792, 15540, 1, 1, 3, 1000), -- Unlit Torchlight
+(22792, 14220, 1, 1, 2, 205), -- Forgotten Scroll - Silent Mind
+(22792, 9551, 1, 1, 2, 983), -- Holy Stone
 -- Ascetic Solina
 (22793, 15637, 1, 1, -1, 2612), -- Vesper Shaper Piece
 (22793, 959, 1, 1, -1, 176), -- Scroll: Enchant Weapon (S-Grade)
@@ -39710,6 +39797,8 @@ INSERT INTO `droplist` VALUES
 (22793, 960, 1, 1, 2, 108.269984), -- Scroll: Enchant Armor (S-Grade)
 (22793, 15690, 1, 1, 3, 1000), -- Secret Key
 (22793, 15540, 1, 1, 3, 1000), -- Unlit Torchlight
+(22793, 14211, 1, 1, 2, 221), -- Forgotten Scroll - Seven Arrow
+(22793, 9551, 1, 1, 2, 1062), -- Holy Stone
 -- Divinity Judge
 (22794, 15639, 1, 1, -1, 13732), -- Vesper Stormer Piece
 (22794, 959, 1, 1, -1, 922), -- Scroll: Enchant Weapon (S-Grade)
@@ -39728,6 +39817,8 @@ INSERT INTO `droplist` VALUES
 (22794, 15690, 1, 1, 3, 10500), -- Secret Key
 (22794, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22794, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22794, 14208, 1, 1, 2, 1893), -- Forgotten Scroll - Final Secret
+(22794, 9551, 1, 1, 2, 9083), -- Holy Stone
 -- Divinity Manager
 (22795, 15663, 1, 1, -1, 26096), -- Sealed Vesper Breastplate Piece
 (22795, 15666, 1, 1, -1, 42035), -- Sealed Vesper Gaiter Piece
@@ -39753,6 +39844,9 @@ INSERT INTO `droplist` VALUES
 (22795, 15690, 1, 1, 3, 10500), -- Secret Key
 (22795, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22795, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22795, 14212, 1, 1, 2, 1518), -- Forgotten Scroll - Enlightenment - Wizard
+(22795, 14213, 1, 1, 2, 1517), -- Forgotten Scroll - Enlightenment - Healer
+(22795, 9551, 1, 1, 2, 7285), -- Holy Stone
 -- Divinity Supervisor
 (22796, 15664, 1, 1, -1, 37946), -- Sealed Vesper Leather Breastplate Piece
 (22796, 15670, 1, 1, -1, 58481), -- Sealed Vesper Leather Legging Piece
@@ -39778,6 +39872,9 @@ INSERT INTO `droplist` VALUES
 (22796, 15690, 1, 1, 3, 10500), -- Secret Key
 (22796, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22796, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22796, 10560, 1, 1, 2, 1684), -- Forgotten Scroll - Expose Weak Point
+(22796, 14220, 1, 1, 2, 1684), -- Forgotten Scroll - Silent Mind
+(22796, 9551, 1, 1, 2, 8081), -- Holy Stone
 -- Divinity Worshipper
 (22797, 15665, 1, 1, -1, 35390), -- Sealed Vesper Tunic Piece
 (22797, 15673, 1, 1, -1, 54541), -- Sealed Vesper Stockings Piece
@@ -39801,6 +39898,9 @@ INSERT INTO `droplist` VALUES
 (22797, 15690, 1, 1, 3, 10500), -- Secret Key
 (22797, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22797, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22797, 10577, 1, 1, 2, 1700), -- Forgotten Scroll - Excessive Loyalty
+(22797, 14221, 1, 1, 2, 1701), -- Forgotten Scroll - Turn Stone
+(22797, 9551, 1, 1, 2, 8165), -- Holy Stone
 -- Divinity Protector
 (22798, 15770, 1, 1, -1, 142869), -- Sealed Vesper Earring Gem
 (22798, 15771, 1, 1, -1, 102788), -- Sealed Vesper Necklace Gem
@@ -39830,6 +39930,9 @@ INSERT INTO `droplist` VALUES
 (22798, 15690, 1, 1, 3, 10500), -- Secret Key
 (22798, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22798, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22798, 10554, 1, 1, 2, 2582), -- Forgotten Scroll - Anti-Magic Armor
+(22798, 10576, 1, 1, 2, 2583), -- Forgotten Scroll - Servitor Barrier
+(22798, 9551, 1, 1, 2, 12395), -- Holy Stone
 -- Divinity Fighter
 (22799, 15667, 1, 1, -1, 81546), -- Sealed Vesper Gauntlet Piece
 (22799, 15671, 1, 1, -1, 81546), -- Sealed Vesper Leather Gloves Piece
@@ -39874,6 +39977,9 @@ INSERT INTO `droplist` VALUES
 (22799, 15690, 1, 1, 3, 10500), -- Secret Key
 (22799, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22799, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22799, 10559, 1, 1, 2, 2119), -- Forgotten Scroll - Sixth Sense
+(22799, 14192, 1, 1, 2, 8473), -- Forgotten Scroll - Star Fall
+(22799, 9551, 1, 1, 2, 10170), -- Holy Stone
 -- Divinity Magus
 (22800, 15660, 1, 1, -1, 67556), -- Sealed Vesper Helmet Piece
 (22800, 15661, 1, 1, -1, 67556), -- Sealed Vesper Leather Helmet Piece
@@ -39912,6 +40018,9 @@ INSERT INTO `droplist` VALUES
 (22800, 15690, 1, 1, 3, 10500), -- Secret Key
 (22800, 15540, 1, 1, 3, 10500), -- Unlit Torchlight
 (22800, 8056, 1, 1, 3, 49000), -- Key of Splendor Room
+(22800, 10578, 1, 1, 2, 2315), -- Forgotten Scroll - Mutual Response
+(22800, 14191, 1, 1, 2, 9261), -- Forgotten Scroll - Meteor
+(22800, 9551, 1, 1, 2, 11113), -- Holy Stone
 -- Cruel Pincer Golem
 (22801, 5162, 1, 1, -1, 858), -- Recipe: Spiritshot (S) Compressed Package (100%)
 (22801, 6701, 1, 1, -1, 10276), -- Sealed Imperial Crusader Breastplate Part
@@ -40453,7 +40562,9 @@ INSERT INTO `droplist` VALUES
 (22834, 10217, 1, 1, 1, 19), -- Icarus Spirit
 (22834, 1895, 3, 9, 2, 143954), -- Metallic Fiber
 (22834, 4040, 1, 1, 2, 60461), -- Mold Lubricant
-(22834, 9549, 1, 1, 2, 24184), -- Wind Stone
+(22834, 9549, 1, 1, 2, 24184); -- Wind Stone
+
+INSERT INTO `droplist` VALUES
 (22834, 9628, 1, 1, 2, 23710), -- Leonard
 (22834, 10483, 1, 1, 2, 20993), -- Life Stone - Level 82
 (22834, 9630, 1, 1, 2, 15911), -- Orichalcum
@@ -40568,9 +40679,7 @@ INSERT INTO `droplist` VALUES
 (22840, 9549, 1, 1, 2, 6700), -- Wind Stone
 (22840, 9628, 1, 1, 2, 6568), -- Leonard
 (22840, 9630, 1, 1, 2, 4407), -- Orichalcum
-(22840, 14166, 1, 1, 2, 4046); -- Life Stone - Level 84
-
-INSERT INTO `droplist` VALUES
+(22840, 14166, 1, 1, 2, 4046), -- Life Stone - Level 84
 (22840, 14167, 1, 1, 2, 1010), -- Mid-Grade Life Stone - Level 84
 (22840, 14168, 1, 1, 2, 101), -- High-Grade Life Stone - Level 84
 (22840, 9627, 1, 1, 2, 56), -- Giant's Codex - Mastery
@@ -42586,7 +42695,9 @@ INSERT INTO `droplist` VALUES
 (25260, 2092, 3, 7, 1, 223950.233936), -- Homunkulus's Sword Blade
 (25260, 2095, 3, 9, 1, 186625.456484), -- Sword of Nightmare Blade
 (25260, 2096, 4, 10, 1, 159964.340724), -- Sword of Whispering Death Blade
-(25260, 4601, 6, 18, 2, 73988.27508), -- Greater Dye of STR (Str+3 Con-3)
+(25260, 4601, 6, 18, 2, 73988.27508); -- Greater Dye of STR (Str+3 Con-3)
+
+INSERT INTO `droplist` VALUES
 (25260, 4602, 2, 4, 2, 295953.10032), -- Greater Dye of STR (Str+3 Dex-3)
 (25260, 4603, 2, 6, 2, 221964.82524), -- Greater Dye of CON (Con+3 Str-3)
 (25260, 951, 3, 7, 2, 145285.79936), -- Scroll: Enchant Weapon (C-Grade)
@@ -42704,9 +42815,7 @@ INSERT INTO `droplist` VALUES
 -- Anakim's Nemesis Zakaron
 (25281, 5313, 1, 1, 0, 54307.97645), -- Sealed Gauntlets of Nightmare
 (25281, 5314, 1, 1, 0, 54307.97645), -- Sealed Boots of Nightmare
-(25281, 5318, 1, 1, 0, 54307.97645); -- Sealed Majestic Gauntlets
-
-INSERT INTO `droplist` VALUES
+(25281, 5318, 1, 1, 0, 54307.97645), -- Sealed Majestic Gauntlets
 (25281, 5319, 1, 1, 0, 54307.97645), -- Sealed Majestic Boots
 (25281, 5514, 60, 180, 0, 51784.493033), -- Sealed Gauntlets of Nightmare Design
 (25281, 5502, 116, 346, 0, 26900.823222), -- Sealed Boots of Nightmare Lining
@@ -44759,7 +44868,9 @@ INSERT INTO `droplist` VALUES
 (25677, 10404, 1, 1, 0, 238403.21952), -- Icarus Hall Piece
 (25677, 9516, 1, 1, 1, 8132.230473), -- Sealed Dynasty Helmet
 (25677, 9529, 1, 1, 1, 11617.577593), -- Sealed Dynasty Shield
-(25677, 13885, 1, 1, 1, 22175.521051), -- Sealed Arcana Sigil
+(25677, 13885, 1, 1, 1, 22175.521051); -- Sealed Arcana Sigil
+
+INSERT INTO `droplist` VALUES
 (25677, 9532, 9, 27, 1, 111466.865213), -- Sealed Dynasty Helmet Piece
 (25677, 9545, 5, 15, 1, 239157.578217), -- Sealed Dynasty Shield Piece
 (25677, 10114, 2, 6, 1, 345871.227453), -- Sealed Dynasty Sigil Piece
@@ -44876,9 +44987,7 @@ INSERT INTO `droplist` VALUES
 (25693, 9993, 1, 3, 0, 335934.158864), -- Sealed Dynasty Ring Gemstone
 (25693, 9442, 1, 1, 1, 544.127377), -- Dynasty Sword
 (25693, 9443, 1, 1, 1, 544.127377), -- Dynasty Blade
-(25693, 9444, 1, 1, 1, 544.127377); -- Dynasty Phantom
-
-INSERT INTO `droplist` VALUES
+(25693, 9444, 1, 1, 1, 544.127377), -- Dynasty Phantom
 (25693, 9616, 1, 1, 1, 170082.03533), -- Dynasty Sword Piece
 (25693, 9617, 1, 1, 1, 170082.03533), -- Dynasty Blade Piece
 (25693, 9618, 1, 1, 1, 170082.547209), -- Dynasty Phantom Piece
@@ -45898,9 +46007,9 @@ INSERT INTO `droplist` VALUES
 (29118, 10222, 1, 1, 0, 65100), -- Icarus Hall
 (29118, 10223, 1, 1, 0, 65100), -- Icarus Spitter
 (29118, 13893, 1, 1, 1, 400000), -- Sealed Holy Spirit's Cloak
-(29118, 10552, 1, 1, 1, 200000), -- Forgotten Scroll - Fighter's Will
-(29118, 10553, 1, 1, 1, 200000), -- Forgotten Scroll - Archer's Will
-(29118, 14219, 1, 1, 1, 200000), -- Forgotten Scroll - Magician's Will
+(29118, 10552, 1, 1, 1, 2000), -- Forgotten Scroll - Fighter's Will
+(29118, 10553, 1, 1, 1, 2000), -- Forgotten Scroll - Archer's Will
+(29118, 14219, 1, 1, 1, 2000), -- Forgotten Scroll - Magician's Will
 -- Lost Captain
 (29129, 395, 1, 1, 0, 337099.912206), -- Manticore Skin Shirt
 (29129, 417, 4, 12, 0, 67295.009586), -- Manticore Skin Gaiters
@@ -46043,8 +46152,8 @@ INSERT INTO `droplist` VALUES
 (29163, 10222, 1, 1, 0, 65100), -- Icarus Hall
 (29163, 10223, 1, 1, 0, 65100), -- Icarus Spitter
 (29163, 13893, 1, 1, 1, 200000), -- Sealed Holy Spirit's Cloak
-(29163, 10550, 1, 1, 1, 400000), -- Forgotten Scroll - Protection of Elemental
-(29163, 10552, 1, 1, 1, 400000), -- Forgotten Scroll - Fighter's Will
+(29163, 10550, 1, 1, 1, 40000), -- Forgotten Scroll - Protection of Elemental
+(29163, 10552, 1, 1, 1, 4000), -- Forgotten Scroll - Fighter's Will
 (29163, 21939, 1, 1, 1, 37700), -- Claw of Destruction
 -- Tiat
 (29175, 7575, 1, 1, 0, 10599.273198), -- Draconic Bow
@@ -46112,6 +46221,25 @@ INSERT INTO `droplist` VALUES
 (29179, 16165, 2, 4, 5, 400000), -- Mid-Grade Life Stone - Level 86
 (29179, 16025, 1, 1, 6, 250000), -- Necklace of Freya
 (29179, 21894, 1, 1, 7, 30000), -- Ice Queen's Tiara
+(29179, 14189, 1, 1, 8, 27500), -- Forgotten Scroll - Hurricane Armor
+(29179, 14190, 1, 1, 8, 26250), -- Forgotten Scroll - Vampiric Mist
+(29179, 14193, 1, 1, 8, 26250), -- Forgotten Scroll - Sublime Self Sacrifice
+(29179, 14194, 1, 1, 8, 26250), -- Forgotten Scroll - Blessing of Eva
+(29179, 14195, 1, 1, 8, 26250), -- Forgotten Scroll - Lord of Vampire
+(29179, 14198, 1, 1, 8, 26250), -- Forgotten Scroll - Song of Purification
+(29179, 14199, 1, 1, 8, 26250), -- Forgotten Scroll - Dance of Berserker
+(29179, 14200, 1, 1, 8, 26250), -- Forgotten Scroll - Summon Imperial Phoenix
+(29179, 14201, 1, 1, 8, 26250), -- Forgotten Scroll - Maximum Force Focus
+(29179, 14202, 1, 1, 8, 26250), -- Forgotten Scroll - Maximum Sonic Focus
+(29179, 14204, 1, 1, 8, 26250), -- Forgotten Scroll - Spirit of the Cat
+(29179, 14205, 1, 1, 8, 26250), -- Forgotten Scroll - Spirit of the Unicorn
+(29179, 14206, 1, 1, 8, 26250), -- Forgotten Scroll - Spirit of the Phantom
+(29179, 14197, 1, 1, 8, 26250), -- Forgotten Scroll - Seal of Limit
+(29179, 14222, 1, 1, 8, 26250), -- Forgotten Scroll - Lucky Strike
+(29179, 14223, 1, 1, 8, 26250), -- Forgotten Scroll - Eye for Eye
+(29179, 14225, 1, 1, 8, 26250), -- Forgotten Scroll - Counter Critical
+(29179, 14226, 1, 1, 8, 26250), -- Forgotten Scroll - Onslaught of Pa'agrio
+(29179, 14227, 1, 1, 8, 26250), -- Forgotten Scroll - Great Fury
 -- Freya
 (29180, 15560, 1, 1, 0, 27300), -- Vigwik Axe
 (29180, 15561, 1, 1, 0, 27270), -- Devilish Maul
@@ -46195,6 +46323,25 @@ INSERT INTO `droplist` VALUES
 (29181, 6659, 1, 1, 7, 900), -- Earring of Zaken
 (29181, 21935, 1, 1, 8, 900), -- Butcher Blades
 (29181, 21892, 1, 1, 9, 30000), -- Pirate King Hat
+(29181, 14170, 1, 1, 10, 27500), -- Forgotten Scroll - Seed of Revenge
+(29181, 14171, 1, 1, 10, 26250), -- Forgotten Scroll - Hell Scream
+(29181, 14172, 1, 1, 10, 26250), -- Forgotten Scroll - Spirit of Phoenix
+(29181, 14173, 1, 1, 10, 26250), -- Forgotten Scroll - Eva's Will / Touch of Eva
+(29181, 14174, 1, 1, 10, 26250), -- Forgotten Scroll - Pain of Shillien
+(29181, 14175, 1, 1, 10, 26250), -- Forgotten Scroll - Exciting Adventure
+(29181, 14176, 1, 1, 10, 26250), -- Forgotten Scroll - Wind Riding
+(29181, 14177, 1, 1, 10, 26250), -- Forgotten Scroll - Ghost Walking
+(29181, 14178, 1, 1, 10, 26250), -- Forgotten Scroll - Flame Hawk
+(29181, 14179, 1, 1, 10, 26250), -- Forgotten Scroll - Arrow Rain
+(29181, 14180, 1, 1, 10, 26250), -- Forgotten Scroll - Ghost Piercing
+(29181, 14181, 1, 1, 10, 26250), -- Forgotten Scroll - Dread Pool
+(29181, 14182, 1, 1, 10, 26250), -- Forgotten Scroll - Force of Destruction
+(29181, 14183, 1, 1, 10, 26250), -- Forgotten Scroll - Demolition Impact
+(29181, 14184, 1, 1, 10, 26250), -- Forgotten Scroll - Golem Armor
+(29181, 14185, 1, 1, 10, 26250), -- Forgotten Scroll - Wild Shot
+(29181, 14186, 1, 1, 10, 26250), -- Forgotten Scroll - Lightning Shock
+(29181, 14187, 1, 1, 10, 26250), -- Forgotten Scroll - Flame Armor
+(29181, 14188, 1, 1, 10, 26250), -- Forgotten Scroll - Frost Armor
 -- Baylor
 (29186, 13143, 1, 1, 0, 83700), -- Sealed Vesper Helmet
 (29186, 13144, 1, 1, 0, 83300), -- Sealed Vesper Leather Helmet
