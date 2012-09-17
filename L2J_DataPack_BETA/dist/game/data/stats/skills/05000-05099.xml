@@ -530,6 +530,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
+		<set name="skillType" val="BUFF" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
 		</for>
