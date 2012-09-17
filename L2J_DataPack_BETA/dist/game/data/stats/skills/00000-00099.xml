@@ -138,7 +138,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<set name="numCharges" val="3" /> <!-- 3 Charges are consumed -->
+		<set name="chargeConsume" val="3" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -186,7 +186,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
+		<set name="chargeConsume" val="2" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1241,7 +1241,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<!-- charge values -->
-		<set name="numCharges" val="1" />
+		<set name="chargeConsume" val="1" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
