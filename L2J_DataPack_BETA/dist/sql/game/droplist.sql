@@ -46323,7 +46323,7 @@ INSERT INTO `droplist` VALUES
 (29181, 57, 9000000, 11000000, 5, 1000000), -- Adena
 (29181, 16162, 2, 4, 6, 600000), -- High-Grade Life Stone - Level 85
 (29181, 16166, 2, 4, 6, 400000), -- High-Grade Life Stone - Level 86
-(29181, 6659, 1, 1, 7, 900), -- Earring of Zaken
+(29181, 21712, 1, 1, 7, 900), -- Blessed Earring of Zaken
 (29181, 21935, 1, 1, 8, 900), -- Butcher Blades
 (29181, 21892, 1, 1, 9, 30000), -- Pirate King Hat
 (29181, 14170, 1, 1, 10, 27500), -- Forgotten Scroll - Seed of Revenge
