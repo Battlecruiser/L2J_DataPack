@@ -130,18 +130,21 @@
 		<!-- Description: When the seal is released, P. Def. and attribute resistance increase, and special skills can be used. It can be equipped only after releasing the seal through the weavers Olf Kanore in Aden or Olf Adams in Rune. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="material" val="cloth" />
+		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 	</item>
 	<item id="21714" type="EtcItem" name="Sealed Cloak of Freya">
 		<!-- Description: When the seal is released, P. Def. and attribute resistance increase, and special skills can be used. It can be equipped only after releasing the seal through the weavers Olf Kanore in Aden or Olf Adams in Rune. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="material" val="cloth" />
+		<set name="price" val="32971650" />
 		<set name="weight" val="220" />
 	</item>
 	<item id="21715" type="EtcItem" name="Sealed Cloak of Frintezza">
 		<!-- Description: When the seal is released, P. Def. and attribute resistance increase, and special skills can be used. It can be equipped only after releasing the seal through the weavers Olf Kanore in Aden or Olf Adams in Rune. Enchantment, attribute, and refining are impossible. Can be exchanged or dropped. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="material" val="cloth" />
+		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 	</item>
 	<item id="21716" type="Armor" name="Cloak of Zaken">
@@ -150,7 +153,9 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s80" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
+		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21242-1" />
 		<cond msgId="2453">
@@ -172,7 +177,9 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s84" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
+		<set name="price" val="32971650" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21243-1" />
 		<cond msgId="2453">
@@ -194,7 +201,9 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s80" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
+		<set name="price" val="29674485" />
 		<set name="weight" val="220" />
 		<set name="item_skill" val="21244-1" />
 		<cond msgId="2453">
@@ -216,9 +225,12 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s80" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
 		<set name="weight" val="110" />
 		<set name="item_skill" val="21242-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="1" />
 		</cond>
@@ -238,9 +250,12 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s84" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
 		<set name="weight" val="110" />
 		<set name="item_skill" val="21243-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="1" />
 		</cond>
@@ -260,9 +275,12 @@
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="s80" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
 		<set name="weight" val="110" />
 		<set name="item_skill" val="21244-1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="1" />
 		</cond>
