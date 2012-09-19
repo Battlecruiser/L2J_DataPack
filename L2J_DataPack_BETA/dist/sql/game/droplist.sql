@@ -45613,6 +45613,7 @@ INSERT INTO `droplist` VALUES
 (29047, 8620, 5, 25, 9, 600000), -- Ancient Book: Divine Inspiration (Manuscript)
 (29047, 13893, 1, 1, 9, 400000), -- Sealed Holy Spirit's Cloak
 (29047, 21893, 1, 1, 10, 100000), -- Halisha's Helmet
+(29047, 21715, 1, 1, 11, 100000), -- Sealed Cloak of Frintezza
 -- Benom
 (29054, 6674, 1, 1, 0, 17879.70348), -- Sealed Imperial Crusader Breastplate
 (29054, 6675, 1, 1, 0, 28535.160216), -- Sealed Imperial Crusader Gaiters
@@ -46240,6 +46241,7 @@ INSERT INTO `droplist` VALUES
 (29179, 14225, 1, 1, 8, 26250), -- Forgotten Scroll - Counter Critical
 (29179, 14226, 1, 1, 8, 26250), -- Forgotten Scroll - Onslaught of Pa'agrio
 (29179, 14227, 1, 1, 8, 26250), -- Forgotten Scroll - Great Fury
+(29179, 21714, 1, 1, 9, 30000), -- Sealed Cloak of Freya
 -- Freya
 (29180, 15560, 1, 1, 0, 27300), -- Vigwik Axe
 (29180, 15561, 1, 1, 0, 27270), -- Devilish Maul
@@ -46277,6 +46279,7 @@ INSERT INTO `droplist` VALUES
 (29180, 16026, 1, 1, 5, 300000), -- Blessed Necklace of Freya
 (29180, 16027, 1, 1, 6, 500000), -- Bottle of Freya's Soul
 (29180, 21894, 1, 1, 7, 30000), -- Ice Queen's Tiara
+(29180, 21714, 1, 1, 8, 30000), -- Sealed Cloak of Freya
 -- Zaken
 (29181, 13143, 1, 1, 0, 17760), -- Sealed Vesper Helmet
 (29181, 13144, 1, 1, 0, 17640), -- Sealed Vesper Leather Helmet
@@ -46342,6 +46345,7 @@ INSERT INTO `droplist` VALUES
 (29181, 14186, 1, 1, 10, 26250), -- Forgotten Scroll - Lightning Shock
 (29181, 14187, 1, 1, 10, 26250), -- Forgotten Scroll - Flame Armor
 (29181, 14188, 1, 1, 10, 26250), -- Forgotten Scroll - Frost Armor
+(29181, 21713, 1, 1, 11, 30000), -- Sealed Cloak of Zaken
 -- Baylor
 (29186, 13143, 1, 1, 0, 83700), -- Sealed Vesper Helmet
 (29186, 13144, 1, 1, 0, 83300), -- Sealed Vesper Leather Helmet
