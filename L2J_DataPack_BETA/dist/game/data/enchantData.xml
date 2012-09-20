@@ -5,7 +5,25 @@
 	<enchant id="947" targetGrade="b" />
 	<enchant id="951" targetGrade="c" />
 	<enchant id="955" targetGrade="d" />
-	<enchant id="959" targetGrade="s" />
+	<enchant id="959" targetGrade="s">
+		<!-- Custom Progressive enchant system uncomment the lines below to enable. -->
+		<!--  <step level="1" successRate="100.00" /> -->
+		<!--  <step level="2" successRate="100.00" /> -->
+		<!--  <step level="3" successRate="100.00" /> -->
+		<!--  <step level="4" successRate="80.00" /> -->
+		<!--  <step level="5" successRate="75.00" /> -->
+		<!--  <step level="6" successRate="70.00" /> -->
+		<!--  <step level="7" successRate="65.00" /> -->
+		<!--  <step level="8" successRate="60.00" /> -->
+		<!--  <step level="9" successRate="55.00" /> -->
+		<!--  <step level="10" successRate="50.00" /> -->
+		<!--  <step level="11" successRate="45.00" /> -->
+		<!--  <step level="12" successRate="40.00" /> -->
+		<!--  <step level="13" successRate="35.00" /> -->
+		<!--  <step level="14" successRate="30.00" /> -->
+		<!--  <step level="15" successRate="25.00" /> -->
+		<!--  <step level="16" successRate="20.00" /> -->
+	</enchant>
 	<!-- Scrolls: Enchant Armor -->
 	<enchant id="730" isWeapon="false" targetGrade="a" />
 	<enchant id="948" isWeapon="false" targetGrade="b" />
@@ -84,96 +102,142 @@
 	<enchant id="22230" isWeapon="false" isSafe="true" targetGrade="d" maxEnchant="6" />
 
 	<!-- Master Yogi's Scroll: Enchant Weapon -->
-	<enchant id="13540">
+	<enchant id="13540" maxEnchant="23">
 		<item id="13539" /> <!-- Staff of Master Yogi -->
+	</enchant>
+
+	<!-- Olf's T-shirt Enchant Scroll -->
+	<enchant id="21581" isWeapon="false" maxEnchant="10">
+		<item id="21580" /> <!-- Olf's T-shirt -->
+		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
+	</enchant>
+
+	<!-- Blessed Olf's T-shirt Enchant Scroll -->
+	<enchant id="21582" isWeapon="false" isBlessed="true" maxEnchant="10">
+		<item id="21580" /> <!-- Olf's T-shirt -->
+		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
+	</enchant>
+
+	<!-- Blessed Olf's T-shirt Enchant Scroll - Event -->
+	<enchant id="21707" isWeapon="false" isBlessed="true" maxEnchant="10">
+		<item id="21580" /> <!-- Olf's T-shirt -->
+		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
+	</enchant>
+
+	<!-- Event - Herdsman's Love Scroll Event -->
+	<enchant id="15381" isWeapon="false" maxEnchant="16">
+		<item id="15383" /> <!-- Weaver's Multi-colored Clothes (7-day limited period) -->
+		<item id="15384" /> <!-- Weaver's Multi-colored Clothes (30-day limited period) -->
+		<item id="15385" /> <!-- Weaver's Multi-colored Clothes (60-day limited period) -->
+		<item id="15386" /> <!-- Weaver's Multi-colored Clothes (90-day limited period) -->
+		<item id="15387" /> <!-- Weaver's Multi-colored Clothes (Permanent Use) -->
+		<item id="15388" /> <!-- Weaver's Multi-colored Clothes (Event) (7-day limited period) -->
+		<item id="15389" /> <!-- Weaver's Multi-colored Clothes (Event) (30-day limited period) -->
+		<item id="15390" /> <!-- Weaver's Multi-colored Clothes (Event) (60-day limited period) -->
+		<item id="15391" /> <!-- Weaver's Multi-colored Clothes (Event) (90-day limited period) -->
+		<item id="15392" /> <!-- Weaver's Multi-colored Clothes (Event) (Permanent Use) -->
+	</enchant>
+
+	<!-- Event - Vitality Belt Enchant Scroll -->
+	<enchant id="15382" isWeapon="false" maxEnchant="50">
+		<item id="15393" /> <!-- Vitality Belt (7-day limited period) -->
+		<item id="15394" /> <!-- Vitality Belt (30-day limited period) -->
+		<item id="15395" /> <!-- Vitality Belt (60-day limited period) -->
+		<item id="15396" /> <!-- Vitality Belt (90-day limited period) -->
+		<item id="15397" /> <!-- Vitality Belt (Permanent Use) -->
+		<item id="15398" /> <!-- Vitality Belt (Event) (7-day limited period) -->
+		<item id="15399" /> <!-- Vitality Belt (Event) (30-day limited period) -->
+		<item id="15400" /> <!-- Vitality Belt (Event) (60-day limited period) -->
+		<item id="15401" /> <!-- Vitality Belt (Event) (90-day limited period) -->
+		<item id="15402" /> <!-- Vitality Belt (Event) (Permanent Use) -->
 	</enchant>
 
 	<!-- Weapon enhancing scroll exclusive for PC cafe -->
 	<enchant id="15346" targetGrade="s">
-		<item id="15313" /> <!-- PC cafe' exclusive - Forgotten Blade -->
-		<item id="15314" /> <!-- For PC cafe use - Basalt Battle hammer -->
-		<item id="15315" /> <!-- For PC cafe use - Imperial Staff -->
-		<item id="15316" /> <!-- For PC cafe use - Angel Slayer -->
-		<item id="15317" /> <!-- For PC cafe use - Dragon Hunter Axe -->
-		<item id="15318" /> <!-- For PC cafe use - Saint Spear -->
-		<item id="15319" /> <!-- For PC cafe use - Demon Splinter -->
-		<item id="15320" /> <!-- For PC cafe use - Heaven's Divider -->
-		<item id="15321" /> <!-- For PC cafe use - Arcana Mace -->
-		<item id="15322" /> <!-- For PC cafe use - Draconic Bow -->
-		<item id="15323" /> <!-- For PC cafe use - Laevateinn -->
-		<item id="15324" /> <!-- For PC cafe use - Gram -->
-		<item id="15325" /> <!-- For PC cafe use - Sarnga -->
-		<item id="15326" /> <!-- For PC cafe use - Tallum Blade *Dark Legion -->
+		<item id="15313" /> <!-- Player Commendation - Forgotten Blade (Player Recommendation Weapon) -->
+		<item id="15314" /> <!-- Player Commendation - Basalt Battlehammer (Player Recommendation Weapon) -->
+		<item id="15315" /> <!-- Player Commendation - Imperial Staff (Player Recommendation Weapon) -->
+		<item id="15316" /> <!-- Player Commendation - Angel Slayer (Player Recommendation Weapon) -->
+		<item id="15317" /> <!-- Player Commendation - Dragon Hunter Axe (Player Recommendation Weapon) -->
+		<item id="15318" /> <!-- Player Commendation - Saint Spear (Player Recommendation Weapon) -->
+		<item id="15319" /> <!-- Player Commendation - Demon Splinter (Player Recommendation Weapon) -->
+		<item id="15320" /> <!-- Player Commendation - Heaven's Divider (Player Recommendation Weapon) -->
+		<item id="15321" /> <!-- Player Commendation - Arcana Macw (Player Recommendation Weapon) -->
+		<item id="15322" /> <!-- Player Commendation - Draconic Bow (Player Recommendation Weapon) -->
+		<item id="15323" /> <!-- Player Commendation - Laevateinn (Player Recommendation Weapon) -->
+		<item id="15324" /> <!-- Player Commendation - Gram (Player Recommendation Weapon) -->
+		<item id="15325" /> <!-- Player Commendation - Sarunga (Player Recommendation Weapon) -->
+		<item id="15326" /> <!-- Player Commendation - Tallum Blade *Dark Legion's Edge (Player Recommendation Weapon) -->
 	</enchant>
 	<enchant id="15347" targetGrade="a">
-		<item id="13210" /> <!-- PC cafe' exclusive - Sirra's Blade -->
-		<item id="13211" /> <!-- For PC Cafe Use - Sword of Ipos -->
-		<item id="13212" /> <!-- For PC Cafe Use - Barakiel's Axe -->
-		<item id="13213" /> <!-- For PC Cafe Use - Behemoth Tuning Fork -->
-		<item id="13214" /> <!-- For PC Cafe Use - Naga Storm -->
-		<item id="13215" /> <!-- For PC cafe use - Tiphon's Spear -->
-		<item id="13216" /> <!-- For PC cafe use - Shyeed's Bow -->
-		<item id="13217" /> <!-- For PC Cafe Use - Sobekk's Hurricane -->
-		<item id="13218" /> <!-- For PC Cafe Use - Themis' Tongue -->
-		<item id="13219" /> <!-- For PC Cafe Use - Cabrio's Hand -->
-		<item id="13220" /> <!-- For PC Cafe Use - Daimon Crystal -->
-		<item id="13221" /> <!-- For PC cafe use - Tallum Blade*Damascus -->
-		<item id="13222" /> <!-- For PC Cafe Use - Eclair Bijou -->
-		<item id="13223" /> <!-- For PC cafe use - Durendal -->
-		<item id="13224" /> <!-- For PC Cafe Use - Screaming Vengeance -->
+		<item id="13210" /> <!-- Player Commendation - Sirra's Blade (Player Commendation Weapon) -->
+		<item id="13211" /> <!-- Player Commendation - Sword of Ipos (Player Commendation Weapon) -->
+		<item id="13212" /> <!-- Player Commendation - Barakiel's Axe (Player Commendation Weapon) -->
+		<item id="13213" /> <!-- Player Commendation - Behemoth Tuning Fork (Player Commendation Weapon) -->
+		<item id="13214" /> <!-- Player Commendation - Naga Storm (Player Commendation Weapon) -->
+		<item id="13215" /> <!-- Player Commendation - Tiphon's Spear (Player Commendation Weapon) -->
+		<item id="13216" /> <!-- Player Commendation - Shyeed's Bow (Player Commendation Weapon) -->
+		<item id="13217" /> <!-- Player Commendation - Sobekk's Hurricane (Player Commendation Weapon) -->
+		<item id="13218" /> <!-- Player Commendation - Themis' Tongue (Player Commendation Weapon) -->
+		<item id="13219" /> <!-- Player Commendation - Cabrio's Hand (Player Commendation Weapon) -->
+		<item id="13220" /> <!-- Player Commendation - Daimon Crystal (Player Commendation Weapon) -->
+		<item id="13221" /> <!-- Player Commendation - Tallum Blade*Damascus (Player Commendation Weapon) -->
+		<item id="13222" /> <!-- Player Commendation - Eclair Bijou (Player Commendation Weapon) -->
+		<item id="13223" /> <!-- Player Commendation - Durendal (Player Commendation Weapon) -->
+		<item id="13224" /> <!-- Player Commendation - Screaming Vengeance (Player Commendation Weapon) -->
 	</enchant>
 	<enchant id="15348" targetGrade="b">
-		<item id="13194" /> <!-- For PC Cafe Use - Damascus Sword -->
-		<item id="13195" /> <!-- For PC cafe use - Lance -->
-		<item id="13196" /> <!-- For PC Cafe Use - Deadman's Glory -->
-		<item id="13197" /> <!-- For PC Cafe Use - Art of Battle Axe -->
-		<item id="13198" /> <!-- For PC Cafe Use - Staff of Evil Spirits -->
-		<item id="13199" /> <!-- For PC Cafe USE - Devil's Dagger -->
-		<item id="13200" /> <!-- For PC Cafe Use - Bellion Cestus -->
-		<item id="13201" /> <!-- For PC cafe use - Hazard Bow -->
-		<item id="13202" /> <!-- For PC Cafe Use - Samurai*Samurai -->
-		<item id="13203" /> <!-- For PC Cafe Use - Guardian's Sword -->
-		<item id="13204" /> <!-- For PC Cafe Use - Wizard's Tear -->
-		<item id="13205" /> <!-- For PC Cafe Use - Kaim Vanul's Bones -->
-		<item id="13206" /> <!-- For PC Cafe Use - Star Buster -->
-		<item id="13207" /> <!-- For PC cafe use - Colichemarde -->
-		<item id="13208" /> <!-- For PC cafe use - Dismantler -->
-		<item id="13209" /> <!-- For PC Cafe Use - Hell Hound -->
+		<item id="13194" /> <!-- Player Commendation - Damascus Sword (Player Commendation Weapon) -->
+		<item id="13195" /> <!-- Player Commendation - Lance (Player Commendation Weapon) -->
+		<item id="13196" /> <!-- Player Commendation - Deadman's Glory (Player Commendation Weapon) -->
+		<item id="13197" /> <!-- Player Commendation - Art of Battle Axe (Player Commendation Weapon) -->
+		<item id="13198" /> <!-- Player Commendation - Staff of Evil Spirits (Player Commendation Weapon) -->
+		<item id="13199" /> <!-- Player Commendation - Devil's Dagger (Player Commendation Weapon) -->
+		<item id="13200" /> <!-- Player Commendation - Bellion Cestus (Player Commendation Weapon) -->
+		<item id="13201" /> <!-- Player Commendation - Bow of Peril (Player Commendation Weapon) -->
+		<item id="13202" /> <!-- Player Commendation - Samurai*Samurai (Player Commendation Weapon) -->
+		<item id="13203" /> <!-- Player Commendation - Guardian's Sword (Player Commendation Weapon) -->
+		<item id="13204" /> <!-- Player Commendation - Wizard's Tear (Player Commendation Weapon) -->
+		<item id="13205" /> <!-- Player Commendation - Kaim Vanul's Bones (Player Commendation Weapon) -->
+		<item id="13206" /> <!-- Player Commendation - Star Buster (Player Commendation Weapon) -->
+		<item id="13207" /> <!-- Player Commendation - Colichemarde (Player Commendation Weapon) -->
+		<item id="13208" /> <!-- Player Commendation - Dismantler (Player Commendation Weapon) -->
+		<item id="13209" /> <!-- Player Commendation - Hell Hound (Player Commendation Weapon) -->
 	</enchant>
 	<enchant id="15349" targetGrade="c">
-		<item id="13178" /> <!-- For PC Cafe Use - Samurai Long Sword -->
-		<item id="13179" /> <!-- For PC Cafe Use - Ghost's Wand -->
-		<item id="13180" /> <!-- For PC Cafe Use - Ghoul's Wand -->
-		<item id="13181" /> <!-- For PC Cafe Use - Devil's Wand -->
-		<item id="13182" /> <!-- For PC Cafe USE - Crystal Dagger -->
-		<item id="13183" /> <!-- For PC cafe use - Great Pata -->
-		<item id="13184" /> <!-- For PC cafe use - Eminence Bow -->
-		<item id="13185" /> <!-- For PC Cafe Use - Orcish Poleaxe -->
-		<item id="13186" /> <!-- For PC cafe use - Yaksa Mace -->
-		<item id="13187" /> <!-- For PC Cafe Use - Shamshir*Shamshir -->
-		<item id="13188" /> <!-- PC Cafe Use - Admiral's Estoc -->
-		<item id="13189" /> <!-- For PC cafe use - Saber Tooth -->
-		<item id="13190" /> <!-- For PC Cafe Use - Sharpshooter -->
-		<item id="13191" /> <!-- For PC Cafe Use - Ecliptic Sword -->
-		<item id="13192" /> <!-- For PC Cafe Use - Ecliptic Axe -->
-		<item id="13193" /> <!-- For PC Cafe Use - Dwarven Hammer -->
+		<item id="13178" /> <!-- Player Commendation - Samurai Long Sword (Player Commendation Weapon) -->
+		<item id="13179" /> <!-- Player Commendation - Ghost's Wand (Player Commendation Weapon) -->
+		<item id="13180" /> <!-- Player Commendation - Ghoul's Wand (Player Commendation Weapon) -->
+		<item id="13181" /> <!-- Player Commendation - Devil's Wand (Player Commendation Weapon) -->
+		<item id="13182" /> <!-- Player Commendation - Crystal Dagger (Player Commendation Weapon) -->
+		<item id="13183" /> <!-- Player Commendation - Great Pata (Player Commendation Weapon) -->
+		<item id="13184" /> <!-- Player Commendation - Eminence Bow (Player Commendation Weapon) -->
+		<item id="13185" /> <!-- Player Commendation - Orcish Poleaxe (Player Commendation Weapon) -->
+		<item id="13186" /> <!-- Player Commendation - Yaksa Mace (Player Commendation Weapon) -->
+		<item id="13187" /> <!-- Player Commendation - Shamshir*Shamshir (Player Commendation Weapon) -->
+		<item id="13188" /> <!-- Player Commendation - Admiral's Estoc (Player Commendation Weapon) -->
+		<item id="13189" /> <!-- Player Commendation - Saber Tooth (Player Commendation Weapon) -->
+		<item id="13190" /> <!-- Player Commendation - Sharpshooter (Player Commendation Weapon) -->
+		<item id="13191" /> <!-- Player Commendation - Ecliptic Sword (Player Commendation Weapon) -->
+		<item id="13192" /> <!-- Player Commendation - Ecliptic Axe (Player Commendation Weapon) -->
+		<item id="13193" /> <!-- Player Commendation - Dwarven Hammer (Player Commendation Weapon) -->
 	</enchant>
 	<enchant id="15350" targetGrade="d">
-		<item id="13163" /> <!-- For PC Cafe Use - Bastard*Crimson Sword -->
-		<item id="13164" /> <!-- For PC cafe use - Claymore -->
-		<item id="13165" /> <!-- For PC cafe use - Bonebreaker -->
-		<item id="13166" /> <!-- For PC Cafe Use - Atuba Hammer -->
-		<item id="13167" /> <!-- For PC Cafe Use - Ghost's Wand -->
-		<item id="13168" /> <!-- For PC Cafe Use - Hall of Life -->
-		<item id="13169" /> <!-- For PC cafe use - Atuba Mace -->
-		<item id="13170" /> <!-- For PC Cafe USE - Mithril Dagger -->
-		<item id="13171" /> <!-- For PC Cafe Use - Scallop Jamadhr -->
-		<item id="13172" /> <!-- For PC cafe use - Crossbow -->
-		<item id="13173" /> <!-- For PC cafe use - Glaive -->
-		<item id="13174" /> <!-- For PC Cafe Use - Elven Long Sword -->
-		<item id="13175" /> <!-- For PC Cafe Use - Grand Epee -->
-		<item id="13176" /> <!-- For PC Cafe Use - General Katzbalger -->
-		<item id="13177" /> <!-- For PC Cafe Use - Cranequin -->
+		<item id="13163" /> <!-- Player Commendation - Bastard*Crimson Sword (Player Commendation Weapon) -->
+		<item id="13164" /> <!-- Player Commendation - Claymore (Player Commendation Weapon) -->
+		<item id="13165" /> <!-- Player Commendation - Bonebreaker (Player Commendation Weapon) -->
+		<item id="13166" /> <!-- Player Commendation - Atuba Hammer (Player Commendation Weapon) -->
+		<item id="13167" /> <!-- Player Commendation - Ghost's Wand (Player Commendation Weapon) -->
+		<item id="13168" /> <!-- Player Commendation - Hall of Life (Player Commendation Weapon) -->
+		<item id="13169" /> <!-- Player Commendation - Atuba Mace (Player Commendation Weapon) -->
+		<item id="13170" /> <!-- Player Commendation - Mithril Dagger (Player Commendation Weapon) -->
+		<item id="13171" /> <!-- Player Commendation - Scallop Jamadhr (Player Commendation Weapon) -->
+		<item id="13172" /> <!-- Player Commendation - Crossbow (Player Commendation Weapon) -->
+		<item id="13173" /> <!-- Player Commendation - Glaive (Player Commendation Weapon) -->
+		<item id="13174" /> <!-- Player Commendation - Elven Long Sword (Player Commendation Weapon) -->
+		<item id="13175" /> <!-- Player Commendation - Grand Epee (Player Commendation Weapon) -->
+		<item id="13176" /> <!-- Player Commendation - General Katzbalger (Player Commendation Weapon) -->
+		<item id="13177" /> <!-- Player Commendation - Cranequin (Player Commendation Weapon) -->
 	</enchant>
 
 	<!-- Weapon-Type Enhance Backup Stone -->
@@ -182,6 +246,7 @@
 	<support id="12364" targetGrade="b" maxEnchant="9" successRate="1.15" />
 	<support id="12365" targetGrade="a" maxEnchant="9" successRate="1.12" />
 	<support id="12366" targetGrade="s" maxEnchant="9" successRate="1.10" />
+	
 	<!-- Armor-Type Enhance Backup Stone -->
 	<support id="12367" isWeapon="false" targetGrade="d" maxEnchant="9" successRate="1.35" />
 	<support id="12368" isWeapon="false" targetGrade="c" maxEnchant="9" successRate="1.27" />
@@ -195,6 +260,7 @@
 	<support id="14704" targetGrade="b" maxEnchant="9" successRate="1.15" />
 	<support id="14705" targetGrade="a" maxEnchant="9" successRate="1.12" />
 	<support id="14706" targetGrade="s" maxEnchant="9" successRate="1.10" />
+	
 	<!-- Agathion Auxiliary Stone: Enchant Armor -->
 	<support id="14707" isWeapon="false" targetGrade="d" maxEnchant="9" successRate="1.35" />
 	<support id="14708" isWeapon="false" targetGrade="c" maxEnchant="9" successRate="1.27" />
