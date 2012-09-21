@@ -2067,7 +2067,7 @@
 		</custom>
 	</npc>
 	<npc id="18444" templateId="18444" clientName="Garden Guard" serverName="nd_monster_dwarf" level="20" type="warrior">
-		<acquire exp="816"  exp_rate="2.04036" sp="36" />
+		<acquire exp="816" exp_rate="2.04036" sp="36" />
 		<agro_range>300</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -3008,24 +3008,24 @@
 		</custom>
 	</npc>
 	<npc id="18463" templateId="18463" clientName="Remnant Diabolist" serverName="hieratic_warrior_ruins" level="81" type="warrior">
-		<acquire exp="260217"  exp_rate="39.6611121068943" sp="28102" />
+		<acquire exp="260217" exp_rate="39.6611121068943" sp="28102" />
 		<additional_make_multi_list>
 			<category chance="70">
-				<item id="57" min="23038" max="47020" chance="100" /> <!-- Adena-->
+				<item id="57" min="23038" max="47020" chance="100" /> <!-- Adena -->
 			</category>
 			<category chance="2.3256">
-				<item id="236" min="1" max="1" chance="0.2693" /> <!-- Soul Separator-->
-				<item id="5537" min="1" max="1" chance="99.7307" /> <!-- Soul Separator Head-->
+				<item id="236" min="1" max="1" chance="0.2693" /> <!-- Soul Separator -->
+				<item id="5537" min="1" max="1" chance="99.7307" /> <!-- Soul Separator Head -->
 			</category>
 			<category chance="42.0584">
-				<item id="1873" min="3" max="9" chance="33.505" /> <!-- Silver Nugget-->
-				<item id="1868" min="32" max="96" chance="15.7055" /> <!-- Thread-->
-				<item id="1876" min="4" max="12" chance="11.1683" /> <!-- Mithril Ore-->
-				<item id="1895" min="3" max="9" chance="20.5133" /> <!-- Metallic Fiber-->
-				<item id="4042" min="1" max="1" chance="8.3762" /> <!-- Enria-->
-				<item id="1808" min="1" max="1" chance="0.2234" /> <!-- Recipe: Soulshot (S-Grade)-->
-				<item id="9675" min="5" max="15" chance="6.701" /> <!-- Prayer Fragment-->
-				<item id="1344" min="1650" max="4950" chance="3.8073" /> <!-- Mithril Arrow-->
+				<item id="1873" min="3" max="9" chance="33.505" /> <!-- Silver Nugget -->
+				<item id="1868" min="32" max="96" chance="15.7055" /> <!-- Thread -->
+				<item id="1876" min="4" max="12" chance="11.1683" /> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="20.5133" /> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="8.3762" /> <!-- Enria -->
+				<item id="1808" min="1" max="1" chance="0.2234" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="9675" min="5" max="15" chance="6.701" /> <!-- Prayer Fragment -->
+				<item id="1344" min="1650" max="4950" chance="3.8073" /> <!-- Mithril Arrow -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>450</agro_range>
@@ -3038,9 +3038,9 @@
 			<height normal="22" special="22" />
 		</collision>
 		<corpse_make_list>
-			<item id="1895" min="1" max="27" chance="93.4652" /> <!-- Metallic Fiber-->
-			<item id="4042" min="1" max="1" chance="76.3299" /> <!-- Enria-->
-			<item id="6710" min="1" max="1" chance="49.53" /> <!-- Sealed Draconic Leather Helmet Pattern-->
+			<item id="1895" min="1" max="27" chance="93.4652" /> <!-- Metallic Fiber -->
+			<item id="4042" min="1" max="1" chance="76.3299" /> <!-- Enria -->
+			<item id="6710" min="1" max="1" chance="49.53" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 		</corpse_make_list>
 		<corpse_time>7</corpse_time>
 		<ex_crt_effect>0</ex_crt_effect>
@@ -3102,24 +3102,24 @@
 		</custom>
 	</npc>
 	<npc id="18464" templateId="18464" clientName="Remnant Diviner" serverName="priest_in_ruins" level="81" type="warrior">
-		<acquire exp="254867"  exp_rate="38.8458019610832" sp="27524" />
+		<acquire exp="254867" exp_rate="38.8458019610832" sp="27524" />
 		<additional_make_multi_list>
 			<category chance="70">
-				<item id="57" min="22408" max="45735" chance="100" /> <!-- Adena-->
+				<item id="57" min="22408" max="45735" chance="100" /> <!-- Adena -->
 			</category>
 			<category chance="2.2612">
-				<item id="305" min="1" max="1" chance="0.2694" /> <!-- Tallum Glaive-->
-				<item id="5541" min="1" max="1" chance="99.7306" /> <!-- Tallum Glaive Edge-->
+				<item id="305" min="1" max="1" chance="0.2694" /> <!-- Tallum Glaive -->
+				<item id="5541" min="1" max="1" chance="99.7306" /> <!-- Tallum Glaive Edge -->
 			</category>
 			<category chance="36.9282">
-				<item id="1871" min="9" max="27" chance="30.9301" /> <!-- Charcoal-->
-				<item id="1866" min="14" max="42" chance="13.2558" /> <!-- Suede-->
-				<item id="1877" min="1" max="1" chance="22.2697" /> <!-- Adamantite Nugget-->
-				<item id="4041" min="1" max="1" chance="4.8412" /> <!-- Mold Hardener-->
-				<item id="4040" min="1" max="1" chance="11.1348" /> <!-- Mold Lubricant-->
-				<item id="6901" min="1" max="1" chance="0.5567" /> <!-- Recipe: Shining Arrow (100%)-->
-				<item id="9675" min="4" max="12" chance="9.279" /> <!-- Prayer Fragment-->
-				<item id="1344" min="900" max="2700" chance="7.7327" /> <!-- Mithril Arrow-->
+				<item id="1871" min="9" max="27" chance="30.9301" /> <!-- Charcoal -->
+				<item id="1866" min="14" max="42" chance="13.2558" /> <!-- Suede -->
+				<item id="1877" min="1" max="1" chance="22.2697" /> <!-- Adamantite Nugget -->
+				<item id="4041" min="1" max="1" chance="4.8412" /> <!-- Mold Hardener -->
+				<item id="4040" min="1" max="1" chance="11.1348" /> <!-- Mold Lubricant -->
+				<item id="6901" min="1" max="1" chance="0.5567" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="9675" min="4" max="12" chance="9.279" /> <!-- Prayer Fragment -->
+				<item id="1344" min="900" max="2700" chance="7.7327" /> <!-- Mithril Arrow -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>450</agro_range>
@@ -3132,9 +3132,9 @@
 			<height normal="23" special="23" />
 		</collision>
 		<corpse_make_list>
-			<item id="6901" min="1" max="1" chance="4.4546" /> <!-- Recipe: Shining Arrow (100%)-->
-			<item id="6711" min="1" max="1" chance="14.7144" /> <!-- Sealed Major Arcana Robe Part-->
-			<item id="6901" min="1" max="1" chance="4.4546" /> <!-- Recipe: Shining Arrow (100%)-->
+			<item id="6901" min="1" max="1" chance="4.4546" /> <!-- Recipe: Shining Arrow (100%) -->
+			<item id="6711" min="1" max="1" chance="14.7144" /> <!-- Sealed Major Arcana Robe Part -->
+			<item id="6901" min="1" max="1" chance="4.4546" /> <!-- Recipe: Shining Arrow (100%) -->
 		</corpse_make_list>
 		<corpse_time>7</corpse_time>
 		<ex_crt_effect>0</ex_crt_effect>
@@ -3198,28 +3198,28 @@
 		</custom>
 	</npc>
 	<npc id="18465" templateId="18465" clientName="Derek" serverName="derek" level="81" type="warrior">
-		<acquire exp="1067320"  exp_rate="162.676394238683" sp="115266" />
+		<acquire exp="1067320" exp_rate="162.676394238683" sp="115266" />
 		<additional_make_multi_list>
 			<category chance="70">
-				<item id="57" min="116439" max="237651" chance="100" /> <!-- Adena-->
+				<item id="57" min="116439" max="237651" chance="100" /> <!-- Adena -->
 			</category>
 			<category chance="72.6522">
-				<item id="5313" min="1" max="1" chance="0.1671" /> <!-- Sealed Gauntlets of Nightmare-->
-				<item id="5514" min="1" max="1" chance="24.8329" /> <!-- Sealed Gauntlets of Nightmare Design-->
-				<item id="5314" min="1" max="1" chance="0.1671" /> <!-- Sealed Boots of Nightmare-->
-				<item id="5502" min="1" max="1" chance="24.8329" /> <!-- Sealed Boots of Nightmare Lining-->
-				<item id="5318" min="1" max="1" chance="0.1671" /> <!-- Sealed Majestic Gauntlets-->
-				<item id="5515" min="1" max="1" chance="24.8329" /> <!-- Sealed Majestic Gauntlets Design-->
-				<item id="5319" min="1" max="1" chance="0.1671" /> <!-- Sealed Majestic Boots-->
-				<item id="5503" min="1" max="1" chance="24.8329" /> <!-- Sealed Majestic Boots Lining-->
+				<item id="5313" min="1" max="1" chance="0.1671" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5514" min="1" max="1" chance="24.8329" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5314" min="1" max="1" chance="0.1671" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5502" min="1" max="1" chance="24.8329" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5318" min="1" max="1" chance="0.1671" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5515" min="1" max="1" chance="24.8329" /> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="5319" min="1" max="1" chance="0.1671" /> <!-- Sealed Majestic Boots -->
+				<item id="5503" min="1" max="1" chance="24.8329" /> <!-- Sealed Majestic Boots Lining -->
 			</category>
 			<category chance="48.0074">
-				<item id="1875" min="3" max="9" chance="32.9683" /> <!-- Stone of Purity-->
-				<item id="1879" min="32" max="96" chance="7.727" /> <!-- Cokes-->
-				<item id="1885" min="22" max="66" chance="5.4947" /> <!-- High-Grade Suede-->
-				<item id="5550" min="1" max="1" chance="39.562" /> <!-- Durable Metal Plate-->
-				<item id="5549" min="10" max="30" chance="14.1293" /> <!-- Metallic Thread-->
-				<item id="959" min="1" max="1" chance="0.1187" /> <!-- Scroll: Enchant Weapon (S-Grade)-->
+				<item id="1875" min="3" max="9" chance="32.9683" /> <!-- Stone of Purity -->
+				<item id="1879" min="32" max="96" chance="7.727" /> <!-- Cokes -->
+				<item id="1885" min="22" max="66" chance="5.4947" /> <!-- High-Grade Suede -->
+				<item id="5550" min="1" max="1" chance="39.562" /> <!-- Durable Metal Plate -->
+				<item id="5549" min="10" max="30" chance="14.1293" /> <!-- Metallic Thread -->
+				<item id="959" min="1" max="1" chance="0.1187" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>450</agro_range>
@@ -3232,9 +3232,9 @@
 			<height normal="28.1" special="28.1" />
 		</collision>
 		<corpse_make_list>
-			<item id="6714" min="1" max="5" chance="69.5358" /> <!-- Sealed Major Arcana Circlet Pattern-->
-			<item id="6901" min="1" max="1" chance="23.1473" /> <!-- Recipe: Shining Arrow (100%)-->
-			<item id="7579" min="1" max="1" chance="28.1174" /> <!-- Draconic Bow Shaft-->
+			<item id="6714" min="1" max="5" chance="69.5358" /> <!-- Sealed Major Arcana Circlet Pattern -->
+			<item id="6901" min="1" max="1" chance="23.1473" /> <!-- Recipe: Shining Arrow (100%) -->
+			<item id="7579" min="1" max="1" chance="28.1174" /> <!-- Draconic Bow Shaft -->
 		</corpse_make_list>
 		<corpse_time>7</corpse_time>
 		<ex_crt_effect>0</ex_crt_effect>
@@ -3494,7 +3494,7 @@
 		</custom>
 	</npc>
 	<npc id="18469" templateId="18469" clientName="Hall Guard" serverName="coralgdn_hall_warrior" level="83" type="warrior">
-		<acquire exp="253630"  exp_rate="36.8166663957033" sp="26086" />
+		<acquire exp="253630" exp_rate="36.8166663957033" sp="26086" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3561,7 +3561,7 @@
 		</custom>
 	</npc>
 	<npc id="18470" templateId="18470" clientName="Hall Guard" serverName="coralgdn_hall_fighter" level="83" type="warrior">
-		<acquire exp="103029"  exp_rate="14.9555272076257" sp="11126" />
+		<acquire exp="103029" exp_rate="14.9555272076257" sp="11126" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3625,7 +3625,7 @@
 		</custom>
 	</npc>
 	<npc id="18471" templateId="18471" clientName="Hall Guard" serverName="coralgdn_hall_wizard" level="83" type="warrior">
-		<acquire exp="45987"  exp_rate="6.67546076353607" sp="4761" />
+		<acquire exp="45987" exp_rate="6.67546076353607" sp="4761" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3702,7 +3702,7 @@
 		</custom>
 	</npc>
 	<npc id="18472" templateId="18472" clientName="Hall Guard" serverName="coralgdn_hall_magicswd" level="83" type="warrior">
-		<acquire exp="112394"  exp_rate="16.314925049596" sp="12138" />
+		<acquire exp="112394" exp_rate="16.314925049596" sp="12138" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3765,7 +3765,7 @@
 		</custom>
 	</npc>
 	<npc id="18473" templateId="18473" clientName="Hall Captain" serverName="coralgdn_hall_raid" level="83" type="warrior">
-		<acquire exp="724449"  exp_rate="105.160285353462" sp="78237" />
+		<acquire exp="724449" exp_rate="105.160285353462" sp="78237" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3888,7 +3888,7 @@
 		</custom>
 	</npc>
 	<npc id="18475" templateId="18475" clientName="Hall Guard" serverName="coralgdn_privates04" level="83" type="warrior">
-		<acquire exp="90678"  exp_rate="13.1627137562297" sp="9792" />
+		<acquire exp="90678" exp_rate="13.1627137562297" sp="9792" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -3964,7 +3964,7 @@
 		</custom>
 	</npc>
 	<npc id="18476" templateId="18476" clientName="Hall Guard" serverName="coralgdn_privates05" level="83" type="warrior">
-		<acquire exp="104688"  exp_rate="15.196433154304" sp="11305" />
+		<acquire exp="104688" exp_rate="15.196433154304" sp="11305" />
 		<agro_range>450</agro_range>
 		<clans>
 			<clan>oracle_clan</clan>
@@ -4033,17 +4033,17 @@
 	<npc id="18477" templateId="18477" clientName="Coral Treasure Chest" serverName="coralgdn_hall_treasure" level="83" type="treasure">
 		<additional_make_multi_list>
 			<category chance="22.9021">
-				<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe-->
-				<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part-->
+				<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part -->
 			</category>
 			<category chance="4.9356">
-				<item id="9460" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Stun Resistance-->
-				<item id="9463" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Poison Resistance-->
-				<item id="9466" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Bleed Resistance-->
-				<item id="9469" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Sleep Resistance-->
-				<item id="9472" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Paralysis Resistance-->
-				<item id="9475" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Hold Resistance-->
-				<item id="9478" min="1" max="1" chance="14.2858" /> <!-- Dynasty Ring - Fear Resistance-->
+				<item id="9460" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Stun Resistance -->
+				<item id="9463" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Poison Resistance -->
+				<item id="9466" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Bleed Resistance -->
+				<item id="9469" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Sleep Resistance -->
+				<item id="9472" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Paralysis Resistance -->
+				<item id="9475" min="1" max="1" chance="14.2857" /> <!-- Dynasty Ring - Hold Resistance -->
+				<item id="9478" min="1" max="1" chance="14.2858" /> <!-- Dynasty Ring - Fear Resistance -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>450</agro_range>
@@ -4109,17 +4109,17 @@
 		<ex_crt_effect>0</ex_crt_effect>
 		<ex_item_drop_list>
 			<category chance="100">
-				<item id="8600" min="3" max="5" chance="55" /> <!-- Herb of Life-->
-				<item id="8601" min="1" max="3" chance="38" /> <!-- Greater Herb of Life-->
-				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life-->
+				<item id="8600" min="3" max="5" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="3" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
 			</category>
 			<category chance="50">
-				<item id="8603" min="3" max="5" chance="55" /> <!-- Herb of Mana-->
-				<item id="8604" min="1" max="2" chance="38" /> <!-- Greater Herb of Mana-->
-				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana-->
+				<item id="8603" min="3" max="5" chance="55" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="2" chance="38" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 			</category>
 			<category chance="1">
-				<item id="8614" min="1" max="1" chance="100" /> <!-- Herb of Recovery-->
+				<item id="8614" min="1" max="1" chance="100" /> <!-- Herb of Recovery -->
 			</category>
 		</ex_item_drop_list>
 		<exp>254330</exp>
@@ -4416,7 +4416,7 @@
 		</custom>
 	</npc>
 	<npc id="18483" templateId="18483" clientName="Garden Guard" serverName="ng_warrior_2d" level="19" type="warrior">
-		<acquire exp="1353"  exp_rate="3.7479" sp="57" />
+		<acquire exp="1353" exp_rate="3.7479" sp="57" />
 		<agro_range>300</agro_range>
 		<clans>
 			<clan>ndg_clan</clan>
@@ -4779,27 +4779,27 @@
 		</custom>
 	</npc>
 	<npc id="18490" templateId="18490" clientName="Beleth's Slave" serverName="slave_tower_c" level="86" type="warrior">
-		<acquire exp="65975"  exp_rate="8.92032426837329" sp="6876" />
+		<acquire exp="65975" exp_rate="8.92032426837329" sp="6876" />
 		<additional_make_multi_list>
 			<category chance="70">
-				<item id="57" min="5380" max="10776" chance="100" /> <!-- Adena-->
+				<item id="57" min="5380" max="10776" chance="100" /> <!-- Adena -->
 			</category>
 			<category chance="0.6213">
-				<item id="164" min="1" max="1" chance="0.0674" /> <!-- Elysian-->
-				<item id="5533" min="1" max="1" chance="24.9401" /> <!-- Elysian Head-->
-				<item id="7895" min="1" max="1" chance="0.0674" /> <!-- Flaming Dragon Skull-->
-				<item id="8342" min="1" max="1" chance="24.9401" /> <!-- Flaming Dragon Skull Piece-->
-				<item id="7902" min="1" max="1" chance="0.0674" /> <!-- Doom Crusher-->
-				<item id="8349" min="1" max="1" chance="24.9347" /> <!-- Doom Crusher Head-->
+				<item id="164" min="1" max="1" chance="0.0674" /> <!-- Elysian -->
+				<item id="5533" min="1" max="1" chance="24.9401" /> <!-- Elysian Head -->
+				<item id="7895" min="1" max="1" chance="0.0674" /> <!-- Flaming Dragon Skull -->
+				<item id="8342" min="1" max="1" chance="24.9401" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="7902" min="1" max="1" chance="0.0674" /> <!-- Doom Crusher -->
+				<item id="8349" min="1" max="1" chance="24.9347" /> <!-- Doom Crusher Head -->
 			</category>
 			<category chance="43.3198">
-				<item id="1873" min="2" max="6" chance="14.9154" /> <!-- Silver Nugget-->
-				<item id="1868" min="15" max="45" chance="9.9436" /> <!-- Thread-->
-				<item id="1876" min="1" max="1" chance="29.8308" /> <!-- Mithril Ore-->
-				<item id="1895" min="1" max="1" chance="42.6155" /> <!-- Metallic Fiber-->
-				<item id="4042" min="1" max="1" chance="2.4859" /> <!-- Enria-->
-				<item id="960" min="1" max="1" chance="0.0597" /> <!-- Scroll: Enchant Armor (S-Grade)-->
-				<item id="6901" min="1" max="1" chance="0.1491" /> <!-- Recipe: Shining Arrow (100%)-->
+				<item id="1873" min="2" max="6" chance="14.9154" /> <!-- Silver Nugget -->
+				<item id="1868" min="15" max="45" chance="9.9436" /> <!-- Thread -->
+				<item id="1876" min="1" max="1" chance="29.8308" /> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="42.6155" /> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="2.4859" /> <!-- Enria -->
+				<item id="960" min="1" max="1" chance="0.0597" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6901" min="1" max="1" chance="0.1491" /> <!-- Recipe: Shining Arrow (100%) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>300</agro_range>

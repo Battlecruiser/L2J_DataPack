@@ -1,6 +1,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13001" templateId="13001" clientName="Heart of Warding" serverName="heart_of_warding" level="70" type="teleporter">
-		<acquire exp="490"  exp_rate="0.1" sp="10" />
+		<acquire exp="490" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -52,7 +52,7 @@
 		</custom>
 	</npc>
 	<npc id="13002" templateId="13002" clientName="Life Control Tower" serverName="life_control_tower_live" level="20" type="citizen">
-		<acquire exp="40"  exp_rate="0.1" sp="10" />
+		<acquire exp="40" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -104,7 +104,7 @@
 		</custom>
 	</npc>
 	<npc id="13003" templateId="13003" clientName="Life Control Tower" serverName="life_control_tower_dead" level="20" type="citizen">
-		<acquire exp="40"  exp_rate="0.1" sp="10" />
+		<acquire exp="40" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -156,7 +156,7 @@
 		</custom>
 	</npc>
 	<npc id="13004" templateId="13004" clientName="Flame Control Tower" serverName="flame_control_tower_live" level="20" type="citizen">
-		<acquire exp="40"  exp_rate="0.1" sp="10" />
+		<acquire exp="40" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -208,7 +208,7 @@
 		</custom>
 	</npc>
 	<npc id="13005" templateId="13005" clientName="Flame Control Tower" serverName="flame_control_tower_dead" level="20" type="citizen">
-		<acquire exp="40"  exp_rate="0.1" sp="10" />
+		<acquire exp="40" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -260,7 +260,7 @@
 		</custom>
 	</npc>
 	<npc id="13006" templateId="13006" clientName="Holiday Tree" serverName="x_mas_tree_a" level="70" type="holything">
-		<acquire exp="490"  exp_rate="0.1" sp="10" />
+		<acquire exp="490" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -312,7 +312,7 @@
 		</custom>
 	</npc>
 	<npc id="13007" templateId="13007" clientName="Special Holiday Tree" serverName="x_mas_tree_b" level="70" type="xmastree">
-		<acquire exp="490"  exp_rate="0.1" sp="10" />
+		<acquire exp="490" exp_rate="0.1" sp="10" />
 		<agro_range>1000</agro_range>
 		<clan_help_range>300</clan_help_range>
 		<collision>
@@ -1293,7 +1293,7 @@
 	<npc id="13031" templateId="13031" clientName="Huge Pig" serverName="event_big_pig" level="80" type="warrior">
 		<additional_make_multi_list>
 			<category chance="100">
-				<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga-->
+				<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>300</agro_range>
@@ -1460,10 +1460,10 @@
 	<npc id="13034" templateId="13034" clientName="Super Huge Pig" serverName="event_super_big_pig" level="80" type="warrior">
 		<additional_make_multi_list>
 			<category chance="100">
-				<item id="9142" min="4" max="6" chance="100" /> <!-- Apiga-->
+				<item id="9142" min="4" max="6" chance="100" /> <!-- Apiga -->
 			</category>
 			<category chance="50">
-				<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty-->
+				<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>300</agro_range>
@@ -1522,10 +1522,10 @@
 	<npc id="13035" templateId="13035" clientName="Golden Pig" serverName="event_gold_pig" level="80" type="warrior">
 		<additional_make_multi_list>
 			<category chance="100">
-				<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga-->
+				<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga -->
 			</category>
 			<category chance="100">
-				<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty-->
+				<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>300</agro_range>
@@ -1584,21 +1584,21 @@
 	<npc id="13036" templateId="13036" clientName="Treasure Chest" serverName="event_treasure_box" level="80" type="treasure">
 		<additional_make_multi_list>
 			<category chance="100">
-				<item id="9170" min="1" max="4" chance="100" /> <!-- Magic Reagents-->
+				<item id="9170" min="1" max="4" chance="100" /> <!-- Magic Reagents -->
 			</category>
 			<category chance="100">
-				<item id="9168" min="1" max="2" chance="100" /> <!-- Philosopher's Stone Ore-->
+				<item id="9168" min="1" max="2" chance="100" /> <!-- Philosopher's Stone Ore -->
 			</category>
 			<category chance="10">
-				<item id="9169" min="1" max="1" chance="100" /> <!-- Philosopher's Stone Conversion Formula-->
+				<item id="9169" min="1" max="1" chance="100" /> <!-- Philosopher's Stone Conversion Formula -->
 			</category>
 			<category chance="10">
-				<item id="9162" min="1" max="1" chance="16.5" /> <!-- Red Philosopher's Stone Transmutation Circle-->
-				<item id="9163" min="1" max="1" chance="16.5" /> <!-- Blue Philosopher's Stone Transmutation Circle-->
-				<item id="9164" min="1" max="1" chance="16.5" /> <!-- Orange Philosopher's Stone Transmutation Circle-->
-				<item id="9165" min="1" max="1" chance="16.5" /> <!-- Black Philosopher's Stone Transmutation Circle-->
-				<item id="9166" min="1" max="1" chance="16.5" /> <!-- White Philosopher's Stone Transmutation Circle-->
-				<item id="9167" min="1" max="1" chance="17.5" /> <!-- Green Philosopher's Stone Transmutation Circle-->
+				<item id="9162" min="1" max="1" chance="16.5" /> <!-- Red Philosopher's Stone Transmutation Circle -->
+				<item id="9163" min="1" max="1" chance="16.5" /> <!-- Blue Philosopher's Stone Transmutation Circle -->
+				<item id="9164" min="1" max="1" chance="16.5" /> <!-- Orange Philosopher's Stone Transmutation Circle -->
+				<item id="9165" min="1" max="1" chance="16.5" /> <!-- Black Philosopher's Stone Transmutation Circle -->
+				<item id="9166" min="1" max="1" chance="16.5" /> <!-- White Philosopher's Stone Transmutation Circle -->
+				<item id="9167" min="1" max="1" chance="17.5" /> <!-- Green Philosopher's Stone Transmutation Circle -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4827,7 +4827,7 @@
 	<npc id="13098" templateId="13098" clientName="Event Treasure Chest" serverName="event_search_box" level="80" type="treasure">
 		<additional_make_multi_list>
 			<category chance="100">
-				<item id="10272" min="3" max="7" chance="100" /> <!-- Treasure Sack Piece-->
+				<item id="10272" min="3" max="7" chance="100" /> <!-- Treasure Sack Piece -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
