@@ -1,0 +1,62 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="option" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="for" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="add" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:string" name="order" use="required" />
+												<xs:attribute type="xs:string" name="stat" use="required" />
+												<xs:attribute type="xs:float" name="val" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="active_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:integer" name="id" use="required" />
+									<xs:attribute type="xs:integer" name="level" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="passive_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:integer" name="id" use="required" />
+									<xs:attribute type="xs:integer" name="level" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="attack_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:integer" name="id" use="required" />
+									<xs:attribute type="xs:integer" name="level" use="required" />
+									<xs:attribute type="xs:float" name="chance" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="critical_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:integer" name="id" use="required" />
+									<xs:attribute type="xs:integer" name="level" use="required" />
+									<xs:attribute type="xs:float" name="chance" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="magic_skill" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:integer" name="id" use="required" />
+									<xs:attribute type="xs:integer" name="level" use="required" />
+									<xs:attribute type="xs:float" name="chance" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:integer" name="id" use="required" />
+						<xs:attribute type="xs:string" name="name" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
