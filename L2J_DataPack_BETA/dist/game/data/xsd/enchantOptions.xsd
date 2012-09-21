@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="options" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:byte" name="level" use="required" />
+									<xs:attribute type="xs:integer" name="option1" use="required" />
+									<xs:attribute type="xs:integer" name="option2" use="optional" />
+									<xs:attribute type="xs:integer" name="option3" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:integer" name="id" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
