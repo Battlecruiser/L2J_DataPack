@@ -1,22 +1,22 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" templateId="25001" clientName="Greyclaw Kutus" serverName="greyclaw_kutus" level="23" type="boss">
-		<acquire exp="2690117"  exp_rate="5085.28725881485" sp="69902" rp="284" />
+		<acquire exp="2690117" exp_rate="5085.28725881485" sp="69902" rp="284" />
 		<additional_make_multi_list>
 			<category chance="65.1693">
-				<item id="348" min="1" max="1" chance="41.8439" /> <!-- Scale Mail-->
-				<item id="377" min="4" max="12" chance="8.3639" /> <!-- Scale Gaiters-->
-				<item id="1935" min="53" max="157" chance="11.4099" /> <!-- Scale Mail Fragment-->
-				<item id="1937" min="24" max="72" chance="38.3823" /> <!-- Scale Gaiters Fragment-->
+				<item id="348" min="1" max="1" chance="41.8439" /> <!-- Scale Mail -->
+				<item id="377" min="4" max="12" chance="8.3639" /> <!-- Scale Gaiters -->
+				<item id="1935" min="53" max="157" chance="11.4099" /> <!-- Scale Mail Fragment -->
+				<item id="1937" min="24" max="72" chance="38.3823" /> <!-- Scale Gaiters Fragment -->
 			</category>
 			<category chance="62.3687">
-				<item id="69" min="1" max="1" chance="10.8535" /> <!-- Bastard Sword-->
-				<item id="125" min="1" max="1" chance="10.8535" /> <!-- Spinebone Sword-->
-				<item id="2021" min="3" max="9" chance="56.586" /> <!-- Spinebone Sword Blade-->
+				<item id="69" min="1" max="1" chance="10.8535" /> <!-- Bastard Sword -->
+				<item id="125" min="1" max="1" chance="10.8535" /> <!-- Spinebone Sword -->
+				<item id="2021" min="3" max="9" chance="56.586" /> <!-- Spinebone Sword Blade -->
 			</category>
 			<category chance="65.421">
-				<item id="6575" min="1" max="1" chance="6.1538" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade)-->
-				<item id="6576" min="1" max="1" chance="55.3846" /> <!-- Blessed Scroll: Enchant Armor (D-Grade)-->
-				<item id="956" min="12" max="36" chance="38.4616" /> <!-- Scroll: Enchant Armor (D-Grade)-->
+				<item id="6575" min="1" max="1" chance="6.1538" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="6576" min="1" max="1" chance="55.3846" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="12" max="36" chance="38.4616" /> <!-- Scroll: Enchant Armor (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -193,24 +193,24 @@
 		</custom>
 	</npc>
 	<npc id="25004" templateId="25004" clientName="Turek Mercenary Captain" serverName="turek_mercenary_boss" level="30" type="boss">
-		<acquire exp="1868579"  exp_rate="2076.1987539167" sp="150667" rp="792" />
+		<acquire exp="1868579" exp_rate="2076.1987539167" sp="150667" rp="792" />
 		<additional_make_multi_list>
 			<category chance="60.1444">
-				<item id="352" min="1" max="1" chance="23.9206" /> <!-- Brigandine Tunic-->
-				<item id="2377" min="6" max="16" chance="3.4785" /> <!-- Mithril Scale Gaiters-->
-				<item id="2378" min="1" max="1" chance="38.263" /> <!-- Brigandine Gaiters-->
-				<item id="1941" min="140" max="420" chance="3.9021" /> <!-- Brigandine Temper-->
-				<item id="2918" min="40" max="120" chance="20.3744" /> <!-- Mithril Scale Gaiters Material-->
-				<item id="2919" min="81" max="243" chance="10.0614" /> <!-- Brigandine Gaiters Material-->
+				<item id="352" min="1" max="1" chance="23.9206" /> <!-- Brigandine Tunic -->
+				<item id="2377" min="6" max="16" chance="3.4785" /> <!-- Mithril Scale Gaiters -->
+				<item id="2378" min="1" max="1" chance="38.263" /> <!-- Brigandine Gaiters -->
+				<item id="1941" min="140" max="420" chance="3.9021" /> <!-- Brigandine Temper -->
+				<item id="2918" min="40" max="120" chance="20.3744" /> <!-- Mithril Scale Gaiters Material -->
+				<item id="2919" min="81" max="243" chance="10.0614" /> <!-- Brigandine Gaiters Material -->
 			</category>
 			<category chance="48.2174">
-				<item id="224" min="1" max="1" chance="14.3583" /> <!-- Maingauche-->
-				<item id="1660" min="1" max="1" chance="14.3583" /> <!-- Cursed Maingauche-->
-				<item id="2038" min="24" max="72" chance="16.9722" /> <!-- Maingauche Edge-->
-				<item id="2044" min="8" max="22" chance="54.3112" /> <!-- Cursed Maingauche Edge-->
+				<item id="224" min="1" max="1" chance="14.3583" /> <!-- Maingauche -->
+				<item id="1660" min="1" max="1" chance="14.3583" /> <!-- Cursed Maingauche -->
+				<item id="2038" min="24" max="72" chance="16.9722" /> <!-- Maingauche Edge -->
+				<item id="2044" min="8" max="22" chance="54.3112" /> <!-- Cursed Maingauche Edge -->
 			</category>
 			<category chance="32.1287">
-				<item id="6387" min="60" max="180" chance="100" /> <!-- Blessed Scroll of Resurrection for Pets-->
+				<item id="6387" min="60" max="180" chance="100" /> <!-- Blessed Scroll of Resurrection for Pets -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -385,30 +385,30 @@
 		</custom>
 	</npc>
 	<npc id="25007" templateId="25007" clientName="Retreat Spider Cletu" serverName="retreat_spider_cletu" level="42" type="boss">
-		<acquire exp="3062105"  exp_rate="1735.88693779223" sp="303198" rp="1292" />
+		<acquire exp="3062105" exp_rate="1735.88693779223" sp="303198" rp="1292" />
 		<additional_make_list>
-			<item id="9816" min="1" max="5" chance="73" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="2" chance="73" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="1" max="5" chance="73" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="2" chance="73" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="71.4274">
-				<item id="398" min="1" max="1" chance="16.102" /> <!-- Plated Leather-->
-				<item id="418" min="7" max="19" chance="1.9806" /> <!-- Plated Leather Gaiters-->
-				<item id="399" min="1" max="1" chance="14.8467" /> <!-- Rind Leather Armor-->
-				<item id="419" min="1" max="1" chance="23.7752" /> <!-- Rind Leather Gaiters-->
-				<item id="1966" min="192" max="576" chance="2.6255" /> <!-- Plated Leather Fragment-->
-				<item id="1967" min="116" max="346" chance="6.52" /> <!-- Plated Leather Gaiters Material-->
-				<item id="1975" min="23" max="67" chance="20.1565" /> <!-- Rind Leather Armor Design-->
-				<item id="1976" min="60" max="180" chance="13.9935" /> <!-- Rind Leather Gaiters Material-->
+				<item id="398" min="1" max="1" chance="16.102" /> <!-- Plated Leather -->
+				<item id="418" min="7" max="19" chance="1.9806" /> <!-- Plated Leather Gaiters -->
+				<item id="399" min="1" max="1" chance="14.8467" /> <!-- Rind Leather Armor -->
+				<item id="419" min="1" max="1" chance="23.7752" /> <!-- Rind Leather Gaiters -->
+				<item id="1966" min="192" max="576" chance="2.6255" /> <!-- Plated Leather Fragment -->
+				<item id="1967" min="116" max="346" chance="6.52" /> <!-- Plated Leather Gaiters Material -->
+				<item id="1975" min="23" max="67" chance="20.1565" /> <!-- Rind Leather Armor Design -->
+				<item id="1976" min="60" max="180" chance="13.9935" /> <!-- Rind Leather Gaiters Material -->
 			</category>
 			<category chance="46.53">
-				<item id="282" min="1" max="1" chance="11.5105" /> <!-- Elemental Bow-->
-				<item id="285" min="1" max="1" chance="11.5105" /> <!-- Noble Elven Bow-->
-				<item id="2085" min="24" max="72" chance="18.3283" /> <!-- Crossbow Shaft-->
-				<item id="2086" min="8" max="22" chance="58.6507" /> <!-- Noble Elven Bow Shaft-->
+				<item id="282" min="1" max="1" chance="11.5105" /> <!-- Elemental Bow -->
+				<item id="285" min="1" max="1" chance="11.5105" /> <!-- Noble Elven Bow -->
+				<item id="2085" min="24" max="72" chance="18.3283" /> <!-- Crossbow Shaft -->
+				<item id="2086" min="8" max="22" chance="58.6507" /> <!-- Noble Elven Bow Shaft -->
 			</category>
 			<category chance="85.2299">
-				<item id="952" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="952" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -574,29 +574,29 @@
 		</custom>
 	</npc>
 	<npc id="25010" templateId="25010" clientName="Furious Thieles" serverName="furious_thieles" level="55" type="boss">
-		<acquire exp="3983098"  exp_rate="1316.7264616346" sp="535296" rp="1988" />
+		<acquire exp="3983098" exp_rate="1316.7264616346" sp="535296" rp="1988" />
 		<additional_make_list>
-			<item id="9818" min="2" max="7" chance="72" /> <!-- Angelic Essence-->
-			<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone-->
+			<item id="9818" min="2" max="7" chance="72" /> <!-- Angelic Essence -->
+			<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="68.816">
-				<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei-->
-				<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei-->
-				<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe-->
-				<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric-->
-				<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric-->
-				<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric-->
+				<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe -->
+				<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric -->
 			</category>
 			<category chance="42.5807">
-				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe-->
-				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head-->
+				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe -->
+				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head -->
 			</category>
 			<category chance="99.4474">
-				<item id="4622" min="1" max="3" chance="39.1645" /> <!-- Greater Dye of MEN <Men+4 Wit-4>-->
-				<item id="4623" min="2" max="4" chance="26.1097" /> <!-- Greater Dye of WIT <Wit+4 Int-4>-->
-				<item id="4624" min="2" max="6" chance="19.5822" /> <!-- Greater Dye of WIT <Wit+4 Men-4>-->
-				<item id="6572" min="1" max="1" chance="15.1436" /> <!-- Blessed Scroll: Enchant Armor (B-Grade)-->
+				<item id="4622" min="1" max="3" chance="39.1645" /> <!-- Greater Dye of MEN <Men+4 Wit-4> -->
+				<item id="4623" min="2" max="4" chance="26.1097" /> <!-- Greater Dye of WIT <Wit+4 Int-4> -->
+				<item id="4624" min="2" max="6" chance="19.5822" /> <!-- Greater Dye of WIT <Wit+4 Men-4> -->
+				<item id="6572" min="1" max="1" chance="15.1436" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -765,25 +765,25 @@
 		</custom>
 	</npc>
 	<npc id="25013" templateId="25013" clientName="Ghost of Peasant Leader" serverName="ghost_of_peasant_leader" level="50" type="boss">
-		<acquire exp="3551193"  exp_rate="1420.47722271599" sp="422350" rp="1700" />
+		<acquire exp="3551193" exp_rate="1420.47722271599" sp="422350" rp="1700" />
 		<additional_make_list>
-			<item id="9814" min="2" max="5" chance="77" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="3" chance="67" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="2" max="5" chance="77" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="3" chance="67" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="57.7678">
-				<item id="2390" min="1" max="1" chance="5.7836" /> <!-- Avadon Leather Armor-->
-				<item id="4068" min="14" max="42" chance="36.4027" /> <!-- Avadon Leather Armor Lining-->
+				<item id="2390" min="1" max="1" chance="5.7836" /> <!-- Avadon Leather Armor -->
+				<item id="4068" min="14" max="42" chance="36.4027" /> <!-- Avadon Leather Armor Lining -->
 			</category>
 			<category chance="35.7445">
-				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe-->
-				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head-->
+				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe -->
+				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head -->
 			</category>
 			<category chance="80.0162">
-				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3>-->
-				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3>-->
-				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3>-->
-				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -960,27 +960,27 @@
 		</custom>
 	</npc>
 	<npc id="25016" templateId="25016" clientName="The 3rd Underwater Guardian" serverName="guardian_3_of_garden" level="60" type="boss">
-		<acquire exp="4154684"  exp_rate="1154.07890173387" sp="587467" rp="2288" />
+		<acquire exp="4154684" exp_rate="1154.07890173387" sp="587467" rp="2288" />
 		<additional_make_list>
-			<item id="9817" min="2" max="7" chance="74" /> <!-- Nonliving Nucleus-->
-			<item id="8176" min="1" max="3" chance="83" /> <!-- Destruction Tombstone-->
+			<item id="9817" min="2" max="7" chance="74" /> <!-- Nonliving Nucleus -->
+			<item id="8176" min="1" max="3" chance="83" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="61.5153">
-				<item id="601" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Boots-->
-				<item id="2475" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Gloves-->
-				<item id="4099" min="60" max="180" chance="18.2056" /> <!-- Sealed Doom Boots Part-->
-				<item id="4091" min="192" max="576" chance="5.6892" /> <!-- Sealed Doom Gloves Part-->
+				<item id="601" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Boots -->
+				<item id="2475" min="1" max="1" chance="15.7283" /> <!-- Sealed Doom Gloves -->
+				<item id="4099" min="60" max="180" chance="18.2056" /> <!-- Sealed Doom Boots Part -->
+				<item id="4091" min="192" max="576" chance="5.6892" /> <!-- Sealed Doom Gloves Part -->
 			</category>
 			<category chance="36.2626">
-				<item id="268" min="1" max="1" chance="9.8165" /> <!-- Bellion Cestus-->
-				<item id="4120" min="12" max="36" chance="90.1835" /> <!-- Bellion Cestus Edge-->
+				<item id="268" min="1" max="1" chance="9.8165" /> <!-- Bellion Cestus -->
+				<item id="4120" min="12" max="36" chance="90.1835" /> <!-- Bellion Cestus Edge -->
 			</category>
 			<category chance="78.1454">
-				<item id="4619" min="5" max="15" chance="10.274" /> <!-- Greater Dye of INT <Int+4 Men-4>-->
-				<item id="4620" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of INT <Int+4 Wit-4>-->
-				<item id="4621" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of MEN <Men+4 Int-4>-->
-				<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade)-->
+				<item id="4619" min="5" max="15" chance="10.274" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
+				<item id="4620" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
+				<item id="4621" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
+				<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1146,23 +1146,23 @@
 		</custom>
 	</npc>
 	<npc id="25019" templateId="25019" clientName="Pan Dryad" serverName="pan_draid" level="25" type="boss">
-		<acquire exp="2541012"  exp_rate="4065.61996889739" sp="79280" rp="320" />
+		<acquire exp="2541012" exp_rate="4065.61996889739" sp="79280" rp="320" />
 		<additional_make_multi_list>
 			<category chance="63.9842">
-				<item id="393" min="1" max="1" chance="26.1614" /> <!-- Mithril Banded Mail-->
-				<item id="394" min="1" max="1" chance="26.1614" /> <!-- Reinforced Leather Shirt-->
-				<item id="415" min="4" max="12" chance="5.2269" /> <!-- Mithril Banded Gaiters-->
-				<item id="416" min="5" max="13" chance="4.6461" /> <!-- Reinforced Leather Gaiters-->
-				<item id="1938" min="53" max="157" chance="9.7987" /> <!-- Mithril Banded Mail Material-->
-				<item id="1939" min="24" max="72" chance="28.0055" /> <!-- Mithril Banded Gaiters Material-->
+				<item id="393" min="1" max="1" chance="26.1614" /> <!-- Mithril Banded Mail -->
+				<item id="394" min="1" max="1" chance="26.1614" /> <!-- Reinforced Leather Shirt -->
+				<item id="415" min="4" max="12" chance="5.2269" /> <!-- Mithril Banded Gaiters -->
+				<item id="416" min="5" max="13" chance="4.6461" /> <!-- Reinforced Leather Gaiters -->
+				<item id="1938" min="53" max="157" chance="9.7987" /> <!-- Mithril Banded Mail Material -->
+				<item id="1939" min="24" max="72" chance="28.0055" /> <!-- Mithril Banded Gaiters Material -->
 			</category>
 			<category chance="73.0704">
-				<item id="316" min="1" max="1" chance="10.8148" /> <!-- Sage's Blood-->
-				<item id="317" min="1" max="1" chance="10.8148" /> <!-- Tome of Blood-->
-				<item id="2030" min="3" max="9" chance="78.3704" /> <!-- Tome of Blood Page-->
+				<item id="316" min="1" max="1" chance="10.8148" /> <!-- Sage's Blood -->
+				<item id="317" min="1" max="1" chance="10.8148" /> <!-- Tome of Blood -->
+				<item id="2030" min="3" max="9" chance="78.3704" /> <!-- Tome of Blood Page -->
 			</category>
 			<category chance="79.3367">
-				<item id="956" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (D-Grade)-->
+				<item id="956" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1226,26 +1226,26 @@
 		</custom>
 	</npc>
 	<npc id="25020" templateId="25020" clientName="Breka Warlock Pastu" serverName="breka_warlock_pastu" level="34" type="boss">
-		<acquire exp="1918617"  exp_rate="1659.70327992502" sp="135504" rp="496" />
+		<acquire exp="1918617" exp_rate="1659.70327992502" sp="135504" rp="496" />
 		<additional_make_multi_list>
 			<category chance="72.5609">
-				<item id="396" min="1" max="1" chance="29.0162" /> <!-- Salamander Skin Mail-->
-				<item id="1952" min="12" max="36" chance="70.9838" /> <!-- Salamander Skin Mail Texture-->
+				<item id="396" min="1" max="1" chance="29.0162" /> <!-- Salamander Skin Mail -->
+				<item id="1952" min="12" max="36" chance="70.9838" /> <!-- Salamander Skin Mail Texture -->
 			</category>
 			<category chance="78.8605">
-				<item id="159" min="1" max="1" chance="2.117" /> <!-- Bonebreaker-->
-				<item id="187" min="1" max="1" chance="2.117" /> <!-- Atuba Hammer-->
-				<item id="188" min="1" max="1" chance="2.117" /> <!-- Ghost Staff-->
-				<item id="189" min="1" max="1" chance="2.117" /> <!-- Staff of Life-->
-				<item id="190" min="1" max="1" chance="2.117" /> <!-- Atuba Mace-->
-				<item id="2048" min="2" max="6" chance="30.3479" /> <!-- Bonebreaker Head-->
-				<item id="2049" min="3" max="7" chance="24.2784" /> <!-- Atuba Hammer Head-->
-				<item id="2050" min="7" max="21" chance="9.1939" /> <!-- Ghost Staff Head-->
-				<item id="2051" min="12" max="36" chance="5.3631" /> <!-- Staff of Life Shaft-->
-				<item id="2058" min="3" max="9" chance="20.2317" /> <!-- Atuba Mace Head-->
+				<item id="159" min="1" max="1" chance="2.117" /> <!-- Bonebreaker -->
+				<item id="187" min="1" max="1" chance="2.117" /> <!-- Atuba Hammer -->
+				<item id="188" min="1" max="1" chance="2.117" /> <!-- Ghost Staff -->
+				<item id="189" min="1" max="1" chance="2.117" /> <!-- Staff of Life -->
+				<item id="190" min="1" max="1" chance="2.117" /> <!-- Atuba Mace -->
+				<item id="2048" min="2" max="6" chance="30.3479" /> <!-- Bonebreaker Head -->
+				<item id="2049" min="3" max="7" chance="24.2784" /> <!-- Atuba Hammer Head -->
+				<item id="2050" min="7" max="21" chance="9.1939" /> <!-- Ghost Staff Head -->
+				<item id="2051" min="12" max="36" chance="5.3631" /> <!-- Staff of Life Shaft -->
+				<item id="2058" min="3" max="9" chance="20.2317" /> <!-- Atuba Mace Head -->
 			</category>
 			<category chance="42.8808">
-				<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade)-->
+				<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1414,20 +1414,20 @@
 		</custom>
 	</npc>
 	<npc id="25023" templateId="25023" clientName="Stakato Queen Zyrnna" serverName="jeruna_queen" level="34" type="boss">
-		<acquire exp="2316590"  exp_rate="2003.97017838467" sp="188679" rp="944" />
+		<acquire exp="2316590" exp_rate="2003.97017838467" sp="188679" rp="944" />
 		<additional_make_multi_list>
 			<category chance="61.4014">
-				<item id="353" min="1" max="1" chance="30.8014" /> <!-- Half Plate Armor-->
-				<item id="380" min="4" max="12" chance="6.1603" /> <!-- Plate Gaiters-->
-				<item id="1950" min="53" max="157" chance="14.3198" /> <!-- Half Plate Temper-->
-				<item id="1951" min="24" max="72" chance="48.7185" /> <!-- Plate Gaiters Part-->
+				<item id="353" min="1" max="1" chance="30.8014" /> <!-- Half Plate Armor -->
+				<item id="380" min="4" max="12" chance="6.1603" /> <!-- Plate Gaiters -->
+				<item id="1950" min="53" max="157" chance="14.3198" /> <!-- Half Plate Temper -->
+				<item id="1951" min="24" max="72" chance="48.7185" /> <!-- Plate Gaiters Part -->
 			</category>
 			<category chance="41.7039">
-				<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr-->
-				<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge-->
+				<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr -->
+				<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge -->
 			</category>
 			<category chance="33.5203">
-				<item id="951" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade)-->
+				<item id="951" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1604,27 +1604,27 @@
 		</custom>
 	</npc>
 	<npc id="25026" templateId="25026" clientName="Ketra Commander Atis" serverName="katu_van_atui" level="49" type="boss">
-		<acquire exp="2328069"  exp_rate="969.624811119179" sp="284981" rp="880" />
+		<acquire exp="2328069" exp_rate="969.624811119179" sp="284981" rp="880" />
 		<additional_make_list>
-			<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="65.2917">
-				<item id="119" min="1" max="1" chance="14.8393" /> <!-- Necklace of Seal-->
-				<item id="886" min="1" max="1" chance="29.6786" /> <!-- Ring of Seal-->
-				<item id="1920" min="140" max="420" chance="3.9388" /> <!-- Necklace of Seal Chain-->
-				<item id="2917" min="40" max="120" chance="23.141" /> <!-- Ring of Seal Gemstone-->
+				<item id="119" min="1" max="1" chance="14.8393" /> <!-- Necklace of Seal -->
+				<item id="886" min="1" max="1" chance="29.6786" /> <!-- Ring of Seal -->
+				<item id="1920" min="140" max="420" chance="3.9388" /> <!-- Necklace of Seal Chain -->
+				<item id="2917" min="40" max="120" chance="23.141" /> <!-- Ring of Seal Gemstone -->
 			</category>
 			<category chance="76.5996">
-				<item id="286" min="1" max="1" chance="5.2457" /> <!-- Eminence Bow-->
-				<item id="2121" min="3" max="9" chance="94.7543" /> <!-- Eminence Bow Shaft-->
+				<item id="286" min="1" max="1" chance="5.2457" /> <!-- Eminence Bow -->
+				<item id="2121" min="3" max="9" chance="94.7543" /> <!-- Eminence Bow Shaft -->
 			</category>
 			<category chance="75.9277">
-				<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3>-->
-				<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3>-->
-				<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3>-->
-				<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade)-->
+				<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+				<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+				<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+				<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1799,27 +1799,27 @@
 		</custom>
 	</npc>
 	<npc id="25029" templateId="25029" clientName="Atraiban" serverName="atraiban" level="53" type="boss">
-		<acquire exp="3895772"  exp_rate="1386.88911946654" sp="516213" rp="1868" />
+		<acquire exp="3895772" exp_rate="1386.88911946654" sp="516213" rp="1868" />
 		<additional_make_list>
-			<item id="9817" min="2" max="6" chance="79" /> <!-- Nonliving Nucleus-->
-			<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone-->
+			<item id="9817" min="2" max="6" chance="79" /> <!-- Nonliving Nucleus -->
+			<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="75.7492">
-				<item id="673" min="1" max="1" chance="18.0649" /> <!-- Avadon Shield-->
-				<item id="2415" min="1" max="1" chance="12.6448" /> <!-- Avadon Circlet-->
-				<item id="4439" min="60" max="180" chance="21.7506" /> <!-- Avadon Shield Fragment-->
-				<item id="4072" min="293" max="877" chance="2.9057" /> <!-- Avadon Circlet Pattern-->
+				<item id="673" min="1" max="1" chance="18.0649" /> <!-- Avadon Shield -->
+				<item id="2415" min="1" max="1" chance="12.6448" /> <!-- Avadon Circlet -->
+				<item id="4439" min="60" max="180" chance="21.7506" /> <!-- Avadon Shield Fragment -->
+				<item id="4072" min="293" max="877" chance="2.9057" /> <!-- Avadon Circlet Pattern -->
 			</category>
 			<category chance="45.727">
-				<item id="284" min="1" max="1" chance="11.2615" /> <!-- Dark Elven Long Bow-->
-				<item id="4112" min="12" max="36" chance="88.7385" /> <!-- Dark Elven Longbow Shaft-->
+				<item id="284" min="1" max="1" chance="11.2615" /> <!-- Dark Elven Long Bow -->
+				<item id="4112" min="12" max="36" chance="88.7385" /> <!-- Dark Elven Longbow Shaft -->
 			</category>
 			<category chance="74.8367">
-				<item id="4613" min="5" max="15" chance="10.274" /> <!-- Greater Dye of STR <Str+4 Con-4>-->
-				<item id="4614" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of STR <Str+4 Dex-4>-->
-				<item id="4615" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of CON <Con+4 Str-4>-->
-				<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade)-->
+				<item id="4613" min="5" max="15" chance="10.274" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+				<item id="4614" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
+				<item id="4615" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
+				<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -1985,27 +1985,27 @@
 		</custom>
 	</npc>
 	<npc id="25032" templateId="25032" clientName="Eva's Guardian Millenu" serverName="eva_guardian_millenu" level="58" type="boss">
-		<acquire exp="4092905"  exp_rate="1216.67806603206" sp="566683" rp="2168" />
+		<acquire exp="4092905" exp_rate="1216.67806603206" sp="566683" rp="2168" />
 		<additional_make_list>
-			<item id="9814" min="2" max="6" chance="82" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="3" chance="82" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="2" max="6" chance="82" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="3" chance="82" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="54.9566">
-				<item id="5297" min="1" max="1" chance="6.8601" /> <!-- Sealed Dark Crystal Leather Armor-->
-				<item id="5298" min="1" max="1" chance="10.9721" /> <!-- Sealed Dark Crystal Leggings-->
-				<item id="5301" min="1" max="1" chance="4.221" /> <!-- Sealed Tallum Leather Armor-->
-				<item id="5478" min="9" max="27" chance="42.8005" /> <!-- Sealed Dark Crystal Leather Armor Pattern-->
-				<item id="5482" min="28" max="84" chance="21.5934" /> <!-- Sealed Dark Crystal Leggings Design-->
-				<item id="5479" min="20" max="60" chance="13.5529" /> <!-- Sealed Tallum Leather Armor Pattern-->
+				<item id="5297" min="1" max="1" chance="6.8601" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5298" min="1" max="1" chance="10.9721" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5301" min="1" max="1" chance="4.221" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5478" min="9" max="27" chance="42.8005" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5482" min="28" max="84" chance="21.5934" /> <!-- Sealed Dark Crystal Leggings Design -->
+				<item id="5479" min="20" max="60" chance="13.5529" /> <!-- Sealed Tallum Leather Armor Pattern -->
 			</category>
 			<category chance="35.4261">
-				<item id="288" min="1" max="1" chance="9.0731" /> <!-- Carnage Bow-->
-				<item id="5535" min="12" max="36" chance="90.9269" /> <!-- Carnage Bow Stave-->
+				<item id="288" min="1" max="1" chance="9.0731" /> <!-- Carnage Bow -->
+				<item id="5535" min="12" max="36" chance="90.9269" /> <!-- Carnage Bow Stave -->
 			</category>
 			<category chance="32.6339">
-				<item id="6570" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (A-Grade)-->
-				<item id="729" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (A-Grade)-->
+				<item id="6570" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -2182,31 +2182,31 @@
 		</custom>
 	</npc>
 	<npc id="25035" templateId="25035" clientName="Shilen's Messenger Cabrio" serverName="domb_death_cabrio" level="70" type="boss">
-		<acquire exp="4596479"  exp_rate="938.056981840496" sp="802604" rp="2884" />
+		<acquire exp="4596479" exp_rate="938.056981840496" sp="802604" rp="2884" />
 		<additional_make_list>
-			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
-			<item id="9814" min="3" max="8" chance="74" /> <!-- Memento Mori-->
-			<item id="8176" min="2" max="3" chance="82" /> <!-- Destruction Tombstone-->
+			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+			<item id="9814" min="3" max="8" chance="74" /> <!-- Memento Mori -->
+			<item id="8176" min="2" max="3" chance="82" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="62.8201">
-				<item id="5313" min="1" max="1" chance="8.645" /> <!-- Sealed Gauntlets of Nightmare-->
-				<item id="5314" min="1" max="1" chance="8.645" /> <!-- Sealed Boots of Nightmare-->
-				<item id="5318" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Gauntlets-->
-				<item id="5319" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Boots-->
-				<item id="5514" min="60" max="180" chance="8.2433" /> <!-- Sealed Gauntlets of Nightmare Design-->
-				<item id="5502" min="116" max="346" chance="4.2822" /> <!-- Sealed Boots of Nightmare Lining-->
-				<item id="5515" min="16" max="48" chance="30.9123" /> <!-- Sealed Majestic Gauntlets Design-->
-				<item id="5503" min="23" max="67" chance="21.9822" /> <!-- Sealed Majestic Boots Lining-->
+				<item id="5313" min="1" max="1" chance="8.645" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="8.645" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="8.645" /> <!-- Sealed Majestic Boots -->
+				<item id="5514" min="60" max="180" chance="8.2433" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5502" min="116" max="346" chance="4.2822" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5515" min="16" max="48" chance="30.9123" /> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="5503" min="23" max="67" chance="21.9822" /> <!-- Sealed Majestic Boots Lining -->
 			</category>
 			<category chance="27.3544">
-				<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive-->
-				<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge-->
+				<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive -->
+				<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge -->
 			</category>
 			<category chance="42.6081">
-				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade)-->
-				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade)-->
-				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade)-->
+				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -2382,20 +2382,20 @@
 		</custom>
 	</npc>
 	<npc id="25038" templateId="25038" clientName="Tirak" serverName="tirak" level="28" type="boss">
-		<acquire exp="2390045"  exp_rate="3048.52653595097" sp="97281" rp="376" />
+		<acquire exp="2390045" exp_rate="3048.52653595097" sp="97281" rp="376" />
 		<additional_make_multi_list>
 			<category chance="50.3817">
-				<item id="880" min="3" max="7" chance="38.7379" /> <!-- Black Pearl Ring-->
-				<item id="912" min="4" max="12" chance="12.124" /> <!-- Near Forest Necklace-->
+				<item id="880" min="3" max="7" chance="38.7379" /> <!-- Black Pearl Ring -->
+				<item id="912" min="4" max="12" chance="12.124" /> <!-- Near Forest Necklace -->
 			</category>
 			<category chance="56.9862">
-				<item id="83" min="1" max="1" chance="10.2596" /> <!-- Sword of Magic-->
-				<item id="144" min="1" max="1" chance="10.2596" /> <!-- Sword of Occult-->
-				<item id="127" min="1" max="1" chance="7.6006" /> <!-- Crimson Sword-->
-				<item id="130" min="1" max="1" chance="7.6006" /> <!-- Elven Sword-->
+				<item id="83" min="1" max="1" chance="10.2596" /> <!-- Sword of Magic -->
+				<item id="144" min="1" max="1" chance="10.2596" /> <!-- Sword of Occult -->
+				<item id="127" min="1" max="1" chance="7.6006" /> <!-- Crimson Sword -->
+				<item id="130" min="1" max="1" chance="7.6006" /> <!-- Elven Sword -->
 			</category>
 			<category chance="41.7444">
-				<item id="955" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (D-Grade)-->
+				<item id="955" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -2570,26 +2570,26 @@
 		</custom>
 	</npc>
 	<npc id="25041" templateId="25041" clientName="Remmel" serverName="remmel" level="35" type="boss">
-		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
+		<acquire exp="1912395" exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="78.2773">
-				<item id="61" min="9" max="25" chance="1.3428" /> <!-- Mithril Plate Gloves-->
-				<item id="607" min="9" max="27" chance="1.2682" /> <!-- Ogre Power Gauntlets-->
-				<item id="1125" min="10" max="28" chance="1.2015" /> <!-- Assault Boots-->
-				<item id="2427" min="10" max="30" chance="1.1414" /> <!-- Salamander Skin Boots-->
-				<item id="2428" min="1" max="1" chance="22.8284" /> <!-- Plate Boots-->
-				<item id="1949" min="112" max="336" chance="4.2767" /> <!-- Mithril Gloves Design-->
-				<item id="1963" min="203" max="607" chance="2.3654" /> <!-- Ogre Power Gauntlets Part-->
-				<item id="1957" min="320" max="960" chance="1.4968" /> <!-- Assault Boots Part-->
-				<item id="2931" min="28" max="82" chance="17.4178" /> <!-- Salamander Skin Boot Lining-->
-				<item id="2932" min="36" max="108" chance="13.3052" /> <!-- Plate Boots Design-->
+				<item id="61" min="9" max="25" chance="1.3428" /> <!-- Mithril Plate Gloves -->
+				<item id="607" min="9" max="27" chance="1.2682" /> <!-- Ogre Power Gauntlets -->
+				<item id="1125" min="10" max="28" chance="1.2015" /> <!-- Assault Boots -->
+				<item id="2427" min="10" max="30" chance="1.1414" /> <!-- Salamander Skin Boots -->
+				<item id="2428" min="1" max="1" chance="22.8284" /> <!-- Plate Boots -->
+				<item id="1949" min="112" max="336" chance="4.2767" /> <!-- Mithril Gloves Design -->
+				<item id="1963" min="203" max="607" chance="2.3654" /> <!-- Ogre Power Gauntlets Part -->
+				<item id="1957" min="320" max="960" chance="1.4968" /> <!-- Assault Boots Part -->
+				<item id="2931" min="28" max="82" chance="17.4178" /> <!-- Salamander Skin Boot Lining -->
+				<item id="2932" min="36" max="108" chance="13.3052" /> <!-- Plate Boots Design -->
 			</category>
 			<category chance="29.5519">
-				<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr-->
-				<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge-->
+				<item id="262" min="1" max="1" chance="29.5049" /> <!-- Scallop Jamadhr -->
+				<item id="2053" min="12" max="36" chance="70.4951" /> <!-- Scallop Jamadhr Edge -->
 			</category>
 			<category chance="44.7912">
-				<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade)-->
+				<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -2765,37 +2765,37 @@
 		</custom>
 	</npc>
 	<npc id="25044" templateId="25044" clientName="Barion" serverName="barion" level="47" type="boss">
-		<acquire exp="2205665"  exp_rate="998.490094223048" sp="257531" rp="820" />
+		<acquire exp="2205665" exp_rate="998.490094223048" sp="257531" rp="820" />
 		<additional_make_list>
-			<item id="9814" min="1" max="3" chance="81" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="1" chance="81" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="1" max="3" chance="81" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="1" chance="81" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="71.6689">
-				<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots-->
-				<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves-->
-				<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots-->
-				<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots-->
-				<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves-->
-				<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets-->
-				<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves-->
-				<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture-->
-				<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture-->
-				<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design-->
-				<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part-->
-				<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design-->
-				<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part-->
-				<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern-->
+				<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
+				<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots -->
+				<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves -->
+				<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
+				<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
+				<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
+				<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
+				<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
+				<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
+				<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
+				<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
+				<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
 			</category>
 			<category chance="70.5529">
-				<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger-->
-				<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade-->
+				<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger -->
+				<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade -->
 			</category>
 			<category chance="48.1251">
-				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3>-->
-				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3>-->
-				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3>-->
-				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -2970,37 +2970,37 @@
 		</custom>
 	</npc>
 	<npc id="25047" templateId="25047" clientName="Karte" serverName="karte" level="49" type="boss">
-		<acquire exp="2328069"  exp_rate="969.624811119179" sp="284981" rp="880" />
+		<acquire exp="2328069" exp_rate="969.624811119179" sp="284981" rp="880" />
 		<additional_make_list>
-			<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="1" max="3" chance="87" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="1" chance="87" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="77.1391">
-				<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots-->
-				<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves-->
-				<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots-->
-				<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots-->
-				<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves-->
-				<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets-->
-				<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves-->
-				<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture-->
-				<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture-->
-				<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design-->
-				<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part-->
-				<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design-->
-				<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part-->
-				<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern-->
+				<item id="2436" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Boots -->
+				<item id="2460" min="1" max="1" chance="11.0508" /> <!-- Theca Leather Gloves -->
+				<item id="2437" min="1" max="1" chance="8.5" /> <!-- Drake Leather Boots -->
+				<item id="2438" min="1" max="1" chance="8.5" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="8.5" /> <!-- Drake Leather Gloves -->
+				<item id="2462" min="1" max="1" chance="8.5" /> <!-- Full Plate Gauntlets -->
+				<item id="2463" min="1" max="1" chance="8.5" /> <!-- Divine Gloves -->
+				<item id="2954" min="144" max="432" chance="2.5694" /> <!-- Theca Leather Boots Texture -->
+				<item id="2955" min="255" max="765" chance="1.451" /> <!-- Theca Leather Gloves Texture -->
+				<item id="2960" min="396" max="1188" chance="0.8038" /> <!-- Drake Leather Boots Design -->
+				<item id="2961" min="30" max="90" chance="10.6106" /> <!-- Full Plate Boots Part -->
+				<item id="2962" min="39" max="117" chance="8.162" /> <!-- Drake Leather Gloves Design -->
+				<item id="2963" min="49" max="147" chance="6.4963" /> <!-- Full Plate Gauntlets Part -->
+				<item id="2964" min="60" max="180" chance="5.3053" /> <!-- Divine Gloves Pattern -->
 			</category>
 			<category chance="75.938">
-				<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger-->
-				<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade-->
+				<item id="228" min="1" max="1" chance="5.2914" /> <!-- Crystal Dagger -->
+				<item id="2119" min="3" max="9" chance="94.7086" /> <!-- Crystal Dagger Blade -->
 			</category>
 			<category chance="91.4185">
-				<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3>-->
-				<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3>-->
-				<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3>-->
-				<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade)-->
+				<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+				<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+				<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+				<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -3177,25 +3177,25 @@
 		</custom>
 	</npc>
 	<npc id="25050" templateId="25050" clientName="Verfa" serverName="verfa" level="51" type="boss">
-		<acquire exp="2256714"  exp_rate="867.633250673215" sp="285537" rp="940" />
+		<acquire exp="2256714" exp_rate="867.633250673215" sp="285537" rp="940" />
 		<additional_make_list>
-			<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="60.4778">
-				<item id="2390" min="1" max="1" chance="3.4942" /> <!-- Avadon Leather Armor-->
-				<item id="4068" min="14" max="42" chance="21.9931" /> <!-- Avadon Leather Armor Lining-->
+				<item id="2390" min="1" max="1" chance="3.4942" /> <!-- Avadon Leather Armor -->
+				<item id="4068" min="14" max="42" chance="21.9931" /> <!-- Avadon Leather Armor Lining -->
 			</category>
 			<category chance="22.6088">
-				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe-->
-				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head-->
+				<item id="300" min="1" max="1" chance="12.2523" /> <!-- Great Axe -->
+				<item id="4113" min="12" max="36" chance="87.7477" /> <!-- Great Axe Head -->
 			</category>
 			<category chance="89.3234">
-				<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3>-->
-				<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3>-->
-				<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3>-->
-				<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade)-->
+				<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+				<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+				<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+				<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -3259,28 +3259,28 @@
 		</custom>
 	</npc>
 	<npc id="25051" templateId="25051" clientName="Rahha" serverName="rahha" level="65" type="boss">
-		<acquire exp="4489693"  exp_rate="1062.64917109525" sp="746626" rp="2592" />
+		<acquire exp="4489693" exp_rate="1062.64917109525" sp="746626" rp="2592" />
 		<additional_make_list>
-			<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori-->
-			<item id="8176" min="2" max="3" chance="80" /> <!-- Destruction Tombstone-->
+			<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori -->
+			<item id="8176" min="2" max="3" chance="80" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="78.0374">
-				<item id="5287" min="1" max="1" chance="3.4556" /> <!-- Sealed Dark Crystal breastplate-->
-				<item id="5288" min="1" max="1" chance="5.5295" /> <!-- Sealed Dark Crystal Gaiters-->
-				<item id="5293" min="1" max="1" chance="2.1266" /> <!-- Sealed Tallum Plate Armor-->
-				<item id="5520" min="9" max="27" chance="22.048" /> <!-- Sealed Dark Crystal Breastplate Pattern-->
-				<item id="5524" min="28" max="84" chance="10.8318" /> <!-- Sealed Dark Crystal Gaiters Pattern-->
-				<item id="5521" min="3" max="7" chance="56.0085" /> <!-- Sealed Tallum Plate Armor Pattern-->
+				<item id="5287" min="1" max="1" chance="3.4556" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5288" min="1" max="1" chance="5.5295" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5293" min="1" max="1" chance="2.1266" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5520" min="9" max="27" chance="22.048" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5524" min="28" max="84" chance="10.8318" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
+				<item id="5521" min="3" max="7" chance="56.0085" /> <!-- Sealed Tallum Plate Armor Pattern -->
 			</category>
 			<category chance="33.7037">
-				<item id="235" min="1" max="1" chance="9.097" /> <!-- Bloody Orchid-->
-				<item id="5536" min="12" max="36" chance="90.903" /> <!-- Bloody Orchid Head-->
+				<item id="235" min="1" max="1" chance="9.097" /> <!-- Bloody Orchid -->
+				<item id="5536" min="12" max="36" chance="90.903" /> <!-- Bloody Orchid Head -->
 			</category>
 			<category chance="89.4441">
-				<item id="729" min="1" max="1" chance="11.6009" /> <!-- Scroll: Enchant Weapon (A-Grade)-->
-				<item id="730" min="1" max="1" chance="87.007" /> <!-- Scroll: Enchant Armor (A-Grade)-->
-				<item id="6569" min="1" max="1" chance="1.3921" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade)-->
+				<item id="729" min="1" max="1" chance="11.6009" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="87.007" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="6569" min="1" max="1" chance="1.3921" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -3446,30 +3446,30 @@
 		</custom>
 	</npc>
 	<npc id="25054" templateId="25054" clientName="Kernon" serverName="kernon" level="75" type="boss">
-		<acquire exp="5231148"  exp_rate="929.981870741031" sp="864099" rp="3172" />
+		<acquire exp="5231148" exp_rate="929.981870741031" sp="864099" rp="3172" />
 		<additional_make_multi_list>
 			<category chance="69.4399">
-				<item id="6676" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Gauntlet-->
-				<item id="6677" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Boots-->
-				<item id="6681" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Glove-->
-				<item id="6682" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Boots-->
-				<item id="6685" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Glove-->
-				<item id="6686" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Boots-->
-				<item id="6703" min="8" max="24" chance="32.2205" /> <!-- Sealed Imperial Crusader Gauntlets Design-->
-				<item id="6704" min="14" max="40" chance="19.0936" /> <!-- Sealed Imperial Crusader Boots Design-->
-				<item id="6708" min="20" max="60" chance="12.8882" /> <!-- Sealed Draconic Leather Gloves Fabric-->
-				<item id="6709" min="28" max="82" chance="9.3732" /> <!-- Sealed Draconic Leather Boots Design-->
-				<item id="6712" min="36" max="108" chance="7.1601" /> <!-- Sealed Major Arcana Gloves fabric-->
-				<item id="6713" min="46" max="136" chance="5.6654" /> <!-- Sealed Major Arcana Boots Design-->
+				<item id="6676" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6677" min="1" max="1" chance="2.2665" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6681" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6682" min="1" max="1" chance="2.2665" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6685" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6686" min="1" max="1" chance="2.2665" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6703" min="8" max="24" chance="32.2205" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
+				<item id="6704" min="14" max="40" chance="19.0936" /> <!-- Sealed Imperial Crusader Boots Design -->
+				<item id="6708" min="20" max="60" chance="12.8882" /> <!-- Sealed Draconic Leather Gloves Fabric -->
+				<item id="6709" min="28" max="82" chance="9.3732" /> <!-- Sealed Draconic Leather Boots Design -->
+				<item id="6712" min="36" max="108" chance="7.1601" /> <!-- Sealed Major Arcana Gloves fabric -->
+				<item id="6713" min="46" max="136" chance="5.6654" /> <!-- Sealed Major Arcana Boots Design -->
 			</category>
 			<category chance="21.0537">
-				<item id="6371" min="1" max="1" chance="5.0271" /> <!-- Demon Splinter-->
-				<item id="6695" min="12" max="36" chance="94.9729" /> <!-- Demon Splinter Blade-->
+				<item id="6371" min="1" max="1" chance="5.0271" /> <!-- Demon Splinter -->
+				<item id="6695" min="12" max="36" chance="94.9729" /> <!-- Demon Splinter Blade -->
 			</category>
 			<category chance="43.6733">
-				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade)-->
-				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade)-->
-				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade)-->
+				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -3643,29 +3643,29 @@
 		</custom>
 	</npc>
 	<npc id="25057" templateId="25057" clientName="Beacon of Blue Sky" serverName="biconne_of_blue_sky" level="45" type="boss">
-		<acquire exp="2085510"  exp_rate="1029.88131793747" sp="229987" rp="764" />
+		<acquire exp="2085510" exp_rate="1029.88131793747" sp="229987" rp="764" />
 		<additional_make_list>
-			<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="76.5669">
-				<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots-->
-				<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets-->
-				<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part-->
-				<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design-->
+				<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
+				<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->
+				<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part -->
+				<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design -->
 			</category>
 			<category chance="47.2675">
-				<item id="231" min="1" max="1" chance="5.193" /> <!-- Grace Dagger-->
-				<item id="233" min="1" max="1" chance="5.193" /> <!-- Dark Screamer-->
-				<item id="2106" min="4" max="12" chance="58.4439" /> <!-- Grace Dagger Edge-->
-				<item id="2107" min="8" max="22" chance="31.1701" /> <!-- Dark Screamer Edge-->
+				<item id="231" min="1" max="1" chance="5.193" /> <!-- Grace Dagger -->
+				<item id="233" min="1" max="1" chance="5.193" /> <!-- Dark Screamer -->
+				<item id="2106" min="4" max="12" chance="58.4439" /> <!-- Grace Dagger Edge -->
+				<item id="2107" min="8" max="22" chance="31.1701" /> <!-- Dark Screamer Edge -->
 			</category>
 			<category chance="94.4307">
-				<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3>-->
-				<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3>-->
-				<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3>-->
-				<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -3837,21 +3837,21 @@
 		</custom>
 	</npc>
 	<npc id="25060" templateId="25060" clientName="Unrequited Kael" serverName="love_reverser_kael" level="24" type="boss">
-		<acquire exp="2584114"  exp_rate="4486.30923166734" sp="74037" rp="300" />
+		<acquire exp="2584114" exp_rate="4486.30923166734" sp="74037" rp="300" />
 		<additional_make_multi_list>
 			<category chance="42.7486">
-				<item id="605" min="4" max="12" chance="65.2174" /> <!-- Leather Gauntlets-->
-				<item id="1123" min="8" max="22" chance="34.7826" /> <!-- Blue Buckskin Boots-->
+				<item id="605" min="4" max="12" chance="65.2174" /> <!-- Leather Gauntlets -->
+				<item id="1123" min="8" max="22" chance="34.7826" /> <!-- Blue Buckskin Boots -->
 			</category>
 			<category chance="39.9911">
-				<item id="275" min="1" max="1" chance="28.8143" /> <!-- Long Bow-->
-				<item id="276" min="1" max="1" chance="28.8143" /> <!-- Elven Bow-->
-				<item id="2024" min="12" max="36" chance="42.3714" /> <!-- Elven Bow Shaft-->
+				<item id="275" min="1" max="1" chance="28.8143" /> <!-- Long Bow -->
+				<item id="276" min="1" max="1" chance="28.8143" /> <!-- Elven Bow -->
+				<item id="2024" min="12" max="36" chance="42.3714" /> <!-- Elven Bow Shaft -->
 			</category>
 			<category chance="67.1128">
-				<item id="6387" min="24" max="72" chance="22.9759" /> <!-- Blessed Scroll of Resurrection for Pets-->
-				<item id="955" min="4" max="10" chance="15.7549" /> <!-- Scroll: Enchant Weapon (D-Grade)-->
-				<item id="956" min="8" max="22" chance="61.2692" /> <!-- Scroll: Enchant Armor (D-Grade)-->
+				<item id="6387" min="24" max="72" chance="22.9759" /> <!-- Blessed Scroll of Resurrection for Pets -->
+				<item id="955" min="4" max="10" chance="15.7549" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="8" max="22" chance="61.2692" /> <!-- Scroll: Enchant Armor (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4018,22 +4018,22 @@
 		</custom>
 	</npc>
 	<npc id="25063" templateId="25063" clientName="Chertuba of Great Soul" serverName="grandeur_soul_chertuba" level="35" type="boss">
-		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
+		<acquire exp="1912395" exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="62.1017">
-				<item id="630" min="6" max="16" chance="4.9799" /> <!-- Square Shield-->
-				<item id="2412" min="1" max="1" chance="38.3646" /> <!-- Plate Helmet-->
-				<item id="2494" min="6" max="18" chance="4.5649" /> <!-- Plate Shield-->
-				<item id="1956" min="40" max="120" chance="30.7004" /> <!-- Square Shield Fragment-->
-				<item id="2930" min="140" max="420" chance="6.2295" /> <!-- Plate Helmet Design-->
-				<item id="2934" min="81" max="243" chance="15.1607" /> <!-- Plate Shield Fragment-->
+				<item id="630" min="6" max="16" chance="4.9799" /> <!-- Square Shield -->
+				<item id="2412" min="1" max="1" chance="38.3646" /> <!-- Plate Helmet -->
+				<item id="2494" min="6" max="18" chance="4.5649" /> <!-- Plate Shield -->
+				<item id="1956" min="40" max="120" chance="30.7004" /> <!-- Square Shield Fragment -->
+				<item id="2930" min="140" max="420" chance="6.2295" /> <!-- Plate Helmet Design -->
+				<item id="2934" min="81" max="243" chance="15.1607" /> <!-- Plate Shield Fragment -->
 			</category>
 			<category chance="29.5519">
-				<item id="297" min="1" max="1" chance="29.5049" /> <!-- Glaive-->
-				<item id="2055" min="12" max="36" chance="70.4951" /> <!-- Glaive Edge-->
+				<item id="297" min="1" max="1" chance="29.5049" /> <!-- Glaive -->
+				<item id="2055" min="12" max="36" chance="70.4951" /> <!-- Glaive Edge -->
 			</category>
 			<category chance="71.2587">
-				<item id="951" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade)-->
+				<item id="951" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4097,43 +4097,43 @@
 		</custom>
 	</npc>
 	<npc id="25064" templateId="25064" clientName="Wizard of Storm Teruk" serverName="wizard_of_storm_teruk" level="40" type="boss">
-		<acquire exp="2030965"  exp_rate="1269.35323685994" sp="181264" rp="632" />
+		<acquire exp="2030965" exp_rate="1269.35323685994" sp="181264" rp="632" />
 		<additional_make_list>
-			<item id="9818" min="1" max="3" chance="64" /> <!-- Angelic Essence-->
-			<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone-->
+			<item id="9818" min="1" max="3" chance="64" /> <!-- Angelic Essence -->
+			<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="64.1428">
-				<item id="852" min="1" max="1" chance="40.3267" /> <!-- Moonstone Earring-->
-				<item id="883" min="6" max="16" chance="5.5014" /> <!-- Aquastone Ring-->
-				<item id="915" min="1" max="1" chance="30.2577" /> <!-- Aquastone Necklace-->
-				<item id="1908" min="81" max="243" chance="14.0613" /> <!-- Moonstone Earring Wire-->
-				<item id="1909" min="480" max="1440" chance="3.3838" /> <!-- Aquastone Ring Wire-->
-				<item id="1910" min="140" max="420" chance="6.4691" /> <!-- Aquastone Necklace Chain-->
+				<item id="852" min="1" max="1" chance="40.3267" /> <!-- Moonstone Earring -->
+				<item id="883" min="6" max="16" chance="5.5014" /> <!-- Aquastone Ring -->
+				<item id="915" min="1" max="1" chance="30.2577" /> <!-- Aquastone Necklace -->
+				<item id="1908" min="81" max="243" chance="14.0613" /> <!-- Moonstone Earring Wire -->
+				<item id="1909" min="480" max="1440" chance="3.3838" /> <!-- Aquastone Ring Wire -->
+				<item id="1910" min="140" max="420" chance="6.4691" /> <!-- Aquastone Necklace Chain -->
 			</category>
 			<category chance="79.0619">
-				<item id="89" min="1" max="1" chance="1.2454" /> <!-- Big Hammer-->
-				<item id="160" min="1" max="1" chance="1.2454" /> <!-- Battle Axe-->
-				<item id="161" min="1" max="1" chance="1.2454" /> <!-- Silver Axe-->
-				<item id="173" min="1" max="1" chance="1.2454" /> <!-- Skull Graver-->
-				<item id="191" min="1" max="1" chance="1.2454" /> <!-- Heavy Doom Hammer-->
-				<item id="192" min="1" max="1" chance="1.2454" /> <!-- Crystal Staff-->
-				<item id="193" min="1" max="1" chance="1.2454" /> <!-- Stick of Faith-->
-				<item id="194" min="1" max="1" chance="1.2454" /> <!-- Heavy Doom Axe-->
-				<item id="2061" min="2" max="6" chance="21.2119" /> <!-- Big Hammer Head-->
-				<item id="2063" min="3" max="7" chance="16.9695" /> <!-- Battle Axe Head-->
-				<item id="2064" min="3" max="9" chance="14.1412" /> <!-- Silver Axe Head-->
-				<item id="2065" min="4" max="10" chance="12.1211" /> <!-- Skull Graver Head-->
-				<item id="2066" min="10" max="30" chance="4.3048" /> <!-- Heavy Doom Hammer Head-->
-				<item id="2067" min="4" max="12" chance="9.8893" /> <!-- Crystal Staff Head-->
-				<item id="2068" min="5" max="13" chance="8.7905" /> <!-- Stick of Faith Shaft-->
-				<item id="2069" min="17" max="49" chance="2.6085" /> <!-- Heavy Doom Axe Blade-->
+				<item id="89" min="1" max="1" chance="1.2454" /> <!-- Big Hammer -->
+				<item id="160" min="1" max="1" chance="1.2454" /> <!-- Battle Axe -->
+				<item id="161" min="1" max="1" chance="1.2454" /> <!-- Silver Axe -->
+				<item id="173" min="1" max="1" chance="1.2454" /> <!-- Skull Graver -->
+				<item id="191" min="1" max="1" chance="1.2454" /> <!-- Heavy Doom Hammer -->
+				<item id="192" min="1" max="1" chance="1.2454" /> <!-- Crystal Staff -->
+				<item id="193" min="1" max="1" chance="1.2454" /> <!-- Stick of Faith -->
+				<item id="194" min="1" max="1" chance="1.2454" /> <!-- Heavy Doom Axe -->
+				<item id="2061" min="2" max="6" chance="21.2119" /> <!-- Big Hammer Head -->
+				<item id="2063" min="3" max="7" chance="16.9695" /> <!-- Battle Axe Head -->
+				<item id="2064" min="3" max="9" chance="14.1412" /> <!-- Silver Axe Head -->
+				<item id="2065" min="4" max="10" chance="12.1211" /> <!-- Skull Graver Head -->
+				<item id="2066" min="10" max="30" chance="4.3048" /> <!-- Heavy Doom Hammer Head -->
+				<item id="2067" min="4" max="12" chance="9.8893" /> <!-- Crystal Staff Head -->
+				<item id="2068" min="5" max="13" chance="8.7905" /> <!-- Stick of Faith Shaft -->
+				<item id="2069" min="17" max="49" chance="2.6085" /> <!-- Heavy Doom Axe Blade -->
 			</category>
 			<category chance="89.437">
-				<item id="4591" min="1" max="3" chance="41.9314" /> <!-- Greater Dye of CON <Con+2 Str-2>-->
-				<item id="4592" min="2" max="4" chance="27.9543" /> <!-- Greater Dye of CON <Con+2 Dex-2>-->
-				<item id="4593" min="2" max="6" chance="20.9657" /> <!-- Greater Dye of DEX <Dex+2 Str-2>-->
-				<item id="951" min="3" max="7" chance="9.1486" /> <!-- Scroll: Enchant Weapon (C-Grade)-->
+				<item id="4591" min="1" max="3" chance="41.9314" /> <!-- Greater Dye of CON <Con+2 Str-2> -->
+				<item id="4592" min="2" max="4" chance="27.9543" /> <!-- Greater Dye of CON <Con+2 Dex-2> -->
+				<item id="4593" min="2" max="6" chance="20.9657" /> <!-- Greater Dye of DEX <Dex+2 Str-2> -->
+				<item id="951" min="3" max="7" chance="9.1486" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4310,33 +4310,33 @@
 		</custom>
 	</npc>
 	<npc id="25067" templateId="25067" clientName="Captain of Red Flag Shaka" serverName="master_of_ledflag_shaka" level="52" type="boss">
-		<acquire exp="3849013"  exp_rate="1423.45161611779" sp="503876" rp="1812" />
+		<acquire exp="3849013" exp_rate="1423.45161611779" sp="503876" rp="1812" />
 		<additional_make_list>
-			<item id="9816" min="2" max="6" chance="79" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="2" max="6" chance="79" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="67.2597">
-				<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei-->
-				<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei-->
-				<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe-->
-				<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric-->
-				<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric-->
-				<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric-->
+				<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe -->
+				<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric -->
 			</category>
 			<category chance="66.781">
-				<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword-->
-				<item id="142" min="1" max="1" chance="2.5452" /> <!-- Keshanberk-->
-				<item id="148" min="1" max="1" chance="2.5452" /> <!-- Sword of Valhalla-->
-				<item id="4104" min="5" max="15" chance="48.6498" /> <!-- Great Sword Blade-->
-				<item id="4107" min="9" max="27" chance="26.6089" /> <!-- Keshanberk Blade-->
-				<item id="4108" min="14" max="42" chance="17.1057" /> <!-- Sword of Valhalla Blade-->
+				<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="2.5452" /> <!-- Keshanberk -->
+				<item id="148" min="1" max="1" chance="2.5452" /> <!-- Sword of Valhalla -->
+				<item id="4104" min="5" max="15" chance="48.6498" /> <!-- Great Sword Blade -->
+				<item id="4107" min="9" max="27" chance="26.6089" /> <!-- Keshanberk Blade -->
+				<item id="4108" min="14" max="42" chance="17.1057" /> <!-- Sword of Valhalla Blade -->
 			</category>
 			<category chance="93.1639">
-				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3>-->
-				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3>-->
-				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3>-->
-				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="3" max="7" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="3" max="9" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="952" min="21" max="63" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4512,32 +4512,32 @@
 		</custom>
 	</npc>
 	<npc id="25070" templateId="25070" clientName="Enchanted Forest Watcher Ruell" serverName="fairys_watcher_ruell" level="55" type="boss">
-		<acquire exp="2477107"  exp_rate="818.878285958151" sp="327038" rp="1068" />
+		<acquire exp="2477107" exp_rate="818.878285958151" sp="327038" rp="1068" />
 		<additional_make_list>
-			<item id="9818" min="1" max="4" chance="75" /> <!-- Angelic Essence-->
-			<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone-->
+			<item id="9818" min="1" max="4" chance="75" /> <!-- Angelic Essence -->
+			<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="59.2595">
-				<item id="856" min="1" max="1" chance="16.3105" /> <!-- Adamantite Earring-->
-				<item id="887" min="1" max="1" chance="24.4657" /> <!-- Adamantite Ring-->
-				<item id="918" min="1" max="1" chance="12.2329" /> <!-- Adamantite Necklace-->
-				<item id="4049" min="81" max="243" chance="12.302" /> <!-- Adamantite Earring Gemstone-->
-				<item id="4050" min="40" max="120" chance="29.4263" /> <!-- Adamantite Ring Wire-->
-				<item id="4051" min="140" max="420" chance="5.2626" /> <!-- Adamantite Necklace Chain-->
+				<item id="856" min="1" max="1" chance="16.3105" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="24.4657" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="12.2329" /> <!-- Adamantite Necklace -->
+				<item id="4049" min="81" max="243" chance="12.302" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4050" min="40" max="120" chance="29.4263" /> <!-- Adamantite Ring Wire -->
+				<item id="4051" min="140" max="420" chance="5.2626" /> <!-- Adamantite Necklace Chain -->
 			</category>
 			<category chance="39.7263">
-				<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword-->
-				<item id="142" min="1" max="1" chance="2.5452" /> <!-- Keshanberk-->
-				<item id="148" min="1" max="1" chance="2.5452" /> <!-- Sword of Valhalla-->
-				<item id="4104" min="5" max="15" chance="48.6498" /> <!-- Great Sword Blade-->
-				<item id="4107" min="9" max="27" chance="26.6089" /> <!-- Keshanberk Blade-->
-				<item id="4108" min="14" max="42" chance="17.1057" /> <!-- Sword of Valhalla Blade-->
+				<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="2.5452" /> <!-- Keshanberk -->
+				<item id="148" min="1" max="1" chance="2.5452" /> <!-- Sword of Valhalla -->
+				<item id="4104" min="5" max="15" chance="48.6498" /> <!-- Great Sword Blade -->
+				<item id="4107" min="9" max="27" chance="26.6089" /> <!-- Keshanberk Blade -->
+				<item id="4108" min="14" max="42" chance="17.1057" /> <!-- Sword of Valhalla Blade -->
 			</category>
 			<category chance="73.4891">
-				<item id="947" min="1" max="1" chance="23.8298" /> <!-- Scroll: Enchant Weapon (B-Grade)-->
-				<item id="948" min="1" max="3" chance="74.4681" /> <!-- Scroll: Enchant Armor (B-Grade)-->
-				<item id="6571" min="1" max="1" chance="1.7021" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade)-->
+				<item id="947" min="1" max="1" chance="23.8298" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="948" min="1" max="3" chance="74.4681" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="6571" min="1" max="1" chance="1.7021" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4704,27 +4704,27 @@
 		</custom>
 	</npc>
 	<npc id="25073" templateId="25073" clientName="Bloody Priest Rudelto" serverName="bloody_priest_rudelto" level="69" type="boss">
-		<acquire exp="4576841"  exp_rate="961.319238353099" sp="791290" rp="2828" />
+		<acquire exp="4576841" exp_rate="961.319238353099" sp="791290" rp="2828" />
 		<additional_make_list>
-			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
-			<item id="9814" min="2" max="8" chance="76" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone-->
+			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+			<item id="9814" min="2" max="8" chance="76" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="67.6683">
-				<item id="5326" min="1" max="1" chance="3.2792" /> <!-- Sealed Robe of Nightmare-->
-				<item id="5329" min="1" max="1" chance="3.2792" /> <!-- Sealed Majestic Robe-->
-				<item id="5487" min="4" max="12" chance="60.9401" /> <!-- Sealed Robe of Nightmare Fabric-->
-				<item id="5488" min="8" max="22" chance="32.5015" /> <!-- Sealed Majestic Robe Fabric-->
+				<item id="5326" min="1" max="1" chance="3.2792" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="3.2792" /> <!-- Sealed Majestic Robe -->
+				<item id="5487" min="4" max="12" chance="60.9401" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="8" max="22" chance="32.5015" /> <!-- Sealed Majestic Robe Fabric -->
 			</category>
 			<category chance="27.2599">
-				<item id="289" min="1" max="1" chance="7.7743" /> <!-- Soul Bow-->
-				<item id="5534" min="12" max="36" chance="92.2257" /> <!-- Soul Bow Stave-->
+				<item id="289" min="1" max="1" chance="7.7743" /> <!-- Soul Bow -->
+				<item id="5534" min="12" max="36" chance="92.2257" /> <!-- Soul Bow Stave -->
 			</category>
 			<category chance="42.4183">
-				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade)-->
-				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade)-->
-				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade)-->
+				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -4890,23 +4890,23 @@
 		</custom>
 	</npc>
 	<npc id="25076" templateId="25076" clientName="Princess Molrang" serverName="princess_molrang" level="25" type="boss">
-		<acquire exp="2541012"  exp_rate="4065.61996889739" sp="79280" rp="320" />
+		<acquire exp="2541012" exp_rate="4065.61996889739" sp="79280" rp="320" />
 		<additional_make_multi_list>
 			<category chance="77.9717">
-				<item id="58" min="1" max="1" chance="15.2584" /> <!-- Mithril Breastplate-->
-				<item id="349" min="1" max="1" chance="15.2584" /> <!-- Compound Scale Mail-->
-				<item id="350" min="1" max="1" chance="15.2584" /> <!-- Dwarven Scale Mail-->
-				<item id="59" min="1" max="3" chance="11.0295" /> <!-- Mithril Gaiters-->
-				<item id="351" min="1" max="1" chance="13.7833" /> <!-- Blast Plate-->
-				<item id="378" min="2" max="4" chance="7.353" /> <!-- Compound Scale Gaiters-->
-				<item id="379" min="1" max="1" chance="22.059" /> <!-- Dwarven Scale Gaiters-->
+				<item id="58" min="1" max="1" chance="15.2584" /> <!-- Mithril Breastplate -->
+				<item id="349" min="1" max="1" chance="15.2584" /> <!-- Compound Scale Mail -->
+				<item id="350" min="1" max="1" chance="15.2584" /> <!-- Dwarven Scale Mail -->
+				<item id="59" min="1" max="3" chance="11.0295" /> <!-- Mithril Gaiters -->
+				<item id="351" min="1" max="1" chance="13.7833" /> <!-- Blast Plate -->
+				<item id="378" min="2" max="4" chance="7.353" /> <!-- Compound Scale Gaiters -->
+				<item id="379" min="1" max="1" chance="22.059" /> <!-- Dwarven Scale Gaiters -->
 			</category>
 			<category chance="23.7073">
-				<item id="293" min="1" max="1" chance="50" /> <!-- War Hammer-->
-				<item id="296" min="1" max="1" chance="50" /> <!-- Dwarven Pike-->
+				<item id="293" min="1" max="1" chance="50" /> <!-- War Hammer -->
+				<item id="296" min="1" max="1" chance="50" /> <!-- Dwarven Pike -->
 			</category>
 			<category chance="12.6939">
-				<item id="6575" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade)-->
+				<item id="6575" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5074,20 +5074,20 @@
 		</custom>
 	</npc>
 	<npc id="25079" templateId="25079" clientName="Cat's Eye Bandit" serverName="catseye" level="30" type="boss">
-		<acquire exp="1868579"  exp_rate="2076.1987539167" sp="150667" rp="792" />
+		<acquire exp="1868579" exp_rate="2076.1987539167" sp="150667" rp="792" />
 		<additional_make_multi_list>
 			<category chance="51.1703">
-				<item id="437" min="1" max="1" chance="56.3214" /> <!-- Mithril Tunic-->
-				<item id="470" min="4" max="12" chance="11.2434" /> <!-- Mithril Stockings-->
-				<item id="1944" min="53" max="157" chance="23.5297" /> <!-- Mithril Tunic Fabric-->
-				<item id="1945" min="216" max="648" chance="8.9055" /> <!-- Mithril Stocking Design-->
+				<item id="437" min="1" max="1" chance="56.3214" /> <!-- Mithril Tunic -->
+				<item id="470" min="4" max="12" chance="11.2434" /> <!-- Mithril Stockings -->
+				<item id="1944" min="53" max="157" chance="23.5297" /> <!-- Mithril Tunic Fabric -->
+				<item id="1945" min="216" max="648" chance="8.9055" /> <!-- Mithril Stocking Design -->
 			</category>
 			<category chance="42.4758">
-				<item id="318" min="1" max="1" chance="32.5983" /> <!-- Crucifix of Blood-->
-				<item id="2042" min="12" max="36" chance="67.4017" /> <!-- Crucifix of Blood Piece-->
+				<item id="318" min="1" max="1" chance="32.5983" /> <!-- Crucifix of Blood -->
+				<item id="2042" min="12" max="36" chance="67.4017" /> <!-- Crucifix of Blood Piece -->
 			</category>
 			<category chance="64.2575">
-				<item id="955" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (D-Grade)-->
+				<item id="955" min="3" max="9" chance="100" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5259,24 +5259,24 @@
 		</custom>
 	</npc>
 	<npc id="25082" templateId="25082" clientName="Leader of Cat Gang" serverName="lost_cat_the_cat_a" level="39" type="boss">
-		<acquire exp="1988451"  exp_rate="1307.33137626409" sp="173127" rp="608" />
+		<acquire exp="1988451" exp_rate="1307.33137626409" sp="173127" rp="608" />
 		<additional_make_multi_list>
 			<category chance="72.0697">
-				<item id="439" min="1" max="1" chance="21.4917" /> <!-- Karmian Tunic-->
-				<item id="471" min="1" max="1" chance="34.3442" /> <!-- Karmian Stockings-->
-				<item id="1962" min="53" max="157" chance="9.53" /> <!-- Karmian Tunic Pattern-->
-				<item id="1954" min="24" max="72" chance="34.6341" /> <!-- Karmian Stocking Design-->
+				<item id="439" min="1" max="1" chance="21.4917" /> <!-- Karmian Tunic -->
+				<item id="471" min="1" max="1" chance="34.3442" /> <!-- Karmian Stockings -->
+				<item id="1962" min="53" max="157" chance="9.53" /> <!-- Karmian Tunic Pattern -->
+				<item id="1954" min="24" max="72" chance="34.6341" /> <!-- Karmian Stocking Design -->
 			</category>
 			<category chance="57.9631">
-				<item id="71" min="1" max="1" chance="6.6165" /> <!-- Flamberge-->
-				<item id="72" min="1" max="1" chance="6.6165" /> <!-- Stormbringer-->
-				<item id="2059" min="8" max="22" chance="28.8809" /> <!-- Flamberge Blade-->
-				<item id="2060" min="4" max="12" chance="57.8861" /> <!-- Stormbringer Blade-->
+				<item id="71" min="1" max="1" chance="6.6165" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="6.6165" /> <!-- Stormbringer -->
+				<item id="2059" min="8" max="22" chance="28.8809" /> <!-- Flamberge Blade -->
+				<item id="2060" min="4" max="12" chance="57.8861" /> <!-- Stormbringer Blade -->
 			</category>
 			<category chance="97.8437">
-				<item id="4589" min="1" max="3" chance="49.763" /> <!-- Greater Dye of STR <Str+2 Con-2>-->
-				<item id="4590" min="2" max="4" chance="33.1754" /> <!-- Greater Dye of STR <Str+2 Dex-2>-->
-				<item id="6574" min="1" max="1" chance="17.0616" /> <!-- Blessed Scroll: Enchant Armor (C-Grade)-->
+				<item id="4589" min="1" max="3" chance="49.763" /> <!-- Greater Dye of STR <Str+2 Con-2> -->
+				<item id="4590" min="2" max="4" chance="33.1754" /> <!-- Greater Dye of STR <Str+2 Dex-2> -->
+				<item id="6574" min="1" max="1" chance="17.0616" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5443,25 +5443,25 @@
 		</custom>
 	</npc>
 	<npc id="25085" templateId="25085" clientName="Timak Orc Chief Ranger" serverName="timak_orc_hunter_a" level="44" type="boss">
-		<acquire exp="3196387"  exp_rate="1651.02647650538" sp="320242" rp="1388" />
+		<acquire exp="3196387" exp_rate="1651.02647650538" sp="320242" rp="1388" />
 		<additional_make_list>
-			<item id="9816" min="2" max="4" chance="75" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="2" chance="75" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="2" max="4" chance="75" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="2" chance="75" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="55.9727">
-				<item id="854" min="7" max="19" chance="8.1969" /> <!-- Earring of Seal-->
-				<item id="885" min="6" max="16" chance="14.5276" /> <!-- Ring of Ages-->
-				<item id="917" min="7" max="21" chance="5.7092" /> <!-- Necklace of Mermaid-->
-				<item id="1914" min="81" max="243" chance="41.8683" /> <!-- Earring of Seal Gemstone-->
-				<item id="1915" min="280" max="840" chance="18.9949" /> <!-- Ring of Ages Gemstone-->
-				<item id="1916" min="240" max="720" chance="10.7031" /> <!-- Necklace of Mermaid Teardrop-->
+				<item id="854" min="7" max="19" chance="8.1969" /> <!-- Earring of Seal -->
+				<item id="885" min="6" max="16" chance="14.5276" /> <!-- Ring of Ages -->
+				<item id="917" min="7" max="21" chance="5.7092" /> <!-- Necklace of Mermaid -->
+				<item id="1914" min="81" max="243" chance="41.8683" /> <!-- Earring of Seal Gemstone -->
+				<item id="1915" min="280" max="840" chance="18.9949" /> <!-- Ring of Ages Gemstone -->
+				<item id="1916" min="240" max="720" chance="10.7031" /> <!-- Necklace of Mermaid Teardrop -->
 			</category>
 			<category chance="72.7344">
-				<item id="4601" min="6" max="18" chance="10.0365" /> <!-- Greater Dye of STR <Str+3 Con-3>-->
-				<item id="4602" min="2" max="4" chance="40.146" /> <!-- Greater Dye of STR <Str+3 Dex-3>-->
-				<item id="4603" min="2" max="6" chance="30.1095" /> <!-- Greater Dye of CON <Con+3 Str-3>-->
-				<item id="951" min="3" max="7" chance="19.708" /> <!-- Scroll: Enchant Weapon (C-Grade)-->
+				<item id="4601" min="6" max="18" chance="10.0365" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+				<item id="4602" min="2" max="4" chance="40.146" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+				<item id="4603" min="2" max="6" chance="30.1095" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+				<item id="951" min="3" max="7" chance="19.708" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5636,26 +5636,26 @@
 		</custom>
 	</npc>
 	<npc id="25088" templateId="25088" clientName="Crazy Mechanic Golem" serverName="crazy_mechanic_golem" level="43" type="boss">
-		<acquire exp="3128858"  exp_rate="1692.18944739865" sp="311947" rp="1340" />
+		<acquire exp="3128858" exp_rate="1692.18944739865" sp="311947" rp="1340" />
 		<additional_make_list>
-			<item id="9817" min="2" max="4" chance="74" /> <!-- Nonliving Nucleus-->
-			<item id="8176" min="1" max="2" chance="74" /> <!-- Destruction Tombstone-->
+			<item id="9817" min="2" max="4" chance="74" /> <!-- Nonliving Nucleus -->
+			<item id="8176" min="1" max="2" chance="74" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="55.1501">
-				<item id="355" min="1" max="1" chance="29.2819" /> <!-- Dwarven Chain Mail Shirt-->
-				<item id="382" min="1" max="1" chance="46.8492" /> <!-- Dwarven Chain Gaiters-->
-				<item id="1968" min="53" max="157" chance="16.6485" /> <!-- Dwarven Chain Mail Shirt Material-->
-				<item id="1969" min="192" max="576" chance="7.2204" /> <!-- Dwarven Chain Gaiters Material-->
+				<item id="355" min="1" max="1" chance="29.2819" /> <!-- Dwarven Chain Mail Shirt -->
+				<item id="382" min="1" max="1" chance="46.8492" /> <!-- Dwarven Chain Gaiters -->
+				<item id="1968" min="53" max="157" chance="16.6485" /> <!-- Dwarven Chain Mail Shirt Material -->
+				<item id="1969" min="192" max="576" chance="7.2204" /> <!-- Dwarven Chain Gaiters Material -->
 			</category>
 			<category chance="45.7553">
-				<item id="227" min="1" max="1" chance="11.8715" /> <!-- Stiletto-->
-				<item id="242" min="1" max="1" chance="11.8715" /> <!-- Soulfire Dirk-->
-				<item id="2083" min="24" max="72" chance="18.1564" /> <!-- Stiletto Edge-->
-				<item id="2084" min="8" max="22" chance="58.1006" /> <!-- Soulfire Dirk Blade-->
+				<item id="227" min="1" max="1" chance="11.8715" /> <!-- Stiletto -->
+				<item id="242" min="1" max="1" chance="11.8715" /> <!-- Soulfire Dirk -->
+				<item id="2083" min="24" max="72" chance="18.1564" /> <!-- Stiletto Edge -->
+				<item id="2084" min="8" max="22" chance="58.1006" /> <!-- Soulfire Dirk Blade -->
 			</category>
 			<category chance="10.3727">
-				<item id="6573" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade)-->
+				<item id="6573" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5716,31 +5716,31 @@
 		</custom>
 	</npc>
 	<npc id="25089" templateId="25089" clientName="Soulless Wild Boar" serverName="soulless_wild_boar" level="59" type="boss">
-		<acquire exp="2684275"  exp_rate="771.121888589711" sp="381459" rp="1208" />
+		<acquire exp="2684275" exp_rate="771.121888589711" sp="381459" rp="1208" />
 		<additional_make_list>
-			<item id="9816" min="1" max="4" chance="83" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="1" max="4" chance="83" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="2" chance="70" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="60.5827">
-				<item id="864" min="1" max="1" chance="11.7667" /> <!-- Earring of Black Ore-->
-				<item id="895" min="1" max="1" chance="17.6501" /> <!-- Ring of Black Ore-->
-				<item id="926" min="1" max="1" chance="8.8251" /> <!-- Necklace of Black Ore-->
-				<item id="4052" min="81" max="243" chance="9.142" /> <!-- Earring of Black Ore Piece-->
-				<item id="4053" min="28" max="84" chance="32.0179" /> <!-- Ring of Black Ore Gemstone-->
-				<item id="4054" min="20" max="60" chance="20.5982" /> <!-- Necklace of Black Ore Beads-->
+				<item id="864" min="1" max="1" chance="11.7667" /> <!-- Earring of Black Ore -->
+				<item id="895" min="1" max="1" chance="17.6501" /> <!-- Ring of Black Ore -->
+				<item id="926" min="1" max="1" chance="8.8251" /> <!-- Necklace of Black Ore -->
+				<item id="4052" min="81" max="243" chance="9.142" /> <!-- Earring of Black Ore Piece -->
+				<item id="4053" min="28" max="84" chance="32.0179" /> <!-- Ring of Black Ore Gemstone -->
+				<item id="4054" min="20" max="60" chance="20.5982" /> <!-- Necklace of Black Ore Beads -->
 			</category>
 			<category chance="67.4465">
-				<item id="175" min="1" max="1" chance="1.117" /> <!-- Art of Battle Axe-->
-				<item id="210" min="1" max="1" chance="1.117" /> <!-- Staff of Evil Spirits-->
-				<item id="4117" min="9" max="27" chance="13.6829" /> <!-- Art of Battle Axe Blade-->
-				<item id="4118" min="2" max="6" chance="58.3369" /> <!-- Evil Spirit Head-->
+				<item id="175" min="1" max="1" chance="1.117" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="1.117" /> <!-- Staff of Evil Spirits -->
+				<item id="4117" min="9" max="27" chance="13.6829" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="2" max="6" chance="58.3369" /> <!-- Evil Spirit Head -->
 			</category>
 			<category chance="65.0788">
-				<item id="4616" min="1" max="3" chance="39.1645" /> <!-- Greater Dye of CON <Con+4 Dex-4>-->
-				<item id="4617" min="2" max="4" chance="26.1097" /> <!-- Greater Dye of DEX <Dex+4 Str-4>-->
-				<item id="4618" min="2" max="6" chance="19.5822" /> <!-- Greater Dye of DEX <Dex+4 Con-4>-->
-				<item id="6572" min="1" max="1" chance="15.1436" /> <!-- Blessed Scroll: Enchant Armor (B-Grade)-->
+				<item id="4616" min="1" max="3" chance="39.1645" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
+				<item id="4617" min="2" max="4" chance="26.1097" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
+				<item id="4618" min="2" max="6" chance="19.5822" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
+				<item id="6572" min="1" max="1" chance="15.1436" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -5907,28 +5907,28 @@
 		</custom>
 	</npc>
 	<npc id="25092" templateId="25092" clientName="Korim" serverName="korim" level="70" type="boss">
-		<acquire exp="4596479"  exp_rate="938.056981840496" sp="802604" rp="2884" />
+		<acquire exp="4596479" exp_rate="938.056981840496" sp="802604" rp="2884" />
 		<additional_make_list>
-			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version)-->
-			<item id="9814" min="3" max="7" chance="81" /> <!-- Memento Mori-->
-			<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone-->
+			<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+			<item id="9814" min="3" max="7" chance="81" /> <!-- Memento Mori -->
+			<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="79.4028">
-				<item id="5312" min="1" max="1" chance="6.0811" /> <!-- Sealed Helm of Nightmare-->
-				<item id="5315" min="1" max="1" chance="8.6898" /> <!-- Sealed Shield of Nightmare-->
-				<item id="5317" min="1" max="1" chance="6.0811" /> <!-- Sealed Majestic Circlet-->
-				<item id="5527" min="9" max="27" chance="41.0386" /> <!-- Sealed Helm of Nightmare Design-->
-				<item id="5495" min="40" max="120" chance="11.7274" /> <!-- Sealed Shield of Nightmare Fragment-->
-				<item id="5528" min="14" max="42" chance="26.382" /> <!-- Sealed Majestic Circlet Design-->
+				<item id="5312" min="1" max="1" chance="6.0811" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="8.6898" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="6.0811" /> <!-- Sealed Majestic Circlet -->
+				<item id="5527" min="9" max="27" chance="41.0386" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5495" min="40" max="120" chance="11.7274" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5528" min="14" max="42" chance="26.382" /> <!-- Sealed Majestic Circlet Design -->
 			</category>
 			<category chance="27.3544">
-				<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive-->
-				<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge-->
+				<item id="305" min="1" max="1" chance="7.7821" /> <!-- Tallum Glaive -->
+				<item id="5541" min="12" max="36" chance="92.2179" /> <!-- Tallum Glaive Edge -->
 			</category>
 			<category chance="65.9784">
-				<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade)-->
-				<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade)-->
+				<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -6105,20 +6105,20 @@
 		</custom>
 	</npc>
 	<npc id="25095" templateId="25095" clientName="Elf Renoa" serverName="elf_renoa" level="29" type="boss">
-		<acquire exp="2345715"  exp_rate="2789.19795704879" sp="104160" rp="396" />
+		<acquire exp="2345715" exp_rate="2789.19795704879" sp="104160" rp="396" />
 		<additional_make_multi_list>
 			<category chance="58.7452">
-				<item id="395" min="1" max="1" chance="32.8894" /> <!-- Manticore Skin Shirt-->
-				<item id="417" min="4" max="12" chance="6.5657" /> <!-- Manticore Skin Gaiters-->
-				<item id="1942" min="53" max="157" chance="13.7404" /> <!-- Manticore Skin Shirt Texture-->
-				<item id="1943" min="24" max="72" chance="46.8045" /> <!-- Manticore Skin Gaiters Pattern-->
+				<item id="395" min="1" max="1" chance="32.8894" /> <!-- Manticore Skin Shirt -->
+				<item id="417" min="4" max="12" chance="6.5657" /> <!-- Manticore Skin Gaiters -->
+				<item id="1942" min="53" max="157" chance="13.7404" /> <!-- Manticore Skin Shirt Texture -->
+				<item id="1943" min="24" max="72" chance="46.8045" /> <!-- Manticore Skin Gaiters Pattern -->
 			</category>
 			<category chance="33.3137">
-				<item id="279" min="1" max="1" chance="27.8645" /> <!-- Reinforced Long Bow-->
-				<item id="2040" min="12" max="36" chance="72.1355" /> <!-- Reinforced Long Bow Shaft-->
+				<item id="279" min="1" max="1" chance="27.8645" /> <!-- Reinforced Long Bow -->
+				<item id="2040" min="12" max="36" chance="72.1355" /> <!-- Reinforced Long Bow Shaft -->
 			</category>
 			<category chance="64.6178">
-				<item id="6576" min="1" max="3" chance="100" /> <!-- Blessed Scroll: Enchant Armor (D-Grade)-->
+				<item id="6576" min="1" max="3" chance="100" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -6285,22 +6285,22 @@
 		</custom>
 	</npc>
 	<npc id="25098" templateId="25098" clientName="Sejarr's Servitor" serverName="sejarr_s_summoner" level="35" type="boss">
-		<acquire exp="1912395"  exp_rate="1561.13846334425" sp="144137" rp="520" />
+		<acquire exp="1912395" exp_rate="1561.13846334425" sp="144137" rp="520" />
 		<additional_make_multi_list>
 			<category chance="75.7935">
-				<item id="396" min="1" max="1" chance="29.0162" /> <!-- Salamander Skin Mail-->
-				<item id="1952" min="12" max="36" chance="70.9838" /> <!-- Salamander Skin Mail Texture-->
+				<item id="396" min="1" max="1" chance="29.0162" /> <!-- Salamander Skin Mail -->
+				<item id="1952" min="12" max="36" chance="70.9838" /> <!-- Salamander Skin Mail Texture -->
 			</category>
 			<category chance="59.4231">
-				<item id="70" min="1" max="1" chance="7.3366" /> <!-- Claymore-->
-				<item id="2499" min="1" max="1" chance="7.3366" /> <!-- Elven Long Sword-->
-				<item id="2047" min="4" max="12" chance="55.9111" /> <!-- Claymore Blade-->
-				<item id="2967" min="8" max="22" chance="29.4157" /> <!-- Elven Long Sword Blade-->
+				<item id="70" min="1" max="1" chance="7.3366" /> <!-- Claymore -->
+				<item id="2499" min="1" max="1" chance="7.3366" /> <!-- Elven Long Sword -->
+				<item id="2047" min="4" max="12" chance="55.9111" /> <!-- Claymore Blade -->
+				<item id="2967" min="8" max="22" chance="29.4157" /> <!-- Elven Long Sword Blade -->
 			</category>
 			<category chance="97.2548">
-				<item id="4589" min="2" max="6" chance="22.3881" /> <!-- Greater Dye of STR <Str+2 Con-2>-->
-				<item id="4590" min="3" max="7" chance="17.9104" /> <!-- Greater Dye of STR <Str+2 Dex-2>-->
-				<item id="952" min="3" max="9" chance="59.7015" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4589" min="2" max="6" chance="22.3881" /> <!-- Greater Dye of STR <Str+2 Con-2> -->
+				<item id="4590" min="3" max="7" chance="17.9104" /> <!-- Greater Dye of STR <Str+2 Dex-2> -->
+				<item id="952" min="3" max="9" chance="59.7015" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
@@ -6361,35 +6361,35 @@
 		</custom>
 	</npc>
 	<npc id="25099" templateId="25099" clientName="Rotting Tree Repiro" serverName="repiro_rot_tree" level="44" type="boss">
-		<acquire exp="2030767"  exp_rate="1048.94981746347" sp="217826" rp="736" />
+		<acquire exp="2030767" exp_rate="1048.94981746347" sp="217826" rp="736" />
 		<additional_make_list>
-			<item id="9816" min="1" max="3" chance="72" /> <!-- Earth Egg-->
-			<item id="8176" min="1" max="1" chance="72" /> <!-- Destruction Tombstone-->
+			<item id="9816" min="1" max="3" chance="72" /> <!-- Earth Egg -->
+			<item id="8176" min="1" max="1" chance="72" /> <!-- Destruction Tombstone -->
 		</additional_make_list>
 		<additional_make_multi_list>
 			<category chance="73.6004">
-				<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots-->
-				<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets-->
-				<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part-->
-				<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design-->
+				<item id="64" min="1" max="1" chance="37.4047" /> <!-- Composite Boots -->
+				<item id="608" min="1" max="1" chance="37.4047" /> <!-- Mithril Gauntlets -->
+				<item id="2956" min="192" max="576" chance="5.409" /> <!-- Composite Boots Part -->
+				<item id="1981" min="53" max="157" chance="19.7816" /> <!-- Mithril Gauntlets Design -->
 			</category>
 			<category chance="65.5526">
-				<item id="75" min="1" max="1" chance="1.1998" /> <!-- Caliburs-->
-				<item id="76" min="1" max="1" chance="1.1998" /> <!-- Sword of Delusion-->
-				<item id="77" min="1" max="1" chance="1.1998" /> <!-- Tsurugi-->
-				<item id="134" min="1" max="1" chance="1.1998" /> <!-- Sword of Nightmare-->
-				<item id="145" min="1" max="1" chance="1.1998" /> <!-- Sword of Whispering Death-->
-				<item id="2089" min="8" max="24" chance="6.7516" /> <!-- Caliburs Edge-->
-				<item id="2090" min="14" max="40" chance="4.001" /> <!-- Delusional Blade-->
-				<item id="2091" min="2" max="6" chance="27.0066" /> <!-- Tsurugi Blade-->
-				<item id="2095" min="3" max="9" chance="18.0044" /> <!-- Sword of Nightmare Blade-->
-				<item id="2096" min="4" max="10" chance="15.4324" /> <!-- Sword of Whispering Death Blade-->
+				<item id="75" min="1" max="1" chance="1.1998" /> <!-- Caliburs -->
+				<item id="76" min="1" max="1" chance="1.1998" /> <!-- Sword of Delusion -->
+				<item id="77" min="1" max="1" chance="1.1998" /> <!-- Tsurugi -->
+				<item id="134" min="1" max="1" chance="1.1998" /> <!-- Sword of Nightmare -->
+				<item id="145" min="1" max="1" chance="1.1998" /> <!-- Sword of Whispering Death -->
+				<item id="2089" min="8" max="24" chance="6.7516" /> <!-- Caliburs Edge -->
+				<item id="2090" min="14" max="40" chance="4.001" /> <!-- Delusional Blade -->
+				<item id="2091" min="2" max="6" chance="27.0066" /> <!-- Tsurugi Blade -->
+				<item id="2095" min="3" max="9" chance="18.0044" /> <!-- Sword of Nightmare Blade -->
+				<item id="2096" min="4" max="10" chance="15.4324" /> <!-- Sword of Whispering Death Blade -->
 			</category>
 			<category chance="90.7721">
-				<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3>-->
-				<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3>-->
-				<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3>-->
-				<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade)-->
+				<item id="4604" min="2" max="6" chance="15.4639" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+				<item id="4605" min="3" max="7" chance="12.3711" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+				<item id="4606" min="3" max="9" chance="10.3093" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="952" min="3" max="9" chance="61.8557" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 			</category>
 		</additional_make_multi_list>
 		<agro_range>0</agro_range>
