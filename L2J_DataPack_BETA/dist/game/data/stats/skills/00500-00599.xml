@@ -150,7 +150,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -201,7 +201,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BLOW" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -251,7 +251,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -293,7 +293,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -340,6 +340,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -394,7 +395,7 @@
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -465,8 +466,11 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="soulMaxConsumeCount" val="1" />
+		<set name="soulMaxConsumeCount" val="1" />**
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="2195">
+			<player souls="1" />
+		</cond>
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -485,8 +489,11 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="soulConsumeCount" val="1" />
+		<set name="soulMaxConsumeCount" val="1" />**
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="2195">
+			<player souls="1" />
+		</cond>
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -877,7 +884,7 @@
 		<set name="skillRadius" val="400" />
 		<set name="skillScope" val="fan;400;90" />
 		<set name="skillType" val="PDAM" />
-		<set name="soulMaxConsumeCount" val="5" />
+		<set name="soulMaxConsumeCount" val="5" />**
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1129,10 +1136,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="soulConsumeCount" val="20" />
+		<set name="soulMaxConsumeCount" val="20" />**
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="251" />
+		<cond msgId="2195">
+			<player souls="20" />
+		</cond>
 		<for>
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation lasts 5 minutes -->
 				<mul order="0x30" stat="pAtk" val="2" /> <!-- pAtk +100% -->
