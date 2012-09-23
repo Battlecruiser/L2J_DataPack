@@ -42,7 +42,7 @@ public class Craft implements ISkillHandler
 		
 		L2PcInstance player = activeChar.getActingPlayer();
 		
-		if (player.getPrivateStoreType() != 0)
+		if (player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
