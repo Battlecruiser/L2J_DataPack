@@ -53,7 +53,7 @@ public class L2PcInstanceAction implements IActionHandler
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// See description in TvTEvent.java
-		if (!TvTEvent.onAction( activeChar, target.getObjectId()))
+		if (!TvTEvent.onAction(activeChar, target.getObjectId()))
 			return false;
 		
 		// Check if the L2PcInstance is confused
@@ -82,7 +82,7 @@ public class L2PcInstanceAction implements IActionHandler
 		{
 			if (activeChar != target) activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			// Check if this L2PcInstance has a Private Store
-			if (((L2PcInstance)target).getPrivateStoreType() != 0)
+			if (((L2PcInstance) target).getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
 			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}
