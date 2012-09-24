@@ -133,7 +133,7 @@ public class Kamaloka extends Quest
 		new Location(-49805, -206139,  -8117),
 		new Location(-10700, -174882, -10936),
 		new Location(-10700, -174882, -10936),
-		new Location( 22010, -174867, -1090),
+		new Location( 22003, -174886, -10900),
 	};
 	
 	/*
