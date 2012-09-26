@@ -1156,7 +1156,7 @@
 		<table name="#power"> 96 99 102 105 108 </table>
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
-		<set name="dependOnTargetBuff" val="0.2" /> <!-- NOTE: Divine Inspiration/Dance/Song/Trigger slots are ignored, so using (20 Default Buff Slots / 100) -->
+		<set name="dependOnTargetBuff" val="true" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

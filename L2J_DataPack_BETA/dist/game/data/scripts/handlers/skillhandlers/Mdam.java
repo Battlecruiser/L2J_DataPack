@@ -71,9 +71,10 @@ public class Mdam implements ISkillHandler
 			
 			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, sps, bss, mcrit);
 			
-			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff() != 0)
+			// Curse of Divinity Formula (each buff increase +30%)
+			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff())
 			{
-				damage += (int) (damage * target.getBuffCount() * skill.getDependOnTargetBuff());
+				damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
 			}
 			
 			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
