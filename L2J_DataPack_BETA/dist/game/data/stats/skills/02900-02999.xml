@@ -158,6 +158,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="89417,-44506,-2126" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
 		<!-- Confirmed CT2.5 -->

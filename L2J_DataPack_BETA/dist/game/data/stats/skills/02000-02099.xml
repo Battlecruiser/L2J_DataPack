@@ -138,6 +138,11 @@
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2014" levels="1" name="Scroll Of Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -322,6 +327,11 @@
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
 		<set name="abnormalLvl" val="3" />
@@ -362,6 +372,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="ClanHall" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -371,6 +386,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Castle" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2042" levels="1" name="Antidote">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1103,5 +1123,10 @@
 		<set name="hitTime" val="300000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 </list>

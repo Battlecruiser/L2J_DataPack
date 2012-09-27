@@ -76,6 +76,11 @@
 		<cond msgId="2292">
 			<player agathionId="1503" />
 		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
 		<set name="abnormalLvl" val="0" />
@@ -102,6 +107,11 @@
 		<set name="reuseDelay" val="43200000" />
 		<cond msgId="2292">
 			<player agathionId="1504" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
@@ -184,6 +194,11 @@
 		<set name="reuseDelay" val="43200000" />
 		<cond msgId="2292">
 			<player agathionId="1507" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy">
@@ -395,6 +410,11 @@
 		<cond msgId="2292">
 			<player agathionId="1511" />
 		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
@@ -503,6 +523,11 @@
 		<set name="reuseDelay" val="43200000" />
 		<cond msgId="2292">
 			<player agathionId="1514" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
@@ -774,6 +799,11 @@
 		<set name="reuseDelay" val="43200000" />
 		<cond msgId="2292">
 			<player agathionId="1522" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">

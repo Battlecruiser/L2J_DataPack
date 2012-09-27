@@ -99,6 +99,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2610" levels="1" name="Register Bookmark (Event)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -552,6 +557,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2650" levels="1" name="Summon Imperial Phoenix">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

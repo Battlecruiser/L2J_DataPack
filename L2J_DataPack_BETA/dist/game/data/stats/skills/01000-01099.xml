@@ -1131,6 +1131,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="1056" levels="12" name="Cancellation">
 		<table name="#mpInitialConsume"> 9 10 11 11 11 12 12 13 13 13 14 14 </table>

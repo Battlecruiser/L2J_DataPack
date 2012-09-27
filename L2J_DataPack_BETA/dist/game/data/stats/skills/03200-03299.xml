@@ -117,6 +117,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="3206" levels="10" name="Item Skill: Music">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -797,6 +802,11 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="3265" levels="1" name="Mysterious Ability">
 		<set name="abnormalLvl" val="0" />

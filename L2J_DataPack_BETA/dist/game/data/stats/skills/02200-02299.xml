@@ -216,6 +216,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="teleCoords" val="#teleCoords" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
 		<!-- Confirmed CT2.5 -->
@@ -228,6 +233,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="teleCoords" val="#teleCoords" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
 		<!-- Confirmed CT2.5 -->
@@ -681,7 +691,10 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
-			<using kind="Bow" />
+			<and>
+				<using kind="Bow" />
+				<player insideZoneId="2234" />
+			</and>
 		</cond>
 		<for>
 			<effect name="Stun" abnormalTime="1" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
@@ -768,6 +781,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2239" />
+		</cond>
 		<for>
 			<effect name="Petrification" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
@@ -784,6 +800,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2240123" />
+		</cond>
 	</skill>
 	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -791,6 +810,9 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2240123" />
+		</cond>
 	</skill>
 	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -798,6 +820,9 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2240123" />
+		</cond>
 	</skill>
 	<skill id="2243" levels="1" name="Hot Spring Sulfur">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -805,6 +830,9 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2240123" />
+		</cond>
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
 		<!-- Confirmed CT2.5 -->
@@ -1413,6 +1441,9 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2276" />
+		</cond>
 	</skill>
 	<skill id="2277" levels="6" name="Event Gift Box">
 		<!-- Confirmed CT2.5 -->

@@ -924,6 +924,11 @@
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="3147" levels="1" name="Item Skill: Recall">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -935,6 +940,11 @@
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>

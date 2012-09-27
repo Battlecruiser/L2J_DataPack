@@ -331,6 +331,11 @@
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -783,6 +788,9 @@
 		<set name="skillType" val="NORNILS_POWER" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="200" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="2353" />
+		</cond>
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
 		<!-- Confirmed CT2.5 -->
@@ -945,7 +953,12 @@
 		<set name="recallType" val="Fortress" />
 		<set name="operateType" val="A1" />
 		<cond msgId="113" addName="1">
-			<player fort="-1" />
+			<and>
+				<player fort="-1" />
+			</and>
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="2365" levels="1" name="Scroll of Fortress Return">
@@ -956,6 +969,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Fortress" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2366" levels="1" name="Blue Coral Key">
 		<!-- Confirmed CT2.5 -->
@@ -1385,6 +1403,11 @@
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="RECALL" />
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2393" levels="1" name="Blessed Scroll of Battlefield Resurrection">
 		<!-- Confirmed CT2.5 -->

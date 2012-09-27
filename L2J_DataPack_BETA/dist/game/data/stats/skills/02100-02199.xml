@@ -6,6 +6,11 @@
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2101" levels="1" name="Feed: General Strider">
 		<!-- Confirmed CT2.5 -->
@@ -878,7 +883,12 @@
 		<set name="recallType" val="ClanHall" />
 		<set name="operateType" val="A1" />
 		<cond msgId="113" addName="1">
-			<player clanHall="-1" />
+			<and>
+				<player clanHall="-1" />
+			</and>
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
@@ -889,6 +899,11 @@
 		<set name="skillType" val="RECALL" />
 		<set name="recallType" val="Castle" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
