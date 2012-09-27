@@ -1,0 +1,1 @@
+DELETE FROM character_quest_global_data WHERE var = "Hekaton respawn";
