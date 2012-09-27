@@ -654,6 +654,9 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="staticReuse" val="true" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="90578" />
+		</cond>
 	</skill>
 	<skill id="9058" levels="1" name="Black Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
@@ -664,6 +667,9 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="staticReuse" val="true" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="90578" />
+		</cond>
 	</skill>
 	<skill id="9059" levels="1" name="Torch Light">
 		<!-- Lights the Torch -->

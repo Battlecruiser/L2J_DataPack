@@ -79,6 +79,11 @@
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="RECALL" />
 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection (Event)">
 		<!-- Confirmed CT2.5 -->

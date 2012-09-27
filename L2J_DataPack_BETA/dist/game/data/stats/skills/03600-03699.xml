@@ -546,6 +546,11 @@
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 		<for>
 			<effect name="ClanGate" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item" />
 			<effect name="ImmobileBuff" abnormalTime="120" noicon="1" val="0" />

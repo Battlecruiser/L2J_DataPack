@@ -838,6 +838,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22054" levels="1" name="Potion of Energy Maintenance">
 		<set name="abnormalLvl" val="1" />

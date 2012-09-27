@@ -317,6 +317,11 @@
 		<set name="skillType" val="TELEPORT" />
 		<set name="teleCoords" val="-120050,44500,360" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2526" levels="1" name="Evasion Counter">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -403,6 +408,11 @@
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2532" levels="1" name="Pathfinder Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -1457,6 +1467,11 @@
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2595" levels="1" name="Gran Kain's Blessed Scroll of Escape">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1465,6 +1480,11 @@
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="2596" levels="1" name="Gran Kain's Blessed Scroll of Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

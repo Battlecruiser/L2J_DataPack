@@ -295,6 +295,11 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

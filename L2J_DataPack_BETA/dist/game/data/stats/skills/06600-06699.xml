@@ -876,6 +876,11 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="skillRadius" val="100" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="6684" levels="1" name="Maguen Recall">
 		<set name="magicLvl" val="1" />
@@ -888,6 +893,11 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="skillRadius" val="100" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="6685" levels="1" name="Santa Claus's Gift">
 		<!-- Confirmed CT2.5 -->
