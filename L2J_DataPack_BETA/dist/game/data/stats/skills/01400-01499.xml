@@ -2587,68 +2587,83 @@
 		</enchant1for>
 	</skill>
 	<skill id="1485" levels="3" name="Spite" enchantGroup1="1" enchantGroup2="1">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#mpConsume"> 62 65 68 </table>
+		<table name="#magicLvl"> 66 70 74 </table>
+		<table name="#mpConsume"> 49 52 54 </table>
+		<table name="#mpInitialConsume"> 13 13 14 </table>
 		<table name="#lvl"> 1 2 3 </table>
 		<table name="#ench1Time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench1MpConsume"> 66 65 63 62 61 60 58 57 56 55 53 53 52 51 50 48 47 47 46 45 43 42 41 40 38 37 36 36 35 33 </table>
+		<table name="#ench1MpConsume"> 53 52 51 50 49 48 48 47 46 45 44 43 42 41 40 39 38 38 37 36 35 34 33 32 31 30 29 29 28 27 </table>
+		<table name="#ench1MpInitialConsume"> 13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 7 6 </table>
 		<table name="#ench2Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="spite" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="2000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="2000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" abnormalVisualEffect="poison" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" abnormalVisualEffect="poison" />
 		</enchant1for>
 	</skill>
 	<skill id="1486" levels="4" name="Mental Impoverish" enchantGroup1="1" enchantGroup2="1">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#mpConsume"> 64 65 67 68 </table>
+		<table name="#magicLvl"> 68 70 72 74 </table>
+		<table name="#mpConsume"> 51 52 53 54 </table>
+		<table name="#mpInitialConsume"> 13 13 14 14 </table>
 		<table name="#lvl"> 1 2 3 4 </table>
 		<table name="#ench1Time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench1MpConsume"> 65 63 62 62 61 60 58 57 56 55 53 53 52 51 50 48 47 46 45 45 43 42 41 40 38 37 36 35 35 33 </table>
+		<table name="#ench1MpConsume"> 52 51 50 50 49 48 47 46 45 44 43 43 42 41 40 39 38 37 36 36 35 34 33 32 31 30 29 28 28 27 </table>
+		<table name="#ench1MpInitialConsume"> 13 12 12 12 12 12 11 11 11 11 10 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 7 6 </table>
 		<table name="#ench2Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="mental_impoverish" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="2000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="2000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" />
+			<effect name="ChanceSkillTrigger" abnormalTime="60" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" abnormalVisualEffect="poison" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" />
+			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" abnormalVisualEffect="poison" />
 		</enchant1for>
 	</skill>
 	<skill id="1487" levels="8" name="Restoration" enchantGroup1="1" enchantGroup2="1">
