@@ -1430,21 +1430,22 @@
 		</enchant3for>
 	</skill>
 	<skill id="1446" levels="11" name="Shadow Bind" enchantGroup1="1" enchantGroup2="1">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
-		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<table name="#ench1Power"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2Time"> 20 26 31 37 42 48 53 59 64 70 75 81 86 92 97 103 108 114 119 125 130 136 141 147 152 158 163 169 174 180 </table>
+		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="30" />
+		<set name="mpConsume" val="20" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
@@ -1452,8 +1453,8 @@
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" abnormalVisualEffect="root" />
@@ -1463,21 +1464,22 @@
 		</enchant2for>
 	</skill>
 	<skill id="1447" levels="9" name="Voice Bind" enchantGroup1="1" enchantGroup2="1">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<table name="#ench1Power"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2Time"> 25 30 36 41 46 52 57 62 68 73 78 84 89 94 100 105 110 116 121 126 132 137 144 148 153 158 164 169 174 180 </table>
+		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
 		<set name="castRange" val="400" />
-		<set name="lvlDepend" val="2" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
+		<set name="mpConsume" val="25" />
+		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
@@ -1485,8 +1487,8 @@
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence" abnormalVisualEffect="mute" />
