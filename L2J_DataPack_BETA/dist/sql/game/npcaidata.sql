@@ -2299,12 +2299,12 @@ INSERT INTO `npcaidata` VALUES
 (18796, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "corpse"), -- Bizarre Cocoon
 (18797, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "corpse"), -- Bizarre Cocoon
 (18798, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "corpse"), -- Bizarre Cocoon
-(18799, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Newborn Lavasaurus
-(18800, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Fledgling Lavasaurus
-(18801, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Adult Lavasaurus
-(18802, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Elderly Lavasaurus
-(18803, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Ancient Lavasaurus
-(18804, 7, 15, 0, 300, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Tar Beetle
+(18799, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Newborn Lavasaurus
+(18800, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Fledgling Lavasaurus
+(18801, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Adult Lavasaurus
+(18802, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Elderly Lavasaurus
+(18803, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 300, "null", 0, 0, "fighter"), -- Ancient Lavasaurus
+(18804, 7, 15, 0, 300, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Tar Beetle
 (18805, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Waste Landfill Machine
 (18806, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Brazier of Purity
 (18807, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Frightened Ragna Orc
@@ -4719,22 +4719,22 @@ INSERT INTO `npcaidata` VALUES
 (22631, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "spike_clan", 500, "null", 0, 0, "mage"), -- Spiked Stakato Nurse
 (22632, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "spike_clan", 500, "null", 0, 0, "balanced"), -- Spiked Stakato Baby
 (22633, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "spike_clan", 500, "null", 0, 0, "mage"), -- Spiked Stakato Shaman
-(22634, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Worker
-(22635, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Soldier
-(22636, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Noble
-(22637, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Tepra Scorpion
-(22638, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Tepra Scarab
-(22639, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Assassin Beetle
-(22640, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Mercenary of Destruction
-(22641, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Knight of Destruction
-(22642, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 500, "null", 0, 0, "fighter"), -- Lavastone Golem
-(22643, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 500, "null", 0, 0, "fighter"), -- Magma Golem
-(22644, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Arimanes of Destruction
-(22645, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Balor of Destruction
-(22646, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Ashuras of Destruction
-(22647, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Lavasillisk
-(22648, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Blazing Ifrit
-(22649, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Magma Drake
+(22634, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Worker
+(22635, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Soldier
+(22636, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Scarlet Stakato Noble
+(22637, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Tepra Scorpion
+(22638, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Tepra Scarab
+(22639, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Assassin Beetle
+(22640, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Mercenary of Destruction
+(22641, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Knight of Destruction
+(22642, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 500, "null", 0, 0, "fighter"), -- Lavastone Golem
+(22643, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fire_clan", 500, "null", 0, 0, "fighter"), -- Magma Golem
+(22644, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Arimanes of Destruction
+(22645, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Balor of Destruction
+(22646, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Ashuras of Destruction
+(22647, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Lavasillisk
+(22648, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Blazing Ifrit
+(22649, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 450, 0, "fire_clan", 1000, "null", 0, 0, "fighter"), -- Magma Drake
 (22650, 7, 15, 5909, 300, 1, 1, 1, 4670, 15, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "reedfield_object", 300, 0, "fighter"), -- Mucrokian Fanatic
 (22651, 7, 15, 5909, 300, 1, 1, 1, 4582, 15, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "reedfield_object", 300, 0, "fighter"), -- Mucrokian Ascetic
 (22652, 7, 15, 5909, 300, 1, 1, 1, 4670, 15, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "reedfield_object", 300, 0, "fighter"), -- Mucrokian Savior
