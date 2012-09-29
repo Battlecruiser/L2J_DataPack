@@ -405,16 +405,33 @@
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
 		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
+		<table name="#speed"> 0.7 0.4 0.1 </table>
+		<table name="#pDef"> 0.9 0.8 0.7 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="mpConsume" val="57" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="2" />
+		<set name="power" val="90" /> 
 		<set name="reuseDelay" val="30000" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="MEN" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="600" />
+		<set name="canBeDispeled" val="false" />
+		<for>
+			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_down">
+				<mul order="0x30" stat="runSpd" val="#speed" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
+				<mul order="0x30" stat="rEvas" val="#pDef" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6143" levels="1" name="Ancient Beam">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
