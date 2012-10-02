@@ -2457,14 +2457,14 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="target" val="TARGET_SELF" />
-		<!-- Summon-specific -->
-		<set name="activationchance" val="12" /> <!-- Cubic Chance -->
-		<set name="activationtime" val="30" /> <!-- Cubic Delay -->
+		<!-- Cubic-Specific -->
+		<set name="cubicDelay" val="30" />
+		<set name="cubicDuration" val="900" />
+		<set name="cubicMaxCount" val="10" />
+		<set name="cubicSkillChance" val="12" />
 		<set name="isCubic" val="true" />
-		<set name="maxcount" val="10" />
 		<set name="npcId" val="6" /> <!-- Cubic Id -->
 		<set name="power" val="#power" /> <!-- Cubic Power -->
-		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
@@ -2488,14 +2488,14 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="target" val="TARGET_SELF" />
-		<!-- Summon-specific -->
-		<set name="activationchance" val="30" /> <!-- Cubic Chance -->
-		<set name="activationtime" val="30" /> <!-- Cubic Delay -->
+		<!-- Cubic-Specific -->
+		<set name="cubicDelay" val="30" />
+		<set name="cubicDuration" val="900" />
+		<set name="cubicMaxCount" val="10" />
+		<set name="cubicSkillChance" val="30" />
 		<set name="isCubic" val="true" />
-		<set name="maxcount" val="10" />
 		<set name="npcId" val="7" /> <!-- Cubic Id -->
 		<set name="power" val="#power" /> <!-- Cubic Power -->
-		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
@@ -2519,14 +2519,14 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="target" val="TARGET_SELF" />
-		<!-- Summon-specific -->
-		<set name="activationchance" val="12" /> <!-- Cubic Chance -->
-		<set name="activationtime" val="30" /> <!-- Cubic Delay -->
+		<!-- Cubic-Specific -->
+		<set name="cubicDelay" val="30" />
+		<set name="cubicDuration" val="900" />
+		<set name="cubicMaxCount" val="10" />
+		<set name="cubicSkillChance" val="12" />
 		<set name="isCubic" val="true" />
-		<set name="maxcount" val="10" />
 		<set name="npcId" val="8" /> <!-- Cubic Id -->
 		<set name="power" val="#power" /> <!-- Cubic Power -->
-		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
