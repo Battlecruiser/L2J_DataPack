@@ -748,7 +748,8 @@
 	</skill>
 	<skill id="5652" levels="3" name="Nightshade - Death Whisper">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggro"> 379 457 532 </table>
+		<!-- Summon Nightshade Skill -->
+		<table name="#aggroPoints"> 379 457 532 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
@@ -757,7 +758,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_dmg_up" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -777,7 +778,8 @@
 	</skill>
 	<skill id="5653" levels="2" name="Nightshade - Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggro"> 418 495 </table>
+		<!-- Summon Nightshade Skill -->
+		<table name="#aggroPoints"> 418 495 </table>
 		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
@@ -786,7 +788,7 @@
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_prob_up" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -806,6 +808,7 @@
 	</skill>
 	<skill id="5654" levels="3" name="Nightshade - Guidance">
 		<!-- Confirmed CT2.5 -->
+		<!-- Summon Nightshade Skill -->
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#aggro"> 379 457 532 </table>
 		<table name="#magicLvl"> 56 62 64 </table>
