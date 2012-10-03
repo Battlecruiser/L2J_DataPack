@@ -21,6 +21,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javolution.util.FastMap;
+
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
@@ -40,7 +42,7 @@ import com.l2jserver.util.Rnd;
 public class TarBeetleSpawn extends DocumentParser
 {
 	private static final Map<Integer, SpawnZone> _spawnZoneList = new HashMap<>();
-	private static final Map<Integer, Beetle> _spawnList = new HashMap<>();
+	private static final Map<Integer, Beetle> _spawnList = new FastMap<>();
 	
 	public static List<Integer> lowerZones = new ArrayList<>();
 	public static List<Integer> upperZones = new ArrayList<>();
