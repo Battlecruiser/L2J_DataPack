@@ -454,7 +454,6 @@
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">
 		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#AtkSpd"> 1.1 1.15 1.2 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -465,7 +464,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="br_event_buf2">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="br_event_buf2">
 				<mul order="0x30" stat="pAtkSpd" val="#AtkSpd" />
 				<mul order="0x30" stat="mAtkSpd" val="#AtkSpd" />
 			</effect>
@@ -883,7 +882,6 @@
 	</skill>
 	<skill id="22158" levels="10" name="Rose Petal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="br_event_buf1" />
@@ -895,7 +893,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="br_event_buf1">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="regHp" val="1.2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 			</effect>

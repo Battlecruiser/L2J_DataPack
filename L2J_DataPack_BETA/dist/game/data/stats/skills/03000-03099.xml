@@ -180,7 +180,6 @@
 	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 384 384 570 570 570 768 </table>
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -195,7 +194,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
@@ -247,7 +246,6 @@
 	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 573 573 873 873 873 1209 </table>
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -266,7 +264,7 @@
 		<set name="reuseDelay" val="12000" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
@@ -464,7 +462,6 @@
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 504 504 747 747 747 1008 </table>
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -481,13 +478,12 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 951 951 1494 1494 1494 2013 </table>
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -504,7 +500,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3042" levels="20" name="Special Ability: Critical Damage">

@@ -571,7 +571,6 @@
 		<table name="#count"> 7 3 </table>
 		<table name="#dot"> 115 575 </table>
 		<table name="#power"> 70 -1 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
@@ -589,7 +588,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Paralyze" abnormalTime="#time2" val="0" special="freezing" abnormalLvl="#abnormalLvl" abnormalType="freezing" />
+			<effect name="Paralyze" abnormalTime="#time2" val="0" special="freezing" abnormalLvl="#abnormalLvls" abnormalType="freezing" />
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
 			<effect count="#count" name="DamOverTime" abnormalTime="#time" noicon="1" val="#dot" />

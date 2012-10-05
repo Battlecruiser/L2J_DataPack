@@ -322,7 +322,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
@@ -334,7 +333,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Grow" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Grow" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -344,7 +343,6 @@
 	<skill id="4029" levels="3" name="NPC Shield">
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up" />
@@ -356,7 +354,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -367,7 +365,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
@@ -382,7 +379,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -393,7 +390,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up" />
@@ -408,7 +404,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -480,7 +476,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#dmg"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -499,7 +494,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -508,7 +503,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#dmg"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -528,7 +522,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -537,7 +531,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pAtk"> 0.83 0.8 0.77 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_down" />
@@ -555,7 +548,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -567,7 +560,6 @@
 		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 50 70 </table>
 		<table name="#time"> 5 10 10 15 15 </table>
-		<table name="#abnormalLvl"> 1 2 2 3 3 </table>
 		<table name="#abnormalLvls"> 1 2 2 3 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_up" />
@@ -585,7 +577,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_up">
+			<effect name="Debuff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -822,7 +814,6 @@
 	<skill id="4052" levels="15" name="Poison">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvl"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
 		<table name="#dot"> 123 150 174 174 174 189 189 189 189 198 198 198 198 198 198 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
 		<table name="#abnormalLvls"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
@@ -839,7 +830,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- Retail Values CT2.5: 41 50 58 58 58 63 63 63 63 66 66 66 66 66 66HP * 3 Seconds -->
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="4053" levels="16" name="Decrease P.Atk">
@@ -1183,7 +1174,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 30 70 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_down" />
@@ -1198,7 +1188,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -1234,7 +1224,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#runSpd"> 0.9 0.8 0.7 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
@@ -1252,7 +1241,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -1415,7 +1404,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#damage"> 54 75 102 132 162 186 201 201 210 210 213 213 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
@@ -1435,7 +1423,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1563,7 +1551,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#accCombat"> 6 8 10 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="ab_hawk_eye" />
@@ -1575,7 +1562,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="ab_hawk_eye">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="ab_hawk_eye">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
@@ -1587,7 +1574,6 @@
 		<!-- Freya retail confirmed -->
 		<table name="#hot"> 21 36 54 81 111 138 165 69 96 126 153 174 </table>
 		<table name="#power"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
@@ -1602,7 +1588,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect count="5" name="HealOverTime" abnormalTime="3" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
+			<effect count="5" name="HealOverTime" abnormalTime="3" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
 		<table name="#mpConsume"> 33 59 88 122 159 195 228 242 252 259 262 262 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1643,7 +1629,6 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
 		<table name="#rEvas"> 5 8 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="berserker" />
@@ -1658,7 +1643,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="berserker">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#mAtk" />

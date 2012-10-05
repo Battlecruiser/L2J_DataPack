@@ -131,7 +131,6 @@
 		<table name="#power"> 0 0 0 10 10 </table>
 		<table name="#saveVs"> NULL NULL NULL MEN MEN </table>
 		<table name="#skillType"> BUFF DUMMY BUFF DEBUFF STUN </table>
-		<table name="#abnormalLvl"> 0 0 1 1 1 </table>
 		<table name="#abnormalType"> none none ultimate_buff heal_effect_down stun </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
 		<table name="#time"> 0 0 5 5 5 </table>
@@ -518,7 +517,6 @@
 		<table name="#mpInitialConsume"> 1 1 1 1 1 1 1 49 51 52 53 53 </table>
 		<table name="#mpConsume"> 1 1 1 1 1 1 1 193 201 207 209 209 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
@@ -535,7 +533,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="skillType" val="BUFF" />
 		<for>
-			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvl" abnormalType="life_force_others" />
+			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">
@@ -591,7 +589,6 @@
 		<table name="#mpConsume"> 10 21 0 </table>
 		<table name="#reuseDelay"> 1800000 1800000 5000 </table>
 		<table name="#time"> 30 30 5 </table>
-		<table name="#abnormalLvl"> 1 2 2 </table>
 		<table name="#abnormalLvls"> 1 2 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up_special" />
@@ -604,7 +601,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="#time" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="#time" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#abnormalLvls" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />

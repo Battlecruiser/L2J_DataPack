@@ -1037,7 +1037,6 @@
 		<table name="#magicLvl"> 40 52 62 70 </table>
 		<table name="#mpConsume"> 18 24 29 33 </table>
 		<table name="#vuln"> 1.16 1.24 1.32 1.4 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="stigma_of_silen" />
@@ -1054,7 +1053,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="stigma_of_silen" special="stigmashilien">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="stigma_of_silen" special="stigmashilien">
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bluntWpnVuln" val="#vuln" />
@@ -1225,7 +1224,6 @@
 		</for>
 	</skill>
 	<skill id="1547" levels="3" name="Spirit Sharing">
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#magicLvl"> 44 62 70 </table>
 		<table name="#mpInitialConsume"> 8 12 13 </table>
 		<table name="#mpConsume"> 31 46 52 </table>
@@ -1247,7 +1245,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="public_slot">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="public_slot">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#amount" />

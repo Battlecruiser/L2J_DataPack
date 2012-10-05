@@ -10,7 +10,6 @@
 		<table name="#power"> 924 1054 1146 1240 1337 1437 1538 1639 1741 1841 </table>
 		<table name="#rCrit"> -0.3 -0.3 -0.3 -0.3 -0.3 -0.4 -0.4 -0.4 -0.4 -0.5 </table>
 		<table name="#vuln"> 1.12 1.12 1.12 1.12 1.12 1.16 1.16 1.16 1.16 1.2 </table>
-		<table name="#abnormalLvl"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -45,7 +44,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_down" effectPower="80" effectType="DEBUFF">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -111,7 +110,6 @@
 		<table name="#power"> 1056 1205 1309 1417 1528 1642 1757 1873 1989 2104 </table>
 		<table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
 		<table name="#vuln"> 1.12 1.12 1.12 1.12 1.12 1.16 1.16 1.16 1.16 1.2 </table>
-		<table name="#abnormalLvl"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#abnormalLvls"> 1 1 1 1 2 2 2 2 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -147,7 +145,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -343,7 +341,6 @@
 		<table name="#ench2mpConsume"> 167 164 161 158 155 153 150 147 144 141 138 136 133 130 127 124 121 119 116 113 110 107 104 102 99 96 93 90 87 85 </table>
 		<table name="#ench3reuseDelay"> 295000 290000 285000 280000 275000 270000 265000 260000 255000 250000 245000 240000 235000 230000 225000 220000 215000 210000 205000 200000 195000 190000 185000 180000 175000 170000 165000 160000 155000 150000 </table>
 		<table name="#ench4time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggroPoints"> 549 611 655 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
@@ -372,7 +369,7 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="possession">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="possession">
 				<sub order="0x40" stat="debuffVuln" val="40" />
 				<mul order="0x30" stat="pDef" val="1.5" />
 				<mul order="0x30" stat="mDef" val="1.5" />
@@ -444,7 +441,6 @@
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
 		<table name="#power"> 229 262 284 308 332 357 382 407 432 457 </table>
-		<table name="#abnormalLvl"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="all_speed_down" />
@@ -464,7 +460,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="all_speed_down" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_speed_down" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="runSpd" val="#debuff" />
 				<mul order="0x30" stat="pAtkSpd" val="#debuff" />
 				<mul order="0x30" stat="mAtkSpd" val="#debuff" />
@@ -477,7 +473,6 @@
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 39 42 44 45 47 48 50 51 53 54 </table>
 		<table name="#power"> 825 941 1023 1107 1194 1283 1373 1464 1554 1644 </table>
-		<table name="#abnormalLvl"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="all_attack_down" />
@@ -500,7 +495,7 @@
 			<using kind="Dual Sword" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="#abnormalLvl" abnormalType="all_attack_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_attack_down" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="mAtk" val="#debuff" />
 				<mul order="0x30" stat="pAtk" val="#debuff" />
 			</effect>
@@ -513,7 +508,6 @@
 		<table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#power"> 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 </table>
-		<table name="#abnormalLvl"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 3685 3718 3751 3784 3817 3850 3883 3916 3949 3982 4014 4047 4080 4113 4146 4179 4212 4245 4278 4311 4343 4376 4409 4442 4475 4508 4541 4574 4607 4640 </table>
 		<table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
@@ -560,7 +554,7 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect self="1" name="Buff" abnormalTime="15" val="0" abnormalLvl="#abnormalLvl" abnormalType="might_mortal">
+			<effect self="1" name="Buff" abnormalTime="15" val="0" abnormalLvl="#abnormalLvls" abnormalType="might_mortal">
 				<mul order="0x30" stat="blowRate" val="#blowRate" />
 			</effect>
 		</for>
@@ -574,7 +568,6 @@
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#blowRate"> 1.1 1.15 1.2 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="might_mortal" />
@@ -591,7 +584,7 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="might_mortal">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="might_mortal">
 				<mul order="0x30" stat="blowRate" val="#blowRate" />
 			</effect>
 		</for>
@@ -613,7 +606,6 @@
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#rEvas"> 12 8 4 </table>
 		<table name="#amount"> 0.55 0.7 0.85 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="stealth" />
@@ -626,7 +618,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="stealth">
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -653,7 +645,6 @@
 		<table name="#accCombat"> 6 6 6 6 6 9 9 9 9 12 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
-		<table name="#abnormalLvl"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="hit_down" />
@@ -675,7 +666,7 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="hit_down">
 				<sub order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -689,7 +680,6 @@
 		<table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#pAtk"> 62 67 73 78 83 89 94 100 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#ench1pAtk"> 106 107 107 108 109 110 110 111 112 112 113 114 115 115 116 117 117 118 119 120 120 121 122 122 123 124 125 125 126 127 </table>
 		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
@@ -706,7 +696,7 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="snipe">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="snipe">
 				<add order="0x40" stat="pAtk" val="#pAtk">
 					<using kind="Bow" />
 				</add>
@@ -751,7 +741,6 @@
 		<table name="#pAtk"> 124 134 155 155 166 177 188 199 </table>
 		<table name="#ench1pAtk"> 211 213 214 216 217 219 220 221 223 224 226 227 229 230 231 233 234 236 237 239 240 242 243 244 246 247 249 250 252 253 </table>
 		<table name="#accCombat"> 1 1 2 2 2 3 3 3 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="snipe" />
@@ -766,7 +755,7 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="snipe">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="snipe">
 				<mul order="0x30" stat="pAtkSpd" val="0.9">
 					<using kind="Bow" />
 				</mul>
@@ -801,7 +790,6 @@
 	<skill id="415" levels="3" name="Spirit of Sagittarius">
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
-		<table name="#abnormalLvl"> 2 4 6 </table>
 		<table name="#PhysicalMpConsumeRate"> 0.9 0.8 0.7 </table>
 		<table name="#abnormalLvls"> 2 4 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -814,7 +802,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="mp_cost_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="mp_cost_down">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 			</effect>
 		</for>
@@ -822,7 +810,6 @@
 	<skill id="416" levels="3" name="Blessing of Sagittarius">
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
-		<table name="#abnormalLvl"> 2 4 6 </table>
 		<table name="#pReuse"> 0.9 0.85 0.8 </table>
 		<table name="#abnormalLvls"> 2 4 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -835,7 +822,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="reuse_delay_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="reuse_delay_down">
 				<mul order="0x30" stat="pReuse" val="#pReuse" />
 			</effect>
 		</for>
@@ -908,7 +895,6 @@
 		<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
 		<table name="#rCrit"> 33 66 100 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up_special" />
@@ -926,7 +912,7 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up_special">
 				<sub order="0x40" stat="debuffVuln" val="80" />
 				<sub order="0x40" stat="cancelVuln" val="40" />
 				<add order="0x40" stat="runSpd" val="#runSpd" />
@@ -972,7 +958,6 @@
 		<table name="#mpConsume"> 27 29 31 33 34 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#atkCountMax"> 1 2 3 4 5 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
 		<table name="#ench1atkCountMax"> 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 </table>
 		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
@@ -989,7 +974,7 @@
 			<using kind="Pole" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="polearm_attack">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="polearm_attack">
 				<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
 			</effect>
 		</for>
@@ -2357,7 +2342,6 @@
 		<table name="#cAtk"> 1.25 1.3 </table>
 		<table name="#mpConsume"> 11 25 </table>
 		<table name="#magicLvl"> 24 55 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up_special" />
@@ -2369,7 +2353,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="operateType" val="A2" />
 		<for>
-			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up_special">
+			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up_special">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pDef" val="0.95" />
@@ -2383,7 +2367,6 @@
 		<table name="#pDef"> 1600 3200 </table>
 		<table name="#runSpd"> 0.6 0.6 </table>
 		<table name="#mpConsume"> 16 24 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_up_special" />
@@ -2395,7 +2378,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1000" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
@@ -2529,7 +2512,6 @@
 		<table name="#pAtkSpd"> 1.08 1.12 </table>
 		<table name="#mpConsume"> 14 25 </table>
 		<table name="#magicLvl"> 32 55 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_speed_up_bow" />
@@ -2542,7 +2524,7 @@
 		<set name="reuseDelay" val="3000" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_speed_up_bow">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_speed_up_bow">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="Crossbow" />
 				</mul>
@@ -2725,7 +2707,6 @@
 		<table name="#ench2Chance"> 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 </table>
 		<table name="#ench3Cost"> 85 84 83 82 81 80 79 78 78 77 76 75 74 73 72 71 71 70 69 68 67 66 65 64 64 63 62 61 60 59 </table>
 		<table name="#ench4Duel"> 16 22 29 35 41 48 54 60 67 73 79 86 92 98 105 111 117 124 130 136 143 149 155 162 168 174 181 187 193 200 </table>
-		<table name="#abnormalLvl"> 6 6 7 7 7 7 8 8 8 8 </table>
 		<table name="#castRange"> 400 500 500 500 500 500 600 600 600 600 </table>
 		<table name="#dot"> 107 107 123 123 123 123 123 134 134 134 </table>
 		<table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
@@ -2768,7 +2749,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant1for>
 			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalLvl="#enchant1AbnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
@@ -2915,7 +2896,6 @@
 		<table name="#mpConsume"> 16 22 29 </table>
 		<table name="#magicLvl"> 36 49 62 </table>
 		<table name="#vuln"> 40 60 100 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="resist_spiritless" />
@@ -2927,7 +2907,7 @@
 		<set name="reuseDelay" val="225000" />
 		<set name="operateType" val="A2" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_spiritless">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="resist_spiritless">
 				<sub order="0x40" stat="derangementVuln" val="#vuln" />
 			</effect>
 		</for>

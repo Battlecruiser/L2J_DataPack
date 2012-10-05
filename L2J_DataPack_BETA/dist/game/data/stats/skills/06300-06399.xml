@@ -22,7 +22,6 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<table name="#mdot"> 300 150 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="force_meditation" />
@@ -38,7 +37,7 @@
 		<for>
 			<!-- Level 1: 60MP * 5 during 10 seconds -->
 			<!-- Level 2: 30MP * 5 during 10 seconds -->
-			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="#mdot" abnormalLvl="#abnormalLvl" abnormalType="force_meditation" />
+			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="#mdot" abnormalLvl="#abnormalLvls" abnormalType="force_meditation" />
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
@@ -1063,7 +1062,6 @@
 		</for>
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="silence_all" />
@@ -1083,7 +1081,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="#abnormalLvl" abnormalType="silence_all" />
+			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="#abnormalLvls" abnormalType="silence_all" />
 			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
 		</for>
 	</skill>
