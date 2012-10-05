@@ -370,7 +370,6 @@
 	</skill>
 	<skill id="223" levels="49" name="Sting" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#abnormalLvl"> 3 3 3 3 3 3 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 8 8 8 8 </table>
 		<table name="#ench2MpConsume"> 74 72 71 70 68 67 66 64 63 62 60 59 58 56 55 54 52 51 50 48 47 46 44 43 42 41 39 38 37 35 </table>
 		<table name="#mpConsume"> 21 22 23 25 26 27 28 28 29 32 33 34 36 37 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 82 88 95 110 118 127 146 157 168 191 204 217 246 262 278 295 313 331 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218 </table>
@@ -409,7 +408,7 @@
 		</cond>
 		<for>
 			<!-- Retail Values CT2.3: 25 25 25 25 25 25 34 34 34 34 34 34 34 34 44 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67HP * 3 Sec -->
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant1for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="201" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="#ench1effectPower" effectType="BLEED" />
@@ -523,7 +522,6 @@
 		<table name="#mpConsume"> 11 19 </table>
 		<table name="#magicLvl"> 32 52 </table>
 		<table name="#runSpd"> 22 33 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 219 495 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -545,7 +543,7 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -2294,7 +2292,6 @@
 		<table name="#mpConsume"> 16 22 29 </table>
 		<table name="#magicLvl"> 36 49 62 </table>
 		<table name="#vuln"> 40 60 80 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 341 467 582 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -2308,7 +2305,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_spiritless">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="resist_spiritless">
 				<sub order="0x40" stat="cancelVuln" val="40" />
 				<sub order="0x40" stat="stunVuln" val="#vuln" />
 				<sub order="0x40" stat="rootVuln" val="#vuln" />
@@ -2533,7 +2530,6 @@
 		<table name="#ench2pvpDmg"> 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.18 1.19 1.19 1.2 1.2 1.21 1.21 1.22 1.22 1.23 1.23 1.24 1.24 1.25 </table>
 		<table name="#mpConsume"> 30 34 </table>
 		<table name="#magicLvl"> 64 72 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 597 646 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -2547,7 +2543,7 @@
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="duelist_spirit">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="duelist_spirit">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="Dual Sword" />
 				</mul>

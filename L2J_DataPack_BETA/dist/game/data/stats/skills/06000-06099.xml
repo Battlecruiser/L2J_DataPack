@@ -399,7 +399,6 @@
 		<table name="#magicLvl"> 50 70 75 80 </table>
 		<table name="#mpConsume"> 45 65 69 72 </table>
 		<table name="#amount"> 1.05 1.1 1.2 1.3 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
@@ -413,7 +412,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="multi_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -471,7 +470,6 @@
 		<table name="#mpConsume"> 74 104 109 116 </table>
 		<table name="#mpInitialConsume"> 18 26 28 29 </table>
 		<table name="#amount"> 1.05 1.1 1.2 1.3 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
@@ -487,7 +485,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="multi_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mAtk" val="#amount" />

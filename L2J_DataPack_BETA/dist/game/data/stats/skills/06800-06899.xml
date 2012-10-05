@@ -405,7 +405,6 @@
 		<!-- FIXME: value unconfirmed -->
 		<table name="#pAtk"> 1.12 1 </table>
 		<table name="#pAtkSpd"> 1.15 1.4 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pa_up" />
@@ -419,7 +418,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
@@ -886,7 +885,6 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<table name="#pDef"> 0.77 0.67 </table>
-		<table name="#abnormalLvl"> 3 4 </table>
 		<table name="#abnormalLvls"> 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="pd_down" />
@@ -903,7 +901,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>

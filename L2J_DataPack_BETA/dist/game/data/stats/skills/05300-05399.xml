@@ -51,7 +51,6 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -69,7 +68,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -78,7 +77,6 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
@@ -96,7 +94,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -206,7 +204,6 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -223,7 +220,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -232,7 +229,6 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
@@ -250,7 +246,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -576,7 +572,6 @@
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -595,7 +590,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
@@ -934,7 +929,6 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -952,7 +946,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -961,7 +955,6 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#dot"> 725 725 785 785 785 840 840 840 840 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
@@ -980,7 +973,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvl" effectType="BLEED" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" effectType="BLEED" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -1077,7 +1070,6 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -1094,7 +1086,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1411,7 +1403,6 @@
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
-		<table name="#abnormalLvl"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
@@ -1433,7 +1424,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
@@ -1442,7 +1433,6 @@
 		<table name="#pAtkSpd"> 1.33 1.33 1.5 </table>
 		<table name="#mpConsume"> 23 42 78 </table>
 		<table name="#mpInitialConsume"> 6 11 20 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_buff" />
@@ -1457,7 +1447,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="skillRadius" val="900" />
 		<for>
-			<effect name="Grow" abnormalTime="10" val="0" abnormalLvl="#abnormalLvl" abnormalType="multi_buff">
+			<effect name="Grow" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>

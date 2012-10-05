@@ -483,7 +483,6 @@
 		<table name="#maxHp"> 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 38 41 48 53 </table>
 		<table name="#mpInitialConsume"> 10 11 12 14 </table>
-		<table name="#abnormalLvl"> 3 4 5 6 </table>
 		<table name="#abnormalLvls"> 3 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="max_hp_up" />
@@ -500,7 +499,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -509,7 +508,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 495 532 582 635 </table>
 		<table name="#magicLvl"> 52 56 62 70 </table>
-		<table name="#abnormalLvl"> 3 4 5 6 </table>
 		<table name="#maxMp"> 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 38 41 46 52 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 </table>
@@ -529,7 +527,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -537,7 +535,6 @@
 	<skill id="5640" levels="2" name="Feline Queen - Haste">
 		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 418 495 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
@@ -558,7 +555,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -628,7 +625,6 @@
 		<!-- 3 lvl not_used, don't add it on skill -->
 		<table name="#aggro"> 582 635 </table>
 		<table name="#mCritRate"> 2 3 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#magicLvl"> 64 72 </table>
 		<table name="#mpConsume"> 46 52 </table>
 		<table name="#mpInitialConsume"> 12 13 </table>
@@ -649,7 +645,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="magic_critical_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="magic_critical_up">
 				<add order="0x40" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
@@ -681,7 +677,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#SpiritOre" abnormalType="cheap_magic">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="cheap_magic">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
@@ -695,7 +691,6 @@
 		<table name="#mAtk"> 1.65 1.75 </table>
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="ma_up" />
@@ -712,7 +707,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -754,7 +749,6 @@
 		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_dmg_up" />
@@ -771,7 +765,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_dmg_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -784,7 +778,6 @@
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#rCrit"> 0.25 0.3 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="critical_prob_up" />
@@ -801,7 +794,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -814,7 +807,6 @@
 		<table name="#magicLvl"> 56 62 64 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="hit_up" />
@@ -831,7 +823,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -931,7 +923,6 @@
 		<table name="#pAtkSpd"> 1.05 1.08 </table>
 		<table name="#runSpd"> 5 8 </table>
 		<table name="#rEvas"> 2 4 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="berserker" />
@@ -947,7 +938,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
