@@ -1720,7 +1720,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="mpConsume" val="162" />
 		<set name="magicLvl" val="82" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="16667" />
 		<set name="reuseDelay" val="12000" />
@@ -1742,7 +1742,7 @@
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="30" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1761,7 +1761,7 @@
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="30" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1781,7 +1781,7 @@
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="165" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="24306" />
 		<set name="reuseDelay" val="12000" />
@@ -1930,6 +1930,8 @@
 	</skill>
 	<skill id="996" levels="1" name="Disarm">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
@@ -1937,10 +1939,10 @@
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="55" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="STR" />
 		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="STR" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1959,7 +1961,7 @@
 		<set name="hitTime" val="800" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
