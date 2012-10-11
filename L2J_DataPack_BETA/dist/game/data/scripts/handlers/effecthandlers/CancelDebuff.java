@@ -14,7 +14,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -108,13 +107,13 @@ public class CancelDebuff extends L2Effect
 		rate += (effect.getAbnormalTime() - effect.getTime()) / 1200;
 		rate += baseRate;
 		
-		if (rate < Config.MIN_DEBUFF_CHANCE)
+		if (rate < effect.getSkill().getMinChance())
 		{
-			rate = Config.MIN_DEBUFF_CHANCE;
+			rate = effect.getSkill().getMinChance();
 		}
-		else if (rate > Config.MAX_DEBUFF_CHANCE)
+		else if (rate > effect.getSkill().getMaxChance())
 		{
-			rate = Config.MAX_DEBUFF_CHANCE;
+			rate = effect.getSkill().getMaxChance();
 		}
 		
 		return Rnd.get(100) < rate;
