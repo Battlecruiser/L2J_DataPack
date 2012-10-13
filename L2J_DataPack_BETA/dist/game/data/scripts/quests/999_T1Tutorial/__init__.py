@@ -136,6 +136,7 @@ class Quest (JQuest) :
 
  def onFirstTalk (self,npc,player):
    if Config.DISABLE_TUTORIAL :
+     npc.showChatWindow(player)
      return
    qs = player.getQuestState(qnTutorial)
    if not qs : 
