@@ -41,7 +41,7 @@ public class FortuneTelling extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		if (player.getAdena() < 1000)
+		if (player.getAdena() < COST)
 		{
 			htmltext = "lowadena.htm";
 		}
