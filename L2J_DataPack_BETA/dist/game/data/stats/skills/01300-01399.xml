@@ -452,22 +452,24 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="1323" levels="1" name="Noblesse Blessing">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="preserve_abnormal" />
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="55" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="5" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="1" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="aggroPoints" val="1" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="55" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="NoblesseBless" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="preserve_abnormal" />
 		</for>
@@ -480,7 +482,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="50" />
 		<set name="itemConsumeId" val="1785" />
-		<set name="mpConsume" val="412" />
+		<set name="mpInitialConsume" val="412" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -493,38 +495,42 @@
 		</cond>
 	</skill>
 	<skill id="1325" levels="1" name="Fortune of Noblesse">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalType" val="reduce_drop_penalty" />
-		<set name="itemConsumeId" val="5806" />
-		<set name="itemConsumeCount" val="4" />
-		<set name="mpInitialConsume" val="75" />
-		<set name="mpConsume" val="200" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="aggroPoints" val="659" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeId" val="5806" />
+		<set name="mpConsume" val="220" />
+		<set name="mpInitialConsume" val="55" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
 			<effect name="CharmOfLuck" abnormalTime="3600" val="0" abnormalLvl="6" abnormalType="reduce_drop_penalty" />
 		</for>
 	</skill>
 	<skill id="1326" levels="1" name="Harmony of Noblesse">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="pd_up_special" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="5" />
-		<set name="mpInitialConsume" val="25" />
-		<set name="mpConsume" val="75" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="900000" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="aggroPoints" val="659" />
+		<set name="hitTime" val="1000" />
+		<set name="hpConsume" val="200" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="80" />
+		<set name="mpInitialConsume" val="20" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<and>
 				<player cp="50" />
@@ -532,7 +538,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="2" abnormalType="pd_up_special" abnormalVisualEffect="invulnerable">
 				<add order="0x40" stat="pDef" val="3000" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -545,19 +551,22 @@
 		</for>
 	</skill>
 	<skill id="1327" levels="1" name="Symphony of Noblesse">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="pd_up_special" />
-		<set name="itemConsumeId" val="3031" />
-		<set name="itemConsumeCount" val="5" />
-		<set name="mpInitialConsume" val="25" />
-		<set name="mpConsume" val="75" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="900000" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="aggroPoints" val="659" />
+		<set name="hitTime" val="1000" />
+		<set name="hpConsume" val="200" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="80" />
+		<set name="mpInitialConsume" val="20" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<and>
 				<player cp="50" />
@@ -565,12 +574,12 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="2" abnormalType="pd_up_special" abnormalVisualEffect="invulnerable">
 				<add order="0x40" stat="mDef" val="4500" />
 				<mul order="0x30" stat="runSpd" val="1.25" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
-				<mul order="0x30" stat="bowWpnVuln" val="0.2" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.2" />
+				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
+				<mul order="0x30" stat="crossbowWpnVuln" val="0.94" />
 				<mul order="0x30" stat="maxCp" val="0.8" />
 				<mul order="0x30" stat="maxRecoverableCp" val="0.6" />
 				<mul order="0x30" stat="maxRecoverableHp" val="0.7" />
@@ -2286,8 +2295,8 @@
 		<set name="aggroPoints" val="676" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="80" />
+		<set name="itemConsumeId" val="3031" />
 		<set name="mpConsume" val="231" />
 		<set name="mpInitialConsume" val="58" />
 		<set name="operateType" val="A2" />
