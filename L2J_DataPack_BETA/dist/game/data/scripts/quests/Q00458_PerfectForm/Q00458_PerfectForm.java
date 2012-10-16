@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 
 /**
  * Perfect Form (458)
@@ -307,6 +308,14 @@ public class Q00458_PerfectForm extends Quest
 				{
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
+				
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+				log.addNpc(18879, st.getInt("18879"));
+				log.addNpc(18886, st.getInt("18886"));
+				log.addNpc(18893, st.getInt("18893"));
+				log.addNpc(18900, st.getInt("18900"));
+				
+				player.sendPacket(log);
 			}
 		}
 		return super.onKill(npc, player, isPet);
