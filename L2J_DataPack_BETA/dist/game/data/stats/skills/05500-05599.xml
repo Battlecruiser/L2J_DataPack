@@ -1445,21 +1445,22 @@
 		</for>
 	</skill>
 	<skill id="5592" levels="16" name="Lightning Barrier">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 81 81 82 82 82 83 83 83 84 84 85 85 85 85 </table>
 		<table name="#power"> 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="aggroPoints" val="138" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="reuseDelay" val="6000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />

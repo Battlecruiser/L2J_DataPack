@@ -1950,11 +1950,12 @@
 		</for>
 	</skill>
 	<skill id="790" levels="1" name="Wild Shot">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3500" />
-		<set name="coolTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="120" />
 		<set name="operateType" val="A1" />
@@ -1962,9 +1963,10 @@
 		<set name="power" val="7475" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillType" val="PDAM" />
+		<set name="skillRadius" val="900" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
 		</cond>
@@ -2082,7 +2084,8 @@
 		</enchant3for>
 	</skill>
 	<skill id="794" levels="1" name="Mass Disarm" enchantGroup1="6" enchantGroup2="6">
-		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2094,8 +2097,8 @@
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="STR" />
 		<set name="reuseDelay" val="150000" />
+		<set name="saveVs" val="STR" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_AURA" />
@@ -2104,7 +2107,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2Reuse" />
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
+				<mul order="0x30" stat="pAtk" val="0.6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="795" levels="1" name="Divine Knight Brandish">

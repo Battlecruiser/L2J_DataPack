@@ -366,36 +366,37 @@
 		</cond>
 	</skill>
 	<skill id="509" levels="34" name="Bleeding Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#dot"> 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
 		<table name="#ench2MpConsume"> 107 105 103 102 100 98 96 94 92 91 89 87 85 83 82 80 78 76 74 72 71 69 67 65 63 62 60 58 56 54 </table>
 		<table name="#ench3Power"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
-		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
+		<table name="#magicLvl"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="lvlDepend" val="1" />
-		<set name="itemConsumeId" val="10113" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="SSBoost" val="2.0" />
-		<set name="power" val="#power" />
-		<set name="ignoreShld" val="true" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="3000" />
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="3000" />
+		<set name="ignoreShld" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10113" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
 		<set name="soulMaxConsumeCount" val="5" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -406,7 +407,6 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<!-- Retail Values CT2.3: 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 * 1 Sec -->
 			<effect count="20" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 		<enchant3for>
@@ -414,6 +414,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1lethal2"> 50 50 51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 </table>
 		<table name="#ench2mpConsume"> 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 73 71 69 67 65 63 61 59 57 55 53 </table>
@@ -422,12 +423,12 @@
 		<table name="#mpConsume"> 100 103 106 109 112 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10113" />
-		<set name="hitTime" val="3000" />
 		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
-		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="0" />
 		<set name="reuseDelay" val="150000" />
@@ -446,10 +447,11 @@
 		</cond>
 	</skill>
 	<skill id="511" levels="1" name="Temptation">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="49" />
+		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="500" />
@@ -502,103 +504,133 @@
 		</cond>
 	</skill>
 	<skill id="514" levels="9" name="Fire Trap" enchantGroup1="2" enchantGroup2="2">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 28 36 43 49 55 60 64 68 72 </table>
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 9 </table>
 		<table name="#ench1trigger"> 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 17 17 18 18 18 19 19 20 </table>
 		<table name="#ench2reuse"> 44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
-		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
-		<set name="summonTotalLifeTime" val="30000" />
-		<set name="reuseDelay" val="45000" />
-		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="350" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="staticReuse" val="true" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="13037" />
 		<set name="triggerSkillId" val="5267" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
-		<set name="trapNpcId" val="13037" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="515" levels="6" name="Poison Trap" enchantGroup1="2" enchantGroup2="2">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 49 55 60 64 68 72 </table>
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
 		<table name="#ench1trigger"> 7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 17 </table>
 		<table name="#ench2reuse"> 44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
-		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
-		<set name="summonTotalLifeTime" val="30000" />
-		<set name="reuseDelay" val="45000" />
-		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="350" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="staticReuse" val="true" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="13037" />		
 		<set name="triggerSkillId" val="5268" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
-		<set name="trapNpcId" val="13037" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="516" levels="6" name="Slow Trap" enchantGroup1="2" enchantGroup2="2">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 52 58 62 66 70 74 </table>
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
 		<table name="#ench1trigger"> 7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 17 </table>
 		<table name="#ench2reuse"> 44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
-		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
-		<set name="summonTotalLifeTime" val="30000" />
-		<set name="reuseDelay" val="45000" />
-		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="350" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="staticReuse" val="true" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="13037" />
 		<set name="triggerSkillId" val="5269" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
-		<set name="trapNpcId" val="13037" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="517" levels="5" name="Flash Trap" enchantGroup1="2" enchantGroup2="2">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 55 60 64 68 72 </table>
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 </table>
 		<table name="#ench1trigger"> 6 6 6 7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 16 </table>
 		<table name="#ench2reuse"> 44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
-		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
-		<set name="summonTotalLifeTime" val="30000" />
-		<set name="reuseDelay" val="45000" />
-		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="350" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="staticReuse" val="true" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="13037" />
 		<set name="triggerSkillId" val="5270" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
-		<set name="trapNpcId" val="13037" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="518" levels="8" name="Binding Trap" enchantGroup1="2" enchantGroup2="2">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#ench1trigger"> 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 17 17 18 18 19 </table>
 		<table name="#ench2reuse"> 44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
-		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="1500" />
-		<set name="summonTotalLifeTime" val="30000" />
-		<set name="reuseDelay" val="45000" />
-		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="350" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="staticReuse" val="true" />
+		<set name="summonTotalLifeTime" val="30000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="trapNpcId" val="13037" />
 		<set name="triggerSkillId" val="5271" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
-		<set name="trapNpcId" val="13037" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
@@ -652,9 +684,12 @@
 		</for>
 	</skill>
 	<skill id="521" levels="8" name="Sharpshooting" enchantGroup1="1" enchantGroup2="1">
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 211 213 214 215 217 218 220 221 223 224 226 227 228 230 231 233 234 236 237 239 240 241 243 244 246 247 249 250 252 253 </table>
-		<table name="#ench1acc"> 6 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 </table>
+		<table name="#ench1Acc"> 6 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10 </table>
 		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
+		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
 		<table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
 		<table name="#accCombat"> 3 3 4 4 5 5 6 6 </table>
@@ -664,13 +699,16 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="snipe" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
 		</cond>
@@ -695,7 +733,7 @@
 				<add order="0x40" stat="pAtk" val="#ench1Power">
 					<using kind="Crossbow" />
 				</add>
-				<add order="0x40" stat="accCombat" val="#ench1acc">
+				<add order="0x40" stat="accCombat" val="#ench1Acc">
 					<using kind="Crossbow" />
 				</add>
 				<basemul order="0x30" stat="rCrit" val="0.2">
@@ -724,30 +762,29 @@
 		</enchant2for>
 	</skill>
 	<skill id="522" levels="4" name="Real Target" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchVuln"> 0.99 0.99 0.99 0.98 0.98 0.98 0.97 0.97 0.97 0.96 0.96 0.96 0.96 0.95 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 </table>
 		<table name="#magicLvl"> 40 52 62 70 </table>
-		<table name="#mpInitialConsume"> 3 4 6 7 </table>
-		<table name="#mpConsume"> 8 10 13 15 </table>
+		<table name="#mpConsume"> 11 14 19 22 </table>
 		<table name="#castRange"> 600 700 800 900 </table>
-		<table name="#effectRange"> 900 1000 1100 1200 </table>
+		<table name="#effectRange"> 1100 1200 1300 1400 </table>
 		<table name="#bowWpnVuln"> 1.12 1.16 1.2 1.24 </table>
 		<table name="#crossbowWpnVuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="real_target" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
@@ -789,7 +826,7 @@
 	</skill>
 	<skill id="523" levels="7" name="Imbue Dark Seed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 228 228 228 228 249 249 249 </table>
+		<table name="#dot"> 380 380 380 380 415 415 415 </table>
 		<table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 </table>
@@ -798,8 +835,6 @@
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1800" />
 		<set name="isDebuff" val="true" />
 		<set name="itemConsumeCount" val="1" />
@@ -816,8 +851,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 76 76 76 76 83 83 83 HP * 3 during 20 seconds -->
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="8" abnormalType="dark_seed" abnormalVisualEffect="bleed" />
+			<!-- 76 76 76 76 83 83 83 HP * 5 during 20 seconds -->
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="8" abnormalType="dark_seed" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5447" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -836,25 +871,30 @@
 		</for>
 	</skill>
 	<skill id="525" levels="6" name="Decoy" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1mpConsume"> 136 133 131 128 127 125 122 120 117 115 112 111 108 106 103 101 98 97 95 92 90 87 85 83 81 78 76 73 71 70 </table>
+		<table name="#ench1MpConsume"> 109 107 105 103 102 100 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 68 67 65 63 61 59 57 56 </table>
+		<table name="#ench1MpInitialConsume"> 27 26 26 25 25 25 24 24 23 23 22 22 21 21 20 20 19 19 19 18 18 17 17 16 16 15 15 14 14 14 </table>
 		<table name="#ench2reuseDelay"> 590000 580000 570000 560000 550000 540000 530000 520000 510000 500000 490000 480000 470000 460000 450000 440000 430000 420000 410000 400000 390000 380000 370000 360000 350000 340000 330000 320000 310000 300000 </table>
 		<table name="#ench3npcId"> 13257 13257 13257 13258 13258 13258 13259 13259 13259 13260 13260 13260 13261 13261 13261 13262 13262 13262 13263 13263 13263 13264 13264 13264 13265 13265 13266 13266 13266 13267 </table>
 		<table name="#magicLvl"> 43 52 60 66 70 74 </table>
-		<table name="#mpConsume"> 75 94 110 123 130 137 </table>
+		<table name="#mpConsume"> 60 75 88 98 104 109 </table>
+		<table name="#mpInitialConsume"> 15 19 22 25 26 28 </table>
 		<table name="#npcId"> 13071 13072 13073 13074 13075 13076 </table>
 		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="npcId" val="#npcId" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="DECOY" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="summonTotalLifeTime" val="20000" />
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
@@ -1128,6 +1168,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
+		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="hpConsume" val="200" />
 		<set name="mpConsume" val="70" />

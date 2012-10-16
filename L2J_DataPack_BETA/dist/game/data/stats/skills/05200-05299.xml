@@ -1301,55 +1301,55 @@
 		</for>
 	</skill>
 	<skill id="5267" levels="21" name="Trap Explosion">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 28 36 43 49 55 60 64 68 72 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 35 46 57 66 77 85 92 99 105 107 111 112 114 115 116 117 119 120 121 122 123 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5268" levels="17" name="Poison">
-		<!-- CT2.5 retail confirmed -->
-		<table name="#dmg"> 54 66 78 78 78 84 165 165 165 165 171 171 171 171 171 171 171 </table>
-		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 79 80 81 82 83 84 85 86 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#dmg"> 90 110 130 130 130 140 275 275 275 275 285 285 285 285 285 285 285 </table>
+		<table name="#magicLvl"> 49 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="poison" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="POISON" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" effectPower="80" effectType="POISON" />
+			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" effectPower="80" effectType="POISON" />
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="all_speed_down" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="all_speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1359,20 +1359,20 @@
 		</for>
 	</skill>
 	<skill id="5270" levels="16" name="Flash Trap">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1380,41 +1380,41 @@
 		</for>
 	</skill>
 	<skill id="5271" levels="19" name="Hold">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#traits"> NONE HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="#traits" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
 	<skill id="5272" levels="17" name="Decoy Provocation">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 43 52 60 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 4080 4950 5657 6104 6349 6542 6582 6620 6656 6690 6722 6752 6781 6809 6836 6862 6887 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="1200" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="AGGDAMAGE" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMe" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5273" levels="9" name="NPC(party) - Physical Single Close Range Attack">

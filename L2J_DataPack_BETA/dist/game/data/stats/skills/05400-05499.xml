@@ -604,6 +604,7 @@
 		</for>
 	</skill>
 	<skill id="5448" levels="1" name="Oblivion">
+		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
@@ -615,6 +616,7 @@
 		</for>
 	</skill>
 	<skill id="5449" levels="1" name="Weak Constitution">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isTriggeredSkill" val="true" />
@@ -627,31 +629,36 @@
 		</for>
 	</skill>
 	<skill id="5450" levels="7" name="Thin Skin">
-		<table name="#dot"> 75 102 132 156 186 201 230 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 52 58 62 66 70 74 </table>
+		<table name="#dot"> 1090 1330 1330 1535 1535 1675 1675 </table>
 		<table name="#abnormalLvls"> 4 5 5 6 7 8 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
 		<for>
-			<effect count="2" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect count="1" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="all_speed_down" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="all_speed_down">
+				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
-				<mul order="0x30" stat="runSpd" val="0.77" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
