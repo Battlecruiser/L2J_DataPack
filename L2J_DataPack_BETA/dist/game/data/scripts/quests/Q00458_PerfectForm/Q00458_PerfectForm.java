@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Perfect Form (458)
@@ -54,13 +53,6 @@ public class Q00458_PerfectForm extends Quest
 		18900
 	};
 	
-	private static final int[][] ALL_MOBS =
-	{
-		KOOKABURRAS,
-		COUGARS,
-		BUFFALOS,
-		GRENDELS
-	};
 	// Rewards
 	// 60% Icarus weapon recipes (except kamael weapons)
 	// @formatter:off
@@ -113,7 +105,7 @@ public class Q00458_PerfectForm extends Quest
 				switch (st.getCond())
 				{
 					case 1:
-						if (st.get("18879").equals("0") && st.get("18886").equals("0") && st.get("18893").equals("0") && st.get("18900").equals("0"))
+						if ((st.getInt("18879") == 0) && (st.getInt("18886") == 0) && (st.getInt("18893") == 0) && (st.getInt("18900") == 0))
 						{
 							htmltext = "32768-11.html";
 						}
@@ -149,12 +141,6 @@ public class Q00458_PerfectForm extends Quest
 		{
 			case "32768-10.htm":
 				st.startQuest();
-				// to avoid NULL values
-				st.set("18879", "0");
-				st.set("18886", "0");
-				st.set("18893", "0");
-				st.set("18900", "0");
-				st.set("overhitsConsecutive", "0");
 				break;
 			case "results1":
 				if (st.isCond(2))
@@ -273,56 +259,53 @@ public class Q00458_PerfectForm extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			final int npcId = npc.getNpcId();
-			
-			for (int[] mobs : ALL_MOBS)
+			int npcId = npc.getNpcId();
+			if ((npcId == KOOKABURRAS[0]) || (npcId == COUGARS[0]) || (npcId == BUFFALOS[0]) || (npcId == GRENDELS[0]))
 			{
-				if (Util.contains(mobs, npcId))
+				npcId++;
+			}
+			
+			String variable = String.valueOf(npcId); // i3
+			int currentValue = st.getInt(variable);
+			if (currentValue < 10)
+			{
+				st.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
+				
+				L2Attackable mob = (L2Attackable) npc;
+				if (mob.isOverhit())
 				{
-					String variable = String.valueOf(mobs[1]); // i3
-					int currentValue = st.getInt(variable);
-					if (currentValue < 10)
+					st.set("overhitsTotal", String.valueOf(st.getInt("overhitsTotal") + 1)); // memoStateEx 1
+					int maxHp = mob.getMaxHp();
+					// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
+					double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
+					if (overhitPercentage >= 1.2)
 					{
-						st.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
-						
-						L2Attackable mob = (L2Attackable) npc;
-						if (mob.isOverhit())
-						{
-							st.set("overhitsTotal", String.valueOf(st.getInt("overhitsTotal") + 1)); // memoStateEx 1
-							int maxHp = mob.getMaxHp();
-							// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
-							double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
-							if (overhitPercentage >= 1.2)
-							{
-								st.set("overhitsCritical", String.valueOf(st.getInt("overhitsCritical") + 1)); // memoStateEx 2
-							}
-							int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
-							st.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
-							/*
-							 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }
-							 */
-						}
-						else
-						{
-							// st.set("overhitsConsecutive", String.valueOf((st.getInt("overhitsConsecutive") % 100) * 100));
-							if (!st.get("overhitsConsecutive").equals("0"))
-							{
-								// avoid writing to database if variable is already zero
-								st.set("overhitsConsecutive", "0");
-							}
-						}
-						
-						if (st.get("18879").equals("10") && st.get("18886").equals("10") && st.get("18893").equals("10") && st.get("18900").equals("10"))
-						{
-							st.setCond(2, true);
-							// st.set("overhitsConsecutive", String.valueOf(st.getInt("overhitsConsecutive") % 100));
-						}
-						else
-						{
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
+						st.set("overhitsCritical", String.valueOf(st.getInt("overhitsCritical") + 1)); // memoStateEx 2
 					}
-					break;
+					int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
+					st.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
+					/*
+					 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }
+					 */
+				}
+				else
+				{
+					// st.set("overhitsConsecutive", String.valueOf((st.getInt("overhitsConsecutive") % 100) * 100));
+					if (st.getInt("overhitsConsecutive") > 0)
+					{
+						// avoid writing to database if variable is already zero
+						st.set("overhitsConsecutive", "0");
+					}
+				}
+				
+				if ((st.getInt("18879") == 10) && (st.getInt("18886") == 10) && (st.getInt("18893") == 10) && (st.getInt("18900") == 10))
+				{
+					st.setCond(2, true);
+					// st.set("overhitsConsecutive", String.valueOf(st.getInt("overhitsConsecutive") % 100));
+				}
+				else
+				{
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
