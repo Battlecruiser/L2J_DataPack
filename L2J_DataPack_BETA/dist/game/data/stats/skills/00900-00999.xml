@@ -821,19 +821,21 @@
 		</for>
 	</skill>
 	<skill id="939" levels="1" name="Soul Rage">
-		<set name="mpConsume" val="5" />
-		<set name="hpConsume" val="25" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="SSBoost" val="2.0" />
+		<!-- Confirmed CT2.5 -->
+		<set name="baseCritRate" val="10" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="PDAM" />
+		<set name="hpConsume" val="25" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="5" />
+		<set name="nextActionAttack" val="true" />
+		<set name="num_souls" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="nextActionAttack" val="true" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1400" />
-		<set name="baseCritRate" val="15" />
-		<set name="num_souls" val="1" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="940" levels="1" name="Fake Attack">
 		<set name="target" val="TARGET_SELF" />

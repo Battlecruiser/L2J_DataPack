@@ -712,12 +712,15 @@
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6090" levels="1" name="Lightning Strike">
+		<!-- Confirmed CT2.5 -->
 		<!-- Lightning Strike effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
+		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="58" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -728,7 +731,7 @@
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="6091" levels="1" name="Anger">
+	<skill id="6091" levels="1" name="Anchor">
 		<!-- Anchor effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
@@ -745,12 +748,14 @@
 		</for>
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Lightning Shock effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
