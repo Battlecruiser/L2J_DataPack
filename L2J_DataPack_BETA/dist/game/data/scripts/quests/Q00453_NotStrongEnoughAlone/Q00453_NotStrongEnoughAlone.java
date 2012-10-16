@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
@@ -232,6 +233,8 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		
 		if (Util.checkIfInRange(1500, npc, player, false))
 		{
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+			
 			if (Util.contains(Monsters1, npcId) && (st.getInt("cond") == 2))
 			{
 				if (npcId == Monsters1[4])
@@ -259,6 +262,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(st, 15, Monsters1[0], Monsters1[1], Monsters1[2], Monsters1[3]);
+				
+				log.addNpc(Monsters1[0], st.getInt(String.valueOf(Monsters1[0])));
+				log.addNpc(Monsters1[1], st.getInt(String.valueOf(Monsters1[1])));
+				log.addNpc(Monsters1[2], st.getInt(String.valueOf(Monsters1[2])));
+				log.addNpc(Monsters1[3], st.getInt(String.valueOf(Monsters1[3])));
 			}
 			else if (Util.contains(Monsters2, npcId) && (st.getInt("cond") == 3))
 			{
@@ -283,6 +291,10 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(st, 20, Monsters2[0], Monsters2[1], Monsters2[2]);
+				
+				log.addNpc(Monsters2[0], st.getInt(String.valueOf(Monsters2[0])));
+				log.addNpc(Monsters2[1], st.getInt(String.valueOf(Monsters2[1])));
+				log.addNpc(Monsters2[2], st.getInt(String.valueOf(Monsters2[2])));
 			}
 			else if (Util.contains(Monsters3, npcId) && (st.getInt("cond") == 4))
 			{
@@ -307,7 +319,12 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(st, 20, Monsters3[0], Monsters3[1], Monsters3[2]);
+				
+				log.addNpc(Monsters3[0], st.getInt(String.valueOf(Monsters3[0])));
+				log.addNpc(Monsters3[1], st.getInt(String.valueOf(Monsters3[1])));
+				log.addNpc(Monsters3[2], st.getInt(String.valueOf(Monsters3[2])));
 			}
+			player.sendPacket(log);
 		}
 	}
 	
