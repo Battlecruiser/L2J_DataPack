@@ -1352,24 +1352,24 @@
 		</enchant1for>
 	</skill>
 	<skill id="437" levels="1" name="Song of Silence" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
 		<table name="#ench2Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_all" />
-		<set name="magicLvl" val="79" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="54" />
-		<set name="skillRadius" val="150" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="60" /> <!-- Base Land Rate -->
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="150000" />
-		<set name="aggroPoints" val="523" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="MUTE" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
