@@ -41,7 +41,7 @@ public class DragonVortex extends AbstractNpcAI
 	
 	private static final int LARGE_DRAGON_BONE = 17248;
 	
-	private static final int DESPAWN_DELAY = 108000; // 30min
+	private static final int DESPAWN_DELAY = 1800000; // 30min
 	
 	private DragonVortex(String name, String descr)
 	{
