@@ -16,7 +16,6 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.TradeController;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2TradeList;
@@ -25,16 +24,16 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
 
-
 /**
  * This class handles following admin commands:
- * - gmshop = shows menu
- * - buy id = shows shop with respective id
- * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:06 $
+ * <ul>
+ * <li>gmshop = shows menu</li>
+ * <li>buy id = shows shop with respective id</li>
+ * </ul>
  */
 public class AdminShop implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminShop.class.getName());
+	private static final Logger _log = Logger.getLogger(AdminShop.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
