@@ -337,7 +337,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="300" /> <!-- NOTE: Real hitTime is 0.1 sec, but here is increased to 0.3 sec, to match retail animation -->
+		<set name="hitTime" val="100" />
 		<set name="coolTime" val="200" />
 		<for>
 			<effect name="RemoveTarget" effectPower="100" noicon="1" val="0" />
@@ -1446,7 +1446,7 @@
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
 		<set name="flyType" val="DUMMY" />
-		<set name="hitTime" val="300" /> <!-- NOTE: Real hitTime is 0.1 sec, but here is increased to 0.3 sec, to match retail animation -->
+		<set name="hitTime" val="100" />
 		<set name="coolTime" val="200" />
 		<set name="isDebuff" val="true" />
 		<set name="mpConsume" val="100" />
