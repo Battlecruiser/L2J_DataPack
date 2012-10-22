@@ -325,6 +325,8 @@ public class Disablers implements ISkillHandler
 							{
 								summon.stopAllEffectsExceptThoseThatLastThroughDeath();
 							}
+							summon.abortAttack();
+							summon.abortCast();
 							summon.unSummon(summonOwner);
 							summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 						}
