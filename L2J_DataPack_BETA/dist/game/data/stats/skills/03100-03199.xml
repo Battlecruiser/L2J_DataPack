@@ -1877,31 +1877,33 @@
 		</for>
 	</skill>
 	<skill id="3193" levels="10" name="Item Skill: Medusa">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Active) -->
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_stone" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="lvlDepend" val="1" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Petrification" abnormalTime="30" val="0" abnormalLvl="2" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
 	</skill>
 	<skill id="3194" levels="10" name="Item Skill: Fear">
