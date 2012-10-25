@@ -2020,26 +2020,30 @@
 		</for>
 	</skill>
 	<skill id="4699" levels="13" name="Blessing of Queen">
+		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 0.25 0.27 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 </table>
 		<table name="#cAtk"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
-		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
-		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
-		<table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
-		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
+		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
+		<table name="#mpConsume"> 97 125 155 161 165 169 172 176 179 183 186 189 193 </table>
+		<table name="#mpInitialConsume"> 25 32 39 41 42 43 43 44 45 46 47 48 49 </table>
+		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_queen_of_cat" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="8000" />
+		<set name="aggroPoints" val="#power" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="#power" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvls" abnormalType="buff_queen_of_cat">
+			<effect name="Buff" abnormalTime="#abnormalTime" val="0" abnormalLvl="#abnormalLvls" abnormalType="buff_queen_of_cat">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
