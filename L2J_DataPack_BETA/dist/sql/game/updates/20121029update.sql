@@ -1,0 +1,1 @@
+ALTER TABLE `castle` ADD `ticketBuyCount` SMALLINT(3) NOT NULL default 0 AFTER `bloodAlliance`;
