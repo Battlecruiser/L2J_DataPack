@@ -144,15 +144,17 @@ public class VarkaSilenosSupport extends Quest
 		else if (npcId == UDAN)
 		{
 			st.setState(State.STARTED);
-			if (Alevel > -1)
+			if (Alevel > 0)
 				htmltext = "31379-3.htm";
-			else if (Alevel > -3 && Alevel > 0)
+			else if (Alevel > -3)
 				htmltext = "31379-1.htm";
 			else if (Alevel < -2)
+			{
 				if (st.hasQuestItems(SEED))
 					htmltext = "31379-4.htm";
 				else
 					htmltext = "31379-2.htm";
+			}
 		}
 		else if (npcId == DIYABU)
 		{
