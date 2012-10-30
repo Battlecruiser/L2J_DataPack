@@ -106,6 +106,12 @@ public class Heal implements ISkillHandler
 		double hp;
 		for (L2Character target: (L2Character[]) targets)
 		{
+			// if skill power is "0 or less" don't show heal system message.
+			if (skill.getPower() <= 0)
+			{
+				continue;
+			}
+			
 			// We should not heal if char is dead/invul
 			if (target == null || target.isDead() || target.isInvul())
 				continue;
