@@ -82,6 +82,12 @@ public class HealPercent implements ISkillHandler
 		boolean full = skill.getPower() == 100.0;
 		for (L2Character target : (L2Character[]) targets)
 		{
+			// if skill power is "0 or less" don't show heal system message.
+			if (skill.getPower() <= 0)
+			{
+				continue;
+			}
+			
 			// 1505 - sublime self sacrifice
 			if ((target.isDead() || target.isInvul()) && (skill.getId() != 1505))
 			{
