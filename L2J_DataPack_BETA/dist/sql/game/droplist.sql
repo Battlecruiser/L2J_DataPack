@@ -12,7 +12,7 @@
 -- split them up over several categories.
 -- In addition, RBs and Grandbosses (mainly) may have the exact same item repeated in multiple categories.
 -- This allows mobs to give 1 copy of the drop to each of several people (if they are lucky enough to get the drops).
--- Calculation for each drop, when in categories, is equivallent in chance as when outside of categories.
+-- Calculation for each drop, when in categories, is equivalent in chance as when outside of categories.
 -- First, the sum of chances for each category is calculated as category chance.  If the category is selected
 -- for drops (i.e. its chance is successful), then exactly 1 item from that category will be selected, with 
 -- such a chance that the overall probability is maintained unchanged. 
@@ -30,7 +30,7 @@
 --    2 is anything else (scrolls,arrows,etc)
 --
 -- Category Explanation (GrandBoss)
---    0+ is defined catagories
+--    0+ is defined categories
 --    Any other mobs within this range (minions, etc) use the default drop categories (most often 2)
 
 DROP TABLE IF EXISTS `droplist`;

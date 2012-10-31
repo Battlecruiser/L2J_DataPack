@@ -1,1 +1,1 @@
-alter table `fort` add `blood` int(3) NOT NULL default 0 after `castleId`;
+alter table `fort` add `blood` int(3) NOT NULL DEFAULT 0 after `castleId`;
