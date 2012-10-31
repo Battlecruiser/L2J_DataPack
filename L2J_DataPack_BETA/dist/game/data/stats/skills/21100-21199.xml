@@ -661,7 +661,7 @@
 		</for>
 	</skill>
 	<skill id="21141" levels="1" name="Blessing of Halloween">
-		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
+		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="target" val="TARGET_SELF" />
@@ -674,7 +674,7 @@
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
-				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="darkRes" val="20" />
 			</effect>
