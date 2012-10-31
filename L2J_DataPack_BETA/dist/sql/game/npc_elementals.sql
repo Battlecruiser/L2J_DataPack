@@ -1,14 +1,14 @@
 DROP TABLE IF EXISTS `npc_elementals`;
 CREATE TABLE IF NOT EXISTS `npc_elementals` (
   `npc_id` smallint(5) unsigned NOT NULL,
-  `elemAtkType` tinyint(1) NOT NULL default '-1',
-  `elemAtkValue` int(3) NOT NULL default '0',
-  `fireDefValue` int(3) NOT NULL default '0',
-  `waterDefValue` int(3) NOT NULL default '0',
-  `windDefValue` int(3) NOT NULL default '0',
-  `earthDefValue` int(3) NOT NULL default '0',
-  `holyDefValue` int(3) NOT NULL default '0',
-  `darkDefValue` int(3) NOT NULL default '0',
+  `elemAtkType` tinyint(1) NOT NULL DEFAULT '-1',
+  `elemAtkValue` int(3) NOT NULL DEFAULT '0',
+  `fireDefValue` int(3) NOT NULL DEFAULT '0',
+  `waterDefValue` int(3) NOT NULL DEFAULT '0',
+  `windDefValue` int(3) NOT NULL DEFAULT '0',
+  `earthDefValue` int(3) NOT NULL DEFAULT '0',
+  `holyDefValue` int(3) NOT NULL DEFAULT '0',
+  `darkDefValue` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`npc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

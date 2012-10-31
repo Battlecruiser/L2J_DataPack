@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS `auto_chat`;
 CREATE TABLE `auto_chat` (
-  `groupId` INT NOT NULL default '0',
-  `npcId` INT NOT NULL default '0',
-  `chatDelay` BIGINT NOT NULL default '-1',
+  `groupId` INT NOT NULL DEFAULT '0',
+  `npcId` INT NOT NULL DEFAULT '0',
+  `chatDelay` BIGINT NOT NULL DEFAULT '-1',
   PRIMARY KEY (`groupId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

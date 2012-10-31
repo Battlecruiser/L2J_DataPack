@@ -1,10 +1,10 @@
 CREATE TABLE IF NOT EXISTS `custom_npc_buffer` (
   `npc_id` int(6) NOT NULL,
   `skill_id` int(6) NOT NULL,
-  `skill_level` int(6) NOT NULL default '1',
-  `skill_fee_id` int(6) NOT NULL default '0',
-  `skill_fee_amount` int(6) NOT NULL default '0',
-  `buff_group` int(6) NOT NULL default '0',
+  `skill_level` int(6) NOT NULL DEFAULT '1',
+  `skill_fee_id` int(6) NOT NULL DEFAULT '0',
+  `skill_fee_amount` int(6) NOT NULL DEFAULT '0',
+  `buff_group` int(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`npc_id`,`skill_id`,`buff_group`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

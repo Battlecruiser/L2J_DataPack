@@ -1,15 +1,15 @@
 DROP TABLE IF EXISTS `lvlupgain`;
 CREATE TABLE `lvlupgain` (
   `classid` tinyint(3) unsigned NOT NULL,
-  `defaulthpbase` decimal(7,3) NOT NULL,
-  `defaulthpadd` decimal(7,3) NOT NULL,
-  `defaulthpmod` decimal(3,2) NOT NULL DEFAULT '0.37',
-  `defaultcpbase` decimal(7,3) NOT NULL,
-  `defaultcpadd` decimal(7,3) NOT NULL,
-  `defaultcpmod` decimal(3,2) NOT NULL DEFAULT '0.22',
-  `defaultmpbase` decimal(7,3) NOT NULL,
-  `defaultmpadd` decimal(7,3) NOT NULL,
-  `defaultmpmod` decimal(3,2) NOT NULL DEFAULT '0.14',
+  `DEFAULThpbase` decimal(7,3) NOT NULL,
+  `DEFAULThpadd` decimal(7,3) NOT NULL,
+  `DEFAULThpmod` decimal(3,2) NOT NULL DEFAULT '0.37',
+  `DEFAULTcpbase` decimal(7,3) NOT NULL,
+  `DEFAULTcpadd` decimal(7,3) NOT NULL,
+  `DEFAULTcpmod` decimal(3,2) NOT NULL DEFAULT '0.22',
+  `DEFAULTmpbase` decimal(7,3) NOT NULL,
+  `DEFAULTmpadd` decimal(7,3) NOT NULL,
+  `DEFAULTmpmod` decimal(3,2) NOT NULL DEFAULT '0.14',
   `class_lvl` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
