@@ -18,7 +18,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 
 /**
  * Tower of Insolence Vortex teleport AI.<br>
@@ -34,213 +34,200 @@ public class ToIVortex extends AbstractNpcAI
 	private static final int DIMENSION_VORTEX_1 = 30952;
 	private static final int DIMENSION_VORTEX_2 = 30953;
 	private static final int DIMENSION_VORTEX_3 = 30954;
-	
-	// ITEMS
-	private static final int ADENA = 57;
-	private static final int BLUE_DIMENSION_STONE = 4402;
+	// Items
 	private static final int GREEN_DIMENSION_STONE = 4401;
+	private static final int BLUE_DIMENSION_STONE = 4402;
 	private static final int RED_DIMENSION_STONE = 4403;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
 		int npcId = npc.getNpcId();
-		// 1st Floor
-		if (event.equalsIgnoreCase("1"))
+		
+		switch (event)
 		{
-			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
+			case "1":
 			{
-				st.takeItems(GREEN_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(114356, 13423, -5096);
-				st.exitQuest(true);
+				// 1st Floor
+				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
+				{
+					takeItems(player, GREEN_DIMENSION_STONE, 1);
+					player.teleToLocation(114356, 13423, -5096, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
 			}
-			else
+			case "2":
 			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
+				// 2nd Floor
+				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
+				{
+					takeItems(player, GREEN_DIMENSION_STONE, 1);
+					player.teleToLocation(114666, 13380, -3608, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "3":
+			{
+				// 3rd Floor
+				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
+				{
+					takeItems(player, GREEN_DIMENSION_STONE, 1);
+					player.teleToLocation(111982, 16028, -2120, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "4":
+			{
+				// 4th Floor
+				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
+				{
+					takeItems(player, BLUE_DIMENSION_STONE, 1);
+					player.teleToLocation(114636, 13413, -640, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "5":
+			{
+				// 5th Floor
+				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
+				{
+					takeItems(player, BLUE_DIMENSION_STONE, 1);
+					player.teleToLocation(114152, 19902, 928, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "6":
+			{
+				// 6th Floor
+				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
+				{
+					takeItems(player, BLUE_DIMENSION_STONE, 1);
+					player.teleToLocation(117131, 16044, 1944, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "7":
+			{
+				// 7th Floor
+				if (hasQuestItems(player, RED_DIMENSION_STONE))
+				{
+					takeItems(player, RED_DIMENSION_STONE, 1);
+					player.teleToLocation(113026, 17687, 2952, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "8":
+			{
+				// 8th Floor
+				if (hasQuestItems(player, RED_DIMENSION_STONE))
+				{
+					takeItems(player, RED_DIMENSION_STONE, 1);
+					player.teleToLocation(115571, 13723, 3960, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "9":
+			{
+				// 9th Floor
+				if (hasQuestItems(player, RED_DIMENSION_STONE))
+				{
+					takeItems(player, RED_DIMENSION_STONE, 1);
+					player.teleToLocation(114649, 14144, 4976, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "10":
+			{
+				// 10 Floor
+				if (hasQuestItems(player, RED_DIMENSION_STONE))
+				{
+					takeItems(player, RED_DIMENSION_STONE, 1);
+					player.teleToLocation(118507, 16605, 5984, true);
+				}
+				else
+				{
+					return "no-stones.htm";
+				}
+				break;
+			}
+			case "GREEN":
+			{
+				if (player.getAdena() >= 10000)
+				{
+					takeItems(player, PcInventory.ADENA_ID, 10000);
+					giveItems(player, GREEN_DIMENSION_STONE, 1);
+				}
+				else
+				{
+					return npcId + "no-adena.htm";
+				}
+				break;
+			}
+			case "BLUE":
+			{
+				if (player.getAdena() >= 10000)
+				{
+					takeItems(player, PcInventory.ADENA_ID, 10000);
+					giveItems(player, BLUE_DIMENSION_STONE, 1);
+				}
+				else
+				{
+					return npcId + "no-adena.htm";
+				}
+				break;
+			}
+			case "RED":
+			{
+				if (player.getAdena() >= 10000)
+				{
+					takeItems(player, PcInventory.ADENA_ID, 10000);
+					giveItems(player, RED_DIMENSION_STONE, 1);
+				}
+				else
+				{
+					return npcId + "no-adena.htm";
+				}
+				break;
 			}
 		}
-		// 2nd Floor
-		else if (event.equalsIgnoreCase("2"))
-		{
-			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
-			{
-				st.takeItems(GREEN_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(114666, 13380, -3608);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 3rd Floor
-		else if (event.equalsIgnoreCase("3"))
-		{
-			if (st.hasQuestItems(GREEN_DIMENSION_STONE))
-			{
-				st.takeItems(GREEN_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(111982, 16028, -2120);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 4th Floor
-		else if (event.equalsIgnoreCase("4"))
-		{
-			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
-			{
-				st.takeItems(BLUE_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(114636, 13413, -640);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 5th Floor
-		else if (event.equalsIgnoreCase("5"))
-		{
-			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
-			{
-				st.takeItems(BLUE_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(114152, 19902, 928);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 6th Floor
-		else if (event.equalsIgnoreCase("6"))
-		{
-			if (st.hasQuestItems(BLUE_DIMENSION_STONE))
-			{
-				st.takeItems(BLUE_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(117131, 16044, 1944);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 7th Floor
-		else if (event.equalsIgnoreCase("7"))
-		{
-			if (st.hasQuestItems(RED_DIMENSION_STONE))
-			{
-				st.takeItems(RED_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(113026, 17687, 2952);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 8th Floor
-		else if (event.equalsIgnoreCase("8"))
-		{
-			if (st.hasQuestItems(RED_DIMENSION_STONE))
-			{
-				st.takeItems(RED_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(115571, 13723, 3960);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 9th Floor
-		else if (event.equalsIgnoreCase("9"))
-		{
-			if (st.hasQuestItems(RED_DIMENSION_STONE))
-			{
-				st.takeItems(RED_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(114649, 14144, 4976);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		// 10 Floor
-		else if (event.equalsIgnoreCase("10"))
-		{
-			if (st.hasQuestItems(RED_DIMENSION_STONE))
-			{
-				st.takeItems(RED_DIMENSION_STONE, 1);
-				st.getPlayer().teleToLocation(118507, 16605, 5984);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = "no-stones.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("GREEN"))
-		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
-			{
-				st.takeItems(ADENA, 10000);
-				st.giveItems(GREEN_DIMENSION_STONE, 1);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = npcId + "no-adena.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("BLUE"))
-		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
-			{
-				st.takeItems(ADENA, 10000);
-				st.giveItems(BLUE_DIMENSION_STONE, 1);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = npcId + "no-adena.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("RED"))
-		{
-			if (st.getQuestItemsCount(ADENA) >= 10000)
-			{
-				st.takeItems(ADENA, 10000);
-				st.giveItems(RED_DIMENSION_STONE, 1);
-				st.exitQuest(true);
-			}
-			else
-			{
-				st.exitQuest(true);
-				htmltext = npcId + "no-adena.htm";
-			}
-		}
-		return htmltext;
+		
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	private ToIVortex(String name, String descr)
