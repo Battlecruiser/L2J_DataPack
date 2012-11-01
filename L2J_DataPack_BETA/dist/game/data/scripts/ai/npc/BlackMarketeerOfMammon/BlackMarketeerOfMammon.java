@@ -36,7 +36,7 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	
-	public BlackMarketeerOfMammon(String name, String descr)
+	private BlackMarketeerOfMammon(String name, String descr)
 	{
 		super(name, descr);
 		
