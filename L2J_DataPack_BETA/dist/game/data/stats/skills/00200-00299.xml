@@ -2004,13 +2004,15 @@
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
 	<skill id="279" levels="5" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#enchantMpConsume"> 100 98 97 96 95 93 92 90 88 87 86 85 83 81 80 78 77 76 75 73 71 70 68 67 66 65 62 61 60 58 </table>
-		<table name="#enchantPower"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
-		<table name="#ench3Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
+		<table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
+		<table name="#ench2MpConsume"> 80 79 78 77 76 75 74 72 71 70 69 68 67 65 64 63 62 61 60 59 57 56 55 54 53 52 50 49 48 47 </table>
+		<table name="#ench2MpInitialConsume"> 20 19 19 19 19 18 18 18 17 17 17 17 16 16 16 15 15 15 15 14 14 14 13 13 13 13 12 12 12 11 </table>
+		<table name="#ench3Chance"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
-		<table name="#mpConsume"> 64 69 73 78 82 </table>
-		<table name="#mpInitialConsume"> 16 18 20 20 21 </table>
+		<table name="#mpConsume"> 64 69 74 78 82 </table>
+		<table name="#mpInitialConsume"> 16 18 19 20 21 </table>
 		<table name="#power"> 82 89 96 102 108 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
@@ -2032,19 +2034,20 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#enchantPower" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpConsume" val="#enchantMpConsume" />
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="40" effectType="DEBUFF" abnormalLvl="1" abnormalType="paralyze">
+			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="40" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="#ench3Power" effectType="DEBUFF" abnormalLvl="1" abnormalType="paralyze">
+			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" triggeredId="6090" chanceType="ON_EXIT" effectPower="#ench3Chance" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
