@@ -74,6 +74,7 @@ import handlers.effecthandlers.Relax;
 import handlers.effecthandlers.RemoveTarget;
 import handlers.effecthandlers.RestorationRandom;
 import handlers.effecthandlers.Root;
+import handlers.effecthandlers.ServitorShare;
 import handlers.effecthandlers.Signet;
 import handlers.effecthandlers.SignetAntiSummon;
 import handlers.effecthandlers.SignetMDam;
@@ -166,6 +167,7 @@ public final class EffectMasterHandler
 		RemoveTarget.class,
 		RestorationRandom.class,
 		Root.class,
+		ServitorShare.class,
 		Signet.class,
 		SignetAntiSummon.class,
 		SignetMDam.class,

@@ -1492,16 +1492,18 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PET" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0">
-				<mul order="0x30" stat="pAtk" val="1.5" />
-				<mul order="0x30" stat="pDef" val="1.5" />
-				<mul order="0x30" stat="mAtk" val="1.25" />
-				<mul order="0x30" stat="mDef" val="1.25" />
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="maxMp" val="1.1" />
-				<basemul order="0x30" stat="rCrit" val="0.2" />
-				<mul order="0x30" stat="pAtkSpd" val="1.1" />
-				<mul order="0x30" stat="mAtkSpd" val="1.03" />
+			<!-- Note: 0.5 means 50% of owner's patk! -->
+			<effect self="1" name="ServitorShare" abnormalTime="1200" val="0" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
+			<effect name="ServitorShare" abnormalTime="1200" noicon="1" val="0">
+				<share order="0x40" stat="pAtk" val="0.5" />
+				<share order="0x40" stat="pDef" val="0.5" />
+				<share order="0x40" stat="mAtk" val="0.25" />
+				<share order="0x40" stat="mDef" val="0.25" />
+				<share order="0x40" stat="maxHp" val="0.1" />
+				<share order="0x40" stat="maxMp" val="0.1" />
+				<share order="0x40" stat="rCrit" val="0.2" />
+				<share order="0x40" stat="pAtkSpd" val="0.1" />
+				<share order="0x40" stat="mAtkSpd" val="0.03" />
 			</effect>
 		</for>
 	</skill>
